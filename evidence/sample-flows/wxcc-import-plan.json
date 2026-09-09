@@ -1,0 +1,67 @@
+[
+  {
+    "file": "/home/dgk/workspace/webex_connect_kb/evidence/sample-flows/raw/wxcc-v3.5/import-EmailAttachmentDropNotification.workflow",
+    "label": "EmailAttachmentDropNotification.workflow",
+    "source": "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Attachment%20Drop%20Notification%20to%20Customer/EmailAttachmentDropNotification.workflow.zip"
+  },
+  {
+    "file": "/home/dgk/workspace/webex_connect_kb/evidence/sample-flows/raw/wxcc-v3.5/import-FacebookTaskBotInboundFlow.workflow",
+    "label": "FacebookTaskBotInboundFlow.workflow",
+    "source": "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Bot%20Flows/FacebookTaskBotInboundFlow.workflow.zip"
+  },
+  {
+    "file": "/home/dgk/workspace/webex_connect_kb/evidence/sample-flows/raw/wxcc-v3.5/import-LiveChatQABotInboundFlow.workflow",
+    "label": "LiveChatQABotInboundFlow.workflow",
+    "source": "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Bot%20Flows/LiveChatQABotInboundFlow.workflow.zip"
+  },
+  {
+    "file": "/home/dgk/workspace/webex_connect_kb/evidence/sample-flows/raw/wxcc-v3.5/import-SmsQABotInboundFlow.workflow",
+    "label": "SmsQABotInboundFlow.workflow",
+    "source": "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Bot%20Flows/SmsQABotInboundFlow.workflow.zip"
+  },
+  {
+    "file": "/home/dgk/workspace/webex_connect_kb/evidence/sample-flows/raw/wxcc-v3.5/import-EmailInboundSampleFlowWithContactPriority.workflow",
+    "label": "EmailInboundSampleFlowWithContactPriority.workflow",
+    "source": "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Usage%20of%20Contact%20Priority%20In%20Flows/EmailInboundSampleFlowWithContactPriority.workflow.zip"
+  },
+  {
+    "file": "/home/dgk/workspace/webex_connect_kb/evidence/sample-flows/raw/wxcc-v3.5/import-Task Close Flow With Screen Pop.workflow",
+    "label": "Task Close Flow With Screen Pop.workflow",
+    "source": "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Usage%20of%20Screen%20Pop%20in%20Flows/Task%20Close%20Flow%20With%20Screen%20Pop.workflow.zip"
+  },
+  {
+    "file": "/home/dgk/workspace/webex_connect_kb/evidence/sample-flows/raw/wxcc-v3.5/import-LiveChatInboundSampleFlowWithSetVariable.workflow",
+    "label": "LiveChatInboundSampleFlowWithSetVariable.workflow",
+    "source": "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Usage%20of%20Set%20Variable%20In%20Flows/LiveChatInboundSampleFlowWithSetVariable.workflow.zip"
+  },
+  {
+    "file": "/home/dgk/workspace/webex_connect_kb/evidence/sample-flows/raw/wxcc-v3.5/import-Task Routed Sample Flow For Extracting Variables.workflow",
+    "label": "Task Routed Sample Flow For Extracting Variables.workflow",
+    "source": "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Usage%20of%20Set%20Variable%20In%20Flows/Task%20Routed%20Sample%20Flow%20For%20Extracting%20Variables.workflow.zip"
+  },
+  {
+    "file": "/home/dgk/workspace/webex_connect_kb/evidence/sample-flows/raw/wxcc-v3.5/import-Task Close Flow.workflow",
+    "label": "Task Close Flow.workflow",
+    "source": "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Event%20Handling%20Workflows/Task%20Close%20Flow.workflow.zip"
+  },
+  {
+    "file": "/home/dgk/workspace/webex_connect_kb/evidence/sample-flows/raw/wxcc-v3.5/import-Task Modified Flow.workflow",
+    "label": "Task Modified Flow.workflow",
+    "source": "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Event%20Handling%20Workflows/Task%20Modified%20Flow.workflow.zip"
+  },
+  {
+    "file": "/home/dgk/workspace/webex_connect_kb/evidence/sample-flows/raw/wxcc-v3.5/import-Task Routed Flow.workflow",
+    "label": "Task Routed Flow.workflow",
+    "source": "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Event%20Handling%20Workflows/Task%20Routed%20Flow.workflow.zip"
+  },
+  {
+    "file": "/home/dgk/workspace/webex_connect_kb/evidence/sample-flows/raw/wxcc-v3.5/import-EmailInboundFlow.workflow",
+    "label": "EmailInboundFlow.workflow",
+    "source": "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Media%20Specific%20Workflows/EmailInboundFlow.workflow.zip"
+  },
+  {
+    "file": "/home/dgk/workspace/webex_connect_kb/evidence/sample-flows/raw/wxcc-v3.5/import-SMS inbound.workflow",
+    "label": "SMS inbound.workflow",
+    "source": "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Media%20Specific%20Workflows/SMS%20inbound.workflow.zip"
+  }
+]

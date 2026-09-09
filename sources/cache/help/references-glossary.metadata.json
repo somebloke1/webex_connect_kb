@@ -1,0 +1,31 @@
+{
+  "category": "REFERENCES",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182577b9",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "8c06155b45279e1cf06b6c580bf2fcc15e2a055832e2faf85ff7a303c0d71af5",
+    "source_path": "a2e5bb9056230e6a793e559b6d440b3fb4668edd077e1d0bd2a6dcd581d2a65d",
+    "text_path": "08e18565473615b3e9b158a17a6375bc8ba507e52246127223f6ce97fcba65d2"
+  },
+  "headings": [],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/references-glossary.md",
+  "resolved_url": "https://help.webexconnect.io/docs/references-glossary",
+  "retrieved_at": "2026-09-08T23:29:39+00:00",
+  "sha256_html_response": "bbf67826fcf2d546ea31b24b55f371a54de3c26b1817911fd69a91be41476688",
+  "sha256_source_body": "a2e5bb9056230e6a793e559b6d440b3fb4668edd077e1d0bd2a6dcd581d2a65d",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/references-glossary.source.md",
+  "source_updated_at": "2026-02-03T15:18:46.586Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/references-glossary.txt",
+  "title": "Glossary",
+  "url": "https://help.webexconnect.io/docs/references-glossary",
+  "word_count": 886,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/references-glossary.metadata.json"
+}

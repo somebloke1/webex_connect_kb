@@ -1,0 +1,101 @@
+# Voice Recordings
+
+Source: https://help.webexconnect.io/docs/voice-recordings
+Documentation version: 6.20.0
+Retrieved: 2026-09-08T23:29:32+00:00
+
+All the recordings from voice flows and APIs will be accessible on the **Voice Recordings** page. 
+
+- **Flows**: Includes recordings from the **Call Patch **and **Record **nodes.
+- **V1 API**: Includes both the full call recording and individual action-level recordings (e.g., Play, Record, Call Patch, and Call Transfer).
+
+Using the **Settings**, you can backup or store the voice recordings on FTP/SFTP/S3 servers.	
+
+
+
+![Voice Recordings](https://files.readme.io/f3829f21d389a4a52938cc5c4a34acf3f0b5f2915e9b8393623f4892da614f30-2025-07-25_12-51-46.png)
+
+
+
+
+Listen to and download recordings of a flow. These recordings will be available for 30 days from the generation date.​
+
+You can now provide an email/a notify URL to get notifications on the file exports scheduled on Voice Recordings. The notification is triggered at the end of each export cycle, relaying the outcome of the file export process.
+
+
+
+![Screenshot of Flow Recordings](https://files.readme.io/2c60807-image.png)
+
+
+
+
+To access the recordings:
+
+1. Go to the **Tools** > **Voice Recordings**.
+2. Navigate to the **Settings** tab.
+3. Select the **File Destination**.
+4. For **none**, enable the required voice recordings. Only the enabled voice recordings will be saved to the configured location.
+
+
+
+![Screenshot of Recordings Settings](https://files.readme.io/b258f1a-image.png)
+
+
+
+
+5. For FTP, enter the following details and enable the required voice recordings. Only the enabled voice recordings will be saved to the configured location.  
+   (i) **User Name** - the user name used to login to the FTP server  
+   (ii) **Password** - the password used to login to the FTP server  
+   (iii) **Host Name** - the hostname of the FTP server  
+   (iv) **Path Name** - the folder path on the FTP server  
+   (v) **Port Name** - the port number for the FTP server.
+
+
+
+![Screenshot of FTP Server Settings](https://files.readme.io/0665686-ftp-settings.png)
+
+
+
+
+> 📘 Note
+> 
+> The FTP feature is no longer supported for new configurations, because Data sent via FTP is vulnerable to sniffing, spoofing, and brute force attacks, among other basic attack methods.
+> 
+> The feature will work as is for the existing customers.
+
+6. For SFTP, enter the following details and enable the required voice recordings. Only the enabled voice recordings will be saved to the configured location.  
+   (i) **User Name** - the user name used to login to the SFTP server  
+   (ii) **Password** - the password used to login to the SFTP server  
+   (iii) **Host Name** - the hostname of the SFTP server  
+   (iv) **Path Name** - the folder path on the SFTP server  
+   (v) **Port Name** - the port number for the SFTP server.
+
+
+
+![Screenshot of SFTP Settings](https://files.readme.io/c245f00-image.png)
+
+
+
+
+> 📘 Note
+> 
+> You can upload the private key (example: AWS based Open SSH key files like rsa512.ppk, rsa256.ppk, ecdsa521.ppk, ecdsa384.ppk, ecdsa256.ppk, ed25519.ppk, ECDSAprivate.ppk, EDDSA255private.ppk) for SFTP configuration, when you select the File Destination as SFTP using the **Upload** button.
+
+7. For S3, enter the following details and enable the required voice recordings. Only the enabled voice recordings will be saved to the configured location.
+   1. **User Name** - the user name used to login to the Amazon Simple Storage Service (S3) console.
+   2. **Bucket Name** - the unique DNS compliant for your new bucket. A bucket consists of file folders or store objects.
+   3. **Access Key** - the access key used to login to the S3 console.
+   4. **Secret Key** - the secret key used to login to the S3 console.
+   5. **Region** - the region of the S3 console.
+
+
+
+![S3 Console Settings](https://files.readme.io/d6f71a3-image.png)
+
+
+
+
+8. Enter a URL for **File Export Notify URL**, to which a notification is sent when a new log file is generated. If an invalid URL is passed in API request or via a variable, then such request will not be considered eligible for retries.
+9. Enter an email address for **Notify on Email**, to which a notification is sent when a new log file is generated.
+10. Click **Save**.  
+    The selected voice recordings are backed up to the configured location on a daily basis.

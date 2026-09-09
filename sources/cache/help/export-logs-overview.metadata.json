@@ -1,0 +1,31 @@
+{
+  "category": "TOOLS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd81825790c",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "7477cc18c4fbd02e831f7719025eeae39ced36bc5d58d5e05223b90d3e50b3ae",
+    "source_path": "637200d71720c3dd90a90c44987fbc78167e9a92166922cdd5a2751e81c2fd34",
+    "text_path": "1a75383d41a6e0c6b459dda84f612b210a372ae1bef860787285bebae08bf5e1"
+  },
+  "headings": [],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/export-logs-overview.md",
+  "resolved_url": "https://help.webexconnect.io/docs/export-logs-overview",
+  "retrieved_at": "2026-09-08T23:29:34+00:00",
+  "sha256_html_response": "6d16e0587e175d65e7382f596e12f3fe861d5f0cd2d6b6c1bb7704434f5fa47c",
+  "sha256_source_body": "637200d71720c3dd90a90c44987fbc78167e9a92166922cdd5a2751e81c2fd34",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/export-logs-overview.source.md",
+  "source_updated_at": "2025-11-12T13:51:45.632Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/export-logs-overview.txt",
+  "title": "Export Logs",
+  "url": "https://help.webexconnect.io/docs/export-logs-overview",
+  "word_count": 45,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/export-logs-overview.metadata.json"
+}

@@ -1,0 +1,37 @@
+{
+  "category": "TOOLS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182577f0",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "a8201e40ee59103edef37abc922d3c0a819b04debc55b9be4989f1286f78bc8d",
+    "source_path": "7c5f5e387d02c4e58ab0e025d932584720264dda5fb8507978e38d38fd860441",
+    "text_path": "0cb2f3921487f16537dce8101394e55e5dcced025d2ef23788f489fe17f2f575"
+  },
+  "headings": [
+    "🚧Status : Active",
+    "Smart Link Support across Channels",
+    "Configuring a Smart Link",
+    "Steps for configuring branded / short URLs for using 'shortenLinks' capability:",
+    "📘"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/smart-links.md",
+  "resolved_url": "https://help.webexconnect.io/docs/smart-links",
+  "retrieved_at": "2026-09-08T23:29:31+00:00",
+  "sha256_html_response": "76831cef8f7de0fdc5e2d244f76873841cf4794417bcd59569071f8949174da6",
+  "sha256_source_body": "7c5f5e387d02c4e58ab0e025d932584720264dda5fb8507978e38d38fd860441",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/smart-links.source.md",
+  "source_updated_at": "2025-03-01T18:06:19.835Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/smart-links.txt",
+  "title": "Smart Links",
+  "url": "https://help.webexconnect.io/docs/smart-links",
+  "word_count": 940,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/smart-links.metadata.json"
+}

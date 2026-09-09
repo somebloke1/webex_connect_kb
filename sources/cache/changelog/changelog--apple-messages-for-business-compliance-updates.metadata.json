@@ -1,0 +1,39 @@
+{
+  "category": "2026 product and policy updates",
+  "deprecated": false,
+  "doc_id": "6a9149694f4057ce793f6d2c",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "b23c845067b915bd7ccab72d4cf9bccec8d9d57ec243a74620d55b47477b3c87",
+    "source_path": "3204a34508549e8287dfb16276c91f605d2fc0ef1497f364185dcac1e0dd1239",
+    "text_path": "0944538e6ccc0cb22c83220161fcb87290f29786e619e770f69024294026f228"
+  },
+  "headings": [
+    "Review Interactive Message UI text",
+    "Replace non-compliant images",
+    "Update domain-specific Rich Link previews",
+    "Update Form keyboard types",
+    "Review configured limits",
+    "Customer action"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/changelog/changelog--apple-messages-for-business-compliance-updates.md",
+  "release_version": null,
+  "resolved_url": "https://help.webexconnect.io/changelog/apple-messages-for-business-compliance-updates",
+  "retrieved_at": "2026-09-08T23:31:53+00:00",
+  "sha256_html_response": "80925343c7160678f8cc65c93861ce138bbefd59d645638be79e21db9bb9ea8b",
+  "sha256_source_body": "3204a34508549e8287dfb16276c91f605d2fc0ef1497f364185dcac1e0dd1239",
+  "source_family": "changelog",
+  "source_kind": "official_changelog",
+  "source_path": "sources/cache/changelog/changelog--apple-messages-for-business-compliance-updates.source.md",
+  "source_published_at": "2026-08-28T08:40:00.000Z",
+  "source_updated_at": null,
+  "status": "ok",
+  "text_path": "sources/cache/changelog/changelog--apple-messages-for-business-compliance-updates.txt",
+  "title": "Apple Messages for Business compliance updates",
+  "url": "https://help.webexconnect.io/changelog/apple-messages-for-business-compliance-updates",
+  "word_count": 366,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/changelog/changelog--apple-messages-for-business-compliance-updates.metadata.json"
+}

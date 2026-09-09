@@ -1,0 +1,378 @@
+{
+  "schema_version": 1,
+  "sample_key": "native-sendsms",
+  "title": "sendSMS.workflow",
+  "observed_at": "2026-09-09T00:00:41.982Z",
+  "source_path": "evidence/sample-flows/observed/native-sendsms.json",
+  "source_sha256": "771a85f9ede5dfa326424b240389266f21a924dfd6ca61659531f912189d83c8",
+  "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model",
+  "runtime_tested": false,
+  "status": "observed_canvas_relationships_summarized",
+  "format_warning": "Internal loaded-canvas model observations only; not a public import schema. Event internal names and visible labels are recorded separately. Dynamic script behavior and missing canvas pages are not inferred.",
+  "counts": {
+    "cells": 4,
+    "operative_nodes": 2,
+    "explicit_edges": 1,
+    "terminal_bindings": 0,
+    "variable_references": 8
+  },
+  "start_configuration": {
+    "channel": 501,
+    "type": "channel",
+    "subtype": "aiagent",
+    "isCheckLiveSessions": 0,
+    "extras": {},
+    "eventid": 501,
+    "v2EventId": 501
+  },
+  "nodes": [
+    {
+      "id": "2",
+      "label": "Configure AI Agent Event",
+      "type_internal": "start",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "onbegin",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "selectedChannel": {
+          "id": 501,
+          "name": "aiagent",
+          "description": "AI Agent",
+          "type": 3,
+          "extraData": {},
+          "subType": "aiagent",
+          "integrationId": "",
+          "image_url": ""
+        },
+        "selectedRuleEvent": {
+          "id": 501,
+          "name": "",
+          "v2EventId": 501
+        },
+        "isKeyWordDisabled": true,
+        "isKeyWordVerifyReq": true,
+        "isKeyWordAvailable": true,
+        "output_variables": [
+          "aiAgent.timestamp",
+          "aiAgent.transId",
+          "aiAgent.payload",
+          "service.serviceKey",
+          "aiAgent.msisdn",
+          "aiAgent.messageContent"
+        ],
+        "conditionData": [
+          {
+            "defaultvalue": "",
+            "mandatory": false,
+            "var_name": "msisdn",
+            "datatype": "string",
+            "channel_id": 501,
+            "event_id": 501,
+            "eventname": ""
+          },
+          {
+            "defaultvalue": "",
+            "mandatory": false,
+            "var_name": "messageContent",
+            "datatype": "string",
+            "channel_id": 501,
+            "event_id": 501,
+            "eventname": ""
+          },
+          {
+            "defaultvalue": "Type",
+            "mandatory": false,
+            "var_name": "CustomerIDType",
+            "datatype": "string",
+            "channel_id": 501,
+            "event_id": 501,
+            "eventname": ""
+          }
+        ],
+        "aiAgentData": {
+          "parseOutput": [
+            {
+              "name": "msisdn",
+              "defaultvalue": "",
+              "mandatory": false,
+              "type": "string"
+            },
+            {
+              "name": "messageContent",
+              "defaultvalue": "",
+              "mandatory": false,
+              "type": "string"
+            }
+          ],
+          "isAuthRequired": false,
+          "name": "",
+          "url": "https://example.invalid/flows/57801/trigger/aiagent",
+          "v2EventId": 501,
+          "jsonData": {
+            "msisdn": "",
+            "messageContent": ""
+          },
+          "xmlData": "",
+          "isExistingAIAgent": true,
+          "selectedEvent": 501,
+          "jsonSource": 0,
+          "conditionData": [],
+          "isValidateSignature": false,
+          "validateSignatureObj": {
+            "algorithm": "",
+            "secretType": "[redacted]",
+            "secretKey": "[redacted]",
+            "headerKey": "[redacted]"
+          }
+        }
+      },
+      "transition_actions": [],
+      "declared_outputs": [
+        "aiAgent.timestamp",
+        "aiAgent.transId",
+        "aiAgent.payload",
+        "service.serviceKey",
+        "aiAgent.msisdn",
+        "aiAgent.messageContent"
+      ],
+      "output_mappings": []
+    },
+    {
+      "id": "3",
+      "label": "SMS",
+      "type_internal": "umppublic",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "onerror",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "hideWaitFor": false,
+        "messagetype": 1,
+        "message": "$(n2.aiAgent.messageContent)",
+        "channelId": 1,
+        "senderidViewFlag": false,
+        "deliverychannel": "SMS",
+        "destination": "$(n2.aiAgent.msisdn)",
+        "destinationType": "msisdn",
+        "successoutcome": 1,
+        "linkValidityCheck": false,
+        "viewmodeData": [
+          {
+            "name": "senderid",
+            "value": 12135793390
+          },
+          {
+            "name": "shortLinkId",
+            "value": ""
+          },
+          {
+            "name": "cnctTempId",
+            "value": ""
+          },
+          {
+            "name": "domain",
+            "value": ""
+          }
+        ],
+        "msgpriorityViewFlag": false,
+        "isMessagePriorityEnabled": 0,
+        "isTemplateDynamic": false,
+        "shortenLinks": false,
+        "trackClicks": false,
+        "domainViewFlag": false
+      },
+      "transition_actions": [],
+      "declared_outputs": [],
+      "output_mappings": []
+    }
+  ],
+  "edges": [
+    {
+      "id": "5128003",
+      "source": "2",
+      "target": "3",
+      "event_internal": "onbegin",
+      "event_label": "onBegin",
+      "representation": "explicit_edge"
+    }
+  ],
+  "terminal_bindings": [],
+  "terminal_sources_not_captured": [],
+  "duplicate_terminal_binding_groups": [],
+  "variable_handoffs": [
+    {
+      "consumer": "3",
+      "location": "configuration.message",
+      "reference": "$(n2.aiAgent.messageContent)",
+      "variable": "n2.aiAgent.messageContent",
+      "producer_node": "2",
+      "producer_field": "aiAgent.messageContent",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "3",
+      "location": "configuration.destination",
+      "reference": "$(n2.aiAgent.msisdn)",
+      "variable": "n2.aiAgent.msisdn",
+      "producer_node": "2",
+      "producer_field": "aiAgent.msisdn",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "outcome[1].notification.payload.serviceName",
+      "reference": "$(serviceName)",
+      "variable": "serviceName",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "outcome[1].notification.custompayload.transactionID",
+      "reference": "$(transid)",
+      "variable": "transid",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "outcome[1].notification.custompayload.flowname",
+      "reference": "$(flowname)",
+      "variable": "flowname",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "outcome[1].notification.custompayload.serviceName",
+      "reference": "$(serviceName)",
+      "variable": "serviceName",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "3",
+      "location": "_usedVars",
+      "reference": "$(n2.aiAgent.msisdn)",
+      "variable": "n2.aiAgent.msisdn",
+      "producer_node": "2",
+      "producer_field": "aiAgent.msisdn",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "3",
+      "location": "_usedVars",
+      "reference": "$(n2.aiAgent.messageContent)",
+      "variable": "n2.aiAgent.messageContent",
+      "producer_node": "2",
+      "producer_field": "aiAgent.messageContent",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    }
+  ],
+  "custom_variable_assignments": [],
+  "custom_variables": [],
+  "flow_outcomes": [
+    {
+      "id": 1,
+      "order": 0,
+      "name": 100,
+      "value": "Last executed node event",
+      "tag": 15,
+      "tagName": "Last Execution Status",
+      "type": "default",
+      "notification": {
+        "method": "get",
+        "headers": "[redacted]",
+        "payload": {
+          "serviceName": "$(serviceName)",
+          "status": "success"
+        },
+        "payloadType": 1,
+        "custompayload": {
+          "transactionID": "$(transid)",
+          "flowname": "$(flowname)",
+          "serviceName": "$(serviceName)",
+          "statuscode": 1000
+        },
+        "notificationType": -2
+      },
+      "isNotify": true,
+      "statusCode": "All status codes"
+    },
+    {
+      "id": 2,
+      "order": 1,
+      "name": 101,
+      "value": "Successfully completed flow",
+      "tag": 11,
+      "tagName": "Success",
+      "type": "default",
+      "notification": null,
+      "isNotify": false,
+      "statusCode": null
+    },
+    {
+      "id": 3,
+      "order": 2,
+      "name": 102,
+      "value": "Flow completed with an error",
+      "tag": 12,
+      "tagName": "Error",
+      "type": "default",
+      "notification": null,
+      "isNotify": false,
+      "statusCode": null
+    },
+    {
+      "id": 4,
+      "order": 3,
+      "name": 103,
+      "value": "Flow ended due to an interruption",
+      "tag": 13,
+      "tagName": "Incomplete",
+      "type": "default",
+      "notification": null,
+      "isNotify": false,
+      "statusCode": null
+    }
+  ],
+  "cycles": [],
+  "cross_page_or_flow_nodes": [],
+  "capture_pages": null,
+  "declared_events_without_captured_route": [
+    {
+      "node": "3",
+      "event_internal": "onerror",
+      "declared_target_count": 1
+    }
+  ],
+  "nodes_not_reached_from_captured_start": [],
+  "edge_endpoints_not_captured": [],
+  "node_variable_producers_not_captured": [],
+  "redactions": "Header credentials and URL hosts redacted. Internal model properties are evidence, not a public import API.",
+  "authored_walkthrough": {
+    "walkthrough": "AI Agent Start 2 exposes optional string `msisdn` and `messageContent`. Its `onbegin`, rendered `onBegin`, connects directly to SMS 3. The node selects SMS delivery and an `msisdn` destination. There is no Receive, conversation loop, or HTTP operation, so this is an agent action for a single outbound message rather than a complete two-way SMS assistant.",
+    "handoffs": "SMS destination is `$(n2.aiAgent.msisdn)` and message is `$(n2.aiAgent.messageContent)`. The main `senderid` parameter is blank, while `resourceinfo` and `viewmodeData` retain a sender resource; those differing representations require tenant rebinding rather than copying the resource blindly. Last Execution Status is configured for all status codes with `payloadType=1`; its `payload` contains `serviceName=$(serviceName)` and literal `status=success`. A separate stored `custompayload` carries transaction metadata and statuscode 1000.",
+    "limitations": "A literal success string is not delivery evidence. The captured model supplies no explicit delivery-event edge, receipt-processing node, failure-specific return object, or customer-reply handling; `successoutcome=1` alone is not enough to infer receipt behavior. An extra `CustomerIDType` appears only in conditionData, not the AI Agent parseOutput contract. This internal canvas model is not a public import schema. `runtime_tested=false`: no message was invoked, sent, received, or delivery-verified."
+  },
+  "walkthrough_status": "authored"
+}

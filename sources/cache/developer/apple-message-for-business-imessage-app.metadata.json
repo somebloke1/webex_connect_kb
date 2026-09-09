@@ -1,0 +1,36 @@
+{
+  "api_metadata_path": "sources/cache/developer/apple-message-for-business-imessage-app.api.json",
+  "category": "MULTI CHANNEL COMMUNICATION API",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f6634",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "9a11e7a54b44fb598923647e349b28d41ae2e17130444e7bab53355a88a5e165",
+    "source_path": "137c0b496693d75c9b6c602b5163b9892664add5a06e2cef64ac54f575c51438",
+    "text_path": "b0c3d6823dcc459c8577a7782d2a4a74d69f9cdf8dee1e0f8b020af33d15b881"
+  },
+  "headings": [
+    "Error Codes"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/apple-message-for-business-imessage-app.md",
+  "openapi_path": "sources/cache/openapi/4b2bc98ccf25994cd57f493db1095731555e9103b6da9e8a0489951d7887f074.json",
+  "resolved_url": "https://developers.webexconnect.io/reference/apple-message-for-business-imessage-app",
+  "retrieved_at": "2026-09-08T23:31:42+00:00",
+  "sha256_api_metadata": "e5cd4d1ae6b21d00ce4357f3c4b122256fe573a2dcf106f814a8c778903ec24f",
+  "sha256_html_response": "18100fac9004e4e4adb0bccce5e8a62066fc723e483307fd4740c9a81c40dd90",
+  "sha256_openapi": "4b2bc98ccf25994cd57f493db1095731555e9103b6da9e8a0489951d7887f074",
+  "sha256_source_body": "137c0b496693d75c9b6c602b5163b9892664add5a06e2cef64ac54f575c51438",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/apple-message-for-business-imessage-app.source.md",
+  "source_updated_at": "2025-10-14T08:40:01.381Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/apple-message-for-business-imessage-app.txt",
+  "title": "Apple Message for Business: iMessage App",
+  "url": "https://developers.webexconnect.io/reference/apple-message-for-business-imessage-app",
+  "word_count": 1798,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/apple-message-for-business-imessage-app.metadata.json"
+}

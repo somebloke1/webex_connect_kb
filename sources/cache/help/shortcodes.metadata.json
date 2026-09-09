@@ -1,0 +1,34 @@
+{
+  "category": "Assets",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182577df",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "f27d98bbb627e4a5363f756f0af99a2f66aea8ba1b1972799856fbe378b2066b",
+    "source_path": "a0c4599d7557ed9c925302b9def7fab4d2d4ef9066e5e8dc0a138922cd5d138e",
+    "text_path": "0c2a2893537ae2c60ebfd7912dc270882b83b4362a6ce0c58a8f99490289c8bf"
+  },
+  "headings": [
+    "🚧Shortcode Allocation",
+    "DLT Registered Numbers"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/shortcodes.md",
+  "resolved_url": "https://help.webexconnect.io/docs/shortcodes",
+  "retrieved_at": "2026-09-08T23:28:59+00:00",
+  "sha256_html_response": "0942b0ab6b1b31e49482d378e1c9751d521babf07c1a48c937fc107f5888442b",
+  "sha256_source_body": "a0c4599d7557ed9c925302b9def7fab4d2d4ef9066e5e8dc0a138922cd5d138e",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/shortcodes.source.md",
+  "source_updated_at": "2026-04-15T09:57:37.530Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/shortcodes.txt",
+  "title": "Short Code",
+  "url": "https://help.webexconnect.io/docs/shortcodes",
+  "word_count": 176,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/shortcodes.metadata.json"
+}

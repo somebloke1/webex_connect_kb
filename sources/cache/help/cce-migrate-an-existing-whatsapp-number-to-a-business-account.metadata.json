@@ -1,0 +1,34 @@
+{
+  "category": "Webex Connect and Cisco Contact Center Enterprise System (CCE)",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd81825795c",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "753d219a8b73a85b42b10cafdf6a70977f5cca8804935050a44baa5545f819e6",
+    "source_path": "4f74ec2547b45bed21c83a8526790e9aa60953f46618b0cd7780b2d3e07cfab9",
+    "text_path": "ea9da940ac2998152ead5033c54d2c27df435543d01dce00ee23b706b836119e"
+  },
+  "headings": [
+    "🚧Note",
+    "❗️Note"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/cce-migrate-an-existing-whatsapp-number-to-a-business-account.md",
+  "resolved_url": "https://help.webexconnect.io/docs/cce-migrate-an-existing-whatsapp-number-to-a-business-account",
+  "retrieved_at": "2026-09-08T23:29:22+00:00",
+  "sha256_html_response": "b6b419375b67282fc51d8ff28c28174d8d2e4c46a4c3b5511fa7ddfabf972b66",
+  "sha256_source_body": "4f74ec2547b45bed21c83a8526790e9aa60953f46618b0cd7780b2d3e07cfab9",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/cce-migrate-an-existing-whatsapp-number-to-a-business-account.source.md",
+  "source_updated_at": "2026-04-14T07:36:40.341Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/cce-migrate-an-existing-whatsapp-number-to-a-business-account.txt",
+  "title": "Migrate an Existing WhatsApp Number to a Business Account - CCE",
+  "url": "https://help.webexconnect.io/docs/cce-migrate-an-existing-whatsapp-number-to-a-business-account",
+  "word_count": 289,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/cce-migrate-an-existing-whatsapp-number-to-a-business-account.metadata.json"
+}

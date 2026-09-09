@@ -1,0 +1,157 @@
+Inbound Webhooks are unique endpoints that can be embedded into your applications to notify Webex Connect of events occurring in the your application(s).
+
+In essence, they work the same way as custom event API v1 but are flexible with the input JSON/XML body that will be parsed as JPath/Xpath and the variables will be made available in flows/rules.
+
+
+
+![Screenshot of Creating Inbound Webhook.](https://files.readme.io/8d339bb-9b3e6f9a3d0578b5e3303f6034647375.png)
+
+
+
+
+## Authentication
+
+We support two types of authentication for inbound webhooks: 
+
+- Service Key based authentication
+- JWT based authentication
+
+When authentication is enabled you need to use one of service key or JWT credentials associated with the relevant Webex Connect service which contains the rule/flow you've associated the inbound webhook with.
+
+## Signature Validation
+
+In addition, we offer support for signatures (using SHA 256 or SHA 512) within headers of inbound webhooks that trigger flows. It will add an additional layer of security to your inbound webhook requests and help safeguard against potential security threats. When signatures are enabled, invalid requests will return an HTTP 400 error. 
+
+> 🚧 Difference between Authentication and Signature Validation
+> 
+> Service Key or JWT Tokens enables you to validate that the request is being made by an authenticated entity. Signature Validation enables you to ensure the integrity of data and ensure that it wasn't intercepted during the transition from the source till it's received on Webex Connect.
+> 
+> We encourage you to use both these options as per security best practices.
+
+
+
+![Screenshot of Managing Inbound Webhook Integration Page.](https://files.readme.io/8146000-Inbound_Webhooks_Signatures.png)
+
+
+
+
+Once an inbound webhook has been configured, it can start accepting any JSON/XML payload. The payload is passed to the linked rule and/or flow. You can also enter example JSON or send a live request to parse. These parameters will be saved and available for usage in rules and flows when you start typing with $ to search for a variable. 
+
+> 🚧 
+> 
+> If you invoke an Inbound Webhook that's not associated with any flow or rule, the system will queue it but no action will be taken at the back of it.
+
+**Here is an example of how a sample JSON is parsed.**
+
+Please note that the service key / JWT token will need to be passed in the header of the request, with header name as _key_.
+
+```json Sample JSON for Inbound Webhook
+{  
+   "data":[  
+      {  
+         "type":"articles",
+         "id":"1",
+         "attributes":{  
+            "title":"JSON API paints my bikeshed!",
+            "body":"The shortest article. Ever.",
+            "created":"2015-05-22T14:56:29.000Z",
+            "updated":"2015-05-22T14:56:28.000Z"
+         }
+      }
+   ]
+}
+```
+
+**Parsed variables for above sample**
+
+| Parameter               | Parsed value                 |
+| :---------------------- | :--------------------------- |
+| data.type               | articles                     |
+| data.id                 | 1                            |
+| data.attributes.title   | JSON API paints my bikeshed! |
+| data.attributes.body    | The shortest article. Ever.  |
+| data.attributes.created | 2015-05-22T14:56:29.000Z     |
+| data.attributes.updated | 2015-05-22T14:56:28.000Z     |
+
+> 📘 Parsing of Arrays in JSON and XML in Inbound Webhook and Custom Event v1 API
+> 
+> Webex Connect uses the standard '.'(Dot) notation to parse parameters from arrays in JSON and XML.
+> 
+> Example: Assume the following JSON:
+> 
+> ```json
+> {
+>   "employee": {
+>     "name": "Ted",
+>     "salary": 56000,
+>     "married": true
+>   }
+> }
+> ```
+> 
+> The parameter 'name' under the 'employee' array is parsed as employee.name.
+> 
+> For Inbound Webhooks created before version 6.6.2 release, the name parameter was parsed as both employee.name and employee_name. However, the Node UI only supported employee.name. Using the employee_name variable was only possible by manually entering the variable name.
+> 
+> New Inbound Webhooks created after the v6.6.2 release will only support variables parsed using the '.' notation. Therefore, only the employee.name variable will have the value 'Ted'. The employee_name variable will be considered a custom or new variable.
+
+## Response Codes
+
+[block:textarea]
+{
+  "text": "Inbound Webhooks are asynchronous. When you send a request to Webex Connect inbound webhooks, Webex Connect returns an immediate response code and description to confirm whether your request has been successfully queued or not. Here's the list of various response codes with their description.",
+  "sidebar": true
+}
+[/block]
+
+
+| Response Code | Message                                                  | Description                                                                     |
+| :------------ | :------------------------------------------------------- | :------------------------------------------------------------------------------ |
+| 1002          | Queued                                                   | Returned when the request is accepted by Webex Connect.                          |
+| 7000          | Invalid JSON                                             | Returned when an invalid JSON request is sent.                                  |
+| 7001          | Authentication failed                                    | Returned when an invalid service key or profile key is provided in the request. |
+| 7002          | Service Key Missing                                      | Service key is missing in the inbound webhook request.                          |
+| 7005          | Internal error occurred                                  | Returned when there is an issue with Webex Connect.                              |
+| 7007          | Service inactive                                         | The service does not exist or is deleted.                                       |
+| 7008          | Request received on an invalid or unsaved event endpoint | The inbound webhook endpoint does not exist.                                    |
+| 7010          | Source IP is not allow listed                            | Source IP is not in the allow list of IPs.                                      |
+| 7020          | You have reached maximum transaction limit               | Returned when you have reached the transaction limit.                           |
+| 7027          | Invalid XML                                              | Returned when an invalid XML request is sent.                                   |
+| 7028          | Invalid signature                                        | Signature validation failed.                                                    |
+| 7029          | Mandatory Signature Missing                              | Signature is mandatory for the inbound webhook and is missing in the request.   |
+
+> 📘 Know Your Endpoint
+> 
+> Based on the domain you use to log in to Webex Connect, the endpoint for your API varies. See the [endpoint](https://developers.webexconnect.io/reference/know-your-api-endpoints) section to understand which endpoint to use for your domain.
+
+## API reference metadata
+
+These are source metadata and examples. `api.auth` is ReadMe metadata; verify authentication in the documented headers/security scheme.
+
+```json
+{
+  "method": "get",
+  "url": "",
+  "auth": "required",
+  "results": {
+    "codes": [
+      {
+        "name": "",
+        "code": "{}",
+        "language": "json",
+        "status": 200
+      },
+      {
+        "name": "",
+        "code": "{}",
+        "language": "json",
+        "status": 400
+      }
+    ]
+  },
+  "params": [],
+  "examples": {
+    "codes": []
+  }
+}
+```

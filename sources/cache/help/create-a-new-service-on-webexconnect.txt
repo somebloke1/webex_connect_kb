@@ -1,0 +1,25 @@
+## 
+
+Add New Service
+
+- Once you login into Webex Connect, you will land on the Services Dashboard. Click on the CREATE NEW SERVICE button on the top right corner of the page to create a new service. 
+
+ [Image: Screenshot of the Services Dashboard in Webex Connect with a highlighted 'CREATE NEW SERVICE' button located at the top right corner.] 
+Services Dashboard in Webex Connect showing where to click to create a new service.
+
+- Assign a name to the service. Click on CREATE to finish creating the service.
+
+ [Image: Screenshot showing the interface for assigning a name to the new service with the 'CREATE' button highlighted.] 
+Interface for naming and finalizing the creation of a new service by clicking 'CREATE'.
+
+- This takes you to the Service Dashboard of the newly created service where you buy numbers, configure apps (i.e. OTT channels), send messages using the Messaging API or create customer interaction flows.
+
+Here are a few tutorials that you can explore next:
+
+ | Sno | Tutorial
+
+ | 1 | Buying a phone number
+
+ | 2 | Creating a flow on Webex Connect
+
+ | 3 | How to use the Messaging API?

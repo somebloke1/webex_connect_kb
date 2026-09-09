@@ -1,0 +1,36 @@
+{
+  "api_metadata_path": "sources/cache/developer/createprofile.api.json",
+  "category": "Profile API v2",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f64e2",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "e7b8967ad209ee0d043d193ef7376d50afa269f5836bafb2a320ab09bb775cd6",
+    "source_path": "1ccd015ea8979d495c3619f02df897fe9b8a824c41f22f385126289914e29399",
+    "text_path": "315736ed4722d7a4d62c6cdf28e7d3c6ef8ee764269426c813d596e3f53e92bb"
+  },
+  "headings": [
+    "**Status Codes**"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/createprofile.md",
+  "openapi_path": "sources/cache/openapi/e25cec90a1ae69ff06ee83df6197728945102a61dadcfc07bfff08567588e7eb.json",
+  "resolved_url": "https://developers.webexconnect.io/reference/createprofile",
+  "retrieved_at": "2026-09-08T23:31:49+00:00",
+  "sha256_api_metadata": "98f285e277bd2a8703e7df861edd15a0eefc88ee1a7d28c5f8dd58571f2a2761",
+  "sha256_html_response": "b0aec248900f59a00a6e1e0dac91baeba80d8d705be801fdcfb9a4df6c868475",
+  "sha256_openapi": "e25cec90a1ae69ff06ee83df6197728945102a61dadcfc07bfff08567588e7eb",
+  "sha256_source_body": "1ccd015ea8979d495c3619f02df897fe9b8a824c41f22f385126289914e29399",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/createprofile.source.md",
+  "source_updated_at": "2026-04-16T06:00:22.926Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/createprofile.txt",
+  "title": "Create Customer Profile",
+  "url": "https://developers.webexconnect.io/reference/createprofile",
+  "word_count": 1178,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/createprofile.metadata.json"
+}

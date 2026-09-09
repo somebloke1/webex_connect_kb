@@ -1,0 +1,287 @@
+{
+  "api": {
+    "examples": {
+      "codes": [
+        {
+          "code": "-X DELETE https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/segments/{segmentid}/users?users={userid1},{userid2}\n-H \"secretKey: {secretKey}\"",
+          "language": "curl"
+        },
+        {
+          "code": "var request=require(\"request\");\n var options = {\n          method: 'DELETE',\n          uri: ' https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/segments/{segmentid}/users?users={userid1},{userid2}',\n          headers: {\n\t'secretKey': '{secretKey}'\n            }\n        };\n  request(options, function(error, response, body) {\n               if(error){\n                  console.log(error);\n             }else{\n                  console.log(response);\n            }\n        });",
+          "language": "json",
+          "name": "Node"
+        },
+        {
+          "code": "require 'httparty'\n# Create the HTTP objects and post request\nhttp = HTTParty.delete(\"https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/segments/{segmentid}/users?users={userid}},{userid2}\",\n    :headers => {\n                          'secretKey ' => '{secretKey}’\n            }\n)\n# Print on console\nputs http",
+          "language": "ruby"
+        },
+        {
+          "code": "var data = null;\n\nvar xhr = new XMLHttpRequest();\n\nxhr.addEventListener(\"readystatechange\", function () {\n  if (this.readyState === this.DONE) {\n    console.log(this.responseText);\n  }\n});\n\nxhr.open(\"DELETE\", \"https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/segments/{segmentid}/users?users={userid1},{userid2}\");\nxhr.setRequestHeader(\"secretKey\", \"{secretKey}\");\nxhr.send(data);",
+          "language": "javascript"
+        },
+        {
+          "code": "import requests\n\nurl = \" https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/segments/{segmentid}/users?users={userid1},{userid2}\"\n\nheaders = {'secretKey': '{secretKey}’}\n\nresponse = requests.request(\"DELETE\", url, headers=headers)\n\nprint(response.text)",
+          "language": "python"
+        }
+      ]
+    },
+    "settings": "",
+    "results": {
+      "codes": [
+        {
+          "language": "json",
+          "code": "{\n    \"code\": 0,\n    \"success_users\": [\n        \"1420966801\",\n        \"1420966802\"\n    ],\n    \"fail_users\": [],\n    \"description\": \"Success\",\n    \"trans_id\": \"7fd2526b-7451-4d05-8015-25a56f942475\"\n}",
+          "status": 200
+        }
+      ]
+    },
+    "auth": "required",
+    "params": [
+      {
+        "name": "Content-Type",
+        "type": "string",
+        "enumValues": "",
+        "default": "",
+        "desc": "Applictaion/JSON",
+        "required": false,
+        "in": "header",
+        "ref": "",
+        "_id": "5fbb4c43e2fd55002c9db733",
+        "id": "5fbb4c43e2fd55002c9db733"
+      },
+      {
+        "name": "secretKey",
+        "type": "string",
+        "enumValues": "",
+        "default": "",
+        "desc": "Client key that can be accessed from your app asset configuration page on imiconnect platform",
+        "required": false,
+        "in": "header",
+        "ref": "",
+        "_id": "5f413ad3baf9ab01757133af",
+        "id": "5f413ad3baf9ab01757133af"
+      },
+      {
+        "name": "appid",
+        "type": "string",
+        "enumValues": "",
+        "default": "",
+        "desc": "The unique identifier corresponding to the app asset",
+        "required": false,
+        "in": "path",
+        "ref": "",
+        "_id": "60194d5104dee6001d03091d",
+        "id": "60194d5104dee6001d03091d"
+      },
+      {
+        "name": "segmentid",
+        "type": "string",
+        "enumValues": "",
+        "default": "",
+        "desc": "The unique identifier corresponding to the segment",
+        "required": false,
+        "in": "path",
+        "ref": "",
+        "_id": "60194d5104dee6001d03091c",
+        "id": "60194d5104dee6001d03091c"
+      },
+      {
+        "name": "userid",
+        "type": "string",
+        "enumValues": "",
+        "default": "",
+        "desc": "The unique identifier of the app user",
+        "required": false,
+        "in": "query",
+        "ref": "",
+        "_id": "60194d5104dee6001d03091b",
+        "id": "60194d5104dee6001d03091b"
+      },
+      {
+        "name": "users",
+        "type": "string",
+        "enumValues": "",
+        "default": "",
+        "desc": "Contains comma separated users",
+        "required": false,
+        "in": "body",
+        "ref": "",
+        "_id": "601977b6d34f370011a8dafc",
+        "id": "601977b6d34f370011a8dafc"
+      }
+    ],
+    "url": "/apps/{inappid}/segments/{segmentid}/users?users={userid1},{userid2}",
+    "method": "delete",
+    "apiSetting": "6a675233ec1c893d8a7f67bb"
+  },
+  "swagger": {
+    "path": "/apps/{inappid}/segments/{segmentid}/users?users={userid1},{userid2}"
+  },
+  "oas_public_id": "@imiconnect-apis/v6.20.0#iy3h4gl45vtxu1",
+  "selected_openapi": {
+    "openapi": "3.1.0",
+    "info": {
+      "title": "Segment APIs",
+      "version": "6.20.0"
+    },
+    "servers": [
+      {
+        "url": "https://rtm.imiconnect.io/rtmsAPI/api/v1"
+      }
+    ],
+    "security": [
+      {
+        "sec0": []
+      }
+    ],
+    "path": "/apps/{inappid}/segments/{segmentid}/users?users={userid1},{userid2}",
+    "method": "delete",
+    "path_parameters": [],
+    "operation": {
+      "summary": "Delete Users from a Segment",
+      "description": "This API is used to delete users from a segment.",
+      "operationId": "delete-users-from-segment",
+      "parameters": [
+        {
+          "name": "Content-Type",
+          "in": "header",
+          "description": "Applictaion/JSON",
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "secretKey",
+          "in": "header",
+          "description": "Client key that can be accessed from your app asset configuration page on imiconnect platform",
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "appid",
+          "in": "path",
+          "description": "The unique identifier corresponding to the app asset",
+          "schema": {
+            "type": "string"
+          },
+          "required": true
+        },
+        {
+          "name": "segmentid",
+          "in": "path",
+          "description": "The unique identifier corresponding to the segment",
+          "schema": {
+            "type": "string"
+          },
+          "required": true
+        },
+        {
+          "name": "userid",
+          "in": "query",
+          "description": "The unique identifier of the app user",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "requestBody": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "users": {
+                  "type": "string",
+                  "description": "Contains comma separated users"
+                }
+              }
+            }
+          }
+        }
+      },
+      "responses": {
+        "200": {
+          "description": "200",
+          "content": {
+            "application/json": {
+              "examples": {
+                "Result": {
+                  "value": "{\n    \"code\": 0,\n    \"success_users\": [\n        \"1420966801\",\n        \"1420966802\"\n    ],\n    \"fail_users\": [],\n    \"description\": \"Success\",\n    \"trans_id\": \"7fd2526b-7451-4d05-8015-25a56f942475\"\n}"
+                }
+              },
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "code": {
+                    "type": "integer",
+                    "example": 0,
+                    "default": 0
+                  },
+                  "success_users": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "example": "1420966801"
+                    }
+                  },
+                  "fail_users": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {}
+                    }
+                  },
+                  "description": {
+                    "type": "string",
+                    "example": "Success"
+                  },
+                  "trans_id": {
+                    "type": "string",
+                    "example": "7fd2526b-7451-4d05-8015-25a56f942475"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "deprecated": false,
+      "x-readme": {
+        "code-samples": [
+          {
+            "language": "curl",
+            "code": "-X DELETE https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/segments/{segmentid}/users?users={userid1},{userid2}\n-H \"secretKey: {secretKey}\""
+          },
+          {
+            "language": "ruby",
+            "code": "require 'httparty'\n# Create the HTTP objects and post request\nhttp = HTTParty.delete(\"https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/segments/{segmentid}/users?users={userid}},{userid2}\",\n    :headers => {\n                          'secretKey ' => '{secretKey}’\n            }\n)\n# Print on console\nputs http"
+          },
+          {
+            "language": "javascript",
+            "code": "var data = null;\n\nvar xhr = new XMLHttpRequest();\n\nxhr.addEventListener(\"readystatechange\", function () {\n  if (this.readyState === this.DONE) {\n    console.log(this.responseText);\n  }\n});\n\nxhr.open(\"DELETE\", \"https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/segments/{segmentid}/users?users={userid1},{userid2}\");\nxhr.setRequestHeader(\"secretKey\", \"{secretKey}\");\nxhr.send(data);"
+          },
+          {
+            "language": "python",
+            "code": "import requests\n\nurl = \" https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/segments/{segmentid}/users?users={userid1},{userid2}\"\n\nheaders = {'secretKey': '{secretKey}’}\n\nresponse = requests.request(\"DELETE\", url, headers=headers)\n\nprint(response.text)"
+          }
+        ],
+        "samples-languages": [
+          "curl",
+          "ruby",
+          "javascript",
+          "python"
+        ]
+      }
+    },
+    "components": {
+      "securitySchemes": {
+        "sec0": {
+          "type": "apiKey",
+          "in": "header",
+          "name": "key"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+# Groups and Teams
+
+Source: https://help.webexconnect.io/docs/getting-started-groups-and-teams
+Documentation version: 6.20.0
+Retrieved: 2026-09-08T23:28:47+00:00
+
+Webex Connect offers the ability to add users at one of the following levels to help you organize your platform usage as per your organizational structure: 
+
+- **Tenant/Client** - users at this level have access to all the assets. Client-level users can switch to any Group/Team to see the assets, flows, etc. at that level. The access rights depend on the role of the user.
+
+- **Group** - each tenant/client can have multiple groups or sub-accounts. A group/sub-account represents a specific department or line of business within an organization. Groups and Teams are required to administer a set of users grouped by their function within the organization. Users at the Group-level have access only to the assets created at that group-level. However, users at the group-level can switch down to the Team-level to see the assets of the teams within that group. The access rights depend on the role of the user.
+
+- **Team** - a sub-account can contain multiple teams which in-turn contain team members. Users at the team-level have access only to the assets created at the team-level. They cannot see and access assets at other Team-levels or at its parent Group-level. The access rights depend on the role of the user.
+
+The following diagram illustrates the hierarchy of users within Webex Connect.
+
+
+
+![Hierarchy of users within Webex Connect](https://files.readme.io/2557749-Account_Hierarchy_-_Client_Groups_Teams.png)
+
+
+
+
+> 📘 User Role and Workspace
+> 
+> Any user on the platform can be attached to only one of the 3 levels within the hierarchy and has appropriate access rights based on the user role.
+
+For example, let us consider a large retail bank. A user who represents the whole bank is the owner. Multiple divisions within the bank like Loans Division, Insurance Division, etc. can be the groups. Various departments like Security, Legal, Marketing, etc. can be the teams. Users are the unique IDs against which login credentials are created.
+
+> 🚧 Switch View
+> 
+> A user with Client-level access can switch to any Group or Team level using the switch view function available in the user management menu. Likewise, a Group Level user can switch to the Team level view of any of the Teams within that Group.
+
+> 📘 Note
+> 
+> All the SFTP configurations, including Group and Team-level ones will be shown at tenant level.
+
+Here's how Client, Group and Team hierarchy applies to some key platform capabilities:
+
+| Asset Type                                     | Provisioned from / Configured at   | Can be edited from?                                                                                     | Can be accessed/used from?                                            | Can it be shared with other Groups, Teams? If yes, how?            |
+| :--------------------------------------------- | :--------------------------------- | :------------------------------------------------------------------------------------------------------ | :-------------------------------------------------------------------- | :----------------------------------------------------------------- |
+| Number - Long  Code / Short Code               | Client-level                       | Client-level                                                                                            | Only Client-level                                                     | No. Numbers cannot be shared across group or teams.                |
+| Number - Long  Code / Short Code               | Team-level                         | Concerned Team (where the asset was provisioned) and the Group that Team is part of.                    | Concerned Team and the Group it is a part of.                         |                                                                    |
+| Templates                                      | Any level (Client, Group, or Team) | Any Level. E.g., Template configured at the client level can be edited from within a Group and/or Team. | Any level                                                             | Yes, templates are shared across levels by default.                |
+| Custom Node Integration                        | Client-level                       | Client-level                                                                                            | Any level                                                             | Yes, Custom Node integrations are shared across levels by default. |
+| Custom Node Integration                        | Group-level                        | Client-level and the concerned group in which the Custom Node is created.                               | Any level                                                             | Yes, Custom Node integrations are shared across levels by default. |
+| QnA and Task Bots configured using Bot Builder | Client-level                       | Client-level                                                                                            | Client-level                                                          | No                                                                 |
+| QnA and Task Bots configured using Bot Builder | Group-level                        | Concerned Group (whose user configured the bot) and the Client-level.                                   | Concerned Group (whose user configured the bot) and the Client-level. | No                                                                 |
+
+Please note that the following product features work at a tenant level and group and team segregation is not applied to them:
+
+- **Smart Links** - All Smart Link configurations whether done at the Client, or Group or Team-level are accessible across all team spaces.
+- **Templates** - Messaging Templates configurations done at any of the team spaces (Client, Group, or Team level) will be accessible across all spaces. Users can Lock their Templates post configurations to avoid changes being done by other users accidentally.
+- **Logbooks** - Logbook configurations too work across team spaces. Users can Lock their logbook configurations to restrict unauthorised edits to the logbook schema by other users. 
+- **Media Manager** - Files stores in Media Manager are accessible to users across client, group and team-level.
+- **Usage Reports** - Details of usage for various platform capabilities including channel and flow executions are available for the entire tenant within Usage section.
+- **Profile** - There is a single customer profile store available for usage by users across all team spaces.
+- **Contact Policy** - Contact Policy module is centralised for a unified/central contact policy application across all teams and groups. You can create specific consent groups for team specific needs though they will be accessible for use across the tenant.
+
+> 🚧 Sharing of Assets
+> 
+> The process of disabling asset sharing with teams continues even after the asset is no longer shared with the team.
+
+> ❗️ Deletion of shared apps
+> 
+> When deleting a shared App from a Group/Team, the App is deleted from everywhere, including the main Group/Team where the App was created.

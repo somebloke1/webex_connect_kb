@@ -1,0 +1,35 @@
+{
+  "category": "WEBEX CONNECT SANDBOX",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd81825789f",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "37349e2d9958aa5c2da4362edd833601d3f24f0213210fd8dcb2d293b9a39987",
+    "source_path": "0f25ccadc8dfede1d1d729c5018ce9682d499fa30a0c9c3e5f231d17abd7fc34",
+    "text_path": "59ba56b3255cea8b54854c1d649d73d45d39985d47a250621bf58a9d8d86d384"
+  },
+  "headings": [
+    "Developer Community",
+    "Webex Connect Sandbox Status",
+    "Key Resources"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/support-for-sandbox-users.md",
+  "resolved_url": "https://help.webexconnect.io/docs/support-for-sandbox-users",
+  "retrieved_at": "2026-09-08T23:28:48+00:00",
+  "sha256_html_response": "ae8497ffc46dae574ddbb5cbfa37e609ac5949ffaa2907265087fabd39ad5e38",
+  "sha256_source_body": "0f25ccadc8dfede1d1d729c5018ce9682d499fa30a0c9c3e5f231d17abd7fc34",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/support-for-sandbox-users.source.md",
+  "source_updated_at": "2025-09-29T00:52:25.553Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/support-for-sandbox-users.txt",
+  "title": "Support for Sandbox Users",
+  "url": "https://help.webexconnect.io/docs/support-for-sandbox-users",
+  "word_count": 179,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/support-for-sandbox-users.metadata.json"
+}

@@ -1,0 +1,41 @@
+{
+  "category": "SERVICES & FLOWS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257841",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "2155fb38104358ddc181cccef08c4360b8f2af7a55e27cd4c1d69cfd14b2760f",
+    "source_path": "20662731ff6eea501df910be88224ea834a02a0721c0aad6b338565c0f06df1a",
+    "text_path": "d8a4245e18e1263a87ede047bf9ac0706572404cc4a6ec1606bb54eb60530758"
+  },
+  "headings": [
+    "📘Automatic fallback to an alternate TTS Provider",
+    "Node Configuration",
+    "Configuring DTMF Input",
+    "Input Variables",
+    "Configuring Speech Recognition:",
+    "📘Note",
+    "Output Variables",
+    "Node Outcomes",
+    "Transition Actions"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/collect-input-node.md",
+  "resolved_url": "https://help.webexconnect.io/docs/collect-input-node",
+  "retrieved_at": "2026-09-08T23:28:55+00:00",
+  "sha256_html_response": "cf93c20b4c5d76a05df5f9de985c990faa9d14a3fb45ed1ccb7cd2b257bae16f",
+  "sha256_source_body": "20662731ff6eea501df910be88224ea834a02a0721c0aad6b338565c0f06df1a",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/collect-input-node.source.md",
+  "source_updated_at": "2026-03-27T08:09:56.320Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/collect-input-node.txt",
+  "title": "Collect Input Node",
+  "url": "https://help.webexconnect.io/docs/collect-input-node",
+  "word_count": 965,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/collect-input-node.metadata.json"
+}

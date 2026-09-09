@@ -1,0 +1,34 @@
+{
+  "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd81825799d",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "68dace1b0d08464b321df1331e1a3f33e5e313343cf5fd1c775c09a782f635b6",
+    "source_path": "7f975c29aa78912f9c8a425c44f729ade0ffec424755ecde5e4a1c5f8a82a59a",
+    "text_path": "d38b1fa5afd3941f227ed928f86dbfe936d708d51662e2a793a3e0a158f4dfa5"
+  },
+  "headings": [
+    "Change your display name",
+    "📘Display Name review required for increasing Messaging Limit."
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/wxcc-how-to-change-your-whatsapp-business-display-name.md",
+  "resolved_url": "https://help.webexconnect.io/docs/wxcc-how-to-change-your-whatsapp-business-display-name",
+  "retrieved_at": "2026-09-08T23:29:13+00:00",
+  "sha256_html_response": "e50da9a3863473882422df0370bc095cb1084642d7a14eb06598c5cf658f0591",
+  "sha256_source_body": "7f975c29aa78912f9c8a425c44f729ade0ffec424755ecde5e4a1c5f8a82a59a",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/wxcc-how-to-change-your-whatsapp-business-display-name.source.md",
+  "source_updated_at": "2026-04-14T07:23:49.417Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/wxcc-how-to-change-your-whatsapp-business-display-name.txt",
+  "title": "How to Change Your WhatsApp Business Display Name - WXCC",
+  "url": "https://help.webexconnect.io/docs/wxcc-how-to-change-your-whatsapp-business-display-name",
+  "word_count": 303,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/wxcc-how-to-change-your-whatsapp-business-display-name.metadata.json"
+}

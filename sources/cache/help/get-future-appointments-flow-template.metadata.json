@@ -1,0 +1,43 @@
+{
+  "category": "PreBUILT Integrations",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182579a8",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "8f2e3a2f3cc8c094706656a46eb7a4d1045fb21261930b3019537e39b2070672",
+    "source_path": "83d93c7c6d5ca82a3151da1f708267f8f6151859a9987d8382ce37b077f00ba2",
+    "text_path": "a4968e2a284ca598d3d11deae6087d5a19c0e2df299397c456125b40f00f0901"
+  },
+  "headings": [
+    "Overview",
+    "Pre-requisites",
+    "User Roles",
+    "Node Breakdown",
+    "Input & Output Variables",
+    "Input Variables (Configure AI Agent Event)",
+    "Output Variables",
+    "Error Handling",
+    "Script Analysis",
+    "Trim Result Set Script",
+    "Evaluate Script"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/get-future-appointments-flow-template.md",
+  "resolved_url": "https://help.webexconnect.io/docs/get-future-appointments-flow-template",
+  "retrieved_at": "2026-09-08T23:28:44+00:00",
+  "sha256_html_response": "ea544d6c26e35d3a622600e5dd24e8b8e9b592f4f5f272c286b5f9e5610ab5f3",
+  "sha256_source_body": "83d93c7c6d5ca82a3151da1f708267f8f6151859a9987d8382ce37b077f00ba2",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/get-future-appointments-flow-template.source.md",
+  "source_updated_at": "2026-07-23T07:50:01.684Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/get-future-appointments-flow-template.txt",
+  "title": "Get Future Appointments Flow Template",
+  "url": "https://help.webexconnect.io/docs/get-future-appointments-flow-template",
+  "word_count": 454,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/get-future-appointments-flow-template.metadata.json"
+}

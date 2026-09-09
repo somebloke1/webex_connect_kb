@@ -1,0 +1,36 @@
+{
+  "api_metadata_path": "sources/cache/developer/whatsapp-list-messages.api.json",
+  "category": "MULTI CHANNEL COMMUNICATION API",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f662c",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "1a67c5a421c65646c6b8521b63f02da6742b98ca2b7b72a821a9070fe8d31808",
+    "source_path": "953acbd4ed990585268e52328763e38266634bfb64604a008823f667938ace0f",
+    "text_path": "767694466db2f83cb6f80e14552d6017a0812e4a3118f11935d59d994ddde404"
+  },
+  "headings": [
+    "Error Codes"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/whatsapp-list-messages.md",
+  "openapi_path": "sources/cache/openapi/d5d948ca76224fd5128ac7857b328828ed45af67c1fca8c82fbb69bcd8c2bbbd.json",
+  "resolved_url": "https://developers.webexconnect.io/reference/whatsapp-list-messages",
+  "retrieved_at": "2026-09-08T23:31:43+00:00",
+  "sha256_api_metadata": "8b043c35b0d01c3fb0cdc20a7afe59e528d593d77e617eb4744f861918183ef6",
+  "sha256_html_response": "cc2c94395d6722a45a0602afc4b4fb3a51e31791dd93fe2e7662c17f2dab6911",
+  "sha256_openapi": "d5d948ca76224fd5128ac7857b328828ed45af67c1fca8c82fbb69bcd8c2bbbd",
+  "sha256_source_body": "953acbd4ed990585268e52328763e38266634bfb64604a008823f667938ace0f",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/whatsapp-list-messages.source.md",
+  "source_updated_at": "2026-05-12T12:33:58.704Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/whatsapp-list-messages.txt",
+  "title": "WhatsApp List Messages",
+  "url": "https://developers.webexconnect.io/reference/whatsapp-list-messages",
+  "word_count": 1847,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/developer/whatsapp-list-messages.metadata.json"
+}

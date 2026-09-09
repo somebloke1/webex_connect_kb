@@ -1,0 +1,70 @@
+With the v5.6.0 release, Webex Connect supports the ability to control the user access permissions to the advanced reporting (Embedded BI logbook reports) by the tenant owner. With this update, the tenant owner can provide view-only access and edit reports access to the advanced reports to other users in the tenant.
+
+## ❗️
+Important
+
+- Advanced reporting is an add-on feature, and it needs to be enabled before you can start seeing the details. Please reach out to your account manager if you would like to enable this feature for your tenant.
+
+- The Logbooks for Business Intelligence (BI) reporting feature is not supported on the Azure environment.
+
+## 📘
+Logbooks for BI Reporting
+
+Embedded BI (that allows you to use Logbooks Data for building custom use-case relevant reports) is a paid add-on and the option to enable logbooks for BI reporting checkbox will be visible only if this feature has been enabled for your tenant. This feature is currently in Beta. Please reach out to your account manager if you would like to subscribe to this feature.
+
+When users set up logbooks, there is an option to enable logbooks for Business Intelligence (BI) reporting. This needs to be checked if you wish to utilize this logbook for capturing data for building custom reports using Embedded BI. When enabled, a copy of this logbook will be loaded in Webex Connect AWS S3 along with the following extra columns:
+
+- clientid
+
+- serviceid
+
+- flowid
+
+- flow versionid
+
+- transid
+
+- sourcetransid.
+
+ [Image: Screenshot displaying the option to Enable logbook for BI reporting] 
+Screenshot displaying the option to Enable logbook for BI Reporting
+
+When you enable a logbook for BI reporting, the File Destination is disabled by default. You can enable it using the toggle button.
+
+ [Image: Screenshot displaying the option to Enable FiIe Destination] 
+Screenshot displaying the option to Enable File Destination
+
+Once a logbook is enabled for BI reporting, there will be a label “BI Reporting Enabled” next to the logbook name at all the places where logbooks are shown.
+
+ [Image: Interface showing the 'BI Reporting Enabled' label] 
+Screenshot displaying the label BI Reporting Enabled
+
+When you add logbooks in a flow, you can distinguish a logbook enabled for BI reporting with the same badge. You can also use the BI reporting enabled logbooks in Transition Actions for any node within the flow by specifying the required attributes.
+
+Enabling the logbook for BI reporting will load the logbook data to an AWS S3 location. Hence, when any flow that has a BI reporting enabled logbook attached to it is executed, the logbooks get stored on an AWS S3 bucket in a CSV format. As mentioned above, this feature is currently in Beta and the process of enabling this feature for a new/updated logbook involves some data configuration to be done by the professional services for report creation.
+
+## 📘
+Accessing Reports built using Embedded BI Feature
+
+To view logbook reports which are built using this feature, the specific user should be provided access by the Webex Connect admin.
+
+## 
+
+Logbook Usage
+
+Logbook Usage section is added to provide the users with necessary information like the number of Items, Total Files Generated, Total File Size, and Number of Records. The logbook usage report is a monthly report which is generated at the end of the month. The Logbook Usage section can be further expanded to display the details of the various logbooks configured across services.
+
+Logbook Usage is further divided into two sections:
+
+- 
+
+Logbooks: Shows the usage reports of all the logbooks generated.
+
+- 
+
+Logbooks-enabled for BI Reporting: Shows the usage reports of the logbooks for the tenants who have BI Reporting enabled. It is a premium feature. Please reach out to your account manager if you would like to use it. 
+
+ [Image: Screenshot of Usage Reports] 
+Screenshot of Usage Reports
+
+When the Embedded BI (i.e. custom reporting using Logbooks data) feature is enabled for a tenant, Logbooks - Enabled for BI Reporting line item/row is shown in the usage report/usage XLS report and shows logbook wise usage. When collapsed, the total sum of all the logbooks will be shown.

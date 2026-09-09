@@ -1,0 +1,1844 @@
+{
+  "schema_version": 1,
+  "sample_key": "gallery-logistics",
+  "title": "LogisticsParcelNotifications",
+  "observed_at": "2026-09-08T23:56:52.097Z",
+  "source_path": "evidence/sample-flows/observed/gallery-logistics.json",
+  "source_sha256": "48e9abc02faf3b184d3e29bb4c518637b976885a5e08f94cc2053ef0079f33f5",
+  "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model",
+  "runtime_tested": false,
+  "status": "observed_canvas_relationships_summarized",
+  "format_warning": "Internal loaded-canvas model observations only; not a public import schema. Event internal names and visible labels are recorded separately. Dynamic script behavior and missing canvas pages are not inferred.",
+  "counts": {
+    "cells": 59,
+    "operative_nodes": 16,
+    "explicit_edges": 16,
+    "terminal_bindings": 26,
+    "variable_references": 45
+  },
+  "start_configuration": {
+    "channel": 14,
+    "type": "channel",
+    "subtype": "webhook",
+    "extras": {},
+    "eventid": "",
+    "v2EventId": ""
+  },
+  "nodes": [
+    {
+      "id": "2",
+      "label": "Invoke Parcel Notification Flow",
+      "type_internal": "start",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "onbegin",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "selectedChannel": {
+          "id": 14,
+          "name": "Webhook",
+          "description": "Webhook",
+          "type": 3,
+          "extraData": {},
+          "subType": "webhook"
+        },
+        "selectedRuleEvent": {
+          "name": "",
+          "id": "",
+          "v2EventId": ""
+        },
+        "webHookData": {
+          "conditionData": [],
+          "jsonData": "",
+          "isAuthRequired": false,
+          "isExistingWebHook": false,
+          "name": "",
+          "jsonSource": "",
+          "parseOutput": [],
+          "v2EventId": "",
+          "selectedEvent": "",
+          "url": "",
+          "xmlData": ""
+        },
+        "isKeyWordDisabled": true,
+        "isKeyWordVerifyReq": true,
+        "isKeyWordAvailable": true,
+        "output_variables": [
+          "inboundWebhook.timestamp",
+          "inboundWebhook.transId",
+          "inboundWebhook.payload",
+          "inboundWebhook.phoneNumber",
+          "inboundWebhook.delievryTime",
+          "inboundWebhook.deliveryDate",
+          "inboundWebhook.customerName",
+          "inboundWebhook.parcelID"
+        ],
+        "conditionData": [
+          {
+            "defaultvalue": "",
+            "mandatory": false,
+            "var_name": "phoneNumber",
+            "datatype": "string",
+            "channel_id": 14,
+            "event_id": "",
+            "eventname": "Two-way Parcel Notifications"
+          },
+          {
+            "defaultvalue": "",
+            "mandatory": false,
+            "var_name": "delievryTime",
+            "datatype": "string",
+            "channel_id": 14,
+            "event_id": "",
+            "eventname": "Two-way Parcel Notifications"
+          },
+          {
+            "defaultvalue": "",
+            "mandatory": false,
+            "var_name": "deliveryDate",
+            "datatype": "string",
+            "channel_id": 14,
+            "event_id": "",
+            "eventname": "Two-way Parcel Notifications"
+          },
+          {
+            "defaultvalue": "",
+            "mandatory": false,
+            "var_name": "customerName",
+            "datatype": "string",
+            "channel_id": 14,
+            "event_id": "",
+            "eventname": "Two-way Parcel Notifications"
+          },
+          {
+            "defaultvalue": "",
+            "mandatory": false,
+            "var_name": "parcelID",
+            "datatype": "string",
+            "channel_id": 14,
+            "event_id": "",
+            "eventname": "Two-way Parcel Notifications"
+          }
+        ]
+      },
+      "transition_actions": [],
+      "declared_outputs": [
+        "inboundWebhook.timestamp",
+        "inboundWebhook.transId",
+        "inboundWebhook.payload",
+        "inboundWebhook.phoneNumber",
+        "inboundWebhook.delievryTime",
+        "inboundWebhook.deliveryDate",
+        "inboundWebhook.customerName",
+        "inboundWebhook.parcelID"
+      ],
+      "output_mappings": []
+    },
+    {
+      "id": "3",
+      "label": "Send Upcoming Delivery Alert",
+      "type_internal": "umppublic",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "onerror",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "hideWaitFor": false,
+        "messagetype": 1,
+        "message": "Dear $(n2.inboundWebhook.customerName), Your parcel (reference id: $(n2.inboundWebhook.parcelID)) will be delievered by $(n2.inboundWebhook.delievryTime) on $(n2.inboundWebhook.deliveryDate). Reply within next 24 hours with CANCEL if you'd like to cancel the delivery or with CHANGE if you'd like to change the delivery address.",
+        "channelId": 1,
+        "senderidViewFlag": false,
+        "deliverychannel": "SMS",
+        "destination": "$(n2.inboundWebhook.phoneNumber)",
+        "destinationType": "msisdn",
+        "successoutcome": 1,
+        "linkValidityCheck": false,
+        "viewmodeData": [
+          {
+            "name": "senderid",
+            "value": 447520632736
+          },
+          {
+            "name": "shortLinkId",
+            "value": ""
+          }
+        ]
+      },
+      "transition_actions": [],
+      "declared_outputs": [],
+      "output_mappings": []
+    },
+    {
+      "id": "4",
+      "label": "Wait for customer response",
+      "type_internal": "receive",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "ontimeout",
+          "declared_target_count": 1
+        },
+        {
+          "event_internal": "onerror",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "timeout": 86400,
+        "senderidViewFlag": false,
+        "read_receipts": false,
+        "output_variables": [
+          "sms.keyword",
+          "sms.serviceNumber",
+          "sms.message",
+          "sms.timestamp",
+          "sms.transId",
+          "sms.senderNumber"
+        ]
+      },
+      "transition_actions": [],
+      "declared_outputs": [
+        {
+          "SMS - Incoming message": [
+            "sms.keyword",
+            "sms.serviceNumber",
+            "sms.message",
+            "sms.timestamp",
+            "sms.transId",
+            "sms.senderNumber"
+          ]
+        }
+      ],
+      "output_mappings": []
+    },
+    {
+      "id": "5",
+      "label": "Branch as per customer response",
+      "type_internal": "evaluate",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "onerror",
+          "declared_target_count": null
+        }
+      ],
+      "configuration": {
+        "evaluteIsOptimization": true,
+        "outcomes": [
+          {
+            "outcome": "CANCEL",
+            "order": "",
+            "open": false,
+            "isEditOn": false,
+            "tempVal": "CANCEL",
+            "conditions": [
+              {
+                "pills": [],
+                "varaible": "$(n4.receive.message)",
+                "condition": "equalsIg",
+                "value": "cancel",
+                "operation": "",
+                "index": "6fjwp2ec"
+              }
+            ],
+            "index": "bpnctumb"
+          },
+          {
+            "outcome": "CHANGE",
+            "order": "",
+            "open": true,
+            "isEditOn": false,
+            "tempVal": "CHANGE",
+            "conditions": [
+              {
+                "pills": [],
+                "varaible": "$(n4.receive.message)",
+                "condition": "equalsIg",
+                "value": "change",
+                "operation": "",
+                "index": "dxxyb8at"
+              }
+            ],
+            "index": "yo2n1qa4"
+          }
+        ],
+        "allConditionsFail": "None of the above",
+        "expression": "if(\"$(n4.receive.message)\" .toUpperCase()===\"cancel\".toUpperCase()){'CANCEL';}else if(\"$(n4.receive.message)\" .toUpperCase()===\"change\".toUpperCase()){'CHANGE';}else{'None of the above';}",
+        "counter": 3,
+        "successEvents": [
+          "CANCEL",
+          "CHANGE",
+          "None of the above"
+        ]
+      },
+      "transition_actions": [],
+      "declared_outputs": [],
+      "output_mappings": []
+    },
+    {
+      "id": "6",
+      "label": "Send SMS",
+      "type_internal": "umppublic",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "onerror",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "hideWaitFor": false,
+        "messagetype": 1,
+        "message": "Thanks for confirming. The delivery for parcel id: $(n2.inboundWebhook.parcelID) has been cancelled.",
+        "channelId": 1,
+        "senderidViewFlag": false,
+        "deliverychannel": "SMS",
+        "destination": "$(n2.inboundWebhook.phoneNumber)",
+        "destinationType": "msisdn",
+        "successoutcome": 1,
+        "linkValidityCheck": false,
+        "viewmodeData": [
+          {
+            "name": "senderid",
+            "value": 447520632736
+          },
+          {
+            "name": "shortLinkId",
+            "value": ""
+          }
+        ]
+      },
+      "transition_actions": [],
+      "declared_outputs": [],
+      "output_mappings": []
+    },
+    {
+      "id": "7",
+      "label": "Invalid Customer Response",
+      "type_internal": "umppublic",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "onerror",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "hideWaitFor": false,
+        "messagetype": 1,
+        "message": "Sorry, that's an invalid response. Please call our customer service helpline for further assistance.",
+        "channelId": 1,
+        "senderidViewFlag": false,
+        "deliverychannel": "SMS",
+        "destination": "$(n2.inboundWebhook.phoneNumber)",
+        "destinationType": "msisdn",
+        "successoutcome": 1,
+        "linkValidityCheck": false,
+        "viewmodeData": [
+          {
+            "name": "senderid",
+            "value": 447520632736
+          },
+          {
+            "name": "shortLinkId",
+            "value": ""
+          }
+        ]
+      },
+      "transition_actions": [],
+      "declared_outputs": [],
+      "output_mappings": []
+    },
+    {
+      "id": "9",
+      "label": "Ask new delivery address",
+      "type_internal": "umppublic",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "onerror",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "hideWaitFor": false,
+        "messagetype": 1,
+        "message": "Thanks for your response. Please respond with the updated delivery address.",
+        "channelId": 1,
+        "senderidViewFlag": false,
+        "deliverychannel": "SMS",
+        "destination": "$(n2.inboundWebhook.phoneNumber)",
+        "destinationType": "msisdn",
+        "successoutcome": 1,
+        "linkValidityCheck": false,
+        "viewmodeData": [
+          {
+            "name": "senderid",
+            "value": 447520632736
+          },
+          {
+            "name": "shortLinkId",
+            "value": ""
+          }
+        ]
+      },
+      "transition_actions": [],
+      "declared_outputs": [],
+      "output_mappings": []
+    },
+    {
+      "id": "15",
+      "label": "Call API to Cancel Delivery",
+      "type_internal": "http",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "oncomplete",
+          "declared_target_count": 1
+        },
+        {
+          "event_internal": "onerror",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "method": "post",
+        "url": "https://example.invalid",
+        "body": {
+          "parcelID": "$(n2.inboundWebhook.parcelID)"
+        },
+        "connctiontimeout": 10000,
+        "requesttimeout": 10000
+      },
+      "transition_actions": [],
+      "declared_outputs": [],
+      "output_mappings": []
+    },
+    {
+      "id": "31",
+      "label": "Wait for updated address",
+      "type_internal": "receive",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "ontimeout",
+          "declared_target_count": 1
+        },
+        {
+          "event_internal": "onerror",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "timeout": 3600,
+        "senderidViewFlag": false,
+        "read_receipts": false
+      },
+      "transition_actions": [],
+      "declared_outputs": [],
+      "output_mappings": []
+    },
+    {
+      "id": "33",
+      "label": "Confirm delivery address",
+      "type_internal": "umppublic",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "onerror",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "hideWaitFor": false,
+        "messagetype": 1,
+        "message": "Your updated address has been captured as: '$(n31.receive.message)'. Please reply with YES to confirm or else reply with RETRY to submit the address again.",
+        "channelId": 1,
+        "senderidViewFlag": false,
+        "deliverychannel": "SMS",
+        "destination": "$(n2.inboundWebhook.phoneNumber)",
+        "destinationType": "msisdn",
+        "successoutcome": 1,
+        "linkValidityCheck": false,
+        "viewmodeData": [
+          {
+            "name": "senderid",
+            "value": 447520632736
+          },
+          {
+            "name": "shortLinkId",
+            "value": ""
+          }
+        ]
+      },
+      "transition_actions": [],
+      "declared_outputs": [],
+      "output_mappings": []
+    },
+    {
+      "id": "36",
+      "label": "Wait for updated address",
+      "type_internal": "receive",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "ontimeout",
+          "declared_target_count": 1
+        },
+        {
+          "event_internal": "onerror",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "timeout": 3600,
+        "senderidViewFlag": false,
+        "read_receipts": false,
+        "output_variables": [
+          "sms.keyword",
+          "sms.serviceNumber",
+          "sms.message",
+          "sms.timestamp",
+          "sms.transId",
+          "sms.senderNumber"
+        ]
+      },
+      "transition_actions": [],
+      "declared_outputs": [
+        {
+          "SMS - Incoming message": [
+            "sms.keyword",
+            "sms.serviceNumber",
+            "sms.message",
+            "sms.timestamp",
+            "sms.transId",
+            "sms.senderNumber"
+          ]
+        }
+      ],
+      "output_mappings": []
+    },
+    {
+      "id": "38",
+      "label": "Branch as per customer response",
+      "type_internal": "evaluate",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "onerror",
+          "declared_target_count": null
+        }
+      ],
+      "configuration": {
+        "evaluteIsOptimization": true,
+        "outcomes": [
+          {
+            "outcome": "YES",
+            "order": "",
+            "open": false,
+            "isEditOn": false,
+            "tempVal": "YES",
+            "conditions": [
+              {
+                "pills": [],
+                "varaible": "$(n36.receive.message)",
+                "condition": "equalsIg",
+                "value": "yes",
+                "operation": "",
+                "index": "6fjwp2ec"
+              }
+            ],
+            "index": "bpnctumb"
+          },
+          {
+            "outcome": "RETRY",
+            "order": "",
+            "open": true,
+            "isEditOn": false,
+            "tempVal": "RETRY",
+            "conditions": [
+              {
+                "pills": [],
+                "varaible": "$(n36.receive.message)",
+                "condition": "equalsIg",
+                "value": "retry",
+                "operation": "",
+                "index": "dxxyb8at"
+              }
+            ],
+            "index": "yo2n1qa4"
+          }
+        ],
+        "allConditionsFail": "None of the above",
+        "expression": "if(\"$(n36.receive.message)\" .toUpperCase()===\"yes\".toUpperCase()){'YES';}else if(\"$(n36.receive.message)\" .toUpperCase()===\"retry\".toUpperCase()){'RETRY';}else{'None of the above';}",
+        "counter": 3,
+        "successEvents": [
+          "YES",
+          "RETRY",
+          "None of the above"
+        ]
+      },
+      "transition_actions": [],
+      "declared_outputs": [],
+      "output_mappings": []
+    },
+    {
+      "id": "41",
+      "label": "Call API to Change Address",
+      "type_internal": "http",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "oncomplete",
+          "declared_target_count": 1
+        },
+        {
+          "event_internal": "onerror",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "method": "post",
+        "url": "https://example.invalid",
+        "body": {
+          "parcelID": "$(n2.inboundWebhook.parcelID)",
+          "newAddress": "$(n36.receive.message)"
+        },
+        "connctiontimeout": 10000,
+        "requesttimeout": 10000
+      },
+      "transition_actions": [],
+      "declared_outputs": [],
+      "output_mappings": []
+    },
+    {
+      "id": "46",
+      "label": "Send SMS",
+      "type_internal": "umppublic",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "onerror",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "hideWaitFor": false,
+        "messagetype": 1,
+        "message": "Thanks for confirming. The delivery address has been updated successfully.",
+        "channelId": 1,
+        "senderidViewFlag": false,
+        "deliverychannel": "SMS",
+        "destination": "$(n2.inboundWebhook.phoneNumber)",
+        "destinationType": "msisdn",
+        "successoutcome": 1,
+        "linkValidityCheck": false,
+        "viewmodeData": [
+          {
+            "name": "senderid",
+            "value": 447520632736
+          },
+          {
+            "name": "shortLinkId",
+            "value": ""
+          }
+        ]
+      },
+      "transition_actions": [],
+      "declared_outputs": [],
+      "output_mappings": []
+    },
+    {
+      "id": "59",
+      "label": "Error message",
+      "type_internal": "umppublic",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "onerror",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "hideWaitFor": false,
+        "messagetype": 1,
+        "message": "Apologies, your delivery could not be cancelled due to some technical error. Please call our customer service helpline for further assistance.",
+        "channelId": 1,
+        "senderidViewFlag": false,
+        "deliverychannel": "SMS",
+        "destination": "$(n2.inboundWebhook.phoneNumber)",
+        "destinationType": "msisdn",
+        "successoutcome": 1,
+        "linkValidityCheck": false,
+        "viewmodeData": [
+          {
+            "name": "senderid",
+            "value": 447520632736
+          },
+          {
+            "name": "shortLinkId",
+            "value": ""
+          }
+        ]
+      },
+      "transition_actions": [],
+      "declared_outputs": [],
+      "output_mappings": []
+    },
+    {
+      "id": "66",
+      "label": "Error message",
+      "type_internal": "umppublic",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "onerror",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "hideWaitFor": false,
+        "messagetype": 1,
+        "message": "Apologies, your delivery address could not be updated due to some technical error. Please call our customer service helpline for further assistance.",
+        "channelId": 1,
+        "senderidViewFlag": false,
+        "deliverychannel": "SMS",
+        "destination": "$(n2.inboundWebhook.phoneNumber)",
+        "destinationType": "msisdn",
+        "successoutcome": 1,
+        "linkValidityCheck": false,
+        "viewmodeData": [
+          {
+            "name": "senderid",
+            "value": 447520632736
+          },
+          {
+            "name": "shortLinkId",
+            "value": ""
+          }
+        ]
+      },
+      "transition_actions": [],
+      "declared_outputs": [],
+      "output_mappings": []
+    }
+  ],
+  "edges": [
+    {
+      "id": "5128003",
+      "source": "2",
+      "target": "3",
+      "event_internal": "onbegin",
+      "event_label": "onBegin",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128011",
+      "source": "3",
+      "target": "4",
+      "event_internal": "onsuccess",
+      "event_label": "onSuccess",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128025",
+      "source": "4",
+      "target": "5",
+      "event_internal": "sms.mo",
+      "event_label": "",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128037",
+      "source": "5",
+      "target": "7",
+      "event_internal": "None of the above",
+      "event_label": "None of the above",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128085",
+      "source": "5",
+      "target": "9",
+      "event_internal": "CHANGE",
+      "event_label": "CHANGE",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128165",
+      "source": "9",
+      "target": "31",
+      "event_internal": "onsuccess",
+      "event_label": "onSuccess",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128170",
+      "source": "31",
+      "target": "33",
+      "event_internal": "sms.mo",
+      "event_label": "",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128184",
+      "source": "33",
+      "target": "36",
+      "event_internal": "onsuccess",
+      "event_label": "onSuccess",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128190",
+      "source": "36",
+      "target": "38",
+      "event_internal": "sms.mo",
+      "event_label": "",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128201",
+      "source": "38",
+      "target": "9",
+      "event_internal": "RETRY",
+      "event_label": "RETRY",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128211",
+      "source": "38",
+      "target": "41",
+      "event_internal": "YES",
+      "event_label": "YES",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128223",
+      "source": "41",
+      "target": "46",
+      "event_internal": "oncomplete",
+      "event_label": "onSuccess",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128234",
+      "source": "5",
+      "target": "15",
+      "event_internal": "CANCEL",
+      "event_label": "CANCEL",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128236",
+      "source": "15",
+      "target": "6",
+      "event_internal": "oncomplete",
+      "event_label": "onSuccess",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128259",
+      "source": "15",
+      "target": "59",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128283",
+      "source": "41",
+      "target": "66",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "representation": "explicit_edge"
+    }
+  ],
+  "terminal_bindings": [
+    {
+      "id": "10",
+      "source": "3",
+      "target": "10",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": null,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "11",
+      "source": "36",
+      "target": "11",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": null,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 3
+    },
+    {
+      "id": "13",
+      "source": "3",
+      "target": "13",
+      "event_internal": "onpolicyfail",
+      "event_label": "onPolicyFail",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": null,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "17",
+      "source": "46",
+      "target": "17",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": null,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 2
+    },
+    {
+      "id": "19",
+      "source": "46",
+      "target": "19",
+      "event_internal": "onpolicyfail",
+      "event_label": "onPolicyFail",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": null,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 2
+    },
+    {
+      "id": "32",
+      "source": "36",
+      "target": "32",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": null,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 3
+    },
+    {
+      "id": "37",
+      "source": "36",
+      "target": "37",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": null,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 3
+    },
+    {
+      "id": "49",
+      "source": "46",
+      "target": "49",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": null,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 2
+    },
+    {
+      "id": "50",
+      "source": "46",
+      "target": "50",
+      "event_internal": "onpolicyfail",
+      "event_label": "onPolicyFail",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": null,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 2
+    },
+    {
+      "id": "53",
+      "source": "46",
+      "target": "53",
+      "event_internal": "onsuccess",
+      "event_label": "onSuccess",
+      "outcome_id": 2,
+      "outcome_name": "Success",
+      "outcome_description": "Successfully completed flow",
+      "session_retry": "",
+      "async_check": null,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "56",
+      "source": "6",
+      "target": "56",
+      "event_internal": "onsuccess",
+      "event_label": "onSuccess",
+      "outcome_id": 2,
+      "outcome_name": "Success",
+      "outcome_description": "Successfully completed flow",
+      "session_retry": "",
+      "async_check": null,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "60",
+      "source": "66",
+      "target": "60",
+      "event_internal": "onsuccess",
+      "event_label": "onSuccess",
+      "outcome_id": 2,
+      "outcome_name": "Success",
+      "outcome_description": "Successfully completed flow",
+      "session_retry": "",
+      "async_check": null,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 2
+    },
+    {
+      "id": "62",
+      "source": "66",
+      "target": "62",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": null,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 2
+    },
+    {
+      "id": "65",
+      "source": "66",
+      "target": "65",
+      "event_internal": "onpolicyfail",
+      "event_label": "onPolicyFail",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": null,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 2
+    },
+    {
+      "id": "70",
+      "source": "66",
+      "target": "70",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": null,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 2
+    },
+    {
+      "id": "71",
+      "source": "66",
+      "target": "71",
+      "event_internal": "onpolicyfail",
+      "event_label": "onPolicyFail",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": null,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 2
+    },
+    {
+      "id": "72",
+      "source": "66",
+      "target": "72",
+      "event_internal": "onsuccess",
+      "event_label": "onSuccess",
+      "outcome_id": 2,
+      "outcome_name": "Success",
+      "outcome_description": "Successfully completed flow",
+      "session_retry": "",
+      "async_check": null,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 2
+    },
+    {
+      "id": "73",
+      "source": "7",
+      "target": "73",
+      "event_internal": "onsuccess",
+      "event_label": "onSuccess",
+      "outcome_id": 2,
+      "outcome_name": "Success",
+      "outcome_description": "Successfully completed flow",
+      "session_retry": "",
+      "async_check": null,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "75",
+      "source": "7",
+      "target": "75",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": null,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "78",
+      "source": "7",
+      "target": "78",
+      "event_internal": "onpolicyfail",
+      "event_label": "onPolicyFail",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": null,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "80",
+      "source": "5",
+      "target": "80",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": null,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "81",
+      "source": "38",
+      "target": "81",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": null,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "82",
+      "source": "33",
+      "target": "82",
+      "event_internal": "onpolicyfail",
+      "event_label": "onPolicyFail",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": null,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "84",
+      "source": "33",
+      "target": "84",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": null,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "85",
+      "source": "9",
+      "target": "85",
+      "event_internal": "onpolicyfail",
+      "event_label": "onPolicyFail",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": null,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "87",
+      "source": "9",
+      "target": "87",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": null,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    }
+  ],
+  "terminal_sources_not_captured": [],
+  "duplicate_terminal_binding_groups": [
+    {
+      "source": "36",
+      "event_internal": "onerror",
+      "outcome_id": "3",
+      "record_count": 3
+    },
+    {
+      "source": "46",
+      "event_internal": "onerror",
+      "outcome_id": "3",
+      "record_count": 2
+    },
+    {
+      "source": "46",
+      "event_internal": "onpolicyfail",
+      "outcome_id": "3",
+      "record_count": 2
+    },
+    {
+      "source": "66",
+      "event_internal": "onsuccess",
+      "outcome_id": "2",
+      "record_count": 2
+    },
+    {
+      "source": "66",
+      "event_internal": "onerror",
+      "outcome_id": "3",
+      "record_count": 2
+    },
+    {
+      "source": "66",
+      "event_internal": "onpolicyfail",
+      "outcome_id": "3",
+      "record_count": 2
+    }
+  ],
+  "variable_handoffs": [
+    {
+      "consumer": "3",
+      "location": "configuration.message",
+      "reference": "$(n2.inboundWebhook.customerName)",
+      "variable": "n2.inboundWebhook.customerName",
+      "producer_node": "2",
+      "producer_field": "inboundWebhook.customerName",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "3",
+      "location": "configuration.message",
+      "reference": "$(n2.inboundWebhook.parcelID)",
+      "variable": "n2.inboundWebhook.parcelID",
+      "producer_node": "2",
+      "producer_field": "inboundWebhook.parcelID",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "3",
+      "location": "configuration.message",
+      "reference": "$(n2.inboundWebhook.delievryTime)",
+      "variable": "n2.inboundWebhook.delievryTime",
+      "producer_node": "2",
+      "producer_field": "inboundWebhook.delievryTime",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "3",
+      "location": "configuration.message",
+      "reference": "$(n2.inboundWebhook.deliveryDate)",
+      "variable": "n2.inboundWebhook.deliveryDate",
+      "producer_node": "2",
+      "producer_field": "inboundWebhook.deliveryDate",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "3",
+      "location": "configuration.destination",
+      "reference": "$(n2.inboundWebhook.phoneNumber)",
+      "variable": "n2.inboundWebhook.phoneNumber",
+      "producer_node": "2",
+      "producer_field": "inboundWebhook.phoneNumber",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "5",
+      "location": "configuration.outcomes[0].conditions[0].varaible",
+      "reference": "$(n4.receive.message)",
+      "variable": "n4.receive.message",
+      "producer_node": "4",
+      "producer_field": "receive.message",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "5",
+      "location": "configuration.outcomes[1].conditions[0].varaible",
+      "reference": "$(n4.receive.message)",
+      "variable": "n4.receive.message",
+      "producer_node": "4",
+      "producer_field": "receive.message",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "5",
+      "location": "configuration.expression",
+      "reference": "$(n4.receive.message)",
+      "variable": "n4.receive.message",
+      "producer_node": "4",
+      "producer_field": "receive.message",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "6",
+      "location": "configuration.message",
+      "reference": "$(n2.inboundWebhook.parcelID)",
+      "variable": "n2.inboundWebhook.parcelID",
+      "producer_node": "2",
+      "producer_field": "inboundWebhook.parcelID",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "6",
+      "location": "configuration.destination",
+      "reference": "$(n2.inboundWebhook.phoneNumber)",
+      "variable": "n2.inboundWebhook.phoneNumber",
+      "producer_node": "2",
+      "producer_field": "inboundWebhook.phoneNumber",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "7",
+      "location": "configuration.destination",
+      "reference": "$(n2.inboundWebhook.phoneNumber)",
+      "variable": "n2.inboundWebhook.phoneNumber",
+      "producer_node": "2",
+      "producer_field": "inboundWebhook.phoneNumber",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "9",
+      "location": "configuration.destination",
+      "reference": "$(n2.inboundWebhook.phoneNumber)",
+      "variable": "n2.inboundWebhook.phoneNumber",
+      "producer_node": "2",
+      "producer_field": "inboundWebhook.phoneNumber",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "15",
+      "location": "configuration.body.parcelID",
+      "reference": "$(n2.inboundWebhook.parcelID)",
+      "variable": "n2.inboundWebhook.parcelID",
+      "producer_node": "2",
+      "producer_field": "inboundWebhook.parcelID",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "33",
+      "location": "configuration.message",
+      "reference": "$(n31.receive.message)",
+      "variable": "n31.receive.message",
+      "producer_node": "31",
+      "producer_field": "receive.message",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "33",
+      "location": "configuration.destination",
+      "reference": "$(n2.inboundWebhook.phoneNumber)",
+      "variable": "n2.inboundWebhook.phoneNumber",
+      "producer_node": "2",
+      "producer_field": "inboundWebhook.phoneNumber",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "38",
+      "location": "configuration.outcomes[0].conditions[0].varaible",
+      "reference": "$(n36.receive.message)",
+      "variable": "n36.receive.message",
+      "producer_node": "36",
+      "producer_field": "receive.message",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "38",
+      "location": "configuration.outcomes[1].conditions[0].varaible",
+      "reference": "$(n36.receive.message)",
+      "variable": "n36.receive.message",
+      "producer_node": "36",
+      "producer_field": "receive.message",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "38",
+      "location": "configuration.expression",
+      "reference": "$(n36.receive.message)",
+      "variable": "n36.receive.message",
+      "producer_node": "36",
+      "producer_field": "receive.message",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "41",
+      "location": "configuration.body.parcelID",
+      "reference": "$(n2.inboundWebhook.parcelID)",
+      "variable": "n2.inboundWebhook.parcelID",
+      "producer_node": "2",
+      "producer_field": "inboundWebhook.parcelID",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "41",
+      "location": "configuration.body.newAddress",
+      "reference": "$(n36.receive.message)",
+      "variable": "n36.receive.message",
+      "producer_node": "36",
+      "producer_field": "receive.message",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "46",
+      "location": "configuration.destination",
+      "reference": "$(n2.inboundWebhook.phoneNumber)",
+      "variable": "n2.inboundWebhook.phoneNumber",
+      "producer_node": "2",
+      "producer_field": "inboundWebhook.phoneNumber",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "59",
+      "location": "configuration.destination",
+      "reference": "$(n2.inboundWebhook.phoneNumber)",
+      "variable": "n2.inboundWebhook.phoneNumber",
+      "producer_node": "2",
+      "producer_field": "inboundWebhook.phoneNumber",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "66",
+      "location": "configuration.destination",
+      "reference": "$(n2.inboundWebhook.phoneNumber)",
+      "variable": "n2.inboundWebhook.phoneNumber",
+      "producer_node": "2",
+      "producer_field": "inboundWebhook.phoneNumber",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "3",
+      "location": "_usedVars",
+      "reference": "$(n2.inboundWebhook.phoneNumber)",
+      "variable": "n2.inboundWebhook.phoneNumber",
+      "producer_node": "2",
+      "producer_field": "inboundWebhook.phoneNumber",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "3",
+      "location": "_usedVars",
+      "reference": "$(n2.inboundWebhook.customerName)",
+      "variable": "n2.inboundWebhook.customerName",
+      "producer_node": "2",
+      "producer_field": "inboundWebhook.customerName",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "3",
+      "location": "_usedVars",
+      "reference": "$(n2.inboundWebhook.parcelID)",
+      "variable": "n2.inboundWebhook.parcelID",
+      "producer_node": "2",
+      "producer_field": "inboundWebhook.parcelID",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "3",
+      "location": "_usedVars",
+      "reference": "$(n2.inboundWebhook.delievryTime)",
+      "variable": "n2.inboundWebhook.delievryTime",
+      "producer_node": "2",
+      "producer_field": "inboundWebhook.delievryTime",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "3",
+      "location": "_usedVars",
+      "reference": "$(n2.inboundWebhook.deliveryDate)",
+      "variable": "n2.inboundWebhook.deliveryDate",
+      "producer_node": "2",
+      "producer_field": "inboundWebhook.deliveryDate",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "4",
+      "location": "_usedVars",
+      "reference": "$(n2.inboundWebhook.phoneNumber)",
+      "variable": "n2.inboundWebhook.phoneNumber",
+      "producer_node": "2",
+      "producer_field": "inboundWebhook.phoneNumber",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "5",
+      "location": "_usedVars",
+      "reference": "$(n4.receive.message)",
+      "variable": "n4.receive.message",
+      "producer_node": "4",
+      "producer_field": "receive.message",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "6",
+      "location": "_usedVars",
+      "reference": "$(n2.inboundWebhook.phoneNumber)",
+      "variable": "n2.inboundWebhook.phoneNumber",
+      "producer_node": "2",
+      "producer_field": "inboundWebhook.phoneNumber",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "6",
+      "location": "_usedVars",
+      "reference": "$(n2.inboundWebhook.parcelID)",
+      "variable": "n2.inboundWebhook.parcelID",
+      "producer_node": "2",
+      "producer_field": "inboundWebhook.parcelID",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "7",
+      "location": "_usedVars",
+      "reference": "$(n2.inboundWebhook.phoneNumber)",
+      "variable": "n2.inboundWebhook.phoneNumber",
+      "producer_node": "2",
+      "producer_field": "inboundWebhook.phoneNumber",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "9",
+      "location": "_usedVars",
+      "reference": "$(n2.inboundWebhook.phoneNumber)",
+      "variable": "n2.inboundWebhook.phoneNumber",
+      "producer_node": "2",
+      "producer_field": "inboundWebhook.phoneNumber",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "15",
+      "location": "_usedVars",
+      "reference": "$(n2.inboundWebhook.parcelID)",
+      "variable": "n2.inboundWebhook.parcelID",
+      "producer_node": "2",
+      "producer_field": "inboundWebhook.parcelID",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "31",
+      "location": "_usedVars",
+      "reference": "$(n2.inboundWebhook.phoneNumber)",
+      "variable": "n2.inboundWebhook.phoneNumber",
+      "producer_node": "2",
+      "producer_field": "inboundWebhook.phoneNumber",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "33",
+      "location": "_usedVars",
+      "reference": "$(n2.inboundWebhook.phoneNumber)",
+      "variable": "n2.inboundWebhook.phoneNumber",
+      "producer_node": "2",
+      "producer_field": "inboundWebhook.phoneNumber",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "33",
+      "location": "_usedVars",
+      "reference": "$(n31.receive.message)",
+      "variable": "n31.receive.message",
+      "producer_node": "31",
+      "producer_field": "receive.message",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "36",
+      "location": "_usedVars",
+      "reference": "$(n2.inboundWebhook.phoneNumber)",
+      "variable": "n2.inboundWebhook.phoneNumber",
+      "producer_node": "2",
+      "producer_field": "inboundWebhook.phoneNumber",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "38",
+      "location": "_usedVars",
+      "reference": "$(n36.receive.message)",
+      "variable": "n36.receive.message",
+      "producer_node": "36",
+      "producer_field": "receive.message",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "41",
+      "location": "_usedVars",
+      "reference": "$(n2.inboundWebhook.parcelID)",
+      "variable": "n2.inboundWebhook.parcelID",
+      "producer_node": "2",
+      "producer_field": "inboundWebhook.parcelID",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "41",
+      "location": "_usedVars",
+      "reference": "$(n36.receive.message)",
+      "variable": "n36.receive.message",
+      "producer_node": "36",
+      "producer_field": "receive.message",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "46",
+      "location": "_usedVars",
+      "reference": "$(n2.inboundWebhook.phoneNumber)",
+      "variable": "n2.inboundWebhook.phoneNumber",
+      "producer_node": "2",
+      "producer_field": "inboundWebhook.phoneNumber",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "59",
+      "location": "_usedVars",
+      "reference": "$(n2.inboundWebhook.phoneNumber)",
+      "variable": "n2.inboundWebhook.phoneNumber",
+      "producer_node": "2",
+      "producer_field": "inboundWebhook.phoneNumber",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "66",
+      "location": "_usedVars",
+      "reference": "$(n2.inboundWebhook.phoneNumber)",
+      "variable": "n2.inboundWebhook.phoneNumber",
+      "producer_node": "2",
+      "producer_field": "inboundWebhook.phoneNumber",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    }
+  ],
+  "custom_variable_assignments": [],
+  "custom_variables": [],
+  "flow_outcomes": [
+    {
+      "id": 2,
+      "name": 101,
+      "value": "Successfully completed flow",
+      "tag": 11,
+      "tagName": "Success",
+      "type": "default",
+      "notification": null
+    },
+    {
+      "id": 3,
+      "name": 102,
+      "value": "Flow completed with an error",
+      "tag": 12,
+      "tagName": "Error",
+      "type": "default",
+      "notification": null
+    },
+    {
+      "id": 4,
+      "name": 103,
+      "value": "Flow ended due to an interruption",
+      "tag": 13,
+      "tagName": "Incomplete",
+      "type": "default",
+      "notification": null
+    },
+    {
+      "id": 1,
+      "name": 100,
+      "value": "Last executed node event",
+      "statusCode": "All status codes",
+      "tag": 15,
+      "tagName": "Last Execution Status",
+      "type": "default",
+      "notification": null
+    }
+  ],
+  "cycles": [
+    [
+      "9",
+      "31",
+      "33",
+      "36",
+      "38"
+    ]
+  ],
+  "cross_page_or_flow_nodes": [],
+  "capture_pages": null,
+  "declared_events_without_captured_route": [
+    {
+      "node": "4",
+      "event_internal": "ontimeout",
+      "declared_target_count": 1
+    },
+    {
+      "node": "4",
+      "event_internal": "onerror",
+      "declared_target_count": 1
+    },
+    {
+      "node": "6",
+      "event_internal": "onerror",
+      "declared_target_count": 1
+    },
+    {
+      "node": "31",
+      "event_internal": "ontimeout",
+      "declared_target_count": 1
+    },
+    {
+      "node": "31",
+      "event_internal": "onerror",
+      "declared_target_count": 1
+    },
+    {
+      "node": "36",
+      "event_internal": "ontimeout",
+      "declared_target_count": 1
+    },
+    {
+      "node": "59",
+      "event_internal": "onerror",
+      "declared_target_count": 1
+    }
+  ],
+  "nodes_not_reached_from_captured_start": [],
+  "edge_endpoints_not_captured": [],
+  "node_variable_producers_not_captured": [],
+  "redactions": "Header credentials and URL hosts redacted. Internal model properties are evidence, not a public import API.",
+  "authored_walkthrough": {
+    "walkthrough": "A webhook triggers the delivery SMS, then Receive 4 waits up to 86400 seconds. Branch 5 recognizes CANCEL or CHANGE case-insensitively. CANCEL calls HTTP 15, then sends cancellation confirmation on success or a technical-error message on error. CHANGE asks for an address, waits at Receive 31, echoes that address for confirmation, and waits at Receive 36. YES calls HTTP 41 and sends update confirmation/error; RETRY returns to the address question, making an explicit loop. Other initial answers receive an invalid-response message. Thus the two API actions occur after distinct customer confirmations, rather than merely after sending the first alert.",
+    "handoffs": "The initial message uses `n2.inboundWebhook.customerName`, `parcelID`, `delievryTime` and `deliveryDate`; recipients use `phoneNumber`. Branches consume `$(n4.receive.message)` and `$(n36.receive.message)`. The proposed address is `$(n31.receive.message)` and is echoed by Send 33 before the YES branch.",
+    "limitations": "The initial webhook parse schema and business URLs are not operationally populated in this capture. Preserve the misspelled observed `delievryTime` only when matching the actual trigger schema. Several Receive failure/timeout declarations have no captured destination, and the RETRY cycle has no explicit attempt counter. Confirm API body bindings and recovery policy before reuse; customer-facing success text is not delivery/API execution evidence."
+  },
+  "walkthrough_status": "authored"
+}

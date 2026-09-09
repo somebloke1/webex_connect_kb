@@ -1,0 +1,352 @@
+# Webex Connect Branded RCS Messaging
+
+Source: https://app.vidcast.io/share/1b8cf04c-353a-4dda-a515-2c1fb9b9b483
+Method: local-subtitle-import; language: en; kind: local-unverified
+Retrieved/processed: 2026-09-08T23:32:47.070464+00:00
+
+Unedited machine/caption evidence. Verify exact UI fields, API names and numbers against the official text documentation.
+
+- 00:00:04.029 — Hello everybody. Thank you for joining today's webinar.
+- 00:00:07.989 — It's another public webinar for Webex developers.
+- 00:00:11.949 — We're happy to present these webinars to you every month.
+- 00:00:15.389 — We have a really good one this month, so buckle up.
+- 00:00:19.588 — Here we go. This one's gonna be from the Webex Connect team.
+- 00:00:23.989 — Been talking about RCS messaging, which I know is a pretty hot topic for a lot of people, so we're excited for this one.
+- 00:00:32.550 — But, before we get to that main presentation, I just want to share quickly some of the latest news, and this is gonna be around, the Webex contact center for developers.
+- 00:00:43.989 — You know, there's been a lot of new content and updates over on the, the contact center platform, so we decided to kind of roll them all up for you here.
+- 00:00:53.270 — Uh. But I'm gonna start with the, you know, some of the recent contact center related items that can be found on the blog section.
+- 00:01:01.830 — Could you go ahead and go to the next slide?
+- 00:01:09.549 — Thanks. So, you know, a lot of the items can be found.
+- 00:01:13.829 — Over on the blog section of our Webex for developers portal, that's a developer.webex.com/blog.
+- 00:01:22.350 — But, starting with our 1st one here on the, from the top left there, then this is from a Webex product manager or Aruna Badachari.
+- 00:01:30.590 — In, in this blog post, he introduces the, the contact center for.
+- 00:01:33.510 — Flow designer platform, this is for orchestrating and automating workflows inside of contact center.
+- 00:01:40.189 — So he shows us how this tool enables developers to create robust data driven integrations that, you know, this is all done through a, a NO code low code interface.
+- 00:01:49.950 — So essentially flow designer has a visual canvas, and that kind of simplifies the development process to create applications and contact center that, you know, create better customer experiences.
+- 00:02:02.390 — So that's a really good one that kind of introduces everything there, but that kind of sets the stage for the, for the next one, to get, get hands on.
+- 00:02:09.950 — With the the contact center flow designer.
+- 00:02:12.790 — So we have another post by my colleague Josinini, and he shows us how to build a custom HTTP connector, and this is to enhanced service and call routing queues.
+- 00:02:23.430 — So in Joe's blog post, he shows us how to plug in 3rd party apis and that essentially enables other services to run alongside Webex's built in call handling and routing software.
+- 00:02:36.830 — So be sure to check that one out.
+- 00:02:38.999 — But, so moving on to the topic of the contact center agent desktop, so in Josephine's latest blog, he explores how to create, web component widgets for the agent desktop.
+- 00:02:53.839 — So here it kind of gives a comprehensive guide on using webpack, and that's for using, you know, for the efficient bundling of static resources.
+- 00:03:02.960 — So, you know, Joe uses a real practical example from github, and that'll get you started with custom widget integrations right off the bat, so be sure to check out that blog post too.
+- 00:03:14.320 — But the the final one mentioned here in really continuing on the same topic is from the, you know, right from the leader of the Webex developer evangelism team, Adam Weeks.
+- 00:03:24.669 — And Adam provides us with a really nice, how to article for using dynamic store variables for the agent desktop widgets.
+- 00:03:33.270 — So, you know, using the store variable optimizes the creation process, to make more efficient workspace for agents, you know, enhance their customer service, drive increased productivity.
+- 00:03:44.270 — All that good stuff, so be sure to check that one out, so, give some ideas around widgets for the agent desktop.
+- 00:03:53.989 — And then finally, I just want to make special mention the the there's been a bunch of recent entries over in the.
+- 00:04:02.580 — The contact center API change log, so over the last month or so, you know, the latest item is gonna introduce some new apis, you know, these are gonna be around for like partial updating of users, you know, partial updating of auxiliary codes in
+- 00:04:17.419 — bulk. So go ahead and check those out.
+- 00:04:20.220 — Those are new API endpoints.
+- 00:04:22.580 — There's also a deprecation notice for the agent profile apis.
+- 00:04:27.539 — Those are being replaced by the desktop profile apis.
+- 00:04:31.459 — So be sure to check out the the contact center API change log for more information on that than all the other recent additions there.
+- 00:04:39.779 — So with that, you know, that's the Webex developer news and callouts for, for this month.
+- 00:04:44.899 — I'm gonna go ahead and pass it over to Rami.
+- 00:04:47.339 — And the Webex Connect team for our main presentation.
+- 00:04:50.859 — Rami, please take it away.
+- 00:04:53.028 — Thanks Phil. So just quick introduction.
+- 00:04:56.508 — My name is Rami Riyad I head our innovation messaging strategy for the CPAS business unit.
+- 00:05:03.029 — And today we'll talk about Webex Connect and and how to upgrade some of your SMS experiences with branded messages.
+- 00:05:12.179 — So just a quick intro, so Webex C pass, we're part of the CX group and and we have the Webex Connect which is basically our cpaas platform that allows the digital orchestration between enterprises and digital channels, and we interface with the
+- 00:05:30.619 — contact center as well. Well to upgrade conversations to a live agent at from an inbound perspective and from an outbound perspective allowing agents to communicate with customers through digital channels.
+- 00:05:44.159 — So a lot of developers today are using Webex Connect to automate their workflows that use SMS or some of the other channels that we're going to talk about.
+- 00:05:53.079 — But this is an example and Daryl will show us more about this later on today, on how to build a flow with kind of.
+- 00:06:01.109 — A drag and drop, low code, NO code interface where as a, as a developer you're driving the nodes and building the business functionality that you want in the Webex cpass flow builder that results with what you're seeing the screen on the right, where
+- 00:06:17.349 — that's what shows up on the user's device.
+- 00:06:19.889 — And we'll go into into a lot more detail of that later on today.
+- 00:06:25.049 — So SMS has been around for quite some time and and with the SMS expansion, we're seeing a lot more around 18.7 billion smss are sent every day.
+- 00:06:36.779 — And that messages and that messaging volume continues to grow.
+- 00:06:41.459 — We're not seeing any slowdown on SMS, actually more and more enterprises are are embracing and using SMS for the day to day operations.
+- 00:06:51.498 — SMS we'd like to say it's the most ubiquitous channel across all of them because.
+- 00:06:56.779 — So every phone has SMS. But there are a lot more options on top, and that's where Webex Connect really enables the adoption of richer digital channels to allow you as an enterprise to communicate better and more effectively with your consume.
+- 00:07:12.639 — So some of the the the channels branded text and RCS, which we'll spend some time on today.
+- 00:07:18.399 — But some of the other channels we talk about is Instagram, whatsapp, Apple Messages for business, and Facebook messenger.
+- 00:07:25.799 — Now each channel has a suitable use case that goes with it.
+- 00:07:29.958 — For, for the sake of today's webinar, we're going to spend most of our time on branded text and RCS.
+- 00:07:35.339 — And talk a little bit about it.
+- 00:07:38.179 — So really if you look at any experience today that that has an SMS component is usually coming from either a short code or a long code, and this is what it looks like really on the far left hand side.
+- 00:07:52.509 — With branded texts, we're able to take the same hundred and 60 characters with NO additional work from an enterprise perspective and show you the experience in the middle, where it's the same content, we're just adding the logo, the verify check
+- 00:08:05.988 — mark, and then the messages coming from the brand itself.
+- 00:08:10.539 — And then once the brand is comfortable and they're in the in the channel, now we can innovate and say, ok, hey, let's take this to the next step or we can introduce cards carousels and more rich features from an, from an RCS as a channel perspective.
+- 00:08:26.389 — Rather than just a hundred and 60 characters content.
+- 00:08:30.469 — Okay, so branded test, really as we mentioned, today, this is the message you get as a consumer.
+- 00:08:38.189 — It's coming from a number, you don't usually know it unless you've saved it in your contact list.
+- 00:08:43.589 — The message on the right, it's coming to the same inbox.
+- 00:08:46.868 — It's coming from Webex Connect, it's You see the blue check mark, so you know who you're talking with, and that logo shows up in your inbox when you're trying to retrieve the conversation.
+- 00:08:57.349 — It allows the brand to control the branding and appearance, strengthen the consumer confidence with the check mark and then increase engagement in response rates.
+- 00:09:06.538 — From an engagement perspective.
+- 00:09:08.419 — Now, why would we use branded text?
+- 00:09:10.899 — Like, it, it really changes the the whole dynamic between interacting from a sender ID to a verified business name and logo that appears in your inbox.
+- 00:09:25.049 — We've done this with several customers around the world and and really there was NO objection in terms of this is higher security, this is better branding, this is verified.
+- 00:09:35.129 — And with a lot of spam going on in messaging today, this is giving an enterprise away.
+- 00:09:41.729 — That actually make sure that the consumer trusts who they're talking about.
+- 00:09:47.809 — So it's really from a, from a comparison perspective from SMS to branded text, today SMS is ubiquitous.
+- 00:09:59.489 — Branded text is available on Android today, but for those of you following this space closely, Apple announced a couple of times in November last year and then again at their developer conference in June, that RCS is coming to iOS in 2024.
+- 00:10:17.478 — So we're expecting more almost full coverage within the next six to twelve months in the market.
+- 00:10:25.839 — With SMS we got delivery receipts with our with branded text, we get the same, we got it in the same inbox, but now with branded texts we also get read receipts.
+- 00:10:35.399 — And we say alpha two way means that it actually the message is coming from a sender rather than like a brand name or display name rather than a phone number.
+- 00:10:44.958 — And to end encryption is supported today it's verified, it's branded.
+- 00:10:48.918 — An agent fallback currently is not required in branded text, it is required in some other channels like Instagram and.
+- 00:10:55.519 — Just for business. The way we'd like to talk about this is that also it's a zero technical change.
+- 00:11:02.758 — If you're an existing customer today using Webex Connect for your SMS traffic, all you need to do is really call your account manager and and say I want to upgrade to branded text.
+- 00:11:14.459 — We handle everything that from your SMS program today, we uplift it within the platform and then we choose whether it's an SMS or RCS message to be delivered to the device based on the device capabilities, replies and everything else comes back into
+- 00:11:30.258 — your existing SMS stream, so if you have any flows built using our flow builder.
+- 00:11:34.499 — Or you have your back end systems expecting an SMS response, you're still getting the same format so that doesn't change your, your implementation and your existing integrations.
+- 00:11:47.659 — We did launch this with, a large financial institution in North America.
+- 00:11:54.719 — They were basically a large bank that wanted to grand their messaging, they were doing one time passwords and banking alerts.
+- 00:12:03.479 — We started with, we start, I think there's a question or did I.
+- 00:12:10.319 — Yeah, sorry, I was just looking at the questions.
+- 00:12:14.159 — We started with just taking their SMS traffic over, they repointed their apis to us, and from there we started doing the branded text upgrade.
+- 00:12:25.439 — So basically every consumer that was able to receive RCS was getting their one time.
+- 00:12:30.399 — Passwords from that bank, they're getting the verified check mark, and then we upgraded their banking notifications as well.
+- 00:12:37.429 — Again, the customer experience was highly enriched and enhanced by that logo just knowing that the message is coming from their bank.
+- 00:12:45.428 — And there was a really enhanced improvement in the consumer safety and trust factors that a richer and more secure channel provides.
+- 00:12:58.609 — A little bit about RCS. So RCS is the protocol that we use to enable branded text.
+- 00:13:03.329 — It's verified by carriers or by Google depending on where you are.
+- 00:13:06.449 — It's branded, it's encrypted in android messages.
+- 00:13:09.209 — It goes to your inbox, so there's NO additional app you need to install.
+- 00:13:13.289 — There's a growing audience as new phones and, and Apple we're launching out.
+- 00:13:18.929 — I think we have a Slido so I'd like to to put it out.
+- 00:13:22.969 — There's a fewer, you can see our Slido.
+- 00:13:26.799 — Or please log into the Slido to to to look at it.
+- 00:13:30.759 — But RCS has been there, it's been growing.
+- 00:13:33.318 — I think the 1st question, what stopped you from using RCS for business messaging?
+- 00:13:38.038 — So if you can, I will collect your responses and I'll show you guys some of the responses we got.
+- 00:13:47.929 — So some of the capabilities that we have, for RCS, so again, it's the trusted, the branding.
+- 00:13:55.329 — What I like about it is you can actually be creative in terms of, you don't have to send everything in a hundred and 60 characters, meaning that, it is.
+- 00:14:04.409 — The the digital cards, you can build a rich card, you can build the buttons on it, there are better metrics in there, so you can get read receipts so you can know when your campaigns are effective.
+- 00:14:13.968 — The customer safety, the channel is very the the sender is verified, and of course you can send richer media, meaning that.
+- 00:14:22.048 — You can send images, videos, colors, it's it becomes a richer experience.
+- 00:14:27.288 — And then someone like me, it's very easy and convenient to tap rather than type.
+- 00:14:32.329 — So if you see on number six, you get suggested actions or or suggested replies.
+- 00:14:38.739 — Where you can just tap a reply or an action, so whether it's opened a URL or say yes, it makes that engagement a lot of, a lot easier.
+- 00:14:48.698 — So I think I'm seeing the results of the Slido, just pop it up here.
+- 00:14:55.558 — Technical complexity is looks like it's the number one winner, lack of awareness about RCS concerns about cost, integration challenges, concerns about reach.
+- 00:15:06.759 — So I think from technical complexity, I think that's where a tool like Webex Connect allows you to build this.
+- 00:15:13.239 — In a low code, NO code where you're uploading your images, designing your conversation in a drag and drop fashion and just connecting nodes, and then the platform takes care about all that complexity behind the scenes.
+- 00:15:24.838 — Lack of awareness, again, we're doing a lot of work.
+- 00:15:27.399 — The whole ecosystem is, is looking at RCS and how to make that a better channel.
+- 00:15:32.599 — I think we. The apple announcement that will change a little bit because now people are going to see RCS everywhere.
+- 00:15:40.479 — From a branded text perspective, I think from a cost perspective, it's almost the same as your SMS.
+- 00:15:47.198 — We want to, we want to enhance and we want the increase the adoption about RCS and and just grow it further from there.
+- 00:16:02.948 — So the discovery really from RCS is one, it's it's phone number based, so you can send out a message again the same way you send an SMS, we can upgrade it to say, you can send an RCS the same way using the phone number or we're seeing more and more
+- 00:16:17.429 — like QR codes and deep links where they're embedded in your website, your storefronts and digital.
+- 00:16:22.669 — Signage where people just scan a QR to start a conversation.
+- 00:16:28.969 — So really with Webex Connect, you can create your designs, whether you're creating the SMS flow or your RCS flow and then within Webex Connect and then the, the, the platform allows and is intelligent enough to do a capability check within the flow
+- 00:16:45.529 — or even as a branded text to send out either.
+- 00:16:48.649 — There's an SMS or as an RCS message, and allowed.
+- 00:16:53.439 — The users to fall back between channels and manage the responses as well.
+- 00:17:00.359 — One of the examples we talk about is in the UK, we launched this with southern council, one of the 1st councils, and this was really.
+- 00:17:10.059 — It was a difficult conversation.
+- 00:17:11.459 — It was about people that are delinquent on their tax payments and they're trying to send them a message saying, it's always when you send a message saying we want money, then you don't get the best response back.
+- 00:17:25.218 — But in that collection I think engagement and trust.
+- 00:17:29.219 — Was the biggest factor, and they saw 90 % of the consumers were reassured and better served that they know who they're talking to.
+- 00:17:37.979 — And it was just not a random number saying, click on this link to pay money.
+- 00:17:43.619 — 60 % there was an increase of people that chose to engage and in debt collection that is huge.
+- 00:17:51.618 — And of course 55 %. Increase in the people choosing to pay in, and when we say pay, they offer different payment plans as part of that, whether it's a one time payment or or installments or direct depart.
+- 00:18:05.019 — So giving the people the options made actually that possible and, and increasing the payment rates.
+- 00:18:13.268 — Smarty was a, a low cost for low cost provider in the UK as well.
+- 00:18:18.269 — Again, they saw a 500 % uplift in campaign engagement, a hundred percent increase of engagement over email, and their 70 % of their trust pilot reviews are now five star ratings.
+- 00:18:30.788 — Which was huge for them and and again it drives more usage, it drives more engagement with the consumers I'll I'll try to answer some of these questions that came in.
+- 00:18:41.148 — I think when will branded text be available on Apple devices?
+- 00:18:45.108 — Apple didn't confirm or deny anything, but we we have a guess that this.
+- 00:18:49.889 — Could be available in, in the next iOS release in September.
+- 00:18:54.289 — Well the session I think is being recorded and it will be shared.
+- 00:18:58.649 — Phones today, a lot of Android phones are compatible with branded texts and we continue to see like the latest Samsung devices are compatible and then we'll hopefully see more iOS devices compatible with branded text as we go along.
+- 00:19:12.499 — Again, this was the screenshot that was shared during the developer conference and is available on the iOS page.
+- 00:19:19.059 — You'll see now people are, are, more aware of this because they now see as an I/O, as an iOS user that you're able to send this messages RCS.
+- 00:19:30.859 — Your image resolutions. For higher, there's tap backs and likes and all that, that there's just a lot of enhanced functionality even from a peer to peer perspective.
+- 00:19:41.059 — Now if everything goes as planned and Apple does release ADP messaging I think we'll see a massive change in reach once this goes live.
+- 00:19:51.849 — I think we had a 2nd Slido question, if RCS business messages become supported on Apple, would this be the tipping point?
+- 00:20:01.769 — Would this be the tipping point for adopting the channel into the mix that you're currently using?
+- 00:20:07.009 — So we'll give it a couple of minutes to to gather some responses here while we go to the next slide.
+- 00:20:12.529 — Daryl I think you're up, I think sorry before you move, we're still getting some answers on Slido, I think 33 % of the responses are saying yes that this maybe the tipping point and.
+- 00:20:29.639 — Well, then move 5050. Let me put the slides up right now.
+- 00:20:37.239 — It's going back and forth between don't NO and yes, which is a good because the the it hasn't been a NO yet.
+- 00:20:45.959 — So I I think that means is I think with Apple joining it gives us more of a ubiquitous channel to offer that rich experience for for all users and all devices.
+- 00:20:57.359 — Daryl switch over to you. Sounds good.
+- 00:21:02.078 — Thanks Formmy. Appreciate that.
+- 00:21:05.549 — Hi everyone, just gonna be discussing here and then showing our, our ability to utilize RCS in a flow.
+- 00:21:17.588 — So how this demo is gonna go is we're gonna set up the RCS channel within the Webex Connect platform.
+- 00:21:23.069 — I'm gonna show you how to build and utilize those nodes that Rami had spoken about, and, we're gonna see RCS in action as well.
+- 00:21:31.548 — So, I'm gonna do a very high level over the flow.
+- 00:21:35.429 — I'm gonna show it to you in action and then we're gonna go to a little deeper.
+- 00:21:38.149 — I'll open up the nodes and things like that and we'll, we'll kind of dig into what we're.
+- 00:21:43.069 — We're looking at and what we're doing.
+- 00:21:44.669 — So, with that said, I will share my workflow here, my apologies.
+- 00:21:53.019 — There we go. So, basically what's happening here is this is a fairly typical deployment of RCS.
+- 00:22:05.179 — We're receiving a communication from a back end system.
+- 00:22:09.619 — It's gonna do an RCS capability check based on that, it'll either go RCS or SMS.
+- 00:22:15.698 — We're gonna receive some data and then we're gonna process a payment.
+- 00:22:18.739 — So what does that look like?
+- 00:22:21.699 — Well, that'll look like this.
+- 00:22:23.139 — I'm gonna I'm gonna use Postman in the background to trigger this flow.
+- 00:22:28.259 — And like I said before, after we see it in action, then we'll, we'll go back and take a look at how this was built.
+- 00:22:34.339 — So I do have my message here and you can see, great, build rich experiences with Webex Connect.
+- 00:22:40.778 — Hi Daryl, thanks for checking out Webex Connect.
+- 00:22:43.058 — Respond here with yes or NO.
+- 00:22:45.179 — Now, to Rami's slides. As earlier, you can see we have our logo.
+- 00:22:50.379 — It's interactive. We can select that.
+- 00:22:52.698 — So if I wanted to call the business, I could call the business via my dialer app, I could visit the website et cetera.
+- 00:23:00.619 — So with this, I'm going to respond with one of our chips or predefined yes or NO, built into the card, and here now you can see we have a carousel.
+- 00:23:10.098 — So this is another. Thing that RCS can provide, it's it's carousels, rich media, rich cri richer content and security.
+- 00:23:18.959 — Every step of this message is secured.
+- 00:23:21.159 — I can anytime click on the Webex logo and be brought to their, their card.
+- 00:23:26.079 — So in this case, I'm being asked which, which version of Webex Connect do I want to upgrade to?
+- 00:23:30.959 — Well, I won't want the premium version.
+- 00:23:32.999 — So I'm gonna select the option one there.
+- 00:23:35.749 — What's gonna happen now is it's gonna take my option, it's gonna look up the pricing for it, things like that.
+- 00:23:42.028 — Mind you, this isn't real pricing.
+- 00:23:43.629 — This is just example demo pricing.
+- 00:23:46.388 — But right now I've been given a Securio payment link to go and pay for my ServiceNow.
+- 00:23:51.788 — So, this is us integrating with the payment service provider.
+- 00:23:55.669 — Again, because it's branded, because I can select that Webex logo, I know that it's the business sending me that, it's a verified check mark, all of those things.
+- 00:24:05.109 — So, we'll select that payment method.
+- 00:24:11.228 — Fantastic. I will go ahead and pay for.
+- 00:24:14.269 — My upgrade and the upgrade is not a hundred dollars, like I said, but you know, for demo purposes.
+- 00:24:24.309 — And this is not a real credit card number either, so.
+- 00:24:34.189 — So it'll go through the process, it'll.
+- 00:24:40.619 — It'll get back to me saying with an OTP now, so I'll just enter my OTP, verify my transaction, and we're all done.
+- 00:24:53.018 — So I have successfully purchased my upgrade and in a few short minutes.
+- 00:24:58.039 — I'm gonna receive a notification saying, hey, your payment is complete.
+- 00:25:02.119 — Thanks for your purchase. Now, how did we make this?
+- 00:25:04.718 — How did this happen? How does this all work?
+- 00:25:06.959 — So, I'm gonna go in and I'm gonna go through some of the pieces here.
+- 00:25:13.729 — That made this demo possible.
+- 00:25:17.369 — So, as Rami said, Webex Connect is a low code, NO code platform.
+- 00:25:21.249 — We have a set of pre built functions on the left here in a palette that you can see.
+- 00:25:27.129 — This is our low code, NO code kind of solution.
+- 00:25:31.208 — You drag and drop what we call nodes.
+- 00:25:33.169 — Which are like I said, the pre built functions and you can double click on them and fill in the blanks essentially.
+- 00:25:38.049 — So in this scenario I've created a webhook that my back end system or in this case postman connects to.
+- 00:25:44.339 — And I now have a variable set of data that I'm expecting as a payload to be received.
+- 00:25:49.178 — So in this, you can see 1st name, last name, number, and cruise.
+- 00:25:53.018 — This was previously used as a cruise for one of our clients.
+- 00:25:56.058 — We did demonstrate the ability to upgrade cruise rooms on a crews, right?
+- 00:26:01.538 — So you could think of how many ways this could be used.
+- 00:26:04.289 — And because it's an out reached channel or a channel being reached out with validation and verification, you know, customers know that, you know, if they give up their credit card number or things like that, that it's not being used in a negative
+- 00:26:16.649 — way. So with that said, RCS capability check.
+- 00:26:21.179 — We go in, we check against that phone number, right?
+- 00:26:25.179 — Validate that it is RCS capable.
+- 00:26:27.938 — On the branch node, this is our if then logic, RCS, we take a look here.
+- 00:26:34.339 — Is it up to true yes? If it is, it goes down the RCS path.
+- 00:26:38.799 — If it's not, it'll go down the SMS path.
+- 00:26:42.559 — So if it's none of the above, you can see it's going down here, if it's RCS it goes here.
+- 00:26:47.399 — This is where the fun stuff comes in now with RCS.
+- 00:26:50.279 — So, our destination type this destination type is always gonna be the MSISDN.
+- 00:26:56.399 — So phone number. And now we can start selecting the type of cards we want to present.
+- 00:27:02.178 — So we can do a simple text based card.
+- 00:27:04.859 — We could do a file, we could do a rich card, a carousel card, as I showed you in my demo, a dynamic carousel where the variables are added as as based on the type of information provided in that payload.
+- 00:27:17.419 — We can also. To provide typing indicators and things like that.
+- 00:27:21.619 — The media that's used here, I just grabbed from our media manager in Webex Connect, so you can upload pictures, videos, things like that to media manager, and then it will provide you a URL that you can use.
+- 00:27:36.659 — Don't have to use. Media manager, but if you are going to be supplying a URL here, it does have to be publicly facing.
+- 00:27:45.178 — And you can see my title for the card and then just the text.
+- 00:27:48.219 — So, this is a fun part as well.
+- 00:27:50.899 — Yes and NO. So those were the suggestions.
+- 00:27:53.929 — We call them chips. You can add suggestions simply and then, you know, validate what type of, chip you want to add.
+- 00:28:00.888 — So these can be opening urls, adding a calendar event dialing phone number, and, you know, for my case, we use the simple reply.
+- 00:28:09.049 — In that reply, how does that get processed?
+- 00:28:11.929 — Well, on the receive node, when we receive that information back from the person, we're receiving it from their phone number and we're receiving a post back response.
+- 00:28:21.769 — So when you select. The, the chip here, when you select reply, you'll see that you have a title, that's what will appear as the button, and then you have a post back.
+- 00:28:35.068 — So very important to note that when you're receiving that information, you're receiving it as post back.
+- 00:28:41.419 — Now, based on that post back we receive, and that is the post back data, if it's the S, it'll continue down the path.
+- 00:28:48.339 — If it's NO, it can go down another path, i.
+- 00:28:51.619 — E. SMS et cetera. In the next slide here, this is where we have the carousel, so to build a carousel very easy.
+- 00:29:02.039 — Select your message type carousel card.
+- 00:29:04.118 — And then again we have our media that I grabbed from our media manager, title, response.
+- 00:29:10.718 — Now, this is where it gets tricky, so there's a little arrow here on the on the right.
+- 00:29:15.279 — If you want to add another card or fill in that other card for that carousel.
+- 00:29:19.739 — That's where you would select it and then fill in the information there and your chip.
+- 00:29:23.859 — If you wanted to add a 3rd 4th or 5th, you could do so right here by clicking on the little plus sign.
+- 00:29:30.338 — It'll add another card to your carousel.
+- 00:29:35.019 — From there, we're gonna select the receive node and the receive node is gonna receive a post.
+- 00:29:39.779 — Back response. And based on that post back response, we either go down the path of doing the upgrade or not doing the upgrade.
+- 00:29:49.019 — In this case we did the upgrade, and again it was a simple text card this time and again just straight text.
+- 00:29:59.349 — Very similar to a text message, as Rami was saying, this is actually the form we use for branded text, and you can see even in the card builder, you can actually have a preview of what that will look like on the user's device.
+- 00:30:13.429 — So we've had a delay node here and then I'm doing an API lookup to our payment provider.
+- 00:30:19.509 — So I I do do a lookup to the payment provider, I see the debt amount and everything else, and then here I'm receiving that via custom payload that we get from our payment provider.
+- 00:30:29.628 — And then from there, we parse out that data and provide the user a payment link.
+- 00:30:36.569 — That payment link enables them to go to a PCI compliance payment window to go ahead and pay for their service.
+- 00:30:42.769 — Again, we can integrate with any payment provider as long as there's an API for us to interface with like you saw here, and, you know, clearly obviously a little bit more secure get clicking on that link and providing a credit card, things like that
+- 00:30:54.809 — in the payment like link because.
+- 00:30:56.689 — This is a verified message.
+- 00:30:58.449 — And here again, another received, this is the payment success and you will see here on my phone, my apologies, your payment is complete.
+- 00:31:10.328 — So it did respond letting me know that my payment was complete and that the transaction was completed as well.
+- 00:31:15.999 — So that was done, and then that that's this message here you see here.
+- 00:31:25.279 — Payment is complete. So that all occurs in, Webex connect.
+- 00:31:29.679 — Now, how do we, how do we build this RCS card?
+- 00:31:33.039 — Like how do I get this branding?
+- 00:31:34.439 — Where, where do we go? For that.
+- 00:31:35.959 — How do, how do we do that?
+- 00:31:37.359 — Well, we do have in the app assets and app section, you can click on create a new app and it'll be an RCS app.
+- 00:31:46.959 — You'd have to go through and build this whole section here as you see.
+- 00:31:51.079 — So you'd have to add in the pictures.
+- 00:31:53.318 — Now these pictures wouldn't come from media manager.
+- 00:31:55.839 — These would be ones you would upload, and they do have to follow strict sizing guidelines as you see here.
+- 00:32:01.919 — So you wouldn't be able to upload them unless they follow those guidelines.
+- 00:32:05.309 — You'd have to select the color, your asset name, things like that, and then down below is where you get all those links.
+- 00:32:10.909 — So if you wanted to add a link, e.g., you could add a website and use that website piece as a link to open an app, e.g..
+- 00:32:18.828 — So if your client had an app, say it's a travel company an airline and their airline app is available there.
+- 00:32:25.309 — You can put in a deep link to open the app based on the operating system that they're using.
+- 00:32:29.909 — And then privacy terms and privacy policy and terms of service.
+- 00:32:35.229 — And then whenever we're building one of these for testing, we have to add our whitelisted numbers that we can test against.
+- 00:32:42.029 — In this case, you can see minor added there.
+- 00:32:44.149 — And then that. That's it. Once you've done that, it'll trigger a ticket on our end.
+- 00:32:49.109 — And somebody from our team will reach out to go over the final details.
+- 00:32:52.788 — And if this is going to be a production or if it's just gonna be remaining as a test.
+- 00:32:58.589 — So I'm gonna go back to my, to the presentation here Apologies.
+- 00:33:09.109 — Okay, uh. So, with everything I've shown today, you've seen how to complete a flow, how to build the asset, you know media manager was a portion there too where you could actually go in and upload some of that richer media to use in the card.
+- 00:33:38.719 — In order to use RCS, you do have to have a full version of our tenant.
+- 00:33:42.998 — So the the trial the capabilities, all those things, you do require a full tenant of Webex Connect.
+- 00:33:49.719 — But if you are a developer who doesn't have access to the full tenant yet of Webex Connect, you can still trial a selection of channels, voice, SMS and whatsapp within our sandbox or developer sandbox.
+- 00:34:01.519 — You can sign up for developer.
+- 00:34:02.879 — Sandbox right here on this QR code if you'd like, and you know, it'll, it'll bring you to the website where you can sign up for it.
+- 00:34:09.899 — There are a rich number of features that are available as well to test and play around with.
+- 00:34:16.778 — And resources for developers, we do have more developer resources, you can visit the Cisco devnet partner developer resources page.
+- 00:34:25.149 — Documentation gives you an introduction to Webex Connect.
+- 00:34:27.829 — Common use cases, some templates overview integrations, useful facts, links and other developer resources, learning labs for how to build your 1st flow on how the program integrates, integrates with other Cisco products such as Meraki.
+- 00:34:44.399 — And that's it for me. Phil Rami?
+- 00:34:54.679 — Okay. Thank you very much.
+- 00:34:57.198 — Let me get back on camera here for you.
+- 00:35:01.539 — Right. Okay, we did have a few questions that came in if we wanna go ahead and address some of those here I think the 1st one that came in, I know is probably gonna be a pretty important one is that when will branded text be available on Apple
+- 00:35:18.659 — devices? Phil, I think we covered most of these early on.
+- 00:35:23.678 — I think the the last three, the the last two were not the last two?
+- 00:35:29.079 — Yeah. Okay, very good. And the one that came in.
+- 00:35:35.459 — How can you determine if the recipient's phone is RCS compatible?
+- 00:35:39.619 — What if the phone is turned off at the moment?
+- 00:35:42.338 — So the, we do offer the capability checks whether through the flow builder or through an API that will allow you to check the capabilities in real time.
+- 00:35:53.419 — We also do store a cache, so.
+- 00:35:55.459 — If you know the device is capable with that moment in time it's off, you can, you'll still get the capable result because of the cache.
+- 00:36:02.779 — Messages will be stored until the phone is online again, and you're delivering.
+- 00:36:07.899 — We did announce in our upcoming release of connect six.six.one you'll also be able to set message expiry time so if a message is not delivered within a certain time, you can expire so that you can send an SMS instead.
+- 00:36:22.619 — Yeah. Another one here is, is RCS working without Google Play Services, e.g., on GRAPHENOS or lineage OS?
+- 00:36:37.058 — I I I think like from from what we know and what we've tested.
+- 00:36:42.469 — RCS is based on google messages on the Android or or messages, and that is, that comes in the base OS part of android.
+- 00:36:54.389 — But we don't know if it will work with some of the other OS versions that are out there or not.
+- 00:36:59.179 — That's something we haven't tested.
+- 00:37:02.139 — And, there was another question I think this is more from the demo that Daryl did.
+- 00:37:09.658 — Are we able to get a test flow that you use so we can play in a sandbox?
+- 00:37:13.179 — You know, the flow looks great.
+- 00:37:16.559 — Yeah, the unfortunately RCS isn't available in the sandbox as a channel, it is only available in a full tenant of connect.
+- 00:37:24.039 — If you do have a full tenant, then you can use RCS in testing capacity and and maybe well actually testing capacity if it's a, if it's a tenant for developers, but yeah, the.
+- 00:37:36.559 — The the the the demo I use and the flow I use wouldn't be able to be used as a, as a template unfortunately.
+- 00:37:42.359 — You can test RCS with D cloud, right?
+- 00:37:44.599 — Right Daryl? Is it available?
+- 00:37:46.559 — Yeah, good point, good point.
+- 00:37:50.198 — Okay, and I think we put the the sandbox of self sign up, link inside of the, the chat there.
+- 00:37:57.359 — So if you want to get more information on that, just go ahead and visit that link around, get.
+- 00:38:02.359 — That yourself a sandbox. I think there was one more question that will be available in world tenant.
+- 00:38:07.649 — We have three levels of our, our tenant outside of sandbox, access edition advanced and premium.
+- 00:38:16.609 — RCS is available, access is API only.
+- 00:38:19.368 — Advanced and premium, you get your flow builder capabilities with that, and RCS is available on all three.
+- 00:38:26.010 — Of these versions or license levels of the platform Great, I think that wraps up all of the questions that we have here.
+- 00:38:42.690 — If any questions happen to pop up later on.
+- 00:38:45.439 — You know, you can feel free to drop a line over to, you know, the Webex developer evangelist team or, you know, anybody on the the Webex Connect team too, always happy to help you out.
+- 00:38:56.680 — But with that, that should wrap up our, our webinar for this month.
+- 00:39:00.710 — Again, thank you so much for, for joining today's session and participating in the Slido.
+- 00:39:05.990 — There'll be a post event survey.
+- 00:39:08.189 — We do ask for everybody's feedback on that so we can continue to present content that everybody would like to see.
+- 00:39:17.470 — So with that. Thank you for joining our webinar and have a great rest of your week.
+- 00:39:22.840 — Bye bye.

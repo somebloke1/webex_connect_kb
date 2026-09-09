@@ -1,0 +1,40 @@
+{
+  "api_metadata_path": "sources/cache/developer/faqs-sms.api.json",
+  "category": "FAQs",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f65a8",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "bccf34c637acaf6646ec9856e1375e1506c098d96bc07c4fd718b48c95efcaa6",
+    "source_path": "9adf2aaee0c1d3be542715204214a8565a7df64b215ef78aad5acd8574d658f7",
+    "text_path": "e4026490046f78c43238e3cbb21a878bf971ea40c4c0d732943ba3ded77b9a56"
+  },
+  "headings": [
+    "How Webex Connect can be used to receive inbound SMS messages",
+    "Support for SMS on Toll-free numbers",
+    "Difference between long codes, short codes, sender IDs, and keywords",
+    "Buying short codes using Webex Connect",
+    "Releasing your unused Webex Connect numbers",
+    "How do I add a new line in an SMS Message?",
+    "Example:"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/faqs-sms.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/faqs-sms",
+  "retrieved_at": "2026-09-08T23:31:52+00:00",
+  "sha256_api_metadata": "575f65b7d8dc3ea0b617314bc47e22705dc85fc80ee114e6faa20ada4e8aafe2",
+  "sha256_html_response": "581b6e507c46b73c3f613abca9a04a3150a9e4c598359de46565300bae471950",
+  "sha256_source_body": "9adf2aaee0c1d3be542715204214a8565a7df64b215ef78aad5acd8574d658f7",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/faqs-sms.source.md",
+  "source_updated_at": "2026-02-13T12:34:34.439Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/faqs-sms.txt",
+  "title": "SMS FAQs",
+  "url": "https://developers.webexconnect.io/reference/faqs-sms",
+  "word_count": 818,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/faqs-sms.metadata.json"
+}

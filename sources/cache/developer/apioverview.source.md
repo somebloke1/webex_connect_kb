@@ -1,0 +1,44 @@
+<<prodname>> is an Enterprise CPaaS platform that enables you to seamlessly add rich communication capabilities into your existing applications and systems with ease. We offer a robust set of APIs, SDKs, and Webhooks to enable two-way communications across 12+ channels, including SMS, Voice, RCS, Apple Messages for Business, WhatsApp, Email, Push Notifications, Live Chat and more. Additionally, we offer synergistic APIs for managing customer consent and contact preferences, and conversation management APIs. 
+
+## Overview of <<prodname>> APIs and SDKs
+
+### Key Webex Connect APIs:
+
+- **Messaging APIs** - Our messaging APIs empower you to connect with customers across multiple channels, including SMS, MMS, RCS, WhatsApp, email, push notifications, in-app messaging, live chat and more. Whether you need to send simple text-based alerts or create rich, interactive experiences, our platform offers the flexibility and scalability to meet your needs. Easily integrate these channels into your applications to enhance customer engagement and drive business growth.
+- **Voice APIs** - Our Voice APIs offer a comprehensive toolkit for building interactive voice experiences. You can initiate proactive outbound voice notifications, design interactive call flows using our API and webhook functionalities, monitor call status in real time, and access detailed call recording information. These capabilities provide the foundation for building engaging and efficient voice experiences tailored to your specific needs.
+- **RCS Capability Check API** - In addition to the APIs for sending text and voice messages, <<prodname>>enables you to optimize your messaging strategy by determining which customers are RCS-capable. By identifying eligible recipients, you can leverage the enhanced features of RCS for delivering rich, interactive messages with compelling calls to action, while seamlessly falling back to SMS for those unable to receive RCS.
+- **Contact Policy APIs** - Contact Policy APIs allow you to manage customer communication preferences. Create groups to categorise message types (e.g., monthly statements, reminders) and control how often customers receive these communications. This helps send messages as per customers' preferences, avoid overwhelming customers with excessive communications, and comply with communication regulations.
+- **Profile APIs** - Webex Connect offers a set of APIs to enable businesses to set up and manage profiles of their customers. We provide two types of profile stores referred to as ‘Customer Profile’ and ‘Application Profile’ respectively.  
+  Customer profile is used to store multiple channel identifiers and customer communication preferences for various customers. Application profile allows you to store all the details associated with a customer’s profile on a specific communication channel. E.g. Facebook Messenger profile of a customer can consist of details such as PSID, first name, last name, customer id, etc. Customer Identified is the link between the master profile and the application-specific profile.
+
+## Webex Connect SDKs
+
+In addition to our robust API suite, we offer SDKs to streamline integration of push notifications, in-app messaging, and live chat into your applications. Leverage our Android, iOS, and JavaScript SDKs to rapidly build engaging, interactive user experiences across mobile and web platforms. Refer to [SDK overview](https://developers.webexconnect.io/docs/overview-of-sdks) page for more information.
+
+## Getting Started
+
+### API Endpoints
+
+Our API endpoints vary based on the geographical region where your <<prodname>> tenant is hosted. This ensures optimal performance and data latency by routing requests to the nearest available server. Refer to [API endpoints](https://developers.webexconnect.io/reference/endpoints) for more information.
+
+### API Authentication
+
+<<prodname>> supports two authentication methods. The first is key-based authentication, where a unique Service key needs to be used for authenticating your API requests. Alternatively, you can opt for JSON Web Token (JWT) authentication, which is a more sophisticated approach with added security features. Choose the method that best aligns with your organisations security requirements. Refer to [API Authentication](https://developers.webexconnect.io/reference/authentication-2) for more information.
+
+### API Response and Error Codes
+
+Unless specified otherwise, <<prodname>> APIs mostly operates on an asynchronous model. This means, while you are provided an immediate response to confirm whether your API requests were accepted or rejected, the progress and/or status of your requests is provided in real-time through callback/notify URLs. For detailed information, refer to [status and error codes](https://developers.webexconnect.io/reference/channel-specific-status-codes-1) for various communication APIs.
+
+### Throughput Management
+
+<<prodname>> handles billions of customer interactions every month. Many of these interactions are mission critical communications for use cases such as OTPs for verification purposes, fraud notifications to safeguard customers against fraud, and service notifications for critical public services. To ensure optimal performance and service for all customers, we implement rate limits on our APIs. These limits define the maximum number of API calls allowed within a specific timeframe. Exceeding contracted throughput limits can result in API requests being rejected to prevent service disruptions. Refer to [rate limits and throughput management](https://developers.webexconnect.io/reference/rate-limits-for-messaging-apis-event-api-and-inbound-webhook) for more information.
+
+### IP Allowlisting
+
+Enhance your security with our Enterprise CPaaS platform by leveraging [IP Allowlisting](https://help.webexconnect.io/v6.20.0/docs/tenant-settings#ip-address-allowlist), a feature that allows you to specify trusted IP addresses that you would be invoking <<prodname>> APIs from. Any API requests on your behalf that do not originate from the configured IP addresses or CIDR ranges will be rejected, thereby reducing the risk of unauthorized access and potential threats.
+
+Tenant Owners can manage IP Address Allowlist entries from Tenant Settings in Webex Connect. You can add valid IPv4 addresses or CIDR ranges.
+
+### Postman Collection
+
+Ready to dive in? Check out our [Postman Collection](https://www.postman.com/cisco/webex-connect/collection/pyjw227/webex-connect-apis) to get started quickly.

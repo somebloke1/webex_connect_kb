@@ -1,0 +1,39 @@
+{
+  "category": "TUTORIALS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257854",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "379fb14746e25c08093b1b26e9cf35183bbf8d1c784794f729bf789543daa24d",
+    "source_path": "3814091df50c13536de19a5a2811c02bee2de06f54c8e43e7444719c401607b0",
+    "text_path": "201bc983c16ebdde26b69074812f3ac7d003e352477da25de225eb6e4a5ae337"
+  },
+  "headings": [
+    "Prerequisites",
+    "Register your Merchant ID on Apple Business Register",
+    "Generate the PEM File required by the payment session",
+    "Configure the App on Webex Connect Platform",
+    "Use Apple Pay option within a flow",
+    "Sample API Request",
+    "Receiving Payment Updates"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/start-with-apple-pay.md",
+  "resolved_url": "https://help.webexconnect.io/docs/start-with-apple-pay",
+  "retrieved_at": "2026-09-08T23:28:50+00:00",
+  "sha256_html_response": "d6a309e01f6d5d94692e1adc820e6f875352809b6619973e940b6304793ca8ee",
+  "sha256_source_body": "3814091df50c13536de19a5a2811c02bee2de06f54c8e43e7444719c401607b0",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/start-with-apple-pay.source.md",
+  "source_updated_at": "2026-04-15T08:30:37.523Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/start-with-apple-pay.txt",
+  "title": "Starting with Apple Pay",
+  "url": "https://help.webexconnect.io/docs/start-with-apple-pay",
+  "word_count": 947,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/start-with-apple-pay.metadata.json"
+}

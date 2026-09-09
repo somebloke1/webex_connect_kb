@@ -1,0 +1,37 @@
+{
+  "category": "Assets",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182577e0",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "0756e4eda495f65e468a6926f7e92e75435fdf49572424096d8418d5dab5dca0",
+    "source_path": "cef101db06ed2e3c710e2d52bd47dec9b25bfb0665e27bdea9c770975248e741",
+    "text_path": "8d89272b4c5f262047d06b8e6139aa920da2d927e59ce839317881556567d203"
+  },
+  "headings": [
+    "📘Alphanumeric Sender IDs",
+    "📘Multiple Geographic Locations",
+    "Get a Sender ID",
+    "🚧Sender ID Allocation",
+    "DLT Registered Numbers"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/sender-id.md",
+  "resolved_url": "https://help.webexconnect.io/docs/sender-id",
+  "retrieved_at": "2026-09-08T23:28:59+00:00",
+  "sha256_html_response": "34973c98cb997392f37a453738b46a1b69fca5ac32fda92679c853c81835f43b",
+  "sha256_source_body": "cef101db06ed2e3c710e2d52bd47dec9b25bfb0665e27bdea9c770975248e741",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/sender-id.source.md",
+  "source_updated_at": "2025-11-20T10:38:01.813Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/sender-id.txt",
+  "title": "Sender ID",
+  "url": "https://help.webexconnect.io/docs/sender-id",
+  "word_count": 315,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/sender-id.metadata.json"
+}

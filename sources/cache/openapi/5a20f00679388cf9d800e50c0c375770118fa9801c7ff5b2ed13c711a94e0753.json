@@ -1,0 +1,354 @@
+{
+  "_id": "6a675233ec1c893d8a7f67b6:6a675233ec1c893d8a7f6556",
+  "components": {
+    "securitySchemes": {
+      "sec0": {
+        "in": "header",
+        "name": "key",
+        "type": "apiKey"
+      }
+    }
+  },
+  "info": {
+    "title": "Messaging API v1",
+    "version": "6.20.0"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/messaging": {
+      "post": {
+        "deprecated": false,
+        "description": "",
+        "operationId": "send-message-v1",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Content-Type",
+            "schema": {
+              "default": "application/json",
+              "type": "string"
+            }
+          },
+          {
+            "description": "Applicable when you want to use service key for API authentication. Available under API tab within a service in your Webex Connect tenant.",
+            "in": "header",
+            "name": "key",
+            "schema": {
+              "default": "<Service Key>",
+              "type": "string"
+            }
+          },
+          {
+            "description": "Bearer {{token}}. Applicable if you want to use JWT tokens for API authentication. Use either of 'key' or 'Authorization' header param.",
+            "in": "header",
+            "name": "Authorization",
+            "schema": {
+              "default": "Bearer <Token>",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "examples": {
+                "Email Sample": {
+                  "value": {
+                    "bcc": [],
+                    "callbackData": "",
+                    "cc": [],
+                    "channel": "email",
+                    "contactPolicy": {
+                      "channelApplyFrequencyCap": true,
+                      "channelCheckConsent": true,
+                      "contactPolicyGroup": ""
+                    },
+                    "content": {
+                      "encoding": "utf-8",
+                      "replyTo": "{{replyToEmailAddress}}",
+                      "subject": "{{subject}}",
+                      "text": "Simple text content",
+                      "type": "text"
+                    },
+                    "correlationid": "",
+                    "from": "{{fromEmailAddress}}",
+                    "notifyurl": "",
+                    "options": {
+                      "fromName": "{{emailSendername}}"
+                    },
+                    "requestedReceipts": [
+                      "submitted",
+                      "delivered",
+                      "read",
+                      "clicked",
+                      "bounced",
+                      "not verified",
+                      "invalid",
+                      "complaint",
+                      "failed"
+                    ],
+                    "substitutions": {
+                      "{{param3}}": "{{param3Value}}",
+                      "{{param4}}": "{{param4Value}}"
+                    },
+                    "to": [
+                      {
+                        "email": [
+                          "{{toEmailAddress}}"
+                        ],
+                        "substitutions": {
+                          "{{param1}}": "{{param1Value}}",
+                          "{{param2}}": "{{param2Value}}"
+                        }
+                      }
+                    ]
+                  }
+                },
+                "RCS Sample": {
+                  "value": {
+                    "callbackData": "",
+                    "channel": "rcs",
+                    "contactPolicy": {
+                      "channelApplyFrequencyCap": true,
+                      "channelCheckConsent": true,
+                      "contactPolicyGroup": ""
+                    },
+                    "content": {
+                      "suggestions": [
+                        {
+                          "displayText": "Yes",
+                          "postbackData": "usr_msg_yes",
+                          "type": "reply"
+                        },
+                        {
+                          "address": "",
+                          "displayText": "",
+                          "latitude": 0,
+                          "longitude": 0,
+                          "postbackData": "",
+                          "type": "viewLocation"
+                        },
+                        {
+                          "displayText": "",
+                          "postbackData": "",
+                          "type": "shareLocation"
+                        },
+                        {
+                          "displayText": "",
+                          "postbackData": "",
+                          "type": "openUrl",
+                          "url": ""
+                        },
+                        {
+                          "displayText": "",
+                          "endTime": "{{TimeinUTC}}",
+                          "meetingDescription": "",
+                          "meetingTitle": "",
+                          "postbackData": "",
+                          "startTime": "{{TimeinUTC}}",
+                          "type": "calendarEvent"
+                        },
+                        {
+                          "displayText": "",
+                          "phone": "",
+                          "postbackData": "",
+                          "type": "dialPhone"
+                        }
+                      ],
+                      "text": "This is the message.  Reply Yes or No.",
+                      "type": "text"
+                    },
+                    "correlationId": "",
+                    "from": "{{rcsAppId}}",
+                    "notifyUrl": "",
+                    "options": {
+                      "smsFallback": true,
+                      "smsSenderId": "{{senderid}}",
+                      "text": "fallback text"
+                    },
+                    "requestedReceipts": [
+                      "DELIVERED"
+                    ],
+                    "substitutions": {
+                      "{{rcs_parameter1}}": "{{rcs_value1}}"
+                    },
+                    "to": [
+                      {
+                        "msisdn": [
+                          "{{msisdn}}"
+                        ],
+                        "substitutions": {
+                          "{{rcs_parameter1}}": "{{rcs_value1}}"
+                        }
+                      }
+                    ]
+                  }
+                },
+                "SMS Sample": {
+                  "value": {
+                    "callbackData": "",
+                    "channel": "sms",
+                    "contactPolicy": {
+                      "channelApplyFrequencyCap": true,
+                      "channelCheckConsent": true,
+                      "contactPolicyGroup": ""
+                    },
+                    "content": {
+                      "text": "£ ¥ ¿ Ä Å Æ Ç É Ñ Ö Ø Ü Ü ß à ä å æ è é\n with JWT token https://www.google.com",
+                      "type": "unicode"
+                    },
+                    "correlationid": "",
+                    "expireAt": "<ISO8601 date/time>",
+                    "from": "{{from}}",
+                    "notifyurl": "",
+                    "options": {
+                      "domain": "https://s.imiconnect.co",
+                      "shortenLinks": "true",
+                      "trackClicks": "true"
+                    },
+                    "requestedReceipts": [
+                      "SENT",
+                      "DELIVERED",
+                      "CLICKED"
+                    ],
+                    "sendAt": "<ISO8601 date/time>",
+                    "substitutions": {
+                      "{{sms_parameter1}}": "{{sms_value1}}",
+                      "{{sms_parameter2}}": "{{sms_value2}}"
+                    },
+                    "to": [
+                      {
+                        "msisdn": [
+                          "{{msisdn}}"
+                        ]
+                      }
+                    ],
+                    "validity": "time period in seconds"
+                  }
+                }
+              },
+              "schema": {}
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Authentication Failed": {
+                    "value": "{\n    \"response\": {\n        \"code\": \"7001\",\n        \"description\": \"Authentication failed.\",\n        \"transid\": \"7670c9a8-131f-4166-ac30-17f6109340d6\"\n    }\n}"
+                  },
+                  "Invalid JSON": {
+                    "value": "{\n    \"response\": {\n        \"code\": \"7000\",\n        \"description\": \"Invalid JSON\",\n        \"transid\": \"2b2c0bfb-4396-444a-880d-44ee007c130f\"\n    }\n}"
+                  },
+                  "Result": {
+                    "value": "{\n    \"response\": [\n        {\n            \"code\": \"1001\",\n            \"transid\": \"3f09295d-9eb3-4c9e-8ee8-a3272e5f00c1\",\n            \"description\": \"Queued\"\n        }\n    ]\n}"
+                  }
+                },
+                "schema": {
+                  "oneOf": [
+                    {
+                      "properties": {
+                        "response": {
+                          "items": {
+                            "properties": {
+                              "code": {
+                                "example": "1001",
+                                "type": "string"
+                              },
+                              "description": {
+                                "example": "Queued",
+                                "type": "string"
+                              },
+                              "transid": {
+                                "example": "3f09295d-9eb3-4c9e-8ee8-a3272e5f00c1",
+                                "type": "string"
+                              }
+                            },
+                            "type": "object"
+                          },
+                          "type": "array"
+                        }
+                      },
+                      "type": "object"
+                    },
+                    {
+                      "properties": {
+                        "response": {
+                          "properties": {
+                            "code": {
+                              "example": "7001",
+                              "type": "string"
+                            },
+                            "description": {
+                              "example": "Authentication failed.",
+                              "type": "string"
+                            },
+                            "transid": {
+                              "example": "7670c9a8-131f-4166-ac30-17f6109340d6",
+                              "type": "string"
+                            }
+                          },
+                          "type": "object"
+                        }
+                      },
+                      "title": "Authentication Failed",
+                      "type": "object"
+                    },
+                    {
+                      "properties": {
+                        "response": {
+                          "properties": {
+                            "code": {
+                              "example": "7000",
+                              "type": "string"
+                            },
+                            "description": {
+                              "example": "Invalid JSON",
+                              "type": "string"
+                            },
+                            "transid": {
+                              "example": "2b2c0bfb-4396-444a-880d-44ee007c130f",
+                              "type": "string"
+                            }
+                          },
+                          "type": "object"
+                        }
+                      },
+                      "title": "Invalid JSON",
+                      "type": "object"
+                    }
+                  ]
+                }
+              }
+            },
+            "description": "200"
+          }
+        },
+        "summary": "Send Message v1"
+      }
+    }
+  },
+  "security": [
+    {
+      "sec0": []
+    }
+  ],
+  "servers": [
+    {
+      "url": "https://api.us.webexconnect.io/resources/v1"
+    }
+  ],
+  "x-readme": {
+    "explorer-enabled": false,
+    "headers": [
+      {
+        "key": "Content-Type",
+        "value": "application/json"
+      }
+    ],
+    "proxy-enabled": false
+  },
+  "x-readme-fauxas": true
+}

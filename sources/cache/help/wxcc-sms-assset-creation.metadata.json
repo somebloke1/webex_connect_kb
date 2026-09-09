@@ -1,0 +1,35 @@
+{
+  "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd81825788a",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "7e296aef46bc00682c6988939edbad1c811288dd698e5747dc23f6d02706acb7",
+    "source_path": "33c4d420a21eb15bd634dedca0ca89d547751f16892e99adb27a3549d88a9584",
+    "text_path": "77ebf08231edaa6e5ece775130806ef0303bba95fd9643ba5255039538944564"
+  },
+  "headings": [
+    "Registering your Webex Connect Phone Number with Webex Contact Center",
+    "❗️",
+    "📘Entrypoint Configuration"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/wxcc-sms-assset-creation.md",
+  "resolved_url": "https://help.webexconnect.io/docs/wxcc-sms-assset-creation",
+  "retrieved_at": "2026-09-08T23:29:12+00:00",
+  "sha256_html_response": "c28325c53b5eaed9a9ffeaca1193a4b31602d559a067bd2110b175b9158b27c7",
+  "sha256_source_body": "33c4d420a21eb15bd634dedca0ca89d547751f16892e99adb27a3549d88a9584",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/wxcc-sms-assset-creation.source.md",
+  "source_updated_at": "2026-07-31T12:18:43.048Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/wxcc-sms-assset-creation.txt",
+  "title": "SMS - WXCC",
+  "url": "https://help.webexconnect.io/docs/wxcc-sms-assset-creation",
+  "word_count": 449,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/wxcc-sms-assset-creation.metadata.json"
+}

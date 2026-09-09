@@ -1,0 +1,351 @@
+{
+  "_id": "6a675233ec1c893d8a7f67fe:6a675233ec1c893d8a7f6634",
+  "components": {
+    "securitySchemes": {}
+  },
+  "info": {
+    "title": "Apple Message for Business: iMessage App",
+    "version": "6.20.0"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/": {
+      "post": {
+        "deprecated": false,
+        "description": "Provides a unique user experience with custom interactive messages. _Note: Modify YourRegion in the URL to the right to reflect your tenant’s region. See [Know your endpoint page](https://developers.imiconnect.io/reference/endpoints)._",
+        "operationId": "apple-message-for-business-imessage-app",
+        "parameters": [
+          {
+            "description": "Applicable when you want to use service key for API authentication. Available under API tab within a service in your webexconnect tenant.",
+            "in": "header",
+            "name": "key",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "JSON Web Token (JWT) for authentication (e.g. bearer [token]) used alternatively to Service Key",
+            "in": "header",
+            "name": "authorization",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "examples": {
+                "Request Example": {
+                  "value": {
+                    "appid": "{{ambAppid}}",
+                    "callbackData": "",
+                    "channels": {
+                      "AppleBusinessChat": {
+                        "interactiveData": {
+                          "appIcon": "https://4.img-dpreview.com/files/p/E~TS590x0~articles/3925134721/0266554465.jpeg",
+                          "appName": "API Explorer",
+                          "appStoreId": 1065520552,
+                          "extensionId": "com.imimobile.fcmconnect.MessagesExtension",
+                          "images": [
+                            {
+                              "identifier": "vimg1",
+                              "url": "https://media.croma.com/image/upload/v1663261950/Croma%20Assets/Small%20Appliances/Vacuum%20Cleaners/Images/259150_qs58bu.png"
+                            },
+                            {
+                              "identifier": "vimg2",
+                              "url": "https://media.croma.com/image/upload/v1632142476/Croma%20Assets/Small%20Appliances/Fryers%20and%20Grills/Images/243342_osqmdr.png"
+                            },
+                            {
+                              "identifier": "vimg3",
+                              "url": "https://res.cloudinary.com/jerrick/image/upload/f_jpg,fl_progressive,q_auto,w_1024/609a695d49932b001dce1ce5.jpg"
+                            }
+                          ],
+                          "receivedMessage": {
+                            "imageIdentifier": "vimg3",
+                            "imageSubtitle": "Subtitle of the image attachment.",
+                            "imageTitle": "Title of image attachment",
+                            "secondarySubtitle": "Title that is aligned right",
+                            "subtitle": "Subtitle to be displayed under title",
+                            "tertiarySubtitle": "Subtitle that is aligned right",
+                            "title": "Title of Bubble youtube"
+                          },
+                          "sessionIdentifier": "76dbffd0-7f2b-4c92-a396-ae533d8a68e9",
+                          "teamId": "ADTJF9P7YB",
+                          "url": "?name=samplepackage&extraCharge=1.5&deliveryDate=27-11-2022&destinationName=Home&street=1infiniteloop&state=CA&city=Hyderabad&country=IND&postalCode=500084&latitude=17.331686&longitude=78.030656&isMyLocation=false&isFinalDestination=false",
+                          "useLiveLayout": "true"
+                        },
+                        "type": "interactive"
+                      }
+                    },
+                    "correlationid": "",
+                    "deliverychannel": "AppleBusinessChat",
+                    "destination": [
+                      {
+                        "abcUserId": [
+                          "{{ambUserId}}"
+                        ]
+                      }
+                    ],
+                    "notifyurl": "",
+                    "notifyurlAuthId": "TNPBXKT09U"
+                  }
+                }
+              },
+              "schema": {
+                "properties": {
+                  "appid": {
+                    "description": "The ID of the app asset that you can obtain from the Connect platform.",
+                    "type": "string"
+                  },
+                  "callbackData": {
+                    "description": "Data that you have configured to receive on the notify Url. This is configured as a part of the request.",
+                    "type": "string"
+                  },
+                  "channels": {
+                    "description": "Channels object used for messaging.",
+                    "properties": {
+                      "AppleBusinessChat": {
+                        "description": "JSON object for AppleBusinessChat configuration.",
+                        "properties": {
+                          "interactiveData": {
+                            "description": "JSON object for interactiveData configuration",
+                            "properties": {
+                              "appIcon": {
+                                "description": "It’ll be an image URL, which we will convert to base64-encoded string. URL validation should be in place. Only .png files are accepted",
+                                "type": "string"
+                              },
+                              "appName": {
+                                "description": "The name of the iMessage app.",
+                                "type": "string"
+                              },
+                              "appStoreId": {
+                                "description": "The App Store identifier of the iMessage app.",
+                                "format": "int32",
+                                "type": "integer"
+                              },
+                              "extensionId": {
+                                "description": "AppStore extension bundle ID of the iMessage App",
+                                "type": "string"
+                              },
+                              "images": {
+                                "description": "An array of image dictionaries.",
+                                "items": {
+                                  "properties": {
+                                    "identifier": {
+                                      "description": "A string field identifying the time item that must be unique within the payload, if more than one exists.",
+                                      "type": "string"
+                                    },
+                                    "url": {
+                                      "description": "Publicly accessible URL that is a direct link to the media.",
+                                      "type": "string"
+                                    }
+                                  },
+                                  "type": "object"
+                                },
+                                "type": "array"
+                              },
+                              "receivedMessage": {
+                                "description": "JSON object for received message configuration",
+                                "properties": {
+                                  "imageIdentifier": {
+                                    "description": "The identifier for one of the images specified in data.images.",
+                                    "type": "string"
+                                  },
+                                  "imageSubtitle": {
+                                    "description": "The attached image's subtitle. Limited to 512 characters. Only custom interactive messages use this key.",
+                                    "type": "string"
+                                  },
+                                  "imageTitle": {
+                                    "description": "The attached image's title. Limited to 512 characters. Only custom interactive messages use this key.",
+                                    "type": "string"
+                                  },
+                                  "secondarySubtitle": {
+                                    "description": "A right-aligned title. Limited to 512 characters. Only custom interactive messages use this key.",
+                                    "type": "string"
+                                  },
+                                  "subtitle": {
+                                    "description": "The subtitle that appears under the main title in the received message bubble. Limited to 512 characters.",
+                                    "type": "string"
+                                  },
+                                  "tertiarySubtitle": {
+                                    "description": "A right-aligned subtitle. Limited to 512 characters. Only custom interactive messages use this key.",
+                                    "type": "string"
+                                  },
+                                  "title": {
+                                    "description": "The main title that the Messages app shows in the header of the received message bubble. Limited to 512 characters.",
+                                    "type": "string"
+                                  }
+                                },
+                                "type": "object"
+                              },
+                              "sessionIdentifier": {
+                                "description": "uuid for this interaction",
+                                "type": "string"
+                              },
+                              "teamId": {
+                                "description": "AppStore team ID of the iMessage App",
+                                "type": "string"
+                              },
+                              "url": {
+                                "description": "A URL query string containing data that the Messages app sends to the iMessage app.",
+                                "type": "string"
+                              },
+                              "useLiveLayout": {
+                                "description": "A Boolean that determines whether the Messages app should use Live Layout. The default is true. Default: true",
+                                "type": "boolean"
+                              }
+                            },
+                            "required": [
+                              "appName",
+                              "url",
+                              "appIcon",
+                              "useLiveLayout"
+                            ],
+                            "type": "object"
+                          },
+                          "type": {
+                            "description": "Type of the outbound event. It can be text, typing_start, typing_end, richLink, or interactive",
+                            "type": "string"
+                          }
+                        },
+                        "type": "object"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  "correlationid": {
+                    "description": "The CorrelationID is a unique identifier that you can attach to every request as a reference a particular transaction or event. This is configured as a part of the request.",
+                    "type": "string"
+                  },
+                  "deliverychannel": {
+                    "default": "AppleBusinessChat",
+                    "description": "Channel used to send the message i.e., AppleBusinessChat in this case.",
+                    "type": "string"
+                  },
+                  "destination": {
+                    "description": "User's Opaque ID that uniquely identifies a user and is specific to the business",
+                    "items": {
+                      "properties": {
+                        "abcUserID": {
+                          "default": [],
+                          "description": "User's Opaque ID -Note: For more information [refer](https://register.apple.com/resources/messages/messaging-documentation/faq)_",
+                          "items": {
+                            "type": "string"
+                          },
+                          "type": "array"
+                        }
+                      },
+                      "type": "object"
+                    },
+                    "type": "array"
+                  },
+                  "notifyurl": {
+                    "description": "Configure a URL to get notifications on delivery reports for a Apple message. This field accepts only a valid URL or a variable. If an invalid URL is passed in API request or via a variable, then such request will not be considered eligible for retries.",
+                    "type": "string"
+                  },
+                  "notifyurlAuthId": {
+                    "default": "No",
+                    "description": "Unique Authentication ID.",
+                    "type": "string"
+                  }
+                },
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{\n  \"response\": {\n    \"code\": \"7001\",\n    \"description\": \"Authentication failed.\",\n    \"transid\": \"7670c9a8-131f-4166-ac30-17f6109340d6\"\n  }\n}"
+                  }
+                },
+                "schema": {
+                  "properties": {
+                    "response": {
+                      "properties": {
+                        "code": {
+                          "example": "7001",
+                          "type": "string"
+                        },
+                        "description": {
+                          "example": "Authentication failed.",
+                          "type": "string"
+                        },
+                        "transid": {
+                          "example": "7670c9a8-131f-4166-ac30-17f6109340d6",
+                          "type": "string"
+                        }
+                      },
+                      "type": "object"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "200"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{\n  \"response\": {\n    \"code\": \"7001\",\n    \"description\": \"Authentication failed.\",\n    \"transid\": \"7670c9a8-131f-4166-ac30-17f6109340d6\"\n  }\n}"
+                  }
+                },
+                "schema": {
+                  "properties": {
+                    "response": {
+                      "properties": {
+                        "code": {
+                          "example": "7001",
+                          "type": "string"
+                        },
+                        "description": {
+                          "example": "Authentication failed.",
+                          "type": "string"
+                        },
+                        "transid": {
+                          "example": "7670c9a8-131f-4166-ac30-17f6109340d6",
+                          "type": "string"
+                        }
+                      },
+                      "type": "object"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "400"
+          }
+        },
+        "summary": "Apple Message for Business: iMessage App"
+      }
+    }
+  },
+  "security": [
+    {}
+  ],
+  "servers": [
+    {
+      "url": "https://api.{YourRegion}.webexconnect.io/resources/v1/messaging",
+      "variables": {
+        "YourRegion": {
+          "default": "YourRegion"
+        }
+      }
+    }
+  ],
+  "x-readme": {
+    "explorer-enabled": true,
+    "headers": [],
+    "proxy-enabled": true
+  },
+  "x-readme-fauxas": true
+}

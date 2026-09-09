@@ -1,0 +1,996 @@
+> 📘 Please note:
+> 
+> - Apple Messages for Business channel is supported via Webex Connect Messaging API v1. The endpoint for it is: [https://{YourRegion}.webexconnect.io/resources/v1/messaging].
+> 
+>   Please modify YourRegion in the URL to reflect your tenant’s region. See [Know your endpoint page](https://developers.imiconnect.io/reference/endpoints).
+> - While the payload samples for various message types are covered below, you can use our Try It feature (click on the Message Type name to get routed to it) to send some test messages. You would be required to provide the Apple Messages for Business asset details, service key, message content, etc. from your account to use this. This apart you can [use our Postman Collection](https://www.postman.com/ciscodevnet/workspace/webex-connect/collection/26634274-03661a66-48a6-43a4-9a6f-77d6dc84654f) for trying variations that are not covered through the Try It feature.
+
+> 📘 Note
+> 
+> Please note that Apple Messages for Business commercial accounts that have not registered any activity in the past three months could be scheduled for deactivation by Apple.
+
+## Types of Apple Messages for Business Messages Supported
+
+Here's a list of Apple Message for Business message types supported by Webex Connect with payload samples. Click the hyperlinks below to see the API documentation for each of these.
+
+### Invitation Message
+
+Use `Invitation Message` to send an Apple Messages for Business invitation to an opted-in customer mobile number. Invitation messages allow a business to start an Apple Messages for Business conversation with a customer before an AMB opaque user ID is available. When the customer responds to the invitation, Webex Connect resolves the conversation to the AMB user ID for subsequent messages.
+
+| Parameter            | Mandatory | Description                                                                                                                                                              |
+| -------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `destination.msisdn` | Yes       | Customer mobile number in E.164 format. Invitation messages are sent to mobile numbers, not AMB opaque user IDs.                                                         |
+| `type`               | Yes       | Set this value to `invitation`.                                                                                                                                          |
+| `withImage`          | Yes       | Boolean value that indicates whether to send the invitation with the business image or brand logo.                                                                       |
+| `brandName`          | Yes       | Brand name to be displayed in the invitation message.                                                                                                                    |
+| `requestIdentifier`  | No        | Optional identifier that can be used to correlate the invitation request and response. The value must be an alphanumeric string with a maximum length of 100 characters. |
+| `locale`             | No        | Locale for the invitation message, if configured. If not specified, the locale defaults to English (US).                                                                 |
+
+Sample payload (Invitation Message):
+
+```json
+{
+  "deliverychannel": "AppleBusinessChat",
+  "appid": "a_637818908588360000",
+  "destination": [
+    {
+      "msisdn": [
+        "+4477362XXXX"
+      ]
+    }
+  ],
+  "channels": {
+    "AppleBusinessChat": {
+      "type": "invitation",
+      "withImage": true,
+      "brandName": "Delta",
+      "requestIdentifier": "fcb5e9ca-0ddc-4a07-bf9b-7fcbd044aeeb"
+    }
+  },
+  "correlationid": "corr-12345",
+  "callbackData": "customer-context",
+  "notifyurl": "https://www.example.com/notify"
+}
+```
+
+### [Text](https://developers.imiconnect.io/reference/apple-message-for-business-_text)
+
+A plain text message that businesses can send to their customers.
+
+| Parameter   | Mandatory | Description                                                         |
+| :---------- | :-------- | :------------------------------------------------------------------ |
+| type        | Yes       | Options: text, richlink, interactive                                |
+| text        | Yes       | The text of the text message, which can contain URLs and formatting |
+| attachments | No        | Contains the attachment object                                      |
+
+```json Text
+{
+	"deliverychannel": "AppleBusinessChat", //Channel used to send the message i.e., AppleBusinessChat for Apple Messages for Business in this case.
+	"appid": "{{ambAppid}}", //The ID of the app asset that you can obtain from the Connect platform.
+	"destination": [{
+		"abcUserId": ["{{ambUserId}}"] //User's Opaque ID that uniquely identifies a user and is specific to the business
+	}],
+	"channels": {
+		"AppleBusinessChat": {
+			"type": "text", //Type of the outbound event. It can be text ; typing_start, typing_end.
+			"text": "" //The content of the text message, which can contain URLs.
+		}
+	},
+    "correlationid": "", //The CorrelationID is a unique identifier that you can attach to every request as a reference a particular transaction or event. This is configured as a part of the request.
+    "callbackData": "", //Data that you have configured to receive on the notify Url. This is configured as a part of the request.
+    "notifyurl": "", //Configure a URL to get notifications on delivery reports for a Apple message. This field accepts only a valid URL or a variable. If an invalid URL is passed in API request or via a variable, then such request will not be considered eligible for retries.
+"notifyurlAuthId": "TNPBXKT09U" //Optional.
+}
+```
+```json Text (Attachments)
+"channels": {
+        "AppleBusinessChat": {
+            "type": "text",
+            "text": "Text with attachments first: \\uFFFC and second: \\uFFFC",
+            "attachments": [
+                {
+                    "url": "https://4.img-dpreview.com/files/p/E~TS590x0~articles/3925134721/0266554465.jpeg",
+                    "mimeType": "image/jpeg"
+                },
+                {
+                    "url": "https://1.img-dpreview.com/files/p/TS1200x900~sample_galleries/0724895971/0009166108.jpg",
+                    "mimeType": "image/jpeg"
+                }
+            ]
+        }
+},
+ "correlationid": "", //Optional. The CorrelationID is a unique identifier that you can attach to every request as a reference a particular transaction or event. This is configured as a part of the request.
+    "callbackData": "", //Optional. Data that you have configured to receive on the notify Url. This is configured as a part of the request.
+    "notifyurl": "", //Optional. Configure a URL to get notifications on delivery reports for a Apple message. This field accepts only a valid URL or a variable. If an invalid URL is passed in API request or via a variable, then such request will not be considered eligible for retries.
+    "notifyurlAuthId": "TNPBXKT09U" //Optional.
+}
+```
+```json Listpicker
+"channels":{
+        "AppleBusinessChat":{
+            "type":"interactive",
+            "interactiveData":{
+                "data":{
+                    "version":"1.0",
+                    "requestIdentifier":"21d4a1c4-327c-ba35-45b1-36a050b15ad2",
+                    "images":[
+                        {
+                            "identifier":"6de6a59c-846f-45d8-a1d7-24382d9919db",
+                            "url":"http://drohnemieten.dein-betrieb.com/wp-content/uploads/2017/05/maxresdefault.jpg"
+                        },
+                        {
+                            "identifier":"c020521e-cc3c-41fa-876e-a445237a6f83",
+                            "url":"https://www.lens-rumors.com/wp-content/uploads/2014/10/Nikon-AF-S-DX-Nikkor-18-140mm-f3.5-5.6G-ED-VR-sample-images1.jpg"
+                        },
+                        {
+                            "identifier":"b70de3eb-a412-4fdd-a4b1-cb4eef853ded",
+                            "url":"http://www.tompetty.com/sites/g/files/g2000007521/f/sample1_1.jpg"
+                        }
+                    ],
+                    "listPicker":{
+                        "sections":[
+                            {
+                                "items":[
+                                    {
+                                        "style":"default",
+                                        "title":"iPhone X",
+                                        "imageIdentifier":"c020521e-cc3c-41fa-876e-a445237a6f83",
+                                        "subtitle":"So immersive the device itself disappears into the experience",
+                                        "order":0,
+                                        "identifier":"0"
+                                    },
+                                    {
+                                        "style":"default",
+                                        "title":"iPhone 8",
+                                        "imageIdentifier":"b70de3eb-a412-4fdd-a4b1-cb4eef853ded",
+                                        "subtitle":"iPhone 8 introduces an all new glass design",
+                                        "order":1,
+                                        "identifier":"1"
+                                    },
+                                    {
+                                        "style":"default",
+                                        "title":"iPhone SE",
+                                        "imageIdentifier":"6de6a59c-846f-45d8-a1d7-24382d9919db",
+                                        "subtitle":"A big step for small",
+                                        "order":2,
+                                        "identifier":"2"
+                                    }
+                                ],
+                                "title":"Available offers!",
+                                "multipleSelection":true,
+                                "order":0
+                            }
+                        ]
+                    }
+                },
+                "useLiveLayout":true,
+                "receivedMessage":{
+                    "style":"small",
+                    "title":"The best deals on new iPhones!",
+                    "subtitle":"Upgrade to a brand new iPhone this summer",
+                    "imageIdentifier":"6de6a59c-846f-45d8-a1d7-24382d9919db"
+                }
+            }
+        }
+},
+"correlationid": "", //Optional. The CorrelationID is a unique identifier that you can attach to every request as a reference a particular transaction or event. This is configured as a part of the request.
+    "callbackData": "", //Optional. Data that you have configured to receive on the notify Url. This is configured as a part of the request.
+    "notifyurl": "", //Optional. Configure a URL to get notifications on delivery reports for a Apple message. This field accepts only a valid URL or a variable. If an invalid URL is passed in API request or via a variable, then such request will not be considered eligible for retries.
+    "notifyurlAuthId": "TNPBXKT09U" //Optional.
+}
+```
+```json QuickReply
+{
+    "deliverychannel": "AppleBusinessChat",
+    "channels": {
+        "AppleBusinessChat": {
+            "type": "interactive",
+            "interactiveData": {
+                "data": {
+                    "version": "1.0",
+                    "requestIdentifier": "21d4a1c4-327c-ba35-45b1-36a050b15ad2",
+                    "quick-reply": {
+                        "summaryText": "Summary text",
+                        "items": [
+                            {
+                                "identifier": "0",
+                                "title": "Yes"
+                            },
+                            {
+                                "identifier": "1",
+                                "title": "No"
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "destination": [
+        {
+            "abcUserId": [
+                "urn:mbid:AQAAY2E1PqGghksrQ71ziwk4Ay68GU1usB+ndGNJuY3QSw+85VM5n29jm9TYilv0fErP38RydQve86uT4d6V8ObPFgIZSELoC4xVpg7oVuz9lkeYIqbwyWgvywHAfeZpus86WvI4dhZUTDJl21P4SUKeaOO5K/A="
+            ]
+        }
+    ]
+}
+```
+
+> 📘 App Clips
+> 
+> If the text contains links, and the UI options ‘Send the link mentioned in message preferably as an App Clip instead of as a Rich Link’ and ‘App Store Region for App Clip (Optional)’ are selected, the link will be converted to an App Clip. If these options are not selected, the links will be converted to Rich Links.
+
+> 📘 Note
+> 
+> It is recommended to use a valid authorization ID; the failure of notification won’t be logged in Debug Logs.
+> 
+> The notify URL should be filled with the proper URL format; otherwise, it would be considered an invalid URL.
+> 
+> The notify URL should be provided with proper spacing of the URL; when space is provided in front of the URL or at the end of the URL, it would be considered an invalid URL.
+
+### [Text with Attachments](https://developers.imiconnect.io/reference/apple-message-for-business_text-with-attachments)
+
+A text message with unicode object replacement character (\\\\uFFFC) at the text position where the attachment should appear in the message text.
+
+ **The attachments object** 
+
+| Parameter | Mandatory | Description                                                    |
+| :-------- | :-------- | :------------------------------------------------------------- |
+| url       | Yes       | Publicly accessible URL that is a **direct** link to the media |
+| mimeType  | Yes       | The MIME type                                                  |
+
+> 📘 Note
+> 
+> Please use URL-friendly file names for attachments, and avoid using special characters such as “+” in file names.
+
+### [Rich Link](https://developers.imiconnect.io/reference/apple-message-for-business-rich-link)
+
+Rich link messages contain an inline image or video as a preview of the hyperlink that business sends to customer
+
+- **richlinks**
+
+| Parameter    | Mandatory | Description                          |
+| :----------- | :-------- | :----------------------------------- |
+| type         | Yes       | Options: text, richlink, interactive |
+| richlinkData | Yes       | Rich link object                     |
+
+ **The rich link object** 
+
+| Parameter | Mandatory | Description                                                    |
+| :-------- | :-------- | :------------------------------------------------------------- |
+| url       | Yes       | Publicly accessible URL that is a **direct** link to the media |
+| title     | Yes       | Title of the rich link message                                 |
+| assets    | Yes       | Contains image or video asset                                  |
+
+```json Rich Link
+"channels":{
+        "AppleBusinessChat":{
+            "type":"richLink",
+            "richLinkData":{
+                "url":"https://youtu.be/gM0qOa_H-rs",
+                "title":"Mpbile Testing",
+                "assets":{
+                    "video":{
+                        "url":"https://youtu.be/gM0qOa_H-rs",
+                        "mimeType":"video/mp4"
+                    }
+                }
+            }
+        }
+    }
+    "destination": [
+    {
+     "userid":["4545"]
+    }
+  ]
+```
+```json Video Asset
+"assets":{
+    "video":{
+        "url":"https://youtu.be/gM0qOa_H-rs",
+        "mimeType":"video/mp4"
+    }
+}
+```
+
+- **interactive**
+
+| Parameter       | Mandatory | Description                                                      |
+| :-------------- | :-------- | :--------------------------------------------------------------- |
+| type            | Yes       | Options: text, richlink, interactive                             |
+| interactiveData | Yes       | Contains the list/Time Picker (Date Picker) and Quick Reply data |
+
+  **interactiveData object** 
+
+| Parameter         | Mandatory                                     | Description                                                                                                                                       |
+| :---------------- | :-------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------ |
+| version           | Yes                                           | A string representing the version number of the message extension schema. Should be 1.0.                                                          |
+| requestIdentifier | Yes                                           | A string that representing a unique identifier for the request. imiconnect returns the ID in the response it sends back to the client application |
+| images            | Yes                                           | An array of image dictionaries                                                                                                                    |
+| listPicker        | Yes if you want to send list picker           | A dictionary that tells Messages how the list picker should behave and what content it should show to the customer.                               |
+| event             | Yes if want to send Time Picker (Date Picker) | A dictionary that tells Messages how the Time Picker (Date Picker) should behave and what content it should show to the customer.                 |
+
+### [Quick Reply](https://developers.imiconnect.io/reference/apple-message-for-business_-quick-reply)
+
+Provides a simple way for the user to make an inline choice with a single tap during an ongoing conversation. You can have between two and five customizable choices, and the user can select only a single item.
+
+**_Quick Reply_**
+
+| Parameter   | Mandatory | Description                                                                                                                                             |
+| :---------- | :-------- | :------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| quick-reply | Yes       | An array of objects for quick reply message.                                                                                                            |
+| summaryText | Yes       | Summary text that will be used for device notification but will also shown in the transcript after the end user selects one of the quick reply options. |
+| items       | Yes       | An array of quick reply items.                                                                                                                          |
+| identifier  | Yes       | An identifier to identify the item.                                                                                                                     |
+| title       | Yes       | Title of the respective quick reply item. Max 1 line of text.                                                                                           |
+
+**_images_** 
+
+| Parameter  | Mandatory | Description                                                                               |
+| :--------- | :-------- | :---------------------------------------------------------------------------------------- |
+| data       | Yes       | Direct link to the image                                                                  |
+| identifier | Yes       | A string containing the image identifier, which must be unique within the list of images. |
+
+### [List Picker](https://developers.imiconnect.io/reference/apple-message-for-business_-list-picker)
+
+Allows the customer to choose from a list of items. A list picker displays a list of items, and information about the items-such as product name, description, and image in the Messages app on the customer's device. The customer can choose one or more items from the list to send with a reply.
+
+> 🚧 
+> 
+> Note that <<prodname>> allows for only 20 sections to be added as part of a single List Picker message. Further each section can have a maximum of 20 items in it.
+
+**_list picker_** 
+
+```json List Picker
+"listPicker":{
+                        "sections":[
+                            {
+                                "items":[
+                                    {
+                                        "style":"default",
+                                        "title":"iPhone X",
+                                        "imageIdentifier":"c020521e-cc3c-41fa-876e-a445237a6f83",
+                                        "subtitle":"So immersive the device itself disappears into the experience",
+                                        "order":0,
+                                        "identifier":"0"
+                                    },
+                                    {
+                                        "style":"default",
+                                        "title":"iPhone 8",
+                                        "imageIdentifier":"b70de3eb-a412-4fdd-a4b1-cb4eef853ded",
+                                        "subtitle":"iPhone 8 introduces an all new glass design",
+                                        "order":1,
+                                        "identifier":"1"
+                                    },
+                                    {
+                                        "style":"default",
+                                        "title":"iPhone SE",
+                                        "imageIdentifier":"6de6a59c-846f-45d8-a1d7-24382d9919db",
+                                        "subtitle":"A big step for small",
+                                        "order":2,
+                                        "identifier":"2"
+                                    }
+                                ],
+                                "title":"Available offers!",
+                                "multipleSelection":true,
+                                "order":0
+                            }
+                        ]
+                    }
+                },
+                "useLiveLayout":true,
+                "receivedMessage":{
+                    "style":"small",
+                    "title":"The best deals on new iPhones!",
+                    "subtitle":"Upgrade to a brand new iPhone this summer",
+                    "imageIdentifier":"6de6a59c-846f-45d8-a1d7-24382d9919db"
+                }
+            }
+        }
+},
+   "correlationid": "", //Optional. The CorrelationID is a unique identifier that you can attach to every request as a reference a particular transaction or event. This is configured as a part of the request.
+    "callbackData": "", //Optional. Data that you have configured to receive on the notify Url. This is configured as a part of the request.
+    "notifyurl": "", //Optional. Configure a URL to get notifications on delivery reports for a Apple message. This field accepts only a valid URL or a variable. If an invalid URL is passed in API request or via a variable, then such request will not be considered eligible for retries.
+    "notifyurlAuthId": "TNPBXKT09U" //Optional.
+}
+```
+
+### [Time Picker(Date Picker)](https://developers.imiconnect.io/reference/apple-message-for-business_-date-picker)
+
+Allows the customer to schedule an appointment. The customer can also get directions to the location or add the event to their calendar by tapping Get Directions or Add to Calendar.
+
+> 🚧 
+> 
+> Note that <<prodname>>allows for a maximum of 10 time slot options to be sent as part of single Time Picker (Date Picker) message.
+
+ **_Time Picker_ (Date Picker)**
+
+```json Time Picker (Date Picker) Event
+{
+    "deliverychannel": "AppleBusinessChat", //Channel used to send the message i.e., AppleBusinessChat for Apple Messages for Business in this case.
+    "appid": "{{ambAppid}}", //The ID of the app asset that you can obtain from the Connect platform.
+    "destination": [
+        {
+            "abcUserId": [
+                "{{ambUserId}}"
+            ] //User's Opaque ID that uniquely identifies a user and is specific to the business
+        }
+    ],
+    "channels": {
+        "AppleBusinessChat": {
+            "type": "interactive", //Options: text, richlink, interactive
+            "interactiveData": {
+                "bid": "com.apple.messages.MSMessageExtensionBalloonPlugin:0000000000:com.apple.icloud.apps.messages.business.extension",
+                "data": {
+                    "version": "", //A string representing the version number of the message extension schema. Should be 1.0.
+                    "requestIdentifier": "", //A string that representing a unique identifier for the request. Webex connect returns the ID in the response it sends back to the client application
+                    "images": [
+                        {
+                            "identifier": "", //A string containing the image identifier, which must be unique within the list of images.
+                            "data": "" //Direct link to the image
+                        }
+                    ],
+                    "event": {
+                        "timezoneOffset": -100, //An integer representing the number of minutes from GMT, specifying the timezone of the event’s location. If not set, times are shown according to the customer’s current time zone. If set, the times are shown according to the event’s time zone, regardless of the customer’s location.
+                        "identifier": "", //A string field identifying the event that must be unique within the payload, if more than one exists.
+                        "title": "", //A string field of the event title.
+                        "timeslots": [
+                            {
+                                "duration": 1800, //An integer representing the duration of the time slot, in seconds.
+                                "startTime": "", //A UTC date string, represented by a valid date in ISO-8601 format and specified as absolute GMT +0000 date; for example, 2017-05-26T08:27:55+00:00, 2017-05-26T08:27:55+0000, or 2017-05-26T08:27:55Z. The timezoneOffset, from the event object, determines whether the startTime is in a specific time zone or in the customer's current time zone.
+                                "identifier": "" //A string field identifying the time item that must be unique within the payload, if more than one exists.
+                            }
+                        ],
+                        "location": {
+                            "title": "", //A string field of the location title.
+                            "latitude": 51.5209041, //Representing the latitude of the location.
+                            "longitude": -0.1025591, //Representing the longitude of the location.
+                            "radius": 16 //Representing the location radius, in meters. Messages for Business ignores this field when latitude and longitude are missing or empty.
+                        }
+                    }
+                },
+                "useLiveLayout": true, //A Boolean that determines whether the Messages app should use Live Layout. The default is true. Default: true
+                "replyMessage": {
+                    "style": "", //A style that controls the size of the view rendered by Live Layout. The default is icon. The list of possible values: icon, small, large
+                    "title": "", //The main title that the Messages app shows in the header of the reply message bubble. When the user taps the reply message bubble, the Messages app replaces the title with the user’s selection. Limited to 512 characters.
+                    "alternateTitle": "" //Alternate Title of the reply message
+                },
+                "requestIdentifier": "", //An identifier for the authenticate request. Recommended value: uuid.
+                "receivedMessage": {
+                    "style": "", //A style that controls the size of the view rendered by Live Layout. The default is icon. The list of possible values: icon, small, large.
+                    "title": "", //The main title that the Messages app shows in the header of the received message bubble. Limited to 512 characters.
+                    "subtitle": "", //The subtitle that appears under the main title in the received message bubble. Limited to 512 characters.
+                    "imageIdentifier": "" //The identifier for one of the images specified in data.images.
+                }
+            }
+        }
+    },
+    "correlationid": "", //The CorrelationID is a unique identifier that you can attach to every request as a reference a particular transaction or event. This is configured as a part of the request.
+    "callbackData": "", //Data that you have configured to receive on the notify Url. This is configured as a part of the request.
+  "notifyurl": "", //Configure a URL to get notifications on delivery reports for a Apple message. This field accepts only a valid URL or a variable. If an invalid URL is passed in API request or via a variable, then such request will not be considered eligible for retries.
+"notifyurlAuthId": "TNPBXKT09U" //Optional.
+}
+```
+
+### [Form Message](https://developers.imiconnect.io/reference/apple-message-for-business-form-messages)
+
+Messages for Business Forms allow you to create rich, multipage interactive flows for users on iOS and iPadOS devices
+
+**Form Specifications**  
+The specifications below define the content of the JSON payloads used to render the Form on user devices. Sample JSON Request Payload is mentioned below.
+
+```json Form Messages
+{
+    "appid": "a_637818908588360000",
+    "notifyurl": "https://requestinspector.com/inspect/01gfx7mnd38xfjswd0am8zev52",
+   "notifyurlAuthId":"TNPBXKT09U", //Optional.
+    "correlationid": "ABCTextmorethan10k",
+    "callbackData": "ABCTextmorethan10k",
+    "deliverychannel": "AppleBusinessChat",
+    "channels": {
+        "AppleBusinessChat": {
+            "type": "interactive",
+            "interactiveData": {
+                "data": {
+                    "requestIdentifier": "76dbffd0-7f2b-4c92-a396-ae533d8a68e7_1",
+                    "dynamic": {
+                        "private": true,
+                        "data": {
+                            "startPageIdentifier": "0",
+                            "showSummary": true,
+                            "splash": {
+                                "header": "Hello! How may I help you?",
+                                "splashtext": "Kindly fill the form to raise your complaint",
+                                "buttonTitle": "Continue",
+                                "imageIdentifier": "vimg3"
+                            },
+                            "pages": [
+                                {
+                                    "pageIdentifier": "0",
+                                    "type": "select",
+                                    "title": "Select the Defective Product",
+                                    "subtitle": "Select one of the purchased products for which there's a complain?",
+                                    "multipleSelection": false,
+                                    "items": [
+                                        {
+                                            "title": "Tulips Vacuum Cleaner",
+                                            "value": "vacuum",
+                                            "identifier": "101",
+                                            "nextPageIdentifier": "2",
+                                            "imageIdentifier": "vimg1"
+                                        },
+                                        {
+                                            "title": "Tulips Air Fryer",
+                                            "value": "airfryer",
+                                            "identifier": "102",
+                                            "nextPageIdentifier": "2",
+                                            "imageIdentifier": "vimg2"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "pageIdentifier": "2",
+                                    "type": "select",
+                                    "title": "Details of the complaint",
+                                    "subtitle": "Please choose one or more of the following as applicable",
+                                    "multipleSelection": true,
+                                    "nextPageIdentifier": "3",
+                                    "items": [
+                                        {
+                                            "title": "Air fryer is not heating up",
+                                            "value": "heat",
+                                            "identifier": "301",
+                                            "imageIdentifier": "vimg2"
+                                        },
+                                        {
+                                            "title": "Power plug is damaged",
+                                            "value": "plug",
+                                            "identifier": "302",
+                                            "imageIdentifier": "vimg2"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "pageIdentifier": "3",
+                                    "type": "picker",
+                                    "nextPageIdentifier": "4",
+                                    "selectedItemIndex": 2,
+                                    "subtitle": "Select Your Preferred Resolution",
+                                    "items": [
+                                        {
+                                            "title": "Refund",
+                                            "value": "refund",
+                                            "identifier": "401"
+                                        },
+                                        {
+                                            "title": "Replace",
+                                            "value": "replace",
+                                            "identifier": "402"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "pageIdentifier": "4",
+                                    "type": "datePicker",
+                                    "title": "Delivery Date",
+                                    "subtitle": "When did you receive the product?",
+                                    "nextPageIdentifier": "5",
+                                    "hintText": "Select the date of delivery",
+                                    "options": {
+                                        "startDate": "01/22/2022",
+                                        "maximumDate": "09/21/2022",
+                                        "minimumDate": "01/01/2020",
+                                        "dateFormat": "",
+                                        "labelText": ""
+                                    }
+                                },
+                                {
+                                    "pageIdentifier": "5",
+                                    "type": "input",
+                                    "title": "Additional Details",
+                                    "subtitle": "Please provide additional details if any",
+                                    "options": {
+                                        "required": false,
+                                        "inputType": "multiline",
+                                        "maximumCharacterCount": 500,
+                                        "keyboardType": "UIKeyboardTypeEmailAddress",
+                                        "placeholder": ""
+                                    },
+                                    "submitForm": true
+                                }
+                            ]
+                        }
+                    },
+                    "images": [
+                        {
+                            "url": "https://media.croma.com/image/upload/v1663261950/Croma%20Assets/Small%20Appliances/Vacuum%20Cleaners/Images/259150_qs58bu.png",
+                            "identifier": "vimg1"
+                        },
+                        {
+                            "url": "https://media.croma.com/image/upload/v1632142476/Croma%20Assets/Small%20Appliances/Fryers%20and%20Grills/Images/243342_osqmdr.png",
+                            "identifier": "vimg2"
+                        },
+                        {
+                            "url": "https://res.cloudinary.com/jerrick/image/upload/f_jpg,fl_progressive,q_auto,w_1024/609a695d49932b001dce1ce5.jpg",
+                            "identifier": "vimg3"
+                        }
+                    ]
+                },
+                "receivedMessage": {
+                    "title": "Raise a complaint",
+                    "subtitle": "Please fill the form to raise your complaint",
+                    "style": "",
+                    "imageIdentifier": "vimg3"
+                },
+                "replyMessage": {
+                    "title": "You've successfully submitted the form",
+                    "subtitle": "Thanks for your patience. You'll hear from us shortly",
+                    "style": "",
+                    "imageIdentifier": "vimg3"
+                }
+            }
+        }
+    },
+    "destination": [
+        {
+            "abcUserId": [
+                "urn:mbid:AQAAY1cYZy/EMyGTtdo8Hn5/hmvhF9EAzi0briUvglmQ2T4OGaIUXqK/BV+bUNosaolxurhgVhyzPn24nIb6bHAlajJeNfHlQNENNL2m6zCOxBRz5bvVH6JoUmPOGCh1bFOHjF1WOQZd+jS7jG+Zh78clXae8D8="
+            ]
+        }
+    ]
+}
+```
+```json iMessage App
+{
+    "type": "interactive",
+    "interactiveData": {
+        "appIcon":"<app icon URL>",
+        "appId": "<app - store - id>",
+        "appName": "Name of the App",
+        "bid": "com.apple.messages.MSMessageExtensionBalloonPlugin:{team-id}:{ext-bundle-id}",
+        "URL": "?data=passed-to-app&data2=more-data-passed-to-app",
+        "sessionIdentifier": "uuid-for-this-interaction",
+        "receivedMessage": {
+            "title": "Title of Bubble",
+            "subtitle": "Subtitle to be displayed under title",
+            "imageTitle": "Title of image attachment",
+            "imageSubtitle": "Subtitle of the image attachment.",
+            "secondarySubtitle": "Title that is aligned right",
+            "tertiarySubtitle": "Subtitle that is aligned right"
+        }
+    },
+    "sourceId": "",
+    "destinationId": "",
+    "v": 1,
+    "id": "d2f99c0e-f64c-4c3b-abbf-4a8567891ef5"
+}
+```
+```json New Authentication Message
+{
+  "v": 1,
+  "sourceId": "<sourceId>",
+  "destinationId": "<destinationId>",
+  "type": "interactive",
+  "locale": "en_us",
+  "interactiveData": {
+    "bid": "com.apple.messages.MSMessageExtensionBalloonPlugin:0000000000:com.apple.icloud.apps.messages.business.extension",
+    "data": {
+      "version": "2.0",
+      "requestIdentifier": "f8ad656-12a0-4fc9-a28d-22d103a0ae5d",
+      "authenticate": {
+        "oauth2": {
+          "state": "3D138r1234ru3e1%26ABCDE+jbFom1SW+wCRR2yq3eh+k0VtLQrTRnVPYF9V2fQ5LM5c53uamshW1DYOF2d+jnENvo5c1sV+UWvjV2+rmGwJ+q2GsvPziBDsgw+Jps7YjbvqwtB+SVdLV2EJC4H0l3cVj8tMuEC0gSw3lGeRP4z+QhhPQ=",
+          "responseType": "code",
+          "scope": ["r_liteprofile"],
+          "redirectURI" : "https://example.com/auth/linkedin/callback"
+        }
+      }
+    },
+    "receivedMessage": {
+      "title": "Lets Sign In"
+    },
+    "replyMessage": {
+      "title": "Sign In Completed"
+    }
+  }
+}
+```
+
+**Request Payload**  
+The type of interactive message that initiates the experience is dynamic.
+
+| Parameter | Mandatory | Description                                                                        |
+| :-------- | :-------- | :--------------------------------------------------------------------------------- |
+| template  | Yes       | Type is 'messageForms'. Tells the client which template to use to render the view. |
+| data      | Yes       | Place all the data in this field.                                                  |
+
+**Data Dictionary Objects**
+
+| Object              | Parameter with in the Object | Mandatory | Description                                                                                                                                                                                                                                                                                                                                                 |
+| :------------------ | :--------------------------- | :-------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| version             | JSON Object                  |           | Shown at the start of the form. When using splash, ensure the appropriate fields listed below display:                                                                                                                                                                                                                                                      |
+|                     | header                       | No        | If set, it displays in bold the title on the page underneath the image.                                                                                                                                                                                                                                                                                     |
+|                     | splashtext                   | No        | Use this to display the body copy for the page.                                                                                                                                                                                                                                                                                                             |
+|                     | buttonTitle                  | Yes       | Text on the button shown on the page. If buttonTitle is missing then this view doesn't display and continues onto the first module.                                                                                                                                                                                                                         |
+|                     | imageIdentifier              | No        | Image to be shown at the top of the view.                                                                                                                                                                                                                                                                                                                   |
+| startPageIdentifier |                              | Yes       | Identifier for the starting page of the form. Must match one of the string identifiers for the configured pages. See pageIdentifier under pages below.                                                                                                                                                                                                      |
+| private             |                              | No        | Defaults to false. Boolean value indicates whether to mark the response as private. If value is true, the response object contains this property (interactiveData > data > dynamic > private).                                                                                                                                                              |
+| showSummary         |                              | No        | Defaults to false. If set to true then it shows the summary of all the selections made within the form.                                                                                                                                                                                                                                                     |
+| pages               | Array of Object              | Yes       | An array of different pages to be shown in the form. Every page object has following common objects.                                                                                                                                                                                                                                                        |
+|                     | pageIdentifier               | Yes       | A unique identifier, as a string, for the page being shown, that is less than 20 characters in length. Do not reuse. Ex: "firstNamePage" or "0001".                                                                                                                                                                                                         |
+|                     | type                         | Yes       | Use one of the following values: select, picker, Time Picker (datePicker), or input.                                                                                                                                                                                                                                                                        |
+|                     | title                        |           | If set this displays the title in bold on the page.                                                                                                                                                                                                                                                                                                         |
+|                     | subtitle                     | Yes       | Use this object to display the question for the page.                                                                                                                                                                                                                                                                                                       |
+|                     | nextPageIdentifier           | Yes       | except for single select option page, where you specify the nextPageIdentifier within each of the item objects. If a page does not have a nextPageIdentifier set on it, the client assumes the current page to be the final page and proceeds to send or provides a summary page based on the data. This is a unique page identifier to show the next page. |
+|                     | submitForm                   | No        | A Bool value placed on the pages to denote the end page of the form. Since multiple pages can act as an end page, this object can be set on multiple pages.                                                                                                                                                                                                 |
+
+The supported page types are as mentioned in the “Types of Pages“ section of the [Interactive Message Types](https://register.apple.com/resources/messages/msp-rest-api/type-interactive#types-of-pages).
+
+[block:parameters]
+{
+  "data": {
+    "h-0": "Object",
+    "h-1": "Parameter with in the Object",
+    "h-2": "Mandatory",
+    "h-3": "Description",
+    "0-0": "select",
+    "0-1": "",
+    "0-2": "",
+    "0-3": "",
+    "1-0": "",
+    "1-1": "multipleSelection",
+    "1-2": "No",
+    "1-3": "A Bool value that defaults to false or singleSelect. Set to true to enable multipleSelection on the page.",
+    "2-0": "",
+    "2-1": "items",
+    "2-2": "No",
+    "2-3": "An array of objects defining the user experience.",
+    "3-0": "",
+    "3-1": "",
+    "3-2": "",
+    "3-3": "title - Localized string value for display.",
+    "4-0": "",
+    "4-1": "",
+    "4-2": "",
+    "4-3": "value- A string value of the object itself.\t",
+    "5-0": "",
+    "5-1": "",
+    "5-2": "",
+    "5-3": "identifier-A unique identifier for the item.",
+    "6-0": "",
+    "6-1": "",
+    "6-2": "",
+    "6-3": "imageidentifier-  string containing the image identifier, from the imageItem dictionary. For more information about sending an image, see ImageItem dictionary.",
+    "7-0": "",
+    "7-1": "",
+    "7-2": "",
+    "7-3": "nextPageIdentifier-A unique page identifier to show the next page. Set this value only when multipleSelection is not defined or set to false.",
+    "8-0": "picker",
+    "8-1": "",
+    "8-2": "",
+    "8-3": "",
+    "9-0": "",
+    "9-1": "pickerTitle",
+    "9-2": "",
+    "9-3": "A string value representing optional text shown next to the picker text field. This value defaults to an empty string. When empty the picker text field centers to the page",
+    "10-0": "",
+    "10-1": "selectedItemIndex",
+    "10-2": "",
+    "10-3": "A zero-indexed number identifying the item in the picker wheel should be selected by default. Defaults to item at index 0.",
+    "11-0": "",
+    "11-1": "items",
+    "11-2": "",
+    "11-3": "An array of objects defining the user experience.  \n-title: Localized string value for display.  \n  \n-value: A string value of the object itself.  \n  \n\\-identifier: A unique identifier for the item.",
+    "12-0": "datePicker",
+    "12-1": "",
+    "12-2": "",
+    "12-3": "",
+    "13-0": "",
+    "13-1": "hintText",
+    "13-2": "",
+    "13-3": "A string representing optional text to give the user more input context that displays below the Date field.",
+    "14-0": "options",
+    "14-1": "",
+    "14-2": "",
+    "14-3": "Dictionary containing optional values for theTime Picker (Date Picker) element.-dateFormat: A string representing the date format on the page. Defaults to MM/dd/yyyy. Unless this property is explicitly set, all of the date properties are defined using this format. For format string specifications see: Use Format Strings to Specify Custom Formats.-startDate: A string representing the date displayed by the Time Picker (Date Picker). Defaults to current date.-maximumDate: A string representing the maximum date that a Time Picker (Date Picker) can show. Defaults to current date.-minimumDate: A string representing the minimum date that a Time Picker (Date Picker) can show.-labelText: A string representing the text string to be shown next to date field. Defaults to text 'Date'.",
+    "15-0": "",
+    "15-1": "dateFormat",
+    "15-2": "",
+    "15-3": "A string representing the date format on the page. Defaults to MM/dd/yyyy. Unless this property is explicitly set, all of the date properties are defined using this format. For format string specifications see: Use Format Strings to Specify Custom Formats.",
+    "16-0": "",
+    "16-1": "startDate",
+    "16-2": "",
+    "16-3": "A string representing the date displayed by the Time Picker (Date Picker). Defaults to current date.",
+    "17-0": "",
+    "17-1": "maximumDate",
+    "17-2": "",
+    "17-3": "A string representing the maximum date that a Time Picker (Date Picker) can show. Defaults to current date.",
+    "18-0": "",
+    "18-1": "minimumDate",
+    "18-2": "",
+    "18-3": "A string representing the minimum date that a Time Picker (Date Picker) can show.",
+    "19-0": "",
+    "19-1": "labelText",
+    "19-2": "",
+    "19-3": "A string representing the text string to be shown next to date field. Defaults to text 'Date'.",
+    "20-0": "input",
+    "20-1": "hintText",
+    "20-2": "",
+    "20-3": "A string representing optional text to give the user more input context that displays below the Input field.",
+    "21-0": "",
+    "21-1": "options",
+    "21-2": "",
+    "21-3": "Dictionary containing optional values for the input field.",
+    "22-0": "",
+    "22-1": "",
+    "22-2": "",
+    "22-3": "regex: A string representing a JSON encoded regular expression (regex) string to limit the type of input for input field to use. An example is when you want to limit input to only have proper decimal values provide a regex string: ^\\\\d\\*\\\\.?\\\\d?\\\\d?$. JSON encode all regex strings",
+    "23-0": "",
+    "23-1": "",
+    "23-2": "",
+    "23-3": "placeholder: A text string used when there is no other text in the input text field. Default value are Required or Optional.",
+    "24-0": "",
+    "24-1": "",
+    "24-2": "",
+    "24-3": "required: A Boolean value that defaults to false. When set to true, the next button on page is disabled until the user provides input.",
+    "25-0": "",
+    "25-1": "",
+    "25-2": "",
+    "25-3": "inputType: A string value that defaults to singleline. Other values are multiline or singleline.",
+    "26-0": "",
+    "26-1": "",
+    "26-2": "",
+    "26-3": "labelText: A string value representing a text label shown to identify the input field. This value defaults to an empty string. Only applies to inputType : singleline.",
+    "27-0": "",
+    "27-1": "",
+    "27-2": "",
+    "27-3": "prefixText: A string value representing optional text shown next to the text field. This value defaults to an empty string. For example, you can set this value to denote the $ character for the field. Only applies to inputType : singleline.",
+    "28-0": "",
+    "28-1": "",
+    "28-2": "",
+    "28-3": "maximumCharacterCount: An integer value representing the field size in characters for singleline and multiline. The field size defaults to 30 characters for singleline and 300 characters for multiline.",
+    "29-0": "",
+    "29-1": "",
+    "29-2": "",
+    "29-3": "keyboardType: Optional string value. Type of keyboard to be shown. Possible values:e",
+    "30-0": "",
+    "30-1": "",
+    "30-2": "",
+    "30-3": "default: Default value. Specifies the default keyboard for the current input method.",
+    "31-0": "",
+    "31-1": "",
+    "31-2": "",
+    "31-3": "asciiCapable: Specifies a keyboard that displays standard ASCII characters.",
+    "32-0": "",
+    "32-1": "",
+    "32-2": "",
+    "32-3": "numbersAndPunctuation: Specifies the numbers and punctuation keyboard.",
+    "33-0": "",
+    "33-1": "",
+    "33-2": "",
+    "33-3": "URL: Specifies a keyboard optimized for URL entry. This keyboard type prominently features the period (.), forward slash (/) characters, and the .com string.",
+    "34-0": "",
+    "34-1": "",
+    "34-2": "",
+    "34-3": "numberPad: Specifies a numeric keypad designed for PIN entry. This keyboard type prominently features the numbers 0 through 9. This keyboard type does not support autocapitalization.",
+    "35-0": "",
+    "35-1": "",
+    "35-2": "",
+    "35-3": "phonePad: Specifies a keypad designed for entering telephone numbers. This keyboard type prominently features the numbers 0 through 9 and the asterisk (\\*) and hash tag (#) characters.",
+    "36-0": "",
+    "36-1": "",
+    "36-2": "",
+    "36-3": "namePhonePad: Specifies a keypad designed for entering a person’s name or phone number. This keyboard type does not support auto-capitalization.",
+    "37-0": "",
+    "37-1": "",
+    "37-2": "",
+    "37-3": "emailAddress: Specifies a keyboard optimized for entering email addresses. This keyboard type prominently features the at (@), period (.), and space characters.",
+    "38-0": "",
+    "38-1": "",
+    "38-2": "",
+    "38-3": "decimalPad: Specifies a keyboard with numbers and a decimal point.",
+    "39-0": "",
+    "39-1": "",
+    "39-2": "",
+    "39-3": "webSearch: Specifies a keyboard optimized for web search terms and URL entry. This keyboard type prominently features the space and period (.) characters.",
+    "40-0": "",
+    "40-1": "",
+    "40-2": "",
+    "40-3": "textContentType: A string value representing the keyboard and system information about the expected semantic meaning for the content that users enter. Supported values are name, namePrefix, givenName, middleName, familyName, nameSuffix, nickname, jobTitle, organizationName, location, fullStreetAddress, streetAddressLine1, streetAddressLine2, addressCity, addressState, addressCityAndState, sublocality, countryName, postalCode, telephoneNumber, emailAddress, URL, creditCardNumber, username, password, newPassword, and oneTimeCode. For a full description of each supported value, see UITextContentType on Apple Developer."
+  },
+  "cols": 4,
+  "rows": 41,
+  "align": [
+    "left",
+    "left",
+    "left",
+    "left"
+  ]
+}
+[/block]
+
+
+### [iMessage App](https://developers.imiconnect.io/reference/apple-message-for-business-imessage-app)
+
+Provides a unique user experience with custom interactive messages.iMessage app is one of the interactive type messages. It’s also referred to as CustomInteractiveData. In addition to the keys from the BaseInteractiveMessage dictionary, the message can also include the keys from the CustomInteractiveData dictionary.
+
+**iMessage App**
+
+| Parameter       | Mandatory | Description                                                                                                                                                                                          |
+| :-------------- | :-------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| appIcon         | No        | It’ll be an image URL, which we will convert to base64-encoded string. URL validation should be in place. Only .png files are accepted                                                               |
+| appId           | yes       | The App Store identifier of the iMessage app.                                                                                                                                                        |
+| appName         | Yes       | The name of the iMessage app.                                                                                                                                                                        |
+| receivedMessage | Yes       | A dictionary with information telling the Messages app what content and how to display it in the received message bubble. This object / dictionary is same as for any other interactive message type |
+| replyMessage    | Yes       | A dictionary with information telling the Messages app what and how to display it in the reply message bubble. This object / dictionary is same as for any other interactive message type            |
+| URL             | Yes       | A URL string containing data that the Messages app sends to the iMessage app.                                                                                                                        |
+| useLiveLayout   | No        | A Boolean that determines whether the Messages app should use Live Layout. The default is true. Default: trueo                                                                                       |
+
+### [Apple Pay & Authentication](https://developers.imiconnect.io/reference/apple-message-for-business_-apple-pay-authentication)
+
+Provides an easy and secure way for customers to buy goods and services through Messages for Business using Apple Pay. When a business asks for payment from a customer who is purchasing goods and services through Messages for Business, the customer can use Apple Pay to make the payment.
+
+**InteractiveData Properties**
+
+The New Authentication Message is an Interactive Message Type, which has the following properties. See Common Specifications for interactive messages types
+
+**InteractiveData Dictionary**
+
+[block:parameters]
+{
+  "data": {
+    "h-0": "Parameters",
+    "h-1": "Mandatory",
+    "h-2": "Description",
+    "0-0": "bid",
+    "0-1": "Yes",
+    "0-2": "The bundle ID relevant to the message type. For iMessage App extension, it’s the app specific bundle ID. For all the other messages, it’s the default  \ncom.apple.messages.MSMessageExtensionBalloonPlugin:0000000000:  \ncom.apple.icloud.apps.messages.business.extension",
+    "1-0": "data",
+    "1-1": "Yes",
+    "1-2": " A collection of name and values used for interactive message types.",
+    "2-0": "receivedMessage",
+    "2-1": "Yes",
+    "2-2": "A dictionary with information telling the Messages app how and what content to display the received message bubble. See ReceivedMessage.",
+    "3-0": "replyMessage",
+    "3-1": "Yes",
+    "3-2": "A dictionary with information telling the Messages app how and what to display in the reply message bubble. See ReplyMessage."
+  },
+  "cols": 3,
+  "rows": 4,
+  "align": [
+    "left",
+    "left",
+    "left"
+  ]
+}
+[/block]
+
+
+**InteractiveData.Data Dictionary**
+
+| Parameters        | Mandatory | Description                                                                                             |
+| :---------------- | :-------- | :------------------------------------------------------------------------------------------------------ |
+| images            |           | An array of image dictionaries.                                                                         |
+| requestIdentifier | Yes       | An identifier for the authentication request.                                                           |
+| version           | Yes       | A numerical version number of the message extension schema. Set 2.0 for the New Authentication Message. |
+| authenticate      | Yes       | An array object to construct the authorization URL.                                                     |
+
+**InteractiveData.Data.Authenticate Dictionary**
+
+| Parameters | Mandatory | Description                                             |
+| :--------- | :-------- | :------------------------------------------------------ |
+| oauth2     | Yes       | A dictionary that describes the authentication request. |
+
+**Data.Authenticate.Oauth2 Dictionary**
+
+| Parameters           | Mandatory | Description                                                                                                                                                                                                |
+| :------------------- | :-------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| responseType         | Yes       | A string indicating the type of authentication request. Set code for authorization flow.                                                                                                                   |
+| scope                | Yes       | An array of scope items that specifies the scope of the request.This dictionary entry gives the exact fields of data that the authentication service provides to the client requesting the authentication. |
+| state                | Yes       | A string indicating the state of the authentication request.                                                                                                                                               |
+| redirectURI          | Yes       | A string representing the redirect URL that the OAuth provider redirects the user.                                                                                                                         |
+| additionalParameters | No        | A string value that you can add on the authorization URL query parameter.                                                                                                                                  |
+
+### [Apple Messages for Business: Typing Indicator](https://developers.imiconnect.io/reference/apple-messages-for-business_-typing-indicator)
+
+The typing indicator is used to let the customer whether the business agent started or ended typing.

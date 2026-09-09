@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "source": "https://www.youtube.com/watch?v=I041FVBzU_s",
+  "created_at": "2026-09-08T23:31:32.397808+00:00",
+  "requested_languages": [
+    "en"
+  ],
+  "title": "Getting started with Webex Connect",
+  "uploader": "Webex CPaaS Solutions",
+  "versions": {
+    "python": "3.13.12",
+    "youtube-transcript-api": "1.2.4",
+    "yt-dlp": "2026.8.19",
+    "webvtt-py": "0.5.1",
+    "faster-whisper": "1.2.1",
+    "ctranslate2": "4.8.2"
+  },
+  "attempts": [
+    {
+      "operation": "download-audio",
+      "started_at": "2026-09-08T23:31:32.407197+00:00",
+      "timeout_seconds": 180,
+      "status": "success",
+      "elapsed_seconds": 8.081
+    },
+    {
+      "operation": "asr",
+      "started_at": "2026-09-08T23:31:40.487900+00:00",
+      "timeout_seconds": 3600,
+      "status": "success",
+      "elapsed_seconds": 233.389
+    }
+  ],
+  "human_reviewed": false,
+  "video_id": "I041FVBzU_s",
+  "title_provenance": "user-supplied",
+  "method": "faster-whisper",
+  "language": "en",
+  "language_probability": 1,
+  "caption_kind": "local-asr",
+  "model": "small",
+  "device": "cpu",
+  "compute_type": "int8",
+  "duration": 1828,
+  "input_sha256": "bb528cacada1faefa3c25708dcce20cde27d324684c870d1b78a510c83e327b9",
+  "asr_settings": {
+    "beam_size": 5,
+    "vad_filter": true,
+    "initial_prompt": null
+  },
+  "upload_date": "20230919",
+  "segment_count": 397,
+  "transcript_end_seconds": 1809.78,
+  "artifact_sha256": {
+    "transcript.json": "40cd3c3b67aebf17042fce66c744370ebe7feec5d17341526b5ad7f33d9930cc",
+    "transcript.srt": "76c5ce742a80061fbf814e9db62ac59a42da5b97e531193563f4557c490b6837",
+    "transcript.md": "a6d59a5f26ba2db1ea42e46ce8587374a8ff4309f771ea25cf61883e85cd023b"
+  }
+}

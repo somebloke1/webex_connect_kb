@@ -1,0 +1,3603 @@
+{
+  "schema_version": 1,
+  "sample_key": "wxcc-facebookattachmentdropnotification",
+  "title": "FacebookAttachmentDropNotification.workflow",
+  "observed_at": "2026-09-09T00:06:28.189Z",
+  "source_path": "evidence/sample-flows/observed/wxcc-facebookattachmentdropnotification.json",
+  "source_sha256": "d2e2f8caf7864d2e681c609508df313209fecba52da11c48b551d29147e535dc",
+  "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model",
+  "runtime_tested": false,
+  "status": "observed_canvas_relationships_summarized",
+  "format_warning": "Internal loaded-canvas model observations only; not a public import schema. Event internal names and visible labels are recorded separately. Dynamic script behavior and missing canvas pages are not inferred.",
+  "counts": {
+    "cells": 65,
+    "operative_nodes": 11,
+    "explicit_edges": 39,
+    "terminal_bindings": 14,
+    "variable_references": 82
+  },
+  "start_configuration": {
+    "channel": 5,
+    "type": "channel",
+    "isCheckLiveSessions": 0,
+    "extras": {},
+    "eventid": 20,
+    "eventname": "MO"
+  },
+  "nodes": [
+    {
+      "id": "2",
+      "label": "Incoming Message",
+      "type_internal": "start",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "onbegin",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "selectedChannel": {
+          "id": 5,
+          "name": "FB",
+          "description": "Messenger",
+          "type": 1,
+          "extraData": {}
+        },
+        "selectedRuleEvent": {
+          "name": "Incoming message",
+          "id": 20,
+          "eventname": "MO",
+          "desc": "This event is triggered when a new message is received from the user on this channel"
+        },
+        "ruleEvent": "Incoming message",
+        "isKeyWordDisabled": true,
+        "isKeyWordVerifyReq": true,
+        "isKeyWordAvailable": true,
+        "output_variables": [
+          "messenger.appId",
+          "messenger.psId",
+          "messenger.transId",
+          "messenger.name",
+          "messenger.timestamp",
+          "messenger.profilePicture",
+          "messenger.message",
+          "messenger.attachments",
+          "messenger.attachmentUrl",
+          "messenger.locationUrl",
+          "messenger.locationLatitude",
+          "messenger.locationLongitude",
+          "service.serviceKey",
+          "messenger.pciInfo.isPCICompliance",
+          "messenger.pciInfo.isPCIValidationDone",
+          "messenger.pciInfo.nonPCIComplianceReason",
+          "messenger.pciInfo.isAttachmentEnabled",
+          "messenger.pciInfo.droppedAttachmentCount",
+          "messenger.malwareinfo.isMalwareCompliance",
+          "messenger.malwareinfo.isMalwareValidationDone",
+          "messenger.malwareinfo.malwareFailedReason",
+          "messenger.malwareinfo.droppedAttachmentCount",
+          "messenger.securityscaninfo.isSecurityCompliance",
+          "messenger.securityscaninfo.isSecurityValidationDone",
+          "messenger.securityscaninfo.securityFailedReason",
+          "messenger.securityscaninfo.droppedAttachmentCount"
+        ]
+      },
+      "transition_actions": [
+        {
+          "kind": "session",
+          "name": "messengerPayloadObject",
+          "when": "onleave",
+          "value": "$(n2.messenger.attachments)"
+        },
+        {
+          "kind": "session",
+          "name": "messagetext",
+          "when": "onleave",
+          "value": "$(n2.messenger.message)"
+        },
+        {
+          "kind": "session",
+          "name": "attachmentURL",
+          "when": "onleave",
+          "value": "$(n2.messenger.attachmentUrl)"
+        },
+        {
+          "kind": "session",
+          "name": "nonPCIComplianceReasonObject",
+          "when": "onleave",
+          "value": "$(n2.messenger.pciInfo.nonPCIComplianceReason)"
+        },
+        {
+          "kind": "session",
+          "name": "isPCIValidationDone",
+          "when": "onleave",
+          "value": "$(n2.messenger.pciInfo.isPCIValidationDone)"
+        },
+        {
+          "kind": "session",
+          "name": "isPCICompliance",
+          "when": "onleave",
+          "value": "$(n2.messenger.pciInfo.isPCICompliance)"
+        },
+        {
+          "kind": "session",
+          "name": "customerName",
+          "when": "onleave",
+          "value": "$(n2.messenger.name)"
+        },
+        {
+          "kind": "session",
+          "name": "appid",
+          "when": "onleave",
+          "value": "$(n2.messenger.appId)"
+        },
+        {
+          "kind": "session",
+          "name": "psId",
+          "when": "onleave",
+          "value": "$(n2.messenger.psId)"
+        },
+        {
+          "kind": "session",
+          "name": "timestamp",
+          "when": "onleave",
+          "value": "$(n2.messenger.ts)"
+        },
+        {
+          "kind": "session",
+          "name": "isAttachmentEnabled",
+          "when": "onleave",
+          "value": "$(n2.messenger.pciInfo.isAttachmentEnabled)"
+        },
+        {
+          "kind": "session",
+          "name": "droppedAttachmentCount",
+          "when": "onleave",
+          "value": "$(n2.messenger.pciInfo.droppedAttachmentCount)"
+        },
+        {
+          "kind": "session",
+          "name": "serviceKey",
+          "when": "onleave",
+          "value": "$(n2.service.serviceKey)"
+        },
+        {
+          "kind": "session",
+          "name": "transId",
+          "when": "onleave",
+          "value": "$(n2.messenger.transId)"
+        },
+        {
+          "kind": "session",
+          "name": "resolveConversationmessagetext",
+          "when": "onleave",
+          "value": "$(n2.messenger.message)"
+        },
+        {
+          "kind": "session",
+          "name": "resolveConversationMessengerPayloadObject",
+          "when": "onleave",
+          "value": "$(n2.messenger.attachments)"
+        },
+        {
+          "kind": "session",
+          "name": "resolveConversationIsPCIValidationDone",
+          "when": "onleave",
+          "value": "$(n2.messenger.pciInfo.isPCIValidationDone)"
+        },
+        {
+          "kind": "session",
+          "name": "resolveConversationNonPCIComplianceReasonObject",
+          "when": "onleave",
+          "value": "$(n2.messenger.pciInfo.nonPCIComplianceReason)"
+        },
+        {
+          "kind": "session",
+          "name": "isSecurityValidationDone",
+          "when": "onleave",
+          "value": "$(n2.messenger.securityscaninfo.isSecurityValidationDone)"
+        },
+        {
+          "kind": "session",
+          "name": "securityNonComplianceReasonObject",
+          "when": "onleave",
+          "value": "$(n2.messenger.securityscaninfo.securityFailedReason)"
+        },
+        {
+          "kind": "session",
+          "name": "securityScanDroppedAttachmentCount",
+          "when": "onleave",
+          "value": "$(n2.messenger.securityscaninfo.droppedAttachmentCount)"
+        },
+        {
+          "kind": "session",
+          "name": "isSecurityCompliance",
+          "when": "onleave",
+          "value": "$(n2.messenger.securityscaninfo.isSecurityCompliance)"
+        },
+        {
+          "kind": "session",
+          "name": "isMalwareValidationDone",
+          "when": "onleave",
+          "value": "$(n2.messenger.malwareinfo.isMalwareValidationDone)"
+        },
+        {
+          "kind": "session",
+          "name": "isMalwareCompliance",
+          "when": "onleave",
+          "value": "$(n2.messenger.malwareinfo.isMalwareCompliance)"
+        },
+        {
+          "kind": "session",
+          "name": "malwareNonComplianceReasonObject",
+          "when": "onleave",
+          "value": "$(n2.messenger.malwareinfo.malwareFailedReason)"
+        },
+        {
+          "kind": "session",
+          "name": "malwareScanDroppedAttachmentCount",
+          "when": "onleave",
+          "value": "$(n2.messenger.malwareinfo.droppedAttachmentCount)"
+        }
+      ],
+      "declared_outputs": [
+        "messenger.appId",
+        "messenger.psId",
+        "messenger.transId",
+        "messenger.name",
+        "messenger.timestamp",
+        "messenger.profilePicture",
+        "messenger.message",
+        "messenger.attachments",
+        "messenger.attachmentUrl",
+        "messenger.locationUrl",
+        "messenger.locationLatitude",
+        "messenger.locationLongitude",
+        "service.serviceKey",
+        "messenger.pciInfo.isPCICompliance",
+        "messenger.pciInfo.isPCIValidationDone",
+        "messenger.pciInfo.nonPCIComplianceReason",
+        "messenger.pciInfo.isAttachmentEnabled",
+        "messenger.pciInfo.droppedAttachmentCount",
+        "messenger.malwareinfo.isMalwareCompliance",
+        "messenger.malwareinfo.isMalwareValidationDone",
+        "messenger.malwareinfo.malwareFailedReason",
+        "messenger.malwareinfo.droppedAttachmentCount",
+        "messenger.securityscaninfo.isSecurityCompliance",
+        "messenger.securityscaninfo.isSecurityValidationDone",
+        "messenger.securityscaninfo.securityFailedReason",
+        "messenger.securityscaninfo.droppedAttachmentCount"
+      ],
+      "output_mappings": []
+    },
+    {
+      "id": "9",
+      "label": "Parse Variables",
+      "type_internal": "evaluate",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "oninvalidchoice",
+          "declared_target_count": 1
+        },
+        {
+          "event_internal": "onerror",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "evaluteIsOptimization": true,
+        "expression": "var tid = transid;\nvar secureMediaUrl;\nvar transId = transId.split('_')[0];\n\nvar messageFromCustomer = messagetext;\nif (messagetext == \"\" || messagetext == null || messagetext == \"null\" || messagetext == \"undefined\" || messagetext == undefined) {\n    messageFromCustomer = \"<del><no-text-sent></del>\";\n} else {\n    messageFromCustomer = messageFromCustomer;\n    messageFromCustomer = JSON.stringify(messageFromCustomer);\n    messageFromCustomer = messageFromCustomer.replace(/\\\\n/g, \"\\\\n\").replace(/\\\\'/g, \"\\\\'\").replace(/\\\\\"/g, '\\\\\"').replace(/\\\\&/g, \"\\\\&\").replace(/\\\\r/g, \"\\\\r\").replace(/\\\\t/g, \"\\\\t\").replace(/\\\\b/g, \"\\\\b\").replace(/\\\\f/g, \"\\\\f\").replace(/\\//g, \"\\\\/\");\n    messageFromCustomer = messageFromCustomer.replace(/(^\")|(\"$)/g, '');\n\n}\n\nif (customerName == null || customerName == \"null\" || customerName == \"\" || customerName == \"UNKNOWN\" || customerName == \"unknown\") {\n    customerName = \"User\";\n}\n\n//Parse PCI Compliance attachment payload For Messenger\n\n/*\n\n1. create one custom variable with name `messengerPayloadObject` and assign value `messenger.attachments`\n\n*/\n\nvar contentUrl = attachmentURL;\nvar arr = [];\n\nvar parseDataAttachment = \"\";\nif (messengerPayloadObject !== '' && messengerPayloadObject !== null) {\n    messengerPayloadObject = JSON.parse(messengerPayloadObject);\n}\n\nif (nonPCIComplianceReasonObject !== null && nonPCIComplianceReasonObject !== '' && nonPCIComplianceReasonObject !== 'NA') {\n    var nonPCIComplianceReasonObject = JSON.parse(nonPCIComplianceReasonObject);\n\n    if ((\"attachments\" in nonPCIComplianceReasonObject)) {\n        var nonPCIComplianceReasonAttachmentObject = nonPCIComplianceReasonObject.attachments;\n\n        if (nonPCIComplianceReasonAttachmentObject.length == 0) {\n            // No attachments were dropped\n\n            if (contentUrl !== \"\") {\n\n                //Attachment is Accepted\n\n                //Assign dropped: False\n\n                var contentUrl = messengerPayloadObject[0][\"payload\"][\"url\"];\n                var fileName = contentUrl.split('?')[0].split('/')[contentUrl.split('?')[0].split('/').length - 1];\n                if (fileName === 'download-media') {\n                    var a = decodeURIComponent(contentUrl).split('path')[1];\n                    secureMediaUrl = a.split('&')[0].split('/');\n                    fileName = secureMediaUrl[secureMediaUrl.length-1]\n                }\n                arr[0] = {};\n                arr[0][\"mimeType\"] = messengerPayloadObject[0].type;\n                arr[0][\"fileName\"] = fileName;\n                arr[0][\"url\"] = contentUrl;\n                arr[0][\"dropped\"] = false;\n\n            }\n\n        } else if (nonPCIComplianceReasonAttachmentObject.length > 0) {\n            //Attachment is dropped\n\n            //Assign dropped: True\n\n            arr[0] = {};\n            arr[0][\"mimeType\"] = nonPCIComplianceReasonAttachmentObject[0].type;\n            arr[0][\"fileName\"] = \"Dropped\";\n            arr[0][\"url\"] = \"\";\n            arr[0][\"dropped\"] = true;\n        } else {\n            // DO Logic if required\n        }\n\n\n    } else {\n\n        // Do Logic if needed this block\n\n    }\n}\nif (isPCIValidationDone == 'NA' && messengerPayloadObject.length > 0) {\n\n    var contentUrl = messengerPayloadObject[0][\"payload\"][\"url\"];\n    var fileName = contentUrl.split('?')[0].split('/')[contentUrl.split('?')[0].split('/').length - 1];\n    if (fileName === 'download-media') {\n        var a = decodeURIComponent(contentUrl).split('path')[1];\n        secureMediaUrl = a.split('&')[0].split('/');\n        fileName = secureMediaUrl[secureMediaUrl.length-1]\n    }\n    arr[0] = {};\n    arr[0][\"mimeType\"] = messengerPayloadObject[0].type;\n    arr[0][\"fileName\"] = fileName;\n    arr[0][\"url\"] = contentUrl;\n    arr[0][\"dropped\"] = false;\n\n}\n\n//`parseDataAttachment` variable can be used as payload\n\nif (arr.length) {\n\n    parseDataAttachment = JSON.stringify(arr);\n\n} else {\n\n    var emptyArray = [];\n\n    parseDataAttachment = JSON.stringify(emptyArray);\n\n}\n\n\n1;\n\nvar messageDetails = {\n    \"appId\": appId,\n    \"facebookPageId\": FBpageid,\n    \"psId\": psId,\n    \"customerName\": customerName,\n    \"message\": resolveConversationmessagetext,\n    \"attachments\": resolveConversationMessengerPayloadObject,\n    \"attachmentUrl\": attachmentURL,\n    \"serviceKey\": serviceKey,\n    \"timestamp\": timestamp\n};\n\nvar pci = {\n    \"isPCICompliant\": JSON.parse(isPCICompliance.replace(\"NA\", \"true\")),\n    \"isPCIValidationDone\": resolveConversationIsPCIValidationDone,\n    \"nonPCIComplianceReason\": resolveConversationNonPCIComplianceReasonObject,\n    \"droppedAttachmentCount\": JSON.parse(droppedAttachmentCount.replace(\"NA\", \"0\"))\n};\n\nvar malwareScanDetails = {\n    \"isMalwareCompliant\": JSON.parse(isMalwareCompliance.replace(\"NA\", \"true\")),\n    \"isMalwareValidationDone\": isMalwareValidationDone,\n    \"malwareFailedReason\": malwareNonComplianceReasonObject,\n    \"droppedAttachmentCount\": JSON.parse(malwareScanDroppedAttachmentCount.replace(\"NA\", \"0\"))\n};\n\nvar securityScanDetails = {\n    \"isSecurityCompliant\": JSON.parse(isSecurityCompliance.replace(\"NA\", \"true\")),\n    \"isSecurityValidationDone\": isSecurityValidationDone,\n    \"securityFailedReason\": securityNonComplianceReasonObject,\n    \"droppedAttachmentCount\": JSON.parse(securityScanDroppedAttachmentCount.replace(\"NA\", \"0\"))\n};\n\nvar details = {\n    \"messageDetails\": messageDetails,\n    \"pciDetails\": pci,\n    \"malwareScanDetails\": malwareScanDetails,\n    \"securityScanDetails\": securityScanDetails\n};\n\nvar detailsJson = JSON.stringify(details);\n\nvar exitCode = \"noAttachmentsDropped\";\nvar droppedAttachmentNotificationMessage = \"\";\n\nvar securityNonComplianceReasonString = JSON.stringify(securityNonComplianceReasonObject);\n\nif (securityNonComplianceReasonString.indexOf(\"PCI: Failed:\") != \"-1\") {\n    droppedAttachmentNotificationMessage = sensitiveContentFoundErrorMessage;\n    exitCode = \"attachmentsDropped\";\n} else if (securityNonComplianceReasonString.indexOf(\"Malware: Failed:\") != \"-1\") {\n    droppedAttachmentNotificationMessage = maliciousContentFoundErrorMessage;\n    exitCode = \"attachmentsDropped\";\n} else if (securityNonComplianceReasonString.indexOf(\"System Alert\") != \"-1\") {\n    droppedAttachmentNotificationMessage = errorProcessingAttachmentsMessage;\n    exitCode = \"attachmentsDropped\";\n} else {\n    exitCode = \"noAttachmentsDropped\";\n}\nexitCode;",
+        "exp": "var tid = transid;\nvar secureMediaUrl;\nvar transId = transId.split('_')[0];\n\nvar messageFromCustomer = messagetext;\nif (messagetext == \"\" || messagetext == null || messagetext == \"null\" || messagetext == \"undefined\" || messagetext == undefined) {\n    messageFromCustomer = \"<del><no-text-sent></del>\";\n} else {\n    messageFromCustomer = messageFromCustomer;\n    messageFromCustomer = JSON.stringify(messageFromCustomer);\n    messageFromCustomer = messageFromCustomer.replace(/\\\\n/g, \"\\\\n\").replace(/\\\\'/g, \"\\\\'\").replace(/\\\\\"/g, '\\\\\"').replace(/\\\\&/g, \"\\\\&\").replace(/\\\\r/g, \"\\\\r\").replace(/\\\\t/g, \"\\\\t\").replace(/\\\\b/g, \"\\\\b\").replace(/\\\\f/g, \"\\\\f\").replace(/\\//g, \"\\\\/\");\n    messageFromCustomer = messageFromCustomer.replace(/(^\")|(\"$)/g, '');\n\n}\n\nif (customerName == null || customerName == \"null\" || customerName == \"\" || customerName == \"UNKNOWN\" || customerName == \"unknown\") {\n    customerName = \"User\";\n}\n\n//Parse PCI Compliance attachment payload For Messenger\n\n/*\n\n1. create one custom variable with name `messengerPayloadObject` and assign value `messenger.attachments`\n\n*/\n\nvar contentUrl = attachmentURL;\nvar arr = [];\n\nvar parseDataAttachment = \"\";\nif (messengerPayloadObject !== '' && messengerPayloadObject !== null) {\n    messengerPayloadObject = JSON.parse(messengerPayloadObject);\n}\n\nif (nonPCIComplianceReasonObject !== null && nonPCIComplianceReasonObject !== '' && nonPCIComplianceReasonObject !== 'NA') {\n    var nonPCIComplianceReasonObject = JSON.parse(nonPCIComplianceReasonObject);\n\n    if ((\"attachments\" in nonPCIComplianceReasonObject)) {\n        var nonPCIComplianceReasonAttachmentObject = nonPCIComplianceReasonObject.attachments;\n\n        if (nonPCIComplianceReasonAttachmentObject.length == 0) {\n            // No attachments were dropped\n\n            if (contentUrl !== \"\") {\n\n                //Attachment is Accepted\n\n                //Assign dropped: False\n\n                var contentUrl = messengerPayloadObject[0][\"payload\"][\"url\"];\n                var fileName = contentUrl.split('?')[0].split('/')[contentUrl.split('?')[0].split('/').length - 1];\n                if (fileName === 'download-media') {\n                    var a = decodeURIComponent(contentUrl).split('path')[1];\n                    secureMediaUrl = a.split('&')[0].split('/');\n                    fileName = secureMediaUrl[secureMediaUrl.length-1]\n                }\n                arr[0] = {};\n                arr[0][\"mimeType\"] = messengerPayloadObject[0].type;\n                arr[0][\"fileName\"] = fileName;\n                arr[0][\"url\"] = contentUrl;\n                arr[0][\"dropped\"] = false;\n\n            }\n\n        } else if (nonPCIComplianceReasonAttachmentObject.length > 0) {\n            //Attachment is dropped\n\n            //Assign dropped: True\n\n            arr[0] = {};\n            arr[0][\"mimeType\"] = nonPCIComplianceReasonAttachmentObject[0].type;\n            arr[0][\"fileName\"] = \"Dropped\";\n            arr[0][\"url\"] = \"\";\n            arr[0][\"dropped\"] = true;\n        } else {\n            // DO Logic if required\n        }\n\n\n    } else {\n\n        // Do Logic if needed this block\n\n    }\n}\nif (isPCIValidationDone == 'NA' && messengerPayloadObject.length > 0) {\n\n    var contentUrl = messengerPayloadObject[0][\"payload\"][\"url\"];\n    var fileName = contentUrl.split('?')[0].split('/')[contentUrl.split('?')[0].split('/').length - 1];\n    if (fileName === 'download-media') {\n        var a = decodeURIComponent(contentUrl).split('path')[1];\n        secureMediaUrl = a.split('&')[0].split('/');\n        fileName = secureMediaUrl[secureMediaUrl.length-1]\n    }\n    arr[0] = {};\n    arr[0][\"mimeType\"] = messengerPayloadObject[0].type;\n    arr[0][\"fileName\"] = fileName;\n    arr[0][\"url\"] = contentUrl;\n    arr[0][\"dropped\"] = false;\n\n}\n\n//`parseDataAttachment` variable can be used as payload\n\nif (arr.length) {\n\n    parseDataAttachment = JSON.stringify(arr);\n\n} else {\n\n    var emptyArray = [];\n\n    parseDataAttachment = JSON.stringify(emptyArray);\n\n}\n\n\n1;\n\nvar messageDetails = {\n    \"appId\": appId,\n    \"facebookPageId\": FBpageid,\n    \"psId\": psId,\n    \"customerName\": customerName,\n    \"message\": resolveConversationmessagetext,\n    \"attachments\": resolveConversationMessengerPayloadObject,\n    \"attachmentUrl\": attachmentURL,\n    \"serviceKey\": serviceKey,\n    \"timestamp\": timestamp\n};\n\nvar pci = {\n    \"isPCICompliant\": JSON.parse(isPCICompliance.replace(\"NA\", \"true\")),\n    \"isPCIValidationDone\": resolveConversationIsPCIValidationDone,\n    \"nonPCIComplianceReason\": resolveConversationNonPCIComplianceReasonObject,\n    \"droppedAttachmentCount\": JSON.parse(droppedAttachmentCount.replace(\"NA\", \"0\"))\n};\n\nvar malwareScanDetails = {\n    \"isMalwareCompliant\": JSON.parse(isMalwareCompliance.replace(\"NA\", \"true\")),\n    \"isMalwareValidationDone\": isMalwareValidationDone,\n    \"malwareFailedReason\": malwareNonComplianceReasonObject,\n    \"droppedAttachmentCount\": JSON.parse(malwareScanDroppedAttachmentCount.replace(\"NA\", \"0\"))\n};\n\nvar securityScanDetails = {\n    \"isSecurityCompliant\": JSON.parse(isSecurityCompliance.replace(\"NA\", \"true\")),\n    \"isSecurityValidationDone\": isSecurityValidationDone,\n    \"securityFailedReason\": securityNonComplianceReasonObject,\n    \"droppedAttachmentCount\": JSON.parse(securityScanDroppedAttachmentCount.replace(\"NA\", \"0\"))\n};\n\nvar details = {\n    \"messageDetails\": messageDetails,\n    \"pciDetails\": pci,\n    \"malwareScanDetails\": malwareScanDetails,\n    \"securityScanDetails\": securityScanDetails\n};\n\nvar detailsJson = JSON.stringify(details);\n\nvar exitCode = \"noAttachmentsDropped\";\nvar droppedAttachmentNotificationMessage = \"\";\n\nvar securityNonComplianceReasonString = JSON.stringify(securityNonComplianceReasonObject);\n\nif (securityNonComplianceReasonString.indexOf(\"PCI: Failed:\") != \"-1\") {\n    droppedAttachmentNotificationMessage = sensitiveContentFoundErrorMessage;\n    exitCode = \"attachmentsDropped\";\n} else if (securityNonComplianceReasonString.indexOf(\"Malware: Failed:\") != \"-1\") {\n    droppedAttachmentNotificationMessage = maliciousContentFoundErrorMessage;\n    exitCode = \"attachmentsDropped\";\n} else if (securityNonComplianceReasonString.indexOf(\"System Alert\") != \"-1\") {\n    droppedAttachmentNotificationMessage = errorProcessingAttachmentsMessage;\n    exitCode = \"attachmentsDropped\";\n} else {\n    exitCode = \"noAttachmentsDropped\";\n}\nexitCode;",
+        "isTestExecuted": true,
+        "nodeVersion": 1
+      },
+      "transition_actions": [
+        {
+          "kind": "log",
+          "name": 12345,
+          "when": "onleave",
+          "value": "$(droppedAttachmentNotificationMessage)"
+        }
+      ],
+      "declared_outputs": [],
+      "output_mappings": []
+    },
+    {
+      "id": "1651",
+      "label": "Messenger",
+      "type_internal": "umppublic",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "onerror",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "hideWaitFor": false,
+        "channelId": 5,
+        "deliverychannel": "FB",
+        "destinationType": "psid",
+        "destination": "$(n2.messenger.psId)",
+        "notification_type": "REGULAR",
+        "msgcreationtype": "createnew",
+        "messagetype": "Text",
+        "fb_text": "$(errorMsg1)",
+        "successoutcome": 1,
+        "quick_replies_status": false,
+        "linkValidityCheck": false,
+        "image_aspect_ratio": "horizontal",
+        "fb_generic_template": [
+          {
+            "buttons": [
+              {
+                "buttonType": "postback",
+                "buttonTitle": "",
+                "data": ""
+              }
+            ]
+          }
+        ],
+        "fb_button_template": {
+          "mainBodyText": "",
+          "buttons": [
+            {
+              "buttonType": "postback",
+              "buttonTitle": "",
+              "data": ""
+            }
+          ]
+        },
+        "fb_list_template": {
+          "top_element_style": "compact",
+          "topElementStyle": "compact",
+          "globalFlag": false,
+          "elements": [
+            {
+              "buttons": [
+                {
+                  "buttonType": "postback",
+                  "buttonTitle": "",
+                  "data": ""
+                }
+              ]
+            }
+          ]
+        },
+        "fb_receipt_template": {
+          "elements": [
+            {}
+          ],
+          "address": {},
+          "summary": {},
+          "adjustments": []
+        },
+        "qr_type": "text",
+        "messaging_type": "RESPONSE"
+      },
+      "transition_actions": [],
+      "declared_outputs": [],
+      "output_mappings": []
+    },
+    {
+      "id": "1662",
+      "label": "Messenger",
+      "type_internal": "umppublic",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "onerror",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "hideWaitFor": false,
+        "channelId": 5,
+        "deliverychannel": "FB",
+        "destinationType": "psid",
+        "destination": "$(n2.messenger.psId)",
+        "notification_type": "REGULAR",
+        "msgcreationtype": "createnew",
+        "messagetype": "Text",
+        "fb_text": "$(errorMsg1)",
+        "successoutcome": 1,
+        "quick_replies_status": false,
+        "linkValidityCheck": false,
+        "image_aspect_ratio": "horizontal",
+        "fb_generic_template": [
+          {
+            "buttons": [
+              {
+                "buttonType": "postback",
+                "buttonTitle": "",
+                "data": ""
+              }
+            ]
+          }
+        ],
+        "fb_button_template": {
+          "mainBodyText": "",
+          "buttons": [
+            {
+              "buttonType": "postback",
+              "buttonTitle": "",
+              "data": ""
+            }
+          ]
+        },
+        "fb_list_template": {
+          "top_element_style": "compact",
+          "topElementStyle": "compact",
+          "globalFlag": false,
+          "elements": [
+            {
+              "buttons": [
+                {
+                  "buttonType": "postback",
+                  "buttonTitle": "",
+                  "data": ""
+                }
+              ]
+            }
+          ]
+        },
+        "fb_receipt_template": {
+          "elements": [
+            {}
+          ],
+          "address": {},
+          "summary": {},
+          "adjustments": []
+        },
+        "qr_type": "text",
+        "messaging_type": "RESPONSE"
+      },
+      "transition_actions": [],
+      "declared_outputs": [],
+      "output_mappings": []
+    },
+    {
+      "id": "1701",
+      "label": "Queue Task",
+      "type_internal": "prebuiltnode",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "oninvaliddata",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "onerror",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "oninvalidchoice",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "ontimeout",
+          "declared_target_count": null
+        }
+      ],
+      "configuration": {
+        "referencekey": 50021,
+        "versionIds": "undefined",
+        "integration_id": 50021,
+        "client_uuid": "50d97e6a-ad14-4a77-898a-7f6f104bfb14",
+        "method_id": 57867,
+        "version_id": 52305,
+        "auth_id": -1,
+        "methodResponseParameters": [
+          {
+            "order": 0,
+            "id": "713640c4-ba82-4e2c-b154-b1810240db28",
+            "name": "taskId",
+            "path": "$.id",
+            "value": "",
+            "desc": "",
+            "type": "body",
+            "validation": {
+              "type": "",
+              "condition": null,
+              "regex": "",
+              "mandatory": true,
+              "format_validator": null
+            },
+            "key": null,
+            "debugKey": false,
+            "node_ui_type": null,
+            "node_ui_group_name": null,
+            "ui_field_configuration": null
+          },
+          {
+            "order": 1,
+            "id": "6fb1e9f7-bdd2-4585-aebe-9dfdd0350793",
+            "name": "agentId",
+            "path": "$.data.agentId",
+            "value": "",
+            "desc": "",
+            "type": "body",
+            "validation": {
+              "type": "",
+              "condition": null,
+              "regex": "",
+              "mandatory": true,
+              "format_validator": null
+            },
+            "key": null,
+            "debugKey": false,
+            "node_ui_type": null,
+            "node_ui_group_name": null,
+            "ui_field_configuration": null
+          }
+        ],
+        "request_body": [
+          {
+            "name": "id",
+            "value": "$(taskId)",
+            "id": "fe686042-a932-4583-afab-639d75fdbe92"
+          },
+          {
+            "name": "tenant_identifier",
+            "id": "278f27c4-33b5-4dec-9d13-b219c30e9a82"
+          },
+          {
+            "name": "queueid",
+            "value": "17e8c5d8-1ced-408d-aa76-b858237896bf",
+            "id": "8cee6079-d764-4a1b-b916-76562659ec73"
+          },
+          {
+            "name": "conversationid",
+            "value": "$(conversationId)",
+            "id": "59d29903-e969-4417-a440-0ca13f486912"
+          },
+          {
+            "name": "mediatype",
+            "value": "social",
+            "id": "d5593c82-9bbd-4d86-9f2c-a43f7633eb37"
+          },
+          {
+            "name": "skillRequirements",
+            "value": "{\\\"requirements\\\":[],\\\"relaxations\\\":[],\\\"relaxationToggle\\\":false}",
+            "id": "c388b1c1-b52c-4841-89ff-dc699fd6596f"
+          },
+          {
+            "name": "contactPriority",
+            "value": "",
+            "id": "3311060c-c23e-4cb0-be4f-5f8cc3512a4c"
+          },
+          {
+            "name": "webhookurl",
+            "id": "e1271f37-8f38-4037-830e-2535dfa60f0a"
+          }
+        ],
+        "path_parameters": [
+          {
+            "name": "domain",
+            "id": "f4bdc968-4573-787b-caa0-66256e73ffa9"
+          },
+          {
+            "name": "id",
+            "value": "$(taskId)",
+            "id": "351695bc-1fa7-2d65-ef79-6bcaafa98c8a"
+          }
+        ],
+        "custom_output_vars": [
+          "taskId",
+          "agentId"
+        ],
+        "viewmodeData": [
+          {
+            "name": "auth_id",
+            "value": "Wxcc",
+            "isNgSelectBox": true
+          },
+          {
+            "name": "version_id",
+            "value": ""
+          },
+          {
+            "name": "method_id",
+            "value": "Queue task"
+          }
+        ],
+        "isAuthPresent": true,
+        "isComponentNode": 1,
+        "container_name": "https://example.invalid/integration_node_file_queue-task_1706168429497_11480657572660271.js",
+        "nodeType": "https://example.invalid/integration_node_file_queue-task_1706168429497_11480657572660271.js",
+        "group_id": 50020,
+        "customUiAuthStatus": 1,
+        "adminParameters": {
+          "oauth_callbackurl_type": 1,
+          "tenant_identifier": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+          "domain": "qaus1",
+          "integration_identifier": "https://example.invalid/v1/integration/cntwct"
+        },
+        "customuiWebcomponentElementName": "node-ui-template1706168429497",
+        "extraParamsData": {
+          "id": "$(taskId)",
+          "queueid": "17e8c5d8-1ced-408d-aa76-b858237896bf",
+          "mediatype": "social",
+          "channel": "facebook",
+          "isskillrouting": false,
+          "conversationid": "$(conversationId)",
+          "relaxationToggle": false,
+          "requirements": [],
+          "relaxations": [],
+          "queuenameOptions": [
+            {
+              "value": "IMI-Preprod-AMB-queue",
+              "key": "b6a165b9-ec18-401b-8123-04aca1366146"
+            },
+            {
+              "value": "IMI-Preprod-FB-Queue",
+              "key": "17e8c5d8-1ced-408d-aa76-b858237896bf"
+            },
+            {
+              "value": "IMI-Preprod-WhatsApp-Queue",
+              "key": "58d373a0-2225-4b68-9948-785f2c9bd6c7"
+            },
+            {
+              "value": "IMI-SMS-Queue",
+              "key": "0bb780a4-0e62-4605-87e2-9d25049c156b"
+            },
+            {
+              "value": "IMI-Social-Queue-SBR",
+              "key": "630c4bdd-6d32-41a1-9c51-44c4f82b5e81"
+            },
+            {
+              "value": "Soln_Auto_QA_AMB_Queue",
+              "key": "2d49fd10-e2ad-4239-aea0-efe8d85b96d6"
+            }
+          ],
+          "queueInfo": [
+            {
+              "id": "b6a165b9-ec18-401b-8123-04aca1366146",
+              "type": "virtual-team",
+              "attributes": {
+                "organizationId": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "tid": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "sid": "b6a165b9-ec18-401b-8123-04aca1366146",
+                "productVersion": 2,
+                "_seedData__i": 0,
+                "name__s": "IMI-Preprod-AMB-queue",
+                "description__s": "IMI-Preprod-AMB-team (this will be used for AMB channel)",
+                "type__i": 1,
+                "channelType__i": 7,
+                "maxTimeInQueue__l": 120,
+                "status__i": 1,
+                "outdialCampaignEnabled__i": 0,
+                "permitMonitoring__i": 0,
+                "permitParking__i": 0,
+                "permitRecording__i": 0,
+                "recordAllCalls__i": 0,
+                "pauseResumeEnabled__i": 0,
+                "ccOneQueue__i": 0,
+                "imiOrgType__s": "IMI",
+                "callDistributionGroups__s": [],
+                "_type__s": "virtual-team",
+                "cstts": 1707207338000,
+                "_lmts__l": 1707207338000,
+                "routingType__s": "LONGEST_AVAILABLE_AGENT",
+                "dbId__s": "b6a165b9-ec18-401b-8123-04aca1366146"
+              },
+              "auxiliaryDataType": "RESOURCES"
+            },
+            {
+              "id": "17e8c5d8-1ced-408d-aa76-b858237896bf",
+              "type": "virtual-team",
+              "attributes": {
+                "organizationId": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "tid": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "sid": "17e8c5d8-1ced-408d-aa76-b858237896bf",
+                "productVersion": 2,
+                "_seedData__i": 0,
+                "name__s": "IMI-Preprod-FB-Queue",
+                "description__s": "",
+                "type__i": 1,
+                "channelType__i": 7,
+                "maxTimeInQueue__l": 90,
+                "status__i": 1,
+                "outdialCampaignEnabled__i": 0,
+                "permitMonitoring__i": 0,
+                "permitParking__i": 0,
+                "permitRecording__i": 0,
+                "recordAllCalls__i": 0,
+                "pauseResumeEnabled__i": 0,
+                "ccOneQueue__i": 0,
+                "imiOrgType__s": "IMI",
+                "callDistributionGroups__s": [],
+                "_type__s": "virtual-team",
+                "cstts": 1656004898000,
+                "_lmts__l": 1677063742000,
+                "routingType__s": "LONGEST_AVAILABLE_AGENT",
+                "timezone__s": "Asia/Calcutta",
+                "dbId__s": "17e8c5d8-1ced-408d-aa76-b858237896bf"
+              },
+              "auxiliaryDataType": "RESOURCES"
+            },
+            {
+              "id": "58d373a0-2225-4b68-9948-785f2c9bd6c7",
+              "type": "virtual-team",
+              "attributes": {
+                "organizationId": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "tid": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "sid": "58d373a0-2225-4b68-9948-785f2c9bd6c7",
+                "productVersion": 2,
+                "_seedData__i": 0,
+                "name__s": "IMI-Preprod-WhatsApp-Queue",
+                "description__s": "",
+                "type__i": 1,
+                "channelType__i": 7,
+                "maxTimeInQueue__l": 90,
+                "status__i": 1,
+                "outdialCampaignEnabled__i": 0,
+                "permitMonitoring__i": 0,
+                "permitParking__i": 0,
+                "permitRecording__i": 0,
+                "recordAllCalls__i": 0,
+                "pauseResumeEnabled__i": 0,
+                "ccOneQueue__i": 0,
+                "imiOrgType__s": "IMI",
+                "callDistributionGroups__s": [],
+                "_type__s": "virtual-team",
+                "cstts": 1656925214000,
+                "_lmts__l": 1677063761000,
+                "routingType__s": "LONGEST_AVAILABLE_AGENT",
+                "timezone__s": "Asia/Calcutta",
+                "dbId__s": "58d373a0-2225-4b68-9948-785f2c9bd6c7"
+              },
+              "auxiliaryDataType": "RESOURCES"
+            },
+            {
+              "id": "0bb780a4-0e62-4605-87e2-9d25049c156b",
+              "type": "virtual-team",
+              "attributes": {
+                "organizationId": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "tid": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "sid": "0bb780a4-0e62-4605-87e2-9d25049c156b",
+                "productVersion": 2,
+                "_seedData__i": 0,
+                "name__s": "IMI-SMS-Queue",
+                "description__s": "",
+                "type__i": 1,
+                "channelType__i": 7,
+                "maxTimeInQueue__l": 180,
+                "status__i": 1,
+                "outdialCampaignEnabled__i": 0,
+                "permitMonitoring__i": 0,
+                "permitParking__i": 0,
+                "permitRecording__i": 0,
+                "recordAllCalls__i": 0,
+                "pauseResumeEnabled__i": 0,
+                "ccOneQueue__i": 0,
+                "imiOrgType__s": "IMI",
+                "callDistributionGroups__s": [],
+                "_type__s": "virtual-team",
+                "cstts": 1658225300000,
+                "_lmts__l": 1677134746000,
+                "routingType__s": "LONGEST_AVAILABLE_AGENT",
+                "dbId__s": "0bb780a4-0e62-4605-87e2-9d25049c156b"
+              },
+              "auxiliaryDataType": "RESOURCES"
+            },
+            {
+              "id": "630c4bdd-6d32-41a1-9c51-44c4f82b5e81",
+              "type": "virtual-team",
+              "attributes": {
+                "organizationId": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "tid": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "sid": "630c4bdd-6d32-41a1-9c51-44c4f82b5e81",
+                "productVersion": 2,
+                "_seedData__i": 0,
+                "name__s": "IMI-Social-Queue-SBR",
+                "description__s": "IMI-Social-Queue-SBR",
+                "type__i": 1,
+                "channelType__i": 7,
+                "maxTimeInQueue__l": 80,
+                "status__i": 1,
+                "outdialCampaignEnabled__i": 0,
+                "permitMonitoring__i": 0,
+                "permitParking__i": 0,
+                "permitRecording__i": 0,
+                "recordAllCalls__i": 0,
+                "pauseResumeEnabled__i": 0,
+                "ccOneQueue__i": 0,
+                "imiOrgType__s": "IMI",
+                "callDistributionGroups__s": [],
+                "_type__s": "virtual-team",
+                "cstts": 1676457983000,
+                "_lmts__l": 1676457983000,
+                "skillBasedRoutingType__s": "LONGEST_AVAILABLE_AGENT",
+                "routingType__s": "SKILLS_BASED",
+                "dbId__s": "630c4bdd-6d32-41a1-9c51-44c4f82b5e81"
+              },
+              "auxiliaryDataType": "RESOURCES"
+            },
+            {
+              "id": "2d49fd10-e2ad-4239-aea0-efe8d85b96d6",
+              "type": "virtual-team",
+              "attributes": {
+                "organizationId": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "tid": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "sid": "2d49fd10-e2ad-4239-aea0-efe8d85b96d6",
+                "productVersion": 2,
+                "_seedData__i": 0,
+                "name__s": "Soln_Auto_QA_AMB_Queue",
+                "description__s": "",
+                "type__i": 1,
+                "channelType__i": 7,
+                "maxTimeInQueue__l": 120,
+                "status__i": 1,
+                "outdialCampaignEnabled__i": 0,
+                "permitMonitoring__i": 0,
+                "permitParking__i": 0,
+                "permitRecording__i": 0,
+                "recordAllCalls__i": 0,
+                "pauseResumeEnabled__i": 0,
+                "ccOneQueue__i": 0,
+                "imiOrgType__s": "IMI",
+                "callDistributionGroups__s": [],
+                "_type__s": "virtual-team",
+                "cstts": 1706699634000,
+                "_lmts__l": 1706699634000,
+                "routingType__s": "LONGEST_AVAILABLE_AGENT",
+                "dbId__s": "2d49fd10-e2ad-4239-aea0-efe8d85b96d6"
+              },
+              "auxiliaryDataType": "RESOURCES"
+            }
+          ],
+          "skillInfo": [
+            {
+              "id": "6b1119a5-4d4f-493f-a0ac-e16daf4798f5",
+              "type": "skill",
+              "attributes": {
+                "organizationId": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "tid": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "sid": "6b1119a5-4d4f-493f-a0ac-e16daf4798f5",
+                "productVersion": 2,
+                "status__i": 1,
+                "type__i": 3,
+                "_type__s": "skill",
+                "cstts": 1676450699000,
+                "_lmts__l": 1676450699000,
+                "enumSkillValues": [
+                  {
+                    "skillId__s": "6b1119a5-4d4f-493f-a0ac-e16daf4798f5",
+                    "name__s": "Sales"
+                  },
+                  {
+                    "skillId__s": "6b1119a5-4d4f-493f-a0ac-e16daf4798f5",
+                    "name__s": "Credit"
+                  },
+                  {
+                    "skillId__s": "6b1119a5-4d4f-493f-a0ac-e16daf4798f5",
+                    "name__s": "Debit"
+                  }
+                ],
+                "serviceLevelThreshold__i": 5,
+                "name__s": "Department",
+                "description__s": "Department",
+                "dbId__s": "6b1119a5-4d4f-493f-a0ac-e16daf4798f5"
+              },
+              "auxiliaryDataType": "RESOURCES"
+            },
+            {
+              "id": "e235e767-dca9-433b-8c17-e449b4be372d",
+              "type": "skill",
+              "attributes": {
+                "organizationId": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "tid": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "sid": "e235e767-dca9-433b-8c17-e449b4be372d",
+                "productVersion": 2,
+                "status__i": 1,
+                "type__i": 0,
+                "_type__s": "skill",
+                "cstts": 1676005996000,
+                "_lmts__l": 1676450569000,
+                "enumSkillValues": [],
+                "serviceLevelThreshold__i": 1,
+                "name__s": "English",
+                "description__s": "English Speaking Expert",
+                "dbId__s": "e235e767-dca9-433b-8c17-e449b4be372d"
+              },
+              "auxiliaryDataType": "RESOURCES"
+            },
+            {
+              "id": "cc35be5e-7b11-4eb4-992e-fecc5da51c37",
+              "type": "skill",
+              "attributes": {
+                "organizationId": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "tid": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "sid": "cc35be5e-7b11-4eb4-992e-fecc5da51c37",
+                "productVersion": 2,
+                "status__i": 1,
+                "type__i": 2,
+                "_type__s": "skill",
+                "cstts": 1676450640000,
+                "_lmts__l": 1676450640000,
+                "enumSkillValues": [],
+                "serviceLevelThreshold__i": 4,
+                "name__s": "Expertise",
+                "description__s": "Expertise Area",
+                "dbId__s": "cc35be5e-7b11-4eb4-992e-fecc5da51c37"
+              },
+              "auxiliaryDataType": "RESOURCES"
+            },
+            {
+              "id": "3c02fc0f-7d48-4b68-b5e4-7c6b4ff5b56e",
+              "type": "skill",
+              "attributes": {
+                "organizationId": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "tid": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "sid": "3c02fc0f-7d48-4b68-b5e4-7c6b4ff5b56e",
+                "productVersion": 2,
+                "status__i": 1,
+                "type__i": 0,
+                "_type__s": "skill",
+                "cstts": 1676006070000,
+                "_lmts__l": 1676450576000,
+                "enumSkillValues": [],
+                "serviceLevelThreshold__i": 2,
+                "name__s": "Hindi",
+                "description__s": "Hindi Speaking Expert",
+                "dbId__s": "3c02fc0f-7d48-4b68-b5e4-7c6b4ff5b56e"
+              },
+              "auxiliaryDataType": "RESOURCES"
+            },
+            {
+              "id": "41ccb06c-de4f-400d-9e9f-3167fd8c2c31",
+              "type": "skill",
+              "attributes": {
+                "organizationId": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "tid": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "sid": "41ccb06c-de4f-400d-9e9f-3167fd8c2c31",
+                "productVersion": 2,
+                "status__i": 1,
+                "type__i": 1,
+                "_type__s": "skill",
+                "cstts": 1676450601000,
+                "_lmts__l": 1676450601000,
+                "enumSkillValues": [],
+                "serviceLevelThreshold__i": 3,
+                "name__s": "Indian",
+                "description__s": "Nationality",
+                "dbId__s": "41ccb06c-de4f-400d-9e9f-3167fd8c2c31"
+              },
+              "auxiliaryDataType": "RESOURCES"
+            }
+          ],
+          "skillOptions": [],
+          "skillRequirements": "{\\\"requirements\\\":[],\\\"relaxations\\\":[],\\\"relaxationToggle\\\":false}",
+          "requirementsArrayThatNeedToBeSentToAPI": [],
+          "contactPriority": ""
+        },
+        "isCustomUiAuthPresent": true,
+        "integration_version": 3,
+        "runTimeAuthorizationId": "[redacted]",
+        "nodeUiAuthorizationId": "[redacted]"
+      },
+      "transition_actions": [
+        {
+          "kind": "all",
+          "name": "all",
+          "when": "onleave",
+          "value": ""
+        }
+      ],
+      "declared_outputs": [
+        "taskId",
+        "agentId"
+      ],
+      "output_mappings": [
+        {
+          "order": 0,
+          "id": "713640c4-ba82-4e2c-b154-b1810240db28",
+          "name": "taskId",
+          "path": "$.id",
+          "value": "",
+          "desc": "",
+          "type": "body",
+          "validation": {
+            "type": "",
+            "condition": null,
+            "regex": "",
+            "mandatory": true,
+            "format_validator": null
+          },
+          "key": null,
+          "debugKey": false,
+          "node_ui_type": null,
+          "node_ui_group_name": null,
+          "ui_field_configuration": null
+        },
+        {
+          "order": 1,
+          "id": "6fb1e9f7-bdd2-4585-aebe-9dfdd0350793",
+          "name": "agentId",
+          "path": "$.data.agentId",
+          "value": "",
+          "desc": "",
+          "type": "body",
+          "validation": {
+            "type": "",
+            "condition": null,
+            "regex": "",
+            "mandatory": true,
+            "format_validator": null
+          },
+          "key": null,
+          "debugKey": false,
+          "node_ui_type": null,
+          "node_ui_group_name": null,
+          "ui_field_configuration": null
+        }
+      ]
+    },
+    {
+      "id": "1703",
+      "label": "Close Task",
+      "type_internal": "prebuiltnode",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "oninvaliddata",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "onerror",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "oninvalidchoice",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "ontimeout",
+          "declared_target_count": null
+        }
+      ],
+      "configuration": {
+        "referencekey": 50022,
+        "versionIds": "undefined",
+        "integration_id": 50022,
+        "client_uuid": "17dde394-4482-4c8d-ad37-65eafccd345a",
+        "method_id": 50348,
+        "version_id": 50163,
+        "auth_id": -1,
+        "request_body": [
+          {
+            "name": "Task Id",
+            "value": "$(taskId)",
+            "id": "ff9e7104-2c35-4e00-95bd-e886b793dc4d"
+          },
+          {
+            "name": "tenant_identifier",
+            "value": "",
+            "id": "31e84e4f-2bad-b743-0a69-537e5be2edc6"
+          },
+          {
+            "name": "Conversation ID",
+            "value": "$(conversationId)",
+            "id": "051e4b74-6a19-cb0e-1e09-b29decd9dcae"
+          },
+          {
+            "name": "Media Type",
+            "value": "social",
+            "id": "70ca0e89-14be-cb0d-7baf-baf71dc3b954"
+          },
+          {
+            "name": "webhookurl",
+            "value": "",
+            "id": "a5395711-fe55-4e41-ac63-63114440bc3e"
+          }
+        ],
+        "path_parameters": [
+          {
+            "name": "domain",
+            "value": "",
+            "id": "35a59252-32a4-f8f9-afe2-7c3287052a51"
+          },
+          {
+            "name": "ID",
+            "value": "$(taskId)",
+            "id": "a01f1704-493b-4a7f-8252-c3dfd1340f3f"
+          }
+        ],
+        "viewmodeData": [
+          {
+            "name": "auth_id",
+            "value": "WxCC Auth",
+            "isNgSelectBox": true
+          },
+          {
+            "name": "version_id",
+            "value": ""
+          },
+          {
+            "name": "method_id",
+            "value": "Close Task on WxCC"
+          }
+        ],
+        "isAuthPresent": true,
+        "isComponentNode": 3,
+        "nodeInput": {
+          "tenant_identifier": "",
+          "domain": "",
+          "ID": "$(taskId)",
+          "Task Id": "$(taskId)",
+          "Conversation ID": "$(conversationId)",
+          "Media Type": "social",
+          "webhookurl": ""
+        },
+        "group_id": 50020,
+        "customUiAuthStatus": 0,
+        "adminParameters": {
+          "oauth_callbackurl_type": 1,
+          "tenant_identifier": "e2df9969-e882-4829-8cf8-7e90e20c4da0",
+          "domain": "loadus1",
+          "integration_identifier": "https://example.invalid/v1/integration/cntwct"
+        },
+        "isCustomUiAuthPresent": true,
+        "integration_version": 3,
+        "runTimeAuthorizationId": "[redacted]",
+        "nodeUiAuthorizationId": "[redacted]"
+      },
+      "transition_actions": [],
+      "declared_outputs": [],
+      "output_mappings": []
+    },
+    {
+      "id": "1897",
+      "label": "Resolve Conversation",
+      "type_internal": "prebuiltnode",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "oninvaliddata",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "onerror",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "oninvalidchoice",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "ontimeout",
+          "declared_target_count": null
+        }
+      ],
+      "configuration": {
+        "referencekey": 50302,
+        "versionIds": "undefined",
+        "integration_id": 50302,
+        "client_uuid": "50d97e6a-ad14-4a77-898a-7f6f104bfb14",
+        "method_id": 57868,
+        "version_id": 52306,
+        "auth_id": -1,
+        "methodResponseParameters": [
+          {
+            "order": 0,
+            "id": "b1e142f3-147f-4979-9685-afd59669f428",
+            "name": "transId",
+            "path": "$.transId",
+            "value": "",
+            "desc": "",
+            "type": "body",
+            "validation": {
+              "type": "",
+              "condition": null,
+              "regex": "",
+              "mandatory": true,
+              "format_validator": null
+            },
+            "key": null,
+            "debugKey": false,
+            "node_ui_type": null,
+            "node_ui_group_name": null,
+            "ui_field_configuration": null
+          },
+          {
+            "order": 1,
+            "id": "8d1a2153-82b3-45c3-97d0-8c40209cf61f",
+            "name": "taskId",
+            "path": "$.taskId",
+            "value": "",
+            "desc": "",
+            "type": "body",
+            "validation": {
+              "type": "",
+              "condition": null,
+              "regex": "",
+              "mandatory": true,
+              "format_validator": null
+            },
+            "key": null,
+            "debugKey": false,
+            "node_ui_type": null,
+            "node_ui_group_name": null,
+            "ui_field_configuration": null
+          },
+          {
+            "order": 2,
+            "id": "3f8b9b65-053c-4be7-b0fc-e47d48c1bb4b",
+            "name": "conversationOperation",
+            "path": "$.conversationOperation",
+            "value": "",
+            "desc": "",
+            "type": "body",
+            "validation": {
+              "type": "",
+              "condition": null,
+              "regex": "",
+              "mandatory": true,
+              "format_validator": null
+            },
+            "key": null,
+            "debugKey": false,
+            "node_ui_type": null,
+            "node_ui_group_name": null,
+            "ui_field_configuration": null
+          }
+        ],
+        "request_body": [
+          {
+            "name": "Trans Id",
+            "value": "$(transId)",
+            "id": "969b36c1-d92a-48c3-822f-ee34b282462e"
+          },
+          {
+            "name": "Media Type",
+            "value": "social",
+            "id": "b611a9fe-d5ff-4967-96cb-98806e423574"
+          },
+          {
+            "name": "Media Channel",
+            "value": "facebook",
+            "id": "80b510f4-70dd-42e0-b711-2549dc964319"
+          },
+          {
+            "name": "tenant_identifier",
+            "id": "1d0cca74-9d4f-40b5-8bbb-c13ac69aba08"
+          },
+          {
+            "name": "webhookurl",
+            "id": "62b8dcc0-cb65-469c-9ed2-0ab2271b7adb"
+          },
+          {
+            "name": "overrideDefaultClose",
+            "value": false,
+            "id": "2fdbf4d3-2924-442b-871c-07435bdbdf21"
+          },
+          {
+            "name": "Details JSON",
+            "value": "$(detailsJson)",
+            "id": "3cb815d1-c4bd-4ec4-9339-847798f1d37a"
+          }
+        ],
+        "path_parameters": [
+          {
+            "name": "domain",
+            "id": "29f23013-459d-4c28-aa3f-8bc91536bcc5"
+          }
+        ],
+        "custom_output_vars": [
+          "transId",
+          "taskId",
+          "conversationOperation"
+        ],
+        "viewmodeData": [
+          {
+            "name": "auth_id",
+            "value": "Wxcc",
+            "isNgSelectBox": true
+          },
+          {
+            "name": "version_id",
+            "value": ""
+          },
+          {
+            "name": "method_id",
+            "value": "Resolve Conversation"
+          }
+        ],
+        "isAuthPresent": true,
+        "isComponentNode": 1,
+        "container_name": "https://example.invalid/integration_node_file_webex-cc-task-resolve-conversation_1701421030212_11480657604508611.js",
+        "nodeType": "https://example.invalid/integration_node_file_webex-cc-task-resolve-conversation_1701421030212_11480657604508611.js",
+        "group_id": 50020,
+        "customUiAuthStatus": 0,
+        "adminParameters": {
+          "oauth_callbackurl_type": 1,
+          "tenant_identifier": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+          "domain": "qaus1",
+          "integration_identifier": "https://example.invalid/v1/integration/cntwct"
+        },
+        "customuiWebcomponentElementName": "node-ui-template1701421030212",
+        "extraParamsData": {
+          "transId": "$(transId)",
+          "trackingId": "$(transId)",
+          "flowId": "Please enter the flow id",
+          "details": "$(detailsJson)",
+          "mediatype": "social",
+          "channel": "facebook",
+          "overrideDefaultClose": false,
+          "sourcenumber": null,
+          "customerid": "",
+          "customername": "",
+          "origin": "",
+          "subject": ""
+        },
+        "isCustomUiAuthPresent": false,
+        "integration_version": 3,
+        "runTimeAuthorizationId": "[redacted]",
+        "nodeUiAuthorizationId": "[redacted]"
+      },
+      "transition_actions": [],
+      "declared_outputs": [
+        "transId",
+        "taskId",
+        "conversationOperation"
+      ],
+      "output_mappings": [
+        {
+          "order": 0,
+          "id": "b1e142f3-147f-4979-9685-afd59669f428",
+          "name": "transId",
+          "path": "$.transId",
+          "value": "",
+          "desc": "",
+          "type": "body",
+          "validation": {
+            "type": "",
+            "condition": null,
+            "regex": "",
+            "mandatory": true,
+            "format_validator": null
+          },
+          "key": null,
+          "debugKey": false,
+          "node_ui_type": null,
+          "node_ui_group_name": null,
+          "ui_field_configuration": null
+        },
+        {
+          "order": 1,
+          "id": "8d1a2153-82b3-45c3-97d0-8c40209cf61f",
+          "name": "taskId",
+          "path": "$.taskId",
+          "value": "",
+          "desc": "",
+          "type": "body",
+          "validation": {
+            "type": "",
+            "condition": null,
+            "regex": "",
+            "mandatory": true,
+            "format_validator": null
+          },
+          "key": null,
+          "debugKey": false,
+          "node_ui_type": null,
+          "node_ui_group_name": null,
+          "ui_field_configuration": null
+        },
+        {
+          "order": 2,
+          "id": "3f8b9b65-053c-4be7-b0fc-e47d48c1bb4b",
+          "name": "conversationOperation",
+          "path": "$.conversationOperation",
+          "value": "",
+          "desc": "",
+          "type": "body",
+          "validation": {
+            "type": "",
+            "condition": null,
+            "regex": "",
+            "mandatory": true,
+            "format_validator": null
+          },
+          "key": null,
+          "debugKey": false,
+          "node_ui_type": null,
+          "node_ui_group_name": null,
+          "ui_field_configuration": null
+        }
+      ]
+    },
+    {
+      "id": "1899",
+      "label": "Messenger",
+      "type_internal": "umppublic",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "onerror",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "hideWaitFor": false,
+        "channelId": 5,
+        "deliverychannel": "FB",
+        "destinationType": "psid",
+        "destination": "$(n2.messenger.psId)",
+        "notification_type": "REGULAR",
+        "msgcreationtype": "createnew",
+        "messagetype": "Text",
+        "fb_text": "Message is resolved",
+        "successoutcome": 1,
+        "quick_replies_status": false,
+        "linkValidityCheck": false,
+        "image_aspect_ratio": "horizontal",
+        "fb_generic_template": [
+          {
+            "buttons": [
+              {
+                "buttonType": "postback",
+                "buttonTitle": "",
+                "data": ""
+              }
+            ]
+          }
+        ],
+        "fb_button_template": {
+          "mainBodyText": "",
+          "buttons": [
+            {
+              "buttonType": "postback",
+              "buttonTitle": "",
+              "data": ""
+            }
+          ]
+        },
+        "fb_list_template": {
+          "top_element_style": "compact",
+          "topElementStyle": "compact",
+          "globalFlag": false,
+          "elements": [
+            {
+              "buttons": [
+                {
+                  "buttonType": "postback",
+                  "buttonTitle": "",
+                  "data": ""
+                }
+              ]
+            }
+          ]
+        },
+        "fb_receipt_template": {
+          "elements": [
+            {}
+          ],
+          "address": {},
+          "summary": {},
+          "adjustments": []
+        },
+        "qr_type": "text",
+        "messaging_type": "RESPONSE"
+      },
+      "transition_actions": [],
+      "declared_outputs": [],
+      "output_mappings": []
+    },
+    {
+      "id": "1912",
+      "label": "Queued",
+      "type_internal": "umppublic",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "onerror",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "hideWaitFor": false,
+        "channelId": 5,
+        "deliverychannel": "FB",
+        "destinationType": "psid",
+        "destination": "$(n2.messenger.psId)",
+        "notification_type": "REGULAR",
+        "msgcreationtype": "createnew",
+        "messagetype": "Text",
+        "fb_text": "Message is queued",
+        "successoutcome": 1,
+        "quick_replies_status": false,
+        "linkValidityCheck": false,
+        "image_aspect_ratio": "horizontal",
+        "fb_generic_template": [
+          {
+            "buttons": [
+              {
+                "buttonType": "postback",
+                "buttonTitle": "",
+                "data": ""
+              }
+            ]
+          }
+        ],
+        "fb_button_template": {
+          "mainBodyText": "",
+          "buttons": [
+            {
+              "buttonType": "postback",
+              "buttonTitle": "",
+              "data": ""
+            }
+          ]
+        },
+        "fb_list_template": {
+          "top_element_style": "compact",
+          "topElementStyle": "compact",
+          "globalFlag": false,
+          "elements": [
+            {
+              "buttons": [
+                {
+                  "buttonType": "postback",
+                  "buttonTitle": "",
+                  "data": ""
+                }
+              ]
+            }
+          ]
+        },
+        "fb_receipt_template": {
+          "elements": [
+            {}
+          ],
+          "address": {},
+          "summary": {},
+          "adjustments": []
+        },
+        "qr_type": "text",
+        "messaging_type": "RESPONSE"
+      },
+      "transition_actions": [],
+      "declared_outputs": [],
+      "output_mappings": []
+    },
+    {
+      "id": "1939",
+      "label": "Branch",
+      "type_internal": "evaluate",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "onerror",
+          "declared_target_count": null
+        }
+      ],
+      "configuration": {
+        "evaluteIsOptimization": true,
+        "outcomes": [
+          {
+            "outcome": "Create/Reopen Path",
+            "order": "",
+            "open": false,
+            "isEditOn": false,
+            "tempVal": "Create/Reopen Path",
+            "conditions": [
+              {
+                "pills": [],
+                "varaible": "$(conversationOperation)",
+                "condition": "==",
+                "value": "created",
+                "operation": "OR",
+                "index": "q34pmebk"
+              },
+              {
+                "pills": [],
+                "varaible": "$(conversationOperation)",
+                "condition": "==",
+                "value": "reopened",
+                "operation": "",
+                "index": "83xlht5o"
+              }
+            ],
+            "index": "3whlkgjl"
+          },
+          {
+            "outcome": "Append Path",
+            "order": "",
+            "open": true,
+            "isEditOn": false,
+            "tempVal": "Append Path",
+            "conditions": [
+              {
+                "pills": [],
+                "varaible": "$(conversationOperation)",
+                "condition": "==",
+                "value": "appended",
+                "operation": "",
+                "index": "yih3jmil"
+              }
+            ],
+            "index": "wvcylz5o"
+          }
+        ],
+        "allConditionsFail": "None of the above",
+        "expression": "if(\"$(conversationOperation)\"  == \"created\" || \"$(conversationOperation)\"  == \"reopened\"){\"Create/Reopen Path\";}else if(\"$(conversationOperation)\"  == \"appended\"){\"Append Path\";}else{'None of the above';}",
+        "counter": 3,
+        "successEvents": [
+          "Create/Reopen Path",
+          "Append Path",
+          "None of the above"
+        ],
+        "nodeVersion": 1
+      },
+      "transition_actions": [],
+      "declared_outputs": [],
+      "output_mappings": []
+    },
+    {
+      "id": "1969",
+      "label": "Messenger",
+      "type_internal": "umppublic",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "onerror",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "hideWaitFor": false,
+        "channelId": 5,
+        "deliverychannel": "FB",
+        "destinationType": "psid",
+        "destination": "$(n2.messenger.psId)",
+        "notification_type": "REGULAR",
+        "msgcreationtype": "createnew",
+        "messagetype": "Text",
+        "fb_text": "$(droppedAttachmentNotificationMessage)",
+        "successoutcome": 1,
+        "quick_replies_status": false,
+        "linkValidityCheck": false,
+        "image_aspect_ratio": "horizontal",
+        "fb_generic_template": [
+          {
+            "buttons": [
+              {
+                "buttonType": "postback",
+                "buttonTitle": "",
+                "data": ""
+              }
+            ]
+          }
+        ],
+        "fb_button_template": {
+          "mainBodyText": "",
+          "buttons": [
+            {
+              "buttonType": "postback",
+              "buttonTitle": "",
+              "data": ""
+            }
+          ]
+        },
+        "fb_list_template": {
+          "top_element_style": "compact",
+          "topElementStyle": "compact",
+          "globalFlag": false,
+          "elements": [
+            {
+              "buttons": [
+                {
+                  "buttonType": "postback",
+                  "buttonTitle": "",
+                  "data": ""
+                }
+              ]
+            }
+          ]
+        },
+        "fb_receipt_template": {
+          "elements": [
+            {}
+          ],
+          "address": {},
+          "summary": {},
+          "adjustments": []
+        },
+        "qr_type": "text",
+        "messaging_type": "RESPONSE"
+      },
+      "transition_actions": [],
+      "declared_outputs": [],
+      "output_mappings": []
+    }
+  ],
+  "edges": [
+    {
+      "id": "5128027",
+      "source": "2",
+      "target": "9",
+      "event_internal": "onbegin",
+      "event_label": "onBegin",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5131556",
+      "source": "9",
+      "target": "1662",
+      "event_internal": "oninvalidchoice",
+      "event_label": "onInvalidChoice",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5131558",
+      "source": "9",
+      "target": "1662",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5131827",
+      "source": "1701",
+      "target": "1703",
+      "event_internal": "ontimeout",
+      "event_label": "onTimeout",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5131829",
+      "source": "1701",
+      "target": "1703",
+      "event_internal": "oninvaliddata",
+      "event_label": "onInvalidData",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5131831",
+      "source": "1701",
+      "target": "1703",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5131833",
+      "source": "1701",
+      "target": "1703",
+      "event_internal": "oninvalidchoice",
+      "event_label": "onInvalidChoice",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5131835",
+      "source": "1701",
+      "target": "1703",
+      "event_internal": "Error",
+      "event_label": "",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5131837",
+      "source": "1701",
+      "target": "1703",
+      "event_internal": "taskFailed",
+      "event_label": "taskFailed",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5131839",
+      "source": "1703",
+      "target": "1651",
+      "event_internal": "oninvaliddata",
+      "event_label": "onInvalidData",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5131841",
+      "source": "1703",
+      "target": "1651",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5131843",
+      "source": "1703",
+      "target": "1651",
+      "event_internal": "oninvalidchoice",
+      "event_label": "onInvalidChoice",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5131845",
+      "source": "1703",
+      "target": "1651",
+      "event_internal": "ontimeout",
+      "event_label": "onTimeout",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5131856",
+      "source": "1703",
+      "target": "1651",
+      "event_internal": "Success",
+      "event_label": "",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5131924",
+      "source": "1703",
+      "target": "1651",
+      "event_internal": "Error",
+      "event_label": "",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5133238",
+      "source": "1703",
+      "target": "1651",
+      "event_internal": "onauthorizationfail",
+      "event_label": "",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5133409",
+      "source": "9",
+      "target": "1897",
+      "event_internal": "noAttachmentsDropped",
+      "event_label": "noAttachmentsDropped",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5133438",
+      "source": "1897",
+      "target": "1899",
+      "event_internal": "created",
+      "event_label": "",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5133448",
+      "source": "1897",
+      "target": "1899",
+      "event_internal": "reopened",
+      "event_label": "",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5133453",
+      "source": "1897",
+      "target": "1662",
+      "event_internal": "oninvaliddata",
+      "event_label": "onInvalidData",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5133455",
+      "source": "1897",
+      "target": "1662",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5133457",
+      "source": "1897",
+      "target": "1662",
+      "event_internal": "oninvalidchoice",
+      "event_label": "onInvalidChoice",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5133461",
+      "source": "1897",
+      "target": "1662",
+      "event_internal": "tooManyRequests",
+      "event_label": "",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5133463",
+      "source": "1897",
+      "target": "1662",
+      "event_internal": "serviceUnavailable",
+      "event_label": "",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5133472",
+      "source": "1897",
+      "target": "1662",
+      "event_internal": "error",
+      "event_label": "",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5133474",
+      "source": "1897",
+      "target": "1662",
+      "event_internal": "taskFailed",
+      "event_label": "",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5133476",
+      "source": "1897",
+      "target": "1662",
+      "event_internal": "appendFailed",
+      "event_label": "",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5133478",
+      "source": "1899",
+      "target": "1701",
+      "event_internal": "onsuccess",
+      "event_label": "onSuccess",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5133485",
+      "source": "1701",
+      "target": "1912",
+      "event_internal": "Queued",
+      "event_label": "Queued",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5133780",
+      "source": "1897",
+      "target": "1939",
+      "event_internal": "ontimeout",
+      "event_label": "onTimeout",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5133784",
+      "source": "1939",
+      "target": "1703",
+      "event_internal": "Create/Reopen Path",
+      "event_label": "Create/Reopen Path",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5134086",
+      "source": "1897",
+      "target": "1662",
+      "event_internal": "onauthorizationfail",
+      "event_label": "",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5134132",
+      "source": "1899",
+      "target": "1701",
+      "event_internal": "onpolicyfail",
+      "event_label": "onPolicyFail",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5134134",
+      "source": "1899",
+      "target": "1701",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5134192",
+      "source": "9",
+      "target": "1969",
+      "event_internal": "attachmentsDropped",
+      "event_label": "attachmentsDropped",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5134218",
+      "source": "1969",
+      "target": "1897",
+      "event_internal": "onsuccess",
+      "event_label": "onSuccess",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5134229",
+      "source": "1969",
+      "target": "1897",
+      "event_internal": "onpolicyfail",
+      "event_label": "onPolicyFail",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5134231",
+      "source": "1969",
+      "target": "1897",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5134477",
+      "source": "1701",
+      "target": "1703",
+      "event_internal": "onauthorizationfail",
+      "event_label": "",
+      "representation": "explicit_edge"
+    }
+  ],
+  "terminal_bindings": [
+    {
+      "id": "1720",
+      "source": "1980",
+      "target": "1720",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": false,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "1721",
+      "source": "1980",
+      "target": "1721",
+      "event_internal": "onpolicyfail",
+      "event_label": "onPolicyFail",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": false,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "1722",
+      "source": "1980",
+      "target": "1722",
+      "event_internal": "onsuccess",
+      "event_label": "onSuccess",
+      "outcome_id": 2,
+      "outcome_name": "Success",
+      "outcome_description": "Successfully completed flow",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": false,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "1728",
+      "source": "1825",
+      "target": "1728",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": false,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "1729",
+      "source": "1825",
+      "target": "1729",
+      "event_internal": "onpolicyfail",
+      "event_label": "onPolicyFail",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": false,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "1730",
+      "source": "1825",
+      "target": "1730",
+      "event_internal": "onsuccess",
+      "event_label": "onSuccess",
+      "outcome_id": 2,
+      "outcome_name": "Success",
+      "outcome_description": "Successfully completed flow",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": false,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "1922",
+      "source": "1912",
+      "target": "1922",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "1923",
+      "source": "1912",
+      "target": "1923",
+      "event_internal": "onpolicyfail",
+      "event_label": "onPolicyFail",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "1924",
+      "source": "1912",
+      "target": "1924",
+      "event_internal": "onsuccess",
+      "event_label": "onSuccess",
+      "outcome_id": 2,
+      "outcome_name": "Success",
+      "outcome_description": "Successfully completed flow",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "1952",
+      "source": "1939",
+      "target": "1952",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "1953",
+      "source": "1939",
+      "target": "1953",
+      "event_internal": "Append Path",
+      "event_label": "Append Path",
+      "outcome_id": 2,
+      "outcome_name": "Success",
+      "outcome_description": "Successfully completed flow",
+      "session_retry": "",
+      "async_check": true,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "1954",
+      "source": "1939",
+      "target": "1954",
+      "event_internal": "None of the above",
+      "event_label": "None of the above",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "1995",
+      "source": "1897",
+      "target": "1995",
+      "event_internal": "appended",
+      "event_label": "appended",
+      "outcome_id": 2,
+      "outcome_name": "Success",
+      "outcome_description": "Successfully completed flow",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "1996",
+      "source": "1897",
+      "target": "1996",
+      "event_internal": "accepted",
+      "event_label": "accepted",
+      "outcome_id": 2,
+      "outcome_name": "Success",
+      "outcome_description": "Successfully completed flow",
+      "session_retry": "",
+      "async_check": true,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    }
+  ],
+  "terminal_sources_not_captured": [
+    "1825",
+    "1980"
+  ],
+  "duplicate_terminal_binding_groups": [],
+  "variable_handoffs": [
+    {
+      "consumer": "2",
+      "location": "transition_actions[0].value",
+      "reference": "$(n2.messenger.attachments)",
+      "variable": "n2.messenger.attachments",
+      "producer_node": "2",
+      "producer_field": "messenger.attachments",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[1].value",
+      "reference": "$(n2.messenger.message)",
+      "variable": "n2.messenger.message",
+      "producer_node": "2",
+      "producer_field": "messenger.message",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[2].value",
+      "reference": "$(n2.messenger.attachmentUrl)",
+      "variable": "n2.messenger.attachmentUrl",
+      "producer_node": "2",
+      "producer_field": "messenger.attachmentUrl",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[3].value",
+      "reference": "$(n2.messenger.pciInfo.nonPCIComplianceReason)",
+      "variable": "n2.messenger.pciInfo.nonPCIComplianceReason",
+      "producer_node": "2",
+      "producer_field": "messenger.pciInfo.nonPCIComplianceReason",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[4].value",
+      "reference": "$(n2.messenger.pciInfo.isPCIValidationDone)",
+      "variable": "n2.messenger.pciInfo.isPCIValidationDone",
+      "producer_node": "2",
+      "producer_field": "messenger.pciInfo.isPCIValidationDone",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[5].value",
+      "reference": "$(n2.messenger.pciInfo.isPCICompliance)",
+      "variable": "n2.messenger.pciInfo.isPCICompliance",
+      "producer_node": "2",
+      "producer_field": "messenger.pciInfo.isPCICompliance",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[6].value",
+      "reference": "$(n2.messenger.name)",
+      "variable": "n2.messenger.name",
+      "producer_node": "2",
+      "producer_field": "messenger.name",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[7].value",
+      "reference": "$(n2.messenger.appId)",
+      "variable": "n2.messenger.appId",
+      "producer_node": "2",
+      "producer_field": "messenger.appId",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[8].value",
+      "reference": "$(n2.messenger.psId)",
+      "variable": "n2.messenger.psId",
+      "producer_node": "2",
+      "producer_field": "messenger.psId",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[9].value",
+      "reference": "$(n2.messenger.ts)",
+      "variable": "n2.messenger.ts",
+      "producer_node": "2",
+      "producer_field": "messenger.ts",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[10].value",
+      "reference": "$(n2.messenger.pciInfo.isAttachmentEnabled)",
+      "variable": "n2.messenger.pciInfo.isAttachmentEnabled",
+      "producer_node": "2",
+      "producer_field": "messenger.pciInfo.isAttachmentEnabled",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[11].value",
+      "reference": "$(n2.messenger.pciInfo.droppedAttachmentCount)",
+      "variable": "n2.messenger.pciInfo.droppedAttachmentCount",
+      "producer_node": "2",
+      "producer_field": "messenger.pciInfo.droppedAttachmentCount",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[12].value",
+      "reference": "$(n2.service.serviceKey)",
+      "variable": "n2.service.serviceKey",
+      "producer_node": "2",
+      "producer_field": "service.serviceKey",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[13].value",
+      "reference": "$(n2.messenger.transId)",
+      "variable": "n2.messenger.transId",
+      "producer_node": "2",
+      "producer_field": "messenger.transId",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[14].value",
+      "reference": "$(n2.messenger.message)",
+      "variable": "n2.messenger.message",
+      "producer_node": "2",
+      "producer_field": "messenger.message",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[15].value",
+      "reference": "$(n2.messenger.attachments)",
+      "variable": "n2.messenger.attachments",
+      "producer_node": "2",
+      "producer_field": "messenger.attachments",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[16].value",
+      "reference": "$(n2.messenger.pciInfo.isPCIValidationDone)",
+      "variable": "n2.messenger.pciInfo.isPCIValidationDone",
+      "producer_node": "2",
+      "producer_field": "messenger.pciInfo.isPCIValidationDone",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[17].value",
+      "reference": "$(n2.messenger.pciInfo.nonPCIComplianceReason)",
+      "variable": "n2.messenger.pciInfo.nonPCIComplianceReason",
+      "producer_node": "2",
+      "producer_field": "messenger.pciInfo.nonPCIComplianceReason",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[18].value",
+      "reference": "$(n2.messenger.securityscaninfo.isSecurityValidationDone)",
+      "variable": "n2.messenger.securityscaninfo.isSecurityValidationDone",
+      "producer_node": "2",
+      "producer_field": "messenger.securityscaninfo.isSecurityValidationDone",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[19].value",
+      "reference": "$(n2.messenger.securityscaninfo.securityFailedReason)",
+      "variable": "n2.messenger.securityscaninfo.securityFailedReason",
+      "producer_node": "2",
+      "producer_field": "messenger.securityscaninfo.securityFailedReason",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[20].value",
+      "reference": "$(n2.messenger.securityscaninfo.droppedAttachmentCount)",
+      "variable": "n2.messenger.securityscaninfo.droppedAttachmentCount",
+      "producer_node": "2",
+      "producer_field": "messenger.securityscaninfo.droppedAttachmentCount",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[21].value",
+      "reference": "$(n2.messenger.securityscaninfo.isSecurityCompliance)",
+      "variable": "n2.messenger.securityscaninfo.isSecurityCompliance",
+      "producer_node": "2",
+      "producer_field": "messenger.securityscaninfo.isSecurityCompliance",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[22].value",
+      "reference": "$(n2.messenger.malwareinfo.isMalwareValidationDone)",
+      "variable": "n2.messenger.malwareinfo.isMalwareValidationDone",
+      "producer_node": "2",
+      "producer_field": "messenger.malwareinfo.isMalwareValidationDone",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[23].value",
+      "reference": "$(n2.messenger.malwareinfo.isMalwareCompliance)",
+      "variable": "n2.messenger.malwareinfo.isMalwareCompliance",
+      "producer_node": "2",
+      "producer_field": "messenger.malwareinfo.isMalwareCompliance",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[24].value",
+      "reference": "$(n2.messenger.malwareinfo.malwareFailedReason)",
+      "variable": "n2.messenger.malwareinfo.malwareFailedReason",
+      "producer_node": "2",
+      "producer_field": "messenger.malwareinfo.malwareFailedReason",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[25].value",
+      "reference": "$(n2.messenger.malwareinfo.droppedAttachmentCount)",
+      "variable": "n2.messenger.malwareinfo.droppedAttachmentCount",
+      "producer_node": "2",
+      "producer_field": "messenger.malwareinfo.droppedAttachmentCount",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "9",
+      "location": "transition_actions[0].value",
+      "reference": "$(droppedAttachmentNotificationMessage)",
+      "variable": "droppedAttachmentNotificationMessage",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1651",
+      "location": "configuration.destination",
+      "reference": "$(n2.messenger.psId)",
+      "variable": "n2.messenger.psId",
+      "producer_node": "2",
+      "producer_field": "messenger.psId",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1651",
+      "location": "configuration.fb_text",
+      "reference": "$(errorMsg1)",
+      "variable": "errorMsg1",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1662",
+      "location": "configuration.destination",
+      "reference": "$(n2.messenger.psId)",
+      "variable": "n2.messenger.psId",
+      "producer_node": "2",
+      "producer_field": "messenger.psId",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1662",
+      "location": "configuration.fb_text",
+      "reference": "$(errorMsg1)",
+      "variable": "errorMsg1",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1701",
+      "location": "configuration.request_body[0].value",
+      "reference": "$(taskId)",
+      "variable": "taskId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1701",
+      "location": "configuration.request_body[3].value",
+      "reference": "$(conversationId)",
+      "variable": "conversationId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1701",
+      "location": "configuration.path_parameters[1].value",
+      "reference": "$(taskId)",
+      "variable": "taskId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1701",
+      "location": "configuration.extraParamsData.id",
+      "reference": "$(taskId)",
+      "variable": "taskId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1701",
+      "location": "configuration.extraParamsData.conversationid",
+      "reference": "$(conversationId)",
+      "variable": "conversationId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1703",
+      "location": "configuration.request_body[0].value",
+      "reference": "$(taskId)",
+      "variable": "taskId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1703",
+      "location": "configuration.request_body[2].value",
+      "reference": "$(conversationId)",
+      "variable": "conversationId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1703",
+      "location": "configuration.path_parameters[1].value",
+      "reference": "$(taskId)",
+      "variable": "taskId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1703",
+      "location": "configuration.nodeInput.ID",
+      "reference": "$(taskId)",
+      "variable": "taskId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1703",
+      "location": "configuration.nodeInput.Task Id",
+      "reference": "$(taskId)",
+      "variable": "taskId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1703",
+      "location": "configuration.nodeInput.Conversation ID",
+      "reference": "$(conversationId)",
+      "variable": "conversationId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1897",
+      "location": "configuration.request_body[0].value",
+      "reference": "$(transId)",
+      "variable": "transId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": [
+        "2"
+      ]
+    },
+    {
+      "consumer": "1897",
+      "location": "configuration.request_body[6].value",
+      "reference": "$(detailsJson)",
+      "variable": "detailsJson",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1897",
+      "location": "configuration.extraParamsData.transId",
+      "reference": "$(transId)",
+      "variable": "transId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": [
+        "2"
+      ]
+    },
+    {
+      "consumer": "1897",
+      "location": "configuration.extraParamsData.trackingId",
+      "reference": "$(transId)",
+      "variable": "transId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": [
+        "2"
+      ]
+    },
+    {
+      "consumer": "1897",
+      "location": "configuration.extraParamsData.details",
+      "reference": "$(detailsJson)",
+      "variable": "detailsJson",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1899",
+      "location": "configuration.destination",
+      "reference": "$(n2.messenger.psId)",
+      "variable": "n2.messenger.psId",
+      "producer_node": "2",
+      "producer_field": "messenger.psId",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1912",
+      "location": "configuration.destination",
+      "reference": "$(n2.messenger.psId)",
+      "variable": "n2.messenger.psId",
+      "producer_node": "2",
+      "producer_field": "messenger.psId",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1939",
+      "location": "configuration.outcomes[0].conditions[0].varaible",
+      "reference": "$(conversationOperation)",
+      "variable": "conversationOperation",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1939",
+      "location": "configuration.outcomes[0].conditions[1].varaible",
+      "reference": "$(conversationOperation)",
+      "variable": "conversationOperation",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1939",
+      "location": "configuration.outcomes[1].conditions[0].varaible",
+      "reference": "$(conversationOperation)",
+      "variable": "conversationOperation",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1939",
+      "location": "configuration.expression",
+      "reference": "$(conversationOperation)",
+      "variable": "conversationOperation",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1969",
+      "location": "configuration.destination",
+      "reference": "$(n2.messenger.psId)",
+      "variable": "n2.messenger.psId",
+      "producer_node": "2",
+      "producer_field": "messenger.psId",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1969",
+      "location": "configuration.fb_text",
+      "reference": "$(droppedAttachmentNotificationMessage)",
+      "variable": "droppedAttachmentNotificationMessage",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.messenger.attachments)",
+      "variable": "n2.messenger.attachments",
+      "producer_node": "2",
+      "producer_field": "messenger.attachments",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.messenger.message)",
+      "variable": "n2.messenger.message",
+      "producer_node": "2",
+      "producer_field": "messenger.message",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.messenger.attachmentUrl)",
+      "variable": "n2.messenger.attachmentUrl",
+      "producer_node": "2",
+      "producer_field": "messenger.attachmentUrl",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.messenger.pciInfo.nonPCIComplianceReason)",
+      "variable": "n2.messenger.pciInfo.nonPCIComplianceReason",
+      "producer_node": "2",
+      "producer_field": "messenger.pciInfo.nonPCIComplianceReason",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.messenger.pciInfo.isPCIValidationDone)",
+      "variable": "n2.messenger.pciInfo.isPCIValidationDone",
+      "producer_node": "2",
+      "producer_field": "messenger.pciInfo.isPCIValidationDone",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.messenger.pciInfo.isPCICompliance)",
+      "variable": "n2.messenger.pciInfo.isPCICompliance",
+      "producer_node": "2",
+      "producer_field": "messenger.pciInfo.isPCICompliance",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.messenger.name)",
+      "variable": "n2.messenger.name",
+      "producer_node": "2",
+      "producer_field": "messenger.name",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.messenger.appId)",
+      "variable": "n2.messenger.appId",
+      "producer_node": "2",
+      "producer_field": "messenger.appId",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.messenger.psId)",
+      "variable": "n2.messenger.psId",
+      "producer_node": "2",
+      "producer_field": "messenger.psId",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.messenger.ts)",
+      "variable": "n2.messenger.ts",
+      "producer_node": "2",
+      "producer_field": "messenger.ts",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.messenger.pciInfo.isAttachmentEnabled)",
+      "variable": "n2.messenger.pciInfo.isAttachmentEnabled",
+      "producer_node": "2",
+      "producer_field": "messenger.pciInfo.isAttachmentEnabled",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.messenger.pciInfo.droppedAttachmentCount)",
+      "variable": "n2.messenger.pciInfo.droppedAttachmentCount",
+      "producer_node": "2",
+      "producer_field": "messenger.pciInfo.droppedAttachmentCount",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.service.serviceKey)",
+      "variable": "n2.service.serviceKey",
+      "producer_node": "2",
+      "producer_field": "service.serviceKey",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.messenger.transId)",
+      "variable": "n2.messenger.transId",
+      "producer_node": "2",
+      "producer_field": "messenger.transId",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.messenger.securityscaninfo.isSecurityValidationDone)",
+      "variable": "n2.messenger.securityscaninfo.isSecurityValidationDone",
+      "producer_node": "2",
+      "producer_field": "messenger.securityscaninfo.isSecurityValidationDone",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.messenger.securityscaninfo.securityFailedReason)",
+      "variable": "n2.messenger.securityscaninfo.securityFailedReason",
+      "producer_node": "2",
+      "producer_field": "messenger.securityscaninfo.securityFailedReason",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.messenger.securityscaninfo.droppedAttachmentCount)",
+      "variable": "n2.messenger.securityscaninfo.droppedAttachmentCount",
+      "producer_node": "2",
+      "producer_field": "messenger.securityscaninfo.droppedAttachmentCount",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.messenger.securityscaninfo.isSecurityCompliance)",
+      "variable": "n2.messenger.securityscaninfo.isSecurityCompliance",
+      "producer_node": "2",
+      "producer_field": "messenger.securityscaninfo.isSecurityCompliance",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.messenger.malwareinfo.isMalwareValidationDone)",
+      "variable": "n2.messenger.malwareinfo.isMalwareValidationDone",
+      "producer_node": "2",
+      "producer_field": "messenger.malwareinfo.isMalwareValidationDone",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.messenger.malwareinfo.isMalwareCompliance)",
+      "variable": "n2.messenger.malwareinfo.isMalwareCompliance",
+      "producer_node": "2",
+      "producer_field": "messenger.malwareinfo.isMalwareCompliance",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.messenger.malwareinfo.malwareFailedReason)",
+      "variable": "n2.messenger.malwareinfo.malwareFailedReason",
+      "producer_node": "2",
+      "producer_field": "messenger.malwareinfo.malwareFailedReason",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.messenger.malwareinfo.droppedAttachmentCount)",
+      "variable": "n2.messenger.malwareinfo.droppedAttachmentCount",
+      "producer_node": "2",
+      "producer_field": "messenger.malwareinfo.droppedAttachmentCount",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1651",
+      "location": "_usedVars",
+      "reference": "$(n2.messenger.psId)",
+      "variable": "n2.messenger.psId",
+      "producer_node": "2",
+      "producer_field": "messenger.psId",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1662",
+      "location": "_usedVars",
+      "reference": "$(n2.messenger.psId)",
+      "variable": "n2.messenger.psId",
+      "producer_node": "2",
+      "producer_field": "messenger.psId",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1899",
+      "location": "_usedVars",
+      "reference": "$(n2.messenger.psId)",
+      "variable": "n2.messenger.psId",
+      "producer_node": "2",
+      "producer_field": "messenger.psId",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1912",
+      "location": "_usedVars",
+      "reference": "$(n2.messenger.psId)",
+      "variable": "n2.messenger.psId",
+      "producer_node": "2",
+      "producer_field": "messenger.psId",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1969",
+      "location": "_usedVars",
+      "reference": "$(n2.messenger.psId)",
+      "variable": "n2.messenger.psId",
+      "producer_node": "2",
+      "producer_field": "messenger.psId",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    }
+  ],
+  "custom_variable_assignments": [
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "messengerPayloadObject",
+      "when": "onleave",
+      "value": "$(n2.messenger.attachments)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "messagetext",
+      "when": "onleave",
+      "value": "$(n2.messenger.message)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "attachmentURL",
+      "when": "onleave",
+      "value": "$(n2.messenger.attachmentUrl)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "nonPCIComplianceReasonObject",
+      "when": "onleave",
+      "value": "$(n2.messenger.pciInfo.nonPCIComplianceReason)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "isPCIValidationDone",
+      "when": "onleave",
+      "value": "$(n2.messenger.pciInfo.isPCIValidationDone)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "isPCICompliance",
+      "when": "onleave",
+      "value": "$(n2.messenger.pciInfo.isPCICompliance)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "customerName",
+      "when": "onleave",
+      "value": "$(n2.messenger.name)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "appid",
+      "when": "onleave",
+      "value": "$(n2.messenger.appId)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "psId",
+      "when": "onleave",
+      "value": "$(n2.messenger.psId)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "timestamp",
+      "when": "onleave",
+      "value": "$(n2.messenger.ts)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "isAttachmentEnabled",
+      "when": "onleave",
+      "value": "$(n2.messenger.pciInfo.isAttachmentEnabled)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "droppedAttachmentCount",
+      "when": "onleave",
+      "value": "$(n2.messenger.pciInfo.droppedAttachmentCount)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "serviceKey",
+      "when": "onleave",
+      "value": "$(n2.service.serviceKey)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "transId",
+      "when": "onleave",
+      "value": "$(n2.messenger.transId)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "resolveConversationmessagetext",
+      "when": "onleave",
+      "value": "$(n2.messenger.message)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "resolveConversationMessengerPayloadObject",
+      "when": "onleave",
+      "value": "$(n2.messenger.attachments)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "resolveConversationIsPCIValidationDone",
+      "when": "onleave",
+      "value": "$(n2.messenger.pciInfo.isPCIValidationDone)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "resolveConversationNonPCIComplianceReasonObject",
+      "when": "onleave",
+      "value": "$(n2.messenger.pciInfo.nonPCIComplianceReason)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "isSecurityValidationDone",
+      "when": "onleave",
+      "value": "$(n2.messenger.securityscaninfo.isSecurityValidationDone)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "securityNonComplianceReasonObject",
+      "when": "onleave",
+      "value": "$(n2.messenger.securityscaninfo.securityFailedReason)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "securityScanDroppedAttachmentCount",
+      "when": "onleave",
+      "value": "$(n2.messenger.securityscaninfo.droppedAttachmentCount)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "isSecurityCompliance",
+      "when": "onleave",
+      "value": "$(n2.messenger.securityscaninfo.isSecurityCompliance)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "isMalwareValidationDone",
+      "when": "onleave",
+      "value": "$(n2.messenger.malwareinfo.isMalwareValidationDone)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "isMalwareCompliance",
+      "when": "onleave",
+      "value": "$(n2.messenger.malwareinfo.isMalwareCompliance)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "malwareNonComplianceReasonObject",
+      "when": "onleave",
+      "value": "$(n2.messenger.malwareinfo.malwareFailedReason)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "malwareScanDroppedAttachmentCount",
+      "when": "onleave",
+      "value": "$(n2.messenger.malwareinfo.droppedAttachmentCount)"
+    }
+  ],
+  "custom_variables": [
+    {
+      "name": "FBpageid",
+      "value": 102557209178653,
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "appid",
+      "value": "a_637915800035610000",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "messengerPayloadObject",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "messagetext",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "attachmentURL",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "nonPCIComplianceReasonObject",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "conversationId",
+      "value": "000000000000000",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "isPCIValidationDone",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "isPCICompliance",
+      "value": false,
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "dropCountAttachments",
+      "value": 0,
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "errorMsg1",
+      "value": "Sorry, we are unable to process your request right now. Please try again later.",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "errorMsg2",
+      "value": "Unable to deliver your message. Please resend.",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "err_msg_toomanyrequests",
+      "value": "There are too many requests currently",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "error_msg3",
+      "value": "Currently sevice is not available",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "customerName",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "decimalValue",
+      "value": true,
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "psId",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "timestamp",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "isAttachmentEnabled",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "droppedAttachmentCount",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "serviceKey",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "callbackPayload",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "taskId",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "transId",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "resolveConversationmessagetext",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "resolveConversationMessengerPayloadObject",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "resolveConversationIsPCIValidationDone",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "resolveConversationNonPCIComplianceReasonObject",
+      "value": "",
+      "desc": "",
+      "type": "default"
+    },
+    {
+      "name": "conversationOperation",
+      "value": "",
+      "desc": "",
+      "type": "default"
+    },
+    {
+      "name": "isSecurityValidationDone",
+      "value": "",
+      "desc": "",
+      "type": "default"
+    },
+    {
+      "name": "isSecurityCompliance",
+      "value": "",
+      "desc": "",
+      "type": "default"
+    },
+    {
+      "name": "securityNonComplianceReasonObject",
+      "value": "",
+      "desc": "",
+      "type": "default"
+    },
+    {
+      "name": "securityScanDroppedAttachmentCount",
+      "value": "",
+      "desc": "",
+      "type": "default"
+    },
+    {
+      "name": "isMalwareValidationDone",
+      "value": "",
+      "desc": "",
+      "type": "default"
+    },
+    {
+      "name": "isMalwareCompliance",
+      "value": "",
+      "desc": "",
+      "type": "default"
+    },
+    {
+      "name": "malwareNonComplianceReasonObject",
+      "value": "",
+      "desc": "",
+      "type": "default"
+    },
+    {
+      "name": "malwareScanDroppedAttachmentCount",
+      "value": "",
+      "desc": "",
+      "type": "default"
+    },
+    {
+      "name": "maliciousContentFoundErrorMessage",
+      "value": "The attachment you sent was dropped as it contains malicious data.",
+      "desc": "",
+      "type": "default"
+    },
+    {
+      "name": "sensitiveContentFoundErrorMessage",
+      "value": "The attachment you sent was dropped as it contains sensitive data.",
+      "desc": "",
+      "type": "default"
+    },
+    {
+      "name": "errorProcessingAttachmentsMessage",
+      "value": "The attachment you sent could not be processed at the moment. Please try again later.",
+      "desc": "",
+      "type": "default"
+    },
+    {
+      "name": "flowVersion",
+      "value": 3.3,
+      "desc": "",
+      "type": "default"
+    }
+  ],
+  "flow_outcomes": [
+    {
+      "id": 2,
+      "order": 0,
+      "name": 101,
+      "value": "Successfully completed flow",
+      "tag": 11,
+      "tagName": "Success",
+      "type": "default",
+      "notification": null
+    },
+    {
+      "id": 3,
+      "order": 1,
+      "name": 102,
+      "value": "Flow completed with an error",
+      "tag": 12,
+      "tagName": "Error",
+      "type": "default",
+      "notification": null
+    },
+    {
+      "id": 4,
+      "order": 2,
+      "name": 103,
+      "value": "Flow ended due to an interruption",
+      "tag": 13,
+      "tagName": "Incomplete",
+      "type": "default",
+      "notification": null
+    },
+    {
+      "id": 1,
+      "name": 100,
+      "value": "Last executed node event",
+      "statusCode": "All status codes",
+      "tag": 15,
+      "tagName": "Last Execution Status",
+      "type": "default",
+      "notification": null
+    }
+  ],
+  "cycles": [],
+  "cross_page_or_flow_nodes": [],
+  "capture_pages": null,
+  "declared_events_without_captured_route": [
+    {
+      "node": "1651",
+      "event_internal": "onerror",
+      "declared_target_count": 1
+    },
+    {
+      "node": "1662",
+      "event_internal": "onerror",
+      "declared_target_count": 1
+    }
+  ],
+  "nodes_not_reached_from_captured_start": [],
+  "edge_endpoints_not_captured": [],
+  "node_variable_producers_not_captured": [],
+  "redactions": "Header credentials and URL hosts redacted. Internal model properties are evidence, not a public import API.",
+  "authored_walkthrough": {
+    "walkthrough": "Messenger Start 2 copies message, identity, attachment and scan fields into custom variables before Evaluate 9 constructs `detailsJson` and chooses an attachment-notification result. `attachmentsDropped` sends Messenger 1969; all its captured outcomes continue to Resolve Conversation 1897. `noAttachmentsDropped` enters 1897 directly. Created/reopened conversations send acknowledgment 1899, then Queue Task 1701 regardless of acknowledgment delivery outcome; `Queued` sends confirmation 1912. Appended and accepted events terminate Success. Resolve timeout branches at 1939: created/reopened attempts Close Task 1703, appended terminates Success, and other/error results terminate Error. Queue failures also close the task; every captured close outcome sends error notice 1651. Other parse/resolve errors use notice 1662.",
+    "handoffs": "Start supplies `$(n2.messenger.psId)` to each send. Evaluate 9 reads scan-reason custom variables, selecting sensitive-content, malware or processing-error text into `droppedAttachmentNotificationMessage`, then passes `$(detailsJson)` to 1897. Queue/close use `$(taskId)` and `$(conversationId)`; Resolve declares `taskId` and `conversationOperation` outputs, while the timeout branch consumes the unqualified operation variable. These custom bindings must be reconciled with the actual integration callback contract.",
+    "limitations": "No Receive node or retry loop is captured. Evaluate uses `appId` while the captured Start assignment/default is `appid`, and Start assigns timestamp from `$(n2.messenger.ts)` although its output list names `messenger.timestamp`; preserve these discrepancies for adaptation. Some terminal bindings name uncaptured producers 1980/1825, and notice-node error routes are absent. Placeholder identities and conversation defaults are not deployable bindings. Runtime remains untested."
+  },
+  "walkthrough_status": "authored"
+}

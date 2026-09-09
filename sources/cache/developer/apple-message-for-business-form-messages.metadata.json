@@ -1,0 +1,36 @@
+{
+  "api_metadata_path": "sources/cache/developer/apple-message-for-business-form-messages.api.json",
+  "category": "MULTI CHANNEL COMMUNICATION API",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f6633",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "210cddb042a7b1854ae2477ed8882bf657927fb7d097b592fc0ca60b2028dd96",
+    "source_path": "137c0b496693d75c9b6c602b5163b9892664add5a06e2cef64ac54f575c51438",
+    "text_path": "2a5d0d2a29ec22175a9355dcc7d908f69f3e768ed646dd78a312383e32d744b4"
+  },
+  "headings": [
+    "Error Codes"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/apple-message-for-business-form-messages.md",
+  "openapi_path": "sources/cache/openapi/1858b924b29b256af1b88f7ae1cb49937798b6d0e602cd005baddcab9fe36215.json",
+  "resolved_url": "https://developers.webexconnect.io/reference/apple-message-for-business-form-messages",
+  "retrieved_at": "2026-09-08T23:31:42+00:00",
+  "sha256_api_metadata": "6fb2f1de667627fb55b2eb86ddb0d0cec872070a0ced973c9dc3be5b765e46b8",
+  "sha256_html_response": "248e6d80246f625489678ed5845af37d47b7659232b0c8ca09997d9c0ca47949",
+  "sha256_openapi": "1858b924b29b256af1b88f7ae1cb49937798b6d0e602cd005baddcab9fe36215",
+  "sha256_source_body": "137c0b496693d75c9b6c602b5163b9892664add5a06e2cef64ac54f575c51438",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/apple-message-for-business-form-messages.source.md",
+  "source_updated_at": "2026-04-21T09:05:56.929Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/apple-message-for-business-form-messages.txt",
+  "title": "Apple Message for Business: Form Messages",
+  "url": "https://developers.webexconnect.io/reference/apple-message-for-business-form-messages",
+  "word_count": 2676,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/apple-message-for-business-form-messages.metadata.json"
+}

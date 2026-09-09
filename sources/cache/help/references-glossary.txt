@@ -1,0 +1,95 @@
+| Term | Definition
+
+ | Asset | Assets in Webex Connect refer to one or more of:
+
+a. Numbers (long codes, short codes), Sender IDs, or Keywords required for sending and receiving SMS and/or voice messages
+
+b. Configured apps/instances for OTT channels including Email, Push and In-app Messaging, Apple Messages for Business, Facebook Messenger, WhatsApp, RCS, and more
+
+c. Configured instances of various integrations supported by Webex Connect
+
+ | Apps | Refers to one or more 'Apps' that can be configured under 'Assets-Apps' section to send and receive messages over OTT channels such as email, Push and In-app Messaging, Apple Messages for Business, Facebook Messenger, WhatsApp, RCS, and more
+
+ | Channel | Refers to communication channels that is used to send and/or receive messages and events.
+
+ | User(s) | The term user refers to registered users on the Webex Connect platform. The users may have different roles, they are:
+Owner
+
+ Full Access User
+Limited Access User
+
+ Reports User
+
+* Restricted User
+
+ | Developers | The term developer refers to the client developers who build applications using Webex Connect APIs, SDKs, or Flows.
+
+ | Customer(s) | The term customer refers to the end consumers of Webex Connect users/clients.
+
+ | Customerid | Customerid is a unique identifier for an end customer/consumer. It can be used to tie together the various channel identifiers for the same customer within the customer profile.
+
+ | Fallback mechanism | A set of rules that attempt to carry out a request in sequence.
+
+If the first channel in the sequence is not applicable or not available to a customer then the next channel is evaluated.
+
+ | Service | A service is a named workspace for managing a customer journey/communication flow within Webex Connect.
+
+ | Flow Builder | A visual interface to build, deploy, and iterate end-to-end communication flows/journeys.
+
+ | Rules | Rules are set of configured events to trigger an action/event.
+
+ | Service key | The service key is required for all API calls to the Webex Connect platform.
+
+ | Templates | A template is a pattern used for designing similar message or flow.
+
+ | Hub secret | A value to create a signature for the notification data. This signature is used by the receiving server for verification.
+
+ | Shortcode | Shortcodes are numerical numbers shorter than mobile numbers( 4 - 7 digit) and differ from one country to another. They are used to send/receive messages.
+
+ | Keyword | A keyword in text messaging refers to unique terms, which can include letters and/or numbers, used for communicating between you and your customers. For example, if a bank asks you to text BALANCE to 55XX8, BALANCE is the keyword
+
+ | Sender ID | A Sender ID (or from address) is a set of numbers or alphabets or alphanumeric string that represents the identity of the sender of an SMS message.
+
+ | RTM | Real-Time-messaging.
+
+(Note:  This is also called  In-App messaging)
+
+ | OTT | OTT stands for over-the-top. In OTT channels, content is delivered via an internet connection rather than through a traditional telco route.
+
+ | Custom events | A custom event is an event listener with a user-defined parameter.
+
+ | Smart links | Trackable short URLs with automated device based routing. Smart links are often used to simplify app-installations by creating a single link to redirect mobile users to relevant app stores on various mobile devices (e.g., Android vs iOS).
+
+ | Service dashboard | The service dashboard is a consolidated view of metrics about the service health and number of messages sent and received for the configured channels.
+
+ | Node | A Node is a discrete function that executes in a flow. Nodes encapsulate an action or a decision to form the basis of a flow
+
+ | Node Events | A node event is a possible outcome of a node.
+
+ | OTP | One-Time Password used for Two-Factor Authentication. Sometimes referred to as One-Time PIN.
+
+ | Session Data | Session data are predefined session parameters for popular channel attributes. If necessary new session parameters can be defined.
+
+ | Session ID | A session ID is generated when a flow is created.
+
+ | Custom Logs | Each Node Session Parameters are logged on Node Entry or Node Exit. Custom log entries are added to flow transaction logs or to Logbook.
+
+ | Transaction ID | The unique identification number assigned to a transaction within Webex Connect.
+
+ | Logbooks | An application provided by Webex Connect to log custom logs for your flow executions. Each file that you create for capturing custom logs is referred to as a Logbook.
+
+ | Flow versioning | A flow version refers to the unique instance of a published or work in progress flow. Whenever you start editing a published flow a new version of that flow is created.
+
+ | Draft flow | A work-in-progress flow that is yet to be made live.
+
+ | Live flow | A published flow within any service of Webex Connect.
+
+ | Integrations | Nodes build with third-party APIs (to connect with their respective systems.)
+
+ | CCSP | Contact Centre Service Provider. E.g., NICE InContact, Enghouse, Cisco, etc.
+
+ | Debug Console | A visual interface provided by Webex Connect for viewing transaction details and troubleshooting issues.
+
+ | WABA | A WhatsApp Business Account registered on Webex Connect.
+
+ | IAM Policies | AWS Identity and Access Management Policies

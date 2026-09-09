@@ -1,0 +1,46 @@
+{
+  "artifacts": [
+    {
+      "path": "evidence/qa/local-asr",
+      "method": "faster-whisper",
+      "caption_kind": "local-asr",
+      "human_reviewed": false,
+      "segments": 2,
+      "artifact_hashes": "pass"
+    },
+    {
+      "path": "transcripts/getting-started-webex-connect-asr",
+      "method": "faster-whisper",
+      "caption_kind": "local-asr",
+      "human_reviewed": false,
+      "segments": 397,
+      "artifact_hashes": "pass"
+    },
+    {
+      "path": "transcripts/vidcast-api-flows/normalized",
+      "method": "local-subtitle-import",
+      "caption_kind": "local-unverified",
+      "human_reviewed": false,
+      "segments": 554,
+      "artifact_hashes": "pass"
+    },
+    {
+      "path": "transcripts/vidcast-integrations/normalized",
+      "method": "local-subtitle-import",
+      "caption_kind": "local-unverified",
+      "human_reviewed": false,
+      "segments": 483,
+      "artifact_hashes": "pass"
+    },
+    {
+      "path": "transcripts/vidcast-rcs/normalized",
+      "method": "local-subtitle-import",
+      "caption_kind": "local-unverified",
+      "human_reviewed": false,
+      "segments": 344,
+      "artifact_hashes": "pass"
+    }
+  ],
+  "fresh_local_asr_reference_match": true,
+  "transcript_search_excludes_known_synthetic_fixture": true
+}

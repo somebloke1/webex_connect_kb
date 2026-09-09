@@ -1,0 +1,35 @@
+{
+  "category": "Webex Engage Standalone Nodes",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257983",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "9c2de3847e638c8540459c7caf9406e29dceb9a597d638480ffc82f579184880",
+    "source_path": "dbeed8fa5f572b1dfef630b51c71bb54f1fa214589dbc99182d98f888aaee247",
+    "text_path": "9f7793880c31e157d55c83473be745d6ea34ea144826688933234ce6f0e372e3"
+  },
+  "headings": [
+    "Configure",
+    "Output variables",
+    "Node outcomes"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/hold-conversation.md",
+  "resolved_url": "https://help.webexconnect.io/docs/hold-conversation",
+  "retrieved_at": "2026-09-08T23:29:30+00:00",
+  "sha256_html_response": "8617d3d3fb2ea94a23d5309d839555b0a68e86e2856f80487797428bc8d9685f",
+  "sha256_source_body": "dbeed8fa5f572b1dfef630b51c71bb54f1fa214589dbc99182d98f888aaee247",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/hold-conversation.source.md",
+  "source_updated_at": "2026-04-14T11:20:21.225Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/hold-conversation.txt",
+  "title": "Hold conversation - WxEngage standalone",
+  "url": "https://help.webexconnect.io/docs/hold-conversation",
+  "word_count": 267,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/hold-conversation.metadata.json"
+}

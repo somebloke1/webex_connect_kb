@@ -1,0 +1,37 @@
+{
+  "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd81825787f",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "990762e7fbbcd0a5877cf92b553f14a0364f4bcb3be9952c7d7d32479a1709bb",
+    "source_path": "02ed5be485e0c41af02427ecf03073b15789abae6266ddb8ca082afafa97eefa",
+    "text_path": "f42f6a4174e4449a90137d5257e5180cf2d78278644045ecb5cef54515c98f61"
+  },
+  "headings": [
+    "Authorization",
+    "Methods and Outcomes",
+    "📘Note:",
+    "Routed Rejected",
+    "📘Note"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/wxcc-routed-notification.md",
+  "resolved_url": "https://help.webexconnect.io/docs/wxcc-routed-notification",
+  "retrieved_at": "2026-09-08T23:29:15+00:00",
+  "sha256_html_response": "f86be00f6b8ed42725934a8bd90c02b96913568c79204c1d9ef10dfa71ead046",
+  "sha256_source_body": "02ed5be485e0c41af02427ecf03073b15789abae6266ddb8ca082afafa97eefa",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/wxcc-routed-notification.source.md",
+  "source_updated_at": "2026-04-14T07:25:05.476Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/wxcc-routed-notification.txt",
+  "title": "Routed Notification - WXCC",
+  "url": "https://help.webexconnect.io/docs/wxcc-routed-notification",
+  "word_count": 603,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/wxcc-routed-notification.metadata.json"
+}

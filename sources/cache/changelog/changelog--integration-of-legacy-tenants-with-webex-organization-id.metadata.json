@@ -1,0 +1,32 @@
+{
+  "category": "2026 product and policy updates",
+  "deprecated": false,
+  "doc_id": "697f898210377c057dcafe11",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "25a7b109585a6125f7a6992569c4166e77d81d2dde27e96dd42dbd4aa88dce2e",
+    "source_path": "bc6874a82cc3e6a16368b95773eb539152f415f09a1baad7f13b823a494ab433",
+    "text_path": "88da2d1c439a351721652ab4ba2fe81c19575d46438a8604b76aff27ee1f5fbc"
+  },
+  "headings": [],
+  "http_status": 200,
+  "markdown_path": "sources/cache/changelog/changelog--integration-of-legacy-tenants-with-webex-organization-id.md",
+  "release_version": null,
+  "resolved_url": "https://help.webexconnect.io/changelog/integration-of-legacy-tenants-with-webex-organization-id",
+  "retrieved_at": "2026-09-08T23:31:53+00:00",
+  "sha256_html_response": "3e07ffe58d7d413368a6308ea42262d561274150f206951a22103544c9f7d77d",
+  "sha256_source_body": "bc6874a82cc3e6a16368b95773eb539152f415f09a1baad7f13b823a494ab433",
+  "source_family": "changelog",
+  "source_kind": "official_changelog",
+  "source_path": "sources/cache/changelog/changelog--integration-of-legacy-tenants-with-webex-organization-id.source.md",
+  "source_published_at": "2026-02-01T17:12:34.776Z",
+  "source_updated_at": null,
+  "status": "ok",
+  "text_path": "sources/cache/changelog/changelog--integration-of-legacy-tenants-with-webex-organization-id.txt",
+  "title": "Integration of Legacy Tenants with Webex Organization ID",
+  "url": "https://help.webexconnect.io/changelog/integration-of-legacy-tenants-with-webex-organization-id",
+  "word_count": 209,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/changelog/changelog--integration-of-legacy-tenants-with-webex-organization-id.metadata.json"
+}

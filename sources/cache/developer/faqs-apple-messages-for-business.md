@@ -1,0 +1,803 @@
+# Apple Messages for Business FAQs
+
+Source: https://developers.webexconnect.io/reference/faqs-apple-messages-for-business
+Documentation version: 6.20.0
+Retrieved: 2026-09-08T23:31:52+00:00
+
+## What is Apple Messages for Business?
+
+Apple Messages for Business Beta is a powerful new way for businesses to connect directly with customers using iPhone, iPad, Mac, and Apple Watch. With Apple Messages for Business, your customers can easily get assistance, schedule appointments, and complete purchases with Apple Pay, right from within Messages.
+
+
+
+![Source screenshot](https://files.readme.io/086ab49-image_26.png)
+
+
+
+
+To engage with your customers on Apple Messages for Business, they will have to reach out to you first through any of the entry points.
+
+## Registration for Apple Messages for Business
+
+Before your business can offer Apple Messages for Business to its customers, you must register with Apple. You will then need to select an approved Messaging Service Platform (MSP) during registration to use Apple Messages for Business.
+
+To register for a new business account, follow these guides by Apple
+
+1. [Getting started with Apple Messages for Business](https://register.apple.com/resources/messages/messaging-documentation/)
+2. [Onboarding your account](https://register.apple.com/resources/messages/messaging-documentation/register-your-acct)
+
+Once your business account is approved, choose Webex Connect as your CSP platform.
+
+For guidelines on brand assets that you will need, refer to Apple's official documentation on branding below.
+
+**[Branding](https://developer.apple.com/design/human-interface-guidelines/messages-for-business/#Branding)** 
+
+For any help with Apple Messages for Business approval, please reach out to the Support Team using the details mentioned in the ‘Contact Support’ section within your ”Webex Connect account.
+
+
+
+![Messaging Service Platform Configuration on Apple Business Register](https://files.readme.io/551be0a-1cd7930-693ec95-Screenshot_2018-10-25_at_17.00.41.png)
+
+
+
+
+You need an Webex Connect account to complete the linking process. Once successfully linked, you will find your business account under Apps in your Webex Connect account.
+
+Now your Apple Messages for Business Account is ready to be used across Webex Connect , IMIchat and IMIbot
+
+## Migrating from an existing Service Provider
+
+If you already have a live Apple Messages for Business account, it's easy to switch to Webex Connect .
+
+
+
+![Messaging Service Provider Configuration.](https://files.readme.io/26f7519-image_27.png)
+
+
+
+
+All you have to do is go to Apple Messages for Business account settings and change your CSP configuration but you will need to ensure that you already the flows/chat setup on Webex Connect to avoid down time for your customers.
+
+## Message Types
+
+We support the following message types on Apple Messages for Business -
+
+**Text**
+
+Simple text messages up-to 10,000 characters can be sent to customers
+
+
+
+![Screenshot of Sample Text Message.](https://files.readme.io/ca1339b-image_28.png)
+
+
+
+
+## Rich Links
+
+A rich link is a URL provided through an image or video that you display in a chat bubble. When people tap the image or video, it opens the link on your website, where you can display information about the item or play the video. Rich links help customers verify that they've selected the item they want before they get more details about it or purchase it. Because you display a rich link within the Messages app, people can tap the link to visit your website and easily return to the conversation.
+
+**Keep the experience focused on the product**. Avoid overloading people with too many different images or videos.
+
+**Use descriptive, approachable language to title a rich link**. The title should provide context for the image or video displayed above it. Avoid using your company name or URL to title a rich link because this information doesn't help customers understand why they might want to tap it. Display your website URL below the title so people know where the link will take them.
+
+**Always include a video thumbnail or image**. If you don't supply a thumbnail for a rich link, customers won't see a preview of the content and might even interpret the message as an unwanted communication from your company. Similarly, displaying a plain link without an image doesn't provide context or encourage customers to open it.
+
+**Automatic Conversion of hyper links in a message to rich links**. When you send messages having hyperlinks to users either through messaging API or the Send Node, we split the message into multiple parts (standalone text and hyperlinks), replace the hyperlinks with rich links, and send separate messages. For example, when you send a URL within a sentence or a large text message, we divide the content into 3 separate messages and generate the rich link message accordingly as per the second example below. We automatically convert Apple Maps links too. For example, when the business sends the following text message (last image) containing Apple Maps URL, will be converted to a rich link as shown below.
+
+
+
+![Screenshot of Rich Links.](https://files.readme.io/ac1e0c9-image_29.png)
+
+
+
+
+## List Pickers
+
+A list picker prompts the customer to select one or more items, such as products or locations. Items can include text and images, and can also be organized into sections. For example, when presenting product options, your list picker could include a color choice section and a size choice section.
+
+
+
+![Screenshot of List Pickers.](https://files.readme.io/b9ca2fb-image_30.png)
+
+
+
+
+**Keep section and item text clear and succinct**. To avoid text truncation, be mindful of different device screen sizes and keep text as short as possible, while still retaining clarity.
+
+**Use high-resolution images at the correct scale**. If your list picker includes images, provide those images at a size of 180px × 180px (60pt × 60pt @3x). All images should be provided at @3x resolution. For guidance, see [Designing High-Resolution Images](https://developer.apple.com/design/human-interface-guidelines/messages-for-business/#Designing-high-resolution-images).
+
+**Strive for a manageable list size**. When you present lots of options at once, you run the risk of overwhelming the customer. Provide digestible lists that encourage quick choices with minimal scrolling. If a list seems too long or complex, consider separating it into a series of separate list pickers that can be presented individually.
+
+## Time Pickers
+
+A time picker prompts the customer to choose an available time slot, such as to schedule a meeting or appointment. The time picker view also shows calendar conflicts so that customers can make an informed decision.
+
+After picking a time, customers can revisit their choice in the conversation view to add the event to Calendar. When the event includes information like an address, directions, or contact details, customers can view this information in Calendar and get a Maps notification that helps them know when to leave for the appointment.
+
+
+
+![Screenshot of Time Pickers.](https://files.readme.io/914a1f8-image_31.png)
+
+
+
+
+**Provide location details when relevant**. If you return location details when the customer chooses a time slot, the customer can revisit their choice in the conversation to get directions to the location.
+
+**With the customer’s permission, send reminders for upcoming appointments**. Ask for permission before enrolling the customer in push notifications and provide an easy way for them to opt out.
+
+## Apple Pay
+
+You can allow people to use Apple Pay to quickly and securely pay for products and services without leaving the conversation. A payment request looks like a normal chat bubble, but displays the familiar Apple Pay payment sheet when selected by the customer. After the customer authorizes payment, the payment request chat bubble updates to reflect that payment is complete.
+
+Collect necessary information before checkout. On the payment sheet, the customer can choose a card, shipping or pickup address, and billing address. However, there’s no way to input additional data, so collect information like product options or promo codes ahead of time.
+
+Send an order confirmation message after checkout. Thank the customer for the purchase and share important information like the order number and, if applicable, anticipated shipping timeframe.
+
+Support order tracking. Let the customer check the status of an order by sending a message, such as “When will my order arrive?”.
+
+
+
+![Screenshot of Apple Pay.](https://files.readme.io/00a9517-image_32.png)
+
+
+
+
+## Form Messages
+
+Forms allow you to create rich, multipage interactive flows for your users on iOS and iPadOS devices using a single JSON payload. You may want to leverage Form Message type for capturing multiple data points at once, that are often needed for, but not limited to, the following use cases:
+
+- Customer Service
+- Customer Satisfaction Surveys
+- Account creation or service sign-up
+
+Form message is a collection of multiple pages, which can be of different types, as follows:
+
+- Select
+  - Single-select
+  - Multi-select
+- Picker
+- Date Picker
+- Input
+
+Using Single-select page type, based on the option selected by user, you can incorporate multiple form flows by specifying different nextPageIdentifier for each of the single-select options.
+
+
+
+![Screenshot of Form Messages.](https://files.readme.io/0b81078-FormMessages_FAQs1.jpeg)
+
+
+
+
+
+
+![Screenshot of Form Messages.](https://files.readme.io/bcbed8d-FormMessages_FAQs2.jpeg)
+
+
+
+
+## iMessage App
+
+Provide a unique user experience with iMessage App or custom interactive messages. You can use your custom interactive message by setting the Team ID, Extension Bundle ID, App Name, and App Icon to reference your extension.  
+Note that the image is not required for configuring the Received Message Bubble, as the image supplied by the iMessage app is used for this purpose.  
+Using the iMessage App, you can let the customer operate from within the iMessage console on his/her device without really installing the App.
+
+
+
+![Screenshot of iMessage App.](https://files.readme.io/55257f3-iMessageApps_FAQs1.jpeg)
+
+
+
+
+
+
+![Screenshot of iMessage App.](https://files.readme.io/8a5e02a-iMessageApps_FAQs2.jpeg)
+
+
+
+
+## New Authentication Message
+
+You can now send an authentication message that complies with OpenID Connect and comes with improved security in the OAuth 2.0 flow.  
+We made sure that the customer experience remains similar to the classical authentication flow.
+
+## Classical Authentication (Deprecated)
+
+Previously Apple Messages for Business allowed you to send an authentication request to consumers (iOS 12+) using an OAuth 2.0 provider. The consumers then respond to the authentication request with their user/password credentials which can be validated against the OAuth 2.0 provider. This message type has now been deprecated and users are required to use New Authentication Message instead.
+
+## Using API to send Apple Messages for Business messages
+
+We support outbound messages through messaging API. More information on the API is available in our [developer documentation](https://developers.imiconnect.io/reference#send-message).
+
+## Setting up Delivery Receipts and Inbound Messages
+
+You can start receiving Apple Messages for Business delivery receipts for outbound messages, message content for inbound messages from your customers by setting "[Outbound Webhooks](https://developers.imiconnect.io/reference#outbound-webhooks)" under Integrations.
+
+For outbound messages, we support -
+
+- Submitted
+- Failed 
+
+For inbound messages, we support -
+
+- Text
+- Image
+- Video
+- List picker response
+- Time picker response
+- Apple Pay response
+- Authentication response 
+
+JSON formats of webhooks are available at [Outbound Webhooks](https://developers.webexconnect.io/reference/abc-outbound-webhooks).
+
+## Starting off with Apple Pay
+
+Apple Messages for Business enables you to provide customers with the option to buy products and services using Apple Pay without leaving the conversation. The consumers can respond to the payment request using their preferred Apple Pay payment methods. 
+
+
+
+![Starting off with Apple Pay.](https://files.readme.io/173e43b-image_33.png)
+
+
+
+
+
+
+![Screenshot of Apple Business Chat - Payments.](https://files.readme.io/1ca37e3-swimlanes-508e740462435c31bad4525f1313bdef.png)
+
+
+
+
+## Prerequisites
+
+1. [Apple Messages for Business account](https://register.apple.com/login?returnTo=/business/ui)
+2. You must have an Apple Developer account in order to create an Apple Pay Merchant account. If you do not have an Apple Developer account, please set one up at [Apple Developers](https://developer.apple.com/). The approval time may take several days. You will need to get your Merchant ID and Certificate from here.
+3. [Payment processing endpoint](https://register.apple.com/resources/messages/msp-rest-api/type-interactive#processing-payment-requests)
+
+## Register your Merchant ID on Apple Business Register
+
+Use the following steps to verify that your Merchant ID is registered with Apple Business Register: 
+
+1. Go to [Apple Business Register](https://register.apple.com/login?returnTo=/business/ui) and sign in with your Apple ID as the administrator or technical contact for the business that owns your Apple Pay credentials. 
+2. Go to your company’s Apple Messages for Business Accounts and find the appropriate business account. If your company has multiple accounts, ensure that you enter the merchant information into the Apple Messages for Business account corresponding to your company’s Apple Pay capability. 
+3. Edit the Apple Pay section of your Apple Messages for Business Account and update your merchant ID. 
+
+## Generate the PEM File required by the payment session
+
+Use the following steps to generate the PEM file required by the payment session: 
+
+1. Download the Merchant Identity Certificate from your Apple Pay developer account to your local file system. 
+2. In the Applications folder on Mac, open the Utilities folder and launch Keychain Access. 
+3. Add the Merchant Identity Certificate to Keychain Access by opening the certificate file. 
+4. In the Keychain Access, find the certificate, and then expand it. You should see a private key. 
+5. Hold down the command key and select both the certificate and the private key.
+
+From Menu select File > Export Items…. 
+
+1. Select “Personal Information Exchange (.p12)” as File Format and save the .p12 file. 
+2. Convert the .p12 file to a .pem file using the following command: 
+
+```text
+openssl pkcs12 -in <CERT_FROM_KEYCHAIN_EXPORT.p12> -out OUTPUT.pem / -nodes -clcerts
+```
+
+## Configure the App on Webex Connect Platform
+
+Use the following steps to configure the App on Webex Connect Platform: 
+
+1. Go to the Apps page. 
+2. Scroll down to the required app and click Manage App. 
+3. Enable Payment and provide the following details that you have obtained here -Merchant ID, Merchant Name, Domain Name 
+4. Choose the payment networks allowed by the business in Supported Networks. Selection of at least one network is mandatory. 
+5. Upload the PEM File that you downloaded. This is the certificate for your business. 
+6. The Payment Gateway URL directs the money to your account.
+
+Optionally, provide values for the following Endpoints. These are a set of URLs used the payment process. 
+
+1. Shipping Contact Update URL - URL for the customer to update any changes in the shipping address 
+2. Payment Method Update URL – URL to change the payment method 
+3. Fallback URL – a URL to complete the purchase transaction in case of a failed payment  
+4. Order Tracking URL – URL to update the order information after completing the order 
+5. Shipping Method Update URL – URL to change or update the shipping method 
+
+## Use Apple Pay option within a flow
+
+Once the above steps are configured, you can start using flow nodes to send Apple Pay requests and wait for payment response to configure your customer journeys.
+
+## Sample API Request
+
+Apple Pay is also supported through Connect's messaging API. Below is a sample request.
+
+```json
+curl --location --request POST 'http://api.imiconnect.io/resources/v1/messaging' \ 
+--header 'Content-Type: application/json' \ 
+--header 'key: e7705d87-4e48-11ea-87fa-00505f944c2b' \ 
+--header 'Content-Type: text/plain' \ 
+--data-raw '{ 
+    "appid": "a_636893638318070000", 
+    "correlationid": "ABCText123", 
+    "callbackData": "ApplePaytest-QA", 
+    "notifyurl": "https://requestinspector.com/inspect/01e194dd7rgrsrs4ra1zk9mr5x", 
+    "deliverychannel": "AppleBusinessChat", 
+    "channels": { 
+        "AppleBusinessChat": { 
+            "type": "interactive", 
+            "interactiveData": { 
+                "data": { 
+                    "version": "1.0", 
+                    "requestIdentifier": "21d4a1c4-327c-ba35-45b1-36a050b15ad2", 
+                    "images": [ 
+                        { 
+                            "identifier": "6de6a59c-846f-45d8-a1d7-24382d9919db", 
+                            "url": "http://drohnemieten.dein-betrieb.com/wp-content/uploads/2017/05/maxresdefault.jpg" 
+                        } 
+  
+                    ], 
+                    "payment": { 
+                        "paymentRequest": { 
+                            "lineItems": [ 
+                                { 
+                                    "amount": "45", 
+                                    "type": "final", 
+                                    "label": "The Alchemist" 
+                                } 
+                            ], 
+   "lineItems": [ 
+                                { 
+                                    "amount": "100", 
+                                    "type": "final", 
+                                    "label": "The Clifton Chronicles" 
+                                } 
+                            ], 
+ 
+                            "shippingMethods": [ 
+                                { 
+                                    "label": "Same day shipping (Optional)", 
+                                    "amount": "20", 
+                                    "detail": " Order placed before 10 AM is delivered on the same day before 10 PM (Optional)", 
+                                    "identifier": "SDS" 
+                                } 
+                            ], 
+                            "requiredShippingContactFields": [ 
+                                "postalAddress", 
+                                "name", 
+                                "phone" 
+                       “email” 
+                            ], 
+                            "countryCode": "US", 
+                            "requiredBillingContactFields": [ 
+                                "postalAddress", 
+                                "name", 
+                                "phone" 
+                       “email” 
+                            ], 
+                            "currencyCode": "USD", 
+                            "total": { 
+                                "amount": "145", 
+                                "type": "final", 
+                                "label": " Your total order value today is" 
+                            } 
+                        } 
+                    } 
+                }, 
+                "useLiveLayout": true, 
+                "receivedMessage": { 
+                    "title": "Order for Books 
+                }, 
+                "replyMessage": { 
+                    "title": "Your order for books" 
+                } 
+            } 
+        } 
+    }, 
+    "destination": [ 
+        { 
+            "abcUserId": [ 
+                "urn:mbid:AQAAY2wXvkqhE0m1GvEzOA6kyZmr5KjyyPDkEYhD4hGjbH5LzOclqRKnpOJb62GRu395zKyda06SneUVy4TN1Palrvnm5HLqcGyAQdhNkGVqFpanbWl4mMigOSYqF4J26WpCW4iTBYSrZmei3+eFa+QoCkTt8Dw=" 
+            ] 
+        } 
+    ] 
+}
+```
+
+## Receiving Payment Updates
+
+Given below is a sample webhook payload for Apple Pay request with a success response -  
+Webhooks can be configured under Integrations > Outbound webhooks
+
+```json
+{  
+   "sourceId":"urn:mbid:AQAAYyBG2mFWYJKsTDLmTItbWN39j+kMBhc9jK3nacozBM57YJ6lpPGkOMatOHjPg68h5FS+4IcQd5knINWzFVc55rIlYxeZHS3zwzVOKsIt5GK9/2DwyaWshEH47L1NM2V+1ACesTobhHJq+hiJiK1mFaI6q94=", 
+   "v":1, 
+   "interactiveData":{  
+      "data":{  
+         "receivedMessage":{  
+            "imageIdentifier":"1", 
+            "subtitle":"We'll see you there!", 
+            "style":"large", 
+            "title":"IMIChat bill pay" 
+         }, 
+         "replyMessage":{  
+            "imageIdentifier":"1", 
+            "subtitle":"$3 \u2013 Payment Not Completed", 
+            "style":"large", 
+            "title":"IMIChat bill pay" 
+         }, 
+         "requestIdentifier":"a8c6a56e-4f33-4d78-a36c-737cbc94ce10", 
+         "payment":{  
+            "merchantSession":{  
+               "merchantSessionIdentifier":"PSHAEE6A74CB76B439CA227EA05B52E8967_0002B0D80068F71D5887F2726CFD997A28E0ED57ABDACDA64934730A24A31583", 
+               "merchantIdentifier":"E21457C93EF89B9F301E948B8095EAB5380F5D1A3F5A07D4066FBBEB99350BD9", 
+               "epochTimestamp":1573466611985, 
+               "initiative":"messaging", 
+               "signature":"308006092a864886f70d010702a0803080020101310f300d06096086480165030402010500308006092a864886f70d0107010000a080308203e330820388a00302010202084c304149519d5436300a06082a8648ce3d040302307a312e302c06035504030c254170706c65204170706c69636174696f6e20496e746567726174696f6e204341202d20473331263024060355040b0c1d4170706c652043657274696669636174696f6e20417574686f7269747931133011060355040a0c0a4170706c6520496e632e310b3009060355040613025553301e170d3139303531383031333235375a170d3234303531363031333235375a305f3125302306035504030c1c6563632d736d702d62726f6b65722d7369676e5f5543342d50524f4431143012060355040b0c0b694f532053797374656d7331133011060355040a0c0a4170706c6520496e632e310b30090603550406130255533059301306072a8648ce3d020106082a8648ce3d03010703420004c21577edebd6c7b2218f68dd7090a1218dc7b0bd6f2c283d846095d94af4a5411b83420ed811f3407e83331f1c54c3f7eb3220d6bad5d4eff49289893e7c0f13a38202113082020d300c0603551d130101ff04023000301f0603551d2304183016801423f249c44f93e4ef27e6c4f6286c3fa2bbfd2e4b304506082b0601050507010104393037303506082b060105050730018629687474703a2f2f6f6373702e6170706c652e636f6d2f6f63737030342d6170706c65616963613330323082011d0603551d2004820114308201103082010c06092a864886f7636405013081fe3081c306082b060105050702023081b60c81b352656c69616e6365206f6e207468697320636572746966696361746520627920616e7920706172747920617373756d657320616363657074616e6365206f6620746865207468656e206170706c696361626c65207374616e64617264207465726d7320616e6420636f6e646974696f6e73206f66207573652c20636572746966696361746520706f6c69637920616e642063657274696669636174696f6e2070726163746963652073746174656d656e74732e303606082b06010505070201162a687474703a2f2f7777772e6170706c652e636f6d2f6365727469666963617465617574686f726974792f30340603551d1f042d302b3029a027a0258623687474703a2f2f63726c2e6170706c652e636f6d2f6170706c6561696361332e63726c301d0603551d0e041604149457db6fd57481868989762f7e578507e79b5824300e0603551d0f0101ff040403020780300f06092a864886f76364061d04020500300a06082a8648ce3d0403020349003046022100be09571fe71e1e735b55e5afacb4c72feb445f30185222c7251002b61ebd6f55022100d18b350a5dd6dd6eb1746035b11eb2ce87cfa3e6af6cbd8380890dc82cddaa63308202ee30820275a0030201020208496d2fbf3a98da97300a06082a8648ce3d0403023067311b301906035504030c124170706c6520526f6f74204341202d20473331263024060355040b0c1d4170706c652043657274696669636174696f6e20417574686f7269747931133011060355040a0c0a4170706c6520496e632e310b3009060355040613025553301e170d3134303530363233343633305a170d3239303530363233343633305a307a312e302c06035504030c254170706c65204170706c69636174696f6e20496e746567726174696f6e204341202d20473331263024060355040b0c1d4170706c652043657274696669636174696f6e20417574686f7269747931133011060355040a0c0a4170706c6520496e632e310b30090603550406130255533059301306072a8648ce3d020106082a8648ce3d03010703420004f017118419d76485d51a5e25810776e880a2efde7bae4de08dfc4b93e13356d5665b35ae22d097760d224e7bba08fd7617ce88cb76bb6670bec8e82984ff5445a381f73081f4304606082b06010505070101043a3038303606082b06010505073001862a687474703a2f2f6f6373702e6170706c652e636f6d2f6f63737030342d6170706c65726f6f7463616733301d0603551d0e0416041423f249c44f93e4ef27e6c4f6286c3fa2bbfd2e4b300f0603551d130101ff040530030101ff301f0603551d23041830168014bbb0dea15833889aa48a99debebdebafdacb24ab30370603551d1f0430302e302ca02aa0288626687474703a2f2f63726c2e6170706c652e636f6d2f6170706c65726f6f74636167332e63726c300e0603551d0f0101ff0404030201063010060a2a864886f7636406020e04020500300a06082a8648ce3d040302036700306402303acf7283511699b186fb35c356ca62bff417edd90f754da28ebef19c815e42b789f898f79b599f98d5410d8f9de9c2fe0230322dd54421b0a305776c5df3383b9067fd177c2c216d964fc6726982126f54f87a7d1b99cb9b0989216106990f09921d00003182018c30820188020101308186307a312e302c06035504030c254170706c65204170706c69636174696f6e20496e746567726174696f6e204341202d20473331263024060355040b0c1d4170706c652043657274696669636174696f6e20417574686f7269747931133011060355040a0c0a4170706c6520496e632e310b300906035504061302555302084c304149519d5436300d06096086480165030402010500a08195301806092a864886f70d010903310b06092a864886f70d010701301c06092a864886f70d010905310f170d3139313131313130303333315a302a06092a864886f70d010934311d301b300d06096086480165030402010500a10a06082a8648ce3d040302302f06092a864886f70d0109043122042028817adbd7737a77b831dae2cc526c36836089748c170ca41f6a837e065d9a46300a06082a8648ce3d04030204473045022008e907661fd17bf5b7ed875a645e1b8309024afa09e2790f3792c339fffadfd9022100a9641cd02298fab047415c68ae824e1c0cc032b6f083abef33ea7111e24680b0000000000000", 
+               "initiativeContext":"https://qa-abctestpgw.imiconnect.com/paymentGateway", 
+               "displayName":"ApplePayPOC", 
+               "signedFields":[  
+                  "merchantIdentifier", 
+                  "merchantSessionIdentifier", 
+                  "initiative", 
+                  "initiativeContext", 
+                  "displayName", 
+                  "nonce" 
+               ], 
+               "nonce":"2c58a676", 
+               "expiresAt":1573473811985 
+            }, 
+            "endpoints":{  
+               "orderTrackingUrl":"qa-abctestpgw.imiconnect.com/orderTracking", 
+               "fallbackUrl":"qa-abctestpgw.imiconnect.com/orderTracking", 
+               "paymentMethodUpdateUrl":"qa-abctestpgw.imiconnect.com/orderTracking", 
+               "shippingContactUpdateUrl":"qa-abctestpgw.imiconnect.com/orderTracking", 
+               "shippingMethodUpdateUrl":"qa-abctestpgw.imiconnect.com/orderTracking" 
+            }, 
+            "state":"paymentNotCompleted", 
+            "paymentRequest":{  
+               "lineItems":[  
+                  {  
+                     "amount":"1.5", 
+                     "label":"Adoption fee", 
+                     "type":"Final" 
+                  }, 
+                  {  
+                     "amount":"3", 
+                     "label":"Your Total", 
+                     "type":"Final" 
+                  } 
+               ], 
+               "total":{  
+                  "amount":"3", 
+                  "label":"Your Total", 
+                  "type":"Final" 
+               }, 
+               "applePay":{  
+                  "merchantIdentifier":"merchant.com.imiconnectSDK.imimobile", 
+                  "supportedNetworks":[  
+                     "amex", 
+                     "visa", 
+                     "discover", 
+                     "masterCard" 
+                  ], 
+                  "merchantCapabilities":[  
+                     "supportsDebit", 
+                     "supportsCredit", 
+                     "supports3DS" 
+                  ] 
+               }, 
+               "countryCode":"US", 
+               "currencyCode":"USD", 
+               "requiredBillingContactFields":[  
+                  "name", 
+                  "phone" 
+               ], 
+               "shippingMethods":[  
+ 
+               ] 
+            } 
+         }, 
+         "version":"1.0" 
+      }, 
+      "bid":"com.apple.messages.MSMessageExtensionBalloonPlugin:0000000000:com.apple.icloud.apps.messages.business.extension", 
+      "sessionIdentifier":"5a86d8a1-2a71-61f0-8d2c-39ff46626244" 
+   }, 
+   "id":"2f834884-b0ed-4bc4-9c93-514e5c781728", 
+   "type":"interactive", 
+   "destinationId":"542bf1e0-ca58-43f2-941a-fe8c45da69f1", 
+   "tid":"2cdf1a0e-2d6f-1332-261d-7ef5eebd1211", 
+   "ts":"2019-11-11T10:03:47.949Z" 
+}
+```
+
+## Authenticating customers
+
+Enterprises can send an ‘authentication’ type message on Apple Messages for Business to prompt the user to login with their credentials right within the message window. This level of authentication opens up a whole new set of sensitive customer support use-cases seamlessly possible.
+
+## Prerequisites
+
+- [Apple Messages for Business account](https://faqs.imiconnect.io/en/articles/4032310-registration-for-apple-business-chat)
+- **OAuth authorization endpoint, OAuth token endpoint, OAuth client ID** - These details need to be entered on your Apple Messages for Business account within Apple Business Register. These details will be provided by you OAuth provider. Below is an example that we setup using LinkedIn’s OAuth service. 
+
+
+
+![Screenshot of OAuth authorization endpoint, OAuth token endpoint, OAuth client ID.](https://files.readme.io/0591b9f-dc6a7fd0-abf5-4392-be54-cee9c2dadc09.png)
+
+
+
+
+- OAuth client secret - This needs to be entered on the ‘Manage App’ section of Apple Messages for Business app on Webex Connect UI. 
+
+
+
+![Screenshot of Managing Apple Business Chat App Page.](https://files.readme.io/bef853b-fbfc541d-b7a1-48f1-9941-5153b74d84cd.png)
+
+
+
+
+## Using Authentication in a flow
+
+Once your authentication configuration is setup on both Apple Business Register and Webex Connect, you can start using it in a flow.
+
+Each type of interactive message on Apple Messages for Business usually have two styles that need to be defined -
+
+1. Received Message - This configuration defines how the initial authentication message is displayed to the customer including title, subtitle, image and size of the bubble
+2. Reply Message - This configuration defines the message presented to the user after the interaction is complete
+3. Within the flow node, you can configure how the message is displayed to the user and also other OAuth properties such as ‘Scopes’ and ‘Response Types’
+
+Below is an example of a user journey using LinkedIn OAuth APIs as an example -
+
+
+
+![Screenshot of LinkedIn OAuth APIs.](https://files.readme.io/5458cd4-BeFunky_Collage.jpg)
+
+
+
+
+Once an authentication request is sent, you can use the receive node to wait for user response and take the subsequent action.
+
+## Sample API Request
+
+Apple Auth is also supported through Connect's messaging API. Below is a sample request.
+
+Here is the sample request, to use it in API.
+
+```json
+{
+   "appid":"a_636914165400010000",
+   "correlationid":"ABCText123",
+   "callbackData":"ABCRegAutomationstg",
+   "notifyurl":"https://requestinspector.com/p/01dephvmctpzw12mrrgvrykg83",
+   "deliverychannel":"AppleBusinessChat",
+   "channels":{
+      "AppleBusinessChat":{
+         "type":"interactive",
+         "interactiveData":{
+            "data":{
+               "version":"1.0",
+               "requestIdentifier":"21d4a1c4-327c-ba35-45b1-36a050b15ad212-711",
+               "images":[
+                  {
+                     "identifier":"6de6a59c-846f-45d8-a1d7-24382d9919d1",
+                     "url":"http://drohnemieten.dein-betrieb.com/wp-content/uploads/2017/05/maxresdefault.jpg"
+                  },
+                  {
+                     "identifier":"b70de3eb-a412-4fdd-a4b1-cb4eef853ded",
+                     "url":"http://www.tompetty.com/sites/g/files/g2000007521/f/sample1_1.jpg"
+                  }
+               ],
+               "authenticate":{
+                  "oauth2":{
+                     "responseType":"code",
+                     "scope":[
+                        "r_liteprofile"
+                     ]
+                  }
+               }
+            },
+            "receivedMessage":{
+               "subtitle":"hhh1!",
+               "title":"Sign In to LinkedIn",
+               "imageIdentifier":"6de6a59c-846f-45d8-a1d7-24382d9919d1"
+            },
+            "replyMessage":{
+               "subtitle":"this is sub!",
+               "title":"You Signed In",
+               "imageIdentifier":"b70de3eb-a412-4fdd-a4b1-cb4eef853ded"
+            }
+         }
+      }
+   },
+   "destination":[
+      {
+         "abcUserId":[
+            "urn:mbid:AQAAY3cnOb7D+iCja4lzroWImGAC2QzKl1EnKaWl+XD/Mf52YjdOgSnTnb0HLontidf8PKkzEB0sNjco/S3Nmwc8Bp3iPZcxh/TeOMcqUFF2Kl1O5JxcJpVLwOemJRYwp+RhHqR33hzCQ+Z+9FYL4/tdCxtyEbxxxxxxxx"
+         ]
+      }
+   ]
+}
+```
+
+Once the message is received Apple Auth will send the client info as token to the OAuth provider for authentication. The OAuth provider will then validate the token against the OAuth provider details and sends the notification in cases of Successful or Failed authentication.
+
+Once the customer is authenticated, you will receive the following JSON back.   
+
+## Webhook Payload
+
+**Success** 
+
+```json Success
+{
+   "abcUserId":"urn:mbid:AQAAY3cnOb7D+iCja4lzroWImGAC2QzKl1EnKaWl+XD/Mf52YjdOgSnTnb0HLontidf8PKkzEB0sNjco/S3Nmwc8Bp3iPZcxh/TeOMcqUFF2Kl1O5JxcJpVLwOemJRYwp+RhHqR33hzCQ+Z+9FYL4/tdCxtyEbw=",
+   "channel":"AppleBusinessChat",
+   "abcAccountId":"2d15f71d-b227-4a10-95ae-6c6a2eff1991",
+   "appId":"a_636914165400010000",
+   "event":"AuthenticationResponse",
+   "ts":"2020-06-18T12:01:28.406+01:00",
+   "tid":"bcf815fa-13e3-e0c6-22a3-acf3e4115371",
+   "authenticateStatus":"authenticated",
+   "authenticateToken":"AQWw-4bU6Hw_A1xkFVhlYzLpcVWBjM-bvgswFMHyfghvcfOOKs5QLNyI09yEMnAPl2dvVEIY1n_jxsYd6Pl4-4UA6SvPPOv23Jk86WWiB18boPZlPVqBAXHZ11JpMGmLrARd7XvgnsBCE9h9Q3RHma64Tq_nFcMMapEbVT59-EymVASCDLPhYEQKXf3q9GPINw9FpWtl2aTHA73rKUb3Wt8b7vNOOAeYMxQezpS8MlKbk6jQ3enUYoRBzGajiQjbEzeJuh0mnYu8vwIknd0SRU7dmHRzHwd7tK52GVGsPPUQ-TetIcNpcHhu3XNVqHhFIZqQ2f2Ctxh_Xjpq9j4uROCI1VNMLA",
+   "requestIdentifier":"21d4a1c4-327c-ba35-45b1-36a050b15ad212-711",
+   "capabilities":"AUTH%2C0.91",
+   "timezone":"2020-06-18T12:01:28.406+01:00",
+   "deviceAgent":"iPhone+OS"
+}
+```
+
+**Failed** 
+
+```json Failed
+{
+   "abcUserId":"urn:mbid:AQAAY3cnOb7D+iCja4lzroWImGAC2QzKl1EnKaWl+XD/Mf52YjdOgSnTnb0HLontidf8PKkzEB0sNjco/S3Nmwc8Bp3iPZcxh/TeOMcqUFF2Kl1O5JxcJpVLwOemJRYwp+RhHqR33hzCQ+Z+9FYL4/tdCxtyEbw=",
+   "channel":"AppleBusinessChat",
+   "abcAccountId":"2d15f71d-b227-4a10-95ae-6c6a2eff1991",
+   "appId":"a_636914165400010000",
+   "event":"AuthenticationResponse",
+   "ts":"2020-06-18T12:02:32.649+01:00",
+   "tid":"5958f185-c912-7363-cbb2-dbe3bb5e2e92",
+   "authenticateStatus":"failed",
+   "authenticateToken":{
+      "status":"Failure",
+      "code":1,
+      "description":"Unsupported elliptic curve point type"
+   },
+   "requestIdentifier":"21d4a1c4-327c-ba35-45b1-36a050b15ad212-711",
+   "capabilities":"AUTH%2C0.91",
+   "timezone":"2020-06-18T12:02:32.649+01:00",
+   "deviceAgent":"iPhone+OS"
+}
+```
+
+## Media guidelines
+
+Sizes for media files that can be used in rich message formats such as list picker, time picker, rich link, Apple pay and OAuth are defined by [Apple](https://developer.apple.com/design/human-interface-guidelines/messages-for-business/#Message-bubble-content).
+
+## Going live
+
+Apple tests and approves all use-cases before a brand can go live on Apple Messages for Business. 
+
+Once your use-case is ready and tested, please reach out to your account manager or [channels@imimobile.com](mailto:channels@imimobile.com) to start the testing process with Apple.
+
+## Conversation Design
+
+Conversation design guidelines published by Apple are available.
+
+**[Human Interface Guidelines](https://register.apple.com/resources/messages/messaging-documentation/message-with-customers)** 
+
+Apple Messages for Business policies and best practices are documented in the below PDF.
+
+**[Best Practices](https://register.apple.com/resources/messages/messaging-documentation/best-practices)** 
+
+## Opt-in Management
+
+Apple Messages for Business is a customer initiated channel for the first time.
+
+However once a conversation is initiated by the customer, businesses are allowed to send alerts and promotional content with an explicit opt-in from the customer after the first conversation is completed.
+
+Customers have the choice of completing blocking the business if they receive unsolicited messages.
+
+## Policy
+
+Apple Messages for Business is governed by [Apple policy](https://register.apple.com/resources/tou/register_en.html).
+
+Businesses must accept these terms during the creation of Business Account
+
+## Are there any throughput limitations?
+
+There are no specific throughput limitations defined by Apple.
+
+Any TPS restrictions imposed will be the restrictions that are applied to Webex Connect tenant. If you face any issues with TPS, contact your account manager or send an email to the support team
+
+## Are gaming/gambling clients allowed on Apple Messages for Business?
+
+Currently gaming and gambling clients are banned on Apple Messages for Business.
+
+## Are there any restrictions on message size?
+
+Attachments are limited to 100 MB.
+
+Images in interactive content such as list pickers and time pickers are limited to 64 KB.
+
+There is no limit on the size of text messages.
+
+## What are the data retention policies?
+
+Data retention policies for Apple Messages for Business are governed by Apple's policy as shown below
+
+![](https://files.readme.io/b78c618-image_34.png "image (34).png")
+
+## Can businesses send alerts & notifications?
+
+Businesses can send alerts & notifications with the explicit permission of the customer.
+
+Since Apple Messages for Business is customer initiated for the first time, businesses can get opt-in from customers to send alerts after dealing with the customer request.
+
+The general rule of thumb is to not send customers messages that they don't expect to receive as that ruins the customer experience and customers have the option to permanently block the channel by deleting the conversation.
+
+Alerts sent on Apple Messages for Business should not be duplicated through push notifications.
+
+## Can businesses send promotional content?
+
+Businesses can send promotional content with the explicit permission of the customer. 
+
+Since Apple Messages for Business is customer initiated for the first time, businesses can get opt-in from customers to send promotional content.
+
+The general rule of thumb is to not send customers messages that they don't expect to receive as that ruins the customer experience and customers have the option to permanently block the channel by deleting the conversation.
+
+## Which versions of iOS are compatible?
+
+**Apple **devices running iOS 11.3 and later or macOS 10.13. 4 and later support **Apple Messages for Business**.
+
+## What happens if a customer doesn't have data connectivity?
+
+The messages are queued until the customer gets data connectivity
+
+## What % of Apple users have access to this feature?
+
+Over 90% of iOS devices are iOS 11.3 and above which is the minimum required version for Apple Messages for Business.
+
+Over 70% of MacOS devices support Apple Messages for Business.
+
+All iPadOS devices support Apple Messages for Business.
+
+## Can customers opt-out?
+
+If a customer is done with a Business Chat conversation and don't plan to go back to it, the thread can be deleted completely end the conversation. 
+
+During deletion, customers are prompted if they would like to completely block the business or just delete the thread.
+
+If a customer decides to block the businesses, any future messages sent to them will fail.
+
+## Are bots on supported on Apple Messages for Business?
+
+Bots are allowed as long as the customer is provided an option to talk to an agent anytime during the conversation
+
+## API reference metadata
+
+These are source metadata and examples. `api.auth` is ReadMe metadata; verify authentication in the documented headers/security scheme.
+
+```json
+{
+  "method": "get",
+  "url": "",
+  "auth": "required",
+  "results": {
+    "codes": [
+      {
+        "name": "",
+        "code": "{}",
+        "language": "json",
+        "status": 200
+      },
+      {
+        "name": "",
+        "code": "{}",
+        "language": "json",
+        "status": 400
+      }
+    ]
+  },
+  "params": [],
+  "examples": {
+    "codes": []
+  }
+}
+```

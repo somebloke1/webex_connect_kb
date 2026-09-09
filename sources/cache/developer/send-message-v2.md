@@ -1,0 +1,509 @@
+# Send Message v2
+
+Source: https://developers.webexconnect.io/reference/send-message-v2
+Documentation version: 6.20.0
+Retrieved: 2026-09-08T23:31:41+00:00
+
+> 🚧 API Endpoint and Authentication
+> 
+> - Your API endpoint varies based on where your Webex Connect account is hosted. Visit [Know Your API Endpoint](https://developers.imiconnect.io/reference/endpoints) section to know more. 
+> 
+> - You can use either Service Key or JSON Web Tokens (JWT) for authentication. If you use both JWT authentication and Service Key in an API request, JWT authentication takes priority, and the Service Key is ignored.
+
+The messaging API supports batching. You can send personalized messages to a maximum of 1000 destinations at once (subject to your TPS limits). E.g., if your messaging API TPS configuration is 10 you can send messages to up to 10 destinations at once.
+
+## Prerequisites
+
+
+
+| Channel | Prerequisite |
+| --- | --- |
+| [SMS](https://developers.webexconnect.io/reference/sms-apis) | Sender ID - A Sender ID is a name or number that an SMS appears to come from (‘from address’) when you receive a message on your phone.  <br>  <br>A sender ID can be alpha-numeric or a short-code or a long-code depending on demographical restrictions |
+| [Email](https://developers.webexconnect.io/reference/email-api) | You will need to set up an Email app within Webex Connectand verify your domain before you are able to send emails.  <br>  <br>Please contact the Support team for any assistance in setting up Email app |
+| [RCS](https://developers.webexconnect.io/reference/rcs-apis) | RCS chatbot needs to be created on all operators in geography before RCS messages can be sent.  <br>  <br>This setup takes at least 7 days after submission on the UI under the apps section of Webex Connect |
+|  |  |
+| [MMS](https://developers.webexconnect.io/reference/mms-api)  |  |
+
+
+
+
+## Messaging API v2 - Samples
+
+```json API Definition
+{
+    "appid": "<channel asset specific App ID available in Assets page>", //This is required only for Push, In-App, Messenger, WhatsApp, and Apple Messages for Business
+    "channel": "<channel name - v2 API currently supports sms, email and rcs",
+    "from": "<from address for the message, for SMS this will be a senderID, for email the sender address and for all OTT channels it will be appId available on the UI>",
+    "to": [
+        {
+            "msisdn/email": [
+                "single/multiple destination objects of the same type" //MSISDN i.e., phone numbers in E.164 format
+            ],
+            "correlationId": "<correlationId for this array of destination objects>",
+            "substitutions": {
+                "parameter1": "<substitutions for this array of destination objects> ",
+                "parametern": "<substitutions for this array of destination objects> "
+            }
+        },
+        // Pass multiple objects in a single destination array for bulk messaging
+        // Pass one object in each destination array for personalized messaging		
+        {
+            "msisdn/email": [
+                "single/multiple destination objects of the same type"
+            ],
+            "correlationId": "<correlationId for this array of destination objects>",
+            "substitutions": {
+                "parameter1": "<substitutions for this array of destination objects> ",
+                "parametern": "<substitutions for this array of destination objects> "
+            }
+        }
+    ],
+    // Global substitutions
+    "substitutions": {
+        "parameterx": "<global replaceable parameters, destination level parameters take precendence",
+    },
+    // Message scheduling
+    "sendAt": "{{TimeinUTC}}",
+    //max 7 days from current time
+    "expireAt": "{{TimeinUTC}}", //Either(expireAt/validity)one can be passed.If both are provided then you will receive a 400 Bad request.
+    "validity": "time period in seconds", //For e.g., 60 for 60 seconds
+    // Channel specific message options
+    "options": {
+		object(smsOptions)||object(emailOptions)||Object(rcsOptions)
+    },
+    // Call-backs
+    "callbackData": "<notify data>",
+  "notifyUrl": "https://notify.example.com",
+  "notifyUrlAuthId":"TNPXXXT09U", //Optional.
+    "requestedReceipts": [
+        "DELIVERED",
+        "READ"
+    ],
+    // Union field message can be only one of content or template
+    "content": {
+    object(smsMessage)||object(emailMessage)||object(rcsMessage)
+    },
+    "template": {
+        "id": "<unique template ID fom the UI"
+    }
+    //Optional object if you want to use Contact Policy 
+    "contactPolicy": {
+             “contactPolicyGroup” : "xKa4xfM3S_a9bP98ryCw8w", //the GroupID to be applied. Required if any of the following options are included and set to true
+
+             “channelCheckConsent” : true, //optional, assumed false, set to true to require opt-in before sending the message,“channelCheckConsent” or “channelApplyFrequencyCap” either of the parameter should be “true” 
+
+            “channelApplyFrequencyCap” : true //optional, assumed false, set to true to enforce group frequency cap for that channel,“channelCheckConsent” or “channelApplyFrequencyCap” either of the parameter should be “true” 
+    }
+}
+```
+
+## Postman Collection
+
+Here is a Postman collection to test our APIs. Make sure you change the key in the header to your service key.
+
+Latest Collection: [![Run in Postman](https://run.pstmn.io/button.svg)](https://www.postman.com/cisco/webex-connect/collection/pyjw227/webex-connect-apis)
+
+Archived Collection:Refer [Postman Collection](https://www.postman.com/cisco/webex-connect/folder/68yfedu/archived-collections)
+
+[Download](https://www.getpostman.com/) Postman from official site.
+
+> 👍 Generating the JWT Token
+> 
+> Connect uses a subset of the JWT fields, described here:
+> 
+> alg  
+> A string used in the header, identifying the algorithm used to encode the payload. The alg value is always HS256 when exchanging messages with Business Chat.
+> 
+> iss  
+> A claim that is a string identifying the principal that issued the JWT. The value is always the Service ID when exchanging messages with API V2.
+> 
+> iat  
+> A claim that is a numeric date—that is, an integer—identifying the time at which the JWT was issued. The value is the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date and time, ignoring leap seconds. For more information, see the Terminology section in RFC 7519.
+> 
+> A Service Secret that is a Base64-encoded string. Decode the string before using the key to sign the JWT
+
+A decoded JWT token should contain the following -
+
+```json Decoded JWT Token
+header
+{
+  "alg": HS256,
+}
+claims
+{
+  "iss": <Service ID>,
+  "iat": <issued at unix-timestamp (in seconds)>
+}
+```
+
+## Body Parameters
+
+
+
+| Parameter | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| channel | enum | yes | email  <br>\* rcs |
+| from | string | yes | \_ email - [fromaddress@domain.com](mailto:fromaddress@domain.com) (domain needs to be registered in apps)  <br> \* rcs - app ID generated on the UI |
+| to | JSONArray | yes | array of destination JSON objects that contain the channel specific destination and personalized substitutions for each destination object. MSISDN i.e., phone numbers should be in E.164 format.  <br>  <br>**Channel wise destinations** -  <br>\_ email - email  <br>\* rcs - msisdn |
+| substitutions | JSONObject | no | a JSON object with global substitutions. If a variable exists both in personalized substitutions and global substitutions, the personalized substitution takes preference |
+| sendAt | date/time | yes | The timestamp of the message to be delivered (maximum 7 days)  <br>  <br>For example,  <br>  \_ 2021-06-26T13:47:18.000Z - UTC |
+| expireAt | date/time | yes | The time format for when the message has to be expired and failed if not delivered  <br>  <br>For example,  <br>  \_ 2021-06-26T13:47:18.000Z - UTC |
+| validity | string | yes | Time period in seconds. E.g., 60 for sixty seconds.  <br>  <br>Only one of expireAt or validity should be sent in the request. The request will not be accepted if both values are present in the payload.  <br>  <br>If both sendAt and validity parameters are present in the same request, the validity time period will be added to the sendAt time to decide the expiry time. |
+| options | JSONObject | no | a JSON object that contains additional channel specific options in API. More information under each channel below |
+| callbackData | string | no | A string that is returned with each outbound web-hook for the message (delivery, failed etc). Maximum number of characters allowed in callbackData including any spaces is 2000. |
+| notifyUrl | string | no | a HTTPS endpoint for message delivery web-hooks |
+| notifyUrlAuthId | string | no | Unique Authentication ID. |
+| requestedReceipts | JSONArray | no | a JSON array that can filter message delivery web-hooks to the notifyURL.  <br>  <br>Can contain one or more of the following for each channel  <br>\_ email -  "Parameter",  <br>    "h-1": "Type",  <br>    "h-2": "Mandatory",  <br>    "h-3": "Descriptio  <br>\* rcs - ": "Type",  <br>    "h-2": "Mandatory",  <br>  <br>Check [Outbound Webhooks](https://developers.imiconnect.io/reference#outbound-webhooks) for more information on receipts |
+| content | JSONObject | yes, if template is not provided | contains the content of the message for each channel. see below for more examples |
+| template | JSONObject | yes, if content is not provided | contains the template id for each channel that's configured on the UI |
+
+
+
+## API reference metadata
+
+These are source metadata and examples. `api.auth` is ReadMe metadata; verify authentication in the documented headers/security scheme.
+
+```json
+{
+  "method": "post",
+  "url": "/messages",
+  "auth": "required",
+  "apiSetting": "6a675233ec1c893d8a7f682f",
+  "examples": {
+    "codes": [
+      {
+        "name": "API Definition",
+        "language": "json",
+        "code": "{\n\t\"appid\":\"<channel asset specific App ID available in Assets page>\", //This is required only for Push, In-App, Messenger, WhatsApp, and Apple Messages for Business\n  \"channel\":\"<channel name - v2 API currently supports sms, email and rcs\",\n\t\"from\":\"<from address for the message, for SMS this will be a senderID, for email the sender address and for all OTT channels it will be appId available on the UI>\",\n\t\"to\":[\n\t\t{\n\t\t\t\"msisdn/email\":[\n\t\t\t\t\"single/multiple destination objects of the same type\" //MSISDN i.e., phone numbers in E.164 format\n\t\t\t],\n      \t],\n\t\t \t\"correlationId\":\"<correlationId for this array of destination objects>\",\n\t\t\t\"substitutions\":{\n\t\t\t\t\"parameter1\":\"<substitutions for this array of destination objects> \",\n\t\t\t\t\"parametern\":\"<substitutions for this array of destination objects> \"\n\t\t\t}\n\t\t},\n\t\t// Pass multiple objects in a single destination array for bulk messaging\n \n                // Pass one object in each destination array for personalized messaging\t\t\n                 {\n\t\t\t\"msisdn/email\":[\n\t\t\t\t\"single/multiple destination objects of the same type\"\n\t\t\t],\n\t\t\t\"correlationId\":\"<correlationId for this array of destination objects>\",\n\t\t\t\"substitutions\":{\n\t\t\t\t\"parameter1\":\"<substitutions for this array of destination objects> \",\n\t\t\t\t\"parametern\":\"<substitutions for this array of destination objects> \"\n\t\t\t}\n\t\t}\n\t],\n\t// Global substitutions\n   \"substitutions\":{\n\t\t\"parameterx\":\"<global replaceable parameters, destination level parameters take precendence\",\n\n\t},\n\t// Message scheduling\n   \"sendAt\":\"{{TimeinUTC}}\",\n//max 7 days from current time\n \"expireAt\":\"{{TimeinUTC}}\",//Either(expireAt/validity)one can be passed.If both are provided then you will receive a 400 Bad request.\n \"validity\":\"time period in seconds\",//For e.g., 60 for 60 seconds\n// Channel specific message options\n    \"options\":{\n\t\tobject(smsOptions)||object(emailOptions)||Object(rcsOptions)\n\t},\n\t// Call-backs\n \"callbackData\":\"<notify data>\",\n \"notifyUrl\":\"https://notify.example.com\",\n \"notifyUrlAuthId\":\"TNPBXKT09U\", //Optional.\n\"requestedReceipts\":[\n\t\t\"DELIVERED\",\n\t\t\"READ\"\n\t],\n // Union field message can be only one of content or template\n   \"content\":{\n    object(smsMessage)||object(emailMessage)||object(rcsMessage)\n   },\n\t\"template\":{\n\t\t\"id\":\"<unique template ID fom the UI\"\n\t}\n   //Optional object if you want to use Contact Policy \n    \"contactPolicy\": {\n             “contactPolicyGroup” : \"xKa4xfM3S_a9bP98ryCw8w\", //the GroupID to be applied. Required if any of the following options are included and set to true\n\n             “channelCheckConsent” : true, //optional, assumed false, set to true to require opt-in before sending the message,“channelCheckConsent” or “channelApplyFrequencyCap” either of the parameter should be “true” \n\n            “channelApplyFrequencyCap” : true //optional, assumed false, set to true to enforce group frequency cap for that channel,“channelCheckConsent” or “channelApplyFrequencyCap” either of the parameter should be “true” \n    }"
+      },
+      {
+        "code": "{\n    \"channel\": \"email\", //channel used for messaging.\n    \"from\": \"{{fromEmailAddress}}\", //Email id of the sender.\n    \"to\": [\n        {\n            \"email\": [\n                \"{{toEmailAddress}}\"\n            ], //email id of the recipients\n            \"substitutions\": {\n                \"{{param1}}\": \"{{param1Value}}\",\n                \"{{param2}}\": \"{{param2Value}}\"\n            }\n        }\n    ],\n    \"substitutions\": {\n        \"{{param3}}\": \"{{param3Value}}\",\n        \"{{param4}}\": \"{{param4Value}}\"\n    },\n    \"cc\": [], //Email id of the copied recipients.\n    \"bcc\": [], //Email id of the bcc recipients.\n    \"options\": {\n        \"fromName\": \"{{emailSendername}}\" //A string that will appear next to the from address in most email inboxes\n    },\n    \"content\": {\n        \"type\": \"text\", //Either text or html. Use text while sending text emails.\n        \"encoding\": \"utf-8\", //Character encoding used for email text. Use this for rendering items such as emoticons as part of text emails.\n        \"subject\": \"{{subject}}\", //Subject of the email\n        \"replyTo\": \"{{replyToEmailAddress}}\", //Reply path for the email when the customer responds\n        \"text\": \"Simple text content\" //Text content of the email\n    },\n    \"requestedReceipts\": [\n        \"submitted\",\n        \"delivered\",\n        \"read\",\n        \"clicked\",\n        \"bounced\",\n        \"not verified\",\n        \"invalid\",\n        \"complaint\",\n        \"failed\"\n    ], //JSON array that can filter message delivery web-hooks to the notifyURL. Can contain one or more of the following: \"submitted\", \"delivered\", \"not verified\", \"invalid\", \"bounced\", \"complaint\", \"read\", \"clicked\", \"failed\". Check Outbound Webhooks for more information on receipts. Note: All the above receipts are relevant for email via AWS SES. For email via SMTP, only \"submitted\" receipt is applicable\n    \"correlationid\": \"\", //The CorrelationID is a unique identifier that you can attach to every request as a reference a particular transaction or event. This is configured as a part of the request.\n    \"callbackData\": \"\", //Data that you have configured to receive on the notify Url. This is configured as a part of the request.\n    \"notifyurl\": \"\", //Provide a URL to get notifications on message delivery status. Use requestedReceipts block to specify list of messages status you want to track.\n    \"notifyUrlAuthId\":\"TNPBXKT09U\", //Optional.\n    \"contactPolicy\": {\n        \"contactPolicyGroup\": \"\", //the GroupID to be applied. Required if any of the following options are included and set to true\n        \"channelCheckConsent\": true, //optional, assumed false, set to true to require opt-in before sending the message,“channelCheckConsent” or “channelApplyFrequencyCap” either of the parameter should be “true” \n        \"channelApplyFrequencyCap\": true //optional, assumed false, set to true to enforce group frequency cap for that channel,“channelCheckConsent” or “channelApplyFrequencyCap” either of the parameter should be “true” \n    }\n}",
+        "language": "json",
+        "name": "Email Sample"
+      },
+      {
+        "name": "RCS Sample",
+        "language": "json",
+        "code": "{\n    \"channel\": \"rcs\",\n    \"from\": \"{{rcsAppId}}\",\n    \"to\": [\n        {\n            \"msisdn\": [\n                \"{{msisdn}}\" //E.164 format required/recommended.\n            ],\n            \"substitutions\": {\n                \"{{rcs_parameter1}}\": \"{{rcs_value1}}\"\n            }\n        }\n    ],\n    \"substitutions\": {\n        \"{{rcs_parameter1}}\": \"{{rcs_value1}}\"\n    },\n    \"options\": {\n        \"smsFallback\": true,\n        \"smsSenderId\": \"{{senderid}}\",\n        \"text\": \"fallback text\"\n    },\n    \"requestedReceipts\": [\n        \"DELIVERED\"\n    ],\n    \"content\": {\n        \"type\": \"text\",\n        \"text\": \"This is the message.  Reply Yes or No.\",\n        \"suggestions\": [\n            {\n                \"type\": \"reply\",\n                \"displayText\": \"Yes\",\n                \"postbackData\": \"usr_msg_yes\"\n            },\n            {\n                \"type\": \"viewLocation\",\n                \"address\": \"\",\n                \"displayText\": \"\",\n                \"latitude\": 0,\n                \"longitude\": 0,\n                \"postbackData\": \"\"\n            },\n            {\n                \"type\": \"shareLocation\",\n                \"displayText\": \"\",\n                \"postbackData\": \"\"\n            },\n            {\n                \"type\": \"openUrl\",\n                \"displayText\": \"\",\n                \"url\": \"\",\n                \"postbackData\": \"\"\n            },\n            {\n                \"type\": \"calendarEvent\",\n                \"displayText\": \"\",\n                \"startTime\": \"{{TimeinUTC}}\",\n                \"endTime\": \"{{TimeinUTC}}\",\n                \"meetingTitle\": \"\",\n                \"meetingDescription\": \"\",\n                \"postbackData\": \"\"\n            },\n            {\n                \"type\": \"dialPhone\",\n                \"displayText\": \"\",\n                \"phone\": \"\",\n                \"postbackData\": \"\"\n            }\n        ]\n    },\n    \"callbackData\": \"\", //Data that you have configured to receive on the notify Url. This is configured as a part of the request.\n    \"correlationId\": \"\", //The CorrelationID is a unique identifier that you can attach to every request as a reference a particular transaction or event. This is configured as a part of the request.\n    \"notifyUrl\": \"\",\n    \"notifyUrlAuthId\":\"TNPBXKT09U\", //Optional.\n    \"contactPolicy\": {\n        \"contactPolicyGroup\": \"\", //the GroupID to be applied. Required if any of the following options are included and set to true\n        \"channelCheckConsent\": true, //optional, assumed false, set to true to require opt-in before sending the message,“channelCheckConsent” or “channelApplyFrequencyCap” either of the parameter should be “true” \n        \"channelApplyFrequencyCap\": true //optional, assumed false, set to true to enforce group frequency cap for that channel,“channelCheckConsent” or “channelApplyFrequencyCap” either of the parameter should be “true” \n    }\n}"
+      }
+    ]
+  },
+  "results": {
+    "codes": [
+      {
+        "status": 201,
+        "language": "json",
+        "code": " {\n        \"requestTimestamp\": \"2019-10-04T10:42:27.728Z\",\n        \"messageId\": \"2002fcc6-d500-XXXX-b3ab-8f86f15891cb\",\n        \"correlationId\": \"na1b2b1i1\",\n        \"status\": \"queued\"\n }",
+        "name": ""
+      },
+      {
+        "status": 400,
+        "language": "json",
+        "code": "\n{\"code\":\"7004\",\"message\":\"Invalid parameter - sendAt\"}",
+        "name": ""
+      }
+    ]
+  },
+  "params": [
+    {
+      "name": "Content-Type",
+      "type": "string",
+      "enumValues": "",
+      "default": "application/json",
+      "desc": "",
+      "required": false,
+      "in": "header",
+      "ref": "",
+      "_id": "6097934c38a04b002279b330",
+      "id": "6097934c38a04b002279b330"
+    },
+    {
+      "name": "key",
+      "type": "string",
+      "enumValues": "",
+      "default": "<Service Key>",
+      "desc": "Applicable when you want to use service key for API authentication. Available under API tab within a service in your Webex Connect tenant.",
+      "required": false,
+      "in": "header",
+      "ref": "",
+      "_id": "6097934c38a04b002279b32f",
+      "id": "6097934c38a04b002279b32f"
+    },
+    {
+      "name": "Authorization",
+      "type": "string",
+      "enumValues": "",
+      "default": "Bearer <Token>",
+      "desc": "Bearer {{token}}. Applicable if you want to use JWT tokens for API authentication. Use either of 'key' or 'Authorization' header param.",
+      "required": false,
+      "in": "header",
+      "ref": "",
+      "_id": "6097934c38a04b002279b32e",
+      "id": "6097934c38a04b002279b32e"
+    }
+  ]
+}
+```
+
+## OpenAPI operation and component schemas
+
+```json
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Messaging API v2_New",
+    "version": "6.20.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.us.webexconnect.io/v2"
+    }
+  ],
+  "security": [
+    {}
+  ],
+  "path": "/messages",
+  "method": "post",
+  "path_parameters": [],
+  "operation": {
+    "summary": "Send Message v2",
+    "description": "Understand how you can use Send Message API v2",
+    "operationId": "send-message-v2",
+    "parameters": [
+      {
+        "name": "Content-Type",
+        "in": "header",
+        "schema": {
+          "type": "string",
+          "default": "application/json"
+        }
+      },
+      {
+        "name": "key",
+        "in": "header",
+        "description": "Applicable when you want to use service key for API authentication. Available under API tab within a service in your Webex Connect tenant.",
+        "schema": {
+          "type": "string",
+          "default": "<Service Key>"
+        }
+      },
+      {
+        "name": "Authorization",
+        "in": "header",
+        "description": "Bearer {{token}}. Applicable if you want to use JWT tokens for API authentication. Use either of 'key' or 'Authorization' header param.",
+        "schema": {
+          "type": "string",
+          "default": "Bearer <Token>"
+        }
+      }
+    ],
+    "responses": {
+      "201": {
+        "description": "201",
+        "content": {
+          "application/json": {
+            "examples": {
+              "Result": {
+                "value": " {\n        \"requestTimestamp\": \"2019-10-04T10:42:27.728Z\",\n        \"messageId\": \"2002fcc6-d500-XXXX-b3ab-8f86f15891cb\",\n        \"correlationId\": \"na1b2b1i1\",\n        \"status\": \"queued\"\n }"
+              }
+            },
+            "schema": {
+              "type": "object",
+              "properties": {
+                "requestTimestamp": {
+                  "type": "string",
+                  "example": "2019-10-04T10:42:27.728Z"
+                },
+                "messageId": {
+                  "type": "string",
+                  "example": "2002fcc6-d500-XXXX-b3ab-8f86f15891cb"
+                },
+                "correlationId": {
+                  "type": "string",
+                  "example": "na1b2b1i1"
+                },
+                "status": {
+                  "type": "string",
+                  "example": "queued"
+                }
+              }
+            }
+          }
+        }
+      },
+      "400": {
+        "description": "400",
+        "content": {
+          "application/json": {
+            "examples": {
+              "Result": {
+                "value": "\n{\"code\":\"7004\",\"message\":\"Invalid parameter - sendAt\"}"
+              }
+            },
+            "schema": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string",
+                  "example": "7004"
+                },
+                "message": {
+                  "type": "string",
+                  "example": "Invalid parameter - sendAt"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "deprecated": false,
+    "requestBody": {
+      "content": {
+        "application/json": {
+          "schema": {},
+          "examples": {
+            "Email Sample": {
+              "value": {
+                "channel": "email",
+                "from": "{{fromEmailAddress}}",
+                "to": [
+                  {
+                    "email": [
+                      "{{toEmailAddress}}"
+                    ],
+                    "substitutions": {
+                      "{{param1}}": "{{param1Value}}",
+                      "{{param2}}": "{{param2Value}}"
+                    }
+                  }
+                ],
+                "substitutions": {
+                  "{{param3}}": "{{param3Value}}",
+                  "{{param4}}": "{{param4Value}}"
+                },
+                "cc": [],
+                "bcc": [],
+                "options": {
+                  "fromName": "{{emailSendername}}"
+                },
+                "content": {
+                  "type": "text",
+                  "encoding": "utf-8",
+                  "subject": "{{subject}}",
+                  "replyTo": "{{replyToEmailAddress}}",
+                  "text": "Simple text content"
+                },
+                "requestedReceipts": [
+                  "submitted",
+                  "delivered",
+                  "read",
+                  "clicked",
+                  "bounced",
+                  "not verified",
+                  "invalid",
+                  "complaint",
+                  "failed"
+                ],
+                "correlationid": "",
+                "callbackData": "",
+                "notifyurl": "",
+                "notifyUrlAuthId": "TNPBXKT09U",
+                "contactPolicy": {
+                  "contactPolicyGroup": "",
+                  "channelCheckConsent": true,
+                  "channelApplyFrequencyCap": true
+                }
+              }
+            },
+            "RCS Sample": {
+              "value": {
+                "channel": "rcs",
+                "from": "{{rcsAppId}}",
+                "to": [
+                  {
+                    "msisdn": [
+                      "{{msisdn}}"
+                    ],
+                    "substitutions": {
+                      "{{rcs_parameter1}}": "{{rcs_value1}}"
+                    }
+                  }
+                ],
+                "substitutions": {
+                  "{{rcs_parameter1}}": "{{rcs_value1}}"
+                },
+                "options": {
+                  "smsFallback": true,
+                  "smsSenderId": "{{senderid}}",
+                  "text": "fallback text"
+                },
+                "requestedReceipts": [
+                  "DELIVERED"
+                ],
+                "content": {
+                  "type": "text",
+                  "text": "This is the message.  Reply Yes or No.",
+                  "suggestions": [
+                    {
+                      "type": "reply",
+                      "displayText": "Yes",
+                      "postbackData": "usr_msg_yes"
+                    },
+                    {
+                      "type": "viewLocation",
+                      "address": "",
+                      "displayText": "",
+                      "latitude": 0,
+                      "longitude": 0,
+                      "postbackData": ""
+                    },
+                    {
+                      "type": "shareLocation",
+                      "displayText": "",
+                      "postbackData": ""
+                    },
+                    {
+                      "type": "openUrl",
+                      "displayText": "",
+                      "url": "",
+                      "postbackData": ""
+                    },
+                    {
+                      "type": "calendarEvent",
+                      "displayText": "",
+                      "startTime": "{{TimeinUTC}}",
+                      "endTime": "{{TimeinUTC}}",
+                      "meetingTitle": "",
+                      "meetingDescription": "",
+                      "postbackData": ""
+                    },
+                    {
+                      "type": "dialPhone",
+                      "displayText": "",
+                      "phone": "",
+                      "postbackData": ""
+                    }
+                  ]
+                },
+                "callbackData": "",
+                "correlationId": "",
+                "notifyUrl": "",
+                "notifyUrlAuthId": "TNPBXKT09U",
+                "contactPolicy": {
+                  "contactPolicyGroup": "",
+                  "channelCheckConsent": true,
+                  "channelApplyFrequencyCap": true
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {}
+  }
+}
+```

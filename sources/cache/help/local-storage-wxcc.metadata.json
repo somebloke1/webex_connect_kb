@@ -1,0 +1,39 @@
+{
+  "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd81825799a",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "9d384030b5463caefb55ea6ad6af641ff626170bc450b4b48b3db490c8741966",
+    "source_path": "e85369ceaf49102ea7743ba456ea02f614bc4074a1b411adef95bc6f678b5276",
+    "text_path": "840438f15f83513e99db1172864e8e30d195b8bb672aaf6fd27132ab9b3ddc70"
+  },
+  "headings": [
+    "WhatsApp Data Localization",
+    "Localized Data",
+    "Updating Local Storage",
+    "Updating Local Storage for New Asset",
+    "Updating local storage of an Existing Asset",
+    "🚧Alert",
+    "📘Note"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/local-storage-wxcc.md",
+  "resolved_url": "https://help.webexconnect.io/docs/local-storage-wxcc",
+  "retrieved_at": "2026-09-08T23:29:13+00:00",
+  "sha256_html_response": "998cd986e924ae6b9741b4813cc7b4a7abc9620061e9652f3c2d281f9682b71a",
+  "sha256_source_body": "e85369ceaf49102ea7743ba456ea02f614bc4074a1b411adef95bc6f678b5276",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/local-storage-wxcc.source.md",
+  "source_updated_at": "2026-04-15T11:52:33.783Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/local-storage-wxcc.txt",
+  "title": "Local Storage - WXCC",
+  "url": "https://help.webexconnect.io/docs/local-storage-wxcc",
+  "word_count": 713,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/local-storage-wxcc.metadata.json"
+}

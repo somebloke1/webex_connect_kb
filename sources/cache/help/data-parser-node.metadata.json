@@ -1,0 +1,39 @@
+{
+  "category": "SERVICES & FLOWS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182577d0",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "b866b6ed59764f6be41d6f1d8f3276301acd16c6bc657a274866dd550f431004",
+    "source_path": "dc3f83adacacb5c4809aab9cbb86cab119cceeb44129ca723c7e3ef904e81233",
+    "text_path": "753c2d310adf610b796ed8e06a17915d11d8e3afc7f3aeaaa00adab0d5ed8363"
+  },
+  "headings": [
+    "Interface Elements",
+    "Converting JSON or XML Data",
+    "Configuring the Input Data",
+    "Parsing the Data",
+    "Testing the Data",
+    "Configuring the Transition Actions",
+    "📘Tip"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/data-parser-node.md",
+  "resolved_url": "https://help.webexconnect.io/docs/data-parser-node",
+  "retrieved_at": "2026-09-08T23:28:54+00:00",
+  "sha256_html_response": "e47714db03577e5cbb617ead3128515342c272b961dfee44c6f530abde26040f",
+  "sha256_source_body": "dc3f83adacacb5c4809aab9cbb86cab119cceeb44129ca723c7e3ef904e81233",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/data-parser-node.source.md",
+  "source_updated_at": "2026-01-26T13:39:05.378Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/data-parser-node.txt",
+  "title": "Data Parser Node",
+  "url": "https://help.webexconnect.io/docs/data-parser-node",
+  "word_count": 1015,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/data-parser-node.metadata.json"
+}

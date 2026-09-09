@@ -1,0 +1,37 @@
+{
+  "category": "WEBEX CONNECT SANDBOX",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd81825789d",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "4d73f3a0d68c9f93310a85705a261636d6a7ed86ad0b67c81a57da099efd656d",
+    "source_path": "aba04eebee170894d9686949d49eb77d748efd4d3edaeca18d96cfaca3f8284e",
+    "text_path": "fc84e460932ee3e4da6fa5a95bd3edf882d24f37c9ef1115819538aab5523c40"
+  },
+  "headings": [
+    "📘Voice Support in Sandbox",
+    "Sandbox Home UI",
+    "Making a Call from Sandbox Home screen",
+    "Receiving a Call",
+    "📘Note"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/making-and-receiving-voice-calls-using-sandbox.md",
+  "resolved_url": "https://help.webexconnect.io/docs/making-and-receiving-voice-calls-using-sandbox",
+  "retrieved_at": "2026-09-08T23:28:48+00:00",
+  "sha256_html_response": "b060f2d821b78d5e7bf0919b875d81547447c8ba2aa340ed409dffb90654c194",
+  "sha256_source_body": "aba04eebee170894d9686949d49eb77d748efd4d3edaeca18d96cfaca3f8284e",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/making-and-receiving-voice-calls-using-sandbox.source.md",
+  "source_updated_at": "2026-04-15T08:23:48.290Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/making-and-receiving-voice-calls-using-sandbox.txt",
+  "title": "Making and Receiving Voice Calls using Sandbox",
+  "url": "https://help.webexconnect.io/docs/making-and-receiving-voice-calls-using-sandbox",
+  "word_count": 850,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/making-and-receiving-voice-calls-using-sandbox.metadata.json"
+}

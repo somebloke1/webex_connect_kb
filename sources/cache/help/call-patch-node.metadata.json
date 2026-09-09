@@ -1,0 +1,41 @@
+{
+  "category": "SERVICES & FLOWS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257848",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "d5d9a70258c35492e6a10e93a31cb900e45c42e3505ea7379016d914bbf9c332",
+    "source_path": "13686cacdab866dcf488ced171d63141f91e32bd3c73f48b93937451159ce946",
+    "text_path": "c9f60a7122ea853b8213f3521b66a38cad52da12910e59900917d399654b8727"
+  },
+  "headings": [
+    "📘Automatic fallback to an alternate TTS Provider",
+    "Node Configuration",
+    "📘Number Format",
+    "📘Conditions",
+    "🚧Looping Threshold Configuration",
+    "Input Variables",
+    "Output Variables",
+    "Node Outcomes",
+    "Transition Actions"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/call-patch-node.md",
+  "resolved_url": "https://help.webexconnect.io/docs/call-patch-node",
+  "retrieved_at": "2026-09-08T23:28:55+00:00",
+  "sha256_html_response": "719fd100b8c07d85ca087521d952c205635e764eabfbe20c8d64dbb8e18c8f89",
+  "sha256_source_body": "13686cacdab866dcf488ced171d63141f91e32bd3c73f48b93937451159ce946",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/call-patch-node.source.md",
+  "source_updated_at": "2026-03-27T08:11:08.924Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/call-patch-node.txt",
+  "title": "Call Patch Node",
+  "url": "https://help.webexconnect.io/docs/call-patch-node",
+  "word_count": 1211,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/call-patch-node.metadata.json"
+}

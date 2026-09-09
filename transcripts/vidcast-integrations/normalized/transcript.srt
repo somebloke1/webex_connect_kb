@@ -1,0 +1,1931 @@
+1
+00:00:04,859 --> 00:00:09,219
+Hello, everyone, and welcome to our latest Webex developer webinar.
+
+2
+00:00:09,979 --> 00:00:13,699
+My name is Phil Bilanti. I'm from the Webex Developer evangelism team.
+
+3
+00:00:14,859 --> 00:00:16,619
+We're very excited about today's session.
+
+4
+00:00:17,739 --> 00:00:20,378
+This one is reusable integrations made easy.
+
+5
+00:00:20,940 --> 00:00:23,140
+With the integration studio for Webex Connect.
+
+6
+00:00:24,379 --> 00:00:30,579
+I'm gonna have our presenters, our presenters, Sam and Martin introduce themselves as well when we get to the main presentation.
+
+7
+00:00:31,780 --> 00:00:39,860
+But we will be utilizing Slido for audience Q and A you can find the Slido right inside the Webex app for this webinar.
+
+8
+00:00:40,480 --> 00:00:44,200
+Or you can participate from your mobile device by scanning the QR code here.
+
+9
+00:00:44,759 --> 00:00:55,400
+So I will need another few moments to allow people to do that if that's the way they want to join, but otherwise you can use this Slido app that's embedded inside the Webex app.
+
+10
+00:01:00,010 --> 00:01:15,890
+But before we get to the main presentation, I just want to call out some February news for Webex developers, and i'll try to get through this quickly cause I know we have a pretty packed presentation, but leading off is the the Webex developer beta
+
+11
+00:01:15,890 --> 00:01:19,090
+program that has some great early access features that you'll.
+
+12
+00:01:19,569 --> 00:01:20,490
+Want to start testing out.
+
+13
+00:01:21,730 --> 00:01:30,089
+You can use that QR code to take you right to the developer beta portal, so if you want to get started, you can use that QR code or that URL at the bottom there.
+
+14
+00:01:31,690 --> 00:01:39,370
+But the 1st is the, you know, inside the beta is the Webex click to call, which is a brand new feature provided through the web call.
+
+15
+00:01:39,410 --> 00:01:51,969
+Calling SDK. With click to call apps for Webex calling enterprises can empower their customers to do things like connect with their support desk or their sales team, you know, just by a click of a button.
+
+16
+00:01:52,129 --> 00:01:59,130
+So, you know, really just removes the hassle of having to manually dial important phone numbers that are shown on the website, you know, on a phone.
+
+17
+00:01:59,370 --> 00:02:02,730
+So it enables like instant interactions right inside the browser.
+
+18
+00:02:02,890 --> 00:02:04,410
+The call can be done right inside there.
+
+19
+00:02:05,789 --> 00:02:11,030
+But, you know, next is AI assistant for Webex developers.
+
+20
+00:02:12,150 --> 00:02:24,709
+And this is a chat interface powered by a large language model, LLM to assist users to find the right Webex developer tools and generate working code to aid in building integrations.
+
+21
+00:02:26,110 --> 00:02:44,869
+So this AI assistant has extensive knowledge of the Webex developer platform, and that's really what truly separates it from other various GPT chatbots, and, you know, coming very soon to the beta program perhaps this week, maybe, is a preview of the
+
+22
+00:02:44,869 --> 00:02:47,320
+new. Converge Webex developer portal.
+
+23
+00:02:47,480 --> 00:02:53,800
+And this combines resources for both the Webex suite and Webex Contact Center platforms.
+
+24
+00:02:53,960 --> 00:02:59,390
+So today. They're two separate portals for contact center and Webex suite.
+
+25
+00:03:00,030 --> 00:03:07,470
+So they really poses a challenge for developers who are, you know, interested in building an integration for the Webex suite and Webex contact center.
+
+26
+00:03:08,829 --> 00:03:11,829
+So, you know, now everything is put together inside one portal.
+
+27
+00:03:12,830 --> 00:03:16,030
+The converged portal has an updated layout and navigation.
+
+28
+00:03:16,310 --> 00:03:27,710
+It makes it real easy for developers to find all the different services inside Webex Suite and contact center, and it's a vastly improved experience all the way around.
+
+29
+00:03:27,869 --> 00:03:30,550
+So we're really excited about getting that started.
+
+30
+00:03:31,180 --> 00:03:46,819
+So we encourage everyone to join the developer beta program, get early access to these great new features, and there's also been some, interesting things recently announced for Webex contact center administrators.
+
+31
+00:03:47,620 --> 00:03:50,460
+And you can use that QR code next to that one.
+
+32
+00:03:50,610 --> 00:03:56,530
+You know, to learn a little bit more about all the things that are there, but I just want to highlight a few of them that are listed in inside that page.
+
+33
+00:03:57,850 --> 00:04:03,209
+You know, 1st is the new list and publish APIs, and that's for programmatic flow management.
+
+34
+00:04:04,530 --> 00:04:08,610
+These new APIs supplement the existing import and export APIs.
+
+35
+00:04:09,240 --> 00:04:17,839
+For flows and sub flows, but just it enables the full automation of flow management for both new and migrating contact center organizations.
+
+36
+00:04:19,879 --> 00:04:29,080
+And next is a new update for contact center users in the United States who can now request ten DLC and WhatsApp numbers and directly through web.
+
+37
+00:04:29,320 --> 00:04:32,000
+Webex connect, you know, as a self service feature.
+
+38
+00:04:33,040 --> 00:04:38,919
+So previously those were not available, and now this has been released for users in the United States.
+
+39
+00:04:41,519 --> 00:04:47,039
+And last but not least on this section is the Cisco AI assistant for contact center.
+
+40
+00:04:47,919 --> 00:04:53,839
+And this AI assistant is to enhance efficiency and elevate customer satisfaction inside a contact center.
+
+41
+00:04:55,278 --> 00:04:59,359
+So it has a rich set of functionality to generate insightful call.
+
+42
+00:04:59,679 --> 00:05:02,278
+Summaries, it does topic analytics.
+
+43
+00:05:02,759 --> 00:05:07,038
+It does agent well being assessments and, automatic CSAT.
+
+44
+00:05:07,319 --> 00:05:13,079
+So just another great AI tool that's built specifically for Webex contact center.
+
+45
+00:05:15,679 --> 00:05:22,759
+But before I conclude the the news here for this month, I just want to make special mention that our registrations are now open for our next.
+
+46
+00:05:22,839 --> 00:05:27,639
+Next developer webinar in March and that topic is on Webex Instant Connect.
+
+47
+00:05:28,329 --> 00:05:36,329
+It's gonna be a really, you know, interesting topic about getting instant meetings that you don't need an even an account for.
+
+48
+00:05:37,169 --> 00:05:39,688
+You can visit our webinars page to sign up for that one.
+
+49
+00:05:40,009 --> 00:05:41,728
+I think that's gonna be in 25 March.
+
+50
+00:05:43,289 --> 00:05:45,129
+And with that, that's the that's the news.
+
+51
+00:05:45,288 --> 00:05:48,009
+I'm gonna hand it over to Sam Watson to kick off our.
+
+52
+00:05:48,169 --> 00:05:51,409
+Our main presentation. So Sam, please take it away.
+
+53
+00:05:52,668 --> 00:06:11,469
+Thanks for that Phil. I all and welcome to the latest Webex customer experience developer webinar, you know, reusable integrations made easy.
+
+54
+00:06:11,909 --> 00:06:14,109
+With the integration studio for Webex Connect.
+
+55
+00:06:14,909 --> 00:06:19,628
+I'm Sam Watson, I'm a product marketing manager at Webex focusing on the customer experience portfolio.
+
+56
+00:06:20,669 --> 00:06:31,549
+And I've been working with, you know, CX and CPAS technologies for over ten plus years working across various products like Webex Connect, new channels such as RCS, new technologies like AI agents.
+
+57
+00:06:31,709 --> 00:06:35,348
+And in this webinar I'm going to be joined by Martin Hadtech.
+
+58
+00:06:35,709 --> 00:06:37,309
+Martin will take a minute to introduce yourself?
+
+59
+00:06:37,869 --> 00:06:40,108
+Yep. Hi guys, my name is Martin Hardik.
+
+60
+00:06:40,348 --> 00:06:42,548
+I'm a solution architect here at Cisco Webex.
+
+61
+00:06:42,988 --> 00:06:49,789
+I've been with the company for over three years now kind of specializing in Webex Connect and cpass.
+
+62
+00:06:51,669 --> 00:06:57,469
+Cheers for that Martin. So the purpose of this webinar is to introduce you to our new integration studio.
+
+63
+00:06:58,068 --> 00:07:07,549
+Which is a new low code, you know, oh sorry it's an upcoming low code self serve platform for managing, you know, API integrations on Webex Connect.
+
+64
+00:07:07,989 --> 00:07:17,949
+So the agenda, and so what we'll do for the agenda for this webinar, I'll give a high level overview of the current integration challenges that our partner face, you know, how we.
+
+65
+00:07:18,079 --> 00:07:29,879
+Also solving that with the integration studio, before we get to probably what you most want to see, which is a live demo of the studio, which will be delivered by Martin, and then we'll wrap up with how to join our beta program.
+
+66
+00:07:30,389 --> 00:07:43,068
+And some Q and A as well. So to get started and just to set the scene a little, you know, how are partners currently building customer experience solutions with Webex Connect?
+
+67
+00:07:43,789 --> 00:07:50,149
+You know, firstly, they're starting with their integrations ecosystem, which is made up of all the APIs into the.
+
+68
+00:07:50,469 --> 00:07:56,989
+Systems and applications that their customers most utilize as well as APIs that connect into their own proprietary systems.
+
+69
+00:07:57,309 --> 00:08:03,389
+And they're exposing these systems and applications on Webex Connect through its flexible integration framework.
+
+70
+00:08:05,249 --> 00:08:20,329
+And these systems, you know, are wide ranging with common examples being our CRM CDP platforms, appointment scheduling systems, workforce optimization systems, and although Webex Connect supports multiple types of integrations, you know, ultimately
+
+71
+00:08:20,329 --> 00:08:23,249
+if a system and application offers a rest or a SOAP API.
+
+72
+00:08:23,739 --> 00:08:29,659
+Webex Connect can integrate with, with it to push data to that system or pull data from that system.
+
+73
+00:08:31,619 --> 00:08:43,579
+So what partners are doing is they're taking these integration APIs, you know, adding them, exposing them on Webex Connect and then using the flow builder to design, design various vertical and horizontal solution.
+
+74
+00:08:44,939 --> 00:08:53,619
+For their customers from, you know, campaigns and purchasing to appointment management solutions, billing and debt collection solutions, AI agents and surveys.
+
+75
+00:08:53,939 --> 00:09:03,419
+And, you know, and by this approach by using their AP, their integration APIs and the flow builder, they're able to capitalize on the demand for CPAs and customer experience.
+
+76
+00:09:03,899 --> 00:09:11,939
+Solutions, you know, unlocking new revenue streams, you know, and enhancing their brand stickiness with their customers by being able to offer more value to those customers.
+
+77
+00:09:17,039 --> 00:09:24,918
+Now when it comes to the flow builder, integrations are used by Webex, the Webex Connect Flow Builder in a couple of ways.
+
+78
+00:09:26,039 --> 00:09:36,839
+And the 1st way is as events, which is events and events are configured using the customer of custom event API, and they notify webex connect of events.
+
+79
+00:09:37,079 --> 00:09:41,199
+In a business system, which in turn triggers a flow or a rule on the platform.
+
+80
+00:09:42,419 --> 00:09:55,018
+You know, these events can be really wide ranging, but a typical example could be when a customer's details have been added to it, a new customer has been added to a CRM system, you know, that can trigger a welcome journey flow that will onboard the
+
+81
+00:09:55,018 --> 00:09:57,339
+customer and introduce that customer to your business.
+
+82
+00:09:58,909 --> 00:10:04,588
+Another type of event when the flows can be triggered are by inbound customer actions on channels.
+
+83
+00:10:05,108 --> 00:10:17,589
+Now e.g., if a customer sends a message via SMS, that could trigger a flow which brings an AI agent into that into that into that chat to take over that interaction and allow the customer to self serve.
+
+84
+00:10:17,999 --> 00:10:21,239
+So that's two ways that an integration can be used as events to trigger flows.
+
+85
+00:10:24,079 --> 00:10:30,399
+2nd way integrations can be used within the flow builder are as knows that perform an action.
+
+86
+00:10:31,399 --> 00:10:37,839
+And this is where you are making an API call to a system to pull or push data to that system to.
+
+87
+00:10:38,079 --> 00:10:42,599
+To feel a certain action. You know, e.g., on the screen in front of you right here.
+
+88
+00:10:43,049 --> 00:10:51,369
+You're seeing we're integrating with Zoho CRM to check the customer details, to pull information from that system so we can personalize the message that we send to them.
+
+89
+00:10:52,969 --> 00:10:55,129
+It's an example of appointment reminder flow.
+
+90
+00:10:55,249 --> 00:11:02,889
+So e.g., when we ask the customer, do you want to confirm reschedule or cancel your appointment if they click.
+
+91
+00:11:03,129 --> 00:11:09,368
+We schedule, we need to look up in calendarly when the next available dates are and communicate that back to the customer.
+
+92
+00:11:09,928 --> 00:11:21,849
+So here's two examples of how integrations are used within the flow, not took it but to pull data from that system, you know, manipulate that data and then use it to power the interaction and to take the next step.
+
+93
+00:11:26,879 --> 00:11:42,558
+Now, as a partner developer, the challenge that you have with building and managing integrations is that, you know, for one integration and one customer, you know, Webex Connect customer tenant, you have to add the integration to Webex Connect and
+
+94
+00:11:42,558 --> 00:11:44,359
+configure the rules of how that could be used.
+
+95
+00:11:44,759 --> 00:11:46,639
+You can con you need to configure how that.
+
+96
+00:11:46,999 --> 00:11:54,039
+Integration can be used as nodes and events setting the URL endpoints, the input fields, the output fields, the authentication level.
+
+97
+00:11:54,959 --> 00:12:00,359
+You then need to, you know, then you need to actually build the flow, you know, dragging the nodes onto the canvas.
+
+98
+00:12:00,948 --> 00:12:06,829
+Configuring the nodes, join up all the business logic between the nodes, testing it, and then publishing it.
+
+99
+00:12:07,508 --> 00:12:11,589
+And then once that's live, you now need to manage the integration, you know, do you need to update it?
+
+100
+00:12:12,069 --> 00:12:18,549
+Is it working? Is it working as it should, should how many times does the flow been executing, how many times does that integration be used?
+
+101
+00:12:18,948 --> 00:12:20,549
+And you have to just, you have to do that.
+
+102
+00:12:20,829 --> 00:12:26,269
+Process for every integration for one Webex connect tenant for a customer.
+
+103
+00:12:27,629 --> 00:12:37,549
+And as a partner developer, you know, when you as a partner developer, you have to repeat this process across all your customer tenants of Webex Connect.
+
+104
+00:12:38,148 --> 00:12:45,149
+You have to go and that puts a humongous strain on, you know, developer time, effort, and resources.
+
+105
+00:12:45,779 --> 00:12:49,099
+And it also slow, you know, it slow it hinders the partner as well.
+
+106
+00:12:49,339 --> 00:13:00,939
+It slows down the time to market for new solutions, it reduces their scalability and ultimately ultimately by managing integrations in silos it makes it more complex and you know hinders the partner.
+
+107
+00:13:06,959 --> 00:13:18,478
+And this this challenge is ultimately caused by the type of integration nodes that a partner can currently use, within Webex Connect to, you know, expose their integrations.
+
+108
+00:13:19,039 --> 00:13:26,599
+You know, the 1st type of node that they can be used is a HTTP node, which allows for the quick creation of API calls in the flow.
+
+109
+00:13:26,959 --> 00:13:41,678
+This node can be copied and reused within the same flow and can be exported in the flow template as well, but it cannot be easily used across, you know, web multiple Webex Connect tenants, and it offers limited functionality and authentication.
+
+110
+00:13:42,758 --> 00:13:45,199
+2nd option that they have are custom nodes.
+
+111
+00:13:45,809 --> 00:13:52,169
+And this is great when you want to create a reusable integration that can be used on the same tenant.
+
+112
+00:13:52,769 --> 00:13:57,689
+So you can configure the integration once on a tenant and then reuse it across multiple flows.
+
+113
+00:13:58,089 --> 00:14:00,089
+And it supports authentication as well.
+
+114
+00:14:00,989 --> 00:14:08,908
+But the problem is that with these nodes is that they cannot be used across multiple tenants and they cannot be exported when sharing flow templates as well.
+
+115
+00:14:16,989 --> 00:14:20,989
+So, you know, at Webex we're, you know, ever committed to providing robust tools.
+
+116
+00:14:21,109 --> 00:14:29,949
+Does that enhance our partners capabilities and, you know, solve the challenge and we want to solve the challenge and challenge of building and managing, you know, integrations for multiple.
+
+117
+00:14:31,229 --> 00:14:40,548
+Customer tenants of Webex Connect, you know, helping them to go live, helping to go to market quickly with new solutions and ultimately capitalize on the demand for cpass and customer experience solutions.
+
+118
+00:14:41,749 --> 00:14:50,669
+And you know with that we're really excited to, you know, announce the beta availability of our integration studio, which is a, you know, central self serve platform for building managing.
+
+119
+00:14:51,348 --> 00:14:55,949
+Deploying and monitoring proprietary or 3rd party API integrations on Webex Connect.
+
+120
+00:15:00,659 --> 00:15:18,059
+And, you know, one of the biggest advantages for, you know, partner developers that the studio will give them is that integrations will only have to be built once and then can be easily reused across multiple Webex Connect tenants.
+
+121
+00:15:19,138 --> 00:15:31,338
+So, once a partner developer, you know, has added the integration to the studio, configured how it can be used as events or nodes, nodes, it can then be submitted for approval and signed off by the Webex team.
+
+122
+00:15:32,138 --> 00:15:38,339
+Once that's done, once that's done, that integration can be instantly switched on for.
+
+123
+00:15:38,859 --> 00:15:44,938
+Instantly switched on for customer tenants for them to take that integration within the NO palette and use that integration within their flows.
+
+124
+00:15:46,769 --> 00:16:02,128
+In addition, you know, partner developers could embed these integrations nodes into the flows that they create, creating a template for these solutions, and then exporting these flows that contain these integration nodes in to their customer tenants,
+
+125
+00:16:02,289 --> 00:16:06,129
+accelerating the time to market for new solutions, new solutions reduce.
+
+126
+00:16:06,289 --> 00:16:10,849
+And the amount of effort it requires to develop, you know, to, to build integrations and deploy solutions.
+
+127
+00:16:11,439 --> 00:16:24,559
+Yeah, and this approach will, you know, help partners developers to work quicker and smarter through usability and it will help our partners to scale with these and you know accelerate speed to market of getting solutions to live for their customers.
+
+128
+00:16:32,079 --> 00:16:43,879
+Some other key features I'd like to highlight about the studio is that, you know, when an integration is ready, developers can publish, you know, have access to one, you know, one click deployment across multiple data centers and regions.
+
+129
+00:16:44,998 --> 00:16:48,799
+They'll be able to track in real time, you know, how that integration is being used.
+
+130
+00:16:49,479 --> 00:17:04,199
+Seeing how many tenants that integration is live on, how many services that integration powers, the number of flow executions that are using that integration, the target audience, is it private or is it public, the category, and other key metrics?
+
+131
+00:17:04,639 --> 00:17:06,639
+And then most importantly, you know.
+
+132
+00:17:07,359 --> 00:17:20,719
+The studio offers change management and version controls, which will allow developers to easily update each integration and roll those updates seamlessly across multiple Webex Connect customer tenants without impacting live services.
+
+133
+00:17:27,359 --> 00:17:34,359
+So what we've covered there is from, you know, an, I guess an operational angle of helping, you know, helping you to work quicker and smarter.
+
+134
+00:17:35,459 --> 00:17:44,018
+So and you know if that would be fantastic if you are a managed service provider cause as I said before, you'll be able to go live quicker with reusable integrations and flows.
+
+135
+00:17:44,619 --> 00:17:55,459
+But another great opportunity that the studio provides to partners, it provides a way of showcasing and monetizing their solution expertise, their experience within.
+
+136
+00:17:55,539 --> 00:18:03,419
+Integrations and their proprietary functionality because as a partner, you know which systems your customers use the most and how they want to use them.
+
+137
+00:18:04,138 --> 00:18:14,699
+So with the studio, what you'll be able to do is you'll be able to take the 3rd party public APIs such as those offered by Salesforce, Zendesk, agile CRM, you'll be able to take, you know.
+
+138
+00:18:15,638 --> 00:18:20,639
+Api's that you may have limited access to or have private access to such as Epic and guidewire.
+
+139
+00:18:20,879 --> 00:18:24,639
+And what you'll be able to do is you'll be able to add your brand to the integration.
+
+140
+00:18:25,359 --> 00:18:30,199
+So what you can see in front of me is an example of a Zendesk node, which a partner can own.
+
+141
+00:18:30,319 --> 00:18:35,239
+So you can see that it has it says Zendesk, but you have to put your part, you might have to put your name there, your.
+
+142
+00:18:35,239 --> 00:18:36,158
+You'll be able to say that you own it.
+
+143
+00:18:37,119 --> 00:18:41,919
+You'll be able to, you know, say who's provided by them, you'll be able to provide links for customer support.
+
+144
+00:18:42,529 --> 00:18:44,449
+And any documentation that you have as well.
+
+145
+00:18:44,608 --> 00:18:55,489
+So you'll be able to own the commercial relationship with your customers that even though they are using the integration sort of 3rd party public APIs or 3rd party private limited access APIs.
+
+146
+00:18:59,219 --> 00:19:11,459
+So, you know, as a partner, you know, you could choose to simply say, you know, here is an integration, turned it on for your tenant of Webex Connect, go ahead and build the flow.
+
+147
+00:19:11,738 --> 00:19:19,019
+But the other opportunity you will provide is actually build these integrations, you can also choose to wrap a managed service around integration.
+
+148
+00:19:19,219 --> 00:19:20,818
+To unlock new revenue streams.
+
+149
+00:19:21,089 --> 00:19:24,409
+And to provide more value to that customer, to your customers.
+
+150
+00:19:26,569 --> 00:19:33,409
+So this is an example of 3rd party and public APIs, and then you'll be again be able to do the same with your proprietary system APIs.
+
+151
+00:19:34,169 --> 00:19:38,649
+Exposed them to Webex Webex customers, to brand it, add your logo.
+
+152
+00:19:40,178 --> 00:19:59,619
+Describe the services that can power and you'll be able to do this for all the different types of APIs that you offer because what you are able to do as a partner, you'll be able to create private integrations.
+
+153
+00:19:59,819 --> 00:20:00,779
+Are just for your customers.
+
+154
+00:20:01,059 --> 00:20:15,099
+But what you'll also be able to do is to make integrations public and list them on the Webex app hub for Webex customers and other partners to discover and use, you know, fostering collaboration and you know helping other Webex customers to say wow,
+
+155
+00:20:15,219 --> 00:20:19,459
+that's how this partner's powering this integration powering a new solution lets use it.
+
+156
+00:20:20,099 --> 00:20:27,058
+So it's a great opportunity to drive awareness of your, your integration expertise and monetize your own APIs.
+
+157
+00:20:27,709 --> 00:20:29,189
+And 3rd party APIs as well.
+
+158
+00:20:33,589 --> 00:20:47,469
+So if a good example of that is Deep Medical who is an early access partner to the integration studio, beta program and Deep medical, you know, offer a AI powered tool that analyzes.
+
+159
+00:20:47,909 --> 00:20:57,348
+Various data points to predict patient NO shows to health care appointments, which we know is a huge challenge for healthcare providers costing millions of dollars every year.
+
+160
+00:20:58,739 --> 00:21:14,899
+So what we were able to do with with deep Medical is we were able to build an integration that combines their AI tool, exposes it and add it to Webex Connect and design an appointment reminder flow that powers so that when the AI toolbridge says,
+
+161
+00:21:14,979 --> 00:21:18,699
+hey, that customer may not be able to attend their appointment, let's.
+
+162
+00:21:18,819 --> 00:21:26,299
+Trigger this flow that notifies the customer that, hey, you have an upcoming appointment, would you like to confirm, change or cancel or rearrange that appointment?
+
+163
+00:21:26,899 --> 00:21:35,619
+So that's the solution, that's a good example of how an integration can be combined with the flow builder to power a valuable solution for customers.
+
+164
+00:21:38,519 --> 00:21:42,158
+And, you know, and, you know, now deep medical now they've done that.
+
+165
+00:21:42,319 --> 00:21:52,559
+They are now currently, you know, they are selling that solution to their customers, they're marketing that solution on their websites on their website as a service called DM connects.
+
+166
+00:21:52,719 --> 00:21:58,239
+And this is just a great example of showcasing of what the integration studio allow you to do when it comes.
+
+167
+00:21:58,519 --> 00:22:03,798
+To showcase your expertise, monetizing your APIs and creating new services for your customers.
+
+168
+00:22:04,709 --> 00:22:12,348
+So that's an overview, and with that I'm gonna pass over to the bit you've probably all been waiting for, which is the live demo of the integration studio.
+
+169
+00:22:14,629 --> 00:22:16,509
+Thanks Sam. Let me share my screen.
+
+170
+00:22:20,789 --> 00:22:24,309
+So hey guys, as Sam says, this is gonna be the demo of integration.
+
+171
+00:22:24,668 --> 00:22:30,909
+Studio. So if you can appreciate there's quite a lot to cover in terms of the studio itself, so we're gonna keep it fairly high level.
+
+172
+00:22:31,709 --> 00:22:44,069
+What we're gonna do today is we're gonna build ourselves an integration, so we're gonna build ourselves as a node that's gonna integrate with our coffee bar AI bots, and from that we're gonna import that into.
+
+173
+00:22:44,509 --> 00:22:53,309
+With Webex Connect and be able to test that so you should see kind of the end to end journey here is that you know to be able to show you how it works.
+
+174
+00:22:53,999 --> 00:23:00,719
+So before we get into the studio itself, I just wanted to clarify some terminology that you're gonna hear quite a lot on this call.
+
+175
+00:23:01,278 --> 00:23:06,638
+So, within integration studio, we use nodes.
+
+176
+00:23:07,798 --> 00:23:11,679
+So hopefully anyone familiar with Webex Connect will be familiar with nodes.
+
+177
+00:23:11,799 --> 00:23:13,999
+So these are your kind of plug and play out.
+
+178
+00:23:14,439 --> 00:23:21,159
+In Webex Connect to be able to say send an SMS, do decision branches, evaluations, all those kind of things.
+
+179
+00:23:21,559 --> 00:23:30,159
+So what integration Studio is doing is allowing us the ability to create nodes to be able to to be used in Flow Builder.
+
+180
+00:23:31,169 --> 00:23:38,609
+So what are nodes? So a node is essentially a collection of API requests which are refer to as methods.
+
+181
+00:23:38,809 --> 00:23:43,329
+So a method is an API request, a node is a collection of methods.
+
+182
+00:23:43,449 --> 00:23:46,169
+So each node must have at least one method.
+
+183
+00:23:46,409 --> 00:23:50,969
+So if we look at how we're doing this within the Epic nodes, we have.
+
+184
+00:23:51,209 --> 00:24:04,728
+Have say an appointment node with your methods to be able to change and update appointments and then you have a patient node, which is for creating patients, looking up patient details, et cetera et cetera.
+
+185
+00:24:05,549 --> 00:24:15,429
+In both of those, we have variables which hopefully you're all familiar with, but they are pretty much what they say on the TIN, they're just dynamic or static variables that we use in in each call.
+
+186
+00:24:16,109 --> 00:24:20,189
+Okay, just wanted to clarify that because you're gonna hear me say node about a hundred more times yet.
+
+187
+00:24:20,828 --> 00:24:23,769
+Okay. So let's get into the studio itself.
+
+188
+00:24:23,969 --> 00:24:28,929
+So the main studio is you have kind of two options at the top.
+
+189
+00:24:29,488 --> 00:24:31,049
+The 1st one just being your team.
+
+190
+00:24:31,208 --> 00:24:34,529
+So this is just where you add add users.
+
+191
+00:24:34,649 --> 00:24:38,489
+Quite basic really, you say you can add a user to put their email in.
+
+192
+00:24:38,849 --> 00:24:41,689
+There's two roles, so your developer is you can assist.
+
+193
+00:24:41,769 --> 00:24:45,849
+Admin role, your collaborator is more of like a tester role or.
+
+194
+00:24:47,669 --> 00:24:55,428
+Kind of admini role. So if you need more details on that, this ties nicely into the link to the documentation.
+
+195
+00:24:55,629 --> 00:25:03,348
+So we have documentation on here which can give you the kind of details on on all of that, but fairly basic in terms of creating users.
+
+196
+00:25:04,029 --> 00:25:07,349
+The main meat of this is your integrations tab.
+
+197
+00:25:07,869 --> 00:25:15,789
+So, within here, you'll have any published integrations, so once you've published anything, you'll see it in here, you can see the versioning, all that kind of thing.
+
+198
+00:25:16,629 --> 00:25:22,909
+This is our staging environment, so there's NO, there's NO published integrations on here.
+
+199
+00:25:23,228 --> 00:25:26,988
+This is a tenant that we were using for Cisco Live recently.
+
+200
+00:25:27,709 --> 00:25:28,909
+And for the lab sessions there.
+
+201
+00:25:29,148 --> 00:25:38,029
+So we do have a lot of drafts on here, so your drafts are the integrations that you're working on, anything that's in UAT that's not been published yet.
+
+202
+00:25:38,819 --> 00:25:42,859
+So you can see on here you can have as many integrations as you like.
+
+203
+00:25:43,579 --> 00:25:46,058
+To add a new integration, it's quite straightforward.
+
+204
+00:25:46,219 --> 00:25:51,498
+You just click add integration, give it a name, a description, upload a logo.
+
+205
+00:25:52,378 --> 00:25:55,419
+The key bit on here is whether you want it as public or private.
+
+206
+00:25:56,039 --> 00:26:00,999
+So public would mean it's available for any Webex Connect customers.
+
+207
+00:26:01,159 --> 00:26:04,479
+Private is more if you're doing this for your own tenants.
+
+208
+00:26:05,678 --> 00:26:09,479
+I should note on that, if you make it public, it doesn't mean that anybody could just use it.
+
+209
+00:26:09,758 --> 00:26:12,479
+It just means it is available to be requested.
+
+210
+00:26:12,639 --> 00:26:15,999
+So there's still that kind of request and approval process that you'd.
+
+211
+00:26:16,119 --> 00:26:19,438
+Have to go through there, but that's the difference between between those.
+
+212
+00:26:20,318 --> 00:26:31,359
+You've got your kind of standard things, your website, your contact details, as Sam mentioned, so support contacts, business contacts, those kind of things for when you push this out if somebody needs to get in touch with you.
+
+213
+00:26:32,238 --> 00:26:34,439
+So once you've created an integration.
+
+214
+00:26:35,129 --> 00:26:46,169
+There's a few kind of basic bits on here, so I'm gonna use one that we've already built just because I say this is already kind of synced to a tenant and it's just easier for me to to demo for speed.
+
+215
+00:26:46,969 --> 00:26:48,808
+So we're gonna use this one that we've already built here.
+
+216
+00:26:49,529 --> 00:26:54,129
+So a few bits to kind of cover before we get into an actual build on this.
+
+217
+00:26:54,369 --> 00:26:59,809
+So the. There are some doc, there is some documentation that you'd need to add to each of your integrations.
+
+218
+00:27:00,129 --> 00:27:02,049
+So there's a scope document.
+
+219
+00:27:02,619 --> 00:27:05,778
+There's the user guide and your data security and privacy policy.
+
+220
+00:27:05,899 --> 00:27:16,819
+So for the scope document we have a template here that you can, you can follow and say it's just got your kind of standard standard stuff on here in terms of detail and what the integration does.
+
+221
+00:27:17,689 --> 00:27:22,049
+Your user guides gonna be more about, you know, how you configure this.
+
+222
+00:27:22,888 --> 00:27:25,809
+Again, this is gonna depend on what your integration is.
+
+223
+00:27:26,009 --> 00:27:30,168
+If this is an internal one, you may not need to have too much detail on there.
+
+224
+00:27:30,368 --> 00:27:33,288
+Depends how simple or complex your your integration is.
+
+225
+00:27:33,769 --> 00:27:37,369
+And your data security and privacy policy is gonna be.
+
+226
+00:27:37,609 --> 00:27:41,209
+Issue company one and say we just need to to link that into into there as well.
+
+227
+00:27:43,108 --> 00:27:48,949
+Okay, another thing that we are, I'm gonna cover a couple of things that we're not actually using in here but are quite important.
+
+228
+00:27:49,269 --> 00:28:01,629
+So there is a concept of system variables, so if you are using something for your integration, so an integration will have, could just be one node or it could be multiple nodes.
+
+229
+00:28:01,789 --> 00:28:09,229
+So if we think about that example I gave you before of epic, Epic would be the integration, then you have different nodes in there.
+
+230
+00:28:09,949 --> 00:28:14,989
+But you may have variables that are used across all your nodes.
+
+231
+00:28:15,149 --> 00:28:21,589
+So e.g., like, I don't know, a reporting URL or username and password which are consistent across.
+
+232
+00:28:22,469 --> 00:28:27,068
+All of your integrations, so you may wanna add that as a as a system variable.
+
+233
+00:28:27,628 --> 00:28:30,989
+One thing that you can do here is you can define.
+
+234
+00:28:32,339 --> 00:28:49,019
+The variable type, so if you have something that's gonna be the same for every, every client, you can use that as an environmental variable or as say you have something like a client key or something that you want to use as a variable, you can set it
+
+235
+00:28:49,019 --> 00:28:51,699
+as a tenant variable, so that could be def defined as.
+
+236
+00:28:51,899 --> 00:28:53,979
+Each tenant that you've distributed to.
+
+237
+00:28:55,738 --> 00:29:03,979
+The other thing that's gonna be, we're not gonna be using for our little demo is gonna be authentication, but obviously this is a big piece.
+
+238
+00:29:04,178 --> 00:29:12,778
+So I'm not gonna get too bogged down in it, but it's got your kind of standard authentication methods here, so your basic oauth, OAuth two.
+
+239
+00:29:13,259 --> 00:29:14,659
+I mean, anyone who's been familiar.
+
+240
+00:29:14,699 --> 00:29:17,259
+Really with Webex Connect, it's the kind of same.
+
+241
+00:29:17,819 --> 00:29:21,659
+You know, same setup here as as you'd be familiar with in, in Webex connect.
+
+242
+00:29:21,939 --> 00:29:26,498
+So being able to, you know, do refresh tokens, tokens, all that kind of stuff in here.
+
+243
+00:29:28,498 --> 00:29:37,178
+Once you've configured those off methods, you kind of can use them within your, within your nodes and reuse it across the anything in your integration.
+
+244
+00:29:38,579 --> 00:29:41,939
+The other bit I'm gonna skip over a little bit is events.
+
+245
+00:29:42,138 --> 00:29:44,859
+So Sam gave a good example of how events can work.
+
+246
+00:29:45,059 --> 00:29:47,659
+This is your kind of inbound triggers.
+
+247
+00:29:49,019 --> 00:29:50,099
+This is where you can set those up.
+
+248
+00:29:50,378 --> 00:29:57,619
+You can add events to be able to do inbound routing or webhooks or async calls.
+
+249
+00:29:59,388 --> 00:30:00,989
+If this actually loads for me.
+
+250
+00:30:02,239 --> 00:30:04,079
+This is always the way with live demos?
+
+251
+00:30:13,078 --> 00:30:14,278
+Okay, let me try that again.
+
+252
+00:30:16,318 --> 00:30:21,559
+So yeah, in events I say you can just do either an inbound event or an asynchronous event.
+
+253
+00:30:21,559 --> 00:30:28,159
+And so you can define that to be used as a start node within rules or as a receive node to restart calls.
+
+254
+00:30:28,909 --> 00:30:35,509
+So I say I'm not gonna go into that too much and say you can get more details on that if if need be.
+
+255
+00:30:35,789 --> 00:30:39,669
+It's all in the, the documentation that we touched on a moment ago.
+
+256
+00:30:41,428 --> 00:30:45,069
+Okay, but what we are gonna do today is we're gonna use nodes.
+
+257
+00:30:45,269 --> 00:30:48,669
+So as I mentioned before, the node is what you.
+
+258
+00:30:48,829 --> 00:30:51,069
+Would actually publish on a.
+
+259
+00:30:51,339 --> 00:30:57,339
+Well, you would publish events as well, but primarily nodes would be what you can publish to to a tenant.
+
+260
+00:30:57,819 --> 00:31:01,099
+So we're gonna create a node for our coffee bar.
+
+261
+00:31:01,299 --> 00:31:07,619
+So anybody who's been to one of our Cisco events will hopefully have seen our Webex coffee bar.
+
+262
+00:31:07,779 --> 00:31:18,279
+So this is. A coffee bar that's using an AI chat bot, so you can order a coffee by your mobile phone that will send it through to our beresters.
+
+263
+00:31:18,438 --> 00:31:20,518
+They will then make a coffee for you.
+
+264
+00:31:21,319 --> 00:31:26,279
+So for the purpose of the demo, we're gonna be using our coffee bar bot, our demo bot.
+
+265
+00:31:26,599 --> 00:31:29,679
+It's just a nice bot to be able to integrate with so we can send it.
+
+266
+00:31:29,839 --> 00:31:33,639
+A message, it'll send us a message back and we can build a, build a flow out of it.
+
+267
+00:31:34,589 --> 00:31:43,509
+Okay, so what we're gonna do, we're gonna create a node, and we're gonna call it Martin's coffee bar.
+
+268
+00:31:46,828 --> 00:31:49,989
+I'll just give it a quick description, so AI coffee bar.
+
+269
+00:31:50,889 --> 00:32:02,689
+For demo. This output prefix variable is what you kind of set for as a unique identifier, this is set integration level don't really need that too much.
+
+270
+00:32:03,249 --> 00:32:09,889
+This is what I mentioned earlier in terms of your authentication, so we've not got any auth set, but if you did have like your.
+
+271
+00:32:10,369 --> 00:32:12,849
+Authentication methods, you can just select those here.
+
+272
+00:32:13,049 --> 00:32:14,889
+So we're gonna say like that as NO auth.
+
+273
+00:32:15,129 --> 00:32:19,609
+And if you need to do any kind of custom node UI, you can also add that here.
+
+274
+00:32:20,749 --> 00:32:22,749
+Let's say this is gonna be quite a basic node.
+
+275
+00:32:22,949 --> 00:32:27,909
+So we're gonna add that here and you can see we now have a node.
+
+276
+00:32:28,028 --> 00:32:33,349
+So we've got martin's coffee bot as a node, and we have NO methods assigned to it.
+
+277
+00:32:34,149 --> 00:32:37,989
+So we need to add a method, so we need to add our API call in here.
+
+278
+00:32:38,609 --> 00:32:43,968
+So we're gonna add a method, and this method is gonna be to send a message to the bot.
+
+279
+00:32:44,089 --> 00:32:49,689
+So we're gonna be send, send message to bot as the method name.
+
+280
+00:32:50,489 --> 00:32:57,289
+Connection and timeouts just standards you know what you wanna, how long do you wanna wait before considering it a timeout.
+
+281
+00:32:57,409 --> 00:33:00,689
+So we're gonna do 10 s. Is for that 10000 milliseconds on each.
+
+282
+00:33:01,569 --> 00:33:04,729
+Your HTTP methods are just your standard REST API calls here.
+
+283
+00:33:05,089 --> 00:33:07,769
+So we're gonna be doing a post.
+
+284
+00:33:08,758 --> 00:33:14,839
+And we're gonna be hitting our coffee bar endpoint, which now I'm gonna swing in here.
+
+285
+00:33:16,719 --> 00:33:27,079
+You can use variables in here as well, so if you have any variables in your URL, you can add them in just using the standard dollar and brackets.
+
+286
+00:33:29,479 --> 00:33:34,439
+Type and let's say just do the past variable, say we're not using that on here, so we're happy with that.
+
+287
+00:33:34,678 --> 00:33:41,398
+It's just a static URL. So we've got our API call, we now need to define what we're actually sending in it.
+
+288
+00:33:41,598 --> 00:33:44,719
+So this is in the defined input variable section.
+
+289
+00:33:45,709 --> 00:33:47,949
+So what we're gonna do, we're gonna expand that here.
+
+290
+00:33:49,109 --> 00:33:53,749
+Again, you can do custom UIs and and the likes using JavaScript if you, if you like.
+
+291
+00:33:55,509 --> 00:33:58,829
+Let's say we're not doing anything that fancy on here, so we're just using the default.
+
+292
+00:34:00,108 --> 00:34:05,389
+We are gonna encode values to UTF, UTF eight just to avoid any dodgy character.
+
+293
+00:34:05,429 --> 00:34:10,399
+Is. URL parameters is where you can do query strings.
+
+294
+00:34:11,678 --> 00:34:16,958
+We're not doing that we're actually using a request body, so we don't need to add anything in there.
+
+295
+00:34:18,038 --> 00:34:26,119
+We do need a HTTP header though, so we're gonna add a header to our request and this is just a standard content type.
+
+296
+00:34:26,399 --> 00:34:29,548
+Just to advise. What we're actually sending.
+
+297
+00:34:29,749 --> 00:34:33,429
+So this can be static, dynamic or a system variable.
+
+298
+00:34:33,549 --> 00:34:39,389
+So in this case, it's just static and we're just saying we're sending application JSON.
+
+299
+00:34:41,028 --> 00:34:48,069
+We don't need any help text on here cause I say it's a static variable, Nobody needs to change this or do anything with it, so we keep that as null.
+
+300
+00:34:48,469 --> 00:34:49,749
+And then we click add variable.
+
+301
+00:34:50,619 --> 00:34:53,419
+So you can see now we've got our header in the list below.
+
+302
+00:34:54,419 --> 00:34:57,019
+Now we just need to add our request body.
+
+303
+00:34:58,259 --> 00:35:07,139
+So you can add this in multiple ways, so similar to most systems, you can use text JSON, XML or form.
+
+304
+00:35:07,339 --> 00:35:08,858
+So we're gonna be using JSON.
+
+305
+00:35:09,779 --> 00:35:27,419
+You can just paste in your, the body of your request here and kind of if you use this kind of format in for variables, so we've got bot message and our thread ID as variables and we've got agent ID as static, and you can click on this format and add
+
+306
+00:35:27,419 --> 00:35:28,619
+variables to bring that through.
+
+307
+00:35:29,539 --> 00:35:38,579
+There's a little bug on this unfortunately at the minute, but you guys won't ever see that, so that should be fixed by the time any of you get your hands on it, but I just need to pass that twice.
+
+308
+00:35:39,538 --> 00:35:48,858
+So what we've got here, you can see it's pulled through my thread ID, it's through my bot message as variables to use in this in this flow.
+
+309
+00:35:49,099 --> 00:35:50,938
+So we need to configure them now.
+
+310
+00:35:51,139 --> 00:35:56,859
+So by default they're just kind of static with nothing in there so as you can see it's prompted me to configure these.
+
+311
+00:35:57,898 --> 00:36:03,418
+So the thread ID that was sending to the bot, this is like the, the session ID.
+
+312
+00:36:03,699 --> 00:36:09,899
+So this is what we use to say, this is the same session, you know, it's not a new conversation each time.
+
+313
+00:36:10,058 --> 00:36:12,699
+This is how we kind of maintain the same conversation.
+
+314
+00:36:13,138 --> 00:36:17,539
+So this is gonna be a dynamic variable in the fact that it's gonna change on every.
+
+315
+00:36:17,579 --> 00:36:20,579
+Every request or potentially change on every request.
+
+316
+00:36:20,938 --> 00:36:22,699
+We'll need to provide it on every request.
+
+317
+00:36:23,059 --> 00:36:25,699
+So we're just gonna call it the same thing.
+
+318
+00:36:25,979 --> 00:36:29,339
+So thread ID, we're gonna need that on every request.
+
+319
+00:36:29,579 --> 00:36:36,499
+So we're gonna mark it as mandatory and this help text is optional, but I'm just gonna put like unique ID for.
+
+320
+00:36:37,649 --> 00:36:46,529
+Session. Your input types, so you can have either text box, date and time or a dropdown.
+
+321
+00:36:46,649 --> 00:36:50,449
+So if you set a dropdown you can just add the values that are available there.
+
+322
+00:36:51,289 --> 00:36:52,529
+We're just using text box.
+
+323
+00:36:53,169 --> 00:36:54,969
+You can also use regex to.
+
+324
+00:36:55,979 --> 00:37:07,699
+Make sure that it's a certain format, you know, if you wanted to, it to be a number or a date or whatever you want in there, you can use that regex validation to to enforce that.
+
+325
+00:37:08,299 --> 00:37:13,419
+But for us here, we just want thread ID dynamic and as a text box, so we're gonna update that.
+
+326
+00:37:14,569 --> 00:37:21,288
+We can see now that has been updated here, and we just need to do the same thing for our bot message.
+
+327
+00:37:22,009 --> 00:37:24,889
+So again, this is gonna be a dynamic variable.
+
+328
+00:37:25,049 --> 00:37:28,848
+This is the message that we send to the bot, so we're gonna be sending this on every request.
+
+329
+00:37:29,909 --> 00:37:42,389
+Again just gonna use the same key name for the name and I'm gonna mark that as mandatory, and I'll just put a help text of this is the message for the bot.
+
+330
+00:37:45,229 --> 00:37:51,829
+Oops. Again text box, NO regex on this quite straightforward field.
+
+331
+00:37:53,709 --> 00:37:55,509
+Okay, so what we got so far?
+
+332
+00:37:55,708 --> 00:38:03,548
+We've got our node, we've got our methods with our API requests and our body and our input variables.
+
+333
+00:38:04,148 --> 00:38:06,148
+We just need to set the output now, so.
+
+334
+00:38:06,989 --> 00:38:08,989
+Can we go down to our defined output section.
+
+335
+00:38:10,908 --> 00:38:14,709
+Again, you can format this doing the past variables.
+
+336
+00:38:14,868 --> 00:38:18,029
+Again, you've got the different formats available.
+
+337
+00:38:18,708 --> 00:38:21,588
+You can do synchronous or async if needs to be.
+
+338
+00:38:22,668 --> 00:38:25,549
+For this we're just getting into a sync synchronous API call.
+
+339
+00:38:26,469 --> 00:38:29,349
+I'm not gonna. Past this one, I'm just gonna add my variable.
+
+340
+00:38:29,668 --> 00:38:34,069
+So this is what we want to get out of our bot, so we're sending a message to the bot.
+
+341
+00:38:34,388 --> 00:38:36,149
+This is what we're getting back from the bot.
+
+342
+00:38:36,349 --> 00:38:37,829
+So I'm just gonna call it.
+
+343
+00:38:38,920 --> 00:38:44,360
+Bot response. We're gonna be looking in the body of the request.
+
+344
+00:38:44,960 --> 00:38:53,520
+So when we get a response back from the bot, we're gonna look in the body of the request and we're gonna be looking for this dollar.response.
+
+345
+00:38:53,919 --> 00:38:58,200
+So that's just something unique to this, this part with just the inner.
+
+346
+00:38:58,680 --> 00:39:03,520
+The response, we're looking for the path of dollar.response, that's where our bot is gonna respond to.
+
+347
+00:39:05,279 --> 00:39:13,760
+We don't really need we can set this as mandatory, we should get a response on every call, we don't really need to, but for the purpose of this we will, and we're not gonna use any debug keys on this.
+
+348
+00:39:14,700 --> 00:39:19,420
+So we're gonna add that output variable, so that's our output of the bot.
+
+349
+00:39:19,700 --> 00:39:26,379
+We now just needed to determine whether we determine how we determine a success or a failure of this call.
+
+350
+00:39:26,580 --> 00:39:29,539
+So when we make that API request, how do we know.
+
+351
+00:39:30,150 --> 00:39:36,830
+If it's a success or a failure, like this determines the outcome branches when we when we put this into connect.
+
+352
+00:39:37,270 --> 00:39:43,430
+So for the success response, we're just gonna add a success outcome, simply call it success.
+
+353
+00:39:45,430 --> 00:39:47,670
+We're gonna look at the HTTP status.
+
+354
+00:39:47,790 --> 00:39:57,190
+So when we make an API. Well, IPR request, we should be getting a HTTP status of 200 back.
+
+355
+00:39:57,469 --> 00:40:02,990
+So we're basically saying if we get a 200 response back, we're considering it a success.
+
+356
+00:40:03,150 --> 00:40:05,310
+So we'll add that as a node outcome.
+
+357
+00:40:05,670 --> 00:40:08,390
+And we just need to add an error outcome as well.
+
+358
+00:40:08,549 --> 00:40:13,150
+So again, just calling this error, again looking at HTTP status.
+
+359
+00:40:13,990 --> 00:40:21,389
+If we know that 200 is a success, then we're gonna say if it doesn't equal 200, then it must be an error.
+
+360
+00:40:22,110 --> 00:40:23,350
+So we'll add that in as well.
+
+361
+00:40:25,870 --> 00:40:40,190
+Okay, so we're not gonna add a timeout said this should be fine, but we have now defined our our method, so we've got an API request, we've got our inputs, we've got our outputs, we should be able to submit this now.
+
+362
+00:40:41,260 --> 00:40:48,700
+And you can see we have Martin's coffee bar as the node with send message to Bot as our, as our method.
+
+363
+00:40:48,900 --> 00:40:53,940
+So we should be all good, but we can see here we have not tested this yet.
+
+364
+00:40:54,060 --> 00:40:58,980
+So we want to be able to push this to our UAT tenant, but 1st we need to test it.
+
+365
+00:40:59,260 --> 00:41:00,540
+So we can click back into.
+
+366
+00:41:00,740 --> 00:41:03,100
+The node. Into the method, sorry.
+
+367
+00:41:04,259 --> 00:41:08,620
+And we go down to this test method to test the method.
+
+368
+00:41:09,419 --> 00:41:13,859
+So you can either use a test data profile or instant test data.
+
+369
+00:41:14,060 --> 00:41:15,380
+I'll show you this in a moment.
+
+370
+00:41:16,500 --> 00:41:19,780
+So what we're gonna do is gonna run an instant test.
+
+371
+00:41:21,000 --> 00:41:28,240
+And this is where you can start to play around with what you've built, so you can see here we have our method which is what we called some message to bot.
+
+372
+00:41:28,879 --> 00:41:35,960
+We've got our thread ID with our, with our help text and our bot message variables here.
+
+373
+00:41:36,400 --> 00:41:40,720
+So I'm just going to add a unique variable for thread ID.
+
+374
+00:41:41,240 --> 00:41:45,720
+And then for the bot message I'm just gonna say hello to our bots.
+
+375
+00:41:46,720 --> 00:41:48,960
+So what we can do now, we can test that.
+
+376
+00:41:49,200 --> 00:41:51,480
+So this is gonna send that API request.
+
+377
+00:41:52,360 --> 00:41:56,040
+So it'll show you your kind of raw response here.
+
+378
+00:41:56,240 --> 00:41:58,920
+So you can see this is the payload that we're getting back from the.
+
+379
+00:42:00,780 --> 00:42:17,059
+On the bot, and if you go to this output variables and load outcome, you can see this is where it got the bot response, so this is the variable that we defined, and this is looking for that dollar.response which relates to this and you can see we're
+
+380
+00:42:17,059 --> 00:42:20,580
+getting a 200 response back, so the node outcome is a success.
+
+381
+00:42:21,060 --> 00:42:34,690
+So, we're looking good. The last step we need to do here is just to save that as a test data profile, so it's just something you need to do for, to satisfy before pro promoting to UAT.
+
+382
+00:42:35,650 --> 00:42:43,090
+But it's also quite useful, so I'm gonna save this as an admin profile, and what that enables me to do then is if I came back in.
+
+383
+00:42:43,250 --> 00:42:45,170
+To this at a later date and I wanted to test that.
+
+384
+00:42:45,770 --> 00:42:53,889
+I can use that test data profile and it'll already have my my variables populated and I can just kind of trigger it again.
+
+385
+00:42:54,500 --> 00:43:08,019
+Quite easily, it may not seem very useful when you just have two basic variables, but trust me, when you have a whole heap of variables, it's it's very much a, a time saver and a lifesaver.
+
+386
+00:43:09,540 --> 00:43:11,900
+Okay, so we've tested our bot.
+
+387
+00:43:12,680 --> 00:43:17,160
+We should now be able to push this to our UAT tunnel.
+
+388
+00:43:17,640 --> 00:43:21,320
+So we can see it's it's now been successfully tested.
+
+389
+00:43:21,680 --> 00:43:24,040
+We're gonna come back out to this main screen here.
+
+390
+00:43:24,919 --> 00:43:27,480
+We can validate this integration.
+
+391
+00:43:28,769 --> 00:43:31,970
+You can see it has its documentation provided.
+
+392
+00:43:32,210 --> 00:43:39,889
+We've got our system variables, we're not using auth, but it satisfied it cause it's, you know, it's not in use, it's not tested.
+
+393
+00:43:40,050 --> 00:43:42,889
+And our node has got the green tick cause we've we've tested it.
+
+394
+00:43:43,650 --> 00:43:47,610
+So what we can do now, we can push this to our UAT tenant.
+
+395
+00:43:48,169 --> 00:43:59,609
+So when you get the integration studio, you will also be, provisioned a, a Webex Connect tenant that is connected to it, so your UAT tenant.
+
+396
+00:43:59,769 --> 00:44:03,090
+So this has already kind of been synced up, so I'm just gonna.
+
+397
+00:44:03,490 --> 00:44:12,969
+Push this to our test tenant, so I'll just republish to UAT and what it's gonna do is gonna push that node onto, onto our tenant.
+
+398
+00:44:16,209 --> 00:44:17,969
+So you can see that's been published.
+
+399
+00:44:18,249 --> 00:44:21,570
+We can now jump onto our Webex Connect tenant.
+
+400
+00:44:22,050 --> 00:44:27,570
+I've already got a template flow to use here just to speed this process up cause we're kind of against the clock.
+
+401
+00:44:27,729 --> 00:44:41,930
+So I'm gonna upload a flow, oh sorry copy that template flow, and I'm just gonna call it in test flow, so they should import that temp.
+
+402
+00:44:42,529 --> 00:44:47,610
+Which is a very basic flow which is gonna receive a message from, from WhatsApp.
+
+403
+00:44:48,539 --> 00:44:52,020
+And that message is then gonna be sent to our bots.
+
+404
+00:44:53,060 --> 00:44:56,500
+We can then respond to the to the bot.
+
+405
+00:44:57,420 --> 00:45:01,100
+I'm not sure why that's taking a moment, might have needed me to log back in.
+
+406
+00:45:01,300 --> 00:45:07,340
+Yep, so let me try that again.
+
+407
+00:45:08,180 --> 00:45:22,919
+Okay. So yeah, it's gonna be a very basic flow just to be able to send a message to our bots and that relayed to us on on WhatsApp.
+
+408
+00:45:23,360 --> 00:45:25,720
+So at the end of this, we're gonna be able to test this as well.
+
+409
+00:45:25,959 --> 00:45:32,000
+So this is the trigger for WhatsApp, so it's saying when we get an incoming message on WhatsApp, if it contains.
+
+410
+00:45:32,280 --> 00:45:38,120
+It's. And we're just gonna use the word testing then to trigger this flow.
+
+411
+00:45:38,600 --> 00:45:47,000
+What we're also doing here, we've got some variables for our thread ID and our bot message, so we just setting the thread ID to be the transaction ID of this flow.
+
+412
+00:45:47,519 --> 00:45:52,840
+We got our bot message that we're triggering just to say hello on the initial message because we're kind of triggering.
+
+413
+00:45:53,040 --> 00:45:58,750
+Get with our name. Okay, we've got a little templated flow already built here.
+
+414
+00:45:59,549 --> 00:46:00,509
+I'm gonna delete this node.
+
+415
+00:46:01,589 --> 00:46:12,310
+Now that we've synced this up, so this is your kind of nodes in the Webex Connect as I mentioned, and what we should see here is our coffee bart node.
+
+416
+00:46:13,190 --> 00:46:15,230
+If I can remember what I call it, that was the one.
+
+417
+00:46:15,750 --> 00:46:19,350
+Mark is coffee bot. So what I can do, I can just drag that in.
+
+418
+00:46:20,910 --> 00:46:33,670
+I can go into here, you can see similar to the test that we did a moment ago, you've got your method here, you've got your thread ID, bot message variables, which we can quickly map to the ones we have set in the flow.
+
+419
+00:46:34,620 --> 00:46:37,259
+And then we just need to define our output.
+
+420
+00:46:37,380 --> 00:46:38,740
+So this is the input of the node.
+
+421
+00:46:38,899 --> 00:46:42,860
+And then in the transition actions is gonna be where we set our output.
+
+422
+00:46:43,020 --> 00:46:50,940
+So we're gonna say when we leave this node, we want to send our bot response to be the response from.
+
+423
+00:46:52,040 --> 00:46:59,920
+This node. So we're configuring it to pass in the thread ID bot message and then we're getting the bot response when we come out of it.
+
+424
+00:47:01,399 --> 00:47:04,080
+Okay quite straightforward, just gonna hook this back up to the flow.
+
+425
+00:47:04,880 --> 00:47:07,839
+So we're getting a message, we're sending that to the bot.
+
+426
+00:47:08,320 --> 00:47:11,560
+That bot message is gonna relay to us in this node to.
+
+427
+00:47:11,720 --> 00:47:13,080
+To send us the bot response.
+
+428
+00:47:13,559 --> 00:47:19,680
+Then we're gonna listen for a response back from us on WhatsApp and we're gonna set that to be.
+
+429
+00:47:20,520 --> 00:47:32,079
+The, the bot message, sorry on the on the receive node, we're gonna send that to be the bot message, and then we're gonna send that back to the bot.
+
+430
+00:47:33,159 --> 00:47:35,079
+So really quite a straightforward flow there.
+
+431
+00:47:35,520 --> 00:47:37,080
+I'm gonna save this and put this live.
+
+432
+00:47:39,510 --> 00:47:52,430
+I'm gonna give that a moment to to trigger, and what we can do now, and I say you can test this as well if you like at home is we're gonna trigger this flow via via WhatsApp, so the keyword there was this testing.
+
+433
+00:47:54,149 --> 00:48:09,069
+So. If we open up this here, if you scan this QR code, say it may need a second to to sync kind of rubbing against this let me share my screen as well.
+
+434
+00:48:09,550 --> 00:48:35,909
+Sorry. Okay, so I've just scanned that QR code and take you to the screen, so I'm just gonna trigger this with testing, and this should if the demo gods on my side, trigger the flow and interact with our bot.
+
+435
+00:48:36,069 --> 00:48:41,390
+So you can see now it's hit our coffee bar bot, and I could say, I'd like.
+
+436
+00:48:41,470 --> 00:48:45,449
+Coffee please. And you've got that loop.
+
+437
+00:48:45,610 --> 00:48:49,609
+So it's saying the message I send back will then trigger the bot again.
+
+438
+00:48:50,770 --> 00:48:55,330
+And again, you can kind of ask, you know, what do you want to say I'll say all that day.
+
+439
+00:48:57,009 --> 00:49:03,050
+So that's it in a nutshell, I say it's quite a lot to cover in that time.
+
+440
+00:49:03,170 --> 00:49:07,090
+So you can scan that if. You'd like to to mess around with it yourself.
+
+441
+00:49:08,730 --> 00:49:22,090
+But hopefully that gives you a little flavor of how quickly we can kind of spin up integrations, how you can publish them to your environments, how it works in terms of the plug and play elements in, in Webex Connect.
+
+442
+00:49:22,410 --> 00:49:24,050
+And yeah, hopefully gives you.
+
+443
+00:49:24,250 --> 00:49:26,450
+A taste of what you can do with this.
+
+444
+00:49:27,090 --> 00:49:30,050
+And with that I will pass back to to Sam.
+
+445
+00:49:31,810 --> 00:49:42,929
+Thanks for that Martin. It's a really great example, like I said, how quickly you can configure an integration and then publish that integration to a Webex Connect event, whether that be your own or whether that be your customers, so that's a
+
+446
+00:49:42,929 --> 00:49:55,730
+fantastic example. Okay, so just to wrap up the, just to wrap up this webinar, yeah, we are looking for partners to join our integration studio, beta program.
+
+447
+00:50:02,310 --> 00:50:15,230
+And if if you, you know, if you're a partner who's interested in, you know, talking to us more about how you can potentially leverage the integration studio, how you can leverage Webex Connect, you know, what sort of use cases that you might be able
+
+448
+00:50:15,230 --> 00:50:22,310
+to power, you know, sign up to the beta program, and then you, you know, if you are accepted, you know, be able to start building.
+
+449
+00:50:22,310 --> 00:50:24,910
+In reasonable integration nodes that will help you to go live quicker.
+
+450
+00:50:25,790 --> 00:50:30,829
+You'll be able to, you know, receive a bit more personalized support, you know, to successfully publish your 1st integrations.
+
+451
+00:50:31,830 --> 00:50:39,030
+And you'll be, you know, some of the 1st partners to use the studio and potentially promo, you know, publish or promote your integrations on the Webex app hub.
+
+452
+00:50:39,990 --> 00:50:50,630
+And not only that you'll be able to, you know, provide us feedback on the studio to help us you know shape the studio as it moves forward towards GA, so I'll just leave that on the screen for a moment to give you all the chance to scan the QR code.
+
+453
+00:50:51,100 --> 00:50:56,060
+And, I also believe there is a link being posted in the chat as well.
+
+454
+00:51:00,540 --> 00:51:02,860
+So with that I think we've come to the end of our webinar.
+
+455
+00:51:03,859 --> 00:51:06,659
+If there's any chance for Q and A, we can do that now.
+
+456
+00:51:07,260 --> 00:51:09,939
+Okay, great. Thank you Sam and Martin.
+
+457
+00:51:10,139 --> 00:51:12,300
+That was a great presentation and demo.
+
+458
+00:51:12,460 --> 00:51:16,660
+Super insightful. There was only two questions that came in.
+
+459
+00:51:17,340 --> 00:51:19,700
+One of them was the pertinent to the material.
+
+460
+00:51:20,700 --> 00:51:23,539
+It was answered inside there, but I don't know if you wanted to expand a little.
+
+461
+00:51:24,500 --> 00:51:27,260
+And the question was, can integrations be published.
+
+462
+00:51:27,260 --> 00:51:30,860
+Like, like Salesforce.com which you then customize for your tenant.
+
+463
+00:51:32,020 --> 00:51:37,940
+Yeah, if you've if you've marked that integration as public, it will be.
+
+464
+00:51:39,220 --> 00:51:51,820
+So, like I said, you'll be able like I mentioned in, in earlier in the webinar, you'll be able to take that integration and figure it via the studio choose whether or not you want it to be a private or public, and then if it is public, it then.
+
+465
+00:51:51,980 --> 00:51:57,960
+It can be. You know, it can be accessible by any Webex Connect customer tenants.
+
+466
+00:51:59,119 --> 00:52:13,280
+Fantastic. And there was another question around, you know, where can they find previous you know webinar recordings, you know, when it comes to like all of these series of webinars, which includes some web.
+
+467
+00:52:13,360 --> 00:52:17,320
+Webex Connect topics. You can find those over at a developer portal.
+
+468
+00:52:17,800 --> 00:52:20,760
+Developer.webex.com/webinars.
+
+469
+00:52:21,680 --> 00:52:31,280
+But if you want to look, for, you know, specific content on Webex Connect, you can also go directly to their developer portal.
+
+470
+00:52:31,720 --> 00:52:36,800
+That's developer.cisco.com/Webex-connect.
+
+471
+00:52:38,040 --> 00:52:41,160
+And that's where you can find all the, you know, the developer content.
+
+472
+00:52:41,360 --> 00:52:43,360
+You know, specifically for Webex Connect.
+
+473
+00:52:44,360 --> 00:52:58,160
+And, I was gonna say, yeah, that's a great link to use because that only not that only not has links to our documentation, but you're able to find links to labs that will help you build your 1st flows and you'll also provide a link to the sandbox,
+
+474
+00:52:58,280 --> 00:53:01,360
+which is our, you know, a way of trying webex connect with.
+
+475
+00:53:01,400 --> 00:53:04,279
+Without having access to a full tenant, so it's a great link to use.
+
+476
+00:53:05,020 --> 00:53:09,700
+Yep, I know developers love getting hands on and getting all the tools to be able to do that.
+
+477
+00:53:10,059 --> 00:53:15,419
+It's fantastic. So it looks like that's, that's about it for today's session.
+
+478
+00:53:16,780 --> 00:53:22,500
+This session is has been recorded, so it's gonna be up on our webinars page within the next few days or so.
+
+479
+00:53:23,540 --> 00:53:24,580
+So just be on the lookout for the.
+
+480
+00:53:24,740 --> 00:53:35,299
+That if you want to pass that along to any of your colleagues or friends that want to check this one out, and you can always reach out to any of us if you ever have any questions that weren't answered here today.
+
+481
+00:53:36,330 --> 00:53:38,770
+And with that, this concludes our session.
+
+482
+00:53:38,969 --> 00:53:39,890
+Thank you again for joining.
+
+483
+00:53:40,609 --> 00:53:42,169
+Have a great day. Thank you.

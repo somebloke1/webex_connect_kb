@@ -1,0 +1,1074 @@
+{
+  "schema_version": 1,
+  "sample_key": "wxcc-task-routed-sample-flow-for-extracting-variables",
+  "title": "Task Routed Sample Flow For Extracting Variables.workflow",
+  "observed_at": "2026-09-09T00:04:25.187Z",
+  "source_path": "evidence/sample-flows/observed/wxcc-task-routed-sample-flow-for-extracting-variables.json",
+  "source_sha256": "f43ac74a96be91b18c8dde631eeb518fba53c3ede321a49cbccf8c4994188b3e",
+  "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model",
+  "runtime_tested": false,
+  "status": "observed_canvas_relationships_summarized",
+  "format_warning": "Internal loaded-canvas model observations only; not a public import schema. Event internal names and visible labels are recorded separately. Dynamic script behavior and missing canvas pages are not inferred.",
+  "counts": {
+    "cells": 15,
+    "operative_nodes": 3,
+    "explicit_edges": 2,
+    "terminal_bindings": 9,
+    "variable_references": 20
+  },
+  "start_configuration": {
+    "channel": 28,
+    "type": "integration",
+    "subtype": "",
+    "isCheckLiveSessions": 0,
+    "extras": {},
+    "eventid": 50026,
+    "eventname": "Task Routed",
+    "v2EventId": 50020,
+    "conditions": [
+      {
+        "startag": "((",
+        "varname": "webex.destination",
+        "opr": "equals",
+        "value": "OR06143228",
+        "datatype": "string",
+        "endtag": "))"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "2",
+      "label": "WxCC Task v2",
+      "type_internal": "start",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "onbegin",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "selectedChannel": {
+          "id": 28,
+          "name": "WxCC Task v2",
+          "description": "Make CRUD operations on WxCC task APIs",
+          "type": 2,
+          "extraData": {},
+          "subType": "",
+          "integrationId": 50020,
+          "image_url": "https://example.invalid/Cisco Webex Logo637513806888123311.svg",
+          "prefix": "webex"
+        },
+        "selectedRuleEvent": {
+          "resume_keys": [],
+          "name": "Task Routed",
+          "output_variables": [
+            {
+              "name": "ID",
+              "type": 2,
+              "path": "$.data.id",
+              "order": 0,
+              "id": "e8045263-9987-6d42-1369-7eb6e69fbd49",
+              "$$hashKey": "object:34256"
+            },
+            {
+              "name": "Type",
+              "type": 2,
+              "path": "$.type",
+              "order": 1,
+              "id": "1235360b-fb5d-85d2-5354-de3448e6372a",
+              "$$hashKey": "object:34262"
+            },
+            {
+              "name": "agentId",
+              "type": 2,
+              "path": "$.data.owner",
+              "order": 2,
+              "id": "065b7754-0b78-82de-5edd-6aa1e0f473ec",
+              "$$hashKey": "object:34268"
+            },
+            {
+              "name": "RequestBody",
+              "type": 2,
+              "path": "$",
+              "order": 3,
+              "id": "e2846d98-0613-cca7-7b12-0852018add53",
+              "$$hashKey": "object:34274"
+            },
+            {
+              "name": "origin",
+              "type": 2,
+              "path": "$.data.origin",
+              "order": 4,
+              "id": "aeb60564-8b69-39e7-7c29-f12b2533da77",
+              "$$hashKey": "object:51827"
+            },
+            {
+              "name": "destination",
+              "type": 2,
+              "path": "$.data.destination",
+              "order": 5,
+              "id": "a59d0090-a13e-3779-ec34-847cd2c087dd",
+              "$$hashKey": "object:51833"
+            },
+            {
+              "name": "mediaChannel",
+              "type": 2,
+              "path": "$.data.mediaChannel",
+              "order": 6,
+              "id": "9a0583ea-8daa-0b11-5b1e-24a92b789f78",
+              "$$hashKey": "object:51839"
+            },
+            {
+              "name": "mediaType",
+              "type": 2,
+              "path": "$.data.mediaType",
+              "order": 7,
+              "id": "25409973-efc0-2d23-76c6-e5c7efe6884d",
+              "$$hashKey": "object:51845"
+            },
+            {
+              "name": "direction",
+              "type": 2,
+              "path": "$.data.direction",
+              "order": 8,
+              "id": "1b6a2fcd-b1f7-ac45-2054-9b5650e8803f",
+              "$$hashKey": "object:51851"
+            },
+            {
+              "name": "variables",
+              "type": 2,
+              "path": "$.data.variables",
+              "order": 9,
+              "id": "b36b95b3-6bf8-525e-adfb-ea0daee3e2f8",
+              "$$hashKey": "object:51857"
+            },
+            {
+              "name": "queue",
+              "type": 2,
+              "path": "$.data.queue",
+              "order": 10,
+              "id": "fc15be4a-7a4a-b808-0818-c8be9c7632f2",
+              "$$hashKey": "object:51863"
+            }
+          ],
+          "id": 50026,
+          "eventname": "Task Routed",
+          "desc": "Triggers when the agent on WxCC has accepted a contact"
+        },
+        "ruleEvent": "Task Routed",
+        "ruleConditionStatus": true,
+        "conditions": [
+          {
+            "conditions": [
+              {
+                "variableConOption": {
+                  "inputType": "select",
+                  "selectOption": {
+                    "selectName": "name",
+                    "selectValue": "value",
+                    "selectFlag": false,
+                    "defaultList": [],
+                    "placeholderFlag": false,
+                    "uploadStatus": false
+                  }
+                },
+                "operatorConOption": {
+                  "inputType": "select",
+                  "selectOption": {
+                    "selectName": "name",
+                    "selectValue": "value",
+                    "selectFlag": false,
+                    "defaultList": [
+                      {
+                        "opr_name": "equals"
+                      },
+                      {
+                        "opr_name": "notequals"
+                      },
+                      {
+                        "opr_name": "in"
+                      },
+                      {
+                        "opr_name": "contains"
+                      },
+                      {
+                        "opr_name": "notin"
+                      },
+                      {
+                        "opr_name": "equalsignorecase"
+                      },
+                      {
+                        "opr_name": "startswith"
+                      },
+                      {
+                        "opr_name": "endswith"
+                      },
+                      {
+                        "opr_name": "regex"
+                      },
+                      {
+                        "opr_name": "containsignorecase"
+                      }
+                    ],
+                    "placeholderFlag": false,
+                    "uploadStatus": false
+                  }
+                },
+                "valueConOption": {
+                  "inputType": "text",
+                  "selectOption": {
+                    "selectName": "name",
+                    "selectValue": "value",
+                    "selectFlag": false,
+                    "defaultList": [],
+                    "placeholderFlag": false,
+                    "uploadStatus": false
+                  }
+                },
+                "pills": [],
+                "index": "my3w5uzc",
+                "variable": "webex.destination",
+                "variableObject": {
+                  "var_name": "webex.destination"
+                },
+                "operator": "equals",
+                "value": "OR06143228"
+              }
+            ],
+            "index": "v4xvh6i9"
+          }
+        ],
+        "apiReqConditions": [
+          {
+            "startag": "((",
+            "varname": "webex.destination",
+            "opr": "equals",
+            "value": "OR06143228",
+            "datatype": "string",
+            "endtag": "))"
+          }
+        ],
+        "isKeyWordDisabled": true,
+        "isKeyWordVerifyReq": true,
+        "isKeyWordAvailable": true,
+        "output_variables": [
+          "webex.ID",
+          "webex.Type",
+          "webex.agentId",
+          "webex.RequestBody",
+          "webex.origin",
+          "webex.destination",
+          "webex.mediaChannel",
+          "webex.mediaType",
+          "webex.direction",
+          "webex.variables",
+          "webex.queue"
+        ]
+      },
+      "transition_actions": [
+        {
+          "kind": "session",
+          "name": "response",
+          "when": "onleave",
+          "value": "$(n2.webex.variables)"
+        },
+        {
+          "kind": "session",
+          "name": "requestBody",
+          "when": "onleave",
+          "value": "$(n2.webex.RequestBody)"
+        },
+        {
+          "kind": "log",
+          "name": 12313,
+          "when": "onleave",
+          "value": "$(n2.webex.variables)"
+        }
+      ],
+      "declared_outputs": [
+        "webex.ID",
+        "webex.Type",
+        "webex.agentId",
+        "webex.RequestBody",
+        "webex.origin",
+        "webex.destination",
+        "webex.mediaChannel",
+        "webex.mediaType",
+        "webex.direction",
+        "webex.variables",
+        "webex.queue"
+      ],
+      "output_mappings": []
+    },
+    {
+      "id": "1326",
+      "label": "Screen Pop",
+      "type_internal": "prebuiltnode",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "oninvaliddata",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "onerror",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "oninvalidchoice",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "ontimeout",
+          "declared_target_count": null
+        }
+      ],
+      "configuration": {
+        "referencekey": 50023,
+        "versionIds": "undefined",
+        "integration_id": 50023,
+        "client_uuid": "59c3244b-34c2-46f2-a99e-86d4eb813c37",
+        "method_id": 50349,
+        "version_id": 50164,
+        "auth_id": -1,
+        "request_body": [
+          {
+            "name": "Trans ID",
+            "value": "$(n2.webex.ID)",
+            "id": "486b059a-c366-9588-5999-862a1d29955d"
+          },
+          {
+            "name": "Agent ID",
+            "value": "$(n2.webex.agentId)",
+            "id": "227f0340-25e7-6ca4-d23a-f176187e858a"
+          },
+          {
+            "name": "ScreenPop URL",
+            "value": "www.google.com",
+            "id": "eb4fcdd2-e302-68e7-92dc-c8b354cf0faf"
+          },
+          {
+            "name": "Target",
+            "value": "sameBrowserTab",
+            "id": "5da7bba4-edb5-d201-0a43-454d3a473061"
+          },
+          {
+            "name": "Query Parameters",
+            "value": {
+              "issue": "$(IssueDescription)",
+              "type": "$(IssueType)"
+            },
+            "id": "6324c253-b6c6-0745-aaae-ee08125bef80"
+          }
+        ],
+        "path_parameters": [
+          {
+            "name": "domain",
+            "id": "800d41bb-73c1-bd74-d715-e2c659ea3661"
+          },
+          {
+            "name": "tenant_identifier",
+            "id": "97762099-35e2-e706-9f07-ad15f4d6a6dd"
+          }
+        ],
+        "viewmodeData": [
+          {
+            "name": "auth_id",
+            "value": "WxCC Task Node Auth",
+            "isNgSelectBox": true
+          },
+          {
+            "name": "version_id",
+            "value": ""
+          },
+          {
+            "name": "method_id",
+            "value": "Screen Pop"
+          }
+        ],
+        "isAuthPresent": true,
+        "isComponentNode": 1,
+        "container_name": "https://example.invalid/prebuiltnodescreen-pop637581232922029104_1391320976826686.js",
+        "nodeType": "https://example.invalid/prebuiltnodescreen-pop637581232922029104_1391320976826686.js",
+        "nodeInput": {
+          "transid": "$(n2.webex.ID)",
+          "agentId": "$(n2.webex.agentId)",
+          "screenPopUrl": "www.google.com",
+          "target": "sameBrowserTab",
+          "queryParameters": {
+            "issue": "$(IssueDescription)",
+            "type": "$(IssueType)"
+          }
+        },
+        "group_id": 50020,
+        "customUiAuthStatus": 0,
+        "adminParameters": {
+          "oauth_callbackurl_type": 1,
+          "tenant_identifier": "b333ee78-8263-4370-a60a-967182fc91e4",
+          "domain": "produs1",
+          "integration_identifier": "https://example.invalid/v1/integration/cntwct"
+        },
+        "customuiWebcomponentElementName": "node-ui-template637581232922029104",
+        "extraParamsData": {
+          "transid": "$(n2.webex.ID)",
+          "agentId": "$(n2.webex.agentId)",
+          "screenPopUrl": "www.google.com",
+          "target": "sameBrowserTab",
+          "queryParameters": {
+            "issue": "$(IssueDescription)",
+            "type": "$(IssueType)"
+          }
+        },
+        "isCustomUiAuthPresent": true,
+        "integration_version": 3,
+        "runTimeAuthorizationId": "[redacted]",
+        "nodeUiAuthorizationId": "[redacted]"
+      },
+      "transition_actions": [],
+      "declared_outputs": [],
+      "output_mappings": []
+    },
+    {
+      "id": "1520",
+      "label": "Evaluate",
+      "type_internal": "evaluate",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "oninvalidchoice",
+          "declared_target_count": 1
+        },
+        {
+          "event_internal": "onerror",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "evaluteIsOptimization": true,
+        "expression": "var responseObj = response; //create one custom variable with name response and store the webex.variables\n\n/* To test\nlog variable x and y to get the info\n*/\nvar x = response;\nvar y = JSON.stringify(response);\nvar z = JSON.stringify(requestBody);\nvar responseArray = JSON.parse(responseObj);\nvar requestObj = JSON.parse(requestBody);\nvar contactId = \"\";\nvar customerId = \"\";\nvar mediaResourceId = \"\";\nvar orgId = \"\";\nvar mediaType = \"\";\nvar mediaChannel = \"\";\nvar callAssociatedDetails = \"\";\nvar queueId = \"\";\nvar queueName = \"\";\nvar ani = \"\";\nvar dn = \"\";\n\nvar customerName = \"\";\nvar contactDirection = \"\";\n\nvar agentId = \"\";\nvar agentName = \"\";\nvar agentSessionId = \"\";\nvar agentDn = \"\";\n\nvar teamId = \"\";\nvar teamName = \"\";\nvar siteId = \"\";\n\n// function to extract fields into flow usable variables\nfunction extractVariable(varname) {\n    for (var i = 0; i < responseArray.length; i++) {\n        var object = responseArray[i];\n        if (object.name == varname) {\n            return object.value;\n        }\n    }\n}\n\nvar IssueDescription = extractVariable(\"IssueDescription\");\nvar IssueType = extractVariable(\"IssueType\");\n\n\ncustomerId = requestObj.data.customerId;\n\nfor (var i = 0; i < responseArray.length; i++) {\n    var object = responseArray[i];\n    if (object.name == \"mediaResourceId\") {\n        mediaResourceId = object.value;\n    }\n    if (object.name == \"orgId\") {\n        orgId = object.value;\n    }\n    if (object.name == \"mediaChannel\") {\n        mediaChannel = object.value;\n    }\n    if (object.name == \"contactId\") {\n        contactId = object.value;\n    }\n    if (object.name == \"mediaType\") {\n        mediaType = object.value;\n    }\n    if (object.name == \"queueId\") {\n        queueId = object.value;\n    }\n    if (object.name == \"queueName\") {\n        queueName = object.value;\n    }\n    if (object.name == \"ani\") {\n        ani = object.value;\n    }\n    if (object.name == \"dn\") {\n        dn = object.value;\n    }\n    if (object.name == \"contactDirection\") {\n        contactDirection = object.value;\n    }\n    if (object.name == \"agentId\") {\n        agentId = object.value;\n    }\n    if (object.name == \"agentName\") {\n        agentName = object.value;\n    }\n    if (object.name == \"agentSessionId\") {\n        agentSessionId = object.value;\n    }\n    if (object.name == \"agentDn\") {\n        agentDn = object.value;\n    }\n    if (object.name == \"teamId\") {\n        teamId = object.value;\n    }\n    if (object.name == \"teamName\") {\n        teamName = object.value;\n    }\n    if (object.name == \"siteId\") {\n        siteId = object.value;\n    }\n    if (object.name == \"callAssociatedDetails\") {\n        callAssociatedDetails = JSON.parse(object.value);\n        customerName = callAssociatedDetails.customerName;\n    }\n}\n1;",
+        "exp": "var responseObj = response; //create one custom variable with name response and store the webex.variables\n\n/* To test\nlog variable x and y to get the info\n*/\nvar x = response;\nvar y = JSON.stringify(response);\nvar z = JSON.stringify(requestBody);\nvar responseArray = JSON.parse(responseObj);\nvar requestObj = JSON.parse(requestBody);\nvar contactId = \"\";\nvar customerId = \"\";\nvar mediaResourceId = \"\";\nvar orgId = \"\";\nvar mediaType = \"\";\nvar mediaChannel = \"\";\nvar callAssociatedDetails = \"\";\nvar queueId = \"\";\nvar queueName = \"\";\nvar ani = \"\";\nvar dn = \"\";\n\nvar customerName = \"\";\nvar contactDirection = \"\";\n\nvar agentId = \"\";\nvar agentName = \"\";\nvar agentSessionId = \"\";\nvar agentDn = \"\";\n\nvar teamId = \"\";\nvar teamName = \"\";\nvar siteId = \"\";\n\n// function to extract fields into flow usable variables\nfunction extractVariable(varname) {\n    for (var i = 0; i < responseArray.length; i++) {\n        var object = responseArray[i];\n        if (object.name == varname) {\n            return object.value;\n        }\n    }\n}\n\nvar IssueDescription = extractVariable(\"IssueDescription\");\nvar IssueType = extractVariable(\"IssueType\");\n\n\ncustomerId = requestObj.data.customerId;\n\nfor (var i = 0; i < responseArray.length; i++) {\n    var object = responseArray[i];\n    if (object.name == \"mediaResourceId\") {\n        mediaResourceId = object.value;\n    }\n    if (object.name == \"orgId\") {\n        orgId = object.value;\n    }\n    if (object.name == \"mediaChannel\") {\n        mediaChannel = object.value;\n    }\n    if (object.name == \"contactId\") {\n        contactId = object.value;\n    }\n    if (object.name == \"mediaType\") {\n        mediaType = object.value;\n    }\n    if (object.name == \"queueId\") {\n        queueId = object.value;\n    }\n    if (object.name == \"queueName\") {\n        queueName = object.value;\n    }\n    if (object.name == \"ani\") {\n        ani = object.value;\n    }\n    if (object.name == \"dn\") {\n        dn = object.value;\n    }\n    if (object.name == \"contactDirection\") {\n        contactDirection = object.value;\n    }\n    if (object.name == \"agentId\") {\n        agentId = object.value;\n    }\n    if (object.name == \"agentName\") {\n        agentName = object.value;\n    }\n    if (object.name == \"agentSessionId\") {\n        agentSessionId = object.value;\n    }\n    if (object.name == \"agentDn\") {\n        agentDn = object.value;\n    }\n    if (object.name == \"teamId\") {\n        teamId = object.value;\n    }\n    if (object.name == \"teamName\") {\n        teamName = object.value;\n    }\n    if (object.name == \"siteId\") {\n        siteId = object.value;\n    }\n    if (object.name == \"callAssociatedDetails\") {\n        callAssociatedDetails = JSON.parse(object.value);\n        customerName = callAssociatedDetails.customerName;\n    }\n}\n1;",
+        "isTestExecuted": true,
+        "nodeVersion": 1
+      },
+      "transition_actions": [
+        {
+          "kind": "session",
+          "name": "CustomerId",
+          "when": "onleave",
+          "value": "$(customerId)"
+        }
+      ],
+      "declared_outputs": [],
+      "output_mappings": []
+    }
+  ],
+  "edges": [
+    {
+      "id": "5132047",
+      "source": "2",
+      "target": "1520",
+      "event_internal": "onbegin",
+      "event_label": "onBegin",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5132051",
+      "source": "1520",
+      "target": "1326",
+      "event_internal": 1,
+      "event_label": "Success",
+      "representation": "explicit_edge"
+    }
+  ],
+  "terminal_bindings": [
+    {
+      "id": "1546",
+      "source": "1520",
+      "target": "1546",
+      "event_internal": "oninvalidchoice",
+      "event_label": "onInvalidChoice",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "1547",
+      "source": "1520",
+      "target": "1547",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "1568",
+      "source": "1326",
+      "target": "1568",
+      "event_internal": "oninvaliddata",
+      "event_label": "onInvalidData",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "1569",
+      "source": "1326",
+      "target": "1569",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "1570",
+      "source": "1326",
+      "target": "1570",
+      "event_internal": "oninvalidchoice",
+      "event_label": "onInvalidChoice",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "1571",
+      "source": "1326",
+      "target": "1571",
+      "event_internal": "onScreenPopFailure",
+      "event_label": "onScreenPopFailure",
+      "outcome_id": "",
+      "outcome_name": null,
+      "outcome_description": null,
+      "session_retry": null,
+      "async_check": null,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "1572",
+      "source": "1326",
+      "target": "1572",
+      "event_internal": "serviceUnavailable",
+      "event_label": "serviceUnavailable",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "1573",
+      "source": "1326",
+      "target": "1573",
+      "event_internal": "ontimeout",
+      "event_label": "onTimeout",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "1574",
+      "source": "1326",
+      "target": "1574",
+      "event_internal": "onScreenPopSuccess",
+      "event_label": "onScreenPopSuccess",
+      "outcome_id": 2,
+      "outcome_name": "Success",
+      "outcome_description": "Successfully completed flow",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    }
+  ],
+  "terminal_sources_not_captured": [],
+  "duplicate_terminal_binding_groups": [],
+  "variable_handoffs": [
+    {
+      "consumer": "2",
+      "location": "transition_actions[0].value",
+      "reference": "$(n2.webex.variables)",
+      "variable": "n2.webex.variables",
+      "producer_node": "2",
+      "producer_field": "webex.variables",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[1].value",
+      "reference": "$(n2.webex.RequestBody)",
+      "variable": "n2.webex.RequestBody",
+      "producer_node": "2",
+      "producer_field": "webex.RequestBody",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[2].value",
+      "reference": "$(n2.webex.variables)",
+      "variable": "n2.webex.variables",
+      "producer_node": "2",
+      "producer_field": "webex.variables",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1326",
+      "location": "configuration.request_body[0].value",
+      "reference": "$(n2.webex.ID)",
+      "variable": "n2.webex.ID",
+      "producer_node": "2",
+      "producer_field": "webex.ID",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1326",
+      "location": "configuration.request_body[1].value",
+      "reference": "$(n2.webex.agentId)",
+      "variable": "n2.webex.agentId",
+      "producer_node": "2",
+      "producer_field": "webex.agentId",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1326",
+      "location": "configuration.request_body[4].value.issue",
+      "reference": "$(IssueDescription)",
+      "variable": "IssueDescription",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1326",
+      "location": "configuration.request_body[4].value.type",
+      "reference": "$(IssueType)",
+      "variable": "IssueType",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1326",
+      "location": "configuration.nodeInput.transid",
+      "reference": "$(n2.webex.ID)",
+      "variable": "n2.webex.ID",
+      "producer_node": "2",
+      "producer_field": "webex.ID",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1326",
+      "location": "configuration.nodeInput.agentId",
+      "reference": "$(n2.webex.agentId)",
+      "variable": "n2.webex.agentId",
+      "producer_node": "2",
+      "producer_field": "webex.agentId",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1326",
+      "location": "configuration.nodeInput.queryParameters.issue",
+      "reference": "$(IssueDescription)",
+      "variable": "IssueDescription",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1326",
+      "location": "configuration.nodeInput.queryParameters.type",
+      "reference": "$(IssueType)",
+      "variable": "IssueType",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1326",
+      "location": "configuration.extraParamsData.transid",
+      "reference": "$(n2.webex.ID)",
+      "variable": "n2.webex.ID",
+      "producer_node": "2",
+      "producer_field": "webex.ID",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1326",
+      "location": "configuration.extraParamsData.agentId",
+      "reference": "$(n2.webex.agentId)",
+      "variable": "n2.webex.agentId",
+      "producer_node": "2",
+      "producer_field": "webex.agentId",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1326",
+      "location": "configuration.extraParamsData.queryParameters.issue",
+      "reference": "$(IssueDescription)",
+      "variable": "IssueDescription",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1326",
+      "location": "configuration.extraParamsData.queryParameters.type",
+      "reference": "$(IssueType)",
+      "variable": "IssueType",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1520",
+      "location": "transition_actions[0].value",
+      "reference": "$(customerId)",
+      "variable": "customerId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.webex.variables)",
+      "variable": "n2.webex.variables",
+      "producer_node": "2",
+      "producer_field": "webex.variables",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.webex.RequestBody)",
+      "variable": "n2.webex.RequestBody",
+      "producer_node": "2",
+      "producer_field": "webex.RequestBody",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1326",
+      "location": "_usedVars",
+      "reference": "$(n2.webex.ID)",
+      "variable": "n2.webex.ID",
+      "producer_node": "2",
+      "producer_field": "webex.ID",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1326",
+      "location": "_usedVars",
+      "reference": "$(n2.webex.agentId)",
+      "variable": "n2.webex.agentId",
+      "producer_node": "2",
+      "producer_field": "webex.agentId",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    }
+  ],
+  "custom_variable_assignments": [
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "response",
+      "when": "onleave",
+      "value": "$(n2.webex.variables)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "requestBody",
+      "when": "onleave",
+      "value": "$(n2.webex.RequestBody)"
+    },
+    {
+      "writer_node": "1520",
+      "kind": "session",
+      "name": "CustomerId",
+      "when": "onleave",
+      "value": "$(customerId)"
+    }
+  ],
+  "custom_variables": [
+    {
+      "name": "response",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "MediaResourceId",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "AgentId",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "AgentName",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "ContactId",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "OrgId",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "MediaType",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "MediaChannel",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "QueueId",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "QueueName",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "Ani",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "Dn",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "CustomerName",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "ContactDirection",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "AgentSessionId",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "AgentDn",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "TeamId",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "TeamName",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "SiteId",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "CustomerId",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "requestBody",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "IssueDescription",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "IssueType",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "flowVersion",
+      "value": 3.3,
+      "desc": "",
+      "type": "default"
+    }
+  ],
+  "flow_outcomes": [
+    {
+      "id": 2,
+      "order": 0,
+      "name": 101,
+      "value": "Successfully completed flow",
+      "tag": 11,
+      "tagName": "Success",
+      "type": "default",
+      "notification": null
+    },
+    {
+      "id": 3,
+      "order": 1,
+      "name": 102,
+      "value": "Flow completed with an error",
+      "tag": 12,
+      "tagName": "Error",
+      "type": "default",
+      "notification": null
+    },
+    {
+      "id": 4,
+      "order": 2,
+      "name": 103,
+      "value": "Flow ended due to an interruption",
+      "tag": 13,
+      "tagName": "Incomplete",
+      "type": "default",
+      "notification": null
+    },
+    {
+      "id": 1,
+      "name": 100,
+      "value": "Last executed node event",
+      "statusCode": "All status codes",
+      "tag": 15,
+      "tagName": "Last Execution Status",
+      "type": "default",
+      "notification": null
+    }
+  ],
+  "cycles": [],
+  "cross_page_or_flow_nodes": [],
+  "capture_pages": null,
+  "declared_events_without_captured_route": [],
+  "nodes_not_reached_from_captured_start": [],
+  "edge_endpoints_not_captured": [],
+  "node_variable_producers_not_captured": [],
+  "redactions": "Header credentials and URL hosts redacted. Internal model properties are evidence, not a public import API.",
+  "authored_walkthrough": {
+    "walkthrough": "Task Routed reaches WxCC Task v2 Start 2 under its webex.destination filter, then Evaluate 1520. Numeric outcome 1, rendered Success, connects to Screen Pop 1326. The central example is extracting task variables established by an inbound flow and carrying them into a desktop action. Screen Pop success terminates at End 1574 through parentNode 1326 and nodeEvent onScreenPopSuccess; most error/timeouts have corresponding End bindings.",
+    "handoffs": "Start copies `$(n2.webex.variables)` into response and `$(n2.webex.RequestBody)` into requestBody. Evaluate parses response as an array and uses extractVariable(name) to find IssueDescription and IssueType; it also reads customerId from requestObj.data.customerId and assigns custom CustomerId on leave. Screen Pop uses `transid=$(n2.webex.ID)`, `agentId=$(n2.webex.agentId)`, target sameBrowserTab, and query fields `issue=$(IssueDescription)` and `type=$(IssueType)`. The names match the separate LiveChat Set Variable example, but no direct Call Workflow edge joins the samples.",
+    "limitations": "Task variables arrive through WxCC events, not shared local memory between independent flow invocations. The onScreenPopFailure pseudo-node has blank exitResult; preserve that incomplete configuration. The destination filter, URL, and desktop behavior need binding in an adapted design. Existing logs and embedded test flags are observations only. No event or screen pop was executed; the internal model is not an importable public schema."
+  },
+  "walkthrough_status": "authored"
+}

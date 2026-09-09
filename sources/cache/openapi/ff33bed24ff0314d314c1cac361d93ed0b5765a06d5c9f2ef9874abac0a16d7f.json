@@ -1,0 +1,179 @@
+{
+  "_id": "6a675233ec1c893d8a7f67bb:6a675233ec1c893d8a7f6501",
+  "components": {
+    "securitySchemes": {
+      "sec0": {
+        "in": "header",
+        "name": "key",
+        "type": "apiKey"
+      }
+    }
+  },
+  "info": {
+    "title": "Segment APIs",
+    "version": "6.20.0"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/apps/{inappid}/segments/{segmentid}/users?users={userid1},{userid2}": {
+      "delete": {
+        "deprecated": false,
+        "description": "This API is used to delete users from a segment.",
+        "operationId": "delete-users-from-segment",
+        "parameters": [
+          {
+            "description": "Applictaion/JSON",
+            "in": "header",
+            "name": "Content-Type",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Client key that can be accessed from your app asset configuration page on imiconnect platform",
+            "in": "header",
+            "name": "secretKey",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "The unique identifier corresponding to the app asset",
+            "in": "path",
+            "name": "appid",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "The unique identifier corresponding to the segment",
+            "in": "path",
+            "name": "segmentid",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "The unique identifier of the app user",
+            "in": "query",
+            "name": "userid",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "users": {
+                    "description": "Contains comma separated users",
+                    "type": "string"
+                  }
+                },
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{\n    \"code\": 0,\n    \"success_users\": [\n        \"1420966801\",\n        \"1420966802\"\n    ],\n    \"fail_users\": [],\n    \"description\": \"Success\",\n    \"trans_id\": \"7fd2526b-7451-4d05-8015-25a56f942475\"\n}"
+                  }
+                },
+                "schema": {
+                  "properties": {
+                    "code": {
+                      "default": 0,
+                      "example": 0,
+                      "type": "integer"
+                    },
+                    "description": {
+                      "example": "Success",
+                      "type": "string"
+                    },
+                    "fail_users": {
+                      "items": {
+                        "properties": {},
+                        "type": "object"
+                      },
+                      "type": "array"
+                    },
+                    "success_users": {
+                      "items": {
+                        "example": "1420966801",
+                        "type": "string"
+                      },
+                      "type": "array"
+                    },
+                    "trans_id": {
+                      "example": "7fd2526b-7451-4d05-8015-25a56f942475",
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "200"
+          }
+        },
+        "summary": "Delete Users from a Segment",
+        "x-readme": {
+          "code-samples": [
+            {
+              "code": "-X DELETE https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/segments/{segmentid}/users?users={userid1},{userid2}\n-H \"secretKey: {secretKey}\"",
+              "language": "curl"
+            },
+            {
+              "code": "require 'httparty'\n# Create the HTTP objects and post request\nhttp = HTTParty.delete(\"https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/segments/{segmentid}/users?users={userid}},{userid2}\",\n    :headers => {\n                          'secretKey ' => '{secretKey}’\n            }\n)\n# Print on console\nputs http",
+              "language": "ruby"
+            },
+            {
+              "code": "var data = null;\n\nvar xhr = new XMLHttpRequest();\n\nxhr.addEventListener(\"readystatechange\", function () {\n  if (this.readyState === this.DONE) {\n    console.log(this.responseText);\n  }\n});\n\nxhr.open(\"DELETE\", \"https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/segments/{segmentid}/users?users={userid1},{userid2}\");\nxhr.setRequestHeader(\"secretKey\", \"{secretKey}\");\nxhr.send(data);",
+              "language": "javascript"
+            },
+            {
+              "code": "import requests\n\nurl = \" https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/segments/{segmentid}/users?users={userid1},{userid2}\"\n\nheaders = {'secretKey': '{secretKey}’}\n\nresponse = requests.request(\"DELETE\", url, headers=headers)\n\nprint(response.text)",
+              "language": "python"
+            }
+          ],
+          "samples-languages": [
+            "curl",
+            "ruby",
+            "javascript",
+            "python"
+          ]
+        }
+      }
+    }
+  },
+  "security": [
+    {
+      "sec0": []
+    }
+  ],
+  "servers": [
+    {
+      "url": "https://rtm.imiconnect.io/rtmsAPI/api/v1"
+    }
+  ],
+  "x-readme": {
+    "explorer-enabled": false,
+    "headers": [
+      {
+        "key": "content-type",
+        "value": "application/json"
+      }
+    ],
+    "proxy-enabled": false
+  },
+  "x-readme-fauxas": true
+}

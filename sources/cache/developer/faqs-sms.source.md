@@ -1,0 +1,135 @@
+## How Webex Connect can be used to receive inbound SMS messages
+
+<<prodname>> doesn't provide an inbox or an interface for viewing incoming SMS. 
+
+However, you can forward the messages to your own applications by configuring an Outbound Webhook under integrations. 
+
+[block:image]
+{
+  "images": [
+    {
+      "image": [
+        "https://files.readme.io/e39dec5-Outbound_Webhook_to_Forward_Incoming_SMS.png",
+        "Outbound Webhook to Forward Incoming SMS.png",
+        "Screenshot of Configure Outbound Webhook Integration."
+      ],
+      "align": "center",
+      "caption": "Screenshot of Configure Outbound Webhook Integration."
+    }
+  ]
+}
+[/block]
+
+
+Alternatively, you can use the 'Tools -> Export Logs' feature and download a copy of inbound logs.
+
+## Support for SMS on Toll-free numbers
+
+<<prodname>> offers 4 types of numbers; Landline, Mobile, Multi-function, and Toll-free. The capabilities of these numbers are available in the following table:
+
+[block:image]
+{
+  "images": [
+    {
+      "image": [
+        "https://files.readme.io/97b3e49-Numbers.jpg",
+        "Numbers.jpg",
+        "Screenshot of Support for SMS on Toll-free numbers."
+      ],
+      "align": "center",
+      "caption": "Screenshot of Support for SMS on Toll-free numbers."
+    }
+  ]
+}
+[/block]
+
+
+For information, refer to[how to purchase a phone number](https://help.webexconnect.io/docs/phone-numbers#buy-numbers-for-the-united-states).
+
+## Difference between long codes, short codes, sender IDs, and keywords
+
+You can choose to communicate with your customers using either of long codes, short codes, sender IDs, and keywords. Here is a brief description of the differences between each of these: 
+
+**Long codes**, generally referred to as standard phone numbers, are 10 digit numbers used to send and receive SMS messages and phone calls. You can easily buy [new phone numbers](https://help.imiconnect.io/docs/buy-a-phone-number) using <<prodname>>.
+
+**Short codes** are 5, 6 or 7 digit numbers that are used to send and receive SMS and MMS messages. Short codes are often the preferred choice for receiving high volumes of messages. For more information on short codes refer here.
+
+**Sender ID** is a name or number that is used to identify the sender of a message. These can be numeric or alphanumeric. Not all countries support alphanumeric sender ids. Where supported, you can use it to aid brand recognition or build trust by using your company or brand name as the sender ID. Refer to [Get a Sender ID](https://help.imiconnect.io/docs/sender-id#section-get-a-sender-id)for more information.
+
+**SMS keywords **are specific words that can be used at the start of the SMS body text to identify the purpose of the incoming messages. They allow you to use the same short code for launching multiple services by associating a different keyword with each service. E.g. You can ask your customers to text-in BALANCE to fetch their latest account balance, and LOAN to request information about a loan offer while sharing the same short code. For more information on SMS keywords refer here.
+
+## Buying short codes using Webex Connect
+
+Short codes are 5, 6 or 7 digit numbers that can be used to send and receive SMS messages. They are shorter in length than a standard phone number making it easy for customers to remember and use them. 
+
+Short codes are used for high volume messaging services as they can send SMS messages at a faster rate than the standard phone number. 
+
+You can buy SMS short codes with <<prodname>> by raising a request under 'Numbers > Get Numbers > Short Code' section. Refer to [Short Code](https://help.imiconnect.io/docs/shortcodes) section for more information.
+
+## Releasing your unused Webex Connect numbers
+
+You can easily cancel or release the numbers that you purchased using <<prodname>> but do not use them any longer. If the number is currently in use or is mapped with any service, you will need to delink it before initiating the release. 
+
+Once released, the number is made available for use to other users. You may not be able to acquire the same number again in case somebody else buys it.
+
+Numbers are billed on a monthly rental basis. You will need to pay the rental charges for the whole month even if you release the number in the middle of a billing cycle. 
+
+Steps for releasing a number:
+
+Login to <<prodname>> and visit 'Numbers' section
+
+Click on the 'Manage' button against the phone number you want to release
+
+You can see the phone number along with subscription details. Click the 'Release Number' button to delete/cancel it.
+
+[block:image]
+{
+  "images": [
+    {
+      "image": [
+        "https://files.readme.io/244b8aa-Releasing_a_Number.JPG",
+        "Releasing a Number.JPG",
+        "Screenshot of Manage Phone Number Page."
+      ],
+      "align": "center",
+      "caption": "Screenshot of Manage Phone Number Page."
+    }
+  ]
+}
+[/block]
+
+
+If the number is mapped with any service, you will get the following message and will need to delink it first.
+
+[block:image]
+{
+  "images": [
+    {
+      "image": [
+        "https://files.readme.io/2da3f09-image_14.png",
+        "image (14).png",
+        "Screenshot of Release Number Popup."
+      ],
+      "align": "center",
+      "caption": "Screenshot of Release Number Popup."
+    }
+  ]
+}
+[/block]
+
+
+## How do I add a new line in an SMS Message?
+
+To include a new line within the content of an SMS message, insert the characters `\n` at the desired location in your message text. The `\n` sequence represents a line break and will cause the text following it to appear on a new line when the message is displayed.
+
+### Example:
+
+**If you want your message to appear as following**:
+
+_“Hello,_
+
+_This is your appointment reminder.”_
+
+**You must write it in the format below**:
+
+_"Hello,\\nThis is your appointment reminder.”_

@@ -1,0 +1,32 @@
+{
+  "api_metadata_path": "sources/cache/developer/contact-policy-error-codes.api.json",
+  "category": "Contact Policy API",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f665e",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "85614ae8f86a7505ce01bca4f4b97141e7e1ddfc7d975ba5693bcb9cabf2ea11",
+    "source_path": "cb692d9fe761d154ce47104d07aed139f9c59395406f30ee68a0c06d35f1e0e0",
+    "text_path": "5fcdc6e84b5f1612f190dbafb17f8c6f22127ebab5153a193e73ca47b9530279"
+  },
+  "headings": [],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/contact-policy-error-codes.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/contact-policy-error-codes",
+  "retrieved_at": "2026-09-08T23:31:48+00:00",
+  "sha256_api_metadata": "575f65b7d8dc3ea0b617314bc47e22705dc85fc80ee114e6faa20ada4e8aafe2",
+  "sha256_html_response": "b1f60e91ed3bf81d935ef030c3b94074b2ce45b500c9c5649c051dbd042a4cad",
+  "sha256_source_body": "cb692d9fe761d154ce47104d07aed139f9c59395406f30ee68a0c06d35f1e0e0",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/contact-policy-error-codes.source.md",
+  "source_updated_at": "2026-01-22T16:02:23.287Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/contact-policy-error-codes.txt",
+  "title": "Contact Policy Error Codes",
+  "url": "https://developers.webexconnect.io/reference/contact-policy-error-codes",
+  "word_count": 78,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/contact-policy-error-codes.metadata.json"
+}

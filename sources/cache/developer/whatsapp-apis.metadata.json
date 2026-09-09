@@ -1,0 +1,42 @@
+{
+  "api_metadata_path": "sources/cache/developer/whatsapp-apis.api.json",
+  "category": "MULTI CHANNEL COMMUNICATION API",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f6627",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "1f0c998425df7e3187ae300004043e7e193dc555e631b0bf2c643d62c6fc63a0",
+    "source_path": "7855bee6405d1f42559cdc0c02897df10a8b7b71bbda3eda586e16ffa356f84f",
+    "text_path": "dfd1f98502afce97953ec91d50708f5907da0d62144c8e2b4952144933062434"
+  },
+  "headings": [
+    "Types of WhatsApp Messages Supported",
+    "[Text  Messages](https://developers.imiconnect.io/reference/whatsapp-text-message)",
+    "[Media Messages](https://developers.imiconnect.io/reference/whatsapp-media-message)",
+    "[Location Messages](https://developers.imiconnect.io/reference/whatsapp-location-message)",
+    "[Contact Message](https://developers.imiconnect.io/reference/whatsapp-contacts-messages)",
+    "[List Messages](https://developers.imiconnect.io/reference/whatsapp-list-messages)",
+    "[Reply Buttons](https://developers.imiconnect.io/reference/whatsapp-reply-buttons)",
+    "[HSMs Text-based Proactive Notification Message-Deprecated](https://developers.imiconnect.io/reference/whatsapp-hsms-text-based-proactive-notification-message)",
+    "[Template Messages Text-based Proactive Notification Message](https://developers.imiconnect.io/reference/whatsapp-template-messages)"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/whatsapp-apis.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/whatsapp-apis",
+  "retrieved_at": "2026-09-08T23:31:42+00:00",
+  "sha256_api_metadata": "d9f2571d8585f4b26bb9bd5327f81b800330d74dd769e509d1cbb0d1f7c27b40",
+  "sha256_html_response": "1c82aec957449fbff83a44917d66329b025a5ba3b4b327d4a21d775946382543",
+  "sha256_source_body": "7855bee6405d1f42559cdc0c02897df10a8b7b71bbda3eda586e16ffa356f84f",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/whatsapp-apis.source.md",
+  "source_updated_at": "2026-05-12T13:46:43.889Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/whatsapp-apis.txt",
+  "title": "WhatsApp API",
+  "url": "https://developers.webexconnect.io/reference/whatsapp-apis",
+  "word_count": 9952,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/developer/whatsapp-apis.metadata.json"
+}

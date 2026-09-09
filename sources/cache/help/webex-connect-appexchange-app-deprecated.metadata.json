@@ -1,0 +1,43 @@
+{
+  "category": "PreBUILT Integrations",
+  "deprecated": true,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182578f1",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "1bd5edea8bf71a5bf4e313afdf3ee596371c14eb107b1df06d722a5e40221249",
+    "source_path": "2ef85486fe765c2a18b6953b72b8feab9cc2425693528d5bcd7999c62c546ced",
+    "text_path": "c50234f2c03ad4ddde99030c1cb2d705a96b13ec00dc2a085ef2f3c31508f925"
+  },
+  "headings": [
+    "📘Deprecation Alert",
+    "Installing Webex Connect for Salesforce app",
+    "Trigger Webex Connect flows from Salesforce",
+    "Process Builder",
+    "Set Apex Variables",
+    "📘",
+    "Event Trigger",
+    "Schedule Trigger",
+    "📘",
+    "Dashboard within Webex Connect for Salesforce App",
+    "Reports"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/webex-connect-appexchange-app-deprecated.md",
+  "resolved_url": "https://help.webexconnect.io/docs/webex-connect-appexchange-app-deprecated",
+  "retrieved_at": "2026-09-08T23:29:11+00:00",
+  "sha256_html_response": "46acbf155eeb10f8bdd544d28ab80d07680851c62624f7c04e195f0a02058e0a",
+  "sha256_source_body": "2ef85486fe765c2a18b6953b72b8feab9cc2425693528d5bcd7999c62c546ced",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/webex-connect-appexchange-app-deprecated.source.md",
+  "source_updated_at": "2026-02-04T13:10:36.583Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/webex-connect-appexchange-app-deprecated.txt",
+  "title": "Webex Connect AppExchange App - Deprecated",
+  "url": "https://help.webexconnect.io/docs/webex-connect-appexchange-app-deprecated",
+  "word_count": 916,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/webex-connect-appexchange-app-deprecated.metadata.json"
+}

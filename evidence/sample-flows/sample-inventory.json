@@ -1,0 +1,2837 @@
+{
+  "schema_version": 1,
+  "refreshed_at": "2026-09-09T00:31:31.380594+00:00",
+  "scope": "All nine observed tenant gallery templates; all 17 official AI fulfillment native files; all 33 current v3.5 digital-channel repository archives; all entries in the cached CCE/WXCC template tables; captured AI/email/SMS public tutorials. Priority tags do not exclude other channels within these collections. This is bounded corpus coverage, not every Cisco sample globally.",
+  "count_unit": "Inventory entries by evidence cohort, not deduplicated unique flows; tutorials, legacy generations and equivalent source occurrences remain separate.",
+  "counts": {
+    "entries": 95,
+    "in_priority_scope": 64,
+    "additional_channel_entries_included": 31,
+    "by_cohort": {
+      "tenant_gallery": 9,
+      "ai_fulfilment_repository": 17,
+      "epic_documented_template": 5,
+      "sms_tutorial": 3,
+      "studio_tutorial": 1,
+      "wxcc_repository_v3_5": 33,
+      "wxcc_legacy_help_listing": 8,
+      "cce_documented_bundle": 15,
+      "legacy_bot_documentation": 4
+    },
+    "downloaded_native_or_zip": 50,
+    "observed_static_canvas": 59,
+    "derived_graph_summaries": 59,
+    "authored_ui_walkthroughs": 59,
+    "runtime_tested": 0
+  },
+  "status_semantics": {
+    "documented_topology": "Source states the major connected execution path; not an exact native edge extraction.",
+    "documented_partial_contract": "Source explains useful dependencies or branches, but does not establish every native node/edge.",
+    "observed_static_canvas": "Sanitized configured sample graph was captured; no flow execution was performed.",
+    "derived_summary_available": "A separate summary JSON matches the current capture SHA256; this is not an independent QA or runtime claim.",
+    "authored_from_current_capture": "The summary index records an authored walkthrough for the same current capture hash."
+  },
+  "source_exclusions": [
+    {
+      "source": "sources/cache/help/templates*.md",
+      "reason": "Message-content templates, not executable flow samples"
+    },
+    {
+      "source": "sources/cache/help/sending-and-receiving-sms-using-sandbox.md",
+      "reason": "Sandbox messaging/API exercise without its own connected sample flow"
+    },
+    {
+      "source": "sources/cache/help/webex-ai-agent-in-sandbox.md",
+      "reason": "Studio access guide, not a sample flow"
+    },
+    {
+      "source": "Older version directories in webexcc-digital-channels",
+      "reason": "Historical releases are version duplicates; current v3.5 collection is inventoried in full, with the older help listing retained for version-conflict context"
+    },
+    {
+      "source": "sources/cache/help/branch-node-to-build-flow-with-conditional-branch.md",
+      "reason": "Individual-node illustration, covered by node reference rather than a standalone AI/email/SMS sample"
+    },
+    {
+      "source": "sources/cache/help/calling-a-flow-from-another-flow.md",
+      "reason": "Call Workflow mechanism illustration, covered by node/lifecycle references"
+    }
+  ],
+  "refresh_command": "python scripts/update_sample_inventory.py",
+  "samples": [
+    {
+      "id": "tenant_gallery:ai-agent-scripted-doctor-appointment",
+      "cohort": "tenant_gallery",
+      "name": "AI Agent Scripted Doctor Appointment",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "All nine entries in the authenticated tenant sample gallery",
+      "source_urls": [
+        "https://help.webexconnect.io/docs/using-ai-agent-flow-templates"
+      ],
+      "documentation_review": "documented_topology",
+      "documentation_walkthrough": "knowledge/15-sample-flow-walkthroughs.md",
+      "artifact_status": "tenant_gallery_template",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "identity_evidence": "Exact labels in observed/*.json; Start from Scratch is not a sample",
+      "observed_paths": [
+        "evidence/sample-flows/observed/gallery-ai-doctor.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/gallery-ai-doctor.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#gallery-ai-doctor"
+    },
+    {
+      "id": "tenant_gallery:ai-agent-livechat-generic",
+      "cohort": "tenant_gallery",
+      "name": "AI Agent Livechat Generic",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "All nine entries in the authenticated tenant sample gallery",
+      "source_urls": [
+        "https://help.webexconnect.io/docs/using-ai-agent-flow-templates"
+      ],
+      "documentation_review": "documented_topology",
+      "documentation_walkthrough": "knowledge/15-sample-flow-walkthroughs.md",
+      "artifact_status": "tenant_gallery_template",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "identity_evidence": "Exact labels in observed/*.json; Start from Scratch is not a sample",
+      "observed_paths": [
+        "evidence/sample-flows/observed/gallery-ai-livechat.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/gallery-ai-livechat.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#gallery-ai-livechat"
+    },
+    {
+      "id": "tenant_gallery:ai-agent-fulfilment-track-package",
+      "cohort": "tenant_gallery",
+      "name": "AI Agent Fulfilment - Track Package",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "All nine entries in the authenticated tenant sample gallery",
+      "source_urls": [
+        "https://help.webexconnect.io/docs/using-ai-agent-flow-templates"
+      ],
+      "documentation_review": "documented_topology",
+      "documentation_walkthrough": "knowledge/15-sample-flow-walkthroughs.md",
+      "artifact_status": "tenant_gallery_template",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "identity_evidence": "Exact labels in observed/*.json; Start from Scratch is not a sample",
+      "observed_paths": [
+        "evidence/sample-flows/observed/gallery-track-package.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/gallery-track-package.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#gallery-track-package"
+    },
+    {
+      "id": "tenant_gallery:logisticsparcelnotifications",
+      "cohort": "tenant_gallery",
+      "name": "LogisticsParcelNotifications",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "All nine entries in the authenticated tenant sample gallery",
+      "source_urls": [],
+      "documentation_review": "no_separate_public_walkthrough",
+      "documentation_walkthrough": null,
+      "artifact_status": "tenant_gallery_template",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "identity_evidence": "Exact labels in observed/*.json; Start from Scratch is not a sample",
+      "observed_paths": [
+        "evidence/sample-flows/observed/gallery-logistics.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/gallery-logistics.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#gallery-logistics"
+    },
+    {
+      "id": "tenant_gallery:webhooktosmsalerts",
+      "cohort": "tenant_gallery",
+      "name": "WebhooktoSMSalerts",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "All nine entries in the authenticated tenant sample gallery",
+      "source_urls": [],
+      "documentation_review": "no_separate_public_walkthrough",
+      "documentation_walkthrough": null,
+      "artifact_status": "tenant_gallery_template",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "identity_evidence": "Exact labels in observed/*.json; Start from Scratch is not a sample",
+      "observed_paths": [
+        "evidence/sample-flows/observed/gallery-webhook-sms.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/gallery-webhook-sms.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#gallery-webhook-sms"
+    },
+    {
+      "id": "tenant_gallery:smssurvey",
+      "cohort": "tenant_gallery",
+      "name": "SMSSurvey",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "All nine entries in the authenticated tenant sample gallery",
+      "source_urls": [],
+      "documentation_review": "no_separate_public_walkthrough",
+      "documentation_walkthrough": null,
+      "artifact_status": "tenant_gallery_template",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "identity_evidence": "Exact labels in observed/*.json; Start from Scratch is not a sample",
+      "observed_paths": [
+        "evidence/sample-flows/observed/gallery-sms-survey.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/gallery-sms-survey.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#gallery-sms-survey"
+    },
+    {
+      "id": "tenant_gallery:chatbot",
+      "cohort": "tenant_gallery",
+      "name": "Chatbot",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "All nine entries in the authenticated tenant sample gallery",
+      "source_urls": [],
+      "documentation_review": "no_separate_public_walkthrough",
+      "documentation_walkthrough": null,
+      "artifact_status": "tenant_gallery_template",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "identity_evidence": "Exact labels in observed/*.json; Start from Scratch is not a sample",
+      "observed_paths": [
+        "evidence/sample-flows/observed/gallery-chatbot.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/gallery-chatbot.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#gallery-chatbot"
+    },
+    {
+      "id": "tenant_gallery:autoresponder",
+      "cohort": "tenant_gallery",
+      "name": "Autoresponder",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "All nine entries in the authenticated tenant sample gallery",
+      "source_urls": [],
+      "documentation_review": "no_separate_public_walkthrough",
+      "documentation_walkthrough": null,
+      "artifact_status": "tenant_gallery_template",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "identity_evidence": "Exact labels in observed/*.json; Start from Scratch is not a sample",
+      "observed_paths": [
+        "evidence/sample-flows/observed/gallery-autoresponder.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/gallery-autoresponder.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#gallery-autoresponder"
+    },
+    {
+      "id": "tenant_gallery:appointmentreminder",
+      "cohort": "tenant_gallery",
+      "name": "AppointmentReminder",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "All nine entries in the authenticated tenant sample gallery",
+      "source_urls": [],
+      "documentation_review": "no_separate_public_walkthrough",
+      "documentation_walkthrough": null,
+      "artifact_status": "tenant_gallery_template",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "identity_evidence": "Exact labels in observed/*.json; Start from Scratch is not a sample",
+      "observed_paths": [
+        "evidence/sample-flows/observed/gallery-appointment-reminder.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/gallery-appointment-reminder.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#gallery-appointment-reminder"
+    },
+    {
+      "id": "ai_fulfilment_repository:cancel-appointment-workflow",
+      "cohort": "ai_fulfilment_repository",
+      "name": "cancel_appointment.workflow",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "AI Agent, email/SMS, or required task-event companion",
+      "source_urls": [
+        "https://github.com/WebexSamples/webex-contact-center-api-samples/blob/main/ai-agent-fulfilment-flows/doctor-clinic-fulfilment-flows/cancel_appointment.workflow"
+      ],
+      "documentation_review": "artifact_acquisition_only",
+      "documentation_walkthrough": "knowledge/15-sample-flow-walkthroughs.md",
+      "artifact_status": "downloaded_opaque_workflow",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "artifact_path": "evidence/sample-flows/raw/cancel_appointment.workflow",
+      "acquisition_manifest": "evidence/sample-flows/public-native-manifest.json",
+      "sha256": "2b0c583aa7cb3f41171ffb7ce278358844a94cd1f1013f71895470c8dafaae1a",
+      "limitation": "Acquisition-stage JSON/hex checks did not yield nodes or edges; consult later UI evidence separately",
+      "observed_paths": [
+        "evidence/sample-flows/observed/native-cancel-appointment.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/native-cancel-appointment.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#native-cancel-appointment"
+    },
+    {
+      "id": "ai_fulfilment_repository:check-availability-workflow",
+      "cohort": "ai_fulfilment_repository",
+      "name": "check_availability.workflow",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "AI Agent, email/SMS, or required task-event companion",
+      "source_urls": [
+        "https://github.com/WebexSamples/webex-contact-center-api-samples/blob/main/ai-agent-fulfilment-flows/doctor-clinic-fulfilment-flows/check_availability.workflow"
+      ],
+      "documentation_review": "artifact_acquisition_only",
+      "documentation_walkthrough": "knowledge/15-sample-flow-walkthroughs.md",
+      "artifact_status": "downloaded_opaque_workflow",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "artifact_path": "evidence/sample-flows/raw/check_availability.workflow",
+      "acquisition_manifest": "evidence/sample-flows/public-native-manifest.json",
+      "sha256": "87447599a4b1c6cb711c74d6d33190443696f490ac0d409af05b0b3230399a72",
+      "limitation": "Acquisition-stage JSON/hex checks did not yield nodes or edges; consult later UI evidence separately",
+      "observed_paths": [
+        "evidence/sample-flows/observed/native-check-availability.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/native-check-availability.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#native-check-availability"
+    },
+    {
+      "id": "ai_fulfilment_repository:create-appointment-workflow",
+      "cohort": "ai_fulfilment_repository",
+      "name": "create_appointment.workflow",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "AI Agent, email/SMS, or required task-event companion",
+      "source_urls": [
+        "https://github.com/WebexSamples/webex-contact-center-api-samples/blob/main/ai-agent-fulfilment-flows/doctor-clinic-fulfilment-flows/create_appointment.workflow"
+      ],
+      "documentation_review": "artifact_acquisition_only",
+      "documentation_walkthrough": "knowledge/15-sample-flow-walkthroughs.md",
+      "artifact_status": "downloaded_opaque_workflow",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "artifact_path": "evidence/sample-flows/raw/create_appointment.workflow",
+      "acquisition_manifest": "evidence/sample-flows/public-native-manifest.json",
+      "sha256": "0d0a5a8604b041cc28ae791c6316c5b9b87475d66119136e6ecac2405164c26e",
+      "limitation": "Acquisition-stage JSON/hex checks did not yield nodes or edges; consult later UI evidence separately",
+      "observed_paths": [
+        "evidence/sample-flows/observed/native-create-appointment.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/native-create-appointment.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#native-create-appointment"
+    },
+    {
+      "id": "ai_fulfilment_repository:lookup-appointment-workflow",
+      "cohort": "ai_fulfilment_repository",
+      "name": "lookup_appointment.workflow",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "AI Agent, email/SMS, or required task-event companion",
+      "source_urls": [
+        "https://github.com/WebexSamples/webex-contact-center-api-samples/blob/main/ai-agent-fulfilment-flows/doctor-clinic-fulfilment-flows/lookup_appointment.workflow"
+      ],
+      "documentation_review": "artifact_acquisition_only",
+      "documentation_walkthrough": "knowledge/15-sample-flow-walkthroughs.md",
+      "artifact_status": "downloaded_opaque_workflow",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "artifact_path": "evidence/sample-flows/raw/lookup_appointment.workflow",
+      "acquisition_manifest": "evidence/sample-flows/public-native-manifest.json",
+      "sha256": "16b3f4722241c56555bbb63d6007f400ce429722ca42dd9dae54a7a6f2bd0fae",
+      "limitation": "Acquisition-stage JSON/hex checks did not yield nodes or edges; consult later UI evidence separately",
+      "observed_paths": [
+        "evidence/sample-flows/observed/native-lookup-appointment.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/native-lookup-appointment.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#native-lookup-appointment"
+    },
+    {
+      "id": "ai_fulfilment_repository:sendsms-workflow",
+      "cohort": "ai_fulfilment_repository",
+      "name": "sendSMS.workflow",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "AI Agent, email/SMS, or required task-event companion",
+      "source_urls": [
+        "https://github.com/WebexSamples/webex-contact-center-api-samples/blob/main/ai-agent-fulfilment-flows/doctor-clinic-fulfilment-flows/sendSMS.workflow"
+      ],
+      "documentation_review": "artifact_acquisition_only",
+      "documentation_walkthrough": "knowledge/15-sample-flow-walkthroughs.md",
+      "artifact_status": "downloaded_opaque_workflow",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "artifact_path": "evidence/sample-flows/raw/sendSMS.workflow",
+      "acquisition_manifest": "evidence/sample-flows/public-native-manifest.json",
+      "sha256": "479b85fbf038e70bd4aa8db68a05c2967e761a1872b0aba67483f2e0e524c160",
+      "limitation": "Acquisition-stage JSON/hex checks did not yield nodes or edges; consult later UI evidence separately",
+      "observed_paths": [
+        "evidence/sample-flows/observed/native-sendsms.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/native-sendsms.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#native-sendsms"
+    },
+    {
+      "id": "ai_fulfilment_repository:block-card-and-order-replacement-workflow",
+      "cohort": "ai_fulfilment_repository",
+      "name": "Block card and order replacement.workflow",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "AI Agent, email/SMS, or required task-event companion",
+      "source_urls": [
+        "https://github.com/WebexSamples/webex-contact-center-api-samples/blob/main/ai-agent-fulfilment-flows/banking%20template%20fulfilment%20flows/Block%20card%20and%20order%20replacement.workflow"
+      ],
+      "documentation_review": "artifact_acquisition_only",
+      "documentation_walkthrough": "knowledge/15-sample-flow-walkthroughs.md",
+      "artifact_status": "downloaded_opaque_workflow",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "artifact_path": "evidence/sample-flows/raw/Block card and order replacement.workflow",
+      "acquisition_manifest": "evidence/sample-flows/public-native-manifest.json",
+      "sha256": "1ad6d8e8df417dca4c886d31cfc913f387041bd192770b79ad563f222dd92016",
+      "limitation": "Acquisition-stage JSON/hex checks did not yield nodes or edges; consult later UI evidence separately",
+      "observed_paths": [
+        "evidence/sample-flows/observed/native-block-card-and-order-replacement.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/native-block-card-and-order-replacement.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#native-block-card-and-order-replacement"
+    },
+    {
+      "id": "ai_fulfilment_repository:fetch-recent-transactions-workflow",
+      "cohort": "ai_fulfilment_repository",
+      "name": "Fetch Recent Transactions.workflow",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "AI Agent, email/SMS, or required task-event companion",
+      "source_urls": [
+        "https://github.com/WebexSamples/webex-contact-center-api-samples/blob/main/ai-agent-fulfilment-flows/banking%20template%20fulfilment%20flows/Fetch%20Recent%20Transactions.workflow"
+      ],
+      "documentation_review": "artifact_acquisition_only",
+      "documentation_walkthrough": "knowledge/15-sample-flow-walkthroughs.md",
+      "artifact_status": "downloaded_opaque_workflow",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "artifact_path": "evidence/sample-flows/raw/Fetch Recent Transactions.workflow",
+      "acquisition_manifest": "evidence/sample-flows/public-native-manifest.json",
+      "sha256": "dc735d636d38c8463830a53ce4c455dc68860f3e80cfc2fe0887755844cb5057",
+      "limitation": "Acquisition-stage JSON/hex checks did not yield nodes or edges; consult later UI evidence separately",
+      "observed_paths": [
+        "evidence/sample-flows/observed/native-fetch-recent-transactions.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/native-fetch-recent-transactions.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#native-fetch-recent-transactions"
+    },
+    {
+      "id": "ai_fulfilment_repository:fetch-account-balance-workflow",
+      "cohort": "ai_fulfilment_repository",
+      "name": "Fetch account balance.workflow",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "AI Agent, email/SMS, or required task-event companion",
+      "source_urls": [
+        "https://github.com/WebexSamples/webex-contact-center-api-samples/blob/main/ai-agent-fulfilment-flows/banking%20template%20fulfilment%20flows/Fetch%20account%20balance.workflow"
+      ],
+      "documentation_review": "artifact_acquisition_only",
+      "documentation_walkthrough": "knowledge/15-sample-flow-walkthroughs.md",
+      "artifact_status": "downloaded_opaque_workflow",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "artifact_path": "evidence/sample-flows/raw/Fetch account balance.workflow",
+      "acquisition_manifest": "evidence/sample-flows/public-native-manifest.json",
+      "sha256": "34613ffbbed82d6dfed9a3044699fcace18285931e9be1028dbcb48892feb686",
+      "limitation": "Acquisition-stage JSON/hex checks did not yield nodes or edges; consult later UI evidence separately",
+      "observed_paths": [
+        "evidence/sample-flows/observed/native-fetch-account-balance.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/native-fetch-account-balance.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#native-fetch-account-balance"
+    },
+    {
+      "id": "ai_fulfilment_repository:register-transaction-dispute-workflow",
+      "cohort": "ai_fulfilment_repository",
+      "name": "Register Transaction Dispute.workflow",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "AI Agent, email/SMS, or required task-event companion",
+      "source_urls": [
+        "https://github.com/WebexSamples/webex-contact-center-api-samples/blob/main/ai-agent-fulfilment-flows/banking%20template%20fulfilment%20flows/Register%20Transaction%20Dispute.workflow"
+      ],
+      "documentation_review": "artifact_acquisition_only",
+      "documentation_walkthrough": "knowledge/15-sample-flow-walkthroughs.md",
+      "artifact_status": "downloaded_opaque_workflow",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "artifact_path": "evidence/sample-flows/raw/Register Transaction Dispute.workflow",
+      "acquisition_manifest": "evidence/sample-flows/public-native-manifest.json",
+      "sha256": "ea127c66c81de5f7c13caf53bfe501a6a681c4239f877267a59e75b6358555f3",
+      "limitation": "Acquisition-stage JSON/hex checks did not yield nodes or edges; consult later UI evidence separately",
+      "observed_paths": [
+        "evidence/sample-flows/observed/native-register-transaction-dispute.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/native-register-transaction-dispute.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#native-register-transaction-dispute"
+    },
+    {
+      "id": "ai_fulfilment_repository:request-priority-shipping-workflow",
+      "cohort": "ai_fulfilment_repository",
+      "name": "Request priority shipping.workflow",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "AI Agent, email/SMS, or required task-event companion",
+      "source_urls": [
+        "https://github.com/WebexSamples/webex-contact-center-api-samples/blob/main/ai-agent-fulfilment-flows/banking%20template%20fulfilment%20flows/Request%20priority%20shipping.workflow"
+      ],
+      "documentation_review": "artifact_acquisition_only",
+      "documentation_walkthrough": "knowledge/15-sample-flow-walkthroughs.md",
+      "artifact_status": "downloaded_opaque_workflow",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "artifact_path": "evidence/sample-flows/raw/Request priority shipping.workflow",
+      "acquisition_manifest": "evidence/sample-flows/public-native-manifest.json",
+      "sha256": "bde81ac95f24430e2cce31c4605cb3a0b07d89aeb3d10316d6607efe57a93a01",
+      "limitation": "Acquisition-stage JSON/hex checks did not yield nodes or edges; consult later UI evidence separately",
+      "observed_paths": [
+        "evidence/sample-flows/observed/native-request-priority-shipping.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/native-request-priority-shipping.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#native-request-priority-shipping"
+    },
+    {
+      "id": "ai_fulfilment_repository:verify-user-workflow",
+      "cohort": "ai_fulfilment_repository",
+      "name": "Verify user.workflow",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "AI Agent, email/SMS, or required task-event companion",
+      "source_urls": [
+        "https://github.com/WebexSamples/webex-contact-center-api-samples/blob/main/ai-agent-fulfilment-flows/banking%20template%20fulfilment%20flows/Verify%20user.workflow"
+      ],
+      "documentation_review": "artifact_acquisition_only",
+      "documentation_walkthrough": "knowledge/15-sample-flow-walkthroughs.md",
+      "artifact_status": "downloaded_opaque_workflow",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "artifact_path": "evidence/sample-flows/raw/Verify user.workflow",
+      "acquisition_manifest": "evidence/sample-flows/public-native-manifest.json",
+      "sha256": "eeabb9057209f6eea1eb202e959b5f65494ba2f99880d8d298484890ae7677ea",
+      "limitation": "Acquisition-stage JSON/hex checks did not yield nodes or edges; consult later UI evidence separately",
+      "observed_paths": [
+        "evidence/sample-flows/observed/native-verify-user.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/native-verify-user.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#native-verify-user"
+    },
+    {
+      "id": "ai_fulfilment_repository:cancel-booking-workflow",
+      "cohort": "ai_fulfilment_repository",
+      "name": "cancel_booking.workflow",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "AI Agent, email/SMS, or required task-event companion",
+      "source_urls": [
+        "https://github.com/WebexSamples/webex-contact-center-api-samples/blob/main/ai-agent-fulfilment-flows/airline%20template%20fulfilment%20flows/cancel_booking.workflow"
+      ],
+      "documentation_review": "artifact_acquisition_only",
+      "documentation_walkthrough": "knowledge/15-sample-flow-walkthroughs.md",
+      "artifact_status": "downloaded_opaque_workflow",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "artifact_path": "evidence/sample-flows/raw/cancel_booking.workflow",
+      "acquisition_manifest": "evidence/sample-flows/public-native-manifest.json",
+      "sha256": "0a7a5f0cd34845920f6e87952280dcfa40fbab63324ba827aff9a7676c064b28",
+      "limitation": "Acquisition-stage JSON/hex checks did not yield nodes or edges; consult later UI evidence separately",
+      "observed_paths": [
+        "evidence/sample-flows/observed/native-cancel-booking.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/native-cancel-booking.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#native-cancel-booking"
+    },
+    {
+      "id": "ai_fulfilment_repository:cancel-checkin-workflow",
+      "cohort": "ai_fulfilment_repository",
+      "name": "cancel_checkin.workflow",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "AI Agent, email/SMS, or required task-event companion",
+      "source_urls": [
+        "https://github.com/WebexSamples/webex-contact-center-api-samples/blob/main/ai-agent-fulfilment-flows/airline%20template%20fulfilment%20flows/cancel_checkin.workflow"
+      ],
+      "documentation_review": "artifact_acquisition_only",
+      "documentation_walkthrough": "knowledge/15-sample-flow-walkthroughs.md",
+      "artifact_status": "downloaded_opaque_workflow",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "artifact_path": "evidence/sample-flows/raw/cancel_checkin.workflow",
+      "acquisition_manifest": "evidence/sample-flows/public-native-manifest.json",
+      "sha256": "e58e0c2a48fe4c9afeb89c98ab79f32876aa4e23d02264eb6d2cdefd8e900365",
+      "limitation": "Acquisition-stage JSON/hex checks did not yield nodes or edges; consult later UI evidence separately",
+      "observed_paths": [
+        "evidence/sample-flows/observed/native-cancel-checkin.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/native-cancel-checkin.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#native-cancel-checkin"
+    },
+    {
+      "id": "ai_fulfilment_repository:checkin-workflow",
+      "cohort": "ai_fulfilment_repository",
+      "name": "checkin.workflow",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "AI Agent, email/SMS, or required task-event companion",
+      "source_urls": [
+        "https://github.com/WebexSamples/webex-contact-center-api-samples/blob/main/ai-agent-fulfilment-flows/airline%20template%20fulfilment%20flows/checkin.workflow"
+      ],
+      "documentation_review": "artifact_acquisition_only",
+      "documentation_walkthrough": "knowledge/15-sample-flow-walkthroughs.md",
+      "artifact_status": "downloaded_opaque_workflow",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "artifact_path": "evidence/sample-flows/raw/checkin.workflow",
+      "acquisition_manifest": "evidence/sample-flows/public-native-manifest.json",
+      "sha256": "5e52ca680281e76a33fb29e1348e4cf2ee5724dd68abfeccd6355af355f84535",
+      "limitation": "Acquisition-stage JSON/hex checks did not yield nodes or edges; consult later UI evidence separately",
+      "observed_paths": [
+        "evidence/sample-flows/observed/native-checkin.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/native-checkin.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#native-checkin"
+    },
+    {
+      "id": "ai_fulfilment_repository:get-flight-info-workflow",
+      "cohort": "ai_fulfilment_repository",
+      "name": "get_flight_info.workflow",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "AI Agent, email/SMS, or required task-event companion",
+      "source_urls": [
+        "https://github.com/WebexSamples/webex-contact-center-api-samples/blob/main/ai-agent-fulfilment-flows/airline%20template%20fulfilment%20flows/get_flight_info.workflow"
+      ],
+      "documentation_review": "artifact_acquisition_only",
+      "documentation_walkthrough": "knowledge/15-sample-flow-walkthroughs.md",
+      "artifact_status": "downloaded_opaque_workflow",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "artifact_path": "evidence/sample-flows/raw/get_flight_info.workflow",
+      "acquisition_manifest": "evidence/sample-flows/public-native-manifest.json",
+      "sha256": "ec0cf9774c4283a00b063da10b65286a437790d19aac0b917407884cb523c2af",
+      "limitation": "Acquisition-stage JSON/hex checks did not yield nodes or edges; consult later UI evidence separately",
+      "observed_paths": [
+        "evidence/sample-flows/observed/native-get-flight-info.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/native-get-flight-info.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#native-get-flight-info"
+    },
+    {
+      "id": "ai_fulfilment_repository:lookup-flights-workflow",
+      "cohort": "ai_fulfilment_repository",
+      "name": "lookup_flights.workflow",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "AI Agent, email/SMS, or required task-event companion",
+      "source_urls": [
+        "https://github.com/WebexSamples/webex-contact-center-api-samples/blob/main/ai-agent-fulfilment-flows/airline%20template%20fulfilment%20flows/lookup_flights.workflow"
+      ],
+      "documentation_review": "artifact_acquisition_only",
+      "documentation_walkthrough": "knowledge/15-sample-flow-walkthroughs.md",
+      "artifact_status": "downloaded_opaque_workflow",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "artifact_path": "evidence/sample-flows/raw/lookup_flights.workflow",
+      "acquisition_manifest": "evidence/sample-flows/public-native-manifest.json",
+      "sha256": "6e9384cd28fb7f029364a63d9b5ca1ea769855441229751b3e10eebbf7018d6e",
+      "limitation": "Acquisition-stage JSON/hex checks did not yield nodes or edges; consult later UI evidence separately",
+      "observed_paths": [
+        "evidence/sample-flows/observed/native-lookup-flights.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/native-lookup-flights.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#native-lookup-flights"
+    },
+    {
+      "id": "ai_fulfilment_repository:reschedule-flight-workflow",
+      "cohort": "ai_fulfilment_repository",
+      "name": "reschedule_flight.workflow",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "AI Agent, email/SMS, or required task-event companion",
+      "source_urls": [
+        "https://github.com/WebexSamples/webex-contact-center-api-samples/blob/main/ai-agent-fulfilment-flows/airline%20template%20fulfilment%20flows/reschedule_flight.workflow"
+      ],
+      "documentation_review": "artifact_acquisition_only",
+      "documentation_walkthrough": "knowledge/15-sample-flow-walkthroughs.md",
+      "artifact_status": "downloaded_opaque_workflow",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "artifact_path": "evidence/sample-flows/raw/reschedule_flight.workflow",
+      "acquisition_manifest": "evidence/sample-flows/public-native-manifest.json",
+      "sha256": "60a36b15873c5f44feb0089945696b909534cfeb82b54b2efbc331cb02987ed8",
+      "limitation": "Acquisition-stage JSON/hex checks did not yield nodes or edges; consult later UI evidence separately",
+      "observed_paths": [
+        "evidence/sample-flows/observed/native-reschedule-flight.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/native-reschedule-flight.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#native-reschedule-flight"
+    },
+    {
+      "id": "epic_documented_template:patient-match-epic-ehr-flow-template",
+      "cohort": "epic_documented_template",
+      "name": "Patient Match (EPIC EHR) Flow Template",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "AI Agent, email/SMS, or required task-event companion",
+      "source_urls": [
+        "https://help.webexconnect.io/docs/patient-match-epic-ehr-flow-template"
+      ],
+      "documentation_review": "documented_topology",
+      "documentation_walkthrough": "knowledge/15-sample-flow-walkthroughs.md",
+      "artifact_status": "not_acquired",
+      "ui_graph_capture": "not_observed",
+      "ui_graph_summary": "not_available",
+      "ui_walkthrough_status": "not_available",
+      "runtime_tested": false,
+      "source_cache": "sources/cache/help/patient-match-epic-ehr-flow-template.md"
+    },
+    {
+      "id": "epic_documented_template:get-future-appointments-flow-template",
+      "cohort": "epic_documented_template",
+      "name": "Get Future Appointments Flow Template",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "AI Agent, email/SMS, or required task-event companion",
+      "source_urls": [
+        "https://help.webexconnect.io/docs/get-future-appointments-flow-template"
+      ],
+      "documentation_review": "documented_topology",
+      "documentation_walkthrough": "knowledge/15-sample-flow-walkthroughs.md",
+      "artifact_status": "not_acquired",
+      "ui_graph_capture": "not_observed",
+      "ui_graph_summary": "not_available",
+      "ui_walkthrough_status": "not_available",
+      "runtime_tested": false,
+      "source_cache": "sources/cache/help/get-future-appointments-flow-template.md"
+    },
+    {
+      "id": "epic_documented_template:confirm-appointment-flow-template",
+      "cohort": "epic_documented_template",
+      "name": "Confirm Appointment Flow Template",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "AI Agent, email/SMS, or required task-event companion",
+      "source_urls": [
+        "https://help.webexconnect.io/docs/confirm-appointment-flow-template"
+      ],
+      "documentation_review": "documented_topology",
+      "documentation_walkthrough": "knowledge/15-sample-flow-walkthroughs.md",
+      "artifact_status": "not_acquired",
+      "ui_graph_capture": "not_observed",
+      "ui_graph_summary": "not_available",
+      "ui_walkthrough_status": "not_available",
+      "runtime_tested": false,
+      "source_cache": "sources/cache/help/confirm-appointment-flow-template.md"
+    },
+    {
+      "id": "epic_documented_template:cancel-appointment-flow-template",
+      "cohort": "epic_documented_template",
+      "name": "Cancel Appointment Flow Template",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "AI Agent, email/SMS, or required task-event companion",
+      "source_urls": [
+        "https://help.webexconnect.io/docs/cancel-appointment-flow-template"
+      ],
+      "documentation_review": "documented_topology",
+      "documentation_walkthrough": "knowledge/15-sample-flow-walkthroughs.md",
+      "artifact_status": "not_acquired",
+      "ui_graph_capture": "not_observed",
+      "ui_graph_summary": "not_available",
+      "ui_walkthrough_status": "not_available",
+      "runtime_tested": false,
+      "source_cache": "sources/cache/help/cancel-appointment-flow-template.md"
+    },
+    {
+      "id": "epic_documented_template:epic-reschedule-appointment-flow-template",
+      "cohort": "epic_documented_template",
+      "name": "EPIC Reschedule Appointment  Flow Template",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "AI Agent, email/SMS, or required task-event companion",
+      "source_urls": [
+        "https://help.webexconnect.io/docs/epic-reschedule-appointment-flow-template"
+      ],
+      "documentation_review": "documented_topology",
+      "documentation_walkthrough": "knowledge/15-sample-flow-walkthroughs.md",
+      "artifact_status": "not_acquired",
+      "ui_graph_capture": "not_observed",
+      "ui_graph_summary": "not_available",
+      "ui_walkthrough_status": "not_available",
+      "runtime_tested": false,
+      "source_cache": "sources/cache/help/epic-reschedule-appointment-flow-template.md"
+    },
+    {
+      "id": "sms_tutorial:sending-automated-sms",
+      "cohort": "sms_tutorial",
+      "name": "sending-automated-sms",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "AI Agent, email/SMS, or required task-event companion",
+      "source_urls": [
+        "https://help.webexconnect.io/docs/sending-automated-sms"
+      ],
+      "documentation_review": "documented_and_diagram_topology",
+      "documentation_walkthrough": "knowledge/16-additional-sample-walkthroughs.md",
+      "artifact_status": "not_acquired",
+      "ui_graph_capture": "not_observed",
+      "ui_graph_summary": "not_available",
+      "ui_walkthrough_status": "not_available",
+      "runtime_tested": false,
+      "diagram_evidence": "evidence/sample-flows/automated-sms-diagram.json",
+      "source_cache": "sources/cache/help/sending-automated-sms.md"
+    },
+    {
+      "id": "sms_tutorial:setup-appointment-reminder-webexconnect",
+      "cohort": "sms_tutorial",
+      "name": "setup-appointment-reminder-webexconnect",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "AI Agent, email/SMS, or required task-event companion",
+      "source_urls": [
+        "https://help.webexconnect.io/docs/setup-appointment-reminder-webexconnect"
+      ],
+      "documentation_review": "documented_and_diagram_topology",
+      "documentation_walkthrough": "knowledge/15-sample-flow-walkthroughs.md",
+      "artifact_status": "not_acquired",
+      "ui_graph_capture": "not_observed",
+      "ui_graph_summary": "not_available",
+      "ui_walkthrough_status": "not_available",
+      "runtime_tested": false,
+      "diagram_evidence": "evidence/sample-flows/appointment-reminder-diagram.json",
+      "source_cache": "sources/cache/help/setup-appointment-reminder-webexconnect.md"
+    },
+    {
+      "id": "sms_tutorial:developer-appointment-webhook-tutorial",
+      "cohort": "sms_tutorial",
+      "name": "Developer appointment webhook tutorial",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "AI Agent, email/SMS, or required task-event companion",
+      "source_urls": [
+        "https://developer.webex.com/blog/build-your-first-webex-connect-flow-a-step-by-step-guide"
+      ],
+      "documentation_review": "documented_topology",
+      "documentation_walkthrough": "knowledge/16-additional-sample-walkthroughs.md",
+      "artifact_status": "not_acquired",
+      "ui_graph_capture": "not_observed",
+      "ui_graph_summary": "not_available",
+      "ui_walkthrough_status": "not_available",
+      "runtime_tested": false,
+      "source_cache": "sources/cache/cisco/blog--build-your-first-webex-connect-flow-a-step-by-step-guide.txt"
+    },
+    {
+      "id": "studio_tutorial:scripted-track-package-fulfillment",
+      "cohort": "studio_tutorial",
+      "name": "Scripted Track Package fulfillment",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "AI Agent, email/SMS, or required task-event companion",
+      "source_urls": [
+        "https://help.webex.com/article/mzpuseb"
+      ],
+      "documentation_review": "documented_topology",
+      "documentation_walkthrough": "knowledge/13-ai-agent-flows.md",
+      "artifact_status": "not_acquired",
+      "ui_graph_capture": "not_observed",
+      "ui_graph_summary": "not_available",
+      "ui_walkthrough_status": "not_available",
+      "runtime_tested": false,
+      "source_cache": "sources/cache/studio/article--mzpuseb.md",
+      "identity_note": "Separate public Studio walkthrough; not asserted identical to the tenant gallery Track Package"
+    },
+    {
+      "id": "wxcc_repository_v3_5:apple-inbound-flow-with-intentid-groupid-based-routing-workflow-zip",
+      "cohort": "wxcc_repository_v3_5",
+      "name": "Apple Inbound Flow with IntentId GroupId based Routing.workflow.zip",
+      "in_collection_scope": true,
+      "in_priority_scope": false,
+      "scope_reason": "Additional channel sample included to cover the whole current collection",
+      "source_urls": [
+        "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Apple%20Business%20Messages/Other%20sample%20flows%20/Apple%20Inbound%20Flow%20with%20IntentId%20GroupId%20based%20Routing.workflow.zip"
+      ],
+      "documentation_review": "artifact_only_no_separate_readme",
+      "documentation_walkthrough": null,
+      "artifact_status": "downloaded_zip_with_opaque_workflow",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "repository_path": "Webex Connect Flows/v3.5/Sample/Apple Business Messages/Other sample flows /Apple Inbound Flow with IntentId GroupId based Routing.workflow.zip",
+      "repository_commit": "ef668084a137c251f81ae3aa38d1f4e06b4e5573",
+      "repository_blob_sha": "711ccf489d759a9c6ed2aa094fd0c783ca49020e",
+      "artifact_path": "evidence/sample-flows/raw/wxcc-v3.5/2dd09164-Apple Inbound Flow with IntentId GroupId based Routing.workflow.zip",
+      "sha256": "0a4807e52fd59fafbaf9f054f44a7feaddf8eced032f40e594cd46d8574b1e57",
+      "acquisition_manifest": "evidence/sample-flows/public-wxcc-manifest.json",
+      "capture_labels": [
+        "Apple Inbound Flow with IntentId GroupId based Routing.workflow"
+      ],
+      "observed_paths": [
+        "evidence/sample-flows/observed/wxcc-apple-inbound-flow-with-intentid-groupid-based-routing.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/wxcc-apple-inbound-flow-with-intentid-groupid-based-routing.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#wxcc-apple-inbound-flow-with-intentid-groupid-based-routing"
+    },
+    {
+      "id": "wxcc_repository_v3_5:apple-list-picker-flow-workflow-zip",
+      "cohort": "wxcc_repository_v3_5",
+      "name": "Apple List Picker Flow.workflow.zip",
+      "in_collection_scope": true,
+      "in_priority_scope": false,
+      "scope_reason": "Additional channel sample included to cover the whole current collection",
+      "source_urls": [
+        "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Apple%20Business%20Messages/Rich%20message%20flows/Apple%20List%20Picker%20Flow.workflow.zip"
+      ],
+      "documentation_review": "artifact_only_no_separate_readme",
+      "documentation_walkthrough": null,
+      "artifact_status": "downloaded_zip_with_opaque_workflow",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "repository_path": "Webex Connect Flows/v3.5/Sample/Apple Business Messages/Rich message flows/Apple List Picker Flow.workflow.zip",
+      "repository_commit": "ef668084a137c251f81ae3aa38d1f4e06b4e5573",
+      "repository_blob_sha": "b58a7835bd4db34bdb934c2272351e5214294910",
+      "artifact_path": "evidence/sample-flows/raw/wxcc-v3.5/9f8cf4b2-Apple List Picker Flow.workflow.zip",
+      "sha256": "5f4c3c46c815b1877d548f6f8a3a3f788ec410af0bf8cf1407a9c51cebeaee5c",
+      "acquisition_manifest": "evidence/sample-flows/public-wxcc-manifest.json",
+      "capture_labels": [
+        "Apple List Picker Flow.workflow"
+      ],
+      "observed_paths": [
+        "evidence/sample-flows/observed/wxcc-apple-list-picker-flow.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/wxcc-apple-list-picker-flow.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#wxcc-apple-list-picker-flow"
+    },
+    {
+      "id": "wxcc_repository_v3_5:apple-time-picker-flow-workflow-zip",
+      "cohort": "wxcc_repository_v3_5",
+      "name": "Apple Time Picker Flow.workflow.zip",
+      "in_collection_scope": true,
+      "in_priority_scope": false,
+      "scope_reason": "Additional channel sample included to cover the whole current collection",
+      "source_urls": [
+        "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Apple%20Business%20Messages/Rich%20message%20flows/Apple%20Time%20Picker%20Flow.workflow.zip"
+      ],
+      "documentation_review": "artifact_only_no_separate_readme",
+      "documentation_walkthrough": null,
+      "artifact_status": "downloaded_zip_with_opaque_workflow",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "repository_path": "Webex Connect Flows/v3.5/Sample/Apple Business Messages/Rich message flows/Apple Time Picker Flow.workflow.zip",
+      "repository_commit": "ef668084a137c251f81ae3aa38d1f4e06b4e5573",
+      "repository_blob_sha": "5398471fb3c5c5b1c7e1e8239fdfeffcd5435921",
+      "artifact_path": "evidence/sample-flows/raw/wxcc-v3.5/29d1301f-Apple Time Picker Flow.workflow.zip",
+      "sha256": "a794f678907c1d4f09aefa012ab5992d3d48c9cbe1e7fa892479174c93c4c4b4",
+      "acquisition_manifest": "evidence/sample-flows/public-wxcc-manifest.json",
+      "capture_labels": [
+        "Apple Time Picker Flow.workflow"
+      ],
+      "observed_paths": [
+        "evidence/sample-flows/observed/wxcc-apple-time-picker-flow.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/wxcc-apple-time-picker-flow.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#wxcc-apple-time-picker-flow"
+    },
+    {
+      "id": "wxcc_repository_v3_5:apple-form-response-flow-workflow-zip",
+      "cohort": "wxcc_repository_v3_5",
+      "name": "Apple Form Response Flow.workflow.zip",
+      "in_collection_scope": true,
+      "in_priority_scope": false,
+      "scope_reason": "Additional channel sample included to cover the whole current collection",
+      "source_urls": [
+        "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Apple%20Business%20Messages/Rich%20message%20response%20flows/Apple%20Form%20Response%20Flow.workflow.zip"
+      ],
+      "documentation_review": "artifact_only_no_separate_readme",
+      "documentation_walkthrough": null,
+      "artifact_status": "downloaded_zip_with_opaque_workflow",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "repository_path": "Webex Connect Flows/v3.5/Sample/Apple Business Messages/Rich message response flows/Apple Form Response Flow.workflow.zip",
+      "repository_commit": "ef668084a137c251f81ae3aa38d1f4e06b4e5573",
+      "repository_blob_sha": "edb6c16ec61f830171c2c42f1c7c365e391327cc",
+      "artifact_path": "evidence/sample-flows/raw/wxcc-v3.5/d04ca908-Apple Form Response Flow.workflow.zip",
+      "sha256": "2f39abc7ef557918d8babf4b4769fdf5e510293f7d7df32f060d2f886a276993",
+      "acquisition_manifest": "evidence/sample-flows/public-wxcc-manifest.json",
+      "capture_labels": [
+        "Apple Form Response Flow.workflow"
+      ],
+      "observed_paths": [
+        "evidence/sample-flows/observed/wxcc-apple-form-response-flow.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/wxcc-apple-form-response-flow.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#wxcc-apple-form-response-flow"
+    },
+    {
+      "id": "wxcc_repository_v3_5:apple-time-picker-and-list-picker-response-flow-workflow-zip",
+      "cohort": "wxcc_repository_v3_5",
+      "name": "Apple Time Picker and List Picker Response Flow.workflow.zip",
+      "in_collection_scope": true,
+      "in_priority_scope": false,
+      "scope_reason": "Additional channel sample included to cover the whole current collection",
+      "source_urls": [
+        "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Apple%20Business%20Messages/Rich%20message%20response%20flows/Apple%20Time%20Picker%20and%20List%20Picker%20Response%20Flow.workflow.zip"
+      ],
+      "documentation_review": "artifact_only_no_separate_readme",
+      "documentation_walkthrough": null,
+      "artifact_status": "downloaded_zip_with_opaque_workflow",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "repository_path": "Webex Connect Flows/v3.5/Sample/Apple Business Messages/Rich message response flows/Apple Time Picker and List Picker Response Flow.workflow.zip",
+      "repository_commit": "ef668084a137c251f81ae3aa38d1f4e06b4e5573",
+      "repository_blob_sha": "683c2e9ed3b6b0c626604bcca137fbfd63232a7b",
+      "artifact_path": "evidence/sample-flows/raw/wxcc-v3.5/e1695515-Apple Time Picker and List Picker Response Flow.workflow.zip",
+      "sha256": "360cc78b534527cf58968831258b959e68a2fe1094f81b6e9281ce1705175c18",
+      "acquisition_manifest": "evidence/sample-flows/public-wxcc-manifest.json",
+      "capture_labels": [
+        "Apple Time Picker and List Picker Response Flow.workflow"
+      ],
+      "observed_paths": [
+        "evidence/sample-flows/observed/wxcc-apple-time-picker-and-list-picker-response-flow.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/wxcc-apple-time-picker-and-list-picker-response-flow.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#wxcc-apple-time-picker-and-list-picker-response-flow"
+    },
+    {
+      "id": "wxcc_repository_v3_5:apple-imessage-app-flow-workflow-zip",
+      "cohort": "wxcc_repository_v3_5",
+      "name": "Apple iMessage App Flow.workflow.zip",
+      "in_collection_scope": true,
+      "in_priority_scope": false,
+      "scope_reason": "Additional channel sample included to cover the whole current collection",
+      "source_urls": [
+        "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Apple%20Business%20Messages/Rich%20message%20response%20flows/Apple%20iMessage%20App%20Flow.workflow.zip"
+      ],
+      "documentation_review": "artifact_only_no_separate_readme",
+      "documentation_walkthrough": null,
+      "artifact_status": "downloaded_zip_with_opaque_workflow",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "repository_path": "Webex Connect Flows/v3.5/Sample/Apple Business Messages/Rich message response flows/Apple iMessage App Flow.workflow.zip",
+      "repository_commit": "ef668084a137c251f81ae3aa38d1f4e06b4e5573",
+      "repository_blob_sha": "3ff4d8a522363c25bd7e404f6eb73f2c00e9e4a3",
+      "artifact_path": "evidence/sample-flows/raw/wxcc-v3.5/22d12fb7-Apple iMessage App Flow.workflow.zip",
+      "sha256": "2436e6f84cb23de4a0477a3cf0f75c9c1ceef85596d8242217fd5f7355d2831b",
+      "acquisition_manifest": "evidence/sample-flows/public-wxcc-manifest.json",
+      "capture_labels": [
+        "Apple iMessage App Flow.workflow"
+      ],
+      "observed_paths": [
+        "evidence/sample-flows/observed/wxcc-apple-imessage-app-flow.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/wxcc-apple-imessage-app-flow.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#wxcc-apple-imessage-app-flow"
+    },
+    {
+      "id": "wxcc_repository_v3_5:emailattachmentdropnotification-workflow-zip",
+      "cohort": "wxcc_repository_v3_5",
+      "name": "EmailAttachmentDropNotification.workflow.zip",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "AI/SMS/email sample or task-context companion",
+      "source_urls": [
+        "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Attachment%20Drop%20Notification%20to%20Customer/EmailAttachmentDropNotification.workflow.zip",
+        "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Attachment%20Drop%20Notification%20to%20Customer/README.md"
+      ],
+      "documentation_review": "documented_partial_contract",
+      "documentation_walkthrough": "knowledge/16-additional-sample-walkthroughs.md",
+      "artifact_status": "downloaded_zip_with_opaque_workflow",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "repository_path": "Webex Connect Flows/v3.5/Sample/Attachment Drop Notification to Customer/EmailAttachmentDropNotification.workflow.zip",
+      "repository_commit": "ef668084a137c251f81ae3aa38d1f4e06b4e5573",
+      "repository_blob_sha": "83869841aa0eff8867b9488bc3dba451859d1c75",
+      "artifact_path": "evidence/sample-flows/raw/wxcc-v3.5/644a6fb2-EmailAttachmentDropNotification.workflow.zip",
+      "sha256": "928b3a004fb6e7e530b3823ce9dffee4e16cf6f6299bcefa375403ab6abd6c36",
+      "acquisition_manifest": "evidence/sample-flows/public-wxcc-manifest.json",
+      "readme_path": "evidence/sample-flows/raw/wxcc-v3.5/f0a1d9c7-README.md",
+      "capture_labels": [
+        "EmailAttachmentDropNotification.workflow"
+      ],
+      "observed_paths": [
+        "evidence/sample-flows/observed/wxcc-emailattachmentdropnotification.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/wxcc-emailattachmentdropnotification.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#wxcc-emailattachmentdropnotification"
+    },
+    {
+      "id": "wxcc_repository_v3_5:facebookattachmentdropnotification-workflow-zip",
+      "cohort": "wxcc_repository_v3_5",
+      "name": "FacebookAttachmentDropNotification.workflow.zip",
+      "in_collection_scope": true,
+      "in_priority_scope": false,
+      "scope_reason": "Additional channel sample included to cover the whole current collection",
+      "source_urls": [
+        "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Attachment%20Drop%20Notification%20to%20Customer/FacebookAttachmentDropNotification.workflow.zip",
+        "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Attachment%20Drop%20Notification%20to%20Customer/README.md"
+      ],
+      "documentation_review": "documented_partial_contract",
+      "documentation_walkthrough": "knowledge/16-additional-sample-walkthroughs.md",
+      "artifact_status": "downloaded_zip_with_opaque_workflow",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "repository_path": "Webex Connect Flows/v3.5/Sample/Attachment Drop Notification to Customer/FacebookAttachmentDropNotification.workflow.zip",
+      "repository_commit": "ef668084a137c251f81ae3aa38d1f4e06b4e5573",
+      "repository_blob_sha": "5f07d786569dadd95ca51f44add7b0a591609df5",
+      "artifact_path": "evidence/sample-flows/raw/wxcc-v3.5/10d617bd-FacebookAttachmentDropNotification.workflow.zip",
+      "sha256": "a8f07721a665e5f54ed26e8f92145d3c8a31145695e1f0880ab5d8e98bd780c8",
+      "acquisition_manifest": "evidence/sample-flows/public-wxcc-manifest.json",
+      "readme_path": "evidence/sample-flows/raw/wxcc-v3.5/f0a1d9c7-README.md",
+      "capture_labels": [
+        "FacebookAttachmentDropNotification.workflow"
+      ],
+      "observed_paths": [
+        "evidence/sample-flows/observed/wxcc-facebookattachmentdropnotification.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/wxcc-facebookattachmentdropnotification.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#wxcc-facebookattachmentdropnotification"
+    },
+    {
+      "id": "wxcc_repository_v3_5:facebooktaskbotinboundflow-workflow-zip",
+      "cohort": "wxcc_repository_v3_5",
+      "name": "FacebookTaskBotInboundFlow.workflow.zip",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "AI/SMS/email sample or task-context companion",
+      "source_urls": [
+        "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Bot%20Flows/FacebookTaskBotInboundFlow.workflow.zip",
+        "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Bot%20Flows/README.md"
+      ],
+      "documentation_review": "documented_partial_contract",
+      "documentation_walkthrough": "knowledge/16-additional-sample-walkthroughs.md",
+      "artifact_status": "downloaded_zip_with_opaque_workflow",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "repository_path": "Webex Connect Flows/v3.5/Sample/Bot Flows/FacebookTaskBotInboundFlow.workflow.zip",
+      "repository_commit": "ef668084a137c251f81ae3aa38d1f4e06b4e5573",
+      "repository_blob_sha": "4806b6c3df602fc80ebfafc7dcab218fd9d94708",
+      "artifact_path": "evidence/sample-flows/raw/wxcc-v3.5/3d441181-FacebookTaskBotInboundFlow.workflow.zip",
+      "sha256": "4240c5776477b82124afa40103b4728931c583da552a2365963277f21761e3e6",
+      "acquisition_manifest": "evidence/sample-flows/public-wxcc-manifest.json",
+      "readme_path": "evidence/sample-flows/raw/wxcc-v3.5/86896002-README.md",
+      "capture_labels": [
+        "FacebookTaskBotInboundFlow.workflow"
+      ],
+      "observed_paths": [
+        "evidence/sample-flows/observed/wxcc-facebooktaskbotinboundflow.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/wxcc-facebooktaskbotinboundflow.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#wxcc-facebooktaskbotinboundflow"
+    },
+    {
+      "id": "wxcc_repository_v3_5:livechatqabotinboundflow-workflow-zip",
+      "cohort": "wxcc_repository_v3_5",
+      "name": "LiveChatQABotInboundFlow.workflow.zip",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "AI/SMS/email sample or task-context companion",
+      "source_urls": [
+        "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Bot%20Flows/LiveChatQABotInboundFlow.workflow.zip",
+        "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Bot%20Flows/README.md"
+      ],
+      "documentation_review": "documented_partial_contract",
+      "documentation_walkthrough": "knowledge/16-additional-sample-walkthroughs.md",
+      "artifact_status": "downloaded_zip_with_opaque_workflow",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "repository_path": "Webex Connect Flows/v3.5/Sample/Bot Flows/LiveChatQABotInboundFlow.workflow.zip",
+      "repository_commit": "ef668084a137c251f81ae3aa38d1f4e06b4e5573",
+      "repository_blob_sha": "ab96c6b65f9848ddaca082f62b0b13f174dea207",
+      "artifact_path": "evidence/sample-flows/raw/wxcc-v3.5/c6601bcf-LiveChatQABotInboundFlow.workflow.zip",
+      "sha256": "497d7a9a3cd082793fcfb3e08d70dc9cd808db1f0c946c09b9be0432c01a9a87",
+      "acquisition_manifest": "evidence/sample-flows/public-wxcc-manifest.json",
+      "readme_path": "evidence/sample-flows/raw/wxcc-v3.5/86896002-README.md",
+      "capture_labels": [
+        "LiveChatQABotInboundFlow.workflow"
+      ],
+      "observed_paths": [
+        "evidence/sample-flows/observed/wxcc-livechatqabotinboundflow.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/wxcc-livechatqabotinboundflow.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#wxcc-livechatqabotinboundflow"
+    },
+    {
+      "id": "wxcc_repository_v3_5:smsqabotinboundflow-workflow-zip",
+      "cohort": "wxcc_repository_v3_5",
+      "name": "SmsQABotInboundFlow.workflow.zip",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "AI/SMS/email sample or task-context companion",
+      "source_urls": [
+        "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Bot%20Flows/SmsQABotInboundFlow.workflow.zip",
+        "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Bot%20Flows/README.md"
+      ],
+      "documentation_review": "documented_partial_contract",
+      "documentation_walkthrough": "knowledge/16-additional-sample-walkthroughs.md",
+      "artifact_status": "downloaded_zip_with_opaque_workflow",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "repository_path": "Webex Connect Flows/v3.5/Sample/Bot Flows/SmsQABotInboundFlow.workflow.zip",
+      "repository_commit": "ef668084a137c251f81ae3aa38d1f4e06b4e5573",
+      "repository_blob_sha": "5521e5685fa4ef567ea3df06354728b14212717e",
+      "artifact_path": "evidence/sample-flows/raw/wxcc-v3.5/687f5bc0-SmsQABotInboundFlow.workflow.zip",
+      "sha256": "cce518cfafecb6925e162e6c9583b31adda2babc7070f25fb064293de82695e2",
+      "acquisition_manifest": "evidence/sample-flows/public-wxcc-manifest.json",
+      "readme_path": "evidence/sample-flows/raw/wxcc-v3.5/86896002-README.md",
+      "capture_labels": [
+        "SmsQABotInboundFlow.workflow"
+      ],
+      "observed_paths": [
+        "evidence/sample-flows/observed/wxcc-smsqabotinboundflow.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/wxcc-smsqabotinboundflow.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#wxcc-smsqabotinboundflow"
+    },
+    {
+      "id": "wxcc_repository_v3_5:facebookclosewithwxmflow-workflow-zip",
+      "cohort": "wxcc_repository_v3_5",
+      "name": "FacebookCloseWithWxmFlow.workflow.zip",
+      "in_collection_scope": true,
+      "in_priority_scope": false,
+      "scope_reason": "Additional channel sample included to cover the whole current collection",
+      "source_urls": [
+        "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Usage%20Of%20Surveys%20in%20Flows/FacebookCloseWithWxmFlow.workflow.zip",
+        "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Usage%20Of%20Surveys%20in%20Flows/README.md"
+      ],
+      "documentation_review": "documented_partial_contract",
+      "documentation_walkthrough": "knowledge/16-additional-sample-walkthroughs.md",
+      "artifact_status": "downloaded_zip_with_opaque_workflow",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "repository_path": "Webex Connect Flows/v3.5/Sample/Usage Of Surveys in Flows/FacebookCloseWithWxmFlow.workflow.zip",
+      "repository_commit": "ef668084a137c251f81ae3aa38d1f4e06b4e5573",
+      "repository_blob_sha": "2274c18dca78115a1aa747b6b962fba8c7839ff7",
+      "artifact_path": "evidence/sample-flows/raw/wxcc-v3.5/cae3968b-FacebookCloseWithWxmFlow.workflow.zip",
+      "sha256": "ea972dcd0cdbe547b6447492e94ac94db7aa2a8b0f867048d4b66daa61d26fd4",
+      "acquisition_manifest": "evidence/sample-flows/public-wxcc-manifest.json",
+      "readme_path": "evidence/sample-flows/raw/wxcc-v3.5/2592e765-README.md",
+      "capture_labels": [
+        "FacebookCloseWithWxmFlow.workflow"
+      ],
+      "observed_paths": [
+        "evidence/sample-flows/observed/wxcc-facebookclosewithwxmflow.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/wxcc-facebookclosewithwxmflow.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#wxcc-facebookclosewithwxmflow"
+    },
+    {
+      "id": "wxcc_repository_v3_5:livechatclosewithwxmflow-workflow-zip",
+      "cohort": "wxcc_repository_v3_5",
+      "name": "LiveChatCloseWithWxmFlow.workflow.zip",
+      "in_collection_scope": true,
+      "in_priority_scope": false,
+      "scope_reason": "Additional channel sample included to cover the whole current collection",
+      "source_urls": [
+        "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Usage%20Of%20Surveys%20in%20Flows/LiveChatCloseWithWxmFlow.workflow.zip",
+        "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Usage%20Of%20Surveys%20in%20Flows/README.md"
+      ],
+      "documentation_review": "documented_partial_contract",
+      "documentation_walkthrough": "knowledge/16-additional-sample-walkthroughs.md",
+      "artifact_status": "downloaded_zip_with_opaque_workflow",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "repository_path": "Webex Connect Flows/v3.5/Sample/Usage Of Surveys in Flows/LiveChatCloseWithWxmFlow.workflow.zip",
+      "repository_commit": "ef668084a137c251f81ae3aa38d1f4e06b4e5573",
+      "repository_blob_sha": "ed3a52af47acdbae4077817456444571c4612a36",
+      "artifact_path": "evidence/sample-flows/raw/wxcc-v3.5/effcf4ce-LiveChatCloseWithWxmFlow.workflow.zip",
+      "sha256": "5fc9fc1fc80caa7f67e74b56032784d0cf0505fdb681d2077b7f999a0da92e64",
+      "acquisition_manifest": "evidence/sample-flows/public-wxcc-manifest.json",
+      "readme_path": "evidence/sample-flows/raw/wxcc-v3.5/2592e765-README.md",
+      "capture_labels": [
+        "LiveChatCloseWithWxmFlow.workflow"
+      ],
+      "observed_paths": [
+        "evidence/sample-flows/observed/wxcc-livechatclosewithwxmflow.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/wxcc-livechatclosewithwxmflow.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#wxcc-livechatclosewithwxmflow"
+    },
+    {
+      "id": "wxcc_repository_v3_5:emailinboundsampleflowwithcontactpriority-workflow-zip",
+      "cohort": "wxcc_repository_v3_5",
+      "name": "EmailInboundSampleFlowWithContactPriority.workflow.zip",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "AI/SMS/email sample or task-context companion",
+      "source_urls": [
+        "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Usage%20of%20Contact%20Priority%20In%20Flows/EmailInboundSampleFlowWithContactPriority.workflow.zip",
+        "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Usage%20of%20Contact%20Priority%20In%20Flows/README.md"
+      ],
+      "documentation_review": "documented_partial_contract",
+      "documentation_walkthrough": "knowledge/16-additional-sample-walkthroughs.md",
+      "artifact_status": "downloaded_zip_with_opaque_workflow",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "repository_path": "Webex Connect Flows/v3.5/Sample/Usage of Contact Priority In Flows/EmailInboundSampleFlowWithContactPriority.workflow.zip",
+      "repository_commit": "ef668084a137c251f81ae3aa38d1f4e06b4e5573",
+      "repository_blob_sha": "c785e2653ee495b203748c94fc1c330070dd7517",
+      "artifact_path": "evidence/sample-flows/raw/wxcc-v3.5/731dcb7e-EmailInboundSampleFlowWithContactPriority.workflow.zip",
+      "sha256": "e725a669e496807a9827eee53951e057fefe2d59b250f549b48edca3978075a9",
+      "acquisition_manifest": "evidence/sample-flows/public-wxcc-manifest.json",
+      "readme_path": "evidence/sample-flows/raw/wxcc-v3.5/5b19d396-README.md",
+      "capture_labels": [
+        "EmailInboundSampleFlowWithContactPriority.workflow"
+      ],
+      "observed_paths": [
+        "evidence/sample-flows/observed/wxcc-emailinboundsampleflowwithcontactpriority.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/wxcc-emailinboundsampleflowwithcontactpriority.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#wxcc-emailinboundsampleflowwithcontactpriority"
+    },
+    {
+      "id": "wxcc_repository_v3_5:livechatinboundsampleflowwithsetvariablepiqandewt-workflow-zip",
+      "cohort": "wxcc_repository_v3_5",
+      "name": "LiveChatInboundSampleFlowWithSetVariablePIQAndEWT.workflow.zip",
+      "in_collection_scope": true,
+      "in_priority_scope": false,
+      "scope_reason": "Additional channel sample included to cover the whole current collection",
+      "source_urls": [
+        "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Usage%20of%20PIQ%20And%20EWT%20In%20Flows/LiveChatInboundSampleFlowWithSetVariablePIQAndEWT.workflow.zip",
+        "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Usage%20of%20PIQ%20And%20EWT%20In%20Flows/README.md"
+      ],
+      "documentation_review": "documented_partial_contract",
+      "documentation_walkthrough": "knowledge/16-additional-sample-walkthroughs.md",
+      "artifact_status": "downloaded_zip_with_opaque_workflow",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "repository_path": "Webex Connect Flows/v3.5/Sample/Usage of PIQ And EWT In Flows/LiveChatInboundSampleFlowWithSetVariablePIQAndEWT.workflow.zip",
+      "repository_commit": "ef668084a137c251f81ae3aa38d1f4e06b4e5573",
+      "repository_blob_sha": "e09c73f6799ab4f5212cb4ffbd0f6c3d78deb260",
+      "artifact_path": "evidence/sample-flows/raw/wxcc-v3.5/552f2736-LiveChatInboundSampleFlowWithSetVariablePIQAndEWT.workflow.zip",
+      "sha256": "4f2a196012eeee68da58909c17819813aa469645a32c73138b3c7827816a1a9f",
+      "acquisition_manifest": "evidence/sample-flows/public-wxcc-manifest.json",
+      "readme_path": "evidence/sample-flows/raw/wxcc-v3.5/0c1ed8ec-README.md",
+      "capture_labels": [
+        "LiveChatInboundSampleFlowWithSetVariablePIQAndEWT.workflow"
+      ],
+      "observed_paths": [
+        "evidence/sample-flows/observed/wxcc-livechatinboundsampleflowwithsetvariablepiqandewt.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/wxcc-livechatinboundsampleflowwithsetvariablepiqandewt.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#wxcc-livechatinboundsampleflowwithsetvariablepiqandewt"
+    },
+    {
+      "id": "wxcc_repository_v3_5:task-close-flow-with-screen-pop-workflow-zip",
+      "cohort": "wxcc_repository_v3_5",
+      "name": "Task Close Flow With Screen Pop.workflow.zip",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "AI/SMS/email sample or task-context companion",
+      "source_urls": [
+        "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Usage%20of%20Screen%20Pop%20in%20Flows/Task%20Close%20Flow%20With%20Screen%20Pop.workflow.zip",
+        "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Usage%20of%20Screen%20Pop%20in%20Flows/README.md"
+      ],
+      "documentation_review": "documented_partial_contract",
+      "documentation_walkthrough": "knowledge/16-additional-sample-walkthroughs.md",
+      "artifact_status": "downloaded_zip_with_opaque_workflow",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "repository_path": "Webex Connect Flows/v3.5/Sample/Usage of Screen Pop in Flows/Task Close Flow With Screen Pop.workflow.zip",
+      "repository_commit": "ef668084a137c251f81ae3aa38d1f4e06b4e5573",
+      "repository_blob_sha": "91f0757eabd88768ecc9701e8cdedcc40506d75c",
+      "artifact_path": "evidence/sample-flows/raw/wxcc-v3.5/714f54bd-Task Close Flow With Screen Pop.workflow.zip",
+      "sha256": "973b65c000a8f1a029443d0b8c2fa9ecd3de83407167248d1f1b5ae79cdd9b79",
+      "acquisition_manifest": "evidence/sample-flows/public-wxcc-manifest.json",
+      "readme_path": "evidence/sample-flows/raw/wxcc-v3.5/58968742-README.md",
+      "capture_labels": [
+        "Task Close Flow With Screen Pop.workflow"
+      ],
+      "observed_paths": [
+        "evidence/sample-flows/observed/wxcc-task-close-flow-with-screen-pop.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/wxcc-task-close-flow-with-screen-pop.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#wxcc-task-close-flow-with-screen-pop"
+    },
+    {
+      "id": "wxcc_repository_v3_5:livechatinboundsampleflowwithsetvariable-workflow-zip",
+      "cohort": "wxcc_repository_v3_5",
+      "name": "LiveChatInboundSampleFlowWithSetVariable.workflow.zip",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "AI/SMS/email sample or task-context companion",
+      "source_urls": [
+        "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Usage%20of%20Set%20Variable%20In%20Flows/LiveChatInboundSampleFlowWithSetVariable.workflow.zip",
+        "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Usage%20of%20Set%20Variable%20In%20Flows/README.md"
+      ],
+      "documentation_review": "documented_partial_contract",
+      "documentation_walkthrough": "knowledge/16-additional-sample-walkthroughs.md",
+      "artifact_status": "downloaded_zip_with_opaque_workflow",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "repository_path": "Webex Connect Flows/v3.5/Sample/Usage of Set Variable In Flows/LiveChatInboundSampleFlowWithSetVariable.workflow.zip",
+      "repository_commit": "ef668084a137c251f81ae3aa38d1f4e06b4e5573",
+      "repository_blob_sha": "80b27d232c1530bfe23acecaad7d591c2686125d",
+      "artifact_path": "evidence/sample-flows/raw/wxcc-v3.5/e9c81b91-LiveChatInboundSampleFlowWithSetVariable.workflow.zip",
+      "sha256": "62ced6f940eefaccf7ee623efa447f6bb5498ada2117541496b05abca122ceef",
+      "acquisition_manifest": "evidence/sample-flows/public-wxcc-manifest.json",
+      "readme_path": "evidence/sample-flows/raw/wxcc-v3.5/08d0825f-README.md",
+      "capture_labels": [
+        "LiveChatInboundSampleFlowWithSetVariable.workflow"
+      ],
+      "observed_paths": [
+        "evidence/sample-flows/observed/wxcc-livechatinboundsampleflowwithsetvariable.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/wxcc-livechatinboundsampleflowwithsetvariable.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#wxcc-livechatinboundsampleflowwithsetvariable"
+    },
+    {
+      "id": "wxcc_repository_v3_5:task-routed-sample-flow-for-extracting-variables-workflow-zip",
+      "cohort": "wxcc_repository_v3_5",
+      "name": "Task Routed Sample Flow For Extracting Variables.workflow.zip",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "AI/SMS/email sample or task-context companion",
+      "source_urls": [
+        "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Usage%20of%20Set%20Variable%20In%20Flows/Task%20Routed%20Sample%20Flow%20For%20Extracting%20Variables.workflow.zip",
+        "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Usage%20of%20Set%20Variable%20In%20Flows/README.md"
+      ],
+      "documentation_review": "documented_partial_contract",
+      "documentation_walkthrough": "knowledge/16-additional-sample-walkthroughs.md",
+      "artifact_status": "downloaded_zip_with_opaque_workflow",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "repository_path": "Webex Connect Flows/v3.5/Sample/Usage of Set Variable In Flows/Task Routed Sample Flow For Extracting Variables.workflow.zip",
+      "repository_commit": "ef668084a137c251f81ae3aa38d1f4e06b4e5573",
+      "repository_blob_sha": "9ff1896de2926d99784c066141819c307cc3cfbb",
+      "artifact_path": "evidence/sample-flows/raw/wxcc-v3.5/740751f0-Task Routed Sample Flow For Extracting Variables.workflow.zip",
+      "sha256": "bba70039da07a43279522ed72200ae1f0d968b04a7626f2d5cdef3c8212240cb",
+      "acquisition_manifest": "evidence/sample-flows/public-wxcc-manifest.json",
+      "readme_path": "evidence/sample-flows/raw/wxcc-v3.5/08d0825f-README.md",
+      "capture_labels": [
+        "Task Routed Sample Flow For Extracting Variables.workflow"
+      ],
+      "observed_paths": [
+        "evidence/sample-flows/observed/wxcc-task-routed-sample-flow-for-extracting-variables.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/wxcc-task-routed-sample-flow-for-extracting-variables.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#wxcc-task-routed-sample-flow-for-extracting-variables"
+    },
+    {
+      "id": "wxcc_repository_v3_5:task-close-flow-workflow-zip",
+      "cohort": "wxcc_repository_v3_5",
+      "name": "Task Close Flow.workflow.zip",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "AI/SMS/email sample or task-context companion",
+      "source_urls": [
+        "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Event%20Handling%20Workflows/Task%20Close%20Flow.workflow.zip",
+        "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Event%20Handling%20Workflows/README.md"
+      ],
+      "documentation_review": "documented_partial_contract",
+      "documentation_walkthrough": "knowledge/16-additional-sample-walkthroughs.md",
+      "artifact_status": "downloaded_zip_with_opaque_workflow",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "repository_path": "Webex Connect Flows/v3.5/Template/Event Handling Workflows/Task Close Flow.workflow.zip",
+      "repository_commit": "ef668084a137c251f81ae3aa38d1f4e06b4e5573",
+      "repository_blob_sha": "d26877df66f5bcf4fd5abae12a5b0e5ccc123ce2",
+      "artifact_path": "evidence/sample-flows/raw/wxcc-v3.5/24e4ad85-Task Close Flow.workflow.zip",
+      "sha256": "2ac3bf80c77bd112601d2c0c74bc3292fa39e6bbc0823c2eef7848c1346b326e",
+      "acquisition_manifest": "evidence/sample-flows/public-wxcc-manifest.json",
+      "readme_path": "evidence/sample-flows/raw/wxcc-v3.5/e50a35da-README.md",
+      "capture_labels": [
+        "Task Close Flow.workflow"
+      ],
+      "observed_paths": [
+        "evidence/sample-flows/observed/wxcc-task-close-flow.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/wxcc-task-close-flow.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#wxcc-task-close-flow"
+    },
+    {
+      "id": "wxcc_repository_v3_5:task-modified-flow-workflow-zip",
+      "cohort": "wxcc_repository_v3_5",
+      "name": "Task Modified Flow.workflow.zip",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "AI/SMS/email sample or task-context companion",
+      "source_urls": [
+        "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Event%20Handling%20Workflows/Task%20Modified%20Flow.workflow.zip",
+        "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Event%20Handling%20Workflows/README.md"
+      ],
+      "documentation_review": "documented_partial_contract",
+      "documentation_walkthrough": "knowledge/16-additional-sample-walkthroughs.md",
+      "artifact_status": "downloaded_zip_with_opaque_workflow",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "repository_path": "Webex Connect Flows/v3.5/Template/Event Handling Workflows/Task Modified Flow.workflow.zip",
+      "repository_commit": "ef668084a137c251f81ae3aa38d1f4e06b4e5573",
+      "repository_blob_sha": "c503db701e88f24ab63932c02c5823ff13bd000e",
+      "artifact_path": "evidence/sample-flows/raw/wxcc-v3.5/0b2de247-Task Modified Flow.workflow.zip",
+      "sha256": "bea316cbb55bca5b51cac9a58dd129fe5817991cd419df69d70a460de188610c",
+      "acquisition_manifest": "evidence/sample-flows/public-wxcc-manifest.json",
+      "readme_path": "evidence/sample-flows/raw/wxcc-v3.5/e50a35da-README.md",
+      "capture_labels": [
+        "Task Modified Flow.workflow"
+      ],
+      "observed_paths": [
+        "evidence/sample-flows/observed/wxcc-task-modified-flow.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/wxcc-task-modified-flow.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#wxcc-task-modified-flow"
+    },
+    {
+      "id": "wxcc_repository_v3_5:task-routed-flow-workflow-zip",
+      "cohort": "wxcc_repository_v3_5",
+      "name": "Task Routed Flow.workflow.zip",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "AI/SMS/email sample or task-context companion",
+      "source_urls": [
+        "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Event%20Handling%20Workflows/Task%20Routed%20Flow.workflow.zip",
+        "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Event%20Handling%20Workflows/README.md"
+      ],
+      "documentation_review": "documented_partial_contract",
+      "documentation_walkthrough": "knowledge/16-additional-sample-walkthroughs.md",
+      "artifact_status": "downloaded_zip_with_opaque_workflow",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "repository_path": "Webex Connect Flows/v3.5/Template/Event Handling Workflows/Task Routed Flow.workflow.zip",
+      "repository_commit": "ef668084a137c251f81ae3aa38d1f4e06b4e5573",
+      "repository_blob_sha": "2d8ed9687626b364d37c5a8fbcaa7c10a434887a",
+      "artifact_path": "evidence/sample-flows/raw/wxcc-v3.5/3668a17a-Task Routed Flow.workflow.zip",
+      "sha256": "5b7ba98c505211d325acc63c8b25115635e8cf291bc834cb84d62ab542c7a04c",
+      "acquisition_manifest": "evidence/sample-flows/public-wxcc-manifest.json",
+      "readme_path": "evidence/sample-flows/raw/wxcc-v3.5/e50a35da-README.md",
+      "capture_labels": [
+        "Task Routed Flow.workflow"
+      ],
+      "observed_paths": [
+        "evidence/sample-flows/observed/wxcc-task-routed-flow.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/wxcc-task-routed-flow.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#wxcc-task-routed-flow"
+    },
+    {
+      "id": "wxcc_repository_v3_5:amb-simplified-flow-zip",
+      "cohort": "wxcc_repository_v3_5",
+      "name": "AMB Simplified Flow.zip",
+      "in_collection_scope": true,
+      "in_priority_scope": false,
+      "scope_reason": "Additional channel sample included to cover the whole current collection",
+      "source_urls": [
+        "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Media%20Specific%20Workflows/Apple%20Messages%20for%20Business/AMB%20Simplified%20Flow.zip"
+      ],
+      "documentation_review": "artifact_only_no_separate_readme",
+      "documentation_walkthrough": null,
+      "artifact_status": "downloaded_zip_with_opaque_workflow",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "repository_path": "Webex Connect Flows/v3.5/Template/Media Specific Workflows/Apple Messages for Business/AMB Simplified Flow.zip",
+      "repository_commit": "ef668084a137c251f81ae3aa38d1f4e06b4e5573",
+      "repository_blob_sha": "824f015d8c66c0a3e168bee72030c86fe22d053b",
+      "artifact_path": "evidence/sample-flows/raw/wxcc-v3.5/2ae1c626-AMB Simplified Flow.zip",
+      "sha256": "6888b271b3659e81711ea2e60990d8d86796780632f8cda10f4d6a8139f3a496",
+      "acquisition_manifest": "evidence/sample-flows/public-wxcc-manifest.json",
+      "capture_labels": [
+        "AMB Simplified Flow.workflow"
+      ],
+      "observed_paths": [
+        "evidence/sample-flows/observed/wxcc-amb-simplified-flow.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/wxcc-amb-simplified-flow.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#wxcc-amb-simplified-flow"
+    },
+    {
+      "id": "wxcc_repository_v3_5:apple-basic-inbound-flow-workflow-zip",
+      "cohort": "wxcc_repository_v3_5",
+      "name": "Apple Basic Inbound Flow.workflow.zip",
+      "in_collection_scope": true,
+      "in_priority_scope": false,
+      "scope_reason": "Additional channel sample included to cover the whole current collection",
+      "source_urls": [
+        "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Media%20Specific%20Workflows/Apple%20Messages%20for%20Business/Apple%20Basic%20Inbound%20Flow.workflow.zip"
+      ],
+      "documentation_review": "artifact_only_no_separate_readme",
+      "documentation_walkthrough": null,
+      "artifact_status": "downloaded_zip_with_opaque_workflow",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "repository_path": "Webex Connect Flows/v3.5/Template/Media Specific Workflows/Apple Messages for Business/Apple Basic Inbound Flow.workflow.zip",
+      "repository_commit": "ef668084a137c251f81ae3aa38d1f4e06b4e5573",
+      "repository_blob_sha": "d85d77080e2d0e7c2811e46cc63175728511c7dd",
+      "artifact_path": "evidence/sample-flows/raw/wxcc-v3.5/31ac8e9d-Apple Basic Inbound Flow.workflow.zip",
+      "sha256": "2873a8c63adf861c4ad5d04705b671ac6e6305b51225facdc49c3a66c598077c",
+      "acquisition_manifest": "evidence/sample-flows/public-wxcc-manifest.json",
+      "capture_labels": [
+        "Apple Basic Inbound Flow.workflow"
+      ],
+      "observed_paths": [
+        "evidence/sample-flows/observed/wxcc-apple-basic-inbound-flow.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/wxcc-apple-basic-inbound-flow.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#wxcc-apple-basic-inbound-flow"
+    },
+    {
+      "id": "wxcc_repository_v3_5:apple-inbound-flow-with-form-workflow-zip",
+      "cohort": "wxcc_repository_v3_5",
+      "name": "Apple Inbound Flow with Form.workflow.zip",
+      "in_collection_scope": true,
+      "in_priority_scope": false,
+      "scope_reason": "Additional channel sample included to cover the whole current collection",
+      "source_urls": [
+        "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Media%20Specific%20Workflows/Apple%20Messages%20for%20Business/Apple%20Inbound%20Flow%20with%20Form.workflow.zip"
+      ],
+      "documentation_review": "artifact_only_no_separate_readme",
+      "documentation_walkthrough": null,
+      "artifact_status": "downloaded_zip_with_opaque_workflow",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "repository_path": "Webex Connect Flows/v3.5/Template/Media Specific Workflows/Apple Messages for Business/Apple Inbound Flow with Form.workflow.zip",
+      "repository_commit": "ef668084a137c251f81ae3aa38d1f4e06b4e5573",
+      "repository_blob_sha": "101e439aa2c2292a3b49c28042b15247d5a5e8af",
+      "artifact_path": "evidence/sample-flows/raw/wxcc-v3.5/92922a1f-Apple Inbound Flow with Form.workflow.zip",
+      "sha256": "98492f8fc5999b5d2be37ab45b5866cde3e9dca04b3da47c35ef3dcb845df4b5",
+      "acquisition_manifest": "evidence/sample-flows/public-wxcc-manifest.json",
+      "capture_labels": [
+        "Apple Inbound Flow with Form.workflow"
+      ],
+      "observed_paths": [
+        "evidence/sample-flows/observed/wxcc-apple-inbound-flow-with-form.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/wxcc-apple-inbound-flow-with-form.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#wxcc-apple-inbound-flow-with-form"
+    },
+    {
+      "id": "wxcc_repository_v3_5:apple-unsubscribe-flow-workflow-zip",
+      "cohort": "wxcc_repository_v3_5",
+      "name": "Apple Unsubscribe Flow.workflow.zip",
+      "in_collection_scope": true,
+      "in_priority_scope": false,
+      "scope_reason": "Additional channel sample included to cover the whole current collection",
+      "source_urls": [
+        "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Media%20Specific%20Workflows/Apple%20Messages%20for%20Business/Apple%20Unsubscribe%20Flow.workflow.zip"
+      ],
+      "documentation_review": "artifact_only_no_separate_readme",
+      "documentation_walkthrough": null,
+      "artifact_status": "downloaded_zip_with_opaque_workflow",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "repository_path": "Webex Connect Flows/v3.5/Template/Media Specific Workflows/Apple Messages for Business/Apple Unsubscribe Flow.workflow.zip",
+      "repository_commit": "ef668084a137c251f81ae3aa38d1f4e06b4e5573",
+      "repository_blob_sha": "f49e3b7bb6269175531745c11951551548219bc4",
+      "artifact_path": "evidence/sample-flows/raw/wxcc-v3.5/09d5ade3-Apple Unsubscribe Flow.workflow.zip",
+      "sha256": "98d4a6e3ce4281b07133b0197a606cf9abe5741ece764120113f47d37685462a",
+      "acquisition_manifest": "evidence/sample-flows/public-wxcc-manifest.json",
+      "capture_labels": [
+        "Apple Unsubscribe Flow.workflow"
+      ],
+      "observed_paths": [
+        "evidence/sample-flows/observed/wxcc-apple-unsubscribe-flow.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/wxcc-apple-unsubscribe-flow.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#wxcc-apple-unsubscribe-flow"
+    },
+    {
+      "id": "wxcc_repository_v3_5:emailinboundflow-workflow-zip",
+      "cohort": "wxcc_repository_v3_5",
+      "name": "EmailInboundFlow.workflow.zip",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "AI/SMS/email sample or task-context companion",
+      "source_urls": [
+        "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Media%20Specific%20Workflows/EmailInboundFlow.workflow.zip",
+        "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Media%20Specific%20Workflows/README.md"
+      ],
+      "documentation_review": "documented_partial_contract",
+      "documentation_walkthrough": "knowledge/16-additional-sample-walkthroughs.md",
+      "artifact_status": "downloaded_zip_with_opaque_workflow",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "repository_path": "Webex Connect Flows/v3.5/Template/Media Specific Workflows/EmailInboundFlow.workflow.zip",
+      "repository_commit": "ef668084a137c251f81ae3aa38d1f4e06b4e5573",
+      "repository_blob_sha": "c30ef875a4b9f5b0796b91d25ab5c7de07b5d442",
+      "artifact_path": "evidence/sample-flows/raw/wxcc-v3.5/db7d78f2-EmailInboundFlow.workflow.zip",
+      "sha256": "592be48953b8162c32bcb49d9d4bab9cfcb0f682b89561408a8485028afa7073",
+      "acquisition_manifest": "evidence/sample-flows/public-wxcc-manifest.json",
+      "readme_path": "evidence/sample-flows/raw/wxcc-v3.5/b81c5578-README.md",
+      "capture_labels": [
+        "EmailInboundFlow.workflow"
+      ],
+      "observed_paths": [
+        "evidence/sample-flows/observed/wxcc-emailinboundflow.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/wxcc-emailinboundflow.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#wxcc-emailinboundflow"
+    },
+    {
+      "id": "wxcc_repository_v3_5:facebookinboundflow-workflow-zip",
+      "cohort": "wxcc_repository_v3_5",
+      "name": "FacebookInboundFlow.workflow.zip",
+      "in_collection_scope": true,
+      "in_priority_scope": false,
+      "scope_reason": "Additional channel sample included to cover the whole current collection",
+      "source_urls": [
+        "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Media%20Specific%20Workflows/FacebookInboundFlow.workflow.zip",
+        "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Media%20Specific%20Workflows/README.md"
+      ],
+      "documentation_review": "documented_partial_contract",
+      "documentation_walkthrough": "knowledge/16-additional-sample-walkthroughs.md",
+      "artifact_status": "downloaded_zip_with_opaque_workflow",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "repository_path": "Webex Connect Flows/v3.5/Template/Media Specific Workflows/FacebookInboundFlow.workflow.zip",
+      "repository_commit": "ef668084a137c251f81ae3aa38d1f4e06b4e5573",
+      "repository_blob_sha": "9ed85c17e5bd167b8e125f17abe108421efe5a76",
+      "artifact_path": "evidence/sample-flows/raw/wxcc-v3.5/ba8c03ab-FacebookInboundFlow.workflow.zip",
+      "sha256": "6799ba2d89924702d2bc5912751b47e6b0aeb957c4e15778c0890549a27be6f7",
+      "acquisition_manifest": "evidence/sample-flows/public-wxcc-manifest.json",
+      "readme_path": "evidence/sample-flows/raw/wxcc-v3.5/b81c5578-README.md",
+      "capture_labels": [
+        "FacebookInboundFlow.workflow"
+      ],
+      "observed_paths": [
+        "evidence/sample-flows/observed/wxcc-facebookinboundflow.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/wxcc-facebookinboundflow.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#wxcc-facebookinboundflow"
+    },
+    {
+      "id": "wxcc_repository_v3_5:live-chat-close-flow-workflow-zip",
+      "cohort": "wxcc_repository_v3_5",
+      "name": "Live Chat Close Flow.workflow.zip",
+      "in_collection_scope": true,
+      "in_priority_scope": false,
+      "scope_reason": "Additional channel sample included to cover the whole current collection",
+      "source_urls": [
+        "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Media%20Specific%20Workflows/Live%20Chat%20Close%20Flow.workflow.zip",
+        "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Media%20Specific%20Workflows/README.md"
+      ],
+      "documentation_review": "documented_partial_contract",
+      "documentation_walkthrough": "knowledge/16-additional-sample-walkthroughs.md",
+      "artifact_status": "downloaded_zip_with_opaque_workflow",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "repository_path": "Webex Connect Flows/v3.5/Template/Media Specific Workflows/Live Chat Close Flow.workflow.zip",
+      "repository_commit": "ef668084a137c251f81ae3aa38d1f4e06b4e5573",
+      "repository_blob_sha": "9168f68998fb81c2cbc44425d52a449556c8bb18",
+      "artifact_path": "evidence/sample-flows/raw/wxcc-v3.5/e1d9c8ab-Live Chat Close Flow.workflow.zip",
+      "sha256": "b329d3413ee5ef6e2fe304b2892959e1623dfeef7995188b5c5eebbafdd5ce75",
+      "acquisition_manifest": "evidence/sample-flows/public-wxcc-manifest.json",
+      "readme_path": "evidence/sample-flows/raw/wxcc-v3.5/b81c5578-README.md",
+      "capture_labels": [
+        "Live Chat Close Flow.workflow"
+      ],
+      "observed_paths": [
+        "evidence/sample-flows/observed/wxcc-live-chat-close-flow.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/wxcc-live-chat-close-flow.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#wxcc-live-chat-close-flow"
+    },
+    {
+      "id": "wxcc_repository_v3_5:livechat-inbound-flow-with-proactive-chat-changes-zip",
+      "cohort": "wxcc_repository_v3_5",
+      "name": "Livechat Inbound flow with proactive chat changes.zip",
+      "in_collection_scope": true,
+      "in_priority_scope": false,
+      "scope_reason": "Additional channel sample included to cover the whole current collection",
+      "source_urls": [
+        "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Media%20Specific%20Workflows/Livechat%20Inbound%20flow%20with%20proactive%20chat%20changes.zip",
+        "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Media%20Specific%20Workflows/README.md"
+      ],
+      "documentation_review": "documented_partial_contract",
+      "documentation_walkthrough": "knowledge/16-additional-sample-walkthroughs.md",
+      "artifact_status": "downloaded_zip_with_opaque_workflow",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "repository_path": "Webex Connect Flows/v3.5/Template/Media Specific Workflows/Livechat Inbound flow with proactive chat changes.zip",
+      "repository_commit": "ef668084a137c251f81ae3aa38d1f4e06b4e5573",
+      "repository_blob_sha": "93cb8ec2bd5aaa85c947a377b3618f1a18106b2f",
+      "artifact_path": "evidence/sample-flows/raw/wxcc-v3.5/942ec430-Livechat Inbound flow with proactive chat changes.zip",
+      "sha256": "bf247c4ab7196057d2510f940b6fb8769f089b5b4d167cd0830f7a8a703fbe7e",
+      "acquisition_manifest": "evidence/sample-flows/public-wxcc-manifest.json",
+      "readme_path": "evidence/sample-flows/raw/wxcc-v3.5/b81c5578-README.md",
+      "capture_labels": [
+        "Livechat Inbound flow with proactive chat changes.workflow"
+      ],
+      "observed_paths": [
+        "evidence/sample-flows/observed/wxcc-livechat-inbound-flow-with-proactive-chat-changes.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/wxcc-livechat-inbound-flow-with-proactive-chat-changes.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#wxcc-livechat-inbound-flow-with-proactive-chat-changes"
+    },
+    {
+      "id": "wxcc_repository_v3_5:livechatinbound-flow-workflow-zip",
+      "cohort": "wxcc_repository_v3_5",
+      "name": "LivechatInbound flow.workflow.zip",
+      "in_collection_scope": true,
+      "in_priority_scope": false,
+      "scope_reason": "Additional channel sample included to cover the whole current collection",
+      "source_urls": [
+        "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Media%20Specific%20Workflows/LivechatInbound%20flow.workflow.zip",
+        "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Media%20Specific%20Workflows/README.md"
+      ],
+      "documentation_review": "documented_partial_contract",
+      "documentation_walkthrough": "knowledge/16-additional-sample-walkthroughs.md",
+      "artifact_status": "downloaded_zip_with_opaque_workflow",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "repository_path": "Webex Connect Flows/v3.5/Template/Media Specific Workflows/LivechatInbound flow.workflow.zip",
+      "repository_commit": "ef668084a137c251f81ae3aa38d1f4e06b4e5573",
+      "repository_blob_sha": "04cf3dca515fb5ba1f9bef61a268ec385e5c6050",
+      "artifact_path": "evidence/sample-flows/raw/wxcc-v3.5/52c176fe-LivechatInbound flow.workflow.zip",
+      "sha256": "bfe83f2209c5e0db03c2a2046ba68c31e79385a379a0739455a7a7fbcf7333cd",
+      "acquisition_manifest": "evidence/sample-flows/public-wxcc-manifest.json",
+      "readme_path": "evidence/sample-flows/raw/wxcc-v3.5/b81c5578-README.md",
+      "capture_labels": [
+        "LivechatInbound flow.workflow"
+      ],
+      "observed_paths": [
+        "evidence/sample-flows/observed/wxcc-livechatinbound-flow.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/wxcc-livechatinbound-flow.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#wxcc-livechatinbound-flow"
+    },
+    {
+      "id": "wxcc_repository_v3_5:livechatinboundflowwithoutform-workflow-zip",
+      "cohort": "wxcc_repository_v3_5",
+      "name": "LivechatInboundFlowWithoutForm.workflow.zip",
+      "in_collection_scope": true,
+      "in_priority_scope": false,
+      "scope_reason": "Additional channel sample included to cover the whole current collection",
+      "source_urls": [
+        "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Media%20Specific%20Workflows/LivechatInboundFlowWithoutForm.workflow.zip",
+        "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Media%20Specific%20Workflows/README.md"
+      ],
+      "documentation_review": "documented_partial_contract",
+      "documentation_walkthrough": "knowledge/16-additional-sample-walkthroughs.md",
+      "artifact_status": "downloaded_zip_with_opaque_workflow",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "repository_path": "Webex Connect Flows/v3.5/Template/Media Specific Workflows/LivechatInboundFlowWithoutForm.workflow.zip",
+      "repository_commit": "ef668084a137c251f81ae3aa38d1f4e06b4e5573",
+      "repository_blob_sha": "3ab5e194b224b47fd972e62deec66bc8c3f60a24",
+      "artifact_path": "evidence/sample-flows/raw/wxcc-v3.5/244c8300-LivechatInboundFlowWithoutForm.workflow.zip",
+      "sha256": "6a56e7af5b9c4fe1ef35c43b38871b4381ac760850efcc94eb6cf71a9887714a",
+      "acquisition_manifest": "evidence/sample-flows/public-wxcc-manifest.json",
+      "readme_path": "evidence/sample-flows/raw/wxcc-v3.5/b81c5578-README.md",
+      "capture_labels": [
+        "LivechatInboundFlowWithoutForm.workflow"
+      ],
+      "observed_paths": [
+        "evidence/sample-flows/observed/wxcc-livechatinboundflowwithoutform.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/wxcc-livechatinboundflowwithoutform.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#wxcc-livechatinboundflowwithoutform"
+    },
+    {
+      "id": "wxcc_repository_v3_5:sms-inbound-workflow-zip",
+      "cohort": "wxcc_repository_v3_5",
+      "name": "SMS inbound.workflow.zip",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "AI/SMS/email sample or task-context companion",
+      "source_urls": [
+        "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Media%20Specific%20Workflows/SMS%20inbound.workflow.zip",
+        "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Media%20Specific%20Workflows/README.md"
+      ],
+      "documentation_review": "documented_partial_contract",
+      "documentation_walkthrough": "knowledge/16-additional-sample-walkthroughs.md",
+      "artifact_status": "downloaded_zip_with_opaque_workflow",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "repository_path": "Webex Connect Flows/v3.5/Template/Media Specific Workflows/SMS inbound.workflow.zip",
+      "repository_commit": "ef668084a137c251f81ae3aa38d1f4e06b4e5573",
+      "repository_blob_sha": "5a436ef5145bf1e2396e04921f793ed2bdd5920a",
+      "artifact_path": "evidence/sample-flows/raw/wxcc-v3.5/c53cf22b-SMS inbound.workflow.zip",
+      "sha256": "4507dfc9a06e971252075195de4efe5cbc0cd8043a3714a9b15d0be020b403de",
+      "acquisition_manifest": "evidence/sample-flows/public-wxcc-manifest.json",
+      "readme_path": "evidence/sample-flows/raw/wxcc-v3.5/b81c5578-README.md",
+      "capture_labels": [
+        "SMS inbound.workflow"
+      ],
+      "observed_paths": [
+        "evidence/sample-flows/observed/wxcc-sms-inbound.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/wxcc-sms-inbound.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#wxcc-sms-inbound"
+    },
+    {
+      "id": "wxcc_repository_v3_5:whatsapp-inbound-workflow-zip",
+      "cohort": "wxcc_repository_v3_5",
+      "name": "Whatsapp inbound.workflow.zip",
+      "in_collection_scope": true,
+      "in_priority_scope": false,
+      "scope_reason": "Additional channel sample included to cover the whole current collection",
+      "source_urls": [
+        "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Media%20Specific%20Workflows/Whatsapp%20inbound.workflow.zip",
+        "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Media%20Specific%20Workflows/README.md"
+      ],
+      "documentation_review": "documented_partial_contract",
+      "documentation_walkthrough": "knowledge/16-additional-sample-walkthroughs.md",
+      "artifact_status": "downloaded_zip_with_opaque_workflow",
+      "ui_graph_capture": "observed_static_canvas",
+      "ui_graph_summary": "derived_summary_available",
+      "ui_walkthrough_status": "authored_from_current_capture",
+      "runtime_tested": false,
+      "repository_path": "Webex Connect Flows/v3.5/Template/Media Specific Workflows/Whatsapp inbound.workflow.zip",
+      "repository_commit": "ef668084a137c251f81ae3aa38d1f4e06b4e5573",
+      "repository_blob_sha": "92c55e034e2d92c99d98795d2b176dcd212884eb",
+      "artifact_path": "evidence/sample-flows/raw/wxcc-v3.5/6ea09b22-Whatsapp inbound.workflow.zip",
+      "sha256": "c90394e89231b7a8d2ce9064b47a747bd111a0ec2f242e40cb6d9c6c260835cf",
+      "acquisition_manifest": "evidence/sample-flows/public-wxcc-manifest.json",
+      "readme_path": "evidence/sample-flows/raw/wxcc-v3.5/b81c5578-README.md",
+      "capture_labels": [
+        "Whatsapp inbound.workflow"
+      ],
+      "observed_paths": [
+        "evidence/sample-flows/observed/wxcc-whatsapp-inbound.json"
+      ],
+      "ui_evidence_types": [
+        "read_only_inspection_of_loaded_sample_canvas_model"
+      ],
+      "summary_paths": [
+        "evidence/sample-flows/summaries/wxcc-whatsapp-inbound.json"
+      ],
+      "ui_walkthrough": "evidence/tenant-samples.md#wxcc-whatsapp-inbound"
+    },
+    {
+      "id": "wxcc_legacy_help_listing:fbm-inbound-message",
+      "cohort": "wxcc_legacy_help_listing",
+      "name": "FBM Inbound Message",
+      "in_collection_scope": true,
+      "in_priority_scope": false,
+      "scope_reason": "Additional channel entry retained from the complete legacy table",
+      "source_urls": [
+        "https://help.webexconnect.io/docs/wxcc-flow-configuration-using-sample-templates"
+      ],
+      "documentation_review": "listed_and_scope_reviewed",
+      "documentation_walkthrough": null,
+      "artifact_status": "not_acquired",
+      "ui_graph_capture": "not_observed",
+      "ui_graph_summary": "not_available",
+      "ui_walkthrough_status": "not_available",
+      "runtime_tested": false,
+      "source_cache": "sources/cache/help/wxcc-flow-configuration-using-sample-templates.md",
+      "identity_note": "Legacy help generation; table contains eight entries despite prose saying seven; not equated to v3.5 files"
+    },
+    {
+      "id": "wxcc_legacy_help_listing:email-inbound",
+      "cohort": "wxcc_legacy_help_listing",
+      "name": "Email Inbound",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "SMS/email or shared event companion",
+      "source_urls": [
+        "https://help.webexconnect.io/docs/wxcc-flow-configuration-using-sample-templates"
+      ],
+      "documentation_review": "documented_partial_contract",
+      "documentation_walkthrough": "knowledge/06-integrations-and-contact-center.md",
+      "artifact_status": "not_acquired",
+      "ui_graph_capture": "not_observed",
+      "ui_graph_summary": "not_available",
+      "ui_walkthrough_status": "not_available",
+      "runtime_tested": false,
+      "source_cache": "sources/cache/help/wxcc-flow-configuration-using-sample-templates.md",
+      "identity_note": "Legacy help generation; table contains eight entries despite prose saying seven; not equated to v3.5 files"
+    },
+    {
+      "id": "wxcc_legacy_help_listing:livechat-inbound-message",
+      "cohort": "wxcc_legacy_help_listing",
+      "name": "Livechat Inbound message",
+      "in_collection_scope": true,
+      "in_priority_scope": false,
+      "scope_reason": "Additional channel entry retained from the complete legacy table",
+      "source_urls": [
+        "https://help.webexconnect.io/docs/wxcc-flow-configuration-using-sample-templates"
+      ],
+      "documentation_review": "listed_and_scope_reviewed",
+      "documentation_walkthrough": null,
+      "artifact_status": "not_acquired",
+      "ui_graph_capture": "not_observed",
+      "ui_graph_summary": "not_available",
+      "ui_walkthrough_status": "not_available",
+      "runtime_tested": false,
+      "source_cache": "sources/cache/help/wxcc-flow-configuration-using-sample-templates.md",
+      "identity_note": "Legacy help generation; table contains eight entries despite prose saying seven; not equated to v3.5 files"
+    },
+    {
+      "id": "wxcc_legacy_help_listing:livechat-close-thread",
+      "cohort": "wxcc_legacy_help_listing",
+      "name": "Livechat Close thread",
+      "in_collection_scope": true,
+      "in_priority_scope": false,
+      "scope_reason": "Additional channel entry retained from the complete legacy table",
+      "source_urls": [
+        "https://help.webexconnect.io/docs/wxcc-flow-configuration-using-sample-templates"
+      ],
+      "documentation_review": "listed_and_scope_reviewed",
+      "documentation_walkthrough": null,
+      "artifact_status": "not_acquired",
+      "ui_graph_capture": "not_observed",
+      "ui_graph_summary": "not_available",
+      "ui_walkthrough_status": "not_available",
+      "runtime_tested": false,
+      "source_cache": "sources/cache/help/wxcc-flow-configuration-using-sample-templates.md",
+      "identity_note": "Legacy help generation; table contains eight entries despite prose saying seven; not equated to v3.5 files"
+    },
+    {
+      "id": "wxcc_legacy_help_listing:sms-inbound-message",
+      "cohort": "wxcc_legacy_help_listing",
+      "name": "SMS Inbound Message",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "SMS/email or shared event companion",
+      "source_urls": [
+        "https://help.webexconnect.io/docs/wxcc-flow-configuration-using-sample-templates"
+      ],
+      "documentation_review": "documented_partial_contract",
+      "documentation_walkthrough": "knowledge/06-integrations-and-contact-center.md",
+      "artifact_status": "not_acquired",
+      "ui_graph_capture": "not_observed",
+      "ui_graph_summary": "not_available",
+      "ui_walkthrough_status": "not_available",
+      "runtime_tested": false,
+      "source_cache": "sources/cache/help/wxcc-flow-configuration-using-sample-templates.md",
+      "identity_note": "Legacy help generation; table contains eight entries despite prose saying seven; not equated to v3.5 files"
+    },
+    {
+      "id": "wxcc_legacy_help_listing:task-routed",
+      "cohort": "wxcc_legacy_help_listing",
+      "name": "Task Routed",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "SMS/email or shared event companion",
+      "source_urls": [
+        "https://help.webexconnect.io/docs/wxcc-flow-configuration-using-sample-templates"
+      ],
+      "documentation_review": "documented_partial_contract",
+      "documentation_walkthrough": "knowledge/06-integrations-and-contact-center.md",
+      "artifact_status": "not_acquired",
+      "ui_graph_capture": "not_observed",
+      "ui_graph_summary": "not_available",
+      "ui_walkthrough_status": "not_available",
+      "runtime_tested": false,
+      "source_cache": "sources/cache/help/wxcc-flow-configuration-using-sample-templates.md",
+      "identity_note": "Legacy help generation; table contains eight entries despite prose saying seven; not equated to v3.5 files"
+    },
+    {
+      "id": "wxcc_legacy_help_listing:task-modified",
+      "cohort": "wxcc_legacy_help_listing",
+      "name": "Task Modified",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "SMS/email or shared event companion",
+      "source_urls": [
+        "https://help.webexconnect.io/docs/wxcc-flow-configuration-using-sample-templates"
+      ],
+      "documentation_review": "documented_partial_contract",
+      "documentation_walkthrough": "knowledge/06-integrations-and-contact-center.md",
+      "artifact_status": "not_acquired",
+      "ui_graph_capture": "not_observed",
+      "ui_graph_summary": "not_available",
+      "ui_walkthrough_status": "not_available",
+      "runtime_tested": false,
+      "source_cache": "sources/cache/help/wxcc-flow-configuration-using-sample-templates.md",
+      "identity_note": "Legacy help generation; table contains eight entries despite prose saying seven; not equated to v3.5 files"
+    },
+    {
+      "id": "wxcc_legacy_help_listing:close-task",
+      "cohort": "wxcc_legacy_help_listing",
+      "name": "Close Task",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "SMS/email or shared event companion",
+      "source_urls": [
+        "https://help.webexconnect.io/docs/wxcc-flow-configuration-using-sample-templates"
+      ],
+      "documentation_review": "documented_partial_contract",
+      "documentation_walkthrough": "knowledge/06-integrations-and-contact-center.md",
+      "artifact_status": "not_acquired",
+      "ui_graph_capture": "not_observed",
+      "ui_graph_summary": "not_available",
+      "ui_walkthrough_status": "not_available",
+      "runtime_tested": false,
+      "source_cache": "sources/cache/help/wxcc-flow-configuration-using-sample-templates.md",
+      "identity_note": "Legacy help generation; table contains eight entries despite prose saying seven; not equated to v3.5 files"
+    },
+    {
+      "id": "cce_documented_bundle:sms-inbound-flow",
+      "cohort": "cce_documented_bundle",
+      "name": "SMS Inbound Flow",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "SMS/email or CCE event companion",
+      "source_urls": [
+        "https://help.webexconnect.io/docs/cce-flow-configurations"
+      ],
+      "documentation_review": "documented_partial_contract",
+      "documentation_walkthrough": "knowledge/16-additional-sample-walkthroughs.md",
+      "artifact_status": "vendor_release_page_http_403_no_bundle_acquired",
+      "ui_graph_capture": "not_observed",
+      "ui_graph_summary": "not_available",
+      "ui_walkthrough_status": "not_available",
+      "runtime_tested": false,
+      "source_cache": "sources/cache/help/cce-flow-configurations.md",
+      "acquisition_evidence": "evidence/sample-flows/cce-acquisition-status.json"
+    },
+    {
+      "id": "cce_documented_bundle:email-inbound-flow",
+      "cohort": "cce_documented_bundle",
+      "name": "Email Inbound Flow",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "SMS/email or CCE event companion",
+      "source_urls": [
+        "https://help.webexconnect.io/docs/cce-flow-configurations"
+      ],
+      "documentation_review": "documented_partial_contract",
+      "documentation_walkthrough": "knowledge/16-additional-sample-walkthroughs.md",
+      "artifact_status": "vendor_release_page_http_403_no_bundle_acquired",
+      "ui_graph_capture": "not_observed",
+      "ui_graph_summary": "not_available",
+      "ui_walkthrough_status": "not_available",
+      "runtime_tested": false,
+      "source_cache": "sources/cache/help/cce-flow-configurations.md",
+      "acquisition_evidence": "evidence/sample-flows/cce-acquisition-status.json"
+    },
+    {
+      "id": "cce_documented_bundle:live-chat-inbound-flow",
+      "cohort": "cce_documented_bundle",
+      "name": "Live Chat Inbound Flow",
+      "in_collection_scope": true,
+      "in_priority_scope": false,
+      "scope_reason": "Additional channel/web-callback entry included from the whole CCE bundle",
+      "source_urls": [
+        "https://help.webexconnect.io/docs/cce-flow-configurations"
+      ],
+      "documentation_review": "documented_partial_contract",
+      "documentation_walkthrough": "knowledge/16-additional-sample-walkthroughs.md",
+      "artifact_status": "vendor_release_page_http_403_no_bundle_acquired",
+      "ui_graph_capture": "not_observed",
+      "ui_graph_summary": "not_available",
+      "ui_walkthrough_status": "not_available",
+      "runtime_tested": false,
+      "source_cache": "sources/cache/help/cce-flow-configurations.md",
+      "acquisition_evidence": "evidence/sample-flows/cce-acquisition-status.json"
+    },
+    {
+      "id": "cce_documented_bundle:live-chat-customer-close",
+      "cohort": "cce_documented_bundle",
+      "name": "Live Chat Customer Close",
+      "in_collection_scope": true,
+      "in_priority_scope": false,
+      "scope_reason": "Additional channel/web-callback entry included from the whole CCE bundle",
+      "source_urls": [
+        "https://help.webexconnect.io/docs/cce-flow-configurations"
+      ],
+      "documentation_review": "documented_partial_contract",
+      "documentation_walkthrough": "knowledge/16-additional-sample-walkthroughs.md",
+      "artifact_status": "vendor_release_page_http_403_no_bundle_acquired",
+      "ui_graph_capture": "not_observed",
+      "ui_graph_summary": "not_available",
+      "ui_walkthrough_status": "not_available",
+      "runtime_tested": false,
+      "source_cache": "sources/cache/help/cce-flow-configurations.md",
+      "acquisition_evidence": "evidence/sample-flows/cce-acquisition-status.json"
+    },
+    {
+      "id": "cce_documented_bundle:live-chat-with-webcallback-flow",
+      "cohort": "cce_documented_bundle",
+      "name": "Live Chat with WebCallback Flow",
+      "in_collection_scope": true,
+      "in_priority_scope": false,
+      "scope_reason": "Additional channel/web-callback entry included from the whole CCE bundle",
+      "source_urls": [
+        "https://help.webexconnect.io/docs/cce-flow-configurations"
+      ],
+      "documentation_review": "documented_partial_contract",
+      "documentation_walkthrough": "knowledge/16-additional-sample-walkthroughs.md",
+      "artifact_status": "vendor_release_page_http_403_no_bundle_acquired",
+      "ui_graph_capture": "not_observed",
+      "ui_graph_summary": "not_available",
+      "ui_walkthrough_status": "not_available",
+      "runtime_tested": false,
+      "source_cache": "sources/cache/help/cce-flow-configurations.md",
+      "acquisition_evidence": "evidence/sample-flows/cce-acquisition-status.json"
+    },
+    {
+      "id": "cce_documented_bundle:webcallback-closed",
+      "cohort": "cce_documented_bundle",
+      "name": "WebCallback CLOSED",
+      "in_collection_scope": true,
+      "in_priority_scope": false,
+      "scope_reason": "Additional channel/web-callback entry included from the whole CCE bundle",
+      "source_urls": [
+        "https://help.webexconnect.io/docs/cce-flow-configurations"
+      ],
+      "documentation_review": "documented_partial_contract",
+      "documentation_walkthrough": "knowledge/16-additional-sample-walkthroughs.md",
+      "artifact_status": "vendor_release_page_http_403_no_bundle_acquired",
+      "ui_graph_capture": "not_observed",
+      "ui_graph_summary": "not_available",
+      "ui_walkthrough_status": "not_available",
+      "runtime_tested": false,
+      "source_cache": "sources/cache/help/cce-flow-configurations.md",
+      "acquisition_evidence": "evidence/sample-flows/cce-acquisition-status.json"
+    },
+    {
+      "id": "cce_documented_bundle:facebook-inbound-flow",
+      "cohort": "cce_documented_bundle",
+      "name": "Facebook Inbound Flow",
+      "in_collection_scope": true,
+      "in_priority_scope": false,
+      "scope_reason": "Additional channel/web-callback entry included from the whole CCE bundle",
+      "source_urls": [
+        "https://help.webexconnect.io/docs/cce-flow-configurations"
+      ],
+      "documentation_review": "documented_partial_contract",
+      "documentation_walkthrough": "knowledge/16-additional-sample-walkthroughs.md",
+      "artifact_status": "vendor_release_page_http_403_no_bundle_acquired",
+      "ui_graph_capture": "not_observed",
+      "ui_graph_summary": "not_available",
+      "ui_walkthrough_status": "not_available",
+      "runtime_tested": false,
+      "source_cache": "sources/cache/help/cce-flow-configurations.md",
+      "acquisition_evidence": "evidence/sample-flows/cce-acquisition-status.json"
+    },
+    {
+      "id": "cce_documented_bundle:whatsapp-inbound-flow",
+      "cohort": "cce_documented_bundle",
+      "name": "WhatsApp Inbound Flow",
+      "in_collection_scope": true,
+      "in_priority_scope": false,
+      "scope_reason": "Additional channel/web-callback entry included from the whole CCE bundle",
+      "source_urls": [
+        "https://help.webexconnect.io/docs/cce-flow-configurations"
+      ],
+      "documentation_review": "documented_partial_contract",
+      "documentation_walkthrough": "knowledge/16-additional-sample-walkthroughs.md",
+      "artifact_status": "vendor_release_page_http_403_no_bundle_acquired",
+      "ui_graph_capture": "not_observed",
+      "ui_graph_summary": "not_available",
+      "ui_walkthrough_status": "not_available",
+      "runtime_tested": false,
+      "source_cache": "sources/cache/help/cce-flow-configurations.md",
+      "acquisition_evidence": "evidence/sample-flows/cce-acquisition-status.json"
+    },
+    {
+      "id": "cce_documented_bundle:applemessages-inbound-flow",
+      "cohort": "cce_documented_bundle",
+      "name": "AppleMessages_Inbound_Flow",
+      "in_collection_scope": true,
+      "in_priority_scope": false,
+      "scope_reason": "Additional channel/web-callback entry included from the whole CCE bundle",
+      "source_urls": [
+        "https://help.webexconnect.io/docs/cce-flow-configurations"
+      ],
+      "documentation_review": "documented_partial_contract",
+      "documentation_walkthrough": "knowledge/16-additional-sample-walkthroughs.md",
+      "artifact_status": "vendor_release_page_http_403_no_bundle_acquired",
+      "ui_graph_capture": "not_observed",
+      "ui_graph_summary": "not_available",
+      "ui_walkthrough_status": "not_available",
+      "runtime_tested": false,
+      "source_cache": "sources/cache/help/cce-flow-configurations.md",
+      "acquisition_evidence": "evidence/sample-flows/cce-acquisition-status.json"
+    },
+    {
+      "id": "cce_documented_bundle:applemessages-customerclose",
+      "cohort": "cce_documented_bundle",
+      "name": "AppleMessages_CustomerClose",
+      "in_collection_scope": true,
+      "in_priority_scope": false,
+      "scope_reason": "Additional channel/web-callback entry included from the whole CCE bundle",
+      "source_urls": [
+        "https://help.webexconnect.io/docs/cce-flow-configurations"
+      ],
+      "documentation_review": "documented_partial_contract",
+      "documentation_walkthrough": "knowledge/16-additional-sample-walkthroughs.md",
+      "artifact_status": "vendor_release_page_http_403_no_bundle_acquired",
+      "ui_graph_capture": "not_observed",
+      "ui_graph_summary": "not_available",
+      "ui_walkthrough_status": "not_available",
+      "runtime_tested": false,
+      "source_cache": "sources/cache/help/cce-flow-configurations.md",
+      "acquisition_evidence": "evidence/sample-flows/cce-acquisition-status.json"
+    },
+    {
+      "id": "cce_documented_bundle:created-flow",
+      "cohort": "cce_documented_bundle",
+      "name": "CREATED Flow",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "SMS/email or CCE event companion",
+      "source_urls": [
+        "https://help.webexconnect.io/docs/cce-flow-configurations"
+      ],
+      "documentation_review": "documented_partial_contract",
+      "documentation_walkthrough": "knowledge/16-additional-sample-walkthroughs.md",
+      "artifact_status": "vendor_release_page_http_403_no_bundle_acquired",
+      "ui_graph_capture": "not_observed",
+      "ui_graph_summary": "not_available",
+      "ui_walkthrough_status": "not_available",
+      "runtime_tested": false,
+      "source_cache": "sources/cache/help/cce-flow-configurations.md",
+      "acquisition_evidence": "evidence/sample-flows/cce-acquisition-status.json"
+    },
+    {
+      "id": "cce_documented_bundle:queued-flow",
+      "cohort": "cce_documented_bundle",
+      "name": "QUEUED Flow",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "SMS/email or CCE event companion",
+      "source_urls": [
+        "https://help.webexconnect.io/docs/cce-flow-configurations"
+      ],
+      "documentation_review": "documented_partial_contract",
+      "documentation_walkthrough": "knowledge/16-additional-sample-walkthroughs.md",
+      "artifact_status": "vendor_release_page_http_403_no_bundle_acquired",
+      "ui_graph_capture": "not_observed",
+      "ui_graph_summary": "not_available",
+      "ui_walkthrough_status": "not_available",
+      "runtime_tested": false,
+      "source_cache": "sources/cache/help/cce-flow-configurations.md",
+      "acquisition_evidence": "evidence/sample-flows/cce-acquisition-status.json"
+    },
+    {
+      "id": "cce_documented_bundle:routed-flow",
+      "cohort": "cce_documented_bundle",
+      "name": "ROUTED Flow",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "SMS/email or CCE event companion",
+      "source_urls": [
+        "https://help.webexconnect.io/docs/cce-flow-configurations"
+      ],
+      "documentation_review": "documented_partial_contract",
+      "documentation_walkthrough": "knowledge/16-additional-sample-walkthroughs.md",
+      "artifact_status": "vendor_release_page_http_403_no_bundle_acquired",
+      "ui_graph_capture": "not_observed",
+      "ui_graph_summary": "not_available",
+      "ui_walkthrough_status": "not_available",
+      "runtime_tested": false,
+      "source_cache": "sources/cache/help/cce-flow-configurations.md",
+      "acquisition_evidence": "evidence/sample-flows/cce-acquisition-status.json"
+    },
+    {
+      "id": "cce_documented_bundle:closed-flow",
+      "cohort": "cce_documented_bundle",
+      "name": "CLOSED Flow",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "SMS/email or CCE event companion",
+      "source_urls": [
+        "https://help.webexconnect.io/docs/cce-flow-configurations"
+      ],
+      "documentation_review": "documented_partial_contract",
+      "documentation_walkthrough": "knowledge/16-additional-sample-walkthroughs.md",
+      "artifact_status": "vendor_release_page_http_403_no_bundle_acquired",
+      "ui_graph_capture": "not_observed",
+      "ui_graph_summary": "not_available",
+      "ui_walkthrough_status": "not_available",
+      "runtime_tested": false,
+      "source_cache": "sources/cache/help/cce-flow-configurations.md",
+      "acquisition_evidence": "evidence/sample-flows/cce-acquisition-status.json"
+    },
+    {
+      "id": "cce_documented_bundle:transferred-flow",
+      "cohort": "cce_documented_bundle",
+      "name": "TRANSFERRED Flow",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "SMS/email or CCE event companion",
+      "source_urls": [
+        "https://help.webexconnect.io/docs/cce-flow-configurations"
+      ],
+      "documentation_review": "documented_partial_contract",
+      "documentation_walkthrough": "knowledge/16-additional-sample-walkthroughs.md",
+      "artifact_status": "vendor_release_page_http_403_no_bundle_acquired",
+      "ui_graph_capture": "not_observed",
+      "ui_graph_summary": "not_available",
+      "ui_walkthrough_status": "not_available",
+      "runtime_tested": false,
+      "source_cache": "sources/cache/help/cce-flow-configurations.md",
+      "acquisition_evidence": "evidence/sample-flows/cce-acquisition-status.json"
+    },
+    {
+      "id": "legacy_bot_documentation:fbm-inbound-bot-callback-crm-example-wxcc-flows-with-qnabot-nodes",
+      "cohort": "legacy_bot_documentation",
+      "name": "FBM inbound bot callback/CRM example - wxcc-flows-with-qnabot-nodes",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "AI Agent, email/SMS, or required task-event companion",
+      "source_urls": [
+        "https://help.webexconnect.io/docs/wxcc-flows-with-qnabot-nodes"
+      ],
+      "documentation_review": "documented_topology",
+      "documentation_walkthrough": "knowledge/16-additional-sample-walkthroughs.md",
+      "artifact_status": "not_acquired",
+      "ui_graph_capture": "not_observed",
+      "ui_graph_summary": "not_available",
+      "ui_walkthrough_status": "not_available",
+      "runtime_tested": false,
+      "source_cache": "sources/cache/help/wxcc-flows-with-qnabot-nodes.md",
+      "identity_note": "Two help pages describe the same legacy Q&A/Task Bot patterns; not four unique modern AI templates"
+    },
+    {
+      "id": "legacy_bot_documentation:livechat-inbound-bot-pre-chat-variant-wxcc-flows-with-qnabot-nodes",
+      "cohort": "legacy_bot_documentation",
+      "name": "Livechat inbound bot/pre-chat variant - wxcc-flows-with-qnabot-nodes",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "AI Agent, email/SMS, or required task-event companion",
+      "source_urls": [
+        "https://help.webexconnect.io/docs/wxcc-flows-with-qnabot-nodes"
+      ],
+      "documentation_review": "documented_topology",
+      "documentation_walkthrough": "knowledge/16-additional-sample-walkthroughs.md",
+      "artifact_status": "not_acquired",
+      "ui_graph_capture": "not_observed",
+      "ui_graph_summary": "not_available",
+      "ui_walkthrough_status": "not_available",
+      "runtime_tested": false,
+      "source_cache": "sources/cache/help/wxcc-flows-with-qnabot-nodes.md",
+      "identity_note": "Two help pages describe the same legacy Q&A/Task Bot patterns; not four unique modern AI templates"
+    },
+    {
+      "id": "legacy_bot_documentation:fbm-inbound-bot-callback-crm-example-configuring-flows-with-ai-agent-node",
+      "cohort": "legacy_bot_documentation",
+      "name": "FBM inbound bot callback/CRM example - configuring-flows-with-ai-agent-node",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "AI Agent, email/SMS, or required task-event companion",
+      "source_urls": [
+        "https://help.webexconnect.io/docs/configuring-flows-with-ai-agent-node"
+      ],
+      "documentation_review": "documented_topology",
+      "documentation_walkthrough": "knowledge/16-additional-sample-walkthroughs.md",
+      "artifact_status": "not_acquired",
+      "ui_graph_capture": "not_observed",
+      "ui_graph_summary": "not_available",
+      "ui_walkthrough_status": "not_available",
+      "runtime_tested": false,
+      "source_cache": "sources/cache/help/configuring-flows-with-ai-agent-node.md",
+      "identity_note": "Two help pages describe the same legacy Q&A/Task Bot patterns; not four unique modern AI templates"
+    },
+    {
+      "id": "legacy_bot_documentation:livechat-inbound-bot-pre-chat-variant-configuring-flows-with-ai-agent-node",
+      "cohort": "legacy_bot_documentation",
+      "name": "Livechat inbound bot/pre-chat variant - configuring-flows-with-ai-agent-node",
+      "in_collection_scope": true,
+      "in_priority_scope": true,
+      "scope_reason": "AI Agent, email/SMS, or required task-event companion",
+      "source_urls": [
+        "https://help.webexconnect.io/docs/configuring-flows-with-ai-agent-node"
+      ],
+      "documentation_review": "documented_topology",
+      "documentation_walkthrough": "knowledge/16-additional-sample-walkthroughs.md",
+      "artifact_status": "not_acquired",
+      "ui_graph_capture": "not_observed",
+      "ui_graph_summary": "not_available",
+      "ui_walkthrough_status": "not_available",
+      "runtime_tested": false,
+      "source_cache": "sources/cache/help/configuring-flows-with-ai-agent-node.md",
+      "identity_note": "Two help pages describe the same legacy Q&A/Task Bot patterns; not four unique modern AI templates"
+    }
+  ]
+}

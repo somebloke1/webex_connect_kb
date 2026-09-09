@@ -1,0 +1,36 @@
+{
+  "category": "Assets",
+  "deprecated": true,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182578f5",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "36bbe07025e771292c9f67c3f7ac21733ad4b0a49d1106a2a8f31dda935c95b5",
+    "source_path": "f46c9f00a10e8c5380ea818daa5e0e1ad6f71488179260ddce3917527ede1fd8",
+    "text_path": "623a2319a716188f43f97ad3d8d69f4b55430b393fd483516e282a5a6cbbd548"
+  },
+  "headings": [
+    "Migration from On-Premise API to Cloud API",
+    "🚧Media Limitation with Cloud APIs",
+    "Advantages of Cloud API",
+    "Disabling 2FA Authentication Pin"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/migration-from-on-prem-to-cloud-api.md",
+  "resolved_url": "https://help.webexconnect.io/docs/migration-from-on-prem-to-cloud-api",
+  "retrieved_at": "2026-09-08T23:29:05+00:00",
+  "sha256_html_response": "be842fdb467a92ce47d3adab40fb0cccba241595d7a58bbe7c3382788f1dd38d",
+  "sha256_source_body": "f46c9f00a10e8c5380ea818daa5e0e1ad6f71488179260ddce3917527ede1fd8",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/migration-from-on-prem-to-cloud-api.source.md",
+  "source_updated_at": "2026-04-15T10:20:36.602Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/migration-from-on-prem-to-cloud-api.txt",
+  "title": "Migration from On-premise API to Cloud API (Deprecated)",
+  "url": "https://help.webexconnect.io/docs/migration-from-on-prem-to-cloud-api",
+  "word_count": 537,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/migration-from-on-prem-to-cloud-api.metadata.json"
+}

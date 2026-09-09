@@ -1,0 +1,35 @@
+{
+  "category": "Assets",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182577ea",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "f5ce3605d37db9e495d86762b891cc65f83cb6073daa8521a66aa00168e490d3",
+    "source_path": "4d4756d921288e95b3cf2cbc29a803995b3627ccd6fad5a59ab3fae22a28068e",
+    "text_path": "0484aeda4e267b0c3a9d86bfd228e6f63241010593e7374318045fae3cc998f5"
+  },
+  "headings": [
+    "📘Authentication",
+    "Configure a Custom Event",
+    "📘Note"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/custom-events.md",
+  "resolved_url": "https://help.webexconnect.io/docs/custom-events",
+  "retrieved_at": "2026-09-08T23:29:07+00:00",
+  "sha256_html_response": "b64726187f312dfa2284174c36e85470efaf9f059a1119bc15428df34fcdcdb5",
+  "sha256_source_body": "4d4756d921288e95b3cf2cbc29a803995b3627ccd6fad5a59ab3fae22a28068e",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/custom-events.source.md",
+  "source_updated_at": "2025-04-02T19:43:04.738Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/custom-events.txt",
+  "title": "Custom Events",
+  "url": "https://help.webexconnect.io/docs/custom-events",
+  "word_count": 367,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/custom-events.metadata.json"
+}

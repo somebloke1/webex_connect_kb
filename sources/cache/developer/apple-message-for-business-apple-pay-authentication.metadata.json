@@ -1,0 +1,37 @@
+{
+  "api_metadata_path": "sources/cache/developer/apple-message-for-business-apple-pay-authentication.api.json",
+  "category": "MULTI CHANNEL COMMUNICATION API",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f660b",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "9a501ccf13163c8ec1e48ddffb5c648b9d9340822f0437b8ec9ce1c6738b0a8d",
+    "source_path": "24ba6418e073adb32b7ff30b33079abd62cbbd9662d2ec814bedf878c2a3e541",
+    "text_path": "c41190e84eb240e8ede92b2f704aaab12732631b3cc3ac4197f8f2667116cf0b"
+  },
+  "headings": [
+    "Apple Pay",
+    "Error Codes"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/apple-message-for-business-apple-pay-authentication.md",
+  "openapi_path": "sources/cache/openapi/9dad1553978cb273a51997396cf794e3e6ccdd60d344af0b1c4c4a1235d53b48.json",
+  "resolved_url": "https://developers.webexconnect.io/reference/apple-message-for-business-apple-pay-authentication",
+  "retrieved_at": "2026-09-08T23:31:42+00:00",
+  "sha256_api_metadata": "6da2f10b9f7a26aa54919c7d9a63b6eb3e175dde130996f8f641671c076a9701",
+  "sha256_html_response": "55b547ee66bbc0915402f290ddee47491e89d06984bd877c197a9252281d1476",
+  "sha256_openapi": "9dad1553978cb273a51997396cf794e3e6ccdd60d344af0b1c4c4a1235d53b48",
+  "sha256_source_body": "24ba6418e073adb32b7ff30b33079abd62cbbd9662d2ec814bedf878c2a3e541",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/apple-message-for-business-apple-pay-authentication.source.md",
+  "source_updated_at": "2025-10-14T08:38:01.604Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/apple-message-for-business-apple-pay-authentication.txt",
+  "title": "Apple Message for Business: Apple Pay & Authentication",
+  "url": "https://developers.webexconnect.io/reference/apple-message-for-business-apple-pay-authentication",
+  "word_count": 2322,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/apple-message-for-business-apple-pay-authentication.metadata.json"
+}

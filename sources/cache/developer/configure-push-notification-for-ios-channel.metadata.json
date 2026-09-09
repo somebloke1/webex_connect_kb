@@ -1,0 +1,36 @@
+{
+  "category": "TUTORIALS",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f6724",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "373e53e94b0976bd563d7a9480bb13616ad95aeb7a9c4c33ac728c6103a31521",
+    "source_path": "7df808c3520bd34f7430e529cac94320da0d1d975b4350a17f644154f131e1c9",
+    "text_path": "4b7091c827d81b8a6137f210064f5613dad8d8e2888612dbd543439c61364814"
+  },
+  "headings": [
+    "Configure Push-Notification for iOS channel",
+    "Firebase Service Account JSON-based push",
+    "Apple Push Notification Service (APNS)",
+    "📘Supported Certificate Format",
+    "APNS token based push"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/configure-push-notification-for-ios-channel.md",
+  "resolved_url": "https://developers.webexconnect.io/docs/configure-push-notification-for-ios-channel",
+  "retrieved_at": "2026-09-08T23:31:39+00:00",
+  "sha256_html_response": "c0a46f01be034a48cc59b9b0e72fb2eb636bcba3509a27de4d97f12be896c536",
+  "sha256_source_body": "7df808c3520bd34f7430e529cac94320da0d1d975b4350a17f644154f131e1c9",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/configure-push-notification-for-ios-channel.source.md",
+  "source_updated_at": "2026-01-22T05:05:16.229Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/configure-push-notification-for-ios-channel.txt",
+  "title": "Configure Push-Notification for iOS channel",
+  "url": "https://developers.webexconnect.io/docs/configure-push-notification-for-ios-channel",
+  "word_count": 313,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/configure-push-notification-for-ios-channel.metadata.json"
+}

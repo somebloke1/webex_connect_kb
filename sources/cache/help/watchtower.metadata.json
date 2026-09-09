@@ -1,0 +1,31 @@
+{
+  "category": "Watchtower",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd81825791c",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "8c22e9b901f1f75dab06841640a3602bb729765aed42aa7dee800bb7e7e3b9f7",
+    "source_path": "eee60be4f3e34ce0855c7e1928e3e780f86f148dc1dd06f9fd9d8057d9c05ac8",
+    "text_path": "ec64a0e545698ffe044b3561aa80ceae841067da14f176b3db14858f72e455f5"
+  },
+  "headings": [],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/watchtower.md",
+  "resolved_url": "https://help.webexconnect.io/docs/watchtower",
+  "retrieved_at": "2026-09-08T23:28:58+00:00",
+  "sha256_html_response": "179650db204de79449e48898f611db94884a7c8074518da5e64841823128def0",
+  "sha256_source_body": "eee60be4f3e34ce0855c7e1928e3e780f86f148dc1dd06f9fd9d8057d9c05ac8",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/watchtower.source.md",
+  "source_updated_at": "2025-10-31T11:45:23.440Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/watchtower.txt",
+  "title": "Watchtower",
+  "url": "https://help.webexconnect.io/docs/watchtower",
+  "word_count": 163,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/watchtower.metadata.json"
+}

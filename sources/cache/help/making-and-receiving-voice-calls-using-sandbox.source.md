@@ -1,0 +1,160 @@
+By using the <<prodname>> Sandbox you can make and receive calls from the interface, APIs, SDKs and advanced flows. In the Sandbox mode, we support one-way communication (make calls) for 19 countries and two-way communication (make and receive calls) for USA, Canada, and UK. By using our pre-defined code snippets for requests and responses, you can seamlessly integrate into your application(s).
+
+> 📘 Voice Support in Sandbox
+> 
+> - Refer to[a list of countries](https://developers.imiconnect.io/reference/sms-and-voice-support-in-sandbox) that you can send and/or receive SMS messages in using <<prodname>> sandbox mode.
+> - Please note you can make a maximum of 5000 outbound calls and receive a maximum of 5000 inbound calls over the lifetime of <<prodname>> Sandbox usage.
+
+## Sandbox Home UI
+
+You can make calls and view sample code for your voice requests on the Sandbox Home page by using the Voice tab. 
+
+[block:image]
+{
+  "images": [
+    {
+      "image": [
+        "https://files.readme.io/7c69a7c-3.jpg",
+        "Voice.jpg",
+        "Screenshot of the Sandbox Home screen displaying call-making feature"
+      ],
+      "align": "center",
+      "border": true,
+      "caption": "Making a Call from Sandbox Home Screen"
+    }
+  ]
+}
+[/block]
+
+
+### Making a Call from Sandbox Home screen
+
+As shown above, Home screen contains explorer interface to help you make a voice call to your registered phone number(s) using pre-provisioned phone numbers, by providing sample voice message and by clicking make voice call. By default the API credentials associated with pre-provisioned 'My First Service' are used to make the calls, and the sample code is visible on the right side of the screen. Additionally, the sample API response once you make a call shows-up in the 'Voice API Response' section on the right side.
+
+Here's a brief description of various parameters / fields that are used for making a call. These values need to be provided when you use <<prodname>>  sandbox Voice API (please note that <<prodname>>  sandbox mode offers a separate endpoint for Voice calls) to make outbound calls:
+
+[block:parameters]
+{
+  "data": {
+    "h-0": "Field Name",
+    "h-1": "Description",
+    "0-0": "Service Key",
+    "0-1": "The unique service key associated with the service selected under the Service Name dropdown. This key is used for authenticating the API request to make the Voice call.",
+    "1-0": "From Number",
+    "1-1": "The Phone Number is used for making a call from <<prodname>>. This value is automatically populated in Sandbox mode and cannot be changed.  \n  \nDepending on the country you are making a call to, this will be a local phone number.",
+    "2-0": "To Number",
+    "2-1": "Phone number of the voice recipient.  \n  \nFrom the drop-down list, select the number to whom you want to make call. The sandbox limits you to only making calls to your verified phone number(s). You can register up to 5 phone numbers (all belonging to the same country) for making and receiving test calls.",
+    "3-0": "Message Type",
+    "3-1": "Select Pre-recorded Prompt or Text to Speech. Select Text to Speech if you want to include special  message.",
+    "4-0": "Text to speech message",
+    "4-1": "Type the message you want to deliver to the recipient."
+  },
+  "cols": 2,
+  "rows": 5,
+  "align": [
+    "left",
+    "left"
+  ]
+}
+[/block]
+
+
+### Receiving a Call
+
+Under the Receive Voice Call tab you can test your incoming calls. To test your incoming calls, click the Voice Call tab.
+
+Receiving voice calls is only supported in countries for which the sandbox supports two-way messaging.  Check Appendix A for the list of countries that support this function.
+
+To test a call, send a voice call message to the pre-provisioned phone number from one of your registered test numbers. The phone number is shown in the Number to message field. The payload will be shown on the right-side in the Event Payload for Incoming Calls panel once you send the voice call.
+
+You can test your calls using the options below.
+
+- Option 1 - Configure your application webhook within the manage numbers section to receive a notification every time a voice call is received on one of your <<prodname>> phone numbers or by enabling the Test Incoming Calls via Default Prompt shown under Option 1.  
+  To configure your own webhook, use the directions below.
+
+1. Click the manage numbers section link that appears under Option 1. The Numbers page appears.
+
+[block:image]
+{
+  "images": [
+    {
+      "image": [
+        "https://files.readme.io/953cc0c-4.jpg",
+        "Numbers.jpg",
+        ""
+      ],
+      "align": "center",
+      "border": true
+    }
+  ]
+}
+[/block]
+
+
+2. Select the voice channel number you want to configure a webhook for and under the Actions menu, click Manage. The Manage Phone Number page appears.
+
+[block:image]
+{
+  "images": [
+    {
+      "image": [
+        "https://files.readme.io/2e85717-5.jpg",
+        "Manage Numbers.jpg",
+        ""
+      ],
+      "align": "center",
+      "border": true
+    }
+  ]
+}
+[/block]
+
+
+3. Select the **Handling Incoming Calls via Callback URL** check box. The Manage Phone Number page expands allowing you to enter your configuration information.
+
+[block:image]
+{
+  "images": [
+    {
+      "image": [
+        "https://files.readme.io/372ecb6-6.jpg",
+        "Handling.jpg",
+        ""
+      ],
+      "align": "center",
+      "border": true
+    }
+  ]
+}
+[/block]
+
+
+Provide the information listed below.
+
+- Callback URL – Type your callback URL. An HTTP Post call will be made to this URL and will wait for an action/instruction when an incoming call is received on this number.
+- Select Service – From the drop-down list select the service for this URL.
+
+4. If you want to validate webhooks with a signature generated using SHA256 or SHA512 sent in the header x-hub-signature, select the Enable Hub Signature check box. The value will be in the form method=signature where method is the algorithm selected.
+5. Click **Save**.
+
+> 📘 Note
+> 
+> If you select to use a URL, you cannot use Test Incoming Calls via Default Prompt option.
+
+- Option 2 - By configuring a flow and selecting Inbound Call as the flow trigger for voice channel.
+
+[block:image]
+{
+  "images": [
+    {
+      "image": [
+        "https://files.readme.io/9d6175c-Option2.png",
+        "Receive calls.jpg",
+        ""
+      ],
+      "align": "center",
+      "border": true
+    }
+  ]
+}
+[/block]

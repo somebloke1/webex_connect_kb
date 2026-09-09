@@ -1,0 +1,43 @@
+{
+  "category": "SERVICES & FLOWS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257813",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "1dd39ae35e4630696c734a81cd21f070d92336c4b25d9c97f32390d7381bc66b",
+    "source_path": "be6f52ada99f7736a8c2f408237a52d3348f24ede26d4eaa0dbd8b294cfaf299",
+    "text_path": "ada36c32fc2616444e0e9f60150e931fb6556e50b79bc2971f55bd99e41a3e8e"
+  },
+  "headings": [
+    "List of Nodes",
+    "Adding a Node to Flow Canvas",
+    "Node Configuration",
+    "Configuration Area",
+    "Contextual Information Sidebar",
+    "Connectors",
+    "Drawing a Connector",
+    "📘",
+    "Restrictions",
+    "Deleting a Connector",
+    "Connector Colour"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/nodes.md",
+  "resolved_url": "https://help.webexconnect.io/docs/nodes",
+  "retrieved_at": "2026-09-08T23:28:51+00:00",
+  "sha256_html_response": "76857fa8b004fb7c67e5123ce6add1ff9c21796e633e56dceea039129f29c504",
+  "sha256_source_body": "be6f52ada99f7736a8c2f408237a52d3348f24ede26d4eaa0dbd8b294cfaf299",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/nodes.source.md",
+  "source_updated_at": "2026-04-15T08:37:34.950Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/nodes.txt",
+  "title": "Nodes",
+  "url": "https://help.webexconnect.io/docs/nodes",
+  "word_count": 1011,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/nodes.metadata.json"
+}

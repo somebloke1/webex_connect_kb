@@ -1,0 +1,34 @@
+Webex Engage’s Integration services are provided as Nodes within Webex Connect’s Flow Builder. You must authorize the integration before using these nodes to design your contact center journey. Webex Engage uses the OAuth 2.0 - Client Credentials Grant type for this authorization process. 
+
+To complete the authorize the nodes, follow these steps:
+
+- Navigate to Assets > Integrations.
+
+- Choose Pre-built Integrations from the Integration Type drop-down list, to display the list of all Pre-built Integrations.
+
+ [Image: Interface showing how to choose Pre-built Integrations from the Integration Type drop-down menu.] 
+Screenshot displaying the selection of Pre-built Integrations from the Integration Type drop-down list
+
+Check for the Webex Engage Live Agent. The integration status will display as Auth Pending if you have not authorized it.
+
+ [Image: Screenshot displaying the option to select the Manage Integrations page.] 
+Screenshot displaying the option to select the Manage Integrations page
+
+On the Manage Integrations page, navigate to the Node Authorizations section. You can view the list of Authorizations mapped to this integration.
+
+ [Image: Screenshot displaying to Add authentication] 
+Screenshot displaying to Add authentication
+
+- Click Action.
+
+- Click Add authentication and enter an Authentication Name.
+
+- Click Authenticate.
+
+A success message appears on the screen.
+
+ Managing node authorisations Centrally
+
+If you have added multiple authentications, you can mark one as default by choosing Mark as default from the Actions drop-down list. Unless explicitly modified, it will ensure that these Auth credentials apply for all instances of Webex Engage Nodes within the tenant.
+
+Once marked as default, you will view a Default tag adjacent to the Auth Name.

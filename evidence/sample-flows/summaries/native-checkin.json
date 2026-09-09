@@ -1,0 +1,547 @@
+{
+  "schema_version": 1,
+  "sample_key": "native-checkin",
+  "title": "checkin.workflow",
+  "observed_at": "2026-09-09T00:01:54.153Z",
+  "source_path": "evidence/sample-flows/observed/native-checkin.json",
+  "source_sha256": "2de2642b12b75fad99c9c60c9d251aa941e5eadf1e171beb771e4c516bcf5c1d",
+  "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model",
+  "runtime_tested": false,
+  "status": "observed_canvas_relationships_summarized",
+  "format_warning": "Internal loaded-canvas model observations only; not a public import schema. Event internal names and visible labels are recorded separately. Dynamic script behavior and missing canvas pages are not inferred.",
+  "counts": {
+    "cells": 7,
+    "operative_nodes": 2,
+    "explicit_edges": 1,
+    "terminal_bindings": 3,
+    "variable_references": 16
+  },
+  "start_configuration": {
+    "channel": 501,
+    "type": "channel",
+    "subtype": "aiagent",
+    "isCheckLiveSessions": 0,
+    "extras": {},
+    "eventid": 501,
+    "v2EventId": 501
+  },
+  "nodes": [
+    {
+      "id": "2",
+      "label": "Configure AI Agent Event",
+      "type_internal": "start",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "onbegin",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "selectedChannel": {
+          "id": 501,
+          "name": "aiagent",
+          "description": "AI Agent",
+          "type": 3,
+          "extraData": {},
+          "subType": "aiagent",
+          "integrationId": "",
+          "image_url": ""
+        },
+        "selectedRuleEvent": {
+          "id": 501,
+          "name": "",
+          "v2EventId": 501
+        },
+        "isKeyWordDisabled": true,
+        "isKeyWordVerifyReq": true,
+        "isKeyWordAvailable": true,
+        "output_variables": [
+          "aiAgent.timestamp",
+          "aiAgent.transId",
+          "aiAgent.payload",
+          "service.serviceKey",
+          "aiAgent.booking_id",
+          "aiAgent.notes",
+          "aiAgent.last_name"
+        ],
+        "conditionData": [
+          {
+            "defaultvalue": "ZK8G2A",
+            "mandatory": false,
+            "var_name": "booking_id",
+            "datatype": "string",
+            "channel_id": 501,
+            "event_id": 501,
+            "eventname": ""
+          },
+          {
+            "defaultvalue": "Extra baggage",
+            "mandatory": false,
+            "var_name": "notes",
+            "datatype": "string",
+            "channel_id": 501,
+            "event_id": 501,
+            "eventname": ""
+          },
+          {
+            "defaultvalue": "Johnson",
+            "mandatory": false,
+            "var_name": "last_name",
+            "datatype": "string",
+            "channel_id": 501,
+            "event_id": 501,
+            "eventname": ""
+          }
+        ],
+        "aiAgentData": {
+          "parseOutput": [
+            {
+              "name": "booking_id",
+              "defaultvalue": "ZK8G2A",
+              "mandatory": false,
+              "type": "string"
+            },
+            {
+              "name": "notes",
+              "defaultvalue": "Extra baggage",
+              "mandatory": false,
+              "type": "string"
+            },
+            {
+              "name": "last_name",
+              "defaultvalue": "Johnson",
+              "mandatory": false,
+              "type": "string"
+            }
+          ],
+          "isAuthRequired": false,
+          "name": "",
+          "url": "https://example.invalid/flows/62338/trigger/aiagent",
+          "v2EventId": 501,
+          "jsonData": {
+            "booking_id": "ZK8G2A",
+            "last_name": "Johnson",
+            "notes": "Extra baggage"
+          },
+          "xmlData": "",
+          "isExistingAIAgent": true,
+          "selectedEvent": 501,
+          "jsonSource": 0,
+          "conditionData": [],
+          "isValidateSignature": false,
+          "validateSignatureObj": {
+            "algorithm": "",
+            "secretType": "[redacted]",
+            "secretKey": "[redacted]",
+            "headerKey": "[redacted]"
+          }
+        }
+      },
+      "transition_actions": [],
+      "declared_outputs": [
+        "aiAgent.timestamp",
+        "aiAgent.transId",
+        "aiAgent.payload",
+        "service.serviceKey",
+        "aiAgent.booking_id",
+        "aiAgent.notes",
+        "aiAgent.last_name"
+      ],
+      "output_mappings": []
+    },
+    {
+      "id": "3",
+      "label": "HTTP Request",
+      "type_internal": "http",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "oncomplete",
+          "declared_target_count": 1
+        },
+        {
+          "event_internal": "onerror",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "method": "post",
+        "url": "https://example.invalid/check_in",
+        "body": {
+          "booking_id": "$(n2.aiAgent.booking_id)",
+          "last_name": "$(n2.aiAgent.last_name)",
+          "notes": "$(n2.aiAgent.notes)"
+        },
+        "connctiontimeout": 10000,
+        "requesttimeout": 10000,
+        "checkAll": false,
+        "dataformate": "json",
+        "type": "extract",
+        "outputvariablelist": {
+          "parameters": [
+            {
+              "id": "PqdQ3scPzD",
+              "name": "message",
+              "path": "$.message",
+              "type": "body",
+              "order": 0
+            },
+            {
+              "id": "lZvzADidmk",
+              "name": "error",
+              "path": "$.error",
+              "type": "body",
+              "order": 1
+            },
+            {
+              "id": "FGcgK17vQJ",
+              "name": "notes",
+              "path": "$.booking.check_in_notes",
+              "type": "body",
+              "order": 2
+            }
+          ],
+          "type": "json"
+        },
+        "isNewnode": true
+      },
+      "transition_actions": [],
+      "declared_outputs": [
+        "message",
+        "error",
+        "notes"
+      ],
+      "output_mappings": {
+        "parameters": [
+          {
+            "id": "PqdQ3scPzD",
+            "name": "message",
+            "path": "$.message",
+            "type": "body",
+            "order": 0
+          },
+          {
+            "id": "lZvzADidmk",
+            "name": "error",
+            "path": "$.error",
+            "type": "body",
+            "order": 1
+          },
+          {
+            "id": "FGcgK17vQJ",
+            "name": "notes",
+            "path": "$.booking.check_in_notes",
+            "type": "body",
+            "order": 2
+          }
+        ],
+        "type": "json"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "5128004",
+      "source": "2",
+      "target": "3",
+      "event_internal": "onbegin",
+      "event_label": "onBegin",
+      "representation": "explicit_edge"
+    }
+  ],
+  "terminal_bindings": [
+    {
+      "id": "9",
+      "source": "3",
+      "target": "9",
+      "event_internal": "oncomplete",
+      "event_label": "onSuccess",
+      "outcome_id": 2,
+      "outcome_name": "Success",
+      "outcome_description": "Successfully completed flow",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "10",
+      "source": "3",
+      "target": "10",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "13",
+      "source": "3",
+      "target": "13",
+      "event_internal": "ontimeout",
+      "event_label": "onTimeout",
+      "outcome_id": 4,
+      "outcome_name": "Incomplete",
+      "outcome_description": "Flow ended due to an interruption",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    }
+  ],
+  "terminal_sources_not_captured": [],
+  "duplicate_terminal_binding_groups": [],
+  "variable_handoffs": [
+    {
+      "consumer": "3",
+      "location": "configuration.body.booking_id",
+      "reference": "$(n2.aiAgent.booking_id)",
+      "variable": "n2.aiAgent.booking_id",
+      "producer_node": "2",
+      "producer_field": "aiAgent.booking_id",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "3",
+      "location": "configuration.body.last_name",
+      "reference": "$(n2.aiAgent.last_name)",
+      "variable": "n2.aiAgent.last_name",
+      "producer_node": "2",
+      "producer_field": "aiAgent.last_name",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "3",
+      "location": "configuration.body.notes",
+      "reference": "$(n2.aiAgent.notes)",
+      "variable": "n2.aiAgent.notes",
+      "producer_node": "2",
+      "producer_field": "aiAgent.notes",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "outcome[1].notification.payload.transactionID",
+      "reference": "$(transid)",
+      "variable": "transid",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "outcome[1].notification.payload.message",
+      "reference": "$(n3.message)",
+      "variable": "n3.message",
+      "producer_node": "3",
+      "producer_field": "message",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "outcome[1].notification.payload.error",
+      "reference": "$(n3.error)",
+      "variable": "n3.error",
+      "producer_node": "3",
+      "producer_field": "error",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "outcome[1].notification.payload.notes",
+      "reference": "$(n3.notes)",
+      "variable": "n3.notes",
+      "producer_node": "3",
+      "producer_field": "notes",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "outcome[1].notification.custompayload.transactionID",
+      "reference": "$(transid)",
+      "variable": "transid",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "outcome[1].notification.custompayload.flowname",
+      "reference": "$(flowname)",
+      "variable": "flowname",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "outcome[1].notification.custompayload.serviceName",
+      "reference": "$(serviceName)",
+      "variable": "serviceName",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "3",
+      "location": "_usedVars",
+      "reference": "$(n2.aiAgent.booking_id)",
+      "variable": "n2.aiAgent.booking_id",
+      "producer_node": "2",
+      "producer_field": "aiAgent.booking_id",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "3",
+      "location": "_usedVars",
+      "reference": "$(n2.aiAgent.last_name)",
+      "variable": "n2.aiAgent.last_name",
+      "producer_node": "2",
+      "producer_field": "aiAgent.last_name",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "3",
+      "location": "_usedVars",
+      "reference": "$(n2.aiAgent.notes)",
+      "variable": "n2.aiAgent.notes",
+      "producer_node": "2",
+      "producer_field": "aiAgent.notes",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "_usedVars",
+      "reference": "$(n3.message)",
+      "variable": "n3.message",
+      "producer_node": "3",
+      "producer_field": "message",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "_usedVars",
+      "reference": "$(n3.error)",
+      "variable": "n3.error",
+      "producer_node": "3",
+      "producer_field": "error",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "_usedVars",
+      "reference": "$(n3.notes)",
+      "variable": "n3.notes",
+      "producer_node": "3",
+      "producer_field": "notes",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    }
+  ],
+  "custom_variable_assignments": [],
+  "custom_variables": [],
+  "flow_outcomes": [
+    {
+      "id": 1,
+      "order": 0,
+      "name": 100,
+      "value": "Last executed node event",
+      "tag": 15,
+      "tagName": "Last Execution Status",
+      "type": "default",
+      "notification": {
+        "method": "get",
+        "headers": "[redacted]",
+        "payload": {
+          "transactionID": "$(transid)",
+          "message": "$(n3.message)",
+          "error": "$(n3.error)",
+          "notes": "$(n3.notes)"
+        },
+        "payloadType": 1,
+        "custompayload": {
+          "transactionID": "$(transid)",
+          "flowname": "$(flowname)",
+          "serviceName": "$(serviceName)",
+          "statuscode": 1000
+        },
+        "notificationType": -2
+      },
+      "isNotify": true,
+      "statusCode": "All status codes"
+    },
+    {
+      "id": 2,
+      "order": 1,
+      "name": 101,
+      "value": "Successfully completed flow",
+      "tag": 11,
+      "tagName": "Success",
+      "type": "default",
+      "notification": null,
+      "isNotify": false,
+      "statusCode": null
+    },
+    {
+      "id": 3,
+      "order": 2,
+      "name": 102,
+      "value": "Flow completed with an error",
+      "tag": 12,
+      "tagName": "Error",
+      "type": "default",
+      "notification": null,
+      "isNotify": false,
+      "statusCode": null
+    },
+    {
+      "id": 4,
+      "order": 3,
+      "name": 103,
+      "value": "Flow ended due to an interruption",
+      "tag": 13,
+      "tagName": "Incomplete",
+      "type": "default",
+      "notification": null,
+      "isNotify": false,
+      "statusCode": null
+    }
+  ],
+  "cycles": [],
+  "cross_page_or_flow_nodes": [],
+  "capture_pages": null,
+  "declared_events_without_captured_route": [],
+  "nodes_not_reached_from_captured_start": [],
+  "edge_endpoints_not_captured": [],
+  "node_variable_producers_not_captured": [],
+  "redactions": "Header credentials and URL hosts redacted. Internal model properties are evidence, not a public import API.",
+  "authored_walkthrough": {
+    "walkthrough": "AI Agent Start 2 exposes optional string `booking_id`, `notes`, and `last_name`, then `onbegin`/rendered `onBegin` enters HTTP 3 POST `/check_in`. End pseudo-nodes associate with HTTP 3 through parentNode and nodeEvent: node 9 terminates `oncomplete`/`onSuccess` with exitResult 2, node 10 terminates `onerror`/`onError` with 3, and node 13 terminates `ontimeout`/`onTimeout` with 4. The graph has no retry return edge.",
+    "handoffs": "HTTP body uses `booking_id=$(n2.aiAgent.booking_id)`, `last_name=$(n2.aiAgent.last_name)`, and `notes=$(n2.aiAgent.notes)`. Both timeout fields contain 10000. JSONPath `$.booking.check_in_notes` becomes output `n3.notes`; `$.message` and `$.error` become their corresponding n3 outputs. The all-status Last Execution Status notification stores payloadType 1 and returns transactionID, message, error, and notes through those outputs. It does not create a boarding-pass response or independently retrieve flight details.",
+    "limitations": "The check-in action and its error/timeout terminal configuration were inspected without execution. Embedded booking/name/notes examples are fixtures, and a stored success message does not prove a completed check-in. No explicit business-status branch, duplicate-write safeguard, reconciliation operation, or SMS/email send appears. Hosts and header values are redacted. This internal canvas representation is evidence rather than a public import schema; `runtime_tested=false` applies to all paths."
+  },
+  "walkthrough_status": "authored"
+}

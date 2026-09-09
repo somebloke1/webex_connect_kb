@@ -1,0 +1,36 @@
+{
+  "api_metadata_path": "sources/cache/developer/api-authentication.api.json",
+  "category": "GETTING STARTED",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f6589",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "17c930e84c0c81c305a548c249ec8597681835a64ef45815b5e57a64534fb164",
+    "source_path": "b7b690688191b65a3f72f6c3a5635de00441ac2d1a2df735c5138575452e06f9",
+    "text_path": "bfb9099b86a9c2d706afec0478f786df01cbf962b73e8772cffb5b69d447cc6d"
+  },
+  "headings": [
+    "Authentication options for Webex Connect APIs and Webhooks",
+    "Rotating API Authentication Credentials",
+    "IP Allowlisting for APIs and Webhooks"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/api-authentication.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/api-authentication",
+  "retrieved_at": "2026-09-08T23:31:39+00:00",
+  "sha256_api_metadata": "575f65b7d8dc3ea0b617314bc47e22705dc85fc80ee114e6faa20ada4e8aafe2",
+  "sha256_html_response": "42492be876bb21b7bdaca0ad1f7770b9c166aecd994b2448433a0892e2272c9a",
+  "sha256_source_body": "b7b690688191b65a3f72f6c3a5635de00441ac2d1a2df735c5138575452e06f9",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/api-authentication.source.md",
+  "source_updated_at": "2026-07-27T15:12:57.646Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/api-authentication.txt",
+  "title": "API Authentication",
+  "url": "https://developers.webexconnect.io/reference/api-authentication",
+  "word_count": 491,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/api-authentication.metadata.json"
+}

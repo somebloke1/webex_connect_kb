@@ -1,0 +1,36 @@
+{
+  "category": "REFERENCES",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257847",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "d3e5fb671ba455b60dd0ffdbfe0dc44a387ec23fc5fa046d0dcbb3bbf5e5933e",
+    "source_path": "88e48f41d6ce4c5c85748197eae49d30bb87f19b28d4e2b489e1fd92bd08d613",
+    "text_path": "7cd63a7dbc1b3c5a107e9edab740b09133b502edc7a76d18270fcf92e7955580"
+  },
+  "headings": [
+    "List of languages that supported for Voice channel for TTS",
+    "📘Note",
+    "List of languages that supported for Voice channel for TTS by the alternate fallback service provider",
+    "📘Fallback voices and languages configuration"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/references-supported-languages-for-voice.md",
+  "resolved_url": "https://help.webexconnect.io/docs/references-supported-languages-for-voice",
+  "retrieved_at": "2026-09-08T23:29:40+00:00",
+  "sha256_html_response": "c9a27b86a10efb7b99af36cdf2e9eea7661c5b997285e04435db95800fc5cd9a",
+  "sha256_source_body": "88e48f41d6ce4c5c85748197eae49d30bb87f19b28d4e2b489e1fd92bd08d613",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/references-supported-languages-for-voice.source.md",
+  "source_updated_at": "2026-03-27T08:27:38.010Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/references-supported-languages-for-voice.txt",
+  "title": "Supported Languages for Voice TTS (Text-to-Speech)",
+  "url": "https://help.webexconnect.io/docs/references-supported-languages-for-voice",
+  "word_count": 8018,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/references-supported-languages-for-voice.metadata.json"
+}

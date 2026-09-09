@@ -1,0 +1,33 @@
+{
+  "category": "TUTORIALS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257815",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "96f141785579fd4ed5ab20524449e8e4b094e27b43ccea19a172d8671c0bace7",
+    "source_path": "76257885b19b2401ea4e89453ef4e32691b205fd8170648c09753073bf5424c5",
+    "text_path": "855406c179d2a7972cb9b2d2c9efdb9df8c35b9911da0d11bf0193b5a63f4928"
+  },
+  "headings": [
+    "Add New Service"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/create-a-new-service-on-webexconnect.md",
+  "resolved_url": "https://help.webexconnect.io/docs/create-a-new-service-on-webexconnect",
+  "retrieved_at": "2026-09-08T23:28:49+00:00",
+  "sha256_html_response": "89e8aba228f1559bdb7db59f57ff0b555309070a6f7c067e8880e30f1fe724c1",
+  "sha256_source_body": "76257885b19b2401ea4e89453ef4e32691b205fd8170648c09753073bf5424c5",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/create-a-new-service-on-webexconnect.source.md",
+  "source_updated_at": "2026-01-26T13:24:21.587Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/create-a-new-service-on-webexconnect.txt",
+  "title": "Creating a Service in Webex Connect",
+  "url": "https://help.webexconnect.io/docs/create-a-new-service-on-webexconnect",
+  "word_count": 193,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/create-a-new-service-on-webexconnect.metadata.json"
+}

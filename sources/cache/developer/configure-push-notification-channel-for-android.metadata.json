@@ -1,0 +1,34 @@
+{
+  "category": "TUTORIALS",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f6723",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "55590c71f5eebac865a3991c4903579160a68a4e21c803f4cf201c746e79b41a",
+    "source_path": "795cd914e4283b7aeebb0d000b1282282bbeedae5b24d54908ab2f061633b936",
+    "text_path": "b6055b05d86247cc89b6e8a906be49eef31fafd6865f0f45ea2964c652cecb77"
+  },
+  "headings": [
+    "Configure Push-Notification channel for Android",
+    "FCM based Push Notification",
+    "HMS based Push Notification"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/configure-push-notification-channel-for-android.md",
+  "resolved_url": "https://developers.webexconnect.io/docs/configure-push-notification-channel-for-android",
+  "retrieved_at": "2026-09-08T23:31:39+00:00",
+  "sha256_html_response": "c9b6f473c7501a996b8eb1370cea31ea4f0579a79c05289808fba1b53b846b75",
+  "sha256_source_body": "795cd914e4283b7aeebb0d000b1282282bbeedae5b24d54908ab2f061633b936",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/configure-push-notification-channel-for-android.source.md",
+  "source_updated_at": "2026-01-22T05:04:56.073Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/configure-push-notification-channel-for-android.txt",
+  "title": "Configure Push-Notification for Android channel",
+  "url": "https://developers.webexconnect.io/docs/configure-push-notification-channel-for-android",
+  "word_count": 132,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/configure-push-notification-channel-for-android.metadata.json"
+}

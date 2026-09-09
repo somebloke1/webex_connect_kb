@@ -1,0 +1,31 @@
+{
+  "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257877",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "e4f9b30d97a8be3ca4a6210db8a747df490406ee6719b25f9e16f6e120502bc4",
+    "source_path": "952f724a20e93d515dfecd675249073b5bddb8b0f37b5a94e69bdd02d9ccce6b",
+    "text_path": "7aab0fa0054d93bf6a4d9e810c326e18a2506bc9312657e4f718f5fd8e953944"
+  },
+  "headings": [],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/wxcc-channel-asset-configuration.md",
+  "resolved_url": "https://help.webexconnect.io/docs/wxcc-channel-asset-configuration",
+  "retrieved_at": "2026-09-08T23:29:12+00:00",
+  "sha256_html_response": "e7227c8708746f28aede472ef988794a15f028db2f719bc816363b62b82aae85",
+  "sha256_source_body": "952f724a20e93d515dfecd675249073b5bddb8b0f37b5a94e69bdd02d9ccce6b",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/wxcc-channel-asset-configuration.source.md",
+  "source_updated_at": "2026-04-14T07:22:50.160Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/wxcc-channel-asset-configuration.txt",
+  "title": "Channel Asset Configuration - WXCC",
+  "url": "https://help.webexconnect.io/docs/wxcc-channel-asset-configuration",
+  "word_count": 87,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/wxcc-channel-asset-configuration.metadata.json"
+}

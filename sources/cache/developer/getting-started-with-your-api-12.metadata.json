@@ -1,0 +1,32 @@
+{
+  "api_metadata_path": "sources/cache/developer/getting-started-with-your-api-12.api.json",
+  "category": "Programmable Voice Calls Using Voice API v1",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f6792",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "2f4f310c779f90e2f7725ecf9a1bdcf8adb966cc12c989410b0e2eeb1a293b15",
+    "source_path": "eed6633f8bb0ba365af9e8d8f6a0c40ae515e4a9be2d13297d8c7f39f989d6f9",
+    "text_path": "684e9fa82b9b546628a370434c38f66b1dd24837219f43df91591646ef30c6ef"
+  },
+  "headings": [],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/getting-started-with-your-api-12.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/getting-started-with-your-api-12",
+  "retrieved_at": "2026-09-08T23:31:52+00:00",
+  "sha256_api_metadata": "1a446541811c176394bed8b1bf3a86c2d3dc16d9b747af7895265c69fc5055d2",
+  "sha256_html_response": "47a667b00d8a7f15967e35eecce9107ed8e95b5e7ad60a9ea4f5cc8c8e83f972",
+  "sha256_source_body": "eed6633f8bb0ba365af9e8d8f6a0c40ae515e4a9be2d13297d8c7f39f989d6f9",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/getting-started-with-your-api-12.source.md",
+  "source_updated_at": "2026-03-09T07:29:08.803Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/getting-started-with-your-api-12.txt",
+  "title": "Getting Started With Your API",
+  "url": "https://developers.webexconnect.io/reference/getting-started-with-your-api-12",
+  "word_count": 70,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/getting-started-with-your-api-12.metadata.json"
+}

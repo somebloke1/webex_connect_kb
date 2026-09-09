@@ -1,0 +1,40 @@
+{
+  "category": "SERVICES & FLOWS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182577d9",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "4430715ed2bb5fc5becb88f79f9d5ecaf8fe79f7b13c8aa39f17af65b67b5857",
+    "source_path": "3d9d30f22c5475ee9258e11a89b44a55d7bca8db33c13d60574b6a0846bd18b3",
+    "text_path": "60eccb858ae46e08e35b72001262f6196c125f89938d2d7a8eeb5bdbab033948"
+  },
+  "headings": [
+    "📘Deprecation Alert",
+    "Interface Elements",
+    "Configuring Registry Operations",
+    "Getting Data from a Store",
+    "Deleting a Store",
+    "Setting Data in a Store",
+    "Configuring Transitions",
+    "📘Tip"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/registry-node.md",
+  "resolved_url": "https://help.webexconnect.io/docs/registry-node",
+  "retrieved_at": "2026-09-08T23:28:56+00:00",
+  "sha256_html_response": "e1c75cfe065b03b9298ecd15bd074a93844ef8b73124ee626e776d286b06d983",
+  "sha256_source_body": "3d9d30f22c5475ee9258e11a89b44a55d7bca8db33c13d60574b6a0846bd18b3",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/registry-node.source.md",
+  "source_updated_at": "2026-01-26T13:44:18.859Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/registry-node.txt",
+  "title": "Registry Node [Deprecated]",
+  "url": "https://help.webexconnect.io/docs/registry-node",
+  "word_count": 974,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/registry-node.metadata.json"
+}

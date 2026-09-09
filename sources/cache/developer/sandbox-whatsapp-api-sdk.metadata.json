@@ -1,0 +1,35 @@
+{
+  "api_metadata_path": "sources/cache/developer/sandbox-whatsapp-api-sdk.api.json",
+  "category": "API Reference for Sandbox",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f65bd",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "d1080d6b636c70985049f38fca1766a55b1466e13913c8dab3cf7db51c202b72",
+    "source_path": "a5c889b6cea7214a7170dea2eff4615f777f449e675162dae48fd584fbb99ebb",
+    "text_path": "9517d0d55029ab02331ff7cf14223a721d7aa99fbbb7992a5417c5c3b879115b"
+  },
+  "headings": [
+    "Overview",
+    "Authentication"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/sandbox-whatsapp-api-sdk.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/sandbox-whatsapp-api-sdk",
+  "retrieved_at": "2026-09-08T23:31:40+00:00",
+  "sha256_api_metadata": "575f65b7d8dc3ea0b617314bc47e22705dc85fc80ee114e6faa20ada4e8aafe2",
+  "sha256_html_response": "40b399704631a4b2300d65940bd452a372d8d6da4302854d66eb985aa7d0fdaf",
+  "sha256_source_body": "a5c889b6cea7214a7170dea2eff4615f777f449e675162dae48fd584fbb99ebb",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/sandbox-whatsapp-api-sdk.source.md",
+  "source_updated_at": "2026-01-22T15:20:55.575Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/sandbox-whatsapp-api-sdk.txt",
+  "title": "WhatsApp APIs & SDKs",
+  "url": "https://developers.webexconnect.io/reference/sandbox-whatsapp-api-sdk",
+  "word_count": 142,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/developer/sandbox-whatsapp-api-sdk.metadata.json"
+}

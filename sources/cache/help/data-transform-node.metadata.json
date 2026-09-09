@@ -1,0 +1,38 @@
+{
+  "category": "SERVICES & FLOWS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182577dc",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "e25c5c4f2350dc921b8494485a16c101ee2d2b553244c2a019a8d74478cac848",
+    "source_path": "5f856ed33a4befeb5ec0019767554a697886ae2b2b7fff008907368ed756c327",
+    "text_path": "f387fcda32edd9f63290a531d7164a07e6e39ce4b303c7eb12ace5d37ab98997"
+  },
+  "headings": [
+    "Interface Elements",
+    "Transforming Data Using VTL",
+    "Configuring Settings",
+    "Quick Sample",
+    "Configuring Transitions",
+    "📘Tip"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/data-transform-node.md",
+  "resolved_url": "https://help.webexconnect.io/docs/data-transform-node",
+  "retrieved_at": "2026-09-08T23:28:58+00:00",
+  "sha256_html_response": "c8337e8f3b6883c0384cda03f0b3e2fd8768134266a826c7ecab7748450c06bd",
+  "sha256_source_body": "5f856ed33a4befeb5ec0019767554a697886ae2b2b7fff008907368ed756c327",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/data-transform-node.source.md",
+  "source_updated_at": "2026-04-15T09:52:36.075Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/data-transform-node.txt",
+  "title": "Data Transform Node",
+  "url": "https://help.webexconnect.io/docs/data-transform-node",
+  "word_count": 825,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/data-transform-node.metadata.json"
+}

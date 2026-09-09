@@ -1,0 +1,36 @@
+{
+  "api_metadata_path": "sources/cache/developer/deleteprofile.api.json",
+  "category": "Profile API v2",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f64e8",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "a064f21055b6ddbc533288a00a73b3137d58b0ceee37f692a534159faa044e0e",
+    "source_path": "722314e9e648c59dfce49b8e69112d3174f7eb8765494ee7223d8e8d6a8c3396",
+    "text_path": "053dbdc15738dc1df8370db83355d29b898c3a06bf72f18ce74e5b08a5bb764c"
+  },
+  "headings": [
+    "**Status Codes**"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/deleteprofile.md",
+  "openapi_path": "sources/cache/openapi/3fe817ed5cea5a96944d85304b6ec5aa3b6e8e03a73dce1662755a42129bf872.json",
+  "resolved_url": "https://developers.webexconnect.io/reference/deleteprofile",
+  "retrieved_at": "2026-09-08T23:31:50+00:00",
+  "sha256_api_metadata": "3187606a800c9d1dcbf4e10cb3643febc5a295a761ecc95e6d6483ddb1361c5d",
+  "sha256_html_response": "4606ad7b2ecfc963114464944e123143dfdc13526145a1311cc835518307ccc6",
+  "sha256_openapi": "3fe817ed5cea5a96944d85304b6ec5aa3b6e8e03a73dce1662755a42129bf872",
+  "sha256_source_body": "722314e9e648c59dfce49b8e69112d3174f7eb8765494ee7223d8e8d6a8c3396",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/deleteprofile.source.md",
+  "source_updated_at": "2026-04-16T06:02:58.591Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/deleteprofile.txt",
+  "title": "Delete Customer Profile",
+  "url": "https://developers.webexconnect.io/reference/deleteprofile",
+  "word_count": 1329,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/deleteprofile.metadata.json"
+}

@@ -1,0 +1,126 @@
+Concurrency in Webex Connect refers to the ability to execute multiple flow threads in parallel. Like transactions per second (TPS) which define the rate at which you can send requests to Webex Connect APIs and Webhooks, concurrency defines the maximum number of flow threads that can be executed in parallel. A flow thread is the smallest part of the flow separated by the waiting nodes (Examples of waiting nodes are Delay, Social hour, Receive, Wait for events in Send nodes, and Prebuilt asynchronous events).
+
+Flow Monitoring allows tenant owners to reserve concurrency for a flow from the pool made available for the tenant. Owners of the tenants are allowed to reserve 75% of the ‘Maximum Allocated flow concurrency' against flows.  
+25% of the 'Allocated Maximum Flow Concurrency’ allocated flow plus unreserved value from the above 75 % available for platform/admin reservation is used for execution for new flows or flows crossing reservation limit on a first come first serve basis. Additionally, the section captures data points on flow thread execution, example of some data points is – Flow invocation and resume volume, mean thread execution rate, median thread execution rate, Peak thread execution rates, mean thread rejection rate, etc. for monitoring the tenant’s flow execution statistics. 
+
+The Flow Monitoring icon is available on the side tab.
+
+Flow Monitoring can be seen under Monitoring.
+
+[block:image]
+{
+  "images": [
+    {
+      "image": [
+        "https://files.readme.io/609a396-Flow_Monitoring.png",
+        "Flow Monitoring.png",
+        "Screenshot of Flow Monitoring Page"
+      ],
+      "align": "center",
+      "border": true,
+      "caption": "Screenshot of Flow Monitoring Page"
+    }
+  ]
+}
+[/block]
+
+
+> 📘 Note
+> 
+> If the ‘Flow Monitoring’ icon is not available for the tenant, please reach out to your account manager to avail this.
+
+## Flow Concurrency Data
+
+1. Login to the platform.
+2. Go to Monitoring > Flow Monitoring.
+3. Select the relevant criteria:
+
+- Group or Team. By default, the group and team you have logged in to are selected.
+- Service – You can select one, more, or all.
+- Time Range – You can select 1 hour, 4 Hours, 1 day, 7 days, 30 days, or a Custom date range within the last 30 days.
+
+4. Click Search. The search results are displayed with the following columns with a span of 10 per page:
+
+- Flow – Name of the flow
+- Flow Invocation & Resume Volume – Number of flow invoked and resumed in the selected time range.
+- Median Thread Execution Rate – Calculated for 10 mins. The middle value of the 10 mins execution time slot. 
+
+**Example**:
+
+| Time (In Minutes) | Thread Executed |
+| :---------------- | :-------------- |
+| 0-10              | 100             |
+| 11-20             | 80              |
+| 21-30             | 140             |
+| 31-40             | 100             |
+| 41-50             | 120             |
+| 51-60             | 100             |
+
+The median value of 1-hour data-set is 100
+
+Mean Thread Execution Rate – Average thread execution rate per 10 mins.
+
+**Example**: 
+
+| Time (In Minutes) | Thread Executed |
+| :---------------- | :-------------- |
+| 0-10              | 100             |
+| 11-20             | 80              |
+| 21-30             | 140             |
+| 31-40             | 100             |
+| 41-50             | 120             |
+| 51-60             | 100             |
+
+The mean value of 1-hour data-set is 106 thread execution per 10 mins
+
+- Peak Thread Execution Rate – The maximum number of threads executed in a 10 mins time slot for the searched time range.
+- Average Thread Execution Time (Milli Secs) – Average time taken in milli seconds for executing each thread
+- Mean Thread Rejection Rate – In each 10 min time slot, the average rate at which the threads are rejected because the concurrency is not available.
+
+> 📘 Note
+> 
+> In instances when the reserved/available concurrency is very low compared to the load on the flow, one may observe a higher ‘Mean Thread Rejection Rate’ as Connect keeps on retrying the queued requests on constant intervals, so as to achieve maximum efficiency for the tenant.
+
+- Reserved Concurrency – is the concurrency that a user is reserving for this flow. Once reserved, the concurrency is always available for the flow and is not made available for other flows.
+
+## Change Flow concurrency for a Flow
+
+- Action – click Edit to update the values. Only tenant owners can update the values. You will see the Last Updated by as Admin or the User name.
+
+Example: Last 1 hour data: Calculating concurrency for zero rejection rate.
+
+| Flow Name​           | Flow Invocation and resume volume | Median Thread Execution Rate​ | Mean Thread Execution Rate | Peak Thread Execution Rate​ | Average Thread​Execution Time | Mean Thread Rejection Rate​ | Reserved Concurrency |
+| :------------------- | :-------------------------------- | :---------------------------- | :------------------------- | :-------------------------- | :---------------------------- | :-------------------------- | :------------------- |
+| Appointment Booking​ | 16,480​                           | 30​                           | 43.14​                     | 810​                        | 111,188.94                    | 941.53​                     | 3​                   |
+
+Mean Thread execution rate per = on average 43.14 per 10 mins = on average 4.3 per min ​  
+Each Thread takes around 1.8 mins, so per min around 2.3 threads are getting executed. Hence, you can observe a high ”Mean Thread Rejection Rate”.
+
+Proposed concurrency for no/zero rejection rate = on average 941 rejections per 10 mins =  on average 94 rejection per mins  
+
+Each Thread takes around 1.8 mins = so proposed reserved concurrency for almost no/zero rejection = (Mean thread rejectionrateXavg thread time) - (94X1.8 + already reserved concurrency) \~~ 150 - 170
+
+Additionally ​
+
+If mean thread execution rate \< median thread execution rate and peak is close to mean = load is distributed​  
+if mean thread execution rate \< median thread execution rate and peak is not close to mean = load is not distributed (denotes spikes)
+
+Example 2: Last 1 hour data: Calculating concurrency using mean execution rate.
+
+| Flow Name​           | Flow Invocation and resume volume​ | Median Thread Execution Rate | Mean Thread Execution Rate | Peak Thread Execution Rate​ | Average Thread​Execution Time (milli secs)​ | Mean Thread Rejection Rate​ | Reserved Concurrency​ |
+| :------------------- | :--------------------------------- | :--------------------------- | :------------------------- | :-------------------------- | :------------------------------------------ | :-------------------------- | :-------------------- |
+| Appointment Booking​ | 11,571                             | 50                           | 54                         | 810                         | 11,156.94​                                  | 431.53​                     | 20                    |
+
+Total number of threads to be executed in 60 mins = 11571
+
+Time taken to execute one thread = 11.1 secs
+
+Average Concurrency \~~ [(11571)/(60X60/11.1)] \~~ 35-40.
+
+Example 3 : Avoid the noisy neighbour situation
+
+Flow Concurrency control allows reservation of concurrency for a flow, once reserved only that flow will be able to use the reserved concurrency. No other flows will be able to use it.
+
+Suppose that your tenant has 100 Concurrency, and you have 4 flows namely Flow A, Flow B, Flow C, and Flow D.  
+Flow A sessions because of unforeseen reasons are taking longer to finish execution, and the delayed execution (rouge) behavior of Flow A is affecting the execution of Flow B, Flow C, and Flow D (for example Flow A is using the entire 100 concurrencies or delayed execution of other flows in the tenant, etc.).  
+If you want the execution of Flow A shouldn’t affect the execution of Flow B then reserve concurrency for Flow B, the reserved concurrency will always be available for the execution of only Flow B sessions and other flows in the tenant like Flow A, Flow C, and Flow D executions will not affect reserved concurrency.

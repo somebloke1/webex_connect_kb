@@ -1,0 +1,261 @@
+{
+  "schema_version": 1,
+  "sample_key": "gallery-webhook-sms",
+  "title": "WebhooktoSMSalerts",
+  "observed_at": "2026-09-08T23:57:29.390Z",
+  "source_path": "evidence/sample-flows/observed/gallery-webhook-sms.json",
+  "source_sha256": "ed2852fd4c36b05b6af1f7cc020e0fb97489bca0b9f03c2ae48ddae68e1c19c4",
+  "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model",
+  "runtime_tested": false,
+  "status": "observed_canvas_relationships_summarized",
+  "format_warning": "Internal loaded-canvas model observations only; not a public import schema. Event internal names and visible labels are recorded separately. Dynamic script behavior and missing canvas pages are not inferred.",
+  "counts": {
+    "cells": 4,
+    "operative_nodes": 2,
+    "explicit_edges": 1,
+    "terminal_bindings": 0,
+    "variable_references": 4
+  },
+  "start_configuration": {
+    "channel": 14,
+    "type": "channel",
+    "subtype": "webhook",
+    "extras": {},
+    "eventid": "",
+    "v2EventId": ""
+  },
+  "nodes": [
+    {
+      "id": "2",
+      "label": "Configure Webhook",
+      "type_internal": "start",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "onbegin",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "selectedChannel": {
+          "id": 14,
+          "name": "Webhook",
+          "description": "Webhook",
+          "type": 3,
+          "extraData": {},
+          "subType": "webhook"
+        },
+        "selectedRuleEvent": {
+          "name": "",
+          "id": "",
+          "v2EventId": ""
+        },
+        "webHookData": {
+          "conditionData": [],
+          "jsonData": "",
+          "isAuthRequired": false,
+          "isExistingWebHook": false,
+          "name": "",
+          "jsonSource": "",
+          "parseOutput": [],
+          "v2EventId": "",
+          "selectedEvent": "",
+          "url": "",
+          "xmlData": ""
+        },
+        "isKeyWordDisabled": true,
+        "isKeyWordVerifyReq": true,
+        "isKeyWordAvailable": true,
+        "output_variables": [
+          "inboundWebhook.timestamp",
+          "inboundWebhook.transId",
+          "inboundWebhook.payload",
+          "inboundWebhook.alertdesc",
+          "inboundWebhook.phone"
+        ],
+        "conditionData": [
+          {
+            "defaultvalue": "",
+            "mandatory": false,
+            "var_name": "alertdesc",
+            "datatype": "string",
+            "channel_id": 14,
+            "event_id": "",
+            "eventname": "Alert Event"
+          },
+          {
+            "defaultvalue": "",
+            "mandatory": false,
+            "var_name": "phone",
+            "datatype": "string",
+            "channel_id": 14,
+            "event_id": "",
+            "eventname": "Alert Event"
+          }
+        ]
+      },
+      "transition_actions": [],
+      "declared_outputs": [
+        "inboundWebhook.timestamp",
+        "inboundWebhook.transId",
+        "inboundWebhook.payload",
+        "inboundWebhook.alertdesc",
+        "inboundWebhook.phone"
+      ],
+      "output_mappings": []
+    },
+    {
+      "id": "3",
+      "label": "SMS",
+      "type_internal": "umppublic",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "onerror",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "hideWaitFor": false,
+        "messagetype": 1,
+        "message": "$(n2.inboundWebhook.alertdesc)",
+        "channelId": 1,
+        "senderidViewFlag": false,
+        "deliverychannel": "SMS",
+        "destination": "$(n2.inboundWebhook.phone)",
+        "destinationType": "msisdn",
+        "successoutcome": 1,
+        "linkValidityCheck": false,
+        "viewmodeData": [
+          {
+            "name": "senderid",
+            "value": "CONNCT"
+          },
+          {
+            "name": "shortLinkId",
+            "value": ""
+          }
+        ]
+      },
+      "transition_actions": [],
+      "declared_outputs": [],
+      "output_mappings": []
+    }
+  ],
+  "edges": [
+    {
+      "id": "5128003",
+      "source": "2",
+      "target": "3",
+      "event_internal": "onbegin",
+      "event_label": "onBegin",
+      "representation": "explicit_edge"
+    }
+  ],
+  "terminal_bindings": [],
+  "terminal_sources_not_captured": [],
+  "duplicate_terminal_binding_groups": [],
+  "variable_handoffs": [
+    {
+      "consumer": "3",
+      "location": "configuration.message",
+      "reference": "$(n2.inboundWebhook.alertdesc)",
+      "variable": "n2.inboundWebhook.alertdesc",
+      "producer_node": "2",
+      "producer_field": "inboundWebhook.alertdesc",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "3",
+      "location": "configuration.destination",
+      "reference": "$(n2.inboundWebhook.phone)",
+      "variable": "n2.inboundWebhook.phone",
+      "producer_node": "2",
+      "producer_field": "inboundWebhook.phone",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "3",
+      "location": "_usedVars",
+      "reference": "$(n2.inboundWebhook.phone)",
+      "variable": "n2.inboundWebhook.phone",
+      "producer_node": "2",
+      "producer_field": "inboundWebhook.phone",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "3",
+      "location": "_usedVars",
+      "reference": "$(n2.inboundWebhook.alertdesc)",
+      "variable": "n2.inboundWebhook.alertdesc",
+      "producer_node": "2",
+      "producer_field": "inboundWebhook.alertdesc",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    }
+  ],
+  "custom_variable_assignments": [],
+  "custom_variables": [],
+  "flow_outcomes": [
+    {
+      "id": 2,
+      "name": 101,
+      "value": "Successfully completed flow",
+      "tag": 11,
+      "tagName": "Success",
+      "type": "default",
+      "notification": null
+    },
+    {
+      "id": 3,
+      "name": 102,
+      "value": "Flow completed with an error",
+      "tag": 12,
+      "tagName": "Error",
+      "type": "default",
+      "notification": null
+    },
+    {
+      "id": 4,
+      "name": 103,
+      "value": "Flow ended due to an interruption",
+      "tag": 13,
+      "tagName": "Incomplete",
+      "type": "default",
+      "notification": null
+    },
+    {
+      "id": 1,
+      "name": 100,
+      "value": "Last executed node event",
+      "statusCode": "All status codes",
+      "tag": 15,
+      "tagName": "Last Execution Status",
+      "type": "default",
+      "notification": null
+    }
+  ],
+  "cycles": [],
+  "cross_page_or_flow_nodes": [],
+  "capture_pages": null,
+  "declared_events_without_captured_route": [
+    {
+      "node": "3",
+      "event_internal": "onerror",
+      "declared_target_count": 1
+    }
+  ],
+  "nodes_not_reached_from_captured_start": [],
+  "edge_endpoints_not_captured": [],
+  "node_variable_producers_not_captured": [],
+  "redactions": "Header credentials and URL hosts redacted. Internal model properties are evidence, not a public import API.",
+  "authored_walkthrough": {
+    "walkthrough": "This is the smallest event-to-message adapter: Webhook Start 2 connects directly to SMS 3 through onBegin. The send's terminal behavior and flow outcome settings remain in the complete graph summary. There is no conversation loop, business API call, data parser, schedule or reply wait.",
+    "handoffs": "SMS destination is `$(n2.inboundWebhook.phone)` and message is `$(n2.inboundWebhook.alertdesc)`. Both depend on the webhook's eventual payload/schema binding; there is no intermediate custom-variable transformation.",
+    "limitations": "The captured Webhook configuration has empty parseOutput/jsonData and no configured URL. It illustrates the intended field contract but does not establish an installed webhook. SMS onerror declares a target but no corresponding captured edge/End binding is present. Provision sender/assets and define failure behavior before using the pattern."
+  },
+  "walkthrough_status": "authored"
+}

@@ -1,0 +1,34 @@
+{
+  "category": "SERVICES & FLOWS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182578e5",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "b954fb8c18a44f6c30f9d9539ebd839a66f0ca267ebdf8bf6726ad554cceda3d",
+    "source_path": "268c924f39380da571aaff8ebdf14e3b7d257553ace1898ab9ab5492bd696f60",
+    "text_path": "a06f6fd53387a49aae82902aefe70aaaaafb47a582133ebfb83bcd7b8c526e9c"
+  },
+  "headings": [
+    "📘Note",
+    "📘Note"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/call-transfer-node.md",
+  "resolved_url": "https://help.webexconnect.io/docs/call-transfer-node",
+  "retrieved_at": "2026-09-08T23:28:58+00:00",
+  "sha256_html_response": "b6bdb03a401dbcba5bae438f9da740fdbcb7ba8625cbaf29d75474a01464d92a",
+  "sha256_source_body": "268c924f39380da571aaff8ebdf14e3b7d257553ace1898ab9ab5492bd696f60",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/call-transfer-node.source.md",
+  "source_updated_at": "2025-09-29T02:05:12.670Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/call-transfer-node.txt",
+  "title": "Call Transfer Node",
+  "url": "https://help.webexconnect.io/docs/call-transfer-node",
+  "word_count": 273,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/call-transfer-node.metadata.json"
+}

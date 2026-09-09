@@ -1,0 +1,41 @@
+{
+  "category": "SERVICES & FLOWS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257830",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "df1b1353690756f32e47c2938310c111c49404a7ebee31feb76b0ffcf711718d",
+    "source_path": "047c5d90bd9fa5a50787b95ab148560c6e533538c8322758879d456a3e53d035",
+    "text_path": "245629156e463f549da6877296752f2274af44f0f46deb731b847cb2a2014690"
+  },
+  "headings": [
+    "Interface Components",
+    "1. Canvas",
+    "2. Node Palette",
+    "3. Canvas Controls",
+    "📘Quick Tip - Selecting multiple nodes at once",
+    "4. Flow Controls and Settings",
+    "📘Note",
+    "5. Flow Versioning",
+    "6. Right-side Toolbar"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/navigate-flow-builder-canvas.md",
+  "resolved_url": "https://help.webexconnect.io/docs/navigate-flow-builder-canvas",
+  "retrieved_at": "2026-09-08T23:28:41+00:00",
+  "sha256_html_response": "c260de7088d7e50c325cbb5e1abe31463b250c22957a237ed77b6ee906e6b5e7",
+  "sha256_source_body": "047c5d90bd9fa5a50787b95ab148560c6e533538c8322758879d456a3e53d035",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/navigate-flow-builder-canvas.source.md",
+  "source_updated_at": "2026-04-15T08:35:43.828Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/navigate-flow-builder-canvas.txt",
+  "title": "Navigating Flow Builder Canvas",
+  "url": "https://help.webexconnect.io/docs/navigate-flow-builder-canvas",
+  "word_count": 660,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/navigate-flow-builder-canvas.metadata.json"
+}

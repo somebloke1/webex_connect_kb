@@ -1,0 +1,195 @@
+Cisco Contact Center Enterprise (CCE) users who want to use Facebook Messenger as a channel of customer support with Webex Contact Center can use the first procedure for connecting their Facebook pages with Webex Connect, and then registering their Messenger app on Webex Engage.
+
+## 
+
+Configuring your Messenger App on Webex Connect
+
+## 📘
+Messenger Usage
+
+Messenger as a channel is supported in the Canada region as well.
+
+You can register your Facebook Messenger page with Webex Connect from 'Assets -> Apps' section. Here are the steps for registering:
+
+- Select Messenger  from Configure New App dropdown. 
+
+- Provide a name for your Messenger app asset and click Add Messenger Page. You must be the admin of the Facebook page to integrate Facebook Messenger with Webex Connect . You will be redirected to your Facebook login page.
+
+ [Image: Screenshot of Creating the New Messenger App Page] 
+Screenshot of Creating the New Messenger App Page
+
+- 
+
+Provide the login credentials. You may not see this step if you're already logged in.
+
+- 
+
+Select the page that you want to register on the What pages do you want to use with Webex Connect pop-up.
+
+- 
+
+Provide the requested access permissions, and click Done.
+
+At this stage, you will be redirected to Webex Connect. If you have selected multiple pages in the previous step, you will be asked to choose the page that you want to use for the asset you are configuring. Select the required page. Once done, you'll see the following screen.
+
+ [Image: Screenshot of Managing the Facebook Messenger App Page] 
+Screenshot of Managing the Facebook Messenger App
+
+## 📘
+Note
+
+Only the Tenant with the user role 'Owner' will be allowed to make changes to Facebook Messenger page after it is configured, to avoid accidental / unintended changes by other platform users.
+
+- 
+
+Click Save. This completes the association of your Facebook Messenger page with Webex Connect. We do support advanced settings such as Welcome Screen, Persistent Menu, etc. but those are optional. Refer to the last section for information on the advanced settings.
+
+ [Image: Screenshot of Facebook Messenger and platform association] 
+Screenshot of Facebook Messenger and platform association
+
+## 
+
+Configuring Welcome Screen, Persistent Menu, etc.
+
+### 
+
+Welcome Screen
+
+You can optionally choose to configure the welcome screen for your Facebook Messenger customers. Switch the Welcome Screen toggle to Enabled, and provide a greeting message for the Welcome Screen (minimum three characters long).
+
+ [Image: Screenshot of Welcome Screen] 
+Welcome Screen
+
+## 📘
+
+We recommend you to not enable the Get Started button on the Facebook Messenger app configuration screen under Assets --> Apps section when using Webex Connect for supporting Facebook Messenger for Webex Contact Center.
+
+### 
+
+Persistent Menu
+
+The Persistent Menu allows you to have an always-on user interface element inside conversations. This is an easy way to help people discover and access the core functionality at any point in the conversation. You have to enable the 'Get Started' button in the welcome screen to configure Persistent Menu.
+
+ [Image: Screenshot of Persistent Menu] 
+Persistent Menu
+
+You can refer to the Messenger documentation on Persistent Menus topic to know more about this feature such as best practices, limitations, etc.
+
+## 
+
+Allowed List Domains
+
+Add the web domains that need to be accessible from Facebook Messenger.
+
+### 
+
+Subscription Messaging
+
+Enable this feature to allow Facebook page to send non-promotional content through Messenger channel. This feature is available only for clients who have Facebook's permission to use it.
+
+### 
+
+Page Discovery Plugins
+
+The Page Discovery plugins allow you to integrate Facebook Messenger chat experience directly onto a website/webpage for a personalized experience. This allows your customers to interact with your business anytime with a click of a button.
+
+To use the below plugins, you should include the code snippet provided on your webpage along with Facebook's JavaScript SDK. The website domain must also be in the allowed list on which you wish to use this plugin.
+
+ [Image: Screenshot of Send to Messenger] 
+Send to Messenger
+
+ | Name | Description
+
+ | Message Us | Renders a button when clicked on, redirects the users to Facebook Messenger and opens a conversation within your page.
+
+ [Image: Screenshot of checkbox plugin -Send to Messenger] 
+Checkbox Plugin
+
+## 🚧
+Opt-In plugins
+
+Support for Opt-ins received through Send to Messenger and Check box plugins is not available at the moment. We are currently working to restore these features and will continue to update this document and the release notes section with the details as they are available.
+
+For more information on detailed information about Messenger app configuration, refer to the Messenger  chapter in the Assets section.
+
+## 
+
+Registering your Facebook Messenger App with Webex Engage
+
+Once the asset has been saved, you will see a 'Register to Webex Engage' action button on top (ref: below screen).
+
+ [Image: Screenshot of Managing the Messenger App Page] 
+Screenshot of Managing the Messenger App Page - Register to Webex Engage
+
+- Click Register to Webex Engage. A pop-up appears.
+
+ [Image: Screenshot of Register to Webex Engage] 
+Screenshot of Register to Webex Engage
+
+- Select the required service (this should be the Webex Connect service that would be used for configuring Facebook Messenger flows for Webex Contact Center).
+
+- Click Register. 
+
+## 🚧
+
+- Please note, the service mapping cannot be changed once done. Hence, the asset registration on Webex Contact Center should be done after the service to be used has been decided. 
+
+- Do not delete the Facebook Messenger asset once it's been registered with Webex CC. Once deleted, it cannot be restored. Doing so would lead to asset deletion within Webex Connect alone, while the entry continues to be in Webex CC and Webex Engage.
+
+ [Image: Screenshot of Asset Registration Page] 
+Screenshot of Asset Registration Page
+
+A message displays 'Asset registered successfully'. This completes the asset registration for Webex Contact Center.
+
+ [Image: Asset Registration] 
+Asset registration completion
+
+As shown above, you will see a Cisco Webex Contact Center icon and a PCI check enabled flag next to the Facebook Messenger asset once it's been successfully mapped with Webex Contact Center.
+
+Once the asset is registered, this asset will be available for entry point mapping in Cisco Webex Contact Center portal.
+
+## 
+
+Edit/Manage/Delete the Facebook Messenger App Asset
+
+- Go to Assets > Apps.
+
+- Search for the Messenger app asset that you want to edit and click Manage in the drop-down list box at the right to manage the settings of this app.
+
+You see the Manage – Messenger page, where you can manage the settings of the app.
+
+ [Image: Manage Facebook Messenger app asset] 
+Manage Facebook Messenger app asset
+
+### 
+
+Delete Facebook Messenger App Asset
+
+- Go to Assets > Apps.
+
+- Search for the Facebook Messenger app asset that you want to edit and click Delete in the drop-down list box at the right to delete the app.
+
+ [Image: Deleting Facebook Messenger app asset] 
+Deleting Facebook Messenger app asset
+
+## 
+
+Facebook Messenger Authorization Expiry
+
+The following is a list of scenarios in which the authorization of your Messenger app will expire:
+
+- When you change your Facebook/Messenger login password.
+
+- If the user who requested the token no longer has a role on the page
+
+- If you deselect any of the integrated pages when adding a new page in the Webex Connect platform. Make sure to include all the integrated pages.
+
+## 📘
+Authorization Expiry
+
+While adding a new page, please make sure to select all the pages that have been integrated with Webex Connect platform previously in the Facebook login flow.
+
+ [Image: Screenshot of delinking the Facebook Messenger page from Webex Connect platform] 
+Screenshot of delinking the Facebook Messenger page from Webex Connect platform
+
+- You can delink the messenger page from the Webex Connect platform from messenger page settings.

@@ -1,0 +1,359 @@
+> 📘 Know Your Endpoint
+> 
+> Based on the domain you use to log in to imiconnect, the endpoint for your API varies. See the [endpoint](https://developers.imiconnect.io/reference/endpoints) section to understand which endpoint to use for your domain.
+
+[block:textarea]
+{
+  "text": "### **Response Parameters**",
+  "sidebar": true
+}
+[/block]
+
+
+| Parameter            | Type   | Description                                                   |
+| :------------------- | :----- | :------------------------------------------------------------ |
+| Status               | Number | Zero indicates success response                               |
+| Description          | String | Describes the status of the API call                          |
+| Records              | Array  | An array of Outward links and Inward links                    |
+| Record\[].Attributes | Array  | Outward links and Inward links                                |
+| Attributes\[].Name   | String | Name of the column. For example, CustomerId -Column Name      |
+| Attributes\[].Value  | String | Value Contained with in the column Eg: CustomerId- 1234       |
+| Attributes\[].ID     | Number | System generated unique Id for the column                     |
+| InwardLinks          | Array  | Shows app profiles mapped  to the Customer Id                 |
+| OutwardLinks         | Array  | Displays customer profile information on Get app profile call |
+| code                 | String | Internal code handling by imiconnect                          |
+| transid              | String | Unique system generated id for API call                       |
+
+## **Status Codes**
+
+This API may return the following response codes:
+
+| Response Code | Message                      | Description                                                                     |
+| :------------ | :--------------------------- | :------------------------------------------------------------------------------ |
+| 1000          | Success                      | Returned when the request is completed successfully                             |
+| 7000          | Invalid JSON                 | Returned when an invalid JSON request is sent                                   |
+| 7001          | Authentication failed        | Returned when the invalid service key or profile key is provided in the request |
+| 7003          | Mandatory parameters missing | Returned when the mandatory parameters configured in custom event are missing   |
+
+## API reference metadata
+
+These are source metadata and examples. `api.auth` is ReadMe metadata; verify authentication in the documented headers/security scheme.
+
+```json
+{
+  "method": "get",
+  "params": [
+    {
+      "name": "showinwardlinks",
+      "type": "string",
+      "enumValues": "",
+      "default": "",
+      "desc": "Extended information within the customer profile in the inwardlinks section can be retrieved as part of the request. The inwardlink section contains channel specific attributes that are linked to the customer profile (e.g. Facebook and Twitter etc.). The values are:  0: Retrieve the master profile only. 1: Retrieve master profile and application profiles. 2: Retrieve the full profile.",
+      "required": false,
+      "in": "path",
+      "ref": "",
+      "_id": "5f6dee8877ce390022cdca68",
+      "id": "5f6dee8877ce390022cdca68"
+    },
+    {
+      "name": "Content-Type",
+      "type": "string",
+      "enumValues": "",
+      "default": "",
+      "desc": "Application/JSON",
+      "required": false,
+      "in": "header",
+      "ref": "",
+      "_id": "5f6deeb68110a301bf05b9ff",
+      "id": "5f6deeb68110a301bf05b9ff"
+    },
+    {
+      "name": "secretKey",
+      "type": "string",
+      "enumValues": "",
+      "default": "",
+      "desc": "Client key that can be accessed from your app asset configuration page on imiconnect platform",
+      "required": false,
+      "in": "header",
+      "ref": "",
+      "_id": "5f6deeb68110a301bf05b9fe",
+      "id": "5f6deeb68110a301bf05b9fe"
+    },
+    {
+      "name": "customerid",
+      "type": "string",
+      "enumValues": "",
+      "default": "",
+      "desc": "A client specific ID (such as CRN) to uniquely identify a customer",
+      "required": false,
+      "in": "path",
+      "ref": "",
+      "_id": "5f6deede0f002800358ccd21",
+      "id": "5f6deede0f002800358ccd21"
+    }
+  ],
+  "results": {
+    "codes": [
+      {
+        "language": "json",
+        "code": "{\n  \"Status\": 0,\n  \"Description\": \"success\",\n  \"Records\": [\n    {\n      \"Attributes\": [\n        {\n          \"Name\": \"msisdn\",\n          \"Value\": \"91900007707\",\n          \"ID\": 8574\n        },\n        {\n          \"Name\": \"email\",\n          \"Value\": \"John.g@gmail.com\",\n          \"ID\": 8575\n        },\n        {\n          \"Name\": \"name\",\n          \"Value\": \"john\",\n          \"ID\": 8576\n        },\n        {\n          \"Name\": \"customerId\",\n          \"Value\": \"4545\",\n          \"ID\": 8577\n        },\n        {\n          \"Name\": \"sms\",\n          \"Value\": \"1\",\n          \"ID\": 8578\n        },\n        {\n          \"Name\": \"voice\",\n          \"Value\": \"1\",\n          \"ID\": 8579\n        },\n        {\n          \"Name\": \"rt\",\n          \"Value\": \"1\",\n          \"ID\": 8580\n        },\n        {\n          \"Name\": \"fb\",\n          \"Value\": \"1\",\n          \"ID\": 8581\n        },\n        {\n          \"Name\": \"twitter\",\n          \"Value\": \"1\",\n          \"ID\": 8582\n        },\n        {\n          \"Name\": \"wechat\",\n          \"Value\": \"1\",\n          \"ID\": 8583\n        },\n        {\n          \"Name\": \"wa\",\n          \"Value\": \"1\",\n          \"ID\": 8584\n        }\n      ],\n      \"InwardLinks\": [],\n      \"OutwardLinks\": []\n    }\n  ],\n  \"code\": \"1000\",\n  \"transid\": \"d2708309-75ab-4f18-b5c6-3f23ab9afd43\"\n}",
+        "status": 200,
+        "name": "Get Single Profile"
+      },
+      {
+        "code": "{\n    \"Status\": 0,\n    \"Description\": \"success\",\n    \"Records\": [{\n        \"Attributes\": [{\n            \"Name\": \"msisdn\",\n            \"Value\": \"918106565495\",\n            \"ID\": 8328\n        }, {\n            \"Name\": \"email\",\n            \"Value\": \"jagadeesh.t@imimobile.com\",\n            \"ID\": 8329\n        }, {\n            \"Name\": \"name\",\n            \"Value\": \"jagadeesh\",\n            \"ID\": 8330\n        }, {\n            \"Name\": \"customerId\",\n            \"Value\": \"2134\",\n            \"ID\": 8331\n        }, {\n            \"Name\": \"sms\",\n            \"Value\": \"1\",\n            \"ID\": 8332\n        }, {\n            \"Name\": \"voice\",\n            \"Value\": \"1\",\n            \"ID\": 8333\n        }, {\n            \"Name\": \"ussd\",\n            \"Value\": \"1\",\n            \"ID\": 8334\n        }, {\n            \"Name\": \"rt\",\n            \"Value\": \"1\",\n            \"ID\": 8335\n        }, {\n            \"Name\": \"fb\",\n            \"Value\": \"1\",\n            \"ID\": 8336\n        }, {\n            \"Name\": \"fbc\",\n            \"Value\": \"1\",\n            \"ID\": 8337\n        }, {\n            \"Name\": \"twitter\",\n            \"Value\": \"1\",\n            \"ID\": 8338\n        }, {\n            \"Name\": \"mxit\",\n            \"Value\": \"1\",\n            \"ID\": 8339\n        }, {\n            \"Name\": \"wechat\",\n            \"Value\": \"1\",\n            \"ID\": 8340\n        }, {\n            \"Name\": \"wa\",\n            \"Value\": \"1\",\n            \"ID\": 8341\n        }],\n        \"InwardLinks\": [],\n        \"OutwardLinks\": []\n    }, {\n        \"Attributes\": [{\n            \"Name\": \"msisdn\",\n            \"Value\": \"919963427038\",\n            \"ID\": 8328\n        }, {\n            \"Name\": \"email\",\n            \"Value\": \"balaji.s@imimobile.com\",\n            \"ID\": 8329\n        }, {\n            \"Name\": \"name\",\n            \"Value\": \"balaji\",\n            \"ID\": 8330\n        }, {\n            \"Name\": \"customerId\",\n            \"Value\": \"2142\",\n            \"ID\": 8331\n        }, {\n            \"Name\": \"sms\",\n            \"Value\": \"1\",\n            \"ID\": 8332\n        }, {\n            \"Name\": \"voice\",\n            \"Value\": \"1\",\n            \"ID\": 8333\n        }, {\n            \"Name\": \"ussd\",\n            \"Value\": \"1\",\n            \"ID\": 8334\n        }, {\n            \"Name\": \"rt\",\n            \"Value\": \"1\",\n            \"ID\": 8335\n        }, {\n            \"Name\": \"fb\",\n            \"Value\": \"1\",\n            \"ID\": 8336\n        }, {\n            \"Name\": \"fbc\",\n            \"Value\": \"1\",\n            \"ID\": 8337\n        }, {\n            \"Name\": \"twitter\",\n            \"Value\": \"1\",\n            \"ID\": 8338\n        }, {\n            \"Name\": \"mxit\",\n            \"Value\": \"1\",\n            \"ID\": 8339\n        }, {\n            \"Name\": \"wechat\",\n            \"Value\": \"1\",\n            \"ID\": 8340\n        }, {\n            \"Name\": \"wa\",\n            \"Value\": \"1\",\n            \"ID\": 8341\n        }],\n        \"InwardLinks\": [],\n        \"OutwardLinks\": []\n    }],\n    \"code\": \"1000\",\n    \"transid\": \"236fe39b-78b0-4f94-bcda-270cdd01ab9a\"\n}",
+        "language": "json",
+        "status": 200,
+        "name": "Get Multiple Profiles"
+      }
+    ]
+  },
+  "settings": "",
+  "url": "/customerprofile/<customerID>",
+  "apiSetting": "6a675233ec1c893d8a7f67b8",
+  "auth": "required",
+  "examples": {
+    "codes": [
+      {
+        "code": "https://api.imiconnect.com/resources/v2/customerprofile/4545?showinwardlinks=0",
+        "language": "json",
+        "name": "Get Single User Profile"
+      },
+      {
+        "code": "https://api.imiconnect.com/resources/v2/customerprofile?customerId=2134&customerId=2142&showinwardlinks=0",
+        "language": "json",
+        "name": "Get Multiple User Profiles"
+      }
+    ]
+  }
+}
+```
+
+## OpenAPI operation and component schemas
+
+```json
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Profile API v2",
+    "version": "6.20.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.imiconnect.io/resources/v2"
+    }
+  ],
+  "security": [
+    {
+      "sec0": []
+    }
+  ],
+  "path": "/customerprofile/<customerID>",
+  "method": "get",
+  "path_parameters": [],
+  "operation": {
+    "summary": "Get Customer Profile",
+    "description": "This API is used to retrieve the profile of a single customer or multiple customers.",
+    "operationId": "getprofile",
+    "parameters": [
+      {
+        "name": "showinwardlinks",
+        "in": "path",
+        "description": "Extended information within the customer profile in the inwardlinks section can be retrieved as part of the request. The inwardlink section contains channel specific attributes that are linked to the customer profile (e.g. Facebook and Twitter etc.). The values are:  0: Retrieve the master profile only. 1: Retrieve master profile and application profiles. 2: Retrieve the full profile.",
+        "schema": {
+          "type": "string"
+        },
+        "required": true
+      },
+      {
+        "name": "Content-Type",
+        "in": "header",
+        "description": "Application/JSON",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "secretKey",
+        "in": "header",
+        "description": "Client key that can be accessed from your app asset configuration page on imiconnect platform",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "customerid",
+        "in": "path",
+        "description": "A client specific ID (such as CRN) to uniquely identify a customer",
+        "schema": {
+          "type": "string"
+        },
+        "required": true
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "200",
+        "content": {
+          "application/json": {
+            "examples": {
+              "Get Single Profile": {
+                "value": "{\n  \"Status\": 0,\n  \"Description\": \"success\",\n  \"Records\": [\n    {\n      \"Attributes\": [\n        {\n          \"Name\": \"msisdn\",\n          \"Value\": \"91900007707\",\n          \"ID\": 8574\n        },\n        {\n          \"Name\": \"email\",\n          \"Value\": \"John.g@gmail.com\",\n          \"ID\": 8575\n        },\n        {\n          \"Name\": \"name\",\n          \"Value\": \"john\",\n          \"ID\": 8576\n        },\n        {\n          \"Name\": \"customerId\",\n          \"Value\": \"4545\",\n          \"ID\": 8577\n        },\n        {\n          \"Name\": \"sms\",\n          \"Value\": \"1\",\n          \"ID\": 8578\n        },\n        {\n          \"Name\": \"voice\",\n          \"Value\": \"1\",\n          \"ID\": 8579\n        },\n        {\n          \"Name\": \"rt\",\n          \"Value\": \"1\",\n          \"ID\": 8580\n        },\n        {\n          \"Name\": \"fb\",\n          \"Value\": \"1\",\n          \"ID\": 8581\n        },\n        {\n          \"Name\": \"twitter\",\n          \"Value\": \"1\",\n          \"ID\": 8582\n        },\n        {\n          \"Name\": \"wechat\",\n          \"Value\": \"1\",\n          \"ID\": 8583\n        },\n        {\n          \"Name\": \"wa\",\n          \"Value\": \"1\",\n          \"ID\": 8584\n        }\n      ],\n      \"InwardLinks\": [],\n      \"OutwardLinks\": []\n    }\n  ],\n  \"code\": \"1000\",\n  \"transid\": \"d2708309-75ab-4f18-b5c6-3f23ab9afd43\"\n}"
+              },
+              "Get Multiple Profiles": {
+                "value": "{\n    \"Status\": 0,\n    \"Description\": \"success\",\n    \"Records\": [{\n        \"Attributes\": [{\n            \"Name\": \"msisdn\",\n            \"Value\": \"918106565495\",\n            \"ID\": 8328\n        }, {\n            \"Name\": \"email\",\n            \"Value\": \"jagadeesh.t@imimobile.com\",\n            \"ID\": 8329\n        }, {\n            \"Name\": \"name\",\n            \"Value\": \"jagadeesh\",\n            \"ID\": 8330\n        }, {\n            \"Name\": \"customerId\",\n            \"Value\": \"2134\",\n            \"ID\": 8331\n        }, {\n            \"Name\": \"sms\",\n            \"Value\": \"1\",\n            \"ID\": 8332\n        }, {\n            \"Name\": \"voice\",\n            \"Value\": \"1\",\n            \"ID\": 8333\n        }, {\n            \"Name\": \"ussd\",\n            \"Value\": \"1\",\n            \"ID\": 8334\n        }, {\n            \"Name\": \"rt\",\n            \"Value\": \"1\",\n            \"ID\": 8335\n        }, {\n            \"Name\": \"fb\",\n            \"Value\": \"1\",\n            \"ID\": 8336\n        }, {\n            \"Name\": \"fbc\",\n            \"Value\": \"1\",\n            \"ID\": 8337\n        }, {\n            \"Name\": \"twitter\",\n            \"Value\": \"1\",\n            \"ID\": 8338\n        }, {\n            \"Name\": \"mxit\",\n            \"Value\": \"1\",\n            \"ID\": 8339\n        }, {\n            \"Name\": \"wechat\",\n            \"Value\": \"1\",\n            \"ID\": 8340\n        }, {\n            \"Name\": \"wa\",\n            \"Value\": \"1\",\n            \"ID\": 8341\n        }],\n        \"InwardLinks\": [],\n        \"OutwardLinks\": []\n    }, {\n        \"Attributes\": [{\n            \"Name\": \"msisdn\",\n            \"Value\": \"919963427038\",\n            \"ID\": 8328\n        }, {\n            \"Name\": \"email\",\n            \"Value\": \"balaji.s@imimobile.com\",\n            \"ID\": 8329\n        }, {\n            \"Name\": \"name\",\n            \"Value\": \"balaji\",\n            \"ID\": 8330\n        }, {\n            \"Name\": \"customerId\",\n            \"Value\": \"2142\",\n            \"ID\": 8331\n        }, {\n            \"Name\": \"sms\",\n            \"Value\": \"1\",\n            \"ID\": 8332\n        }, {\n            \"Name\": \"voice\",\n            \"Value\": \"1\",\n            \"ID\": 8333\n        }, {\n            \"Name\": \"ussd\",\n            \"Value\": \"1\",\n            \"ID\": 8334\n        }, {\n            \"Name\": \"rt\",\n            \"Value\": \"1\",\n            \"ID\": 8335\n        }, {\n            \"Name\": \"fb\",\n            \"Value\": \"1\",\n            \"ID\": 8336\n        }, {\n            \"Name\": \"fbc\",\n            \"Value\": \"1\",\n            \"ID\": 8337\n        }, {\n            \"Name\": \"twitter\",\n            \"Value\": \"1\",\n            \"ID\": 8338\n        }, {\n            \"Name\": \"mxit\",\n            \"Value\": \"1\",\n            \"ID\": 8339\n        }, {\n            \"Name\": \"wechat\",\n            \"Value\": \"1\",\n            \"ID\": 8340\n        }, {\n            \"Name\": \"wa\",\n            \"Value\": \"1\",\n            \"ID\": 8341\n        }],\n        \"InwardLinks\": [],\n        \"OutwardLinks\": []\n    }],\n    \"code\": \"1000\",\n    \"transid\": \"236fe39b-78b0-4f94-bcda-270cdd01ab9a\"\n}"
+              }
+            },
+            "schema": {
+              "oneOf": [
+                {
+                  "title": "Get Single Profile",
+                  "type": "object",
+                  "properties": {
+                    "Status": {
+                      "type": "integer",
+                      "example": 0,
+                      "default": 0
+                    },
+                    "Description": {
+                      "type": "string",
+                      "example": "success"
+                    },
+                    "Records": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "Attributes": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "Name": {
+                                  "type": "string",
+                                  "example": "msisdn"
+                                },
+                                "Value": {
+                                  "type": "string",
+                                  "example": "91900007707"
+                                },
+                                "ID": {
+                                  "type": "integer",
+                                  "example": 8574,
+                                  "default": 0
+                                }
+                              }
+                            }
+                          },
+                          "InwardLinks": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {}
+                            }
+                          },
+                          "OutwardLinks": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {}
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "code": {
+                      "type": "string",
+                      "example": "1000"
+                    },
+                    "transid": {
+                      "type": "string",
+                      "example": "d2708309-75ab-4f18-b5c6-3f23ab9afd43"
+                    }
+                  }
+                },
+                {
+                  "title": "Get Multiple Profiles",
+                  "type": "object",
+                  "properties": {
+                    "Status": {
+                      "type": "integer",
+                      "example": 0,
+                      "default": 0
+                    },
+                    "Description": {
+                      "type": "string",
+                      "example": "success"
+                    },
+                    "Records": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "Attributes": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "Name": {
+                                  "type": "string",
+                                  "example": "msisdn"
+                                },
+                                "Value": {
+                                  "type": "string",
+                                  "example": "918106565495"
+                                },
+                                "ID": {
+                                  "type": "integer",
+                                  "example": 8328,
+                                  "default": 0
+                                }
+                              }
+                            }
+                          },
+                          "InwardLinks": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {}
+                            }
+                          },
+                          "OutwardLinks": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {}
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "code": {
+                      "type": "string",
+                      "example": "1000"
+                    },
+                    "transid": {
+                      "type": "string",
+                      "example": "236fe39b-78b0-4f94-bcda-270cdd01ab9a"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "deprecated": false
+  },
+  "components": {
+    "securitySchemes": {
+      "sec0": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "key"
+      }
+    }
+  }
+}
+```

@@ -1,0 +1,35 @@
+{
+  "category": "WEBEX CONNECT SANDBOX",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd81825789e",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "6accc30cbd0ebb1f4e437ae6704dd66abe0a70ea14a5fb5161142d188fc4e781",
+    "source_path": "ecfb01a25983776f2bae215bde330a2181680e40cb3a708e092abda68989aa8c",
+    "text_path": "5c6e8f94fd0c94347bf841af984f21a3c1332582808d0a368f187411640cb403"
+  },
+  "headings": [
+    "📘WhatsApp Support in Sandbox",
+    "Sandbox Home UI",
+    "Sending WhatsApp from Sandbox Home screen"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/sending-and-receiving-whatsapp-messages-using-sandbox.md",
+  "resolved_url": "https://help.webexconnect.io/docs/sending-and-receiving-whatsapp-messages-using-sandbox",
+  "retrieved_at": "2026-09-08T23:28:48+00:00",
+  "sha256_html_response": "b1793e0a1a50e4fc58b336118fbcfa04b542dd8b9f25e4e0d17d83a9f64b3535",
+  "sha256_source_body": "ecfb01a25983776f2bae215bde330a2181680e40cb3a708e092abda68989aa8c",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/sending-and-receiving-whatsapp-messages-using-sandbox.source.md",
+  "source_updated_at": "2025-08-22T11:26:11.914Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/sending-and-receiving-whatsapp-messages-using-sandbox.txt",
+  "title": "Sending and Receiving WhatsApp Messages using Sandbox",
+  "url": "https://help.webexconnect.io/docs/sending-and-receiving-whatsapp-messages-using-sandbox",
+  "word_count": 443,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/sending-and-receiving-whatsapp-messages-using-sandbox.metadata.json"
+}

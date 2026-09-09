@@ -1,0 +1,32 @@
+{
+  "api_metadata_path": "sources/cache/developer/data-streams-in-app.api.json",
+  "category": "Data Streams",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f664d",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "a767fdab31369a4dcb651e38184585cebe07d6b18b90d3a3d672895fb1cbd43a",
+    "source_path": "5ed394f11da8cff911080e7747c0b02c7b59fa97e2c7c99a689f0853d9da877d",
+    "text_path": "5e99919d413b5c3f5e4d0fc6d278a2e1042769d072f3b1b0ea72a8a4130a08b9"
+  },
+  "headings": [],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/data-streams-in-app.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/data-streams-in-app",
+  "retrieved_at": "2026-09-08T23:31:48+00:00",
+  "sha256_api_metadata": "575f65b7d8dc3ea0b617314bc47e22705dc85fc80ee114e6faa20ada4e8aafe2",
+  "sha256_html_response": "ec2c2f2f03392c2b3494d747fce89a6b35e35d94e5b44aaf7c0f08efea86c79a",
+  "sha256_source_body": "5ed394f11da8cff911080e7747c0b02c7b59fa97e2c7c99a689f0853d9da877d",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/data-streams-in-app.source.md",
+  "source_updated_at": "2026-06-23T17:50:19.129Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/data-streams-in-app.txt",
+  "title": "Data Streams - Live Chat / In-App Messaging",
+  "url": "https://developers.webexconnect.io/reference/data-streams-in-app",
+  "word_count": 3127,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/data-streams-in-app.metadata.json"
+}

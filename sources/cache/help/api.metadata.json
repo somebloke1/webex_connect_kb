@@ -1,0 +1,36 @@
+{
+  "category": "Webex Engage Standalone Nodes",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257979",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "13f970647c41c0866962572d39233ff0ab991d5de4dce978852be17f3c24eaa6",
+    "source_path": "e7e5cd9ea7cf5a95c0dd8bf456d2fbccd4c279faf1c77f56524d7001112df89f",
+    "text_path": "57108e08bdfabd06f3aabf43c25510b69ae8291d9f042e343dbfcc6136eb1854"
+  },
+  "headings": [
+    "➡️ Inbound Messages",
+    "⬅️ Outbound Messages",
+    "↩️ Announcement",
+    "Markdown Cheat Sheet"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/api.md",
+  "resolved_url": "https://help.webexconnect.io/docs/api",
+  "retrieved_at": "2026-09-08T23:29:28+00:00",
+  "sha256_html_response": "6678d99a011f996e3b12670e4ce44b451cf28d89bbbbbb618108b99bd127f8a2",
+  "sha256_source_body": "e7e5cd9ea7cf5a95c0dd8bf456d2fbccd4c279faf1c77f56524d7001112df89f",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/api.source.md",
+  "source_updated_at": "2026-04-14T07:47:02.083Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/api.txt",
+  "title": "API - WxEngage standalone",
+  "url": "https://help.webexconnect.io/docs/api",
+  "word_count": 267,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/api.metadata.json"
+}

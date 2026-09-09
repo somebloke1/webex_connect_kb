@@ -1,0 +1,33 @@
+{
+  "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257905",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "d14105d571fcb7964a6e5d62662c880c5c13c41d77238a6633a229577ab50f77",
+    "source_path": "a6e7938deb06a6c2bfffd67516a3ed288888d66c8a052db05576c0cf13ee377a",
+    "text_path": "122bf7a7b407a765a2e60761712b2c5f63bc2f85fc5e182c1537dc8dc815295d"
+  },
+  "headings": [
+    "Node and Methods"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/wxcc-surveys-node.md",
+  "resolved_url": "https://help.webexconnect.io/docs/wxcc-surveys-node",
+  "retrieved_at": "2026-09-08T23:29:18+00:00",
+  "sha256_html_response": "a9e3b06f77551a076f4c2497112f22cdfb3957e6978cc83473c3c10291dfdd0a",
+  "sha256_source_body": "a6e7938deb06a6c2bfffd67516a3ed288888d66c8a052db05576c0cf13ee377a",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/wxcc-surveys-node.source.md",
+  "source_updated_at": "2026-02-03T15:11:52.543Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/wxcc-surveys-node.txt",
+  "title": "Webex Surveys",
+  "url": "https://help.webexconnect.io/docs/wxcc-surveys-node",
+  "word_count": 72,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/wxcc-surveys-node.metadata.json"
+}

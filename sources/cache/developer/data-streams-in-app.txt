@@ -1,0 +1,753 @@
+**In-App - Inbound Message**
+
+The following are the Live Chat / In-App inbound message payloads.
+
+```json Incoming Message
+{
+   "attachments":"",
+   "clientId":"EK20133633/xxxx/v2_610FA9CFEDBxxxxEAC82CF60759BB0C0",
+   "transid":"d94ba95c-xxxx-4c4e-xxxx-7851028415f4",
+   "channel":"Rtm",
+   "extras":"",
+   "dataIntegration":{
+      "context":{
+         "serviceId":"",
+         "serviceName":"",
+         "flowId":"",
+         "flowName":"",
+         "messagingAPI":"false"
+      },
+      "appContext":{
+         
+      }
+   },
+   "thread":"{\"updated_on\":\"2024-11-xxxx:52:55.947Z\",\"created_on\":\"2024-11-xxxx:52:40.801Z\",\"id\":\"fd321782-dc4c-4107-bb6a-ebfc473f9e0a\",\"title\":\"MyStore 483\",\"category\":\"MyStore 483\",\"type\":\"Conversation\",\"unread_msg_count\":0,\"status\":\"Active\"}",
+   "message":"",
+   "userId":"8686",
+   "tid":"d94ba95c-xxxx-4c4e-xxxx-7851028415f4",
+   "thread_title":"MyStore 483",
+   "clientUUID":"9e911426-xxxx-4747-xxxx-d9499c7433bd",
+   "x-wx-gtrid":"7528f6be-xxxx-4777-xxxx-548b879a61b7",
+   "thread_id":"fd321782-xxxx-4107-xxxx-ebfc473f9e0a",
+   "appId":"Exxxx33633",
+   "replyTo":"",
+   "event":"MO",
+   "ts":"2024-11-xxxx:23:00.284+05:30"
+}
+```
+```json Incoming Attachment
+{
+   "attachments":"[{\"preview\":\"/9j/4AAQSkZJRxxxxgAAAQABAAD//gAQTGF2YzU4LjU0LjEwMAD/2wBDAAgoKC8oLxxxxzc3N0E8QUNDQ0FBQUFDQ0NISEhVVVVISEhDQ0hIUFBVVVxfXFdXVVdfXxxxxHh4c3OMjJGsrM//xAB/AAACAwEBAQAAAAAAAAAAAAAFBAYCAwEHAAEAAgMBAQEAAAAAAAAAAAAAAwQCBQEGAAcQAAIBAwIEBQMEAwEAAAAAAAABAhEhAxIxQVGRIoFxMhNhQlIEYrGS0aGCwfARAQEAAgICAwEBAAAAAAAAAAABAhExIRJBUTIDkSL/wAARCABkAMgDARIAAhIAAxIA/9oADAMBAAIRAxEAPwCJ6Y8l0BSlc53dEqrTVmlyQ87s2UBKUs+xRjxS6DiQW0MW0s5LGnwXQLInMlclEoXxxit0uiMHuWmysMppu1jUfTHoiJOVUE2jpGJB9I19K6ILYo6mO3tsRFj7TH7V0Q5OLVhS7M0qasdhCL+mPRDULHOZW/NezKRI48cPtj0Q/UrPK/N/oOmtLaIJemPRG0nRDXlb7v8ARMZqjIl1CD+mPRGUCy3dc0nlXkRRY4V9MeiLNsZxt+aRlSDEXDH9kf4r+heDqdVMtqnHpqAM8aX0R/iv6JnLYPnv5pi1BJ5/pj9seiLnM7vzf68jsEP0R+2PRDmwXyvzf6GmgHuMftj0Q6rsY3fm/wBQERhz24U9MeiJLp7Rub+ad9G2h2LFj01cY9EMxVYafm5CS73uhXPUHiUIwxQyS9xxiltGNEZNtWTsdHtyEyp1X7F5YoO+iK/1X9GPuWpyPorlMc0amg08cYy2XRDsqyZ3ksct5qWy/NXCMQUdW0d+SDEcKsy+zymq5K5bVGMu5yvZOwDNFRnsugQzpvu+BlsYFeUYcWht91TQdhvNIA2IIYpTCYxo2BYyowImiIyZzoR1z1MQpzRhEc02JXjjWIrBtGAkASsXydroOMxHQO4JaZoCxsxlOiMe1zhVeR2M00nzRGw1Ox0No9QORScqroczcduisCTaxxJEhKSfmveEtDIbmjRI+/Il2rzOcymjGfYOhg6NKAiDcvhc2UFjppj0BpJJUkI6dTpXtX+Tm8MVzZ4haNilqWKtlbndKbPdpGp0Bk2LtjXkTkVtBJR3LD4SCWjMlU5FhUO6K0OjZm7aTJV7VegiTp2BsXVFhL0UnwceimqhEJT7xS9rnx0xiSbnIO5X4ia7DYdo0qms5pJj/iZ2kXDpzrAWVJQFUjRULdo1Kzi1jJJxYS9kA7NJe2l8gHS2iwx5A2a9sitbCx4w1IyiqFzaKTOppQyJIiLpiaC6aEM9cxZaRoeb6mhWw0TMaTHI0yKe42kv/MrcVhIXF0JIHVJ1jE3p+B1hTkyH4cuh/DGcSsqKT1bGrtjKLGhUSDQ43RAXNKkRHO6hDPs/InEWk9VUxSE4tiWF8qVx/wA17KdHb3At1d76Vt+pnoNK+S2XBfJ2F6jl8/0c0tdNlaKF2SuTlN9qWm7GcgZJllkX2rdvFGP0MAQMqUsNR06qPk2MTnTofzw915s7Rr3VDZV8yJuWpu1LnSYfl0ssc4qb0t8sB5/kfpE6OQefnNLDymlHK9Me07hOMoKu75AnFjpS5wuUnkWzu8unVSf5G3qMZY0n5k5ktUaUBZzRjLvFUPIi1Y3diqlVfCFRqLTTYcdyw2TCQRuMnFBnTYtCkFRFKqWMjf0tFqFKInC1kRDU0wVWmtgHNGYqrO7GvRleFnC1hmEtRLYGSOwb0CNUD2VWJ7KYmoTlRSKGY2LU2sw2EkOyVbizTLxBDMN7hkUERjQtD51t5EvqkthVAOsQlQbJkqUqYIGkewZKLQ/Ajyo5FlDGMF2rc7ph+RKUpqFTWHflcuRV2a7Z+19LmZdofjN9iscah8jUpX0rd7/BymV2nrUdDwUyo7WyLqNijpe3sLKliFS+kPEdo7BLBVIkjj3SwhV9sa8hnIvcelemO/yyywx2vPrEtbMRAY65auFa1l8ckH3XwLW3TlbkVn+S9KRwJUe6JCmWO+1JKt/JTPvbUe5Xj+wxWifyd757jkJkstBbBXPiY6QuXKRXLInUng6oC6qbDmPBXacpUVpqdAbCaTqwuthY1YhwPcXBj2WSewPKabkDYKB6uBmoi6IQxKIhk7Rg1IgKjeZdw47lrjXoaiUdaHxSF+CWyhXHZmdaMZyeHr3I/kugRrqKzobQEM60H0D1C2lVEHCVUbD9dKLZCHgSUY3N1JVDtaG2lYRk6gILi8gb1AJk9DUePD7ddUikb/HMtMCEy0qszVh3HOONJUvxYCm6y8Sp/Sdm7drnC6xVqVY6avOpzBFvLHyf7HPZzcWUM73XvafJ2CzjY+d5Y2O9/THpYAI6fHACyJUJ1K5mSnVQ0g0WdIxBLdS0yy2qUwA3dnNhhs7eKbMCBOPGCZlOpYdhKUZFrNWKt1R0fovvcLmEWrVmrVwQJKw7WvA2QfECF4IGLc14h8gGPNm6MGzd0ehiDon8sNUBuMrULWFpXgnncE26DlVGZcBLGIRSIw1pZX1NX1IHluGIQUpX6DERjIfkC4Y5zfaj0OUpbJaV8DutrDFA3Q5Y0rOSr8G0IxUqvcr/ABddceler7ewhwdacSXqDdZVo2+iOK4qxs7PjSbeVN3PUMv4+KNW1betWaIEf088TTVwu5xiqRigcBJmqygqsXxtpjlLUu1NtKoKQlV0AAVFEqopskyikLeTnMqzYQthjS5qrF/jd1zcy12sYcxhrJPTZXBzq2dzbHH+W3tLHTr5g2TyVs7E88T8s12p7FhYNpVNVe+yXA52YXJ0XlMeFKYsCpdprM53Wr23flQA67GjAbk1sXGEgE6BCEJ7gqDcnc3MXXkIEJcB6WxTrXLHRpiPN0OSQti9ixMpJgOcuBZaWcjWwXjIiykV+ltW6MUbkwXUoNH9K4QRdwamImdF0qNcDEFEoC1FpK4/KxfROLFMaki8iojIr3mMF3GkPUiUegu0EgzWRTN6S+xZicvDLwiKdyi3XmdT6Z6c/Ps9Ps9ihFSVHyN8f/DnvbPbr5wl6RrN3Qaex9k9L8STwNZXlceR9DcUaVrEgUVpYwvSwjUGEcb7vAyx+oUvDbwg8nqOLY4jLluXIjRGT28ikuBHQi9xexfRPolez2tGiMrHZB6jQGmuCK8EM5fVt+iuySyBpHZFfjw3HhR16hrfZ4lH6fEuoyFGlcfAtj4FpizFjTDdTN7k8m5CPM57HZ8CnjYk8hE1cvPcvsWYpPLJI2WwPJDJrAiRyRJsa8pLgdlwCNDaIJ2KLYXaE0MlsUlsW8eiwef/2Q==\",\"file\":\"https://qa-appleattachment.s3.amazonaws.com/dbd82a30-918e-4222-b799-c3879ae98eabd2d93f4c-293e-403a-8fdc-0db7cfb0d28f?keyUri=kms%3A%2F%2Fkms-us-int.wbx2.com%2Fkeys%2F3e42f5f1-5f82-4dcb-918d-b04f844aad2d&JWE=eyJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiZGlyIn0..LBIBZpjvxHhH9uIY.p3g7qG3xGIDpnBRLs5kY4jXB42Rzria6L8w_czkoxjjwQSnsKj87oQxH9ho9fohucIOB4_LZ6zifexvqXAbBCqvFfdHRDvIcfxMxyONzzYvZJJHgtoBuU3xFrR_aZ589MgiGNugeOXK7K0u29ToCZJmyDzSvd5tFsLbhPl9NdlcUheiAhnwZZTJR3Yhb4E3Cw9UbjRfdrqabW2oMbeeg6dZ2bli9UP3Mf4gTGp6cGPV59CLnlU4_8gpO26SHU8H-KSqVvreNcifLkM9n55DGWGtt54nHPXTcb-0xiwk0Ta0xZJgDol8etCEaZyVzX0b_N0Y0DulCLwT6lmkbcB510kD7GGJdsvGv2rUd8dgAkzucwzRsd94DTZ9C.nJlHRNZ41d0LcSxmF43jRw\",\"size\":75370,\"id\":\"302947189875262\",\"contentType\":\"image\"}]",
+   "clientId":"EK20133633/xxxx/v2_610FA9CFEDBxxxxEAC82CF60759BB0C0",
+   "transid":"defc578b-xxxx-4405-xxxx-09f9b67e1f52",
+   "channel":"Rtm",
+   "extras":"",
+   "dataIntegration":{
+      "context":{
+         "serviceId":"",
+         "serviceName":"",
+         "flowId":"",
+         "flowName":"",
+         "messagingAPI":"false"
+      },
+      "appContext":{
+         
+      }
+   },
+   "thread":"{\"updated_on\":\"2024-11-xxxx:26:35.949Z\",\"id\":\"20fade24-xxxx-459f-xxxx-2415936ff3eb\",\"unread_msg_count\":0,\"title\":\"Thread1Test\",\"type\":\"Conversation\",\"status\":\"Active\"}",
+   "message":"",
+   "userId":"xxxx",
+   "tid":"defc578b-xxxx-4405-xxxx-09f9b67e1f52",
+   "thread_title":"Thread1Test",
+   "clientUUID":"9e911426-xxxx-4747-xxxx-d9499c7433bd",
+   "x-wx-gtrid":"fcb9c714-xxxx-4559-xxxx-f0b010ae773c",
+   "thread_id":"20fade24-xxxx-459f-xxxx-2415936ff3eb",
+   "appId":"EK2xxxx633",
+   "replyTo":"",
+   "event":"MO",
+   "ts":"2024-11-xxxx:58:06.386+05:30"
+}
+```
+```json Postback
+{
+    "attachments": "",
+    "clientId": "EK20133633/xxxx/v2_610FA9CFEDB64xxxxC82CF60759BB0C0",
+    "transid": "64475517-xxxx-445a-xxxx-d416d9ed9f0f",
+    "channel": "Rtm",
+    "interactiveData": "{\"reference\":\"postback\",\"identifier\":\"postback\",\"title\":\"postback\",\"type\":\"quickReplyPostback\"}",
+    "extras": "",
+    "dataIntegration": {
+        "context": {
+            "serviceId": "",
+            "serviceName": "",
+            "flowId": "",
+            "flowName": "",
+            "messagingAPI": "false"
+        },
+        "appContext": {
+            
+        }
+    },
+    "thread": "{\"updated_on\":\"2024-11-xxxx:06:16.152Z\",\"created_on\":\"2024-11-xxxx:57:12.725Z\",\"id\":\"70f01690-xxxx-4cc7-xxxx-00ed1823dc43\",\"title\":\"iOS Test 776\",\"category\":\"iOS Test 776\",\"type\":\"Conversation\",\"unread_msg_count\":0,\"status\":\"Active\"}",
+    "message": "postback",
+    "userId": "xxxx",
+    "tid": "64475517-xxxx-445a-xxxx-d416d9ed9f0f",
+    "thread_title": "iOS Test 776",
+    "clientUUID": "9e911426-xxxx-4747-xxxx-d9499c7433bd",
+    "x-wx-gtrid": "822e9c85-xxxx-40bb-xxxx-cbff99c57e85",
+    "thread_id": "70f01690-xxxx-4cc7-xxxx-00ed1823dc43",
+    "appId": "EKxxxx3633",
+    "replyTo": "",
+    "event": "OnPostback",
+    "ts": "2024-11-xxxx:36:17.510+05:30"
+}
+```
+```json On Thread Close
+{
+    "origin": "gateway",
+    "channel": "Rtm",
+    "dataIntegration": {
+        "context": {
+            "serviceId": "76",
+            "serviceName": "RegInApp",
+            "flowId": "xxxx",
+            "flowName": "Flow3Threadclosed",
+            "messagingAPI": "false"
+        },
+        "appContext": {
+            
+        }
+    },
+    "type": "Conversation",
+    "title": "FormtEstThread",
+    "userId": "9897",
+    "tid": "32a8bd14-xxxx-4e05-xxxx-75d112720035",
+    "threadId": "99d56588-xxxx-4263-xxxx-b822c7b7b517",
+    "x-wx-gtrid": "14d45a2a-xxxx-4d42-xxxx-cacf0a93915f",
+    "datetime": "2024-11-xxxx:08:26.982+05:30",
+    "appId": "EK20133633",
+    "event": "OnThreadClosed",
+    "status": "Closed",
+    "ts": "2024-11-xxxx:08:26.982+05:30"
+}
+```
+```json Custom Event
+{
+    "transid": "27075df0-xxxx-4929-xxxx-6dd6f1e436a3",
+    "channel": "Rtm",
+    "dataIntegration": [
+        {
+            "prebuiltId": xxxx,
+            "outBoundEventNotificationEnabled": 1,
+            "drEventNotificationEnabled": 1,
+            "context": {
+                "serviceId": "",
+                "serviceName": "",
+                "flowId": "",
+                "flowName": "",
+                "messagingAPI": "false"
+            },
+            "userAuditNotificationEnabled": 0,
+            "assetLevel": 1,
+            "isInboundEventNotificationEnabled": 1,
+            "dataIntegrationid": 172
+        }
+    ],
+    "thread": "{\"id\":\"99d56588-xxxx-4263-xxxx-b822c7b7b517\",\"title\":\"FormtEstThread\",\"type\":\"Conversation\",\"unread_msg_count\":0,\"status\":\"Closed\"}",
+    "event_identifier": "MO",
+    "userId": "9897",
+    "deviceId": "05667xxxxa671eb3",
+    "tid": "27075df0-xxxx-4929-xxxx-6dd6f1e436a3",
+    "clientUUID": "9e911426-xxxx-4747-xxxx-d9499c7433bd",
+    "x-wx-gtrid": "0f91c362-xxxx-4700-xxxx-99a573c5c74b",
+    "channel_identifier": "RTM",
+    "appId": "EKxxxx3633",
+    "tenantId": 3,
+    "event": "UpdateThreadACK",
+    "ts": "2024-11-xxxx:08:28.713+05:30"
+}
+```
+```json Typing Start
+{
+  "clientId": "NA18140011/XXXXXX/V2_41d0f523288c4591",
+  "transid": "c7fa78a5-XXXX-XXXX-9350-c1324c00a00c",
+  "channel": "Rtm",
+  "extras": "",
+  "dataIntegration": [
+    {
+      "prebuiltId": 50472,
+      "outBoundEventNotificationEnabled": 1,
+      "drEventNotificationEnabled": 1,
+      "context": {
+        "serviceId": "",
+        "serviceName": "",
+        "flowId": "",
+        "flowName": "",
+        "messagingAPI": "false"
+      },
+      "userAuditNotificationEnabled": 0,
+      "assetLevel": 1,
+      "isInboundEventNotificationEnabled": 1,
+      "dataIntegrationid": 50297
+    }
+  ],
+  "thread": "{\"updated_on\":\"2025-09-05T10:55:32.433Z\",\"created_on\":\"2025-07-29T08:49:56.513Z\",\"id\":\"4419bb31-1332-494a-9d2e-f018f5c8efa8\",\"title\":\"test\",\"type\":\"Conversation\",\"unread_msg_count\":0,\"status\":\"Active\"}",
+  "type": "typingStart",
+  "message": "",
+  "event_identifier": "MO",
+  "userId": "974090",
+  "tid": "c7fa78a5-XXXX-XXXX-9350-c1324c00a00c",
+  "thread_title": "test",
+  "clientUUID": "0a4a1900-XXXX-XXXX-b9f9-5ef0927d6683",
+  "x-wx-gtrid": "18c4e233-19e6-XXXX-9222-20412dcffbf2",
+  "thread_id": "4419bb31-1332-XXXX-XXXX-f018f5c8efa8",
+  "channel_identifier": "RTM",
+  "appId": "NA1XXXX011",
+  "tenantId": 3XX8,
+  "event": "TypingIndicator",
+  "ts": "2025-09-10T11:04:28.560Z"
+} 
+```
+```json Typing Stop
+{
+  "clientId": "NA18140011/XXXX/V2_41d0f523288c4591",
+  "transid": "c7fa78a5-0fd8-XXXX-9350-c1324c00a00c",
+  "channel": "Rtm",
+  "extras": "",
+  "dataIntegration": [
+    {
+      "prebuiltId": 12345,
+      "outBoundEventNotificationEnabled": 1,
+      "drEventNotificationEnabled": 1,
+      "context": {
+        "serviceId": "",
+        "serviceName": "",
+        "flowId": "",
+        "flowName": "",
+        "messagingAPI": "false"
+      },
+      "userAuditNotificationEnabled": 0,
+      "assetLevel": 1,
+      "isInboundEventNotificationEnabled": 1,
+      "dataIntegrationid": 50297
+    }
+  ],
+  "thread": "{\"updated_on\":\"2025-09-05T10:55:32.433Z\",\"created_on\":\"2025-07-29T08:49:56.513Z\",\"id\":\"4419bb31-1332-494a-9d2e-f018f5c8efa8\",\"title\":\"test\",\"type\":\"Conversation\",\"unread_msg_count\":0,\"status\":\"Active\"}",
+  "type": "typingStop",
+  "message": "",
+  "event_identifier": "MO",
+  "userId": "97XX90",
+  "tid": "c7fa78a5-0fd8-XXXX-9350-c1324c00a00c",
+  "thread_title": "test",
+  "clientUUID": "0a4a1900-98ef-XXXX-b9f9-5ef0927d6683",
+  "x-wx-gtrid": "18c4e233-19e6-XXXX-9222-20412dcffbf2",
+  "thread_id": "4419bb31-1332-XXXX-9d2e-f018f5c8efa8",
+  "channel_identifier": "RTM",
+  "appId": "NA1XXXX011",
+  "tenantId": 3678,
+  "event": "TypingIndicator",
+  "ts": "2025-09-10T11:04:28.560Z"
+} 
+```
+
+**Live Chat / In-App - Inbound Message Descriptions **
+
+The following table contains the parameter descriptions of inbound messages.
+
+
+
+| Field Name | Descriptions | Example | Event Type |
+| --- | --- | --- | --- |
+| attachments | In-App attachment details | [{\"file\":\"https://stagingrtmedia.s3.amazonaws.com/ne05064134/97407654974538.doc\",\"size\":98304,\"id\":\"97407654974538\",\"contentType\":\"file\"}] |  |
+| clientId | Unique identification  number of the client. | POXXXX3801/3XX2/v2_fc50XXXXXXXXXX5a |  |
+| transid | Contains the transaction ID. | d94ba95c-xxxx-4c4e-xxxx-7851028415f4 |  |
+| channel | This is “rt” in case of Live Chat and In-App Messaging. | RTM | Common parameter for all inbound event types. |
+| extras | Contains the additional information like some user-specific property, or any custom parameter that is required to display the message in a certain fashion within the app | {       <br>"key1": "value1",  <br>"key2": "value2",  <br>"key3": "value3"     <br>} |  |
+| dataIntegration | The object contains   key-value pairs which are added either by Data Stream admin or in flow and also app context object. | "dataIntegration": {    "context":  <br> {       <br>"key1": "value1",  <br>"key2": "value2",  <br>"key3": "value3"     <br>},  <br>“appContext”: {  <br>}  <br>} |  |
+| context | The object contains key-value pairs which are added either by Data Stream admin or in flow. | "context": {   <br>                     "key1": "value1",  <br>                     "key2": "value2",  <br>                     "key3": "value3"     <br>} | Common parameter for all inbound event types. |
+| serviceId | Contains the unique reference id of the service. | 12345 | Common parameter for all inbound event types. |
+| serviceName | Contains the name of the service. | My New Service | Common parameter for all inbound event types. |
+| flowId | Contains the unique ID for the flow. | 54321 | Common parameter for all inbound event types. |
+| flowName | Contains the name of the flow. | Sample Flow | Common parameter for all inbound event types. |
+| messagingAPI | Indicates whether the request is sent through messaging API | true/false | Common parameter for all delivery receipts. |
+| appContext | The object is added as key-value pair either by Data Stream admin or in flow. | “appContext“: {  <br>“key1”: “value1“,  <br>“key2”: “value2“  <br>} | Common parameter for all inbound event types. |
+| thread |  |  |  |
+| message | Contains the text message sent by the user. | Hi this is a LiveChat message |  |
+| userId | Unique identification  number of the user. | 12345 | Common parameter for all inbound event types. |
+| tid | Contains the transaction id. | cfXXXX81-2XXe-4XX5-9XXd-36XXXXXXXX3a | Common parameter for all inbound event types. |
+| thread_title |  |  |  |
+| client_UUID |  |  |  |
+| x-wx-gtrid | Contains the global transaction ID between cross-products for a given request. | d7XXXX76-3XXa-4XXe-9XX3-d6XXXXXXXXf9 | Message and Attachments  |
+| thread_id | The unique identification of the thread in which the message needs to be published. | "fd321782-xxxx-4107-xxxx-ebfc473f9e0a" |  |
+| appid | Contains the application ID. | a_63XXXXXXXXXXXXX000 | Common parameter for all inbound event types. |
+| reply_To | Contains the details of the user to whom the message is being sent. | User1 | Message, Attachments and Postback |
+| event | Contains the incoming event type. | Incoming Message  <br>OnPostback  <br>OnThreadClosed  <br>Custom |  |
+| ts | Timestamp when MO received to Webex Connect. | 2022-01-17T10:59:51.945Z | Common parameter for all inbound event types. |
+| datetime | Data and Time on which the message is received. | 2020-02-25T12:40:45.051+05:30 | Postback, OnThread Closed, and Custom Event |
+| pciInfo | Contains the PCI information of the user. | droppedAttachmentCount |  |
+| deviceId | Unique identification  number of the device. | fc5XXXXXXXXX25a |  |
+| version | Version of the In-App REST API used for sending messages. | 1 |  |
+| Name | Contains the name of the user. | Tom |  |
+| status | Contains the status of the flow. | Closed |  |
+| title | Contains the title name | Buy Now |  |
+
+
+
+
+**Live Chat / In-App - Delivery Receipt**
+
+The following are the Live Chat / In-App delivery receipts payloads.
+
+```json Submitted
+{
+  "deliveryInfoNotification": {
+    "deliveryInfo": {
+      "timeStamp": "2022-01-17T16:08:10.787+05:30",
+      "pushId": "dummy_data",
+      "Description": "Submitted",
+      "code": "7501",
+      "deliveryChannel": "rt",
+      "destination": "dummy_data",
+      "destinationType": "customerid",
+      "deviceid": "",
+      "deliveryStatus": "Submitted"
+    },
+    "subtid": "dummy_data",
+    "transid": "dummy_data",
+    "callbackData": "",
+    "correlationid": ""
+  },
+    "dataIntegration": {
+      "context": {
+        "Key": "Value",
+        "Key2": "Value2"
+      },
+      "appContext": {
+        "adminKey": "",
+        "tenant_identifier": "dummyTenant"
+      }
+    }
+  }
+}
+```
+```json Delivered
+{
+  "deliveryInfoNotification": {
+    "deliveryInfo": {
+      "timeStamp": "2022-01-17T16:08:10.896+05:30",
+      "pushId": "",
+      "Description": "Delivered",
+      "code": "7500",
+      "deliveryChannel": "rt",
+      "destination": "dummy_data",
+      "destinationType": "customerid",
+      "deviceid": "dummy_data",
+      "deliveryStatus": "Delivered"
+    },
+    "subtid": "dummy_data",
+    "transid": "dummy_data",
+    "callbackData": "",
+    "correlationid": ""
+  },
+  "dataIntegration": {
+    "dataIntegration": {
+      "context": {
+        "Key": "Value",
+        "Key2": "Value2"
+      },
+      "appContext": {
+        "adminKey": "",
+        "tenant_identifier": "dummyTenant"
+      }
+    }
+  }
+}
+```
+```json Read
+{
+  "deliveryInfoNotification": {
+    "deliveryInfo": {
+      "timeStamp": "2022-01-17T16:08:10.927+05:30",
+      "pushId": "",
+      "Description": "Read",
+      "code": "7502",
+      "deliveryChannel": "rt",
+      "destination": "dummy_data",
+      "destinationType": "customerid",
+      "deviceid": "dummy_data",
+      "deliveryStatus": "Read"
+    },
+    "subtid": "dummy_data",
+    "transid": "dummy_data",
+    "callbackData": "",
+    "correlationid": ""
+  },
+  "dataIntegration": {
+    "dataIntegration": {
+      "context": {
+        "Key": "Value",
+        "Key2": "Value2"
+      },
+      "appContext": {
+        "adminKey": "",
+        "tenant_identifier": "dummyTenant"
+      }
+    }
+  }
+}
+```
+
+**Live Chat / In-App - Delivery Receipt Descriptions **
+
+The following table contains the parameter descriptions of delivery receipts.
+
+
+
+| Field Name | Description | Example | Message Type |
+| --- | --- | --- | --- |
+| x-wx-gtrid | Contains the global transaction ID between cross-products for a given request. | d7XXXX76-3XXa-4XXe-9XX3-d6XXXXXXXXf9 | Common parameter for all delivery receipts. |
+| deliveryInfoNotification | System variable | N/A | Common parameter for all delivery receipts. |
+| deliveryInfo | System variable | N/A | Common parameter for all delivery receipts. |
+| timeStamp | Timestamp of the event | 2024-03-04T16:08:52.860+05:30 | Common parameter for all delivery receipts. |
+| Description | Detailed description of the delivery status. | Message length exceeded | Common parameter for all delivery receipts. |
+| code | Status code as mentioned in the documentation | 7107 | Common parameter for all delivery receipts. |
+| deliveryChannel | Channel to be used to send message | In-App | Common parameter for all delivery receipts. |
+| additionalinfo | Additional info such as details about the browser used to open a link in case of Click events. |  | Common parameter for all delivery receipts. |
+| destination | The mobile number to which message will be sent. | 174XXXX6048 | Common parameter for all delivery receipts. |
+| destinationType | This is always msisdn for In-App. | customerid | Common parameter for all delivery receipts. |
+| deliveryStatus | Status of messages once sent | Submitted | Common parameter for all delivery receipts. |
+| subtid | A unique transaction id will be generated as subtid for the flow level transactions(or node tid). | 27XXXX95-dXXb-4XXc-8XXc-61XXXXXXX8fa | Common parameter for all delivery receipts. |
+| transid | Unique transaction reference id of the request. | 93XXXX0b-0XX0-4XXb-aXXd-37fXXXXXXX4d | Common parameter for all delivery receipts. |
+| callbackData | Data that you have configured to receive on the notify Url. This is configured as a part of the request | CallBackdata | Common parameter for all delivery receipts. |
+| correlationid | The CorrelationID is a unique identifier that you can attach to every request as a reference a particular transaction or event. This is configured as a part of the request. | InAppMTusingmsisdn | Common parameter for all delivery receipts. |
+| dataIntegration | The object contains   key-value pairs which are added either by Data Stream admin or in flow and also app context object. | "dataIntegration": {    "context":  <br> {       <br>"key1": "value1",  <br>"key2": "value2",  <br>"key3": "value3"     <br>},  <br>“appContext”: {  <br>}  <br>} | Common parameter for all delivery receipts. |
+| context | The object contains key-value pairs which are added either by Data Stream admin or in flow. | "context": {   <br>                     "key1": "value1",  <br>                     "key2": "value2",  <br>                     "key3": "value3"     <br>} | Common parameter for all delivery receipts. |
+| serviceId | Contains the unique reference id of the service. | 12345 | Common parameter for all delivery receipts. |
+| serviceName | Contains the name of the service. | My New Service | Common parameter for all delivery receipts. |
+| flowId | Contains the unique ID for the flow. | 54321 | Common parameter for all delivery receipts. |
+| flowName | Contains the name of the flow. | Sample Flow | Common parameter for all delivery receipts. |
+| messagingAPI | Indicates whether the request is sent through messaging API | true/false | Common parameter for all delivery receipts. |
+| appContext | The object is added as key-value pair either by Data Stream admin or in flow. | “appContext“: {  <br>“key1”: “value1“,  <br>“key2”: “value2“  <br>} | Common parameter for all delivery receipts. |
+
+
+
+
+**Live Chat / In-App - Outbound Message**
+
+The following are the Live Chat / In-App outbound message payloads.
+
+```json Text
+{
+  "transid": "1cXXXXcd-7XX0-4XX2-9XX7-24XXXXXXXXa4",
+  "channel": "RT",
+  "extras": {
+    
+  },
+  "validateDestination": false,
+  "dataIntegration": {
+    "context": {
+      "check": "Data Stream Send Node",
+      "serviceId": "12345",
+      "serviceName": "My New Service",
+      "flowId": "54321",
+      "flowName": "Sample Flow",
+      "messagingAPI": "false"
+    },
+    "appContext": {
+      
+    }
+  },
+  "priority": 5,
+  "message": "Send Node flow executed 01-04-2024",
+  "userId": "2XX0",
+  "tid": "1cXXXXcd-7XX0-4XX2-9XX7-249XXXXXXXXa4",
+  "threadid": "b5XXXX01-c2ee-4XXc-aXX0-01XXXXXXXX0b",
+  "clientUUID": "0aXXXX00-98ef-4XX5-bXX9-5eXXXXXXXX83",
+  "x-wx-gtrid": "7aXXXXa6-bXX5-6XX0-aXX8-bcXXXXXXXX6f",
+  "appId": "NEXXXXXX34",
+  "x_msg_seq": 0,
+  "serviceKey": "27XXXX75-eXX3-1XXe-aXX0-02XXXXXXXXd5"
+}
+```
+```json File
+{
+"channel": "RT",
+  "extras": {
+    
+  },
+  "validateDestination": false,
+  "dataIntegration": {
+    "context": {
+      "check": "Send Node with file",
+      "serviceId": "12345",
+      "serviceName": "Inapp_First",
+      "flowId": "54321",
+      "flowName": "DS2",
+      "messagingAPI": "false"
+    },
+    "appContext": {
+      
+    }
+  },
+  "priority": 5,
+  "message": "Send Node with file",
+  "userId": "2XX0",
+  "tid": "1cXXXXcd-7XX0-4XX2-9XX7-249XXXXXXXXa4",
+  "threadid": "b5XXXX01-c2ee-4XXc-aXX0-01XXXXXXXX0b",
+  "clientUUID": "0aXXXX00-98ef-4XX5-bXX9-5eXXXXXXXX83",
+  "x-wx-gtrid": "7aXXXXa6-bXX5-6XX0-aXX8-bcXXXXXXXX6f",
+  "attachment": [
+    {
+      "preview": "https://sample-videos.com/img/Sample-jpg-image-50kb.jpg",
+      "file": "https://sample-videos.com/img/Sample-jpg-image-50kb.jpg",
+      "contentType": "image/jpg"
+    }
+  ],
+  "appId": "NEXXXXXX34",
+  "x_msg_seq": 0,
+  "serviceKey": "27XXXX75-eXX3-1XXe-aXX0-02XXXXXXXXd5"
+}
+```
+```json Postback
+{
+  "transid": "a3XXXX3c-5XX0-4XXe-aXXd-edXXXXXXXX12",
+  "channel": "RT",
+  "extras": {
+    
+  },
+  "validateDestination": false,
+  "dataIntegration": {
+    "context": {
+      "Check": "Post Back Send Node",
+      "serviceId": "12345",
+      "serviceName": "InappR_First",
+      "flowId": "54321",
+      "flowName": "DS3",
+      "messagingAPI": "false"
+    },
+    "appContext": {
+      
+    }
+  },
+  "priority": 5,
+  "message": "Generic template",
+  "userId": "2XX0",
+  "tid": "1cXXXXcd-7XX0-4XX2-9XX7-249XXXXXXXXa4",
+  "threadid": "b5XXXX01-c2ee-4XXc-aXX0-01XXXXXXXX0b",
+  "clientUUID": "0aXXXX00-98ef-4XX5-bXX9-5eXXXXXXXX83",
+  "x-wx-gtrid": "7aXXXXa6-bXX5-6XX0-aXX8-bcXXXXXXXX6f",
+  "attachment": [
+    {
+      "templateType": "generic",
+      "payload": {
+        "reference": "Consent",
+        "elements": [
+          {
+            "buttons": [
+              {
+                "identifier": "12124",
+                "payload": "",
+                "type": "templatePostback",
+                "title": "Buy Now",
+                "url": ""
+              }
+            ],
+            "subtitle": "Subtitle",
+            "imageUrls": [
+              "https://www.fnordware.com/superpng/pnggrad16rgb.png"
+            ],
+            "title": "product"
+          }
+        ]
+      },
+      "contentType": "template"
+    }
+  ],
+  "appId": "NEXXXXXX34",
+  "x_msg_seq": 0,
+  "serviceKey": "27XXXX75-eXX3-1XXe-aXX0-02XXXXXXXXd5"
+}
+```
+```json Quick Replies
+{
+  "quickReplies": {
+    "reference": "Consent",
+    "options": [
+      {
+        "identifier": "12321",
+        "payload": "",
+        "imageUrl": "https://www.fnordware.com/superpng/pnggrad16rgb.png",
+        "type": "quickReplyPostback",
+        "title": "Yes"
+      }
+    ]
+  },
+  "transid": "2eXXXX09-1XX1-4XX9-9XX7-93XXXXXXXX25",
+  "channel": "RT",
+  "extras": {
+    
+  },
+  "validateDestination": false,
+  "dataIntegration": {
+    "context": {
+      "check": "Send Node Quick Reply",
+      "serviceId": "12345",
+      "serviceName": "Inapp_First",
+      "flowId": "54321",
+      "flowName": "DS3",
+      "messagingAPI": "false"
+    },
+    "appContext": {
+      
+    }
+  },
+  "priority": 5,
+  "message": "Quick reply Post back",
+  "userId": "2XX0",
+  "tid": "1cXXXXcd-7XX0-4XX2-9XX7-249XXXXXXXXa4",
+  "threadid": "b5XXXX01-c2ee-4XXc-aXX0-01XXXXXXXX0b",
+  "clientUUID": "0aXXXX00-98ef-4XX5-bXX9-5eXXXXXXXX83",
+  "x-wx-gtrid": "7aXXXXa6-bXX5-6XX0-aXX8-bcXXXXXXXX6f",
+  "appId": "NEXXXXXX34",
+  "x_msg_seq": 0,
+  "serviceKey": "27XXXX75-eXX3-1XXe-aXX0-02XXXXXXXXd5"
+}
+```
+```json Form  Message
+{
+  "transid": "2eXXXX09-1XX1-4XX9-9XX7-93XXXXXXXX25",
+  "channel": "RT",
+  "extras": {
+    
+  },
+  "validateDestination": false,
+  "dataIntegration": {
+    "context": {
+      "check": "DS send node form",
+      "serviceId": "12345",
+      "serviceName": "Inapp_First",
+      "flowId": "54321",
+      "flowName": "DSFlow",
+      "messagingAPI": "false"
+    },
+    "appContext": {
+      
+    }
+  },
+  "priority": 1,
+  "userId": "2XX0",
+  "tid": "1cXXXXcd-7XX0-4XX2-9XX7-249XXXXXXXXa4",
+  "threadid": "b5XXXX01-c2ee-4XXc-aXX0-01XXXXXXXX0b",
+  "clientUUID": "0aXXXX00-98ef-4XX5-bXX9-5eXXXXXXXX83",
+  "x-wx-gtrid": "7aXXXXa6-bXX5-6XX0-aXX8-bcXXXXXXXX6f",
+  "attachment": [
+    {
+      "templateType": "form",
+      "payload": {
+        "fields": [
+          {
+            "name": "Name",
+            "description": "enter name",
+            "label": "Name",
+            "type": "text",
+            "mandatory": false
+          },
+          {
+            "name": "Email",
+            "description": "email",
+            "label": "Email",
+            "type": "email",
+            "mandatory": false
+          },
+          {
+            "name": "Gender",
+            "options": [
+              "Male",
+              "Female"
+            ],
+            "description": "",
+            "label": "Gender",
+            "type": "dropdown",
+            "mandatory": false
+          }
+        ],
+        "title": "Student Form"
+      },
+      "templateId": "0W1XPWN2ND",
+      "contentType": "template"
+    }
+  ],
+  "appId": "NEXXXXXX34",
+  "x_msg_seq": 0,
+  "serviceKey": "27XXXX75-eXX3-1XXe-aXX0-02XXXXXXXXd5"
+
+```
+
+**Live Chat / In-App - Outbound Message Descriptions**
+
+The following table contains the parameter descriptions of outbound messages.
+
+
+
+| Field Name | Descriptions | Example | Event Type |
+| --- | --- | --- | --- |
+| transid | Unique transaction reference id of the request. | 93XXXX0b-0XX0-4XXb-aXXd-37fXXXXXXX4d | Text, File, Postback, and Form Response |
+| channel | This is “rt” in case of Live Chat and In-App Messaging. | RTM | Common parameter for all outbound message types. |
+| extras | Contains the additional information like some user-specific property, or any custom parameter that is required to display the message in a certain fashion within the app | {       <br>"key1": "value1",  <br>"key2": "value2",  <br>"key3": "value3"     <br>} | Common parameter for all outbound message types. |
+| validateDestination | System Variable | true/false | Common parameter for all outbound message types. |
+| dataIntegration | The object contains   key-value pairs which are added either by Data Stream admin or in flow and also app context object. | "dataIntegration": {    "context":  <br> {       <br>"key1": "value1",  <br>"key2": "value2",  <br>"key3": "value3"     <br>},  <br>“appContext”: {  <br>}  <br>} | Common parameter for all outbound message types. |
+| context | The object contains key-value pairs which are added either by Data Stream admin or in flow. | "context": {   <br>                     "key1": "value1",  <br>                     "key2": "value2",  <br>                     "key3": "value3"     <br>} | Common parameter for all outbound message types. |
+| serviceId | Contains the unique reference id of the service. | 12345 | Common parameter for all outbound message types. |
+| serviceName | Contains the name of the service. | My New Service | Common parameter for all outbound message types. |
+| flowId | Contains the unique ID for the flow. | 54321 | Common parameter for all outbound message types. |
+| flowName | Contains the name of the flow. | Sample Flow | Common parameter for all outbound message types. |
+| messagingAPI | Indicates whether the request is sent through messaging API. | true/false | Common parameter for all outbound message types. |
+| appContext | The object is added as key-value pair either by Data Stream admin or in flow. | “appContext“: {  <br>“key1”: “value1“,  <br>“key2”: “value2“  <br>} | Common parameter for all outbound message types. |
+| priority | This parameter is used to specify the message priority. | 1 | Common parameter for all outbound message types. |
+| message | Contains the text message sent by the user. | Hi this is a LiveChat message | Common parameter for all outbound message types. |
+| userId | Unique identification number of the user. | 2480 | Common parameter for all outbound message types. |
+| tid | Transaction ID | 234XXXXX-dXXX-4XXX-9XXX-c4bXXXXXXX20 | Common parameter for all outbound message types. |
+| threadid | Unique identification number of the thread. | 12eXXXX26-9XX1-4XX7-bXXa-d9XXXXXXXX13 | Common parameter for all outbound message types. |
+| clientUUID | Contains the clients unique identification number. | 9eXXXX26-9XX1-4XX7-bXXa-d9XXXXXXXXbd | Common parameter for all outbound message types. |
+| x-wx-gtrid | Contains the global transaction ID between cross-products for a given request. | d7XXXX76-3XXa-4XXe-9XX3-d6XXXXXXXXf9 | Common parameter for all outbound message types. |
+| appId | Contains the application ID | a_63XXXXXXXXXXXXX000 | Common parameter for all outbound message types. |
+| x_msg_seq | This parameter represents whether the request should process sequence or not. | 0 | Common parameter for all outbound message types. |
+| serviceKey | Unique identification number for the service. | 02XXXXd0-5XX7-1XXd-bXX8-12XXXXXXXX6d | Common parameter for all outbound message types. |
+| templateType | Contains the information about the template type.  <br>Generic or Form | "templateType": "form",  <br>  <br>"templateType": "generic", |  |
+| payload | Contains the information about the payload. | payload": { "reference": "T-shirt options", "elements": \[ //Maximum of 8 elements can be added. { "title": "Classic White T-Shirt", "subtitle": "Clothing", "imageUrls": [ //Maximum of 5 images can be added. "https://e7.pngegg.com/pngimages/464/597/png-clipart-logo-cisco-systems-router-network-switch-packet-tracer-logo-hmi-emblem-text-thumbnail.png" ], "buttons": \[ //Maximum of 3 buttons can be added. { "type": "webUrl", "identifier": "21221-323232-231212", "url": "<https://upload.wikimedia.org/wikipedia/commons/6/6a/PNG_Test.png">, "title": "View Item", "payload": {} } |  |
+| type | Defines the type of the button. In case of a quick reply, it should be quickReplyPostback. | quickReplyPostback | Quick Reply |
+| title | Specifies the bubble title. | Student Form | Form Response  |
+
+
+
+## API reference metadata
+
+These are source metadata and examples. `api.auth` is ReadMe metadata; verify authentication in the documented headers/security scheme.
+
+```json
+{
+  "method": "get",
+  "url": "",
+  "auth": "required",
+  "results": {
+    "codes": [
+      {
+        "name": "",
+        "code": "{}",
+        "language": "json",
+        "status": 200
+      },
+      {
+        "name": "",
+        "code": "{}",
+        "language": "json",
+        "status": 400
+      }
+    ]
+  },
+  "params": [],
+  "examples": {
+    "codes": []
+  }
+}
+```

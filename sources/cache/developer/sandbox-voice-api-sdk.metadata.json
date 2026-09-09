@@ -1,0 +1,37 @@
+{
+  "api_metadata_path": "sources/cache/developer/sandbox-voice-api-sdk.api.json",
+  "category": "API Reference for Sandbox",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f65bc",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "c008b6774fd66ed610805f3ab281a0e27583223619451b3b27bd3d75d8ffb251",
+    "source_path": "4d07d89bdc12c0e2c9bf783916883d740956d80b0917b8ba77ad1bfc1f46357d",
+    "text_path": "a5d7dc1ff16a1f99e708002c956fe03d5aa1c297a455bd7eb9f493401e63fccc"
+  },
+  "headings": [
+    "Creating a Phone Call",
+    "Receiving a Phone Call",
+    "Events",
+    "Actions"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/sandbox-voice-api-sdk.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/sandbox-voice-api-sdk",
+  "retrieved_at": "2026-09-08T23:31:40+00:00",
+  "sha256_api_metadata": "575f65b7d8dc3ea0b617314bc47e22705dc85fc80ee114e6faa20ada4e8aafe2",
+  "sha256_html_response": "c99061c31460f318d18c47987e7c99376e7d7c4f7d373f243e111c520ac6f8b7",
+  "sha256_source_body": "4d07d89bdc12c0e2c9bf783916883d740956d80b0917b8ba77ad1bfc1f46357d",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/sandbox-voice-api-sdk.source.md",
+  "source_updated_at": "2026-04-16T05:31:23.761Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/sandbox-voice-api-sdk.txt",
+  "title": "Voice APIs & SDKs",
+  "url": "https://developers.webexconnect.io/reference/sandbox-voice-api-sdk",
+  "word_count": 1228,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/developer/sandbox-voice-api-sdk.metadata.json"
+}

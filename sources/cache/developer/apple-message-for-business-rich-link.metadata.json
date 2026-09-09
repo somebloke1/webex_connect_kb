@@ -1,0 +1,37 @@
+{
+  "api_metadata_path": "sources/cache/developer/apple-message-for-business-rich-link.api.json",
+  "category": "MULTI CHANNEL COMMUNICATION API",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f6608",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "26bb0ae0f71e3408a756a8065d55800a3ff98063b202de9ff69a035d5b886de1",
+    "source_path": "d700922db048418ec052853d9ccfc44fb9a288b35173578e30a1b2f01b23ae07",
+    "text_path": "d6ec6548e3b97009e3ecfaa00478bca3b629e1a578a33b6f64960232a933b368"
+  },
+  "headings": [
+    "Rich Link with Video",
+    "Error Codes"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/apple-message-for-business-rich-link.md",
+  "openapi_path": "sources/cache/openapi/8c2767e283687e052bf0f5335346756deada08e7d3309e5819f93a357e049353.json",
+  "resolved_url": "https://developers.webexconnect.io/reference/apple-message-for-business-rich-link",
+  "retrieved_at": "2026-09-08T23:31:42+00:00",
+  "sha256_api_metadata": "50c5adecb9fd1293d8a90b513ccfd76e5c18cafea861161e14442c52b09e8373",
+  "sha256_html_response": "29f82eaea97e8e491262d083d1e3586a9c377d1e1d2491e175f9f132b1c608d3",
+  "sha256_openapi": "8c2767e283687e052bf0f5335346756deada08e7d3309e5819f93a357e049353",
+  "sha256_source_body": "d700922db048418ec052853d9ccfc44fb9a288b35173578e30a1b2f01b23ae07",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/apple-message-for-business-rich-link.source.md",
+  "source_updated_at": "2026-04-16T05:41:23.714Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/apple-message-for-business-rich-link.txt",
+  "title": "Apple Message for Business: Rich Link",
+  "url": "https://developers.webexconnect.io/reference/apple-message-for-business-rich-link",
+  "word_count": 1836,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/apple-message-for-business-rich-link.metadata.json"
+}

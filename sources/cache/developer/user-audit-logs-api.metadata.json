@@ -1,0 +1,40 @@
+{
+  "api_metadata_path": "sources/cache/developer/user-audit-logs-api.api.json",
+  "category": "Audit Logs API",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f6793",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "cb29bbd99ecb51ee25a30a2390257318196a3d5873fc14708e5b44243d3d1f6b",
+    "source_path": "36cf3c56f69d1e6c3d98de7e6182690abfc4c298dae3801101ab8bfb8991ee64",
+    "text_path": "e56cf2f91337fc2b6f0ce0ca1610cfaaea5bc7d3c634db8ddeb305bdb832455a"
+  },
+  "headings": [
+    "Prerequisites",
+    "Retrieving Webex Connect Audit Logs via API",
+    "Request Body",
+    "Request Parameters",
+    "Sample Response Body",
+    "Response Parameters",
+    "HTTP Status Codes"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/user-audit-logs-api.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/user-audit-logs-api",
+  "retrieved_at": "2026-09-08T23:31:49+00:00",
+  "sha256_api_metadata": "4f97656a12c0d85a7e8f2a09700fdf6e0f0b6aa2315ac6abc298dbccb9ca1ecb",
+  "sha256_html_response": "d91320b6f55bfee71b3ddc074a268148ba8881037fbf07ab8ff1a1135f8a1b8a",
+  "sha256_source_body": "36cf3c56f69d1e6c3d98de7e6182690abfc4c298dae3801101ab8bfb8991ee64",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/user-audit-logs-api.source.md",
+  "source_updated_at": "2026-08-18T10:27:01.473Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/user-audit-logs-api.txt",
+  "title": "User Audit Logs API",
+  "url": "https://developers.webexconnect.io/reference/user-audit-logs-api",
+  "word_count": 1009,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/developer/user-audit-logs-api.metadata.json"
+}

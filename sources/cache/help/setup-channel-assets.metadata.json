@@ -1,0 +1,33 @@
+{
+  "category": "Webex Engage Standalone Nodes",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd81825796a",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "c8da411a904750efdc77f700099cbfc63ec63c6e9299d0ffe66471fea94313e1",
+    "source_path": "764a24370db6f6e5c96d99baa0521bb606e4314c6293fa1ad8dcdef7806ead0c",
+    "text_path": "d005109789456de1a211c08c1ccdd5285ee64c553624d6eacdae25eff267c5ec"
+  },
+  "headings": [
+    "📘Note:"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/setup-channel-assets.md",
+  "resolved_url": "https://help.webexconnect.io/docs/setup-channel-assets",
+  "retrieved_at": "2026-09-08T23:29:25+00:00",
+  "sha256_html_response": "e2c5844f16d87aea73d9b3281d2049c816b75abcbbb84ab874dbc8f97914420d",
+  "sha256_source_body": "764a24370db6f6e5c96d99baa0521bb606e4314c6293fa1ad8dcdef7806ead0c",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/setup-channel-assets.source.md",
+  "source_updated_at": "2026-04-14T07:44:46.619Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/setup-channel-assets.txt",
+  "title": "Setup channel assets - WxEngage standalone",
+  "url": "https://help.webexconnect.io/docs/setup-channel-assets",
+  "word_count": 89,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/setup-channel-assets.metadata.json"
+}

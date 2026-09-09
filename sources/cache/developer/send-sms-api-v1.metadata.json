@@ -1,0 +1,41 @@
+{
+  "api_metadata_path": "sources/cache/developer/send-sms-api-v1.api.json",
+  "category": "MULTI CHANNEL COMMUNICATION API",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f6660",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "c4b2f2b56d74368182e09dd04f4ecc55dbbf8611f7a775f88c63c6691c47d5a3",
+    "source_path": "2d342c0955eb4e1620fc145b16ba2fc1f3994272786851e2750156edc95968a9",
+    "text_path": "ce5508c58114b828230024711d71f09fca50a7c6d0496691fc9ec4ca86101678"
+  },
+  "headings": [
+    "Request Body to Send SMS Using Send SMS API v1",
+    "Send SMS API v1 Body Parameters",
+    "Sample Response Body"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/send-sms-api-v1.md",
+  "metadata_path": "sources/cache/developer/send-sms-api-v1.metadata.json",
+  "openapi_path": "sources/cache/openapi/dafa223b870b4125143939d60730ace782025db24cac442b5b689e3e7ea32910.json",
+  "previous_retrieved_at": "2026-09-08T23:31:40+00:00",
+  "previous_sha256_source_body": "2d342c0955eb4e1620fc145b16ba2fc1f3994272786851e2750156edc95968a9",
+  "resolved_url": "https://developers.webexconnect.io/reference/send-sms-api-v1",
+  "retrieved_at": "2026-09-08T23:35:07+00:00",
+  "sha256_api_metadata": "bb05a535468968153895d89c908cc64cfd205bf90f82ac44c91c93405f7b2cfa",
+  "sha256_html_response": "1c419957b7649cdd6fad93aa62e07fcd45544f5ad576a01fa7e42c9cb2e5d3e6",
+  "sha256_openapi": "dafa223b870b4125143939d60730ace782025db24cac442b5b689e3e7ea32910",
+  "sha256_source_body": "2d342c0955eb4e1620fc145b16ba2fc1f3994272786851e2750156edc95968a9",
+  "source_body_changed": false,
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/send-sms-api-v1.source.md",
+  "source_updated_at": "2026-06-23T15:26:14.800Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/send-sms-api-v1.txt",
+  "title": "Send SMS API v1",
+  "url": "https://developers.webexconnect.io/reference/send-sms-api-v1",
+  "word_count": 1346,
+  "normalized_at": "2026-09-08T23:37:55+00:00"
+}

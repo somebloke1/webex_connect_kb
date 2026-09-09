@@ -1,0 +1,38 @@
+{
+  "api_metadata_path": "sources/cache/developer/numbers-faqs.api.json",
+  "category": "FAQs",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f65a4",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "582094855e52ecc9fa321f88e0496b2e12caa142f5e83a375b48c45c844e8b19",
+    "source_path": "345566da2b9a5ac5033f8dea594adadbccdff4dd825368cbe4cecd6d720a6ce9",
+    "text_path": "ae69ca0600e8b8b0e5a0776f6aaa9ff1b280dc10ddfdc7cb4ef5b882fde62af7"
+  },
+  "headings": [
+    "Why do I have to provide my address while purchasing numbers in certain countries?",
+    "Re-purchasing: Can I purchase the same number after I have released it?",
+    "Can I use a number in more than one service?",
+    "How long does it take to get my verified Sender Form for TFNs approved in the United States or Canada?",
+    "How long does it take to get a shortcode in the United States?"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/numbers-faqs.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/numbers-faqs",
+  "retrieved_at": "2026-09-08T23:31:52+00:00",
+  "sha256_api_metadata": "575f65b7d8dc3ea0b617314bc47e22705dc85fc80ee114e6faa20ada4e8aafe2",
+  "sha256_html_response": "b45d7a19da4d446ecaec303dc48d754a83f319f1530d3eb6b93cfd478ed8d914",
+  "sha256_source_body": "345566da2b9a5ac5033f8dea594adadbccdff4dd825368cbe4cecd6d720a6ce9",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/numbers-faqs.source.md",
+  "source_updated_at": "2026-04-16T06:09:38.899Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/numbers-faqs.txt",
+  "title": "Numbers FAQs",
+  "url": "https://developers.webexconnect.io/reference/numbers-faqs",
+  "word_count": 422,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/numbers-faqs.metadata.json"
+}

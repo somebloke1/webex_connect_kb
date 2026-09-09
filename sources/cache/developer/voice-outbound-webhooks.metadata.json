@@ -1,0 +1,35 @@
+{
+  "api_metadata_path": "sources/cache/developer/voice-outbound-webhooks.api.json",
+  "category": "OUTBOUND WEBHOOKS",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f654f",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "2c4f441998e4b419bb91a64c7fcd0cec25109781a825eba00ab2ef5de04dd454",
+    "source_path": "e59604b93dcffac2b3e6a7f71bd35178799c13cfd5360b5828efcc9257e2d3a4",
+    "text_path": "9d3f213e4117f95eb7443bf7a24d42d5bfb9f24d6376bf29e69d70f9d1d0c2e7"
+  },
+  "headings": [
+    "Voice Delivery Receipts",
+    "**Usecases for Outbound Calls from Webex Connect**"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/voice-outbound-webhooks.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/voice-outbound-webhooks",
+  "retrieved_at": "2026-09-08T23:31:45+00:00",
+  "sha256_api_metadata": "187de124aa8aa8acf032d1bfec486640b94ec306193dfc1e0feb2652279c3c88",
+  "sha256_html_response": "bd72789511191e488a73e64c442a4f472c8c7bd358ddc887cc3f3a69620bbbd7",
+  "sha256_source_body": "e59604b93dcffac2b3e6a7f71bd35178799c13cfd5360b5828efcc9257e2d3a4",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/voice-outbound-webhooks.source.md",
+  "source_updated_at": "2026-04-16T05:57:03.282Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/voice-outbound-webhooks.txt",
+  "title": "Voice",
+  "url": "https://developers.webexconnect.io/reference/voice-outbound-webhooks",
+  "word_count": 900,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/developer/voice-outbound-webhooks.metadata.json"
+}

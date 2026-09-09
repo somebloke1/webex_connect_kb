@@ -1,0 +1,36 @@
+{
+  "category": "Webex Engage Standalone Nodes",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257977",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "dfe60b4e3c224b74c1924ce39821af92f2a36105efd0f97ca6a85e3d177a0cbd",
+    "source_path": "e74ebe5fe2f09996e6455d57b8ebffeb53d8fe3457d0dbf6eb692ec1c8d73a14",
+    "text_path": "c834fd20d02256f98d20e664ca5453b1f52cbf6a8fc792a7869fdfe221095b4e"
+  },
+  "headings": [
+    "➡️ Inbound Messages",
+    "⬅️ Outbound Messages",
+    "↩️ Announcement",
+    "Markdown Cheat Sheet"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/whatsapp-2.md",
+  "resolved_url": "https://help.webexconnect.io/docs/whatsapp-2",
+  "retrieved_at": "2026-09-08T23:29:28+00:00",
+  "sha256_html_response": "24cb3edfcffbc49604d41e18b02c96d22ea93e5e51560468e37cf7be0e0df7b3",
+  "sha256_source_body": "e74ebe5fe2f09996e6455d57b8ebffeb53d8fe3457d0dbf6eb692ec1c8d73a14",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/whatsapp-2.source.md",
+  "source_updated_at": "2026-04-14T07:46:45.586Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/whatsapp-2.txt",
+  "title": "Message Schema - WhatsApp - WxEngage standalone",
+  "url": "https://help.webexconnect.io/docs/whatsapp-2",
+  "word_count": 474,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/whatsapp-2.metadata.json"
+}

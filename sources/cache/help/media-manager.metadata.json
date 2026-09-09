@@ -1,0 +1,38 @@
+{
+  "category": "TOOLS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257804",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "638b60dd3084a8393ef889c40211d2746bc16b5a9088b63459db0ea3739bbdd5",
+    "source_path": "96c5f26db1a4aff99ea09ad8bdd51aba1504a23ef6814efa7fb85720809d97a8",
+    "text_path": "958c5879216e8080ee5730447c5767c76929e17d052209b6ddce0ee0abf1fead"
+  },
+  "headings": [
+    "Supported File Formats",
+    "Using Media Manager",
+    "Import URL",
+    "Upload",
+    "📘Note",
+    "Copying the URL"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/media-manager.md",
+  "resolved_url": "https://help.webexconnect.io/docs/media-manager",
+  "retrieved_at": "2026-09-08T23:29:35+00:00",
+  "sha256_html_response": "0dad1ec7d31bbcae22717c723e4ce3d5d8289248176b7721c27923f97de5c79f",
+  "sha256_source_body": "96c5f26db1a4aff99ea09ad8bdd51aba1504a23ef6814efa7fb85720809d97a8",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/media-manager.source.md",
+  "source_updated_at": "2026-07-29T13:01:50.709Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/media-manager.txt",
+  "title": "Media Manager",
+  "url": "https://help.webexconnect.io/docs/media-manager",
+  "word_count": 570,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/media-manager.metadata.json"
+}

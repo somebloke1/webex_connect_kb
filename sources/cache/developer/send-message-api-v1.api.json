@@ -1,0 +1,115 @@
+{
+  "api": {
+    "method": "post",
+    "url": "/messages",
+    "auth": "required",
+    "results": {
+      "codes": [
+        {
+          "name": "",
+          "code": "{\n    \"response\": [\n        {\n            \"code\": \"1001\",\n            \"transid\": \"3f09295d-9eb3-4c9e-8ee8-a3272e5f00c1\",\n            \"description\": \"Queued\"\n        }\n    ]\n}",
+          "language": "json",
+          "status": 200
+        },
+        {
+          "name": "Authentication Failed",
+          "code": "{\n    \"response\": {\n        \"code\": \"7001\",\n        \"description\": \"Authentication failed.\",\n        \"transid\": \"7670c9a8-131f-4166-ac30-17f6109340d6\"\n    }\n}",
+          "language": "json",
+          "status": 200
+        },
+        {
+          "code": "{\n    \"response\": {\n        \"code\": \"7000\",\n        \"description\": \"Invalid JSON\",\n        \"transid\": \"2b2c0bfb-4396-444a-880d-44ee007c130f\"\n    }\n}",
+          "language": "json",
+          "status": 200,
+          "name": "Invalid JSON"
+        }
+      ]
+    },
+    "params": [
+      {
+        "name": "Content-Type",
+        "type": "string",
+        "enumValues": "",
+        "default": "application/json",
+        "desc": "",
+        "required": false,
+        "in": "header",
+        "ref": "",
+        "_id": "66b2523fc3aa01006e3711d2",
+        "id": "66b2523fc3aa01006e3711d2"
+      },
+      {
+        "name": "key",
+        "type": "string",
+        "enumValues": "",
+        "default": "<Service Key>",
+        "desc": "Applicable when you want to use service key for API authentication. Available under API tab within a service in your Webex Connect tenant.",
+        "required": false,
+        "in": "header",
+        "ref": "",
+        "_id": "66b2523fc3aa01006e3711d1",
+        "id": "66b2523fc3aa01006e3711d1"
+      },
+      {
+        "name": "Authorization",
+        "type": "string",
+        "enumValues": "",
+        "default": "Bearer <Token>",
+        "desc": "Bearer {{token}}. Applicable if you want to use JWT tokens for API authentication. Use either of 'key' or 'Authorization' header param.",
+        "required": false,
+        "in": "header",
+        "ref": "",
+        "_id": "66b2523fc3aa01006e3711d0",
+        "id": "66b2523fc3aa01006e3711d0"
+      }
+    ],
+    "examples": {
+      "codes": [
+        {
+          "code": "",
+          "language": "json",
+          "name": null
+        }
+      ]
+    },
+    "apiSetting": "6a675233ec1c893d8a7f6825"
+  },
+  "swagger": null,
+  "oas_public_id": "@imiconnect-apis/v6.20.0#c0q048c2vlzd44kur",
+  "selected_openapi": {
+    "openapi": "3.1.0",
+    "info": {
+      "title": "Messaging API v1 New",
+      "version": "6.20.0"
+    },
+    "servers": [
+      {
+        "url": "https://api.{YourRegion}.webexconnect.io/resources/v1",
+        "variables": {
+          "YourRegion": {
+            "default": "YourRegion"
+          }
+        }
+      }
+    ],
+    "security": [
+      {
+        "sec0": []
+      }
+    ],
+    "path": "/messages",
+    "method": "post",
+    "path_parameters": [],
+    "operation": {},
+    "components": {
+      "securitySchemes": {
+        "sec0": {
+          "type": "apiKey",
+          "in": "header",
+          "name": "key"
+        }
+      }
+    },
+    "operation_status": "not_present_in_supplied_openapi"
+  }
+}

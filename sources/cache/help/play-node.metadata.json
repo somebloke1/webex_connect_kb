@@ -1,0 +1,42 @@
+{
+  "category": "SERVICES & FLOWS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257840",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "a9109fac442d20e19bb1ec16b825bca1df7893b1697dc9959698f85854187cf7",
+    "source_path": "38fffdb97f4a921d61cec7950839fc119235dd40e685b553adcab72130ef2663",
+    "text_path": "d10ea1d33f02ee3686524e82213546d038b7456606cab45e1ce40931a2031902"
+  },
+  "headings": [
+    "📘Automatic fallback to an alternate TTS Provider",
+    "Node Configuration",
+    "📘Note",
+    "📘Speech Synthesis Markup Language (SSML)",
+    "📘Character Limit",
+    "📘SSML Support",
+    "Input Variables",
+    "Output Variables",
+    "Node Outcomes",
+    "Transition Actions"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/play-node.md",
+  "resolved_url": "https://help.webexconnect.io/docs/play-node",
+  "retrieved_at": "2026-09-08T23:28:55+00:00",
+  "sha256_html_response": "224c9babc0dd834df6b95e63565fad7f7b3ba06f4be651c32675f2082e3c4e0b",
+  "sha256_source_body": "38fffdb97f4a921d61cec7950839fc119235dd40e685b553adcab72130ef2663",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/play-node.source.md",
+  "source_updated_at": "2026-03-27T08:09:11.705Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/play-node.txt",
+  "title": "Play Node",
+  "url": "https://help.webexconnect.io/docs/play-node",
+  "word_count": 1175,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/play-node.metadata.json"
+}

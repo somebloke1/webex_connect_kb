@@ -1,0 +1,1655 @@
+{
+  "_id": "6a675233ec1c893d8a7f684c",
+  "components": {
+    "headers": {
+      "X-cp-continuation-token": {
+        "schema": {
+          "description": "An arbitrary stateless token returned with paginated results. It can be used as a\nquery parameter to get the next page of results. If the token is not present, there is not another page of data.\n",
+          "type": "string"
+        }
+      }
+    },
+    "parameters": {
+      "alternateAddress": {
+        "description": "WhatsApp-only consumer identifier (BSUID). Requires channel=whatsapp and the WhatsApp BSUID feature flag enabled; must match the configured format, else 400.\n",
+        "in": "query",
+        "name": "alternateAddress",
+        "required": false,
+        "schema": {
+          "$ref": "#/components/schemas/AlternateAddress"
+        }
+      },
+      "consentStatus": {
+        "description": "If specified, filters results by the consumer's opted in/out status",
+        "example": true,
+        "in": "query",
+        "name": "consent",
+        "schema": {
+          "type": "boolean"
+        }
+      },
+      "continuationToken": {
+        "description": "The continuation token returned in a previouse request that specifies the next page of results to retrieve.",
+        "example": "WR6J8u9fDH3YB9up6OmVWw",
+        "in": "query",
+        "name": "continuationToken",
+        "required": false,
+        "schema": {
+          "$ref": "#/components/headers/X-cp-continuation-token"
+        }
+      },
+      "groupId": {
+        "in": "path",
+        "name": "groupId",
+        "required": true,
+        "schema": {
+          "$ref": "#/components/schemas/GroupId"
+        }
+      },
+      "pageSize": {
+        "description": "The amount of results to return with the next page.",
+        "example": 50,
+        "in": "query",
+        "name": "pageSize",
+        "required": false,
+        "schema": {
+          "default": 50,
+          "maximum": 1000,
+          "type": "integer"
+        }
+      },
+      "responseFormat": {
+        "description": "Response content-type.",
+        "example": "CSV",
+        "in": "query",
+        "name": "format",
+        "schema": {
+          "default": "JSON",
+          "enum": [
+            "CSV",
+            "JSON"
+          ],
+          "type": "string"
+        }
+      }
+    },
+    "responses": {
+      "404GroupNotFound": {
+        "description": "Invalid or unknown group ID."
+      },
+      "410GroupDeleted": {
+        "description": "The group has been deleted."
+      }
+    },
+    "schemas": {
+      "AddOrUpdateConsentRequest": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/ConsentRequest"
+          },
+          {
+            "properties": {
+              "metadata": {
+                "$ref": "#/components/schemas/Metadata"
+              }
+            },
+            "type": "object"
+          }
+        ],
+        "description": "Consumer identity and the desired consent value. For `channel=whatsapp` either `address` or `alternateAddress` is required (and `alternateAddress` / `replaceAlternateAddress` apply to WhatsApp only); for all other channels `address` is required and `alternateAddress` is not applicable.\n"
+      },
+      "Address": {
+        "description": "Address for communications sent on this channel.",
+        "example": "+12125551212",
+        "type": "string"
+      },
+      "AlternateAddress": {
+        "description": "WhatsApp-only consumer identifier (BSUID). Valid only for channel=whatsapp and only accepted when the WhatsApp BSUID feature flag is enabled; must match the configured BSUID format. Requests violating these rules return 400.\n",
+        "example": "US.1234567890123456",
+        "type": "string"
+      },
+      "Channel": {
+        "description": "A channel of communication",
+        "enum": [
+          "email",
+          "text",
+          "voice",
+          "whatsapp"
+        ],
+        "example": "whatsapp",
+        "type": "string"
+      },
+      "ChannelAddress": {
+        "properties": {
+          "address": {
+            "$ref": "#/components/schemas/Address"
+          },
+          "channel": {
+            "$ref": "#/components/schemas/Channel"
+          }
+        },
+        "required": [
+          "channel",
+          "address"
+        ],
+        "type": "object"
+      },
+      "ConsentFields": {
+        "properties": {
+          "alternateAddress": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/AlternateAddress"
+              }
+            ],
+            "description": "WhatsApp-only consumer identifier (BSUID). When the WhatsApp BSUID feature flag is enabled and `channel=whatsapp`, `address` may be omitted provided this `alternateAddress` is supplied. Rejected with 400 for non-WhatsApp channels or when the feature flag is disabled.\n"
+          },
+          "consent": {
+            "description": "Value indicating whether the consumer approves or disapproves of communication",
+            "example": true,
+            "type": "boolean"
+          },
+          "expires": {
+            "$ref": "#/components/schemas/IsoDate"
+          },
+          "reason": {
+            "description": "Free form text value indicating an arbitrary comment about this record",
+            "example": "Sample comment",
+            "type": "string"
+          },
+          "replaceAlternateAddress": {
+            "default": false,
+            "description": "WhatsApp-only overwrite flag. When `true`, the supplied `alternateAddress` overwrites the existing `alternateAddress` on the consent record. Requires `channel=whatsapp` and a non-empty `alternateAddress`; the API returns 400 otherwise. Ignored when the WhatsApp BSUID feature flag is disabled. Write-only: accepted on requests but never emitted in responses.\n",
+            "example": false,
+            "type": "boolean",
+            "writeOnly": true
+          }
+        },
+        "required": [
+          "consent",
+          "reason"
+        ],
+        "type": "object"
+      },
+      "ConsentRequest": {
+        "allOf": [
+          {
+            "properties": {
+              "address": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Address"
+                  }
+                ],
+                "description": "Address for communications sent on this channel. Required for all channels except `whatsapp`, where it may be omitted provided `alternateAddress` is supplied.\n"
+              },
+              "channel": {
+                "$ref": "#/components/schemas/Channel"
+              }
+            },
+            "required": [
+              "channel"
+            ],
+            "type": "object"
+          },
+          {
+            "$ref": "#/components/schemas/ConsentFields"
+          }
+        ],
+        "description": "Consumer identity and the desired consent value. For `channel=whatsapp` either `address` or `alternateAddress` is required (both may be supplied, and `alternateAddress` / `replaceAlternateAddress` apply to WhatsApp only); for all other channels `address` is required and `alternateAddress` is not applicable.\n",
+        "else": {
+          "required": [
+            "address"
+          ]
+        },
+        "if": {
+          "properties": {
+            "channel": {
+              "const": "whatsapp"
+            }
+          },
+          "required": [
+            "channel"
+          ]
+        },
+        "then": {
+          "anyOf": [
+            {
+              "required": [
+                "address"
+              ]
+            },
+            {
+              "required": [
+                "alternateAddress"
+              ]
+            }
+          ]
+        }
+      },
+      "ConsumerConsent": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/ChannelAddress"
+          },
+          {
+            "$ref": "#/components/schemas/ConsentFields"
+          }
+        ]
+      },
+      "GroupDefault": {
+        "description": "The default control type for addresses to be contacted.",
+        "enum": [
+          "ALLOWLIST",
+          "DENYLIST"
+        ],
+        "example": "ALLOWLIST",
+        "type": "string"
+      },
+      "GroupDefinition": {
+        "description": "Description of a group and its senders",
+        "properties": {
+          "created": {
+            "$ref": "#/components/schemas/IsoDate"
+          },
+          "createdBy": {
+            "description": "Identity to track the creator of the group.",
+            "example": "username@imi.com",
+            "type": "string"
+          },
+          "description": {
+            "description": "A text description for this consent group.",
+            "example": "StoreCo Sale Campaign",
+            "type": "string"
+          },
+          "groupDefault": {
+            "$ref": "#/components/schemas/GroupDefault"
+          },
+          "groupId": {
+            "$ref": "#/components/schemas/GroupId"
+          },
+          "lastUpdated": {
+            "$ref": "#/components/schemas/IsoDate"
+          },
+          "maxFrequencies": {
+            "$ref": "#/components/schemas/MaxFrequencies"
+          },
+          "name": {
+            "description": "The name of the group.",
+            "example": "StoreCo Consent Group",
+            "maxLength": 120,
+            "minLength": 1,
+            "type": "string"
+          },
+          "senders": {
+            "description": "Array of allowed sending addresses for this consent group to send from.",
+            "items": {
+              "$ref": "#/components/schemas/ChannelAddress"
+            },
+            "maxItems": 10,
+            "minItems": 1,
+            "type": "array"
+          },
+          "status": {
+            "$ref": "#/components/schemas/GroupStatus"
+          },
+          "tenantId": {
+            "$ref": "#/components/schemas/TenantId"
+          }
+        },
+        "type": "object"
+      },
+      "GroupId": {
+        "description": "Unique ID of group",
+        "example": "YNN--jY3ehD73SJ6",
+        "type": "string"
+      },
+      "GroupStatus": {
+        "description": "The state of the group to indicate if currently active or updatable.",
+        "enum": [
+          "ENABLED",
+          "DISABLED"
+        ],
+        "example": "ENABLED",
+        "type": "string"
+      },
+      "IsoDate": {
+        "description": "ISO8601 formatted date and time",
+        "example": "2020-07-13T21:21:32Z",
+        "type": "string"
+      },
+      "MaxFrequencies": {
+        "description": "Array of objects describing the maximum frequency of contacts for a given channel over a given period of time.",
+        "items": {
+          "$ref": "#/components/schemas/MaxFrequency"
+        },
+        "maxItems": 10,
+        "minItems": 0,
+        "type": "array"
+      },
+      "MaxFrequency": {
+        "description": "Describes the maximum frequency of contacts for a given channel over a given period of time.",
+        "properties": {
+          "channel": {
+            "$ref": "#/components/schemas/Channel"
+          },
+          "maxCount": {
+            "description": "The maximum number of contacts for a unit of time.",
+            "example": 100,
+            "maximum": 5000,
+            "minimum": 1,
+            "type": "integer"
+          },
+          "period": {
+            "description": "The unit of time based on the UTC calendar the maximum count applies to.",
+            "enum": [
+              "DAY",
+              "WEEK",
+              "MONTH"
+            ],
+            "example": "DAY",
+            "type": "string"
+          }
+        },
+        "required": [
+          "maxCount",
+          "period",
+          "channel"
+        ],
+        "type": "object"
+      },
+      "MaxFrequencyResponse": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/MaxFrequency"
+          },
+          {
+            "properties": {
+              "count": {
+                "description": "The current frequency counter for this consumer for the specified period and channel.",
+                "example": 25,
+                "minimum": 0,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "count"
+            ],
+            "type": "object"
+          }
+        ]
+      },
+      "Metadata": {
+        "description": "Optional fields to store extra data along with the consent change request",
+        "properties": {
+          "campaign": {
+            "description": "An identifier of the campaign that is associated with the consent change request.",
+            "example": "Demo Broadcast",
+            "type": "string"
+          },
+          "keyword": {
+            "description": "Any arbitrary keyword associated with the consent change request.",
+            "example": "Demo",
+            "type": "string"
+          },
+          "messageBody": {
+            "description": "The message received from the consumer that prompted the change in consent.",
+            "example": "yes",
+            "type": "string"
+          },
+          "source": {
+            "description": "The source that prompted the consent change.",
+            "example": "Magazine",
+            "type": "string"
+          }
+        },
+        "title": "metadata",
+        "type": "object"
+      },
+      "Name": {
+        "description": "The unique name of the group.",
+        "example": "StoreCo Consent Group",
+        "maxLength": 128,
+        "minLength": 1,
+        "type": "string"
+      },
+      "NotificationSubscription": {
+        "description": "Defines the properties related to a notification subscription.",
+        "properties": {
+          "authId": {
+            "description": "The ID to be used for making the callback. If not provided, the callback will proceed without authorization. To obtain an authorization ID, add an authorization under the Assets -> Integrations section. A unique authorization ID will be generated and displayed on the Authorization listing page, which must be included in this API call.",
+            "example": 1234,
+            "type": "integer"
+          },
+          "calbackUrl": {
+            "description": "The URL that will get the callback",
+            "example": "https://webhook.example.com/notify",
+            "type": "string"
+          }
+        },
+        "required": [
+          "callbackUrl"
+        ],
+        "type": "object"
+      },
+      "Sender": {
+        "properties": {
+          "address": {
+            "$ref": "#/components/schemas/Address"
+          },
+          "channel": {
+            "$ref": "#/components/schemas/Channel"
+          }
+        },
+        "required": [
+          "channel"
+        ],
+        "type": "object"
+      },
+      "TenantId": {
+        "description": "A tenant id.",
+        "example": 1050,
+        "type": "string"
+      }
+    },
+    "securitySchemes": {
+      "JWT-Authentication": {
+        "bearerFormat": "JWT",
+        "description": "JWT Token **DEPRECATED**: Use ProfileKey authentication instead.\n\nAn example decoded JWT token body accepted by the application looks like the following:\n\n```javascript\n{\n    \"tenantid\": \"example-tenant-id\", // The ID of a tenant associated with the request.\n    \"roleId\": 1,                     // The ID of the users role where 1=read only, 2=read write, 3=full access.\n    \"iss\": \"IMI\",                    // Identifier of the JWT's issuing service.\n    \"iat\": 1611723014,               // Unix Timestamp in seconds specifying the issued at date.\n    \"exp\": 1611723614                // Unix Timestamp in seconds specifying the expiration date.\n    \"username\": \"jsmith\"             // The username associated with the request (optional field).\n}\n```\n",
+        "scheme": "bearer",
+        "type": "http"
+      },
+      "ProfileKey": {
+        "bearerFormat": "ProfileKey",
+        "description": "Default API authentication method that uses a profile key assigned to a tenant through the connect\nplatform under the Tenant settings.\n\nExample: `0ca67aa4-c800-463f-8180-54412c5f4f4f`\n",
+        "scheme": "bearer",
+        "type": "http"
+      }
+    }
+  },
+  "info": {
+    "description": "This document describes the IMImobile Contact Policy REST API",
+    "title": "Contact Policy API",
+    "version": "@project.version@ <@git.commit.id.describe-short@>",
+    "x-logo": {
+      "altText": "IMI Mobile Logo",
+      "url": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAAAAAAAD/4QBCRXhpZgAATU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAkAAAAMAAAABAAAAAEABAAEAAAABAAAAAAAAAAAAAP/bAEMACwkJBwkJBwkJCQkLCQkJCQkJCwkLCwwLCwsMDRAMEQ4NDgwSGRIlGh0lHRkfHCkpFiU3NTYaKjI+LSkwGTshE//bAEMBBwgICwkLFQsLFSwdGR0sLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLP/AABEIAdoB2gMBIgACEQEDEQH/xAAfAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgv/xAC1EAACAQMDAgQDBQUEBAAAAX0BAgMABBEFEiExQQYTUWEHInEUMoGRoQgjQrHBFVLR8CQzYnKCCQoWFxgZGiUmJygpKjQ1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4eLj5OXm5+jp6vHy8/T19vf4+fr/xAAfAQADAQEBAQEBAQEBAAAAAAAAAQIDBAUGBwgJCgv/xAC1EQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/APXKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiisl/EfhtGdH1O2DozI4JbIZTgg8VcYSn8KuRKpGHxOxrUVSXVdJYKy3cJVgGUgnBB5B6Uv9qaX/wA/UX5n/Cn7Kf8AK/uI+sUv5l96LlFU/wC1NL/5+ovzP+FVpPEXhyJ2jk1K2V1OGUk5B6+lNUaj2i/uD6xS/nX3o1aKit7m2u4Y7i2lWWGQEo6fdYA44qWs2mnZmqaaugooopDCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK4rxZ4nktS+mac7LOVH2i4Xgxg/wRH19T2+vTehQnXnyQOfEYiGHhzzO1ork/C/ihNSVLG+cLfouI3OAtyoH/oXqO/8ALrKmtRlRlyTKoV4V4KcHoFeHXv8Ax+6h/wBfdz/6Navca8Ovf+P3UP8Ar7uf/RrV6+UfFP5HiZ58MPmdBotx51r5TH57c7Pqh5X/AArUrktJufs95HuOI5v3T+nPQ/nXWV6NWPLI+eg7oZPKsEUszfdjQsffHQVxTu0rySOcs7M7fUnNb2vX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ABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFAH//2Q=="
+    }
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/v1/groups": {
+      "get": {
+        "description": "This method will return all consent groups with details owned by a calling tenant. *Note-  Replace {your_connecttenant_apidomain } in the URL with your hostname to try this API with your environment. See [Know your endpoint page.](https://developers.webexconnect.io/reference/endpoints)*",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/GroupDefinition"
+                  },
+                  "minItems": 0,
+                  "type": "array"
+                }
+              }
+            },
+            "description": "Array of group definition objects"
+          }
+        },
+        "summary": "Get all consent groups belonging to a tenant.",
+        "tags": [
+          "Groups"
+        ]
+      },
+      "post": {
+        "description": "Use this method for creating a new multi-channel consent group. *Note- Replace {your_connecttenant_apidomain } in the URL with your hostname to try this API with your environment. See [Know your endpoint page.](https://developers.webexconnect.io/reference/endpoints)*",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "createdBy": {
+                    "description": "Identity to track the creator of the group.",
+                    "example": "username@imi.com",
+                    "type": "string"
+                  },
+                  "description": {
+                    "description": "A text description for this consent group.",
+                    "example": "StoreCo Sale Campaign",
+                    "type": "string"
+                  },
+                  "groupDefault": {
+                    "$ref": "#/components/schemas/GroupDefault"
+                  },
+                  "maxFrequencies": {
+                    "$ref": "#/components/schemas/MaxFrequencies"
+                  },
+                  "name": {
+                    "$ref": "#/components/schemas/Name"
+                  },
+                  "senders": {
+                    "description": "Array of allowed sending addresses for this consent group to send from.",
+                    "items": {
+                      "$ref": "#/components/schemas/Sender"
+                    },
+                    "maxItems": 10,
+                    "minItems": 1,
+                    "type": "array"
+                  }
+                },
+                "required": [
+                  "name",
+                  "description",
+                  "senders",
+                  "groupDefault"
+                ],
+                "type": "object"
+              }
+            }
+          },
+          "description": "The request body outlines the desired configuration for a new consent group.",
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "content": {
+              "text/plain": {
+                "example": "YNN--jY3ehD73SJ6",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "description": "Group has been successfully created with the specified ID."
+          }
+        },
+        "summary": "Create a new consent group",
+        "tags": [
+          "Groups"
+        ]
+      }
+    },
+    "/v1/groups/*/members": {
+      "get": {
+        "description": "Returns a list of specific consumer consent definitions from all group(s) owned by the tenant. At least one of `address` or `alternateAddress` must be supplied. *Note-  Replace {your_connecttenant_apidomain } in the URL with your hostname to try this API with your environment. See [Know your endpoint page.](https://developers.webexconnect.io/reference/endpoints)*",
+        "parameters": [
+          {
+            "description": "Specify a particular channel to get consumer details.",
+            "in": "query",
+            "name": "channel",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/Channel"
+            }
+          },
+          {
+            "description": "The specific URL encoded address of the consumer. Either `address` or `alternateAddress` is required.",
+            "example": "%2012125551212",
+            "in": "query",
+            "name": "address",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/Address"
+            }
+          },
+          {
+            "$ref": "#/components/parameters/alternateAddress"
+          },
+          {
+            "$ref": "#/components/parameters/continuationToken"
+          },
+          {
+            "$ref": "#/components/parameters/pageSize"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "allOf": [
+                      {
+                        "$ref": "#/components/schemas/ConsumerConsent"
+                      },
+                      {
+                        "properties": {
+                          "groupId": {
+                            "$ref": "#/components/schemas/GroupId"
+                          }
+                        },
+                        "required": [
+                          "groupId"
+                        ],
+                        "type": "object"
+                      }
+                    ]
+                  },
+                  "minItems": 0,
+                  "type": "array"
+                }
+              },
+              "text/csv": {
+                "example": "\"Address\",\"Channel\",\"TenantId\",\"GroupId\",\"Consent\",\"Expires\",\"LastUpdated\",\"Reason\",\"Keyword\",\"Campaign\",\"Source\"\n\"consumer@example.com\",\"EMAIL\",\"1117\",\"YNN--jY3ehD73SJ6\",\"true\",\"2020-12-23T17:01:09.876Z\",\"2020-12-23T16:56:26.257Z\",\"\",\"demo\",\"My campaign\",\"magazine\",\"yes\"\n\"consumer@example.com\",\"EMAIL\",\"1117\",\"pxJlOIjzQGuYbaykdrN12g\",\"true\",\"2020-12-23T17:01:09.876Z\",\"2020-12-23T16:56:26.257Z\",\"\",\"demo\",\"My campaign\",\"magazine\",\"yes\"\n\"consumer@example.com\",\"EMAIL\",\"1117\",\"KFXY_vkXR96LgFz7gc3IvA\",\"true\",\"2020-12-23T17:01:09.876Z\",\"2020-12-23T16:56:26.257Z\",\"\",\"demo\",\"My campaign\",\"magazine\",\"yes\"\n",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "description": "Consent definition object(s) indicating either positive or negative consent.  If there are no consumers, an empty list will be returned.",
+            "headers": {
+              "X-cp-continue-token": {
+                "$ref": "#/components/headers/X-cp-continuation-token"
+              }
+            }
+          },
+          "404": {
+            "description": "No groups found for the provided tenant ID."
+          }
+        },
+        "summary": "Get all groups for consumer",
+        "tags": [
+          "Consumers"
+        ]
+      },
+      "post": {
+        "description": "Use this method to add or update consent details for the specified consumer in all groups owned by a tenant. *Note-  Replace {your_connecttenant_apidomain } in the URL with your hostname to try this API with your environment. See [Know your endpoint page.](https://developers.webexconnect.io/reference/endpoints)*",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "examples": {
+                "otherChannel": {
+                  "description": "For all non-WhatsApp channels, `address` is required and `alternateAddress` is not applicable.",
+                  "summary": "Other channels (email / text / voice) - address required",
+                  "value": {
+                    "address": "consumer@example.com",
+                    "channel": "email",
+                    "consent": true,
+                    "reason": "Newsletter opt-in"
+                  }
+                },
+                "whatsapp": {
+                  "description": "For `channel=whatsapp`, at least one of `address` or `alternateAddress` is required; both may be supplied.\n",
+                  "summary": "WhatsApp - address and/or alternateAddress",
+                  "value": {
+                    "address": "+12125551212",
+                    "alternateAddress": "US.1234567890123456",
+                    "channel": "whatsapp",
+                    "consent": true,
+                    "reason": "Signed up via WhatsApp"
+                  }
+                }
+              },
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ConsentRequest"
+                  },
+                  {
+                    "properties": {
+                      "metadata": {
+                        "$ref": "#/components/schemas/Metadata"
+                      },
+                      "senderAddress": {
+                        "description": "The address associated with a group's sender. If specified, the consent change request will only apply to all groups that contains a sender's address matching this value.",
+                        "example": "+12125550000",
+                        "type": "string"
+                      }
+                    },
+                    "type": "object"
+                  }
+                ]
+              }
+            }
+          },
+          "description": "Object defining a consumer and the desired consent value",
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "ignored": {
+                      "items": {
+                        "description": "List of group IDs that were unable to be updated and the reason the update was not processed.",
+                        "properties": {
+                          "groupId": {
+                            "$ref": "#/components/schemas/GroupId"
+                          },
+                          "reason": {
+                            "description": "Reason this group was unable to be updated with the requested consent information.",
+                            "enum": [
+                              "INVALID_CHANNEL",
+                              "OTHER"
+                            ],
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "groupId",
+                          "reason"
+                        ],
+                        "type": "object"
+                      },
+                      "minItems": 0,
+                      "type": "array"
+                    },
+                    "updated": {
+                      "description": "List of group IDs where consent was added or changed.",
+                      "items": {
+                        "$ref": "#/components/schemas/GroupId"
+                      },
+                      "minItems": 0,
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "updated",
+                    "ignored"
+                  ],
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Consent added or changed to the following groups.  Any groups that are unable to be updated are listed as well"
+          },
+          "404": {
+            "description": "No groups found for the provided tenant ID."
+          }
+        },
+        "summary": "Add or update consent across all groups.",
+        "tags": [
+          "Consumers"
+        ]
+      }
+    },
+    "/v1/groups/*/members/optOut": {
+      "post": {
+        "description": "Use this method to Opt-out a consumer from all groups under a specified tenant. For DENYLIST groups- Opt-out is applied to all groups, regardless of channel match. For ALLOWLIST groups- Opt-out is applied only to groups where the sender address matches. *Note-  Replace {your_connecttenant_apidomain } in the URL with your hostname to try this API with your environment. See [Know your endpoint page.](https://developers.webexconnect.io/reference/endpoints)*",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "examples": {
+                "otherChannel": {
+                  "description": "For all non-WhatsApp channels, `address` is required and `alternateAddress` is not applicable.",
+                  "summary": "Other channels (email / text / voice) - address required",
+                  "value": {
+                    "address": "consumer@example.com",
+                    "channel": "email",
+                    "consent": false,
+                    "reason": "Opt-out requested"
+                  }
+                },
+                "whatsapp": {
+                  "description": "For `channel=whatsapp`, at least one of `address` or `alternateAddress` is required; both may be supplied.\n",
+                  "summary": "WhatsApp - address and/or alternateAddress",
+                  "value": {
+                    "address": "+12125551212",
+                    "alternateAddress": "US.1234567890123456",
+                    "channel": "whatsapp",
+                    "consent": false,
+                    "reason": "Opt-out requested"
+                  }
+                }
+              },
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ConsentRequest"
+                  },
+                  {
+                    "properties": {
+                      "metadata": {
+                        "$ref": "#/components/schemas/Metadata"
+                      },
+                      "senderAddress": {
+                        "description": "The address associated with a group's sender. Used to filter groups for opt-out. If specified, the consent change request will only apply to all groups that contains a sender's address matching this value.",
+                        "example": "+12125550000",
+                        "type": "string"
+                      }
+                    },
+                    "type": "object"
+                  }
+                ]
+              }
+            }
+          },
+          "description": "Object defining a consumer and the desired consent value",
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "ignored": {
+                      "items": {
+                        "description": "List of group IDs that were unable to be updated and the reason the update was not processed.",
+                        "properties": {
+                          "groupId": {
+                            "$ref": "#/components/schemas/GroupId"
+                          },
+                          "reason": {
+                            "description": "Reason this group was unable to be updated with the requested consent information.",
+                            "enum": [
+                              "INVALID_CHANNEL",
+                              "OTHER"
+                            ],
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "groupId",
+                          "reason"
+                        ],
+                        "type": "object"
+                      },
+                      "minItems": 0,
+                      "type": "array"
+                    },
+                    "updated": {
+                      "description": "List of group IDs where opt-out was applied.",
+                      "items": {
+                        "$ref": "#/components/schemas/GroupId"
+                      },
+                      "minItems": 0,
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "updated",
+                    "ignored"
+                  ],
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Consent updated to the following groups. Any groups that are unable to be updated are listed as well"
+          },
+          "404": {
+            "description": "No groups found for the provided tenant ID."
+          }
+        },
+        "summary": "Opt-out a consumer from all groups.",
+        "tags": [
+          "Consumers"
+        ]
+      }
+    },
+    "/v1/groups/{groupId}": {
+      "delete": {
+        "description": "This method deletes a consent group and all its consumer records for a specified groupId. *Note-  Replace {your_connecttenant_apidomain } in the URL with your hostname to try this API with your environment. See [Know your endpoint page.](https://developers.webexconnect.io/reference/endpoints)*",
+        "responses": {
+          "204": {
+            "description": "Consent group deleted successfully"
+          },
+          "404": {
+            "$ref": "#/components/responses/404GroupNotFound"
+          }
+        },
+        "summary": "Deletes a consent group and all its consumer records.",
+        "tags": [
+          "Groups"
+        ]
+      },
+      "get": {
+        "description": "This method returns a details of a consent group for a specified groupId. *Note-  Replace {your_connecttenant_apidomain } in the URL with your hostname to try this API with your environment. See [Know your endpoint page.](https://developers.webexconnect.io/reference/endpoints)*",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GroupDefinition"
+                }
+              }
+            },
+            "description": "Group definition object"
+          },
+          "404": {
+            "$ref": "#/components/responses/404GroupNotFound"
+          },
+          "410": {
+            "$ref": "#/components/responses/410GroupDeleted"
+          }
+        },
+        "summary": "Get a consent group",
+        "tags": [
+          "Groups"
+        ]
+      },
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/groupId"
+        }
+      ],
+      "put": {
+        "description": "This method updates an existing consent group for a specified groupId. *Note-  Replace {your_connecttenant_apidomain } in the URL with your hostname to try this API with your environment. See [Know your endpoint page.](https://developers.webexconnect.io/reference/endpoints)*",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "description": {
+                    "description": "A text description for this consent group.",
+                    "example": "StoreCo Sale Campaign",
+                    "type": "string"
+                  },
+                  "maxFrequencies": {
+                    "$ref": "#/components/schemas/MaxFrequencies"
+                  },
+                  "name": {
+                    "$ref": "#/components/schemas/Name"
+                  },
+                  "senders": {
+                    "description": "Array of allowed sending addresses for this consent group to send from.",
+                    "items": {
+                      "$ref": "#/components/schemas/Sender"
+                    },
+                    "maxItems": 10,
+                    "minItems": 1,
+                    "type": "array"
+                  },
+                  "status": {
+                    "description": "The state of the group to indicate if currently enabled or disabled.",
+                    "enum": [
+                      "ENABLED",
+                      "DISABLED"
+                    ],
+                    "example": "ENABLED",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "name",
+                  "description",
+                  "senders",
+                  "status"
+                ],
+                "type": "object"
+              }
+            }
+          },
+          "description": "The request body outlines the desired configuration for the consent group.",
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Consent group updated successfully"
+          },
+          "404": {
+            "$ref": "#/components/responses/404GroupNotFound"
+          },
+          "410": {
+            "$ref": "#/components/responses/410GroupDeleted"
+          }
+        },
+        "summary": "Updates an existing consent group.",
+        "tags": [
+          "Groups"
+        ]
+      }
+    },
+    "/v1/groups/{groupId}/counters": {
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/groupId"
+        }
+      ],
+      "post": {
+        "description": "Verifies a given consumer has given consent and increments contact frequency count by one. *Note-  Replace {your_connecttenant_apidomain } in the URL with your hostname to try this API with your environment. See [Know your endpoint page.](https://developers.webexconnect.io/reference/endpoints)*",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "items": {
+                  "properties": {
+                    "address": {
+                      "$ref": "#/components/schemas/Address"
+                    },
+                    "alternateAddress": {
+                      "allOf": [
+                        {
+                          "$ref": "#/components/schemas/AlternateAddress"
+                        }
+                      ],
+                      "description": "WhatsApp-only consumer identifier (BSUID). When the WhatsApp BSUID feature flag is enabled and `channel=whatsapp`, `address` may be omitted provided this `alternateAddress` is supplied.\n"
+                    },
+                    "channel": {
+                      "$ref": "#/components/schemas/Channel"
+                    },
+                    "channelApplyFrequencyCap": {
+                      "description": "true indicates that the verification frequency limit should be checked against this consumer.",
+                      "example": true,
+                      "type": "boolean"
+                    },
+                    "channelCheckConsent": {
+                      "description": "true indicates that the consent record should be validated against the consent group.",
+                      "example": true,
+                      "type": "boolean"
+                    },
+                    "correlationId": {
+                      "description": "An arbitrary ID.",
+                      "example": "d72c3b68-5cef-4da6-95ad-7b969bfef8bc",
+                      "type": "string"
+                    },
+                    "sourceTransId": {
+                      "description": "The transaction ID generated on the calling service.",
+                      "example": "15224da9-9780-432d-855a-cfb3122118a4",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "sourceTransId",
+                    "channel"
+                  ],
+                  "type": "object"
+                },
+                "maxItems": 1,
+                "minItems": 1,
+                "type": "array"
+              }
+            }
+          },
+          "description": "Object defining an individual consumer belonging to the specified group.",
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "properties": {
+                      "address": {
+                        "$ref": "#/components/schemas/Address"
+                      },
+                      "alternateAddress": {
+                        "allOf": [
+                          {
+                            "$ref": "#/components/schemas/AlternateAddress"
+                          }
+                        ],
+                        "description": "WhatsApp-only consumer identifier (BSUID), echoed back when supplied on the request. Omitted for non-WhatsApp callers or when no `alternateAddress` was provided.\n"
+                      },
+                      "channel": {
+                        "$ref": "#/components/schemas/Channel"
+                      },
+                      "code": {
+                        "description": "The application response code indicating success or failure.",
+                        "example": 20001,
+                        "type": "string"
+                      },
+                      "correlationId": {
+                        "description": "An arbitrary ID. This is populated with the value passed into the request.",
+                        "example": "d72c3b68-5cef-4da6-95ad-7b969bfef8bc",
+                        "type": "string"
+                      },
+                      "description": {
+                        "description": "Describes the reason for the application response code.",
+                        "example": "Consumer has consented to message, frequency counter incremented",
+                        "type": "string"
+                      },
+                      "expires": {
+                        "$ref": "#/components/schemas/IsoDate"
+                      },
+                      "groupId": {
+                        "$ref": "#/components/schemas/GroupId"
+                      },
+                      "lastUpdated": {
+                        "$ref": "#/components/schemas/IsoDate"
+                      },
+                      "sourceTransId": {
+                        "description": "The transaction ID generated on the calling service.",
+                        "example": "15224da9-9780-432d-855a-cfb3122118a4",
+                        "type": "string"
+                      },
+                      "transId": {
+                        "description": "The transaction ID generated from this service. Currently the same as the sourceTransId.",
+                        "example": "15224da9-9780-432d-855a-cfb3122118a4",
+                        "type": "string"
+                      },
+                      "verifiedAt": {
+                        "$ref": "#/components/schemas/IsoDate"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  "type": "array"
+                }
+              }
+            },
+            "description": "The 200 Http status encompases all responses that indicate a consumer is allowed to be contacted. There\nare various responses available based on the different states of consent, frequency, and request params.\n\n\nThe following are the application specific response codes:\n\n| code  | Description                                                                     |\n|-------|---------------------------------------------------------------------------------|\n| 20001 | Consumer has consented to message, frequency counter incremented                |\n| 20006 | Frequency cap: The consumer has provided consent, frequency counter incremented |\n| 20010 | Consumer consent is valid, frequencyCap bypassed, frequency counter incremented |\n"
+          },
+          "400": {
+            "description": "The 400 Http status encompases all responses that indicate a consumer should NOT be contacted. There\nare various responses available based on the different states of consent, frequency, and request params.\n\n\nThe following are the application specific response codes:\n\n| code  | Description                                                    |\n|-------|----------------------------------------------------------------|\n| 20002 | Recipient has not consented to message                         |\n| 20003 | Requested consumer was not found in group                      |\n| 20004 | Unable to reach Contact Policy Service, please try again later |\n| 20005 | Invalid or unknown group ID or channel                         |\n| 20007 | Frequency cap: Recipient has exceeded frequency cap            |\n| 20008 | Frequency cap: The group was not found                         |\n| 20012 | Consent check failed, customer consent expired                 |\n"
+          }
+        },
+        "summary": "Verify consent and increment frequency counter.",
+        "tags": [
+          "Consumers"
+        ]
+      },
+      "put": {
+        "description": "Set a consumer's frequency counter to a given value. *Note-  Replace {your_connecttenant_apidomain } in the URL with your hostname to try this API with your environment. See [Know your endpoint page.](https://developers.webexconnect.io/reference/endpoints)*",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ChannelAddress"
+                  },
+                  {
+                    "properties": {
+                      "count": {
+                        "description": "Sets the frequency counter to this value.",
+                        "example": 123,
+                        "type": "number"
+                      },
+                      "period": {
+                        "description": "The period defining which counter should be set.",
+                        "enum": [
+                          "DAY",
+                          "WEEK",
+                          "MONTH"
+                        ],
+                        "example": "DAY",
+                        "type": "string"
+                      }
+                    },
+                    "type": "object"
+                  }
+                ],
+                "required": [
+                  "count",
+                  "period"
+                ]
+              }
+            }
+          },
+          "description": "Object defining an individual consumer belonging to the specified group and desired counter value.",
+          "required": true
+        },
+        "responses": {
+          "204": {
+            "description": "The frequency counter has been updated."
+          },
+          "404": {
+            "$ref": "#/components/responses/404GroupNotFound"
+          },
+          "409": {
+            "description": "The consumer combination was not found in the specified group."
+          }
+        },
+        "summary": "Set frequency counter for consumer.",
+        "tags": [
+          "Consumers"
+        ]
+      }
+    },
+    "/v1/groups/{groupId}/history": {
+      "get": {
+        "description": "Returns the complete history of all additions and updates to consumer consent for a given group, optionally filtered by consumer. *Note-  Replace {your_connecttenant_apidomain } in the URL with your hostname to try this API with your environment. See [Know your endpoint page.](https://developers.webexconnect.io/reference/endpoints)*",
+        "parameters": [
+          {
+            "description": "If specified, will only return history records for consumers on a particular channel.",
+            "in": "query",
+            "name": "channel",
+            "schema": {
+              "$ref": "#/components/schemas/Channel"
+            }
+          },
+          {
+            "description": "If specified, will only return history records for all channels containing the address, if found.",
+            "example": "%2012125551212",
+            "in": "query",
+            "name": "address",
+            "schema": {
+              "$ref": "#/components/schemas/Address"
+            }
+          },
+          {
+            "$ref": "#/components/parameters/alternateAddress"
+          },
+          {
+            "$ref": "#/components/parameters/responseFormat"
+          },
+          {
+            "$ref": "#/components/parameters/continuationToken"
+          },
+          {
+            "$ref": "#/components/parameters/pageSize"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "allOf": [
+                      {
+                        "$ref": "#/components/schemas/ConsumerConsent"
+                      },
+                      {
+                        "properties": {
+                          "timestamp": {
+                            "description": "ISO8601 timestamp of record",
+                            "example": "2020-07-20T21:21:32Z",
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "timestamp"
+                        ],
+                        "type": "object"
+                      }
+                    ]
+                  },
+                  "minItems": 0,
+                  "type": "array"
+                }
+              },
+              "text/csv": {
+                "example": "\"Address\",\"Channel\",\"TenantId\",\"GroupId\",\"Consent\",\"Expires\",\"LastUpdated\",\"Reason\",\"Keyword\",\"Campaign\",\"Source\"\n\"+115551110000\",\"TELEPHONE\",\"1117\",\"YNN--jY3ehD73SJ6\",\"true\",\"2021-01-28T20:55:32.215Z\",\"2021-01-28T20:50:32.354Z\",\"Sample comment 1\",\"\",\"\",\"\",\"\"\n\"+115551110000\",\"TELEPHONE\",\"1117\",\"YNN--jY3ehD73SJ6\",\"true\",\"2021-01-28T20:56:14.308Z\",\"2021-01-28T20:51:14.360Z\",\"Sample comment 1\",\"demo2\",\"My campaign\",\"magazine\",\"yes\"\n",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "description": "Consent definition object(s) indicating either positive or negative consent.  If there are no consumers, an empty list will be returned.",
+            "headers": {
+              "X-cp-continue-token": {
+                "$ref": "#/components/headers/X-cp-continuation-token"
+              }
+            }
+          },
+          "404": {
+            "description": "Invalid or unknown group ID"
+          }
+        },
+        "summary": "Get group consumer history",
+        "tags": [
+          "Consumers"
+        ]
+      },
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/groupId"
+        }
+      ]
+    },
+    "/v1/groups/{groupId}/members": {
+      "delete": {
+        "description": "Use this method for deleting a consent record from the specified group. Identify the consumer by `address`, by `alternateAddress` (WhatsApp only), or by both; at least one is required. *Note-  Replace {your_connecttenant_apidomain } in the URL with your hostname to try this API with your environment. See [Know your endpoint page.](https://developers.webexconnect.io/reference/endpoints)*",
+        "parameters": [
+          {
+            "description": "The specific URL encoded address of the consumer which needs to be deleted. Either `address` or `alternateAddress` is required.",
+            "example": "%2012125551212",
+            "in": "query",
+            "name": "address",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/Address"
+            }
+          },
+          {
+            "description": "If specified, will delete consent of the particular channel.",
+            "in": "query",
+            "name": "channel",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/Channel"
+            }
+          },
+          {
+            "$ref": "#/components/parameters/alternateAddress"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/ConsumerConsent"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                }
+              }
+            },
+            "description": "The consent has been deleted. Returns the deleted consent record(s)."
+          },
+          "404": {
+            "$ref": "#/components/responses/404GroupNotFound"
+          }
+        },
+        "summary": "Delete a consumer from a consent group",
+        "tags": [
+          "Consumers"
+        ]
+      },
+      "get": {
+        "description": "Queries a given group for consent records, optionally specifying an individual consumer.  Response may be returned as JSON or CSV format. *Note-  Replace {your_connecttenant_apidomain } in the URL with your hostname to try this API with your environment. See [Know your endpoint page.](https://developers.webexconnect.io/reference/endpoints)*",
+        "parameters": [
+          {
+            "description": "If specified, will only return consent definitions for consumers on a particular channel",
+            "in": "query",
+            "name": "channel",
+            "schema": {
+              "$ref": "#/components/schemas/Channel"
+            }
+          },
+          {
+            "description": "If specified, will return consent definitions for all channels containing a single consumer address if found.",
+            "example": "%2012125551212",
+            "in": "query",
+            "name": "address",
+            "schema": {
+              "$ref": "#/components/schemas/Address"
+            }
+          },
+          {
+            "$ref": "#/components/parameters/alternateAddress"
+          },
+          {
+            "$ref": "#/components/parameters/consentStatus"
+          },
+          {
+            "$ref": "#/components/parameters/responseFormat"
+          },
+          {
+            "$ref": "#/components/parameters/continuationToken"
+          },
+          {
+            "$ref": "#/components/parameters/pageSize"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "allOf": [
+                      {
+                        "$ref": "#/components/schemas/ConsumerConsent"
+                      },
+                      {
+                        "properties": {
+                          "frequencies": {
+                            "description": "Array of objects describing the maximum and current frequency of contacts for a given channel over a given period of time.",
+                            "items": {
+                              "$ref": "#/components/schemas/MaxFrequencyResponse"
+                            },
+                            "maxItems": 10,
+                            "minItems": 0,
+                            "type": "array"
+                          },
+                          "lastUpdated": {
+                            "description": "ISO8601 timestamp of last update time of the consent value",
+                            "example": "2020-07-20T21:21:32Z",
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "lastUpdated"
+                        ],
+                        "type": "object"
+                      }
+                    ]
+                  },
+                  "minItems": 0,
+                  "type": "array"
+                }
+              },
+              "text/csv": {
+                "example": "\"Address\",\"Channel\",\"TenantId\",\"GroupId\",\"Consent\",\"Expires\",\"LastUpdated\",\"Reason\",\"Keyword\",\"Campaign\",\"Source\"\n\"+115551110000\",\"TELEPHONE\",\"1117\",\"YNN--jY3ehD73SJ6\",\"true\",\"2021-01-28T20:56:14.308Z\",\"2021-01-28T20:51:14.352Z\",\"Sample comment 1\",\"demo2\",\"My campaign\",\"magazine\",\"yes\"\n",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "description": "Consent definition object(s) indicating either positive or negative consent.  If there are no consumers, an empty list will be returned.",
+            "headers": {
+              "X-cp-continue-token": {
+                "$ref": "#/components/headers/X-cp-continuation-token"
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/404GroupNotFound"
+          }
+        },
+        "summary": "Get group member(s)",
+        "tags": [
+          "Consumers"
+        ]
+      },
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/groupId"
+        }
+      ],
+      "post": {
+        "description": "Use this method to add or update consent details in the specified group. For `channel=whatsapp` either `address` or `alternateAddress` is required; for all other channels `address` is required and `alternateAddress` is not applicable. *Note-  Replace {your_connecttenant_apidomain } in the URL with your hostname to try this API with your environment. See [Know your endpoint page.](https://developers.webexconnect.io/reference/endpoints)*\n",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "examples": {
+                "otherChannel": {
+                  "description": "For all non-WhatsApp channels, `address` is required and `alternateAddress` is not applicable.",
+                  "summary": "Other channels (email / text / voice) - address required",
+                  "value": {
+                    "address": "consumer@example.com",
+                    "channel": "email",
+                    "consent": true,
+                    "reason": "Newsletter opt-in"
+                  }
+                },
+                "whatsapp": {
+                  "description": "For `channel=whatsapp`, at least one of `address` or `alternateAddress` is required; both may be supplied (as shown here).\n",
+                  "summary": "WhatsApp - address and/or alternateAddress",
+                  "value": {
+                    "address": "+12125551212",
+                    "alternateAddress": "US.1234567890123456",
+                    "channel": "whatsapp",
+                    "consent": true,
+                    "reason": "Signed up via WhatsApp"
+                  }
+                }
+              },
+              "schema": {
+                "$ref": "#/components/schemas/AddOrUpdateConsentRequest"
+              }
+            }
+          },
+          "description": "A consumer and the desired consent value",
+          "required": true
+        },
+        "responses": {
+          "204": {
+            "description": "Consent added or changed"
+          },
+          "404": {
+            "$ref": "#/components/responses/404GroupNotFound"
+          },
+          "409": {
+            "description": "Invalid channel type for requested group"
+          }
+        },
+        "summary": "Add or update consent",
+        "tags": [
+          "Consumers"
+        ]
+      }
+    },
+    "/v1/groups/{groupId}/members/count": {
+      "get": {
+        "description": "Queries a given group for the count of consent records. *Note-  Replace {your_connecttenant_apidomain } in the URL with your hostname to try this API with your environment. See [Know your endpoint page.](https://developers.webexconnect.io/reference/endpoints)*",
+        "parameters": [
+          {
+            "description": "If specified, the count will be restricted to the amount for a specific channel.",
+            "in": "query",
+            "name": "channel",
+            "schema": {
+              "$ref": "#/components/schemas/Channel"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "optedIn": {
+                      "description": "The count of consumers opted into the group.",
+                      "example": 115,
+                      "type": "integer"
+                    },
+                    "optedOut": {
+                      "description": "The count of consumers opted out of the group.",
+                      "example": 36,
+                      "type": "integer"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "The count of group members separated by consent status."
+          },
+          "404": {
+            "description": "Invalid or unknown group ID"
+          }
+        },
+        "summary": "Get group membership count",
+        "tags": [
+          "Consumers"
+        ]
+      },
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/groupId"
+        }
+      ]
+    },
+    "/v1/groups/{groupId}/notifications": {
+      "delete": {
+        "description": "Removes the notification subscription for the specified group. *Note-  Replace {your_connecttenant_apidomain } in the URL with your hostname to try this API with your environment. See [Know your endpoint page.](https://developers.webexconnect.io/reference/endpoints)*",
+        "responses": {
+          "204": {
+            "description": "The notification subscription has been removed from the group."
+          },
+          "404": {
+            "$ref": "#/components/responses/404GroupNotFound"
+          }
+        },
+        "summary": "Deletes a subscription",
+        "tags": [
+          "Notifications"
+        ]
+      },
+      "get": {
+        "description": "Gets the notification subscriptions for the specified. *Note-  Replace {your_connecttenant_apidomain } in the URL with your hostname to try this API with your environment. See [Know your endpoint page.](https://developers.webexconnect.io/reference/endpoints)*",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/NotificationSubscription"
+                  },
+                  "type": "array"
+                }
+              }
+            },
+            "description": "The subscription was successfully returned."
+          },
+          "404": {
+            "$ref": "#/components/responses/404GroupNotFound"
+          }
+        },
+        "summary": "Get notification subscriptions",
+        "tags": [
+          "Notifications"
+        ]
+      },
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/groupId"
+        }
+      ],
+      "post": {
+        "description": "Adds a new notification subscription when one does not exist or replaces the existing one if it exists.\nOnly one is allowed per group. *Note-  Replace {your_connecttenant_apidomain } in the URL with your hostname to try this API with your environment. See [Know your endpoint page.](https://developers.webexconnect.io/reference/endpoints)*\n\n**Notification Callback Example**\n\nWhen a consent event occurs, the system will POST a notification to the configured `callbackUrl`.  \nThe notification object sent to the callback URL contains the following fields:\n\n```json\n[\n  {\n    \"url\": \"https://01k20e3cavd42anqjebpay672m00-6e93043ee858c487ce1c.requestinspector.com\",\n    \"request_method\": \"POST\",\n    \"request_header\": \"Content-Type=application/json\",\n    \"request_body\": \"{\\\"eventType\\\":\\\"CONSENT_REVOKED\\\",\\\"channel\\\":\\\"text\\\",\\\"address\\\":\\\"+15559110000\\\",\\\"groupId\\\":\\\"di5h-Rg0QdGlGFd1bCAmxA\\\",\\\"reason\\\":\\\"Sample comment 1\\\",\\\"timestamp\\\":\\\"2025-08-06T19:39:15.806780100Z\\\"}\",\n    \"req_origin_time\": \"2025-08-06T19:39:15.92161Z\",\n    \"source\": \"10\",\n    \"handler_class\": \"UMPNotifyHandler\",\n    \"txn_log_level\": 2,\n    \"trans_id\": \"153dfa6a-91dd-4a81-9fc1-89037d15b171\",\n    \"app_id\": \"1234\",\n    \"is_authorization_enabled\": 1, //If authorization is disabled, this field will be 0\n    \"authorization_id\": 1234, //If authorization is disabled, this field will be 0\n    \"clientId\": \"12345\"\n  }\n]\n```\n\n**Fields of the Main Notification Object**\n\n| Field                   | Type    | Description                                                        |\n|------------------------ |---------|--------------------------------------------------------------------|\n| url                     | String  | The third party's callback URL.                                    |\n| request_method          | String  | The HTTP method used for the callback (e.g., POST).                |\n| request_header          | String  | The HTTP request headers, typically as a key-value string.         |\n| request_body            | String  | The request body sent to the third party, usually an escaped JSON string. This contains the specific event details. |\n| req_origin_time         | Instant | The time the request originated.                                   |\n| source                  | String  | The source of the notification.                                    |\n| handler_class           | String  | The handler class name for processing the notification.            |\n| txn_log_level           | int     | Transaction log level for auditing.                                |\n| trans_id                | String  | Transaction ID for tracking the request.                           |\n| app_id                  | String  | Application ID associated with the request.                        |\n| is_authorization_enabled| int     | Flag indicating if authorization is enabled (1 for true, 0 for false). This field is enabled only if 'authId' is specified in the API. |\n| authorization_id        | int     | Authorization ID is populated only if 'authId' is specified in the API. |\n| clientId                | Integer | Client/tenant identifier.                                          |\n\n**Fields within the request_body (Callback Request Body)**\n\nThe `request_body` field in the main notification object is a stringified JSON, which contains the following fields with details about the specific consent event:<br><br>\n**Note:** *The maximum length allowed for a phone number-type address is 15 characters, excluding the '+' sign. There is no length restriction for other address types such as email and other fields like reason, keyword, campaign, and source.*\n\n| Field      | Type                   | Description                                                                 |\n|------------|------------------------|-----------------------------------------------------------------------------|\n| eventType  | NotificationEventType  | Type of consent event (e.g., CONSENT_PROVIDED, CONSENT_REVOKED, CONSENT_DELETED). |\n| channel    | String                 | Communication channel (e.g., text, email).                                  |\n| address    | Address                | Consumer's address (e.g., phone number, email address).                     |\n| alternateAddress | Address          | WhatsApp-only consumer identifier (BSUID). Present only for WhatsApp records when the BSUID feature flag is enabled; omitted otherwise. |\n| groupId    | String                 | Identifier for the group associated with the consent.                       |\n| reason     | String                 | Reason for the consent change.                                              |\n| keyword    | String                 | Keyword associated with the consent (optional, from metadata).              |\n| campaign   | String                 | Campaign identifier (optional, from metadata).                              |\n| source     | String                 | Source of the consent change (optional, from metadata).                     |\n| timestamp  | Instant                | Time when the consent change occurred.                                      |\n",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NotificationSubscription"
+              }
+            }
+          },
+          "description": "The request body outlines the desired configuration for the notification subscription.",
+          "required": true
+        },
+        "responses": {
+          "204": {
+            "description": "The subscription was successfully saved."
+          },
+          "404": {
+            "$ref": "#/components/responses/404GroupNotFound"
+          }
+        },
+        "summary": "Add or update a subscription",
+        "tags": [
+          "Notifications"
+        ]
+      }
+    }
+  },
+  "security": [
+    {
+      "ProfileKey": []
+    },
+    {
+      "JWT-Authentication": []
+    }
+  ],
+  "servers": [
+    {
+      "description": "Enter your own API host",
+      "url": "https://{your_connecttenant_apidomain }",
+      "variables": {
+        "customerHost": {
+          "default": "example.com",
+          "description": "Your base domain (e.g., api.mycompany.com)"
+        }
+      }
+    }
+  ],
+  "tags": [
+    {
+      "description": "The group service exposes endpoints for managing group policies.",
+      "name": "Groups"
+    },
+    {
+      "description": "The consumer service exposes endpoints to manage the consent status of a given consumer for a\ngroup policy. In addition, it allows for verifying if the consumer can be contacted based on various\nfactors including the consent policy configuration, the consumers consent status, and the\namount of times they have already been checked for consent.\n",
+      "name": "Consumers"
+    },
+    {
+      "description": "The notification service allows an external service to subscribe to events of a specific\ngroup policy to receive callbacks when the events occur.\n",
+      "name": "Notifications"
+    }
+  ],
+  "x-readme": {
+    "explorer-enabled": true,
+    "proxy-enabled": true
+  }
+}

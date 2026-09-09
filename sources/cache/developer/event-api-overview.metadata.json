@@ -1,0 +1,32 @@
+{
+  "api_metadata_path": "sources/cache/developer/event-api-overview.api.json",
+  "category": "EVENT API",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f64e1",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "50c017e75df8d2663a112984da21c285458ec5448c8b73046d486f7d5e6f4730",
+    "source_path": "1cfe9cf20aa00126e57abc04577280475b6dfa8624bd71b6782866b7d6f6af5c",
+    "text_path": "e23741444828eea7baae964c384844cf8bef70479974d7f6cc1e9a6e360e87b7"
+  },
+  "headings": [],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/event-api-overview.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/event-api-overview",
+  "retrieved_at": "2026-09-08T23:31:49+00:00",
+  "sha256_api_metadata": "f909c5a75d74b07c7be254224c5da1f03d295b5fdb687f94e0d82fe1a0c930a1",
+  "sha256_html_response": "eaeba2d60a96a2fdddd0467b1a560bc0e4672ab58b0f7f29266bbb8bedf3f815",
+  "sha256_source_body": "1cfe9cf20aa00126e57abc04577280475b6dfa8624bd71b6782866b7d6f6af5c",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/event-api-overview.source.md",
+  "source_updated_at": "2023-12-06T12:52:30.971Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/event-api-overview.txt",
+  "title": "Overview",
+  "url": "https://developers.webexconnect.io/reference/event-api-overview",
+  "word_count": 536,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/event-api-overview.metadata.json"
+}

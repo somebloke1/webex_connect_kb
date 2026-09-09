@@ -1,0 +1,36 @@
+{
+  "category": "TOOLS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257853",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "2e509db968ea26a26e92c7cdf3b248b03d528cfe3cb4371d4b7c28aff321d7b3",
+    "source_path": "f6a6bce643c8288116e093a30af0097a12cb143386e865db79112b33a779c687",
+    "text_path": "ae292573f9c6962409b34a378fc592d79f740caaab45247b8e5c9c817e18a7d8"
+  },
+  "headings": [
+    "❗️Important",
+    "📘Logbooks for BI Reporting",
+    "📘Accessing Reports built using Embedded BI Feature",
+    "Logbook Usage"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/enable-logbooks-for-bi-reporting.md",
+  "resolved_url": "https://help.webexconnect.io/docs/enable-logbooks-for-bi-reporting",
+  "retrieved_at": "2026-09-08T23:29:35+00:00",
+  "sha256_html_response": "d8200e94f54cf4da2984c864201e23a85c2ac27556d2754e98b13f1c949eea05",
+  "sha256_source_body": "f6a6bce643c8288116e093a30af0097a12cb143386e865db79112b33a779c687",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/enable-logbooks-for-bi-reporting.source.md",
+  "source_updated_at": "2025-03-01T17:05:49.867Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/enable-logbooks-for-bi-reporting.txt",
+  "title": "Enable Logbooks for BI Reporting",
+  "url": "https://help.webexconnect.io/docs/enable-logbooks-for-bi-reporting",
+  "word_count": 691,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/enable-logbooks-for-bi-reporting.metadata.json"
+}

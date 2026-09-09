@@ -1,0 +1,688 @@
+> 📘 Note
+> 
+> This page covers the documentation for the new/advanced Export Logs interface that was launched in <<prodname>> release v5.6.3 in April 2022.
+
+The Export Logs page is divided into the following two tabs and sections within:
+
+- [Download / Export](https://help.imiconnect.io/docs/new-export-logs#download--export-logs): You can download or export outbound logs, inbound logs, outbound webhooks failed notification logs, and view recently downloaded and exported logs. You can download Export Logs with the following methods:
+  - [Direct Download](https://help.imiconnect.io/docs/new-export-logs#direct-download) - allows you to download a local copy of the logs.
+  - [Export to SFTP / S3](https://help.imiconnect.io/docs/new-export-logs#export-to-sftps3) - allows you to schedule a one-time export to SFTP or S3 location.
+- [Schedule Export](https://help.imiconnect.io/docs/new-export-logs#schedule-export): You can schedule the export of logs set at the desired frequency and duration.
+
+> 📘 Export Logs - Transaction Details
+> 
+> Please note that the Export Logs contain Outbound logs (DRs), Inbound logs, and failed outbound webhook logs. They do not contain details of any flow execution failures caused due to non-messaging nodes.
+
+## Download / Export Logs
+
+This tab allows you to download export logs for inbound, outbound transactions, and outbound webhooks failed notifications. The tab also allows scheduling a one-time logs export to a S3 or SFTP location.
+
+> 📘 Note
+> 
+> - The time taken to prepare the zip file for download depends on the number of records in the file. In the case of a large number of records, it can take up to 30 minutes.
+
+> 🚧 Limitations
+> 
+> The multi-select option of Export Logs is not supported in the Azure environment.
+
+### Direct Download (Download a local copy)
+
+You can directly download the logs on to your local system by using one of the two methods below.
+
+- To download outbound logs, select one or more Services, one or more Channels, the required Period, and then click **Download**.
+- To download inbound logs, select one or more Numbers or Apps, one or more Channel Events, the required Period, and then click **Download**.
+- To download outbound webhooks failed notifications logs, select one or more Outbound Webhook, the required Period, and then click **Download**.
+
+#### Export Logs with Multi-select
+
+New export logs with multi-select in services, channels, number or apps, channel events, outbound webhooks, etc allow the download of 100 million records per download request.
+
+The legacy export logs allow only the download of 10 million records per download request.
+
+#### Multi-select option
+
+- If the multi-select option of Service, channels, Number or app, channel events, and outbound webhooks is enabled for your tenant, you can select multiple services and channels for Outbound logs, multiple apps, assets, or numbers and channels for Inbound logs, or multiple outbound webhooks for Outbound Webhooks failed notifications logs. If the multi-select option is enabled, you will be allowed to download up to 100 million records per download request.
+- If the multi-select option is not available for Service, channels, Number or app, channel events, and outbound webhooks, then you can download up to 10 million records per selection by using the UI-based download option.
+
+> 📘 Note
+> 
+> The contact policy is available only for new export logs and is not available for legacy export logs.
+> 
+> All new export log clients have multi-select enabled.
+
+> 📘 Note
+> 
+> Outbound webhook failed notification logs are only available for new export logs download.
+
+Here are the various statuses that appear in relation to the options selected, while performing the download operation:
+
+- **Pending**: After you click the **Download** option, a new entry is created under the **Recent Downloads**/ **Exports** section, indicating the status of download as '**Pending**'. In a few seconds, the status changes to '**Preparing for download**'.
+- **Ready for download**: After the file is ready to download the status changes to '**Ready for download**' and the download icon appears in the Status column against the entry. Click the download icon to start the download of a .zip file (containing the transaction logs) to your local system.
+- **No Records**: If the log does not have any records, the status changes to No Records.
+
+> 📘 Expected latency for downloading a large number of records
+> 
+> The time required to prepare the .zip file for download depends on the number of records it contains. For files with a large number of records (>10 million), the process may take up to 30 minutes.
+
+#### Records in the Recent Downloads / Exports
+
+A list of recent 20 downloads appears under the **Recent Downloads** section. For each of the log files, this section shows the system-generated name of the download action, download type (Download via URL is a direct download to the local system, exported to S3 is a one-time export to S3), number of records within the log files, and the timestamp at which the log file download was initiated.
+
+##### Download Export logs limits and naming convention
+
+- **Legacy Export Logs**: Each download request can contain up to 10 million records. The downloaded .zip file will include a single CSV file. The naming convention for Zip is Logs-timestamp-UniqueID.zip. Here's an example for an Outbound export logs download using legacy export  - Logs-2024-05-30T200710.010-ea79ea7b-f65d-4c67-9bd8-f8662715b1b5.zip.
+- **New Export Logs**: Each download request can contain up to 100 million records. The downloaded .zip file may include one or more CSV files. Inbound and Outbound Export Logs: A CSV file is created for each selected channel, with an additional CSV file for every million records per channel. For example, if you download an outbound log and select 5 services and 3 channels (SMS, RCS, and WhatsApp), the .zip file will have at least 3 files, one for each channel. If any channel has more than 1 million records for the selected period, additional files will be created for that channel. An example of the naming convention used for the zip and files is -  
+  Zip name - filename_datetimestamp.zip , Example - filename_2025-12-03T080006+0000.zip  
+  Filename inside zip - filename_channelname_1_datetimestamp.csv, Example - filename_channelname_1_YYYY-MM-DDThhmmss+0000.csv
+- **Outbound Webhook Failed Notification Logs**: A CSV file is created for each selected outbound webhook. If an outbound webhook has more than one million records, additional files are created for every million failed records for that outbound webhook. An example of the naming convention used for the zip and files is -  
+  Zip name -Logs-timestamp-uniqueid.zip ,  Example - Logs-2024-05-30t200710.010-ea79ea7b-f65d-4c67-9bd8-f8662715b1b5.zip  
+  Filename inside zip - Logs-generationtimestamp-uuid-Outbound webhookname-1.csv, Example - Logs-2024-05-30T200039.039-6d416abb-e7ac-4ecd-9d40-cf5e388feb46-OutboundWebhook-1.csv
+
+> 📘 Channels not supported
+> 
+> Export Logs capability is not available for Instagram.
+
+[block:image]
+{
+  "images": [
+    {
+      "image": [
+        "https://files.readme.io/d0af276-d9af908-Export_Logs1.jpg",
+        "",
+        "Screenshot of Export Logs"
+      ],
+      "align": "center",
+      "border": true,
+      "caption": "Screenshot of Export Logs"
+    }
+  ]
+}
+[/block]
+
+
+### WhatsApp Channel Impact
+
+#### Phone Number (WAID) Continuity:
+
+Phone numbers will only be shared for customers if:
+
+- If a business has messaged/called the customer within the last 30 days.
+- The customer has messaged/called the business within the last 30 days.  
+  The customer contact information is in the businesses’s Contact Book or the businesses contact information is in that of customers'.
+- The Export Logs can be used to export the logs for the last 30 days.
+
+Guidelines for Webex Connect Clients
+
+To ensure your records are up-to-date and your operations remain uninterrupted, please follow these steps to export and analyze your interaction logs for the period of April 1, 2026, through June 2026.
+
+#### Configuring the Export
+
+1. Define the Date Range for Inbound and Outbound Logs.
+2. Ensure that your export includes fields for the BSUID and the Customer Phone Number.
+3. Initiate the download to receive a CSV/data file containing your interaction history.  
+   Analyzing and Updating
+
+Ensure that the BSUID are populated in your internal database or CRMs. Compare the exported list against your current CRM or internal database.
+
+**Example**:
+
+If the downloaded Export Logs has data for 100 customers and only 70 customers have exchanged messages with your organization, then clients can initiate interactions with the remaining 30 customers in order to maintain Phone Number (WAID) Continuity.  
+Refer to the WhatsApp Usernames and Business-Scoped User IDs (BSUID) article for more information on BSUID mapping with phone numbers.
+
+#### Other general guidelines:
+
+- Proactive Mapping: Do not wait for the full rollout of the Username feature in June. By populating your Contact Book in advance of the Username feature rollout, you ensure that your existing workflows remain functional regardless of changes in Meta’s payload structure.
+- Regular Audits: Schedule periodic log exports to identify customer data that is not part of the Contact Book and capture new customer interactions beyond June 2026 to keep your Contact Book updated from time to time.
+- Security Note: Ensure that all exported logs are handled in accordance with your organization’s data privacy and security policies, as these files contain sensitive customer contact information. Any breach in the data privacy and security policies defeat the purpose of safeguarding the customer’s private data.
+
+For more information on BSUID and Contact Book, refer to [WhatsApp Usernames and Business-Scoped User IDs (BSUID)](https://help.webexconnect.io/v6.17.0/docs/whatsapp-usernames-and-business-scoped-user-ids-bsuid) article.
+
+### Configure one-time Export Logs schedule to SFTP/S3
+
+> 📘 Note
+> 
+> This feature is not enabled for all tenants by default. Please reach out to your account manager if you would like to get the 'Download and Schedule Export Logs to SFTP/AWS S3' options enabled for your tenant.
+
+The **Export to SFTP/S3** option allows you to configure a one-time export of the logs to an SFTP or AWS S3 location.
+
+To export the logs to SFTP/S3:
+
+1. Navigate to **Export Logs** pages available under **Tools**.
+
+[block:image]
+{
+  "images": [
+    {
+      "image": [
+        "https://files.readme.io/4fb73bd-1.png",
+        "",
+        "Image illustrating navigation to the Export Logs page within the Tools section"
+      ],
+      "align": "center",
+      "sizing": "200px",
+      "border": true,
+      "caption": "Screenshot showing how to select the Export Logs in the Tools section"
+    }
+  ]
+}
+[/block]
+
+
+2. On the **Download/Export** tab, click **Export to SFTP/S3** under **Download**.
+
+[block:image]
+{
+  "images": [
+    {
+      "image": [
+        "https://files.readme.io/1ff091a-2.png",
+        "",
+        "Snapshot showing how to select the 'Export to SFTP/S3' option."
+      ],
+      "align": "center",
+      "border": true,
+      "caption": "Screenshot showing how to select the Export to SFTP/S3 option"
+    }
+  ]
+}
+[/block]
+
+
+The Export logs page is displayed.
+
+[block:image]
+{
+  "images": [
+    {
+      "image": [
+        "https://files.readme.io/b0155ed-3.png",
+        "",
+        "Screenshot displaying the Export Log page"
+      ],
+      "align": "center",
+      "border": true,
+      "caption": "Screenshot displaying the Export Log page"
+    }
+  ]
+}
+[/block]
+
+
+3. On the Export Log page, 
+   - To download outbound logs, select **Outbound logs**, one or more **Services**, one or more **Channels**, the required **Period**, and then click **Download**.
+   - To download inbound logs, select **Inbound logs**, one or more **Numbers** or **Apps**, one or more C**hannel Events**, the required **Period**, and then click **Download**.
+   - To download outbound webhook failed notifications, select **Outbound Webhook Failed Notification Logs**, one ore more **Outbound Webhooks**, the required **Period**, and then click **Download**.
+4. Under the **File Settings** section, select the file type (CSV File (.csv) or Text File (.txt)) from the dropdown.
+5. Enter an appropriate file name. To avoid any cross-tenant data issues, duplicate file names are not allowed. If you are receiving an error File name is already used, try a different filename.
+6. Select a **Delimiter** (tab, semi-colon, space, comma, or other).
+
+> 📘 Note
+> 
+> If you select **Other** as **Delimiter**, enter the delimiter in the space provided.
+
+7. Select the required options for your export file from the following:
+   - Include column headers
+   - Add end of file
+   - Password protects my file
+8. Select SFTP or AWS S3 from the File Destination dropdown.
+   1. For SFTP:
+      1. Enter the **User Name**, **Password**, **Host Name**, **Port Name**, **Path Name**.
+      2. Enter **File Export Notify URL**.
+      3. Enter the email address in the **Notify on Email** textbox.
+      4. Click **Upload** to upload the private key (example: AWS-based Open SSH key files like rsa512.ppk, rsa256.ppk, ecdsa521.ppk, ecdsa384.ppk, ecdsa256.ppk, ed25519.ppk, ECDSAprivate.ppk, EDDSA255private.ppk), if applicable.
+   2. For AWS S3:
+      1. Enter the **User Name**, **Bucket Name**, **Access Key**, **Secret Key**, and **Region**.
+      2. Enter **File Export Notify URL**.
+      3. Enter the email address in the **Notify on Email** textbox.
+9. Click **Export**.  
+   You will be redirected to the Download / Export tab, and you can see a new entry created in the ‘**Recent Downloads/Exports**’.  
+   Here are the various statuses that appear in relation to the options selected, while performing the export operation:
+   - **Pending**: The status of export may show **Pending** depending on the number of recent logs. After a few minutes, the status is updated to **In-progress**.
+   - **Exported**: The status changes to **Exported** after the logs have been exported to the desired location. Sometimes, you may see a **Failed** status denoting the logs failed to export to the destination. This can happen because of faulty destination credentials or system errors. Try again with correct credentials. If the issues persist, reach out to the <<prodname>> support team.
+
+> 📘 Note
+> 
+> If you select multiple services, or channels the time period for getting the logs is restricted to 24 hours i.e. you can choose only 24-hour periods in any last 30 days.
+> 
+> If you want to configure a scheduler to export logs to your desired SFTP or AWS S3 location on a regular frequency, you can use the 'Schedule Export' section.
+
+### Schedule Export
+
+The Schedule Export tab enables you to view the list of log files that are scheduled for export. You can also create a new schedule, enable/disable the status of an existing schedule, manage/delete existing schedule, or view logs for executed schedules.
+
+> 📘 Note
+> 
+> The Schedule Export feature is a paid add-on and may not be enabled for your tenant by default. Contact your account manager if you want to enable this feature.
+
+The Schedule Export Logs displays a table with columns such as Schedule, Frequency, File Destination, Created On, Status (Enable/Disable), and Actions.
+
+[block:image]
+{
+  "images": [
+    {
+      "image": [
+        "https://files.readme.io/97d9740-b477b19-Export_Logs5.jpg",
+        "",
+        "Screenshot displaying the Schedule Export Logs."
+      ],
+      "align": "center",
+      "border": true,
+      "caption": "Screenshot displaying the Schedule Export Logs"
+    }
+  ]
+}
+[/block]
+
+
+For each log schedule (row item), the information is shown as per the column along with a dropdown button to Manage, View Logs, and Delete Options.
+
+1. Click **Actions** > **View Logs** to view the logs in a tabular format.  
+   The table contains fields such as File Name, Schedule ID, Created on, No. of Records, File Size (KB), and Errors.
+
+#### Schedule Export Log Usage
+
+The  following line items will be available in Usage Reports: 
+
+- Number of log schedules (only for schedule row)
+- Number of files processed
+- Total Size of files processed
+
+> 📘 Note
+> 
+> In the usage xls file, Export Logs tab has the same information or headers along with the date header. (i.e. format type, number of files processed, total size of files processed, number of schedules and date).
+
+#### New Columns in Export Logs
+
+Additional columns are added for all channels to indicate timestamps for export logs and service name, flow name, etc. However, the newly added fields will be available only in the enhanced version of the Export Log. The columns include:
+
+- Timestamps (where sent, delivered, or read, in IS8601 format)
+- Error message (where not sent or not delivered)
+- Time (will be in local time-zone of the tenant)
+- Existing date
+- Service-Name, ServiceID, FlowId, Flow Name, etc.
+
+> 📘 Access to download logs
+> 
+> Users with decryption access will be allowed to download decrypted log files. Whereas, users without decryption access can download only encrypted files. The users without the decryption access can see a download button only for the encrypted log file records, but not for the decrypted log files.
+> 
+> Owners of the tenant can configure Schedule Export Logs. Please note logs exported through schedule are always decrypted.
+
+### Adding a Schedule Log
+
+To add a schedule log:
+
+1. Navigate to **Tools** > **Export Logs** > **Schedule Export**.
+
+   [block:image]{"images":[{"image":["https://files.readme.io/b91c790-Schedule_Export.jpeg","","Screenshot displaying the Schedule Export Logs."],"align":"center","border":true,"caption":"Screenshot displaying the Schedule Export Logs."}]}[/block]
+2. Click **Add schedule log** to go to the **Schedule Export Log** page. 
+
+   [block:image]{"images":[{"image":["https://files.readme.io/635701f-1.jpg",null,"Screenshot of adding the Schedule Export Log."],"align":"center","border":true,"caption":"Screenshot of adding the Schedule Export Log"}]}[/block]
+
+   > 📘 Note
+   > 
+   > If Branded Text is enabled for your client, you can view the ‘**Attempted Upgrade to**’ and ‘**Upgrade Result**,’ on the Scheduled Export Log page, which will appear during the process of adding a schedule log. To enable Branded Text for your number, please refer to the [Branded Text](https://help.webexconnect.io/docs/rcs-branded-text)  page for more information.
+3. Select if you want to schedule export for an Inbound log or an Outbound log or a Contact Policy or an Outbound Webhook Failed Notification log:
+   1. For Outbound logs, do the following:
+      1. Select **Outbound logs**.
+      2. Select the required service(s). You can select one or more services per schedule. You can also select **All Existing & Any New** in the services(s) dropdown. If you select **All Existing & Any New**, all existing services and any new service that you create after the schedule will automatically be included in the next schedule. 
+      3. Select the required channel(s). You can select one or more channels. Select **All Channels** to include all the channels for selected services.
+   2. For Inbound logs, do the following:
+      1. Select **Inbound logs**.
+      2. Select the required number or app. You can select one or more numbers or apps per schedule. You can also select **All Existing & Any New** in the number or app dropdown. If you select **All Existing & Any New**, all the existing numbers or apps and any new number or app(s) that you create after the schedule will automatically be included in the next schedule.
+      3. Select the required channel event(s). You can select one or more channel events. Select **Select All** to include all the channel events for selected numbers or app(s).
+   3. For Contact Policy, do the following:
+      1. Select **Contact Policy**.
+      2. Select the required Consent Group Name. You can select one or more **Consent Group Names**. You can also select **All Existing & Any New** from the dropdown. If you select **All Existing & Any New**, all existing services and any new service that you create after the schedule will automatically be included in the next schedule.
+         > 📘 Note
+         > 
+         > - If Contact Policy is provisioned for a tenant, **Contact Policy** appears as one of the log options.
+         > - Contact Policy Export Logs include carrier deactivation records. Successfully processed DEACT records are available in transactional logs, and failed deactivation records are captured in the same export framework.
+         > - Because failed deactivation records do not complete the lookup process successfully, fields that cannot be determined, such as Consent Group ID and Consent Group Name, display `No data`. You must opt out these numbers manually.
+      3. Select **File Type** (.csv or .txt) from the dropdown. The Contact Policy log will only support the .csv file type.
+      4. Select the **Delimiter** (tab, semi-colon, space, comma, others-user input). The Contact policy log will only support the default delimiter comma.
+   4. For Outbound Webhook Failed Notification Logs, do the following: 
+      1. Select Outbound Webhook Failed Notification Logs.
+      2. Select Outbound Webhook(s). You can select one or more outbound webhooks per schedule. You can also select All Existing & Any New in the outbound webhooks dropdown. If you select All Existing & Any New, all existing outbound webhooks and any new outbound webhook that you create after the schedule will automatically be included in the next schedule.  
+
+> 📘 Note
+> 
+> When you select **All Existing & Any New**, all the current live export log schedules will be disabled after 24 hours, and only the new ‘All Existing & Any New’ scheduler will be active. For the first 24 hours both (the existing and the new schedule with all existing and any new configuration) will be active. After 24-hours, only the new ‘All Existing and any new’ schedule will be active.
+
+4. Select the required **Period**.
+5. Select **File Type** (.csv or .txt) from the dropdown. 
+6. Enter **Filename**. Duplicate file names for export log schedule are not allowed. If the File Name is already used, try a different filename.
+7. Select the **Delimiter** (tab, semi-colon, space, comma, others-user input). Delimiter is the character that separates the fields in the file.
+8. Select the required options for your export file from the following:
+   - Include column headers - Select this if you want to include column headers in the file.
+   - Add end of file - Select this to add end of file.
+   - Password protect my file - Select this to enable password protection to the file. Enter the Password to use to open the file.
+   - Add new columns to the file - Select this to add additional columns to the file. Select the columns you want to add from the dropdown.
+
+> 📘 Note
+> 
+> Only the following required options are available for file exportation when the Contact Policy log is configured:
+> 
+> - Add end of file
+> - Password protect my life
+
+9. Under **Export Schedule** section, **Select Frequency** (Daily, Hourly) from the dropdown. If you have selected **All Existing and Any New** or if you have configured schedule with multi-select then the frequency is reduced to only support **Hourly**.
+10. Enter **Offset Days**.  For daily, the allowed offset is -7 to 0; for hourly, the allowed offset is 0 to -71.
+
+> 📘 Note
+> 
+> Every day the log file is exported between 0000 hours to 0100 hours. When an offset is set, logs of the previous day are exported as per the offset specified.
+
+11. Select **Schedule Ends** (in 1 day, 7 days, 15 days, 30 days, custom or do not expire) from the dropdown. By selecting custom, you can choose a particular day and time when you want the schedule to end.
+    1. Select **Add empty file when no records are found**, option if you want to add a blank file in case of no records.
+
+> 📘 Note
+> 
+> The validity of do not expire schedule type would be 15 years.
+
+> 📘 Note
+> 
+> You can configure log selection based on service and channel for outbound logs, and based on number or apps and events for inbound logs. However, each schedule can only be set once. If you attempt to schedule the same configuration again, an alert message will appear: "Same log configuration already exists with schedule.
+
+> 📘 Note
+> 
+> Only the Tenant Owner can configure the export logs schedule.
+
+<br />
+
+> 📘 File Naming Convention and Limits for Export scheduled before v6.6.1
+> 
+> Each schedule export log configured without multi-selection of service/number/apps before the v6.6.1 release can contain up to 10 million records in each Zip file. The files in the Zip are not divided for each million records like it is being done for the multi-select export logs configured after v6.6.1. The naming convention for Export logs scheduled to S3 or SFTP locations before v6.6.1, and without using the multi-select option for service/number/apps
+> 
+> - Zip name - filename_YYYY-MM-DDThhmmss+0000.zip
+> - File name inside zip (assuming CSV as file type under ‘File Type’ configuration) - filename_channelname_YYYY-MM-DDThhmmss+0000.csv
+> - File name inside zip (assuming txt as file type under ‘File Type’ configuration) - filename_channelname_YYYY-MM-DDThhmmss+0000.txt
+
+> 📘 File Naming Convention Update for Multi-Selection of Service/Number/Assets
+> 
+> The file naming convention for Export Log Schedules has been updated to support multi-selection of service/number/apps. Previously configured schedules (before the v6.6.1 release) that used single selection will now accommodate multiple files from different channels in the ZIP file.
+> 
+> Please refer to the section above to see the differences in file naming conventions between single select export logs configured before the v6.6.1 release and those configured after.
+> 
+> Additionally, if you update the schedule export configuration of existing schedules (those configured before v6.6.1) to include multiple service/number/apps, the file naming convention for schedules exported after the configuration change will adopt the new convention. If you do not perform multi-selection in the updated configuration, the file naming convention will remain unchanged until multi-selection is performed. This ensures backward compatibility for file naming unless the existing single select configuration (pre v6.6.1) is updated to multi-select.
+
+> 📘 Note
+> 
+> You can configure maximum of 10 schedules by default. Please reach out to your account manager, if you would like to get this increased for your tenant.
+
+### File Destination (export)
+
+You can export the file to a specified SFTP or AWS S3 by selecting a new location.
+
+To provide the file destination:
+
+1. In the File Destination dropdown, select SFTP or AWS S3.
+2. If you selected SFTP in the previous step, enter the following details:
+   1. User Name
+   2. Password
+   3. Host Name
+   4. Port Name
+   5. Path Name
+   6. file export notify URL
+   7. Notify on email
+3. If you selected AWS S3 in the previous step, enter the following details:
+   1. User Name
+   2. Bucket Name
+   3. Access Key
+   4. Secret Key
+   5. Region
+   6. file export notify URL
+   7. Notify on email
+
+You can also provide an email (recommended) to get a notification email for the file export. You will be notified about any failures also on the same email id.
+
+> 📘 Note
+> 
+> A notification via email is sent 7 days and 1 day prior to the scheduled end date.
+
+## Fields in the Export Logs
+
+The outbound logs, inbound logs and outbound webhook failed notification logs contain the following fields channel-wise:
+
+> 📘 Note
+> 
+> Request Origin Timestamp field is enabled only upon toggling the Add new columns to the file.
+
+The following are the common and default Outbound log fields across all channels in the Export Logs.
+
+| Outbound Logs     | Data Type | Max Length                              | Usual Range (Length)                    |
+| :---------------- | :-------- | :-------------------------------------- | :-------------------------------------- |
+| Transaction ID    | String    | 63                                      | 36-40                                   |
+| Correlation ID    | String    | 50                                      | 10 to 40                                |
+| Template ID       | String    | 64                                      | 10                                      |
+| CRN Number        | String    | 50                                      | 25-50                                   |
+| Source            | Integer   | 10                                      | 01 to 10                                |
+| Channel           | String    | 100                                     | Depends on the name of channel          |
+| Asset             | String    | 32                                      | 20                                      |
+| Event Description | String    | 1000                                    | Depends on channel event name           |
+| Current Status    |           |                                         |                                         |
+| Time              | String    | 18                                      | 18                                      |
+| Timezone          | String    | 6                                       | 03 to 06                                |
+| MSISDN            | String    | 30                                      | 10 to 15                                |
+| Message           | String    | Depends of the message provided by User | Depends of the message provided by User |
+
+The following are the common and default Inbound log fields across all channels in the Export Logs. 
+
+| Inbound Logs      | Data Type | Max Length                              | Usual Range (Length)                    |
+| :---------------- | :-------- | :-------------------------------------- | :-------------------------------------- |
+| Transaction ID    | String    | 63                                      | 36-40                                   |
+| CRN Number        | String    | 50                                      | 25-50                                   |
+| Channel           | String    | 100                                     | Depends on the name of channel          |
+| Asset             | String    | 32                                      | 20                                      |
+| Event Description | String    | 1000                                    | Depends on channel event name           |
+| Current Status    |           |                                         |                                         |
+| Time              | String    | 18                                      | 18                                      |
+| Timezone          | String    | 6                                       | 03 to 06                                |
+| MSISDN            | String    | 30                                      | 10 to 15                                |
+| Message           | String    | Depends of the message provided by User | Depends of the message provided by User |
+
+The following are the columns in the Outbound webhook failed notification logs in the Export Logs.
+
+| Outbound Webhook Failed Notification Logs | Data Type | Max Length                              | Usual Range (Length) |
+| :---------------------------------------- | :-------- | :-------------------------------------- | :------------------- |
+| Webhook ID                                | String    | 20                                      | 10                   |
+| Webhook Name                              | String    | 100 characters                          | User defined         |
+| Error Code                                | String    | 30                                      | 02-06                |
+| Trans ID                                  | String    | 63                                      | 36-40                |
+| Source                                    | Interger  | 10                                      | 01-10                |
+| URL                                       | String    | 100 characters                          | 30-50 characters     |
+| Time Taken                                | Integer   | 5 digits                                | 3-5 digit            |
+| Request Origin Time                       | String    | 18                                      | 18                   |
+| Datetime                                  | String    | 28                                      | 10 -28               |
+| Response                                  | String    | 200                                     | 150-175              |
+| Payload                                   | String    | 300000 ,depends on tenant configuration | User defined         |
+
+The following are the columns in the Contact Policy in the Export Logs.
+
+| Contact Policy Logs | Description                                                               |
+| :------------------ | :------------------------------------------------------------------------ |
+| Date                | Date on which the consent is provided or revoked.                         |
+| Consent Group ID    | Unique identification number for the consent group.                       |
+| Consent Group Name  | Name of the consent group.                                                |
+| Address             | Number from which the consent has been provided.                          |
+| Channel             | Channel to be used to send message.                                       |
+| Consent             | True if consent is provided. False if consent is revoked.                 |
+| Consent Expiry      | Date on which the consent would expire.                                   |
+| Reason for Change   | Contains the reason about the change in the consent.                      |
+| Keyword             | An arbitrary keyword associated with the consent change.                  |
+| Campaign            | An identifier of the campaign that is associated with the consent change. |
+| Source              | The source that prompted the consent change.                              |
+
+### Channel-specific Fields in the Export Logs
+
+The channel-specific outbound logs and inbound logs contain the following fields channel-wise:
+
+[block:parameters]
+{
+  "data": {
+    "h-0": "Channel",
+    "h-1": "Outbound Logs",
+    "h-2": "Inbound Logs",
+    "0-0": "SMS",
+    "0-1": "Segements [Segement counts for outbound SMS transactions for which delivery receipts have not been received by the time of exporting the logs will be logged as zero (value ‘0’)].",
+    "0-2": "Segements",
+    "1-0": "Voice",
+    "1-1": "SourceTID  \nCall TID  \nAsset Name  \nDate  \nDuration  \nCall Type  \nFlowName  \nFlowId  \nFromNumber  \nToNumber  \nOfferedAt  \nAnsweredAt  \nEndedAt  \nMachineDetected  \nCallDuration  \nCauseCode  \nCauseDescription  \nTrombone Release  \nTrombone Connected",
+    "1-2": "SourceTID  \nCall TID  \nAsset Name  \nSource  \nStatus  \nDate  \nDuration  \nService Name  \nService ID  \nFlow name  \nFlow ID  \nFromNumber  \nToNumber  \nOfferedAt  \nAnsweredAt  \nEndedAt  \nCall Type  \nMachineDetected  \nCallDuration  \nCauseCode  \nCauseDescription  \nRouting Number",
+    "2-0": "In-app",
+    "2-1": "User ID",
+    "2-2": "Source  \nThread ID  \nDate  \nUser ID",
+    "3-0": "Push",
+    "3-1": "Type  \nTotal Sent  \nTotal Submitted  \nOS  \nDestination Type  \nDestination",
+    "3-2": "N/A",
+    "4-0": "Facebook Messenger",
+    "4-1": "Type  \nPS ID",
+    "4-2": "Date  \nPS ID",
+    "5-0": "RCS",
+    "5-1": "Payload",
+    "5-2": "Date  \nMedia",
+    "6-0": "WhatsApp",
+    "6-1": "WAID  \nBSUID                                                                                                                         BSUID_DR                                                                                                                              Media  \nHSM  \nSent Time  \nDelivered Time  \nRead Time",
+    "6-2": "Date  \nWAID                 BSUID",
+    "7-0": "Apple Business Chat",
+    "7-1": "ABC ID  \nmsisdn (for invitation messages only)  \nPayload",
+    "7-2": "Date  \nmsisdn (for invitation messages only, when available)  \nABC ID",
+    "8-0": "Email",
+    "8-1": "From  \nEmail ID  \nSubject",
+    "8-2": "Date  \nTo  \nEmail ID  \nSubject"
+  },
+  "cols": 3,
+  "rows": 9,
+  "align": [
+    "left",
+    "left",
+    "left"
+  ]
+}
+[/block]
+
+
+> 📘 Note
+> 
+> If +E.164 format is enabled for your tenant - all the recipient numbers will be displayed in E.164 format.
+> 
+> This format displays the number with a "+" followed by the country code and the phone number.
+> 
+> Additional fields are only available when Export Logs add-on (Bulk Download, Export to SFTP/S3, and Schedule Export) is enabled.
+
+### Add-on Fields in the Export Logs
+
+The outbound logs and inbound logs contain the following fields channel-wise:
+
+Common add-on Outbound fields across all the channels in Export logs.
+
+| Outbound Logs       |
+| :------------------ |
+| Submitted           |
+| Delivered           |
+| Failed              |
+| Error Code          |
+| Error Description   |
+| Message Type        |
+| Service name        |
+| Service ID          |
+| Flow name           |
+| Flow ID             |
+| Flow transaction ID |
+| Request IP          |
+| Channel Name        |
+| Asset name          |
+| Asset ID            |
+
+Common add-on Inbound fields across all the channels in Export logs.
+
+| Inbound Logs      |
+| :---------------- |
+| Transaction ID    |
+| CRN Number        |
+| Channel           |
+| Asset             |
+| Event Description |
+| Current Status    |
+| Time              |
+| Timezone          |
+| MSISDN            |
+| Message           |
+| Segments          |
+
+#### Channel-specific Add-on Fields in the Export Logs
+
+The channel-specific add-on outbound logs and inbound logs contain the following fields channel-wise:
+
+[block:parameters]
+{
+  "data": {
+    "h-0": "Channel",
+    "h-1": "Outbounds Logs",
+    "h-2": "Inbound Logs",
+    "0-0": "SMS",
+    "0-1": "Delivered  \nClicked  \nUndelivered  \nFailed  \nTemplate Type",
+    "0-2": "Refer to the common add-on fields table",
+    "1-0": "Voice",
+    "1-1": "Accepted  \nAnswered  \nDropped  \nReleased  \nDisconnected  \nTrombone Release  \nTrombone Connected  \nFlowName  \nFlowTid  \nCallTid  \nFromNumber  \nToNumber  \nOfferedAt  \nAnsweredAt  \nEndedAt  \nCallType  \nMachineDetected  \nCallDuration  \nCauseCode  \nCauseDescription  \nDisplayName  \nDisplayNumber",
+    "1-2": "FlowName  \nFlowTid  \nCallTid  \nFromNumber  \nToNumber  \nAnsweredAt  \nEndedAt  \nCallType  \nMachineDetected  \nCallDuration  \nCauseCode  \nCauseDescription",
+    "2-0": "In-App",
+    "2-1": "Delivered  \nRead  \nFailed  \nMessage Type",
+    "2-2": "Refer to the common add-on fields table",
+    "3-0": "Push",
+    "3-1": "Delivered  \nRead  \nFailed  \nMessage Type",
+    "3-2": "Not available",
+    "4-0": "Messenger",
+    "4-1": "Delivered  \nRead  \nFailed  \nMessage Type  \nPayload",
+    "4-2": "Refer to the common add-on fields table",
+    "5-0": "RCS",
+    "5-1": "Delivered  \nRead  \nFailed  \nMessage Type  \nPayload  \nCarrierId  \nMaaP",
+    "5-2": "Refer to the common add-on fields table",
+    "6-0": "WhatsApp",
+    "6-1": "Delivered  \nRead  \nFailed  \nMessage Type  \nPayload",
+    "6-2": "Payload",
+    "7-0": "Apple Messages for Business",
+    "7-1": "Failed  \nMessage Type",
+    "7-2": "Refer to the common add-on fields table",
+    "8-0": "Email",
+    "8-1": "Delivered  \nInvalid  \nBounced  \nComplaint  \nOpened  \nUnsubscribed  \nFailed  \nMessage Type  \nCC  \nBCC",
+    "8-2": "Refer to the common add-on fields table"
+  },
+  "cols": 3,
+  "rows": 9,
+  "align": [
+    "left",
+    "left",
+    "left"
+  ]
+}
+[/block]
+
+
+> 📘 Multiple 'To' Recipients
+> 
+> - You have the ability to send emails to multiple ‘To’ recipients in a single email transaction using Messaging API v2. This would require you to pass an additional parameter ‘multipleToRecipients’ to be passed as part of the request with its value set to ‘true’. When multiple email IDs are mentioned in the “Email” parameter of the “To” block, <<prodname>> submits a single request to AWS SES or to SMTP server to send the concerned email to all - To, CC, and BCC. In this case, the API response will contain only one transaction ID for all recipients. Refer API reference for more information.
+> - When <<prodname>> is used to send emails to multiple email recipients (To, CC, BCC), the message submitted count reflects the total number of emails sent (counting each of the recipient in To, CC, and BCC fields individually). These changes will reflect in the ‘Reports’ and in the ‘Usage’ sections for email transactions.
+> - The platform will not trigger or resume a flow, nor trigger a rule or an outbound webhook notification for incoming emails where Sender Email ID is same as the Recipient Email ID. However, details of such incoming emails will be available within Export Logs.
+> - For emails sent via SMTP channel, we do not support delivery tracking.
+> - The Bounced Delivery Receipt captures the timestamp when an SES email is sent to an invalid address.
+
+## Scheduling of Export Logs across Groups and Teams
+
+Exports logs can be scheduled at the following levels:
+
+- Scheduling a export logs at client level - Contains transactions of client, group, and team where asset is present with flows configured.
+- Scheduling a export at a group level - client/group/team - Contains transactions of client, group, and team where asset is present with flows configured.
+- Scheduling a export log at a team level - client/group/team - Contains transactions of client, group, and team where asset is present with flows configured.
+
+## FAQs
+
+1. How will the export logs get updated Message status / Delivery receipts with the offset configuration?  
+   Offset configuration can be used to get the data exported hourly or daily with offset hours or days. Example – Assume an hourly configuration of schedule export log with -1 hour of offset. A transaction between 2:00 - 3:00 PM will be reflected in export logs file generated between 4:00 – 5:00 PM.
+2. Can one schedule export files to multiple file destinations?  
+   One schedule can only export files to one file destination either on S3 or SFTP, but not multiple destinations as the same schedule.
+3. How are the multiple files of the same schedule shipped to the file destination?  
+   Files will be zipped. Multiple text/csv files will be zipped as a single zip file per schedule.
+4. Does the schedule consider the services and assets that are in the future?  
+   Yes, When the user chooses the “All Existing & Any New” option, all existing and new services and assets added will be considered automatically with the same scheduler configured at the respective level i.e., client/group/team. A schedule configured at the client level, as all services, will consider the existing all services + any new services added in the future at the client level. 
+5. What channels are supported currently with export logs?  
+   Channels supported are SMS, MMS, WhatsApp, Messenger, Apple Messages for Business, RCS, Email, Push, In-app, Voice.

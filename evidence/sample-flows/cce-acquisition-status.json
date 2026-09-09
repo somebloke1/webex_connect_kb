@@ -1,0 +1,22 @@
+{
+  "source_url": "https://software.cisco.com/download/home/268439622/type/286332149/release/12.6(2)",
+  "http_status": 403,
+  "final_url": "https://software.cisco.com/download/home/268439622/type/286332149/release/12.6(2)",
+  "bytes": 460,
+  "sha256": "28f59ed7f73baad79457b08a7458de016f98247ed91989b8f2a0bd67d43a61c1",
+  "retrieved_at": "2026-09-09T00:04:41.120419+00:00",
+  "saved_html": "evidence/sample-flows/raw/cce-download-page.html",
+  "artifact_acquired": false,
+  "status": "release page response inspected; no flow bundle downloaded",
+  "browser_followup": {
+    "observed_at": "2026-09-09T00:10:26.071773+00:00",
+    "release_page_loaded": true,
+    "listed_file": "WxConnect_CCE_Flow_Templates.zip",
+    "listed_size": "5.44 MB",
+    "published_date": "05-Nov-2024",
+    "download_result": "Log In and Service Contract Required dialog",
+    "artifact_acquired": false,
+    "user_authentication_question": "pending_optional",
+    "current_access": "Cisco.com authentication not completed in this session"
+  }
+}

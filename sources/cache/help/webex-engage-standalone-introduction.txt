@@ -1,0 +1,12 @@
+Webex Engage's Live Agent Integration allows you to manage Conversations on Digital channels from within Webex Connect's Flow Builder.
+
+Webex Connect and Webex Engage - Live Agent (Standalone) integration allows customers to leverage Webex Connect's customer interaction automation capabilities for enabling customer self-service and support across digital messaging channels
+
+Webex Connect brings in the ability to receive customer inquiries from a range of digital messaging channels (listed below) and facilitate automated handling of these inquiries by leveraging AI-powered bots and third-party business systems (such as CRMs, etc.) with contextual and seamless escalation to a Live agent on Webex Engage's (Standalone) Agent Console when human intervention is needed.
+
+Webex Connect's Flow Builder is a key component of this solution, empowering clients to design seamless customer engagement and self-service experiences. It achieves this by leveraging various rich messaging capabilities and integrating with backend systems and applications to automate handling of customer requests.
+
+Here's a guide to help you get started:
+
+ [Image: Flowchart of Webex Connect and Webex Engage Integration] 
+Flowchart of Webex Connect and Webex Engage Integration

@@ -1,0 +1,35 @@
+{
+  "api_metadata_path": "sources/cache/developer/live-chat-in-app-messages-outbound-webhooks.api.json",
+  "category": "OUTBOUND WEBHOOKS",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f6550",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "a1e8596cb66fcc8b013c5e6dd5375b3bd751fa94d1e8f85f69abe1f8ccff12fe",
+    "source_path": "90c45be6aa9bf9aeb5d2e4c5a2d1855df4f34032c06da22cf0419702e2bafa85",
+    "text_path": "386f36afd49d1fda91da843e7dfd9221f699aeecf8aa118c1f4e81d658442dc5"
+  },
+  "headings": [
+    "Outbound Webhook configuration for tracking Live Chat/In-App message delivery status.",
+    "Outbound Webhook configuration for tracking incoming Live Chat/In-App Messages or Events"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/live-chat-in-app-messages-outbound-webhooks.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/live-chat-in-app-messages-outbound-webhooks",
+  "retrieved_at": "2026-09-08T23:31:44+00:00",
+  "sha256_api_metadata": "187de124aa8aa8acf032d1bfec486640b94ec306193dfc1e0feb2652279c3c88",
+  "sha256_html_response": "75896cc77f471817a74e01aab8d18ca1ebdb8bcd26db8ac17762af954c95a3fd",
+  "sha256_source_body": "90c45be6aa9bf9aeb5d2e4c5a2d1855df4f34032c06da22cf0419702e2bafa85",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/live-chat-in-app-messages-outbound-webhooks.source.md",
+  "source_updated_at": "2026-02-26T06:52:45.218Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/live-chat-in-app-messages-outbound-webhooks.txt",
+  "title": "Live Chat / In-App Messages",
+  "url": "https://developers.webexconnect.io/reference/live-chat-in-app-messages-outbound-webhooks",
+  "word_count": 1362,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/live-chat-in-app-messages-outbound-webhooks.metadata.json"
+}

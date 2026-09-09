@@ -1,0 +1,101 @@
+{
+  "_id": "6a675233ec1c893d8a7f67ba:6a675233ec1c893d8a7f64f0",
+  "components": {
+    "securitySchemes": {
+      "sec0": {
+        "in": "header",
+        "name": "key",
+        "type": "apiKey"
+      }
+    }
+  },
+  "info": {
+    "title": "Thread API",
+    "version": "6.20.0"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/{rtmsdomain}/api/v1/apps/{appid}/streams": {
+      "get": {
+        "deprecated": false,
+        "description": "Streams are used to route the messages from customers to one service. One stream per service limits users to hold conversations on multiple threads from the same service. So, a thread ID should be generated first, for every new thread title with a combination of message type, stream ID and thread title as shown in the below combination:\n**<stream_id>_<message_type>_<thread_title>*.",
+        "operationId": "list-streams",
+        "parameters": [
+          {
+            "description": "Specifies the ID of app asset on IMIconnect platform",
+            "in": "path",
+            "name": "appid",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Application/JSON",
+            "in": "header",
+            "name": "Content-Type",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Client key that can be accessed from your app asset configuration page on IMIconnect platform",
+            "in": "header",
+            "name": "secretKey",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "examples": {
+                "Request Example": {
+                  "value": {}
+                }
+              },
+              "schema": {}
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{\n  \"status\": \"success\",\n  \"streams\": [\n    {\n      \"id\": \"59197d9ee4b04a5c464d71f6\",\n      \"created_on\": \"2017-05-15T10:06:22.848Z\",\n      \"name\": \"APPUSERSTREAM\"\n    },\n    {\n      \"id\": \"59267828e4b0479ee69708bb\",\n      \"created_on\": \"2017-05-25T06:22:32.167Z\",\n      \"name\": \"BOT\"\n    },\n    ],\n  \"code\": 0\n}"
+                  }
+                }
+              }
+            },
+            "description": "200"
+          }
+        },
+        "summary": "Get Streams - Legacy"
+      }
+    }
+  },
+  "security": [
+    {
+      "sec0": []
+    }
+  ],
+  "servers": [
+    {
+      "url": "https://rtm.imiconnect.io/rtmsAPI/api/v1/"
+    }
+  ],
+  "x-readme": {
+    "explorer-enabled": false,
+    "headers": [
+      {
+        "key": "content-type",
+        "value": "application/json"
+      }
+    ],
+    "proxy-enabled": false
+  },
+  "x-readme-fauxas": true
+}

@@ -1,0 +1,32 @@
+{
+  "api_metadata_path": "sources/cache/developer/channels-faqs.api.json",
+  "category": "FAQs",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f65a6",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "c13355a6ae5ce28d6e4383f8608743f2c82045d153b53a8fde2fa0fc0cd221d7",
+    "source_path": "87f0f95728c273b7a001458f24a3af17e35e634c63f16a6f4c7d415ef9b29dea",
+    "text_path": "b7226405e74caaab6857db3dc9073d572c4cd57c5dc0a0959af6a3b7b8f34e7f"
+  },
+  "headings": [],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/channels-faqs.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/channels-faqs",
+  "retrieved_at": "2026-09-08T23:31:52+00:00",
+  "sha256_api_metadata": "575f65b7d8dc3ea0b617314bc47e22705dc85fc80ee114e6faa20ada4e8aafe2",
+  "sha256_html_response": "856976a2262dd6b5109ef21e98820661d1e4d68eca6b92c43474e7a2c48c689c",
+  "sha256_source_body": "87f0f95728c273b7a001458f24a3af17e35e634c63f16a6f4c7d415ef9b29dea",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/channels-faqs.source.md",
+  "source_updated_at": "2026-02-12T09:09:31.483Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/channels-faqs.txt",
+  "title": "Channels FAQs",
+  "url": "https://developers.webexconnect.io/reference/channels-faqs",
+  "word_count": 101,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/channels-faqs.metadata.json"
+}

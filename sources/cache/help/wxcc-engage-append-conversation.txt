@@ -1,0 +1,420 @@
+This node calls imengage Append Conversation API to append the message to an existing conversation on imiengage. While configuring flows in Webex Connect, you’d need to use this node for appending a message from the end-user to an existing conversation. So that the same will be reflected in the agent desktop.
+
+## 
+
+Authorization
+
+Refer to section Node Authorizations for more information. .  
+
+## 
+
+Methods and Outcomes
+
+Here’s a brief description of various methods, and corresponding output variables and node outcomes associated with each of the methods.
+
+Method Name - Append Conversation 
+
+ [Image: Screenshot of Append Conversion configuration page.] 
+Screenshot of Append Conversion configuration page.
+
+## 📘
+
+In the tables below, "n6" refers to the respective node ID.
+
+ | Method Name | Output Variables | Node Outcomes
+
+ | Append conversation | TransId |  onInvalidData
+
+ onError
+ onInvalidChoice
+
+ onauthorizationfail
+ Failure
+
+ onAppendMessageFailure
+ onAppendMessageSuccess
+
+ onTimeout
+
+ | Channel | Field Value
+
+ | Facebook Messenger | CHANNEL - Facebook
+
+CONVERSATION ID - $(n6.conversationId)
+
+DIRECTION - Inbound
+
+MESSAGE TYPE - Text With Attachments
+
+TEXT - $(n2.messenger.message)
+
+TIMESTAMP (IN UTC) - $(n2.messenger.ts)
+
+ | SMS | CHANNEL - SMS
+
+CONVERSATION ID - $(n6.conversationId)
+
+DIRECTION - Inbound
+
+TEXT - $(n2.sms.message)
+
+TIMESTAMP (IN UTC) - $(n2.sms.ts)
+
+ | Email | CONVERSATION ID - $(n6.conversationId)
+
+DIRECTION – Inbound
+
+TIMESTAMP (IN UTC) - $(n2.email.timestamp)
+
+FROM ADDRESS - $(n2.email.emailId)
+
+TO RECEPIENTS - $(n2.email.toAddresses)
+
+CC RECEPIENTS - $(n2.email.ccRecipients)
+
+SUBJECT - $(n2.email.subject)
+
+EMAIL HEADERS - $(n2.email.headers)
+
+PLAIN BODY - $(messageStrippedText)
+
+HTML BODY - $(messageHTML)
+
+STRIPPED HTML - $(messageStrippedHTML)
+
+ATTACHMENTS - $(parseDataAttachments)
+
+ | Live Chat | CHANNEL - Live Chat
+
+CONVERSATION ID - $(n6.conversationId)
+
+DIRECTION - Inbound, Outbound, Announcement
+
+Direction Inbound - MESSAGE TYPE -
+
+- Text
+
+- Text With Attachments
+
+- Live Chat Form Response
+
+- Live Chat Carousel Response
+
+- Live Chat Quick Replies
+
+Response
+
+Direction Outbound - MESSAGE TYPE -
+
+- Text With Attachments
+
+- Live Chat Text with Carousel
+
+- Live Chat  Text with Quick
+
+Replies
+
+Direction Announcement - Text
+
+- TIMESTAMP (IN UTC)
+
+TEXT - $(message)
+
+TIMESTAMP (IN UTC) - $(n2.inappmessaging.timestamp)
+
+ATTACHMENTS - $(parseDataAttachment)
+
+QUICK REPLIES (Inbound) - $(n2.Inappmessaging.postback)
+
+CAROUSALS (Inbound) - $(n2.Inappmessaging.postback)
+
+QUICK REPLIES (Outbound) -  $(n.send.quickreplies)
+
+CAROUSALS (Outbound) - $(n.send.template)
+
+ | WhatsApp | CHANNEL - WhatsApp
+
+Conversation ID - $(conversationId)
+
+TEXT - $(messageFromCustomer)
+
+TIMESTAMP (IN UTC) - $(n2.whatsapp.ts)
+
+ATTACHMENTS - $(parseDataAttachment)
+
+## 📘
+Note
+
+Based on the Direction selected in Live Chat the Message Type will be changed accordingly.
+
+When Direction is selected as Inbound the Message Types are:
+
+- Text
+
+- Live Chat Form Response
+
+- Text With Attachments is default value selected
+
+- Live Chat Carousel Response
+
+- Live Chat Quick Replies Response
+
+Method Name - Append Conversation 
+
+ | Input Variables | Output Variable
+
+ | CHANNEL – Facebook Messenger
+
+CONVERSATION ID - $(n6.conversationId)
+
+_ Conversation from the output variables of the Search Conversation is the Conversation ID
+
+DIRECTION – Inbound
+
+TEXT - $(messageFromCustomer)
+
+_ This is one of the Evaluate node variables which contains the processed incoming message object from customer respectively
+
+_ Message from the output variables of the start node is the message. The message will be appended to the conversation
+
+TIMESTAMP (IN UTC) - $(n2.messenger.ts)
+
+_ $(n2.messenger.ts) is the timestamp of the message
+
+ATTACHMENT - $(parseDataAttachment)
+
+* This is one of the Evaluate node variables which contains the processed incoming attachment array object from customer respectively | TransId
+
+## 📘
+Note
+
+When the variable is selected from the previous node output variables, the node Id will be the prefix for the variable. For example, if sms.serviceNumber is an output variable of start node (node Id 2), then the variable becomes $(n2.sms.serviceNumber).
+
+Method Name - Append Conversation 
+
+ | Input Variables | Output Variables
+
+ | CHANNEL – SMS
+
+CONVERSATION ID - $(n6.conversationId)
+
+•	Conversation from the output variables of the Search Conversation is the Conversation ID
+
+DIRECTION – Inbound
+
+TEXT - $(n2.sms.message)
+
+•	Message from the output variables of the start node is the message. The message will be appended to the conversation
+
+TIMESTAMP (IN UTC) - $(n2.sms.ts)
+
+•	$(n2.sms.ts) is the timestamp of the message
+
+Note: when the variable is selected from the previous node output variables, the nodeid will be the prefix for the variable.
+
+Eg., sms.serviceNumber is an output variable of start node (node id 2), then the variable becomes $(n2.sms.serviceNumber) | TransId
+
+Method Name - Append Conversation 
+
+ | Input Variables | Output Variables
+
+ | CHANNEL – EMAIL
+
+CONVERSATION ID - $(n6.conversationId)
+
+_ Conversation from the output variables of the Search Conversation is the Conversation ID
+
+DIRECTION – Inbound
+
+FROM EMAIL ID - $(n2.email.emailId)
+
+_ emailId in the output variables of the start node is from email id
+
+EMAIL SUBJECT - $(n2.email.subject)
+
+_ Subject in the output variables of the start node is the subject
+
+TO RECEPIENTS - $(n2.email.toAddresses)
+
+_ ToAddresses in the output variables of the start node is the To Recepients
+
+CC RECEPIENTS - $(n2.email.ccRecipients)
+
+_ ccRecepients in the output variables of the start node is the CC Recepients
+
+TIMESTAMP (IN UTC) - $(n2.email.timestamp)
+
+_ Timestamp in the output variables of the start node which contains the Email Timestamp
+
+EMAIL HEADERS - $(n2.email.headers)
+
+_ Email Headersvin the output variables of the start node is the Email Headers
+
+PLAIN BODY - $(messageStrippedText)
+
+_ messageStrippedText in the custom variables is the Plain body
+
+HTML BODY - $(messageHTML)
+
+_ MessageHTML in the custom variables is the HTML body
+
+STRIPPED HTML - $(messageStrippedHTML)
+
+_ messageStrippedHTML in the custom variables is the Stripped HTML
+
+ATTACHMENT - $(parseDataAttachment)
+
+* This is one of the Evaluate node variables which contains the processed incoming attachment array object from customer respectively | TransId
+
+## 📘
+Note
+
+When the variable is selected from the previous node output variables, the nodeid will be the prefix for the variable. Eg., sms.serviceNumber is an output variable of start node (node id 2), then the variable becomes $(n2.sms.serviceNumber)
+
+Method Name - Append Conversation 
+
+## 📘
+Note
+
+Append Conversation has two versions 1.0 and 1.3
+
+ | Input Variables | Output Variables | Versions
+
+ | CHANNEL – LIVECHAT
+
+CONVERSATION ID - $(n6.conversationId) (Here, n6 is the respective node ID)
+
+_ Conversation from the output variables of the Search Conversation is the Conversation ID
+
+DIRECTION – Inbound
+
+MESSAGE TYPE -
+Text
+
+ Text With Attachments
+Live Chat Form Response
+
+ Live Chat with Carousel Response
+
+_ Live Chat with Quick Replies Response
+
+Live Chat Quick Replies Response Object/Live Chat Carousels Response Object: $(Inappmessaging.postback)
+
+DIRECTION – Outbound
+
+MESSAGE TYPE -
+Text With Attachments
+
+ Live Chat Text with Carousel
+
+_ Live Chat Text with Quick Replies
+
+Live Chat Quick Replies Object/Live Chat Carousels Object: $(n.send.template) or $(n.send.quickreplies)
+
+ATTACHMENT - $(parseDataAttachment)
+
+_ This is one of the Evaluate node variables which contains the processed incoming attachment array object from customer respectively
+
+TEXT - $(message)
+
+_ message is one of the custom variables which contains the message
+
+TIMESTAMP (IN UTC) - $(n2.inappmessaging.timestamp)
+
+_ $(n2.inappmessaging.timestamp) is one of the start node variables which contains the Timestamp
+
+DIRECTION – Announcement
+
+TEXT - $(message)
+
+_ message is one of the custom variable which contains the message
+
+TIMESTAMP (IN UTC) - $(n2.inappmessaging.timestamp)
+
+_ Timestamp in the output variables of the start node which contains the Timestamp
+
+* $(n2.inappmessaging.timestamp) is one of the start node variables which contains the Timestamp | TransId | Text With Attachments, Live Chat Carousel Response,
+
+Live Chat Quick Replies Response are available in v1.3 for Inbound Direction
+
+Text With Attachments, Live Chat Text With Carousel, Live Chat Text With Quick Replies are available in v1.3 for Outbound Direction
+
+Announcement is available in v1.3
+
+## 📘
+Note
+
+When the variable is selected from the previous node output variables, the nodeid will be the prefix for the variable. Eg., sms.serviceNumber is an output variable of start node (node id 2), then the variable becomes $(n2.sms.serviceNumber)
+
+Method Name - Append Conversation 
+
+WhatsApp Rich Messages:
+
+## 🚧
+Unsupported variable
+
+The $(n30.send.response_interactive) variable is not supported for WhatsApp Buttons or Lists. To implement these features, you must manually construct a JSON payload that conforms to the following schemas.
+
+Outbound Payloads 
+
+To send interactive messages, use the following JSON structures:
+
+ButtonsLists
+
+{
+  "header": { "type": "text", "text": "your text" },
+  "body": { "text": "your-text-body-content" },
+  "footer": { "text": "your-text-footer-content" },
+  "action": {
+    "buttons": [
+      { "type": "reply", "reply": { "id": "unique-id", "title": "Button Title" } }
+    ]
+  }
+}
+
+{
+  "header": { "type": "text", "text": "your text" },
+  "body": { "text": "your-text-body-content" },
+  "footer": { "text": "your-text-footer-content" },
+  "action": {
+    "button": "cta-button-content",
+    "sections": [
+      { "title": "section-title", "rows": [{ "id": "row-id", "title": "row-title" }] }
+    ]
+  }
+}
+
+Inbound Payloads 
+
+When processing inbound interactive responses, the system expects the following format:
+
+Interactive response
+
+{
+  "title": "Option 1",
+  "identifier": "b0c75e59-3196-442d-9de5-bafaaa83b402"
+}
+
+ | Input Variables | Output Variables
+
+ | CHANNEL – WhatsApp
+
+CONVERSATION ID - $(conversationId)
+
+_ Conversation ID from the output variables of the Search Conversation
+
+Direction – Inbound/Outbound
+
+Text – $(messageFromCustomer)
+
+_ This is one of the Evaluate node variables which contains the processed incoming message from the  customer.
+
+_ Message text from end customer
+
+Timestamp - $(n2.whatsapp.ts)
+
+_ Timestamp in UTC
+
+Attachments – $(parseDataAttachment)
+
+* This is one of the Evaluate node variables which contains the processed incoming attachment array object from customer respectively | TransId

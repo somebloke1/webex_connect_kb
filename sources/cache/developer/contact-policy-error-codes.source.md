@@ -1,0 +1,1 @@
+For more information on Contact Policy Error Codes, refer to [Channel Specific Status Codes](https://developers.imiconnect.io/reference/channel-specific-status-codes-1)

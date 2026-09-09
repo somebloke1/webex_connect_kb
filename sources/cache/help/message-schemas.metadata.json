@@ -1,0 +1,31 @@
+{
+  "category": "Webex Engage Standalone Nodes",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257972",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "70b7e2b301442c916d40cd47bde63c30515a22ba0d106ca1d89b919791fbce8e",
+    "source_path": "db55cac10d6d76a15885ae7f6fd29356f5803ff7fefd2aec95f583e454896d90",
+    "text_path": "9f26f5138076b678842ce557e7a4e5767255800b36738e811c31571ec0546f35"
+  },
+  "headings": [],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/message-schemas.md",
+  "resolved_url": "https://help.webexconnect.io/docs/message-schemas",
+  "retrieved_at": "2026-09-08T23:29:27+00:00",
+  "sha256_html_response": "0040309d22db9188c4e5362622f7be6e0ba612de2b633d2d487a2c9b8e38386e",
+  "sha256_source_body": "db55cac10d6d76a15885ae7f6fd29356f5803ff7fefd2aec95f583e454896d90",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/message-schemas.source.md",
+  "source_updated_at": "2026-04-14T07:45:39.983Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/message-schemas.txt",
+  "title": "Message Schemas - WxEngage standalone",
+  "url": "https://help.webexconnect.io/docs/message-schemas",
+  "word_count": 31,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/message-schemas.metadata.json"
+}

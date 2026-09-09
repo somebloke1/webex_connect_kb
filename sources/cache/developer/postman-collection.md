@@ -1,0 +1,49 @@
+# Postman Collection
+
+Source: https://developers.webexconnect.io/reference/postman-collection
+Documentation version: 6.20.0
+Retrieved: 2026-09-08T23:31:39+00:00
+
+**Latest Postman Collection**
+
+Here is the link to the Postman Collection for various Webex Connect APIs.
+
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://www.postman.com/cisco/webex-connect/collection/pyjw227/webex-connect-apis)
+
+The API endpoints may differ on the region your Webex Connect tenant is based in. Please refer [Know Your API Endpoint](https://developers.imiconnect.io/reference#endpoints) section for the details.
+
+**Archived Collections**
+
+Refer to the [archive collections](https://www.postman.com/cisco/webex-connect/folder/68yfedu/archived-collections) for messaging, topic, segment, thread, and MMS API.
+
+## API reference metadata
+
+These are source metadata and examples. `api.auth` is ReadMe metadata; verify authentication in the documented headers/security scheme.
+
+```json
+{
+  "method": "get",
+  "url": "",
+  "auth": "required",
+  "results": {
+    "codes": [
+      {
+        "name": "",
+        "code": "{}",
+        "language": "json",
+        "status": 200
+      },
+      {
+        "name": "",
+        "code": "{}",
+        "language": "json",
+        "status": 400
+      }
+    ]
+  },
+  "params": [],
+  "examples": {
+    "codes": []
+  }
+}
+```

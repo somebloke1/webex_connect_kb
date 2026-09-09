@@ -1,0 +1,35 @@
+{
+  "category": "ADMINISTRATION",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257865",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "87889cea9defda33d454552fddd8da340057e544891e7e006ac5ea67d83b7e9f",
+    "source_path": "3af92b44124e20da522e0c0bf37b827241f90aadb1110533e0feae843c2acb58",
+    "text_path": "63dfec8c3ee661946eaab73a0b1d0f65da31244f5f7552f6fd793d2ad02ef2bf"
+  },
+  "headings": [
+    "Top Actions",
+    "Log Trail",
+    "📘Note"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/user-audit.md",
+  "resolved_url": "https://help.webexconnect.io/docs/user-audit",
+  "retrieved_at": "2026-09-08T23:29:37+00:00",
+  "sha256_html_response": "f42a1fb61ad1c64907d2823fb2e7748ccfd9335636055d14f4e7912d0f17a29b",
+  "sha256_source_body": "3af92b44124e20da522e0c0bf37b827241f90aadb1110533e0feae843c2acb58",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/user-audit.source.md",
+  "source_updated_at": "2025-09-30T06:17:00.722Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/user-audit.txt",
+  "title": "User Audit",
+  "url": "https://help.webexconnect.io/docs/user-audit",
+  "word_count": 384,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/user-audit.metadata.json"
+}

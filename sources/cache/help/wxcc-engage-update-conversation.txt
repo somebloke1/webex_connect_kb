@@ -1,0 +1,45 @@
+This node calls imengage Update Conversation API to update the conversation on imiengage. While configuring flows in Webex Connect, you’d need to use this node for updating the conversation.
+
+## 
+
+Authorization
+
+Refer to section Node Authorizations for more information.
+
+## 
+
+Methods and Outcomes
+
+Here’s a brief description of various methods, and corresponding output variables and node outcomes associated with each of the methods.
+
+Method Name - Update Conversation
+
+ [Image: Screenshot of Update Conversion configuration page.] 
+Screenshot of Update Conversion configuration page.
+
+ | Method Name | Output  Variables | Node Outcomes
+
+ | Update Conversation | transID |    onInvalidData
+
+ onError
+ onInvalidChoice
+
+ onauthorizationfail
+ Failure
+
+ onConversationUpdatedFailure
+ onConversationUpdatedSuccess
+
+ Success
+
+* onTimeout 
+
+ | Input Variables | Output  Variables | Versions
+
+ | Conversation ID - $(mediaResourceId)
+
+MediaResourceId from the output variables of the evaluate node is the Conversation ID
+
+Task ID - $(flid)
+
+Flow transaction id from the state node is converted into UUID in the evaluate node, and passed to create task node, for creating task with flid as task id. | transID | v1.0

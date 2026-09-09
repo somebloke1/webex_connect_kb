@@ -1,0 +1,37 @@
+{
+  "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257893",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "2688f6d86ce5e017c25e3c54d3ecfa338645e7c49c75321d40018e006d9693ca",
+    "source_path": "745297344c220b641e733fdf39c8c1eaa1fc36564a40781347c6af39e1ed7632",
+    "text_path": "fa2e7b093186c463ff6df32f8d4d6de850b0d72c1c6fb436fe3a8fd80d6c5a0c"
+  },
+  "headings": [
+    "📘Note:",
+    "General Settings",
+    "📘Note:",
+    "Output Variables",
+    "Calculating Estimated Wait Time"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/wxcc-piq-and-ewt.md",
+  "resolved_url": "https://help.webexconnect.io/docs/wxcc-piq-and-ewt",
+  "retrieved_at": "2026-09-08T23:29:15+00:00",
+  "sha256_html_response": "1a521ee7caef77d945c55f31a8e20f5fcb3c31985ff7787836b9cbd64a4e2f87",
+  "sha256_source_body": "745297344c220b641e733fdf39c8c1eaa1fc36564a40781347c6af39e1ed7632",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/wxcc-piq-and-ewt.source.md",
+  "source_updated_at": "2026-07-31T09:15:32.885Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/wxcc-piq-and-ewt.txt",
+  "title": "PIQ and EWT - WXCC",
+  "url": "https://help.webexconnect.io/docs/wxcc-piq-and-ewt",
+  "word_count": 585,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/wxcc-piq-and-ewt.metadata.json"
+}

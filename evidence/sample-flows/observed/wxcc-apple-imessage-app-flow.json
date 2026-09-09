@@ -1,0 +1,6219 @@
+{
+  "flowId": "96878",
+  "temporary_name": "KBSampleWxcc19",
+  "cells": [
+    {
+      "id": "1",
+      "parent": "0",
+      "vertex": false,
+      "edge": false,
+      "value": {
+        "tag": "workflowdata",
+        "attributes": {
+          "copy_used_vars": {
+            "2": {
+              "_usedVars": [],
+              "_usedTransVar": [],
+              "_dynamicVar": [
+                "abc.abcUserId",
+                "abc.appId",
+                "abc.bid",
+                "abc.timestamp",
+                "abc.transId",
+                "abc.url",
+                "abc.attachments",
+                "abc.capabilityList",
+                "service.serviceKey",
+                "abc.deviceAgent",
+                "abc.type",
+                "abc.accountId",
+                "abc.locale",
+                "abc.pciInfo.isPCICompliance",
+                "abc.pciInfo.isPCIValidationDone",
+                "abc.pciInfo.nonPCIComplianceReason",
+                "abc.pciInfo.isAttachmentEnabled",
+                "abc.pciInfo.droppedAttachmentCount",
+                "abc.malwareinfo.isMalwareCompliance",
+                "abc.malwareinfo.isMalwareValidationDone",
+                "abc.malwareinfo.malwareFailedReason",
+                "abc.malwareinfo.droppedAttachmentCount",
+                "abc.securityscaninfo.isSecurityCompliance",
+                "abc.securityscaninfo.isSecurityValidationDone",
+                "abc.securityscaninfo.securityFailedReason",
+                "abc.securityscaninfo.droppedAttachmentCount"
+              ],
+              "_dynamicTransVar": [],
+              "_usedStreamVar": []
+            },
+            "22": {
+              "_usedVars": [
+                {
+                  "id": "n2",
+                  "nodeId": 2,
+                  "param": "abc.abcUserId",
+                  "fullPath": "n2.abc.abcUserId",
+                  "source": 22
+                }
+              ],
+              "_usedTransVar": [],
+              "_dynamicVar": [],
+              "_dynamicTransVar": [],
+              "_usedStreamVar": []
+            },
+            "226": {
+              "_usedVars": [
+                {
+                  "id": "n2",
+                  "nodeId": 2,
+                  "param": "abc.abcUserId",
+                  "fullPath": "n2.abc.abcUserId",
+                  "source": 226
+                }
+              ],
+              "_usedTransVar": [
+                {
+                  "id": "n226",
+                  "nodeId": 226,
+                  "param": "conversationId",
+                  "fullPath": "n226.conversationId",
+                  "source": 226
+                },
+                {
+                  "id": "n226",
+                  "nodeId": 226,
+                  "param": "aliasId",
+                  "fullPath": "n226.aliasId",
+                  "source": 226
+                },
+                {
+                  "id": "n226",
+                  "nodeId": 226,
+                  "param": "status",
+                  "fullPath": "n226.status",
+                  "source": 226
+                },
+                {
+                  "id": "n226",
+                  "nodeId": 226,
+                  "param": "responsePayload",
+                  "fullPath": "n226.responsePayload",
+                  "source": 226
+                }
+              ],
+              "_dynamicVar": [
+                "conversationId",
+                "aliasId",
+                "conversationExistsBool",
+                "status",
+                "teamId",
+                "userId",
+                "apiStatus",
+                "code",
+                "description",
+                "responsePayload"
+              ],
+              "_dynamicTransVar": [],
+              "_usedStreamVar": []
+            },
+            "242": {
+              "_usedVars": [
+                {
+                  "id": "n226",
+                  "nodeId": 226,
+                  "param": "conversationId",
+                  "fullPath": "n226.conversationId",
+                  "source": 242
+                },
+                {
+                  "id": "n2",
+                  "nodeId": 2,
+                  "param": "abc.url",
+                  "fullPath": "n2.abc.url",
+                  "source": 242
+                },
+                {
+                  "id": "n2",
+                  "nodeId": 2,
+                  "param": "abc.timestamp",
+                  "fullPath": "n2.abc.timestamp",
+                  "source": 242
+                },
+                {
+                  "id": "n2",
+                  "nodeId": 2,
+                  "param": "abc.capabilityList",
+                  "fullPath": "n2.abc.capabilityList",
+                  "source": 242
+                }
+              ],
+              "_usedTransVar": [],
+              "_dynamicVar": [
+                "TransId"
+              ],
+              "_dynamicTransVar": [],
+              "_usedStreamVar": []
+            },
+            "382": {
+              "_usedVars": [
+                {
+                  "id": "n2",
+                  "nodeId": 2,
+                  "param": "abc.abcUserId",
+                  "fullPath": "n2.abc.abcUserId",
+                  "source": 382
+                }
+              ],
+              "_usedTransVar": [],
+              "_dynamicVar": [],
+              "_dynamicTransVar": [],
+              "_usedStreamVar": []
+            }
+          },
+          "dynamic_output_vars": {
+            "2": [
+              "abc.abcUserId",
+              "abc.appId",
+              "abc.bid",
+              "abc.timestamp",
+              "abc.transId",
+              "abc.url",
+              "abc.attachments",
+              "abc.capabilityList",
+              "service.serviceKey",
+              "abc.deviceAgent",
+              "abc.type",
+              "abc.accountId",
+              "abc.locale",
+              "abc.pciInfo.isPCICompliance",
+              "abc.pciInfo.isPCIValidationDone",
+              "abc.pciInfo.nonPCIComplianceReason",
+              "abc.pciInfo.isAttachmentEnabled",
+              "abc.pciInfo.droppedAttachmentCount",
+              "abc.malwareinfo.isMalwareCompliance",
+              "abc.malwareinfo.isMalwareValidationDone",
+              "abc.malwareinfo.malwareFailedReason",
+              "abc.malwareinfo.droppedAttachmentCount",
+              "abc.securityscaninfo.isSecurityCompliance",
+              "abc.securityscaninfo.isSecurityValidationDone",
+              "abc.securityscaninfo.securityFailedReason",
+              "abc.securityscaninfo.droppedAttachmentCount"
+            ],
+            "3": [],
+            "4": [
+              "transId",
+              "taskId",
+              "conversationOperation"
+            ],
+            "5": [],
+            "7": [
+              "taskId",
+              "agentId"
+            ],
+            "8": [],
+            "9": [
+              "taskId",
+              "agentId"
+            ],
+            "12": [],
+            "13": [],
+            "14": [],
+            "15": [
+              "transId",
+              "taskId",
+              "conversationOperation"
+            ],
+            "19": [],
+            "21": [],
+            "22": [],
+            "23": [],
+            "24": [],
+            "26": [],
+            "27": [],
+            "36": [],
+            "40": [],
+            "44": [],
+            "46": [],
+            "49": [],
+            "52": [],
+            "55": [],
+            "59": [
+              "taskId",
+              "agentId"
+            ],
+            "60": [],
+            "67": [],
+            "69": [],
+            "74": [
+              "positionInQueue",
+              "estimatedWaitTime",
+              "status",
+              "reasonCode",
+              "reason"
+            ],
+            "76": [],
+            "80": [],
+            "84": [],
+            "86": [],
+            "88": [],
+            "100": [],
+            "104": [],
+            "109": [],
+            "115": [],
+            "122": [],
+            "126": [],
+            "129": [],
+            "134": [],
+            "138": [],
+            "145": [],
+            "148": [],
+            "172": [],
+            "173": [],
+            "175": [],
+            "178": [],
+            "181": [],
+            "183": [],
+            "186": [],
+            "192": [
+              "conversationId",
+              "aliasId",
+              "conversationExistsBool",
+              "status",
+              "teamId",
+              "userId",
+              "apiStatus",
+              "code",
+              "description",
+              "responsePayload"
+            ],
+            "193": [],
+            "195": [],
+            "198": [],
+            "202": [],
+            "208": [],
+            "210": [],
+            "213": [],
+            "221": [],
+            "226": [
+              "conversationId",
+              "aliasId",
+              "conversationExistsBool",
+              "status",
+              "teamId",
+              "userId",
+              "apiStatus",
+              "code",
+              "description",
+              "responsePayload"
+            ],
+            "227": [],
+            "229": [],
+            "232": [],
+            "236": [],
+            "241": [],
+            "242": [
+              "TransId"
+            ],
+            "254": [],
+            "261": [],
+            "269": [],
+            "278": [],
+            "279": [],
+            "280": [],
+            "282": [],
+            "285": [],
+            "289": [],
+            "290": [],
+            "292": [],
+            "306": [],
+            "312": [],
+            "382": []
+          },
+          "logbooks": [],
+          "node_group_info": {},
+          "notes": {
+            "nodes": {},
+            "workflow": {}
+          },
+          "start_node_info": {
+            "channel": 23,
+            "type": "channel",
+            "isCheckLiveSessions": 0,
+            "extras": {},
+            "eventid": 130,
+            "eventname": "iMessageAppResponse"
+          }
+        },
+        "text": ""
+      }
+    },
+    {
+      "id": "2",
+      "parent": "1",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "tag": "start",
+        "attributes": {
+          "hidecell": true,
+          "image": "start.svg",
+          "key": "start",
+          "keytype": "fullscreen",
+          "label": "Configure Apple Messages for Business Event",
+          "name": "Start",
+          "nodetype": "start",
+          "type": "start",
+          "updatedImage": "applebusinesschat.svg",
+          "updatedimage": "applebusinesschat.svg",
+          "updatedon": "2024-03-06T05:15:06.602",
+          "view_restrict": true
+        },
+        "children": [
+          {
+            "tag": "event",
+            "attributes": {
+              "name": "onbegin",
+              "targetcount": 1
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "selectedChannel",
+              "type": "",
+              "view": ""
+            },
+            "text": {
+              "id": 23,
+              "name": "AppleBusinessChat",
+              "description": "Apple Messages for Business",
+              "type": 1,
+              "extraData": {}
+            }
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "selectedRuleEvent",
+              "type": "",
+              "view": ""
+            },
+            "text": {
+              "name": "Interactive Message: iMessage App Response",
+              "id": 130,
+              "eventname": "iMessageAppResponse",
+              "desc": "This event occurs when user submits a response to an iMessage App."
+            }
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "ruleEvent",
+              "type": "",
+              "view": ""
+            },
+            "text": "Interactive Message: iMessage App Response"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "ruleConditionStatus",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "conditions",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "apiReqConditions",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "webHookData",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "customEvents",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "isKeyWordDisabled",
+              "type": "",
+              "view": ""
+            },
+            "text": true
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "isKeyWordVerifyReq",
+              "type": "",
+              "view": ""
+            },
+            "text": true
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "isKeyWordAvailable",
+              "type": "",
+              "view": ""
+            },
+            "text": true
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "output_variables",
+              "type": "",
+              "view": ""
+            },
+            "text": [
+              "abc.abcUserId",
+              "abc.appId",
+              "abc.bid",
+              "abc.timestamp",
+              "abc.transId",
+              "abc.url",
+              "abc.attachments",
+              "abc.capabilityList",
+              "service.serviceKey",
+              "abc.deviceAgent",
+              "abc.type",
+              "abc.accountId",
+              "abc.locale",
+              "abc.pciInfo.isPCICompliance",
+              "abc.pciInfo.isPCIValidationDone",
+              "abc.pciInfo.nonPCIComplianceReason",
+              "abc.pciInfo.isAttachmentEnabled",
+              "abc.pciInfo.droppedAttachmentCount",
+              "abc.malwareinfo.isMalwareCompliance",
+              "abc.malwareinfo.isMalwareValidationDone",
+              "abc.malwareinfo.malwareFailedReason",
+              "abc.malwareinfo.droppedAttachmentCount",
+              "abc.securityscaninfo.isSecurityCompliance",
+              "abc.securityscaninfo.isSecurityValidationDone",
+              "abc.securityscaninfo.securityFailedReason",
+              "abc.securityscaninfo.droppedAttachmentCount"
+            ]
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "voiceServiceProvider",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "conditionData",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "syncWebHookData",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "isCheckLiveSessions",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "nodevariablestore",
+            "attributes": {
+              "name": "n2.abc.abcUserId",
+              "source": 22
+            },
+            "text": "$(abc.abcUserId)"
+          },
+          {
+            "tag": "nodevariablestore",
+            "attributes": {
+              "name": "n2.abc.url",
+              "source": 242
+            },
+            "text": "$(abc.url)"
+          },
+          {
+            "tag": "nodevariablestore",
+            "attributes": {
+              "name": "n2.abc.timestamp",
+              "source": 242
+            },
+            "text": "$(abc.timestamp)"
+          },
+          {
+            "tag": "nodevariablestore",
+            "attributes": {
+              "name": "n2.abc.capabilityList",
+              "source": 242
+            },
+            "text": "$(abc.capabilityList)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "22",
+      "parent": "1",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "tag": "umpapplebc",
+        "attributes": {
+          "image": "applebusinesschat.svg",
+          "key": "abc",
+          "label": "Apple Messages for Business",
+          "name": "Apple Messages for Business",
+          "paramhide": true,
+          "type": "UmpAppleBC",
+          "updatedImage": "applebusinesschat.svg",
+          "updatedimage": "applebusinesschat.svg",
+          "updatedon": "2024-02-27T05:34:41.027",
+          "view_restrict": true
+        },
+        "children": [
+          {
+            "tag": "param",
+            "attributes": {
+              "label": "Remove Wait For",
+              "name": "hideWaitFor"
+            },
+            "text": false
+          },
+          {
+            "tag": "event",
+            "attributes": {
+              "name": "onerror",
+              "targetcount": 1
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "channelId",
+              "type": "",
+              "view": ""
+            },
+            "text": 23
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "deliverychannel",
+              "type": "",
+              "view": ""
+            },
+            "text": "abc"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "destinationType",
+              "type": "",
+              "view": ""
+            },
+            "text": "abcUserId"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "destination",
+              "type": "",
+              "view": ""
+            },
+            "text": "$(n2.abc.abcUserId)"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "msgcreationtype",
+              "type": "",
+              "view": ""
+            },
+            "text": "createnew"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "type",
+              "type": "",
+              "view": ""
+            },
+            "text": "text"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "body",
+              "type": "",
+              "view": ""
+            },
+            "text": "$(errorMsg)"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "attachmenttype",
+              "type": "",
+              "view": ""
+            },
+            "text": "url"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "attachments",
+              "type": "",
+              "view": ""
+            },
+            "text": [
+              {
+                "mimeType": "",
+                "url": ""
+              }
+            ]
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "successoutcome",
+              "type": "",
+              "view": ""
+            },
+            "text": 1
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "timeout",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "expiryType",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "expiry",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "linkValidityCheck",
+              "type": "",
+              "view": ""
+            },
+            "text": false
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "shortLinkId",
+              "type": "",
+              "view": {
+                "name": "smartLinkIdView",
+                "class": "shortLinkId",
+                "value": ""
+              }
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "linkValidityTime",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "typing_indicator",
+              "type": "",
+              "view": ""
+            },
+            "text": true
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "url",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "urltitle",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "imageurl",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "imageMimeType",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "include_rich_link_video",
+              "type": "",
+              "view": ""
+            },
+            "text": false
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "videourl",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "videoMimeType",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "list_picker_received_message",
+              "type": "",
+              "view": ""
+            },
+            "text": {
+              "style": "small",
+              "title": "",
+              "subtitle": "",
+              "imageIdentifier": "",
+              "imageurl": "",
+              "ispreviewrequired": false
+            }
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "list_picker_sections",
+              "type": "",
+              "view": ""
+            },
+            "text": [
+              {
+                "order": "",
+                "style": "default",
+                "title": "",
+                "items": [
+                  {
+                    "order": "",
+                    "title": "",
+                    "subtitle": "",
+                    "identifier": "",
+                    "ispreviewrequired": false,
+                    "imageIdentifier": "",
+                    "imageurl": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "multipleSelection",
+              "type": "",
+              "view": ""
+            },
+            "text": false
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "sections",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "requestIdentifier",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "receivedMessage",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "images",
+              "type": "",
+              "view": ""
+            },
+            "text": []
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "replyMessage",
+              "type": "",
+              "view": ""
+            },
+            "text": {
+              "style": "small",
+              "title": ""
+            }
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "date_picker_received_message",
+              "type": "",
+              "view": ""
+            },
+            "text": {
+              "style": "small",
+              "title": "",
+              "subtitle": "",
+              "imageIdentifier": "",
+              "imageurl": "",
+              "ispreviewrequired": false
+            }
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "date_picker_events",
+              "type": "",
+              "view": ""
+            },
+            "text": {
+              "timezoneOffset": "",
+              "timeslots": [
+                {}
+              ],
+              "location": {}
+            }
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "payment",
+              "type": "",
+              "view": ""
+            },
+            "text": {
+              "paymentRequest": {
+                "lineItems": [
+                  {
+                    "label": "",
+                    "amount": "",
+                    "type": ""
+                  }
+                ],
+                "shippingMethods": [
+                  {
+                    "label": "",
+                    "amount": "",
+                    "detail": "",
+                    "identifier": ""
+                  }
+                ],
+                "total": {
+                  "label": "",
+                  "amount": "",
+                  "type": ""
+                },
+                "countryCode": "",
+                "currencyCode": "",
+                "requiredBillingContactFields": [],
+                "requiredShippingContactFields": []
+              }
+            }
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "payment_received_message",
+              "type": "",
+              "view": ""
+            },
+            "text": {
+              "title": ""
+            }
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "payment_reply_message",
+              "type": "",
+              "view": ""
+            },
+            "text": {
+              "title": ""
+            }
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "payment_request_inputtype",
+              "type": "",
+              "view": ""
+            },
+            "text": "static"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "scope",
+              "type": "",
+              "view": ""
+            },
+            "text": []
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "oauthScope",
+              "type": "",
+              "view": ""
+            },
+            "text": [
+              {}
+            ]
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "oauthData",
+              "type": "",
+              "view": ""
+            },
+            "text": {
+              "oauthReceiveTitle": "",
+              "oauthReceivesubtitle": "",
+              "oauthReceiveImage": "",
+              "oauthReplyTitle": "",
+              "oauthReplysubtitle": "",
+              "oauthReplyImage": ""
+            }
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "responseType",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "state",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "viewmodeData",
+              "type": "",
+              "view": ""
+            },
+            "text": []
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "countryCode",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "currencyCode",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "dynamic_line_items",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "static_line_items",
+              "type": "",
+              "view": ""
+            },
+            "text": [
+              {
+                "label": "",
+                "amount": "",
+                "type": ""
+              }
+            ]
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "timezoneViewFlag",
+              "type": "",
+              "view": ""
+            },
+            "text": false
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "summaryText",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "extraParameters",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "quickreply",
+              "type": "",
+              "view": ""
+            },
+            "text": {}
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "callbackdata",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "correlationid",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "notifyurl",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "form_elements",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "teamId",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "extBundleId",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "appIcon",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "appId",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "appName",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "iMessageUrl",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "useLiveLayout",
+              "type": "",
+              "view": ""
+            },
+            "text": true
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "additionalParameters",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "226",
+      "parent": "1",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "tag": "prebuiltnode",
+        "attributes": {
+          "defaulttemplate": "deftemplate",
+          "image": "https://example.invalid/dvp-cfdforms/link/80331bec-81fc-4414-9396-39d6a0afc6bf/CiscoWebexLogo637513806888123311_152820853165114.svg",
+          "infolabel": "91svfz7pc2",
+          "label": "Search Conversation",
+          "name": "Search Conversation",
+          "paramhide": true,
+          "templatedialog": [
+            {
+              "name": "deftemplate",
+              "label": "test",
+              "key": "prebuiltnode",
+              "size": {
+                "width": "$(width-integration)",
+                "height": "$(height-integration)"
+              }
+            }
+          ],
+          "type": "PrebuiltNode",
+          "updatedImage": "https://example.invalid/dvp-cfdforms/link/80331bec-81fc-4414-9396-39d6a0afc6bf/CiscoWebexLogo637513806888123311_152820853165114.svg",
+          "updatedimage": "https://example.invalid/dvp-cfdforms/link/80331bec-81fc-4414-9396-39d6a0afc6bf/CiscoWebexLogo637513806888123311_152820853165114.svg",
+          "updatedon": "2024-03-06T05:25:37.191",
+          "versionidsstr": [
+            {
+              "id": 50158,
+              "versionName": "v1.0",
+              "integrationId": 50033,
+              "status": 1,
+              "description": "",
+              "liveFromDate": "2021-12-02 04:08:18.0",
+              "discardedFromDate": null
+            },
+            {
+              "id": 50172,
+              "versionName": "v1.1",
+              "integrationId": 50033,
+              "status": 1,
+              "description": "",
+              "liveFromDate": "2022-01-06 11:23:03.0",
+              "discardedFromDate": null
+            },
+            {
+              "id": 50605,
+              "versionName": "v1.2",
+              "integrationId": 50033,
+              "status": 4,
+              "description": "",
+              "liveFromDate": "2022-07-13 05:19:38.0",
+              "discardedFromDate": "2022-07-13 05:51:00.0"
+            },
+            {
+              "id": 50792,
+              "versionName": "beta0.000001",
+              "integrationId": 50033,
+              "status": 4,
+              "description": "",
+              "liveFromDate": "2022-08-30 11:01:28.0",
+              "discardedFromDate": "2022-10-31 06:52:00.0"
+            },
+            {
+              "id": 50949,
+              "versionName": "v1.3",
+              "integrationId": 50033,
+              "status": 1,
+              "description": "",
+              "liveFromDate": "2022-10-31 06:52:00.0",
+              "discardedFromDate": null
+            },
+            {
+              "id": 52196,
+              "versionName": "alpha 0.000002",
+              "integrationId": 50033,
+              "status": 1,
+              "description": "",
+              "liveFromDate": "2023-12-04 15:49:38.0",
+              "discardedFromDate": null
+            }
+          ],
+          "view_restrict": true
+        },
+        "children": [
+          {
+            "tag": "param",
+            "attributes": {
+              "name": "referencekey",
+              "type": "",
+              "view": ""
+            },
+            "text": 50033
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "name": "versionsList",
+              "type": "",
+              "view": ""
+            },
+            "text": [
+              {
+                "id": 50158,
+                "versionName": "v1.0",
+                "integrationId": 50033,
+                "status": 1,
+                "description": "",
+                "liveFromDate": "2021-12-02 04:08:18.0",
+                "discardedFromDate": null
+              },
+              {
+                "id": 50172,
+                "versionName": "v1.1",
+                "integrationId": 50033,
+                "status": 1,
+                "description": "",
+                "liveFromDate": "2022-01-06 11:23:03.0",
+                "discardedFromDate": null
+              },
+              {
+                "id": 50605,
+                "versionName": "v1.2",
+                "integrationId": 50033,
+                "status": 4,
+                "description": "",
+                "liveFromDate": "2022-07-13 05:19:38.0",
+                "discardedFromDate": "2022-07-13 05:51:00.0"
+              },
+              {
+                "id": 50792,
+                "versionName": "beta0.000001",
+                "integrationId": 50033,
+                "status": 4,
+                "description": "",
+                "liveFromDate": "2022-08-30 11:01:28.0",
+                "discardedFromDate": "2022-10-31 06:52:00.0"
+              },
+              {
+                "id": 50949,
+                "versionName": "v1.3",
+                "integrationId": 50033,
+                "status": 1,
+                "description": "",
+                "liveFromDate": "2022-10-31 06:52:00.0",
+                "discardedFromDate": null
+              },
+              {
+                "id": 52196,
+                "versionName": "alpha 0.000002",
+                "integrationId": 50033,
+                "status": 1,
+                "description": "",
+                "liveFromDate": "2023-12-04 15:49:38.0",
+                "discardedFromDate": null
+              }
+            ]
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "name": "versionIds",
+              "type": "versiondata"
+            },
+            "text": "undefined"
+          },
+          {
+            "tag": "event",
+            "attributes": {
+              "name": "oninvaliddata",
+              "type": "BP"
+            },
+            "text": ""
+          },
+          {
+            "tag": "event",
+            "attributes": {
+              "name": "onerror",
+              "type": "BP"
+            },
+            "text": ""
+          },
+          {
+            "tag": "event",
+            "attributes": {
+              "name": "oninvalidchoice",
+              "type": "BP"
+            },
+            "text": ""
+          },
+          {
+            "tag": "event",
+            "attributes": {
+              "name": "ontimeout",
+              "type": "TP"
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "integration_id",
+              "type": "",
+              "view": ""
+            },
+            "text": 50033
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "client_uuid",
+              "type": "",
+              "view": ""
+            },
+            "text": "50d97e6a-ad14-4a77-898a-7f6f104bfb14"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "node_uuid",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "method_id",
+              "type": "",
+              "view": ""
+            },
+            "text": 57894
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "version_id",
+              "type": "",
+              "view": ""
+            },
+            "text": 52318
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "auth_id",
+              "type": "",
+              "view": ""
+            },
+            "text": -1
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "methodRequestParameters",
+              "type": "",
+              "view": ""
+            },
+            "text": [
+              {
+                "order": 0,
+                "id": "761a1780-1258-924a-84e9-6c73332cf2dd",
+                "name": "domain",
+                "path": null,
+                "type": "path",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": true,
+                  "format_validator": null
+                },
+                "key": "domain",
+                "debugKey": false,
+                "node_ui_type": "admin",
+                "node_ui_group_name": "hide",
+                "ui_field_configuration": {
+                  "type": "text",
+                  "options": []
+                }
+              },
+              {
+                "order": 0,
+                "id": "9f048553-c1c1-42f6-5e5a-a28e0c4afcdc",
+                "name": "channel",
+                "path": "channel",
+                "value": "amb",
+                "desc": "amb",
+                "type": "body",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": true,
+                  "format_validator": null
+                },
+                "key": "channel",
+                "debugKey": false,
+                "node_ui_type": "default",
+                "node_ui_group_name": "default",
+                "ui_field_configuration": {
+                  "type": "text",
+                  "options": []
+                }
+              },
+              {
+                "order": 0,
+                "id": "39ae0eb8-1409-db03-9869-67dc2643003d",
+                "name": "customeraddress",
+                "path": "customeraddress",
+                "value": "$(n2.abc.abcUserId)",
+                "desc": "$(n2.abc.abcUserId)",
+                "type": "body",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": true,
+                  "format_validator": null
+                },
+                "key": "customeraddress",
+                "debugKey": false,
+                "node_ui_type": "default",
+                "node_ui_group_name": "default",
+                "ui_field_configuration": {
+                  "type": "text",
+                  "options": []
+                }
+              },
+              {
+                "order": 0,
+                "id": "0504fd49-9acf-aa6e-9cd9-b1dc5c33783b",
+                "name": "bizaddress",
+                "path": "bizaddress",
+                "value": "6fe67ece-e9fc-40fa-afac-fcbdd4353165",
+                "desc": "6fe67ece-e9fc-40fa-afac-fcbdd4353165",
+                "type": "body",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": true,
+                  "format_validator": null
+                },
+                "key": "bizaddress",
+                "debugKey": false,
+                "node_ui_type": "default",
+                "node_ui_group_name": "default",
+                "ui_field_configuration": {
+                  "type": "text",
+                  "options": []
+                }
+              },
+              {
+                "order": 0,
+                "id": "588518d1-0ca2-4b13-df21-cf98e4a0ab5b",
+                "name": "subject",
+                "path": "subject",
+                "value": null,
+                "desc": null,
+                "type": "body",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": true,
+                  "format_validator": null
+                },
+                "key": "subject",
+                "debugKey": false,
+                "node_ui_type": "default",
+                "node_ui_group_name": "default",
+                "ui_field_configuration": {
+                  "type": "text",
+                  "options": []
+                }
+              },
+              {
+                "order": 0,
+                "id": "ae91e42d-943a-6656-2f2c-1c88e2cff60f",
+                "name": "threadid",
+                "path": "threadid",
+                "value": null,
+                "desc": null,
+                "type": "body",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": true,
+                  "format_validator": null
+                },
+                "key": "threadid",
+                "debugKey": false,
+                "node_ui_type": "default",
+                "node_ui_group_name": "default",
+                "ui_field_configuration": {
+                  "type": "text",
+                  "options": []
+                }
+              },
+              {
+                "order": 0,
+                "id": "9cacc794-1dcd-013e-42cd-dfaa65bc9342",
+                "name": "browserfingerprint",
+                "path": "browserfingerprint",
+                "value": null,
+                "desc": null,
+                "type": "body",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": true,
+                  "format_validator": null
+                },
+                "key": "browserfingerprint",
+                "debugKey": false,
+                "node_ui_type": "default",
+                "node_ui_group_name": "default",
+                "ui_field_configuration": {
+                  "type": "text",
+                  "options": []
+                }
+              },
+              {
+                "order": 0,
+                "id": "833d28d7-01ae-e928-d997-7b26de781468",
+                "name": "toRecipients",
+                "path": "toRecipients",
+                "value": null,
+                "desc": null,
+                "type": "body",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": true,
+                  "format_validator": null
+                },
+                "key": "toRecipients",
+                "debugKey": false,
+                "node_ui_type": "default",
+                "node_ui_group_name": "default",
+                "ui_field_configuration": {
+                  "type": "text",
+                  "options": []
+                }
+              },
+              {
+                "order": 0,
+                "id": "c31da7a0-d9b9-ccd5-82c6-4320f2cbc051",
+                "name": "ccRecipients",
+                "path": "ccRecipients",
+                "value": null,
+                "desc": null,
+                "type": "body",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": true,
+                  "format_validator": null
+                },
+                "key": "ccRecipients",
+                "debugKey": false,
+                "node_ui_type": "default",
+                "node_ui_group_name": "default",
+                "ui_field_configuration": {
+                  "type": "text",
+                  "options": []
+                }
+              },
+              {
+                "order": 0,
+                "id": "f52cd50e-720e-4146-8c2d-da2a1c77ae60",
+                "name": "inReplyTo",
+                "path": "inReplyTo",
+                "value": null,
+                "desc": null,
+                "type": "body",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": true,
+                  "format_validator": null
+                },
+                "key": "inReplyTo",
+                "debugKey": false,
+                "node_ui_type": "default",
+                "node_ui_group_name": "default",
+                "ui_field_configuration": {
+                  "type": "text",
+                  "options": []
+                }
+              }
+            ]
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "methodRequestGroups",
+              "type": "",
+              "view": ""
+            },
+            "text": {}
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "methodGroupsOrder",
+              "type": "",
+              "view": ""
+            },
+            "text": []
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "methodResponseParameters",
+              "type": "",
+              "view": ""
+            },
+            "text": [
+              {
+                "order": 0,
+                "id": "99903af4-557d-4e0c-b152-3e968b4f6113",
+                "name": "conversationId",
+                "path": "$.value.conversationId",
+                "value": "",
+                "desc": "",
+                "type": "body",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": true,
+                  "format_validator": null
+                },
+                "key": null,
+                "debugKey": false,
+                "node_ui_type": null,
+                "node_ui_group_name": null,
+                "ui_field_configuration": null
+              },
+              {
+                "order": 1,
+                "id": "4909d72d-8414-42a0-b0be-8848975646d9",
+                "name": "aliasId",
+                "path": "$.value.aliasId",
+                "value": "",
+                "desc": "",
+                "type": "body",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": true,
+                  "format_validator": null
+                },
+                "key": null,
+                "debugKey": false,
+                "node_ui_type": null,
+                "node_ui_group_name": null,
+                "ui_field_configuration": null
+              },
+              {
+                "order": 2,
+                "id": "154e719a-9091-4d6e-8628-0503dbf785db",
+                "name": "conversationExistsBool",
+                "path": "$.value.chatExist",
+                "value": "",
+                "desc": "",
+                "type": "body",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": true,
+                  "format_validator": null
+                },
+                "key": null,
+                "debugKey": false,
+                "node_ui_type": null,
+                "node_ui_group_name": null,
+                "ui_field_configuration": null
+              },
+              {
+                "order": 3,
+                "id": "beb555b7-19af-47b4-b214-f5c7a1858dd2",
+                "name": "status",
+                "path": "$.value.status",
+                "value": "",
+                "desc": "",
+                "type": "body",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": true,
+                  "format_validator": null
+                },
+                "key": null,
+                "debugKey": false,
+                "node_ui_type": null,
+                "node_ui_group_name": null,
+                "ui_field_configuration": null
+              },
+              {
+                "order": 4,
+                "id": "186672f2-81b7-4cd1-8c9b-f43d44c77d13",
+                "name": "teamId",
+                "path": "$.value.teamId",
+                "value": "",
+                "desc": "",
+                "type": "body",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": true,
+                  "format_validator": null
+                },
+                "key": null,
+                "debugKey": false,
+                "node_ui_type": null,
+                "node_ui_group_name": null,
+                "ui_field_configuration": null
+              },
+              {
+                "order": 5,
+                "id": "6c5e5c7a-bc65-4ea0-b65a-9b3ef5d554d6",
+                "name": "userId",
+                "path": "$.value.userId",
+                "value": "",
+                "desc": "",
+                "type": "body",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": true,
+                  "format_validator": null
+                },
+                "key": null,
+                "debugKey": false,
+                "node_ui_type": null,
+                "node_ui_group_name": null,
+                "ui_field_configuration": null
+              },
+              {
+                "order": 6,
+                "id": "b484dd0a-439b-4d68-a4d3-5d7d9e9a5b5d",
+                "name": "apiStatus",
+                "path": "$.status",
+                "value": "",
+                "desc": "",
+                "type": "body",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": true,
+                  "format_validator": null
+                },
+                "key": null,
+                "debugKey": false,
+                "node_ui_type": null,
+                "node_ui_group_name": null,
+                "ui_field_configuration": null
+              },
+              {
+                "order": 7,
+                "id": "4da8811e-757c-4637-a1fd-d46eaac9908f",
+                "name": "code",
+                "path": "$.code",
+                "value": "",
+                "desc": "",
+                "type": "body",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": true,
+                  "format_validator": null
+                },
+                "key": null,
+                "debugKey": false,
+                "node_ui_type": null,
+                "node_ui_group_name": null,
+                "ui_field_configuration": null
+              },
+              {
+                "order": 8,
+                "id": "fd47fb48-014a-4ad5-ac2a-0f844cba1cd0",
+                "name": "description",
+                "path": "$.description",
+                "value": "",
+                "desc": "",
+                "type": "body",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": true,
+                  "format_validator": null
+                },
+                "key": null,
+                "debugKey": false,
+                "node_ui_type": null,
+                "node_ui_group_name": null,
+                "ui_field_configuration": null
+              },
+              {
+                "order": 9,
+                "id": "b1b0b741-dc2a-444c-8e62-032185c68bec",
+                "name": "responsePayload",
+                "path": "$",
+                "value": "",
+                "desc": "",
+                "type": "body",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": true,
+                  "format_validator": null
+                },
+                "key": null,
+                "debugKey": false,
+                "node_ui_type": null,
+                "node_ui_group_name": null,
+                "ui_field_configuration": null
+              }
+            ]
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "authorization",
+              "type": "",
+              "view": ""
+            },
+            "text": "[redacted]"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "headers",
+              "type": "",
+              "view": ""
+            },
+            "text": "[redacted]"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "request_body",
+              "type": "",
+              "view": ""
+            },
+            "text": [
+              {
+                "name": "channel",
+                "value": "amb",
+                "id": "9f048553-c1c1-42f6-5e5a-a28e0c4afcdc"
+              },
+              {
+                "name": "customeraddress",
+                "value": "$(n2.abc.abcUserId)",
+                "id": "39ae0eb8-1409-db03-9869-67dc2643003d"
+              },
+              {
+                "name": "bizaddress",
+                "value": "6fe67ece-e9fc-40fa-afac-fcbdd4353165",
+                "id": "0504fd49-9acf-aa6e-9cd9-b1dc5c33783b"
+              },
+              {
+                "name": "subject",
+                "value": null,
+                "id": "588518d1-0ca2-4b13-df21-cf98e4a0ab5b"
+              },
+              {
+                "name": "threadid",
+                "value": null,
+                "id": "ae91e42d-943a-6656-2f2c-1c88e2cff60f"
+              },
+              {
+                "name": "browserfingerprint",
+                "value": null,
+                "id": "9cacc794-1dcd-013e-42cd-dfaa65bc9342"
+              },
+              {
+                "name": "toRecipients",
+                "value": null,
+                "id": "833d28d7-01ae-e928-d997-7b26de781468"
+              },
+              {
+                "name": "ccRecipients",
+                "value": null,
+                "id": "c31da7a0-d9b9-ccd5-82c6-4320f2cbc051"
+              },
+              {
+                "name": "inReplyTo",
+                "value": null,
+                "id": "f52cd50e-720e-4146-8c2d-da2a1c77ae60"
+              }
+            ]
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "url_parameters",
+              "type": "",
+              "view": ""
+            },
+            "text": []
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "path_parameters",
+              "type": "",
+              "view": ""
+            },
+            "text": [
+              {
+                "name": "domain",
+                "id": "761a1780-1258-924a-84e9-6c73332cf2dd"
+              }
+            ]
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "newEvents",
+              "type": "",
+              "view": ""
+            },
+            "text": [
+              {
+                "name": "onauthorizationfail",
+                "type": "error"
+              },
+              {
+                "name": "conversationActive",
+                "type": "success"
+              },
+              {
+                "name": "conversationClosed",
+                "type": "success"
+              },
+              {
+                "name": "conversationInQueue",
+                "type": "success"
+              },
+              {
+                "name": "conversationOnHold",
+                "type": "success"
+              },
+              {
+                "name": "noConversationFound",
+                "type": "success"
+              }
+            ]
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "prevEvents",
+              "type": "",
+              "view": ""
+            },
+            "text": [
+              {
+                "name": "onauthorizationfail",
+                "type": "error"
+              },
+              {
+                "name": "conversationActive",
+                "type": "success"
+              },
+              {
+                "name": "conversationClosed",
+                "type": "success"
+              },
+              {
+                "name": "conversationInQueue",
+                "type": "success"
+              },
+              {
+                "name": "conversationOnHold",
+                "type": "success"
+              },
+              {
+                "name": "noConversationFound",
+                "type": "success"
+              }
+            ]
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "custom_output_vars",
+              "type": "",
+              "view": ""
+            },
+            "text": [
+              "conversationId",
+              "aliasId",
+              "conversationExistsBool",
+              "status",
+              "teamId",
+              "userId",
+              "apiStatus",
+              "code",
+              "description",
+              "responsePayload"
+            ]
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "node_heading",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "resourceinfo",
+              "type": "",
+              "view": ""
+            },
+            "text": {
+              "node_id": 226,
+              "node_name": "Search Conversation",
+              "resource_list": [
+                {
+                  "integration_id": 50033,
+                  "method_id": 57894,
+                  "auth_id": -1,
+                  "group_id": 50021,
+                  "prebuilt_group_auth_id": "4e7a7419-3bfe-11ec-bd9a-1220bef2a7c1"
+                }
+              ]
+            }
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "oauthRequest",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "viewmodeData",
+              "type": "",
+              "view": ""
+            },
+            "text": [
+              {
+                "name": "auth_id",
+                "value": "Engage",
+                "isNgSelectBox": true
+              },
+              {
+                "name": "version_id",
+                "value": ""
+              },
+              {
+                "name": "method_id",
+                "value": "Search Chat"
+              }
+            ]
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "isAuthPresent",
+              "type": "",
+              "view": ""
+            },
+            "text": true
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "isComponentNode",
+              "type": "",
+              "view": ""
+            },
+            "text": 1
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "container_name",
+              "type": "",
+              "view": ""
+            },
+            "text": "https://example.invalid/integration_node_file_search-conversation_1701704943759.js"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "nodeType",
+              "type": "",
+              "view": ""
+            },
+            "text": "https://example.invalid/integration_node_file_search-conversation_1701704943759.js"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "nodeInput",
+              "type": "",
+              "view": ""
+            },
+            "text": {
+              "conversationid": "",
+              "channel": "amb",
+              "customeraddress": "$(n2.abc.abcUserId)",
+              "bizaddress": "7605c173-14c9-420c-9aa0-dff12f335388",
+              "livechatApp": "",
+              "livechatThreadID": "",
+              "emailFromAddress": "",
+              "emailInReplyTo": null,
+              "emailToRecipients": null,
+              "emailCcRecipients": null,
+              "emailSubject": null,
+              "threadid": null,
+              "browserfingerprint": null,
+              "appleAccountID": "",
+              "subject": null,
+              "toRecipients": null,
+              "ccRecipients": null,
+              "inReplyTo": null,
+              "methodName": "search",
+              "nodeRunTimeAuth": "auth",
+              "gbmAgentId": ""
+            }
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "group_id",
+              "type": "",
+              "view": ""
+            },
+            "text": 50021
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "customUiAuthStatus",
+              "type": "",
+              "view": ""
+            },
+            "text": 0
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "customUiAuthId",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "adminParameters",
+              "type": "",
+              "view": ""
+            },
+            "text": {
+              "oauth_callbackurl_type": 0,
+              "clientId": "1ec92647-d32e-4555-ad01-f72d0d02cd37",
+              "tenant_identifier": "1ec92647-d32e-4555-ad01-f72d0d02cd37",
+              "domain": "Preprodengageapi.imiengage.net",
+              "integration_identifier": "https://example.invalid/v1/integration/cnteng",
+              "clientSecret": "[redacted]"
+            }
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "customuiWebcomponentElementName",
+              "type": "",
+              "view": ""
+            },
+            "text": "node-ui-template1701704943759"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "extraParamsData",
+              "type": "",
+              "view": ""
+            },
+            "text": {
+              "conversationid": "",
+              "channel": "amb",
+              "customeraddress": "$(n2.abc.abcUserId)",
+              "bizaddress": "6fe67ece-e9fc-40fa-afac-fcbdd4353165",
+              "livechatApp": "",
+              "livechatThreadID": "",
+              "emailFromAddress": "",
+              "emailInReplyTo": null,
+              "emailToRecipients": null,
+              "emailCcRecipients": null,
+              "emailSubject": null,
+              "threadid": null,
+              "browserfingerprint": null,
+              "appleAccountID": "",
+              "subject": null,
+              "toRecipients": null,
+              "ccRecipients": null,
+              "inReplyTo": null,
+              "methodName": "search",
+              "nodeRunTimeAuth": "auth",
+              "gbmAgentId": ""
+            }
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "isCustomUiAuthPresent",
+              "type": "",
+              "view": ""
+            },
+            "text": false
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "integration_version",
+              "type": "",
+              "view": ""
+            },
+            "text": 3
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "runTimeAuthorizationId",
+              "type": "",
+              "view": ""
+            },
+            "text": "[redacted]"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "nodeUiAuthorizationId",
+              "type": "",
+              "view": ""
+            },
+            "text": "[redacted]"
+          },
+          {
+            "tag": "log",
+            "attributes": {
+              "action_order": 0,
+              "index": "d81vcbss",
+              "name": 1001,
+              "order": 0,
+              "tag": "log",
+              "type": "onleave"
+            },
+            "text": "$(n226.conversationId)"
+          },
+          {
+            "tag": "log",
+            "attributes": {
+              "action_order": 0,
+              "index": "vkz74ywx",
+              "name": 1002,
+              "order": 1,
+              "tag": "log",
+              "type": "onleave"
+            },
+            "text": "$(n226.aliasId)"
+          },
+          {
+            "tag": "log",
+            "attributes": {
+              "action_order": 0,
+              "index": "n7mgktse",
+              "name": 1003,
+              "order": 2,
+              "tag": "log",
+              "type": "onleave"
+            },
+            "text": "$(n226.status)"
+          },
+          {
+            "tag": "log",
+            "attributes": {
+              "action_order": 0,
+              "index": "wo3fxm68",
+              "name": 1004,
+              "order": 3,
+              "tag": "log",
+              "type": "onleave"
+            },
+            "text": "$(n226.responsePayload)"
+          },
+          {
+            "tag": "nodevariablestore",
+            "attributes": {
+              "name": "n226.conversationId",
+              "source": 226
+            },
+            "text": "$(conversationId)"
+          },
+          {
+            "tag": "nodevariablestore",
+            "attributes": {
+              "name": "n226.aliasId",
+              "source": 226
+            },
+            "text": "$(aliasId)"
+          },
+          {
+            "tag": "nodevariablestore",
+            "attributes": {
+              "name": "n226.status",
+              "source": 226
+            },
+            "text": "$(status)"
+          },
+          {
+            "tag": "nodevariablestore",
+            "attributes": {
+              "name": "n226.responsePayload",
+              "source": 226
+            },
+            "text": "$(responsePayload)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "242",
+      "parent": "1",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "tag": "prebuiltnode",
+        "attributes": {
+          "defaulttemplate": "deftemplate",
+          "image": "https://example.invalid/dvp-cfdforms/link/80331bec-81fc-4414-9396-39d6a0afc6bf/CiscoWebexLogo637513806888123311_152820853165114.svg",
+          "infolabel": "resg32fc3z",
+          "label": "Append Conversation",
+          "name": "Append Conversation",
+          "paramhide": true,
+          "templatedialog": [
+            {
+              "name": "deftemplate",
+              "label": "test",
+              "key": "prebuiltnode",
+              "size": {
+                "width": "$(width-integration)",
+                "height": "$(height-integration)"
+              }
+            }
+          ],
+          "type": "PrebuiltNode",
+          "updatedImage": "https://example.invalid/dvp-cfdforms/link/80331bec-81fc-4414-9396-39d6a0afc6bf/CiscoWebexLogo637513806888123311_152820853165114.svg",
+          "updatedimage": "https://example.invalid/dvp-cfdforms/link/80331bec-81fc-4414-9396-39d6a0afc6bf/CiscoWebexLogo637513806888123311_152820853165114.svg",
+          "updatedon": "2024-05-17T06:34:27.681",
+          "versionidsstr": [
+            {
+              "id": 50171,
+              "versionName": "v1.0",
+              "integrationId": 50031,
+              "status": 1,
+              "description": "",
+              "liveFromDate": "2021-12-13 12:13:00.0",
+              "discardedFromDate": null
+            },
+            {
+              "id": 50432,
+              "versionName": "beta0.001",
+              "integrationId": 50031,
+              "status": 4,
+              "description": "",
+              "liveFromDate": "2022-05-17 05:39:00.0",
+              "discardedFromDate": "2022-05-17 05:50:00.0"
+            },
+            {
+              "id": 50434,
+              "versionName": "beta0.002",
+              "integrationId": 50031,
+              "status": 4,
+              "description": "",
+              "liveFromDate": "2022-05-17 05:50:02.0",
+              "discardedFromDate": "2022-05-17 10:18:00.0"
+            },
+            {
+              "id": 50436,
+              "versionName": "beta0.003",
+              "integrationId": 50031,
+              "status": 4,
+              "description": "",
+              "liveFromDate": "2022-05-17 10:16:16.0",
+              "discardedFromDate": "2022-05-24 13:45:00.0"
+            },
+            {
+              "id": 50439,
+              "versionName": "beta0.004",
+              "integrationId": 50031,
+              "status": 4,
+              "description": "",
+              "liveFromDate": "2022-05-24 13:45:23.0",
+              "discardedFromDate": "2022-07-25 07:37:00.0"
+            },
+            {
+              "id": 50476,
+              "versionName": "beta0.005",
+              "integrationId": 50031,
+              "status": 4,
+              "description": "",
+              "liveFromDate": "2022-05-27 09:30:23.0",
+              "discardedFromDate": "2022-05-27 09:45:00.0"
+            },
+            {
+              "id": 50477,
+              "versionName": "beta0.006",
+              "integrationId": 50031,
+              "status": 4,
+              "description": "",
+              "liveFromDate": "2022-05-27 09:44:37.0",
+              "discardedFromDate": "2022-07-25 07:37:00.0"
+            },
+            {
+              "id": 50501,
+              "versionName": "beta0.007",
+              "integrationId": 50031,
+              "status": 4,
+              "description": "",
+              "liveFromDate": "2022-06-07 05:59:43.0",
+              "discardedFromDate": "2022-07-25 07:37:00.0"
+            },
+            {
+              "id": 50523,
+              "versionName": "beta0.008",
+              "integrationId": 50031,
+              "status": 4,
+              "description": "",
+              "liveFromDate": "2022-06-13 10:11:48.0",
+              "discardedFromDate": "2022-07-25 07:37:00.0"
+            },
+            {
+              "id": 50524,
+              "versionName": "beta0.009",
+              "integrationId": 50031,
+              "status": 4,
+              "description": "",
+              "liveFromDate": "2022-06-13 10:29:00.0",
+              "discardedFromDate": "2022-07-25 07:37:00.0"
+            },
+            {
+              "id": 50548,
+              "versionName": "beta0.010",
+              "integrationId": 50031,
+              "status": 4,
+              "description": "",
+              "liveFromDate": "2022-06-24 05:45:59.0",
+              "discardedFromDate": "2022-07-25 07:37:00.0"
+            },
+            {
+              "id": 50653,
+              "versionName": "v1.1",
+              "integrationId": 50031,
+              "status": 4,
+              "description": "",
+              "liveFromDate": "2022-07-25 07:36:00.0",
+              "discardedFromDate": "2022-07-25 17:31:00.0"
+            },
+            {
+              "id": 50660,
+              "versionName": "v1.3",
+              "integrationId": 50031,
+              "status": 1,
+              "description": "",
+              "liveFromDate": "2022-07-25 17:29:00.0",
+              "discardedFromDate": null
+            },
+            {
+              "id": 50881,
+              "versionName": "alpha0.00001",
+              "integrationId": 50031,
+              "status": 4,
+              "description": "",
+              "liveFromDate": "2022-09-21 12:50:29.0",
+              "discardedFromDate": "2022-09-22 07:52:00.0"
+            },
+            {
+              "id": 50883,
+              "versionName": "alpha0.00002",
+              "integrationId": 50031,
+              "status": 4,
+              "description": "",
+              "liveFromDate": "2022-09-22 07:52:16.0",
+              "discardedFromDate": "2022-11-04 14:03:00.0"
+            },
+            {
+              "id": 50951,
+              "versionName": "v1.4",
+              "integrationId": 50031,
+              "status": 1,
+              "description": "",
+              "liveFromDate": "2022-11-04 14:03:00.0",
+              "discardedFromDate": null
+            },
+            {
+              "id": 52197,
+              "versionName": "alpha 0.000002",
+              "integrationId": 50031,
+              "status": 1,
+              "description": "",
+              "liveFromDate": "2023-12-05 04:22:51.0",
+              "discardedFromDate": null
+            },
+            {
+              "id": 52201,
+              "versionName": "alpha 0.000003",
+              "integrationId": 50031,
+              "status": 1,
+              "description": "",
+              "liveFromDate": "2023-12-05 11:27:18.0",
+              "discardedFromDate": null
+            },
+            {
+              "id": 52203,
+              "versionName": "alpha 0.000004",
+              "integrationId": 50031,
+              "status": 1,
+              "description": "",
+              "liveFromDate": "2023-12-05 11:45:43.0",
+              "discardedFromDate": null
+            },
+            {
+              "id": 52206,
+              "versionName": "alpha 0.000005",
+              "integrationId": 50031,
+              "status": 1,
+              "description": "",
+              "liveFromDate": "2023-12-07 03:54:27.0",
+              "discardedFromDate": null
+            },
+            {
+              "id": 52228,
+              "versionName": "alpha 0.000006",
+              "integrationId": 50031,
+              "status": 1,
+              "description": "",
+              "liveFromDate": "2023-12-20 03:12:35.0",
+              "discardedFromDate": null
+            }
+          ],
+          "view_restrict": true
+        },
+        "children": [
+          {
+            "tag": "param",
+            "attributes": {
+              "name": "referencekey",
+              "type": "",
+              "view": ""
+            },
+            "text": 50031
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "name": "versionsList",
+              "type": "",
+              "view": ""
+            },
+            "text": [
+              {
+                "id": 50171,
+                "versionName": "v1.0",
+                "integrationId": 50031,
+                "status": 1,
+                "description": "",
+                "liveFromDate": "2021-12-13 12:13:00.0",
+                "discardedFromDate": null
+              },
+              {
+                "id": 50432,
+                "versionName": "beta0.001",
+                "integrationId": 50031,
+                "status": 4,
+                "description": "",
+                "liveFromDate": "2022-05-17 05:39:00.0",
+                "discardedFromDate": "2022-05-17 05:50:00.0"
+              },
+              {
+                "id": 50434,
+                "versionName": "beta0.002",
+                "integrationId": 50031,
+                "status": 4,
+                "description": "",
+                "liveFromDate": "2022-05-17 05:50:02.0",
+                "discardedFromDate": "2022-05-17 10:18:00.0"
+              },
+              {
+                "id": 50436,
+                "versionName": "beta0.003",
+                "integrationId": 50031,
+                "status": 4,
+                "description": "",
+                "liveFromDate": "2022-05-17 10:16:16.0",
+                "discardedFromDate": "2022-05-24 13:45:00.0"
+              },
+              {
+                "id": 50439,
+                "versionName": "beta0.004",
+                "integrationId": 50031,
+                "status": 4,
+                "description": "",
+                "liveFromDate": "2022-05-24 13:45:23.0",
+                "discardedFromDate": "2022-07-25 07:37:00.0"
+              },
+              {
+                "id": 50476,
+                "versionName": "beta0.005",
+                "integrationId": 50031,
+                "status": 4,
+                "description": "",
+                "liveFromDate": "2022-05-27 09:30:23.0",
+                "discardedFromDate": "2022-05-27 09:45:00.0"
+              },
+              {
+                "id": 50477,
+                "versionName": "beta0.006",
+                "integrationId": 50031,
+                "status": 4,
+                "description": "",
+                "liveFromDate": "2022-05-27 09:44:37.0",
+                "discardedFromDate": "2022-07-25 07:37:00.0"
+              },
+              {
+                "id": 50501,
+                "versionName": "beta0.007",
+                "integrationId": 50031,
+                "status": 4,
+                "description": "",
+                "liveFromDate": "2022-06-07 05:59:43.0",
+                "discardedFromDate": "2022-07-25 07:37:00.0"
+              },
+              {
+                "id": 50523,
+                "versionName": "beta0.008",
+                "integrationId": 50031,
+                "status": 4,
+                "description": "",
+                "liveFromDate": "2022-06-13 10:11:48.0",
+                "discardedFromDate": "2022-07-25 07:37:00.0"
+              },
+              {
+                "id": 50524,
+                "versionName": "beta0.009",
+                "integrationId": 50031,
+                "status": 4,
+                "description": "",
+                "liveFromDate": "2022-06-13 10:29:00.0",
+                "discardedFromDate": "2022-07-25 07:37:00.0"
+              },
+              {
+                "id": 50548,
+                "versionName": "beta0.010",
+                "integrationId": 50031,
+                "status": 4,
+                "description": "",
+                "liveFromDate": "2022-06-24 05:45:59.0",
+                "discardedFromDate": "2022-07-25 07:37:00.0"
+              },
+              {
+                "id": 50653,
+                "versionName": "v1.1",
+                "integrationId": 50031,
+                "status": 4,
+                "description": "",
+                "liveFromDate": "2022-07-25 07:36:00.0",
+                "discardedFromDate": "2022-07-25 17:31:00.0"
+              },
+              {
+                "id": 50660,
+                "versionName": "v1.3",
+                "integrationId": 50031,
+                "status": 1,
+                "description": "",
+                "liveFromDate": "2022-07-25 17:29:00.0",
+                "discardedFromDate": null
+              },
+              {
+                "id": 50881,
+                "versionName": "alpha0.00001",
+                "integrationId": 50031,
+                "status": 4,
+                "description": "",
+                "liveFromDate": "2022-09-21 12:50:29.0",
+                "discardedFromDate": "2022-09-22 07:52:00.0"
+              },
+              {
+                "id": 50883,
+                "versionName": "alpha0.00002",
+                "integrationId": 50031,
+                "status": 4,
+                "description": "",
+                "liveFromDate": "2022-09-22 07:52:16.0",
+                "discardedFromDate": "2022-11-04 14:03:00.0"
+              },
+              {
+                "id": 50951,
+                "versionName": "v1.4",
+                "integrationId": 50031,
+                "status": 1,
+                "description": "",
+                "liveFromDate": "2022-11-04 14:03:00.0",
+                "discardedFromDate": null
+              },
+              {
+                "id": 52197,
+                "versionName": "alpha 0.000002",
+                "integrationId": 50031,
+                "status": 1,
+                "description": "",
+                "liveFromDate": "2023-12-05 04:22:51.0",
+                "discardedFromDate": null
+              },
+              {
+                "id": 52201,
+                "versionName": "alpha 0.000003",
+                "integrationId": 50031,
+                "status": 1,
+                "description": "",
+                "liveFromDate": "2023-12-05 11:27:18.0",
+                "discardedFromDate": null
+              },
+              {
+                "id": 52203,
+                "versionName": "alpha 0.000004",
+                "integrationId": 50031,
+                "status": 1,
+                "description": "",
+                "liveFromDate": "2023-12-05 11:45:43.0",
+                "discardedFromDate": null
+              },
+              {
+                "id": 52206,
+                "versionName": "alpha 0.000005",
+                "integrationId": 50031,
+                "status": 1,
+                "description": "",
+                "liveFromDate": "2023-12-07 03:54:27.0",
+                "discardedFromDate": null
+              },
+              {
+                "id": 52228,
+                "versionName": "alpha 0.000006",
+                "integrationId": 50031,
+                "status": 1,
+                "description": "",
+                "liveFromDate": "2023-12-20 03:12:35.0",
+                "discardedFromDate": null
+              }
+            ]
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "name": "versionIds",
+              "type": "versiondata"
+            },
+            "text": "undefined"
+          },
+          {
+            "tag": "event",
+            "attributes": {
+              "name": "oninvaliddata",
+              "type": "BP"
+            },
+            "text": ""
+          },
+          {
+            "tag": "event",
+            "attributes": {
+              "name": "onerror",
+              "type": "BP"
+            },
+            "text": ""
+          },
+          {
+            "tag": "event",
+            "attributes": {
+              "name": "oninvalidchoice",
+              "type": "BP"
+            },
+            "text": ""
+          },
+          {
+            "tag": "event",
+            "attributes": {
+              "name": "ontimeout",
+              "type": "TP"
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "integration_id",
+              "type": "",
+              "view": ""
+            },
+            "text": 50031
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "client_uuid",
+              "type": "",
+              "view": ""
+            },
+            "text": "50d97e6a-ad14-4a77-898a-7f6f104bfb14"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "node_uuid",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "method_id",
+              "type": "",
+              "view": ""
+            },
+            "text": 58050
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "version_id",
+              "type": "",
+              "view": ""
+            },
+            "text": 52406
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "auth_id",
+              "type": "",
+              "view": ""
+            },
+            "text": -1
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "methodRequestParameters",
+              "type": "",
+              "view": ""
+            },
+            "text": [
+              {
+                "order": 0,
+                "id": "9a5bd517-93db-51a9-1f35-3edccf4152d0",
+                "name": "domain",
+                "path": null,
+                "type": "path",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": true,
+                  "format_validator": null
+                },
+                "key": "domain",
+                "debugKey": false,
+                "node_ui_type": "admin",
+                "node_ui_group_name": "hide",
+                "ui_field_configuration": {
+                  "type": "text",
+                  "options": []
+                }
+              },
+              {
+                "order": 0,
+                "id": "276e9680-96eb-2a1d-7511-9c2699d2acc4",
+                "name": "Conversation ID",
+                "path": null,
+                "value": "$(n226.conversationId)",
+                "desc": "$(n226.conversationId)",
+                "type": "path",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": true,
+                  "format_validator": null
+                },
+                "key": "conversationid",
+                "debugKey": false,
+                "node_ui_type": "default",
+                "node_ui_group_name": "default",
+                "ui_field_configuration": {
+                  "type": "text",
+                  "options": []
+                }
+              },
+              {
+                "order": 0,
+                "id": "f322b506-c3f8-ddb4-4648-86a772380562",
+                "name": "channel",
+                "path": "channel",
+                "value": "amb",
+                "desc": "amb",
+                "type": "body",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": true,
+                  "format_validator": null
+                },
+                "key": "channel",
+                "debugKey": false,
+                "node_ui_type": "default",
+                "node_ui_group_name": "default",
+                "ui_field_configuration": {
+                  "type": "text",
+                  "options": []
+                }
+              },
+              {
+                "order": 0,
+                "id": "3e22ceff-4d06-dacc-505a-ccddb88016a4",
+                "name": "subject",
+                "path": "subject",
+                "value": null,
+                "desc": null,
+                "type": "body",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": true,
+                  "format_validator": null
+                },
+                "key": "subject",
+                "debugKey": false,
+                "node_ui_type": "default",
+                "node_ui_group_name": "default",
+                "ui_field_configuration": {
+                  "type": "text",
+                  "options": []
+                }
+              },
+              {
+                "order": 0,
+                "id": "fedbc70f-5cf4-ef16-73c1-4460a97fdfe7",
+                "name": "direction",
+                "path": "direction",
+                "value": "inbound",
+                "desc": "inbound",
+                "type": "body",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": true,
+                  "format_validator": null
+                },
+                "key": "direction",
+                "debugKey": false,
+                "node_ui_type": "default",
+                "node_ui_group_name": "default",
+                "ui_field_configuration": {
+                  "type": "text",
+                  "options": []
+                }
+              },
+              {
+                "order": 0,
+                "id": "87afb582-ebbd-9ff5-41ae-a472a601394c",
+                "name": "messagetype",
+                "path": "messagetype",
+                "value": "text-with-attachments",
+                "desc": "text-with-attachments",
+                "type": "body",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": true,
+                  "format_validator": null
+                },
+                "key": "messagetype",
+                "debugKey": false,
+                "node_ui_type": "default",
+                "node_ui_group_name": "default",
+                "ui_field_configuration": {
+                  "type": "text",
+                  "options": []
+                }
+              },
+              {
+                "order": 0,
+                "id": "1e96df51-89b0-2c9c-661e-de688f8ce3c3",
+                "name": "livechatformresponse",
+                "path": "livechatformresponse",
+                "value": null,
+                "desc": null,
+                "type": "body",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": true,
+                  "format_validator": null
+                },
+                "key": "livechatformresponse",
+                "debugKey": false,
+                "node_ui_type": "default",
+                "node_ui_group_name": "default",
+                "ui_field_configuration": {
+                  "type": "text",
+                  "options": []
+                }
+              },
+              {
+                "order": 0,
+                "id": "53a32535-fd66-0b2d-4d5d-8c831bb9f0b6",
+                "name": "text",
+                "path": "text",
+                "value": "$(n2.abc.url)",
+                "desc": "$(n2.abc.url)",
+                "type": "body",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": true,
+                  "format_validator": null
+                },
+                "key": "text",
+                "debugKey": false,
+                "node_ui_type": "default",
+                "node_ui_group_name": "default",
+                "ui_field_configuration": {
+                  "type": "text",
+                  "options": []
+                }
+              },
+              {
+                "order": 0,
+                "id": "187f10e7-03d1-5418-77c8-42039c7f9cef",
+                "name": "timestamp",
+                "path": "timestamp",
+                "value": "$(n2.abc.timestamp)",
+                "desc": "$(n2.abc.timestamp)",
+                "type": "body",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": true,
+                  "format_validator": null
+                },
+                "key": "timestamp",
+                "debugKey": false,
+                "node_ui_type": "default",
+                "node_ui_group_name": "default",
+                "ui_field_configuration": {
+                  "type": "text",
+                  "options": []
+                }
+              },
+              {
+                "order": 0,
+                "id": "a8c08533-3ac7-137a-95d7-07005acf999a",
+                "name": "attachments",
+                "path": "attachments",
+                "value": null,
+                "desc": null,
+                "type": "body",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": true,
+                  "format_validator": null
+                },
+                "key": "attachments",
+                "debugKey": false,
+                "node_ui_type": "default",
+                "node_ui_group_name": "default",
+                "ui_field_configuration": {
+                  "type": "text",
+                  "options": []
+                }
+              },
+              {
+                "order": 0,
+                "id": "62722b09-23a0-97ad-1c35-84ba4e9b3b4a",
+                "name": "frmAddress",
+                "path": "frmAddress",
+                "value": null,
+                "desc": null,
+                "type": "body",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": true,
+                  "format_validator": null
+                },
+                "key": "frmAddress",
+                "debugKey": false,
+                "node_ui_type": "default",
+                "node_ui_group_name": "default",
+                "ui_field_configuration": {
+                  "type": "text",
+                  "options": []
+                }
+              },
+              {
+                "order": 0,
+                "id": "cb0a1f8b-fc43-bbe9-6124-9620a86644ae",
+                "name": "toRecipients",
+                "path": "toRecipients",
+                "value": null,
+                "desc": null,
+                "type": "body",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": true,
+                  "format_validator": null
+                },
+                "key": "toRecipients",
+                "debugKey": false,
+                "node_ui_type": "default",
+                "node_ui_group_name": "default",
+                "ui_field_configuration": {
+                  "type": "text",
+                  "options": []
+                }
+              },
+              {
+                "order": 0,
+                "id": "3e6f60b3-f145-1f2d-4ff4-2af92f3eb662",
+                "name": "ccRecipients",
+                "path": "ccRecipients",
+                "value": null,
+                "desc": null,
+                "type": "body",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": true,
+                  "format_validator": null
+                },
+                "key": "ccRecipients",
+                "debugKey": false,
+                "node_ui_type": "default",
+                "node_ui_group_name": "default",
+                "ui_field_configuration": {
+                  "type": "text",
+                  "options": []
+                }
+              },
+              {
+                "order": 0,
+                "id": "ba19a86e-c087-0d12-58de-c09eb918661b",
+                "name": "plainBody",
+                "path": "plainBody",
+                "value": null,
+                "desc": null,
+                "type": "body",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": true,
+                  "format_validator": null
+                },
+                "key": "plainBody",
+                "debugKey": false,
+                "node_ui_type": "default",
+                "node_ui_group_name": "default",
+                "ui_field_configuration": {
+                  "type": "text",
+                  "options": []
+                }
+              },
+              {
+                "order": 0,
+                "id": "8c8e17c9-4922-cf22-7952-78bb59491507",
+                "name": "strippedHtml",
+                "path": "strippedHtml",
+                "value": null,
+                "desc": null,
+                "type": "body",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": true,
+                  "format_validator": null
+                },
+                "key": "strippedHtml",
+                "debugKey": false,
+                "node_ui_type": "default",
+                "node_ui_group_name": "default",
+                "ui_field_configuration": {
+                  "type": "text",
+                  "options": []
+                }
+              },
+              {
+                "order": 0,
+                "id": "e6266dbd-0b11-d757-84c7-16a6403d77d5",
+                "name": "htmlBody",
+                "path": "htmlBody",
+                "value": null,
+                "desc": null,
+                "type": "body",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": true,
+                  "format_validator": null
+                },
+                "key": "htmlBody",
+                "debugKey": false,
+                "node_ui_type": "default",
+                "node_ui_group_name": "default",
+                "ui_field_configuration": {
+                  "type": "text",
+                  "options": []
+                }
+              },
+              {
+                "order": 0,
+                "id": "449e2874-a662-c5a8-1815-15a311647418",
+                "name": "emailHeaders",
+                "path": "emailHeaders",
+                "value": null,
+                "desc": null,
+                "type": "body",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": true,
+                  "format_validator": null
+                },
+                "key": "emailHeaders",
+                "debugKey": false,
+                "node_ui_type": "default",
+                "node_ui_group_name": "default",
+                "ui_field_configuration": {
+                  "type": "text",
+                  "options": []
+                }
+              },
+              {
+                "order": 0,
+                "id": "0cffbc14-355f-e9aa-cb57-228896feca6a",
+                "name": "webhookurl",
+                "path": "callbackurl",
+                "type": "body",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": true,
+                  "format_validator": null
+                },
+                "key": "callbackurl",
+                "debugKey": false,
+                "node_ui_type": "admin",
+                "node_ui_group_name": "hide",
+                "ui_field_configuration": {
+                  "type": "text",
+                  "options": []
+                }
+              },
+              {
+                "order": 0,
+                "id": "b9c9966b-aa92-1cc7-659d-8b4d83eba2e7",
+                "name": "lcCarousel",
+                "path": "lcCarousel",
+                "value": null,
+                "desc": null,
+                "type": "body",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": true,
+                  "format_validator": null
+                },
+                "key": "lcCarousel",
+                "debugKey": false,
+                "node_ui_type": "default",
+                "node_ui_group_name": "default",
+                "ui_field_configuration": {
+                  "type": "text",
+                  "options": []
+                }
+              },
+              {
+                "order": 0,
+                "id": "e07028b3-3135-32b4-bbad-e64d608a97bb",
+                "name": "lcQuickReplies",
+                "path": "lcQuickReplies",
+                "value": null,
+                "desc": null,
+                "type": "body",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": true,
+                  "format_validator": null
+                },
+                "key": "lcQuickReplies",
+                "debugKey": false,
+                "node_ui_type": "default",
+                "node_ui_group_name": "default",
+                "ui_field_configuration": {
+                  "type": "text",
+                  "options": []
+                }
+              },
+              {
+                "order": 0,
+                "id": "bd4a0546-7628-cd73-e515-edd47e938a48",
+                "name": "lcQuickRepliesResponse",
+                "path": "lcQuickRepliesResponse",
+                "value": null,
+                "desc": null,
+                "type": "body",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": true,
+                  "format_validator": null
+                },
+                "key": "lcQuickRepliesResponse",
+                "debugKey": false,
+                "node_ui_type": "default",
+                "node_ui_group_name": "default",
+                "ui_field_configuration": {
+                  "type": "text",
+                  "options": []
+                }
+              },
+              {
+                "order": 0,
+                "id": "d730f104-5629-bc07-1dc4-6ab660c1a089",
+                "name": "lcCarouselResponse",
+                "path": "lcCarouselResponse",
+                "value": null,
+                "desc": null,
+                "type": "body",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": true,
+                  "format_validator": null
+                },
+                "key": "lcCarouselResponse",
+                "debugKey": false,
+                "node_ui_type": "default",
+                "node_ui_group_name": "default",
+                "ui_field_configuration": {
+                  "type": "text",
+                  "options": []
+                }
+              },
+              {
+                "order": 0,
+                "id": "2e31d592-35f6-45fe-931b-e0c94271b6a2",
+                "name": "ambForm",
+                "path": "ambForm",
+                "value": null,
+                "desc": null,
+                "type": "body",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": false,
+                  "format_validator": null
+                },
+                "key": "ambForm",
+                "debugKey": false,
+                "node_ui_type": "default",
+                "node_ui_group_name": "default",
+                "ui_field_configuration": {
+                  "type": "text",
+                  "options": []
+                }
+              },
+              {
+                "order": 0,
+                "id": "bda9cf2e-fff3-4f5a-9cb4-520e551fdd31",
+                "name": "ambFormResponse",
+                "path": "ambFormResponse",
+                "value": null,
+                "desc": null,
+                "type": "body",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": false,
+                  "format_validator": null
+                },
+                "key": "ambFormResponse",
+                "debugKey": false,
+                "node_ui_type": "default",
+                "node_ui_group_name": "default",
+                "ui_field_configuration": {
+                  "type": "text",
+                  "options": []
+                }
+              },
+              {
+                "order": 0,
+                "id": "7ecfe613-d393-4b14-bbb0-7e8fe1f0cef2",
+                "name": "ambListPicker",
+                "path": "ambListPicker",
+                "value": null,
+                "desc": null,
+                "type": "body",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": false,
+                  "format_validator": null
+                },
+                "key": "ambListPicker",
+                "debugKey": false,
+                "node_ui_type": "default",
+                "node_ui_group_name": "default",
+                "ui_field_configuration": {
+                  "type": "text",
+                  "options": []
+                }
+              },
+              {
+                "order": 0,
+                "id": "0ca71761-4205-4807-9572-f31f3306b4ac",
+                "name": "ambListPickerResponse",
+                "path": "ambListPickerResponse",
+                "value": null,
+                "desc": null,
+                "type": "body",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": false,
+                  "format_validator": null
+                },
+                "key": "ambListPickerResponse",
+                "debugKey": false,
+                "node_ui_type": "default",
+                "node_ui_group_name": "default",
+                "ui_field_configuration": {
+                  "type": "text",
+                  "options": []
+                }
+              },
+              {
+                "order": 0,
+                "id": "36ee261f-18f6-4436-b727-dadb9a091b51",
+                "name": "ambQuickReplies",
+                "path": "ambQuickReplies",
+                "value": null,
+                "desc": null,
+                "type": "body",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": false,
+                  "format_validator": null
+                },
+                "key": "ambQuickReplies",
+                "debugKey": false,
+                "node_ui_type": "default",
+                "node_ui_group_name": "default",
+                "ui_field_configuration": {
+                  "type": "text",
+                  "options": []
+                }
+              },
+              {
+                "order": 0,
+                "id": "8f77dcec-b3c5-4591-a509-dfedf34ecde8",
+                "name": "ambQuickRepliesResponse",
+                "path": "ambQuickRepliesResponse",
+                "value": null,
+                "desc": null,
+                "type": "body",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": false,
+                  "format_validator": null
+                },
+                "key": "ambQuickRepliesResponse",
+                "debugKey": false,
+                "node_ui_type": "default",
+                "node_ui_group_name": "default",
+                "ui_field_configuration": {
+                  "type": "text",
+                  "options": []
+                }
+              },
+              {
+                "order": 0,
+                "id": "06c9ad06-70b2-46fa-a76a-80e436715b0a",
+                "name": "ambTimePicker",
+                "path": "ambTimePicker",
+                "value": null,
+                "desc": null,
+                "type": "body",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": false,
+                  "format_validator": null
+                },
+                "key": "ambTimePicker",
+                "debugKey": false,
+                "node_ui_type": "default",
+                "node_ui_group_name": "default",
+                "ui_field_configuration": {
+                  "type": "text",
+                  "options": []
+                }
+              },
+              {
+                "order": 0,
+                "id": "1124d1eb-35e1-4b0f-b732-29cfca141ec4",
+                "name": "ambTimePickerResponse",
+                "path": "ambTimePickerResponse",
+                "value": null,
+                "desc": null,
+                "type": "body",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": false,
+                  "format_validator": null
+                },
+                "key": "ambTimePickerResponse",
+                "debugKey": false,
+                "node_ui_type": "default",
+                "node_ui_group_name": "default",
+                "ui_field_configuration": {
+                  "type": "text",
+                  "options": []
+                }
+              },
+              {
+                "order": 0,
+                "id": "61e3f532-8564-4e05-9646-65ac0ebc7d40",
+                "name": "gbmCarousel",
+                "path": "gbmCarousel",
+                "value": null,
+                "desc": null,
+                "type": "body",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": false,
+                  "format_validator": null
+                },
+                "key": "gbmCarousel",
+                "debugKey": false,
+                "node_ui_type": "default",
+                "node_ui_group_name": "default",
+                "ui_field_configuration": {
+                  "type": "text",
+                  "options": []
+                }
+              },
+              {
+                "order": 0,
+                "id": "ccea238f-cca2-412d-92e0-2d35c392ecf0",
+                "name": "gbmRichCard",
+                "path": "gbmRichCard",
+                "value": null,
+                "desc": null,
+                "type": "body",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": false,
+                  "format_validator": null
+                },
+                "key": "gbmRichCard",
+                "debugKey": false,
+                "node_ui_type": "default",
+                "node_ui_group_name": "default",
+                "ui_field_configuration": {
+                  "type": "text",
+                  "options": []
+                }
+              },
+              {
+                "order": 0,
+                "id": "2a084a0a-6d8d-479e-898e-094916e1bbbf",
+                "name": "gbmSuggestions",
+                "path": "gbmSuggestions",
+                "value": null,
+                "desc": null,
+                "type": "body",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": false,
+                  "format_validator": null
+                },
+                "key": "gbmSuggestions",
+                "debugKey": false,
+                "node_ui_type": "default",
+                "node_ui_group_name": "default",
+                "ui_field_configuration": {
+                  "type": "text",
+                  "options": []
+                }
+              },
+              {
+                "order": 0,
+                "id": "ec193872-c351-4879-a73d-b7bfea5f4473",
+                "name": "gbmSuggestionResponse",
+                "path": "gbmSuggestionResponse",
+                "value": null,
+                "desc": null,
+                "type": "body",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": false,
+                  "format_validator": null
+                },
+                "key": "gbmSuggestionResponse",
+                "debugKey": false,
+                "node_ui_type": "default",
+                "node_ui_group_name": "default",
+                "ui_field_configuration": {
+                  "type": "text",
+                  "options": []
+                }
+              },
+              {
+                "order": 0,
+                "id": "803d928a-8804-49c9-8e06-05b02bda923e",
+                "name": "extras",
+                "path": "extras",
+                "value": "$(n2.abc.capabilityList)",
+                "desc": "$(n2.abc.capabilityList)",
+                "type": "body",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": false,
+                  "format_validator": null
+                },
+                "key": "extras",
+                "debugKey": false,
+                "node_ui_type": "default",
+                "node_ui_group_name": "default",
+                "ui_field_configuration": {
+                  "type": "text",
+                  "options": []
+                }
+              }
+            ]
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "methodRequestGroups",
+              "type": "",
+              "view": ""
+            },
+            "text": {}
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "methodGroupsOrder",
+              "type": "",
+              "view": ""
+            },
+            "text": []
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "methodResponseParameters",
+              "type": "",
+              "view": ""
+            },
+            "text": [
+              {
+                "order": 0,
+                "id": "36aea71a-f412-4033-90c0-91f69a2e9dfd",
+                "name": "TransId",
+                "path": "tid",
+                "value": "",
+                "desc": "",
+                "type": "body",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": true,
+                  "format_validator": null
+                },
+                "key": null,
+                "debugKey": false,
+                "node_ui_type": null,
+                "node_ui_group_name": null,
+                "ui_field_configuration": null
+              }
+            ]
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "authorization",
+              "type": "",
+              "view": ""
+            },
+            "text": "[redacted]"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "headers",
+              "type": "",
+              "view": ""
+            },
+            "text": "[redacted]"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "request_body",
+              "type": "",
+              "view": ""
+            },
+            "text": [
+              {
+                "name": "channel",
+                "value": "amb",
+                "id": "f322b506-c3f8-ddb4-4648-86a772380562"
+              },
+              {
+                "name": "subject",
+                "value": null,
+                "id": "3e22ceff-4d06-dacc-505a-ccddb88016a4"
+              },
+              {
+                "name": "direction",
+                "value": "inbound",
+                "id": "fedbc70f-5cf4-ef16-73c1-4460a97fdfe7"
+              },
+              {
+                "name": "messagetype",
+                "value": "text-with-attachments",
+                "id": "87afb582-ebbd-9ff5-41ae-a472a601394c"
+              },
+              {
+                "name": "livechatformresponse",
+                "value": null,
+                "id": "1e96df51-89b0-2c9c-661e-de688f8ce3c3"
+              },
+              {
+                "name": "text",
+                "value": "$(n2.abc.url)",
+                "id": "53a32535-fd66-0b2d-4d5d-8c831bb9f0b6"
+              },
+              {
+                "name": "timestamp",
+                "value": "$(n2.abc.timestamp)",
+                "id": "187f10e7-03d1-5418-77c8-42039c7f9cef"
+              },
+              {
+                "name": "attachments",
+                "value": null,
+                "id": "a8c08533-3ac7-137a-95d7-07005acf999a"
+              },
+              {
+                "name": "frmAddress",
+                "value": null,
+                "id": "62722b09-23a0-97ad-1c35-84ba4e9b3b4a"
+              },
+              {
+                "name": "toRecipients",
+                "value": null,
+                "id": "cb0a1f8b-fc43-bbe9-6124-9620a86644ae"
+              },
+              {
+                "name": "ccRecipients",
+                "value": null,
+                "id": "3e6f60b3-f145-1f2d-4ff4-2af92f3eb662"
+              },
+              {
+                "name": "plainBody",
+                "value": null,
+                "id": "ba19a86e-c087-0d12-58de-c09eb918661b"
+              },
+              {
+                "name": "strippedHtml",
+                "value": null,
+                "id": "8c8e17c9-4922-cf22-7952-78bb59491507"
+              },
+              {
+                "name": "htmlBody",
+                "value": null,
+                "id": "e6266dbd-0b11-d757-84c7-16a6403d77d5"
+              },
+              {
+                "name": "emailHeaders",
+                "value": null,
+                "id": "449e2874-a662-c5a8-1815-15a311647418"
+              },
+              {
+                "name": "webhookurl",
+                "id": "0cffbc14-355f-e9aa-cb57-228896feca6a"
+              },
+              {
+                "name": "lcCarousel",
+                "value": null,
+                "id": "b9c9966b-aa92-1cc7-659d-8b4d83eba2e7"
+              },
+              {
+                "name": "lcQuickReplies",
+                "value": null,
+                "id": "e07028b3-3135-32b4-bbad-e64d608a97bb"
+              },
+              {
+                "name": "lcQuickRepliesResponse",
+                "value": null,
+                "id": "bd4a0546-7628-cd73-e515-edd47e938a48"
+              },
+              {
+                "name": "lcCarouselResponse",
+                "value": null,
+                "id": "d730f104-5629-bc07-1dc4-6ab660c1a089"
+              },
+              {
+                "name": "ambForm",
+                "value": null,
+                "id": "2e31d592-35f6-45fe-931b-e0c94271b6a2"
+              },
+              {
+                "name": "ambFormResponse",
+                "value": null,
+                "id": "bda9cf2e-fff3-4f5a-9cb4-520e551fdd31"
+              },
+              {
+                "name": "ambListPicker",
+                "value": null,
+                "id": "7ecfe613-d393-4b14-bbb0-7e8fe1f0cef2"
+              },
+              {
+                "name": "ambListPickerResponse",
+                "value": null,
+                "id": "0ca71761-4205-4807-9572-f31f3306b4ac"
+              },
+              {
+                "name": "ambQuickReplies",
+                "value": null,
+                "id": "36ee261f-18f6-4436-b727-dadb9a091b51"
+              },
+              {
+                "name": "ambQuickRepliesResponse",
+                "value": null,
+                "id": "8f77dcec-b3c5-4591-a509-dfedf34ecde8"
+              },
+              {
+                "name": "ambTimePicker",
+                "value": null,
+                "id": "06c9ad06-70b2-46fa-a76a-80e436715b0a"
+              },
+              {
+                "name": "ambTimePickerResponse",
+                "value": null,
+                "id": "1124d1eb-35e1-4b0f-b732-29cfca141ec4"
+              },
+              {
+                "name": "gbmCarousel",
+                "value": null,
+                "id": "61e3f532-8564-4e05-9646-65ac0ebc7d40"
+              },
+              {
+                "name": "gbmRichCard",
+                "value": null,
+                "id": "ccea238f-cca2-412d-92e0-2d35c392ecf0"
+              },
+              {
+                "name": "gbmSuggestions",
+                "value": null,
+                "id": "2a084a0a-6d8d-479e-898e-094916e1bbbf"
+              },
+              {
+                "name": "gbmSuggestionResponse",
+                "value": null,
+                "id": "ec193872-c351-4879-a73d-b7bfea5f4473"
+              },
+              {
+                "name": "extras",
+                "value": "$(n2.abc.capabilityList)",
+                "id": "803d928a-8804-49c9-8e06-05b02bda923e"
+              }
+            ]
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "url_parameters",
+              "type": "",
+              "view": ""
+            },
+            "text": []
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "path_parameters",
+              "type": "",
+              "view": ""
+            },
+            "text": [
+              {
+                "name": "domain",
+                "id": "9a5bd517-93db-51a9-1f35-3edccf4152d0"
+              },
+              {
+                "name": "Conversation ID",
+                "value": "$(n226.conversationId)",
+                "id": "276e9680-96eb-2a1d-7511-9c2699d2acc4"
+              }
+            ]
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "newEvents",
+              "type": "",
+              "view": ""
+            },
+            "text": [
+              {
+                "name": "onauthorizationfail",
+                "type": "error"
+              },
+              {
+                "name": "Failure",
+                "type": "error"
+              },
+              {
+                "name": "onAppendMessageSuccess",
+                "type": "success"
+              },
+              {
+                "name": "onAppendMessageFailure",
+                "type": "error"
+              }
+            ]
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "prevEvents",
+              "type": "",
+              "view": ""
+            },
+            "text": [
+              {
+                "name": "onauthorizationfail",
+                "type": "error"
+              },
+              {
+                "name": "Failure",
+                "type": "error"
+              },
+              {
+                "name": "onAppendMessageSuccess",
+                "type": "success"
+              },
+              {
+                "name": "onAppendMessageFailure",
+                "type": "error"
+              }
+            ]
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "custom_output_vars",
+              "type": "",
+              "view": ""
+            },
+            "text": [
+              "TransId"
+            ]
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "node_heading",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "resourceinfo",
+              "type": "",
+              "view": ""
+            },
+            "text": {
+              "node_id": 242,
+              "node_name": "Append Conversation",
+              "resource_list": [
+                {
+                  "integration_id": 50031,
+                  "method_id": 58050,
+                  "auth_id": -1,
+                  "group_id": 50021,
+                  "prebuilt_group_auth_id": "4e7a7419-3bfe-11ec-bd9a-1220bef2a7c1",
+                  "node_version_id": 52406
+                }
+              ]
+            }
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "oauthRequest",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "viewmodeData",
+              "type": "",
+              "view": ""
+            },
+            "text": [
+              {
+                "name": "auth_id",
+                "value": "Engage",
+                "isNgSelectBox": true
+              },
+              {
+                "name": "version_id",
+                "value": ""
+              },
+              {
+                "name": "method_id",
+                "value": "Append Chat"
+              }
+            ]
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "isAuthPresent",
+              "type": "",
+              "view": ""
+            },
+            "text": true
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "isComponentNode",
+              "type": "",
+              "view": ""
+            },
+            "text": 1
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "container_name",
+              "type": "",
+              "view": ""
+            },
+            "text": "https://example.invalid/integration_node_file_append-message_1713818631468_5354679624588877.js"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "nodeType",
+              "type": "",
+              "view": ""
+            },
+            "text": "https://example.invalid/integration_node_file_append-message_1713818631468_5354679624588877.js"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "nodeInput",
+              "type": "",
+              "view": ""
+            },
+            "text": {}
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "group_id",
+              "type": "",
+              "view": ""
+            },
+            "text": 50021
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "customUiAuthStatus",
+              "type": "",
+              "view": ""
+            },
+            "text": 0
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "customUiAuthId",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "adminParameters",
+              "type": "",
+              "view": ""
+            },
+            "text": {
+              "oauth_callbackurl_type": 0,
+              "clientId": "1ec92647-d32e-4555-ad01-f72d0d02cd37",
+              "tenant_identifier": "1ec92647-d32e-4555-ad01-f72d0d02cd37",
+              "domain": "Preprodengageapi.imiengage.net",
+              "integration_identifier": "https://example.invalid/v1/integration/cnteng",
+              "clientSecret": "[redacted]"
+            }
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "customuiWebcomponentElementName",
+              "type": "",
+              "view": ""
+            },
+            "text": "node-ui-template1713818631468"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "extraParamsData",
+              "type": "",
+              "view": ""
+            },
+            "text": {
+              "conversationid": "$(n226.conversationId)",
+              "singleOrDynamic": "single",
+              "channel": "amb",
+              "frmAddress": null,
+              "toRecipients": null,
+              "ccRecipients": null,
+              "emailHeaders": "[redacted]",
+              "htmlBody": null,
+              "plainBody": null,
+              "strippedHtml": null,
+              "strippedText": "",
+              "direction": "inbound",
+              "messageType": "text-with-attachments",
+              "messagetype": "text-with-attachments",
+              "textOrResponse": "$(n2.abc.url)",
+              "dynamicLabel": "Text",
+              "timestamp": "$(n2.abc.timestamp)",
+              "dynamicJSON": "",
+              "attachments": null,
+              "lcCarousel": null,
+              "lcQuickReplies": null,
+              "gbmSuggestionResponse": null,
+              "gbmSuggestions": null,
+              "gbmRichCard": null,
+              "gbmCarousel": null,
+              "extras": "$(n2.abc.capabilityList)",
+              "lcCarouselObject": null,
+              "lcQRObject": null,
+              "livechatformresponse": null,
+              "lcQuickRepliesResponse": null,
+              "lcCarouselResponse": null,
+              "subject": null,
+              "ambListPickerResponse": null,
+              "ambTimePickerResponse": null,
+              "ambFormResponse": null,
+              "ambQuickReplies": null,
+              "ambQuickRepliesResponse": null,
+              "ambListPicker": null,
+              "ambTimePicker": null,
+              "ambForm": null,
+              "text": "$(n2.abc.url)"
+            }
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "isCustomUiAuthPresent",
+              "type": "",
+              "view": ""
+            },
+            "text": false
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "integration_version",
+              "type": "",
+              "view": ""
+            },
+            "text": 3
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "runTimeAuthorizationId",
+              "type": "",
+              "view": ""
+            },
+            "text": "[redacted]"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "nodeUiAuthorizationId",
+              "type": "",
+              "view": ""
+            },
+            "text": "[redacted]"
+          }
+        ]
+      }
+    },
+    {
+      "id": "360",
+      "parent": "5129186",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "eventtype": "default",
+        "label": "onPolicyFail",
+        "name": "onpolicyfail",
+        "nodeLabel": "End",
+        "nodeType": "end",
+        "parentInfo": {
+          "name": "onpolicyfail"
+        },
+        "portType": "BP",
+        "sessionRetryFlag": 0,
+        "type": "EN",
+        "value": "onpolicyfail",
+        "data": {
+          "parentNode": 382,
+          "type": "end"
+        },
+        "params": [
+          {
+            "name": "nodeEvent",
+            "value": "onpolicyfail"
+          },
+          {
+            "name": "sessionRetry",
+            "value": ""
+          },
+          {
+            "name": "exitResult",
+            "value": 3
+          },
+          {
+            "name": "asyncCheck",
+            "value": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "361",
+      "parent": "5129186",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "eventtype": "default",
+        "label": "onError",
+        "name": "onerror",
+        "nodeLabel": "End",
+        "nodeType": "end",
+        "parentInfo": {
+          "name": "onerror"
+        },
+        "portType": "BP",
+        "sessionRetryFlag": 0,
+        "type": "EN",
+        "value": "onerror",
+        "data": {
+          "parentNode": 382,
+          "type": "end"
+        },
+        "params": [
+          {
+            "name": "nodeEvent",
+            "value": "onerror"
+          },
+          {
+            "name": "sessionRetry",
+            "value": ""
+          },
+          {
+            "name": "exitResult",
+            "value": 3
+          },
+          {
+            "name": "asyncCheck",
+            "value": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "362",
+      "parent": "5129188",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "eventtype": "default",
+        "label": "onSuccess",
+        "name": "onsuccess",
+        "nodeLabel": "End",
+        "nodeType": "end",
+        "parentInfo": {
+          "name": "onsuccess"
+        },
+        "portType": "MP",
+        "sessionRetryFlag": 0,
+        "type": "EN",
+        "value": "onsuccess",
+        "data": {
+          "parentNode": 382,
+          "type": "end"
+        },
+        "params": [
+          {
+            "name": "nodeEvent",
+            "value": "onsuccess"
+          },
+          {
+            "name": "sessionRetry",
+            "value": ""
+          },
+          {
+            "name": "exitResult",
+            "value": 2
+          },
+          {
+            "name": "asyncCheck",
+            "value": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "382",
+      "parent": "1",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "tag": "umpapplebc",
+        "attributes": {
+          "image": "applebusinesschat.svg",
+          "key": "abc",
+          "label": "Apple Messages for Business",
+          "name": "Apple Messages for Business",
+          "paramhide": true,
+          "type": "UmpAppleBC",
+          "updatedImage": "applebusinesschat.svg",
+          "updatedimage": "applebusinesschat.svg",
+          "updatedon": "2024-03-05T05:57:54.103",
+          "view_restrict": true
+        },
+        "children": [
+          {
+            "tag": "param",
+            "attributes": {
+              "label": "Remove Wait For",
+              "name": "hideWaitFor"
+            },
+            "text": false
+          },
+          {
+            "tag": "event",
+            "attributes": {
+              "name": "onerror",
+              "targetcount": 1
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "channelId",
+              "type": "",
+              "view": ""
+            },
+            "text": 23
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "deliverychannel",
+              "type": "",
+              "view": ""
+            },
+            "text": "abc"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "destinationType",
+              "type": "",
+              "view": ""
+            },
+            "text": "abcUserId"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "destination",
+              "type": "",
+              "view": ""
+            },
+            "text": "$(n2.abc.abcUserId)"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "msgcreationtype",
+              "type": "",
+              "view": ""
+            },
+            "text": "createnew"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "type",
+              "type": "",
+              "view": ""
+            },
+            "text": "text"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "body",
+              "type": "",
+              "view": ""
+            },
+            "text": "Sorry your message could not be processed, please restart the conversation with a plain text message."
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "attachmenttype",
+              "type": "",
+              "view": ""
+            },
+            "text": "url"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "attachments",
+              "type": "",
+              "view": ""
+            },
+            "text": [
+              {
+                "mimeType": "",
+                "url": ""
+              }
+            ]
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "successoutcome",
+              "type": "",
+              "view": ""
+            },
+            "text": 1
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "timeout",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "expiryType",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "expiry",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "linkValidityCheck",
+              "type": "",
+              "view": ""
+            },
+            "text": false
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "shortLinkId",
+              "type": "",
+              "view": {
+                "name": "smartLinkIdView",
+                "class": "shortLinkId",
+                "value": ""
+              }
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "linkValidityTime",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "typing_indicator",
+              "type": "",
+              "view": ""
+            },
+            "text": true
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "url",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "urltitle",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "imageurl",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "imageMimeType",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "include_rich_link_video",
+              "type": "",
+              "view": ""
+            },
+            "text": false
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "videourl",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "videoMimeType",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "list_picker_received_message",
+              "type": "",
+              "view": ""
+            },
+            "text": {
+              "style": "small",
+              "title": "",
+              "subtitle": "",
+              "imageIdentifier": "",
+              "imageurl": "",
+              "ispreviewrequired": false
+            }
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "list_picker_sections",
+              "type": "",
+              "view": ""
+            },
+            "text": [
+              {
+                "order": "",
+                "style": "default",
+                "title": "",
+                "items": [
+                  {
+                    "order": "",
+                    "title": "",
+                    "subtitle": "",
+                    "identifier": "",
+                    "ispreviewrequired": false,
+                    "imageIdentifier": "",
+                    "imageurl": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "multipleSelection",
+              "type": "",
+              "view": ""
+            },
+            "text": false
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "sections",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "requestIdentifier",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "receivedMessage",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "images",
+              "type": "",
+              "view": ""
+            },
+            "text": []
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "replyMessage",
+              "type": "",
+              "view": ""
+            },
+            "text": {
+              "style": "small",
+              "title": ""
+            }
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "date_picker_received_message",
+              "type": "",
+              "view": ""
+            },
+            "text": {
+              "style": "small",
+              "title": "",
+              "subtitle": "",
+              "imageIdentifier": "",
+              "imageurl": "",
+              "ispreviewrequired": false
+            }
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "date_picker_events",
+              "type": "",
+              "view": ""
+            },
+            "text": {
+              "timezoneOffset": "",
+              "timeslots": [
+                {}
+              ],
+              "location": {}
+            }
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "payment",
+              "type": "",
+              "view": ""
+            },
+            "text": {
+              "paymentRequest": {
+                "lineItems": [
+                  {
+                    "label": "",
+                    "amount": "",
+                    "type": ""
+                  }
+                ],
+                "shippingMethods": [
+                  {
+                    "label": "",
+                    "amount": "",
+                    "detail": "",
+                    "identifier": ""
+                  }
+                ],
+                "total": {
+                  "label": "",
+                  "amount": "",
+                  "type": ""
+                },
+                "countryCode": "",
+                "currencyCode": "",
+                "requiredBillingContactFields": [],
+                "requiredShippingContactFields": []
+              }
+            }
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "payment_received_message",
+              "type": "",
+              "view": ""
+            },
+            "text": {
+              "title": ""
+            }
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "payment_reply_message",
+              "type": "",
+              "view": ""
+            },
+            "text": {
+              "title": ""
+            }
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "payment_request_inputtype",
+              "type": "",
+              "view": ""
+            },
+            "text": "static"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "scope",
+              "type": "",
+              "view": ""
+            },
+            "text": []
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "oauthScope",
+              "type": "",
+              "view": ""
+            },
+            "text": [
+              {}
+            ]
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "oauthData",
+              "type": "",
+              "view": ""
+            },
+            "text": {
+              "oauthReceiveTitle": "",
+              "oauthReceivesubtitle": "",
+              "oauthReceiveImage": "",
+              "oauthReplyTitle": "",
+              "oauthReplysubtitle": "",
+              "oauthReplyImage": ""
+            }
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "responseType",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "state",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "viewmodeData",
+              "type": "",
+              "view": ""
+            },
+            "text": []
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "countryCode",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "currencyCode",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "dynamic_line_items",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "static_line_items",
+              "type": "",
+              "view": ""
+            },
+            "text": [
+              {
+                "label": "",
+                "amount": "",
+                "type": ""
+              }
+            ]
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "timezoneViewFlag",
+              "type": "",
+              "view": ""
+            },
+            "text": false
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "summaryText",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "extraParameters",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "quickreply",
+              "type": "",
+              "view": ""
+            },
+            "text": {}
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "callbackdata",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "correlationid",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "notifyurl",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "form_elements",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "teamId",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "extBundleId",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "appIcon",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "appId",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "appName",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "iMessageUrl",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "useLiveLayout",
+              "type": "",
+              "view": ""
+            },
+            "text": true
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "additionalParameters",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "386",
+      "parent": "5129239",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "eventtype": "default",
+        "label": "onPolicyFail",
+        "name": "onpolicyfail",
+        "nodeLabel": "End",
+        "nodeType": "end",
+        "parentInfo": {
+          "name": "onpolicyfail"
+        },
+        "portType": "BP",
+        "sessionRetryFlag": 0,
+        "type": "EN",
+        "value": "onpolicyfail",
+        "data": {
+          "parentNode": 382,
+          "type": "end"
+        },
+        "params": [
+          {
+            "name": "nodeEvent",
+            "value": "onpolicyfail"
+          },
+          {
+            "name": "sessionRetry",
+            "value": ""
+          },
+          {
+            "name": "exitResult",
+            "value": 3
+          },
+          {
+            "name": "asyncCheck",
+            "value": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "387",
+      "parent": "5129239",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "eventtype": "default",
+        "label": "onError",
+        "name": "onerror",
+        "nodeLabel": "End",
+        "nodeType": "end",
+        "parentInfo": {
+          "name": "onerror"
+        },
+        "portType": "BP",
+        "sessionRetryFlag": 0,
+        "type": "EN",
+        "value": "onerror",
+        "data": {
+          "parentNode": 382,
+          "type": "end"
+        },
+        "params": [
+          {
+            "name": "nodeEvent",
+            "value": "onerror"
+          },
+          {
+            "name": "sessionRetry",
+            "value": ""
+          },
+          {
+            "name": "exitResult",
+            "value": 3
+          },
+          {
+            "name": "asyncCheck",
+            "value": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "388",
+      "parent": "5129241",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "eventtype": "default",
+        "label": "onSuccess",
+        "name": "onsuccess",
+        "nodeLabel": "End",
+        "nodeType": "end",
+        "parentInfo": {
+          "name": "onsuccess"
+        },
+        "portType": "MP",
+        "sessionRetryFlag": 0,
+        "type": "EN",
+        "value": "onsuccess",
+        "data": {
+          "parentNode": 382,
+          "type": "end"
+        },
+        "params": [
+          {
+            "name": "nodeEvent",
+            "value": "onsuccess"
+          },
+          {
+            "name": "sessionRetry",
+            "value": ""
+          },
+          {
+            "name": "exitResult",
+            "value": 2
+          },
+          {
+            "name": "asyncCheck",
+            "value": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "394",
+      "parent": "5129263",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "eventtype": "default",
+        "label": "onInvalidData",
+        "name": "oninvaliddata",
+        "nodeLabel": "End",
+        "nodeType": "end",
+        "portType": "BP",
+        "sessionRetryFlag": 0,
+        "type": "EN",
+        "value": "oninvaliddata",
+        "data": {
+          "parentNode": 226,
+          "type": "end"
+        },
+        "params": [
+          {
+            "name": "nodeEvent",
+            "value": "oninvaliddata"
+          },
+          {
+            "name": "sessionRetry",
+            "value": ""
+          },
+          {
+            "name": "exitResult",
+            "value": 3
+          },
+          {
+            "name": "asyncCheck",
+            "value": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "395",
+      "parent": "5129263",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "eventtype": "default",
+        "label": "onError",
+        "name": "onerror",
+        "nodeLabel": "End",
+        "nodeType": "end",
+        "portType": "BP",
+        "sessionRetryFlag": 0,
+        "type": "EN",
+        "value": "onerror",
+        "data": {
+          "parentNode": 226,
+          "type": "end"
+        },
+        "params": [
+          {
+            "name": "nodeEvent",
+            "value": "onerror"
+          },
+          {
+            "name": "sessionRetry",
+            "value": ""
+          },
+          {
+            "name": "exitResult",
+            "value": 3
+          },
+          {
+            "name": "asyncCheck",
+            "value": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "396",
+      "parent": "5129263",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "eventtype": "default",
+        "label": "onInvalidChoice",
+        "name": "oninvalidchoice",
+        "nodeLabel": "End",
+        "nodeType": "end",
+        "portType": "BP",
+        "sessionRetryFlag": 0,
+        "type": "EN",
+        "value": "oninvalidchoice",
+        "data": {
+          "parentNode": 226,
+          "type": "end"
+        },
+        "params": [
+          {
+            "name": "nodeEvent",
+            "value": "oninvalidchoice"
+          },
+          {
+            "name": "sessionRetry",
+            "value": ""
+          },
+          {
+            "name": "exitResult",
+            "value": 3
+          },
+          {
+            "name": "asyncCheck",
+            "value": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "397",
+      "parent": "5129263",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "eventtype": "default",
+        "label": "onauthorizationfail",
+        "name": "onauthorizationfail",
+        "nodeLabel": "End",
+        "nodeType": "end",
+        "parentInfo": {
+          "name": "onauthorizationfail"
+        },
+        "portType": "BP",
+        "sessionRetryFlag": 0,
+        "type": "EN",
+        "value": "[redacted]",
+        "data": {
+          "parentNode": 226,
+          "type": "end"
+        },
+        "params": [
+          {
+            "name": "nodeEvent",
+            "value": "onauthorizationfail"
+          },
+          {
+            "name": "sessionRetry",
+            "value": ""
+          },
+          {
+            "name": "exitResult",
+            "value": 3
+          },
+          {
+            "name": "asyncCheck",
+            "value": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "398",
+      "parent": "5129265",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "eventtype": "default",
+        "label": "onTimeout",
+        "name": "ontimeout",
+        "nodeLabel": "End",
+        "nodeType": "end",
+        "portType": "TP",
+        "sessionRetryFlag": 0,
+        "type": "EN",
+        "value": "ontimeout",
+        "data": {
+          "parentNode": 226,
+          "type": "end"
+        },
+        "params": [
+          {
+            "name": "nodeEvent",
+            "value": "ontimeout"
+          },
+          {
+            "name": "sessionRetry",
+            "value": ""
+          },
+          {
+            "name": "exitResult",
+            "value": 3
+          },
+          {
+            "name": "asyncCheck",
+            "value": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "399",
+      "parent": "5129275",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "eventtype": "default",
+        "label": "onAppendMessageSuccess",
+        "name": "onAppendMessageSuccess",
+        "nodeLabel": "End",
+        "nodeType": "end",
+        "parentInfo": {
+          "name": "onAppendMessageSuccess"
+        },
+        "portType": "MP",
+        "sessionRetryFlag": 0,
+        "type": "EN",
+        "value": "onAppendMessageSuccess",
+        "data": {
+          "parentNode": 242,
+          "type": "end"
+        },
+        "params": [
+          {
+            "name": "nodeEvent",
+            "value": "onAppendMessageSuccess"
+          },
+          {
+            "name": "sessionRetry",
+            "value": ""
+          },
+          {
+            "name": "exitResult",
+            "value": 2
+          },
+          {
+            "name": "asyncCheck",
+            "value": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "5128902",
+      "parent": "1",
+      "vertex": false,
+      "edge": true,
+      "source": "2",
+      "target": "226",
+      "value": {
+        "duplicatetarget": false,
+        "label": "onBegin",
+        "name": "onbegin",
+        "optionNodeType": "default",
+        "porttype": "MP",
+        "type": "EDGE",
+        "value": "onbegin"
+      }
+    },
+    {
+      "id": "5128972",
+      "parent": "1",
+      "vertex": false,
+      "edge": true,
+      "source": "226",
+      "target": "242",
+      "value": {
+        "duplicatetarget": false,
+        "label": "conversationActive",
+        "name": "conversationActive",
+        "optionNodeType": "default",
+        "porttype": "MP",
+        "type": "EDGE",
+        "value": "conversationActive"
+      }
+    },
+    {
+      "id": "5129150",
+      "parent": "1",
+      "vertex": false,
+      "edge": true,
+      "source": "242",
+      "target": "22",
+      "value": {
+        "duplicatetarget": false,
+        "label": "onTimeout",
+        "name": "ontimeout",
+        "optionNodeType": "default",
+        "porttype": "TP",
+        "type": "EDGE",
+        "value": "ontimeout"
+      }
+    },
+    {
+      "id": "5129152",
+      "parent": "1",
+      "vertex": false,
+      "edge": true,
+      "source": "242",
+      "target": "22",
+      "value": {
+        "duplicatetarget": false,
+        "label": "onInvalidData",
+        "name": "oninvaliddata",
+        "optionNodeType": "default",
+        "porttype": "BP",
+        "type": "EDGE",
+        "value": "oninvaliddata"
+      }
+    },
+    {
+      "id": "5129154",
+      "parent": "1",
+      "vertex": false,
+      "edge": true,
+      "source": "242",
+      "target": "22",
+      "value": {
+        "duplicatetarget": false,
+        "label": "onError",
+        "name": "onerror",
+        "optionNodeType": "default",
+        "porttype": "BP",
+        "type": "EDGE",
+        "value": "onerror"
+      }
+    },
+    {
+      "id": "5129159",
+      "parent": "1",
+      "vertex": false,
+      "edge": true,
+      "source": "242",
+      "target": "22",
+      "value": {
+        "duplicatetarget": false,
+        "label": "onInvalidChoice",
+        "name": "oninvalidchoice",
+        "optionNodeType": "default",
+        "porttype": "BP",
+        "type": "EDGE",
+        "value": "oninvalidchoice"
+      }
+    },
+    {
+      "id": "5129161",
+      "parent": "1",
+      "vertex": false,
+      "edge": true,
+      "source": "242",
+      "target": "22",
+      "value": {
+        "duplicatetarget": false,
+        "label": "",
+        "name": "onauthorizationfail",
+        "optionNodeType": "default",
+        "porttype": "BP",
+        "type": "EDGE",
+        "value": "[redacted]"
+      }
+    },
+    {
+      "id": "5129163",
+      "parent": "1",
+      "vertex": false,
+      "edge": true,
+      "source": "242",
+      "target": "22",
+      "value": {
+        "duplicatetarget": false,
+        "label": "Failure",
+        "name": "Failure",
+        "optionNodeType": "default",
+        "porttype": "BP",
+        "type": "EDGE",
+        "value": "Failure"
+      }
+    },
+    {
+      "id": "5129165",
+      "parent": "1",
+      "vertex": false,
+      "edge": true,
+      "source": "242",
+      "target": "22",
+      "value": {
+        "duplicatetarget": false,
+        "label": "onAppendMessageFailure",
+        "name": "onAppendMessageFailure",
+        "optionNodeType": "default",
+        "porttype": "BP",
+        "type": "EDGE",
+        "value": "onAppendMessageFailure"
+      }
+    },
+    {
+      "id": "5129244",
+      "parent": "1",
+      "vertex": false,
+      "edge": true,
+      "source": "226",
+      "target": "242",
+      "value": {
+        "duplicatetarget": false,
+        "label": "",
+        "name": "conversationInQueue",
+        "optionNodeType": "default",
+        "porttype": "MP",
+        "type": "EDGE",
+        "value": "conversationInQueue"
+      }
+    },
+    {
+      "id": "5129257",
+      "parent": "1",
+      "vertex": false,
+      "edge": true,
+      "source": "226",
+      "target": "382",
+      "value": {
+        "duplicatetarget": false,
+        "label": "",
+        "name": "noConversationFound",
+        "optionNodeType": "default",
+        "porttype": "MP",
+        "type": "EDGE",
+        "value": "noConversationFound"
+      }
+    },
+    {
+      "id": "5129259",
+      "parent": "1",
+      "vertex": false,
+      "edge": true,
+      "source": "226",
+      "target": "382",
+      "value": {
+        "duplicatetarget": false,
+        "label": "",
+        "name": "conversationClosed",
+        "optionNodeType": "default",
+        "porttype": "MP",
+        "type": "EDGE",
+        "value": "conversationClosed"
+      }
+    },
+    {
+      "id": "5129261",
+      "parent": "1",
+      "vertex": false,
+      "edge": true,
+      "source": "226",
+      "target": "382",
+      "value": {
+        "duplicatetarget": false,
+        "label": "",
+        "name": "conversationOnHold",
+        "optionNodeType": "default",
+        "porttype": "MP",
+        "type": "EDGE",
+        "value": "conversationOnHold"
+      }
+    }
+  ],
+  "customVariables": [
+    {
+      "name": "errorMsg",
+      "value": "Sorry, your message could not be delivered.",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "flowVersion",
+      "value": 3.3,
+      "desc": "",
+      "type": "default"
+    }
+  ],
+  "outcomes": [
+    {
+      "id": 2,
+      "order": 0,
+      "name": 101,
+      "value": "Successfully completed flow",
+      "tag": 11,
+      "tagName": "Success",
+      "type": "default",
+      "notification": null
+    },
+    {
+      "id": 3,
+      "order": 1,
+      "name": 102,
+      "value": "Flow completed with an error",
+      "tag": 12,
+      "tagName": "Error",
+      "type": "default",
+      "notification": null
+    },
+    {
+      "id": 4,
+      "order": 2,
+      "name": 103,
+      "value": "Flow ended due to an interruption",
+      "tag": 13,
+      "tagName": "Incomplete",
+      "type": "default",
+      "notification": null
+    },
+    {
+      "id": 1,
+      "name": 100,
+      "value": "Last executed node event",
+      "statusCode": "All status codes",
+      "tag": 15,
+      "tagName": "Last Execution Status",
+      "type": "default",
+      "notification": null
+    }
+  ],
+  "label": "Apple iMessage App Flow.workflow",
+  "observed_at": "2026-09-09T00:06:09.966Z",
+  "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model",
+  "runtime_tested": false,
+  "redactions": "Header credentials and URL hosts redacted. Internal model properties are evidence, not a public import API."
+}

@@ -1,0 +1,644 @@
+{
+  "flowId": "96838",
+  "temporary_name": "KBSampleWebhookSMS20260908",
+  "cells": [
+    {
+      "id": "1",
+      "parent": "0",
+      "vertex": false,
+      "edge": false,
+      "value": {
+        "tag": "workflowdata",
+        "attributes": {
+          "copy_used_vars": {
+            "2": {
+              "_usedVars": [],
+              "_usedTransVar": [],
+              "_dynamicVar": [
+                "inboundWebhook.timestamp",
+                "inboundWebhook.transId",
+                "inboundWebhook.payload",
+                "inboundWebhook.alertdesc",
+                "inboundWebhook.phone"
+              ],
+              "_dynamicTransVar": []
+            },
+            "3": {
+              "_usedVars": [
+                {
+                  "id": "n2",
+                  "nodeId": 2,
+                  "param": "inboundWebhook.phone",
+                  "fullPath": "n2.inboundWebhook.phone",
+                  "source": 3
+                },
+                {
+                  "id": "n2",
+                  "nodeId": 2,
+                  "param": "inboundWebhook.alertdesc",
+                  "fullPath": "n2.inboundWebhook.alertdesc",
+                  "source": 3
+                }
+              ],
+              "_usedTransVar": [],
+              "_dynamicVar": [],
+              "_dynamicTransVar": []
+            }
+          },
+          "dynamic_output_vars": {
+            "2": [
+              "inboundWebhook.timestamp",
+              "inboundWebhook.transId",
+              "inboundWebhook.payload",
+              "inboundWebhook.alertdesc",
+              "inboundWebhook.phone"
+            ],
+            "3": []
+          },
+          "logbooks": [],
+          "node_group_info": {},
+          "notes": {
+            "nodes": {},
+            "workflow": {}
+          },
+          "start_node_info": {
+            "channel": 14,
+            "type": "channel",
+            "subtype": "webhook",
+            "extras": {},
+            "eventid": "",
+            "v2EventId": ""
+          }
+        },
+        "text": ""
+      }
+    },
+    {
+      "id": "2",
+      "parent": "1",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "tag": "start",
+        "attributes": {
+          "hidecell": true,
+          "image": "start.svg",
+          "key": "start",
+          "keytype": "fullscreen",
+          "label": "Configure Webhook",
+          "name": "Start",
+          "nodetype": "start",
+          "type": "start",
+          "updatedimage": "webhook.svg",
+          "updatedon": "2020-06-04T10:18:03.546",
+          "view_restrict": true
+        },
+        "children": [
+          {
+            "tag": "event",
+            "attributes": {
+              "name": "onbegin",
+              "targetcount": 1
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "selectedChannel",
+              "type": "",
+              "view": ""
+            },
+            "text": {
+              "id": 14,
+              "name": "Webhook",
+              "description": "Webhook",
+              "type": 3,
+              "extraData": {},
+              "subType": "webhook"
+            }
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "selectedRuleEvent",
+              "type": "",
+              "view": ""
+            },
+            "text": {
+              "name": "",
+              "id": "",
+              "v2EventId": ""
+            }
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "ruleEvent",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "ruleConditionStatus",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "conditions",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "apiReqConditions",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "webHookData",
+              "type": "",
+              "view": ""
+            },
+            "text": {
+              "conditionData": [],
+              "jsonData": "",
+              "isAuthRequired": false,
+              "isExistingWebHook": false,
+              "name": "",
+              "jsonSource": "",
+              "parseOutput": [],
+              "v2EventId": "",
+              "selectedEvent": "",
+              "url": "",
+              "xmlData": ""
+            }
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "customEvents",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "isKeyWordDisabled",
+              "type": "",
+              "view": ""
+            },
+            "text": true
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "isKeyWordVerifyReq",
+              "type": "",
+              "view": ""
+            },
+            "text": true
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "isKeyWordAvailable",
+              "type": "",
+              "view": ""
+            },
+            "text": true
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "output_variables",
+              "type": "",
+              "view": ""
+            },
+            "text": [
+              "inboundWebhook.timestamp",
+              "inboundWebhook.transId",
+              "inboundWebhook.payload",
+              "inboundWebhook.alertdesc",
+              "inboundWebhook.phone"
+            ]
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "voiceServiceProvider",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "conditionData",
+              "type": "",
+              "view": ""
+            },
+            "text": [
+              {
+                "defaultvalue": "",
+                "mandatory": false,
+                "var_name": "alertdesc",
+                "datatype": "string",
+                "channel_id": 14,
+                "event_id": "",
+                "eventname": "Alert Event"
+              },
+              {
+                "defaultvalue": "",
+                "mandatory": false,
+                "var_name": "phone",
+                "datatype": "string",
+                "channel_id": 14,
+                "event_id": "",
+                "eventname": "Alert Event"
+              }
+            ]
+          },
+          {
+            "tag": "nodevariablestore",
+            "attributes": {
+              "name": "n2.inboundWebhook.phone",
+              "source": 3
+            },
+            "text": "$(inboundWebhook.phone)"
+          },
+          {
+            "tag": "nodevariablestore",
+            "attributes": {
+              "name": "n2.inboundWebhook.alertdesc",
+              "source": 3
+            },
+            "text": "$(inboundWebhook.alertdesc)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "3",
+      "parent": "1",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "tag": "umppublic",
+        "attributes": {
+          "image": "sms.svg",
+          "infolabel": "sendsms",
+          "key": "sendsms",
+          "label": "SMS",
+          "name": "SMS",
+          "paramhide": true,
+          "type": "UmpPublic",
+          "updatedimage": "sms.svg",
+          "updatedon": "2020-06-04T10:18:34.667",
+          "view_restrict": true
+        },
+        "children": [
+          {
+            "tag": "param",
+            "attributes": {
+              "label": "Remove Wait For",
+              "name": "hideWaitFor"
+            },
+            "text": false
+          },
+          {
+            "tag": "event",
+            "attributes": {
+              "name": "onerror",
+              "targetcount": 1
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "messagetype",
+              "type": "",
+              "view": ""
+            },
+            "text": 1
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "message",
+              "type": "",
+              "view": ""
+            },
+            "text": "$(n2.inboundWebhook.alertdesc)"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "senderid",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "expiry",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "timeout",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "expiryType",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "channelId",
+              "type": "",
+              "view": ""
+            },
+            "text": 1
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "senderidViewFlag",
+              "type": "",
+              "view": ""
+            },
+            "text": false
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "deliverychannel",
+              "type": "",
+              "view": ""
+            },
+            "text": "SMS"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "callbackdata",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "correlationid",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "destination",
+              "type": "",
+              "view": ""
+            },
+            "text": "$(n2.inboundWebhook.phone)"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "destinationType",
+              "type": "",
+              "view": ""
+            },
+            "text": "msisdn"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "successoutcome",
+              "type": "",
+              "view": ""
+            },
+            "text": 1
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "notifyurl",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "linkValidityCheck",
+              "type": "",
+              "view": ""
+            },
+            "text": false
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "shortLinkId",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "linkValidityTime",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "extraParameters",
+              "type": "",
+              "view": ""
+            },
+            "text": {}
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "resourceinfo",
+              "type": "",
+              "view": ""
+            },
+            "text": {
+              "node_id": 3,
+              "node_name": "SMS",
+              "resource_list": [
+                {
+                  "resource_name": "senderid",
+                  "resource_values": [
+                    "CONNCT"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "viewmodeData",
+              "type": "",
+              "view": ""
+            },
+            "text": [
+              {
+                "name": "senderid",
+                "value": "CONNCT"
+              },
+              {
+                "name": "shortLinkId",
+                "value": ""
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "5128003",
+      "parent": "1",
+      "vertex": false,
+      "edge": true,
+      "source": "2",
+      "target": "3",
+      "value": {
+        "duplicatetarget": false,
+        "label": "onBegin",
+        "name": "onbegin",
+        "optionNodeType": "default",
+        "porttype": "MP",
+        "type": "EDGE",
+        "value": "onbegin"
+      }
+    }
+  ],
+  "customVariables": [],
+  "outcomes": [
+    {
+      "id": 2,
+      "name": 101,
+      "value": "Successfully completed flow",
+      "tag": 11,
+      "tagName": "Success",
+      "type": "default",
+      "notification": null
+    },
+    {
+      "id": 3,
+      "name": 102,
+      "value": "Flow completed with an error",
+      "tag": 12,
+      "tagName": "Error",
+      "type": "default",
+      "notification": null
+    },
+    {
+      "id": 4,
+      "name": 103,
+      "value": "Flow ended due to an interruption",
+      "tag": 13,
+      "tagName": "Incomplete",
+      "type": "default",
+      "notification": null
+    },
+    {
+      "id": 1,
+      "name": 100,
+      "value": "Last executed node event",
+      "statusCode": "All status codes",
+      "tag": 15,
+      "tagName": "Last Execution Status",
+      "type": "default",
+      "notification": null
+    }
+  ],
+  "label": "WebhooktoSMSalerts",
+  "observed_at": "2026-09-08T23:57:29.390Z",
+  "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model",
+  "runtime_tested": false,
+  "redactions": "Header credentials and URL hosts redacted. Internal model properties are evidence, not a public import API."
+}

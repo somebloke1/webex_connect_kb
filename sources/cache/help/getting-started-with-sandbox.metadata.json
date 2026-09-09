@@ -1,0 +1,38 @@
+{
+  "category": "WEBEX CONNECT SANDBOX",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd81825789a",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "d67959c6e4c21ea82e762872f195749c4f93d9a1f7036055faad80812ada4892",
+    "source_path": "fac61e1f0b960781df7b85236e538b1a0ed239e3070fbc35d1dbc6ce72cb4b92",
+    "text_path": "72bf65f982c756463c3198a9733afca39f4c9d5a4f6280f383ddd8f7a46dd954"
+  },
+  "headings": [
+    "❗️New Sandbox Site",
+    "What does the Sandbox contain",
+    "Signing-up for and accessing Webex Connect Sandbox",
+    "📘Note",
+    "📘Note",
+    "📘Pre-requisites for sending and receiving messages using Sandbox"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/getting-started-with-sandbox.md",
+  "resolved_url": "https://help.webexconnect.io/docs/getting-started-with-sandbox",
+  "retrieved_at": "2026-09-08T23:28:48+00:00",
+  "sha256_html_response": "6e5d74a5a846846b30c0c8949eb2e1c63087bb079a9f444f3dc5e367107389f3",
+  "sha256_source_body": "fac61e1f0b960781df7b85236e538b1a0ed239e3070fbc35d1dbc6ce72cb4b92",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/getting-started-with-sandbox.source.md",
+  "source_updated_at": "2025-09-29T00:02:53.072Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/getting-started-with-sandbox.txt",
+  "title": "Getting Started with Sandbox",
+  "url": "https://help.webexconnect.io/docs/getting-started-with-sandbox",
+  "word_count": 517,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/getting-started-with-sandbox.metadata.json"
+}

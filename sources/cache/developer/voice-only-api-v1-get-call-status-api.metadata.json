@@ -1,0 +1,38 @@
+{
+  "api_metadata_path": "sources/cache/developer/voice-only-api-v1-get-call-status-api.api.json",
+  "category": "MULTI CHANNEL COMMUNICATION API",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f671e",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "5dca7cdeb400111a5d6990044275afbbabcd0eaed1a479317ef4ae436d04ef48",
+    "source_path": "6ffd6a32bca56dadd371595f333447ad6f98f7dc7a120773ab87b26ffc1e8ddb",
+    "text_path": "d26f70b985916d037a4b294499a57b26df560507828344eeb3b2f705d5bc7560"
+  },
+  "headings": [
+    "Request Body for Get Call Status API",
+    "Get Call Status Path Parameters",
+    "Get Call Status Header Parameters",
+    "Sample Response Body",
+    "Response Parameters"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/voice-only-api-v1-get-call-status-api.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/voice-only-api-v1-get-call-status-api",
+  "retrieved_at": "2026-09-08T23:31:44+00:00",
+  "sha256_api_metadata": "575f65b7d8dc3ea0b617314bc47e22705dc85fc80ee114e6faa20ada4e8aafe2",
+  "sha256_html_response": "1446712ed7cceceed7093d80c3b48c648f7f7dbc13f7303f4cf837cae757f3bb",
+  "sha256_source_body": "6ffd6a32bca56dadd371595f333447ad6f98f7dc7a120773ab87b26ffc1e8ddb",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/voice-only-api-v1-get-call-status-api.source.md",
+  "source_updated_at": "2026-04-16T05:51:07.582Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/voice-only-api-v1-get-call-status-api.txt",
+  "title": "Get Call Status Using Voice API v1",
+  "url": "https://developers.webexconnect.io/reference/voice-only-api-v1-get-call-status-api",
+  "word_count": 493,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/developer/voice-only-api-v1-get-call-status-api.metadata.json"
+}

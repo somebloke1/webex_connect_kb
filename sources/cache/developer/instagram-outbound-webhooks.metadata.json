@@ -1,0 +1,38 @@
+{
+  "api_metadata_path": "sources/cache/developer/instagram-outbound-webhooks.api.json",
+  "category": "OUTBOUND WEBHOOKS",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f65fa",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "4acc629beedac64af9901a1079ca2b2c53e77aeb7b00eae79937907dbeccf652",
+    "source_path": "beda9fb03527032c2376749bf606928b09f30a147dc0b674cc7bacab140c8075",
+    "text_path": "33d19d6a71fbf26fa6183ee1fccd7bc4f21b181ae7432551a207128e5ed239e9"
+  },
+  "headings": [
+    "Outbound Webhook configuration for tracking Instagram message delivery status",
+    "Outbound Webhook configuration for tracking incoming Instagram messages and events",
+    "Incoming Messages",
+    "Postback",
+    "Message Deleted"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/instagram-outbound-webhooks.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/instagram-outbound-webhooks",
+  "retrieved_at": "2026-09-08T23:31:45+00:00",
+  "sha256_api_metadata": "575f65b7d8dc3ea0b617314bc47e22705dc85fc80ee114e6faa20ada4e8aafe2",
+  "sha256_html_response": "0e2c720638bc6346d70e0e25d84473d50605ab928cbc56f6534d71c43b94b3c7",
+  "sha256_source_body": "beda9fb03527032c2376749bf606928b09f30a147dc0b674cc7bacab140c8075",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/instagram-outbound-webhooks.source.md",
+  "source_updated_at": "2026-01-22T16:07:59.595Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/instagram-outbound-webhooks.txt",
+  "title": "Instagram (Deprecated)",
+  "url": "https://developers.webexconnect.io/reference/instagram-outbound-webhooks",
+  "word_count": 681,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/instagram-outbound-webhooks.metadata.json"
+}

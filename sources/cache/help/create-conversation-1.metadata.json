@@ -1,0 +1,36 @@
+{
+  "category": "Webex Engage Standalone Nodes",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd81825797d",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "2ca37154d4af988bbe3c6558e620922ebd279e9d688649f6e1d2e3d5255a177d",
+    "source_path": "4f39ab4a742a52c59dc4a6800d45fcb0b9e97c89aa4fc34d93318e4976724a73",
+    "text_path": "6daf8064b739035308286f4f2d3f13f680a592d6ee684af192b36463219e8a20"
+  },
+  "headings": [
+    "Configuration",
+    "Output variables",
+    "📘Note:",
+    "Node outcomes"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/create-conversation-1.md",
+  "resolved_url": "https://help.webexconnect.io/docs/create-conversation-1",
+  "retrieved_at": "2026-09-08T23:29:29+00:00",
+  "sha256_html_response": "d258ac2a14a9334be3f8b210bc71c0913a346cda927471bc09563a7fdf9d82b7",
+  "sha256_source_body": "4f39ab4a742a52c59dc4a6800d45fcb0b9e97c89aa4fc34d93318e4976724a73",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/create-conversation-1.source.md",
+  "source_updated_at": "2026-04-14T07:47:24.429Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/create-conversation-1.txt",
+  "title": "Create conversation - WxEngage standalone",
+  "url": "https://help.webexconnect.io/docs/create-conversation-1",
+  "word_count": 3342,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/create-conversation-1.metadata.json"
+}

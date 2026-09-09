@@ -1,0 +1,14 @@
+{
+  "exit_code": 1,
+  "before": [
+    "metadata.json",
+    "transcript.json",
+    "transcript.md",
+    "transcript.srt"
+  ],
+  "after": [
+    "failure.json"
+  ],
+  "fault": "simulated output write failure after successful import",
+  "prior_artifacts_preserved": false
+}

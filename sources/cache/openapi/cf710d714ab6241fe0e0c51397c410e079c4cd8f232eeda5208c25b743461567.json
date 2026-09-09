@@ -1,0 +1,215 @@
+{
+  "_id": "6a675233ec1c893d8a7f67bc:6a675233ec1c893d8a7f64f5",
+  "components": {
+    "securitySchemes": {
+      "sec0": {
+        "in": "header",
+        "name": "key",
+        "type": "apiKey"
+      }
+    }
+  },
+  "info": {
+    "title": "Topic APIs",
+    "version": "6.20.0"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/apps/$(appid)/users/$(userid)/topics?start=0&subscribed=true/false/both": {
+      "get": {
+        "deprecated": false,
+        "description": "This API is used to get all the topics of a subscriber.",
+        "operationId": "get-all-topics",
+        "parameters": [
+          {
+            "description": "Application/JSON",
+            "in": "header",
+            "name": "Content-Type",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Client key that can be accessed from your app asset configuration page on imiconnect platform",
+            "in": "header",
+            "name": "secretKey",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "The ID of the app asset that you can obtain from imiconnect platform",
+            "in": "path",
+            "name": "appid",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Unique ID for a mobile/web app user",
+            "in": "path",
+            "name": "userid",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "The record pointer which defines where to start in the list. A maximum of 50 records can be returned (if available).",
+            "in": "query",
+            "name": "start",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{\n\t\"total\" : 1,\n\t\"count\" : 1,\n\t\"topics\" : [{\n\t\t\t\"id\" : \"591d7b7de4b09e0d95d4f73d\",\n\t\t\t\"ref\" : \"offer ref\",\n\t\t\t\"created_on\" : \"2017-05-26T18 12:22:51.001Z\",\n\t\t\t\"description\" : \"Get Lot of Benifits from this topic\",\n\t\t\t\"name\" : \"offers\",\n\t\t\t\"topic_group\" : \"Extra Benifits\",\n                                           \"subscribed\" : true\n\n\t\t}\n\t],\n\t\"trans_id\" : \"2b1142c3-b99e-4af4-befa-77b5451ad2af\",\n\t\"description\" : \"success\",\n\t\"code\" : 0\n}"
+                  }
+                },
+                "schema": {
+                  "properties": {
+                    "code": {
+                      "default": 0,
+                      "example": 0,
+                      "type": "integer"
+                    },
+                    "count": {
+                      "default": 0,
+                      "example": 1,
+                      "type": "integer"
+                    },
+                    "description": {
+                      "example": "success",
+                      "type": "string"
+                    },
+                    "topics": {
+                      "items": {
+                        "properties": {
+                          "created_on": {
+                            "example": "2017-05-26T18 12:22:51.001Z",
+                            "type": "string"
+                          },
+                          "description": {
+                            "example": "Get Lot of Benifits from this topic",
+                            "type": "string"
+                          },
+                          "id": {
+                            "example": "591d7b7de4b09e0d95d4f73d",
+                            "type": "string"
+                          },
+                          "name": {
+                            "example": "offers",
+                            "type": "string"
+                          },
+                          "ref": {
+                            "example": "offer ref",
+                            "type": "string"
+                          },
+                          "subscribed": {
+                            "default": true,
+                            "example": true,
+                            "type": "boolean"
+                          },
+                          "topic_group": {
+                            "example": "Extra Benifits",
+                            "type": "string"
+                          }
+                        },
+                        "type": "object"
+                      },
+                      "type": "array"
+                    },
+                    "total": {
+                      "default": 0,
+                      "example": 1,
+                      "type": "integer"
+                    },
+                    "trans_id": {
+                      "example": "2b1142c3-b99e-4af4-befa-77b5451ad2af",
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "200"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                },
+                "schema": {
+                  "properties": {},
+                  "type": "object"
+                }
+              }
+            },
+            "description": "400"
+          }
+        },
+        "summary": "Get All Topics of a Subscriber",
+        "x-readme": {
+          "code-samples": [
+            {
+              "code": "-X GET https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/user/{userid}/topics?start=0\n-H \"secretKey: {secretKey}\"\n",
+              "language": "curl"
+            },
+            {
+              "code": "require 'httparty'\n# Create the HTTP objects and post request\nhttp = HTTParty.get(\"https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/user/{userid}/topics?start=0\",\n    :headers => {\n                          'secretKey ' => '{secretKey}’\n            }\n)\n# Print on console\nputs http\n",
+              "language": "ruby"
+            },
+            {
+              "code": "var data = null;\n\nvar xhr = new XMLHttpRequest();\n\nxhr.addEventListener(\"readystatechange\", function () {\n  if (this.readyState === this.DONE) {\n    console.log(this.responseText);\n  }\n});\n\nxhr.open(\"GET\", \" https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/user/{userid}/topics?start=0\");\nxhr.setRequestHeader(\"secretKey\", \"{secretKey}\");\nxhr.send(data);\n",
+              "language": "javascript"
+            },
+            {
+              "code": "import requests\n\nurl = \" https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/user/{userid}/topics?start=0\"\n\nheaders = {'secretKey': '{secretKey}’}\n\nresponse = requests.request(\"GET\", url, headers=headers)\n\nprint(response.text)\n",
+              "language": "python"
+            }
+          ],
+          "samples-languages": [
+            "curl",
+            "ruby",
+            "javascript",
+            "python"
+          ]
+        }
+      }
+    }
+  },
+  "security": [
+    {
+      "sec0": []
+    }
+  ],
+  "servers": [
+    {
+      "url": "https://rtm.imiconnect.io/"
+    }
+  ],
+  "x-readme": {
+    "explorer-enabled": false,
+    "headers": [
+      {
+        "key": "content-type",
+        "value": "application/json"
+      }
+    ],
+    "proxy-enabled": false
+  },
+  "x-readme-fauxas": true
+}

@@ -1,0 +1,142 @@
+{
+  "api": {
+    "method": "post",
+    "url": "/calls",
+    "auth": "required",
+    "results": {
+      "codes": [
+        {
+          "name": "",
+          "code": "{}",
+          "language": "json",
+          "status": 200
+        },
+        {
+          "name": "",
+          "code": "{}",
+          "language": "json",
+          "status": 400
+        }
+      ]
+    },
+    "params": [
+      {
+        "name": "Content-type",
+        "type": "string",
+        "enumValues": "",
+        "default": "application/json",
+        "desc": "",
+        "required": false,
+        "in": "header",
+        "ref": "",
+        "_id": "69ae786267a741d271df79fb",
+        "id": "69ae786267a741d271df79fb"
+      },
+      {
+        "name": "Authorization",
+        "type": "string",
+        "enumValues": "",
+        "default": "Service key or Bearer <Token>",
+        "desc": "If you are using service key, enter the service key as the value. If you are using JWT authentication then enter Bearer Token. You can get the JWT token or Service key from within a service in your Webex connect tenant.",
+        "required": false,
+        "in": "header",
+        "ref": "",
+        "_id": "69ae786267a741d271df79fc",
+        "id": "69ae786267a741d271df79fc"
+      }
+    ],
+    "examples": {
+      "codes": []
+    },
+    "apiSetting": "6a675233ec1c893d8a7f6846"
+  },
+  "swagger": {
+    "path": "/calls"
+  },
+  "oas_public_id": "@imiconnect-apis/v6.20.0#113dg2jgmmivac80",
+  "selected_openapi": {
+    "openapi": "3.1.0",
+    "info": {
+      "title": "Programmable Voice Calls Using Voice API v1",
+      "version": "6.20.0"
+    },
+    "servers": [
+      {
+        "url": "https://api.{YourRegion}.webexconnect.io/v1/voice",
+        "variables": {
+          "YourRegion": {
+            "default": "YourRegion"
+          }
+        }
+      }
+    ],
+    "security": [
+      {}
+    ],
+    "path": "/calls",
+    "method": "post",
+    "path_parameters": [],
+    "operation": {
+      "summary": "Programmable Voice Calls Using Voice API v1",
+      "description": "Make, receive and control voice calls using simple API commands using Voice API v1.",
+      "operationId": "voice-only-api-v1-programmable-voice-api",
+      "parameters": [
+        {
+          "name": "Content-type",
+          "in": "header",
+          "schema": {
+            "type": "string",
+            "default": "application/json"
+          }
+        },
+        {
+          "name": "Authorization",
+          "in": "header",
+          "description": "If you are using service key, enter the service key as the value. If you are using JWT authentication then enter Bearer Token. You can get the JWT token or Service key from within a service in your Webex connect tenant.",
+          "schema": {
+            "type": "string",
+            "default": "Service key or Bearer <Token>"
+          }
+        }
+      ],
+      "responses": {
+        "200": {
+          "description": "200",
+          "content": {
+            "application/json": {
+              "examples": {
+                "Result": {
+                  "value": "{}"
+                }
+              },
+              "schema": {
+                "type": "object",
+                "properties": {}
+              }
+            }
+          }
+        },
+        "400": {
+          "description": "400",
+          "content": {
+            "application/json": {
+              "examples": {
+                "Result": {
+                  "value": "{}"
+                }
+              },
+              "schema": {
+                "type": "object",
+                "properties": {}
+              }
+            }
+          }
+        }
+      },
+      "deprecated": false
+    },
+    "components": {
+      "securitySchemes": {}
+    }
+  }
+}

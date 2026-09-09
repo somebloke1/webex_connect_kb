@@ -1,0 +1,680 @@
+{
+  "flowId": "96843",
+  "temporary_name": "KBSampleNative01",
+  "cells": [
+    {
+      "id": "1",
+      "parent": "0",
+      "vertex": false,
+      "edge": false,
+      "value": {
+        "tag": "workflowdata",
+        "attributes": {
+          "copy_used_vars": {
+            "2": {
+              "_usedVars": [],
+              "_usedTransVar": [],
+              "_dynamicVar": [
+                "aiAgent.timestamp",
+                "aiAgent.transId",
+                "aiAgent.payload",
+                "service.serviceKey",
+                "aiAgent.preferred_period",
+                "aiAgent.preferred_date"
+              ],
+              "_dynamicTransVar": [],
+              "_usedStreamVar": []
+            },
+            "3": {
+              "_usedVars": [
+                {
+                  "id": "n2",
+                  "nodeId": 2,
+                  "param": "aiAgent.payload",
+                  "fullPath": "n2.aiAgent.payload",
+                  "source": 3
+                }
+              ],
+              "_usedTransVar": [],
+              "_dynamicVar": [],
+              "_dynamicTransVar": [],
+              "_usedStreamVar": []
+            },
+            "flow-settings": {
+              "_usedVars": [
+                {
+                  "id": "n3",
+                  "nodeId": 3,
+                  "param": "http.statusCode",
+                  "fullPath": "n3.http.statusCode",
+                  "source": "flow-settings"
+                },
+                {
+                  "id": "n3",
+                  "nodeId": 3,
+                  "param": "http.responseBody",
+                  "fullPath": "n3.http.responseBody",
+                  "source": "flow-settings"
+                }
+              ],
+              "_usedTransVar": [],
+              "_dynamicVar": [],
+              "_dynamicTransVar": [],
+              "_usedStreamVar": []
+            }
+          },
+          "dynamic_output_vars": {
+            "2": [
+              "aiAgent.timestamp",
+              "aiAgent.transId",
+              "aiAgent.payload",
+              "service.serviceKey",
+              "aiAgent.preferred_period",
+              "aiAgent.preferred_date"
+            ],
+            "3": []
+          },
+          "logbooks": [],
+          "node_group_info": {},
+          "notes": {
+            "nodes": {},
+            "workflow": {}
+          },
+          "start_node_info": {
+            "channel": 501,
+            "type": "channel",
+            "subtype": "aiagent",
+            "isCheckLiveSessions": 0,
+            "extras": {},
+            "eventid": 501,
+            "v2EventId": 501
+          }
+        },
+        "text": ""
+      }
+    },
+    {
+      "id": "2",
+      "parent": "1",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "tag": "start",
+        "attributes": {
+          "hidecell": true,
+          "image": "start.svg",
+          "key": "start",
+          "keytype": "fullscreen",
+          "label": "Configure AI Agent Event",
+          "name": "Start",
+          "nodetype": "start",
+          "type": "start",
+          "updatedImage": "aiagent.svg",
+          "updatedimage": "aiagent.svg",
+          "updatedon": "2025-04-14T18:01:24.807",
+          "view_restrict": true
+        },
+        "children": [
+          {
+            "tag": "event",
+            "attributes": {
+              "name": "onbegin",
+              "targetcount": 1
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "selectedChannel",
+              "type": "",
+              "view": ""
+            },
+            "text": {
+              "id": 501,
+              "name": "aiagent",
+              "description": "AI Agent",
+              "type": 3,
+              "extraData": {},
+              "subType": "aiagent",
+              "integrationId": "",
+              "image_url": ""
+            }
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "selectedRuleEvent",
+              "type": "",
+              "view": ""
+            },
+            "text": {
+              "id": 501,
+              "name": "",
+              "v2EventId": 501
+            }
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "ruleEvent",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "ruleConditionStatus",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "conditions",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "apiReqConditions",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "webHookData",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "customEvents",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "isKeyWordDisabled",
+              "type": "",
+              "view": ""
+            },
+            "text": true
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "isKeyWordVerifyReq",
+              "type": "",
+              "view": ""
+            },
+            "text": true
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "isKeyWordAvailable",
+              "type": "",
+              "view": ""
+            },
+            "text": true
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "output_variables",
+              "type": "",
+              "view": ""
+            },
+            "text": [
+              "aiAgent.timestamp",
+              "aiAgent.transId",
+              "aiAgent.payload",
+              "service.serviceKey",
+              "aiAgent.preferred_period",
+              "aiAgent.preferred_date"
+            ]
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "voiceServiceProvider",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "conditionData",
+              "type": "",
+              "view": ""
+            },
+            "text": [
+              {
+                "defaultvalue": "morning",
+                "mandatory": false,
+                "var_name": "preferred_period",
+                "datatype": "string",
+                "channel_id": 501,
+                "event_id": 501,
+                "eventname": ""
+              },
+              {
+                "defaultvalue": "03-22-2025",
+                "mandatory": false,
+                "var_name": "preferred_date",
+                "datatype": "string",
+                "channel_id": 501,
+                "event_id": 501,
+                "eventname": ""
+              }
+            ]
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "syncWebHookData",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "isCheckLiveSessions",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "aiAgentData",
+              "type": "",
+              "view": ""
+            },
+            "text": {
+              "parseOutput": [
+                {
+                  "name": "preferred_period",
+                  "defaultvalue": "morning",
+                  "mandatory": false,
+                  "type": "string"
+                },
+                {
+                  "name": "preferred_date",
+                  "defaultvalue": "03-22-2025",
+                  "mandatory": false,
+                  "type": "string"
+                }
+              ],
+              "isAuthRequired": false,
+              "name": "",
+              "url": "https://example.invalid/flows/57847/trigger/aiagent",
+              "v2EventId": 501,
+              "jsonData": {
+                "preferred_date": "03-22-2025",
+                "preferred_period": "morning"
+              },
+              "xmlData": "",
+              "isExistingAIAgent": true,
+              "selectedEvent": 501,
+              "jsonSource": 0,
+              "conditionData": [],
+              "isValidateSignature": false,
+              "validateSignatureObj": {
+                "algorithm": "",
+                "secretType": "[redacted]",
+                "secretKey": "[redacted]",
+                "headerKey": "[redacted]"
+              }
+            }
+          },
+          {
+            "tag": "nodevariablestore",
+            "attributes": {
+              "name": "n2.aiAgent.payload",
+              "source": 3
+            },
+            "text": "$(aiAgent.payload)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "3",
+      "parent": "1",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "tag": "http",
+        "attributes": {
+          "image": "http.svg",
+          "key": "http",
+          "label": "HTTP Request",
+          "name": "HTTP Request",
+          "paramhide": true,
+          "type": "http",
+          "updatedImage": "http.svg",
+          "updatedimage": "http.svg",
+          "updatedon": "2026-02-26T13:37:59.770",
+          "view_restrict": true
+        },
+        "children": [
+          {
+            "tag": "event",
+            "attributes": {
+              "name": "oncomplete",
+              "targetcount": 1,
+              "type": "MP"
+            },
+            "text": ""
+          },
+          {
+            "tag": "event",
+            "attributes": {
+              "name": "onerror",
+              "targetcount": 1,
+              "type": "BP"
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "method",
+              "type": "",
+              "view": ""
+            },
+            "text": "post"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "url",
+              "type": "",
+              "view": ""
+            },
+            "text": "https://example.invalid/check_availability"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "body",
+              "type": "",
+              "view": ""
+            },
+            "text": "$(n2.aiAgent.payload)"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "connctiontimeout",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "requesttimeout",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "proxyaddress",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "_arrayResultMap",
+              "type": "",
+              "view": ""
+            },
+            "text": []
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "checkAll",
+              "type": "",
+              "view": ""
+            },
+            "text": false
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "data",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "dataformate",
+              "type": "",
+              "view": ""
+            },
+            "text": "json"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "type",
+              "type": "",
+              "view": ""
+            },
+            "text": "extract"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "outputvariablelist",
+              "type": "",
+              "view": ""
+            },
+            "text": {}
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "outputvariablesarray",
+              "type": "",
+              "view": ""
+            },
+            "text": []
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "isNewnode",
+              "type": "",
+              "view": ""
+            },
+            "text": true
+          },
+          {
+            "tag": "header",
+            "attributes": {
+              "name": "Content-type",
+              "order": 0,
+              "tempname": "",
+              "type": "in"
+            },
+            "text": "[redacted]"
+          },
+          {
+            "tag": "nodevariablestore",
+            "attributes": {
+              "name": "n3.http.statusCode",
+              "source": "flow-settings"
+            },
+            "text": "$(http.statusCode)"
+          },
+          {
+            "tag": "nodevariablestore",
+            "attributes": {
+              "name": "n3.http.responseBody",
+              "source": "flow-settings"
+            },
+            "text": "$(http.responseBody)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "5128004",
+      "parent": "1",
+      "vertex": false,
+      "edge": true,
+      "source": "2",
+      "target": "3",
+      "value": {
+        "duplicatetarget": false,
+        "label": "onBegin",
+        "name": "onbegin",
+        "optionNodeType": "default",
+        "porttype": "MP",
+        "type": "EDGE",
+        "value": "onbegin"
+      }
+    }
+  ],
+  "customVariables": [],
+  "outcomes": [
+    {
+      "id": 1,
+      "order": 0,
+      "name": 100,
+      "value": "Last executed node event",
+      "tag": 15,
+      "tagName": "Last Execution Status",
+      "type": "default",
+      "notification": {
+        "method": "get",
+        "headers": "[redacted]",
+        "payload": {
+          "transactionID": "$(transid)",
+          "flowname": "$(flowname)",
+          "serviceName": "$(serviceName)",
+          "statuscode": 1000
+        },
+        "payloadType": 2,
+        "custompayload": {
+          "transactionID": "$(transid)",
+          "flowname": "$(flowname)",
+          "serviceName": "$(serviceName)",
+          "httpStatus": "$(n3.http.statusCode)",
+          "httpResponse": "$(n3.http.responseBody)"
+        },
+        "notificationType": -2
+      },
+      "isNotify": true,
+      "statusCode": "All status codes"
+    },
+    {
+      "id": 2,
+      "order": 1,
+      "name": 101,
+      "value": "Successfully completed flow",
+      "tag": 11,
+      "tagName": "Success",
+      "type": "default",
+      "notification": null,
+      "isNotify": false,
+      "statusCode": null
+    },
+    {
+      "id": 3,
+      "order": 2,
+      "name": 102,
+      "value": "Flow completed with an error",
+      "tag": 12,
+      "tagName": "Error",
+      "type": "default",
+      "notification": null,
+      "isNotify": false,
+      "statusCode": null
+    },
+    {
+      "id": 4,
+      "order": 3,
+      "name": 103,
+      "value": "Flow ended due to an interruption",
+      "tag": 13,
+      "tagName": "Incomplete",
+      "type": "default",
+      "notification": null,
+      "isNotify": false,
+      "statusCode": null
+    }
+  ],
+  "label": "check_availability.workflow",
+  "observed_at": "2026-09-08T23:59:30.439Z",
+  "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model",
+  "runtime_tested": false,
+  "redactions": "Header credentials and URL hosts redacted. Internal model properties are evidence, not a public import API."
+}

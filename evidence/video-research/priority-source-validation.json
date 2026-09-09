@@ -1,0 +1,19 @@
+{
+  "catalogue_count": 15,
+  "local_links_resolve": 33,
+  "priority_interval_checks": {
+    "ai-agent": {
+      "curated_intervals": 10,
+      "within_reported_duration": true,
+      "segment_count": 379
+    },
+    "email": {
+      "curated_intervals": 10,
+      "within_reported_duration": true,
+      "segment_count": 242
+    }
+  },
+  "transcript_backed_recordings": 6,
+  "total_segments": 2399,
+  "recording_duration_seconds": 16060.414
+}

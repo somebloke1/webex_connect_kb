@@ -1,0 +1,36 @@
+{
+  "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257880",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "c104a7de6c992f17f606320a3299f5f767bebbaf75153754b9123620211fda81",
+    "source_path": "6fda9b3e87af66c48d15ef5392f0cab1193285fb72832283135693212fefc7c7",
+    "text_path": "918f1aef2f9b9618221725ceb1271f0f3db2d91f344bca582a701c3f006f44b5"
+  },
+  "headings": [
+    "Authorization",
+    "Methods and Outcomes",
+    "📘Note",
+    "📘Note"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/wxcc-modify-notification.md",
+  "resolved_url": "https://help.webexconnect.io/docs/wxcc-modify-notification",
+  "retrieved_at": "2026-09-08T23:29:15+00:00",
+  "sha256_html_response": "99c0d164f7f62d670ceae63d92a799ac8d92b7703a01a1867499dba65d87ff7c",
+  "sha256_source_body": "6fda9b3e87af66c48d15ef5392f0cab1193285fb72832283135693212fefc7c7",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/wxcc-modify-notification.source.md",
+  "source_updated_at": "2026-04-14T07:25:10.573Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/wxcc-modify-notification.txt",
+  "title": "Modify Notification - WXCC",
+  "url": "https://help.webexconnect.io/docs/wxcc-modify-notification",
+  "word_count": 591,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/wxcc-modify-notification.metadata.json"
+}

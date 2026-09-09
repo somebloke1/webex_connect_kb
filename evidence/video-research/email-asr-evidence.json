@@ -1,0 +1,54 @@
+{
+  "source": "https://www.youtube.com/watch?v=5TzxFpDzIPs",
+  "created_at": "2026-09-08T23:43:29.801670+00:00",
+  "title": "Webex Connect Email \u2014 Ask the Expert",
+  "title_provenance": "user-supplied",
+  "uploader": "Webex CPaaS Solutions",
+  "method": "faster-whisper",
+  "language": "en",
+  "caption_kind": "local-asr",
+  "model": "small",
+  "device": "cpu",
+  "compute_type": "int8",
+  "duration": 2494,
+  "segment_count": 242,
+  "transcript_end_seconds": 2482.52,
+  "input_sha256": "84e6522394f47afbb3aaa7fa730ae70bd68ed84b239c1552a39d361ea426e88d",
+  "artifact_sha256": {
+    "transcript.json": "b5a3c1c7f1023ace25bbb3ed1f253e8d95bfa66643650c03421414e09cba9fc3",
+    "transcript.srt": "29bb0966e70a382caedd0bc6688819551fdf084de2ca045cc06472cc352ddbbc",
+    "transcript.md": "15d41e3c2021efe3c7d7567627cfec38b80e75691f16d6c583735794a4d6c984"
+  },
+  "attempts": [
+    {
+      "operation": "download-audio",
+      "started_at": "2026-09-08T23:43:29.812075+00:00",
+      "timeout_seconds": 180,
+      "status": "success",
+      "elapsed_seconds": 11.22
+    },
+    {
+      "operation": "asr",
+      "started_at": "2026-09-08T23:43:41.031693+00:00",
+      "timeout_seconds": 3600,
+      "status": "success",
+      "elapsed_seconds": 436.343
+    }
+  ],
+  "versions": {
+    "python": "3.13.12",
+    "youtube-transcript-api": "1.2.4",
+    "yt-dlp": "2026.8.19",
+    "webvtt-py": "0.5.1",
+    "faster-whisper": "1.2.1",
+    "ctranslate2": "4.8.2"
+  },
+  "human_reviewed": false,
+  "reviewed_at": "2026-09-08",
+  "review_scope": "Email teaching and flow/API demonstration 11:24-40:26; sales enablement excluded",
+  "review_method": "agent read timestamped local ASR transcript; no frame/audio human review",
+  "normalization_note": "Raw recognition mistakes retained; current email node/channel documentation supplies technical spelling and current behavior. No video-frame or human word-accuracy certification.",
+  "raw_transcript_path": "transcripts/email-ask-expert-asr/transcript.md",
+  "curated_notes_path": "evidence/video-research/email-ask-expert-learning-notes.md",
+  "version_note": "November 2023 demonstration; current asset-derived From Email and comma-separated Destination ID documentation take precedence over historical UI claims"
+}

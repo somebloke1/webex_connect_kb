@@ -1,0 +1,27 @@
+{
+  "api": {
+    "results": {
+      "codes": [
+        {
+          "name": "",
+          "code": "{}",
+          "language": "json",
+          "status": 200
+        },
+        {
+          "name": "",
+          "code": "{}",
+          "language": "json",
+          "status": 400
+        }
+      ]
+    },
+    "settings": "",
+    "url": "",
+    "auth": "required",
+    "params": [],
+    "method": "get"
+  },
+  "swagger": null,
+  "oas_public_id": null
+}

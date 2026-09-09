@@ -1,0 +1,33 @@
+{
+  "category": "REFERENCES",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257965",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "09ae7e9a66e948c6a5fd18ec8d5d9dbde70a4a02583a95068a22c89c82b0f6b9",
+    "source_path": "17265e80fa3682bed3f425346f3ada96606b4cc0758a2f4a9ffab9b8a2782291",
+    "text_path": "91b04810bbe1702e8c06cd0b233ad15d26787c5d90a781f7716ac027f5d87a5c"
+  },
+  "headings": [
+    "📘Sending emojis"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/references-character-sets-supported-for-messaging.md",
+  "resolved_url": "https://help.webexconnect.io/docs/references-character-sets-supported-for-messaging",
+  "retrieved_at": "2026-09-08T23:29:40+00:00",
+  "sha256_html_response": "0043f0da965b59b5f5bae17a6108aa3a67d241be46d86cfd5b4a705ceb9c0133",
+  "sha256_source_body": "17265e80fa3682bed3f425346f3ada96606b4cc0758a2f4a9ffab9b8a2782291",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/references-character-sets-supported-for-messaging.source.md",
+  "source_updated_at": "2026-02-03T15:18:54.667Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/references-character-sets-supported-for-messaging.txt",
+  "title": "Character Sets Supported for Messaging",
+  "url": "https://help.webexconnect.io/docs/references-character-sets-supported-for-messaging",
+  "word_count": 147,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/references-character-sets-supported-for-messaging.metadata.json"
+}

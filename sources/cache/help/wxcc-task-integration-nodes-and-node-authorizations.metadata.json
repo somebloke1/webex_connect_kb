@@ -1,0 +1,39 @@
+{
+  "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257903",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "00c710864d392ea0d3346a1bf1a61b19e7c5922282800d3fc513671b57ae46b6",
+    "source_path": "692170e3b6f9d39090981639ade4073b376f4cb7f4457e1a9c6ad358834866c6",
+    "text_path": "a05bc903a373d7a87ec00961e62a157a4dd2754fc3f95e3d6791b36783e524e5"
+  },
+  "headings": [
+    "Node and Methods",
+    "Node Authorization",
+    "📘Note",
+    "Node Authorization for Cisco Webex Contact Center Task nodes",
+    "📘Note",
+    "🚧Note:",
+    "📘Note"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/wxcc-task-integration-nodes-and-node-authorizations.md",
+  "resolved_url": "https://help.webexconnect.io/docs/wxcc-task-integration-nodes-and-node-authorizations",
+  "retrieved_at": "2026-09-08T23:29:14+00:00",
+  "sha256_html_response": "209a40f94b5cf25119818581524051a2cd44494ea4cfc4fefa898daf19c222cb",
+  "sha256_source_body": "692170e3b6f9d39090981639ade4073b376f4cb7f4457e1a9c6ad358834866c6",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/wxcc-task-integration-nodes-and-node-authorizations.source.md",
+  "source_updated_at": "2026-02-03T15:05:26.184Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/wxcc-task-integration-nodes-and-node-authorizations.txt",
+  "title": "Webex CC Task Integration Nodes and Node Authorizations",
+  "url": "https://help.webexconnect.io/docs/wxcc-task-integration-nodes-and-node-authorizations",
+  "word_count": 1173,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/wxcc-task-integration-nodes-and-node-authorizations.metadata.json"
+}

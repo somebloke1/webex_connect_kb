@@ -1,0 +1,113 @@
+# Flow Builder Response Codes
+
+Source: https://help.webexconnect.io/docs/references-flowbuilder-response-codes
+Documentation version: 6.20.0
+Retrieved: 2026-09-08T23:28:45+00:00
+
+## AddToQueue 
+
+| Error Code | Message                | Description                                         |
+| :--------- | :--------------------- | :-------------------------------------------------- |
+| 3001       | validation fail        | Returned when the mandatory parameters are missing. |
+| 3002       | add to queue exception | Returned when unable to add to queue.               |
+| 3003       | add to queue fail      | Returned when failed to add to the queue.           |
+
+## CallWorkflow
+
+| Error Code | Message                | Description                                         |
+| :--------- | :--------------------- | :-------------------------------------------------- |
+| 3001       | validation fail        | Returned when the mandatory parameters are missing. |
+| 3002       | workflow not available | Returned when the workflow is not available.        |
+
+## CDR
+
+| Error Code | Message                 | Description                                          |
+| :--------- | :---------------------- | :--------------------------------------------------- |
+| 3001       | validation fail         | Returned when the mandatory parameters are missing.  |
+| 3002       | CDR insertion exception | Returned when an error occurs while inserting a CDR. |
+| 3003       | CDR insertion fail      | Returned when failed to insert into the queue.       |
+
+## Data Parser
+
+| Error Code | Message                  | Description                                                     |
+| :--------- | :----------------------- | :-------------------------------------------------------------- |
+| 3001       | validation fail          | Returned when the mandatory parameters are missing.             |
+| 3002       | invalid datatype         | Returned when an invalid datatype is found.                     |
+| 3003       | mandatory path not found | Returned when a mandatory path is not found in the given input. |
+| 3004       | exception                | Returned when an exception occurs during the run-time.          |
+
+## Error
+
+| Error Code | Message                | Description                                         |
+| :--------- | :--------------------- | :-------------------------------------------------- |
+| 3001       | exception occur        | Returned when the mandatory parameters are missing. |
+| 3002       | normal error execution | Returned when an occurs during execution.           |
+
+## Evaluate
+
+| Error Code | Message               | Description                                         |
+| :--------- | :-------------------- | :-------------------------------------------------- |
+| 3001       | validation fail       | Returned when the mandatory parameters are missing. |
+| 3002       | script execution fail | Returned when the script failed to execute.         |
+| 3003       | invalid result        | Returned when an invalid results are produced.      |
+
+## ExternalEvent
+
+| Error Code | Message              | Description                                         |
+| :--------- | :------------------- | :-------------------------------------------------- |
+| 3001       | validation fail      | Returned when the mandatory parameters are missing. |
+| 3002       | invalid event occurs | Returned when the event-id is invalid.              |
+
+## HTTP
+
+| Error Code | Message            | Description                                         |
+| :--------- | :----------------- | :-------------------------------------------------- |
+| 3001       | validation fail    | Returned when the mandatory parameters are missing. |
+| 3002       | http exception     | Returned when the HTTP exception occurs.            |
+| 3003       | http response null | Returned when the HTTP response is null.            |
+
+## ReceiveSMS
+
+| Error Code | Message         | Description                                         |
+| :--------- | :-------------- | :-------------------------------------------------- |
+| 3001       | validation fail | Returned when the mandatory parameters are missing. |
+
+## Redirect
+
+| Error Code | Message          | Description                                         |
+| :--------- | :--------------- | :-------------------------------------------------- |
+| 3001       | validation fail  | Returned when the mandatory parameters are missing. |
+| 3002       | encode exception | Returned when an exception occurs during encoding.  |
+
+## Repository
+
+| Error Code | Message                   | Description                                         |
+| :--------- | :------------------------ | :-------------------------------------------------- |
+| 3001       | validation fail           | Returned when the mandatory parameters are missing. |
+| 3002       | Repository operation fail | Returned when the repository operation is failed.   |
+
+## ServiceBundle
+
+| Error Code | Message                 | Description                                         |
+| :--------- | :---------------------- | :-------------------------------------------------- |
+| 3001       | validation fail         | Returned when the mandatory parameters are missing. |
+| 3002       | http exception          | Returned when the HTTP exception occurs.            |
+| 3003       | http response null      | Returned when the HTTP response is null.            |
+| 3004       | http response body null | Returned when the HTTP response body is null.       |
+| 3005       | option not found        | Returned when the option is not found.              |
+
+## SMS
+
+| Error Code | Message               | Description                                                      |
+| :--------- | :-------------------- | :--------------------------------------------------------------- |
+| 3001       | message not available | Returned when a message is configured with an empty text.        |
+| 3002       | http exception        | Returned when the http exception occurs.                         |
+| 3003       | endpoint unreachable  | Returned when the HTTP messaging API is not reachable.           |
+| 3004       | gateway exception     | Returned when the messaging API response is in incorrect format. |
+
+## Transform
+
+| Error Code | Message             | Description                                         |
+| :--------- | :------------------ | :-------------------------------------------------- |
+| 3001       | validation fail     | Returned when the mandatory parameters are missing. |
+| 3002       | transform exception | Returned when an exception occurs during transform. |

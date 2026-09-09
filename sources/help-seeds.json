@@ -1,0 +1,3032 @@
+{
+  "retrieved_at": "2026-09-08T23:28:41+00:00",
+  "source": "https://help.webexconnect.io/docs/service-introduction",
+  "default_version": "6.20.0",
+  "scope": "All visible platform-help navigation pages; API navigation is selected separately to exclude SDK internals.",
+  "seeds": [
+    {
+      "url": "https://help.webexconnect.io/docs/welcome",
+      "title": "Webex Connect Platform Overview",
+      "source_family": "help",
+      "category": "GETTING STARTED",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/accessing-the-product",
+      "title": "Accessing Webex Connect",
+      "source_family": "help",
+      "category": "GETTING STARTED",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/getting-started-with-the-product",
+      "title": "The beginner's guide to Webex Connect",
+      "source_family": "help",
+      "category": "GETTING STARTED",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/getting-started-groups-and-teams",
+      "title": "Groups and Teams",
+      "source_family": "help",
+      "category": "GETTING STARTED",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/buying-phone-numbers",
+      "title": "Buying a Phone Number",
+      "source_family": "help",
+      "category": "GETTING STARTED",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/create-a-new-flow",
+      "title": "Creating a Flow on Webex Connect",
+      "source_family": "help",
+      "category": "GETTING STARTED",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/sending-automated-sms",
+      "title": "Sending automated SMS using Webex Connect Visual Flow Builder",
+      "source_family": "help",
+      "category": "GETTING STARTED",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/transaction-logs-and-debugging",
+      "title": "Flow Debug",
+      "source_family": "help",
+      "category": "GETTING STARTED",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/getting-started-best-practices",
+      "title": "Tenant Configuration Best Practices",
+      "source_family": "help",
+      "category": "GETTING STARTED",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/getting-started-with-sandbox",
+      "title": "Getting Started with Sandbox",
+      "source_family": "help",
+      "category": "WEBEX CONNECT SANDBOX",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/accessing-sandbox",
+      "title": "Accessing Webex Connect Sandbox",
+      "source_family": "help",
+      "category": "WEBEX CONNECT SANDBOX",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/sending-and-receiving-sms-using-sandbox",
+      "title": "Sending and Receiving SMS using Sandbox",
+      "source_family": "help",
+      "category": "WEBEX CONNECT SANDBOX",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/making-and-receiving-voice-calls-using-sandbox",
+      "title": "Making and Receiving Voice Calls using Sandbox",
+      "source_family": "help",
+      "category": "WEBEX CONNECT SANDBOX",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/sending-and-receiving-whatsapp-messages-using-sandbox",
+      "title": "Sending and Receiving WhatsApp Messages using Sandbox",
+      "source_family": "help",
+      "category": "WEBEX CONNECT SANDBOX",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/sandbox-faqs",
+      "title": "Sandbox FAQs",
+      "source_family": "help",
+      "category": "WEBEX CONNECT SANDBOX",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/support-for-sandbox-users",
+      "title": "Support for Sandbox Users",
+      "source_family": "help",
+      "category": "WEBEX CONNECT SANDBOX",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/webex-ai-agent-in-sandbox",
+      "title": "Accessing Webex AI Agent Studio in Sandbox",
+      "source_family": "help",
+      "category": "WEBEX CONNECT SANDBOX",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/create-a-new-service-on-webexconnect",
+      "title": "Creating a Service in Webex Connect",
+      "source_family": "help",
+      "category": "TUTORIALS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/exception-handling-at-the-node-level",
+      "title": "Exception handling at the node level",
+      "source_family": "help",
+      "category": "TUTORIALS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/branch-node-to-build-flow-with-conditional-branch",
+      "title": "Using Branch Node to build a flow with conditional branching",
+      "source_family": "help",
+      "category": "TUTORIALS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/create-custom-variable-webexconnect",
+      "title": "Creating a Custom Variable on Webex Connect",
+      "source_family": "help",
+      "category": "TUTORIALS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/using-custom-node-to-configure-your-own-integrations",
+      "title": "Using Custom Node to configure your own integrations",
+      "source_family": "help",
+      "category": "TUTORIALS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/setup-appointment-reminder-webexconnect",
+      "title": "Setting up a Two-way Appointment Reminder in Webex Connect",
+      "source_family": "help",
+      "category": "TUTORIALS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/analyze-customer-sentiment-with-imiconnect-ibm-watson",
+      "title": "Analyze customer sentiment using Webex Connect with IBM Watson",
+      "source_family": "help",
+      "category": "TUTORIALS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/start-with-apple-pay",
+      "title": "Starting with Apple Pay",
+      "source_family": "help",
+      "category": "TUTORIALS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/authenticate-customers-with-apple-auth",
+      "title": "Authenticating Customers with Apple Auth",
+      "source_family": "help",
+      "category": "TUTORIALS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/service-introduction",
+      "title": "What's a Service",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/create-a-service",
+      "title": "Creating a Service",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/service-dashboard",
+      "title": "Inside a Service",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/service-key-and-jwt-authentication-tokens",
+      "title": "Service Key & JWT Authentication Tokens",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/service-settings",
+      "title": "Locking, Deleting, and Other Settings",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/flows-introduction",
+      "title": "Flows",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/navigate-flow-builder-canvas",
+      "title": "Navigating Flow Builder Canvas",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/flow-settings",
+      "title": "Flow Settings",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/trigger-flow",
+      "title": "Triggering a Flow",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/nodes",
+      "title": "Nodes",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/variable-management-in-flows",
+      "title": "Variable Management in Flows",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/transition-actions",
+      "title": "Transition Actions",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/node-transitions",
+      "title": "Node Transitions",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/calling-a-flow-from-another-flow",
+      "title": "Calling a Flow from another Flow",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/flow-version-history",
+      "title": "Flow Version History",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/flow-analytics",
+      "title": "Flow Analytics",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/faqs-visual-flow-builder",
+      "title": "FAQs",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/flow-nodes",
+      "title": "Node Palette",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/start-node",
+      "title": "Start Node",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/sms-node",
+      "title": "SMS Node",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/email-node",
+      "title": "Email Node",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/push",
+      "title": "Push Node",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/voice-node-group",
+      "title": "Voice Node Group",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/in-app-messaging",
+      "title": "Live Chat/In-App Messaging Node",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/apple-messages-for-business-node",
+      "title": "Apple Messages for Business Node",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/messenger",
+      "title": "Messenger Node",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/mms-node",
+      "title": "MMS Node",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/whatsapp-node",
+      "title": "WhatsApp Node",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/receive-node",
+      "title": "Receive Node",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/social-hour-check-node",
+      "title": "Social Hour Check Node",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/http-request-node",
+      "title": "HTTP Request Node",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/branch-node",
+      "title": "Branch Node",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/evaluate-node",
+      "title": "Evaluate Node",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/cryptographic-hash-node-configuration",
+      "title": "Cryptographic Hash",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/delay-node",
+      "title": "Delay Node",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/data-parser-node",
+      "title": "Data Parser Node",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/page-connector-node",
+      "title": "Page Connector Node",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/call-workflow-node",
+      "title": "Call Workflow Node",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/generate-otp-node",
+      "title": "Generate OTP Node",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/validate-otp-node",
+      "title": "Validate OTP Node",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/encryption-node",
+      "title": "Encryption Node",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/decryption-node",
+      "title": "Decryption Node",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/call-user-node",
+      "title": "Call User Node",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/collect-input-node",
+      "title": "Collect Input Node",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/play-node",
+      "title": "Play Node",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/record-node",
+      "title": "Record Node",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/call-patch-node",
+      "title": "Call Patch Node",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/ivr-menu-node",
+      "title": "IVR Menu Node",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/profile-node",
+      "title": "Profile Node",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/rcs-capability-node",
+      "title": "RCS Capability Node",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/rcs-message-node",
+      "title": "RCS Message Node",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/nlp-premium-node",
+      "title": "NLP Premium Node",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": true,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/send-voice-node",
+      "title": "Send Voice Node [Deprecated]",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/registry-node",
+      "title": "Registry Node [Deprecated]",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/database-node",
+      "title": "Database Node [Deprecated]",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/create-chat-node",
+      "title": "Create Chat Node",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/validate-chat-node",
+      "title": "Validate Chat Node",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/campaign-profile-node",
+      "title": "Webex Campaign Profile Node",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/qa-bot-node",
+      "title": "QnA Bot Node",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": true,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/task-bot-node",
+      "title": "Task Bot Node",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": true,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/nlp-node",
+      "title": "NLP Node",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/data-transform-node",
+      "title": "Data Transform Node",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/call-transfer-node",
+      "title": "Call Transfer Node",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/summarize-text-beta-node",
+      "title": "Summarize Text Beta Node",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/rules",
+      "title": "Rules",
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/service-reports",
+      "title": "Reports",
+      "source_family": "help",
+      "category": "REPORTS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/watchtower",
+      "title": "Watchtower",
+      "source_family": "help",
+      "category": "Watchtower",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/integrations",
+      "title": "Integrations",
+      "source_family": "help",
+      "category": "Watchtower",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/throughput-utilization",
+      "title": "Throughput Utilization",
+      "source_family": "help",
+      "category": "Watchtower",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/phone-numbers",
+      "title": "Phone Number",
+      "source_family": "help",
+      "category": "Assets",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/shortcodes",
+      "title": "Short Code",
+      "source_family": "help",
+      "category": "Assets",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/sender-id",
+      "title": "Sender ID",
+      "source_family": "help",
+      "category": "Assets",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/keyword",
+      "title": "Keyword",
+      "source_family": "help",
+      "category": "Assets",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/branded-text",
+      "title": "Branded Text",
+      "source_family": "help",
+      "category": "Assets",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/brands-campaigns10dlc",
+      "title": "Brands & Campaigns (10DLC)",
+      "source_family": "help",
+      "category": "Assets",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/limitations-and-faqs",
+      "title": "Limitations and FAQs",
+      "source_family": "help",
+      "category": "Assets",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/create-brand",
+      "title": "Creating a Brand",
+      "source_family": "help",
+      "category": "Assets",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/details-for-creating-brands",
+      "title": "Details for Creating Brands",
+      "source_family": "help",
+      "category": "Assets",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/authentication-using-2fa",
+      "title": "Authentication using 2FA",
+      "source_family": "help",
+      "category": "Assets",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/unverified-scenarios-and-resubmission-of-brands",
+      "title": "Unverified Scenarios and Resubmission of Brands",
+      "source_family": "help",
+      "category": "Assets",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/manage-a-brand",
+      "title": "Managing a Brand",
+      "source_family": "help",
+      "category": "Assets",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/register-a-campaign",
+      "title": "Registering a Campaign",
+      "source_family": "help",
+      "category": "Assets",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/types-of-campaigns-and-terms",
+      "title": "Types of Campaigns and Terms",
+      "source_family": "help",
+      "category": "Assets",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/manage-a-campaign",
+      "title": "Managing a Campaign",
+      "source_family": "help",
+      "category": "Assets",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/campaign-and-content-attributes",
+      "title": "Campaign and Content Attributes",
+      "source_family": "help",
+      "category": "Assets",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/assigning-a-number-to-a-campaign-id",
+      "title": "Assigning a number to a Campaign ID",
+      "source_family": "help",
+      "category": "Assets",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/apple-messages-for-business-setup",
+      "title": "Apple Messages for Business",
+      "source_family": "help",
+      "category": "Assets",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/email",
+      "title": "Email",
+      "source_family": "help",
+      "category": "Assets",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/best-practices-to-improve-email-deliverability",
+      "title": "Best Practices to Improve Email Deliverability",
+      "source_family": "help",
+      "category": "Assets",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/configuring-branded-mail-in-apple-business-connect",
+      "title": "Configuring Branded Mail in Apple Business Connect",
+      "source_family": "help",
+      "category": "Assets",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/setting-up-brand-indicators-for-message-identification-bimi",
+      "title": "Setting up Brand Indicators for Message Identification (BIMI)",
+      "source_family": "help",
+      "category": "Assets",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/instagram",
+      "title": "Instagram (Deprecated)",
+      "source_family": "help",
+      "category": "Assets",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/facebook-messenger",
+      "title": "Messenger",
+      "source_family": "help",
+      "category": "Assets",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/mobile-web",
+      "title": "Mobile & Web",
+      "source_family": "help",
+      "category": "Assets",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/rcs-asset",
+      "title": "RCS",
+      "source_family": "help",
+      "category": "Assets",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/rcs-onboarding-guidelines",
+      "title": "RCS Onboarding Guidelines",
+      "source_family": "help",
+      "category": "Assets",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/configure-rcs-agent",
+      "title": "Configure RCS Agent",
+      "source_family": "help",
+      "category": "Assets",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/whatsapp",
+      "title": "WhatsApp",
+      "source_family": "help",
+      "category": "Assets",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/whatsapp-usernames-and-business-scoped-user-ids-bsuid",
+      "title": "WhatsApp Usernames and Business-Scoped User IDs (BSUID)",
+      "source_family": "help",
+      "category": "Assets",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/migration-from-on-prem-to-cloud-api",
+      "title": "Migration from On-premise API to Cloud API (Deprecated)",
+      "source_family": "help",
+      "category": "Assets",
+      "doc_version": "6.20.0",
+      "deprecated": true,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/whatsapp-local-storage",
+      "title": "Local Storage",
+      "source_family": "help",
+      "category": "Assets",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/additional-information-regarding-embedded-signup",
+      "title": "Additional Information on WhatsApp Onboarding",
+      "source_family": "help",
+      "category": "Assets",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/how-to-change-your-whatsapp-business-display-name",
+      "title": "How to Change Your WhatsApp Business Display Name",
+      "source_family": "help",
+      "category": "Assets",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/display-name-guidelines",
+      "title": "Display Name Guidelines",
+      "source_family": "help",
+      "category": "Assets",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/messaging-customers-on-whatsapp-business-platform",
+      "title": "Messaging Customers on WhatsApp Business Platform",
+      "source_family": "help",
+      "category": "Assets",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/whatsapp-business-phone-numbers-quality-rating",
+      "title": "WhatsApp Business Phone Number Quality Rating",
+      "source_family": "help",
+      "category": "Assets",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/whatsapp-messaging-limits",
+      "title": "Messaging Limits",
+      "source_family": "help",
+      "category": "Assets",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/migrate-an-existing-whatsapp-number-to-a-whatsapp-business-account",
+      "title": "Migrate an Existing WhatsApp Number to a Business Account",
+      "source_family": "help",
+      "category": "Assets",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/inbound-webhooks",
+      "title": "Inbound Webhooks",
+      "source_family": "help",
+      "category": "Assets",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/outbound-webhooks",
+      "title": "Outbound Webhooks",
+      "source_family": "help",
+      "category": "Assets",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/mtls-configuration-for-outbound-webhooks",
+      "title": "mTLS Configuration for Outbound Webhooks",
+      "source_family": "help",
+      "category": "Assets",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/authorization-for-outbound-webhook-and-contact-policy",
+      "title": "Authorization for Outbound Webhook and Contact Policy",
+      "source_family": "help",
+      "category": "Assets",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/custom-events",
+      "title": "Custom Events",
+      "source_family": "help",
+      "category": "Assets",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/custom-nodes-integration",
+      "title": "Custom Node Integration",
+      "source_family": "help",
+      "category": "Assets",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/third-party-bot",
+      "title": "Third-Party Bot",
+      "source_family": "help",
+      "category": "Assets",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/pre-built-integrations-introduction",
+      "title": "Introduction",
+      "source_family": "help",
+      "category": "PreBUILT Integrations",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/agile-crm-create-get-delete-update",
+      "title": "Agile CRM",
+      "source_family": "help",
+      "category": "PreBUILT Integrations",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/salesforce-crm-get-insert-update-delete-contacts",
+      "title": "Salesforce CRM",
+      "source_family": "help",
+      "category": "PreBUILT Integrations",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/ai-agent-node",
+      "title": "AI Agent",
+      "source_family": "help",
+      "category": "PreBUILT Integrations",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/google-dialogflow-cx",
+      "title": "Google Dialogflow CX",
+      "source_family": "help",
+      "category": "PreBUILT Integrations",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/google-dialogflow-es",
+      "title": "Google Dialogflow ES",
+      "source_family": "help",
+      "category": "PreBUILT Integrations",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/servicenow-node",
+      "title": "ServiceNow",
+      "source_family": "help",
+      "category": "PreBUILT Integrations",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/customer-journey-data",
+      "title": "Customer Journey Data",
+      "source_family": "help",
+      "category": "PreBUILT Integrations",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/zendesk-crm",
+      "title": "Zendesk CRM",
+      "source_family": "help",
+      "category": "PreBUILT Integrations",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/prebuilt-integration-freshdesk",
+      "title": "Freshdesk",
+      "source_family": "help",
+      "category": "PreBUILT Integrations",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/prebuilt-integrations-zoho-crm",
+      "title": "Zoho CRM",
+      "source_family": "help",
+      "category": "PreBUILT Integrations",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/link-shortener",
+      "title": "Link Shortener",
+      "source_family": "help",
+      "category": "PreBUILT Integrations",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/epic",
+      "title": "EPIC",
+      "source_family": "help",
+      "category": "PreBUILT Integrations",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/patient-match-epic-ehr-flow-template",
+      "title": "Patient Match (EPIC EHR) Flow Template",
+      "source_family": "help",
+      "category": "PreBUILT Integrations",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/get-available-slots",
+      "title": "Get Available slots",
+      "source_family": "help",
+      "category": "PreBUILT Integrations",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/epic-reschedule-appointment-flow-template",
+      "title": "EPIC Reschedule Appointment  Flow Template",
+      "source_family": "help",
+      "category": "PreBUILT Integrations",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/confirm-appointment-flow-template",
+      "title": "Confirm Appointment Flow Template",
+      "source_family": "help",
+      "category": "PreBUILT Integrations",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/get-future-appointments-flow-template",
+      "title": "Get Future Appointments Flow Template",
+      "source_family": "help",
+      "category": "PreBUILT Integrations",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/cancel-appointment-flow-template",
+      "title": "Cancel Appointment Flow Template",
+      "source_family": "help",
+      "category": "PreBUILT Integrations",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/webex-chat-webex-engage",
+      "title": "Webex Chat/ Webex Engage",
+      "source_family": "help",
+      "category": "PreBUILT Integrations",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/enghouse-integration-deprecated",
+      "title": "Enghouse Integration-Deprecated",
+      "source_family": "help",
+      "category": "PreBUILT Integrations",
+      "doc_version": "6.20.0",
+      "deprecated": true,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/webex-connect-appexchange-app-deprecated",
+      "title": "Webex Connect AppExchange App - Deprecated",
+      "source_family": "help",
+      "category": "PreBUILT Integrations",
+      "doc_version": "6.20.0",
+      "deprecated": true,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/nice-incontact-deprecated",
+      "title": "Nice inContact - Deprecated",
+      "source_family": "help",
+      "category": "PreBUILT Integrations",
+      "doc_version": "6.20.0",
+      "deprecated": true,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/cisco-ece-integration-deprecated",
+      "title": "Cisco ECE Integration - Deprecated",
+      "source_family": "help",
+      "category": "PreBUILT Integrations",
+      "doc_version": "6.20.0",
+      "deprecated": true,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/skype-for-business-integration-deprecated",
+      "title": "Skype for Business Integration - Deprecated",
+      "source_family": "help",
+      "category": "PreBUILT Integrations",
+      "doc_version": "6.20.0",
+      "deprecated": true,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/wxcc-overview",
+      "title": "Overview - WXCC",
+      "source_family": "help",
+      "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/wxcc-channel-asset-configuration",
+      "title": "Channel Asset Configuration - WXCC",
+      "source_family": "help",
+      "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/wxcc-sms-assset-creation",
+      "title": "SMS - WXCC",
+      "source_family": "help",
+      "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/wxcc-fbm-asset-creation",
+      "title": "Facebook Messenger - WXCC",
+      "source_family": "help",
+      "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/wxcc-email-asset-creation",
+      "title": "Email - WXCC",
+      "source_family": "help",
+      "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/livechat-asset-creation-wxcc",
+      "title": "Live Chat - WXCC",
+      "source_family": "help",
+      "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/wxcc-whatsapp-asset-creation",
+      "title": "WhatsApp - WXCC",
+      "source_family": "help",
+      "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/whatsapp-usernames-and-business-scoped-user-ids-bsuid-wxcc",
+      "title": "WhatsApp Usernames and Business-Scoped User IDs (BSUID) - WXCC",
+      "source_family": "help",
+      "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/local-storage-wxcc",
+      "title": "Local Storage - WXCC",
+      "source_family": "help",
+      "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/wxcc-additional-information-on-whatsapp-onboarding",
+      "title": "Additional Information on WhatsApp Onboarding - WXCC",
+      "source_family": "help",
+      "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/wxcc-how-to-change-your-whatsapp-business-display-name",
+      "title": "How to Change Your WhatsApp Business Display Name - WXCC",
+      "source_family": "help",
+      "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/wxcc-display-name-guidelines",
+      "title": "Display Name Guidelines - WXCC",
+      "source_family": "help",
+      "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/wxcc-messaging-customers-on-whatsapp-business-platform",
+      "title": "Messaging Customers on WhatsApp Business Platform - WXCC",
+      "source_family": "help",
+      "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/wxcc-whatsapp-business-phone-number-quality-rating",
+      "title": "WhatsApp Business Phone Number Quality Rating - WXCC",
+      "source_family": "help",
+      "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/wxcc-messaging-limits",
+      "title": "Messaging Limits - WXCC",
+      "source_family": "help",
+      "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/wxcc-migrate-an-existing-whatsapp-number-to-a-business-account-wxcc",
+      "title": "Migrate an Existing WhatsApp Number to a Business Account - WXCC",
+      "source_family": "help",
+      "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/wxcc-apple-messages-for-business",
+      "title": "Apple Messages for Business - WXCC",
+      "source_family": "help",
+      "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/wxcc-task-integration-nodes-and-node-authorizations",
+      "title": "Webex CC Task Integration Nodes and Node Authorizations",
+      "source_family": "help",
+      "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/wxcc-create-task",
+      "title": "Create Task - WXCC",
+      "source_family": "help",
+      "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/wxcc-set-variable",
+      "title": "Set Variable - WXCC",
+      "source_family": "help",
+      "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/wxcc-queue-task",
+      "title": "Queue Task - WXCC",
+      "source_family": "help",
+      "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/wxcc-piq-and-ewt",
+      "title": "PIQ and EWT - WXCC",
+      "source_family": "help",
+      "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/wxcc-routed-notification",
+      "title": "Routed Notification - WXCC",
+      "source_family": "help",
+      "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/wxcc-modify-notification",
+      "title": "Modify Notification - WXCC",
+      "source_family": "help",
+      "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/wxcc-screen-pop",
+      "title": "Screen Pop - WXCC",
+      "source_family": "help",
+      "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/wxcc-close-task",
+      "title": "Close Task - WXCC",
+      "source_family": "help",
+      "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/wxcc-resolve-conversation",
+      "title": "Resolve Conversation",
+      "source_family": "help",
+      "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/wxcc-engage-node-palette",
+      "title": "Webex CC Engage Integration Nodes, Data Streams, and Node Authorizations",
+      "source_family": "help",
+      "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/wxcc-engage-search-conversation",
+      "title": "Search Conversation - WXCC",
+      "source_family": "help",
+      "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/wxcc-engage-append-conversation",
+      "title": "Append Conversation - WXCC",
+      "source_family": "help",
+      "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/wxcc-engage-create-conversation",
+      "title": "Create Conversation - WXCC",
+      "source_family": "help",
+      "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/wxcc-engage-update-conversation",
+      "title": "Update  Conversation - WXCC",
+      "source_family": "help",
+      "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/wxcc-engage-add-participant",
+      "title": "Add Participant - WXCC",
+      "source_family": "help",
+      "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/wxcc-engage-remove-participant",
+      "title": "Remove Participant - WXCC",
+      "source_family": "help",
+      "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/wxcc-engage-close-conversation",
+      "title": "Close Conversation - WXCC",
+      "source_family": "help",
+      "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/wxcc-engage-re-open-conversation",
+      "title": "Re-Open Conversation - WXCC",
+      "source_family": "help",
+      "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/wxcc-engage-business-hours",
+      "title": "Business Hours - WXCC",
+      "source_family": "help",
+      "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/wxcc-surveys-node",
+      "title": "Webex Surveys",
+      "source_family": "help",
+      "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/wxcc-surveys-node-",
+      "title": "Surveys",
+      "source_family": "help",
+      "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/wxcc-flow-configuration-using-sample-templates",
+      "title": "Flow Configuration using Sample Templates - WXCC",
+      "source_family": "help",
+      "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/wxcc-proactive-chat-flows",
+      "title": "Proactive chat - Flows - WXCC",
+      "source_family": "help",
+      "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/wxcc-flows-with-qnabot-nodes",
+      "title": "Configuring flows with Q&A and Task Bot Nodes - WXCC",
+      "source_family": "help",
+      "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/configuring-flows-with-ai-agent-node",
+      "title": "Configuring flows with AI Agent Node - WXCC",
+      "source_family": "help",
+      "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/wxcc-handling-various-customer-intents-bot-builder-wxcc",
+      "title": "Handling various customer intents using flows and Bot Builder",
+      "source_family": "help",
+      "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/wxcc-using-bot-rich-responses-with-livechat",
+      "title": "Using bot rich responses with Livechat",
+      "source_family": "help",
+      "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/wxcc-best-practices-guidelines",
+      "title": "Best Practices and Guidelines - WXCC",
+      "source_family": "help",
+      "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/wxcc-faqs",
+      "title": "FAQs - WXCC",
+      "source_family": "help",
+      "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/cce_overview",
+      "title": "Overview - CCE",
+      "source_family": "help",
+      "category": "Webex Connect and Cisco Contact Center Enterprise System (CCE)",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/cce-channel-asset-configuration",
+      "title": "Channel Asset Configuration - CCE",
+      "source_family": "help",
+      "category": "Webex Connect and Cisco Contact Center Enterprise System (CCE)",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/cce-sms",
+      "title": "SMS - CCE",
+      "source_family": "help",
+      "category": "Webex Connect and Cisco Contact Center Enterprise System (CCE)",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/cce-email",
+      "title": "Email - CCE",
+      "source_family": "help",
+      "category": "Webex Connect and Cisco Contact Center Enterprise System (CCE)",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/cce-live-chat",
+      "title": "Live Chat - CCE",
+      "source_family": "help",
+      "category": "Webex Connect and Cisco Contact Center Enterprise System (CCE)",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/cce-apple-messages-for-business",
+      "title": "Apple Messages for Business - CCE",
+      "source_family": "help",
+      "category": "Webex Connect and Cisco Contact Center Enterprise System (CCE)",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/cce-facebook-messenger",
+      "title": "Facebook Messenger - CCE",
+      "source_family": "help",
+      "category": "Webex Connect and Cisco Contact Center Enterprise System (CCE)",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/cce-whatsapp",
+      "title": "WhatsApp - CCE",
+      "source_family": "help",
+      "category": "Webex Connect and Cisco Contact Center Enterprise System (CCE)",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/whatsapp-usernames-and-business-scoped-user-ids-bsuid-cce",
+      "title": "WhatsApp Usernames and Business-Scoped User IDs (BSUID) - CCE",
+      "source_family": "help",
+      "category": "Webex Connect and Cisco Contact Center Enterprise System (CCE)",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/cce-local-storage",
+      "title": "Local Storage - CCE",
+      "source_family": "help",
+      "category": "Webex Connect and Cisco Contact Center Enterprise System (CCE)",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/cce-additional-information-on-whatsapp-onboarding",
+      "title": "Additional Information on WhatsApp Onboarding - CCE",
+      "source_family": "help",
+      "category": "Webex Connect and Cisco Contact Center Enterprise System (CCE)",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/cce-how-to-change-your-whatsapp-business-display-name",
+      "title": "How to Change Your WhatsApp Business Display Name - CCE",
+      "source_family": "help",
+      "category": "Webex Connect and Cisco Contact Center Enterprise System (CCE)",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/cce-display-name-guidelines",
+      "title": "Display Name Guidelines - CCE",
+      "source_family": "help",
+      "category": "Webex Connect and Cisco Contact Center Enterprise System (CCE)",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/cce-messaging-customers-on-whatsapp-business-platform",
+      "title": "Messaging Customers on WhatsApp Business Platform - CCE",
+      "source_family": "help",
+      "category": "Webex Connect and Cisco Contact Center Enterprise System (CCE)",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/cce-whatsapp-business-phone-number-quality-rating",
+      "title": "WhatsApp Business Phone Number Quality Rating - CCE",
+      "source_family": "help",
+      "category": "Webex Connect and Cisco Contact Center Enterprise System (CCE)",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/cce-messaging-limits",
+      "title": "Messaging Limits - CCE",
+      "source_family": "help",
+      "category": "Webex Connect and Cisco Contact Center Enterprise System (CCE)",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/cce-migrate-an-existing-whatsapp-number-to-a-business-account",
+      "title": "Migrate an Existing WhatsApp Number to a Business Account - CCE",
+      "source_family": "help",
+      "category": "Webex Connect and Cisco Contact Center Enterprise System (CCE)",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/cce-event-authorization",
+      "title": "Event Authorization - CCE",
+      "source_family": "help",
+      "category": "Webex Connect and Cisco Contact Center Enterprise System (CCE)",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/cce-integration-nodes-and-node-authorizations",
+      "title": "CCE Integration Nodes and Node Authorizations",
+      "source_family": "help",
+      "category": "Webex Connect and Cisco Contact Center Enterprise System (CCE)",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/cce-create-task",
+      "title": "Create Task - CCE",
+      "source_family": "help",
+      "category": "Webex Connect and Cisco Contact Center Enterprise System (CCE)",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/cce-get-task-details",
+      "title": "Get Task Details - CCE",
+      "source_family": "help",
+      "category": "Webex Connect and Cisco Contact Center Enterprise System (CCE)",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/cce-end-task",
+      "title": "End Task - CCE",
+      "source_family": "help",
+      "category": "Webex Connect and Cisco Contact Center Enterprise System (CCE)",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/cce-webex-engage-nodes-and-node-authorizations",
+      "title": "Webex Engage Nodes and Node Authorizations - CCE",
+      "source_family": "help",
+      "category": "Webex Connect and Cisco Contact Center Enterprise System (CCE)",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/cce-search-conversation-engage-node",
+      "title": "Search Conversation - CCE",
+      "source_family": "help",
+      "category": "Webex Connect and Cisco Contact Center Enterprise System (CCE)",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/cce-append-conversation-engage-node",
+      "title": "Append Conversation - CCE",
+      "source_family": "help",
+      "category": "Webex Connect and Cisco Contact Center Enterprise System (CCE)",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/cce-create-conversation-engage-node",
+      "title": "Create Conversation - CCE",
+      "source_family": "help",
+      "category": "Webex Connect and Cisco Contact Center Enterprise System (CCE)",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/cce-update-conversation-engage-node",
+      "title": "Update Conversation - CCE",
+      "source_family": "help",
+      "category": "Webex Connect and Cisco Contact Center Enterprise System (CCE)",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/cce-add-participant-engage-node",
+      "title": "Add Participant - CCE",
+      "source_family": "help",
+      "category": "Webex Connect and Cisco Contact Center Enterprise System (CCE)",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/cce-remove-participant-engage-node",
+      "title": "Remove Participant - CCE",
+      "source_family": "help",
+      "category": "Webex Connect and Cisco Contact Center Enterprise System (CCE)",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/cce-close-conversation-engage-node",
+      "title": "Close Conversation - CCE",
+      "source_family": "help",
+      "category": "Webex Connect and Cisco Contact Center Enterprise System (CCE)",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/cce-re-open-conversation-engage-node",
+      "title": "Re-open Conversation - CCE",
+      "source_family": "help",
+      "category": "Webex Connect and Cisco Contact Center Enterprise System (CCE)",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/cce-flow-configurations",
+      "title": "Flow Configurations - CCE",
+      "source_family": "help",
+      "category": "Webex Connect and Cisco Contact Center Enterprise System (CCE)",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/cce-best-practices",
+      "title": "Best Practices and Guidelines - CCE",
+      "source_family": "help",
+      "category": "Webex Connect and Cisco Contact Center Enterprise System (CCE)",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/cce-faqs",
+      "title": "FAQs - CCE",
+      "source_family": "help",
+      "category": "Webex Connect and Cisco Contact Center Enterprise System (CCE)",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/webex-engage-standalone-introduction",
+      "title": "Introduction - WxEngage standalone",
+      "source_family": "help",
+      "category": "Webex Engage Standalone Nodes",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/pre-requisites",
+      "title": "Pre-requisites - WxEngage standalone",
+      "source_family": "help",
+      "category": "Webex Engage Standalone Nodes",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/setup-org-hierarchy",
+      "title": "Setup Org Hierarchy - WxEngage standalone",
+      "source_family": "help",
+      "category": "Webex Engage Standalone Nodes",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/setup-channel-assets",
+      "title": "Setup channel assets - WxEngage standalone",
+      "source_family": "help",
+      "category": "Webex Engage Standalone Nodes",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/sms",
+      "title": "SMS - WxEngage standalone",
+      "source_family": "help",
+      "category": "Webex Engage Standalone Nodes",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/facebook-messenger-2",
+      "title": "Facebook Messenger - WxEngage standalone",
+      "source_family": "help",
+      "category": "Webex Engage Standalone Nodes",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/livechat",
+      "title": "Livechat - WxEngage standalone",
+      "source_family": "help",
+      "category": "Webex Engage Standalone Nodes",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/email-1",
+      "title": "Email - WxEngage standalone",
+      "source_family": "help",
+      "category": "Webex Engage Standalone Nodes",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/apple-messages-for-business-2",
+      "title": "Apple Messages for Business - WxEngage standalone",
+      "source_family": "help",
+      "category": "Webex Engage Standalone Nodes",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/whatsapp-1",
+      "title": "WhatsApp - WxEngage standalone",
+      "source_family": "help",
+      "category": "Webex Engage Standalone Nodes",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/channel-specific-message-types",
+      "title": "Channel specific message types - WxEngage standalone",
+      "source_family": "help",
+      "category": "Webex Engage Standalone Nodes",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/message-schemas",
+      "title": "Message Schemas - WxEngage standalone",
+      "source_family": "help",
+      "category": "Webex Engage Standalone Nodes",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/sms-1",
+      "title": "Message Schema- SMS - WxEngage standalone",
+      "source_family": "help",
+      "category": "Webex Engage Standalone Nodes",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/facebook-messenger-3",
+      "title": "Message Schema - Facebook Messenger - WxEngage standalone",
+      "source_family": "help",
+      "category": "Webex Engage Standalone Nodes",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/livechat-1",
+      "title": "Message Schema - Livechat - WxEngage standalone",
+      "source_family": "help",
+      "category": "Webex Engage Standalone Nodes",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/email-2",
+      "title": "Message Schema - Email - WxEngage standalone",
+      "source_family": "help",
+      "category": "Webex Engage Standalone Nodes",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/whatsapp-2",
+      "title": "Message Schema - WhatsApp - WxEngage standalone",
+      "source_family": "help",
+      "category": "Webex Engage Standalone Nodes",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/apple-messages-for-business-3",
+      "title": "Message Schema - Apple Messages for Business - WxEngage standalone",
+      "source_family": "help",
+      "category": "Webex Engage Standalone Nodes",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/api",
+      "title": "API - WxEngage standalone",
+      "source_family": "help",
+      "category": "Webex Engage Standalone Nodes",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/authorize-integration",
+      "title": "Authorize Integration - WxEngage standalone",
+      "source_family": "help",
+      "category": "Webex Engage Standalone Nodes",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/node-palette",
+      "title": "Node Palette - WxEngage standalone",
+      "source_family": "help",
+      "category": "Webex Engage Standalone Nodes",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/search-conversation-1",
+      "title": "Search conversation - WxEngage standalone",
+      "source_family": "help",
+      "category": "Webex Engage Standalone Nodes",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/create-conversation-1",
+      "title": "Create conversation - WxEngage standalone",
+      "source_family": "help",
+      "category": "Webex Engage Standalone Nodes",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/append-message",
+      "title": "Append message - WxEngage standalone",
+      "source_family": "help",
+      "category": "Webex Engage Standalone Nodes",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/fetch-teams-working-hours",
+      "title": "Fetch Team's working hours - WxEngage standalone",
+      "source_family": "help",
+      "category": "Webex Engage Standalone Nodes",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/update-conversation-1",
+      "title": "Update conversation  - WxEngage standalone",
+      "source_family": "help",
+      "category": "Webex Engage Standalone Nodes",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/transfer-conversation",
+      "title": "Transfer conversation - WxEngage standalone",
+      "source_family": "help",
+      "category": "Webex Engage Standalone Nodes",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/fetch-conversation-transcript",
+      "title": "Fetch conversation transcript - WxEngage standalone",
+      "source_family": "help",
+      "category": "Webex Engage Standalone Nodes",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/hold-conversation",
+      "title": "Hold conversation - WxEngage standalone",
+      "source_family": "help",
+      "category": "Webex Engage Standalone Nodes",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/close-conversation-1",
+      "title": "Close conversation - WxEngage standalone",
+      "source_family": "help",
+      "category": "Webex Engage Standalone Nodes",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/reopen-conversation",
+      "title": "Reopen conversation - WxEngage standalone",
+      "source_family": "help",
+      "category": "Webex Engage Standalone Nodes",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/data-streams-webex-engage",
+      "title": "Data streams for Webex Engage",
+      "source_family": "help",
+      "category": "Webex Engage Standalone Nodes",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/limitations",
+      "title": "Limitations - WxEngage standalone",
+      "source_family": "help",
+      "category": "Webex Engage Standalone Nodes",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/webex-campaign-integration-with-webex-connect",
+      "title": "Webex Campaign Integration with Webex Connect",
+      "source_family": "help",
+      "category": "Webex Connect and Webex Campaign Integration",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/smart-links",
+      "title": "Smart Links",
+      "source_family": "help",
+      "category": "TOOLS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/voice-media",
+      "title": "Voice Media",
+      "source_family": "help",
+      "category": "TOOLS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/voice-recordings",
+      "title": "Voice Recordings",
+      "source_family": "help",
+      "category": "TOOLS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/templates",
+      "title": "Templates",
+      "source_family": "help",
+      "category": "TOOLS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/templates-sms",
+      "title": "SMS",
+      "source_family": "help",
+      "category": "TOOLS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/templates-rcs",
+      "title": "RCS",
+      "source_family": "help",
+      "category": "TOOLS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/templates-email",
+      "title": "Email",
+      "source_family": "help",
+      "category": "TOOLS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/push-template",
+      "title": "Push",
+      "source_family": "help",
+      "category": "TOOLS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/livechat-template",
+      "title": "Live Chat/In-App Messaging",
+      "source_family": "help",
+      "category": "TOOLS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/templates-messenger",
+      "title": "Messenger",
+      "source_family": "help",
+      "category": "TOOLS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/templates-whatsapp",
+      "title": "WhatsApp",
+      "source_family": "help",
+      "category": "TOOLS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/whatsapp-category-guidelines",
+      "title": "WhatsApp Category Guidelines",
+      "source_family": "help",
+      "category": "TOOLS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/whatsapp-templates",
+      "title": "WhatsApp Template Rejection Reasons",
+      "source_family": "help",
+      "category": "TOOLS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/export-logs-overview",
+      "title": "Export Logs",
+      "source_family": "help",
+      "category": "TOOLS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/new-export-logs",
+      "title": "New Export Logs",
+      "source_family": "help",
+      "category": "TOOLS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/legacy-export-logs",
+      "title": "Legacy Export Logs",
+      "source_family": "help",
+      "category": "TOOLS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/logbook",
+      "title": "Logbooks",
+      "source_family": "help",
+      "category": "TOOLS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/enable-logbooks-for-bi-reporting",
+      "title": "Enable Logbooks for BI Reporting",
+      "source_family": "help",
+      "category": "TOOLS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/media-manager",
+      "title": "Media Manager",
+      "source_family": "help",
+      "category": "TOOLS",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/console",
+      "title": "Debug Console",
+      "source_family": "help",
+      "category": "DEBUG",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/archive-search",
+      "title": "Archive Search",
+      "source_family": "help",
+      "category": "DEBUG",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/profile-settings",
+      "title": "Profile Settings",
+      "source_family": "help",
+      "category": "ADMINISTRATION",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/tenant-settings",
+      "title": "Tenant Settings",
+      "source_family": "help",
+      "category": "ADMINISTRATION",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/single-sign-on-settings",
+      "title": "Single Sign-On (SSO) Using SAML",
+      "source_family": "help",
+      "category": "ADMINISTRATION",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/azure-sso",
+      "title": "Azure SSO",
+      "source_family": "help",
+      "category": "ADMINISTRATION",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/usage",
+      "title": "Usage",
+      "source_family": "help",
+      "category": "ADMINISTRATION",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/usage-report-fields",
+      "title": "Usage Report Fields",
+      "source_family": "help",
+      "category": "ADMINISTRATION",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/user-roles-and-hierarchy",
+      "title": "User Roles",
+      "source_family": "help",
+      "category": "ADMINISTRATION",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/teammates",
+      "title": "Teammates",
+      "source_family": "help",
+      "category": "ADMINISTRATION",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/user-audit",
+      "title": "User Audit",
+      "source_family": "help",
+      "category": "ADMINISTRATION",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/flow-monitoring",
+      "title": "Flow Monitoring",
+      "source_family": "help",
+      "category": "MONITORING",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/event-scheduler",
+      "title": "Event Scheduler",
+      "source_family": "help",
+      "category": "APP TRAY",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/contact-policy",
+      "title": "Contact Policy",
+      "source_family": "help",
+      "category": "APP TRAY",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/getting-started-with-contact-policy-app",
+      "title": "Getting Started with Contact Policy",
+      "source_family": "help",
+      "category": "APP TRAY",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/consent-groups",
+      "title": "Consent Groups",
+      "source_family": "help",
+      "category": "APP TRAY",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/manage-consent-groups",
+      "title": "Manage Consent Groups",
+      "source_family": "help",
+      "category": "APP TRAY",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/handling-carrier-deactivations",
+      "title": "Handling Carrier Deactivations",
+      "source_family": "help",
+      "category": "APP TRAY",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/contact-policy-reports",
+      "title": "Contact Policy Reports",
+      "source_family": "help",
+      "category": "APP TRAY",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/mobile-wallet",
+      "title": "Mobile Wallet",
+      "source_family": "help",
+      "category": "APP TRAY",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/mobile-wallet-api",
+      "title": "Mobile Wallet API",
+      "source_family": "help",
+      "category": "APP TRAY",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/getting-started-with-webex-ai-agent-studio",
+      "title": "Getting Started with Webex AI Agent Studio",
+      "source_family": "help",
+      "category": "App Tray - Webex AI Agent Studio",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/configure-fulfilment-flows-for-ai-agent-actions",
+      "title": "Configure Fulfillment Flows for AI Agent Actions",
+      "source_family": "help",
+      "category": "App Tray - Webex AI Agent Studio",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/data-retention-policy",
+      "title": "Data Retention Policy",
+      "source_family": "help",
+      "category": "DATA MANAGEMENT",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/data-hosting",
+      "title": "Data Storage",
+      "source_family": "help",
+      "category": "DATA MANAGEMENT",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/references-glossary",
+      "title": "Glossary",
+      "source_family": "help",
+      "category": "REFERENCES",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/references-character-sets-supported-for-messaging",
+      "title": "Character Sets Supported for Messaging",
+      "source_family": "help",
+      "category": "REFERENCES",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/references-public-ips-across-regions",
+      "title": "Public IPs Across Regions",
+      "source_family": "help",
+      "category": "REFERENCES",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/references-api-codes",
+      "title": "API Status Codes",
+      "source_family": "help",
+      "category": "REFERENCES",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/references-carrier-ids-for-rcs-capability-and-rcs-message-nodes",
+      "title": "Carrier IDs for RCS Capability and RCS Message Nodes",
+      "source_family": "help",
+      "category": "REFERENCES",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/references-flowbuilder-response-codes",
+      "title": "Flow Builder Response Codes",
+      "source_family": "help",
+      "category": "REFERENCES",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/references-supported-languages-for-voice",
+      "title": "Supported Languages for Voice TTS (Text-to-Speech)",
+      "source_family": "help",
+      "category": "REFERENCES",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/references-supported-languages-for-voice-stt-speech-to-text",
+      "title": "Supported Languages for Voice STT (Speech-to-Text)",
+      "source_family": "help",
+      "category": "REFERENCES",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/references-supported-file-types-for-channels",
+      "title": "Supported File Types for Channels",
+      "source_family": "help",
+      "category": "REFERENCES",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/references-security-best-practices",
+      "title": "Security Best Practices",
+      "source_family": "help",
+      "category": "REFERENCES",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    },
+    {
+      "url": "https://help.webexconnect.io/docs/data-streams",
+      "title": "Data Streams",
+      "source_family": "help",
+      "category": "Data Streams",
+      "doc_version": "6.20.0",
+      "deprecated": false,
+      "discovered_from": "https://help.webexconnect.io/docs/service-introduction"
+    }
+  ]
+}

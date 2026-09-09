@@ -1,0 +1,31 @@
+{
+  "category": "Assets",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd81825791e",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "fabc5722e3eb2afb6e94f73816c78083ca910bcd81e426c885ebd242dec87b7c",
+    "source_path": "cb4df47edf386e30060fc4edea7007e5f391d9b88a340000c52344e01b29569d",
+    "text_path": "da54ff069a33ac8d49ed20a193f92cecf3d7e9db7734ebe3611c6a05e0494b7c"
+  },
+  "headings": [],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/additional-information-regarding-embedded-signup.md",
+  "resolved_url": "https://help.webexconnect.io/docs/additional-information-regarding-embedded-signup",
+  "retrieved_at": "2026-09-08T23:29:05+00:00",
+  "sha256_html_response": "50cf5e1cbb563db158dfd3d5523fc20fb07690a15a5835a14bc748edc7039317",
+  "sha256_source_body": "cb4df47edf386e30060fc4edea7007e5f391d9b88a340000c52344e01b29569d",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/additional-information-regarding-embedded-signup.source.md",
+  "source_updated_at": "2025-10-14T08:07:36.082Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/additional-information-regarding-embedded-signup.txt",
+  "title": "Additional Information on WhatsApp Onboarding",
+  "url": "https://help.webexconnect.io/docs/additional-information-regarding-embedded-signup",
+  "word_count": 118,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/additional-information-regarding-embedded-signup.metadata.json"
+}

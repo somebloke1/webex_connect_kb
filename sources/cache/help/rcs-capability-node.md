@@ -1,0 +1,82 @@
+# RCS Capability Node
+
+Source: https://help.webexconnect.io/docs/rcs-capability-node
+Documentation version: 6.20.0
+Retrieved: 2026-09-08T23:28:56+00:00
+
+The RCS capability node checks if the mobile number of customers has the capability to receive RCS messages. This node helps you in checking the RCS version, RCS platform, and if RCS has been enabled on the user's mobile device, along with many other RCS attributes.<br>
+
+
+
+![RCS Capability Node](https://files.readme.io/78f4539-RCS.jpg)
+
+
+
+
+## Node Configuration
+
+Double-click the node to configure it. RCS is driven by a mobile number. In the configuration window, either specify the mobile number of the user or the variable that contains the mobile number.
+
+
+
+![Configuration Window](https://files.readme.io/22033f2-RCS1.jpg)
+
+
+
+
+The configuration window has two dynamic fields in addition to the mobile number:
+
+- **Force Refresh** - allows the users to indicate to the platform whether to fetch a 7-day cached status of users' capability status or current live status. The cached lookup is near-instant and recommended for high throughput campaigns. If a number is not found in the cache, we will auto-fallback to live lookup.  
+  This field only accepts the following values:
+  - **true** – does a live lookup of capability on the operator network. Takes 3-6 seconds
+  - **false** – does a cache lookup of capability and falls back to live if number not available in the cache.
+- **Carrier** – enter an integer value if you already know the carrier that the customer uses. Leave it blank if unsure.  
+  It is useful when sending messages to users on a single mobile operator and increases the message throughput significantly when provided. See the list of [carrier IDs](https://help.webexconnect.io/docs/references-carrier-ids-for-rcs-capability-and-rcs-message-nodes).
+
+## Input Variables
+
+You can see a list of all the flow variables available for use within this node under the **Input Variables** pane. You can also search for a variable using the **Search** field.
+
+You can see the list of variables that you explicitly create and configure for this node under the **Custom Variables** pane. You can also add a custom variable to the flow using the **Add New Custom Variable** button. For more information, see [Custom Variables](https://help.webexconnect.io/docs/variable-management-in-flows).
+
+## Output Variables
+
+> 📘 Using the node
+> 
+> The capability node output variables can be used in conjunction with a branch node succeeding it to decide whether to send an SMS or RCS message to a user.
+> 
+> `rcs.enabled` tells you whether RCS is enabled or not but this might be the basic version of RCS such as up1 that doesn't support rich features such as cards or carousels.
+> 
+> `rcs.version` tells you what features are available when `rcs.enabled` is true. up2 supports all the rich features of RCS.
+
+You can see the data that this node generates as output variables. These [variables](https://help.webexconnect.io/docs/variable-management-in-flows) are available for use in subsequent nodes. The following are the standard output variables for the RCS capability node:
+
+- **rcs.msisdn** - returns the E.164 formatted number of the query number. For example, +447500661610
+- **rcs.carrierCode** - returns the carrier code of the customer device. For example, CA_ROGERS
+- **rcs.enabled** - returns true if the customer has RCS enabled
+- **rcs.version** - returns up1/up2/disabled depending on client RCS version
+- **rcs.platform** - returns the name of RCS platform, Google or Samsung
+- **rcs.capabilities.richcard** - returns true if the user's mobile device supports rich card
+- **rcs.capabilities.richcardCarousel** - returns true if the user's mobile device supports rich card carousel
+- **rcs.capabilities.calendarEvent** - returns true if the user's mobile device supports adding an event to the calendar directly from within the RCS message
+- **rcs.capabilities.dialPhoneNumber** - returns true if the user's mobile device supports dialing a phone number directly from within the RCS message
+- **rcs.capabilities.openUrl** - returns true if the user's mobile device supports opening a URL directly from within the RCS message
+- **rcs.capabilities.shareLocation** - returns true if the user's mobile device supports sharing a location directly from within the RCS message
+- **rcs.capabilities.viewLocation** - returns true if the user's mobile device supports viewing a location directly from within the RCS message
+- **rcs.capabilities.chat** - returns true if the user's mobile device supports chat directly from within the RCS message
+- **rcs.capabilities.fileTransfer** - returns true if the user's mobile device supports transferring files directly from within the RCS message
+- **rcs.capabilities.paymentsV1** - returns true if the user's mobile device supports making payments directly from within the RCS message
+- **rcs.capabilities.videoCall** - returns true if the user's mobile device supports making a video call directly from within the RCS message.
+
+## Node Outcomes
+
+You can see the list of possible node outcomes for this node under this pane. You can customize the node labels using the **Edit** (pencil) icon. The node exits through one of the node edges corresponding to the outcome of the node.
+
+| Node Edge           | Node Event/Outcome                                                                                          |
+| :------------------ | :---------------------------------------------------------------------------------------------------------- |
+| Success (green)<br> | - **onSuccess** - the flow exits through this node when the RCS capability verification is a success        |
+| Error (red)         | - **onError** - the flow exits through this node outcome when there is an error in verifying RCS capability |
+
+## Transition Actions
+
+Use this tab to configure the transition actions for <code>On-enter</code>/<code>On-leave</code> events. However, configuring transition actions is optional. For detailed instructions about configuring the transition actions, see [Node Transition Actions](https://help.webexconnect.io/docs/transition-actions).

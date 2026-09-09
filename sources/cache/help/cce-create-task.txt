@@ -1,0 +1,324 @@
+This node calls Contact Center Enterprise Task API to create a new Task. While configuring flows in Webex Connect, you’d need to use this node for creating the task on Contact Center Enterprise.
+
+## 
+
+Authorization
+
+Refer to section Node Authorizations for more information. 
+
+## 
+
+Methods and Outcomes
+
+Here’s a brief description of various methods, and corresponding output variables and node outcomes associated with each of the methods.
+
+Method Name - Create Task 
+
+ [Image:  Interface section displaying the method name "Create Task".] 
+ Interface section displaying the method name "Create Task".
+
+## 📘
+Note
+
+Based on the Channel you have selected, the Conversation ID will change accordingly.
+
+ | Input Variables | Output Variables | Node Outcomes
+
+ | _ Method Name
+
+Name of the CCE task.
+
+_ Tracking ID
+
+The Tracking ID used to track individual requests.
+
+_ Domain - $(domain) One of the custom variables that must contain the finesse public accessible domain name for your business. A domain name is a string of text that maps to a numeric IP address, used to access a website from client software. Example: www.google.com.
+
+Task Details
+
+_ Task ID - $(flid)
+
+Flow transaction id from the state node is converted into UUID in the evaluate node, and passed to create task node, for creating task with flid as task id. $(flid) is one of the custom variables that contains the processed task ID value which is evaluated in the Evaluate node.
+
+- Disposition Code - The unique identifier for the type of conversation between the customer and the live agent. _ Conversation ID - $(conversationId) - This is async variable from the Create Conversation node. This variable automatically gets available in Webex Connect platform once create conversation executed with success. _ Destination - $(destination) One of the custom variables that must contain the value for customer's identifier. For example, the value of "PSID" in case of Facebook Messenger, "MSISDN" in case of SMS channel, and so on for other channels. Destination the customer contacted. For telephony, this is the number the contact called. For chat, this is the URL of the page where the chat takes place. For email, it is the email address contacted. _ Media Type
+
+Media type of the task. Acceptable values are email | chat | telephony | social | Web Callback For SMS, the media type is - Social. The Media Type for Email is 'Email', for Live chat, the Media Type is 'Chat', and for Callbacks, the Media Type is 'Telephony', and for Web Callback it is 'Web Callback'. _ Media Channel
+
+Media channel of the task. Eg. For a Social media type, the mediaChannel could be Facebook. Acceptable values for different media types are as follows:- Media Type Valid Media Channels - email, telephony, voice chat, chat, social, facebook messenger, sms, WhatsApp, and Web Callback._ Preferred Owner - $(preferredOwner) - One of the custom variable that must contain the relevant agent ID
+
+The Preferred Agent ID of the Agent to whom the task should be assigned to. This is the Agent Skill Target ID in CCE._ Script Selector - $(scriptSelector)
+
+Information that is used to select a routing script for the task
+
+Customer Details
+
+_ Customer ID
+
+Identification for the customer
+
+_ Mobile Number (Origin)
+
+Customer's mobile number
+
+_ Customer Name
+
+Customer's name
+
+Optional Variables
+
+_ Call Variables - $(val1)
+
+Value of the call variable. Maximum allowed value length is up to 40 bytes.
+
+_ User Variables - $(val1)
+
+User variables consist of Key, Type, and Value.
+
+_ Extension Variables - $(val1)
+
+Extension variables consist of Key, Type, and Value. | CCE Create Task -
+location
+
+ responsePayload |  ok - 200 - Success
+
+ Successfully Created - 201 - Success
+Forbidden - 403 - Erro
+
+ Not Found - 404 - Error
+Internal Server Error - 500 - Error
+
+ Bad Request - 400 - Error
+Unreachable - HTTP Status - 502 Error
+
+ Service Unavailable - 503 - Error
+
+* Task Already Exists - 20200 - Success
+
+## 📘
+
+Note:
+
+When the variable is selected from the previous node output variables, the nodetid will be the prefix for the variable. Eg., sms.serviceNumber is an output variable of start node (node id 2), then the variable becomes $(n2.sms.serviceNumber)
+
+## 
+
+Sample configurations for various channels
+
+## 📘
+Note:
+
+Below are the channel specific field. These will be applicable for the respective channels
+
+EMAIL ID(ORIGIN) - $(n2.email.emailId)
+
+MOBILE NUMBER(ORIGIN) - $(n2.sms.senderNumber)
+
+LIVECHAT USER ID(ORIGIN) - $(n2.livechat.userId)
+
+ | Channel | Field Value
+
+ | SMS | Task ID - $(flid)
+
+Conversation ID - $(conversationId)
+
+Destination - $(n2.sms.serviceNumber)
+
+Media Type - Social
+
+Media Channel - SMS
+
+Preferred Owner - $(1100)
+
+Script Selector - $(ScriptSelector)
+
+Customer Details
+
+Customer ID -$(n2.sms.senderNumber)
+
+Mobile Number (Origin) - $(n2.sms.senderNumber)
+
+Customer Name - $(n2.sms.senderNumber)
+
+- Call Variables -
+
+- User Variables -
+
+ | Facebook Messenger | Task ID - $(flid)
+
+Conversation ID - $(conversationId)
+
+Destination - $(n2.messenger.appId)
+
+Media Type - Social
+
+Media Channel - Facebook Messenger
+
+Preferred Owner - $(0000)
+
+Script Selector - $(ScriptSelector)
+
+Customer Details
+
+Customer ID - $(n2.messenger.psId)
+
+Customer Name - $(CustomerName)
+
+Facebook Messenger PS Id - $(n2.messenger.psId)
+
+Call Variables -
+
+User Variables -
+
+Extension Variables -
+
+- Key -  facebookID
+
+- Value - $(n2.messenger.psId)
+
+ | WhatsApp | Task ID - $(flid)
+
+Conversation ID - $(conversationId)
+
+Destination - $(n2.whatsapp.appId)
+
+Media Type - Social
+
+Media Channel - WhatsApp
+
+Preferred Owner - $(0000)
+
+Script Selector - $(ScriptSelector)
+
+Customer Details
+
+Customer ID - $(n2.whatsapp.waId)
+
+WhatsApp WA Id - $(n2.whatsapp.waId)
+
+Customer Name - $(customerName)
+
+Call Variables -
+
+User Variables -
+
+ | Email | Task ID - $(flid)
+
+Conversation ID - $(conversationId)
+
+Destination - $(n2.email.appId)
+
+Media Type - Email
+
+Media Channel - Email
+
+Preferred Owner - $(0000)
+
+Script Selector - Insurance
+
+Customer Details
+
+Customer ID - $(n2.email.emailId)
+
+Customer Name - $(n2.email.senderName)
+
+$(n2.email.senderName) - $(n2.email.emailId)
+
+Call Variables -
+
+User Variables -
+Key - _DR_EmailSubject
+
+ Type - String
+
+Value - $(n2.email.subject)
+
+ | Live Chat | Task ID - $(flid)
+
+Conversation ID - $(conversationId)
+
+Destination - $(n2.inappmessaging.appId)
+
+Media Type - Chat
+
+Media Channel - Live Chat/In App Messaging
+
+Preferred Owner - $(0000)
+
+Script Selector - $(n38.inappmessaging.formFields.Query)
+
+Customer Details
+
+Customer ID - $(n38.inappmessaging.formFields.Email)
+
+Mobile Number (Origin) -
+
+Customer Name - $(n38.inappmessaging.formFields.Name)
+
+Live Chat User Id (Origin)- $(n2.inappmessaging.userId)
+
+Call Variables -
+
+User Variables
+Type - String
+
+ Value - $(n2.inappmessaging.threadId)
+
+ | Web Calback | Task ID - $(taskid_Callback)
+
+Conversation ID - $(conversationId)
+
+Destination - $(n2.inappmessaging.appId)
+
+Media Type - Web Callback
+
+Media Channel - Web Callback
+
+Preferred Owner - $(0000)
+
+Script Selector - $(ScriptSelector)_Callback
+
+Customer Details
+
+Customer ID - $(CustomerID)
+
+Phone Number (Origin) -  $(CustomerPhoneNumber)
+
+Customer Name - $(CustomerName)
+
+Call Variables -
+
+User Variables
+
+Extension Variables
+
+LiveChatUserId (Origin)- $(ChatuserID)
+
+LiveChatThread - $(ChatThreadID)
+
+LiveChatAppID - $(aphid)
+
+Type - String
+
+ | Apple Messages for Business | Task ID - $(flid)
+
+Conversation ID - $(conversationId)
+
+Destination - $(n2.abc.appId)
+
+Media Type - Social
+
+Media Channel – Apple Messages for Business
+
+Preferred Owner -  $(0000)
+
+Script Selector - $(ScriptSelector)
+
+Customer Details
+
+Customer ID - $(n2.abc.abcUserId)
+
+Apple Business for Messages User Id(Origin)- $(n2.abc.abcUserId)
+
+Call Variables - $(customerName)
+
+User Variables -

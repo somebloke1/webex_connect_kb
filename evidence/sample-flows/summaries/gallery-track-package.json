@@ -1,0 +1,421 @@
+{
+  "schema_version": 1,
+  "sample_key": "gallery-track-package",
+  "title": "AI Agent Fulfilment - Track Package",
+  "observed_at": "2026-09-09T00:09:50.634Z",
+  "source_path": "evidence/sample-flows/observed/gallery-track-package.json",
+  "source_sha256": "b3f8ddd3c102fc0ed1d402650c0d79f0fa41e3135ca0d7fbeb4476fb362dac03",
+  "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model",
+  "runtime_tested": false,
+  "status": "observed_canvas_relationships_summarized",
+  "format_warning": "Internal loaded-canvas model observations only; not a public import schema. Event internal names and visible labels are recorded separately. Dynamic script behavior and missing canvas pages are not inferred.",
+  "counts": {
+    "cells": 7,
+    "operative_nodes": 2,
+    "explicit_edges": 1,
+    "terminal_bindings": 3,
+    "variable_references": 10
+  },
+  "start_configuration": {
+    "channel": 501,
+    "type": "channel",
+    "subtype": "aiagent",
+    "isCheckLiveSessions": 0,
+    "extras": {},
+    "eventid": 501,
+    "v2EventId": 501
+  },
+  "nodes": [
+    {
+      "id": "2",
+      "label": "Configure AI Agent Event",
+      "type_internal": "start",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "onbegin",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "selectedChannel": {
+          "id": 501,
+          "name": "aiagent",
+          "description": "AI Agent",
+          "type": 3,
+          "extraData": {},
+          "subType": "aiagent",
+          "integrationId": "",
+          "image_url": ""
+        },
+        "selectedRuleEvent": {
+          "id": 501,
+          "name": "",
+          "v2EventId": 501
+        },
+        "isKeyWordDisabled": true,
+        "isKeyWordVerifyReq": true,
+        "isKeyWordAvailable": true,
+        "output_variables": [
+          "aiAgent.timestamp",
+          "aiAgent.transId",
+          "aiAgent.payload",
+          "service.serviceKey",
+          "aiAgent.packageNum"
+        ],
+        "conditionData": [
+          {
+            "defaultvalue": "packageNum",
+            "mandatory": false,
+            "var_name": "packageNum",
+            "datatype": "string",
+            "channel_id": 501,
+            "event_id": 501,
+            "eventname": ""
+          }
+        ],
+        "aiAgentData": {
+          "parseOutput": [
+            {
+              "name": "packageNum",
+              "defaultvalue": "packageNum",
+              "mandatory": false,
+              "type": "string"
+            }
+          ],
+          "isAuthRequired": false,
+          "name": "",
+          "url": "https://example.invalid/flows/55262/trigger/aiagent",
+          "v2EventId": 501,
+          "jsonData": {
+            "packageNum": "packageNum"
+          },
+          "xmlData": "",
+          "isExistingAIAgent": true,
+          "selectedEvent": 501,
+          "jsonSource": 0,
+          "conditionData": [],
+          "isValidateSignature": false,
+          "validateSignatureObj": {
+            "algorithm": "",
+            "secretType": "[redacted]",
+            "secretKey": "[redacted]",
+            "headerKey": "[redacted]"
+          }
+        }
+      },
+      "transition_actions": [],
+      "declared_outputs": [
+        "aiAgent.timestamp",
+        "aiAgent.transId",
+        "aiAgent.payload",
+        "service.serviceKey",
+        "aiAgent.packageNum"
+      ],
+      "output_mappings": []
+    },
+    {
+      "id": "3",
+      "label": "HTTP Request",
+      "type_internal": "http",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "oncomplete",
+          "declared_target_count": 1
+        },
+        {
+          "event_internal": "onerror",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "method": "get",
+        "url": "https://example.invalid/track/$(n2.aiAgent.packageNum)",
+        "connctiontimeout": 10000,
+        "requesttimeout": 10000,
+        "checkAll": false,
+        "dataformate": "json",
+        "type": "extract",
+        "outputvariablelist": {
+          "parameters": [
+            {
+              "id": "TTQETJdMg8",
+              "name": "fullResp",
+              "path": "$",
+              "type": "body",
+              "order": 0
+            }
+          ],
+          "type": "json"
+        },
+        "isNewnode": true
+      },
+      "transition_actions": [
+        {
+          "kind": "log",
+          "name": 1111,
+          "when": "onleave",
+          "value": "$(n3.fullResp)"
+        }
+      ],
+      "declared_outputs": [
+        "fullResp"
+      ],
+      "output_mappings": {
+        "parameters": [
+          {
+            "id": "TTQETJdMg8",
+            "name": "fullResp",
+            "path": "$",
+            "type": "body",
+            "order": 0
+          }
+        ],
+        "type": "json"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "5128004",
+      "source": "2",
+      "target": "3",
+      "event_internal": "onbegin",
+      "event_label": "onBegin",
+      "representation": "explicit_edge"
+    }
+  ],
+  "terminal_bindings": [
+    {
+      "id": "4",
+      "source": "3",
+      "target": "4",
+      "event_internal": "oncomplete",
+      "event_label": "onSuccess",
+      "outcome_id": 2,
+      "outcome_name": "Success",
+      "outcome_description": "Successfully completed flow",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "6",
+      "source": "3",
+      "target": "6",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "9",
+      "source": "3",
+      "target": "9",
+      "event_internal": "ontimeout",
+      "event_label": "onTimeout",
+      "outcome_id": 4,
+      "outcome_name": "Incomplete",
+      "outcome_description": "Flow ended due to an interruption",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    }
+  ],
+  "terminal_sources_not_captured": [],
+  "duplicate_terminal_binding_groups": [],
+  "variable_handoffs": [
+    {
+      "consumer": "3",
+      "location": "configuration.url",
+      "reference": "$(n2.aiAgent.packageNum)",
+      "variable": "n2.aiAgent.packageNum",
+      "producer_node": "2",
+      "producer_field": "aiAgent.packageNum",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "3",
+      "location": "transition_actions[0].value",
+      "reference": "$(n3.fullResp)",
+      "variable": "n3.fullResp",
+      "producer_node": "3",
+      "producer_field": "fullResp",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "outcome[1].notification.payload.transactionID",
+      "reference": "$(transid)",
+      "variable": "transid",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "outcome[1].notification.payload.flowname",
+      "reference": "$(flowname)",
+      "variable": "flowname",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "outcome[1].notification.payload.serviceName",
+      "reference": "$(serviceName)",
+      "variable": "serviceName",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "outcome[1].notification.custompayload.transactionID",
+      "reference": "$(transid)",
+      "variable": "transid",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "outcome[1].notification.custompayload.response",
+      "reference": "$(n3.fullResp)",
+      "variable": "n3.fullResp",
+      "producer_node": "3",
+      "producer_field": "fullResp",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "3",
+      "location": "_usedVars",
+      "reference": "$(n2.aiAgent.packageNum)",
+      "variable": "n2.aiAgent.packageNum",
+      "producer_node": "2",
+      "producer_field": "aiAgent.packageNum",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "3",
+      "location": "_usedTransVar",
+      "reference": "$(n3.fullResp)",
+      "variable": "n3.fullResp",
+      "producer_node": "3",
+      "producer_field": "fullResp",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "_usedVars",
+      "reference": "$(n3.fullResp)",
+      "variable": "n3.fullResp",
+      "producer_node": "3",
+      "producer_field": "fullResp",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    }
+  ],
+  "custom_variable_assignments": [],
+  "custom_variables": [],
+  "flow_outcomes": [
+    {
+      "id": 1,
+      "order": 0,
+      "name": 100,
+      "value": "Last executed node event",
+      "tag": 15,
+      "tagName": "Last Execution Status",
+      "type": "default",
+      "notification": {
+        "method": "get",
+        "headers": "[redacted]",
+        "payload": {
+          "transactionID": "$(transid)",
+          "flowname": "$(flowname)",
+          "serviceName": "$(serviceName)",
+          "statuscode": 1000
+        },
+        "payloadType": 2,
+        "custompayload": {
+          "transactionID": "$(transid)",
+          "response": "$(n3.fullResp)"
+        },
+        "notificationType": -2
+      },
+      "isNotify": true,
+      "statusCode": "All status codes"
+    },
+    {
+      "id": 2,
+      "order": 1,
+      "name": 101,
+      "value": "Successfully completed flow",
+      "tag": 11,
+      "tagName": "Success",
+      "type": "default",
+      "notification": null,
+      "isNotify": false,
+      "statusCode": null
+    },
+    {
+      "id": 3,
+      "order": 2,
+      "name": 102,
+      "value": "Flow completed with an error",
+      "tag": 12,
+      "tagName": "Error",
+      "type": "default",
+      "notification": null,
+      "isNotify": false,
+      "statusCode": null
+    },
+    {
+      "id": 4,
+      "order": 3,
+      "name": 103,
+      "value": "Flow ended due to an interruption",
+      "tag": 13,
+      "tagName": "Incomplete",
+      "type": "default",
+      "notification": null,
+      "isNotify": false,
+      "statusCode": null
+    }
+  ],
+  "cycles": [],
+  "cross_page_or_flow_nodes": [],
+  "capture_pages": null,
+  "declared_events_without_captured_route": [],
+  "nodes_not_reached_from_captured_start": [],
+  "edge_endpoints_not_captured": [],
+  "node_variable_producers_not_captured": [],
+  "redactions": "Header credentials and URL hosts redacted. Internal model properties are evidence, not a public import API.",
+  "authored_walkthrough": {
+    "walkthrough": "The AI Agent event enters Start 2, then its onBegin edge invokes HTTP Request 3. The HTTP node performs GET against the sample tracking path and extracts the complete JSON body under fullResp. Its End bindings associate internal oncomplete (rendered onSuccess) with Success, onerror with Error, and ontimeout with Incomplete. The flow-settings Last Execution Status entry contains an agent-facing response object. This is a fulfillment adapter: the agent supplies a package identifier, Connect calls the business API, and flow outcome configuration returns data; there is no Send or Receive node in this graph.",
+    "handoffs": "Start output `$(n2.aiAgent.packageNum)` becomes `/track/$(n2.aiAgent.packageNum)` in the HTTP URL. HTTP JSON path `$` maps to `n3.fullResp`; `$(n3.fullResp)` is used by the on-leave log and notification custompayload.response. The custom response also carries `$(transid)`.",
+    "limitations": "The configured example marks packageNum nonmandatory and includes embedded historical response data. Those examples are not a successful current API response. URL hosts/header values are redacted. The same response variable is referenced by the all-status outcome configuration, so validate what is available on failure before adapting the return contract. No loop or retry is captured."
+  },
+  "walkthrough_status": "authored"
+}

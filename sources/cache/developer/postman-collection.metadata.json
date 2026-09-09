@@ -1,0 +1,32 @@
+{
+  "api_metadata_path": "sources/cache/developer/postman-collection.api.json",
+  "category": "GETTING STARTED",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f6594",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "a8f230a57cbf0959ec3f8a864196955a38b4c8ba82a316783bd4ad193aaaaee2",
+    "source_path": "0d40d4d62a37ea2ec66448e804247ce76a30128c1bb2d0cce49bc48fa048b263",
+    "text_path": "d15d253478a60e1cdcec5d22754e782339096d9ae97dff17ca3cd811aca41613"
+  },
+  "headings": [],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/postman-collection.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/postman-collection",
+  "retrieved_at": "2026-09-08T23:31:39+00:00",
+  "sha256_api_metadata": "575f65b7d8dc3ea0b617314bc47e22705dc85fc80ee114e6faa20ada4e8aafe2",
+  "sha256_html_response": "13383477a81c705e03fd73e0fd14e3584e64584f963096c8f6f6673d5261c562",
+  "sha256_source_body": "0d40d4d62a37ea2ec66448e804247ce76a30128c1bb2d0cce49bc48fa048b263",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/postman-collection.source.md",
+  "source_updated_at": "2026-04-09T11:00:18.515Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/postman-collection.txt",
+  "title": "Postman Collection",
+  "url": "https://developers.webexconnect.io/reference/postman-collection",
+  "word_count": 123,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/postman-collection.metadata.json"
+}

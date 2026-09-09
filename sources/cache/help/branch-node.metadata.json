@@ -1,0 +1,42 @@
+{
+  "category": "SERVICES & FLOWS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182577cf",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "5ffee198f1163f3066a8bf229340753f4483f37ca665a5d278893594133edb38",
+    "source_path": "72591fa2e223d2b8c82982ee470df9fc8c2dce1b2d5edf31be928c365402e52f",
+    "text_path": "f1a60852d87fe6388f6c1f402ed45f1f10b1877289643e1447e01bd66d9c7289"
+  },
+  "headings": [
+    "Node Configuration",
+    "Input Variables",
+    "Custom Variables",
+    "Output Variables",
+    "Node Outcomes",
+    "Transition Actions",
+    "Example 1",
+    "Common RegEx Examples",
+    "Tips for Branch Node RegEx:",
+    "Test the Node Configuration"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/branch-node.md",
+  "resolved_url": "https://help.webexconnect.io/docs/branch-node",
+  "retrieved_at": "2026-09-08T23:28:53+00:00",
+  "sha256_html_response": "68adefb3d0abcfb404050b70fee1396dcc50e237349dfcfe9272ce1c530d29c8",
+  "sha256_source_body": "72591fa2e223d2b8c82982ee470df9fc8c2dce1b2d5edf31be928c365402e52f",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/branch-node.source.md",
+  "source_updated_at": "2026-04-15T09:22:56.559Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/branch-node.txt",
+  "title": "Branch Node",
+  "url": "https://help.webexconnect.io/docs/branch-node",
+  "word_count": 1372,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/branch-node.metadata.json"
+}

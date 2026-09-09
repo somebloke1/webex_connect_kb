@@ -1,0 +1,33 @@
+{
+  "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182579a0",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "294c982c4ccd18863e650d3602d7866ea283df28eac371652d1818165217aa5f",
+    "source_path": "ccd8b2b23a530cd2187fbe03db38188a9b4164a6b4c2d9dc4575947a1a3f19b6",
+    "text_path": "49167fab0060a1c3c29b48dd2a97a661460415180c81fbf72dbf9aeb61a0212e"
+  },
+  "headings": [
+    "Improve your quality rating"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/wxcc-whatsapp-business-phone-number-quality-rating.md",
+  "resolved_url": "https://help.webexconnect.io/docs/wxcc-whatsapp-business-phone-number-quality-rating",
+  "retrieved_at": "2026-09-08T23:29:14+00:00",
+  "sha256_html_response": "4c67516cc80258bb2dc7faa8f24b710d285cd4bfbd6ce8befef75ba3025f63c6",
+  "sha256_source_body": "ccd8b2b23a530cd2187fbe03db38188a9b4164a6b4c2d9dc4575947a1a3f19b6",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/wxcc-whatsapp-business-phone-number-quality-rating.source.md",
+  "source_updated_at": "2026-04-14T07:24:08.204Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/wxcc-whatsapp-business-phone-number-quality-rating.txt",
+  "title": "WhatsApp Business Phone Number Quality Rating - WXCC",
+  "url": "https://help.webexconnect.io/docs/wxcc-whatsapp-business-phone-number-quality-rating",
+  "word_count": 407,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/wxcc-whatsapp-business-phone-number-quality-rating.metadata.json"
+}

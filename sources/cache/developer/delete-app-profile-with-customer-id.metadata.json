@@ -1,0 +1,36 @@
+{
+  "api_metadata_path": "sources/cache/developer/delete-app-profile-with-customer-id.api.json",
+  "category": "Profile API v2",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f6587",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "4c966bc4a7a09a7581d5f28c71837ea7b5a86433445fd4f1362d6f382620e26e",
+    "source_path": "ef0e73b62df991a5e81640a4bab3e6789f0d9488523b885fed0318baf62555ee",
+    "text_path": "54e4b7785a6e695d70e3853fccb123883c42d432549213ecd21c5f8069cc7ded"
+  },
+  "headings": [
+    "**Status Codes**"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/delete-app-profile-with-customer-id.md",
+  "openapi_path": "sources/cache/openapi/7b04f795053f56e109536a6958d447b2f66d1422a28ce0902b64c3ece873c405.json",
+  "resolved_url": "https://developers.webexconnect.io/reference/delete-app-profile-with-customer-id",
+  "retrieved_at": "2026-09-08T23:31:50+00:00",
+  "sha256_api_metadata": "51ffa7adf9dd988501426f9d2234d034d6e29331b35b2d3649ad7a0785f65c5f",
+  "sha256_html_response": "ddb14407b8ebb5139458a3f60a4b76b5fde7534d74ae4d903ffc9e0313cb6018",
+  "sha256_openapi": "7b04f795053f56e109536a6958d447b2f66d1422a28ce0902b64c3ece873c405",
+  "sha256_source_body": "ef0e73b62df991a5e81640a4bab3e6789f0d9488523b885fed0318baf62555ee",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/delete-app-profile-with-customer-id.source.md",
+  "source_updated_at": "2026-04-16T06:02:27.154Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/delete-app-profile-with-customer-id.txt",
+  "title": "Delete App Profile with Customer ID",
+  "url": "https://developers.webexconnect.io/reference/delete-app-profile-with-customer-id",
+  "word_count": 1364,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/delete-app-profile-with-customer-id.metadata.json"
+}

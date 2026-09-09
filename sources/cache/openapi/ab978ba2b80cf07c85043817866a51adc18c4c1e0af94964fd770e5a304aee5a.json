@@ -1,0 +1,167 @@
+{
+  "_id": "6a675233ec1c893d8a7f67bb:6a675233ec1c893d8a7f64f9",
+  "components": {
+    "securitySchemes": {
+      "sec0": {
+        "in": "header",
+        "name": "key",
+        "type": "apiKey"
+      }
+    }
+  },
+  "info": {
+    "title": "Segment APIs",
+    "version": "6.20.0"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/apps/{inappid}/segments": {
+      "post": {
+        "deprecated": false,
+        "description": "This API is used to create a segment. A segment can be created with or without criteria.",
+        "operationId": "segment-apis-create",
+        "parameters": [
+          {
+            "description": "Application/JSON",
+            "in": "header",
+            "name": "Content-Type",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Client key that can be accessed from your app asset configuration page on imiconnect platform",
+            "in": "header",
+            "name": "secretKey",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "The unique identifier corresponding to the app asset",
+            "in": "path",
+            "name": "inappid",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "examples": {
+                "JSON": {
+                  "value": {
+                    "criteria": "Security Check & QATopic",
+                    "name": "JWTSegment"
+                  }
+                }
+              },
+              "schema": {
+                "properties": {
+                  "criteria": {
+                    "description": "Criteria can be used to define a category of a segment, or it can be a combination of topics with logical operators (& | ! symbols). This is an optional parameter. You can add users to a segment and make a group without defining it's criteria . For topic-based criteria, based on the criteria condition the user base will be prepared to send push/in-app messages. For example, if Sports and News are topics, the criteria can be Sports&News *both Sports and News), or, Sports|News (either Sports or News).",
+                    "type": "string"
+                  },
+                  "name": {
+                    "description": "Specifies the name of the segment",
+                    "type": "string"
+                  }
+                },
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "API Response": {
+                    "value": "{\n    \"code\": 0,\n    \"description\": \"Success\",\n    \"trans_id\": \"a1ea3708-2541-433c-8d7f-ffa19044b7ea\",\n    \"id\": \"5f3a16c4e4b0eae4f99c0f56\"\n}\n"
+                  }
+                },
+                "schema": {
+                  "properties": {
+                    "code": {
+                      "default": 0,
+                      "example": 0,
+                      "type": "integer"
+                    },
+                    "description": {
+                      "example": "Success",
+                      "type": "string"
+                    },
+                    "id": {
+                      "example": "5f3a16c4e4b0eae4f99c0f56",
+                      "type": "string"
+                    },
+                    "trans_id": {
+                      "example": "a1ea3708-2541-433c-8d7f-ffa19044b7ea",
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "200"
+          }
+        },
+        "summary": "Create Segment",
+        "x-readme": {
+          "code-samples": [
+            {
+              "code": "-X POST https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/segments\n-H \"Content-Type : application/json\"\n-H \"secretKey: {secretKey}\"",
+              "language": "curl",
+              "name": "cURL"
+            },
+            {
+              "code": "require 'httparty'\n# Create the HTTP objects and post request\nhttp = HTTParty.post(\"https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/segments\",\n    :headers => {'Content-Type' => 'application/json',\n                          'secretKey ' => '{secretKey}’\n            }\n)\n# Print on console\nputs http",
+              "language": "ruby",
+              "name": "Ruby"
+            },
+            {
+              "code": "var data = null;\n\nvar xhr = new XMLHttpRequest();\n\nxhr.addEventListener(\"readystatechange\", function () {\n  if (this.readyState === this.DONE) {\n    console.log(this.responseText);\n  }\n});\n\nxhr.open(\"POST\", \" https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{{inappid}}/segments\");\nxhr.setRequestHeader(\"Content-Type\", \"application/json\");\nxhr.setRequestHeader(\"secretKey\", \"{secretKey}\");\nxhr.send(data);",
+              "language": "javascript",
+              "name": "JavaScript"
+            },
+            {
+              "code": "import requests\n\nurl = \" https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/segments\"\n\nheaders = {'Content-Type': 'application/json', 'secretKey': '{secretKey}’}\n\nresponse = requests.request(\"POST\", url, headers=headers)\n\nprint(response.text)",
+              "language": "python"
+            }
+          ],
+          "samples-languages": [
+            "curl",
+            "ruby",
+            "javascript",
+            "python"
+          ]
+        }
+      }
+    }
+  },
+  "security": [
+    {
+      "sec0": []
+    }
+  ],
+  "servers": [
+    {
+      "url": "https://rtm.imiconnect.io/rtmsAPI/api/v1"
+    }
+  ],
+  "x-readme": {
+    "explorer-enabled": false,
+    "headers": [
+      {
+        "key": "content-type",
+        "value": "application/json"
+      }
+    ],
+    "proxy-enabled": false
+  },
+  "x-readme-fauxas": true
+}

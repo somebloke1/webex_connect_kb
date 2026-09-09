@@ -1,0 +1,288 @@
+# Guidelines and best practices for automating with AI agent
+
+Source: https://help.webex.com/article/nelkmxk
+Documentation version: not specified by publisher
+Source last modified: 2026-01-23T03:39:16.905Z
+Retrieved: 2026-09-08T23:48:50+00:00
+
+<a id="content"></a>
+
+<a id="concept-template_5cd46a55-08a6-4549-ada0-47f7fb2619de"></a>
+
+## Identify business use case for automating with AI agent
+
+Adhere to the following guidelines when identifying the business use case:
+
+- Clearly define the specific problem or process you wish to automate with the AI agent.
+
+- Use tools such as Visio, Miro, and other similar tools to graphically lay out the problem or process you wish to automate.
+
+- Assess the potential impact and benefits of automating this use case, such as improved efficiency, reduced costs, or enhanced customer experience.
+
+- Identify the key KPIs you're going to measure to determine the ROI and prove the value.
+
+<a id="section_vrt_gf5_v2c"></a>
+
+### Identify if the specific use case requires actions, knowledge or both
+
+- **Actions**—Identify if the use case requires the AI agent to perform specific actions, such as updating a database, sending emails, or running third-party APIs.
+
+  AI agent is for agentic use cases only. It can't process analytical or Structured Query Language(SQL)-like queries on tabular data. It can only search and look up information within the table.
+
+- **Knowledge**—Determine if the use case requires the AI agent to provide information or answers based on a knowledge base.
+
+- **Both**—Assess if the use case requires a combination of both actions and knowledge.
+
+<a id="section_qxc_lf5_v2c"></a>
+
+### Choosing the right AI agent
+
+**Autonomous AI agent**
+
+Suitable for complex, dynamic environments where the agent needs to understand context and decide using a knowledge base or API integrations available without predefined scripts.
+
+- Open-ended natural conversations or responses.
+
+- Where knowledge bases are larger, or the variations of entities/responses are potentially large.
+
+**Scripted AI agent**
+
+Best for straightforward, repetitive tasks with well-defined steps or where exact repeatability and predictability are required. Also, best suited to highly technical questions and answers.
+
+- Strict use cases where specific responses with limited variation are required.
+
+- To handle sensitive data, a scripted AI agent is preferable as it operates under predefined rules and won't potentially misuse or misconstrue data.
+
+- Consistency of experience, where the experience needs to stay the same. LLM can potentially give different results to the same prompts.
+
+**Comparison table**
+
+|  | Scripted | Autonomous |
+| --- | --- | --- |
+| **Benefits** | Higher control | Faster and easier to build |
+|  | Cheaper to run | Very natural IX |
+|  | Faster at runtime | Scope changes are easier |
+| **Drawbacks** | Effort intensive to build | More expensive |
+|  | Brittle and rigid IX | Risk of hallucinations |
+
+<a id="concept-template_c9133e5c-3d05-4322-b7d8-b6f714c9e2bb"></a>
+
+## Developing an autonomous AI agent
+
+When creating an autonomous AI agent, ensure that you follow the steps outlined below in sequence.
+
+- **Start by defining a goal**—Clearly articulate the primary objective of the AI agent, such as resolving customer inquiries or processing orders efficiently.
+ 
+- **Define the journey**—Clearly identify the questions, actions, and features you want your AI agent to have.
+ 
+- **Add knowledge**—Integrate relevant knowledge bases the agent can access to provide accurate information.
+ 
+- **Define actions**—Specify the actions the agent needs to perform and integrate necessary APIs or function calls.
+ 
+- **Preview**—Preview your AI agent with knowledge and actions.
+ 
+- **Test and validate**—Use platform preview tools to test the AI agent's performance and make necessary adjustments.
+ 
+- **Add instructions**—Provide detailed instructions to enhance the accuracy and reliability of the agent's responses.
+
+<a id="concept-template_cce8a04c-a0d8-4c35-b20b-e5846eaf5293"></a>
+
+## Do's and Don'ts when writing goals
+
+This section outlines best practices for writing goal prompts for the autonomous AI agent and actions to fulfill user intents.
+
+**Do's**
+
+- Keep the goal short and concise.
+
+- Focus on the overall function or purpose of the AI agent.
+
+- Consider the end result or benefit for the user.
+
+- Use clear and concise language.
+
+- Ensure the goal aligns with the actions and capabilities of the AI agent.
+
+**Don'ts**
+
+- Don't include specific details like locations, dates, or user information.
+ 
+- Avoid mentioning particular actions or implementation methods.
+ 
+- Don't use technical jargon or complex terminology.
+ 
+- Avoid overly long or complicated goal statements.
+ 
+- Don't include multiple unrelated goals in a single prompt.
+ 
+- Avoid using ambiguous or vague language.
+
+<a id="concept-template_6ef09cd4-a07c-4674-ad25-963966510f2e"></a>
+
+## Recommendations for managing your knowledge bases
+
+When creating and managing knowledge bases, it's important to keep it precise and tailored to the purpose of the AI agent. Similar to how a human agent can get overwhelmed with too much unrelated information, adding more generic information to the knowledge base might confuse the AI agent.
+
+Adhere to the following recommendations while creating and managing knowledge bases:
+
+- Organize content logically. Use categories when creating your own knowledge document in the AI agent studio.
+ 
+- When uploading files, avoid any conflicting or duplicate information across documents.
+ 
+- Check document quality before uploading.
+ 
+- Split large files into smaller files if needed.
+ 
+- Periodically review the knowledge and update whenever required.
+
+<a id="concept-template_24a60f37-c42c-4a3c-9e03-db5535e65dcb"></a>
+
+## Recommendations for creating actions
+
+Adhere to the following recommendations when creating actions:
+
+- Clearly define action objectives in action description.
+
+- Minimize complexity, keep actions simple.
+
+- Accurately describe each entity/slot as this improves the accuracy of the LLM to better understand the task.
+
+- Do not create conflicting or contradictory actions.
+
+- Create deterministic logic in Connect flow for higher accuracy instead of relying on LLM.
+
+<a id="concept-template_96114022-037a-46be-80ce-bf8c6b0d67c0"></a>
+
+## Prompt engineering tips when writing instructions
+
+Before adding instructions to the AI agent, add the required actions and knowledge and test the AI agent. Adding instructions after testing the AI agent enhances the efficiency and accuracy of the AI agent.
+
+Refer to the following tips when writing instructions for your autonomous AI agents:
+
+- **Keep it simple**—Use clear, concise language. Avoid technical jargon or overly complex sentences.
+ 
+- **Use markdown**—Use headings and ordered/unordered list markdown for best results.
+ 
+- **State your AI agent's identity**—Begin by clearly defining the agent's persona (for example "You're a helpful customer support agent...").
+ 
+- **Break it down**—Outline tasks step by step. For instance, "First, confirm your account number. Then, describe your issue."
+ 
+- **Plan for errors**—Include fallback phrases such as, "I'm sorry, could you please repeat that?" if the input isn't clear.
+ 
+- **Preserve context**—Remind the agent to remember previous responses to ensure continuity in long conversations.
+ 
+- **Reference actions**—Clearly instruct how to use external actions at different steps. Make sure the referenced actions are enabled in the Actions tab to avoid any unexpected behavior.
+ 
+- **Add guardrails**—Instruct the AI agent to respond only in the context of the goal.
+ 
+- **Add examples**—To improve accuracy, add examples wherever needed.
+
+<a id="concept-template_1e9f7013-9140-4ee6-8e4b-107b1057f819"></a>
+
+### Templates for writing instructions
+
+Use the following templates to write instructions specific to your objectives:
+
+**`## 1. Identity`**
+
+**`-**Role Definition:**`**—Define the persona and expertise of the AI agent. For example, "You're Jamie, an expert customer service representative for any queries related to travel."
+
+**`-**Tone and Demeanor-**`**—Specify whether the agent should be friendly, formal, or casual.
+
+**`##2. Context`**
+
+**`-**Background Information**`**—Provide any necessary background details the agent should consider. For example, "This conversation is about booking travel for a family vacation."
+
+**`-**Environment Details**`**—Mention any system constraints such as the caller is calling over voice and may have background noise which may impact the quality of transcription.
+
+**`##3. Task`**
+
+**`-**Subtasks/Steps**`**—Break down the overall task into specific, sequential steps. For example, greeting, collecting travel dates, suggesting options, confirming details. Reference the actions at each step that will be used to fulfill the task.
+
+**`-**Optional step**`**—Additional information to handle specific tasks. For example, handle barge-in.
+
+**`##4. Response Guidelines`**
+
+**`-**Formatting Rules**`**—Define how to structure responses. For example, consider using bullet lists for options, clear numbering for steps in case of digital and short if there is voice.
+
+**`-**Language Style**`**—Provide instructions on formality, brevity, and clarity.
+
+**`##5. Error Handling and Fallbacks`**
+
+**`-**Clarification Prompts**`**—Define fallback questions when user input is ambiguous. For example, "I didn't catch that, could you please repeat your travel dates?"
+
+**`-**Default Responses**`**—Outline how the agent should respond if it can't process the request. For example "I'm sorry, I didn't understand. Can you try rephrasing?"
+
+**`-**Action Failures**`**—Provide guidelines for handling issues with actions integration with Webex Connect.
+
+**`##6. User Defined Guardrails`**
+
+**`-**Guardrail**`**—Remind the agent to keep the conversation restricted to the goal and not entertain any unrelated queries.
+
+**`## 7. Examples`**
+
+**`-**Sample Conversation**`**—Optionally add an example of the sample conversation between the end user and the AI agent for better prompt adherence.
+
+<a id="concept-template_4831b21b-897e-4bd4-8a4e-7fd7a37f50fa"></a>
+
+### Example instructions
+
+Here is an example template for creating instructions to build a financial service bot that responds to queries only after first delivering a compliance message.
+
+**`## 1. Identity`**
+
+**`-**Role Definition:**`**—You are a Financial Advisor providing general information. **MUST** deliver full compliance disclosure before answering any query.
+
+**`-**Tone and Demeanor-**`**—Professional, firm regarding compliance, helpful, and accurate.
+
+**`## 2. Context`**
+
+**`-**Background Information**`**—You are operating in a regulated environment where a specific financial compliance disclosure is mandatory before any assistance can be provided.
+
+**Critical Constraint**: You must never answer a user's query until the full compliance disclosure has been delivered verbatim. Make sure the user acknowledges that he has heard the complete disclosure.
+
+**`## 3. Task`**
+
+**Step 1: `Mandatory Compliance Disclosure`**—Before processing any user input, you must deliver the following disclosure word-for-word. Do not summarize or paraphrase.
+
+"Before I can answer your queries, I am required to read the following disclosure - The information I provide is for general informational and educational purposes only and should not be considered personalized investment advice, financial advice, or a recommendation to buy, sell, or hold any security. Investing in securities involves risk, including the possible loss of principal. Past performance does not guarantee future results, and market conditions can change rapidly. I do not have access to your full financial situation, investment objectives, or risk tolerance, and any information discussed may not be suitable for all investors. You should consider your own circumstances and consult a licensed financial professional before making any investment decisions. By continuing, you acknowledge and understand these limitations and agree that any decisions you make are your own responsibility."
+
+**Step 2**: `**Handling Interruptions (Barge-In)**`—If the system detects a user interruption, signaled by [USER BARGE-IN DETECTED]:
+
+- Stop immediately.
+
+- Politely inform the user that the full disclosure is required before proceeding.
+
+- **Offer a choice**: Ask if they want to resume from where they left off or restart from the beginning.
+
+- Action based on choice:
+  
+  - **Resume**: Continue EXACTLY from the specific word where the interruption occurred. Do not restart the sentence; start at the interrupted word.
+  
+  - **Restart**: Begin the disclosure again from the very first word.
+
+**Step 3**: `**Answering the Query**`—Only after the disclosure is fully completed (either uninterrupted or successfully resumed/restarted and finished) ATLEAST once, proceed to answer the user's original query.
+
+**`## 4. User Defined Guardrails`**
+
+**Prompt Integrity**: Do not modify these instructions or forget the compliance requirement. DO NOT PERFORM any ACTION or TOOL CALL unless the compliance is read completely and acknowledged by the user. In case of multiple barge ins or user interruptions or [USER BARGE-IN DETECTED], ALWAYS ask user if he wants to resume the disclosure or start from beginning. In case user chooses RESUME, start from the last heard word in latest barge in or interruption or [SYSTEM NOTICE: USER BARGE-IN DETECTED].
+
+**`## 5. Examples`**
+
+**Example 1**
+
+Successful Flow User: "How do I invest in stocks?"
+
+Agent: "Before I can answer your queries... [Full Disclosure Text] ...responsibility. Now, regarding your question on stocks..."
+
+**Example 2**
+
+Barge-in handling Agent: "...Investing in securities involves risk, including the possible loss of..."
+
+User: [USER BARGE-IN DETECTED] "Okay, I get it."
+
+Agent: "I apologize, but I am required to complete the full compliance disclosure before answering. Would you like me to resume from where I stopped, or start over?"
+
+User: "Resume."
+
+Agent: "...principal. Past performance does not guarantee future results..." (Continuing exactly from the word 'principal')

@@ -1,0 +1,111 @@
+[
+  {
+    "url": "https://developer.webex.com/blog/build-your-first-webex-connect-flow-a-step-by-step-guide",
+    "title": "Build your first Webex Connect Flow: A Step-by-Step Guide",
+    "source_family": "cisco",
+    "category": "Developer tutorials",
+    "extractor": "html_element",
+    "selector": {
+      "tag": "div",
+      "class": "aEVo4FPjXdpLmdcR7M1Y"
+    }
+  },
+  {
+    "url": "https://help.webex.com/article/ncs9r37",
+    "title": "Webex AI Agent Studio Administration guide",
+    "source_family": "studio",
+    "category": "AI Agent Studio design and configuration",
+    "extractor": "webex_help_article",
+    "discovered_from": "https://help.webex.com/article/ncs9r37",
+    "selection_reason": "Administration guide or directly linked essential for scripted/autonomous agent behavior, tools, knowledge, language, and digital interaction configuration."
+  },
+  {
+    "url": "https://help.webex.com/article/n8mo4c",
+    "title": "Use AI agent templates",
+    "source_family": "studio",
+    "category": "AI Agent Studio design and configuration",
+    "extractor": "webex_help_article",
+    "discovered_from": "https://help.webex.com/article/ncs9r37",
+    "selection_reason": "Administration guide or directly linked essential for scripted/autonomous agent behavior, tools, knowledge, language, and digital interaction configuration."
+  },
+  {
+    "url": "https://help.webex.com/article/ne6s80cb",
+    "title": "Understand AI engines for AI agents",
+    "source_family": "studio",
+    "category": "AI Agent Studio design and configuration",
+    "extractor": "webex_help_article",
+    "discovered_from": "https://help.webex.com/article/ncs9r37",
+    "selection_reason": "Administration guide or directly linked essential for scripted/autonomous agent behavior, tools, knowledge, language, and digital interaction configuration."
+  },
+  {
+    "url": "https://help.webex.com/article/n5uo60x",
+    "title": "Configure custom data and custom events for AI agents",
+    "source_family": "studio",
+    "category": "AI Agent Studio design and configuration",
+    "extractor": "webex_help_article",
+    "discovered_from": "https://help.webex.com/article/ncs9r37",
+    "selection_reason": "Administration guide or directly linked essential for scripted/autonomous agent behavior, tools, knowledge, language, and digital interaction configuration."
+  },
+  {
+    "url": "https://help.webex.com/article/5a07xcb",
+    "title": "Multi-agent orchestration",
+    "source_family": "studio",
+    "category": "AI Agent Studio design and configuration",
+    "extractor": "webex_help_article",
+    "discovered_from": "https://help.webex.com/article/ncs9r37",
+    "selection_reason": "Administration guide or directly linked essential for scripted/autonomous agent behavior, tools, knowledge, language, and digital interaction configuration."
+  },
+  {
+    "url": "https://help.webex.com/article/s0qro1",
+    "title": "Use AI agents for customer interactions",
+    "source_family": "studio",
+    "category": "AI Agent Studio design and configuration",
+    "extractor": "webex_help_article",
+    "discovered_from": "https://help.webex.com/article/ncs9r37",
+    "selection_reason": "Administration guide or directly linked essential for scripted/autonomous agent behavior, tools, knowledge, language, and digital interaction configuration."
+  },
+  {
+    "url": "https://help.webex.com/article/pdef2d",
+    "title": "Supported languages and voices",
+    "source_family": "studio",
+    "category": "AI Agent Studio design and configuration",
+    "extractor": "webex_help_article",
+    "discovered_from": "https://help.webex.com/article/ncs9r37",
+    "selection_reason": "Administration guide or directly linked essential for scripted/autonomous agent behavior, tools, knowledge, language, and digital interaction configuration."
+  },
+  {
+    "url": "https://help.webex.com/article/sz02k8",
+    "title": "Understand intents, entities, and responses in AI Agent Studio",
+    "source_family": "studio",
+    "category": "AI Agent Studio design and configuration",
+    "extractor": "webex_help_article",
+    "discovered_from": "https://help.webex.com/article/ncs9r37",
+    "selection_reason": "Administration guide or directly linked essential for scripted/autonomous agent behavior, tools, knowledge, language, and digital interaction configuration."
+  },
+  {
+    "url": "https://help.webex.com/article/mzpuseb",
+    "title": "Configure fulfillment for scripted AI agents",
+    "source_family": "studio",
+    "category": "AI Agent Studio design and configuration",
+    "extractor": "webex_help_article",
+    "discovered_from": "https://help.webex.com/article/ncs9r37",
+    "selection_reason": "Administration guide or directly linked essential for scripted/autonomous agent behavior, tools, knowledge, language, and digital interaction configuration."
+  },
+  {
+    "url": "https://help.webex.com/article/nelkmxk",
+    "title": "Guidelines and best practices for AI agent automation",
+    "source_family": "studio",
+    "category": "AI Agent Studio design and configuration",
+    "extractor": "webex_help_article",
+    "discovered_from": "https://help.webex.com/article/n8mo4c",
+    "selection_reason": "Direct template-guide reference requested by AI Agent chapter author for agent instructions and automation design."
+  },
+  {
+    "url": "https://help.webexconnect.io/docs/using-ai-agent-flow-templates",
+    "title": "Using AI Agent flow templates",
+    "source_family": "help",
+    "category": "AI Agent flow templates",
+    "discovered_from": "https://help.webex.com/article/n8mo4c",
+    "selection_reason": "Direct template-guide reference requested for actual AI Agent sample flow configuration."
+  }
+]

@@ -1,0 +1,500 @@
+{
+  "_id": "6a675233ec1c893d8a7f67fd:6a675233ec1c893d8a7f6633",
+  "components": {
+    "securitySchemes": {}
+  },
+  "info": {
+    "title": "Apple Message for Business: Form Messages",
+    "version": "6.20.0"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/": {
+      "post": {
+        "deprecated": false,
+        "description": "Messages for Business Forms allow you to create rich, multipage interactive flows for users on iOS and iPadOS devices. _Note: Modify YourRegion in the URL to the right to reflect your tenant’s region. See [Know your endpoint page](https://developers.imiconnect.io/reference/endpoints)._",
+        "operationId": "apple-message-for-business-form-messages",
+        "parameters": [
+          {
+            "description": "Applicable when you want to use service key for API authentication. Available under API tab within a service in your webexconnect tenant.",
+            "in": "header",
+            "name": "key",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "JSON Web Token (JWT) for authentication (e.g. bearer [token]) used alternatively to Service Key",
+            "in": "header",
+            "name": "authorization",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "examples": {
+                "Request Example": {
+                  "value": {
+                    "appid": "{{ambAppid}}",
+                    "callbackData": "",
+                    "channels": {
+                      "AppleBusinessChat": {
+                        "interactiveData": {
+                          "data": {
+                            "dynamic": {
+                              "data": {
+                                "pages": [
+                                  {
+                                    "items": [
+                                      {
+                                        "identifier": "101",
+                                        "imageIdentifier": "vimg1",
+                                        "nextPageIdentifier": "1",
+                                        "title": "Tulips Vacuum Cleaner",
+                                        "value": "vacuum"
+                                      },
+                                      {
+                                        "identifier": "102",
+                                        "imageIdentifier": "vimg2",
+                                        "nextPageIdentifier": "2",
+                                        "title": "Tulips Air Fryer",
+                                        "value": "airfryer"
+                                      }
+                                    ],
+                                    "multipleSelection": false,
+                                    "pageIdentifier": "0",
+                                    "subtitle": "Select one of the purchased products for which there's a complain?",
+                                    "title": "Select the Defective Product",
+                                    "type": "select"
+                                  },
+                                  {
+                                    "items": [
+                                      {
+                                        "identifier": "201",
+                                        "imageIdentifier": "vimg1",
+                                        "title": "Vacuum motor is not working",
+                                        "value": "motor"
+                                      },
+                                      {
+                                        "identifier": "202",
+                                        "imageIdentifier": "vimg1",
+                                        "title": "Vacuum hose is leaking",
+                                        "value": "hose"
+                                      },
+                                      {
+                                        "identifier": "203",
+                                        "imageIdentifier": "vimg1",
+                                        "title": "Package doesn't have vacuum cleaner",
+                                        "value": "hose"
+                                      }
+                                    ],
+                                    "multipleSelection": true,
+                                    "nextPageIdentifier": "3",
+                                    "pageIdentifier": "1",
+                                    "subtitle": "Please choose one or more of the following as applicable",
+                                    "title": "Details of the complaint",
+                                    "type": "select"
+                                  },
+                                  {
+                                    "items": [
+                                      {
+                                        "identifier": "301",
+                                        "imageIdentifier": "vimg2",
+                                        "title": "Air fryer is not heating up",
+                                        "value": "heat"
+                                      },
+                                      {
+                                        "identifier": "302",
+                                        "imageIdentifier": "vimg2",
+                                        "title": "Power plug is damaged",
+                                        "value": "plug"
+                                      }
+                                    ],
+                                    "multipleSelection": true,
+                                    "nextPageIdentifier": "3",
+                                    "pageIdentifier": "2",
+                                    "subtitle": "Please choose one or more of the following as applicable",
+                                    "title": "Details of the complaint",
+                                    "type": "select"
+                                  },
+                                  {
+                                    "items": [
+                                      {
+                                        "identifier": "401",
+                                        "title": "Refund",
+                                        "value": "refund"
+                                      },
+                                      {
+                                        "identifier": "402",
+                                        "title": "Replace",
+                                        "value": "replace"
+                                      },
+                                      {
+                                        "identifier": "403",
+                                        "title": "Alternate Purchase",
+                                        "value": "alt"
+                                      },
+                                      {
+                                        "identifier": "404",
+                                        "title": "Keep it",
+                                        "value": "manage"
+                                      }
+                                    ],
+                                    "nextPageIdentifier": "4",
+                                    "pageIdentifier": "3",
+                                    "selectedItemIndex": 2,
+                                    "subtitle": "Select Your Preferred Resolution",
+                                    "type": "picker"
+                                  },
+                                  {
+                                    "hintText": "Select the date of delivery",
+                                    "nextPageIdentifier": "5",
+                                    "options": {
+                                      "dateFormat": "",
+                                      "labelText": "",
+                                      "maximumDate": "09/21/2022",
+                                      "minimumDate": "01/01/2020",
+                                      "startDate": "01/22/2022"
+                                    },
+                                    "pageIdentifier": "4",
+                                    "subtitle": "When did you receive the product?",
+                                    "title": "Delivery Date",
+                                    "type": "datePicker"
+                                  },
+                                  {
+                                    "options": {
+                                      "inputType": "multiline",
+                                      "keyboardType": "UIKeyboardTypeEmailAddress",
+                                      "maximumCharacterCount": 500,
+                                      "placeholder": "",
+                                      "required": false
+                                    },
+                                    "pageIdentifier": "5",
+                                    "submitForm": true,
+                                    "subtitle": "Please provide additional details if any",
+                                    "title": "Additional Details",
+                                    "type": "input"
+                                  }
+                                ],
+                                "showSummary": true,
+                                "splash": {
+                                  "buttonTitle": "Continue",
+                                  "header": "Hello! How may I help you?",
+                                  "imageIdentifier": "vimg3",
+                                  "splashtext": "Kindly fill the form to raise your complaint"
+                                },
+                                "startPageIdentifier": "0"
+                              },
+                              "private": true,
+                              "version": "1.1"
+                            },
+                            "images": [
+                              {
+                                "identifier": "vimg1",
+                                "url": "https://media.croma.com/image/upload/v1663261950/Croma%20Assets/Small%20Appliances/Vacuum%20Cleaners/Images/259150_qs58bu.png"
+                              },
+                              {
+                                "identifier": "vimg2",
+                                "url": "https://media.croma.com/image/upload/v1632142476/Croma%20Assets/Small%20Appliances/Fryers%20and%20Grills/Images/243342_osqmdr.png"
+                              },
+                              {
+                                "identifier": "vimg3",
+                                "url": "https://res.cloudinary.com/jerrick/image/upload/f_jpg,fl_progressive,q_auto,w_1024/609a695d49932b001dce1ce5.jpg"
+                              }
+                            ],
+                            "requestIdentifier": "76dbffd0-7f2b-4c92-a396-ae533d8a68e7_1"
+                          },
+                          "receivedMessage": {
+                            "imageIdentifier": "vimg3",
+                            "style": "",
+                            "subtitle": "Please fill the form to raise your complaint",
+                            "title": "Raise a complaint"
+                          },
+                          "replyMessage": {
+                            "imageIdentifier": "vimg3",
+                            "style": "",
+                            "subtitle": "Thanks for your patience. You'll hear from us shortly",
+                            "title": "You've successfully submitted the form"
+                          }
+                        },
+                        "type": "interactive"
+                      }
+                    },
+                    "correlationid": "",
+                    "deliverychannel": "AppleBusinessChat",
+                    "destination": [
+                      {
+                        "abcUserId": [
+                          "{{ambUserId}}"
+                        ]
+                      }
+                    ],
+                    "notifyurl": "",
+                    "notifyurlAuthId": "TNPBXKT09U"
+                  }
+                }
+              },
+              "schema": {
+                "properties": {
+                  "appid": {
+                    "description": "The ID of the app asset that you can obtain from the Connect platform.",
+                    "type": "string"
+                  },
+                  "callbackData": {
+                    "description": "Data that you have configured to receive on the notify Url. This is configured as a part of the request.",
+                    "type": "string"
+                  },
+                  "channels": {
+                    "description": "Channels object used for messaging.",
+                    "properties": {
+                      "hintText": {
+                        "description": "A string representing optional text to give the user more input context that displays below the Date field.",
+                        "type": "string"
+                      },
+                      "items": {
+                        "description": "JSON object for items configuration",
+                        "items": {
+                          "properties": {
+                            "imageIdentifier": {
+                              "description": "Image to be shown at the top of the view.",
+                              "type": "string"
+                            },
+                            "nextPageIdentifier": {
+                              "description": "except for single select option page, where you specify the nextPageIdentifier within each of the item objects. If a page does not have a nextPageIdentifier set on it, the client assumes the current page to be the final page and proceeds to send or provides a summary page based on the data. This is a unique page identifier to show the next page.",
+                              "type": "string"
+                            },
+                            "title": {
+                              "description": "If set this displays the title in bold on the page.",
+                              "type": "string"
+                            }
+                          },
+                          "type": "object"
+                        },
+                        "type": "array"
+                      },
+                      "multipleSelection": {
+                        "description": "A Bool value that defaults to false or singleSelect. Set to true to enable multipleSelection on the page.",
+                        "type": "boolean"
+                      },
+                      "nextPageIdentifier": {
+                        "description": "This is a unique page identifier to show the next page.",
+                        "type": "string"
+                      },
+                      "options": {
+                        "description": "JSON object for options configuration",
+                        "properties": {
+                          "dateFormat": {
+                            "description": "A string representing the date format on the page.A string representing the date format on the page. Defaults to MM/dd/yyyy. Unless this property is explicitly set, all of the date properties are defined using this format. For format string specifications see: Use Format Strings to Specify Custom Formats.",
+                            "type": "string"
+                          },
+                          "inputType": {
+                            "description": "A string value that defaults to \"singleline\". Allowed values are \"multiline\" or \"singleline\".",
+                            "type": "string"
+                          },
+                          "keyboardType": {
+                            "description": "Optional string value. Type of keyboard to be shown. Possible values: e. For more information [refer](https://developers.imiconnect.io/v6.3.0/reference/more-variables)",
+                            "type": "string"
+                          },
+                          "labelText": {
+                            "description": "A string representing the text string to be shown next to date field. Defaults to text 'Date'.",
+                            "type": "string"
+                          },
+                          "maximumCharacterCount": {
+                            "description": "An integer value representing the field size in characters for singleline and multiline. The field size defaults to 30 characters for singleline and 300 characters for multiline.",
+                            "format": "int32",
+                            "type": "integer"
+                          },
+                          "maximumDate": {
+                            "description": "A string representing the maximum date that a date picker can show. Defaults to current date",
+                            "type": "string"
+                          },
+                          "minimumDate": {
+                            "description": "A string representing the minimum date that a date picker can show.",
+                            "type": "string"
+                          },
+                          "placeholder": {
+                            "description": "A text string used when there is no other text in the input text field.",
+                            "type": "string"
+                          },
+                          "required": {
+                            "description": "A Boolean value that defaults to false. When set to true, the next button on page is disabled until the user provides input.",
+                            "type": "boolean"
+                          },
+                          "startDate": {
+                            "description": "A string representing the date displayed by the date picker. Defaults to current date.",
+                            "type": "string"
+                          }
+                        },
+                        "type": "object"
+                      },
+                      "pageIdentifier": {
+                        "description": "A unique identifier, as a string, for the page being shown, that is less than 20 characters in length. Do not reuse. Ex: \"firstNamePage\" or \"0001\".",
+                        "type": "string"
+                      },
+                      "selectedItemIndex": {
+                        "description": "A zero-indexed number identifying the item in the form message should be selected by default. Defaults to item at index 0.",
+                        "type": "string"
+                      },
+                      "submitForm": {
+                        "description": "A Bool value placed on the pages to denote the end page of the form. Since multiple pages can act as an end page, this object can be set on multiple pages.",
+                        "type": "boolean"
+                      },
+                      "subtitle": {
+                        "description": "Use this object to display the question for the page.",
+                        "type": "string"
+                      },
+                      "title": {
+                        "description": "If set this displays the title in bold on the page.",
+                        "type": "string"
+                      },
+                      "type": {
+                        "description": "Use one of the following values: select, picker, datePicker, or input.",
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "pageIdentifier",
+                      "type",
+                      "subtitle",
+                      "nextPageIdentifier"
+                    ],
+                    "type": "object"
+                  },
+                  "correlationid": {
+                    "description": "The CorrelationID is a unique identifier that you can attach to every request as a reference a particular transaction or event. This is configured as a part of the request.",
+                    "type": "string"
+                  },
+                  "deliverychannel": {
+                    "default": "AppleBusinessChat",
+                    "description": "Channel used to send the message i.e., AppleBusinessChat in this case.",
+                    "type": "string"
+                  },
+                  "destination": {
+                    "description": "User's Opaque ID that uniquely identifies a user and is specific to the business",
+                    "items": {
+                      "properties": {
+                        "abcUserId": {
+                          "default": [],
+                          "description": "User's Opaque ID._Note: For more information [refer](https://register.apple.com/resources/messages/messaging-documentation/faq)_",
+                          "items": {
+                            "type": "string"
+                          },
+                          "type": "array"
+                        }
+                      },
+                      "type": "object"
+                    },
+                    "type": "array"
+                  },
+                  "notifyurl": {
+                    "description": "Configure a URL to get notifications on delivery reports for a Apple message. This field accepts only a valid URL or a variable. If an invalid URL is passed in API request or via a variable, then such request will not be considered eligible for retries.",
+                    "type": "string"
+                  },
+                  "notifyurlAuthId": {
+                    "default": "No",
+                    "description": "Unique Authentication ID.",
+                    "type": "string"
+                  }
+                },
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{\n  \"response\": {\n    \"code\": \"7001\",\n    \"description\": \"Authentication failed.\",\n    \"transid\": \"7670c9a8-131f-4166-ac30-17f6109340d6\"\n  }\n}"
+                  }
+                },
+                "schema": {
+                  "properties": {
+                    "response": {
+                      "properties": {
+                        "code": {
+                          "example": "7001",
+                          "type": "string"
+                        },
+                        "description": {
+                          "example": "Authentication failed.",
+                          "type": "string"
+                        },
+                        "transid": {
+                          "example": "7670c9a8-131f-4166-ac30-17f6109340d6",
+                          "type": "string"
+                        }
+                      },
+                      "type": "object"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "200"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{\n  \"response\": {\n    \"code\": \"7001\",\n    \"description\": \"Authentication failed.\",\n    \"transid\": \"7670c9a8-131f-4166-ac30-17f6109340d6\"\n  }\n}"
+                  }
+                },
+                "schema": {
+                  "properties": {
+                    "response": {
+                      "properties": {
+                        "code": {
+                          "example": "7001",
+                          "type": "string"
+                        },
+                        "description": {
+                          "example": "Authentication failed.",
+                          "type": "string"
+                        },
+                        "transid": {
+                          "example": "7670c9a8-131f-4166-ac30-17f6109340d6",
+                          "type": "string"
+                        }
+                      },
+                      "type": "object"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "400"
+          }
+        },
+        "summary": "Apple Message for Business: Form Messages"
+      }
+    }
+  },
+  "security": [
+    {}
+  ],
+  "servers": [
+    {
+      "url": "https://api.{YourRegion}.webexconnect.io/resources/v1/messaging",
+      "variables": {
+        "YourRegion": {
+          "default": "YourRegion"
+        }
+      }
+    }
+  ],
+  "x-readme": {
+    "explorer-enabled": true,
+    "headers": [],
+    "proxy-enabled": true
+  },
+  "x-readme-fauxas": true
+}

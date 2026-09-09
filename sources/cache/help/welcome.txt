@@ -1,0 +1,207 @@
+Webex Connect (formerly imiconnect) is an Enterprise Communications Platform as a Service (CPaaS) that enables enterprises to rapidly automate end-to-end customer interactions and journeys across 12+ channels.
+
+Webex Connect offers various APIs and a rich low-code toolset to make it easy for enterprises to orchestrate, automate, and manage customer interactions across SMS, Voice, MMS, RCS, Email, Push Notifications, Live Chat, In-App Messaging, Apple Messages for Business, WhatsApp, Facebook Messenger, Instagram, and more.
+
+At the heart of Webex Connect is a powerful visual flow builder that allows developers, product managers, configuration specialists, and other functional business users, to build, test, launch, analyze and optimize customer interaction flows across various communication channels and systems. 
+
+Webex Connect offers pre-built integrations with various CRM, marketing, contact center, and other systems such as Salesforce, Freshdesk, Zendesk, Dialogflow, EPIC, and more. This reduces integration effort and allows you to accelerate end-to-end customer interactions and customer journey automation.
+
+## 
+
+Key Capabilities
+
+- APIs, SDKs, and Webhooks for sending and receiving communications across multiple channels 
+
+- Templates module for creating and managing rich messaging templates for various channels
+
+- Out-of-box integrations with leading CRM, marketing, contact center, and industry-specific systems 
+
+- Flexible integrations with your existing business systems using APIs, file-drops, and more
+
+- Visual Flow Builder with 50+ nodes to orchestrate and automate end-to-end customer interactions 
+
+- Flow Analytics and Sankey Charts for analyzing how you can optimize your flows to optimize CX
+
+- Centralize dashboard for effectively managing various customer interactions and journeys
+
+- Rich Visual Reporting and Insights to contextually analyze your messaging and flow traffic
+
+- Debug console for identifying and troubleshooting issues 
+
+- Tools for configuring custom data feeds for downstream processing 
+
+- Enterprise-grade controls such as Hierarchical Account Organization, Single Sign-On (SSO), Role-Based Access Control, and Audit Trail
+
+- Event Scheduler for scheduling message broadcasts
+
+- Bot Builder for configuring, testing, launching, and managing Q&A Bots and Task Bots 
+
+- Contact Policy app for managing customer consent and applying contact thresholds to avoid over communication
+
+## 
+
+Channel Support
+
+Webex Connect currently supports the following communication channels:
+
+### 
+
+SMS
+
+- Requesting a Short Code                                 
+
+- Setting up Sender IDs
+
+- Requesting a Keyword
+
+- Buying Phone Numbers
+
+- Sending SMS using our Multichannel Messaging API
+
+- Sending SMS using our Visual Flow Builder
+
+### 
+
+RCS
+
+- Configuring your RCS App
+
+- Sending RCS Messages using our Multichannel Messaging API
+
+- Sending RCS Messages using our Visual Flow Builder
+
+- Checking customer presence on RCS using RCS Capability Node
+
+### 
+
+Branded Text
+
+- Branded Text
+
+### 
+
+Voice
+
+- Buying Phone Numbers
+
+- Making Voice Calls using our Voice Call API
+
+- Using the Voice Flow Node
+
+### 
+
+MMS
+
+- Sending MMS using our Multi Channel Messaging API
+
+### 
+
+Email
+
+- Configuring an Email App Asset
+
+- Sending Emails using our Multichannel Messaging API
+
+- Using the Email Flow Node
+
+## 
+
+Push Notifications
+
+- Configuring a Mobile/Web App
+
+- Sending Push Notifications using our Multichannel Messaging API
+
+- Using the Push Flow Node
+
+## 
+
+Live Chat and In-App Messaging
+
+- Configuring a Mobile/Web App
+
+- Integrating Webex Connect Android SDK with your Android App
+
+- Integrating Webex Connect iOS SDK with your iOS App
+
+- Integrating Webex Connect JavaScript SDK with your JavaScript App
+
+- Sending Live Chat and In-App Messages using our Multichannel Messaging API
+
+- Using the Live Chat / In-App Messaging Flow Node
+
+## 
+
+Apple Messages for Business
+
+- Configuring your Apple Messages for Business  Profile
+
+- Using our Multichannel Messaging API to send messages over Apple Messages for Business 
+
+- Using the Apple Messages for Business Flow Node
+
+## 
+
+Messenger
+
+- Linking your Facebook Page to Webex Connect
+
+- Using our Multichannel Messaging API to send messages over Facebook Messenger
+
+- Using the Messenger Flow Node 
+
+## 
+
+WhatsApp
+
+- Setting up your WhatsApp Business Account
+
+- Sending WhatsApp Messages using our Multichannel Messaging API
+
+- Using the WhatsApp Flow Node
+
+### 
+
+Integrations
+
+The following integrations are currently available on Webex Connect:
+
+- Inbound Webhook 
+
+- Outbound Webhook
+
+- Custom Event
+
+- Custom Node
+
+- Webex Engage 
+
+- Third-party Bot
+
+- Webex Contact Center 
+
+- Pre-built Integrations Nodes
+
+- Agile CRM
+
+- Salesforce CRM
+
+- AI Agent 
+
+- Google Dialogflow CX
+
+- Google Diaglog Flow ES
+
+- ServiceNow 
+
+- Customer Journey Data
+
+- Zendesk CRM
+
+- Freshdesk
+
+- Zoho CRM
+
+- Shortened URLs
+
+- Epic

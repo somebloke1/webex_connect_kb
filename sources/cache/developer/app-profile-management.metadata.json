@@ -1,0 +1,30 @@
+{
+  "category": "GETTING STARTED WITH SDKs",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f6722",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "fc0015d9dcb5473c5663367d7d77ae9a3fbbac273b01d16ca8101926456e1b38",
+    "source_path": "cc792b5940573bb9596315eb84d8660b6acc085f9f3aa12a704b57c7f85ae74c",
+    "text_path": "f5b2ce3343f2e888f09d04e4f4808ac4fa005040a7cb1a9b898e25563bee1059"
+  },
+  "headings": [],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/app-profile-management.md",
+  "resolved_url": "https://developers.webexconnect.io/docs/app-profile-management",
+  "retrieved_at": "2026-09-08T23:31:39+00:00",
+  "sha256_html_response": "357950cb5e868a3f74302ed4a0cd310dd9e9798516619eb7f53f585855d01b4d",
+  "sha256_source_body": "cc792b5940573bb9596315eb84d8660b6acc085f9f3aa12a704b57c7f85ae74c",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/app-profile-management.source.md",
+  "source_updated_at": "2026-04-23T05:45:54.231Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/app-profile-management.txt",
+  "title": "App Profile Management in Webex Connect",
+  "url": "https://developers.webexconnect.io/docs/app-profile-management",
+  "word_count": 421,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/app-profile-management.metadata.json"
+}

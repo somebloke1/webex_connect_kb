@@ -1,0 +1,813 @@
+{
+  "schema_version": 1,
+  "sample_key": "native-get-flight-info",
+  "title": "get_flight_info.workflow",
+  "observed_at": "2026-09-09T00:02:04.734Z",
+  "source_path": "evidence/sample-flows/observed/native-get-flight-info.json",
+  "source_sha256": "024e86363b5044d0f434a70847c465c3fca7a723f60284aa65bbd5c1a610b215",
+  "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model",
+  "runtime_tested": false,
+  "status": "observed_canvas_relationships_summarized",
+  "format_warning": "Internal loaded-canvas model observations only; not a public import schema. Event internal names and visible labels are recorded separately. Dynamic script behavior and missing canvas pages are not inferred.",
+  "counts": {
+    "cells": 6,
+    "operative_nodes": 2,
+    "explicit_edges": 1,
+    "terminal_bindings": 2,
+    "variable_references": 32
+  },
+  "start_configuration": {
+    "channel": 501,
+    "type": "channel",
+    "subtype": "aiagent",
+    "isCheckLiveSessions": 0,
+    "extras": {},
+    "eventid": 501,
+    "v2EventId": 501
+  },
+  "nodes": [
+    {
+      "id": "2",
+      "label": "Configure AI Agent Event",
+      "type_internal": "start",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "onbegin",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "selectedChannel": {
+          "id": 501,
+          "name": "aiagent",
+          "description": "AI Agent",
+          "type": 3,
+          "extraData": {},
+          "subType": "aiagent",
+          "integrationId": "",
+          "image_url": ""
+        },
+        "selectedRuleEvent": {
+          "id": 501,
+          "name": "",
+          "v2EventId": 501
+        },
+        "isKeyWordDisabled": true,
+        "isKeyWordVerifyReq": true,
+        "isKeyWordAvailable": true,
+        "output_variables": [
+          "aiAgent.timestamp",
+          "aiAgent.transId",
+          "aiAgent.payload",
+          "service.serviceKey",
+          "aiAgent.booking_id",
+          "aiAgent.last_name"
+        ],
+        "conditionData": [
+          {
+            "defaultvalue": "",
+            "mandatory": false,
+            "var_name": "booking_id",
+            "datatype": "string",
+            "channel_id": 501,
+            "event_id": 501,
+            "eventname": ""
+          },
+          {
+            "defaultvalue": "",
+            "mandatory": false,
+            "var_name": "last_name",
+            "datatype": "string",
+            "channel_id": 501,
+            "event_id": 501,
+            "eventname": ""
+          }
+        ],
+        "aiAgentData": {
+          "parseOutput": [
+            {
+              "name": "booking_id",
+              "defaultvalue": "",
+              "mandatory": false,
+              "type": "string"
+            },
+            {
+              "name": "last_name",
+              "defaultvalue": "",
+              "mandatory": false,
+              "type": "string"
+            }
+          ],
+          "isAuthRequired": false,
+          "name": "",
+          "url": "https://example.invalid/flows/62331/trigger/aiagent",
+          "v2EventId": 501,
+          "jsonData": {
+            "booking_id": "",
+            "last_name": ""
+          },
+          "xmlData": "",
+          "isExistingAIAgent": true,
+          "selectedEvent": 501,
+          "jsonSource": 0,
+          "conditionData": [],
+          "isValidateSignature": false,
+          "validateSignatureObj": {
+            "algorithm": "",
+            "secretType": "[redacted]",
+            "secretKey": "[redacted]",
+            "headerKey": "[redacted]"
+          }
+        }
+      },
+      "transition_actions": [],
+      "declared_outputs": [
+        "aiAgent.timestamp",
+        "aiAgent.transId",
+        "aiAgent.payload",
+        "service.serviceKey",
+        "aiAgent.booking_id",
+        "aiAgent.last_name"
+      ],
+      "output_mappings": []
+    },
+    {
+      "id": "3",
+      "label": "HTTP Request",
+      "type_internal": "http",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "oncomplete",
+          "declared_target_count": 1
+        },
+        {
+          "event_internal": "onerror",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "method": "get",
+        "url": "https://example.invalid/get_booking_info?booking_id=$(n2.aiAgent.booking_id)&last_name=$(n2.aiAgent.last_name)",
+        "connctiontimeout": 10000,
+        "requesttimeout": 10000,
+        "checkAll": false,
+        "dataformate": "json",
+        "type": "extract",
+        "outputvariablelist": {
+          "parameters": [
+            {
+              "id": "inUy5NOXtr",
+              "name": "arrival_time",
+              "path": "$.booking.arrival_time",
+              "type": "body",
+              "order": 0
+            },
+            {
+              "id": "eW0CW4jNr2",
+              "name": "flight_number",
+              "path": "$.booking.flight_number",
+              "type": "body",
+              "order": 1
+            },
+            {
+              "id": "T4Mr9bCAcY",
+              "name": "passenger_name",
+              "path": "$.booking.user_name",
+              "type": "body",
+              "order": 2
+            },
+            {
+              "id": "uc6jX0QiEA",
+              "name": "origin",
+              "path": "$.booking.origin",
+              "type": "body",
+              "order": 3
+            },
+            {
+              "id": "fEKmqCmQqG",
+              "name": "destination",
+              "path": "$.booking.destination",
+              "type": "body",
+              "order": 4
+            },
+            {
+              "id": "9NCsPfu5r5",
+              "name": "booking_status",
+              "path": "$.booking.booking_status",
+              "type": "body",
+              "order": 5
+            },
+            {
+              "id": "dV5ewQhhWL",
+              "name": "flight_id",
+              "path": "$.booking.flight_id",
+              "type": "body",
+              "order": 6
+            },
+            {
+              "id": "X29VnIaNdY",
+              "name": "booking_id",
+              "path": "$.booking.booking_id",
+              "type": "body",
+              "order": 7
+            },
+            {
+              "id": "L18jxVzU2o",
+              "name": "flight_status",
+              "path": "$.booking.flight_status",
+              "type": "body",
+              "order": 8
+            },
+            {
+              "id": "HAyb1firPW",
+              "name": "check_in_status",
+              "path": "$.booking.check_in_status",
+              "type": "body",
+              "order": 9
+            },
+            {
+              "id": "D735dgEjs0",
+              "name": "departure_time",
+              "path": "$.booking.departure_time",
+              "type": "body",
+              "order": 10
+            },
+            {
+              "id": "xSsFuk8VB9",
+              "name": "error",
+              "path": "$.error",
+              "type": "body",
+              "order": 11
+            }
+          ],
+          "type": "json"
+        },
+        "isNewnode": true
+      },
+      "transition_actions": [],
+      "declared_outputs": [
+        "arrival_time",
+        "flight_number",
+        "passenger_name",
+        "origin",
+        "destination",
+        "booking_status",
+        "flight_id",
+        "booking_id",
+        "flight_status",
+        "check_in_status",
+        "departure_time",
+        "error"
+      ],
+      "output_mappings": {
+        "parameters": [
+          {
+            "id": "inUy5NOXtr",
+            "name": "arrival_time",
+            "path": "$.booking.arrival_time",
+            "type": "body",
+            "order": 0
+          },
+          {
+            "id": "eW0CW4jNr2",
+            "name": "flight_number",
+            "path": "$.booking.flight_number",
+            "type": "body",
+            "order": 1
+          },
+          {
+            "id": "T4Mr9bCAcY",
+            "name": "passenger_name",
+            "path": "$.booking.user_name",
+            "type": "body",
+            "order": 2
+          },
+          {
+            "id": "uc6jX0QiEA",
+            "name": "origin",
+            "path": "$.booking.origin",
+            "type": "body",
+            "order": 3
+          },
+          {
+            "id": "fEKmqCmQqG",
+            "name": "destination",
+            "path": "$.booking.destination",
+            "type": "body",
+            "order": 4
+          },
+          {
+            "id": "9NCsPfu5r5",
+            "name": "booking_status",
+            "path": "$.booking.booking_status",
+            "type": "body",
+            "order": 5
+          },
+          {
+            "id": "dV5ewQhhWL",
+            "name": "flight_id",
+            "path": "$.booking.flight_id",
+            "type": "body",
+            "order": 6
+          },
+          {
+            "id": "X29VnIaNdY",
+            "name": "booking_id",
+            "path": "$.booking.booking_id",
+            "type": "body",
+            "order": 7
+          },
+          {
+            "id": "L18jxVzU2o",
+            "name": "flight_status",
+            "path": "$.booking.flight_status",
+            "type": "body",
+            "order": 8
+          },
+          {
+            "id": "HAyb1firPW",
+            "name": "check_in_status",
+            "path": "$.booking.check_in_status",
+            "type": "body",
+            "order": 9
+          },
+          {
+            "id": "D735dgEjs0",
+            "name": "departure_time",
+            "path": "$.booking.departure_time",
+            "type": "body",
+            "order": 10
+          },
+          {
+            "id": "xSsFuk8VB9",
+            "name": "error",
+            "path": "$.error",
+            "type": "body",
+            "order": 11
+          }
+        ],
+        "type": "json"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "5128004",
+      "source": "2",
+      "target": "3",
+      "event_internal": "onbegin",
+      "event_label": "onBegin",
+      "representation": "explicit_edge"
+    }
+  ],
+  "terminal_bindings": [
+    {
+      "id": "12",
+      "source": "3",
+      "target": "12",
+      "event_internal": "oncomplete",
+      "event_label": "onSuccess",
+      "outcome_id": 2,
+      "outcome_name": "Success",
+      "outcome_description": "Successfully completed flow",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "13",
+      "source": "3",
+      "target": "13",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    }
+  ],
+  "terminal_sources_not_captured": [],
+  "duplicate_terminal_binding_groups": [],
+  "variable_handoffs": [
+    {
+      "consumer": "3",
+      "location": "configuration.url",
+      "reference": "$(n2.aiAgent.booking_id)",
+      "variable": "n2.aiAgent.booking_id",
+      "producer_node": "2",
+      "producer_field": "aiAgent.booking_id",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "3",
+      "location": "configuration.url",
+      "reference": "$(n2.aiAgent.last_name)",
+      "variable": "n2.aiAgent.last_name",
+      "producer_node": "2",
+      "producer_field": "aiAgent.last_name",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "outcome[1].notification.payload.transactionID",
+      "reference": "$(transid)",
+      "variable": "transid",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "outcome[1].notification.payload.flowname",
+      "reference": "$(flowname)",
+      "variable": "flowname",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "outcome[1].notification.payload.serviceName",
+      "reference": "$(serviceName)",
+      "variable": "serviceName",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "outcome[1].notification.custompayload.transactionID",
+      "reference": "$(transid)",
+      "variable": "transid",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "outcome[1].notification.custompayload.passenger_name",
+      "reference": "$(n3.passenger_name)",
+      "variable": "n3.passenger_name",
+      "producer_node": "3",
+      "producer_field": "passenger_name",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "outcome[1].notification.custompayload.arrival_time",
+      "reference": "$(n3.arrival_time)",
+      "variable": "n3.arrival_time",
+      "producer_node": "3",
+      "producer_field": "arrival_time",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "outcome[1].notification.custompayload.flight_number",
+      "reference": "$(n3.flight_number)",
+      "variable": "n3.flight_number",
+      "producer_node": "3",
+      "producer_field": "flight_number",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "outcome[1].notification.custompayload.origin",
+      "reference": "$(n3.origin)",
+      "variable": "n3.origin",
+      "producer_node": "3",
+      "producer_field": "origin",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "outcome[1].notification.custompayload.destination",
+      "reference": "$(n3.destination)",
+      "variable": "n3.destination",
+      "producer_node": "3",
+      "producer_field": "destination",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "outcome[1].notification.custompayload.booking_status",
+      "reference": "$(n3.booking_status)",
+      "variable": "n3.booking_status",
+      "producer_node": "3",
+      "producer_field": "booking_status",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "outcome[1].notification.custompayload.flight_id",
+      "reference": "$(n3.flight_id)",
+      "variable": "n3.flight_id",
+      "producer_node": "3",
+      "producer_field": "flight_id",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "outcome[1].notification.custompayload.booking_id",
+      "reference": "$(n3.booking_id)",
+      "variable": "n3.booking_id",
+      "producer_node": "3",
+      "producer_field": "booking_id",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "outcome[1].notification.custompayload.flight_status",
+      "reference": "$(n3.flight_status)",
+      "variable": "n3.flight_status",
+      "producer_node": "3",
+      "producer_field": "flight_status",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "outcome[1].notification.custompayload.check_in_status",
+      "reference": "$(n3.check_in_status)",
+      "variable": "n3.check_in_status",
+      "producer_node": "3",
+      "producer_field": "check_in_status",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "outcome[1].notification.custompayload.departure_time",
+      "reference": "$(n3.departure_time)",
+      "variable": "n3.departure_time",
+      "producer_node": "3",
+      "producer_field": "departure_time",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "outcome[1].notification.custompayload.error",
+      "reference": "$(n3.error)",
+      "variable": "n3.error",
+      "producer_node": "3",
+      "producer_field": "error",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "3",
+      "location": "_usedVars",
+      "reference": "$(n2.aiAgent.booking_id)",
+      "variable": "n2.aiAgent.booking_id",
+      "producer_node": "2",
+      "producer_field": "aiAgent.booking_id",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "3",
+      "location": "_usedVars",
+      "reference": "$(n2.aiAgent.last_name)",
+      "variable": "n2.aiAgent.last_name",
+      "producer_node": "2",
+      "producer_field": "aiAgent.last_name",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "_usedVars",
+      "reference": "$(n3.passenger_name)",
+      "variable": "n3.passenger_name",
+      "producer_node": "3",
+      "producer_field": "passenger_name",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "_usedVars",
+      "reference": "$(n3.arrival_time)",
+      "variable": "n3.arrival_time",
+      "producer_node": "3",
+      "producer_field": "arrival_time",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "_usedVars",
+      "reference": "$(n3.flight_number)",
+      "variable": "n3.flight_number",
+      "producer_node": "3",
+      "producer_field": "flight_number",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "_usedVars",
+      "reference": "$(n3.origin)",
+      "variable": "n3.origin",
+      "producer_node": "3",
+      "producer_field": "origin",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "_usedVars",
+      "reference": "$(n3.destination)",
+      "variable": "n3.destination",
+      "producer_node": "3",
+      "producer_field": "destination",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "_usedVars",
+      "reference": "$(n3.booking_status)",
+      "variable": "n3.booking_status",
+      "producer_node": "3",
+      "producer_field": "booking_status",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "_usedVars",
+      "reference": "$(n3.flight_id)",
+      "variable": "n3.flight_id",
+      "producer_node": "3",
+      "producer_field": "flight_id",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "_usedVars",
+      "reference": "$(n3.booking_id)",
+      "variable": "n3.booking_id",
+      "producer_node": "3",
+      "producer_field": "booking_id",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "_usedVars",
+      "reference": "$(n3.flight_status)",
+      "variable": "n3.flight_status",
+      "producer_node": "3",
+      "producer_field": "flight_status",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "_usedVars",
+      "reference": "$(n3.check_in_status)",
+      "variable": "n3.check_in_status",
+      "producer_node": "3",
+      "producer_field": "check_in_status",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "_usedVars",
+      "reference": "$(n3.departure_time)",
+      "variable": "n3.departure_time",
+      "producer_node": "3",
+      "producer_field": "departure_time",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "_usedVars",
+      "reference": "$(n3.error)",
+      "variable": "n3.error",
+      "producer_node": "3",
+      "producer_field": "error",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    }
+  ],
+  "custom_variable_assignments": [],
+  "custom_variables": [],
+  "flow_outcomes": [
+    {
+      "id": 1,
+      "order": 0,
+      "name": 100,
+      "value": "Last executed node event",
+      "tag": 15,
+      "tagName": "Last Execution Status",
+      "type": "default",
+      "notification": {
+        "method": "get",
+        "headers": "[redacted]",
+        "payload": {
+          "transactionID": "$(transid)",
+          "flowname": "$(flowname)",
+          "serviceName": "$(serviceName)",
+          "statuscode": 1000
+        },
+        "payloadType": 2,
+        "custompayload": {
+          "transactionID": "$(transid)",
+          "passenger_name": "$(n3.passenger_name)",
+          "arrival_time": "$(n3.arrival_time)",
+          "flight_number": "$(n3.flight_number)",
+          "origin": "$(n3.origin)",
+          "destination": "$(n3.destination)",
+          "booking_status": "$(n3.booking_status)",
+          "flight_id": "$(n3.flight_id)",
+          "booking_id": "$(n3.booking_id)",
+          "flight_status": "$(n3.flight_status)",
+          "check_in_status": "$(n3.check_in_status)",
+          "departure_time": "$(n3.departure_time)",
+          "error": "$(n3.error)"
+        },
+        "notificationType": -2
+      },
+      "isNotify": true,
+      "statusCode": "All status codes"
+    },
+    {
+      "id": 2,
+      "order": 1,
+      "name": 101,
+      "value": "Successfully completed flow",
+      "tag": 11,
+      "tagName": "Success",
+      "type": "default",
+      "notification": null,
+      "isNotify": false,
+      "statusCode": null
+    },
+    {
+      "id": 3,
+      "order": 2,
+      "name": 102,
+      "value": "Flow completed with an error",
+      "tag": 12,
+      "tagName": "Error",
+      "type": "default",
+      "notification": null,
+      "isNotify": false,
+      "statusCode": null
+    },
+    {
+      "id": 4,
+      "order": 3,
+      "name": 103,
+      "value": "Flow ended due to an interruption",
+      "tag": 13,
+      "tagName": "Incomplete",
+      "type": "default",
+      "notification": null,
+      "isNotify": false,
+      "statusCode": null
+    }
+  ],
+  "cycles": [],
+  "cross_page_or_flow_nodes": [],
+  "capture_pages": null,
+  "declared_events_without_captured_route": [],
+  "nodes_not_reached_from_captured_start": [],
+  "edge_endpoints_not_captured": [],
+  "node_variable_producers_not_captured": [],
+  "redactions": "Header credentials and URL hosts redacted. Internal model properties are evidence, not a public import API.",
+  "authored_walkthrough": {
+    "walkthrough": "AI Agent Start 2 takes optional string `booking_id` and `last_name`. Its `onbegin`/rendered `onBegin` enters HTTP 3 GET `/get_booking_info?booking_id=$(n2.aiAgent.booking_id)&last_name=$(n2.aiAgent.last_name)`. Connection/request timeout values are 10000. End pseudo-node 12 binds HTTP `oncomplete`/`onSuccess` with exitResult 2; node 13 binds `onerror`/`onError` with 3. No downstream booking modification occurs.",
+    "handoffs": "HTTP extracts fields from `$.booking`: arrival/departure times, flight number, origin/destination, booking status, flight_id, booking_id, flight status, and check_in_status. It renames `$.booking.user_name` to `n3.passenger_name` and extracts top-level `$.error`. The all-status Last Execution Status outcome has payloadType 2 and stores a custompayload with transactionID plus these named n3 outputs. The returned booking_id and flight_id are useful inputs for later actions, but no native edge or Call Workflow invokes those actions here.",
+    "limitations": "There is no explicit URL-encoding transformation, no-result branch, retry, or separate timeout pseudo-node. The graph maps configured response paths without proving their presence on every response. Sample booking details are not live travel records, and the lookup does not establish an identity-assurance policy. The host is redacted; the internal model is not a public import schema. Runtime testing is false, so no lookup or response serialization was exercised."
+  },
+  "walkthrough_status": "authored"
+}

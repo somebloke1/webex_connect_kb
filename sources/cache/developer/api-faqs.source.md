@@ -1,0 +1,68 @@
+## Does Webex Connect messaging API support batching?
+
+Yes, <<prodname>> [messaging API](https://developers.imiconnect.io/reference/apioverview) supports batching. You can send personalised messages to a maximum of 1000 destinations at once. 
+
+For example here is an example of a bulk SMS request -
+
+```text
+[{
+        "deliverychannel": "sms",
+        "channels": {
+            "sms": {
+                "text": "Hi John, Greetings from MNOP bank. "
+            }
+        },
+        "destination": [{
+            "msisdn": ["91900000009"]
+        }]
+    }, {
+        "deliverychannel": "sms",
+        "channels": {
+            "sms": {
+                "text": "Hi Mark, Greetings from MNOP bank. "
+            }
+        },
+        "destination": [{
+            "msisdn": ["91900000008"]
+        }]
+    }, {
+        "deliverychannel": "sms",
+        "channels": {
+            "sms": {
+                "text": "Hi steve, Greetings from MNOP bank. "
+            }
+        },
+        "destination": [{
+            "msisdn": ["91900000007"]
+        }]
+    }
+
+]
+```
+
+And the corresponding response -
+
+```text
+{
+  "response": [
+    {
+      "description": "Queued",
+      "correlationid": "",
+      "code": "1001",
+      "transid": "29e6cff5-5f0d-4872-b336-57799cb63da7"
+    },
+    {
+      "description": "Queued",
+      "correlationid": "",
+      "code": "1001",
+      "transid": "29e6cff5-5f0d-4872-b336-57799cb63da7_1"
+    },
+    {
+      "description": "Queued",
+      "correlationid": "",
+      "code": "1001",
+      "transid": "29e6cff5-5f0d-4872-b336-57799cb63da7_2"
+    }
+  ]
+}
+```

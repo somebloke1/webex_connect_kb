@@ -1,0 +1,473 @@
+## 
+
+Introduction
+
+Webex Connect offers a pre-built integration node for Freshdesk to make it easier for you to create, view, update, and/or delete tickets or contacts in your Freshdesk account within an Webex Connect flow.
+
+This node needs to be enabled for your account and is not available by default. Please contact your account manager in case you wish to enable it for your account.
+
+ [Image: Screenshot of Fresh Desk CRM] 
+Screenshot of Fresh Desk CRM 
+
+## 
+
+Version Supported
+
+This integration is based on Freshdesk API v2.
+
+## 
+
+Pre-requisites
+
+- The tenant would need a Freshdesk account.
+
+- This node needs to be enabled for your Webex Connect tenant and is not available by default. Please contact your account manager in case you wish to enable it for your account.
+
+- This integration is available only in the cloud version of Webex Connect.
+
+## 
+
+Node Configuration
+
+Drag-and-drop the node on to the visual flow builder and double-click the node to configure it.
+
+## 📘
+Please note that the latest version of the Fresh desk integration node that you should use is v1.4.
+
+- 
+
+Select the required Method Name from the drop-down list box. The following methods are supported currently: 
+
+- Create a Ticket-  Allows to create a ticket with subject, priority and description of the ticket.
+
+- View a Ticket- Allows to view a ticket by the ticket ID.
+
+- Update a Ticket- Allows to modify the ticket by unique ticket ID.
+
+- Delete a Ticket- Allows to delete a ticket using the unique identification of ticket.
+
+- Create a Contact- Allows to add a new contact with customer’s personal details using the first name, last name, phone, address etc.
+
+- View a Contact- Allows to view a contact by contact ID.
+
+- Update a Contact- Allows to modify a contact by unique identification number of the ticket.
+
+- Soft Delete a Contact- Allows to delete a contact temporarily by the contact ID.
+
+- 
+
+Select add new authorization if you're using this node for the first time. You can select an existing authorization in case you've used this node in the past and have saved authorization credentials.
+
+- 
+
+If you select the option to add new authorization, you will be asked to provide a name for this authorization to be able to reuse it later on. In addition, you need to provide the username and password of your Freshdesk account to complete the authorization.
+
+- 
+
+Once the authorization has been completed, add the request parameters such as 'Ticket ID' for the selected method and click save.
+
+ [Image: Screenshot of View a Contact method configuration page.] 
+Screenshot of View a Contact method configuration page.
+
+- 
+
+You can see the data that this node generates under the Output Variables section. These variables are available for use in subsequent nodes. E.g., company_id, name, email, etc. in the above screenshot.
+
+- 
+
+You can see the list of possible node outcomes for various methods supported by this node under the 'Node Outcomes' section. Examples include, 'Success', 'Error', 'OnTimeout', etc.
+
+## 
+
+Methods and Outcomes
+
+Here’s a brief description of various methods, and corresponding output variables and node outcomes associated with each of the methods.
+
+### 
+
+Method Name - Create a Ticket
+
+ [Image: Screenshot of Create a Ticket method configuration page.] 
+Screenshot of Create a Ticket method configuration page.
+
+ | 
+Input Variables
+ | 
+Output Variables
+ | 
+Node Outcomes
+
+ | 
+Description
+
+- Specifies the description of a ticket
+
+Subject
+
+- Specifies the subject of a ticket
+
+Email
+
+- Specifies the email address
+
+Priority
+
+- Specifies the nature of the ticket based on the content
+
+Status
+
+- Specifies the status of the ticket 
+
+CC_Emails
+Specifies the cc email address
+ | 
+cc_emails
+
+- Contains the cc email address
+
+reply_cc_emails
+
+priority
+
+- Contains the nature of the ticket based on the content
+
+requester_id
+
+- Contains the unique identification number of the requester
+
+source
+
+status
+
+- Contains the status for the ticket
+
+subject
+
+- Contains the subject for the ticket
+
+company_id
+
+- Contains the company unique identification number
+
+id
+Contains the unique identification number of the ticket
+
+type
+fr_escalated
+spam
+urgent
+is_escalated
+
+created_at
+
+- Contains the details of the place the ticket is created at
+
+updated_at
+
+- Contains the details of the place the ticket is updated at
+
+due_by
+fr_due_by
+description_text
+description
+ | onCreateTicketFailure
+
+onCreateTicketSuccess
+
+### 
+
+Method Name - View a Ticket
+
+ [Image: Screenshot of View a Ticket method configuration page.] 
+Screenshot of View a Ticket method configuration page.
+
+ | Input Variables | Output Variables | Node Outcomes
+
+ | Ticket ID | cc_emails
+
+reply_cc_emails
+
+priority
+
+requester_id
+
+source
+
+status
+
+subject
+
+company_id
+
+id
+
+type
+
+fr_escalated
+
+spam
+
+urgent
+
+is_escalated
+
+created_at
+
+updated_at
+
+due_by
+
+fr_due_by
+
+description_text
+
+description
+
+custom_fields_category | onViewTicketFailure
+
+onViewTicketSuccess
+
+### 
+
+Method Name - Update a Ticket
+
+ [Image: Screenshot of Update a Ticket method configuration page.] 
+Screenshot of Update a Ticket method configuration page.
+
+ | Input Variables | Output Variables | Node Outcomes
+
+ | Ticket ID
+
+Priority
+
+Status | description_text
+
+description
+
+fr_escalated
+
+spam
+
+priority
+
+requester_id
+
+source
+
+status
+
+subject
+
+id
+
+is_escalated
+
+created_at
+
+updated_at
+
+due_by
+
+fr_due_by | onUpdateTicketFailure
+
+onUpdateTicketSuccess
+
+### 
+
+Method Name - Delete a Ticket
+
+ [Image: Screenshot of Delete a Ticket method configuration page.] 
+Screenshot of Delete a Ticket method configuration page.
+
+ | Input Variables | Output Variables | Node Outcomes
+
+ | Ticket ID | None | onDeleteTicketFailure
+
+onDeleteTicketSuccess
+
+### 
+
+Method Name - Create a Contact
+
+ [Image: Screenshot of Create a Contact method configuration page.] 
+Screenshot of Create a Contact method configuration page.
+
+ | 
+Input Variables
+ | 
+Output Variables
+ | 
+Node Outcomes
+
+ | 
+Name
+
+- Specifies the name of the contact
+
+Email
+
+- Specifies the email address of the contact
+
+Other Emails
+
+- Specifies the alternate email address of the contact
+ | 
+active
+
+company_id
+
+- Contains the company unique identification number
+
+view_all_tickets
+deleted
+
+email
+
+- Contains the email address of the contact
+
+id
+
+- Contains the unique identification number of the contact
+
+language
+
+- Contains the type of language selected by the contact
+
+name
+
+- Contains the name of the contact
+
+time_zone
+
+- Contains the time zone details of the contact
+
+other_emails
+
+- Contains  the alternate email address of the contact
+
+other_companies
+
+created_at
+
+- Contains the details of the place the contact is created at
+
+updated_at
+
+- Contains the details of the place the contact is updated at
+
+tags
+
+avatar
+
+mobile
+
+- Contains the phone number of the contact
+
+phone
+
+- Contains the phone number of the contact
+
+description
+
+- Contains the description of a ticket
+
+address
+Contains the address of the contact
+ | onCreateContactFailure
+
+onCreateContactSuccess
+
+### 
+
+Method Name - View a Contact
+
+ [Image: Screenshot of View a Contact method configuration page.] 
+Screenshot of View a Contact method configuration page.
+
+ | Input Variables | Output Variables | Node Outcomes
+
+ | Contact ID | active
+
+company_id
+
+view_all_tickets
+
+email
+
+id
+
+language
+
+name
+
+time_zone
+
+other_companies
+
+created_at
+
+updated_at
+
+custom_fields
+
+avatar | onViewContactFailure
+
+onViewContactSuccess
+
+### 
+
+Method Name - Update a Contact
+
+ [Image: Screenshot of Update a Contact method configuration page.] 
+Screenshot of Update a Contact method configuration page.
+
+ | Input Variables | Output Variables | Node Outcomes
+
+ | Contact ID
+
+Name
+
+Job Title
+
+Other Emails | active
+
+company_id
+
+view_all_tickets
+
+deleted
+
+email
+
+id
+
+job_title
+
+language
+
+name
+
+time_zone
+
+other_emails
+
+other_companies
+
+created_at
+
+updated_at | onUpdateContactFailure
+
+onUpdateContactSuccess
+
+### 
+
+Method Name - Soft Delete a Contact
+
+ [Image: Screenshot of Soft Delete a Contact method configuration page.] 
+Screenshot of Soft Delete a Contact method configuration page.
+
+ | Input Variables | Output Variables | Node Outcomes
+
+ | Contact ID | response | onSoftDeleteContactFailure
+
+onSoftDeleteContactSuccess

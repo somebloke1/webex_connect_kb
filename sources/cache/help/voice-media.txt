@@ -1,0 +1,51 @@
+Voice media is the repository of different voice files and folders segmented in business and language hierarchy. This feature allows you to create folders and upload voice media files into the folders. 
+
+These files are used in Flow Builder to create single or multi-language voice flows. You can map the same media across multiple languages within the same flow without needing to create a separate flow for each language. As the media files are segregated into different folders, you can easily select necessary files while creating voice flows. You can create local language folders within the main folder. If you delete a folder, subsequently all the files and folders in the folder also get deleted.
+
+The standard followed is ISO 639-1. 
+
+To add voice media, follow the steps given below:
+
+- Navigate to Tools > Voice Media.
+
+- Click Add Folder, provide a name for the folder and click Save. The new folder appears on the Voice Media page.
+
+ [Image: Screenshot of Voice Media Page] 
+Screenshot of Voice Media Page
+
+- Click the folder to which you want to add the media files.
+
+- Click Add Language Folder, select the required language and click Save. A folder gets created with the selected language.
+
+## 📘
+Note
+
+You must add folders for all the languages that you require. Each folder corresponds only to a single language.
+
+ [Image: Screenshot of Main Folder Navigation] 
+Screenshot of Main Folder Navigation
+
+- Click the language folder to which you want to add the media.
+
+- Click Add New and select:
+
+(i) Upload - browse and select a file from the local computer.
+
+## 📘
+Media File Type and Size
+
+- The supported media file types are MP3 and WAV.
+
+- The file size to upload is limited to 10MB.
+
+   (ii) Record A Clip - enter a Recording Name and click Next. Select the Country from the drop-down list, dial the number provided on the screen and enter the PIN when prompted to record a clip. The set of pre-configured numbers for each country appears when you select the country.
+
+   (iii) Synthesize Using TTS - provide a name for the media, message, voice type, and language to synthesize TTS from the provide message.
+
+ [Image: Screenshot of Synthesize using TTS] 
+Screenshot of Synthesize using TTS
+
+## 📘
+Note
+
+Starting from 6.5.0, the Standard option in the Voice Type dropdown is not available as Azure is deprecating the standard voice from August 2024. Please note that TTS API should not be used with voice type as Standard.

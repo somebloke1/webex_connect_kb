@@ -1,0 +1,335 @@
+The Reports section helps you view and analyze your messaging and flow traffic across various services. Webex Connect provides reporting at three levels - platform level summary, channel asset level summary, and service level summary. 
+
+Here's a brief description of the reports available at each level.
+
+## 
+
+Platform Summary
+
+The platform summary report provides the aggregated count of the total number of messages sent and received across various channels within the specified time period.
+
+Select Platform > Summary option under the Entity dropdown and mention the time period as shown below. 
+
+The apps at channel level are categorized in the Entity dropdown.
+
+## 📘
+Timezone Settings
+
+Please note that the data shown in the report is based on the tenant timezone settings.
+
+ [Image: Screenshot of Reports Page.] 
+Screenshot of Reports Page.
+
+The details of messages sent (i.e., messages submitted and processed for delivery) and messages received across various channels will be available as shown below. You can simply hover over the line graph to get the details for any specific day within the selected time period. The data for each channel is represented by a color as shown in the graph. The channels for which data is displayed are as follows:
+
+- SMS
+
+- Voice
+
+- Live Chat / In-app Messaging
+
+- Messenger
+
+- Email
+
+- Apple Messages for Business
+
+- RCS
+
+- WhatsApp
+
+- Instagram
+
+- MMS
+
+- Push
+
+ [Image: Screenshot showing the selection of the Summary option under the Entity dropdown menu on the Platform.] 
+Navigating to the Summary option in the Entity dropdown menu on the Platform with specified time period
+
+When you select a single day or partial day (Today/Yesterday/Custom) in the Period filter, the hour-wise data is shown on the graph.
+
+## 📘
+Custom Time Period
+
+When you select Custom in the Time Period field, the Custom Date pop-up allows you to choose a date range within the past 13 months. You can select time value in hours (hh) only; minutes (mm) are not supported. For example, if today’s date is 1st January, 2025, you can set the End Date to January 1, 2025, but the Start Date cannot be older than 1st December, 2023 in the report.
+
+ [Image: Custom Date pop-up appears when you choose custom time period. This allows to generate a report with a specified date/time range.] 
+Custom Date
+
+ [Image: Screenshot of Service Level Report for WhatsApp Channel.] 
+Service Level Report for WhatsApp Channel.
+
+If needed, you can download the reports in PNG, JPEG, PDF, SVG, CSV, and XLS format by clicking the hamburger menu icon towards the top-right side of the chart, as shown below.
+
+ [Image: Screenshot displaying to download the reports.] 
+Screenshot displaying to download the reports.
+
+### 
+
+Reports for Outbound Emails
+
+Sample report for Email channel usage at a service level.
+
+ [Image: Screenshot of Sample report for Email channel usage at a service level.] 
+Sample report for Email channel usage at a service level.
+
+The above screenshot shows details for Email channel usage at a service level with the following data points:
+
+- Total number of requests
+
+- Number of email messages sent
+
+- Number of email messages submitted for processing
+
+- Number of email messages scheduled (email messages waiting to be submitted)
+
+- Number of email messages rejected (email messages rejected by the platform due to various reasons)
+
+- Number and percentage of email messages delivered (email messages with confirmed delivery receipt)
+
+- Number and percentage of email messages failed
+
+- Total links clicked
+
+- Number of email messages hard bounced (not delivered because of invalid email address, etc.)
+
+- Number of email messages soft bounced (not delivered because of insufficient space in the inbox, etc.)
+
+- Number of complaints (phishing, abuse, spam, etc.)
+
+Since it’s not possible to display all the sub-categories at the high-level report, a sub-report for bounced emails and complaints is displayed, called Messages Bounced and Email Complaints.
+
+ [Image: Screenshot of Messages Bounced and Email Complaints] 
+Messages Bounced and Email Complaints
+
+## 📘
+Note
+
+The default retention period for email bounce list is Seven days for email via AWS SES. To change the retention period, reach out to your account manager.
+
+ | Field Name | Description
+
+ | Status Name | Indicates if it is a bounced message or an email complaint.
+
+ | Sub-Category | Indicated the category to which the event belongs.
+
+ | Details | Captures granular information about the reason for email bounce. It’s not applicable to Complaints.
+
+ | Count | Displays the number of times the event occurred.
+
+### 
+
+Reports for Voice
+
+Sample report for voice channel usage at a service level.
+
+ [Image: Sample Report for Voice Channel usage at service level] 
+Sample Report for Voice Channel usage at service level
+
+The above screenshot shows details for Voice channel usage at a service level with the following data points:
+
+- Total Requests
+
+- Total Calls Submitted
+
+- Total Calls Scheduled
+
+- Total Calls Rejected
+
+- Total Calls Answered by User
+
+- Total Calls Answered by Machine
+
+- Total Calls Failed
+
+- Average Call Duration
+
+### 
+
+Reports for SMS
+
+ [Image: Screenshot of SMPP Reports] 
+SMS Reports
+
+Following is the information that’s displayed as part of the reports:
+
+- Total Requests  - Number of requests submitted by the user to the Webex Connect platform.
+
+- Requests Submitted - Number of requests submitted by the Webex Connect platform to the messaging gateways.
+
+- Requests Scheduled - Number of requests waiting to be submitted by the Webex Connect platform to the messaging gateways.
+
+- Requests Rejected - Number of requests rejected by the Webex Connect platform.
+
+- Total Messages Submitted - Total count of messages delivered and messages failed to be delivered to the end user.
+
+- Messages Delivered as RCS Basic - Total count of messages delivered to the end user as RCS basic.
+
+- Message Delivered as SMS- Total count of messages delivered to the end user.
+
+- Message Enabled for RCS Basic- Total number of messages activated for RCS Basic.
+
+- Messages Failed - Total count of messages failed to be delivered to the end user.
+
+- Messages Clicked - Number of messages clicked.
+
+## 📘
+Custom Time Period
+
+When you select Custom in the Time Period field, the Custom Date pop-up allows you to choose a date range within the past 13 months. You can select time value in hours (hh) only; minutes (mm) are not supported. For example, if today’s date is 1st January, 2025, you can set the End Date to January 1, 2025, but the Start Date cannot be older than 1st December, 2023 in the report.
+
+ [Image: Custom Date pop-up appears when you choose custom time period. This allows to generate a report with a specified date/time range.] 
+Custom Date
+
+#### 
+
+Using Sender ID
+
+- Select the Sender ID for which you want to generate the report.
+
+- Select the required time. Click Get reports.
+
+ [Image: Asset Level Report for SMS Channel.] 
+Asset Level Report for SMS Channel.
+
+Following is the information that’s displayed as part of the reports:
+
+- Total Messages Submitted (Estimated Segments) - Total count of messages delivered and messages failed to be delivered to the end user.
+
+- Messages Delivered (Actual Segments) - Total count of messages delivered to the end user.
+
+- Messages Failed (Actual Segments) - Total count of messages failed to be delivered to the end user.
+
+## 
+
+Channel Asset Level Reports
+
+Alternatively, the reports can be viewed at a channel asset level by selecting the channel asset for example a Number (in case of SMS and Voice), or an App (for OTT channels such as Apple Messages for Business and WhatsApp). 
+
+Select your desired number or the app name from the Entity dropdown and mention the time period as shown below. 
+
+ [Image: Asset Level Report for SMS or Voice Channel.] 
+Asset Level Report for SMS or Voice Channel.
+
+The details of messages received on the selected channel asset (i.e. a number or an app) will be available as shown below. This is the aggregated count of messages received on the select asset across various services within Webex Connect where the selected asset is being used. Hover over the line graph to get the details of the number of messages received on any given day within the selected time period.
+
+ [Image: Asset Level Report for SMS or Voice Channel.] 
+Asset Level Report for SMS or Voice Channel.
+
+## 
+
+Service Level Reports
+
+While the high-level stats of messaging, flow execution, and API invocation details for each service are visible as soon as you enter the service-specific dashboard (sample below), more granular information about channel usage and flow executions are present within the Reports section. 
+
+ [Image: Screenshot of the Service Specific Dashboard] 
+Service Specific Dashboard
+
+To view and analyze detailed reports for any of your services visit the 'Reports' section and select your desired service from the Entity dropdown. Further, select the channel or the flow name and specify the time period you would like to see the reports for. Click Get Reports. 
+
+Sample report for SMS channel usage at a service level. 
+
+ [Image: Screenshot of the Service Level Report for SMS Channel] 
+Service Level Report for SMS Channel.
+
+Following is the information that’s displayed as part of the reports:
+
+- Total Requests  - Number of requests submitted by the user to the connect platform.
+
+- Requests Submitted - Number of requests submitted by the connect platform to the messaging gateways.
+
+- Requests Scheduled - Number of requests waiting to be submitted by the connect platform to the messaging gateways.
+
+- Requests Rejected - Number of requests rejected by the connect platform.
+
+- Total Messages Submitted - Total count of messages delivered and messages failed to be delivered to the end user.
+
+- Message Delivered as RCS Basic- Total count of messages delivered to the end user as RCS Basic.
+
+- Message Delivered as SMS- Total count of messages delivered to the end user.
+
+- Message Enabled for RCS Basic- Total number of messages activated for RCS Basic.
+
+- Messages Failed - Total count of messages failed to be delivered to the end user.
+
+- Messages Clicked - Number of messages clicked.
+
+Details for other channels are also available in a similar reporting format with some variations keeping in view channel-specific capabilities. 
+
+## 📘
+What's multi-part SMS message count
+
+The standard character limit for a single SMS is 160 characters. If you send an SMS message that contains more than 160 characters, the message is split into smaller chunks at the operator end and is concatenated at the device end to form a single message for the recipient. If you send a message that contains 200 characters, the multi-part message count would be 2.
+
+Sample report for a flow within a service. 
+
+ [Image: Screenshot of the Sample Report for a Flow within a Service] 
+Sample Report for a Flow within a Service
+
+## ❗️
+'No of Messages'
+
+The platform UI incorrectly represents the Y axis of Flow Reports as 'No of Messages'. It is actually the number of times that the flow is invoked, excluding sub-flow executions.
+
+The above screenshot shows details for a flow with the following data points:
+
+- Number of times the flow was invoked from external systems or as part of execution of main flow. 
+
+## 📘
+Sub-flow execution count
+
+If the graph isn't plotted and you see counts invoked, it is likely that the flow executions were part of the main flow execution, meaning they occurred as sub-flows execution. Sub-flow execution counts are not included in the plotting of graph.
+
+- Number of flow executions - completed, incomplete, and errors 
+
+- Count of flows that were successful vs failed as per user configuration on exit nodes 
+
+- Report of custom exit reasons using user defined tags  
+
+Flow specific reports can are available in two formats:
+
+- Regular View - flow execution stats as shown in the above image.
+
+- Sankey View - flow usage stats in a Sankey chart.
+
+The following image displays a sample Sankey chart report for a workflow.
+
+ [Image: Screenshot of the Sample Sankey Chart Report] 
+A Sample Sankey Chart Report
+
+In this view, a list of saved Sankey charts for each version of the selected workflow appears in the Sankey View pane. Select an entity, a workflow, and the Report Type as Sankey View. Now select the version of the flow for which you want to see the Sankey chart and click View Charts.
+
+## ❗️
+Interactive Reports and Insights
+
+As part of the reporting and analytics enhancements to the platform, we introduced a new interactive reports and insights capability in Beta mode earlier this year. This feature provides a richer reporting experience allowing you to analyze your customer interactions better. Some of the key capabilities include:
+
+- Rich data visualisations
+
+- Drill through reports
+
+- Cross highlighting and filtering between report visuals
+
+- Customizable views
+
+- Export report pages as PDF files
+
+- Export summarized data from individual visuals into CSV, XLS files.
+
+This is a controlled beta release. Please reach out to your account manager if you would like to know more about this feature.
+
+Sample Report for Link Shortener
+
+ [Image: Reports page showing Link Shortener selected as the entity, with Link Shortener engagement metrics for creates, clicks, and click-through rate.] 
+Sample report for Link Shortener engagement.
+
+The above screenshot shows details for Link Shortener with the following data points:
+
+- Total Creates: The number of shortened links created using the selected tag.
+
+- Total Clicks: The total number of clicks recorded for the selected tag.
+
+- Link Shortener Engagement - This provides a comprehensive overview of the Link Shortener report, displaying the number of links created and the total clicks associated with a selected tag, irrespective of the channels.
+
+- CTR: To calculate the click-through rate (CTR): Divide the number of clicks by the number of links sent (or impressions), then multiply by 100 to express it as a percentage.

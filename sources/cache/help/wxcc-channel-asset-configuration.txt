@@ -1,0 +1,15 @@
+Webex Connect and Cisco Webex Contact Center  integration currently supports five channels - SMS, Email, Facebook Messenger, and Live Chat. Here are the details of how you can configure the channel assets for each of these channels within Webex Connect.
+
+ | Channel | Documentation
+
+ | SMS | SMS Asset Creation
+
+ | Email | Email Asset Creation
+
+ | Facebook Messenger | Facebook Messenger Asset Creation
+
+ | Live Chat | LiveChat Asset Creation
+
+ | WhatsApp | WhatsApp Asset Creation
+
+ | Apple Messages for Business | Apple Messages for Business

@@ -1,0 +1,5580 @@
+{
+  "schema_version": 1,
+  "sample_key": "wxcc-apple-time-picker-flow",
+  "title": "Apple Time Picker Flow.workflow",
+  "observed_at": "2026-09-09T00:05:32.254Z",
+  "source_path": "evidence/sample-flows/observed/wxcc-apple-time-picker-flow.json",
+  "source_sha256": "853079ab65445283de2458dd9c5834191576210fc6335f1b0bedfe8a2d3e3ffa",
+  "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model",
+  "runtime_tested": false,
+  "status": "observed_canvas_relationships_summarized",
+  "format_warning": "Internal loaded-canvas model observations only; not a public import schema. Event internal names and visible labels are recorded separately. Dynamic script behavior and missing canvas pages are not inferred.",
+  "counts": {
+    "cells": 86,
+    "operative_nodes": 14,
+    "explicit_edges": 57,
+    "terminal_bindings": 14,
+    "variable_references": 107
+  },
+  "start_configuration": {
+    "channel": 23,
+    "type": "channel",
+    "isCheckLiveSessions": 0,
+    "extras": {},
+    "eventid": 97,
+    "eventname": "MO"
+  },
+  "nodes": [
+    {
+      "id": "2",
+      "label": "Configure Apple Messages for Business Event",
+      "type_internal": "start",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "onbegin",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "selectedChannel": {
+          "id": 23,
+          "name": "AppleBusinessChat",
+          "description": "Apple Messages for Business",
+          "type": 1,
+          "extraData": {}
+        },
+        "selectedRuleEvent": {
+          "name": "Incoming message",
+          "id": 97,
+          "eventname": "MO",
+          "desc": "This event occurs every time a user sends a text message with or without attachments to your Apple Messages for Business."
+        },
+        "ruleEvent": "Incoming message",
+        "isKeyWordDisabled": true,
+        "isKeyWordVerifyReq": true,
+        "isKeyWordAvailable": true,
+        "output_variables": [
+          "abc.abcUserId",
+          "abc.type",
+          "abc.attachments",
+          "abc.message",
+          "abc.attachmentCount",
+          "abc.attachmentUrl",
+          "abc.attachmentType",
+          "abc.locale",
+          "abc.accountId",
+          "abc.appId",
+          "abc.timestamp",
+          "abc.transId",
+          "abc.intentId",
+          "abc.groupId",
+          "abc.deviceAgent",
+          "abc.capabilities",
+          "service.serviceKey",
+          "abc.capabilityList",
+          "abc.pciInfo.isPCICompliance",
+          "abc.pciInfo.isPCIValidationDone",
+          "abc.pciInfo.nonPCIComplianceReason",
+          "abc.pciInfo.isAttachmentEnabled",
+          "abc.pciInfo.droppedAttachmentCount",
+          "abc.malwareinfo.isMalwareCompliance",
+          "abc.malwareinfo.isMalwareValidationDone",
+          "abc.malwareinfo.malwareFailedReason",
+          "abc.malwareinfo.droppedAttachmentCount",
+          "abc.securityscaninfo.isSecurityCompliance",
+          "abc.securityscaninfo.isSecurityValidationDone",
+          "abc.securityscaninfo.securityFailedReason",
+          "abc.securityscaninfo.droppedAttachmentCount"
+        ]
+      },
+      "transition_actions": [
+        {
+          "kind": "session",
+          "name": "abcUserId",
+          "when": "onleave",
+          "value": "$(n2.abc.abcUserId)"
+        },
+        {
+          "kind": "session",
+          "name": "attachments",
+          "when": "onleave",
+          "value": "$(n2.abc.attachments)"
+        },
+        {
+          "kind": "session",
+          "name": "attachmentCount",
+          "when": "onleave",
+          "value": "$(n2. abc.attachmentCount)"
+        },
+        {
+          "kind": "session",
+          "name": "attachmentUrl",
+          "when": "onleave",
+          "value": "$(n2.abc.attachmentUrl)"
+        },
+        {
+          "kind": "session",
+          "name": "accountId",
+          "when": "onleave",
+          "value": "$(n2.abc.accountId)"
+        },
+        {
+          "kind": "session",
+          "name": "appId",
+          "when": "onleave",
+          "value": "$(n2.abc.appId)"
+        },
+        {
+          "kind": "session",
+          "name": "timestamp",
+          "when": "onleave",
+          "value": "$(n2.abc.timestamp)"
+        },
+        {
+          "kind": "session",
+          "name": "transId",
+          "when": "onleave",
+          "value": "$(n2.abc.transId)"
+        },
+        {
+          "kind": "session",
+          "name": "serviceKey",
+          "when": "onleave",
+          "value": "$(n2.service.serviceKey)"
+        },
+        {
+          "kind": "session",
+          "name": "resolveConversationmessagetext",
+          "when": "onleave",
+          "value": "$(n2.abc.message)"
+        },
+        {
+          "kind": "session",
+          "name": "resolveConversationIsPCIValidationDone",
+          "when": "onleave",
+          "value": "$(n2.abc.pciInfo.isPCIValidationDone)"
+        },
+        {
+          "kind": "session",
+          "name": "resolveConversationNonPCIComplianceReasonObject",
+          "when": "onleave",
+          "value": "$(n2.abc.pciInfo.nonPCIComplianceReason)"
+        },
+        {
+          "kind": "session",
+          "name": "isAttachmentEnabled",
+          "when": "onleave",
+          "value": "$(n2.abc.pciInfo.isAttachmentEnabled)"
+        },
+        {
+          "kind": "session",
+          "name": "droppedAttachmentCount",
+          "when": "onleave",
+          "value": "$(n2.abc.pciInfo.droppedAttachmentCount)"
+        },
+        {
+          "kind": "session",
+          "name": "isPCICompliance",
+          "when": "onleave",
+          "value": "$(n2.abc.pciInfo.isPCICompliance)"
+        },
+        {
+          "kind": "session",
+          "name": "customerName",
+          "when": "onleave",
+          "value": "$(defaultCustomerName)"
+        },
+        {
+          "kind": "session",
+          "name": "isSecurityValidationDone",
+          "when": "onleave",
+          "value": "$(n2.abc.securityscaninfo.isSecurityValidationDone)"
+        },
+        {
+          "kind": "session",
+          "name": "securityNonComplianceReasonObject",
+          "when": "onleave",
+          "value": "$(n2.abc.securityscaninfo.securityFailedReason)"
+        },
+        {
+          "kind": "session",
+          "name": "securityScanDroppedAttachmentCount",
+          "when": "onleave",
+          "value": "$(n2.abc.securityscaninfo.droppedAttachmentCount)"
+        },
+        {
+          "kind": "session",
+          "name": "isSecurityCompliance",
+          "when": "onleave",
+          "value": "$(n2.abc.securityscaninfo.isSecurityCompliance)"
+        },
+        {
+          "kind": "session",
+          "name": "isMalwareValidationDone",
+          "when": "onleave",
+          "value": "$(n2.abc.malwareinfo.isMalwareValidationDone)"
+        },
+        {
+          "kind": "session",
+          "name": "isMalwareCompliance",
+          "when": "onleave",
+          "value": "$(n2.abc.malwareinfo.isMalwareCompliance)"
+        },
+        {
+          "kind": "session",
+          "name": "malwareNonComplianceReasonObject",
+          "when": "onleave",
+          "value": "$(n2.abc.malwareinfo.malwareFailedReason)"
+        },
+        {
+          "kind": "session",
+          "name": "malwareScanDroppedAttachmentCount",
+          "when": "onleave",
+          "value": "$(n2.abc.malwareinfo.droppedAttachmentCount)"
+        },
+        {
+          "kind": "session",
+          "name": "deviceCapabilityList",
+          "when": "onleave",
+          "value": "$(n2.abc.capabilityList)"
+        }
+      ],
+      "declared_outputs": [
+        "abc.abcUserId",
+        "abc.type",
+        "abc.attachments",
+        "abc.message",
+        "abc.attachmentCount",
+        "abc.attachmentUrl",
+        "abc.attachmentType",
+        "abc.locale",
+        "abc.accountId",
+        "abc.appId",
+        "abc.timestamp",
+        "abc.transId",
+        "abc.intentId",
+        "abc.groupId",
+        "abc.deviceAgent",
+        "abc.capabilities",
+        "service.serviceKey",
+        "abc.capabilityList",
+        "abc.pciInfo.isPCICompliance",
+        "abc.pciInfo.isPCIValidationDone",
+        "abc.pciInfo.nonPCIComplianceReason",
+        "abc.pciInfo.isAttachmentEnabled",
+        "abc.pciInfo.droppedAttachmentCount",
+        "abc.malwareinfo.isMalwareCompliance",
+        "abc.malwareinfo.isMalwareValidationDone",
+        "abc.malwareinfo.malwareFailedReason",
+        "abc.malwareinfo.droppedAttachmentCount",
+        "abc.securityscaninfo.isSecurityCompliance",
+        "abc.securityscaninfo.isSecurityValidationDone",
+        "abc.securityscaninfo.securityFailedReason",
+        "abc.securityscaninfo.droppedAttachmentCount"
+      ],
+      "output_mappings": []
+    },
+    {
+      "id": "5",
+      "label": "Apple Messages for Business",
+      "type_internal": "umpapplebc",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "onerror",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "hideWaitFor": false,
+        "channelId": 23,
+        "deliverychannel": "abc",
+        "destinationType": "abcUserId",
+        "destination": "$(n2.abc.abcUserId)",
+        "msgcreationtype": "createnew",
+        "type": "text",
+        "body": "Message is resolved",
+        "attachmenttype": "url",
+        "attachments": [
+          {
+            "mimeType": "",
+            "url": ""
+          }
+        ],
+        "successoutcome": 1,
+        "linkValidityCheck": false,
+        "typing_indicator": true,
+        "include_rich_link_video": false,
+        "list_picker_received_message": {
+          "style": "small",
+          "title": "",
+          "subtitle": "",
+          "imageIdentifier": "",
+          "imageurl": "",
+          "ispreviewrequired": false
+        },
+        "list_picker_sections": [
+          {
+            "order": "",
+            "style": "default",
+            "title": "",
+            "items": [
+              {
+                "order": "",
+                "title": "",
+                "subtitle": "",
+                "identifier": "",
+                "ispreviewrequired": false,
+                "imageIdentifier": "",
+                "imageurl": ""
+              }
+            ]
+          }
+        ],
+        "multipleSelection": false,
+        "replyMessage": {
+          "style": "small",
+          "title": ""
+        },
+        "date_picker_received_message": {
+          "style": "small",
+          "title": "",
+          "subtitle": "",
+          "imageIdentifier": "",
+          "imageurl": "",
+          "ispreviewrequired": false
+        },
+        "date_picker_events": {
+          "timezoneOffset": "",
+          "timeslots": [
+            {}
+          ],
+          "location": {}
+        },
+        "payment": {
+          "paymentRequest": {
+            "lineItems": [
+              {
+                "label": "",
+                "amount": "",
+                "type": ""
+              }
+            ],
+            "shippingMethods": [
+              {
+                "label": "",
+                "amount": "",
+                "detail": "",
+                "identifier": ""
+              }
+            ],
+            "total": {
+              "label": "",
+              "amount": "",
+              "type": ""
+            },
+            "countryCode": "",
+            "currencyCode": "",
+            "requiredBillingContactFields": [],
+            "requiredShippingContactFields": []
+          }
+        },
+        "payment_received_message": {
+          "title": ""
+        },
+        "payment_reply_message": {
+          "title": ""
+        },
+        "payment_request_inputtype": "static",
+        "oauthScope": [
+          {}
+        ],
+        "oauthData": {
+          "oauthReceiveTitle": "",
+          "oauthReceivesubtitle": "",
+          "oauthReceiveImage": "",
+          "oauthReplyTitle": "",
+          "oauthReplysubtitle": "",
+          "oauthReplyImage": ""
+        },
+        "static_line_items": [
+          {
+            "label": "",
+            "amount": "",
+            "type": ""
+          }
+        ],
+        "timezoneViewFlag": false,
+        "useLiveLayout": true
+      },
+      "transition_actions": [],
+      "declared_outputs": [],
+      "output_mappings": []
+    },
+    {
+      "id": "13",
+      "label": "Evaluate",
+      "type_internal": "evaluate",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "oninvalidchoice",
+          "declared_target_count": 1
+        },
+        {
+          "event_internal": "onerror",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "evaluteIsOptimization": true,
+        "expression": "var messageDetails = {\n    \"appId\": appId,\n    \"abcUserId\": abcUserId,\n    \"accountId\": accountId,\n    \"customerName\": customerName,\n    \"message\": resolveConversationmessagetext,\n    \"attachments\": attachments,\n    \"attachmentUrl\": attachmentUrl,\n    \"serviceKey\": serviceKey,\n    \"timestamp\": timestamp,\n    \"deviceCapabilityList\": deviceCapabilityList\n};\n\nvar pci = {\n    \"isPCICompliant\": JSON.parse(isPCICompliance.replace(\"NA\", \"true\")),\n    \"isPCIValidationDone\": resolveConversationIsPCIValidationDone,\n    \"nonPCIComplianceReason\": resolveConversationNonPCIComplianceReasonObject,\n    \"droppedAttachmentCount\": JSON.parse(droppedAttachmentCount.replace(\"NA\", \"0\"))\n};\n\nvar malwareScanDetails = {\n    \"isMalwareCompliant\": JSON.parse(isMalwareCompliance.replace(\"NA\", \"true\")),\n    \"isMalwareValidationDone\": isMalwareValidationDone,\n    \"malwareFailedReason\": malwareNonComplianceReasonObject,\n    \"droppedAttachmentCount\": JSON.parse(malwareScanDroppedAttachmentCount.replace(\"NA\", \"0\"))\n};\n\nvar securityScanDetails = {\n    \"isSecurityCompliant\": JSON.parse(isSecurityCompliance.replace(\"NA\", \"true\")),\n    \"isSecurityValidationDone\": isSecurityValidationDone,\n    \"securityFailedReason\": securityNonComplianceReasonObject,\n    \"droppedAttachmentCount\": JSON.parse(securityScanDroppedAttachmentCount.replace(\"NA\", \"0\"))\n};\n\nvar details = {\n    \"messageDetails\": messageDetails,\n    \"pciDetails\": pci,\n    \"malwareScanDetails\": malwareScanDetails,\n    \"securityScanDetails\": securityScanDetails\n};\n\nvar detailsJson = JSON.stringify(details);\n\n1;",
+        "exp": "var messageDetails = {\n    \"appId\": appId,\n    \"abcUserId\": abcUserId,\n    \"accountId\": accountId,\n    \"customerName\": customerName,\n    \"message\": resolveConversationmessagetext,\n    \"attachments\": attachments,\n    \"attachmentUrl\": attachmentUrl,\n    \"serviceKey\": serviceKey,\n    \"timestamp\": timestamp,\n    \"deviceCapabilityList\": deviceCapabilityList\n};\n\nvar pci = {\n    \"isPCICompliant\": JSON.parse(isPCICompliance.replace(\"NA\", \"true\")),\n    \"isPCIValidationDone\": resolveConversationIsPCIValidationDone,\n    \"nonPCIComplianceReason\": resolveConversationNonPCIComplianceReasonObject,\n    \"droppedAttachmentCount\": JSON.parse(droppedAttachmentCount.replace(\"NA\", \"0\"))\n};\n\nvar malwareScanDetails = {\n    \"isMalwareCompliant\": JSON.parse(isMalwareCompliance.replace(\"NA\", \"true\")),\n    \"isMalwareValidationDone\": isMalwareValidationDone,\n    \"malwareFailedReason\": malwareNonComplianceReasonObject,\n    \"droppedAttachmentCount\": JSON.parse(malwareScanDroppedAttachmentCount.replace(\"NA\", \"0\"))\n};\n\nvar securityScanDetails = {\n    \"isSecurityCompliant\": JSON.parse(isSecurityCompliance.replace(\"NA\", \"true\")),\n    \"isSecurityValidationDone\": isSecurityValidationDone,\n    \"securityFailedReason\": securityNonComplianceReasonObject,\n    \"droppedAttachmentCount\": JSON.parse(securityScanDroppedAttachmentCount.replace(\"NA\", \"0\"))\n};\n\nvar details = {\n    \"messageDetails\": messageDetails,\n    \"pciDetails\": pci,\n    \"malwareScanDetails\": malwareScanDetails,\n    \"securityScanDetails\": securityScanDetails\n};\n\nvar detailsJson = JSON.stringify(details);\n\n1;",
+        "isTestExecuted": true,
+        "nodeVersion": 1
+      },
+      "transition_actions": [],
+      "declared_outputs": [],
+      "output_mappings": []
+    },
+    {
+      "id": "15",
+      "label": "Resolve Conversation",
+      "type_internal": "prebuiltnode",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "oninvaliddata",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "onerror",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "oninvalidchoice",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "ontimeout",
+          "declared_target_count": null
+        }
+      ],
+      "configuration": {
+        "referencekey": 50302,
+        "versionIds": "undefined",
+        "integration_id": 50302,
+        "client_uuid": "50d97e6a-ad14-4a77-898a-7f6f104bfb14",
+        "method_id": 57868,
+        "version_id": 52306,
+        "auth_id": -1,
+        "methodResponseParameters": [
+          {
+            "order": 0,
+            "id": "b1e142f3-147f-4979-9685-afd59669f428",
+            "name": "transId",
+            "path": "$.transId",
+            "value": "",
+            "desc": "",
+            "type": "body",
+            "validation": {
+              "type": "",
+              "condition": null,
+              "regex": "",
+              "mandatory": true,
+              "format_validator": null
+            },
+            "key": null,
+            "debugKey": false,
+            "node_ui_type": null,
+            "node_ui_group_name": null,
+            "ui_field_configuration": null
+          },
+          {
+            "order": 1,
+            "id": "8d1a2153-82b3-45c3-97d0-8c40209cf61f",
+            "name": "taskId",
+            "path": "$.taskId",
+            "value": "",
+            "desc": "",
+            "type": "body",
+            "validation": {
+              "type": "",
+              "condition": null,
+              "regex": "",
+              "mandatory": true,
+              "format_validator": null
+            },
+            "key": null,
+            "debugKey": false,
+            "node_ui_type": null,
+            "node_ui_group_name": null,
+            "ui_field_configuration": null
+          },
+          {
+            "order": 2,
+            "id": "3f8b9b65-053c-4be7-b0fc-e47d48c1bb4b",
+            "name": "conversationOperation",
+            "path": "$.conversationOperation",
+            "value": "",
+            "desc": "",
+            "type": "body",
+            "validation": {
+              "type": "",
+              "condition": null,
+              "regex": "",
+              "mandatory": true,
+              "format_validator": null
+            },
+            "key": null,
+            "debugKey": false,
+            "node_ui_type": null,
+            "node_ui_group_name": null,
+            "ui_field_configuration": null
+          }
+        ],
+        "request_body": [
+          {
+            "name": "Trans Id",
+            "value": "$(transId)",
+            "id": "969b36c1-d92a-48c3-822f-ee34b282462e"
+          },
+          {
+            "name": "Media Type",
+            "value": "social",
+            "id": "b611a9fe-d5ff-4967-96cb-98806e423574"
+          },
+          {
+            "name": "Media Channel",
+            "value": "appleMessages",
+            "id": "80b510f4-70dd-42e0-b711-2549dc964319"
+          },
+          {
+            "name": "tenant_identifier",
+            "id": "1d0cca74-9d4f-40b5-8bbb-c13ac69aba08"
+          },
+          {
+            "name": "webhookurl",
+            "id": "62b8dcc0-cb65-469c-9ed2-0ab2271b7adb"
+          },
+          {
+            "name": "overrideDefaultClose",
+            "value": false,
+            "id": "2fdbf4d3-2924-442b-871c-07435bdbdf21"
+          },
+          {
+            "name": "Details JSON",
+            "value": "$(detailsJson)",
+            "id": "3cb815d1-c4bd-4ec4-9339-847798f1d37a"
+          }
+        ],
+        "path_parameters": [
+          {
+            "name": "domain",
+            "id": "29f23013-459d-4c28-aa3f-8bc91536bcc5"
+          }
+        ],
+        "custom_output_vars": [
+          "transId",
+          "taskId",
+          "conversationOperation"
+        ],
+        "viewmodeData": [
+          {
+            "name": "auth_id",
+            "value": "Wxcc",
+            "isNgSelectBox": true
+          },
+          {
+            "name": "version_id",
+            "value": ""
+          },
+          {
+            "name": "method_id",
+            "value": "Resolve Conversation"
+          }
+        ],
+        "isAuthPresent": true,
+        "isComponentNode": 1,
+        "container_name": "https://example.invalid/integration_node_file_webex-cc-task-resolve-conversation_1701421030212.js",
+        "nodeType": "https://example.invalid/integration_node_file_webex-cc-task-resolve-conversation_1701421030212.js",
+        "nodeInput": {
+          "transId": "$(transId)",
+          "trackingId": "$(transId)",
+          "flowId": 34617,
+          "details": "$(detailsJson)",
+          "mediatype": "social",
+          "channel": "appleMessages",
+          "overrideDefaultClose": false,
+          "sourcenumber": null,
+          "customerid": "",
+          "customername": "",
+          "origin": "",
+          "subject": ""
+        },
+        "group_id": 50020,
+        "customUiAuthStatus": 0,
+        "adminParameters": {
+          "oauth_callbackurl_type": 1,
+          "tenant_identifier": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+          "domain": "qaus1",
+          "integration_identifier": "https://example.invalid/v1/integration/cntwct"
+        },
+        "customuiWebcomponentElementName": "node-ui-template1701421030212",
+        "extraParamsData": {
+          "transId": "$(transId)",
+          "trackingId": "$(transId)",
+          "flowId": "Please enter the flow id",
+          "details": "$(detailsJson)",
+          "mediatype": "social",
+          "channel": "appleMessages",
+          "overrideDefaultClose": false,
+          "sourcenumber": null,
+          "customerid": "",
+          "customername": "",
+          "origin": "",
+          "subject": ""
+        },
+        "isCustomUiAuthPresent": false,
+        "integration_version": 3,
+        "runTimeAuthorizationId": "[redacted]",
+        "nodeUiAuthorizationId": "[redacted]"
+      },
+      "transition_actions": [],
+      "declared_outputs": [
+        "transId",
+        "taskId",
+        "conversationOperation"
+      ],
+      "output_mappings": [
+        {
+          "order": 0,
+          "id": "b1e142f3-147f-4979-9685-afd59669f428",
+          "name": "transId",
+          "path": "$.transId",
+          "value": "",
+          "desc": "",
+          "type": "body",
+          "validation": {
+            "type": "",
+            "condition": null,
+            "regex": "",
+            "mandatory": true,
+            "format_validator": null
+          },
+          "key": null,
+          "debugKey": false,
+          "node_ui_type": null,
+          "node_ui_group_name": null,
+          "ui_field_configuration": null
+        },
+        {
+          "order": 1,
+          "id": "8d1a2153-82b3-45c3-97d0-8c40209cf61f",
+          "name": "taskId",
+          "path": "$.taskId",
+          "value": "",
+          "desc": "",
+          "type": "body",
+          "validation": {
+            "type": "",
+            "condition": null,
+            "regex": "",
+            "mandatory": true,
+            "format_validator": null
+          },
+          "key": null,
+          "debugKey": false,
+          "node_ui_type": null,
+          "node_ui_group_name": null,
+          "ui_field_configuration": null
+        },
+        {
+          "order": 2,
+          "id": "3f8b9b65-053c-4be7-b0fc-e47d48c1bb4b",
+          "name": "conversationOperation",
+          "path": "$.conversationOperation",
+          "value": "",
+          "desc": "",
+          "type": "body",
+          "validation": {
+            "type": "",
+            "condition": null,
+            "regex": "",
+            "mandatory": true,
+            "format_validator": null
+          },
+          "key": null,
+          "debugKey": false,
+          "node_ui_type": null,
+          "node_ui_group_name": null,
+          "ui_field_configuration": null
+        }
+      ]
+    },
+    {
+      "id": "22",
+      "label": "Apple Messages for Business",
+      "type_internal": "umpapplebc",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "onerror",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "hideWaitFor": false,
+        "channelId": 23,
+        "deliverychannel": "abc",
+        "destinationType": "abcUserId",
+        "destination": "$(n2.abc.abcUserId)",
+        "msgcreationtype": "createnew",
+        "type": "text",
+        "body": "$(errorMsg1)",
+        "attachmenttype": "url",
+        "attachments": [
+          {
+            "mimeType": "",
+            "url": ""
+          }
+        ],
+        "successoutcome": 1,
+        "linkValidityCheck": false,
+        "typing_indicator": true,
+        "include_rich_link_video": false,
+        "list_picker_received_message": {
+          "style": "small",
+          "title": "",
+          "subtitle": "",
+          "imageIdentifier": "",
+          "imageurl": "",
+          "ispreviewrequired": false
+        },
+        "list_picker_sections": [
+          {
+            "order": "",
+            "style": "default",
+            "title": "",
+            "items": [
+              {
+                "order": "",
+                "title": "",
+                "subtitle": "",
+                "identifier": "",
+                "ispreviewrequired": false,
+                "imageIdentifier": "",
+                "imageurl": ""
+              }
+            ]
+          }
+        ],
+        "multipleSelection": false,
+        "replyMessage": {
+          "style": "small",
+          "title": ""
+        },
+        "date_picker_received_message": {
+          "style": "small",
+          "title": "",
+          "subtitle": "",
+          "imageIdentifier": "",
+          "imageurl": "",
+          "ispreviewrequired": false
+        },
+        "date_picker_events": {
+          "timezoneOffset": "",
+          "timeslots": [
+            {}
+          ],
+          "location": {}
+        },
+        "payment": {
+          "paymentRequest": {
+            "lineItems": [
+              {
+                "label": "",
+                "amount": "",
+                "type": ""
+              }
+            ],
+            "shippingMethods": [
+              {
+                "label": "",
+                "amount": "",
+                "detail": "",
+                "identifier": ""
+              }
+            ],
+            "total": {
+              "label": "",
+              "amount": "",
+              "type": ""
+            },
+            "countryCode": "",
+            "currencyCode": "",
+            "requiredBillingContactFields": [],
+            "requiredShippingContactFields": []
+          }
+        },
+        "payment_received_message": {
+          "title": ""
+        },
+        "payment_reply_message": {
+          "title": ""
+        },
+        "payment_request_inputtype": "static",
+        "oauthScope": [
+          {}
+        ],
+        "oauthData": {
+          "oauthReceiveTitle": "",
+          "oauthReceivesubtitle": "",
+          "oauthReceiveImage": "",
+          "oauthReplyTitle": "",
+          "oauthReplysubtitle": "",
+          "oauthReplyImage": ""
+        },
+        "static_line_items": [
+          {
+            "label": "",
+            "amount": "",
+            "type": ""
+          }
+        ],
+        "timezoneViewFlag": false,
+        "useLiveLayout": true
+      },
+      "transition_actions": [],
+      "declared_outputs": [],
+      "output_mappings": []
+    },
+    {
+      "id": "23",
+      "label": "Close Task",
+      "type_internal": "prebuiltnode",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "oninvaliddata",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "onerror",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "oninvalidchoice",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "ontimeout",
+          "declared_target_count": null
+        }
+      ],
+      "configuration": {
+        "referencekey": 50022,
+        "versionIds": "undefined",
+        "integration_id": 50022,
+        "client_uuid": "80bd20eb-296d-435a-8160-793ba617a39e",
+        "method_id": 50348,
+        "version_id": 50163,
+        "auth_id": -1,
+        "request_body": [
+          {
+            "name": "Task Id",
+            "value": "$(taskId)",
+            "id": "ff9e7104-2c35-4e00-95bd-e886b793dc4d"
+          },
+          {
+            "name": "tenant_identifier",
+            "value": "",
+            "id": "31e84e4f-2bad-b743-0a69-537e5be2edc6"
+          },
+          {
+            "name": "Conversation ID",
+            "value": "$(conversationId)",
+            "id": "051e4b74-6a19-cb0e-1e09-b29decd9dcae"
+          },
+          {
+            "name": "Media Type",
+            "value": "social",
+            "id": "70ca0e89-14be-cb0d-7baf-baf71dc3b954"
+          },
+          {
+            "name": "webhookurl",
+            "value": "",
+            "id": "a5395711-fe55-4e41-ac63-63114440bc3e"
+          }
+        ],
+        "path_parameters": [
+          {
+            "name": "domain",
+            "value": "",
+            "id": "35a59252-32a4-f8f9-afe2-7c3287052a51"
+          },
+          {
+            "name": "ID",
+            "value": "$(taskId)",
+            "id": "a01f1704-493b-4a7f-8252-c3dfd1340f3f"
+          }
+        ],
+        "viewmodeData": [
+          {
+            "name": "auth_id",
+            "value": "Wxcc_Latest_V4",
+            "isNgSelectBox": true
+          },
+          {
+            "name": "version_id",
+            "value": "v1.1"
+          },
+          {
+            "name": "method_id",
+            "value": "Close Task on WxCC"
+          }
+        ],
+        "isAuthPresent": true,
+        "isComponentNode": 3,
+        "group_id": 50020,
+        "customUiAuthStatus": 0,
+        "adminParameters": {
+          "oauth_callbackurl_type": 1,
+          "tenant_identifier": "1b598f3e-447e-45fd-928e-7357b8a4a895",
+          "domain": "intgus1",
+          "integration_identifier": "https://example.invalid/v1/integration/cntwct"
+        },
+        "isCustomUiAuthPresent": true,
+        "integration_version": 3,
+        "runTimeAuthorizationId": "[redacted]",
+        "nodeUiAuthorizationId": "[redacted]"
+      },
+      "transition_actions": [],
+      "declared_outputs": [],
+      "output_mappings": []
+    },
+    {
+      "id": "27",
+      "label": "Apple Messages for Business",
+      "type_internal": "umpapplebc",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "onerror",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "hideWaitFor": false,
+        "channelId": 23,
+        "deliverychannel": "abc",
+        "destinationType": "abcUserId",
+        "destination": "$(n2.abc.abcUserId)",
+        "msgcreationtype": "createnew",
+        "type": "text",
+        "body": "$(errorMsg1)",
+        "attachmenttype": "url",
+        "attachments": [
+          {
+            "mimeType": "",
+            "url": ""
+          }
+        ],
+        "successoutcome": 1,
+        "linkValidityCheck": false,
+        "typing_indicator": true,
+        "include_rich_link_video": false,
+        "list_picker_received_message": {
+          "style": "small",
+          "title": "",
+          "subtitle": "",
+          "imageIdentifier": "",
+          "imageurl": "",
+          "ispreviewrequired": false
+        },
+        "list_picker_sections": [
+          {
+            "order": "",
+            "style": "default",
+            "title": "",
+            "items": [
+              {
+                "order": "",
+                "title": "",
+                "subtitle": "",
+                "identifier": "",
+                "ispreviewrequired": false,
+                "imageIdentifier": "",
+                "imageurl": ""
+              }
+            ]
+          }
+        ],
+        "multipleSelection": false,
+        "replyMessage": {
+          "style": "small",
+          "title": ""
+        },
+        "date_picker_received_message": {
+          "style": "small",
+          "title": "",
+          "subtitle": "",
+          "imageIdentifier": "",
+          "imageurl": "",
+          "ispreviewrequired": false
+        },
+        "date_picker_events": {
+          "timezoneOffset": "",
+          "timeslots": [
+            {}
+          ],
+          "location": {}
+        },
+        "payment": {
+          "paymentRequest": {
+            "lineItems": [
+              {
+                "label": "",
+                "amount": "",
+                "type": ""
+              }
+            ],
+            "shippingMethods": [
+              {
+                "label": "",
+                "amount": "",
+                "detail": "",
+                "identifier": ""
+              }
+            ],
+            "total": {
+              "label": "",
+              "amount": "",
+              "type": ""
+            },
+            "countryCode": "",
+            "currencyCode": "",
+            "requiredBillingContactFields": [],
+            "requiredShippingContactFields": []
+          }
+        },
+        "payment_received_message": {
+          "title": ""
+        },
+        "payment_reply_message": {
+          "title": ""
+        },
+        "payment_request_inputtype": "static",
+        "oauthScope": [
+          {}
+        ],
+        "oauthData": {
+          "oauthReceiveTitle": "",
+          "oauthReceivesubtitle": "",
+          "oauthReceiveImage": "",
+          "oauthReplyTitle": "",
+          "oauthReplysubtitle": "",
+          "oauthReplyImage": ""
+        },
+        "static_line_items": [
+          {
+            "label": "",
+            "amount": "",
+            "type": ""
+          }
+        ],
+        "timezoneViewFlag": false,
+        "useLiveLayout": true
+      },
+      "transition_actions": [],
+      "declared_outputs": [],
+      "output_mappings": []
+    },
+    {
+      "id": "59",
+      "label": "Queue Task",
+      "type_internal": "prebuiltnode",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "oninvaliddata",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "onerror",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "oninvalidchoice",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "ontimeout",
+          "declared_target_count": null
+        }
+      ],
+      "configuration": {
+        "referencekey": 50021,
+        "versionIds": "undefined",
+        "integration_id": 50021,
+        "client_uuid": "50d97e6a-ad14-4a77-898a-7f6f104bfb14",
+        "method_id": 57867,
+        "version_id": 52305,
+        "auth_id": -1,
+        "methodResponseParameters": [
+          {
+            "order": 0,
+            "id": "713640c4-ba82-4e2c-b154-b1810240db28",
+            "name": "taskId",
+            "path": "$.id",
+            "value": "",
+            "desc": "",
+            "type": "body",
+            "validation": {
+              "type": "",
+              "condition": null,
+              "regex": "",
+              "mandatory": true,
+              "format_validator": null
+            },
+            "key": null,
+            "debugKey": false,
+            "node_ui_type": null,
+            "node_ui_group_name": null,
+            "ui_field_configuration": null
+          },
+          {
+            "order": 1,
+            "id": "6fb1e9f7-bdd2-4585-aebe-9dfdd0350793",
+            "name": "agentId",
+            "path": "$.data.agentId",
+            "value": "",
+            "desc": "",
+            "type": "body",
+            "validation": {
+              "type": "",
+              "condition": null,
+              "regex": "",
+              "mandatory": true,
+              "format_validator": null
+            },
+            "key": null,
+            "debugKey": false,
+            "node_ui_type": null,
+            "node_ui_group_name": null,
+            "ui_field_configuration": null
+          }
+        ],
+        "request_body": [
+          {
+            "name": "id",
+            "value": "$(taskId)",
+            "id": "fe686042-a932-4583-afab-639d75fdbe92"
+          },
+          {
+            "name": "tenant_identifier",
+            "id": "278f27c4-33b5-4dec-9d13-b219c30e9a82"
+          },
+          {
+            "name": "queueid",
+            "value": "0d21cd70-b5db-4e32-9c13-88252a01d403",
+            "id": "8cee6079-d764-4a1b-b916-76562659ec73"
+          },
+          {
+            "name": "conversationid",
+            "value": "$(conversationId)",
+            "id": "59d29903-e969-4417-a440-0ca13f486912"
+          },
+          {
+            "name": "mediatype",
+            "value": "social",
+            "id": "d5593c82-9bbd-4d86-9f2c-a43f7633eb37"
+          },
+          {
+            "name": "skillRequirements",
+            "value": "{\\\"requirements\\\":[],\\\"relaxations\\\":[],\\\"relaxationToggle\\\":false}",
+            "id": "c388b1c1-b52c-4841-89ff-dc699fd6596f"
+          },
+          {
+            "name": "contactPriority",
+            "value": "",
+            "id": "3311060c-c23e-4cb0-be4f-5f8cc3512a4c"
+          },
+          {
+            "name": "webhookurl",
+            "id": "e1271f37-8f38-4037-830e-2535dfa60f0a"
+          }
+        ],
+        "path_parameters": [
+          {
+            "name": "domain",
+            "id": "f4bdc968-4573-787b-caa0-66256e73ffa9"
+          },
+          {
+            "name": "id",
+            "value": "$(taskId)",
+            "id": "351695bc-1fa7-2d65-ef79-6bcaafa98c8a"
+          }
+        ],
+        "custom_output_vars": [
+          "taskId",
+          "agentId"
+        ],
+        "viewmodeData": [
+          {
+            "name": "auth_id",
+            "value": "Wxcc",
+            "isNgSelectBox": true
+          },
+          {
+            "name": "version_id",
+            "value": ""
+          },
+          {
+            "name": "method_id",
+            "value": "Queue task"
+          }
+        ],
+        "isAuthPresent": true,
+        "isComponentNode": 1,
+        "container_name": "https://example.invalid/integration_node_file_queue-task_1706168429497_12273366987672346.js",
+        "nodeType": "https://example.invalid/integration_node_file_queue-task_1706168429497_12273366987672346.js",
+        "nodeInput": {
+          "id": "$(taskId)",
+          "queueid": "b6a165b9-ec18-401b-8123-04aca1366146",
+          "mediatype": "social",
+          "channel": "appleMessages",
+          "isskillrouting": false,
+          "conversationid": "$(conversationId)",
+          "relaxationToggle": false,
+          "requirements": [],
+          "relaxations": [],
+          "queuenameOptions": [
+            {
+              "value": "IMI-Preprod-AMB-queue1",
+              "key": "b6a165b9-ec18-401b-8123-04aca1366146"
+            },
+            {
+              "value": "IMI-Preprod-AMB-queue2",
+              "key": "0d21cd70-b5db-4e32-9c13-88252a01d403"
+            },
+            {
+              "value": "IMI-Preprod-FB-Queue",
+              "key": "17e8c5d8-1ced-408d-aa76-b858237896bf"
+            },
+            {
+              "value": "IMI-Preprod-WhatsApp-Queue",
+              "key": "58d373a0-2225-4b68-9948-785f2c9bd6c7"
+            },
+            {
+              "value": "IMI-SMS-Queue",
+              "key": "0bb780a4-0e62-4605-87e2-9d25049c156b"
+            },
+            {
+              "value": "IMI-Social-Queue-SBR",
+              "key": "630c4bdd-6d32-41a1-9c51-44c4f82b5e81"
+            },
+            {
+              "value": "Soln_Auto_QA_AMB_Queue",
+              "key": "2d49fd10-e2ad-4239-aea0-efe8d85b96d6"
+            }
+          ],
+          "queueInfo": [
+            {
+              "id": "b6a165b9-ec18-401b-8123-04aca1366146",
+              "type": "virtual-team",
+              "attributes": {
+                "organizationId": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "tid": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "sid": "b6a165b9-ec18-401b-8123-04aca1366146",
+                "productVersion": 2,
+                "_seedData__i": 0,
+                "name__s": "IMI-Preprod-AMB-queue1",
+                "description__s": "IMI-Preprod-AMB-team (this will be used for AMB channel)",
+                "type__i": 1,
+                "channelType__i": 7,
+                "maxTimeInQueue__l": 30,
+                "status__i": 1,
+                "outdialCampaignEnabled__i": 0,
+                "permitMonitoring__i": 0,
+                "permitParking__i": 0,
+                "permitRecording__i": 0,
+                "recordAllCalls__i": 0,
+                "pauseResumeEnabled__i": 0,
+                "ccOneQueue__i": 0,
+                "imiOrgType__s": "IMI",
+                "callDistributionGroups__s": [],
+                "_type__s": "virtual-team",
+                "cstts": 1707207338000,
+                "_lmts__l": 1709555134000,
+                "routingType__s": "LONGEST_AVAILABLE_AGENT",
+                "dbId__s": "b6a165b9-ec18-401b-8123-04aca1366146"
+              },
+              "auxiliaryDataType": "RESOURCES"
+            },
+            {
+              "id": "0d21cd70-b5db-4e32-9c13-88252a01d403",
+              "type": "virtual-team",
+              "attributes": {
+                "organizationId": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "tid": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "sid": "0d21cd70-b5db-4e32-9c13-88252a01d403",
+                "productVersion": 2,
+                "_seedData__i": 0,
+                "name__s": "IMI-Preprod-AMB-queue2",
+                "description__s": "AMB channel queue 2",
+                "type__i": 1,
+                "channelType__i": 7,
+                "maxTimeInQueue__l": 30,
+                "status__i": 1,
+                "outdialCampaignEnabled__i": 0,
+                "permitMonitoring__i": 0,
+                "permitParking__i": 0,
+                "permitRecording__i": 0,
+                "recordAllCalls__i": 0,
+                "pauseResumeEnabled__i": 0,
+                "ccOneQueue__i": 0,
+                "imiOrgType__s": "IMI",
+                "callDistributionGroups__s": [],
+                "_type__s": "virtual-team",
+                "cstts": 1709555105000,
+                "_lmts__l": 1709555151000,
+                "routingType__s": "LONGEST_AVAILABLE_AGENT",
+                "dbId__s": "0d21cd70-b5db-4e32-9c13-88252a01d403"
+              },
+              "auxiliaryDataType": "RESOURCES"
+            },
+            {
+              "id": "17e8c5d8-1ced-408d-aa76-b858237896bf",
+              "type": "virtual-team",
+              "attributes": {
+                "organizationId": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "tid": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "sid": "17e8c5d8-1ced-408d-aa76-b858237896bf",
+                "productVersion": 2,
+                "_seedData__i": 0,
+                "name__s": "IMI-Preprod-FB-Queue",
+                "description__s": "",
+                "type__i": 1,
+                "channelType__i": 7,
+                "maxTimeInQueue__l": 90,
+                "status__i": 1,
+                "outdialCampaignEnabled__i": 0,
+                "permitMonitoring__i": 0,
+                "permitParking__i": 0,
+                "permitRecording__i": 0,
+                "recordAllCalls__i": 0,
+                "pauseResumeEnabled__i": 0,
+                "ccOneQueue__i": 0,
+                "imiOrgType__s": "IMI",
+                "callDistributionGroups__s": [],
+                "_type__s": "virtual-team",
+                "cstts": 1656004898000,
+                "_lmts__l": 1677063742000,
+                "timezone__s": "Asia/Calcutta",
+                "routingType__s": "LONGEST_AVAILABLE_AGENT",
+                "dbId__s": "17e8c5d8-1ced-408d-aa76-b858237896bf"
+              },
+              "auxiliaryDataType": "RESOURCES"
+            },
+            {
+              "id": "58d373a0-2225-4b68-9948-785f2c9bd6c7",
+              "type": "virtual-team",
+              "attributes": {
+                "organizationId": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "tid": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "sid": "58d373a0-2225-4b68-9948-785f2c9bd6c7",
+                "productVersion": 2,
+                "_seedData__i": 0,
+                "name__s": "IMI-Preprod-WhatsApp-Queue",
+                "description__s": "",
+                "type__i": 1,
+                "channelType__i": 7,
+                "maxTimeInQueue__l": 90,
+                "status__i": 1,
+                "outdialCampaignEnabled__i": 0,
+                "permitMonitoring__i": 0,
+                "permitParking__i": 0,
+                "permitRecording__i": 0,
+                "recordAllCalls__i": 0,
+                "pauseResumeEnabled__i": 0,
+                "ccOneQueue__i": 0,
+                "imiOrgType__s": "IMI",
+                "callDistributionGroups__s": [],
+                "_type__s": "virtual-team",
+                "cstts": 1656925214000,
+                "_lmts__l": 1677063761000,
+                "timezone__s": "Asia/Calcutta",
+                "routingType__s": "LONGEST_AVAILABLE_AGENT",
+                "dbId__s": "58d373a0-2225-4b68-9948-785f2c9bd6c7"
+              },
+              "auxiliaryDataType": "RESOURCES"
+            },
+            {
+              "id": "0bb780a4-0e62-4605-87e2-9d25049c156b",
+              "type": "virtual-team",
+              "attributes": {
+                "organizationId": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "tid": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "sid": "0bb780a4-0e62-4605-87e2-9d25049c156b",
+                "productVersion": 2,
+                "_seedData__i": 0,
+                "name__s": "IMI-SMS-Queue",
+                "description__s": "",
+                "type__i": 1,
+                "channelType__i": 7,
+                "maxTimeInQueue__l": 180,
+                "status__i": 1,
+                "outdialCampaignEnabled__i": 0,
+                "permitMonitoring__i": 0,
+                "permitParking__i": 0,
+                "permitRecording__i": 0,
+                "recordAllCalls__i": 0,
+                "pauseResumeEnabled__i": 0,
+                "ccOneQueue__i": 0,
+                "imiOrgType__s": "IMI",
+                "callDistributionGroups__s": [],
+                "_type__s": "virtual-team",
+                "cstts": 1658225300000,
+                "_lmts__l": 1677134746000,
+                "routingType__s": "LONGEST_AVAILABLE_AGENT",
+                "dbId__s": "0bb780a4-0e62-4605-87e2-9d25049c156b"
+              },
+              "auxiliaryDataType": "RESOURCES"
+            },
+            {
+              "id": "630c4bdd-6d32-41a1-9c51-44c4f82b5e81",
+              "type": "virtual-team",
+              "attributes": {
+                "organizationId": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "tid": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "sid": "630c4bdd-6d32-41a1-9c51-44c4f82b5e81",
+                "productVersion": 2,
+                "_seedData__i": 0,
+                "name__s": "IMI-Social-Queue-SBR",
+                "description__s": "IMI-Social-Queue-SBR",
+                "type__i": 1,
+                "channelType__i": 7,
+                "maxTimeInQueue__l": 80,
+                "status__i": 1,
+                "outdialCampaignEnabled__i": 0,
+                "permitMonitoring__i": 0,
+                "permitParking__i": 0,
+                "permitRecording__i": 0,
+                "recordAllCalls__i": 0,
+                "pauseResumeEnabled__i": 0,
+                "ccOneQueue__i": 0,
+                "imiOrgType__s": "IMI",
+                "callDistributionGroups__s": [],
+                "_type__s": "virtual-team",
+                "cstts": 1676457983000,
+                "_lmts__l": 1676457983000,
+                "routingType__s": "SKILLS_BASED",
+                "skillBasedRoutingType__s": "LONGEST_AVAILABLE_AGENT",
+                "dbId__s": "630c4bdd-6d32-41a1-9c51-44c4f82b5e81"
+              },
+              "auxiliaryDataType": "RESOURCES"
+            },
+            {
+              "id": "2d49fd10-e2ad-4239-aea0-efe8d85b96d6",
+              "type": "virtual-team",
+              "attributes": {
+                "organizationId": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "tid": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "sid": "2d49fd10-e2ad-4239-aea0-efe8d85b96d6",
+                "productVersion": 2,
+                "_seedData__i": 0,
+                "name__s": "Soln_Auto_QA_AMB_Queue",
+                "description__s": "",
+                "type__i": 1,
+                "channelType__i": 7,
+                "maxTimeInQueue__l": 120,
+                "status__i": 1,
+                "outdialCampaignEnabled__i": 0,
+                "permitMonitoring__i": 0,
+                "permitParking__i": 0,
+                "permitRecording__i": 0,
+                "recordAllCalls__i": 0,
+                "pauseResumeEnabled__i": 0,
+                "ccOneQueue__i": 0,
+                "imiOrgType__s": "IMI",
+                "callDistributionGroups__s": [],
+                "_type__s": "virtual-team",
+                "cstts": 1706699634000,
+                "_lmts__l": 1706699634000,
+                "routingType__s": "LONGEST_AVAILABLE_AGENT",
+                "dbId__s": "2d49fd10-e2ad-4239-aea0-efe8d85b96d6"
+              },
+              "auxiliaryDataType": "RESOURCES"
+            }
+          ],
+          "skillInfo": [
+            {
+              "id": "6b1119a5-4d4f-493f-a0ac-e16daf4798f5",
+              "type": "skill",
+              "attributes": {
+                "organizationId": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "tid": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "sid": "6b1119a5-4d4f-493f-a0ac-e16daf4798f5",
+                "productVersion": 2,
+                "status__i": 1,
+                "type__i": 3,
+                "_type__s": "skill",
+                "cstts": 1676450699000,
+                "_lmts__l": 1676450699000,
+                "enumSkillValues": [
+                  {
+                    "skillId__s": "6b1119a5-4d4f-493f-a0ac-e16daf4798f5",
+                    "name__s": "Sales"
+                  },
+                  {
+                    "skillId__s": "6b1119a5-4d4f-493f-a0ac-e16daf4798f5",
+                    "name__s": "Credit"
+                  },
+                  {
+                    "skillId__s": "6b1119a5-4d4f-493f-a0ac-e16daf4798f5",
+                    "name__s": "Debit"
+                  }
+                ],
+                "serviceLevelThreshold__i": 5,
+                "name__s": "Department",
+                "description__s": "Department",
+                "dbId__s": "6b1119a5-4d4f-493f-a0ac-e16daf4798f5"
+              },
+              "auxiliaryDataType": "RESOURCES"
+            },
+            {
+              "id": "e235e767-dca9-433b-8c17-e449b4be372d",
+              "type": "skill",
+              "attributes": {
+                "organizationId": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "tid": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "sid": "e235e767-dca9-433b-8c17-e449b4be372d",
+                "productVersion": 2,
+                "status__i": 1,
+                "type__i": 0,
+                "_type__s": "skill",
+                "cstts": 1676005996000,
+                "_lmts__l": 1676450569000,
+                "enumSkillValues": [],
+                "serviceLevelThreshold__i": 1,
+                "name__s": "English",
+                "description__s": "English Speaking Expert",
+                "dbId__s": "e235e767-dca9-433b-8c17-e449b4be372d"
+              },
+              "auxiliaryDataType": "RESOURCES"
+            },
+            {
+              "id": "cc35be5e-7b11-4eb4-992e-fecc5da51c37",
+              "type": "skill",
+              "attributes": {
+                "organizationId": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "tid": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "sid": "cc35be5e-7b11-4eb4-992e-fecc5da51c37",
+                "productVersion": 2,
+                "status__i": 1,
+                "type__i": 2,
+                "_type__s": "skill",
+                "cstts": 1676450640000,
+                "_lmts__l": 1676450640000,
+                "enumSkillValues": [],
+                "serviceLevelThreshold__i": 4,
+                "name__s": "Expertise",
+                "description__s": "Expertise Area",
+                "dbId__s": "cc35be5e-7b11-4eb4-992e-fecc5da51c37"
+              },
+              "auxiliaryDataType": "RESOURCES"
+            },
+            {
+              "id": "3c02fc0f-7d48-4b68-b5e4-7c6b4ff5b56e",
+              "type": "skill",
+              "attributes": {
+                "organizationId": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "tid": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "sid": "3c02fc0f-7d48-4b68-b5e4-7c6b4ff5b56e",
+                "productVersion": 2,
+                "status__i": 1,
+                "type__i": 0,
+                "_type__s": "skill",
+                "cstts": 1676006070000,
+                "_lmts__l": 1676450576000,
+                "enumSkillValues": [],
+                "serviceLevelThreshold__i": 2,
+                "name__s": "Hindi",
+                "description__s": "Hindi Speaking Expert",
+                "dbId__s": "3c02fc0f-7d48-4b68-b5e4-7c6b4ff5b56e"
+              },
+              "auxiliaryDataType": "RESOURCES"
+            },
+            {
+              "id": "41ccb06c-de4f-400d-9e9f-3167fd8c2c31",
+              "type": "skill",
+              "attributes": {
+                "organizationId": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "tid": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "sid": "41ccb06c-de4f-400d-9e9f-3167fd8c2c31",
+                "productVersion": 2,
+                "status__i": 1,
+                "type__i": 1,
+                "_type__s": "skill",
+                "cstts": 1676450601000,
+                "_lmts__l": 1676450601000,
+                "enumSkillValues": [],
+                "serviceLevelThreshold__i": 3,
+                "name__s": "Indian",
+                "description__s": "Nationality",
+                "dbId__s": "41ccb06c-de4f-400d-9e9f-3167fd8c2c31"
+              },
+              "auxiliaryDataType": "RESOURCES"
+            },
+            {
+              "id": "f5a497a3-6bd9-45ea-8473-c7a648dbe9fa",
+              "type": "skill",
+              "attributes": {
+                "organizationId": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "tid": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "sid": "f5a497a3-6bd9-45ea-8473-c7a648dbe9fa",
+                "productVersion": 2,
+                "status__i": 1,
+                "type__i": 1,
+                "_type__s": "skill",
+                "cstts": 1707306499000,
+                "_lmts__l": 1707306499000,
+                "enumSkillValues": [],
+                "serviceLevelThreshold__i": 100,
+                "name__s": "KeshSkill",
+                "description__s": "KeshSkill",
+                "dbId__s": "f5a497a3-6bd9-45ea-8473-c7a648dbe9fa"
+              },
+              "auxiliaryDataType": "RESOURCES"
+            }
+          ],
+          "skillOptions": [],
+          "skillRequirements": "{\\\"requirements\\\":[],\\\"relaxations\\\":[],\\\"relaxationToggle\\\":false}",
+          "requirementsArrayThatNeedToBeSentToAPI": [],
+          "contactPriority": ""
+        },
+        "group_id": 50020,
+        "customUiAuthStatus": 1,
+        "adminParameters": {
+          "oauth_callbackurl_type": 1,
+          "tenant_identifier": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+          "domain": "qaus1",
+          "integration_identifier": "https://example.invalid/v1/integration/cntwct"
+        },
+        "customuiWebcomponentElementName": "node-ui-template1706168429497",
+        "extraParamsData": {
+          "id": "$(taskId)",
+          "queueid": "0d21cd70-b5db-4e32-9c13-88252a01d403",
+          "mediatype": "social",
+          "channel": "appleMessages",
+          "isskillrouting": false,
+          "conversationid": "$(conversationId)",
+          "relaxationToggle": false,
+          "requirements": [],
+          "relaxations": [],
+          "queuenameOptions": [
+            {
+              "value": "IMI-Preprod-AMB-queue1",
+              "key": "b6a165b9-ec18-401b-8123-04aca1366146"
+            },
+            {
+              "value": "IMI-Preprod-AMB-queue2",
+              "key": "0d21cd70-b5db-4e32-9c13-88252a01d403"
+            },
+            {
+              "value": "IMI-Preprod-FB-Queue",
+              "key": "17e8c5d8-1ced-408d-aa76-b858237896bf"
+            },
+            {
+              "value": "IMI-Preprod-WhatsApp-Queue",
+              "key": "58d373a0-2225-4b68-9948-785f2c9bd6c7"
+            },
+            {
+              "value": "IMI-SMS-Queue",
+              "key": "0bb780a4-0e62-4605-87e2-9d25049c156b"
+            },
+            {
+              "value": "IMI-Social-Queue-SBR",
+              "key": "630c4bdd-6d32-41a1-9c51-44c4f82b5e81"
+            },
+            {
+              "value": "Soln_Auto_QA_AMB_Queue",
+              "key": "2d49fd10-e2ad-4239-aea0-efe8d85b96d6"
+            }
+          ],
+          "queueInfo": [
+            {
+              "id": "b6a165b9-ec18-401b-8123-04aca1366146",
+              "type": "virtual-team",
+              "attributes": {
+                "organizationId": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "tid": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "sid": "b6a165b9-ec18-401b-8123-04aca1366146",
+                "productVersion": 2,
+                "_seedData__i": 0,
+                "name__s": "IMI-Preprod-AMB-queue1",
+                "description__s": "IMI-Preprod-AMB-team (this will be used for AMB channel)",
+                "type__i": 1,
+                "channelType__i": 7,
+                "maxTimeInQueue__l": 30,
+                "status__i": 1,
+                "outdialCampaignEnabled__i": 0,
+                "permitMonitoring__i": 0,
+                "permitParking__i": 0,
+                "permitRecording__i": 0,
+                "recordAllCalls__i": 0,
+                "pauseResumeEnabled__i": 0,
+                "ccOneQueue__i": 0,
+                "imiOrgType__s": "IMI",
+                "callDistributionGroups__s": [],
+                "_type__s": "virtual-team",
+                "cstts": 1707207338000,
+                "_lmts__l": 1709555134000,
+                "routingType__s": "LONGEST_AVAILABLE_AGENT",
+                "dbId__s": "b6a165b9-ec18-401b-8123-04aca1366146"
+              },
+              "auxiliaryDataType": "RESOURCES"
+            },
+            {
+              "id": "0d21cd70-b5db-4e32-9c13-88252a01d403",
+              "type": "virtual-team",
+              "attributes": {
+                "organizationId": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "tid": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "sid": "0d21cd70-b5db-4e32-9c13-88252a01d403",
+                "productVersion": 2,
+                "_seedData__i": 0,
+                "name__s": "IMI-Preprod-AMB-queue2",
+                "description__s": "AMB channel queue 2",
+                "type__i": 1,
+                "channelType__i": 7,
+                "maxTimeInQueue__l": 30,
+                "status__i": 1,
+                "outdialCampaignEnabled__i": 0,
+                "permitMonitoring__i": 0,
+                "permitParking__i": 0,
+                "permitRecording__i": 0,
+                "recordAllCalls__i": 0,
+                "pauseResumeEnabled__i": 0,
+                "ccOneQueue__i": 0,
+                "imiOrgType__s": "IMI",
+                "callDistributionGroups__s": [],
+                "_type__s": "virtual-team",
+                "cstts": 1709555105000,
+                "_lmts__l": 1709555151000,
+                "routingType__s": "LONGEST_AVAILABLE_AGENT",
+                "dbId__s": "0d21cd70-b5db-4e32-9c13-88252a01d403"
+              },
+              "auxiliaryDataType": "RESOURCES"
+            },
+            {
+              "id": "17e8c5d8-1ced-408d-aa76-b858237896bf",
+              "type": "virtual-team",
+              "attributes": {
+                "organizationId": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "tid": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "sid": "17e8c5d8-1ced-408d-aa76-b858237896bf",
+                "productVersion": 2,
+                "_seedData__i": 0,
+                "name__s": "IMI-Preprod-FB-Queue",
+                "description__s": "",
+                "type__i": 1,
+                "channelType__i": 7,
+                "maxTimeInQueue__l": 90,
+                "status__i": 1,
+                "outdialCampaignEnabled__i": 0,
+                "permitMonitoring__i": 0,
+                "permitParking__i": 0,
+                "permitRecording__i": 0,
+                "recordAllCalls__i": 0,
+                "pauseResumeEnabled__i": 0,
+                "ccOneQueue__i": 0,
+                "imiOrgType__s": "IMI",
+                "callDistributionGroups__s": [],
+                "_type__s": "virtual-team",
+                "cstts": 1656004898000,
+                "_lmts__l": 1677063742000,
+                "routingType__s": "LONGEST_AVAILABLE_AGENT",
+                "timezone__s": "Asia/Calcutta",
+                "dbId__s": "17e8c5d8-1ced-408d-aa76-b858237896bf"
+              },
+              "auxiliaryDataType": "RESOURCES"
+            },
+            {
+              "id": "58d373a0-2225-4b68-9948-785f2c9bd6c7",
+              "type": "virtual-team",
+              "attributes": {
+                "organizationId": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "tid": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "sid": "58d373a0-2225-4b68-9948-785f2c9bd6c7",
+                "productVersion": 2,
+                "_seedData__i": 0,
+                "name__s": "IMI-Preprod-WhatsApp-Queue",
+                "description__s": "",
+                "type__i": 1,
+                "channelType__i": 7,
+                "maxTimeInQueue__l": 90,
+                "status__i": 1,
+                "outdialCampaignEnabled__i": 0,
+                "permitMonitoring__i": 0,
+                "permitParking__i": 0,
+                "permitRecording__i": 0,
+                "recordAllCalls__i": 0,
+                "pauseResumeEnabled__i": 0,
+                "ccOneQueue__i": 0,
+                "imiOrgType__s": "IMI",
+                "callDistributionGroups__s": [],
+                "_type__s": "virtual-team",
+                "cstts": 1656925214000,
+                "_lmts__l": 1677063761000,
+                "routingType__s": "LONGEST_AVAILABLE_AGENT",
+                "timezone__s": "Asia/Calcutta",
+                "dbId__s": "58d373a0-2225-4b68-9948-785f2c9bd6c7"
+              },
+              "auxiliaryDataType": "RESOURCES"
+            },
+            {
+              "id": "0bb780a4-0e62-4605-87e2-9d25049c156b",
+              "type": "virtual-team",
+              "attributes": {
+                "organizationId": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "tid": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "sid": "0bb780a4-0e62-4605-87e2-9d25049c156b",
+                "productVersion": 2,
+                "_seedData__i": 0,
+                "name__s": "IMI-SMS-Queue",
+                "description__s": "",
+                "type__i": 1,
+                "channelType__i": 7,
+                "maxTimeInQueue__l": 180,
+                "status__i": 1,
+                "outdialCampaignEnabled__i": 0,
+                "permitMonitoring__i": 0,
+                "permitParking__i": 0,
+                "permitRecording__i": 0,
+                "recordAllCalls__i": 0,
+                "pauseResumeEnabled__i": 0,
+                "ccOneQueue__i": 0,
+                "imiOrgType__s": "IMI",
+                "callDistributionGroups__s": [],
+                "_type__s": "virtual-team",
+                "cstts": 1658225300000,
+                "_lmts__l": 1677134746000,
+                "routingType__s": "LONGEST_AVAILABLE_AGENT",
+                "dbId__s": "0bb780a4-0e62-4605-87e2-9d25049c156b"
+              },
+              "auxiliaryDataType": "RESOURCES"
+            },
+            {
+              "id": "630c4bdd-6d32-41a1-9c51-44c4f82b5e81",
+              "type": "virtual-team",
+              "attributes": {
+                "organizationId": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "tid": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "sid": "630c4bdd-6d32-41a1-9c51-44c4f82b5e81",
+                "productVersion": 2,
+                "_seedData__i": 0,
+                "name__s": "IMI-Social-Queue-SBR",
+                "description__s": "IMI-Social-Queue-SBR",
+                "type__i": 1,
+                "channelType__i": 7,
+                "maxTimeInQueue__l": 80,
+                "status__i": 1,
+                "outdialCampaignEnabled__i": 0,
+                "permitMonitoring__i": 0,
+                "permitParking__i": 0,
+                "permitRecording__i": 0,
+                "recordAllCalls__i": 0,
+                "pauseResumeEnabled__i": 0,
+                "ccOneQueue__i": 0,
+                "imiOrgType__s": "IMI",
+                "callDistributionGroups__s": [],
+                "_type__s": "virtual-team",
+                "cstts": 1676457983000,
+                "_lmts__l": 1676457983000,
+                "skillBasedRoutingType__s": "LONGEST_AVAILABLE_AGENT",
+                "routingType__s": "SKILLS_BASED",
+                "dbId__s": "630c4bdd-6d32-41a1-9c51-44c4f82b5e81"
+              },
+              "auxiliaryDataType": "RESOURCES"
+            },
+            {
+              "id": "2d49fd10-e2ad-4239-aea0-efe8d85b96d6",
+              "type": "virtual-team",
+              "attributes": {
+                "organizationId": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "tid": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "sid": "2d49fd10-e2ad-4239-aea0-efe8d85b96d6",
+                "productVersion": 2,
+                "_seedData__i": 0,
+                "name__s": "Soln_Auto_QA_AMB_Queue",
+                "description__s": "",
+                "type__i": 1,
+                "channelType__i": 7,
+                "maxTimeInQueue__l": 120,
+                "status__i": 1,
+                "outdialCampaignEnabled__i": 0,
+                "permitMonitoring__i": 0,
+                "permitParking__i": 0,
+                "permitRecording__i": 0,
+                "recordAllCalls__i": 0,
+                "pauseResumeEnabled__i": 0,
+                "ccOneQueue__i": 0,
+                "imiOrgType__s": "IMI",
+                "callDistributionGroups__s": [],
+                "_type__s": "virtual-team",
+                "cstts": 1706699634000,
+                "_lmts__l": 1706699634000,
+                "routingType__s": "LONGEST_AVAILABLE_AGENT",
+                "dbId__s": "2d49fd10-e2ad-4239-aea0-efe8d85b96d6"
+              },
+              "auxiliaryDataType": "RESOURCES"
+            }
+          ],
+          "skillInfo": [
+            {
+              "id": "6b1119a5-4d4f-493f-a0ac-e16daf4798f5",
+              "type": "skill",
+              "attributes": {
+                "organizationId": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "tid": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "sid": "6b1119a5-4d4f-493f-a0ac-e16daf4798f5",
+                "productVersion": 2,
+                "status__i": 1,
+                "type__i": 3,
+                "_type__s": "skill",
+                "cstts": 1676450699000,
+                "_lmts__l": 1676450699000,
+                "enumSkillValues": [
+                  {
+                    "skillId__s": "6b1119a5-4d4f-493f-a0ac-e16daf4798f5",
+                    "name__s": "Debit"
+                  },
+                  {
+                    "skillId__s": "6b1119a5-4d4f-493f-a0ac-e16daf4798f5",
+                    "name__s": "Sales"
+                  },
+                  {
+                    "skillId__s": "6b1119a5-4d4f-493f-a0ac-e16daf4798f5",
+                    "name__s": "Credit"
+                  }
+                ],
+                "serviceLevelThreshold__i": 5,
+                "name__s": "Department",
+                "description__s": "Department",
+                "dbId__s": "6b1119a5-4d4f-493f-a0ac-e16daf4798f5"
+              },
+              "auxiliaryDataType": "RESOURCES"
+            },
+            {
+              "id": "e235e767-dca9-433b-8c17-e449b4be372d",
+              "type": "skill",
+              "attributes": {
+                "organizationId": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "tid": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "sid": "e235e767-dca9-433b-8c17-e449b4be372d",
+                "productVersion": 2,
+                "status__i": 1,
+                "type__i": 0,
+                "_type__s": "skill",
+                "cstts": 1676005996000,
+                "_lmts__l": 1676450569000,
+                "enumSkillValues": [],
+                "serviceLevelThreshold__i": 1,
+                "name__s": "English",
+                "description__s": "English Speaking Expert",
+                "dbId__s": "e235e767-dca9-433b-8c17-e449b4be372d"
+              },
+              "auxiliaryDataType": "RESOURCES"
+            },
+            {
+              "id": "cc35be5e-7b11-4eb4-992e-fecc5da51c37",
+              "type": "skill",
+              "attributes": {
+                "organizationId": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "tid": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "sid": "cc35be5e-7b11-4eb4-992e-fecc5da51c37",
+                "productVersion": 2,
+                "status__i": 1,
+                "type__i": 2,
+                "_type__s": "skill",
+                "cstts": 1676450640000,
+                "_lmts__l": 1676450640000,
+                "enumSkillValues": [],
+                "serviceLevelThreshold__i": 4,
+                "name__s": "Expertise",
+                "description__s": "Expertise Area",
+                "dbId__s": "cc35be5e-7b11-4eb4-992e-fecc5da51c37"
+              },
+              "auxiliaryDataType": "RESOURCES"
+            },
+            {
+              "id": "3c02fc0f-7d48-4b68-b5e4-7c6b4ff5b56e",
+              "type": "skill",
+              "attributes": {
+                "organizationId": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "tid": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "sid": "3c02fc0f-7d48-4b68-b5e4-7c6b4ff5b56e",
+                "productVersion": 2,
+                "status__i": 1,
+                "type__i": 0,
+                "_type__s": "skill",
+                "cstts": 1676006070000,
+                "_lmts__l": 1676450576000,
+                "enumSkillValues": [],
+                "serviceLevelThreshold__i": 2,
+                "name__s": "Hindi",
+                "description__s": "Hindi Speaking Expert",
+                "dbId__s": "3c02fc0f-7d48-4b68-b5e4-7c6b4ff5b56e"
+              },
+              "auxiliaryDataType": "RESOURCES"
+            },
+            {
+              "id": "41ccb06c-de4f-400d-9e9f-3167fd8c2c31",
+              "type": "skill",
+              "attributes": {
+                "organizationId": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "tid": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "sid": "41ccb06c-de4f-400d-9e9f-3167fd8c2c31",
+                "productVersion": 2,
+                "status__i": 1,
+                "type__i": 1,
+                "_type__s": "skill",
+                "cstts": 1676450601000,
+                "_lmts__l": 1676450601000,
+                "enumSkillValues": [],
+                "serviceLevelThreshold__i": 3,
+                "name__s": "Indian",
+                "description__s": "Nationality",
+                "dbId__s": "41ccb06c-de4f-400d-9e9f-3167fd8c2c31"
+              },
+              "auxiliaryDataType": "RESOURCES"
+            },
+            {
+              "id": "f5a497a3-6bd9-45ea-8473-c7a648dbe9fa",
+              "type": "skill",
+              "attributes": {
+                "organizationId": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "tid": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+                "sid": "f5a497a3-6bd9-45ea-8473-c7a648dbe9fa",
+                "productVersion": 2,
+                "status__i": 1,
+                "type__i": 1,
+                "_type__s": "skill",
+                "cstts": 1707306499000,
+                "_lmts__l": 1707306499000,
+                "enumSkillValues": [],
+                "serviceLevelThreshold__i": 100,
+                "name__s": "KeshSkill",
+                "description__s": "KeshSkill",
+                "dbId__s": "f5a497a3-6bd9-45ea-8473-c7a648dbe9fa"
+              },
+              "auxiliaryDataType": "RESOURCES"
+            }
+          ],
+          "skillOptions": [
+            {
+              "value": "Department",
+              "key": "6b1119a5-4d4f-493f-a0ac-e16daf4798f5"
+            },
+            {
+              "value": "English",
+              "key": "e235e767-dca9-433b-8c17-e449b4be372d"
+            },
+            {
+              "value": "Expertise",
+              "key": "cc35be5e-7b11-4eb4-992e-fecc5da51c37"
+            },
+            {
+              "value": "Hindi",
+              "key": "3c02fc0f-7d48-4b68-b5e4-7c6b4ff5b56e"
+            },
+            {
+              "value": "Indian",
+              "key": "41ccb06c-de4f-400d-9e9f-3167fd8c2c31"
+            },
+            {
+              "value": "KeshSkill",
+              "key": "f5a497a3-6bd9-45ea-8473-c7a648dbe9fa"
+            }
+          ],
+          "skillRequirements": "{\\\"requirements\\\":[],\\\"relaxations\\\":[],\\\"relaxationToggle\\\":false}",
+          "requirementsArrayThatNeedToBeSentToAPI": [],
+          "contactPriority": ""
+        },
+        "isCustomUiAuthPresent": true,
+        "integration_version": 3,
+        "runTimeAuthorizationId": "[redacted]",
+        "nodeUiAuthorizationId": "[redacted]"
+      },
+      "transition_actions": [
+        {
+          "kind": "all",
+          "name": "all",
+          "when": "onleave",
+          "value": ""
+        }
+      ],
+      "declared_outputs": [
+        "taskId",
+        "agentId"
+      ],
+      "output_mappings": [
+        {
+          "order": 0,
+          "id": "713640c4-ba82-4e2c-b154-b1810240db28",
+          "name": "taskId",
+          "path": "$.id",
+          "value": "",
+          "desc": "",
+          "type": "body",
+          "validation": {
+            "type": "",
+            "condition": null,
+            "regex": "",
+            "mandatory": true,
+            "format_validator": null
+          },
+          "key": null,
+          "debugKey": false,
+          "node_ui_type": null,
+          "node_ui_group_name": null,
+          "ui_field_configuration": null
+        },
+        {
+          "order": 1,
+          "id": "6fb1e9f7-bdd2-4585-aebe-9dfdd0350793",
+          "name": "agentId",
+          "path": "$.data.agentId",
+          "value": "",
+          "desc": "",
+          "type": "body",
+          "validation": {
+            "type": "",
+            "condition": null,
+            "regex": "",
+            "mandatory": true,
+            "format_validator": null
+          },
+          "key": null,
+          "debugKey": false,
+          "node_ui_type": null,
+          "node_ui_group_name": null,
+          "ui_field_configuration": null
+        }
+      ]
+    },
+    {
+      "id": "60",
+      "label": "Apple Messages for Business",
+      "type_internal": "umpapplebc",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "onerror",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "hideWaitFor": false,
+        "channelId": 23,
+        "deliverychannel": "abc",
+        "destinationType": "abcUserId",
+        "destination": "$(n2.abc.abcUserId)",
+        "msgcreationtype": "createnew",
+        "type": "text",
+        "body": "Message is queued",
+        "attachmenttype": "url",
+        "attachments": [
+          {
+            "mimeType": "",
+            "url": ""
+          }
+        ],
+        "successoutcome": 1,
+        "linkValidityCheck": false,
+        "typing_indicator": true,
+        "include_rich_link_video": false,
+        "list_picker_received_message": {
+          "style": "small",
+          "title": "",
+          "subtitle": "",
+          "imageIdentifier": "",
+          "imageurl": "",
+          "ispreviewrequired": false
+        },
+        "list_picker_sections": [
+          {
+            "order": "",
+            "style": "default",
+            "title": "",
+            "items": [
+              {
+                "order": "",
+                "title": "",
+                "subtitle": "",
+                "identifier": "",
+                "ispreviewrequired": false,
+                "imageIdentifier": "",
+                "imageurl": ""
+              }
+            ]
+          }
+        ],
+        "multipleSelection": false,
+        "replyMessage": {
+          "style": "small",
+          "title": ""
+        },
+        "date_picker_received_message": {
+          "style": "small",
+          "title": "",
+          "subtitle": "",
+          "imageIdentifier": "",
+          "imageurl": "",
+          "ispreviewrequired": false
+        },
+        "date_picker_events": {
+          "timezoneOffset": "",
+          "timeslots": [
+            {}
+          ],
+          "location": {}
+        },
+        "payment": {
+          "paymentRequest": {
+            "lineItems": [
+              {
+                "label": "",
+                "amount": "",
+                "type": ""
+              }
+            ],
+            "shippingMethods": [
+              {
+                "label": "",
+                "amount": "",
+                "detail": "",
+                "identifier": ""
+              }
+            ],
+            "total": {
+              "label": "",
+              "amount": "",
+              "type": ""
+            },
+            "countryCode": "",
+            "currencyCode": "",
+            "requiredBillingContactFields": [],
+            "requiredShippingContactFields": []
+          }
+        },
+        "payment_received_message": {
+          "title": ""
+        },
+        "payment_reply_message": {
+          "title": ""
+        },
+        "payment_request_inputtype": "static",
+        "oauthScope": [
+          {}
+        ],
+        "oauthData": {
+          "oauthReceiveTitle": "",
+          "oauthReceivesubtitle": "",
+          "oauthReceiveImage": "",
+          "oauthReplyTitle": "",
+          "oauthReplysubtitle": "",
+          "oauthReplyImage": ""
+        },
+        "static_line_items": [
+          {
+            "label": "",
+            "amount": "",
+            "type": ""
+          }
+        ],
+        "timezoneViewFlag": false,
+        "useLiveLayout": true
+      },
+      "transition_actions": [],
+      "declared_outputs": [],
+      "output_mappings": []
+    },
+    {
+      "id": "172",
+      "label": "Branch",
+      "type_internal": "evaluate",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "onerror",
+          "declared_target_count": null
+        }
+      ],
+      "configuration": {
+        "evaluteIsOptimization": true,
+        "outcomes": [
+          {
+            "outcome": "Create/Reopen Path",
+            "order": "",
+            "open": false,
+            "isEditOn": false,
+            "tempVal": "Create/Reopen Path",
+            "conditions": [
+              {
+                "pills": [],
+                "varaible": "$(conversationOperation)",
+                "condition": "==",
+                "value": "created",
+                "operation": "OR",
+                "index": "uxvsvwak"
+              },
+              {
+                "pills": [],
+                "varaible": "$(conversationOperation)",
+                "condition": "==",
+                "value": "reopened",
+                "operation": "",
+                "index": "5i5cjztp"
+              }
+            ],
+            "index": "x0zetwxa"
+          },
+          {
+            "outcome": "Append Path",
+            "order": "",
+            "open": true,
+            "isEditOn": false,
+            "tempVal": "Append Path",
+            "conditions": [
+              {
+                "pills": [],
+                "varaible": "$(conversationOperation)",
+                "condition": "==",
+                "value": "appended",
+                "operation": "",
+                "index": "jnyrexmb"
+              }
+            ],
+            "index": "ssz3u0o7"
+          }
+        ],
+        "allConditionsFail": "None of the above",
+        "expression": "if(\"$(conversationOperation)\"  == \"created\" || \"$(conversationOperation)\"  == \"reopened\"){\"Create/Reopen Path\";}else if(\"$(conversationOperation)\"  == \"appended\"){\"Append Path\";}else{'None of the above';}",
+        "counter": 3,
+        "successEvents": [
+          "Create/Reopen Path",
+          "Append Path",
+          "None of the above"
+        ],
+        "nodeVersion": 1
+      },
+      "transition_actions": [],
+      "declared_outputs": [],
+      "output_mappings": []
+    },
+    {
+      "id": "193",
+      "label": "Apple Messages for Business",
+      "type_internal": "umpapplebc",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "onerror",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "hideWaitFor": false,
+        "channelId": 23,
+        "deliverychannel": "abc",
+        "destinationType": "abcUserId",
+        "destination": "$(n2.abc.abcUserId)",
+        "msgcreationtype": "createnew",
+        "type": "date_picker",
+        "attachmenttype": "url",
+        "attachments": [
+          {
+            "mimeType": "",
+            "url": ""
+          }
+        ],
+        "successoutcome": 1,
+        "linkValidityCheck": false,
+        "typing_indicator": false,
+        "include_rich_link_video": false,
+        "list_picker_received_message": {
+          "style": "small",
+          "title": "Country",
+          "subtitle": "Please choose your country",
+          "imageIdentifier": "",
+          "imageurl": "",
+          "ispreviewrequired": false
+        },
+        "list_picker_sections": [
+          {
+            "order": 1,
+            "style": "default",
+            "title": "Country",
+            "items": [
+              {
+                "order": 1,
+                "title": "India",
+                "subtitle": "",
+                "identifier": "India",
+                "ispreviewrequired": false,
+                "imageIdentifier": "",
+                "imageurl": "",
+                "index": "bd5q00jr"
+              },
+              {
+                "order": 2,
+                "title": "USA",
+                "subtitle": "",
+                "identifier": "USA",
+                "ispreviewrequired": false,
+                "imageIdentifier": "",
+                "imageurl": "",
+                "index": "2331v8h4"
+              },
+              {
+                "order": 3,
+                "title": "UK",
+                "subtitle": "",
+                "identifier": "UK",
+                "ispreviewrequired": false,
+                "imageIdentifier": "",
+                "imageurl": "",
+                "index": "7jsa9leq"
+              }
+            ],
+            "index": "e9aciwkv"
+          }
+        ],
+        "multipleSelection": false,
+        "requestIdentifier": "system",
+        "receivedMessage": {
+          "style": "small",
+          "title": "Schedule an appointment",
+          "subtitle": "Please choose your preferred slot",
+          "imageIdentifier": ""
+        },
+        "replyMessage": {
+          "style": "small",
+          "title": "Chosen time slot",
+          "alternateTitle": "The country you have chosen"
+        },
+        "date_picker_received_message": {
+          "style": "small",
+          "title": "Schedule an appointment",
+          "subtitle": "Please choose your preferred slot",
+          "imageIdentifier": "",
+          "imageurl": "",
+          "ispreviewrequired": false
+        },
+        "date_picker_events": {
+          "timezoneOffset": "Asia/Calcutta",
+          "timeslots": [
+            {
+              "index": "q5tdcn3w",
+              "date": "2024-04-01",
+              "time": "09:00",
+              "duration": 1800,
+              "identifier": "0900-1800"
+            },
+            {
+              "index": "ob327yv6",
+              "date": "2024-04-01",
+              "time": "10:00",
+              "duration": 1800,
+              "identifier": "1000-1800"
+            }
+          ],
+          "location": {
+            "title": "Address",
+            "latitude": 37.7555,
+            "longitude": -122.4311,
+            "radius": 100
+          },
+          "title": "Morrning",
+          "identifier": "morning"
+        },
+        "payment": {
+          "paymentRequest": {
+            "lineItems": [
+              {
+                "label": "",
+                "amount": "",
+                "type": ""
+              }
+            ],
+            "shippingMethods": [
+              {
+                "label": "",
+                "amount": "",
+                "detail": "",
+                "identifier": ""
+              }
+            ],
+            "total": {
+              "label": "",
+              "amount": "",
+              "type": ""
+            },
+            "countryCode": "",
+            "currencyCode": "",
+            "requiredBillingContactFields": [],
+            "requiredShippingContactFields": []
+          }
+        },
+        "payment_received_message": {
+          "title": ""
+        },
+        "payment_reply_message": {
+          "title": ""
+        },
+        "payment_request_inputtype": "static",
+        "oauthScope": [
+          {}
+        ],
+        "oauthData": {
+          "oauthReceiveTitle": "",
+          "oauthReceivesubtitle": "",
+          "oauthReceiveImage": "",
+          "oauthReplyTitle": "",
+          "oauthReplysubtitle": "",
+          "oauthReplyImage": ""
+        },
+        "static_line_items": [
+          {
+            "label": "",
+            "amount": "",
+            "type": ""
+          }
+        ],
+        "timezoneViewFlag": false,
+        "useLiveLayout": true
+      },
+      "transition_actions": [],
+      "declared_outputs": [
+        "send.timePicker"
+      ],
+      "output_mappings": []
+    },
+    {
+      "id": "197",
+      "label": "Append Conversation",
+      "type_internal": "prebuiltnode",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "oninvaliddata",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "onerror",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "oninvalidchoice",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "ontimeout",
+          "declared_target_count": null
+        }
+      ],
+      "configuration": {
+        "referencekey": 50031,
+        "versionIds": "undefined",
+        "integration_id": 50031,
+        "client_uuid": "50d97e6a-ad14-4a77-898a-7f6f104bfb14",
+        "method_id": 58050,
+        "version_id": 52406,
+        "auth_id": -1,
+        "methodResponseParameters": [
+          {
+            "order": 0,
+            "id": "36aea71a-f412-4033-90c0-91f69a2e9dfd",
+            "name": "TransId",
+            "path": "tid",
+            "value": "",
+            "desc": "",
+            "type": "body",
+            "validation": {
+              "type": "",
+              "condition": null,
+              "regex": "",
+              "mandatory": true,
+              "format_validator": null
+            },
+            "key": null,
+            "debugKey": false,
+            "node_ui_type": null,
+            "node_ui_group_name": null,
+            "ui_field_configuration": null
+          }
+        ],
+        "request_body": [
+          {
+            "name": "channel",
+            "value": "amb",
+            "id": "f322b506-c3f8-ddb4-4648-86a772380562"
+          },
+          {
+            "name": "subject",
+            "value": null,
+            "id": "3e22ceff-4d06-dacc-505a-ccddb88016a4"
+          },
+          {
+            "name": "direction",
+            "value": "outbound",
+            "id": "fedbc70f-5cf4-ef16-73c1-4460a97fdfe7"
+          },
+          {
+            "name": "messagetype",
+            "value": "amb-time-picker",
+            "id": "87afb582-ebbd-9ff5-41ae-a472a601394c"
+          },
+          {
+            "name": "livechatformresponse",
+            "value": null,
+            "id": "1e96df51-89b0-2c9c-661e-de688f8ce3c3"
+          },
+          {
+            "name": "text",
+            "value": null,
+            "id": "53a32535-fd66-0b2d-4d5d-8c831bb9f0b6"
+          },
+          {
+            "name": "timestamp",
+            "value": "$(n193.send.sentDateTime)",
+            "id": "187f10e7-03d1-5418-77c8-42039c7f9cef"
+          },
+          {
+            "name": "attachments",
+            "value": null,
+            "id": "a8c08533-3ac7-137a-95d7-07005acf999a"
+          },
+          {
+            "name": "frmAddress",
+            "value": null,
+            "id": "62722b09-23a0-97ad-1c35-84ba4e9b3b4a"
+          },
+          {
+            "name": "toRecipients",
+            "value": null,
+            "id": "cb0a1f8b-fc43-bbe9-6124-9620a86644ae"
+          },
+          {
+            "name": "ccRecipients",
+            "value": null,
+            "id": "3e6f60b3-f145-1f2d-4ff4-2af92f3eb662"
+          },
+          {
+            "name": "plainBody",
+            "value": null,
+            "id": "ba19a86e-c087-0d12-58de-c09eb918661b"
+          },
+          {
+            "name": "strippedHtml",
+            "value": null,
+            "id": "8c8e17c9-4922-cf22-7952-78bb59491507"
+          },
+          {
+            "name": "htmlBody",
+            "value": null,
+            "id": "e6266dbd-0b11-d757-84c7-16a6403d77d5"
+          },
+          {
+            "name": "emailHeaders",
+            "value": null,
+            "id": "449e2874-a662-c5a8-1815-15a311647418"
+          },
+          {
+            "name": "webhookurl",
+            "id": "0cffbc14-355f-e9aa-cb57-228896feca6a"
+          },
+          {
+            "name": "lcCarousel",
+            "value": null,
+            "id": "b9c9966b-aa92-1cc7-659d-8b4d83eba2e7"
+          },
+          {
+            "name": "lcQuickReplies",
+            "value": null,
+            "id": "e07028b3-3135-32b4-bbad-e64d608a97bb"
+          },
+          {
+            "name": "lcQuickRepliesResponse",
+            "value": null,
+            "id": "bd4a0546-7628-cd73-e515-edd47e938a48"
+          },
+          {
+            "name": "lcCarouselResponse",
+            "value": null,
+            "id": "d730f104-5629-bc07-1dc4-6ab660c1a089"
+          },
+          {
+            "name": "ambForm",
+            "value": null,
+            "id": "2e31d592-35f6-45fe-931b-e0c94271b6a2"
+          },
+          {
+            "name": "ambFormResponse",
+            "value": null,
+            "id": "bda9cf2e-fff3-4f5a-9cb4-520e551fdd31"
+          },
+          {
+            "name": "ambListPicker",
+            "value": null,
+            "id": "7ecfe613-d393-4b14-bbb0-7e8fe1f0cef2"
+          },
+          {
+            "name": "ambListPickerResponse",
+            "value": null,
+            "id": "0ca71761-4205-4807-9572-f31f3306b4ac"
+          },
+          {
+            "name": "ambQuickReplies",
+            "value": null,
+            "id": "36ee261f-18f6-4436-b727-dadb9a091b51"
+          },
+          {
+            "name": "ambQuickRepliesResponse",
+            "value": null,
+            "id": "8f77dcec-b3c5-4591-a509-dfedf34ecde8"
+          },
+          {
+            "name": "ambTimePicker",
+            "value": "$(n193.send.timePicker)",
+            "id": "06c9ad06-70b2-46fa-a76a-80e436715b0a"
+          },
+          {
+            "name": "ambTimePickerResponse",
+            "value": null,
+            "id": "1124d1eb-35e1-4b0f-b732-29cfca141ec4"
+          },
+          {
+            "name": "gbmCarousel",
+            "value": null,
+            "id": "61e3f532-8564-4e05-9646-65ac0ebc7d40"
+          },
+          {
+            "name": "gbmRichCard",
+            "value": null,
+            "id": "ccea238f-cca2-412d-92e0-2d35c392ecf0"
+          },
+          {
+            "name": "gbmSuggestions",
+            "value": null,
+            "id": "2a084a0a-6d8d-479e-898e-094916e1bbbf"
+          },
+          {
+            "name": "gbmSuggestionResponse",
+            "value": null,
+            "id": "ec193872-c351-4879-a73d-b7bfea5f4473"
+          },
+          {
+            "name": "extras",
+            "value": null,
+            "id": "803d928a-8804-49c9-8e06-05b02bda923e"
+          }
+        ],
+        "path_parameters": [
+          {
+            "name": "domain",
+            "id": "9a5bd517-93db-51a9-1f35-3edccf4152d0"
+          },
+          {
+            "name": "Conversation ID",
+            "value": "$(conversationId)",
+            "id": "276e9680-96eb-2a1d-7511-9c2699d2acc4"
+          }
+        ],
+        "custom_output_vars": [
+          "TransId"
+        ],
+        "viewmodeData": [
+          {
+            "name": "auth_id",
+            "value": "Engage",
+            "isNgSelectBox": true
+          },
+          {
+            "name": "version_id",
+            "value": ""
+          },
+          {
+            "name": "method_id",
+            "value": "Append Chat"
+          }
+        ],
+        "isAuthPresent": true,
+        "isComponentNode": 1,
+        "container_name": "https://example.invalid/integration_node_file_append-message_1713818631468_5354679624588877.js",
+        "nodeType": "https://example.invalid/integration_node_file_append-message_1713818631468_5354679624588877.js",
+        "group_id": 50021,
+        "customUiAuthStatus": 0,
+        "adminParameters": {
+          "oauth_callbackurl_type": 0,
+          "clientId": "1ec92647-d32e-4555-ad01-f72d0d02cd37",
+          "tenant_identifier": "1ec92647-d32e-4555-ad01-f72d0d02cd37",
+          "domain": "Preprodengageapi.imiengage.net",
+          "integration_identifier": "https://example.invalid/v1/integration/cnteng",
+          "clientSecret": "[redacted]"
+        },
+        "customuiWebcomponentElementName": "node-ui-template1713818631468",
+        "extraParamsData": {
+          "conversationid": "$(conversationId)",
+          "singleOrDynamic": "single",
+          "channel": "amb",
+          "frmAddress": null,
+          "toRecipients": null,
+          "ccRecipients": null,
+          "emailHeaders": "[redacted]",
+          "htmlBody": null,
+          "plainBody": null,
+          "strippedHtml": null,
+          "strippedText": "",
+          "direction": "outbound",
+          "messageType": "amb-time-picker",
+          "messagetype": "amb-time-picker",
+          "textOrResponse": "$(n193.send.timePicker)",
+          "dynamicLabel": "Time picker",
+          "timestamp": "$(n193.send.sentDateTime)",
+          "dynamicJSON": "",
+          "attachments": null,
+          "lcCarousel": null,
+          "lcQuickReplies": null,
+          "gbmSuggestionResponse": null,
+          "gbmSuggestions": null,
+          "gbmRichCard": null,
+          "gbmCarousel": null,
+          "extras": null,
+          "lcCarouselObject": null,
+          "lcQRObject": null,
+          "livechatformresponse": null,
+          "lcQuickRepliesResponse": null,
+          "lcCarouselResponse": null,
+          "subject": null,
+          "ambListPickerResponse": null,
+          "ambTimePickerResponse": null,
+          "ambFormResponse": null,
+          "ambQuickReplies": null,
+          "ambQuickRepliesResponse": null,
+          "ambListPicker": null,
+          "ambTimePicker": "$(n193.send.timePicker)",
+          "ambForm": null,
+          "text": null
+        },
+        "isCustomUiAuthPresent": false,
+        "integration_version": 3,
+        "runTimeAuthorizationId": "[redacted]",
+        "nodeUiAuthorizationId": "[redacted]"
+      },
+      "transition_actions": [],
+      "declared_outputs": [
+        "TransId"
+      ],
+      "output_mappings": [
+        {
+          "order": 0,
+          "id": "36aea71a-f412-4033-90c0-91f69a2e9dfd",
+          "name": "TransId",
+          "path": "tid",
+          "value": "",
+          "desc": "",
+          "type": "body",
+          "validation": {
+            "type": "",
+            "condition": null,
+            "regex": "",
+            "mandatory": true,
+            "format_validator": null
+          },
+          "key": null,
+          "debugKey": false,
+          "node_ui_type": null,
+          "node_ui_group_name": null,
+          "ui_field_configuration": null
+        }
+      ]
+    },
+    {
+      "id": "198",
+      "label": "Append Conversation",
+      "type_internal": "prebuiltnode",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "oninvaliddata",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "onerror",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "oninvalidchoice",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "ontimeout",
+          "declared_target_count": null
+        }
+      ],
+      "configuration": {
+        "referencekey": 50031,
+        "versionIds": "undefined",
+        "integration_id": 50031,
+        "client_uuid": "50d97e6a-ad14-4a77-898a-7f6f104bfb14",
+        "method_id": 58050,
+        "version_id": 52406,
+        "auth_id": -1,
+        "methodResponseParameters": [
+          {
+            "order": 0,
+            "id": "36aea71a-f412-4033-90c0-91f69a2e9dfd",
+            "name": "TransId",
+            "path": "tid",
+            "value": "",
+            "desc": "",
+            "type": "body",
+            "validation": {
+              "type": "",
+              "condition": null,
+              "regex": "",
+              "mandatory": true,
+              "format_validator": null
+            },
+            "key": null,
+            "debugKey": false,
+            "node_ui_type": null,
+            "node_ui_group_name": null,
+            "ui_field_configuration": null
+          }
+        ],
+        "request_body": [
+          {
+            "name": "channel",
+            "value": "amb",
+            "id": "f322b506-c3f8-ddb4-4648-86a772380562"
+          },
+          {
+            "name": "subject",
+            "value": null,
+            "id": "3e22ceff-4d06-dacc-505a-ccddb88016a4"
+          },
+          {
+            "name": "direction",
+            "value": "inbound",
+            "id": "fedbc70f-5cf4-ef16-73c1-4460a97fdfe7"
+          },
+          {
+            "name": "messagetype",
+            "value": "amb-time-picker-response",
+            "id": "87afb582-ebbd-9ff5-41ae-a472a601394c"
+          },
+          {
+            "name": "livechatformresponse",
+            "value": null,
+            "id": "1e96df51-89b0-2c9c-661e-de688f8ce3c3"
+          },
+          {
+            "name": "text",
+            "value": null,
+            "id": "53a32535-fd66-0b2d-4d5d-8c831bb9f0b6"
+          },
+          {
+            "name": "timestamp",
+            "value": "$(n206.abc.timestamp)",
+            "id": "187f10e7-03d1-5418-77c8-42039c7f9cef"
+          },
+          {
+            "name": "attachments",
+            "value": null,
+            "id": "a8c08533-3ac7-137a-95d7-07005acf999a"
+          },
+          {
+            "name": "frmAddress",
+            "value": null,
+            "id": "62722b09-23a0-97ad-1c35-84ba4e9b3b4a"
+          },
+          {
+            "name": "toRecipients",
+            "value": null,
+            "id": "cb0a1f8b-fc43-bbe9-6124-9620a86644ae"
+          },
+          {
+            "name": "ccRecipients",
+            "value": null,
+            "id": "3e6f60b3-f145-1f2d-4ff4-2af92f3eb662"
+          },
+          {
+            "name": "plainBody",
+            "value": null,
+            "id": "ba19a86e-c087-0d12-58de-c09eb918661b"
+          },
+          {
+            "name": "strippedHtml",
+            "value": null,
+            "id": "8c8e17c9-4922-cf22-7952-78bb59491507"
+          },
+          {
+            "name": "htmlBody",
+            "value": null,
+            "id": "e6266dbd-0b11-d757-84c7-16a6403d77d5"
+          },
+          {
+            "name": "emailHeaders",
+            "value": null,
+            "id": "449e2874-a662-c5a8-1815-15a311647418"
+          },
+          {
+            "name": "webhookurl",
+            "id": "0cffbc14-355f-e9aa-cb57-228896feca6a"
+          },
+          {
+            "name": "lcCarousel",
+            "value": null,
+            "id": "b9c9966b-aa92-1cc7-659d-8b4d83eba2e7"
+          },
+          {
+            "name": "lcQuickReplies",
+            "value": null,
+            "id": "e07028b3-3135-32b4-bbad-e64d608a97bb"
+          },
+          {
+            "name": "lcQuickRepliesResponse",
+            "value": null,
+            "id": "bd4a0546-7628-cd73-e515-edd47e938a48"
+          },
+          {
+            "name": "lcCarouselResponse",
+            "value": null,
+            "id": "d730f104-5629-bc07-1dc4-6ab660c1a089"
+          },
+          {
+            "name": "ambForm",
+            "value": null,
+            "id": "2e31d592-35f6-45fe-931b-e0c94271b6a2"
+          },
+          {
+            "name": "ambFormResponse",
+            "value": null,
+            "id": "bda9cf2e-fff3-4f5a-9cb4-520e551fdd31"
+          },
+          {
+            "name": "ambListPicker",
+            "value": null,
+            "id": "7ecfe613-d393-4b14-bbb0-7e8fe1f0cef2"
+          },
+          {
+            "name": "ambListPickerResponse",
+            "value": null,
+            "id": "0ca71761-4205-4807-9572-f31f3306b4ac"
+          },
+          {
+            "name": "ambQuickReplies",
+            "value": null,
+            "id": "36ee261f-18f6-4436-b727-dadb9a091b51"
+          },
+          {
+            "name": "ambQuickRepliesResponse",
+            "value": null,
+            "id": "8f77dcec-b3c5-4591-a509-dfedf34ecde8"
+          },
+          {
+            "name": "ambTimePicker",
+            "value": null,
+            "id": "06c9ad06-70b2-46fa-a76a-80e436715b0a"
+          },
+          {
+            "name": "ambTimePickerResponse",
+            "value": "$(n206.receive.payload)",
+            "id": "1124d1eb-35e1-4b0f-b732-29cfca141ec4"
+          },
+          {
+            "name": "gbmCarousel",
+            "value": null,
+            "id": "61e3f532-8564-4e05-9646-65ac0ebc7d40"
+          },
+          {
+            "name": "gbmRichCard",
+            "value": null,
+            "id": "ccea238f-cca2-412d-92e0-2d35c392ecf0"
+          },
+          {
+            "name": "gbmSuggestions",
+            "value": null,
+            "id": "2a084a0a-6d8d-479e-898e-094916e1bbbf"
+          },
+          {
+            "name": "gbmSuggestionResponse",
+            "value": null,
+            "id": "ec193872-c351-4879-a73d-b7bfea5f4473"
+          },
+          {
+            "name": "extras",
+            "value": "$(n206.abc.capabilityList)",
+            "id": "803d928a-8804-49c9-8e06-05b02bda923e"
+          }
+        ],
+        "path_parameters": [
+          {
+            "name": "domain",
+            "id": "9a5bd517-93db-51a9-1f35-3edccf4152d0"
+          },
+          {
+            "name": "Conversation ID",
+            "value": "$(conversationId)",
+            "id": "276e9680-96eb-2a1d-7511-9c2699d2acc4"
+          }
+        ],
+        "custom_output_vars": [
+          "TransId"
+        ],
+        "viewmodeData": [
+          {
+            "name": "auth_id",
+            "value": "Engage",
+            "isNgSelectBox": true
+          },
+          {
+            "name": "version_id",
+            "value": ""
+          },
+          {
+            "name": "method_id",
+            "value": "Append Chat"
+          }
+        ],
+        "isAuthPresent": true,
+        "isComponentNode": 1,
+        "container_name": "https://example.invalid/integration_node_file_append-message_1713818631468_5354679624588877.js",
+        "nodeType": "https://example.invalid/integration_node_file_append-message_1713818631468_5354679624588877.js",
+        "group_id": 50021,
+        "customUiAuthStatus": 0,
+        "adminParameters": {
+          "oauth_callbackurl_type": 0,
+          "clientId": "1ec92647-d32e-4555-ad01-f72d0d02cd37",
+          "tenant_identifier": "1ec92647-d32e-4555-ad01-f72d0d02cd37",
+          "domain": "Preprodengageapi.imiengage.net",
+          "integration_identifier": "https://example.invalid/v1/integration/cnteng",
+          "clientSecret": "[redacted]"
+        },
+        "customuiWebcomponentElementName": "node-ui-template1713818631468",
+        "extraParamsData": {
+          "conversationid": "$(conversationId)",
+          "singleOrDynamic": "single",
+          "channel": "amb",
+          "frmAddress": null,
+          "toRecipients": null,
+          "ccRecipients": null,
+          "emailHeaders": "[redacted]",
+          "htmlBody": null,
+          "plainBody": null,
+          "strippedHtml": null,
+          "strippedText": "",
+          "direction": "inbound",
+          "messageType": "amb-time-picker-response",
+          "messagetype": "amb-time-picker-response",
+          "textOrResponse": "$(n206.receive.payload)",
+          "dynamicLabel": "Time picker response",
+          "timestamp": "$(n206.abc.timestamp)",
+          "dynamicJSON": "",
+          "attachments": null,
+          "lcCarousel": null,
+          "lcQuickReplies": null,
+          "gbmSuggestionResponse": null,
+          "gbmSuggestions": null,
+          "gbmRichCard": null,
+          "gbmCarousel": null,
+          "extras": "$(n206.abc.capabilityList)",
+          "lcCarouselObject": null,
+          "lcQRObject": null,
+          "livechatformresponse": null,
+          "lcQuickRepliesResponse": null,
+          "lcCarouselResponse": null,
+          "subject": null,
+          "ambListPickerResponse": null,
+          "ambTimePickerResponse": "$(n206.receive.payload)",
+          "ambFormResponse": null,
+          "ambQuickReplies": null,
+          "ambQuickRepliesResponse": null,
+          "ambListPicker": null,
+          "ambTimePicker": null,
+          "ambForm": null,
+          "text": null
+        },
+        "isCustomUiAuthPresent": false,
+        "integration_version": 3,
+        "runTimeAuthorizationId": "[redacted]",
+        "nodeUiAuthorizationId": "[redacted]"
+      },
+      "transition_actions": [],
+      "declared_outputs": [
+        "TransId"
+      ],
+      "output_mappings": [
+        {
+          "order": 0,
+          "id": "36aea71a-f412-4033-90c0-91f69a2e9dfd",
+          "name": "TransId",
+          "path": "tid",
+          "value": "",
+          "desc": "",
+          "type": "body",
+          "validation": {
+            "type": "",
+            "condition": null,
+            "regex": "",
+            "mandatory": true,
+            "format_validator": null
+          },
+          "key": null,
+          "debugKey": false,
+          "node_ui_type": null,
+          "node_ui_group_name": null,
+          "ui_field_configuration": null
+        }
+      ]
+    },
+    {
+      "id": "206",
+      "label": "Receive",
+      "type_internal": "receive",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "ontimeout",
+          "declared_target_count": 1
+        },
+        {
+          "event_internal": "onerror",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "timeout": 300,
+        "senderidViewFlag": false,
+        "read_receipts": false,
+        "output_variables": [
+          "abc.message",
+          "abc.abcUserId",
+          "abc.type",
+          "abc.datePickerTimeSlots",
+          "abc.datePickerTimeSlotsDuration",
+          "abc.datePickerTimeSlotsStartTime",
+          "abc.datePickerTimeSlotsIdentifier",
+          "abc.requestIdentifier",
+          "abc.replyMessageAlternateTitle",
+          "abc.locale",
+          "abc.accountId",
+          "abc.appId",
+          "abc.timestamp",
+          "abc.transId",
+          "abc.deviceAgent",
+          "abc.capabilities",
+          "abc.capabilityList"
+        ],
+        "contentType": "static"
+      },
+      "transition_actions": [
+        {
+          "kind": "log",
+          "name": 1001,
+          "when": "onleave",
+          "value": "$(n206.receive.payload)"
+        }
+      ],
+      "declared_outputs": [
+        {
+          "ABC - Date Picker": [
+            "abc.message",
+            "abc.abcUserId",
+            "abc.type",
+            "abc.datePickerTimeSlots",
+            "abc.datePickerTimeSlotsDuration",
+            "abc.datePickerTimeSlotsStartTime",
+            "abc.datePickerTimeSlotsIdentifier",
+            "abc.requestIdentifier",
+            "abc.replyMessageAlternateTitle",
+            "abc.locale",
+            "abc.accountId",
+            "abc.appId",
+            "abc.timestamp",
+            "abc.transId",
+            "abc.deviceAgent",
+            "abc.capabilities",
+            "abc.capabilityList"
+          ]
+        }
+      ],
+      "output_mappings": []
+    }
+  ],
+  "edges": [
+    {
+      "id": "5128172",
+      "source": "13",
+      "target": "22",
+      "event_internal": "oninvalidchoice",
+      "event_label": "onInvalidChoice",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128197",
+      "source": "23",
+      "target": "27",
+      "event_internal": "Success",
+      "event_label": "",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128220",
+      "source": "23",
+      "target": "27",
+      "event_internal": "ontimeout",
+      "event_label": "onTimeout",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128222",
+      "source": "23",
+      "target": "27",
+      "event_internal": "oninvaliddata",
+      "event_label": "onInvalidData",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128224",
+      "source": "23",
+      "target": "27",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128226",
+      "source": "23",
+      "target": "27",
+      "event_internal": "oninvalidchoice",
+      "event_label": "onInvalidChoice",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128228",
+      "source": "23",
+      "target": "27",
+      "event_internal": "onauthorizationfail",
+      "event_label": "",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128230",
+      "source": "23",
+      "target": "27",
+      "event_internal": "Error",
+      "event_label": "",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128235",
+      "source": "15",
+      "target": "22",
+      "event_internal": "oninvaliddata",
+      "event_label": "onInvalidData",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128237",
+      "source": "15",
+      "target": "22",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128239",
+      "source": "15",
+      "target": "22",
+      "event_internal": "oninvalidchoice",
+      "event_label": "onInvalidChoice",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128241",
+      "source": "15",
+      "target": "22",
+      "event_internal": "onauthorizationfail",
+      "event_label": "onauthorizationfail",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128243",
+      "source": "15",
+      "target": "22",
+      "event_internal": "tooManyRequests",
+      "event_label": "tooManyRequests",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128245",
+      "source": "15",
+      "target": "22",
+      "event_internal": "serviceUnavailable",
+      "event_label": "serviceUnavailable",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128247",
+      "source": "15",
+      "target": "22",
+      "event_internal": "error",
+      "event_label": "error",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128249",
+      "source": "15",
+      "target": "22",
+      "event_internal": "taskFailed",
+      "event_label": "taskFailed",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128259",
+      "source": "15",
+      "target": "22",
+      "event_internal": "appendFailed",
+      "event_label": "appendFailed",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128339",
+      "source": "5",
+      "target": "59",
+      "event_internal": "onsuccess",
+      "event_label": "onSuccess",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128341",
+      "source": "59",
+      "target": "23",
+      "event_internal": "oninvaliddata",
+      "event_label": "onInvalidData",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128343",
+      "source": "59",
+      "target": "23",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128345",
+      "source": "59",
+      "target": "23",
+      "event_internal": "oninvalidchoice",
+      "event_label": "onInvalidChoice",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128347",
+      "source": "59",
+      "target": "23",
+      "event_internal": "onauthorizationfail",
+      "event_label": "",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128349",
+      "source": "59",
+      "target": "23",
+      "event_internal": "Error",
+      "event_label": "",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128351",
+      "source": "59",
+      "target": "23",
+      "event_internal": "taskFailed",
+      "event_label": "",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128353",
+      "source": "59",
+      "target": "23",
+      "event_internal": "ontimeout",
+      "event_label": "onTimeout",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128363",
+      "source": "59",
+      "target": "60",
+      "event_internal": "Queued",
+      "event_label": "",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128376",
+      "source": "13",
+      "target": "22",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128634",
+      "source": "15",
+      "target": "172",
+      "event_internal": "ontimeout",
+      "event_label": "onTimeout",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128636",
+      "source": "172",
+      "target": "23",
+      "event_internal": "Create/Reopen Path",
+      "event_label": "Create/Reopen Path",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128662",
+      "source": "5",
+      "target": "59",
+      "event_internal": "onpolicyfail",
+      "event_label": "onPolicyFail",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128664",
+      "source": "5",
+      "target": "59",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128877",
+      "source": "13",
+      "target": "15",
+      "event_internal": 1,
+      "event_label": "success",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128894",
+      "source": "197",
+      "target": "198",
+      "event_internal": "onAppendMessageSuccess",
+      "event_label": "onAppendMessageSuccess",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128899",
+      "source": "198",
+      "target": "5",
+      "event_internal": "onAppendMessageSuccess",
+      "event_label": "onAppendMessageSuccess",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128903",
+      "source": "197",
+      "target": "5",
+      "event_internal": "oninvaliddata",
+      "event_label": "onInvalidData",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128905",
+      "source": "197",
+      "target": "5",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128907",
+      "source": "197",
+      "target": "5",
+      "event_internal": "oninvalidchoice",
+      "event_label": "onInvalidChoice",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128909",
+      "source": "197",
+      "target": "5",
+      "event_internal": "onauthorizationfail",
+      "event_label": "",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128911",
+      "source": "197",
+      "target": "5",
+      "event_internal": "Failure",
+      "event_label": "",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128913",
+      "source": "197",
+      "target": "5",
+      "event_internal": "onAppendMessageFailure",
+      "event_label": "",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128915",
+      "source": "198",
+      "target": "5",
+      "event_internal": "oninvaliddata",
+      "event_label": "onInvalidData",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128917",
+      "source": "198",
+      "target": "5",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128919",
+      "source": "198",
+      "target": "5",
+      "event_internal": "oninvalidchoice",
+      "event_label": "onInvalidChoice",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128921",
+      "source": "198",
+      "target": "5",
+      "event_internal": "onauthorizationfail",
+      "event_label": "onauthorizationfail",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128923",
+      "source": "198",
+      "target": "5",
+      "event_internal": "Failure",
+      "event_label": "Failure",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128925",
+      "source": "198",
+      "target": "5",
+      "event_internal": "onAppendMessageFailure",
+      "event_label": "onAppendMessageFailure",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128927",
+      "source": "197",
+      "target": "5",
+      "event_internal": "ontimeout",
+      "event_label": "onTimeout",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128929",
+      "source": "198",
+      "target": "5",
+      "event_internal": "ontimeout",
+      "event_label": "onTimeout",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128999",
+      "source": "2",
+      "target": "13",
+      "event_internal": "onbegin",
+      "event_label": "onBegin",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5129001",
+      "source": "15",
+      "target": "193",
+      "event_internal": "created",
+      "event_label": "created",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5129003",
+      "source": "15",
+      "target": "193",
+      "event_internal": "reopened",
+      "event_label": "reopened",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5129011",
+      "source": "193",
+      "target": "5",
+      "event_internal": "onpolicyfail",
+      "event_label": "onPolicyFail",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5129013",
+      "source": "193",
+      "target": "5",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5129131",
+      "source": "193",
+      "target": "206",
+      "event_internal": "onsuccess",
+      "event_label": "onSuccess",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5129133",
+      "source": "206",
+      "target": "5",
+      "event_internal": "ontimeout",
+      "event_label": "onTimeout",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5129135",
+      "source": "206",
+      "target": "5",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5129140",
+      "source": "206",
+      "target": "197",
+      "event_internal": "abc.oninteractivetimepicker",
+      "event_label": "",
+      "representation": "explicit_edge"
+    }
+  ],
+  "terminal_bindings": [
+    {
+      "id": "34",
+      "source": "60",
+      "target": "34",
+      "event_internal": "onpolicyfail",
+      "event_label": "onPolicyFail",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 2
+    },
+    {
+      "id": "35",
+      "source": "60",
+      "target": "35",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 2
+    },
+    {
+      "id": "52",
+      "source": "27",
+      "target": "52",
+      "event_internal": "onsuccess",
+      "event_label": "onSuccess",
+      "outcome_id": 2,
+      "outcome_name": "Success",
+      "outcome_description": "Successfully completed flow",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "72",
+      "source": "27",
+      "target": "72",
+      "event_internal": "onpolicyfail",
+      "event_label": "onPolicyFail",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "73",
+      "source": "27",
+      "target": "73",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "129",
+      "source": "22",
+      "target": "129",
+      "event_internal": "onsuccess",
+      "event_label": "onSuccess",
+      "outcome_id": 2,
+      "outcome_name": "Success",
+      "outcome_description": "Successfully completed flow",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "173",
+      "source": "172",
+      "target": "173",
+      "event_internal": "Append Path",
+      "event_label": "Append Path",
+      "outcome_id": 2,
+      "outcome_name": "Success",
+      "outcome_description": "Successfully completed flow",
+      "session_retry": "",
+      "async_check": true,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "175",
+      "source": "172",
+      "target": "175",
+      "event_internal": "None of the above",
+      "event_label": "None of the above",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "178",
+      "source": "172",
+      "target": "178",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "181",
+      "source": "60",
+      "target": "181",
+      "event_internal": "onsuccess",
+      "event_label": "onSuccess",
+      "outcome_id": 2,
+      "outcome_name": "Success",
+      "outcome_description": "Successfully completed flow",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "183",
+      "source": "60",
+      "target": "183",
+      "event_internal": "onpolicyfail",
+      "event_label": "onPolicyFail",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 2
+    },
+    {
+      "id": "186",
+      "source": "60",
+      "target": "186",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 2
+    },
+    {
+      "id": "207",
+      "source": "15",
+      "target": "207",
+      "event_internal": "appended",
+      "event_label": "appended",
+      "outcome_id": 2,
+      "outcome_name": "Success",
+      "outcome_description": "Successfully completed flow",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "208",
+      "source": "15",
+      "target": "208",
+      "event_internal": "accepted",
+      "event_label": "accepted",
+      "outcome_id": 2,
+      "outcome_name": "Success",
+      "outcome_description": "Successfully completed flow",
+      "session_retry": "",
+      "async_check": true,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    }
+  ],
+  "terminal_sources_not_captured": [],
+  "duplicate_terminal_binding_groups": [
+    {
+      "source": "60",
+      "event_internal": "onpolicyfail",
+      "outcome_id": "3",
+      "record_count": 2
+    },
+    {
+      "source": "60",
+      "event_internal": "onerror",
+      "outcome_id": "3",
+      "record_count": 2
+    }
+  ],
+  "variable_handoffs": [
+    {
+      "consumer": "2",
+      "location": "transition_actions[0].value",
+      "reference": "$(n2.abc.abcUserId)",
+      "variable": "n2.abc.abcUserId",
+      "producer_node": "2",
+      "producer_field": "abc.abcUserId",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[1].value",
+      "reference": "$(n2.abc.attachments)",
+      "variable": "n2.abc.attachments",
+      "producer_node": "2",
+      "producer_field": "abc.attachments",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[2].value",
+      "reference": "$(n2. abc.attachmentCount)",
+      "variable": "n2. abc.attachmentCount",
+      "producer_node": "2",
+      "producer_field": " abc.attachmentCount",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[3].value",
+      "reference": "$(n2.abc.attachmentUrl)",
+      "variable": "n2.abc.attachmentUrl",
+      "producer_node": "2",
+      "producer_field": "abc.attachmentUrl",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[4].value",
+      "reference": "$(n2.abc.accountId)",
+      "variable": "n2.abc.accountId",
+      "producer_node": "2",
+      "producer_field": "abc.accountId",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[5].value",
+      "reference": "$(n2.abc.appId)",
+      "variable": "n2.abc.appId",
+      "producer_node": "2",
+      "producer_field": "abc.appId",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[6].value",
+      "reference": "$(n2.abc.timestamp)",
+      "variable": "n2.abc.timestamp",
+      "producer_node": "2",
+      "producer_field": "abc.timestamp",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[7].value",
+      "reference": "$(n2.abc.transId)",
+      "variable": "n2.abc.transId",
+      "producer_node": "2",
+      "producer_field": "abc.transId",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[8].value",
+      "reference": "$(n2.service.serviceKey)",
+      "variable": "n2.service.serviceKey",
+      "producer_node": "2",
+      "producer_field": "service.serviceKey",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[9].value",
+      "reference": "$(n2.abc.message)",
+      "variable": "n2.abc.message",
+      "producer_node": "2",
+      "producer_field": "abc.message",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[10].value",
+      "reference": "$(n2.abc.pciInfo.isPCIValidationDone)",
+      "variable": "n2.abc.pciInfo.isPCIValidationDone",
+      "producer_node": "2",
+      "producer_field": "abc.pciInfo.isPCIValidationDone",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[11].value",
+      "reference": "$(n2.abc.pciInfo.nonPCIComplianceReason)",
+      "variable": "n2.abc.pciInfo.nonPCIComplianceReason",
+      "producer_node": "2",
+      "producer_field": "abc.pciInfo.nonPCIComplianceReason",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[12].value",
+      "reference": "$(n2.abc.pciInfo.isAttachmentEnabled)",
+      "variable": "n2.abc.pciInfo.isAttachmentEnabled",
+      "producer_node": "2",
+      "producer_field": "abc.pciInfo.isAttachmentEnabled",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[13].value",
+      "reference": "$(n2.abc.pciInfo.droppedAttachmentCount)",
+      "variable": "n2.abc.pciInfo.droppedAttachmentCount",
+      "producer_node": "2",
+      "producer_field": "abc.pciInfo.droppedAttachmentCount",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[14].value",
+      "reference": "$(n2.abc.pciInfo.isPCICompliance)",
+      "variable": "n2.abc.pciInfo.isPCICompliance",
+      "producer_node": "2",
+      "producer_field": "abc.pciInfo.isPCICompliance",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[15].value",
+      "reference": "$(defaultCustomerName)",
+      "variable": "defaultCustomerName",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[16].value",
+      "reference": "$(n2.abc.securityscaninfo.isSecurityValidationDone)",
+      "variable": "n2.abc.securityscaninfo.isSecurityValidationDone",
+      "producer_node": "2",
+      "producer_field": "abc.securityscaninfo.isSecurityValidationDone",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[17].value",
+      "reference": "$(n2.abc.securityscaninfo.securityFailedReason)",
+      "variable": "n2.abc.securityscaninfo.securityFailedReason",
+      "producer_node": "2",
+      "producer_field": "abc.securityscaninfo.securityFailedReason",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[18].value",
+      "reference": "$(n2.abc.securityscaninfo.droppedAttachmentCount)",
+      "variable": "n2.abc.securityscaninfo.droppedAttachmentCount",
+      "producer_node": "2",
+      "producer_field": "abc.securityscaninfo.droppedAttachmentCount",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[19].value",
+      "reference": "$(n2.abc.securityscaninfo.isSecurityCompliance)",
+      "variable": "n2.abc.securityscaninfo.isSecurityCompliance",
+      "producer_node": "2",
+      "producer_field": "abc.securityscaninfo.isSecurityCompliance",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[20].value",
+      "reference": "$(n2.abc.malwareinfo.isMalwareValidationDone)",
+      "variable": "n2.abc.malwareinfo.isMalwareValidationDone",
+      "producer_node": "2",
+      "producer_field": "abc.malwareinfo.isMalwareValidationDone",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[21].value",
+      "reference": "$(n2.abc.malwareinfo.isMalwareCompliance)",
+      "variable": "n2.abc.malwareinfo.isMalwareCompliance",
+      "producer_node": "2",
+      "producer_field": "abc.malwareinfo.isMalwareCompliance",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[22].value",
+      "reference": "$(n2.abc.malwareinfo.malwareFailedReason)",
+      "variable": "n2.abc.malwareinfo.malwareFailedReason",
+      "producer_node": "2",
+      "producer_field": "abc.malwareinfo.malwareFailedReason",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[23].value",
+      "reference": "$(n2.abc.malwareinfo.droppedAttachmentCount)",
+      "variable": "n2.abc.malwareinfo.droppedAttachmentCount",
+      "producer_node": "2",
+      "producer_field": "abc.malwareinfo.droppedAttachmentCount",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[24].value",
+      "reference": "$(n2.abc.capabilityList)",
+      "variable": "n2.abc.capabilityList",
+      "producer_node": "2",
+      "producer_field": "abc.capabilityList",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "5",
+      "location": "configuration.destination",
+      "reference": "$(n2.abc.abcUserId)",
+      "variable": "n2.abc.abcUserId",
+      "producer_node": "2",
+      "producer_field": "abc.abcUserId",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "15",
+      "location": "configuration.request_body[0].value",
+      "reference": "$(transId)",
+      "variable": "transId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": [
+        "2"
+      ]
+    },
+    {
+      "consumer": "15",
+      "location": "configuration.request_body[6].value",
+      "reference": "$(detailsJson)",
+      "variable": "detailsJson",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "15",
+      "location": "configuration.nodeInput.transId",
+      "reference": "$(transId)",
+      "variable": "transId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": [
+        "2"
+      ]
+    },
+    {
+      "consumer": "15",
+      "location": "configuration.nodeInput.trackingId",
+      "reference": "$(transId)",
+      "variable": "transId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": [
+        "2"
+      ]
+    },
+    {
+      "consumer": "15",
+      "location": "configuration.nodeInput.details",
+      "reference": "$(detailsJson)",
+      "variable": "detailsJson",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "15",
+      "location": "configuration.extraParamsData.transId",
+      "reference": "$(transId)",
+      "variable": "transId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": [
+        "2"
+      ]
+    },
+    {
+      "consumer": "15",
+      "location": "configuration.extraParamsData.trackingId",
+      "reference": "$(transId)",
+      "variable": "transId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": [
+        "2"
+      ]
+    },
+    {
+      "consumer": "15",
+      "location": "configuration.extraParamsData.details",
+      "reference": "$(detailsJson)",
+      "variable": "detailsJson",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "22",
+      "location": "configuration.destination",
+      "reference": "$(n2.abc.abcUserId)",
+      "variable": "n2.abc.abcUserId",
+      "producer_node": "2",
+      "producer_field": "abc.abcUserId",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "22",
+      "location": "configuration.body",
+      "reference": "$(errorMsg1)",
+      "variable": "errorMsg1",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "23",
+      "location": "configuration.request_body[0].value",
+      "reference": "$(taskId)",
+      "variable": "taskId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "23",
+      "location": "configuration.request_body[2].value",
+      "reference": "$(conversationId)",
+      "variable": "conversationId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "23",
+      "location": "configuration.path_parameters[1].value",
+      "reference": "$(taskId)",
+      "variable": "taskId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "27",
+      "location": "configuration.destination",
+      "reference": "$(n2.abc.abcUserId)",
+      "variable": "n2.abc.abcUserId",
+      "producer_node": "2",
+      "producer_field": "abc.abcUserId",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "27",
+      "location": "configuration.body",
+      "reference": "$(errorMsg1)",
+      "variable": "errorMsg1",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "59",
+      "location": "configuration.request_body[0].value",
+      "reference": "$(taskId)",
+      "variable": "taskId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "59",
+      "location": "configuration.request_body[3].value",
+      "reference": "$(conversationId)",
+      "variable": "conversationId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "59",
+      "location": "configuration.path_parameters[1].value",
+      "reference": "$(taskId)",
+      "variable": "taskId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "59",
+      "location": "configuration.nodeInput.id",
+      "reference": "$(taskId)",
+      "variable": "taskId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "59",
+      "location": "configuration.nodeInput.conversationid",
+      "reference": "$(conversationId)",
+      "variable": "conversationId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "59",
+      "location": "configuration.extraParamsData.id",
+      "reference": "$(taskId)",
+      "variable": "taskId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "59",
+      "location": "configuration.extraParamsData.conversationid",
+      "reference": "$(conversationId)",
+      "variable": "conversationId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "60",
+      "location": "configuration.destination",
+      "reference": "$(n2.abc.abcUserId)",
+      "variable": "n2.abc.abcUserId",
+      "producer_node": "2",
+      "producer_field": "abc.abcUserId",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "172",
+      "location": "configuration.outcomes[0].conditions[0].varaible",
+      "reference": "$(conversationOperation)",
+      "variable": "conversationOperation",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "172",
+      "location": "configuration.outcomes[0].conditions[1].varaible",
+      "reference": "$(conversationOperation)",
+      "variable": "conversationOperation",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "172",
+      "location": "configuration.outcomes[1].conditions[0].varaible",
+      "reference": "$(conversationOperation)",
+      "variable": "conversationOperation",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "172",
+      "location": "configuration.expression",
+      "reference": "$(conversationOperation)",
+      "variable": "conversationOperation",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "193",
+      "location": "configuration.destination",
+      "reference": "$(n2.abc.abcUserId)",
+      "variable": "n2.abc.abcUserId",
+      "producer_node": "2",
+      "producer_field": "abc.abcUserId",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "197",
+      "location": "configuration.request_body[6].value",
+      "reference": "$(n193.send.sentDateTime)",
+      "variable": "n193.send.sentDateTime",
+      "producer_node": "193",
+      "producer_field": "send.sentDateTime",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "197",
+      "location": "configuration.request_body[26].value",
+      "reference": "$(n193.send.timePicker)",
+      "variable": "n193.send.timePicker",
+      "producer_node": "193",
+      "producer_field": "send.timePicker",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "197",
+      "location": "configuration.path_parameters[1].value",
+      "reference": "$(conversationId)",
+      "variable": "conversationId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "197",
+      "location": "configuration.extraParamsData.conversationid",
+      "reference": "$(conversationId)",
+      "variable": "conversationId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "197",
+      "location": "configuration.extraParamsData.textOrResponse",
+      "reference": "$(n193.send.timePicker)",
+      "variable": "n193.send.timePicker",
+      "producer_node": "193",
+      "producer_field": "send.timePicker",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "197",
+      "location": "configuration.extraParamsData.timestamp",
+      "reference": "$(n193.send.sentDateTime)",
+      "variable": "n193.send.sentDateTime",
+      "producer_node": "193",
+      "producer_field": "send.sentDateTime",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "197",
+      "location": "configuration.extraParamsData.ambTimePicker",
+      "reference": "$(n193.send.timePicker)",
+      "variable": "n193.send.timePicker",
+      "producer_node": "193",
+      "producer_field": "send.timePicker",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "198",
+      "location": "configuration.request_body[6].value",
+      "reference": "$(n206.abc.timestamp)",
+      "variable": "n206.abc.timestamp",
+      "producer_node": "206",
+      "producer_field": "abc.timestamp",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "198",
+      "location": "configuration.request_body[27].value",
+      "reference": "$(n206.receive.payload)",
+      "variable": "n206.receive.payload",
+      "producer_node": "206",
+      "producer_field": "receive.payload",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "198",
+      "location": "configuration.request_body[32].value",
+      "reference": "$(n206.abc.capabilityList)",
+      "variable": "n206.abc.capabilityList",
+      "producer_node": "206",
+      "producer_field": "abc.capabilityList",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "198",
+      "location": "configuration.path_parameters[1].value",
+      "reference": "$(conversationId)",
+      "variable": "conversationId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "198",
+      "location": "configuration.extraParamsData.conversationid",
+      "reference": "$(conversationId)",
+      "variable": "conversationId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "198",
+      "location": "configuration.extraParamsData.textOrResponse",
+      "reference": "$(n206.receive.payload)",
+      "variable": "n206.receive.payload",
+      "producer_node": "206",
+      "producer_field": "receive.payload",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "198",
+      "location": "configuration.extraParamsData.timestamp",
+      "reference": "$(n206.abc.timestamp)",
+      "variable": "n206.abc.timestamp",
+      "producer_node": "206",
+      "producer_field": "abc.timestamp",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "198",
+      "location": "configuration.extraParamsData.extras",
+      "reference": "$(n206.abc.capabilityList)",
+      "variable": "n206.abc.capabilityList",
+      "producer_node": "206",
+      "producer_field": "abc.capabilityList",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "198",
+      "location": "configuration.extraParamsData.ambTimePickerResponse",
+      "reference": "$(n206.receive.payload)",
+      "variable": "n206.receive.payload",
+      "producer_node": "206",
+      "producer_field": "receive.payload",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "206",
+      "location": "transition_actions[0].value",
+      "reference": "$(n206.receive.payload)",
+      "variable": "n206.receive.payload",
+      "producer_node": "206",
+      "producer_field": "receive.payload",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.abc.abcUserId)",
+      "variable": "n2.abc.abcUserId",
+      "producer_node": "2",
+      "producer_field": "abc.abcUserId",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.abc.attachments)",
+      "variable": "n2.abc.attachments",
+      "producer_node": "2",
+      "producer_field": "abc.attachments",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2. abc.attachmentCount)",
+      "variable": "n2. abc.attachmentCount",
+      "producer_node": "2",
+      "producer_field": " abc.attachmentCount",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.abc.attachmentUrl)",
+      "variable": "n2.abc.attachmentUrl",
+      "producer_node": "2",
+      "producer_field": "abc.attachmentUrl",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.abc.accountId)",
+      "variable": "n2.abc.accountId",
+      "producer_node": "2",
+      "producer_field": "abc.accountId",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.abc.appId)",
+      "variable": "n2.abc.appId",
+      "producer_node": "2",
+      "producer_field": "abc.appId",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.abc.timestamp)",
+      "variable": "n2.abc.timestamp",
+      "producer_node": "2",
+      "producer_field": "abc.timestamp",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.abc.transId)",
+      "variable": "n2.abc.transId",
+      "producer_node": "2",
+      "producer_field": "abc.transId",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.service.serviceKey)",
+      "variable": "n2.service.serviceKey",
+      "producer_node": "2",
+      "producer_field": "service.serviceKey",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.abc.message)",
+      "variable": "n2.abc.message",
+      "producer_node": "2",
+      "producer_field": "abc.message",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.abc.pciInfo.isPCIValidationDone)",
+      "variable": "n2.abc.pciInfo.isPCIValidationDone",
+      "producer_node": "2",
+      "producer_field": "abc.pciInfo.isPCIValidationDone",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.abc.pciInfo.nonPCIComplianceReason)",
+      "variable": "n2.abc.pciInfo.nonPCIComplianceReason",
+      "producer_node": "2",
+      "producer_field": "abc.pciInfo.nonPCIComplianceReason",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.abc.pciInfo.isAttachmentEnabled)",
+      "variable": "n2.abc.pciInfo.isAttachmentEnabled",
+      "producer_node": "2",
+      "producer_field": "abc.pciInfo.isAttachmentEnabled",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.abc.pciInfo.droppedAttachmentCount)",
+      "variable": "n2.abc.pciInfo.droppedAttachmentCount",
+      "producer_node": "2",
+      "producer_field": "abc.pciInfo.droppedAttachmentCount",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.abc.pciInfo.isPCICompliance)",
+      "variable": "n2.abc.pciInfo.isPCICompliance",
+      "producer_node": "2",
+      "producer_field": "abc.pciInfo.isPCICompliance",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.abc.securityscaninfo.isSecurityValidationDone)",
+      "variable": "n2.abc.securityscaninfo.isSecurityValidationDone",
+      "producer_node": "2",
+      "producer_field": "abc.securityscaninfo.isSecurityValidationDone",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.abc.securityscaninfo.securityFailedReason)",
+      "variable": "n2.abc.securityscaninfo.securityFailedReason",
+      "producer_node": "2",
+      "producer_field": "abc.securityscaninfo.securityFailedReason",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.abc.securityscaninfo.droppedAttachmentCount)",
+      "variable": "n2.abc.securityscaninfo.droppedAttachmentCount",
+      "producer_node": "2",
+      "producer_field": "abc.securityscaninfo.droppedAttachmentCount",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.abc.securityscaninfo.isSecurityCompliance)",
+      "variable": "n2.abc.securityscaninfo.isSecurityCompliance",
+      "producer_node": "2",
+      "producer_field": "abc.securityscaninfo.isSecurityCompliance",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.abc.malwareinfo.isMalwareValidationDone)",
+      "variable": "n2.abc.malwareinfo.isMalwareValidationDone",
+      "producer_node": "2",
+      "producer_field": "abc.malwareinfo.isMalwareValidationDone",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.abc.malwareinfo.isMalwareCompliance)",
+      "variable": "n2.abc.malwareinfo.isMalwareCompliance",
+      "producer_node": "2",
+      "producer_field": "abc.malwareinfo.isMalwareCompliance",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.abc.malwareinfo.malwareFailedReason)",
+      "variable": "n2.abc.malwareinfo.malwareFailedReason",
+      "producer_node": "2",
+      "producer_field": "abc.malwareinfo.malwareFailedReason",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.abc.malwareinfo.droppedAttachmentCount)",
+      "variable": "n2.abc.malwareinfo.droppedAttachmentCount",
+      "producer_node": "2",
+      "producer_field": "abc.malwareinfo.droppedAttachmentCount",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.abc.capabilityList)",
+      "variable": "n2.abc.capabilityList",
+      "producer_node": "2",
+      "producer_field": "abc.capabilityList",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "5",
+      "location": "_usedVars",
+      "reference": "$(n2.abc.abcUserId)",
+      "variable": "n2.abc.abcUserId",
+      "producer_node": "2",
+      "producer_field": "abc.abcUserId",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "22",
+      "location": "_usedVars",
+      "reference": "$(n2.abc.abcUserId)",
+      "variable": "n2.abc.abcUserId",
+      "producer_node": "2",
+      "producer_field": "abc.abcUserId",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "27",
+      "location": "_usedVars",
+      "reference": "$(n2.abc.abcUserId)",
+      "variable": "n2.abc.abcUserId",
+      "producer_node": "2",
+      "producer_field": "abc.abcUserId",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "60",
+      "location": "_usedVars",
+      "reference": "$(n2.abc.abcUserId)",
+      "variable": "n2.abc.abcUserId",
+      "producer_node": "2",
+      "producer_field": "abc.abcUserId",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "193",
+      "location": "_usedVars",
+      "reference": "$(n2.abc.abcUserId)",
+      "variable": "n2.abc.abcUserId",
+      "producer_node": "2",
+      "producer_field": "abc.abcUserId",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "197",
+      "location": "_usedVars",
+      "reference": "$(n193.send.sentDateTime)",
+      "variable": "n193.send.sentDateTime",
+      "producer_node": "193",
+      "producer_field": "send.sentDateTime",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "197",
+      "location": "_usedVars",
+      "reference": "$(n193.send.timePicker)",
+      "variable": "n193.send.timePicker",
+      "producer_node": "193",
+      "producer_field": "send.timePicker",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "198",
+      "location": "_usedVars",
+      "reference": "$(n206.abc.timestamp)",
+      "variable": "n206.abc.timestamp",
+      "producer_node": "206",
+      "producer_field": "abc.timestamp",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "198",
+      "location": "_usedVars",
+      "reference": "$(n206.receive.payload)",
+      "variable": "n206.receive.payload",
+      "producer_node": "206",
+      "producer_field": "receive.payload",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "198",
+      "location": "_usedVars",
+      "reference": "$(n206.abc.capabilityList)",
+      "variable": "n206.abc.capabilityList",
+      "producer_node": "206",
+      "producer_field": "abc.capabilityList",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "206",
+      "location": "_usedVars",
+      "reference": "$(n2.abc.abcUserId)",
+      "variable": "n2.abc.abcUserId",
+      "producer_node": "2",
+      "producer_field": "abc.abcUserId",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "206",
+      "location": "_usedTransVar",
+      "reference": "$(n206.receive.payload)",
+      "variable": "n206.receive.payload",
+      "producer_node": "206",
+      "producer_field": "receive.payload",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    }
+  ],
+  "custom_variable_assignments": [
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "abcUserId",
+      "when": "onleave",
+      "value": "$(n2.abc.abcUserId)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "attachments",
+      "when": "onleave",
+      "value": "$(n2.abc.attachments)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "attachmentCount",
+      "when": "onleave",
+      "value": "$(n2. abc.attachmentCount)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "attachmentUrl",
+      "when": "onleave",
+      "value": "$(n2.abc.attachmentUrl)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "accountId",
+      "when": "onleave",
+      "value": "$(n2.abc.accountId)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "appId",
+      "when": "onleave",
+      "value": "$(n2.abc.appId)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "timestamp",
+      "when": "onleave",
+      "value": "$(n2.abc.timestamp)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "transId",
+      "when": "onleave",
+      "value": "$(n2.abc.transId)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "serviceKey",
+      "when": "onleave",
+      "value": "$(n2.service.serviceKey)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "resolveConversationmessagetext",
+      "when": "onleave",
+      "value": "$(n2.abc.message)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "resolveConversationIsPCIValidationDone",
+      "when": "onleave",
+      "value": "$(n2.abc.pciInfo.isPCIValidationDone)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "resolveConversationNonPCIComplianceReasonObject",
+      "when": "onleave",
+      "value": "$(n2.abc.pciInfo.nonPCIComplianceReason)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "isAttachmentEnabled",
+      "when": "onleave",
+      "value": "$(n2.abc.pciInfo.isAttachmentEnabled)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "droppedAttachmentCount",
+      "when": "onleave",
+      "value": "$(n2.abc.pciInfo.droppedAttachmentCount)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "isPCICompliance",
+      "when": "onleave",
+      "value": "$(n2.abc.pciInfo.isPCICompliance)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "customerName",
+      "when": "onleave",
+      "value": "$(defaultCustomerName)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "isSecurityValidationDone",
+      "when": "onleave",
+      "value": "$(n2.abc.securityscaninfo.isSecurityValidationDone)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "securityNonComplianceReasonObject",
+      "when": "onleave",
+      "value": "$(n2.abc.securityscaninfo.securityFailedReason)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "securityScanDroppedAttachmentCount",
+      "when": "onleave",
+      "value": "$(n2.abc.securityscaninfo.droppedAttachmentCount)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "isSecurityCompliance",
+      "when": "onleave",
+      "value": "$(n2.abc.securityscaninfo.isSecurityCompliance)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "isMalwareValidationDone",
+      "when": "onleave",
+      "value": "$(n2.abc.malwareinfo.isMalwareValidationDone)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "isMalwareCompliance",
+      "when": "onleave",
+      "value": "$(n2.abc.malwareinfo.isMalwareCompliance)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "malwareNonComplianceReasonObject",
+      "when": "onleave",
+      "value": "$(n2.abc.malwareinfo.malwareFailedReason)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "malwareScanDroppedAttachmentCount",
+      "when": "onleave",
+      "value": "$(n2.abc.malwareinfo.droppedAttachmentCount)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "deviceCapabilityList",
+      "when": "onleave",
+      "value": "$(n2.abc.capabilityList)"
+    }
+  ],
+  "custom_variables": [
+    {
+      "name": "abcUserId",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": "",
+      "index": "1o4qmzh3"
+    },
+    {
+      "name": "attachments",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": "",
+      "index": "xtia7kp6"
+    },
+    {
+      "name": "attachmentCount",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": "",
+      "index": "2hfzt4lo"
+    },
+    {
+      "name": "attachmentUrl",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": "",
+      "index": "weg7sf0q"
+    },
+    {
+      "name": "accountId",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": "",
+      "index": "7iutjbxc"
+    },
+    {
+      "name": "appId",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": "",
+      "index": "cyjn2hzh"
+    },
+    {
+      "name": "timestamp",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": "",
+      "index": "yj3mymgo"
+    },
+    {
+      "name": "transId",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": "",
+      "index": "fn8u0ofj"
+    },
+    {
+      "name": "serviceKey",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": "",
+      "index": "wtz42d2a"
+    },
+    {
+      "name": "resolveConversationmessagetext",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": "",
+      "index": "lsmoiu4q"
+    },
+    {
+      "name": "resolveConversationIsPCIValidationDone",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": "",
+      "index": "4vzrlmyv"
+    },
+    {
+      "name": "resolveConversationNonPCIComplianceReasonObject",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": "",
+      "index": "ma5f2xco"
+    },
+    {
+      "name": "isAttachmentEnabled",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": "",
+      "index": "b4iudsqa"
+    },
+    {
+      "name": "droppedAttachmentCount",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": "",
+      "index": "6ww8f68c"
+    },
+    {
+      "name": "isPCICompliance",
+      "value": false,
+      "desc": "",
+      "type": "default",
+      "dec": "",
+      "index": "5cdxqiei"
+    },
+    {
+      "name": "errorMsg1",
+      "value": "Sorry, we are unable to process your request right now. Please try again later.",
+      "desc": "",
+      "type": "default",
+      "dec": "",
+      "index": "7kfn80yi"
+    },
+    {
+      "name": "errorMsg2",
+      "value": "Unable to deliver your message. Please resend.",
+      "desc": "",
+      "type": "default",
+      "dec": "",
+      "index": "wpxim1jm"
+    },
+    {
+      "name": "taskId",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": "",
+      "index": "x8dvvcmt"
+    },
+    {
+      "name": "conversationId",
+      "value": "000000000000000",
+      "desc": "",
+      "type": "default",
+      "dec": "",
+      "index": "nbqu1rzd"
+    },
+    {
+      "name": "customerName",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": "",
+      "index": "ifdt73as"
+    },
+    {
+      "name": "errorMsg3",
+      "value": "Currently sevice is not available",
+      "desc": "",
+      "type": "default",
+      "dec": "",
+      "index": "0o8gesdo"
+    },
+    {
+      "name": "conversationOperation",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": "",
+      "index": "4b37y39n"
+    },
+    {
+      "name": "isSecurityValidationDone",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "index": "4dlh0m8q"
+    },
+    {
+      "name": "securityNonComplianceReasonObject",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "index": "i46tpyyr"
+    },
+    {
+      "name": "securityScanDroppedAttachmentCount",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "index": "8qbwv3v2"
+    },
+    {
+      "name": "isSecurityCompliance",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "index": "e8cedlgt"
+    },
+    {
+      "name": "isMalwareValidationDone",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "index": "6ul7brau"
+    },
+    {
+      "name": "isMalwareCompliance",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "index": "wbc06flr"
+    },
+    {
+      "name": "malwareNonComplianceReasonObject",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "index": "koragitk"
+    },
+    {
+      "name": "malwareScanDroppedAttachmentCount",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "index": "717p0eke"
+    },
+    {
+      "name": "defaultCustomerName",
+      "value": "Customer",
+      "desc": "",
+      "type": "default",
+      "index": "22z1ewmn"
+    },
+    {
+      "name": "flowVersion",
+      "value": 3.3,
+      "desc": "",
+      "type": "default",
+      "index": "isqegvyn"
+    },
+    {
+      "name": "deviceCapabilityList",
+      "value": "",
+      "type": "default"
+    }
+  ],
+  "flow_outcomes": [
+    {
+      "id": 2,
+      "order": 0,
+      "name": 101,
+      "value": "Successfully completed flow",
+      "tag": 11,
+      "tagName": "Success",
+      "type": "default",
+      "notification": null
+    },
+    {
+      "id": 3,
+      "order": 1,
+      "name": 102,
+      "value": "Flow completed with an error",
+      "tag": 12,
+      "tagName": "Error",
+      "type": "default",
+      "notification": null
+    },
+    {
+      "id": 4,
+      "order": 2,
+      "name": 103,
+      "value": "Flow ended due to an interruption",
+      "tag": 13,
+      "tagName": "Incomplete",
+      "type": "default",
+      "notification": null
+    },
+    {
+      "id": 1,
+      "name": 100,
+      "value": "Last executed node event",
+      "statusCode": "All status codes",
+      "tag": 15,
+      "tagName": "Last Execution Status",
+      "type": "default",
+      "notification": null
+    }
+  ],
+  "cycles": [],
+  "cross_page_or_flow_nodes": [],
+  "capture_pages": null,
+  "declared_events_without_captured_route": [
+    {
+      "node": "22",
+      "event_internal": "onerror",
+      "declared_target_count": 1
+    }
+  ],
+  "nodes_not_reached_from_captured_start": [],
+  "edge_endpoints_not_captured": [],
+  "node_variable_producers_not_captured": [],
+  "redactions": "Header credentials and URL hosts redacted. Internal model properties are evidence, not a public import API.",
+  "authored_walkthrough": {
+    "walkthrough": "Start 2 prepares details at Evaluate 13 and invokes Resolve Conversation 15. Created/reopened routes send time picker 193 and wait up to 300 seconds at Receive 206. Its interactive time-picker event appends the outbound picker through 197, then the inbound response through 198, then status message 5 and Queue Task 59. Picker, Receive and append failures converge on the same status/queue path. Queued sends acknowledgement 60; queue failure closes task 23 then sends error 27. Existing appended/accepted Resolve outcomes finish Success without presenting the picker. Resolve timeout uses Branch 172 to distinguish created/reopened cleanup from appended completion.",
+    "handoffs": "Append 197 records `$(n193.send.timePicker)` and `$(n193.send.sentDateTime)` as `amb-time-picker`. Append 198 records `$(n206.receive.payload)` and `$(n206.abc.timestamp)` as `amb-time-picker-response`, plus capability metadata. Sends address `$(n2.abc.abcUserId)`; append/queue nodes consume shared `conversationId`/`taskId`.",
+    "limitations": "Picker slots are fixed to 2024-04-01 at 09:00 and 10:00, with duration 1800 and timezoneOffset `Asia/Calcutta`; they are historical examples, not available appointments. The graph records a selection then queues work: no booking API, availability lookup, selected-slot branch or retry loop exists. Queueing can occur after a picker timeout. Several repeated End bindings and Send 22’s unrouted error are retained as captured."
+  },
+  "walkthrough_status": "authored"
+}

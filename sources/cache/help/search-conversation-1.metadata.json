@@ -1,0 +1,36 @@
+{
+  "category": "Webex Engage Standalone Nodes",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd81825797c",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "d25e4b87e6bcdbe16bcd72b1ce0217fda1b32eb4570c154a856f91101ec888c0",
+    "source_path": "c68657804196de8fe36f27ee4ebf4a04120f14684effb897c72e2062852d0ce6",
+    "text_path": "007ac4a28542975849f16f5099ad6386bfbdb7e73a86ef831ed9ff5f8c37b146"
+  },
+  "headings": [
+    "📘Configuring API channel",
+    "Configuration",
+    "Output variables",
+    "Node outcomes"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/search-conversation-1.md",
+  "resolved_url": "https://help.webexconnect.io/docs/search-conversation-1",
+  "retrieved_at": "2026-09-08T23:29:29+00:00",
+  "sha256_html_response": "64407aab720971410d6b154155eb25620b430ca1b1afcf83c4f23790f73178ee",
+  "sha256_source_body": "c68657804196de8fe36f27ee4ebf4a04120f14684effb897c72e2062852d0ce6",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/search-conversation-1.source.md",
+  "source_updated_at": "2026-04-14T07:47:16.866Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/search-conversation-1.txt",
+  "title": "Search conversation - WxEngage standalone",
+  "url": "https://help.webexconnect.io/docs/search-conversation-1",
+  "word_count": 1227,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/search-conversation-1.metadata.json"
+}

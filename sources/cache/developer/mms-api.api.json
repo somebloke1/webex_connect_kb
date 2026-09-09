@@ -1,0 +1,264 @@
+{
+  "api": {
+    "method": "post",
+    "url": "/messages",
+    "auth": "required",
+    "results": {
+      "codes": [
+        {
+          "name": "",
+          "code": "{\n   \"messageId\":\"0a129aee-e1cd-480d-b08d-4f48548ff48d\",\n   \"correlationId\":\"k1l2\",\n   \"status\":\"queued\",\n   \"requestTimestamp\":\"2014-02-17T07:25:01.4178645-05:00\"\n}",
+          "language": "json",
+          "status": 201
+        },
+        {
+          "name": "",
+          "code": "{\n  \"code\": 8000,\n  \"message\": \"Invalid parameter: 'asdf'\"\n}",
+          "language": "json",
+          "status": 400
+        }
+      ]
+    },
+    "params": [
+      {
+        "name": "Content-Type",
+        "type": "string",
+        "enumValues": "",
+        "default": "Application/JSON",
+        "desc": "",
+        "required": false,
+        "in": "header",
+        "ref": "",
+        "_id": "60ed14971f0b29007be6198a",
+        "id": "60ed14971f0b29007be6198a"
+      },
+      {
+        "name": "key",
+        "type": "string",
+        "enumValues": "",
+        "default": "",
+        "desc": "Service key available on the platform UI",
+        "required": false,
+        "in": "header",
+        "ref": "",
+        "_id": "60ed14971f0b29007be6198b",
+        "id": "60ed14971f0b29007be6198b"
+      },
+      {
+        "name": "Authorization",
+        "type": "string",
+        "enumValues": "",
+        "default": "Bearer <JWT Token>",
+        "desc": "Bearer {{token}}. Applicable if you want to use JWT tokens for API authentication. Use either of 'key' or 'Authorization' header param.",
+        "required": false,
+        "in": "header",
+        "ref": "",
+        "_id": "60ed35e99b398000106b4182",
+        "id": "60ed35e99b398000106b4182"
+      }
+    ],
+    "examples": {
+      "codes": [
+        {
+          "code": "{\n   \"channel\":\"mms\",\n   \"from\": \"101010\",\n   \"to\":[  // each object in the \"to\" array represents a separate physical message//\n      {\n         \"msisdn\":[\"15550001001\",\"15550001002\"], // supports array of msisdns: one msg, multiple recipients\n         \"correlationId\":\"na1b2b1i1\",\n         \"substitutions\":{\n            \"area\":\"EC1M 4BH\",\n            \"accountNumber\":\"38S189\"\n         }\n      },\n      {\n         \"msisdn\":[\"15550001003\"],\n         \"correlationId\":\"zd7sj3hs\",\n         \"substitutions\":{\n            \"area\":\"NW10 2QD\",\n            \"accountNumber\":\"SA129\"\n         }\n      }\n   ],\n   // Global substitutions\n   \"substitutions\":{\n      \"offerName\":\"Big OFFER\",\n      \"value\":\"123\"\n   },\n   // Message Scheduling\n   \"sendAt\":\"<ISO8601 date/time>\",\n   \"expireAt\":\"<ISO8601 date/time>\",\n   \"priority\":\"<priority number>\",\n   // Call-backs\n   \"callbackData\":\"<notify data>\",\n   \"notifyUrl\":\"https://notify.example.com\",\n   \"requestedReceipts\": [\n        \"DELIVERED\",\n        \"READ\"\n    ],\n   // Channel Options\n   \"options\":{\n      \"trackClicks\":true,\n      \"trackOpens\":true,\n      \"bypassSuppression\":false, // true to bypass channel suppression (if supported)\n      \"serviceCode\":\"abc123\", //mms, optional//\n      \"vasId\":\"def456\", //mms, optional: overrides vasId configued for credentials //\n      \"vaspId\":\"ghi789\" //mms, optional: overrides vaspId configued for credentials //\n   },\n   \"headers\": [\n      {\"key1\": \"value1\"},\n      {\"key2\": \"value2\"}\n   ],\n   // Union field message can be only one of content or template //\n   \"content\":{\n      \"type\":\"text/plain; charset=utf-8\",\n      \"subject\":\"\",\n      \"text\": \"Check out this pic! ${cid:flower_img} What do you think?\",\n      \"attachments\":[\n         {\n            \"cid\": \"flower_img\",\n            \"type\":\"text/plain\",\n            \"name\":\"myfile.txt\",\n            // either content (base64 encoded) or mediaUrl or resourceId //\n            \"content\":\"ZXhhbXBsZSBmaWxl\",\n            \"mediaUrl\": \"https://example.com/media/123/flower.png\",\n            \"resourceId\": 123\n         },\n         {\n            \"cid\": \"person_img\",\n            \"type\":\"image/png\",\n            \"name\":\"IMAGECID\",\n            // either content (base64 encoded) or mediaUrl or resourceId //\n            \"content\":\"ZXhhbXBsZSBmaWxl\",\n            \"mediaUrl\": \"https://example.com/media/123/person.png\"\n         }\n      ],\n   },\n   \"template\":{\n      \"id\":\"<id>\",\n      \"subject\":\"\",\n      \"attachments\":[\n         {\n            \"cid\": \"flower_img\",\n            \"type\":\"text/plain\",\n            \"name\":\"myfile.txt\",\n            // either content (base64 encoded) or mediaUrl or resourceId //\n            \"content\":\"ZXhhbXBsZSBmaWxl\",\n            \"mediaUrl\": \"https://example.com/media/123/flower.png\",\n            \"resourceId\": 123\n         },\n         {\n            \"cid\": \"person_img\",\n            \"type\":\"image/png\",\n            \"name\":\"IMAGECID\",\n            // either content (base64 encoded) or mediaUrl or resourceId //\n            \"content\":\"ZXhhbXBsZSBmaWxl\",\n            \"mediaUrl\": \"https://example.com/media/123/person.png\",\n            \"resourceId\": 456\n         }\n      ]\n   }\n}",
+          "language": "json",
+          "name": "Request"
+        },
+        {
+          "code": "{ \n  \"channel\":\"mms\", \n  \"from\":\"34343\", \n    \"to\":[ \n          { \"msisdn\":[ \"16502813641\" ], \n         \"correlationId\":\"na1b2b1i1\", \n         \"substitutions\":\n          { \"area\":\"EC1M 4BH\", \"offerName\":\"suneeltest\", \"accountNumber\":\"38S189\" } } ], \n          \"substitutions\":\n          { \"offerName\":\"Big OFFER\", \"value\":\"123\"\n          },\n          \"sendAt\":\"<ISO8601 date/time>\", \n          \"expireAt\":\"<ISO8601 date/time>\", \n          \"prioriy\":\"<priority number>\", \n          \"callbackData\":\"suneelmmstest\", \n          \"notifyUrl\":\"https://requestinspector.com/inspect/01eyjsmfpta77j3v9b0q3vrqkf\", \n          \"contactolicy\":\n          { \"contactPolicyGroup\":\"200\", \n          \"channelCheckConsent\":true }, \n          \"requestedReceipts\":\n          [ \"DELIVERED\", \"READ\", \"SUBMITTED\", \"FAILED\" ], \n          \"content\":\n          { \"fallbacktext\":\"fallback $(offerName)text as SMS\", \n          \"name\":\"Internal $(offerName)Name\", \n          \"attachments\":[ \n          { \"type\":\"image\", \"messageText\":\"flower $(offerName) image\", \n           \"mediaUrl\":\"http://res.cloudinary.com/demo/image/upload/sample.jpg\", \n           \"duration\":5 \n          } \n          ] \n          } \n}\n ",
+          "language": "json",
+          "name": "MMS with Single Slide"
+        },
+        {
+          "code": "{ \n  \"channel\":\"mms\", \n    \"from\":\"34343\", \n      \"to\":[ \n        {\n         \"msisdn\":[ \"16502813641\" ], \n         \"correlationId\":\"na1b2b1i1\", \n         \"substitutions\":\n          { \n           \"area\":\"EC1M 4BH\", \n           \"offerName\":\"suneeltest\", \n           \"accountNumber\":\"38S189\"\n           * imimobile internal *\n           * imimobile internal *\n          } \n        } \n           ], \n      \"substitutions\":{ \"offerName\":\"Big OFFER\", \"value\":\"123\" }, \n        \"sendt\":\"<ISO8601 date/time>\", \n          \"expirAt\":\"<ISO8601 date/time>\", \n            \"prioriy\":\"<priority number>\", \n              \"callbackData\":\"suneelmmstest\", \n                \"notifyUrl\":\"https://requestinspector.com/inspect/01eyjsmfpta77j3v9b0q3vrqkf\", \n                  \"requestedReceipts\":[ \"DELIVERED\", \"READ\", \"SUBMITTED\", \"FAILED\" ], \n                    \"content\":{ \"fallbacktext\":\"fallback $(offerName)text as SMS\", \n                      \"name\":\"Internal $(offerName)Name\", \n                        \"attachments\":[ \n                          { \"type\":\"image\",\n                            \"messageText\":\"flower $(offerName) image\",\n                            \"mediaUrl\":\"http://res.cloudinary.com/demo/image/upload/sample.jpg\", \n                            \"duration\":5 \n                          }, \n                          {\n                            \"type\":\"image\",\n                            \"messageText\":\"person video MMS testing QA\", \n                            \"duration\":5, \n                            \"mediaUrl\":\"https://res.cloudinary.com/demo/basketball_shot.jpg\" \n                          },\n                          { \n                            \"type\":\"pdf\",\n                            \"messageText\":\"person video\", \n                            \"duration\":5, \n                            \"mediaUrl\":\"http://www.pdf995.com/samples/pdf.pdf\" \n                          }, \n                          { \n                            \"type\":\"video\",\n                            \"messageText\":\"person video\", \n                            \"duration\":5, \n                            \"mediaUrl\":\"http://mirrors.standaloneinstaller.com/video-sample/small.m4v\" \n                          },\n          * imimobile internal *\n          * imimobile internal *\n        { \n          \"type\":\"image\",\n          \"messageText\":\"You get more time to focus on individual words. When a text is short, you can devote more time to learning how every single word is used and what importance it has in the piece.You can read a whole story in one sitting\", \n                          \"duration\":5, \n                          \"mediaUrl\":\"https://www.easygifanimator.net/images/samples/eglite.gif\" \n                          }, \n                            { \n                              \"type\":\"video\", \n                                \"messageText\":\"person video\", \n                                \"duration\":5, \n                                \"mediaUrl\":\"http://mirrors.standaloneinstaller.com/video-sample/small.m4v\" \n                             } \n  ] \n} \n}",
+          "language": "json",
+          "name": "MMS with Multiple Attachments"
+        },
+        {
+          "code": "{ \n  \"channel\":\"mms\", \n  \"from\":\"34343\", \n  \"to\":\n  [ \n    { \n      \"msisdn\":[ \"16505548289\" ], \n      \"correlationId\":\"na1b2b1i1\", \n      \"substitutions\":\n       { \n         \"area\":\"EC1M 4BH\", \n         \"offerName\":\"suneeltest\", \n         \"accountNumber\":\"38S189\" \n       } \n    } \n  ], \n    \"substitutions\":{ \n      \"offerName\":\"Big OFFER\", \n      \"value\":\"123\" \n    }, \n        \"prioriy\":\"<priority number>\", \n         \"callbackData\":\"suneelmmstest\", \n         \"notifyUrl\":\"https://requestinspector.com/inspect/01eyjsmfpta77j3v9b0q3vrqkf\", \n         \"contactolicy\":\n         { \n           \"contactPolicyGroup\":\"200\", \n           \"channelCheckConsent\":true \n         }, \n         \"requestedReceipts\":[ \"DELIVERED\",\"READ\", \"SUBMITTED\", \"FAILED\" ],\n* imimobile internal *\n* imimobile internal *\n \"sendAt\":\"2021-02-26T14:05:00.938Z\", \n   \"expireAt\":\"2021-02-26T14:10:00.938Z\", \n     \"content\":{ \n       \"fallbacktext\":\"fallback $(offerName)text as SMS\", \n         \"name\":\"Internal $(offerName)Name\", \n         \"attachments\":\n         [ \n           { \"type\":\"image\", \n            \"messageText\":\"flower $(offerName) image\", \n            \"mediaUrl\":\"https://4.img-dpreview.com/files/p/E~TS590x0~articles/3925134721/0266554465.jpeg\", \n            \"duration\":5 \n           } \n         ] \n     } \n}\n",
+          "language": "json",
+          "name": "MMS with Schedule Request"
+        }
+      ]
+    },
+    "apiSetting": "6a675233ec1c893d8a7f67c0"
+  },
+  "swagger": {
+    "path": "/messages"
+  },
+  "oas_public_id": "@imiconnect-apis/v6.20.0#4bark20lozrjsuh",
+  "selected_openapi": {
+    "openapi": "3.1.0",
+    "info": {
+      "title": "Send MMS",
+      "version": "6.20.0"
+    },
+    "servers": [
+      {
+        "url": "https://api.us.webexconnect.io/v2"
+      }
+    ],
+    "security": [
+      {}
+    ],
+    "path": "/messages",
+    "method": "post",
+    "path_parameters": [],
+    "operation": {
+      "summary": "MMS API",
+      "description": "",
+      "operationId": "mms-api",
+      "parameters": [
+        {
+          "name": "Content-Type",
+          "in": "header",
+          "schema": {
+            "type": "string",
+            "default": "Application/JSON"
+          }
+        },
+        {
+          "name": "key",
+          "in": "header",
+          "description": "Service key available on the platform UI",
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "Authorization",
+          "in": "header",
+          "description": "Bearer {{token}}. Applicable if you want to use JWT tokens for API authentication. Use either of 'key' or 'Authorization' header param.",
+          "schema": {
+            "type": "string",
+            "default": "Bearer <JWT Token>"
+          }
+        }
+      ],
+      "responses": {
+        "201": {
+          "description": "201",
+          "content": {
+            "application/json": {
+              "examples": {
+                "Result": {
+                  "value": "{\n   \"messageId\":\"0a129aee-e1cd-480d-b08d-4f48548ff48d\",\n   \"correlationId\":\"k1l2\",\n   \"status\":\"queued\",\n   \"requestTimestamp\":\"2014-02-17T07:25:01.4178645-05:00\"\n}"
+                }
+              },
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "messageId": {
+                    "type": "string",
+                    "example": "0a129aee-e1cd-480d-b08d-4f48548ff48d"
+                  },
+                  "correlationId": {
+                    "type": "string",
+                    "example": "k1l2"
+                  },
+                  "status": {
+                    "type": "string",
+                    "example": "queued"
+                  },
+                  "requestTimestamp": {
+                    "type": "string",
+                    "example": "2014-02-17T07:25:01.4178645-05:00"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "400": {
+          "description": "400",
+          "content": {
+            "application/json": {
+              "examples": {
+                "Result": {
+                  "value": "{\n  \"code\": 8000,\n  \"message\": \"Invalid parameter: 'asdf'\"\n}"
+                }
+              },
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "code": {
+                    "type": "integer",
+                    "example": 8000,
+                    "default": 0
+                  },
+                  "message": {
+                    "type": "string",
+                    "example": "Invalid parameter: 'asdf'"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "deprecated": false,
+      "requestBody": {
+        "content": {
+          "application/json": {
+            "schema": {},
+            "examples": {
+              "MMS with Single Slide": {
+                "value": {
+                  "channel": "mms",
+                  "from": "34343",
+                  "to": [
+                    {
+                      "msisdn": [
+                        "16502813641"
+                      ],
+                      "correlationId": "na1b2b1i1",
+                      "substitutions": {
+                        "area": "EC1M 4BH",
+                        "offerName": "suneeltest",
+                        "accountNumber": "38S189"
+                      }
+                    }
+                  ],
+                  "substitutions": {
+                    "offerName": "Big OFFER",
+                    "value": "123"
+                  },
+                  "sendAt": "<ISO8601 date/time>",
+                  "expireAt": "<ISO8601 date/time>",
+                  "prioriy": "<priority number>",
+                  "callbackData": "suneelmmstest",
+                  "notifyUrl": "https://requestinspector.com/inspect/01eyjsmfpta77j3v9b0q3vrqkf",
+                  "contactolicy": {
+                    "contactPolicyGroup": "200",
+                    "channelCheckConsent": true
+                  },
+                  "requestedReceipts": [
+                    "DELIVERED",
+                    "READ",
+                    "SUBMITTED",
+                    "FAILED"
+                  ],
+                  "content": {
+                    "fallbacktext": "fallback $(offerName)text as SMS",
+                    "name": "Internal $(offerName)Name",
+                    "attachments": [
+                      {
+                        "type": "image",
+                        "messageText": "flower $(offerName) image",
+                        "mediaUrl": "http://res.cloudinary.com/demo/image/upload/sample.jpg",
+                        "duration": 5
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "securitySchemes": {}
+    }
+  }
+}

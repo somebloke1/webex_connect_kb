@@ -1,0 +1,293 @@
+{
+  "_id": "6a675233ec1c893d8a7f67f6:6a675233ec1c893d8a7f662c",
+  "components": {
+    "securitySchemes": {}
+  },
+  "info": {
+    "title": "WhatsApp List Messages",
+    "version": "6.20.0"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/": {
+      "post": {
+        "deprecated": false,
+        "description": "List Message includes a menu of up to 10 options. This type of message offers a simpler and more consistent way for users to make a selection when interacting with a business.  _Note: Modify YourRegion in the URL to the right to reflect your tenant’s region. See [Know your endpoint page](https://developers.imiconnect.io/reference/endpoints)._",
+        "operationId": "whatsapp-list-messages",
+        "parameters": [
+          {
+            "description": "Applicable when you want to use service key for API authentication. Available under API tab within a service in your WebexConnect tenant.",
+            "in": "header",
+            "name": "key",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "JSON Web Token (JWT) for authentication (e.g. bearer<token>) used alternatively to Service Key",
+            "in": "header",
+            "name": "authorization",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "appid": {
+                    "description": "Contains the applicationid",
+                    "type": "string"
+                  },
+                  "callbackData": {
+                    "description": "Data that you have configured to receive on the notify Url. This is configured as a part of the request.",
+                    "type": "string"
+                  },
+                  "channels": {
+                    "description": "Channels used for incoming messages",
+                    "properties": {
+                      "OTT-Messaging": {
+                        "description": "JSON object for social channel message configuration",
+                        "properties": {
+                          "wa": {
+                            "description": "JSON object for WhatsApp message configuration",
+                            "properties": {
+                              "identity_key_hash": {
+                                "description": "Unique identity hash key to track the messages sent to the authorized customer.",
+                                "type": "string"
+                              },
+                              "list": {
+                                "description": "JSON object for list configuration",
+                                "properties": {
+                                  "action": {
+                                    "description": "JSON object for action configuration. Action you want the user to perform after reading the message.",
+                                    "properties": {
+                                      "button": {
+                                        "default": "List Title",
+                                        "description": "Specifies the button text for your list. Maximum of 20 characters are supported.",
+                                        "type": "string"
+                                      },
+                                      "sections": {
+                                        "description": "Array of sections containing rows. This can include maximum of 10 rows counted under all sections, with each section having atleast one row.",
+                                        "items": {
+                                          "properties": {
+                                            "rows": {
+                                              "description": "\"Array. Contains a list of rows. You can have a total of 10 rows across your sections.  Each row must have a title (Maximum length: 24 characters) and an ID (Maximum length: 200 characters). You can add a description (Maximum length: 72 characters), but it is optional.\"",
+                                              "items": {
+                                                "properties": {
+                                                  "description": {
+                                                    "description": "Row description",
+                                                    "type": "string"
+                                                  },
+                                                  "id": {
+                                                    "description": "unique id of the row",
+                                                    "type": "string"
+                                                  },
+                                                  "title": {
+                                                    "description": "title of the row",
+                                                    "type": "string"
+                                                  }
+                                                },
+                                                "type": "object"
+                                              },
+                                              "type": "array"
+                                            },
+                                            "title": {
+                                              "description": "A title of the button",
+                                              "type": "string"
+                                            }
+                                          },
+                                          "type": "object"
+                                        },
+                                        "type": "array"
+                                      }
+                                    },
+                                    "type": "object"
+                                  },
+                                  "body": {
+                                    "description": "body of the message",
+                                    "properties": {
+                                      "text": {
+                                        "description": "Body of the message. Maximum of 1024 characters is supported.",
+                                        "type": "string"
+                                      }
+                                    },
+                                    "required": [
+                                      "text"
+                                    ],
+                                    "type": "object"
+                                  },
+                                  "footer": {
+                                    "description": "footer of the message",
+                                    "properties": {
+                                      "text": {
+                                        "description": "Contains the footer text message.",
+                                        "type": "string"
+                                      }
+                                    },
+                                    "type": "object"
+                                  },
+                                  "header": {
+                                    "description": "header of the list message",
+                                    "properties": {
+                                      "text": {
+                                        "description": "Contains the text for the header. Maximum of 60 characters is supported for text.",
+                                        "type": "string"
+                                      },
+                                      "type": {
+                                        "default": "text",
+                                        "description": "Contains the header type. Supported value: ' text'",
+                                        "type": "string"
+                                      }
+                                    },
+                                    "type": "object"
+                                  }
+                                },
+                                "type": "object"
+                              },
+                              "type": {
+                                "default": "list",
+                                "description": "specifies message type",
+                                "type": "string"
+                              }
+                            },
+                            "type": "object"
+                          }
+                        },
+                        "type": "object"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  "correlationid": {
+                    "description": "The correlationid is a unique identifier that you can attach to every request as a reference a particular transaction or event. This is configured as a part of the request.",
+                    "type": "string"
+                  },
+                  "deliverychannel": {
+                    "default": "whatsapp",
+                    "description": "Channel used to send the message i.e., whatsapp in this case.",
+                    "type": "string"
+                  },
+                  "destination": {
+                    "description": "Unique user id for the recipient of the message on whatsapp.",
+                    "items": {
+                      "properties": {}
+                    },
+                    "type": "array"
+                  },
+                  "notifyurl": {
+                    "description": "Configure a URL to get notifications on delivery reports for a WhatsApp message. This field accepts only a valid URL or a variable. If an invalid URL is passed in API request or via a variable, then such request will not be considered eligible for retries.",
+                    "type": "string"
+                  },
+                  "notifyurlAuthId": {
+                    "description": "Unique Authentication ID.",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "destination"
+                ],
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{\n    \"response\": [\n        {\n            \"code\": \"1001\",\n            \"transid\": \"3f09295d-9eb3-4c9e-8ee8-a3272e5f00c1\",\n            \"description\": \"Queued\"\n        }\n    ]\n}"
+                  }
+                },
+                "schema": {
+                  "properties": {
+                    "response": {
+                      "items": {
+                        "properties": {
+                          "code": {
+                            "example": "1001",
+                            "type": "string"
+                          },
+                          "description": {
+                            "example": "Queued",
+                            "type": "string"
+                          },
+                          "transid": {
+                            "example": "3f09295d-9eb3-4c9e-8ee8-a3272e5f00c1",
+                            "type": "string"
+                          }
+                        },
+                        "type": "object"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "200"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{\n  \"response\": {\n    \"code\": \"7001\",\n    \"description\": \"Authentication failed.\",\n    \"transid\": \"7670c9a8-131f-4166-ac30-17f6109340d6\"\n  }\n}"
+                  }
+                },
+                "schema": {
+                  "properties": {
+                    "response": {
+                      "properties": {
+                        "code": {
+                          "example": "7001",
+                          "type": "string"
+                        },
+                        "description": {
+                          "example": "Authentication failed.",
+                          "type": "string"
+                        },
+                        "transid": {
+                          "example": "7670c9a8-131f-4166-ac30-17f6109340d6",
+                          "type": "string"
+                        }
+                      },
+                      "type": "object"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "400"
+          }
+        },
+        "summary": "WhatsApp List Messages"
+      }
+    }
+  },
+  "security": [
+    {}
+  ],
+  "servers": [
+    {
+      "url": "https://{YourRegion}.webexconnect.io/resources/v1/messaging",
+      "variables": {
+        "YourRegion": {
+          "default": "YourRegion"
+        }
+      }
+    }
+  ],
+  "x-readme": {
+    "explorer-enabled": true,
+    "headers": [],
+    "proxy-enabled": true
+  },
+  "x-readme-fauxas": true
+}

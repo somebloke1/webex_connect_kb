@@ -1,0 +1,79 @@
+{
+  "validated_at": "2026-09-08T23:38:15.605574+00:00",
+  "results": [
+    {
+      "directory": "transcripts/local-asr-validation",
+      "segments": 2,
+      "roundtrip_and_hashes": "passed"
+    },
+    {
+      "directory": "transcripts/getting-started-webex-connect-asr",
+      "segments": 397,
+      "roundtrip_and_hashes": "passed"
+    }
+  ],
+  "fixture_hypothesis_matches_reference_record": true,
+  "priority_webinar_validation_at": "2026-09-08T23:53:26.501673+00:00",
+  "priority_webinar_results": [
+    {
+      "directory": "transcripts/ai-agent-ask-expert-asr",
+      "video_id": "AGDmhRoNFT4",
+      "duration": 2597,
+      "last_segment_end": 2603.42,
+      "segments": 379,
+      "uploader": "Webex CPaaS Solutions",
+      "upload_date": "20241203",
+      "attempts": [
+        {
+          "operation": "download-audio",
+          "started_at": "2026-09-08T23:43:29.789336+00:00",
+          "timeout_seconds": 180,
+          "status": "success",
+          "elapsed_seconds": 15.046
+        },
+        {
+          "operation": "asr",
+          "started_at": "2026-09-08T23:43:44.835633+00:00",
+          "timeout_seconds": 3600,
+          "status": "success",
+          "elapsed_seconds": 430.296
+        }
+      ],
+      "integrity": "hashes and millisecond timestamp roundtrip passed",
+      "segments_ending_beyond_source_duration": [
+        379
+      ],
+      "source_duration_overshoot_seconds": 6.42,
+      "timing_note": "Raw ASR boundary retained; final segment end is uncertain."
+    },
+    {
+      "directory": "transcripts/email-ask-expert-asr",
+      "video_id": "5TzxFpDzIPs",
+      "duration": 2494,
+      "last_segment_end": 2482.52,
+      "segments": 242,
+      "uploader": "Webex CPaaS Solutions",
+      "upload_date": "20231219",
+      "attempts": [
+        {
+          "operation": "download-audio",
+          "started_at": "2026-09-08T23:43:29.812075+00:00",
+          "timeout_seconds": 180,
+          "status": "success",
+          "elapsed_seconds": 11.22
+        },
+        {
+          "operation": "asr",
+          "started_at": "2026-09-08T23:43:41.031693+00:00",
+          "timeout_seconds": 3600,
+          "status": "success",
+          "elapsed_seconds": 436.343
+        }
+      ],
+      "integrity": "hashes and millisecond timestamp roundtrip passed",
+      "segments_ending_beyond_source_duration": [],
+      "source_duration_overshoot_seconds": 0,
+      "timing_note": "No segments end beyond reported source duration."
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "category": "Assets",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257803",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "937e2c30c9e462b65d5e4363352299682eda20b82bf7aef8e46f71665c4765c1",
+    "source_path": "82b0a812a7c3f6b9dcf67f642056e3547b7fc0d06c32bfa18c8d898368bdf7b9",
+    "text_path": "881002bdd46dc409f98719ff19552463d55af3b0fd3eae5fe8f27a323c2c8828"
+  },
+  "headings": [
+    "Adding a BOT Integration",
+    "Using Bot in a Service",
+    "Communicating with BOT",
+    "Conversation Between BOT and CCSP"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/third-party-bot.md",
+  "resolved_url": "https://help.webexconnect.io/docs/third-party-bot",
+  "retrieved_at": "2026-09-08T23:29:07+00:00",
+  "sha256_html_response": "40651fa1fa80bf313b442ec1ce4986213e910707a0a2ef537691155d894b1b40",
+  "sha256_source_body": "82b0a812a7c3f6b9dcf67f642056e3547b7fc0d06c32bfa18c8d898368bdf7b9",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/third-party-bot.source.md",
+  "source_updated_at": "2026-04-15T11:34:32.955Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/third-party-bot.txt",
+  "title": "Third-Party Bot",
+  "url": "https://help.webexconnect.io/docs/third-party-bot",
+  "word_count": 1003,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/third-party-bot.metadata.json"
+}

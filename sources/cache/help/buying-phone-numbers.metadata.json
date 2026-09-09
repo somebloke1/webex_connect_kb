@@ -1,0 +1,35 @@
+{
+  "category": "GETTING STARTED",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257816",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "07058e942447763a83d6bae765a6a8574900d32fe284efeac2dc3809831c8c8b",
+    "source_path": "9a8ff33a55e9771ef530d4a8d9fe153946a6d280a232b8f52bdae3c19166117d",
+    "text_path": "96ab62a90ebba74e4531a682e66b8ab3f2e4b8a91b800e70de1d3bfb3dd995c6"
+  },
+  "headings": [
+    "Step 1: Go to 'Buy - Phone Number' section",
+    "Step 2: Buy a Phone Number",
+    "📘Note"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/buying-phone-numbers.md",
+  "resolved_url": "https://help.webexconnect.io/docs/buying-phone-numbers",
+  "retrieved_at": "2026-09-08T23:28:47+00:00",
+  "sha256_html_response": "119c56ed93959c36b17cd5e2e75d868e1bc8c64c95091d97751937970f1da884",
+  "sha256_source_body": "9a8ff33a55e9771ef530d4a8d9fe153946a6d280a232b8f52bdae3c19166117d",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/buying-phone-numbers.source.md",
+  "source_updated_at": "2026-01-26T13:09:57.452Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/buying-phone-numbers.txt",
+  "title": "Buying a Phone Number",
+  "url": "https://help.webexconnect.io/docs/buying-phone-numbers",
+  "word_count": 244,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/buying-phone-numbers.metadata.json"
+}

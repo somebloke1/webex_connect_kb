@@ -1,0 +1,35 @@
+{
+  "category": "TOOLS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182577f1",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "13920ecfe206c0562ae6f4347e6de62e42f3fff8134bbba6c1c01614058b3fc2",
+    "source_path": "7e132ee9ada7ca3d6613ca916c63530994148dff8ebc3a4b8d2824515ace138c",
+    "text_path": "3ae06bcebe79f9b97557fa2fd928c592a54e39c542a766cb371922ddd0514476"
+  },
+  "headings": [
+    "📘Note",
+    "📘Media File Type and Size",
+    "📘Note"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/voice-media.md",
+  "resolved_url": "https://help.webexconnect.io/docs/voice-media",
+  "retrieved_at": "2026-09-08T23:29:32+00:00",
+  "sha256_html_response": "96dc8d808f9ef229a933670a3a86e8331f7f5340f9ac8687db9d99b8b6cc7c5e",
+  "sha256_source_body": "7e132ee9ada7ca3d6613ca916c63530994148dff8ebc3a4b8d2824515ace138c",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/voice-media.source.md",
+  "source_updated_at": "2025-03-01T18:04:53.291Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/voice-media.txt",
+  "title": "Voice Media",
+  "url": "https://help.webexconnect.io/docs/voice-media",
+  "word_count": 419,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/voice-media.metadata.json"
+}

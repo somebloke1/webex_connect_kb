@@ -1,0 +1,264 @@
+{
+  "api": {
+    "examples": {
+      "codes": [
+        {
+          "code": "-X DELETE https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{{inappid}}/topics/{{topicid}}/users\n-H \"secretKey: {secretKey}\"\n",
+          "language": "curl"
+        },
+        {
+          "code": "var request=require(\"request\");\n var options = {\n          method: 'DELETE',\n          uri: 'https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{{inappid}}/topics/{{topicid}}/users',\n          headers: {\n\t'secretKey': '{secretKey}'\n            }\n        };\n  request(options, function(error, response, body) {\n               if(error){\n                  console.log(error);\n             }else{\n                  console.log(response);\n            }\n        });\n",
+          "language": "json",
+          "name": "Node"
+        },
+        {
+          "code": "require 'httparty'\n# Create the HTTP objects and post request\nhttp = HTTParty.delete(\"https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{{inappid}}/topics/{{topicid}}/users\",\n    :headers => {\n                          'secretKey ' => '{secretKey}’\n            }\n)\n# Print on console\nputs http\n",
+          "language": "ruby"
+        },
+        {
+          "code": "var data = null;\n\nvar xhr = new XMLHttpRequest();\n\nxhr.addEventListener(\"readystatechange\", function () {\n  if (this.readyState === this.DONE) {\n    console.log(this.responseText);\n  }\n});\n\nxhr.open(\"DELETE\", \" https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{{inappid}}/topics/{{topicid}}/users\");\nxhr.setRequestHeader(\"secretKey\", \"{secretKey}\");\nxhr.send(data);\n",
+          "language": "javascript"
+        },
+        {
+          "code": "import requests\n\nurl = \" https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{{inappid}}/topics/{{topicid}}/users\"\n\nheaders = {'secretKey': '{secretKey}’}\n\nresponse = requests.request(\"DELETE\", url, headers=headers)\n\nprint(response.text)\n",
+          "language": "python"
+        }
+      ]
+    },
+    "settings": "",
+    "results": {
+      "codes": [
+        {
+          "name": "",
+          "status": 200,
+          "language": "json",
+          "code": "{\n    \"total\": \"1\",\n    \"code\": 0,\n    \"count\": \"50\",\n    \"description\": \"success\",\n    \"trans_id\": \"49f6cf11-6787-4b75-bef7-f9afd618af71\",\n    \"users\": [\n        \"1420966801\"\n    ]\n}\n"
+        }
+      ]
+    },
+    "auth": "required",
+    "params": [
+      {
+        "name": "Content-Type",
+        "type": "string",
+        "enumValues": "",
+        "default": "",
+        "desc": "Application/JSON",
+        "required": true,
+        "in": "header",
+        "ref": "",
+        "_id": "5f55d872728985006494a0f8",
+        "id": "5f55d872728985006494a0f8"
+      },
+      {
+        "name": "secretKey",
+        "type": "string",
+        "enumValues": "",
+        "default": "",
+        "desc": "Client key that can be accessed from your app asset configuration page on imiconnect platform",
+        "required": true,
+        "in": "header",
+        "ref": "",
+        "_id": "5f55d872728985006494a0f7",
+        "id": "5f55d872728985006494a0f7"
+      },
+      {
+        "name": "appid",
+        "type": "string",
+        "enumValues": "",
+        "default": "",
+        "desc": "The ID of the app asset that you can obtain from imiconnect platform",
+        "required": false,
+        "in": "path",
+        "ref": "",
+        "_id": "5f6d8bcdcd308f0049a572db",
+        "id": "5f6d8bcdcd308f0049a572db"
+      },
+      {
+        "name": "topicid",
+        "type": "string",
+        "enumValues": "",
+        "default": "",
+        "desc": "Specifies the ID of the topic",
+        "required": false,
+        "in": "path",
+        "ref": "",
+        "_id": "5f6d8c0325fda8004294f0ae",
+        "id": "5f6d8c0325fda8004294f0ae"
+      },
+      {
+        "name": "users",
+        "type": "string",
+        "enumValues": "",
+        "default": "",
+        "desc": "List of required comma separated users",
+        "required": false,
+        "in": "query",
+        "ref": "",
+        "_id": "6019742552b7dd006f00bac1",
+        "id": "6019742552b7dd006f00bac1"
+      }
+    ],
+    "url": "/apps/$(appid)/topics/$(topicid)/users?users=\"1234\",\"5678\"",
+    "method": "delete",
+    "apiSetting": "6a675233ec1c893d8a7f67bc"
+  },
+  "swagger": {
+    "path": "/apps/$(appid)/topics/$(topicid)/users?users=\"1234\",\"5678\""
+  },
+  "oas_public_id": "@imiconnect-apis/v6.20.0#wk2xm71r8mur",
+  "selected_openapi": {
+    "openapi": "3.1.0",
+    "info": {
+      "title": "Topic APIs",
+      "version": "6.20.0"
+    },
+    "servers": [
+      {
+        "url": "https://rtm.imiconnect.io/"
+      }
+    ],
+    "security": [
+      {
+        "sec0": []
+      }
+    ],
+    "path": "/apps/$(appid)/topics/$(topicid)/users?users=\"1234\",\"5678\"",
+    "method": "delete",
+    "path_parameters": [],
+    "operation": {
+      "summary": "Unsubscribe multiple users from a Topic",
+      "description": "This API is used to unsubscribe the user from a topic.",
+      "operationId": "unsubscribe-users-from-topics",
+      "parameters": [
+        {
+          "name": "Content-Type",
+          "in": "header",
+          "description": "Application/JSON",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "secretKey",
+          "in": "header",
+          "description": "Client key that can be accessed from your app asset configuration page on imiconnect platform",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "appid",
+          "in": "path",
+          "description": "The ID of the app asset that you can obtain from imiconnect platform",
+          "schema": {
+            "type": "string"
+          },
+          "required": true
+        },
+        {
+          "name": "topicid",
+          "in": "path",
+          "description": "Specifies the ID of the topic",
+          "schema": {
+            "type": "string"
+          },
+          "required": true
+        },
+        {
+          "name": "users",
+          "in": "query",
+          "description": "List of required comma separated users",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "200": {
+          "description": "200",
+          "content": {
+            "application/json": {
+              "examples": {
+                "Result": {
+                  "value": "{\n    \"total\": \"1\",\n    \"code\": 0,\n    \"count\": \"50\",\n    \"description\": \"success\",\n    \"trans_id\": \"49f6cf11-6787-4b75-bef7-f9afd618af71\",\n    \"users\": [\n        \"1420966801\"\n    ]\n}\n"
+                }
+              },
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "total": {
+                    "type": "string",
+                    "example": "1"
+                  },
+                  "code": {
+                    "type": "integer",
+                    "example": 0,
+                    "default": 0
+                  },
+                  "count": {
+                    "type": "string",
+                    "example": "50"
+                  },
+                  "description": {
+                    "type": "string",
+                    "example": "success"
+                  },
+                  "trans_id": {
+                    "type": "string",
+                    "example": "49f6cf11-6787-4b75-bef7-f9afd618af71"
+                  },
+                  "users": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "example": "1420966801"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "deprecated": false,
+      "x-readme": {
+        "code-samples": [
+          {
+            "language": "curl",
+            "code": "-X DELETE https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{{inappid}}/topics/{{topicid}}/users\n-H \"secretKey: {secretKey}\"\n"
+          },
+          {
+            "language": "ruby",
+            "code": "require 'httparty'\n# Create the HTTP objects and post request\nhttp = HTTParty.delete(\"https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{{inappid}}/topics/{{topicid}}/users\",\n    :headers => {\n                          'secretKey ' => '{secretKey}’\n            }\n)\n# Print on console\nputs http\n"
+          },
+          {
+            "language": "javascript",
+            "code": "var data = null;\n\nvar xhr = new XMLHttpRequest();\n\nxhr.addEventListener(\"readystatechange\", function () {\n  if (this.readyState === this.DONE) {\n    console.log(this.responseText);\n  }\n});\n\nxhr.open(\"DELETE\", \" https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{{inappid}}/topics/{{topicid}}/users\");\nxhr.setRequestHeader(\"secretKey\", \"{secretKey}\");\nxhr.send(data);\n"
+          },
+          {
+            "language": "python",
+            "code": "import requests\n\nurl = \" https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{{inappid}}/topics/{{topicid}}/users\"\n\nheaders = {'secretKey': '{secretKey}’}\n\nresponse = requests.request(\"DELETE\", url, headers=headers)\n\nprint(response.text)\n"
+          }
+        ],
+        "samples-languages": [
+          "curl",
+          "ruby",
+          "javascript",
+          "python"
+        ]
+      }
+    },
+    "components": {
+      "securitySchemes": {
+        "sec0": {
+          "type": "apiKey",
+          "in": "header",
+          "name": "key"
+        }
+      }
+    }
+  }
+}

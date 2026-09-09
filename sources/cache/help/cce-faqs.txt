@@ -1,0 +1,55 @@
+Which channels are supported as part of Webex Connect and Contact Center Enterprise integration?
+
+Webex Connect and Contact Center Enterprise integration currently supports SMS, Live Chat, and Email  channels. We plan to add more channels soon and this section will be updated as we roll out support for additional channels.
+
+Which file formats are supported across various channels as part of Webex Connect and Contact Center Enterprise integration?
+
+ | File Format | Agent to Customer Live Chat | Agent to Customer Email | Agent to Customer Apple Messages for Business | Agent to Customer Messenger | Agent to Customer WhatsApp | Customer to Agent LiveChat | Customer to Agent Apple Messages for Business | Customer to Agent WhatsApp | Customer to Agent Email | Customer to Agent Messenger
+
+ | .txt | NO | YES | YES | NO | YES | NO (cannot select) | YES | YES | NO | YES
+
+ | .csv | YES | NO (cannot select) | YES | NO | NO | YES | YES | YES | NO | Yes
+
+ | .doc | YES | YES | YES | NO | YES | YES | YES | YES | NO | YES
+
+ | .docx | YES | YES | YES | NO | YES | YES | YES | YES | NO | YES
+
+ | .ppt | YES | YES | YES | NO | YES | YES | YES | YES | NO | YES
+
+ | .pptx | YES | YES | YES | NO | YES | YES | YES | YES | NO | YES
+
+ | .png | YES | YES | YES | YES | YES | YES | YES | YES | YES | YES
+
+ | gif | YES | YES | YES | YES (but not shown in FBM) | NO | YES | YES | YES | YES | YES(received as Mp4)
+
+ | .bmp | NO | NO (cannot select) | NO | NO | NO | NO (cannot select) | NO | YES | YES | YES
+
+ | .jpeg | NO | YES | YES | YES | YES | YES | YES | YES | YES | Yes(Received as jpg
+
+ | .jpg | YES | YES | YES | YES | YES | YES | YES | YES | YES | YES
+
+ | .xls | YES | YES | YES | NO | YES | YES | YES | YES | NO | YES
+
+ | .xlsx | YES | YES | YES | NO | YES | YES | YES | YES | NO | YES
+
+ | .pdf | YES | YES | YES | NO | YES | YES | YES | YES | NO | YES
+
+ | .zip | NO | Yes | NO | NO | NO | NO (cannot select) | YES | YES | NO | YES
+
+ | .mp3 | YES | NO (cannot select) | YES | NO |  |  | YES |  |  | 
+
+ | .wav | YES | NO (cannot select) | YES | NO | NO | YES | YES | YES | YES | YES
+
+ | .mp4 | YES | NO (cannot select) | YES | YES | YES | YES | YES | YES | YES | YES
+
+ | .flv | NO | NO (cannot select) | NO | YES | NO | NO (cannot select) | NO | YES | NO (can send but drops at AD) | YES
+
+ | .mkv | NO | NO (cannot select) | NO | NO | NO | NO (cannot select) | NO | YES | NO | Yes
+
+ | avi | NO | NO (cannot select) | NO | YES | NO | NO (cannot select) | YES | YES | YES | YES
+
+ | .ogg |  |  | YES |  |  |  | NO |  |  | 
+
+ | .mpeg |  |  | YES |  |  |  | NO |  |  | 
+
+ | .rtf |  |  | NO |  |  |  | YES |  |  |

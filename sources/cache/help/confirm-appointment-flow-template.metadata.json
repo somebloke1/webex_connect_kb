@@ -1,0 +1,42 @@
+{
+  "category": "PreBUILT Integrations",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182579a7",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "22973f526846604c1443cb0013858a696d71e151bbc66eb1261d069a6ccf88d0",
+    "source_path": "e8933681dd90537c521b090b9f4db703c0bae5cfd14addb70baadc59af49f96a",
+    "text_path": "36ff74214a0ca46edd533ee7ed339fadda78e42dd8892b82c23bf8f44afa0a65"
+  },
+  "headings": [
+    "Overview",
+    "Pre-requisites",
+    "User Roles",
+    "Node Breakdown",
+    "Input & Output Variables",
+    "Input Variables (Configure AI Agent Event)",
+    "Output Variables",
+    "Error Handling",
+    "Script Analysis",
+    "Evaluate Script"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/confirm-appointment-flow-template.md",
+  "resolved_url": "https://help.webexconnect.io/docs/confirm-appointment-flow-template",
+  "retrieved_at": "2026-09-08T23:28:43+00:00",
+  "sha256_html_response": "7d51ed3d47d4602a1293c77b8df9f136c97735e65a06ce237b06a71515699bb0",
+  "sha256_source_body": "e8933681dd90537c521b090b9f4db703c0bae5cfd14addb70baadc59af49f96a",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/confirm-appointment-flow-template.source.md",
+  "source_updated_at": "2026-07-23T07:49:24.417Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/confirm-appointment-flow-template.txt",
+  "title": "Confirm Appointment Flow Template",
+  "url": "https://help.webexconnect.io/docs/confirm-appointment-flow-template",
+  "word_count": 545,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/confirm-appointment-flow-template.metadata.json"
+}

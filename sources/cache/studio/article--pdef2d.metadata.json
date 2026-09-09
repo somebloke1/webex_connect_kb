@@ -1,0 +1,55 @@
+{
+  "url": "https://help.webex.com/article/pdef2d",
+  "title": "Supported languages and voices for AI agents",
+  "source_family": "studio",
+  "category": "AI Agent Studio design and configuration",
+  "extractor": "webex_help_article",
+  "discovered_from": "https://help.webex.com/article/ncs9r37",
+  "selection_reason": "Administration guide or directly linked essential for scripted/autonomous agent behavior, tools, knowledge, language, and digital interaction configuration.",
+  "retrieved_at": "2026-09-08T23:48:49+00:00",
+  "status": "ok",
+  "source_kind": "official_documentation",
+  "http_status": 200,
+  "resolved_url": "https://help.webex.com/article/pdef2d",
+  "doc_version": null,
+  "source_updated_at": "2026-07-16T09:54:08.286Z",
+  "doc_id": "pdef2d",
+  "headings": [
+    ""
+  ],
+  "word_count": 2596,
+  "sha256_source_body": "127b3c06f2a6dd595b19475c07890ed388946da66e3ba32ff9eb19e0abc76336",
+  "sha256_html_response": "bba6aebf26335812971e668f03889b76a74ce7a4b5dac5a5f722e786cadac04c",
+  "extraction": "Webex Help public Next.js pageProps.chapters[*].divHtml for books or UIData for articles; navigation excluded; headings, table cells and original links preserved",
+  "deprecated": false,
+  "source_body_format": "html",
+  "publisher_metadata": {
+    "id": 233623,
+    "externalId": "pdef2d",
+    "language": "en-US",
+    "status": "COMPLETED",
+    "isBook": null,
+    "creationTime": "2024-10-11T06:52:39.292Z",
+    "lastModifiedTime": "2026-07-16T09:54:08.286Z",
+    "lastSyncTime": "2026-07-16T09:54:08.286Z",
+    "chapter_titles": [],
+    "table_count": 2,
+    "products": [
+      "Webex Contact Center"
+    ],
+    "version_note": "No product documentation version supplied; use publisher lastModifiedTime and retrieval date.",
+    "title_raw": "Supported languages and voices for AI agents"
+  },
+  "source_path": "sources/cache/studio/article--pdef2d.source.md",
+  "markdown_path": "sources/cache/studio/article--pdef2d.md",
+  "text_path": "sources/cache/studio/article--pdef2d.txt",
+  "file_sha256": {
+    "source_path": "127b3c06f2a6dd595b19475c07890ed388946da66e3ba32ff9eb19e0abc76336",
+    "markdown_path": "8d53930af2a51d4add7c062e373f36a84de58b595d484ddf353c8fa9d69cdeae",
+    "text_path": "703b61240915bf7fd368b7d3355f34469533a7097c9548099ceb71b96861574e"
+  },
+  "metadata_path": "sources/cache/studio/article--pdef2d.metadata.json",
+  "previous_retrieved_at": "2026-09-08T23:45:55+00:00",
+  "previous_sha256_source_body": "127b3c06f2a6dd595b19475c07890ed388946da66e3ba32ff9eb19e0abc76336",
+  "source_body_changed": false
+}

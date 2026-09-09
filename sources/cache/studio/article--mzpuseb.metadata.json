@@ -1,0 +1,57 @@
+{
+  "url": "https://help.webex.com/article/mzpuseb",
+  "title": "Configure fulfillment for scripted AI agents",
+  "source_family": "studio",
+  "category": "AI Agent Studio design and configuration",
+  "extractor": "webex_help_article",
+  "discovered_from": "https://help.webex.com/article/ncs9r37",
+  "selection_reason": "Administration guide or directly linked essential for scripted/autonomous agent behavior, tools, knowledge, language, and digital interaction configuration.",
+  "retrieved_at": "2026-09-08T23:48:50+00:00",
+  "status": "ok",
+  "source_kind": "official_documentation",
+  "http_status": 200,
+  "resolved_url": "https://help.webex.com/article/mzpuseb",
+  "doc_version": null,
+  "source_updated_at": "2025-06-04T06:25:55.485Z",
+  "doc_id": "mzpuseb",
+  "headings": [
+    "Intent-based agent handover",
+    "Step-by-step guide: Fulfillment",
+    "Agent routing based on previous intent"
+  ],
+  "word_count": 1340,
+  "sha256_source_body": "fde85306af7a09589b26c7f1d89908a35ea69a2b5af81658cc9a2fdce97d778d",
+  "sha256_html_response": "0ebc619be4f8ff2d84d69ed4babdbc784b77e39abbb0af6ea90c7f19c51664c7",
+  "extraction": "Webex Help public Next.js pageProps.chapters[*].divHtml for books or UIData for articles; navigation excluded; headings, table cells and original links preserved",
+  "deprecated": false,
+  "source_body_format": "html",
+  "publisher_metadata": {
+    "id": 241956,
+    "externalId": "mzpuseb",
+    "language": "en-US",
+    "status": "COMPLETED",
+    "isBook": null,
+    "creationTime": "2025-04-15T00:12:30.889Z",
+    "lastModifiedTime": "2025-06-04T06:25:55.485Z",
+    "lastSyncTime": "2025-06-04T06:25:55.485Z",
+    "chapter_titles": [],
+    "table_count": 0,
+    "products": [
+      "Webex Contact Center"
+    ],
+    "version_note": "No product documentation version supplied; use publisher lastModifiedTime and retrieval date.",
+    "title_raw": "<h1>Configure fulfillment for scripted AI agents</h1>"
+  },
+  "source_path": "sources/cache/studio/article--mzpuseb.source.md",
+  "markdown_path": "sources/cache/studio/article--mzpuseb.md",
+  "text_path": "sources/cache/studio/article--mzpuseb.txt",
+  "file_sha256": {
+    "source_path": "fde85306af7a09589b26c7f1d89908a35ea69a2b5af81658cc9a2fdce97d778d",
+    "markdown_path": "22c9a2fcb90115d596d70215f296c1a12a58bbfcf56dac0e375eda2d137ec3a4",
+    "text_path": "0394a4920559fce56583ccb8553a374737d9ad0cc225cc138e932a973643f8c1"
+  },
+  "metadata_path": "sources/cache/studio/article--mzpuseb.metadata.json",
+  "previous_retrieved_at": "2026-09-08T23:45:55+00:00",
+  "previous_sha256_source_body": "fde85306af7a09589b26c7f1d89908a35ea69a2b5af81658cc9a2fdce97d778d",
+  "source_body_changed": false
+}

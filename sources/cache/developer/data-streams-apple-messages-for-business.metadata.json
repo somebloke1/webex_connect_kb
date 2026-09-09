@@ -1,0 +1,32 @@
+{
+  "api_metadata_path": "sources/cache/developer/data-streams-apple-messages-for-business.api.json",
+  "category": "Data Streams",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f6658",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "e7a2bbd4b3b0c3488825f3cac8a4fc6ea094ee6d261447c54cf11982e58d8787",
+    "source_path": "a2c0de2b3cd53d4307f592db9f4c2f011b561032c8895f388058dc5128092a06",
+    "text_path": "be5ab8df7882d9378fc2332726f9b31d961383b7fc2619fbacbc67dc896222fd"
+  },
+  "headings": [],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/data-streams-apple-messages-for-business.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/data-streams-apple-messages-for-business",
+  "retrieved_at": "2026-09-08T23:31:49+00:00",
+  "sha256_api_metadata": "575f65b7d8dc3ea0b617314bc47e22705dc85fc80ee114e6faa20ada4e8aafe2",
+  "sha256_html_response": "a1e6b1126220466057f1fce56fca517389c6afecea415573862053ccd2ff1504",
+  "sha256_source_body": "a2c0de2b3cd53d4307f592db9f4c2f011b561032c8895f388058dc5128092a06",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/data-streams-apple-messages-for-business.source.md",
+  "source_updated_at": "2026-08-04T14:47:41.622Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/data-streams-apple-messages-for-business.txt",
+  "title": "Data Streams - Apple Messages for Business",
+  "url": "https://developers.webexconnect.io/reference/data-streams-apple-messages-for-business",
+  "word_count": 6438,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/data-streams-apple-messages-for-business.metadata.json"
+}

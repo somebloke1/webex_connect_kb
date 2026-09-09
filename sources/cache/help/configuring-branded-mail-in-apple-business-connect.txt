@@ -1,0 +1,51 @@
+## 
+
+Overview
+
+Branded Mail allows businesses to add their logo and brand name to emails sent from their domain. This feature helps build brand identity, increase trust, and make emails stand out in the Mail app on Apple devices and iCloud Mail on the web. 
+
+You can configure Branded Mail in Apple Business Connect by following the detailed instructions mentioned in subsequent sections.
+
+## 
+
+Prerequisites
+
+Before you set up Branded Mail, some of the important points to consider are: 
+
+- The company must own the logo.
+
+- The email domain name must be a commercial name.
+
+- The company must be verified by Apple.
+
+- The mail server must meet DMARC requirements.
+
+## 
+
+Domain Structure
+
+Branded Mail can be set up at one of the following levels: 
+
+- Domain and subdomains. e.g., domain.tld or subdomain.domain.tld
+
+- Subdomain only. e.g., subdomain.domain.tld
+
+- Specific email address. e.g., mailid@domain.tld
+
+## 📘
+
+After adding a domain on Apple Business Connect and generating TXT record, the domain must be verified within 14 calendar days.
+
+## 
+
+Set up Branded Mail in Apple Business Connect
+
+Configure Branded Mail by signing in to Apple Business Connect with an Administrator role, add your domain or email address, and verify your company as mentioned in Configure your brand email. 
+
+Also, you can add, review, or remove Domain or Email Address for which you are setting up Branded Mail by following the instructions specified in Configure your brand email.
+
+## 
+
+Verify Domain for Branded Mail in Apple Business Connect
+
+To verify your domain for Branded Mail, you should copy the TXT record generated in Apple Business Connect into your domain’s DNS zone file and initiate verification as mentioned in Verify your domain for Branded Mail in Apple Business Connect.

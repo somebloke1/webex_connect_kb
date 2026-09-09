@@ -1,0 +1,47 @@
+{
+  "url": "https://developer.webex.com/blog/build-your-first-webex-connect-flow-a-step-by-step-guide",
+  "title": "Build your first Webex Connect Flow: A Step-by-Step Guide",
+  "source_family": "cisco",
+  "category": "Developer tutorials",
+  "extractor": "html_element",
+  "selector": {
+    "tag": "div",
+    "class": "aEVo4FPjXdpLmdcR7M1Y"
+  },
+  "retrieved_at": "2026-09-08T23:34:01+00:00",
+  "status": "ok",
+  "source_kind": "official_article",
+  "http_status": 200,
+  "resolved_url": "https://developer.webex.com/blog/build-your-first-webex-connect-flow-a-step-by-step-guide",
+  "doc_version": null,
+  "source_updated_at": null,
+  "doc_id": null,
+  "headings": [
+    "What We’ll Build",
+    "Get started with the Flow Builder",
+    "Navigate to the Service Dashboard",
+    "Start Building a Flow",
+    "Send the Initial SMS",
+    "Receive the Patient Response",
+    "Check the Response",
+    "Report on Progress",
+    "Final Configurations",
+    "Publish Live",
+    "Test the Flow",
+    "Verifying and Troubleshooting",
+    "Congratulations and Next Steps!"
+  ],
+  "word_count": 2186,
+  "sha256_source_body": "6d3cbbd64d0f6514a94a70a81796c1d80ce13effa65a63aefe32fc3d1e204e20",
+  "sha256_html_response": "ff7e7c54280c0bf806877bc924bf0f78019e072336d327cd1ba3b849a6a7f803",
+  "extraction": "Explicit article HTML element; document navigation excluded",
+  "deprecated": false,
+  "source_path": "sources/cache/cisco/blog--build-your-first-webex-connect-flow-a-step-by-step-guide.source.md",
+  "markdown_path": "sources/cache/cisco/blog--build-your-first-webex-connect-flow-a-step-by-step-guide.md",
+  "text_path": "sources/cache/cisco/blog--build-your-first-webex-connect-flow-a-step-by-step-guide.txt",
+  "file_sha256": {
+    "source_path": "6d3cbbd64d0f6514a94a70a81796c1d80ce13effa65a63aefe32fc3d1e204e20",
+    "markdown_path": "7a49d36c34dc4f9c7ceeeaaddfccbb25a4da1e5b6f79e011c4234a5559b38f30",
+    "text_path": "2fa2435a6dda381f628ad021b174ab92c1011d9ed0f151acb177dd9dbbe12e92"
+  }
+}

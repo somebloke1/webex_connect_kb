@@ -1,0 +1,34 @@
+{
+  "id": "It3Zq0wdxHg",
+  "url": "https://www.youtube.com/watch?v=It3Zq0wdxHg",
+  "retrieved_at": "2026-09-08",
+  "title": "Webex Connect: Set Up (English)",
+  "author": "Bucher + Suter",
+  "channel_id": "UCyl9G6uDdjRV1ByQCQlew1Q",
+  "duration_seconds": 659,
+  "published_at": "2022-02-24T09:24:24-08:00",
+  "uploaded_at": "2022-02-24T09:24:24-08:00",
+  "availability": "OK",
+  "caption_tracks": [
+    {
+      "language_code": "en",
+      "kind": "asr",
+      "name": "English (auto-generated)"
+    }
+  ],
+  "chapters_from_description": [
+    "00:00 - Introduction",
+    "00:20 - What is Webex Connect?",
+    "01:20 - Use Case 1 - SMS survey",
+    "01:35 - Flows and channels",
+    "02:00 - Flow creation demo",
+    "02:20 - Using an existing Connect template",
+    "03:50 - Use Case 2 - delivery information",
+    "05:50 - Webhook triggers from external services",
+    "06:35 - Branch nodes",
+    "08:10 - Update CRM or ERP",
+    "08:20 - Use Case 3 - Appointment reminder",
+    "09:40 - SMS sending",
+    "09:55 - Branch nodes"
+  ]
+}

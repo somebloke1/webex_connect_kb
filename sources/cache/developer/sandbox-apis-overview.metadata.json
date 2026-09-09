@@ -1,0 +1,35 @@
+{
+  "api_metadata_path": "sources/cache/developer/sandbox-apis-overview.api.json",
+  "category": "API Reference for Sandbox",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f65b0",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "fe1ecd49c17b76ef750dbb48367e5948b18b4edd4f5543d16685cd74f10ef871",
+    "source_path": "cdd5531091aaa22f395ddc6bf3a4b85f43e9285c4a80f3b6c290da49cbbce611",
+    "text_path": "071bb4ab3107fcef051dc41e4a9f987e2b396c97dc2884466d6727e890c8cdb6"
+  },
+  "headings": [
+    "API Endpoints for Sandbox",
+    "Signing Up for Webex Connect Sandbox"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/sandbox-apis-overview.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/sandbox-apis-overview",
+  "retrieved_at": "2026-09-08T23:31:39+00:00",
+  "sha256_api_metadata": "575f65b7d8dc3ea0b617314bc47e22705dc85fc80ee114e6faa20ada4e8aafe2",
+  "sha256_html_response": "bc0246bd627ac083dd0cc8bf32d076a88e15f9995d695476ca277e93ccc0a6e6",
+  "sha256_source_body": "cdd5531091aaa22f395ddc6bf3a4b85f43e9285c4a80f3b6c290da49cbbce611",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/sandbox-apis-overview.source.md",
+  "source_updated_at": "2026-04-16T05:30:49.414Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/sandbox-apis-overview.txt",
+  "title": "Sandbox APIs Overview",
+  "url": "https://developers.webexconnect.io/reference/sandbox-apis-overview",
+  "word_count": 527,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/sandbox-apis-overview.metadata.json"
+}

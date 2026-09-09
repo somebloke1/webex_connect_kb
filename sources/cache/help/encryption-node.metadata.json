@@ -1,0 +1,37 @@
+{
+  "category": "SERVICES & FLOWS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182577d5",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "f04429cbeaf5d08e588ec08d21afcb9dc6869a59faeb6f80833d33d2f03d4f43",
+    "source_path": "861dd0536d7d229b93b8cb5710e45f1f53118957fa6e27a486749b82f6d029a8",
+    "text_path": "fb07070931bffe92848359860f12b1b61e0c19605a6bd373cf9f1da906bdf7b0"
+  },
+  "headings": [
+    "Interface Elements",
+    "Encrypting a Text or String",
+    "Configuring Encryption Settings",
+    "Configuring Transitions",
+    "📘Tip"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/encryption-node.md",
+  "resolved_url": "https://help.webexconnect.io/docs/encryption-node",
+  "retrieved_at": "2026-09-08T23:28:54+00:00",
+  "sha256_html_response": "1ad03fd96fbd92c4446b976e38fd522630c8bdb2260e594dcb6875227c12208a",
+  "sha256_source_body": "861dd0536d7d229b93b8cb5710e45f1f53118957fa6e27a486749b82f6d029a8",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/encryption-node.source.md",
+  "source_updated_at": "2026-01-26T13:40:41.789Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/encryption-node.txt",
+  "title": "Encryption Node",
+  "url": "https://help.webexconnect.io/docs/encryption-node",
+  "word_count": 838,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/encryption-node.metadata.json"
+}

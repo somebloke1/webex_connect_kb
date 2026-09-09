@@ -1,0 +1,32 @@
+{
+  "api_metadata_path": "sources/cache/developer/sms-and-voice-support-in-sandbox.api.json",
+  "category": "API Reference for Sandbox",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f65b1",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "22e3a3c66ea3b686fb45fe9a0a6ddde90b42a8fab56f735226b37bc01a2f42b8",
+    "source_path": "39c910036ca997a41238abb657c154b44949620ed05aabdb51da8879b05147d0",
+    "text_path": "e9c155b1cb544376073c766329b84f4ad63593313358f52c7e23b59f3915343c"
+  },
+  "headings": [],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/sms-and-voice-support-in-sandbox.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/sms-and-voice-support-in-sandbox",
+  "retrieved_at": "2026-09-08T23:31:40+00:00",
+  "sha256_api_metadata": "575f65b7d8dc3ea0b617314bc47e22705dc85fc80ee114e6faa20ada4e8aafe2",
+  "sha256_html_response": "857920f5b077fc9579b40e4609b2de2de0ffc16ddbaadcf55afaf2b25b94ed4c",
+  "sha256_source_body": "39c910036ca997a41238abb657c154b44949620ed05aabdb51da8879b05147d0",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/sms-and-voice-support-in-sandbox.source.md",
+  "source_updated_at": "2025-05-17T06:14:16.833Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/sms-and-voice-support-in-sandbox.txt",
+  "title": "SMS and Voice Support in Sandbox",
+  "url": "https://developers.webexconnect.io/reference/sms-and-voice-support-in-sandbox",
+  "word_count": 563,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/developer/sms-and-voice-support-in-sandbox.metadata.json"
+}

@@ -1,0 +1,56 @@
+Apple began enforcing updated Apple Messages for Business payload requirements on **21 August 2026**. This notice applies only to Webex Connect customers using Apple Messages for Business.
+
+Review all active Apple Messages for Business flow nodes and Rich Link Preview asset configurations, and update any non-compliant configurations.
+
+## Review Interactive Message UI text
+
+Interactive Message UI fields do not share one platform-wide character limit.
+
+For Apple-rendered Interactive Message fields, each title, subtitle, label, button, hint, and similar UI string must use printable Unicode characters and must not exceed **200 characters**.
+
+Ordinary Text messages are unaffected.
+
+## Replace non-compliant images
+
+Images used in Interactive Messages, Rich Links, and Invitation Messages must be **PNG** and **200 KB or less**.
+
+The images array must remain below **5 MB**. Ordinary attachment formats are unchanged.
+
+Webex Connect does not automatically convert source images, so replace affected assets with compliant PNG files.
+
+## Update domain-specific Rich Link previews
+
+Existing domain previews may be non-PNG or larger than 200 KB.
+
+Under **Rich Link Previews for Domains**, replace each affected image with a PNG of 200 KB or less and confirm that its asset identifier resolves correctly.
+
+## Update Form keyboard types
+
+Current examples use `UIKeyboardTypeEmailAddress`, and existing flows may use other `UIKeyboardType` aliases.
+
+Going forward, supported values are:
+
+`default`, `asciiCapable`, `numbersAndPunctuation`, `URL`, `numberPad`, `phonePad`, `namePhonePad`, `emailAddress`, `decimalPad`, and `webSearch`.
+
+Webex Connect sends `default` for an unsupported value. Update active Form nodes to preserve the intended keyboard.
+
+## Review configured limits
+
+Quick Replies remain limited to **2 through 5 items**, so this does not change.
+
+Apple Pay `lineItems` and `newLineItems` are limited to **20 items each**.
+
+For Time Picker locations:
+
+- `latitude` must be from `-90` through `90`.
+- `longitude` must be from `-180` through `180`.
+- `radius` must be non-negative.
+- `timezoneOffset` must be from `-720` through `840` minutes.
+
+## Customer action
+
+Messages that do not meet Apple's requirements may be rejected and not delivered.
+
+Review each active Apple Messages for Business Send node and domain preview configuration, then test affected journeys on an Apple device.
+
+Webex Connect handles Apple's required payload data types and uses a compliant page image, compliant domain preview, or the platform default PNG for automatically generated Rich Links.

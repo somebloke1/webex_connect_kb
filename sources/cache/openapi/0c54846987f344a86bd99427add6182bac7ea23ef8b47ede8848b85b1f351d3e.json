@@ -1,0 +1,132 @@
+{
+  "_id": "6a675233ec1c893d8a7f67cd:6a675233ec1c893d8a7f65e2",
+  "components": {
+    "securitySchemes": {
+      "sec0": {
+        "in": "header",
+        "name": "Content-Type",
+        "type": "apiKey",
+        "x-default": "application/json"
+      },
+      "sec1": {
+        "in": "header",
+        "name": "Authorization",
+        "type": "apiKey",
+        "x-bearer-format": "bearer",
+        "x-default": "{{jwt-token}}"
+      }
+    }
+  },
+  "info": {
+    "title": "Instagram APIs",
+    "version": "6.20.0"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/": {
+      "post": {
+        "deprecated": false,
+        "description": "",
+        "operationId": "instagram-api",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Content-Type",
+            "schema": {
+              "default": "Application/JSON",
+              "type": "string"
+            }
+          },
+          {
+            "description": "Bearer {{token}}. Applicable if you want to use JWT tokens for API authentication. Use either of 'key' or 'Authorization' header param.",
+            "in": "header",
+            "name": "Authorization",
+            "schema": {
+              "default": "Bearer <JWT Token>",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{\n   \"messageId\":\"0a129aee-e1cd-480d-b08d-4f48548ff48d\",\n   \"correlationId\":\"k1l2\",\n   \"status\":\"queued\",\n   \"requestTimestamp\":\"2014-02-17T07:25:01.4178645-05:00\"\n}"
+                  }
+                },
+                "schema": {
+                  "properties": {
+                    "correlationId": {
+                      "example": "k1l2",
+                      "type": "string"
+                    },
+                    "messageId": {
+                      "example": "0a129aee-e1cd-480d-b08d-4f48548ff48d",
+                      "type": "string"
+                    },
+                    "requestTimestamp": {
+                      "example": "2014-02-17T07:25:01.4178645-05:00",
+                      "type": "string"
+                    },
+                    "status": {
+                      "example": "queued",
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "201"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{\n  \"code\": 8000,\n  \"message\": \"Invalid parameter: 'asdf'\"\n}"
+                  }
+                },
+                "schema": {
+                  "properties": {
+                    "code": {
+                      "default": 0,
+                      "example": 8000,
+                      "type": "integer"
+                    },
+                    "message": {
+                      "example": "Invalid parameter: 'asdf'",
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "400"
+          }
+        },
+        "summary": "Instagram API (Deprecated)"
+      }
+    }
+  },
+  "security": [
+    {
+      "sec0": [],
+      "sec1": []
+    }
+  ],
+  "servers": [
+    {
+      "url": "https://api.us.webexconnect.io/v1/instagram/messages"
+    }
+  ],
+  "x-readme": {
+    "explorer-enabled": true,
+    "headers": [],
+    "proxy-enabled": true
+  },
+  "x-readme-fauxas": true
+}

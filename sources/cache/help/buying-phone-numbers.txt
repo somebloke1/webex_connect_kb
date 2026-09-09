@@ -1,0 +1,41 @@
+You can buy numbers either from within a Service or by visiting the Assets -> Numbers section. Here're the steps for buying a phone number in Webex Connect:
+
+## 
+
+Step 1: Go to 'Buy - Phone Number' section
+
+Option 1. Click Buy Numbers under the Flows section of the service dashboard. 
+
+ [Image: Buying a Phone Number from Service Dashboard] 
+The above section can be accessed on the service dashboard of any created service
+
+Option 2: Hover over the Assets icon from the menu bar on the left and click Numbers.
+
+ [Image: Accessing Numbers through Assets] 
+The Assets menu option can be accessed from the vertical menu bar across Webex Connect
+
+## 
+
+Step 2: Buy a Phone Number
+
+- Click Get Numbers > Phone Number.
+
+- Select the desired Country from the drop-down list and then select the Number Type. 
+
+- Click Find Numbers to get a list of the available numbers.
+
+ [Image: Buying a Number from Assets] 
+Buy Phone Numbers screen
+
+- Pick a number that suits your requirement from the available options and click BUY.
+
+You will then see a purchase confirmation dialog box. 
+
+- Click BUY NUMBER to proceed further.
+
+All the numbers purchased by you are available for use across flows. Also, you can use them through the messaging API by configuring the Sender ID parameter.
+
+## 📘
+Note
+
+Due to limitations in auto-provisioning MMS for 10DLC numbers in the U.S., the MMS option is hidden for United States landline numbers.

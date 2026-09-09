@@ -1,0 +1,35 @@
+{
+  "api_metadata_path": "sources/cache/developer/faq-facebook-messenger.api.json",
+  "category": "FAQs",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f65a9",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "ef27da81da79bbb42660befc755d26ba824a78a382f463ea1e922ca5bca609c6",
+    "source_path": "bb85051f6e7ad03a9f06624f2f30fa8a1f0ac7b9cfbc644dec482a00439d142f",
+    "text_path": "da4d1df7d05b4d405c0fcca3a958b1aea30b76edcfb6ba63a8a143f654cad149"
+  },
+  "headings": [
+    "Using Facebook Messenger as a marketing channel",
+    "Can I broadcast messages on Facebook Messenger and/or Twitter DM?"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/faq-facebook-messenger.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/faq-facebook-messenger",
+  "retrieved_at": "2026-09-08T23:31:52+00:00",
+  "sha256_api_metadata": "575f65b7d8dc3ea0b617314bc47e22705dc85fc80ee114e6faa20ada4e8aafe2",
+  "sha256_html_response": "c2a8c10401b6b1b19ef3466013209190530ddb24f6633829392c30ffeb7ab483",
+  "sha256_source_body": "bb85051f6e7ad03a9f06624f2f30fa8a1f0ac7b9cfbc644dec482a00439d142f",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/faq-facebook-messenger.source.md",
+  "source_updated_at": "2026-02-12T09:19:59.420Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/faq-facebook-messenger.txt",
+  "title": "Facebook Messenger FAQs",
+  "url": "https://developers.webexconnect.io/reference/faq-facebook-messenger",
+  "word_count": 340,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/faq-facebook-messenger.metadata.json"
+}

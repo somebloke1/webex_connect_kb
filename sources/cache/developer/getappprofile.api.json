@@ -1,0 +1,542 @@
+{
+  "api": {
+    "url": "/customerappprofile/<appid>/<customerid>",
+    "apiSetting": "6a675233ec1c893d8a7f67b8",
+    "auth": "required",
+    "examples": {
+      "codes": [
+        {
+          "code": "-X GET https://api.imiconnect.io/resources/v2/customerappprofile/{inappid}/{customerId}\n-H \"Content-Type : application/json\"\n-H \"key : {profilekey}\"\n",
+          "language": "curl",
+          "name": null
+        },
+        {
+          "code": "var request=require(\"request\");\n var options = {\n          method: 'GET',\n          uri: ' https://api.imiconnect.io/resources/v2/customerappprofile/{inappid}/{customerId}',\n          headers: {\n            'Content-Type': 'application/json',\n\t'key': ' Profile key present in tenant setting '\n            }\n        };\n  request(options, function(error, response, body) {\n               if(error){\n                  console.log(error);\n             }else{\n                  console.log(response);\n            }\n        });\n\n",
+          "language": "json",
+          "name": "Node"
+        },
+        {
+          "code": "require 'httparty'\n# Create the HTTP objects and post request\nhttp = HTTParty.get(\"https://api.imiconnect.io/resources/v2/customerappprofile/{inappid}/{customerId}\",\n    :headers => {'Content-Type' => 'application/json',\n\t'key' => ' Profile key present in tenant setting’})\n# Print on console\nputs http\n",
+          "language": "ruby"
+        },
+        {
+          "code": "var data = null;\n\nvar xhr = new XMLHttpRequest();\n\nxhr.addEventListener(\"readystatechange\", function () {\n  if (this.readyState === this.DONE) {\n    console.log(this.responseText);\n  }\n});\n\nxhr.open(\"GET\", \" https://api.imiconnect.io/resources/v2/customerappprofile/{inappid}/{customerId}\");\nxhr.setRequestHeader(\"Content-Type\", \"application/json\");\nxhr.setRequestHeader(\"key\", \"Profile key present in tenant setting\");\nxhr.send(data);\n",
+          "language": "javascript"
+        },
+        {
+          "code": "import requests\n\nurl = \" https://api.imiconnect.io/resources/v2/customerappprofile/{inappid}/{customerId}\");\"\n\nheaders = {'Content-Type': 'application/json', 'key': ' Profile key present in tenant setting '}\n\nresponse = requests.request(\"GET\", url, headers=headers)\n\nprint(response.text)\n",
+          "language": "python"
+        },
+        {
+          "code": "https://api.imiconnect.com/resources/v2/customerappprofile/a_636035705699961900/8953",
+          "language": "json",
+          "name": "Get Single App Profile"
+        },
+        {
+          "code": "https://api.imiconnect.com/resources/v1/customerappprofile/a_636035705699961900/8953",
+          "language": "json",
+          "name": "Get Multiple App Profiles"
+        }
+      ]
+    },
+    "method": "get",
+    "params": [
+      {
+        "name": "appid",
+        "type": "string",
+        "enumValues": "",
+        "default": "",
+        "desc": "The ID of the app asset that you can obtain from imiconnect platform",
+        "required": false,
+        "in": "path",
+        "ref": "",
+        "_id": "5f6df042f6c96a0023ed87c5",
+        "id": "5f6df042f6c96a0023ed87c5"
+      },
+      {
+        "name": "customerid",
+        "type": "string",
+        "enumValues": "",
+        "default": "",
+        "desc": "Customer ID is a Client specific ID (such as CRN) to uniquely identify a customer",
+        "required": false,
+        "in": "path",
+        "ref": "",
+        "_id": "5f6df042f6c96a0023ed87c4",
+        "id": "5f6df042f6c96a0023ed87c4"
+      },
+      {
+        "name": "Content-Type",
+        "type": "string",
+        "enumValues": "",
+        "default": "",
+        "desc": "Application/JSON",
+        "required": false,
+        "in": "header",
+        "ref": "",
+        "_id": "5fd71ae5928e9f0012c3e0cf",
+        "id": "5fd71ae5928e9f0012c3e0cf"
+      },
+      {
+        "name": "secretKey",
+        "type": "string",
+        "enumValues": "",
+        "default": "",
+        "desc": "Client key that can be accessed from your app asset configuration page on imiconnect platform",
+        "required": false,
+        "in": "header",
+        "ref": "",
+        "_id": "5fd71ae5928e9f0012c3e0ce",
+        "id": "5fd71ae5928e9f0012c3e0ce"
+      }
+    ],
+    "results": {
+      "codes": [
+        {
+          "language": "json",
+          "code": "{\n    \"Status\": 0,\n    \"Description\": \"success\",\n    \"code\": \"1000\",\n    \"transid\": \"4bd0927e-df07-4b4c-a731-4912deaaa72c\",\n    \"Records\": [\n        {\n            \"OutwardLinks\": [\n                {\n                    \"ProfileID\": 3030,\n                    \"ProfileName\": \"imi2828_cpms_1\",\n                    \"Records\": [\n                        [\n                            {\n                                \"Value\": \"777777\",\n                                \"ID\": 67007,\n                                \"Name\": \"customerid\"\n                            },\n                            {\n                                \"Value\": \"sainath.a@imimobile.com\",\n                                \"ID\": 67008,\n                                \"Name\": \"email\"\n                            },\n                            {\n                                \"Value\": \"1\",\n                                \"ID\": 67009,\n                                \"Name\": \"msisdn\"\n                            },\n                            {\n                                \"Value\": \"1\",\n                                \"ID\": 67010,\n                                \"Name\": \"name\"\n                            },\n                            {\n                                \"Value\": \"false\",\n                                \"ID\": 71641,\n                                \"Name\": \"channel_pref\"\n                            }\n                        ]\n                    ]\n                }\n            ],\n            \"Attributes\": [\n                {\n                    \"Value\": \"0\",\n                    \"ID\": 86910,\n                    \"Name\": \"verified\"\n                },\n                {\n                    \"Value\": \"777777\",\n                    \"ID\": 86911,\n                    \"Name\": \"customerId\"\n                },\n                {\n                    \"Value\": \"Check123457\",\n                    \"ID\": 86912,\n                    \"Name\": \"userId\"\n                },\n                {\n                    \"Value\": \"checkdevice1\",\n                    \"ID\": 86913,\n                    \"Name\": \"deviceId\"\n                },\n                {\n                    \"Value\": \"Android\",\n                    \"ID\": 86914,\n                    \"Name\": \"os\"\n                },\n                {\n                    \"Value\": \"37bc5867465cb95124e5e03aad905100f8154cb4f1f5cb8c4a01eae8ee75831612\",\n                    \"ID\": 86915,\n                    \"Name\": \"pushId\"\n                },\n                {\n                    \"Value\": \"fb89d255-15e5-4a24-b35b-5d88bb6df2b9\",\n                    \"ID\": 86916,\n                    \"Name\": \"rtmId\"\n                },\n                {\n                    \"Value\": \"2018-01-21T16:39:54+0530\",\n                    \"ID\": 86917,\n                    \"Name\": \"last_opened\"\n                },\n                {\n                    \"Value\": \"\",\n                    \"ID\": 86918,\n                    \"Name\": \"ios_fcmpushid\"\n                },\n                {\n                    \"Value\": \"\",\n                    \"ID\": 86919,\n                    \"Name\": \"language\"\n                },\n                {\n                    \"Value\": \"\",\n                    \"ID\": 86920,\n                    \"Name\": \"timezone\"\n                },\n                {\n                    \"Value\": \"\",\n                    \"ID\": 86921,\n                    \"Name\": \"foreground\"\n                },\n                {\n                    \"Value\": \"false\",\n                    \"ID\": 86922,\n                    \"Name\": \"guest\"\n                },\n                {\n                    \"Value\": \"1\",\n                    \"ID\": 86923,\n                    \"Name\": \"status\"\n                },\n                {\n                    \"Value\": \"2016-07-11 17:02:51\",\n                    \"ID\": 86924,\n                    \"Name\": \"createdOn\"\n                }\n            ],\n            \"InwardLinks\": []\n        }\n    ]\n}\n",
+          "status": 200
+        },
+        {
+          "code": "{\n  \"Status\": 0,\n  \"Description\": \"success\",\n  \"Records\": [\n    {\n      \"Attributes\": [\n        {\n          \"Name\": \"status\",\n          \"Value\": 1,\n          \"ID\": 16528\n        },\n        {\n          \"Name\": \"verified\",\n          \"Value\": 1,\n          \"ID\": 16529\n        },\n        {\n          \"Name\": \"twitterid\",\n          \"Value\": \"3223165326\",\n          \"ID\": 16530\n        },\n        {\n          \"Name\": \"twitter_handle\",\n          \"Value\": \"wsophyd3\",\n          \"ID\": 16531\n        },\n        {\n          \"Name\": \"twitter_name\",\n          \"Value\": \"Jack\",\n          \"ID\": 16532\n        },\n        {\n          \"Name\": \"customerId\",\n          \"Value\": \"8953\",\n          \"ID\": 16533\n        },\n        {\n          \"Name\": \"geolocation\",\n          \"Value\": \"\",\n          \"ID\": 16534\n        },\n        {\n          \"Name\": \"timezone\",\n          \"Value\": \"Pacific Time (US & Canada)\",\n          \"ID\": 16535\n        },\n        {\n          \"Name\": \"channel\",\n          \"Value\": \"twitter\",\n          \"ID\": 16536\n        },\n        {\n          \"Name\": \"createdOn\",\n          \"Value\": \"2016-07-08 10:49:20\",\n          \"ID\": 16537\n        },\n        {\n          \"Name\": \"updatedOn\",\n          \"Value\": \"2016-07-13 08:19:31\",\n          \"ID\": 16538\n        }\n      ],\n      \"InwardLinks\": [],\n      \"OutwardLinks\": [\n        {\n          \"Records\": [\n            [\n              {\n                \"Name\": \"msisdn\",\n                \"Value\": \"919908505526\",\n                \"ID\": 8574\n              },\n              {\n                \"Name\": \"email\",\n                \"Value\": \"abc.xyz@imimobile.com\",\n                \"ID\": 8575\n              },\n              {\n                \"Name\": \"name\",\n                \"Value\": \"john\",\n                \"ID\": 8576\n              },\n              {\n                \"Name\": \"customerId\",\n                \"Value\": \"8953\",\n                \"ID\": 8577\n              },\n              {\n                \"Name\": \"sms\",\n                \"Value\": \"1\",\n                \"ID\": 8578\n              },\n              {\n                \"Name\": \"voice\",\n                \"Value\": \"1\",\n                \"ID\": 8579\n              },\n              {\n                \"Name\": \"rt\",\n                \"Value\": \"1\",\n                \"ID\": 8580\n              },\n              {\n                \"Name\": \"fb\",\n                \"Value\": \"1\",\n                \"ID\": 8581\n              },\n              {\n                \"Name\": \"twitter\",\n                \"Value\": \"1\",\n                \"ID\": 8582\n              },\n              {\n                \"Name\": \"wechat\",\n                \"Value\": \"1\",\n                \"ID\": 8583\n              },\n              {\n                \"Name\": \"wa\",\n                \"Value\": \"1\",\n                \"ID\": 8584\n              }\n            ]\n          ],\n          \"ProfileID\": 341,\n          \"ProfileName\": \"UKREG42_cpms_1\"\n        }\n      ]\n    }\n  ],\n  \"code\": \"1000\",\n  \"transid\": \"c01bea92-6fc6-4416-b1da-79f15a19fd0c\"\n}",
+          "language": "json",
+          "status": 200,
+          "name": "Get Single App Profile"
+        },
+        {
+          "code": "{\n  \"Status\": 0,\n  \"Description\": \"success\",\n  \"Records\": [\n    {\n      \"Attributes\": [\n        {\n          \"Name\": \"status\",\n          \"Value\": 0,\n          \"ID\": 6063\n        },\n        {\n          \"Name\": \"verified\",\n          \"Value\": \"0\",\n          \"ID\": 6064\n        },\n        {\n          \"Name\": \"customerId\",\n          \"Value\": \"8954\",\n          \"ID\": 6065\n        },\n        {\n          \"Name\": \"connectStatus\",\n          \"Value\": 0,\n          \"ID\": 6066\n        },\n        {\n          \"Name\": \"appId\",\n          \"Value\": \"\",\n          \"ID\": 6067\n        },\n        {\n          \"Name\": \"userId\",\n          \"Value\": \"8954\",\n          \"ID\": 6068\n        },\n        {\n          \"Name\": \"password\",\n          \"Value\": \"\",\n          \"ID\": 6069\n        },\n        {\n          \"Name\": \"deviceId\",\n          \"Value\": \"\",\n          \"ID\": 6070\n        },\n        {\n          \"Name\": \"batterylevel\",\n          \"Value\": \"11%\",\n          \"ID\": 6071\n        },\n        {\n          \"Name\": \"Bluetooth\",\n          \"Value\": \"1\",\n          \"ID\": 6072\n        },\n        {\n          \"Name\": \"cellid\",\n          \"Value\": \"\",\n          \"ID\": 6073\n        },\n        {\n          \"Name\": \"connectType\",\n          \"Value\": \"\",\n          \"ID\": 6074\n        },\n        {\n          \"Name\": \"email\",\n          \"Value\": \"\",\n          \"ID\": 6075\n        },\n        {\n          \"Name\": \"externalmemory\",\n          \"Value\": \"\",\n          \"ID\": 6076\n        },\n        {\n          \"Name\": \"foreground\",\n          \"Value\": \"0\",\n          \"ID\": 6077\n        },\n        {\n          \"Name\": \"foregroundapp\",\n          \"Value\": \"\",\n          \"ID\": 6078\n        },\n        {\n          \"Name\": \"idlescreen\",\n          \"Value\": \"\",\n          \"ID\": 6079\n        },\n        {\n          \"Name\": \"imei\",\n          \"Value\": \"\",\n          \"ID\": 6080\n        },\n        {\n          \"Name\": \"imsi\",\n          \"Value\": \"\",\n          \"ID\": 6081\n        },\n        {\n          \"Name\": \"internalmemory\",\n          \"Value\": \"11.85 GB\",\n          \"ID\": 6082\n        },\n        {\n          \"Name\": \"IP\",\n          \"Value\": \"192.168.1.2\",\n          \"ID\": 6083\n        },\n        {\n          \"Name\": \"language\",\n          \"Value\": \"English (en-IN)\",\n          \"ID\": 6084\n        },\n        {\n          \"Name\": \"oldlocation\",\n          \"Value\": \"[ { \\\"val\\\" : \\\"[17.40209177851416,78.48741864001678]\\\" , \\\"count\\\" : 1 , \\\"trans_date\\\" : { \\\"$date\\\" : \\\"2016-02-22T19:07:49.714Z\\\"}}]\",\n          \"ID\": 6085\n        },\n        {\n          \"Name\": \"location\",\n          \"Value\": \"[17.4026309524199,78.48846396756929]\",\n          \"ID\": 6086\n        },\n        {\n          \"Name\": \"MAC\",\n          \"Value\": \"\",\n          \"ID\": 6087\n        },\n        {\n          \"Name\": \"make\",\n          \"Value\": \"Apple\",\n          \"ID\": 6088\n        },\n        {\n          \"Name\": \"MCC\",\n          \"Value\": \"\",\n          \"ID\": 6089\n        },\n        {\n          \"Name\": \"MNC\",\n          \"Value\": \"\",\n          \"ID\": 6090\n        },\n        {\n          \"Name\": \"model\",\n          \"Value\": \"iPhone 6 (GSM+CDMA)\",\n          \"ID\": 6091\n        },\n        {\n          \"Name\": \"NFC\",\n          \"Value\": \"\",\n          \"ID\": 6092\n        },\n        {\n          \"Name\": \"os\",\n          \"Value\": \"ios\",\n          \"ID\": 6093\n        },\n        {\n          \"Name\": \"osversion\",\n          \"Value\": \"9.2.1\",\n          \"ID\": 6094\n        },\n        {\n          \"Name\": \"phonemode\",\n          \"Value\": \"\",\n          \"ID\": 6095\n        },\n        {\n          \"Name\": \"presence\",\n          \"Value\": \"\",\n          \"ID\": 6096\n        },\n        {\n          \"Name\": \"RAM\",\n          \"Value\": \"1.00 GB\",\n          \"ID\": 6097\n        },\n        {\n          \"Name\": \"resolution\",\n          \"Value\": \"750x1334\",\n          \"ID\": 6098\n        },\n        {\n          \"Name\": \"roaming\",\n          \"Value\": \"\",\n          \"ID\": 6099\n        },\n        {\n          \"Name\": \"serialnumber\",\n          \"Value\": \"\",\n          \"ID\": 6100\n        },\n        {\n          \"Name\": \"signalstrength\",\n          \"Value\": \"\",\n          \"ID\": 6101\n        },\n        {\n          \"Name\": \"teleco\",\n          \"Value\": \"\",\n          \"ID\": 6102\n        },\n        {\n          \"Name\": \"timespent\",\n          \"Value\": 385,\n          \"ID\": 6103\n        },\n        {\n          \"Name\": \"timezone\",\n          \"Value\": \"\",\n          \"ID\": 6104\n        },\n        {\n          \"Name\": \"useragent\",\n          \"Value\": \"Mozilla/5.0 (iPhone; CPU iPhone OS 9_2_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13D15\",\n          \"ID\": 6105\n        },\n        {\n          \"Name\": \"pushId\",\n          \"Value\": \"6682513c1a97730fb9b69e1358273571fa5181e930bc37b9f905adead18322d3\",\n          \"ID\": 6106\n        },\n        {\n          \"Name\": \"rtmId\",\n          \"Value\": \"8954_08519E2437BB40FEBDF694B5C88703DC\",\n          \"ID\": 6107\n        },\n        {\n          \"Name\": \"createdOn\",\n          \"Value\": \"2016-08-09 12:57:26\",\n          \"ID\": 6108\n        },\n        {\n          \"Name\": \"last_opened\",\n          \"Value\": \"2016-02-22T18:38:57+0530\",\n          \"ID\": 6109\n        },\n        {\n          \"Name\": \"last_upgraded\",\n          \"Value\": \"2016-02-18T20:24:11+0530\",\n          \"ID\": 6110\n        },\n        {\n          \"Name\": \"channel\",\n          \"Value\": \"rt\",\n          \"ID\": 6111\n        }\n      ],\n      \"InwardLinks\": [],\n      \"OutwardLinks\": [\n        {\n          \"Records\": [\n            [\n              {\n                \"Name\": \"msisdn\",\n                \"Value\": \"918019031470\",\n                \"ID\": 5950\n              },\n              {\n                \"Name\": \"email\",\n                \"Value\": \"abc.pqr@imimobile.com\",\n                \"ID\": 5951\n              },\n              {\n                \"Name\": \"name\",\n                \"Value\": \"IMI\",\n                \"ID\": 5952\n              },\n              {\n                \"Name\": \"customerId\",\n                \"Value\": \"8954\",\n                \"ID\": 5953\n              },\n              {\n                \"Name\": \"country\",\n                \"Value\": \"1\",\n                \"ID\": 5954\n              },\n              {\n                \"Name\": \"city\",\n                \"Value\": \"1\",\n                \"ID\": 5955\n              },\n              {\n                \"Name\": \"sms\",\n                \"Value\": \"1\",\n                \"ID\": 5956\n              },\n              {\n                \"Name\": \"voice\",\n                \"Value\": \"1\",\n                \"ID\": 5957\n              },\n              {\n                \"Name\": \"ussd\",\n                \"Value\": \"1\",\n                \"ID\": 5958\n              },\n              {\n                \"Name\": \"rt\",\n                \"Value\": \"1\",\n                \"ID\": 5959\n              },\n              {\n                \"Name\": \"fb\",\n                \"Value\": \"1\",\n                \"ID\": 5960\n              },\n              {\n                \"Name\": \"fbc\",\n                \"Value\": \"1\",\n                \"ID\": 5961\n              },\n              {\n                \"Name\": \"twitter\",\n                \"Value\": \"1\",\n                \"ID\": 5962\n              },\n              {\n                \"Name\": \"wechat\",\n                \"Value\": \"1\",\n                \"ID\": 5963\n              },\n              {\n                \"Name\": \"wa\",\n                \"Value\": \"1\",\n                \"ID\": 5964\n              }\n            ]\n          ],\n          \"ProfileID\": 239,\n          \"ProfileName\": \"UK412_cpms_1\"\n        }\n      ]\n    },\n    {\n      \"Attributes\": [\n        {\n          \"Name\": \"status\",\n          \"Value\": 0,\n          \"ID\": 6063\n        },\n        {\n          \"Name\": \"verified\",\n          \"Value\": \"0\",\n          \"ID\": 6064\n        },\n        {\n          \"Name\": \"customerId\",\n          \"Value\": \"8953\",\n          \"ID\": 6065\n        },\n        {\n          \"Name\": \"connectStatus\",\n          \"Value\": 0,\n          \"ID\": 6066\n        },\n        {\n          \"Name\": \"appId\",\n          \"Value\": \"\",\n          \"ID\": 6067\n        },\n        {\n          \"Name\": \"userId\",\n          \"Value\": \"8953\",\n          \"ID\": 6068\n        },\n        {\n          \"Name\": \"password\",\n          \"Value\": \"\",\n          \"ID\": 6069\n        },\n        {\n          \"Name\": \"deviceId\",\n          \"Value\": \"08519E2437BB40FEBDF694B5C88703DC\",\n          \"ID\": 6070\n        },\n        {\n          \"Name\": \"batterylevel\",\n          \"Value\": \"56%\",\n          \"ID\": 6071\n        },\n        {\n          \"Name\": \"Bluetooth\",\n          \"Value\": \"1\",\n          \"ID\": 6072\n        },\n        {\n          \"Name\": \"cellid\",\n          \"Value\": \"\",\n          \"ID\": 6073\n        },\n        {\n          \"Name\": \"connectType\",\n          \"Value\": \"\",\n          \"ID\": 6074\n        },\n        {\n          \"Name\": \"email\",\n          \"Value\": \"\",\n          \"ID\": 6075\n        },\n        {\n          \"Name\": \"externalmemory\",\n          \"Value\": \"\",\n          \"ID\": 6076\n        },\n        {\n          \"Name\": \"foreground\",\n          \"Value\": \"0\",\n          \"ID\": 6077\n        },\n        {\n          \"Name\": \"foregroundapp\",\n          \"Value\": \"\",\n          \"ID\": 6078\n        },\n        {\n          \"Name\": \"idlescreen\",\n          \"Value\": \"\",\n          \"ID\": 6079\n        },\n        {\n          \"Name\": \"imei\",\n          \"Value\": \"\",\n          \"ID\": 6080\n        },\n        {\n          \"Name\": \"imsi\",\n          \"Value\": \"\",\n          \"ID\": 6081\n        },\n        {\n          \"Name\": \"internalmemory\",\n          \"Value\": \"11.85 GB\",\n          \"ID\": 6082\n        },\n        {\n          \"Name\": \"IP\",\n          \"Value\": \"10.0.3.199\",\n          \"ID\": 6083\n        },\n        {\n          \"Name\": \"language\",\n          \"Value\": \"English (en-IN)\",\n          \"ID\": 6084\n        },\n        {\n          \"Name\": \"oldlocation\",\n          \"Value\": \"[ { \\\"val\\\" : \\\"[17.43485703226193,78.39852736587122]\\\" , \\\"count\\\" : 1 , \\\"trans_date\\\" : { \\\"$date\\\" : \\\"2016-03-02T06:10:57.449Z\\\"}}]\",\n          \"ID\": 6085\n        },\n        {\n          \"Name\": \"location\",\n          \"Value\": \"[17.43586970339053,78.39709874994861]\",\n          \"ID\": 6086\n        },\n        {\n          \"Name\": \"MAC\",\n          \"Value\": \"\",\n          \"ID\": 6087\n        },\n        {\n          \"Name\": \"make\",\n          \"Value\": \"Apple\",\n          \"ID\": 6088\n        },\n        {\n          \"Name\": \"MCC\",\n          \"Value\": \"404\",\n          \"ID\": 6089\n        },\n        {\n          \"Name\": \"MNC\",\n          \"Value\": \"49\",\n          \"ID\": 6090\n        },\n        {\n          \"Name\": \"model\",\n          \"Value\": \"iPhone 6 (GSM+CDMA)\",\n          \"ID\": 6091\n        },\n        {\n          \"Name\": \"NFC\",\n          \"Value\": \"\",\n          \"ID\": 6092\n        },\n        {\n          \"Name\": \"os\",\n          \"Value\": \"ios\",\n          \"ID\": 6093\n        },\n        {\n          \"Name\": \"osversion\",\n          \"Value\": \"9.2.1\",\n          \"ID\": 6094\n        },\n        {\n          \"Name\": \"phonemode\",\n          \"Value\": \"\",\n          \"ID\": 6095\n        },\n        {\n          \"Name\": \"presence\",\n          \"Value\": \"\",\n          \"ID\": 6096\n        },\n        {\n          \"Name\": \"RAM\",\n          \"Value\": \"1.00 GB\",\n          \"ID\": 6097\n        },\n        {\n          \"Name\": \"resolution\",\n          \"Value\": \"750x1334\",\n          \"ID\": 6098\n        },\n        {\n          \"Name\": \"roaming\",\n          \"Value\": \"0\",\n          \"ID\": 6099\n        },\n        {\n          \"Name\": \"serialnumber\",\n          \"Value\": \"\",\n          \"ID\": 6100\n        },\n        {\n          \"Name\": \"signalstrength\",\n          \"Value\": \"\",\n          \"ID\": 6101\n        },\n        {\n          \"Name\": \"teleco\",\n          \"Value\": \"AirTel\",\n          \"ID\": 6102\n        },\n        {\n          \"Name\": \"timespent\",\n          \"Value\": 4242,\n          \"ID\": 6103\n        },\n        {\n          \"Name\": \"timezone\",\n          \"Value\": \"Asia/Kolkata\",\n          \"ID\": 6104\n        },\n        {\n          \"Name\": \"useragent\",\n          \"Value\": \"Mozilla/5.0 (iPhone; CPU iPhone OS 9_2_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13D15\",\n          \"ID\": 6105\n        },\n        {\n          \"Name\": \"pushId\",\n          \"Value\": \"cf81c1b537de65fb26bc023f83008a6594fb74f9c8c96482a4427e9289bed217\",\n          \"ID\": 6106\n        },\n        {\n          \"Name\": \"rtmId\",\n          \"Value\": \"8953_08519E2437BB40FEBDF694B5C88703DC\",\n          \"ID\": 6107\n        },\n        {\n          \"Name\": \"createdOn\",\n          \"Value\": \"2016-08-09 12:57:26\",\n          \"ID\": 6108\n        },\n        {\n          \"Name\": \"last_opened\",\n          \"Value\": \"2016-03-02T11:12:09+0530\",\n          \"ID\": 6109\n        },\n        {\n          \"Name\": \"last_upgraded\",\n          \"Value\": \"2016-03-02T11:12:09+0530\",\n          \"ID\": 6110\n        },\n        {\n          \"Name\": \"channel\",\n          \"Value\": \"rt\",\n          \"ID\": 6111\n        }\n      ],\n      \"InwardLinks\": [],\n      \"OutwardLinks\": [\n        {\n          \"Records\": [\n            [\n              {\n                \"Name\": \"msisdn\",\n                \"Value\": \"919908505526\",\n                \"ID\": 5950\n              },\n              {\n                \"Name\": \"email\",\n                \"Value\": \"abc.lmnop@imimobile.com\",\n                \"ID\": 5951\n              },\n              {\n                \"Name\": \"name\",\n                \"Value\": \"LMNOP\",\n                \"ID\": 5952\n              },\n              {\n                \"Name\": \"customerId\",\n                \"Value\": \"8953\",\n                \"ID\": 5953\n              },\n              {\n                \"Name\": \"country\",\n                \"Value\": \"1\",\n                \"ID\": 5954\n              },\n              {\n                \"Name\": \"city\",\n                \"Value\": \"1\",\n                \"ID\": 5955\n              },\n              {\n                \"Name\": \"sms\",\n                \"Value\": \"1\",\n                \"ID\": 5956\n              },\n              {\n                \"Name\": \"voice\",\n                \"Value\": \"1\",\n                \"ID\": 5957\n              },\n              {\n                \"Name\": \"ussd\",\n                \"Value\": \"1\",\n                \"ID\": 5958\n              },\n              {\n                \"Name\": \"rt\",\n                \"Value\": \"1\",\n                \"ID\": 5959\n              },\n              {\n                \"Name\": \"fb\",\n                \"Value\": \"1\",\n                \"ID\": 5960\n              },\n              {\n                \"Name\": \"fbc\",\n                \"Value\": \"1\",\n                \"ID\": 5961\n              },\n              {\n                \"Name\": \"twitter\",\n                \"Value\": \"1\",\n                \"ID\": 5962\n              },\n              {\n                \"Name\": \"wechat\",\n                \"Value\": \"1\",\n                \"ID\": 5963\n              },\n              {\n                \"Name\": \"wa\",\n                \"Value\": \"1\",\n                \"ID\": 5964\n              }\n            ]\n          ],\n          \"ProfileID\": 239,\n          \"ProfileName\": \"UK412_cpms_1\"\n        }\n      ]\n    }\n  ],\n  \"code\": \"1000\",\n  \"transid\": \"67bcc0f8-6fef-4d1c-90e0-cfaaf3dafb63\"\n}",
+          "language": "json",
+          "status": 200,
+          "name": "Get Multiple App Profiles"
+        }
+      ]
+    },
+    "settings": ""
+  },
+  "swagger": {
+    "path": "/customerappprofile/<appid>/<customerid>"
+  },
+  "oas_public_id": "@imiconnect-apis/v6.20.0#4antsko2gmhtm41k0",
+  "selected_openapi": {
+    "openapi": "3.1.0",
+    "info": {
+      "title": "Profile API v2",
+      "version": "6.20.0"
+    },
+    "servers": [
+      {
+        "url": "https://api.imiconnect.io/resources/v2"
+      }
+    ],
+    "security": [
+      {
+        "sec0": []
+      }
+    ],
+    "path": "/customerappprofile/<appid>/<customerid>",
+    "method": "get",
+    "path_parameters": [],
+    "operation": {
+      "summary": "Get App Profile by Customer ID",
+      "description": "This API is used to retrieve a customer's application profile for a given *appid* and *customer profile key*. The *appid* is a unique ID for individual channel assets.",
+      "operationId": "getappprofile",
+      "parameters": [
+        {
+          "name": "appid",
+          "in": "path",
+          "description": "The ID of the app asset that you can obtain from imiconnect platform",
+          "schema": {
+            "type": "string"
+          },
+          "required": true
+        },
+        {
+          "name": "customerid",
+          "in": "path",
+          "description": "Customer ID is a Client specific ID (such as CRN) to uniquely identify a customer",
+          "schema": {
+            "type": "string"
+          },
+          "required": true
+        },
+        {
+          "name": "Content-Type",
+          "in": "header",
+          "description": "Application/JSON",
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "secretKey",
+          "in": "header",
+          "description": "Client key that can be accessed from your app asset configuration page on imiconnect platform",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "200": {
+          "description": "200",
+          "content": {
+            "application/json": {
+              "examples": {
+                "Result": {
+                  "value": "{\n    \"Status\": 0,\n    \"Description\": \"success\",\n    \"code\": \"1000\",\n    \"transid\": \"4bd0927e-df07-4b4c-a731-4912deaaa72c\",\n    \"Records\": [\n        {\n            \"OutwardLinks\": [\n                {\n                    \"ProfileID\": 3030,\n                    \"ProfileName\": \"imi2828_cpms_1\",\n                    \"Records\": [\n                        [\n                            {\n                                \"Value\": \"777777\",\n                                \"ID\": 67007,\n                                \"Name\": \"customerid\"\n                            },\n                            {\n                                \"Value\": \"sainath.a@imimobile.com\",\n                                \"ID\": 67008,\n                                \"Name\": \"email\"\n                            },\n                            {\n                                \"Value\": \"1\",\n                                \"ID\": 67009,\n                                \"Name\": \"msisdn\"\n                            },\n                            {\n                                \"Value\": \"1\",\n                                \"ID\": 67010,\n                                \"Name\": \"name\"\n                            },\n                            {\n                                \"Value\": \"false\",\n                                \"ID\": 71641,\n                                \"Name\": \"channel_pref\"\n                            }\n                        ]\n                    ]\n                }\n            ],\n            \"Attributes\": [\n                {\n                    \"Value\": \"0\",\n                    \"ID\": 86910,\n                    \"Name\": \"verified\"\n                },\n                {\n                    \"Value\": \"777777\",\n                    \"ID\": 86911,\n                    \"Name\": \"customerId\"\n                },\n                {\n                    \"Value\": \"Check123457\",\n                    \"ID\": 86912,\n                    \"Name\": \"userId\"\n                },\n                {\n                    \"Value\": \"checkdevice1\",\n                    \"ID\": 86913,\n                    \"Name\": \"deviceId\"\n                },\n                {\n                    \"Value\": \"Android\",\n                    \"ID\": 86914,\n                    \"Name\": \"os\"\n                },\n                {\n                    \"Value\": \"37bc5867465cb95124e5e03aad905100f8154cb4f1f5cb8c4a01eae8ee75831612\",\n                    \"ID\": 86915,\n                    \"Name\": \"pushId\"\n                },\n                {\n                    \"Value\": \"fb89d255-15e5-4a24-b35b-5d88bb6df2b9\",\n                    \"ID\": 86916,\n                    \"Name\": \"rtmId\"\n                },\n                {\n                    \"Value\": \"2018-01-21T16:39:54+0530\",\n                    \"ID\": 86917,\n                    \"Name\": \"last_opened\"\n                },\n                {\n                    \"Value\": \"\",\n                    \"ID\": 86918,\n                    \"Name\": \"ios_fcmpushid\"\n                },\n                {\n                    \"Value\": \"\",\n                    \"ID\": 86919,\n                    \"Name\": \"language\"\n                },\n                {\n                    \"Value\": \"\",\n                    \"ID\": 86920,\n                    \"Name\": \"timezone\"\n                },\n                {\n                    \"Value\": \"\",\n                    \"ID\": 86921,\n                    \"Name\": \"foreground\"\n                },\n                {\n                    \"Value\": \"false\",\n                    \"ID\": 86922,\n                    \"Name\": \"guest\"\n                },\n                {\n                    \"Value\": \"1\",\n                    \"ID\": 86923,\n                    \"Name\": \"status\"\n                },\n                {\n                    \"Value\": \"2016-07-11 17:02:51\",\n                    \"ID\": 86924,\n                    \"Name\": \"createdOn\"\n                }\n            ],\n            \"InwardLinks\": []\n        }\n    ]\n}\n"
+                },
+                "Get Single App Profile": {
+                  "value": "{\n  \"Status\": 0,\n  \"Description\": \"success\",\n  \"Records\": [\n    {\n      \"Attributes\": [\n        {\n          \"Name\": \"status\",\n          \"Value\": 1,\n          \"ID\": 16528\n        },\n        {\n          \"Name\": \"verified\",\n          \"Value\": 1,\n          \"ID\": 16529\n        },\n        {\n          \"Name\": \"twitterid\",\n          \"Value\": \"3223165326\",\n          \"ID\": 16530\n        },\n        {\n          \"Name\": \"twitter_handle\",\n          \"Value\": \"wsophyd3\",\n          \"ID\": 16531\n        },\n        {\n          \"Name\": \"twitter_name\",\n          \"Value\": \"Jack\",\n          \"ID\": 16532\n        },\n        {\n          \"Name\": \"customerId\",\n          \"Value\": \"8953\",\n          \"ID\": 16533\n        },\n        {\n          \"Name\": \"geolocation\",\n          \"Value\": \"\",\n          \"ID\": 16534\n        },\n        {\n          \"Name\": \"timezone\",\n          \"Value\": \"Pacific Time (US & Canada)\",\n          \"ID\": 16535\n        },\n        {\n          \"Name\": \"channel\",\n          \"Value\": \"twitter\",\n          \"ID\": 16536\n        },\n        {\n          \"Name\": \"createdOn\",\n          \"Value\": \"2016-07-08 10:49:20\",\n          \"ID\": 16537\n        },\n        {\n          \"Name\": \"updatedOn\",\n          \"Value\": \"2016-07-13 08:19:31\",\n          \"ID\": 16538\n        }\n      ],\n      \"InwardLinks\": [],\n      \"OutwardLinks\": [\n        {\n          \"Records\": [\n            [\n              {\n                \"Name\": \"msisdn\",\n                \"Value\": \"919908505526\",\n                \"ID\": 8574\n              },\n              {\n                \"Name\": \"email\",\n                \"Value\": \"abc.xyz@imimobile.com\",\n                \"ID\": 8575\n              },\n              {\n                \"Name\": \"name\",\n                \"Value\": \"john\",\n                \"ID\": 8576\n              },\n              {\n                \"Name\": \"customerId\",\n                \"Value\": \"8953\",\n                \"ID\": 8577\n              },\n              {\n                \"Name\": \"sms\",\n                \"Value\": \"1\",\n                \"ID\": 8578\n              },\n              {\n                \"Name\": \"voice\",\n                \"Value\": \"1\",\n                \"ID\": 8579\n              },\n              {\n                \"Name\": \"rt\",\n                \"Value\": \"1\",\n                \"ID\": 8580\n              },\n              {\n                \"Name\": \"fb\",\n                \"Value\": \"1\",\n                \"ID\": 8581\n              },\n              {\n                \"Name\": \"twitter\",\n                \"Value\": \"1\",\n                \"ID\": 8582\n              },\n              {\n                \"Name\": \"wechat\",\n                \"Value\": \"1\",\n                \"ID\": 8583\n              },\n              {\n                \"Name\": \"wa\",\n                \"Value\": \"1\",\n                \"ID\": 8584\n              }\n            ]\n          ],\n          \"ProfileID\": 341,\n          \"ProfileName\": \"UKREG42_cpms_1\"\n        }\n      ]\n    }\n  ],\n  \"code\": \"1000\",\n  \"transid\": \"c01bea92-6fc6-4416-b1da-79f15a19fd0c\"\n}"
+                },
+                "Get Multiple App Profiles": {
+                  "value": "{\n  \"Status\": 0,\n  \"Description\": \"success\",\n  \"Records\": [\n    {\n      \"Attributes\": [\n        {\n          \"Name\": \"status\",\n          \"Value\": 0,\n          \"ID\": 6063\n        },\n        {\n          \"Name\": \"verified\",\n          \"Value\": \"0\",\n          \"ID\": 6064\n        },\n        {\n          \"Name\": \"customerId\",\n          \"Value\": \"8954\",\n          \"ID\": 6065\n        },\n        {\n          \"Name\": \"connectStatus\",\n          \"Value\": 0,\n          \"ID\": 6066\n        },\n        {\n          \"Name\": \"appId\",\n          \"Value\": \"\",\n          \"ID\": 6067\n        },\n        {\n          \"Name\": \"userId\",\n          \"Value\": \"8954\",\n          \"ID\": 6068\n        },\n        {\n          \"Name\": \"password\",\n          \"Value\": \"\",\n          \"ID\": 6069\n        },\n        {\n          \"Name\": \"deviceId\",\n          \"Value\": \"\",\n          \"ID\": 6070\n        },\n        {\n          \"Name\": \"batterylevel\",\n          \"Value\": \"11%\",\n          \"ID\": 6071\n        },\n        {\n          \"Name\": \"Bluetooth\",\n          \"Value\": \"1\",\n          \"ID\": 6072\n        },\n        {\n          \"Name\": \"cellid\",\n          \"Value\": \"\",\n          \"ID\": 6073\n        },\n        {\n          \"Name\": \"connectType\",\n          \"Value\": \"\",\n          \"ID\": 6074\n        },\n        {\n          \"Name\": \"email\",\n          \"Value\": \"\",\n          \"ID\": 6075\n        },\n        {\n          \"Name\": \"externalmemory\",\n          \"Value\": \"\",\n          \"ID\": 6076\n        },\n        {\n          \"Name\": \"foreground\",\n          \"Value\": \"0\",\n          \"ID\": 6077\n        },\n        {\n          \"Name\": \"foregroundapp\",\n          \"Value\": \"\",\n          \"ID\": 6078\n        },\n        {\n          \"Name\": \"idlescreen\",\n          \"Value\": \"\",\n          \"ID\": 6079\n        },\n        {\n          \"Name\": \"imei\",\n          \"Value\": \"\",\n          \"ID\": 6080\n        },\n        {\n          \"Name\": \"imsi\",\n          \"Value\": \"\",\n          \"ID\": 6081\n        },\n        {\n          \"Name\": \"internalmemory\",\n          \"Value\": \"11.85 GB\",\n          \"ID\": 6082\n        },\n        {\n          \"Name\": \"IP\",\n          \"Value\": \"192.168.1.2\",\n          \"ID\": 6083\n        },\n        {\n          \"Name\": \"language\",\n          \"Value\": \"English (en-IN)\",\n          \"ID\": 6084\n        },\n        {\n          \"Name\": \"oldlocation\",\n          \"Value\": \"[ { \\\"val\\\" : \\\"[17.40209177851416,78.48741864001678]\\\" , \\\"count\\\" : 1 , \\\"trans_date\\\" : { \\\"$date\\\" : \\\"2016-02-22T19:07:49.714Z\\\"}}]\",\n          \"ID\": 6085\n        },\n        {\n          \"Name\": \"location\",\n          \"Value\": \"[17.4026309524199,78.48846396756929]\",\n          \"ID\": 6086\n        },\n        {\n          \"Name\": \"MAC\",\n          \"Value\": \"\",\n          \"ID\": 6087\n        },\n        {\n          \"Name\": \"make\",\n          \"Value\": \"Apple\",\n          \"ID\": 6088\n        },\n        {\n          \"Name\": \"MCC\",\n          \"Value\": \"\",\n          \"ID\": 6089\n        },\n        {\n          \"Name\": \"MNC\",\n          \"Value\": \"\",\n          \"ID\": 6090\n        },\n        {\n          \"Name\": \"model\",\n          \"Value\": \"iPhone 6 (GSM+CDMA)\",\n          \"ID\": 6091\n        },\n        {\n          \"Name\": \"NFC\",\n          \"Value\": \"\",\n          \"ID\": 6092\n        },\n        {\n          \"Name\": \"os\",\n          \"Value\": \"ios\",\n          \"ID\": 6093\n        },\n        {\n          \"Name\": \"osversion\",\n          \"Value\": \"9.2.1\",\n          \"ID\": 6094\n        },\n        {\n          \"Name\": \"phonemode\",\n          \"Value\": \"\",\n          \"ID\": 6095\n        },\n        {\n          \"Name\": \"presence\",\n          \"Value\": \"\",\n          \"ID\": 6096\n        },\n        {\n          \"Name\": \"RAM\",\n          \"Value\": \"1.00 GB\",\n          \"ID\": 6097\n        },\n        {\n          \"Name\": \"resolution\",\n          \"Value\": \"750x1334\",\n          \"ID\": 6098\n        },\n        {\n          \"Name\": \"roaming\",\n          \"Value\": \"\",\n          \"ID\": 6099\n        },\n        {\n          \"Name\": \"serialnumber\",\n          \"Value\": \"\",\n          \"ID\": 6100\n        },\n        {\n          \"Name\": \"signalstrength\",\n          \"Value\": \"\",\n          \"ID\": 6101\n        },\n        {\n          \"Name\": \"teleco\",\n          \"Value\": \"\",\n          \"ID\": 6102\n        },\n        {\n          \"Name\": \"timespent\",\n          \"Value\": 385,\n          \"ID\": 6103\n        },\n        {\n          \"Name\": \"timezone\",\n          \"Value\": \"\",\n          \"ID\": 6104\n        },\n        {\n          \"Name\": \"useragent\",\n          \"Value\": \"Mozilla/5.0 (iPhone; CPU iPhone OS 9_2_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13D15\",\n          \"ID\": 6105\n        },\n        {\n          \"Name\": \"pushId\",\n          \"Value\": \"6682513c1a97730fb9b69e1358273571fa5181e930bc37b9f905adead18322d3\",\n          \"ID\": 6106\n        },\n        {\n          \"Name\": \"rtmId\",\n          \"Value\": \"8954_08519E2437BB40FEBDF694B5C88703DC\",\n          \"ID\": 6107\n        },\n        {\n          \"Name\": \"createdOn\",\n          \"Value\": \"2016-08-09 12:57:26\",\n          \"ID\": 6108\n        },\n        {\n          \"Name\": \"last_opened\",\n          \"Value\": \"2016-02-22T18:38:57+0530\",\n          \"ID\": 6109\n        },\n        {\n          \"Name\": \"last_upgraded\",\n          \"Value\": \"2016-02-18T20:24:11+0530\",\n          \"ID\": 6110\n        },\n        {\n          \"Name\": \"channel\",\n          \"Value\": \"rt\",\n          \"ID\": 6111\n        }\n      ],\n      \"InwardLinks\": [],\n      \"OutwardLinks\": [\n        {\n          \"Records\": [\n            [\n              {\n                \"Name\": \"msisdn\",\n                \"Value\": \"918019031470\",\n                \"ID\": 5950\n              },\n              {\n                \"Name\": \"email\",\n                \"Value\": \"abc.pqr@imimobile.com\",\n                \"ID\": 5951\n              },\n              {\n                \"Name\": \"name\",\n                \"Value\": \"IMI\",\n                \"ID\": 5952\n              },\n              {\n                \"Name\": \"customerId\",\n                \"Value\": \"8954\",\n                \"ID\": 5953\n              },\n              {\n                \"Name\": \"country\",\n                \"Value\": \"1\",\n                \"ID\": 5954\n              },\n              {\n                \"Name\": \"city\",\n                \"Value\": \"1\",\n                \"ID\": 5955\n              },\n              {\n                \"Name\": \"sms\",\n                \"Value\": \"1\",\n                \"ID\": 5956\n              },\n              {\n                \"Name\": \"voice\",\n                \"Value\": \"1\",\n                \"ID\": 5957\n              },\n              {\n                \"Name\": \"ussd\",\n                \"Value\": \"1\",\n                \"ID\": 5958\n              },\n              {\n                \"Name\": \"rt\",\n                \"Value\": \"1\",\n                \"ID\": 5959\n              },\n              {\n                \"Name\": \"fb\",\n                \"Value\": \"1\",\n                \"ID\": 5960\n              },\n              {\n                \"Name\": \"fbc\",\n                \"Value\": \"1\",\n                \"ID\": 5961\n              },\n              {\n                \"Name\": \"twitter\",\n                \"Value\": \"1\",\n                \"ID\": 5962\n              },\n              {\n                \"Name\": \"wechat\",\n                \"Value\": \"1\",\n                \"ID\": 5963\n              },\n              {\n                \"Name\": \"wa\",\n                \"Value\": \"1\",\n                \"ID\": 5964\n              }\n            ]\n          ],\n          \"ProfileID\": 239,\n          \"ProfileName\": \"UK412_cpms_1\"\n        }\n      ]\n    },\n    {\n      \"Attributes\": [\n        {\n          \"Name\": \"status\",\n          \"Value\": 0,\n          \"ID\": 6063\n        },\n        {\n          \"Name\": \"verified\",\n          \"Value\": \"0\",\n          \"ID\": 6064\n        },\n        {\n          \"Name\": \"customerId\",\n          \"Value\": \"8953\",\n          \"ID\": 6065\n        },\n        {\n          \"Name\": \"connectStatus\",\n          \"Value\": 0,\n          \"ID\": 6066\n        },\n        {\n          \"Name\": \"appId\",\n          \"Value\": \"\",\n          \"ID\": 6067\n        },\n        {\n          \"Name\": \"userId\",\n          \"Value\": \"8953\",\n          \"ID\": 6068\n        },\n        {\n          \"Name\": \"password\",\n          \"Value\": \"\",\n          \"ID\": 6069\n        },\n        {\n          \"Name\": \"deviceId\",\n          \"Value\": \"08519E2437BB40FEBDF694B5C88703DC\",\n          \"ID\": 6070\n        },\n        {\n          \"Name\": \"batterylevel\",\n          \"Value\": \"56%\",\n          \"ID\": 6071\n        },\n        {\n          \"Name\": \"Bluetooth\",\n          \"Value\": \"1\",\n          \"ID\": 6072\n        },\n        {\n          \"Name\": \"cellid\",\n          \"Value\": \"\",\n          \"ID\": 6073\n        },\n        {\n          \"Name\": \"connectType\",\n          \"Value\": \"\",\n          \"ID\": 6074\n        },\n        {\n          \"Name\": \"email\",\n          \"Value\": \"\",\n          \"ID\": 6075\n        },\n        {\n          \"Name\": \"externalmemory\",\n          \"Value\": \"\",\n          \"ID\": 6076\n        },\n        {\n          \"Name\": \"foreground\",\n          \"Value\": \"0\",\n          \"ID\": 6077\n        },\n        {\n          \"Name\": \"foregroundapp\",\n          \"Value\": \"\",\n          \"ID\": 6078\n        },\n        {\n          \"Name\": \"idlescreen\",\n          \"Value\": \"\",\n          \"ID\": 6079\n        },\n        {\n          \"Name\": \"imei\",\n          \"Value\": \"\",\n          \"ID\": 6080\n        },\n        {\n          \"Name\": \"imsi\",\n          \"Value\": \"\",\n          \"ID\": 6081\n        },\n        {\n          \"Name\": \"internalmemory\",\n          \"Value\": \"11.85 GB\",\n          \"ID\": 6082\n        },\n        {\n          \"Name\": \"IP\",\n          \"Value\": \"10.0.3.199\",\n          \"ID\": 6083\n        },\n        {\n          \"Name\": \"language\",\n          \"Value\": \"English (en-IN)\",\n          \"ID\": 6084\n        },\n        {\n          \"Name\": \"oldlocation\",\n          \"Value\": \"[ { \\\"val\\\" : \\\"[17.43485703226193,78.39852736587122]\\\" , \\\"count\\\" : 1 , \\\"trans_date\\\" : { \\\"$date\\\" : \\\"2016-03-02T06:10:57.449Z\\\"}}]\",\n          \"ID\": 6085\n        },\n        {\n          \"Name\": \"location\",\n          \"Value\": \"[17.43586970339053,78.39709874994861]\",\n          \"ID\": 6086\n        },\n        {\n          \"Name\": \"MAC\",\n          \"Value\": \"\",\n          \"ID\": 6087\n        },\n        {\n          \"Name\": \"make\",\n          \"Value\": \"Apple\",\n          \"ID\": 6088\n        },\n        {\n          \"Name\": \"MCC\",\n          \"Value\": \"404\",\n          \"ID\": 6089\n        },\n        {\n          \"Name\": \"MNC\",\n          \"Value\": \"49\",\n          \"ID\": 6090\n        },\n        {\n          \"Name\": \"model\",\n          \"Value\": \"iPhone 6 (GSM+CDMA)\",\n          \"ID\": 6091\n        },\n        {\n          \"Name\": \"NFC\",\n          \"Value\": \"\",\n          \"ID\": 6092\n        },\n        {\n          \"Name\": \"os\",\n          \"Value\": \"ios\",\n          \"ID\": 6093\n        },\n        {\n          \"Name\": \"osversion\",\n          \"Value\": \"9.2.1\",\n          \"ID\": 6094\n        },\n        {\n          \"Name\": \"phonemode\",\n          \"Value\": \"\",\n          \"ID\": 6095\n        },\n        {\n          \"Name\": \"presence\",\n          \"Value\": \"\",\n          \"ID\": 6096\n        },\n        {\n          \"Name\": \"RAM\",\n          \"Value\": \"1.00 GB\",\n          \"ID\": 6097\n        },\n        {\n          \"Name\": \"resolution\",\n          \"Value\": \"750x1334\",\n          \"ID\": 6098\n        },\n        {\n          \"Name\": \"roaming\",\n          \"Value\": \"0\",\n          \"ID\": 6099\n        },\n        {\n          \"Name\": \"serialnumber\",\n          \"Value\": \"\",\n          \"ID\": 6100\n        },\n        {\n          \"Name\": \"signalstrength\",\n          \"Value\": \"\",\n          \"ID\": 6101\n        },\n        {\n          \"Name\": \"teleco\",\n          \"Value\": \"AirTel\",\n          \"ID\": 6102\n        },\n        {\n          \"Name\": \"timespent\",\n          \"Value\": 4242,\n          \"ID\": 6103\n        },\n        {\n          \"Name\": \"timezone\",\n          \"Value\": \"Asia/Kolkata\",\n          \"ID\": 6104\n        },\n        {\n          \"Name\": \"useragent\",\n          \"Value\": \"Mozilla/5.0 (iPhone; CPU iPhone OS 9_2_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13D15\",\n          \"ID\": 6105\n        },\n        {\n          \"Name\": \"pushId\",\n          \"Value\": \"cf81c1b537de65fb26bc023f83008a6594fb74f9c8c96482a4427e9289bed217\",\n          \"ID\": 6106\n        },\n        {\n          \"Name\": \"rtmId\",\n          \"Value\": \"8953_08519E2437BB40FEBDF694B5C88703DC\",\n          \"ID\": 6107\n        },\n        {\n          \"Name\": \"createdOn\",\n          \"Value\": \"2016-08-09 12:57:26\",\n          \"ID\": 6108\n        },\n        {\n          \"Name\": \"last_opened\",\n          \"Value\": \"2016-03-02T11:12:09+0530\",\n          \"ID\": 6109\n        },\n        {\n          \"Name\": \"last_upgraded\",\n          \"Value\": \"2016-03-02T11:12:09+0530\",\n          \"ID\": 6110\n        },\n        {\n          \"Name\": \"channel\",\n          \"Value\": \"rt\",\n          \"ID\": 6111\n        }\n      ],\n      \"InwardLinks\": [],\n      \"OutwardLinks\": [\n        {\n          \"Records\": [\n            [\n              {\n                \"Name\": \"msisdn\",\n                \"Value\": \"919908505526\",\n                \"ID\": 5950\n              },\n              {\n                \"Name\": \"email\",\n                \"Value\": \"abc.lmnop@imimobile.com\",\n                \"ID\": 5951\n              },\n              {\n                \"Name\": \"name\",\n                \"Value\": \"LMNOP\",\n                \"ID\": 5952\n              },\n              {\n                \"Name\": \"customerId\",\n                \"Value\": \"8953\",\n                \"ID\": 5953\n              },\n              {\n                \"Name\": \"country\",\n                \"Value\": \"1\",\n                \"ID\": 5954\n              },\n              {\n                \"Name\": \"city\",\n                \"Value\": \"1\",\n                \"ID\": 5955\n              },\n              {\n                \"Name\": \"sms\",\n                \"Value\": \"1\",\n                \"ID\": 5956\n              },\n              {\n                \"Name\": \"voice\",\n                \"Value\": \"1\",\n                \"ID\": 5957\n              },\n              {\n                \"Name\": \"ussd\",\n                \"Value\": \"1\",\n                \"ID\": 5958\n              },\n              {\n                \"Name\": \"rt\",\n                \"Value\": \"1\",\n                \"ID\": 5959\n              },\n              {\n                \"Name\": \"fb\",\n                \"Value\": \"1\",\n                \"ID\": 5960\n              },\n              {\n                \"Name\": \"fbc\",\n                \"Value\": \"1\",\n                \"ID\": 5961\n              },\n              {\n                \"Name\": \"twitter\",\n                \"Value\": \"1\",\n                \"ID\": 5962\n              },\n              {\n                \"Name\": \"wechat\",\n                \"Value\": \"1\",\n                \"ID\": 5963\n              },\n              {\n                \"Name\": \"wa\",\n                \"Value\": \"1\",\n                \"ID\": 5964\n              }\n            ]\n          ],\n          \"ProfileID\": 239,\n          \"ProfileName\": \"UK412_cpms_1\"\n        }\n      ]\n    }\n  ],\n  \"code\": \"1000\",\n  \"transid\": \"67bcc0f8-6fef-4d1c-90e0-cfaaf3dafb63\"\n}"
+                }
+              },
+              "schema": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "Status": {
+                        "type": "integer",
+                        "example": 0,
+                        "default": 0
+                      },
+                      "Description": {
+                        "type": "string",
+                        "example": "success"
+                      },
+                      "code": {
+                        "type": "string",
+                        "example": "1000"
+                      },
+                      "transid": {
+                        "type": "string",
+                        "example": "4bd0927e-df07-4b4c-a731-4912deaaa72c"
+                      },
+                      "Records": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "OutwardLinks": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "ProfileID": {
+                                    "type": "integer",
+                                    "example": 3030,
+                                    "default": 0
+                                  },
+                                  "ProfileName": {
+                                    "type": "string",
+                                    "example": "imi2828_cpms_1"
+                                  },
+                                  "Records": {
+                                    "type": "array",
+                                    "items": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "object",
+                                        "properties": {
+                                          "Value": {
+                                            "type": "string",
+                                            "example": "777777"
+                                          },
+                                          "ID": {
+                                            "type": "integer",
+                                            "example": 67007,
+                                            "default": 0
+                                          },
+                                          "Name": {
+                                            "type": "string",
+                                            "example": "customerid"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "Attributes": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "Value": {
+                                    "type": "string",
+                                    "example": "0"
+                                  },
+                                  "ID": {
+                                    "type": "integer",
+                                    "example": 86910,
+                                    "default": 0
+                                  },
+                                  "Name": {
+                                    "type": "string",
+                                    "example": "verified"
+                                  }
+                                }
+                              }
+                            },
+                            "InwardLinks": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {}
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "title": "Get Single App Profile",
+                    "type": "object",
+                    "properties": {
+                      "Status": {
+                        "type": "integer",
+                        "example": 0,
+                        "default": 0
+                      },
+                      "Description": {
+                        "type": "string",
+                        "example": "success"
+                      },
+                      "Records": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "Attributes": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "Name": {
+                                    "type": "string",
+                                    "example": "status"
+                                  },
+                                  "Value": {
+                                    "type": "integer",
+                                    "example": 1,
+                                    "default": 0
+                                  },
+                                  "ID": {
+                                    "type": "integer",
+                                    "example": 16528,
+                                    "default": 0
+                                  }
+                                }
+                              }
+                            },
+                            "InwardLinks": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {}
+                              }
+                            },
+                            "OutwardLinks": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "Records": {
+                                    "type": "array",
+                                    "items": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "object",
+                                        "properties": {
+                                          "Name": {
+                                            "type": "string",
+                                            "example": "msisdn"
+                                          },
+                                          "Value": {
+                                            "type": "string",
+                                            "example": "919908505526"
+                                          },
+                                          "ID": {
+                                            "type": "integer",
+                                            "example": 8574,
+                                            "default": 0
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "ProfileID": {
+                                    "type": "integer",
+                                    "example": 341,
+                                    "default": 0
+                                  },
+                                  "ProfileName": {
+                                    "type": "string",
+                                    "example": "UKREG42_cpms_1"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "code": {
+                        "type": "string",
+                        "example": "1000"
+                      },
+                      "transid": {
+                        "type": "string",
+                        "example": "c01bea92-6fc6-4416-b1da-79f15a19fd0c"
+                      }
+                    }
+                  },
+                  {
+                    "title": "Get Multiple App Profiles",
+                    "type": "object",
+                    "properties": {
+                      "Status": {
+                        "type": "integer",
+                        "example": 0,
+                        "default": 0
+                      },
+                      "Description": {
+                        "type": "string",
+                        "example": "success"
+                      },
+                      "Records": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "Attributes": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "Name": {
+                                    "type": "string",
+                                    "example": "status"
+                                  },
+                                  "Value": {
+                                    "type": "integer",
+                                    "example": 0,
+                                    "default": 0
+                                  },
+                                  "ID": {
+                                    "type": "integer",
+                                    "example": 6063,
+                                    "default": 0
+                                  }
+                                }
+                              }
+                            },
+                            "InwardLinks": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {}
+                              }
+                            },
+                            "OutwardLinks": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "Records": {
+                                    "type": "array",
+                                    "items": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "object",
+                                        "properties": {
+                                          "Name": {
+                                            "type": "string",
+                                            "example": "msisdn"
+                                          },
+                                          "Value": {
+                                            "type": "string",
+                                            "example": "918019031470"
+                                          },
+                                          "ID": {
+                                            "type": "integer",
+                                            "example": 5950,
+                                            "default": 0
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "ProfileID": {
+                                    "type": "integer",
+                                    "example": 239,
+                                    "default": 0
+                                  },
+                                  "ProfileName": {
+                                    "type": "string",
+                                    "example": "UK412_cpms_1"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "code": {
+                        "type": "string",
+                        "example": "1000"
+                      },
+                      "transid": {
+                        "type": "string",
+                        "example": "67bcc0f8-6fef-4d1c-90e0-cfaaf3dafb63"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "deprecated": false,
+      "x-readme": {
+        "code-samples": [
+          {
+            "language": "curl",
+            "code": "-X GET https://api.imiconnect.io/resources/v2/customerappprofile/{inappid}/{customerId}\n-H \"Content-Type : application/json\"\n-H \"key : {profilekey}\"\n"
+          },
+          {
+            "language": "ruby",
+            "code": "require 'httparty'\n# Create the HTTP objects and post request\nhttp = HTTParty.get(\"https://api.imiconnect.io/resources/v2/customerappprofile/{inappid}/{customerId}\",\n    :headers => {'Content-Type' => 'application/json',\n\t'key' => ' Profile key present in tenant setting’})\n# Print on console\nputs http\n"
+          },
+          {
+            "language": "javascript",
+            "code": "var data = null;\n\nvar xhr = new XMLHttpRequest();\n\nxhr.addEventListener(\"readystatechange\", function () {\n  if (this.readyState === this.DONE) {\n    console.log(this.responseText);\n  }\n});\n\nxhr.open(\"GET\", \" https://api.imiconnect.io/resources/v2/customerappprofile/{inappid}/{customerId}\");\nxhr.setRequestHeader(\"Content-Type\", \"application/json\");\nxhr.setRequestHeader(\"key\", \"Profile key present in tenant setting\");\nxhr.send(data);\n"
+          },
+          {
+            "language": "python",
+            "code": "import requests\n\nurl = \" https://api.imiconnect.io/resources/v2/customerappprofile/{inappid}/{customerId}\");\"\n\nheaders = {'Content-Type': 'application/json', 'key': ' Profile key present in tenant setting '}\n\nresponse = requests.request(\"GET\", url, headers=headers)\n\nprint(response.text)\n"
+          }
+        ],
+        "samples-languages": [
+          "curl",
+          "ruby",
+          "javascript",
+          "python"
+        ]
+      }
+    },
+    "components": {
+      "securitySchemes": {
+        "sec0": {
+          "type": "apiKey",
+          "in": "header",
+          "name": "key"
+        }
+      }
+    }
+  }
+}

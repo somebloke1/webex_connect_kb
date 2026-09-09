@@ -1,0 +1,37 @@
+{
+  "api_metadata_path": "sources/cache/developer/whatsapp-reply-buttons.api.json",
+  "category": "MULTI CHANNEL COMMUNICATION API",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f662d",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "da75fe78fecf77f1c7101529146d89e09245f49ad2f19b8076399974b2e0a3f8",
+    "source_path": "dcc7fbfbdd8fc27877491550c6e6becfe4fa4378f5ebc58c336aee0681481119",
+    "text_path": "e74a743fefc6580fda4778d5516e8fdce69485b4a2d693cdfeed845198e1e25b"
+  },
+  "headings": [
+    "WhatsApp Reply buttons -Video/Image",
+    "Error Codes"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/whatsapp-reply-buttons.md",
+  "openapi_path": "sources/cache/openapi/2349d48813bcf786c1c150df4df935129a9e7255b51c49189d66ffcea7073315.json",
+  "resolved_url": "https://developers.webexconnect.io/reference/whatsapp-reply-buttons",
+  "retrieved_at": "2026-09-08T23:31:43+00:00",
+  "sha256_api_metadata": "9b065ac39b59ce715708d3c84f0fa58e1a1811b2e65cdb44c3ddc6eae9e2659f",
+  "sha256_html_response": "108bff19bb4b0fdd2665d540bd3c2992efbf9d08f646d0c6716dc61b736fa6b3",
+  "sha256_openapi": "2349d48813bcf786c1c150df4df935129a9e7255b51c49189d66ffcea7073315",
+  "sha256_source_body": "dcc7fbfbdd8fc27877491550c6e6becfe4fa4378f5ebc58c336aee0681481119",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/whatsapp-reply-buttons.source.md",
+  "source_updated_at": "2026-05-12T12:34:36.014Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/whatsapp-reply-buttons.txt",
+  "title": "WhatsApp Reply Buttons",
+  "url": "https://developers.webexconnect.io/reference/whatsapp-reply-buttons",
+  "word_count": 2349,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/developer/whatsapp-reply-buttons.metadata.json"
+}

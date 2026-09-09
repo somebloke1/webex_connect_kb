@@ -1,0 +1,33 @@
+{
+  "category": "Assets",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182579a4",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "9fc05fbdbc9b167048c69899810729e27d70ea49d8a99332d263e0dc2a7871f4",
+    "source_path": "b5e189cd7396811cd97e0bd0288d02fd62a9e97616fda37b53fda2bc16c21dbb",
+    "text_path": "38676d7d40665bc7e82bd91b79a8eb5ce39248a00795657b78446d6d8f928362"
+  },
+  "headings": [
+    "RCS Onboarding Guidelines"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/rcs-onboarding-guidelines.md",
+  "resolved_url": "https://help.webexconnect.io/docs/rcs-onboarding-guidelines",
+  "retrieved_at": "2026-09-08T23:29:04+00:00",
+  "sha256_html_response": "f88090c88184fc56179a0ac14826507a73fc0cd07b80b0dd3a54e0a281f8a7bd",
+  "sha256_source_body": "b5e189cd7396811cd97e0bd0288d02fd62a9e97616fda37b53fda2bc16c21dbb",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/rcs-onboarding-guidelines.source.md",
+  "source_updated_at": "2026-03-26T06:50:39.494Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/rcs-onboarding-guidelines.txt",
+  "title": "RCS Onboarding Guidelines",
+  "url": "https://help.webexconnect.io/docs/rcs-onboarding-guidelines",
+  "word_count": 1508,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/rcs-onboarding-guidelines.metadata.json"
+}

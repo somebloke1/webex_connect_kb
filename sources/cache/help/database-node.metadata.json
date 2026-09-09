@@ -1,0 +1,38 @@
+{
+  "category": "SERVICES & FLOWS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182577db",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "54cffe400c124ccf7c5a8853dd2e966135c8d444b29a2441ffea857c275dc74f",
+    "source_path": "6377a0bf07234071a55de7c3cf8a68c3a230287a798dcf34e02ecf46e4718e17",
+    "text_path": "3b0fe44007bbeca1b9e5a129e7eb9c8d91d61ba35e9346c0debdfeba6b927c75"
+  },
+  "headings": [
+    "📘Deprecation Alert",
+    "Interface Elements",
+    "Selecting or Updating a Specific Data in Database",
+    "Configuring Settings",
+    "Configuring Transitions",
+    "📘Tip"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/database-node.md",
+  "resolved_url": "https://help.webexconnect.io/docs/database-node",
+  "retrieved_at": "2026-09-08T23:28:56+00:00",
+  "sha256_html_response": "c632e4eae21df4126d00b8b101ef1413790cd0cd50c10316fc19104a7af1e832",
+  "sha256_source_body": "6377a0bf07234071a55de7c3cf8a68c3a230287a798dcf34e02ecf46e4718e17",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/database-node.source.md",
+  "source_updated_at": "2026-01-26T13:44:37.919Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/database-node.txt",
+  "title": "Database Node [Deprecated]",
+  "url": "https://help.webexconnect.io/docs/database-node",
+  "word_count": 723,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/database-node.metadata.json"
+}

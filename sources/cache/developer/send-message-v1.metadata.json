@@ -1,0 +1,43 @@
+{
+  "api_metadata_path": "sources/cache/developer/send-message-v1.api.json",
+  "category": "MULTI CHANNEL COMMUNICATION API",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f6556",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "a1a0b38ddd378395c6f603bb7c42d0bdccf11a933be2913d4576137313900774",
+    "source_path": "7298a6d9151be5289c4578eb9349919761f4ee382e7d38a1fb05cd523bb957f6",
+    "text_path": "6a696492f78ff7d05e8a3593f0d9c830e96290c0bab24d49db503ef72f3276e0"
+  },
+  "headings": [
+    "Supported Channels",
+    "Error Codes",
+    "Batching Requests",
+    "Messaging API v1 - Samples",
+    "Postman Collection",
+    "Body Parameters",
+    "Channels",
+    "**Voice Message**"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/send-message-v1.md",
+  "openapi_path": "sources/cache/openapi/5a20f00679388cf9d800e50c0c375770118fa9801c7ff5b2ed13c711a94e0753.json",
+  "resolved_url": "https://developers.webexconnect.io/reference/send-message-v1",
+  "retrieved_at": "2026-09-08T23:31:43+00:00",
+  "sha256_api_metadata": "a3a14e10e78fd1ffc0f5fbcde8c2c8bad096d5a99a9f10c6c41a7a36c675338e",
+  "sha256_html_response": "d633e482804a81abef1a68eb34d4ecaa67770c2a8ce6b3db1c191e2d5fb9d5be",
+  "sha256_openapi": "5a20f00679388cf9d800e50c0c375770118fa9801c7ff5b2ed13c711a94e0753",
+  "sha256_source_body": "7298a6d9151be5289c4578eb9349919761f4ee382e7d38a1fb05cd523bb957f6",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/send-message-v1.source.md",
+  "source_updated_at": "2026-04-21T15:36:27.304Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/send-message-v1.txt",
+  "title": "Send Message v1",
+  "url": "https://developers.webexconnect.io/reference/send-message-v1",
+  "word_count": 3414,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/developer/send-message-v1.metadata.json"
+}

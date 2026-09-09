@@ -1,0 +1,135 @@
+This node calls Webex CC Modify Notification API to notify Webex CC whether conferencing or transferring an agent or participant to the conversation was successful or not. While configuring flows in Webex Connect, you’d need to use this node for notifying Webex CC about the agent conference/transfer status. 
+
+## 
+
+Authorization
+
+Refer to section Node Authorizations for more information. .  
+
+## 
+
+Methods and Outcomes
+
+Here’s a brief description of various methods, and corresponding output variables and node outcomes associated with each of the methods.
+
+Method Name - Modified Accept 
+
+ [Image: Screenshot of Modified Accept configuration page.] 
+Screenshot of Modified Accept configuration page.
+
+ | Method Name | Output Variables | Node Outcomes
+
+ | Modified Accept | None |  onInvalidData
+
+ onError
+ onInvalidChoice
+
+ onauthorizationfail
+ onTimeout
+
+ onModifiedAcceptSuccess
+
+* onModifiedFailure
+
+ | Channel | Field Value
+
+ | All channels | TASK ID - $(n2.webex.ID)
+
+ID - $(n2.webex.ID)
+
+AGENT ID - $(n2.webex.agentId)
+
+QUEUE ID - $(n2.webex.queue)
+
+MEDIA RESOURCE ID - $(mediaResourceId)
+
+MEDIA TYPE - $(n2.webex.mediaType)
+
+ | Input Variable | Output Variable | Versions
+
+ | TASK ID - $(n2.webex.ID)
+
+* ID from the output variables of the modified event is the task ID | None | V1.1 and v1.0
+
+ | ID - $(n2.webex.ID)
+
+* ID from the output variables of the modified event is the task ID  |  | 
+
+ | AGENT ID - $(n2.webex.agentId)
+
+* AgentId from the output variables of the modified event is the Agent ID |  | 
+
+ | QUEUE ID - $(n2.webex.queue)
+
+* Queue from the output variables of the modified event is the Queue ID |  | 
+
+ | MEDIA RESOURSE ID - $(mediaResourceId)
+
+* MediaResourceId from the output variables of the modified event is the Media Resource ID |  | 
+
+ | MEDIA TYPE - $(n2.webex.mediaType)
+
+* MediaType from the output variables of the modified event is the Media Type |  | 
+
+## 📘
+Note
+
+When the variable is selected from the previous node output variables, the nodetid will be the prefix for the variable. Eg., sms.serviceNumber is an output variable of start node (node id 2), then the variable becomes $(n2.sms.serviceNumber)
+
+Method Name - Modified Reject 
+
+ [Image: Screenshot of Modified Reject configuration page.] 
+Screenshot of Modified Reject configuration page.
+
+ | Method Name | Output Variables | Node Outcomes
+
+ | Modified Reject | None |  onInvalidData
+
+ onError
+ onInvalidChoice
+
+ onauthorizationfail
+ onModifiedRejectFailure
+
+ onModifiedRejectSuccess
+
+* onTimeout
+
+ | Input Variables | Output Variables | Versions
+
+ | TASK ID - $(n2.webex.ID)
+
+* ID from the output variables of the modified event is the task ID | None | V1.1 and v1.0
+
+ | ID - $(n2.webex.ID)
+
+* ID from the output variables of the modified event is the task ID |  | 
+
+ | AGENT ID - $(n2.webex.agentId)
+
+* AgentId from the output variables of the modified event is the Agent ID |  | 
+
+ | QUEUE ID - $(n2.webex.queue)
+
+* Queue from the output variables of the modified event is the Queue ID  |  | 
+
+ | MEDIA RESOURSE ID - $(mediaResourceId)
+
+* MediaResourceId from the output variables of the modified event is the Media Resource ID |  | 
+
+ | MEDIA TYPE - $(n2.webex.mediaType)
+
+* MediaType from the output variables of the modified event is the Media Type |  | 
+
+ | REASON - $(description)
+
+* $(description) will have the add/remove participant failure reason |  | 
+
+ | REASON CODE - $(code)
+
+* $(code) will have the add/remove participant failure reason code |  | 
+
+## 📘
+Note
+
+When the variable is selected from the previous node output variables, the node Id will be the prefix for the variable. For example, if sms.serviceNumber is an output variable of start node (node Id 2), then the variable becomes $(n2.sms.serviceNumber).

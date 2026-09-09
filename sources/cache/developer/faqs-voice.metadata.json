@@ -1,0 +1,39 @@
+{
+  "api_metadata_path": "sources/cache/developer/faqs-voice.api.json",
+  "category": "FAQs",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f65af",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "fd8de0b3de315d81da5df824c28b5c8c34b35d2a4407eb7b594686fe3baa55ee",
+    "source_path": "5b36298b379a80a20cce938583d1b3c7d59541b16fc9e8f8b914bf72953d46d4",
+    "text_path": "727c7a9961cd1528a0d051777e69e1b6ee048f7a2ed6c447d86d6e70d8c201e1"
+  },
+  "headings": [
+    "Do you support Text to Speech?",
+    "How many different voices do you support? Do you have accents for UK, IE & HU?",
+    "Do you support SSML?",
+    "Do you support Answering Machine Detection?",
+    "Do you Support STIR/SHAKEN?",
+    "What is SPAM RISK Caller ID?"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/faqs-voice.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/faqs-voice",
+  "retrieved_at": "2026-09-08T23:31:52+00:00",
+  "sha256_api_metadata": "575f65b7d8dc3ea0b617314bc47e22705dc85fc80ee114e6faa20ada4e8aafe2",
+  "sha256_html_response": "06084e2391d79323f49a0483564aeecfc94dede3fff9735f8d48d90e9ed5bd8f",
+  "sha256_source_body": "5b36298b379a80a20cce938583d1b3c7d59541b16fc9e8f8b914bf72953d46d4",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/faqs-voice.source.md",
+  "source_updated_at": "2026-02-12T09:20:51.691Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/faqs-voice.txt",
+  "title": "Voice FAQs",
+  "url": "https://developers.webexconnect.io/reference/faqs-voice",
+  "word_count": 465,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/faqs-voice.metadata.json"
+}

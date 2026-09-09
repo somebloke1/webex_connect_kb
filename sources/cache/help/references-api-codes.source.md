@@ -1,0 +1,515 @@
+The APIs will respond with a code to in a synchronous response to the request
+
+## Messaging
+
+| Code | Message                                                                          | Description                                                                                                                        |
+| :--- | :------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------- |
+| 7000 | Invalid JSON                                                                     | Returned when an invalid JSON request is sent.                                                                                     |
+| 7001 | Authentication failed                                                            | Returned when an invalid service key or profile key is provided in the request.                                                    |
+| 7002 | Service Key Missing                                                              | Returned when the parameter key is missing in the message request.                                                                 |
+| 7003 | any one of [customerid,msisdn,email, userid,pushid,psid, etc.] is mandatory      | Returned when a mandatory parameter is missing for destination.                                                                    |
+|      | param 'text' is missing for android                                              | Returned when parameter text or its value is missing for Android in push object.                                                   |
+|      | param 'text' is missing for ios                                                  | Returned when the parameter text or its value is missing for iOS in push object.                                                   |
+|      | param 'push' missing for push channel                                            | Returned when the parameter push is missing.                                                                                       |
+|      | either android or ios information is mandatory for push channel                  | Returned when the push channel is missing in push object.                                                                          |
+|      | param 'text' missing for channel fb                                              | Returned when the parameter text or its value is missing for Facebook channel.                                                     |
+|      | param 'OTT-Messaging' missing for channel fb                                     | Returned when the _OTT-Messaging_ object is missing when _deliverychannel_ is Facebook.                                            |
+|      | param 'fb' missing for channel fb                                                | Returned when the _fb_ object is missing in _OTT-Messaging_ object.                                                                |
+|      | param 'text' missing for channel rt                                              | Returned when the parameter _text_ or its value is missing for _rt_ channel.                                                       |
+|      | param 'appmessaging' missing for channel rt                                      | Returned when the _rt_ object is missing when _deliverychannel_ is rt.                                                             |
+|      | param 'body' missing for channel sms                                             | Returned when the parameter _body_ or its value is missing for _sms_ channel and the parameter _type_ is not selected as text (1). |
+|      | param 'text' missing for channel sms                                             | Returned when the parameter _text_ or its value is missing for _sms_ channel.                                                      |
+|      | param 'sms' missing for channel sms                                              | Returned when the _sms_ object is missing when _deliverychannel_ is sms.                                                           |
+|      | either param 'callflowid' or param 'media' is required                           | Returned when the parameters _callflowid_ or _media_ or their  values are missing for _voice_ channel.                             |
+|      | param 'voice' missing for channel voice                                          | Returned when the _voice_ object is missing when _deliverychannel_ is voice.                                                       |
+|      | No destination channel information found in request                              | Returned when the value is missing for _deliverychannel_.                                                                          |
+|      | param 'deliverychannel' missing                                                  | Returned when the _deliverychannel_ is missing.                                                                                    |
+|      | mandatory param device_types missing                                             | Returned when device_types object is missing in \_interactive_ object.                                                             |
+|      | mandatory param value missing for action xxx                                     | Returned when the parameter _value_ is missing in actions array.                                                                   |
+|      | mandatory param pos missing                                                      | Returned when the parameter _pos_ is missing in actions array.                                                                     |
+|      | mandatory param category missing                                                 | Returned when the parameter _category_ is missing in _interactive_ object.                                                         |
+|      | mandatory param actions missing                                                  | Returned when the parameter _actions_ is missing in _interactive_ object.                                                          |
+| 7004 | invalid value for param 'priority', it should be one of [1,2,3,4,5]              | Returned when the parameter priority value is other than 1 to 5 for rt channel.                                                    |
+|      | invalid value of param 'type' , only [1,2,3,4] are allowed                       | Returned when the parameter type value is other than 1 to 4 for sms channel.                                                       |
+|      | invalid device type xxx, only ios or android is allowed                          | Returned when the parameter device_types value is other than ios or android.                                                       |
+|      | duplicate device type xxx                                                        | Returned when duplicate position value is provided in device_types array in interactive object.                                    |
+|      | invalid value of param pos, duplicate values for pos are not allowed             | Returned when duplicate position value is provided in actions array in interactive object.                                         |
+|      | invalid value of param action or action is invalid for this channel              | Returned when an invalid action is provided in actions array in interactive object.                                                |
+|      | invalid value of param value, specified value is invalid for action xxx          | Returned when an invalid value is provided in value parameter in interactive actions object.                                       |
+|      | invalid action for identifier xxx                                                | Returned when an invalid action is provided for corresponding category.                                                            |
+|      | invalid identifier or no actions mapped for this identifier                      | Returned when the corresponding identifiers for category are not mapped to the identifiers that are there for actions.             |
+|      | no identifier found for this category and at this position                       | Returned when identifiers are not found for a category.                                                                            |
+|      | Invalid value of param pos, only positions [xx,xx] are allowed for this category | Returned when an invalid position value is provided that is not there for corresponding category.                                  |
+|      | Invalid number of actions, expected actions size xx, but found xx                | Returned when an unexpected number of actions found in interactive object.                                                         |
+|      | Invalid value of param category or no identifiers mapped to this category        | Returned when an invalid category is provided in request.                                                                          |
+| 7005 | Request expired                                                                  | Returned when the request is expired.                                                                                              |
+| 7006 | Internal error occurred                                                          | Returned when an internal error occurs.                                                                                            |
+|      | Internal server error                                                            | Returned when an occur occurs in server.                                                                                           |
+| 7007 | Service Inactive                                                                 | Returned when a service is in inactive state.                                                                                      |
+| 7008 | Inactive Profile                                                                 | Returned when the profile is inactive.                                                                                             |
+| 7009 | Maximum number of destination address                                            | Returned when an API request exceeds the limit (1000) to send messages using messaging API.                                        |
+| 7010 | Source IP is not in the allowed list                                             | Returned when a request is sent from an IP that is not  in the allowed list in <<prodname>>.                                       |
+|      | Service provider exception                                                       | Returned when a service provider exception occurs.                                                                                 |
+| 7011 | Unknown Exception                                                                | Returned when an unknown exception occurs.                                                                                         |
+| 7019 | Request expired                                                                  | Returned when the request is expired.                                                                                              |
+| 7020 | You have reached maximum transaction limit                                       | Returned when you have reached the transaction limit.                                                                              |
+| 7101 | Invalid Sender ID                                                                | Returned when the sender ID is invalid.                                                                                            |
+| 7102 | Invalid address                                                                  | Returned when the address is invalid.                                                                                              |
+| 7103 | Not enough credits                                                               | Returned when the client does not have enough credits in his account.                                                              |
+| 7104 | Invalid app id                                                                   | Returned when the app id is invalid.                                                                                               |
+| 7105 | Customer profile not found                                                       | Returned when the customer profile is not found.                                                                                   |
+| 7106 | Channel not configured                                                           | Returned when the channel is not configured.                                                                                       |
+| 7107 | Message length exceeded                                                          | Returned when the length of the message exceeded.                                                                                  |
+| 7108 | Invalid template                                                                 | Returned when the template is invalid.                                                                                             |
+| 7109 | User in DnD                                                                      | Returned when the user is registered on Do Not Disturb list.                                                                       |
+| 7110 | User is not active                                                               | Returned when the user is in inactive state.                                                                                       |
+| 7111 | Spam content detected                                                            | Returned when the content contains a spam word.                                                                                    |
+| 7112 | Invalid message type                                                             | Returned when the message type is invalid.                                                                                         |
+| 7113 | Social hours                                                                     | Returned when the message is sent during non-social hours.                                                                         |
+| 7114 | Configuration Error. Please contact admin.                                       | Returned when there is an error in configuration.                                                                                  |
+| 7115 | Rate plan not defined                                                            | Returned when the rate plan is not defined.                                                                                        |
+| 7116 | Destination profile is not verified                                              | Returned when the destination profile is not verified.                                                                             |
+| 7117 | RTM is not enabled for this app                                                  | Returned when RTM is not enabled for this application.                                                                             |
+| 7118 | push is not enabled for this app                                                 | Returned when push is not enabled for this application.                                                                            |
+| 7119 | Destination profile doesn't have OS details                                      | Returned when the destination profile does not have OS details.                                                                    |
+| 7120 | Voice params length exceeded                                                     | Returned when the voice parameters length is exceeded.                                                                             |
+| 7121 | Replaceable params could not be fetched.                                         | Returned when the replaceable parameters could not be fetched.                                                                     |
+| 7200 | Unknown Status                                                                   | Returned when the status is unknown.                                                                                               |
+| 7201 | Delivery failed at Operator                                                      | Returned when the delivery failed at operator.                                                                                     |
+| 7202 | Delivery failed at platform                                                      | Returned when the delivery failed at platform.                                                                                     |
+| 7203 | Unknown Subscriber address                                                       | Returned when the subscriber address is not known.                                                                                 |
+| 7204 | Insufficient Credits in subscriber account                                       | Returned when the subscriber account has insufficient credits.                                                                     |
+| 7205 | Error in Binary message                                                          | Returned when there is an error in binary message.                                                                                 |
+| 7206 | Can't deliver. Subscriber SIM Full                                               | Returned when the subscribers sim is full.                                                                                         |
+| 7207 | Subscriber out of coverage area or not reachable                                 | Returned when the subscriber is out of coverage area.                                                                              |
+| 7208 | Source ip is not in the allowed list                                             | Returned when the source IP is not  in the allowed list.                                                                           |
+| 7208 | Message expired                                                                  | Returned when message is expired.                                                                                                  |
+| 7209 | Unable to deliver multipart message                                              | Returned when unable to deliver multipart message.                                                                                 |
+| 7210 | Billing Configuration error                                                      | Returned when there is an error in billing configuration.                                                                          |
+| 7211 | Billing error at operator                                                        | Returned when an error occurs at operator.                                                                                         |
+| 7212 | Invalid registration                                                             | Returned when the registration is invalid.                                                                                         |
+| 7213 | Unregistered                                                                     | Returned when the user is not registered.                                                                                          |
+| 7214 | Cloud specific failure                                                           | Returned due to cloud failure.                                                                                                     |
+| 7301 | Message expired                                                                  | Returned when the message is expired.                                                                                              |
+| 7302 | Rate limit exceeded                                                              | Returned when the rate limit exceeded.                                                                                             |
+| 7303 | Delivery notification of a message expired                                       | Returned when the delivery notification of a message is expired.                                                                   |
+| 7304 | Invalid app credentials(Invalid OAuth)                                           | Returned when invalid app credentials are provided.                                                                                |
+| 7305 | Invalid user credentials                                                         | Returned when user credentials are invalid.                                                                                        |
+| 7307 | End point not reachable(FB is not reachable)                                     | Returned when Facebook is not reachable.                                                                                           |
+| 7401 | No answer                                                                        | Returned when the call is not answered.                                                                                            |
+| 7402 | Customer busy                                                                    | Returned when the customer is busy.                                                                                                |
+| 7403 | Call rejected                                                                    | Returned when the call is rejected.                                                                                                |
+| 7404 | Others                                                                           | Returned for other errors                                                                                                          |
+| 7500 | Delivered                                                                        | Returned when the delivery is completed successfully.                                                                              |
+| 7501 | Submitted                                                                        | Returned when the submit is success.                                                                                               |
+| 7502 | Read                                                                             | Returned when the message is read.                                                                                                 |
+| 7503 | Message expired before delivery attempt                                          | Returned when the message is expired before attempting a delivery.                                                                 |
+| 7504 | Authentication error                                                             | Returned when an authentication error occurs.                                                                                      |
+| 7505 | Too large payload ( >4kb)                                                        | Returned when the payload is more than 4kb for Android.                                                                            |
+| 7506 | Invalid time to live value                                                       | Returned when an invalid value is passed for time to live parameter for Android.                                                   |
+| 7507 | Too many requests for the App                                                    | Returned when too many requests are received for the same app.                                                                     |
+| 7508 | GCM server error                                                                 | Returned when an error occurs in Google Cloud Messaging server.                                                                    |
+| 7509 | Too many concurrent requests for same customer                                   | Returned when too many requests are received for the same customer.                                                                |
+| 7510 | Too big payload                                                                  | Returned when the payload is more than 4kb for iOS.                                                                                |
+| 7511 | Invalid time to live value                                                       | Returned when an invalid value is passed for time to live parameter for iOS.                                                       |
+| 7512 | Invalid push id                                                                  | Returned when the push id is invalid.                                                                                              |
+| 7513 | Unregistered Device                                                              | Returned when a device is not registered.                                                                                          |
+| 7514 | Wrong apns certificate gateway                                                   | Returned when a wrong APNs certificate is provided.                                                                                |
+| 7515 | Bad apns certificate                                                             | Returned when an APNs certificate is invalid.                                                                                      |
+| 7516 | Too many request for the same device                                             | Returned when too many requests are received by the same device.                                                                   |
+| 7517 | APNS server error                                                                | Returned when an APNs server error occurs.                                                                                         |
+| 7518 | Unknown                                                                          | Returned when an unknown error occurs.                                                                                             |
+| 7600 | no results found                                                                 | Returned when the results are not found.                                                                                           |
+| 7601 | transaction is not under this service or service key is invalid                  | Returned when there is a mismatch with the service key or transaction.                                                             |
+| 7601 | Verification failed                                                              | Returns then the verification is failed.                                                                                           |
+| 7602 | user presence failure                                                            | Returned when the user not available in the network.                                                                               |
+| 7603 | either validation failed for request or user verification failure                | Returned when the validation is failed or user verification is failed for the request.                                             |
+| 7618 | Invalid request characters: The character uxxxx cannot be included               | Returned when the message format is invalid.                                                                                       |
+| 7627 | Parameter missing: media id                                                      | Returned when the message is sent without media id parameter.                                                                      |
+| 7628 | The other user is not yet a follower                                             | Returned when the message is sent to a non follower.                                                                               |
+| 7629 | The other user is not yet a follower                                             | Returned when the message is sent to a non follower.                                                                               |
+| 7630 | Rich media message is empty                                                      | Returned when the message is sent without rich media.                                                                              |
+| 7631 | Text message is empty                                                            | Returned when the message is sent without a text.                                                                                  |
+| 7632 | Error source: multimedia file size                                               | Returned when the media size is beyond the expected size.                                                                          |
+| 7633 | Message contents too long                                                        | Returned when the message is sent with a lengthy text.                                                                             |
+| 7634 | Title too long                                                                   | Returned when the message title is too long.                                                                                       |
+| 7635 | Description too long                                                             | Returned when the description is too long.                                                                                         |
+| 7636 | URL too long                                                                     | Returned when the URL is too long.                                                                                                 |
+| 7637 | Image URL too long                                                               | Returned when the Image URL is too long.                                                                                           |
+| 7638 | Audio play time over limit                                                       | Returned when the audio play time exceeds 60 seconds.                                                                              |
+| 7639 | Rich media messages over limit                                                   | Returned when you have used up your limit to send Rich media messages.                                                             |
+| 7641 | Message quantity over limit                                                      | Returned when you have used up your limit to send  messages.                                                                       |
+| 7642 | This user does not exist.                                                        | Returned when the message is sent with an invalid user information.                                                                |
+| 7643 | Invalid image file type (invalid file type)                                      | Returned when the image file type is invalid.                                                                                      |
+
+## Transaction Status
+
+[block:parameters]
+{
+  "data": {
+    "h-0": "Code",
+    "h-1": "Message",
+    "h-2": "Description",
+    "0-0": "7006",
+    "0-1": "Internal server error",
+    "0-2": "Returned when the message failed at the gateway and was not transmitted to the destination operator. This is may be an intermittent temporary error.",
+    "1-0": "7008",
+    "1-1": "Inactive profile",
+    "1-2": "Returned when the profile is inactive.",
+    "2-0": "7010",
+    "2-1": "Service provider exception",
+    "2-2": "Returned when a service provider exception occurs.",
+    "3-0": "7011",
+    "3-1": "Unknown exception",
+    "3-2": "Returned when an unknown exception occurs.",
+    "4-0": "7019",
+    "4-1": "Request expired",
+    "4-2": "Returned when the request is expired.",
+    "5-0": "7020",
+    "5-1": "You have reached maximum transaction limit",
+    "5-2": "Returned when you have reached the transaction limit.",
+    "6-0": "7101",
+    "6-1": "Invalid Sender ID",
+    "6-2": "Returned when the sender is not authorized or configured at the destination operator or the wrong sender Id is being used for this request.",
+    "7-0": "7102",
+    "7-1": "Invalid address",
+    "7-2": "Returned when the address is invalid.",
+    "8-0": "7103",
+    "8-1": "Not enough credits",
+    "8-2": "Returned when the client does not have enough credits in his account.",
+    "9-0": "7104",
+    "9-1": "Invalid app ID",
+    "9-2": "Returned when the app id is invalid.",
+    "10-0": "7105",
+    "10-1": "Customer profile not found",
+    "10-2": "Returned when the customer profile is not found.",
+    "11-0": "7106",
+    "11-1": "Channel not configured",
+    "11-2": "Returned when the channel is not configured.",
+    "12-0": "7107",
+    "12-1": "Message length exceeded",
+    "12-2": "Returned when the length of the message exceeded.",
+    "13-0": "7108",
+    "13-1": "Invalid template",
+    "13-2": "Returned when the template is invalid.",
+    "14-0": "7109",
+    "14-1": "User in DnD",
+    "14-2": "Returned when the user is registered on Do Not Disturb list.",
+    "15-0": "7110",
+    "15-1": "User is not active",
+    "15-2": "Returned when the user is in inactive state.",
+    "16-0": "7111",
+    "16-1": "Span content detected",
+    "16-2": "Returned when the network operator has rejected this message as spam. Subsequent messages to the recipient may or may not be delivered depending on the underlying cause:  \n-The sender ID has exceeded or violated carrier rules on message velocity (too many messages to the same recipient, too many messages from the same sender ID with sender ID restrictions).  \n-The message content was marked as spam due to detected keywords.  \n-The message was flagged for linking to websites suspected of spam or fraud.  \n-The message content contained URL-shortening services that the network operator may have banned.",
+    "17-0": "7112",
+    "17-1": "Invalid message type",
+    "17-2": "Returned when the message type is invalid.",
+    "18-0": "7113",
+    "18-1": "Social hours",
+    "18-2": "Returned when the message is sent during non-social hours.",
+    "19-0": "7114",
+    "19-1": "Configuration Error. Please contact admin",
+    "19-2": "Returned when there is an error in configuration.",
+    "20-0": "7115",
+    "20-1": "Rate plan not defined",
+    "20-2": "Returned when the rate plan is not defined.",
+    "21-0": "7116",
+    "21-1": "Destination profile is not verified",
+    "21-2": "Returned when the destination profile is not verified.",
+    "22-0": "7117",
+    "22-1": "RTM is not enabled for this app",
+    "22-2": "Returned when RTM is not enabled for this application.",
+    "23-0": "7118",
+    "23-1": "Push is not enabled for this app",
+    "23-2": "Returned when push is not enabled for this application.",
+    "24-0": "7119",
+    "24-1": "Destination profile doesn't have OS details",
+    "24-2": "Returned when the destination profile does not have OS details.",
+    "25-0": "7120",
+    "25-1": "Voice parameters length exceeded",
+    "25-2": "Returned when the voice parameters length is exceeded.",
+    "26-0": "7121",
+    "26-1": "Replaceable parameters could not be fetched.",
+    "26-2": "Returned when the replaceable parameters could not be fetched.",
+    "27-0": "7200",
+    "27-1": "Unknown status",
+    "27-2": "Returned when the status is unknown.",
+    "28-0": "7201",
+    "28-1": "Delivery failed at Operator",
+    "28-2": "Returned when the message was routed to the operator but was rejected for various network-specific reasons (temp. failure or other network related issue).",
+    "29-0": "7202",
+    "29-1": "Delivery failed at platform",
+    "29-2": "Returned when the delivery failed at platform.",
+    "30-0": "7203",
+    "30-1": "Unknown Subscriber address",
+    "30-2": "Returned when the number is an invalid mobile number on the destination network. This may indicate the subscriber is no longer valid, the number has ported away, or may have service blocks preventing message delivery.",
+    "31-0": "7204",
+    "31-1": "Insufficient Credits in subscriber account",
+    "31-2": "Returned when a message is sent to a prepaid mobile subscriber who no longer has a credit balance on their SIM card and can no longer receive messages.",
+    "32-0": "7205",
+    "32-1": "Error in Binary message",
+    "32-2": "Returned when there is an error in binary message.",
+    "33-0": "7206",
+    "33-1": "Can't deliver. Subscriber SIM Full",
+    "33-2": "Returned when the subscribers SIM is full.",
+    "34-0": "7207",
+    "34-1": "Subscriber out of coverage area or not reachable",
+    "34-2": "Returned when the subscriber is out of coverage area.",
+    "35-0": "7208",
+    "35-1": "Message expired",
+    "35-2": "Returned when the message could not be delivered to the handset and exceeded its delivery time limit. This occurs when a subscriber has their handset turned off, or handset has no more memory to accept messages.",
+    "36-0": "7209",
+    "36-1": "Unable to deliver multi-part message",
+    "36-2": "Returned when the message was sent as a multi-part message (either a long text message more than 160 chars which is split into multiple parts, or a message with specific character encoding) to the network destination and one or more of the parts was returned undeliverable. The specific error for the non-delivery is not disclosed and all parts of the message will be flagged with this error code.",
+    "37-0": "7210",
+    "37-1": "Billing Configuration error",
+    "37-2": "Returned when there is an error in billing configuration. This may be caused by an unexpected network destination, or due to a provisioning error.",
+    "38-0": "7211",
+    "38-1": "Billing error at operator",
+    "38-2": "Returned when message could not be delivered as network operator has indicated there was a billing related error.",
+    "39-0": "7212",
+    "39-1": "Invalid registration",
+    "39-2": "Returned when the registration is invalid.",
+    "40-0": "7213",
+    "40-1": "Unregistered",
+    "40-2": "Returned when the user is not registered.",
+    "41-0": "7214",
+    "41-1": "Cloud specific failure",
+    "41-2": "Returned due to cloud failure.",
+    "42-0": "7301",
+    "42-1": "Message expired",
+    "42-2": "Returned when the message is expired.",
+    "43-0": "7302",
+    "43-1": "Rate limit exceeded",
+    "43-2": "Returned when the sender ID used to send traffic has exceeded its authorized TPS limit. 10 DLC registered numbers which are subject to rate limits will return such errors when exceeding the limits associated with their approved campaign IDs. The limits may be network operator, campaign or sender ID related. There could also be other throughput restrictions.  \n  \nPlease note that campaign and brand limits apply across service providers and are shared by the brand and/or campaign – ensure that when using multiple service providers, you are not exceeding the limits across those providers.",
+    "44-0": "7303",
+    "44-1": "Delivery notification of a message expired",
+    "44-2": "Returned when the delivery notification of a message is expired.",
+    "45-0": "7304",
+    "45-1": "Invalid app credentials(Invalid OAuth)",
+    "45-2": "Returned when invalid app credentials are provided.",
+    "46-0": "7305",
+    "46-1": "Invalid user credentials",
+    "46-2": "Returned when user credentials are invalid.",
+    "47-0": "7307",
+    "47-1": "End point not reachable (FB is not reachable)",
+    "47-2": "Returned when Facebook is not reachable",
+    "48-0": "7401",
+    "48-1": "No answer",
+    "48-2": "Returned when the call is not answered.",
+    "49-0": "7402",
+    "49-1": "Customer busy",
+    "49-2": "Returned when the customer is busy.",
+    "50-0": "7403",
+    "50-1": "Call rejected",
+    "50-2": "Returned when the call is rejected.",
+    "51-0": "7404",
+    "51-1": "Others",
+    "51-2": "Returned for other errors",
+    "52-0": "7500",
+    "52-1": "Delivered",
+    "52-2": "Returned when the message is transmitted to the destination network and confirmation of delivery is provided from the mobile handset.If the recipient did not receive the message, it may be due to spam, sender ID filters, or a corrupt or malformed message payload the handset was unable to process.",
+    "53-0": "7501",
+    "53-1": "Submitted",
+    "53-2": "Returned when the message has is in an interim status indicating submission to network provider, prior to it being actually delivered to the handset.",
+    "54-0": "7502",
+    "54-1": "Read",
+    "54-2": "Returned when the message is read.",
+    "55-0": "7503",
+    "55-1": "Message expired before delivery attempt",
+    "55-2": "Returned when the message is expired before attempting a delivery.",
+    "56-0": "7504",
+    "56-1": "Authentication error",
+    "56-2": "Returned when an authentication error occurs.",
+    "57-0": "7505",
+    "57-1": "Too large payload ( >4kb)",
+    "57-2": "Returned when the payload is more than 4kb for Android.",
+    "58-0": "7506",
+    "58-1": "Invalid time to live value",
+    "58-2": "Returned when an invalid value is passed for time to live parameter for Android.",
+    "59-0": "7507",
+    "59-1": "Too many requests for the app",
+    "59-2": "Returned when too many requests are received for the same app.",
+    "60-0": "7508",
+    "60-1": "GCM server error",
+    "60-2": "Returned when an error occurs in Google Cloud Messaging server.",
+    "61-0": "7509",
+    "61-1": "Too many concurrent requests for same customer",
+    "61-2": "Returned when too many requests are received for the same customer.",
+    "62-0": "7510",
+    "62-1": "Too big payload",
+    "62-2": "Returned when the payload is more than 4kb for iOS.",
+    "63-0": "7511",
+    "63-1": "Invalid time to live value",
+    "63-2": "Returned when an invalid value is passed for time to live parameter for iOS.",
+    "64-0": "7512",
+    "64-1": "Invalid push ID",
+    "64-2": "Returned when the push ID is invalid.",
+    "65-0": "7513",
+    "65-1": "Unregistered Device",
+    "65-2": "Returned when the device is unregistered  \n-The device inbox may be full at the device or network operator.  \n-The device has been marked as busy by the network operator.  \n-The device may have been flooded with messages and further submission to the device is not possible.",
+    "66-0": "7514",
+    "66-1": "Wrong APNs certificate gateway",
+    "66-2": "Returned when a wrong APNs certificate is provided.",
+    "67-0": "7515",
+    "67-1": "Bad APNs certificate",
+    "67-2": "Returned when an APNs certificate is invalid.",
+    "68-0": "7516",
+    "68-1": "Too many request for the same device",
+    "68-2": "Returned when too many requests are received by the same device.",
+    "69-0": "7517",
+    "69-1": "APNs server error",
+    "69-2": "Returned when an APNs server error occurs.",
+    "70-0": "7518",
+    "70-1": "Unknown",
+    "70-2": "Returned when an unknown error occurs.  \nThe message may or may not have been delivered, but no additional information is available from the network operator.",
+    "71-0": "7600",
+    "71-1": "No results found",
+    "71-2": "Returned when the results are not found.",
+    "72-0": "7601",
+    "72-1": "Transaction is not under this service or service key is invalid",
+    "72-2": "Returned when there is a mismatch with the service key or transaction.",
+    "73-0": "",
+    "73-1": "Verification failed",
+    "73-2": "Returns then the verification is failed",
+    "74-0": "7602",
+    "74-1": "User presence failure",
+    "74-2": "Returned when the user not available in the network.",
+    "75-0": "",
+    "75-1": "Either validation failed for request or user verification failure",
+    "75-2": "Returned when the validation is failed or user verification is failed for the request.",
+    "76-0": "7608",
+    "76-1": "Invalid image file size",
+    "76-2": "Returned when the image file size exceeds the limit.",
+    "77-0": "7609",
+    "77-1": "Invalid audio file size",
+    "77-2": "Returned when the audio file size exceeds 256K.",
+    "78-0": "7610",
+    "78-1": "Invalid video file size",
+    "78-2": "Returned when the audio file size exceeds 1Mb.",
+    "79-0": "7611",
+    "79-1": "Invalid thumbnail file size",
+    "79-2": "Returned when the thumbnail file size exceeds 64KB.",
+    "80-0": "7618",
+    "80-1": "Invalid request characters: The character uxxxx cannot be included",
+    "80-2": "Returned when the message format is invalid.",
+    "81-0": "7627",
+    "81-1": "Parameter missing: media ID",
+    "81-2": "Returned when the message is sent without media id parameter.",
+    "82-0": "7628",
+    "82-1": "The other user is not yet a follower",
+    "82-2": "Returned when the message is sent to a non follower.",
+    "83-0": "7629",
+    "83-1": "The other user is not yet a follower",
+    "83-2": "Returned when the message is sent to a non follower.",
+    "84-0": "7630",
+    "84-1": "Rich media message is empty",
+    "84-2": "Returned when the message is sent without rich media.",
+    "85-0": "7631",
+    "85-1": "Text message is empty",
+    "85-2": "Returned when the message is sent without a text.",
+    "86-0": "7632",
+    "86-1": "Error source: multimedia file size",
+    "86-2": "Returned when the media size is beyond the expected size.",
+    "87-0": "7633",
+    "87-1": "Message contents too long",
+    "87-2": "Returned when the message is sent with a lengthy text.",
+    "88-0": "7634",
+    "88-1": "Title too long",
+    "88-2": "Returned when the message title is too long.",
+    "89-0": "7635",
+    "89-1": "Description too long",
+    "89-2": "Returned when the description is too long.",
+    "90-0": "7636",
+    "90-1": "URL too long",
+    "90-2": "Returned when the URL is too long.",
+    "91-0": "7637",
+    "91-1": "Image URL too long",
+    "91-2": "Returned when the Image URL is too long.",
+    "92-0": "7638",
+    "92-1": "Audio play time over limit",
+    "92-2": "Returned when the audio play time exceeds 60 seconds.",
+    "93-0": "7639",
+    "93-1": "Rich media messages over limit",
+    "93-2": "Returned when you have used up your limit to send Rich media messages.",
+    "94-0": "7641",
+    "94-1": "Message quantity over limit",
+    "94-2": "Returned when you have used up your limit to send messages.",
+    "95-0": "7642",
+    "95-1": "This user does not exist",
+    "95-2": "Returned when the message is sent with an invalid user information.",
+    "96-0": "7643",
+    "96-1": "Invalid image file type (invalid file type)",
+    "96-2": "Returned when the image file type is invalid."
+  },
+  "cols": 3,
+  "rows": 97,
+  "align": [
+    "left",
+    "left",
+    "left"
+  ]
+}
+[/block]
+
+
+## Event
+
+| Code | Message                             | Description                                                                                                                               |
+| :--- | :---------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------- |
+| 1002 | Queues                              | Returned when the request is accepted by <<prodname>>.                                                                                    |
+| 7000 | Invalid JSON                        | Returned when an invalid JSON request is sent.                                                                                            |
+| 7001 | Authentication failed               | Returned when an invalid service key or profile key is provided in the request.                                                           |
+| 7002 | Service key missing                 | Returned when the parameter key is missing in the message request.                                                                        |
+| 7004 | Invalid value                       | Returned when an invalid value for parameter is provided.                                                                                 |
+| 7005 | Internal error occurred             | Returned when there is an issue with <<prodname>>.                                                                                        |
+| 7006 | Internal error occurred             | Returned when there is an issue with <<prodname>>.                                                                                        |
+| 7025 | Mandatory custom parameters missing | Returned when any mandatory custom event parameter is missing, where these custom parameters are created in custom event creation screen. |
+| 7401 | No answer                           | Returned when the call is not answered by the end user                                                                                    |
+| 7402 | Customer busy                       | Returned when the end customer’s network is busy                                                                                          |
+| 7403 | Call rejected                       | Returned when the end customer has rejected the calls                                                                                     |
+| 7404 | Others                              | Others                                                                                                                                    |
+| 7519 | Answered                            | Returned when the call is answered by the end user                                                                                        |
+| 7407 | Call offered                        | Returned when the call is offered to the network                                                                                          |
+| 7408 | Call accepted                       | Returned when the call is accepted by the network                                                                                         |
+| 7409 | Call dropped                        | Returned when the call is disconnected by the end user                                                                                    |
+| 7410 | Call disconnected                   | Returned when the call is disconnected by <<prodname>>                                                                                    |
+| 7411 | Trombone connected                  | Returned when call patch is initiated                                                                                                     |
+| 7412 | Trombone released                   | Returned when call patch has ended                                                                                                        |
+| 7405 | Released                            | Returned when the call has ended                                                                                                          |
+| 7413 | Number not registered/active in DVP | Returned when the asset (number) is not mapped to a tenant on <<prodname>>                                                                |
+| 7414 | Tenant not registered/active in DVP | Returned when the voice is not enabled  for the tenant                                                                                    |
+| 7415 | Voice Quota limit exceeded          | Returned when call volume limit is reached                                                                                                |
+
+## Profile
+
+| Code | Message                                                         | Description                                                                                          |
+| :--- | :-------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------- |
+| 1000 | Success                                                         | Returned when the request is completed successfully.                                                 |
+| 1002 | Partial success                                                 | Returned when at least one app profile could not be created or fetched successfully.                 |
+| 7003 | CustomerId is missing                                           | Returned when the parameter CustomerId or its value is missing.                                      |
+|      | Mandatory param access_token missing                            | Returned when the parameter access_token or its value is missing while creating an app profile.      |
+|      | Mandatory param access_token_expiry missing                     | Returned when the parameter access_token_expiry is missing while creating an app profile.            |
+|      | Mandatory param psid missing                                    | Returned when the parameter psid is missing while creating or updating an app profile.               |
+|      | Mandatory param access_token_secret missing                     | Returned when the parameter access_token_secret is missing while creating an app profile.            |
+|      | Mandatory param screenName missing                              | Returned when the parameter screenName is missing while creating an app profile.                     |
+|      | Mandatory param connectStatus missing                           | Returned when the parameter connectStatus is missing while creating rtm profile.                     |
+|      | Mandatory param deviceId missing                                | Returned when the parameter deviceId is missing while creating rtm profile.                          |
+|      | Mandatory param rtmId missing                                   | Returned when the parameter rtmId is missing while creating or updating rtm profile.                 |
+|      | Mandatory param msisdn missing                                  | Returned when the parameter msisdn or its value is missing while creating a profile.                 |
+|      | Mandatory param status missing or it is empty                   | Returned when the parameter status or its value is missing while creating or updating a profile.     |
+|      | Invalid value for param status, only values [0,1] are allowed   | Returned when the parameter status value is other than 0 or 1.                                       |
+| 7010 | Source IP is not  in the allowed list                           | Returned when a request is sent from an IP that is not  in the allowed list in <<prodname>>.         |
+| 7011 | Invalid Attribute Value                                         | Returned when an invalid value is provided for the customer or app profile Attributes object.        |
+|      | invalid value for param status, only values [0,1] are allowed   | Returned when an invalid value is provided for customer or app profile Records array.                |
+| 7012 | Batch size limit(100) exceeded                                  | Returned when an API request exceeds the limit to create or update or delete using profile API.      |
+| 7013 | Master profile store not found                                  | Returned when a master profile store does not exists.                                                |
+| 7014 | Customer not found                                              | Returned when a customer does not exists to update or delete the profile.                            |
+|      | App profile not found                                           | Returned when a customers app profile does not exists to update or delete the app profile.           |
+| 7015 | Customer already exists                                         | Returned when a customer profile is being created for which the profile already exists.              |
+|      | App profile already exists                                      | Returned when a customers application profile is being created for which the profile already exists. |
+| 7016 | Unknown error                                                   | Returned when an unknown error occurs.                                                               |
+| 7017 | Profile attribute doesn't exist                                 | Returned when an attribute is sent for which the attribute is not defined in client master profile.  |
+| 7018 | Invalid app profile or app profile is not linked to this client | Returned when an application master profile does not exists.                                         |
+| 7019 | Request expired                                                 | Returned when the request is expired.                                                                |
+| 7020 | You have reached maximum transaction limit                      | Returned when you have reached the transaction limit.                                                |

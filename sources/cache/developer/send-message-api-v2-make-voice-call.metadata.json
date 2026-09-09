@@ -1,0 +1,40 @@
+{
+  "api_metadata_path": "sources/cache/developer/send-message-api-v2-make-voice-call.api.json",
+  "category": "MULTI CHANNEL COMMUNICATION API",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f6715",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "5213894bc1648cf8f345d3aff6924155c1c003f17824f6e79381cef2e5d1eacc",
+    "source_path": "6a3c2fa32256d440a6796a1e19c4a417fbed0efa082f2f6a4e0a20bdbbc43d79",
+    "text_path": "6af1969f9455ae8a83e86b78f0612a1e0f431327767456815cc6e9d89087da70"
+  },
+  "headings": [
+    "Request Body to Make Calls using a Media ID",
+    "Make Calls using a Media ID Body Parameters",
+    "Sample Response Body",
+    "Response Parameters",
+    "HTTP Response Codes",
+    "Examples",
+    "Make Call using Text-to-Speech (TTS)"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/send-message-api-v2-make-voice-call.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/send-message-api-v2-make-voice-call",
+  "retrieved_at": "2026-09-08T23:31:44+00:00",
+  "sha256_api_metadata": "575f65b7d8dc3ea0b617314bc47e22705dc85fc80ee114e6faa20ada4e8aafe2",
+  "sha256_html_response": "66d212e82d951554fb013279d2c34ee1a2ec1718845c1bb802aab3b0c4c72ea2",
+  "sha256_source_body": "6a3c2fa32256d440a6796a1e19c4a417fbed0efa082f2f6a4e0a20bdbbc43d79",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/send-message-api-v2-make-voice-call.source.md",
+  "source_updated_at": "2026-04-09T11:43:12.752Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/send-message-api-v2-make-voice-call.txt",
+  "title": "Make Calls Using Send Message API v2",
+  "url": "https://developers.webexconnect.io/reference/send-message-api-v2-make-voice-call",
+  "word_count": 1599,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/developer/send-message-api-v2-make-voice-call.metadata.json"
+}

@@ -1,0 +1,31 @@
+{
+  "category": "Webex Connect and Cisco Contact Center Enterprise System (CCE)",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182578cd",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "e7b8aec9863816eb5784e5d3f509b62f47ec88a013c47943be2ba4447a1c9304",
+    "source_path": "fa6bf4cdb0865b7e7925b13a3149b744049e9634a33ba5485483ad1a8c9a7528",
+    "text_path": "1e9c26a0998de780ba15f0d2c16d0ff3caac88a5b30f88c0a18864be0a6366a9"
+  },
+  "headings": [],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/cce-faqs.md",
+  "resolved_url": "https://help.webexconnect.io/docs/cce-faqs",
+  "retrieved_at": "2026-09-08T23:29:25+00:00",
+  "sha256_html_response": "19f57500cae3008ef472a96608ba3d23dd2b1804c190c01a4339813d56922f02",
+  "sha256_source_body": "fa6bf4cdb0865b7e7925b13a3149b744049e9634a33ba5485483ad1a8c9a7528",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/cce-faqs.source.md",
+  "source_updated_at": "2026-04-14T07:38:14.406Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/cce-faqs.txt",
+  "title": "FAQs - CCE",
+  "url": "https://help.webexconnect.io/docs/cce-faqs",
+  "word_count": 670,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/cce-faqs.metadata.json"
+}

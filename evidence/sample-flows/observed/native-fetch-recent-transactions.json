@@ -1,0 +1,1303 @@
+{
+  "flowId": "96849",
+  "temporary_name": "KBSampleNative07",
+  "cells": [
+    {
+      "id": "1",
+      "parent": "0",
+      "vertex": false,
+      "edge": false,
+      "value": {
+        "tag": "workflowdata",
+        "attributes": {
+          "copy_used_vars": {
+            "2": {
+              "_usedVars": [],
+              "_usedTransVar": [],
+              "_dynamicVar": [
+                "aiAgent.timestamp",
+                "aiAgent.transId",
+                "aiAgent.payload",
+                "service.serviceKey",
+                "aiAgent.transaction_count",
+                "aiAgent.customer_id"
+              ],
+              "_dynamicTransVar": [],
+              "_usedStreamVar": []
+            },
+            "3": {
+              "_usedVars": [
+                {
+                  "id": "n2",
+                  "nodeId": 2,
+                  "param": "aiAgent.customer_id",
+                  "fullPath": "n2.aiAgent.customer_id",
+                  "source": 3
+                }
+              ],
+              "_usedTransVar": [],
+              "_dynamicVar": [
+                "last_transactions",
+                "status"
+              ],
+              "_dynamicTransVar": [],
+              "_usedStreamVar": []
+            },
+            "5": {
+              "_usedVars": [
+                {
+                  "id": "n3",
+                  "nodeId": 3,
+                  "param": "http.statusCode",
+                  "fullPath": "n3.http.statusCode",
+                  "source": 5
+                }
+              ],
+              "_usedTransVar": [],
+              "_dynamicVar": [],
+              "_dynamicTransVar": [],
+              "_usedStreamVar": []
+            },
+            "7": {
+              "_usedVars": [],
+              "_usedTransVar": [
+                {
+                  "id": "n3",
+                  "nodeId": 3,
+                  "param": "last_transactions",
+                  "fullPath": "n3.last_transactions",
+                  "source": 7
+                }
+              ],
+              "_dynamicVar": [],
+              "_dynamicTransVar": [],
+              "_usedStreamVar": []
+            },
+            "8": {
+              "_usedVars": [],
+              "_usedTransVar": [],
+              "_dynamicVar": [],
+              "_dynamicTransVar": [],
+              "_usedStreamVar": []
+            },
+            "flow-settings": {
+              "_usedVars": [
+                {
+                  "id": "n3",
+                  "nodeId": 3,
+                  "param": "status",
+                  "fullPath": "n3.status",
+                  "source": "flow-settings"
+                },
+                {
+                  "id": "n3",
+                  "nodeId": 3,
+                  "param": "last_transactions",
+                  "fullPath": "n3.last_transactions",
+                  "source": "flow-settings"
+                }
+              ],
+              "_usedTransVar": [],
+              "_dynamicVar": [],
+              "_dynamicTransVar": [],
+              "_usedStreamVar": []
+            }
+          },
+          "dynamic_output_vars": {
+            "2": [
+              "aiAgent.timestamp",
+              "aiAgent.transId",
+              "aiAgent.payload",
+              "service.serviceKey",
+              "aiAgent.transaction_count",
+              "aiAgent.customer_id"
+            ],
+            "3": [
+              "last_transactions",
+              "status"
+            ],
+            "5": [],
+            "7": [],
+            "8": []
+          },
+          "logbooks": [],
+          "node_group_info": {},
+          "notes": {
+            "nodes": {},
+            "workflow": {}
+          },
+          "start_node_info": {
+            "channel": 501,
+            "type": "channel",
+            "subtype": "aiagent",
+            "isCheckLiveSessions": 0,
+            "extras": {},
+            "eventid": 501,
+            "v2EventId": 501
+          }
+        },
+        "text": ""
+      }
+    },
+    {
+      "id": "2",
+      "parent": "1",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "tag": "start",
+        "attributes": {
+          "hidecell": true,
+          "image": "start.svg",
+          "key": "start",
+          "keytype": "fullscreen",
+          "label": "Configure AI Agent Event",
+          "name": "Start",
+          "nodetype": "start",
+          "type": "start",
+          "updatedImage": "aiagent.svg",
+          "updatedimage": "aiagent.svg",
+          "updatedon": "2025-06-04T11:22:21.935",
+          "view_restrict": true
+        },
+        "children": [
+          {
+            "tag": "event",
+            "attributes": {
+              "name": "onbegin",
+              "targetcount": 1
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "selectedChannel",
+              "type": "",
+              "view": ""
+            },
+            "text": {
+              "id": 501,
+              "name": "aiagent",
+              "description": "AI Agent",
+              "type": 3,
+              "extraData": {},
+              "subType": "aiagent",
+              "integrationId": "",
+              "image_url": ""
+            }
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "selectedRuleEvent",
+              "type": "",
+              "view": ""
+            },
+            "text": {
+              "id": 501,
+              "name": "",
+              "v2EventId": 501
+            }
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "ruleEvent",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "ruleConditionStatus",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "conditions",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "apiReqConditions",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "webHookData",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "customEvents",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "isKeyWordDisabled",
+              "type": "",
+              "view": ""
+            },
+            "text": true
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "isKeyWordVerifyReq",
+              "type": "",
+              "view": ""
+            },
+            "text": true
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "isKeyWordAvailable",
+              "type": "",
+              "view": ""
+            },
+            "text": true
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "output_variables",
+              "type": "",
+              "view": ""
+            },
+            "text": [
+              "aiAgent.timestamp",
+              "aiAgent.transId",
+              "aiAgent.payload",
+              "service.serviceKey",
+              "aiAgent.transaction_count",
+              "aiAgent.customer_id"
+            ]
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "voiceServiceProvider",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "conditionData",
+              "type": "",
+              "view": ""
+            },
+            "text": [
+              {
+                "defaultvalue": 5,
+                "mandatory": false,
+                "var_name": "transaction_count",
+                "datatype": "string",
+                "channel_id": 501,
+                "event_id": 501,
+                "eventname": ""
+              },
+              {
+                "defaultvalue": "",
+                "mandatory": false,
+                "var_name": "customer_id",
+                "datatype": "string",
+                "channel_id": 501,
+                "event_id": 501,
+                "eventname": ""
+              }
+            ]
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "syncWebHookData",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "isCheckLiveSessions",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "aiAgentData",
+              "type": "",
+              "view": ""
+            },
+            "text": {
+              "parseOutput": [
+                {
+                  "name": "transaction_count",
+                  "defaultvalue": 5,
+                  "mandatory": false,
+                  "type": "string"
+                },
+                {
+                  "name": "customer_id",
+                  "defaultvalue": "",
+                  "mandatory": false,
+                  "type": "string"
+                }
+              ],
+              "isAuthRequired": false,
+              "name": "",
+              "url": "https://example.invalid/flows/62170/trigger/aiagent",
+              "v2EventId": 501,
+              "jsonData": {
+                "customer_id": "",
+                "transaction_count": 5
+              },
+              "xmlData": "",
+              "isExistingAIAgent": true,
+              "selectedEvent": 501,
+              "jsonSource": 0,
+              "conditionData": [],
+              "isValidateSignature": false,
+              "validateSignatureObj": {
+                "algorithm": "",
+                "secretType": "[redacted]",
+                "secretKey": "[redacted]",
+                "headerKey": "[redacted]"
+              }
+            }
+          },
+          {
+            "tag": "nodevariablestore",
+            "attributes": {
+              "name": "n2.aiAgent.customer_id",
+              "source": 3
+            },
+            "text": "$(aiAgent.customer_id)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "3",
+      "parent": "1",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "tag": "http",
+        "attributes": {
+          "image": "http.svg",
+          "key": "http",
+          "label": "HTTP Request",
+          "name": "HTTP Request",
+          "paramhide": true,
+          "type": "http",
+          "updatedImage": "http.svg",
+          "updatedimage": "http.svg",
+          "updatedon": "2026-02-26T13:31:30.450",
+          "view_restrict": true
+        },
+        "children": [
+          {
+            "tag": "event",
+            "attributes": {
+              "name": "oncomplete",
+              "targetcount": 1,
+              "type": "MP"
+            },
+            "text": ""
+          },
+          {
+            "tag": "event",
+            "attributes": {
+              "name": "onerror",
+              "targetcount": 1,
+              "type": "BP"
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "method",
+              "type": "",
+              "view": ""
+            },
+            "text": "get"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "url",
+              "type": "",
+              "view": ""
+            },
+            "text": "https://example.invalid/get_transactions/$(n2.aiAgent.customer_id)"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "body",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "connctiontimeout",
+              "type": "",
+              "view": ""
+            },
+            "text": 10000
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "requesttimeout",
+              "type": "",
+              "view": ""
+            },
+            "text": 10000
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "proxyaddress",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "_arrayResultMap",
+              "type": "",
+              "view": ""
+            },
+            "text": [
+              {
+                "key": "$.last_transactions[0].transaction_date",
+                "value": "29-08-2024",
+                "check": true
+              },
+              {
+                "key": "$.last_transactions[0].transaction_id",
+                "value": "3f2504e0-4f89-11d3-9a0c-0305e82c3349",
+                "check": false
+              },
+              {
+                "key": "$.last_transactions[0].dispute.reason",
+                "value": "incorrect charge",
+                "check": false
+              },
+              {
+                "key": "$.last_transactions[0].dispute.status",
+                "value": "Pending",
+                "check": false
+              },
+              {
+                "key": "$.last_transactions[0].transaction_amount",
+                "value": "$ 50.75",
+                "check": false
+              },
+              {
+                "key": "$.last_transactions[0].merchant_name",
+                "value": "Coffee Spot",
+                "check": false
+              },
+              {
+                "key": "$.last_transactions[0].transaction_time",
+                "value": "09:50:30",
+                "check": false
+              },
+              {
+                "key": "$.last_transactions[1].transaction_date",
+                "value": "28-08-2024",
+                "check": false
+              },
+              {
+                "key": "$.last_transactions[1].transaction_id",
+                "value": "3f2504e0-4f89-11d3-9a0c-0305e82c3350",
+                "check": false
+              },
+              {
+                "key": "$.last_transactions[1].transaction_amount",
+                "value": "$ 200.00",
+                "check": false
+              },
+              {
+                "key": "$.last_transactions[1].merchant_name",
+                "value": "Digital Den",
+                "check": false
+              },
+              {
+                "key": "$.last_transactions[1].transaction_time",
+                "value": "12:15:45",
+                "check": false
+              },
+              {
+                "key": "$.last_transactions[2].transaction_date",
+                "value": "27-08-2024",
+                "check": false
+              },
+              {
+                "key": "$.last_transactions[2].transaction_id",
+                "value": "3f2504e0-4f89-11d3-9a0c-0305e82c3351",
+                "check": false
+              },
+              {
+                "key": "$.last_transactions[2].transaction_amount",
+                "value": "$ 150.50",
+                "check": false
+              },
+              {
+                "key": "$.last_transactions[2].merchant_name",
+                "value": "Outdoor World",
+                "check": false
+              },
+              {
+                "key": "$.last_transactions[2].transaction_time",
+                "value": "15:30:10",
+                "check": false
+              }
+            ]
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "checkAll",
+              "type": "",
+              "view": ""
+            },
+            "text": false
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "data",
+              "type": "",
+              "view": ""
+            },
+            "text": {
+              "last_transactions": [
+                {
+                  "dispute": {
+                    "reason": "incorrect charge",
+                    "status": "Pending"
+                  },
+                  "merchant_name": "Coffee Spot",
+                  "transaction_amount": "$ 50.75",
+                  "transaction_date": "29-08-2024",
+                  "transaction_id": "3f2504e0-4f89-11d3-9a0c-0305e82c3349",
+                  "transaction_time": "09:50:30"
+                },
+                {
+                  "merchant_name": "Digital Den",
+                  "transaction_amount": "$ 200.00",
+                  "transaction_date": "28-08-2024",
+                  "transaction_id": "3f2504e0-4f89-11d3-9a0c-0305e82c3350",
+                  "transaction_time": "12:15:45"
+                },
+                {
+                  "merchant_name": "Outdoor World",
+                  "transaction_amount": "$ 150.50",
+                  "transaction_date": "27-08-2024",
+                  "transaction_id": "3f2504e0-4f89-11d3-9a0c-0305e82c3351",
+                  "transaction_time": "15:30:10"
+                }
+              ]
+            }
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "dataformate",
+              "type": "",
+              "view": ""
+            },
+            "text": "json"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "type",
+              "type": "",
+              "view": ""
+            },
+            "text": "extract"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "outputvariablelist",
+              "type": "",
+              "view": ""
+            },
+            "text": {
+              "parameters": [
+                {
+                  "id": "B6OYqFkGM6",
+                  "name": "last_transactions",
+                  "path": "$",
+                  "type": "body",
+                  "order": 0
+                },
+                {
+                  "id": "iAimaJEnPN",
+                  "name": "status",
+                  "path": "$.status",
+                  "type": "body",
+                  "order": 1
+                }
+              ],
+              "type": "json"
+            }
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "outputvariablesarray",
+              "type": "",
+              "view": ""
+            },
+            "text": [
+              {
+                "name": "$",
+                "value": "last_transactions",
+                "type": "body",
+                "index": "7wzi9nba"
+              },
+              {
+                "name": "$.status",
+                "value": "status",
+                "type": "body",
+                "index": "11oh481p"
+              }
+            ]
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "isNewnode",
+              "type": "",
+              "view": ""
+            },
+            "text": true
+          },
+          {
+            "tag": "header",
+            "attributes": {
+              "name": "Content-Type",
+              "order": 0,
+              "tempname": "",
+              "type": "in"
+            },
+            "text": "[redacted]"
+          },
+          {
+            "tag": "nodevariablestore",
+            "attributes": {
+              "name": "n3.http.statusCode",
+              "source": 5
+            },
+            "text": "$(http.statusCode)"
+          },
+          {
+            "tag": "nodevariablestore",
+            "attributes": {
+              "name": "n3.last_transactions",
+              "source": 7
+            },
+            "text": "$(last_transactions)"
+          },
+          {
+            "tag": "nodevariablestore",
+            "attributes": {
+              "name": "n3.status",
+              "source": "flow-settings"
+            },
+            "text": "$(status)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "5",
+      "parent": "1",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "tag": "evaluate",
+        "attributes": {
+          "image": "branch.svg",
+          "infolabel": "branch",
+          "key": "branch",
+          "label": "Branch",
+          "name": "Branch",
+          "paramhide": true,
+          "type": "evaluate",
+          "updatedImage": "branch.svg",
+          "updatedimage": "branch.svg",
+          "updatedon": "2025-06-04T11:25:28.781",
+          "view_restrict": true
+        },
+        "children": [
+          {
+            "tag": "event",
+            "attributes": {
+              "name": "onerror",
+              "type": "BP"
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hidden": true,
+              "name": "evaluteIsOptimization"
+            },
+            "text": true
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "outcomes",
+              "type": "",
+              "view": ""
+            },
+            "text": [
+              {
+                "outcome": "user found",
+                "order": "",
+                "open": true,
+                "isEditOn": false,
+                "tempVal": "user found",
+                "isOutcomeChangedOnce": false,
+                "conditions": [
+                  {
+                    "pills": [],
+                    "varaible": "$(n3.http.statusCode)",
+                    "condition": "==",
+                    "value": 200,
+                    "operation": "",
+                    "index": "r5bwh645"
+                  }
+                ],
+                "index": "27i3e4ba"
+              }
+            ]
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "allConditionsFail",
+              "type": "",
+              "view": ""
+            },
+            "text": "user not found"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "expression",
+              "type": "",
+              "view": ""
+            },
+            "text": "if(\"$(n3.http.statusCode)\"  == 200){\"user found\";}else{'user not found';}"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "counter",
+              "type": "",
+              "view": ""
+            },
+            "text": 2
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "successEvents",
+              "type": "",
+              "view": ""
+            },
+            "text": [
+              "user found",
+              "user not found"
+            ]
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "nodeVersion",
+              "type": "",
+              "view": ""
+            },
+            "text": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "7",
+      "parent": "1",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "tag": "evaluate",
+        "attributes": {
+          "defaultparam": "expression",
+          "image": "evaluate.svg",
+          "key": "evaluate",
+          "label": "Evaluate",
+          "name": "Evaluate",
+          "type": "evaluate",
+          "updatedImage": "evaluate.svg",
+          "updatedimage": "evaluate.svg",
+          "updatedon": "2025-06-04T11:25:41.950",
+          "view_restrict": true
+        },
+        "children": [
+          {
+            "tag": "param",
+            "attributes": {
+              "hidden": true,
+              "name": "evaluteIsOptimization",
+              "type": "",
+              "view": ""
+            },
+            "text": true
+          },
+          {
+            "tag": "event",
+            "attributes": {
+              "name": "oninvalidchoice",
+              "targetcount": 1
+            },
+            "text": ""
+          },
+          {
+            "tag": "event",
+            "attributes": {
+              "name": "onerror",
+              "targetcount": 1
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "expression",
+              "type": "",
+              "view": ""
+            },
+            "text": 1
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "exp",
+              "type": "",
+              "view": ""
+            },
+            "text": 1
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "isTestExecuted",
+              "type": "",
+              "view": ""
+            },
+            "text": true
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "nodeVersion",
+              "type": "",
+              "view": ""
+            },
+            "text": 1
+          },
+          {
+            "tag": "session",
+            "attributes": {
+              "action_order": 0,
+              "index": "7lolekd7",
+              "name": "status",
+              "order": 0,
+              "tag": "session",
+              "type": "onenter"
+            },
+            "text": "success"
+          },
+          {
+            "tag": "session",
+            "attributes": {
+              "action_order": 0,
+              "index": "yumupupq",
+              "name": "transactions",
+              "order": 1,
+              "tag": "session",
+              "type": "onenter"
+            },
+            "text": "$(n3.last_transactions)"
+          },
+          {
+            "tag": "session",
+            "attributes": {
+              "action_order": 0,
+              "index": "tuoj72u8",
+              "name": "message",
+              "order": 2,
+              "tag": "session",
+              "type": "onenter"
+            },
+            "text": "transactions fetched successfully"
+          }
+        ]
+      }
+    },
+    {
+      "id": "8",
+      "parent": "1",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "tag": "evaluate",
+        "attributes": {
+          "defaultparam": "expression",
+          "image": "evaluate.svg",
+          "key": "evaluate",
+          "label": "Evaluate",
+          "name": "Evaluate",
+          "type": "evaluate",
+          "updatedImage": "evaluate.svg",
+          "updatedimage": "evaluate.svg",
+          "updatedon": "2025-06-04T11:25:49.941",
+          "view_restrict": true
+        },
+        "children": [
+          {
+            "tag": "param",
+            "attributes": {
+              "hidden": true,
+              "name": "evaluteIsOptimization",
+              "type": "",
+              "view": ""
+            },
+            "text": true
+          },
+          {
+            "tag": "event",
+            "attributes": {
+              "name": "oninvalidchoice",
+              "targetcount": 1
+            },
+            "text": ""
+          },
+          {
+            "tag": "event",
+            "attributes": {
+              "name": "onerror",
+              "targetcount": 1
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "expression",
+              "type": "",
+              "view": ""
+            },
+            "text": 1
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "exp",
+              "type": "",
+              "view": ""
+            },
+            "text": 1
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "isTestExecuted",
+              "type": "",
+              "view": ""
+            },
+            "text": true
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "nodeVersion",
+              "type": "",
+              "view": ""
+            },
+            "text": 1
+          },
+          {
+            "tag": "session",
+            "attributes": {
+              "action_order": 0,
+              "index": "2berxa3a",
+              "name": "status",
+              "order": 0,
+              "tag": "session",
+              "type": "onenter"
+            },
+            "text": "failure"
+          },
+          {
+            "tag": "session",
+            "attributes": {
+              "action_order": 0,
+              "index": "d5eemc6u",
+              "name": "message",
+              "order": 1,
+              "tag": "session",
+              "type": "onenter"
+            },
+            "text": "user not found"
+          }
+        ]
+      }
+    },
+    {
+      "id": "5128009",
+      "parent": "1",
+      "vertex": false,
+      "edge": true,
+      "source": "2",
+      "target": "3",
+      "value": {
+        "duplicatetarget": false,
+        "label": "onBegin",
+        "name": "onbegin",
+        "optionNodeType": "default",
+        "porttype": "MP",
+        "type": "EDGE",
+        "value": "onbegin"
+      }
+    },
+    {
+      "id": "5128023",
+      "parent": "1",
+      "vertex": false,
+      "edge": true,
+      "source": "3",
+      "target": "5",
+      "value": {
+        "duplicatetarget": false,
+        "label": "onSuccess",
+        "name": "oncomplete",
+        "optionNodeType": "default",
+        "porttype": "MP",
+        "type": "EDGE",
+        "value": "oncomplete"
+      }
+    },
+    {
+      "id": "5128030",
+      "parent": "1",
+      "vertex": false,
+      "edge": true,
+      "source": "5",
+      "target": "7",
+      "value": {
+        "duplicatetarget": false,
+        "edgeConfig": "$(name)",
+        "label": "user found",
+        "name": "user found",
+        "optionNodeType": "option",
+        "porttype": "MP",
+        "type": "EDGE",
+        "value": "user found"
+      }
+    },
+    {
+      "id": "5128035",
+      "parent": "1",
+      "vertex": false,
+      "edge": true,
+      "source": "5",
+      "target": "8",
+      "value": {
+        "duplicatetarget": false,
+        "edgeConfig": "$(name)",
+        "label": "user not found",
+        "name": "user not found",
+        "optionNodeType": "option",
+        "porttype": "MP",
+        "type": "EDGE",
+        "value": "user not found"
+      }
+    }
+  ],
+  "customVariables": [
+    {
+      "name": "status",
+      "value": "",
+      "type": "default"
+    },
+    {
+      "name": "transactions",
+      "value": "",
+      "type": "default"
+    },
+    {
+      "name": "message",
+      "value": "",
+      "type": "default"
+    }
+  ],
+  "outcomes": [
+    {
+      "id": 1,
+      "order": 0,
+      "name": 100,
+      "value": "Last executed node event",
+      "tag": 15,
+      "tagName": "Last Execution Status",
+      "type": "default",
+      "notification": {
+        "method": "get",
+        "headers": "[redacted]",
+        "payload": {
+          "transactionID": "$(transid)",
+          "status": "$(n3.status)",
+          "message": "$(message)",
+          "transactions": "$(n3.last_transactions)"
+        },
+        "payloadType": 1,
+        "custompayload": "{\n    \"transactionID\": \"$(transid)\",\n    \"flowname\": \"$(flowname)\",\n    \"serviceName\": \"$(serviceName)\",\n    \"statuscode\": \"1000\",\n    \"status\" : \"$(status)\",\n    \"message\" : \"$(message)\",\n    \"transactions\" : $(transactions)\n}",
+        "notificationType": -2
+      },
+      "isNotify": true,
+      "statusCode": "All status codes"
+    },
+    {
+      "id": 2,
+      "order": 1,
+      "name": 101,
+      "value": "Successfully completed flow",
+      "tag": 11,
+      "tagName": "Success",
+      "type": "default",
+      "notification": null,
+      "isNotify": false,
+      "statusCode": null
+    },
+    {
+      "id": 3,
+      "order": 2,
+      "name": 102,
+      "value": "Flow completed with an error",
+      "tag": 12,
+      "tagName": "Error",
+      "type": "default",
+      "notification": null,
+      "isNotify": false,
+      "statusCode": null
+    },
+    {
+      "id": 4,
+      "order": 3,
+      "name": 103,
+      "value": "Flow ended due to an interruption",
+      "tag": 13,
+      "tagName": "Incomplete",
+      "type": "default",
+      "notification": null,
+      "isNotify": false,
+      "statusCode": null
+    }
+  ],
+  "label": "Fetch Recent Transactions.workflow",
+  "observed_at": "2026-09-09T00:00:57.584Z",
+  "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model",
+  "runtime_tested": false,
+  "redactions": "Header credentials and URL hosts redacted. Internal model properties are evidence, not a public import API."
+}

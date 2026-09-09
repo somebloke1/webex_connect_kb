@@ -1,0 +1,40 @@
+{
+  "category": "Webex Connect and Cisco Contact Center Enterprise System (CCE)",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257964",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "485d4a4bf607d2dcab3e7cb5ac440e1b49a7f38d3ec9d92b8d55c7139202dbe8",
+    "source_path": "39170a390d290092f6c7bf1396f56b61efbc4db6e13ce389e6f0905d22ef9037",
+    "text_path": "3d40c98df509faa59369522d0ad9b45291801197506287b199369f8d70db3165"
+  },
+  "headings": [
+    "WhatsApp Data Localization",
+    "Localized Data",
+    "Updating Local Storage",
+    "Updating Local Storage for New Asset",
+    "Updating local storage of an Existing Asset",
+    "🚧Alert",
+    "📘Note",
+    ""
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/cce-local-storage.md",
+  "resolved_url": "https://help.webexconnect.io/docs/cce-local-storage",
+  "retrieved_at": "2026-09-08T23:29:21+00:00",
+  "sha256_html_response": "48d1c5aa4fc822a8438cfe9a9b60ddca90aec98bb104562a8da2cb63fc4110b6",
+  "sha256_source_body": "39170a390d290092f6c7bf1396f56b61efbc4db6e13ce389e6f0905d22ef9037",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/cce-local-storage.source.md",
+  "source_updated_at": "2026-04-14T07:35:48.010Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/cce-local-storage.txt",
+  "title": "Local Storage - CCE",
+  "url": "https://help.webexconnect.io/docs/cce-local-storage",
+  "word_count": 713,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/cce-local-storage.metadata.json"
+}

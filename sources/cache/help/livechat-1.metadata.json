@@ -1,0 +1,36 @@
+{
+  "category": "Webex Engage Standalone Nodes",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257975",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "4b9933049defad4c92c4f733f5aec9fcb6ef7b21fad20083282a1509f5b17ac3",
+    "source_path": "c533bac7cd65400c3b9d46226f020528aa45201586ded05f698adce1d04dcf59",
+    "text_path": "0b69338c4b563959a5a0440effbef3e02e985c266c53f48e9175abd2b2e36ac3"
+  },
+  "headings": [
+    "➡️ Inbound Messages",
+    "⬅️ Outbound Messages",
+    "↩️ Announcement",
+    "Markdown Cheat Sheet"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/livechat-1.md",
+  "resolved_url": "https://help.webexconnect.io/docs/livechat-1",
+  "retrieved_at": "2026-09-08T23:29:28+00:00",
+  "sha256_html_response": "752d2921b4ac2b7f260b4a07efb71df3d2ea3c4be50ee0e7f626061d28ddb4e1",
+  "sha256_source_body": "c533bac7cd65400c3b9d46226f020528aa45201586ded05f698adce1d04dcf59",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/livechat-1.source.md",
+  "source_updated_at": "2026-04-14T07:46:22.970Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/livechat-1.txt",
+  "title": "Message Schema - Livechat - WxEngage standalone",
+  "url": "https://help.webexconnect.io/docs/livechat-1",
+  "word_count": 786,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/livechat-1.metadata.json"
+}

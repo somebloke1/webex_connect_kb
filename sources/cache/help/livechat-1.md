@@ -1,0 +1,388 @@
+# Message Schema - Livechat - WxEngage standalone
+
+Source: https://help.webexconnect.io/docs/livechat-1
+Documentation version: 6.20.0
+Retrieved: 2026-09-08T23:29:28+00:00
+
+## ➡️ Inbound Messages
+
+```json text
+{
+    "aliasId": "6ee6ce94-9940-44a6-a017-d99ed4d97dd7",
+    "direction": "inbound",
+    "type": "text",
+    "text": "Hi there, this is a sample inbound text containing credit card info: XXXX XXXX XXXX XXXX",
+    "timestamp": "2019-08-24T14:15:22Z",
+    "redacted": false
+}
+```
+```json text-with-attachments
+{
+    "aliasId": "6ee6ce94-9940-44a6-a017-d99ed4d97dd7",
+    "direction": "inbound",
+    "type": "text-with-attachments",
+    "text": "Hi there, this is a sample inbound text containing credit card info: XXXX XXXX XXXX XXXX",
+    "attachments": [
+        {
+            "mimeType": "image/png",
+            "fileName": "SampleImage.png",
+            "fileUrl": "https://example.com/sample-image.png",
+            "dropped": false
+        },
+        {
+            "mimeType": "application/pdf",
+            "fileName": "SampleFile.pdf",
+            "fileUrl": "",
+            "dropped": true
+        }
+    ],
+    "timestamp": "2019-08-24T14:15:22Z",
+    "redacted": false
+}
+```
+```json lc-carousel-response
+{
+    "aliasId": "cb1da0b6-0a9f-4c22-805e-a084ffa50dce",
+    "direction": "inbound",
+    "type": "lc-carousel-response",
+    "lcCarouselResponse": {
+        "identifier": "<UUID>",
+        "reference": "Sample carousel",
+        "title": "Button 1"
+    },
+    "timestamp": "2019-08-24T14:15:22Z",
+    "redacted": false
+}
+```
+```json lc-quick-replies-response
+{
+    "aliasId": "29a9da1c-4419-42ad-888d-329fb259356d",
+    "direction": "inbound",
+    "type": "lc-quick-replies-response",
+    "lcQuickRepliesResponse": {
+        "identifier": "<UUID>",
+        "reference": "Sample quick replies",
+        "title": "Button 1",
+        "payload": "DEVELOPER_DEFINED_PAYLOAD"
+    },
+    "timestamp": "2019-08-24T14:15:22Z",
+    "redacted": false
+}
+```
+```json lc-form-response
+{
+    "aliasId": "47000fcf-4310-48f1-b1f5-cf3a278ae6b1",
+    "direction": "inbound",
+    "type": "lcFormResponse",
+    "lcFormResponse": {
+        "title": "Hi there, please answer the questions below and we will connect you",
+        "fields": [
+            {
+                "label": "Full Name",
+                "name": "fullName",
+                "type": "text",
+                "value": "John Doe"
+            },
+            {
+                "label": "Category",
+                "name": "category",
+                "type": "dropdown",
+                "value": "Sales"
+            }
+        ]
+    },
+    "timestamp": "2019-08-24T14:15:22Z",
+    "redacted": false
+}
+```
+
+## ⬅️ Outbound Messages
+
+```json text
+{
+    "aliasId": "6ee6ce94-9940-44a6-a017-d99ed4d97dd7",
+    "direction": "outbound",
+    "type": "text",
+    "text": "Hi there, this is a sample outbound text containing credit card info: XXXX XXXX XXXX XXXX",
+    "timestamp": "2019-08-24T14:15:22Z",
+    "redacted": false,
+    "attemptGwDelivery": true
+}
+```
+```json text-with-attachments
+{
+    "aliasId": "6ee6ce94-9940-44a6-a017-d99ed4d97dd7",
+    "direction": "outbound",
+    "type": "text-with-attachments",
+    "text": "Hi there, this is a sample outbound text containing credit card info: XXXX XXXX XXXX XXXX",
+    "attachments": [
+        {
+            "mimeType": "image/png",
+            "fileName": "SampleImage.png",
+            "fileUrl": "https://example.com/sample-image.png",
+            "dropped": false
+        },
+        {
+            "mimeType": "application/pdf",
+            "fileName": "SampleFile.pdf",
+            "fileUrl": "",
+            "dropped": true
+        }
+    ],
+    "timestamp": "2019-08-24T14:15:22Z",
+    "redacted": false,
+    "attemptGwDelivery": true
+}
+```
+```json text-with-lc-carousel
+{
+    "aliasId": "37405482-4c19-4b06-9a69-9238720d617f",
+    "direction": "outbound",
+    "type": "text-with-lc-carousel",
+    "text": "Sample LC carousel text message",
+    "lcCarousel": {
+        "reference": "Sample LC carousel",
+        "elements": [
+            {
+                "title": "Sample Title 1 webUrl and payload",
+                "subtitle": "Sample Subtitle",
+                "imageUrls": [
+                    "https://i.imgur.com/V2RpIfV.jpg",
+                    "https://i.imgur.com/V2RpIfV.jpg"
+                ],
+                "buttons": [
+                    {
+                        "identifier": "<uuid>",
+                        "type": "webUrl",
+                        "url": "https://i.imgur.com/3GbZCSPb.jpg",
+                        "title": "View Website1"
+                    },
+                    {
+                        "identifier": "<uuid>",
+                        "type": "templatePostback",
+                        "title": "Start Chatting",
+                        "payload": "DEVELOPER_DEFINED_PAYLOAD"
+                    }
+                ]
+            },
+            {
+                "title": "Sample Title 2 only one webUrl one button",
+                "subtitle": "Sample Subtitle",
+                "imageUrls": [
+                    "https://i.imgur.com/V2RpIfV.jpg",
+                    "https://i.imgur.com/V2RpIfV.jpg"
+                ],
+                "buttons": [
+                    {
+                        "identifier": "<uuid>",
+                        "type": "webUrl",
+                        "url": "https://i.imgur.com/3GbZCSPb.jpg",
+                        "title": "View Website1"
+                    }
+                ]
+            },
+            {
+                "title": "Sample Title 3 only one templatePostback one button",
+                "subtitle": "Sample Subtitle",
+                "imageUrls": [
+                    "https://i.imgur.com/wNod4Ss.gif"
+                ],
+                "buttons": [
+                    {
+                        "identifier": "<uuid>",
+                        "type": "templatePostback",
+                        "title": "Start Chatting",
+                        "payload": "DEVELOPER_DEFINED_PAYLOAD"
+                    }
+                ]
+            },
+            {
+                "title": "Sample Title 4 all webUrl",
+                "subtitle": "Sample Subtitle",
+                "imageUrls": [
+                    "https://i.imgur.com/V2RpIfV.jpg",
+                    "https://i.imgur.com/V2RpIfV.jpg"
+                ],
+                "buttons": [
+                    {
+                        "identifier": "<uuid>",
+                        "type": "webUrl",
+                        "url": "https://image.shutterstock.com/image-photo/bright-summer-meadow-flowers-beautiful-260nw-689913652.jpg",
+                        "title": "View Website1"
+                    },
+                    {
+                        "identifier": "<uuid>",
+                        "type": "webUrl",
+                        "url": "https://image.shutterstock.com/image-photo/closeup-summer-nature-landscape-inspirational-600w-595765205.jpg",
+                        "title": "View Website2"
+                    },
+                    {
+                        "identifier": "<uuid>",
+                        "type": "webUrl",
+                        "url": "https://image.shutterstock.com/image-illustration/architectural-interior-pattern-white-yellow-600w-1109193374.jpg",
+                        "title": "View Website2"
+                    }
+                ]
+            },
+            {
+                "title": "Sample Title 5 all templatePostback",
+                "subtitle": "Sample Subtitle",
+                "imageUrls": [
+                    "https://i.imgur.com/V2RpIfV.jpg",
+                    "https://i.imgur.com/V2RpIfV.jpg"
+                ],
+                "buttons": [
+                    {
+                        "identifier": "<uuid>",
+                        "type": "templatePostback",
+                        "title": "General Queries",
+                        "payload": "DEVELOPER_DEFINED_PAYLOAD1"
+                    },
+                    {
+                        "identifier": "<uuid>",
+                        "type": "templatePostback",
+                        "title": "Account Details",
+                        "payload": "DEVELOPER_DEFINED_PAYLOAD2"
+                    },
+                    {
+                        "identifier": "<uuid>",
+                        "type": "templatePostback",
+                        "title": "Branch Timings",
+                        "payload": "DEVELOPER_DEFINED_PAYLOAD3"
+                    }
+                ]
+            },
+            {
+                "title": "Sample Title 6 only two buttons",
+                "subtitle": "Sample Subtitle",
+                "imageUrls": [
+                    "https://i.imgur.com/V2RpIfV.jpg",
+                    "https://i.imgur.com/V2RpIfV.jpg"
+                ],
+                "buttons": [
+                    {
+                        "identifier": "<uuid>",
+                        "type": "webUrl",
+                        "url": "https://i.imgur.com/3GbZCSPb.jpg",
+                        "title": "View Website1"
+                    },
+                    {
+                        "identifier": "<uuid>",
+                        "type": "templatePostback",
+                        "title": "Start Chatting",
+                        "payload": "DEVELOPER_DEFINED_PAYLOAD"
+                    }
+                ]
+            },
+            {
+                "title": "Sample Title 7 one webUrl two templatePostback",
+                "subtitle": "Sample Subtitle",
+                "imageUrls": [
+                    "https://i.imgur.com/V2RpIfV.jpg",
+                    "https://i.imgur.com/V2RpIfV.jpg"
+                ],
+                "buttons": [
+                    {
+                        "identifier": "<uuid>",
+                        "type": "webUrl",
+                        "url": "https://image.shutterstock.com/image-photo/image-front-sports-car-scene-600w-566330083.jpg",
+                        "title": "View Website1"
+                    },
+                    {
+                        "identifier": "<uuid>",
+                        "type": "templatePostback",
+                        "title": "Start Chatting 1",
+                        "payload": "DEVELOPER_DEFINED_PAYLOAD 1"
+                    },
+                    {
+                        "identifier": "<uuid>",
+                        "type": "templatePostback",
+                        "title": "Start Chatting 2",
+                        "payload": "DEVELOPER_DEFINED_PAYLOAD 2"
+                    }
+                ]
+            },
+            {
+                "title": "Sample Title 8 one templatePostback two webUrl",
+                "subtitle": "Sample Subtitle",
+                "imageUrls": [
+                    "https://i.imgur.com/V2RpIfV.jpg",
+                    "https://i.imgur.com/V2RpIfV.jpg"
+                ],
+                "buttons": [
+                    {
+                        "identifier": "<uuid>",
+                        "type": "templatePostback",
+                        "title": "Postback 1",
+                        "payload": "DEVELOPER_DEFINED_PAYLOAD 11"
+                    },
+                    {
+                        "identifier": "<uuid>",
+                        "type": "templatePostback",
+                        "title": "Postback 2",
+                        "payload": "DEVELOPER_DEFINED_PAYLOAD 22"
+                    },
+                    {
+                        "identifier": "<uuid>",
+                        "type": "webUrl",
+                        "title": "View Website",
+                        "url": "https://image.shutterstock.com/image-illustration/high-speed-luxury-sedan-driving-600w-1171714909.jpg"
+                    }
+                ]
+            }
+        ]
+    },
+    "timestamp": "2019-08-24T14:15:22Z",
+    "redacted": false,
+    "attemptGwDelivery": true
+}
+```
+```json text-with-lc-quick-replies
+{
+    "aliasId": "e391db11-7a46-4a64-a069-c393146b5bd2",
+    "direction": "outbound",
+    "type": "text-with-lc-quick-replies",
+    "text": "Hi there, this is a sample text with LC quick replies",
+    "lcQuickReplies": {
+        "reference": "Sample quick replies",
+        "options": [
+            {
+                "identifier": "<uuid",
+                "type": "quickReplyPostback",
+                "title": "Button 1",
+                "payload": "string"
+            },
+            {
+                "identifier": "<uuid",
+                "type": "quickReplyPostback",
+                "title": "Button 2",
+                "payload": "string"
+            }
+        ]
+    },
+    "timestamp": "2019-08-24T14:15:22Z",
+    "redacted": false,
+    "attemptGwDelivery": true
+}
+```
+
+## ↩️ Announcement
+
+Announcements support markdown content. Refer to the cheat sheet below:
+
+```json announcement
+{
+    "aliasId": "6ee6ce94-9940-44a6-a017-d99ed4d97dd7",
+    "direction": "announcement",
+    "type": "text",
+    "text": "Sample **Announcement**",
+    "timestamp": "2019-08-24T14:15:22Z"
+}
+```
+
+## Markdown Cheat Sheet
+
+| Formatting | Synax                                       |
+| :--------- | :------------------------------------------ |
+| Bold       | Embed within double star symbols (\*\*)     |
+| Italics    | Embed within single underscore symbols (\_) |

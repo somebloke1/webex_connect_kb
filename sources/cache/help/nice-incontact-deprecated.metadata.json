@@ -1,0 +1,33 @@
+{
+  "category": "PreBUILT Integrations",
+  "deprecated": true,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182578f2",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "8456bd5167c8f7f52fbe074f3315b67dcc0be02b17be6a30ba50ea87a81bff2e",
+    "source_path": "64a7f33d7d71dd2cbda915b8a4d1adfd62eb8125108585d636dd4c10bea00cf5",
+    "text_path": "f72e4b21e5a3e91ff51d94b4277ce9e523fda41f6b1b81ff25e2b3d7021fe35d"
+  },
+  "headings": [
+    "❗️Deprecation Alert"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/nice-incontact-deprecated.md",
+  "resolved_url": "https://help.webexconnect.io/docs/nice-incontact-deprecated",
+  "retrieved_at": "2026-09-08T23:29:11+00:00",
+  "sha256_html_response": "0209ff447446f93fdcd758c376a8a2085aefe619467267affbc531b0611f51f7",
+  "sha256_source_body": "64a7f33d7d71dd2cbda915b8a4d1adfd62eb8125108585d636dd4c10bea00cf5",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/nice-incontact-deprecated.source.md",
+  "source_updated_at": "2026-02-04T13:10:30.118Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/nice-incontact-deprecated.txt",
+  "title": "Nice inContact - Deprecated",
+  "url": "https://help.webexconnect.io/docs/nice-incontact-deprecated",
+  "word_count": 348,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/nice-incontact-deprecated.metadata.json"
+}

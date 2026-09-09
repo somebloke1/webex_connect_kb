@@ -1,0 +1,38 @@
+{
+  "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd81825798c",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "3eb5bbc2890aeaffb532805f40764cd5afad204823421a41d0284670eb5961fb",
+    "source_path": "dc1144a279db52a1d31ee8b1b56fb4be4c0e4fdcdc623fcead064bdc2d2e4074",
+    "text_path": "106211a1ecd27d5501895e0edc6f1d998c65f5916a6d40fde57e9c7e27a21147"
+  },
+  "headings": [
+    "FBM Inbound Message Flow with bot nodes",
+    "Use case description",
+    "Understanding Flow Logic",
+    "Conversation closed",
+    "Processing bot response",
+    "Livechat Inbound Message Flow with bot nodes"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/configuring-flows-with-ai-agent-node.md",
+  "resolved_url": "https://help.webexconnect.io/docs/configuring-flows-with-ai-agent-node",
+  "retrieved_at": "2026-09-08T23:28:45+00:00",
+  "sha256_html_response": "2a7dccb98bfee44eed96a3fa54285b019c694cb6bcd247430cb581035dfa1a42",
+  "sha256_source_body": "dc1144a279db52a1d31ee8b1b56fb4be4c0e4fdcdc623fcead064bdc2d2e4074",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/configuring-flows-with-ai-agent-node.source.md",
+  "source_updated_at": "2026-04-15T12:00:35.246Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/configuring-flows-with-ai-agent-node.txt",
+  "title": "Configuring flows with AI Agent Node - WXCC",
+  "url": "https://help.webexconnect.io/docs/configuring-flows-with-ai-agent-node",
+  "word_count": 1340,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/configuring-flows-with-ai-agent-node.metadata.json"
+}

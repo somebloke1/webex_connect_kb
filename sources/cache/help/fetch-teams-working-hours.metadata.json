@@ -1,0 +1,35 @@
+{
+  "category": "Webex Engage Standalone Nodes",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd81825797f",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "a4cde2b958fc79f7bb44de95c800c9a6a868950071666c8d2eb95a7f815024cd",
+    "source_path": "8f8d5953562dd0d3a70cc0092fa6fc7433a3ca32e58d8a372612a78250262db4",
+    "text_path": "b372d1f2493b34a80637b9a734e0f82dc8a9281574fb71734c4bd36e4efd41f5"
+  },
+  "headings": [
+    "Configuration",
+    "Output variables",
+    "Node outcomes"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/fetch-teams-working-hours.md",
+  "resolved_url": "https://help.webexconnect.io/docs/fetch-teams-working-hours",
+  "retrieved_at": "2026-09-08T23:29:29+00:00",
+  "sha256_html_response": "1bf29fa37467efcbeb02ab7ad8d1ea0597f30b62899d620a721a5c95c4d4def2",
+  "sha256_source_body": "8f8d5953562dd0d3a70cc0092fa6fc7433a3ca32e58d8a372612a78250262db4",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/fetch-teams-working-hours.source.md",
+  "source_updated_at": "2026-04-14T07:47:39.827Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/fetch-teams-working-hours.txt",
+  "title": "Fetch Team's working hours - WxEngage standalone",
+  "url": "https://help.webexconnect.io/docs/fetch-teams-working-hours",
+  "word_count": 347,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/fetch-teams-working-hours.metadata.json"
+}

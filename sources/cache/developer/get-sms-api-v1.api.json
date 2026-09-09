@@ -1,0 +1,110 @@
+{
+  "api": {
+    "method": "get",
+    "url": "/(/message/{id}",
+    "auth": "required",
+    "results": {
+      "codes": [
+        {
+          "name": "",
+          "code": "{\n    \"clientId\": 1117,\n    \"toType\": \"msisdn\",\n    \"numSegments\": \"1\",\n    \"requestTimestamp\": \"2020-04-09T09:46:37.897Z\",\n    \"groupId\": 1387,\n    \"channel\": \"sms\",\n    \"messageId\": \"6173724b-c850-42b0-b9d7-eac73de28e95\",\n    \"requestedReceipts\": [],\n    \"version\": \"2.0\",\n    \"content\": {\n        \"text\": \"Here+is+a+message\",\n        \"type\": \"text\"\n    },\n    \"teamId\": 1992,\n    \"callbackData\": \"<notify data>\",\n    \"options\": {\n        \"trackOpens\": false,\n        \"smsFallback\": false,\n        \"bypassSuppression\": false,\n        \"domain\": \"https://sstg.imiconnect.net\",\n        \"trackClicks\": true,\n        \"shortenLinks\": true\n    },\n    \"notifyUrl\": \"https://webhook.site/f6fbab37-6d59-4fec-913a-021db78ce43b\",\n    \"from\": \"CONNCT\",\n    \"correlationId\": \"sit\",\n    \"to\": \"447500661610\",\n    \"direction\": \"outbound\",\n    \"status\": \"Submitted\"\n}",
+          "language": "json",
+          "status": 200
+        },
+        {
+          "name": null,
+          "code": "{}",
+          "language": "json",
+          "status": 404
+        },
+        {
+          "code": "",
+          "language": "text",
+          "status": 429
+        },
+        {
+          "code": "",
+          "language": "text",
+          "status": 401
+        },
+        {
+          "code": "",
+          "language": "text",
+          "status": 405
+        }
+      ]
+    },
+    "params": [
+      {
+        "name": "Content-Type",
+        "type": "string",
+        "enumValues": "",
+        "default": "application/json",
+        "desc": "",
+        "required": false,
+        "in": "body",
+        "ref": "",
+        "_id": "66b24f204c74360051431fa8",
+        "id": "66b24f204c74360051431fa8"
+      },
+      {
+        "name": "key",
+        "type": "string",
+        "enumValues": "",
+        "default": "",
+        "desc": "Applicable when you want to use service key for API authentication. Available under API tab within a service in your Webex Connect tenant.",
+        "required": false,
+        "in": "body",
+        "ref": "",
+        "_id": "66b24f204c74360051431fa7",
+        "id": "66b24f204c74360051431fa7"
+      },
+      {
+        "name": "Authorization",
+        "type": "string",
+        "enumValues": "",
+        "default": "",
+        "desc": "Bearer {{token}}.. Applicable if you want to use JWT tokens for API authentication. Use either of 'key' or 'Authorization' header param.",
+        "required": false,
+        "in": "body",
+        "ref": "",
+        "_id": "66b24f204c74360051431fa6",
+        "id": "66b24f204c74360051431fa6"
+      }
+    ],
+    "examples": {
+      "codes": []
+    },
+    "apiSetting": "6a675233ec1c893d8a7f6823"
+  },
+  "swagger": null,
+  "oas_public_id": "@imiconnect-apis/v6.20.0#c0q048colzd3y8xj",
+  "selected_openapi": {
+    "openapi": "3.1.0",
+    "info": {
+      "title": "Get SMS v1 New",
+      "version": "6.20.0"
+    },
+    "servers": [
+      {
+        "url": "https://api.{YourRegion}.webexconnect.io/v1/sms/messages/",
+        "variables": {
+          "YourRegion": {
+            "default": "YourRegion"
+          }
+        }
+      }
+    ],
+    "security": [
+      {}
+    ],
+    "path": "/(/message/{id}",
+    "method": "get",
+    "path_parameters": [],
+    "operation": {},
+    "components": {
+      "securitySchemes": {}
+    },
+    "operation_status": "not_present_in_supplied_openapi"
+  }
+}

@@ -1,0 +1,1111 @@
+# Retrieve information on any recordings taken during a call
+
+Source: https://developers.webexconnect.io/reference/sandbox-get_v1-voice-calls-sessionid-recordings
+Documentation version: 6.20.0
+Retrieved: 2026-09-08T23:31:40+00:00
+
+> 📘 Note:
+> 
+> New Sandbox API endpoint: <https://api.us.webexconnect.io/v1/voice/calls/{sessionId}/recordings>
+
+## API reference metadata
+
+These are source metadata and examples. `api.auth` is ReadMe metadata; verify authentication in the documented headers/security scheme.
+
+```json
+{
+  "method": "get",
+  "url": "",
+  "auth": "required",
+  "params": [],
+  "results": {
+    "codes": []
+  },
+  "apiSetting": "6a675233ec1c893d8a7f67c7"
+}
+```
+
+## OpenAPI operation and component schemas
+
+```json
+{
+  "openapi": "3.0.0",
+  "info": {
+    "version": "1",
+    "title": "Voice API",
+    "description": ""
+  },
+  "servers": [
+    {
+      "url": "https://api-sandbox.imiconnect.io"
+    }
+  ],
+  "security": null,
+  "path": "/v1/voice/calls/{sessionId}/recordings",
+  "method": "get",
+  "path_parameters": [],
+  "operation": {
+    "tags": [
+      "Voice"
+    ],
+    "security": [
+      {
+        "BearerToken": []
+      }
+    ],
+    "summary": "Retrieve information on any recordings taken during a call",
+    "parameters": [
+      {
+        "$ref": "#/components/parameters/SessionId"
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Call recordings",
+        "headers": {
+          "Request-Id": {
+            "$ref": "#/components/headers/RequestId"
+          }
+        },
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/CallRecordingsResponse"
+            }
+          }
+        }
+      },
+      "404": {
+        "headers": {
+          "Request-Id": {
+            "$ref": "#/components/headers/RequestId"
+          }
+        },
+        "description": "Session ID not found"
+      }
+    }
+  },
+  "components": {
+    "parameters": {
+      "IdempotencyKey": {
+        "name": "Idempotency-Key",
+        "in": "header",
+        "required": true,
+        "schema": {
+          "type": "string",
+          "maxLength": 64,
+          "pattern": "^[\\w=\\-]+$"
+        },
+        "example": "5a38810a-acc0-4f5e-851f-95c02e03930c",
+        "description": "An optional user provided value that is used to prevent duplicate requests.  API requests with an Idempotency-Key value that has been used in the previous 1 hours will be rejected as a duplicate request."
+      },
+      "SessionId": {
+        "in": "path",
+        "name": "sessionId",
+        "schema": {
+          "type": "string"
+        },
+        "required": true,
+        "example": "1da5e55c-52e4-4054-bec4-43256dd2eb91"
+      }
+    },
+    "headers": {
+      "RequestId": {
+        "schema": {
+          "type": "string"
+        },
+        "example": "ca44810a-acc0-4f5e-851f-95c02e03110a",
+        "description": "Unique ID that identifies this HTTP request."
+      }
+    },
+    "securitySchemes": {
+      "BearerToken": {
+        "type": "http",
+        "scheme": "bearer",
+        "description": "Authorization token (this can be either a JWT signed by a secret key or a service key)"
+      }
+    },
+    "schemas": {
+      "CallRecordingsResponse": {
+        "type": "object",
+        "properties": {
+          "sessionId": {
+            "type": "string",
+            "example": "1da5e55c-52e4-4054-bec4-43256dd2eb91"
+          },
+          "recordings": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "object",
+              "properties": {
+                "durationSeconds": {
+                  "type": "integer",
+                  "example": 609,
+                  "description": "Length of the recording in seconds"
+                },
+                "url": {
+                  "type": "string",
+                  "format": "URL",
+                  "example": "https://myapihost.com/v3/voice/calls/1da5e55c-52e4-4054-bec4-43256dd2eb91/recordings/filename_123_456.wav"
+                }
+              }
+            }
+          }
+        }
+      },
+      "CallStatus": {
+        "description": "Individual call status",
+        "type": "object",
+        "properties": {
+          "sessionId": {
+            "type": "string",
+            "example": "1da5e55c-52e4-4054-bec4-43256dd2eb91"
+          },
+          "callerId": {
+            "type": "string",
+            "format": "E.164",
+            "description": "The calling party number used when placing the call to the dialed number",
+            "example": "+15615551212"
+          },
+          "dialedNumber": {
+            "type": "string",
+            "format": "E.164",
+            "description": "The number that the call was placed to",
+            "example": "+19545551212"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "COMPLETED",
+              "QUEUED",
+              "FAILED"
+            ]
+          },
+          "correlationId": {
+            "type": "string",
+            "description": "User provided correlation ID that was provided with the initial API request",
+            "example": "customer12345"
+          },
+          "durationSeconds": {
+            "type": "integer",
+            "example": 305,
+            "description": "How long the call was connected for"
+          },
+          "offeredTime": {
+            "type": "string",
+            "example": "2021-06-01T12:30:13.495Z",
+            "description": "Time when the call was initiatied"
+          },
+          "answeredTime": {
+            "type": "string",
+            "example": "2021-06-01T12:30:16.950Z",
+            "description": "Time when the call was answered"
+          }
+        }
+      },
+      "NewCallRequest": {
+        "required": [
+          "callerId",
+          "dialedNumber",
+          "callbackUrl"
+        ],
+        "type": "object",
+        "description": "Request body for invoking a new call",
+        "properties": {
+          "callerId": {
+            "type": "string",
+            "format": "E.164",
+            "description": "The calling party number to use when placing the call to the dialed number",
+            "example": "+15615551212"
+          },
+          "dialedNumber": {
+            "type": "string",
+            "format": "E.164",
+            "description": "Number to dial and start call sessions with.",
+            "example": "+15615552424"
+          },
+          "callbackUrl": {
+            "type": "string",
+            "format": "URL",
+            "example": "https://developer.site.com/webhook",
+            "description": "URL for event callbacks that will provide the next actions for the call"
+          },
+          "recordCallSeconds": {
+            "type": "integer",
+            "description": "If present and a positive value, record the call for this many seconds.  A value of 0 means to record until the end of the call."
+          },
+          "detectVoiceMail": {
+            "type": "boolean",
+            "default": false,
+            "description": "Not supported currently."
+          },
+          "correlationId": {
+            "type": "string",
+            "example": "myownID12345",
+            "description": "A user-provided arbitrary string value that will be stored with the call status and sent in all callback events."
+          }
+        }
+      },
+      "NewVoiceMessage": {
+        "required": [
+          "callerId",
+          "dialedNumber",
+          "audio"
+        ],
+        "type": "object",
+        "description": "Request body for invoking a new voice message",
+        "properties": {
+          "callerId": {
+            "type": "string",
+            "format": "E.164",
+            "description": "The calling party number to use when placing the call to the dialed number",
+            "example": "+15615551212"
+          },
+          "dialedNumber": {
+            "type": "string",
+            "format": "E.164",
+            "description": "number to dial and start call sessions with.",
+            "example": "+15615552424"
+          },
+          "callbackUrl": {
+            "type": "string",
+            "format": "URL",
+            "example": "https://developer.site.com/webhook",
+            "description": "URL for sending notifications after call gets completed or failed"
+          },
+          "correlationId": {
+            "type": "string",
+            "example": "myownID12345",
+            "description": "A user-provided arbitrary string value that will be stored with the call status and sent in all callback events."
+          },
+          "audio": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/TtsAudioObject"
+              },
+              {
+                "$ref": "#/components/schemas/MediaAudioObject"
+              },
+              {
+                "$ref": "#/components/schemas/UrlAudioObject"
+              }
+            ]
+          }
+        }
+      },
+      "NewCallStatus": {
+        "type": "object",
+        "properties": {
+          "sessionId": {
+            "type": "string",
+            "description": "Unique session ID identifying this call",
+            "example": "0e36bb32-5f5d-46c9-b132-85e010a80c2a"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "QUEUED",
+              "FAILED"
+            ],
+            "example": "QUEUED"
+          }
+        }
+      },
+      "BaseEvent": {
+        "type": "object",
+        "required": [
+          "event",
+          "eventTime",
+          "sessionId"
+        ],
+        "properties": {
+          "event": {
+            "type": "string",
+            "description": "Type of event"
+          },
+          "eventTime": {
+            "type": "string",
+            "example": "2021-06-01T12:30:13.495Z",
+            "description": "Time when the event was created"
+          },
+          "sessionId": {
+            "type": "string",
+            "example": "f3f3ea62-42f3-4a2e-8b76-98617533cb31",
+            "description": "Unique ID representing a call"
+          },
+          "transactionId": {
+            "type": "string",
+            "example": "f3f3ea62-42f3-4a2e-8b76-98617533cb31",
+            "description": "Unique ID representing current transaction or menu"
+          },
+          "correlationId": {
+            "type": "string",
+            "example": "650aa5d6-4285-4aea-bc3d-f0bd94ad3d21",
+            "description": "Arbitrary value provided on initial API invocation.  This is echoed back to the event webhook for every event in a given call."
+          }
+        }
+      },
+      "CallEndpoints": {
+        "type": "object",
+        "required": [
+          "callerId",
+          "dialedNumber"
+        ],
+        "properties": {
+          "callerId": {
+            "type": "string",
+            "description": "Calling party number in E.164 format",
+            "example": "+19545551212"
+          },
+          "dialedNumber": {
+            "type": "string",
+            "description": "Called party number in E.164 format",
+            "example": "+15615552323"
+          }
+        }
+      },
+      "ErrorInfo": {
+        "type": "object",
+        "required": [
+          "code",
+          "message"
+        ],
+        "properties": {
+          "code": {
+            "type": "string",
+            "description": "Error code",
+            "example": "1200"
+          },
+          "message": {
+            "type": "string",
+            "description": "Human readable description of the error",
+            "example": "Unable to connect call"
+          }
+        }
+      },
+      "AcceptedEvent": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseEvent"
+          },
+          {
+            "$ref": "#/components/schemas/CallEndpoints"
+          },
+          {
+            "type": "object",
+            "required": [
+              "offeredTime"
+            ],
+            "properties": {
+              "event": {
+                "type": "string",
+                "enum": [
+                  "ACCEPTED"
+                ]
+              },
+              "offeredTime": {
+                "type": "string",
+                "example": "2021-06-01T12:30:13.495Z",
+                "description": "Time when the call was placed"
+              }
+            }
+          }
+        ]
+      },
+      "VoiceMailDetected": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseEvent"
+          },
+          {
+            "$ref": "#/components/schemas/CallEndpoints"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "event": {
+                "type": "string",
+                "enum": [
+                  "VMDETECTED"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "AnsweredEvent": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseEvent"
+          },
+          {
+            "$ref": "#/components/schemas/CallEndpoints"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "event": {
+                "type": "string",
+                "enum": [
+                  "ANSWERED"
+                ]
+              },
+              "offeredTime": {
+                "type": "string",
+                "example": "2021-06-01T12:31:13.495Z",
+                "description": "Time when the call was placed"
+              },
+              "answeredTime": {
+                "type": "string",
+                "example": "2021-06-01T12:31:33.495Z",
+                "description": "Time when the call was answered"
+              }
+            }
+          }
+        ]
+      },
+      "DroppedEvent": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseEvent"
+          },
+          {
+            "type": "object",
+            "required": [
+              "status",
+              "droppedBy"
+            ],
+            "properties": {
+              "event": {
+                "type": "string",
+                "enum": [
+                  "DROPPED"
+                ]
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "SUCCESS",
+                  "FAILURE"
+                ]
+              },
+              "droppedBy": {
+                "type": "string",
+                "enum": [
+                  "CALLER",
+                  "CALLEE"
+                ]
+              },
+              "error": {
+                "$ref": "#/components/schemas/ErrorInfo"
+              }
+            }
+          }
+        ]
+      },
+      "PatchedEvent": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseEvent"
+          },
+          {
+            "type": "object",
+            "required": [
+              "status"
+            ],
+            "properties": {
+              "event": {
+                "type": "string",
+                "enum": [
+                  "PATCHED"
+                ]
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "SUCCESS",
+                  "FAILURE"
+                ]
+              },
+              "ConnectedOn": {
+                "type": "string",
+                "example": "2021-06-01T12:30:13.495Z",
+                "description": "Time when the call was patched successfully"
+              },
+              "recordingFileName": {
+                "type": "array",
+                "uniqueItems": true,
+                "description": "Array of recording file names",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "droppedBy": {
+                "type": "string",
+                "enum": [
+                  "CALLER",
+                  "CALLEE"
+                ]
+              },
+              "error": {
+                "description": "This field is only present if status is set to FAILURE",
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ErrorInfo"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "PlayedEvent": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseEvent"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "event": {
+                "type": "string",
+                "enum": [
+                  "PLAYED"
+                ]
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "SUCCESS",
+                  "FAILURE"
+                ]
+              },
+              "playedDuration": {
+                "type": "integer",
+                "description": "duration of content play in seconds",
+                "example": 300
+              },
+              "error": {
+                "description": "This field is only present if status is set to FAILURE",
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ErrorInfo"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "CollectedDigitsEvent": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseEvent"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "event": {
+                "type": "string",
+                "enum": [
+                  "COLLECTED_DIGITS"
+                ]
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "SUCCESS",
+                  "FAILURE"
+                ]
+              },
+              "numOfDigits": {
+                "type": "integer",
+                "description": "total number of digits pressed by the user"
+              },
+              "digitsReceived": {
+                "type": "string",
+                "description": "digits entered by the user"
+              },
+              "terminationDigit": {
+                "type": "string",
+                "description": "termination digit pressed by the user"
+              },
+              "playedDuration": {
+                "type": "integer",
+                "description": "duration of content play in seconds",
+                "example": 300
+              },
+              "error": {
+                "description": "This field is only present if status is set to FAILURE",
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ErrorInfo"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "RecordedEvent": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseEvent"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "event": {
+                "type": "string",
+                "enum": [
+                  "RECORDED"
+                ]
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "SUCCESS",
+                  "FAILURE"
+                ]
+              },
+              "recordingFileName": {
+                "type": "string",
+                "description": "name of the recording file created"
+              },
+              "recordingLength": {
+                "type": "integer",
+                "description": "duration of the recording in seconds"
+              },
+              "error": {
+                "description": "This field is only present if status is set to FAILURE",
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ErrorInfo"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "BaseAction": {
+        "required": [
+          "action"
+        ],
+        "properties": {
+          "action": {
+            "type": "string",
+            "description": "Value indicating which action to invoke"
+          },
+          "recordCall": {
+            "type": "boolean",
+            "description": "Record call audio"
+          }
+        }
+      },
+      "AnswerAction": {
+        "description": "Answer an incoming call",
+        "type": "object",
+        "properties": {
+          "action": {
+            "type": "string",
+            "enum": [
+              "ANSWER"
+            ]
+          }
+        }
+      },
+      "HangupAction": {
+        "description": "Disconnects the call",
+        "type": "object",
+        "properties": {
+          "action": {
+            "type": "string",
+            "enum": [
+              "HANGUP"
+            ]
+          },
+          "reason": {
+            "type": "string",
+            "description": "An optional reason to be logged for disconnecting the call"
+          }
+        }
+      },
+      "PlayAction": {
+        "description": "Play audio prompt(s) and optionally collect DTMF digits.",
+        "required": [
+          "audio"
+        ],
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseAction"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "action": {
+                "type": "string",
+                "enum": [
+                  "PLAY"
+                ]
+              },
+              "audio": {
+                "type": "array",
+                "items": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/components/schemas/UrlAudioObject"
+                    },
+                    {
+                      "$ref": "#/components/schemas/TtsAudioObject"
+                    },
+                    {
+                      "$ref": "#/components/schemas/MediaAudioObject"
+                    }
+                  ]
+                }
+              },
+              "maxDigits": {
+                "type": "integer",
+                "default": 0,
+                "description": "If positive, allow caller to enter this many DTMF digits from the phone keypad"
+              },
+              "digitTimeout": {
+                "type": "integer",
+                "default": 5,
+                "description": "Stop collecting digits if this many seconds elapses without additional digits being entered"
+              },
+              "terminationDigit": {
+                "type": "string",
+                "default": null,
+                "description": "If present, allow a caller to terminate their DTMF digit entry by pressing this character.  Note, this is a string to accomodate '#' and '*' digits."
+              }
+            }
+          }
+        ]
+      },
+      "PatchAction": {
+        "description": "Dial and patch another call leg to the existing call session",
+        "required": [
+          "dialedNumber"
+        ],
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseAction"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "action": {
+                "type": "string",
+                "enum": [
+                  "PATCH"
+                ]
+              },
+              "holdAudio": {
+                "description": "This audio object is played to the existing call leg while the platform is connecting the new call leg.",
+                "type": "object",
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/UrlAudioObject"
+                  },
+                  {
+                    "$ref": "#/components/schemas/TtsAudioObject"
+                  },
+                  {
+                    "$ref": "#/components/schemas/MediaAudioObject"
+                  }
+                ]
+              },
+              "greetingAudio": {
+                "description": "This audio object is played to the new call leg before patching them to the existing call leg.",
+                "type": "object",
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/UrlAudioObject"
+                  },
+                  {
+                    "$ref": "#/components/schemas/TtsAudioObject"
+                  },
+                  {
+                    "$ref": "#/components/schemas/MediaAudioObject"
+                  }
+                ]
+              },
+              "greetingRepeatCount": {
+                "type": "integer",
+                "default": 0,
+                "example": 3,
+                "description": "Repeat the greeting audio this many times."
+              },
+              "patchCallerId": {
+                "type": "string",
+                "format": "E.164",
+                "description": "Use this as the calling party number when dialing the new call leg.",
+                "example": "+19545551212"
+              },
+              "dialedNumber": {
+                "type": "string",
+                "format": "E.164",
+                "description": "Dial this number to patch on to the existing call.",
+                "example": "+15615551212"
+              },
+              "patchDigit": {
+                "type": "string",
+                "default": null,
+                "example": 5,
+                "description": "If present, called party must press this digit to be patched to the existing call, otherwise they will be patched once the greeting audio has completed playing."
+              },
+              "passDtmf": {
+                "type": "boolean",
+                "default": true,
+                "description": "If enabled, DTMF signalling will be passed between the two patched call legs"
+              }
+            }
+          }
+        ]
+      },
+      "RecordAction": {
+        "description": "Play audio prompt(s) and then record audio.",
+        "type": "object",
+        "properties": {
+          "action": {
+            "type": "string",
+            "enum": [
+              "RECORD"
+            ]
+          },
+          "audio": {
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/UrlAudioObject"
+                },
+                {
+                  "$ref": "#/components/schemas/TtsAudioObject"
+                },
+                {
+                  "$ref": "#/components/schemas/MediaAudioObject"
+                }
+              ]
+            }
+          },
+          "timeoutSeconds": {
+            "type": "integer",
+            "description": "Stop recording after this many seconds",
+            "example": 15
+          },
+          "terminationDigit": {
+            "type": "string",
+            "example": "#",
+            "description": "Stop recording when the user presses this DTMF digit"
+          }
+        }
+      },
+      "AudioObject": {
+        "required": [
+          "type"
+        ],
+        "properties": {
+          "type": {
+            "type": "string"
+          }
+        }
+      },
+      "UrlAudioObject": {
+        "description": "Audio object representing audio retrieved from a URL.",
+        "required": [
+          "location"
+        ],
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/AudioObject"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": [
+                  "URL"
+                ]
+              },
+              "location": {
+                "type": "string",
+                "format": "URL",
+                "example": "https://mysite.com/audiofile.mp3",
+                "description": "URL to the audio file you wish to play"
+              }
+            }
+          }
+        ]
+      },
+      "TtsAudioObject": {
+        "description": "Audio object representing audio rendered by a text-to-speech engine.",
+        "required": [
+          "text"
+        ],
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/AudioObject"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": [
+                  "TTS"
+                ]
+              },
+              "style": {
+                "type": "string",
+                "enum": [
+                  "NEURAL"
+                ],
+                "default": "NEURAL",
+                "example": "NEURAL",
+                "description": "Neural voice"
+              },
+              "language": {
+                "type": "string",
+                "enum": [
+                  "en-US",
+                  "en-GB",
+                  "en-AU",
+                  "en-IN",
+                  "de-AT",
+                  "nl-BE",
+                  "en-CA",
+                  "fr-CA",
+                  "da-DK",
+                  "et-EE",
+                  "fr-FR",
+                  "de-DE",
+                  "hu-HU",
+                  "ga-IE",
+                  "en-IE",
+                  "it-IT",
+                  "nl-NL",
+                  "nb-NO",
+                  "pl-PL",
+                  "pt-PT",
+                  "es-ES",
+                  "ca-ES",
+                  "sv-SE",
+                  "fr-CH",
+                  "de-CH",
+                  "hi-IN",
+                  "ta-IN",
+                  "te-IN",
+                  "ms-MY",
+                  "zh-HK",
+                  "zh-CN",
+                  "zh-TW",
+                  "pt-BR",
+                  "es-MX",
+                  "ko-KR",
+                  "ar-SA",
+                  "ar-EG",
+                  "bg-BG",
+                  "hr-HR",
+                  "cs-CZ",
+                  "en-PH",
+                  "fi-FI",
+                  "el-GR",
+                  "he-IL",
+                  "id-ID",
+                  "ja-JP",
+                  "lv-LV",
+                  "lt-LT",
+                  "mt-MT",
+                  "ro-RO",
+                  "ru-RU",
+                  "sk-SK",
+                  "sl-SI",
+                  "th-TH",
+                  "tr-TR",
+                  "uk-UA",
+                  "ur-PK",
+                  "vi-VN",
+                  "cy-GB",
+                  "en-HK"
+                ],
+                "default": "en-US",
+                "example": "en-US",
+                "description": "Language of the text being synthesized"
+              },
+              "voice": {
+                "type": "string",
+                "description": "The desired voice for the rendered speech",
+                "default": "AriaNeural"
+              },
+              "gender": {
+                "type": "string",
+                "enum": [
+                  "MALE",
+                  "FEMALE"
+                ],
+                "description": "Gender of the synthesized voice",
+                "default": "FEMALE",
+                "example": "FEMALE"
+              },
+              "engine": {
+                "type": "string",
+                "enum": [
+                  "AZURE"
+                ],
+                "default": "AZURE",
+                "description": "Which TTS engine to use to render the speech"
+              },
+              "text": {
+                "type": "string",
+                "example": "Hello, World!",
+                "description": "The text that you wish to be rendered to speech via the TTS engine.  This can be plain text or SSML."
+              },
+              "textFormat": {
+                "type": "string",
+                "enum": [
+                  "TEXT",
+                  "SSML"
+                ],
+                "default": "TEXT",
+                "description": "Format of text feild. If TEXT, text field contains plain text. If SSML, text field contains valid SSML script."
+              }
+            }
+          }
+        ]
+      },
+      "MediaAudioObject": {
+        "description": "Audio object representing audio available on the plaform as media asset.",
+        "required": [
+          "mediaId"
+        ],
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/AudioObject"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": [
+                  "MEDIA"
+                ]
+              },
+              "mediaId": {
+                "type": "string",
+                "example": "5442",
+                "description": "Media ID of the audio file you wish to play"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
+```

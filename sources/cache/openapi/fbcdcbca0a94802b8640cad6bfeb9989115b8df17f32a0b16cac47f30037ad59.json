@@ -1,0 +1,213 @@
+{
+  "_id": "6a675233ec1c893d8a7f67ba:6a675233ec1c893d8a7f6505",
+  "components": {
+    "securitySchemes": {
+      "sec0": {
+        "in": "header",
+        "name": "key",
+        "type": "apiKey"
+      }
+    }
+  },
+  "info": {
+    "title": "Thread API",
+    "version": "6.20.0"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/apps/{appId}/threads": {
+      "post": {
+        "deprecated": false,
+        "description": "This API is used to create a thread for a given app ID. It provides a thread ID in response, which is a mandatory parameter to send messages to user(s).",
+        "operationId": "thread-apis-create-thread",
+        "parameters": [
+          {
+            "description": "Specifies the ID of the app asset on Webex Connect platform",
+            "in": "path",
+            "name": "appid",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "application/json",
+            "in": "header",
+            "name": "Content-Type",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Client key that can be accessed from your app asset configuration page on Webex Connect platform",
+            "in": "header",
+            "name": "secretKey",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "examples": {
+                "Request Example": {
+                  "value": {
+                    "category": "Samplecategory",
+                    "externalid": "anything: text or number",
+                    "extras": {
+                      "Custom_Param1": "value1",
+                      "Custom_Param10": [
+                        "value1",
+                        "value2"
+                      ],
+                      "Custom_Param2": "value1",
+                      "Custom_Param3": "value1",
+                      "Custom_Param4": "value1"
+                    },
+                    "title": "Sample title",
+                    "type": "Conversation"
+                  }
+                }
+              },
+              "schema": {
+                "properties": {
+                  "category": {
+                    "description": "Specifies the thread category",
+                    "type": "string"
+                  },
+                  "externalid": {
+                    "description": "This can be used to specify any identifier that client is maintaining on their side",
+                    "type": "string"
+                  },
+                  "extras": {
+                    "description": "Specifies custom parameters",
+                    "type": "string"
+                  },
+                  "title": {
+                    "description": "Specifies the thread title.",
+                    "type": "string"
+                  },
+                  "type": {
+                    "description": "Threads can be of two types, namely Conversation or Announcement. The type Conversation allows to have 2-way communication, whereas the type Announcement allows for only one-way messages from application to users.",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "type"
+                ],
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{\n\"code\":\"0\",\n\"description\":\"success\",\n\"thread\":{\n\"created_on\":\"2020-07-30T12:05:13.752Z\",\n\"id\":\"f39ee157-2d49-461b-9f6a-22bf4e962b79\"\n}\n}"
+                  }
+                },
+                "schema": {
+                  "properties": {
+                    "code": {
+                      "example": "0",
+                      "type": "string"
+                    },
+                    "description": {
+                      "example": "success",
+                      "type": "string"
+                    },
+                    "thread": {
+                      "properties": {
+                        "created_on": {
+                          "example": "2020-07-30T12:05:13.752Z",
+                          "type": "string"
+                        },
+                        "id": {
+                          "example": "f39ee157-2d49-461b-9f6a-22bf4e962b79",
+                          "type": "string"
+                        }
+                      },
+                      "type": "object"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "200"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                },
+                "schema": {
+                  "properties": {},
+                  "type": "object"
+                }
+              }
+            },
+            "description": "400"
+          }
+        },
+        "security": [],
+        "summary": "Create Thread",
+        "x-readme": {
+          "code-samples": [
+            {
+              "code": "-X POST https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{{inappid}}/threads\n-H \"Content-Type : application/json\"\n-H \"secretKey: {secretKey}\"\n\n\n",
+              "language": "curl",
+              "name": "cURL"
+            },
+            {
+              "code": "require 'httparty'\n# Create the HTTP objects and post request\nhttp = HTTParty.post(\"https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{{inappid}}/threads\",\n    :headers => {'Content-Type' => 'application/json',\n                          'secretKey ' => '{secretKey}’\n            }\n)\n# Print on console\nputs http\n\n\n",
+              "language": "ruby"
+            },
+            {
+              "code": "var data = null;\n\nvar xhr = new XMLHttpRequest();\n\nxhr.addEventListener(\"readystatechange\", function () {\n  if (this.readyState === this.DONE) {\n    console.log(this.responseText);\n  }\n});\n\nxhr.open(\"POST\", \" https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{{inappid}}/threads\");\nxhr.setRequestHeader(\"Content-Type\", \"application/json\");\nxhr.setRequestHeader(\"secretKey\", \"{secretKey}\");\nxhr.send(data);\n",
+              "language": "javascript"
+            },
+            {
+              "code": "import requests\n\nurl = \" https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{{inappid}}/threads\"\n\nheaders = {'Content-Type': 'application/json', 'secretKey': '{secretKey}’}\n\nresponse = requests.request(\"POST\", url, headers=headers)\n\nprint(response.text)\n",
+              "language": "python"
+            }
+          ],
+          "samples-languages": [
+            "curl",
+            "ruby",
+            "javascript",
+            "python"
+          ]
+        }
+      }
+    }
+  },
+  "security": [
+    {
+      "sec0": []
+    }
+  ],
+  "servers": [
+    {
+      "url": "https://rtm.imiconnect.io/rtmsAPI/api/v1/"
+    }
+  ],
+  "x-readme": {
+    "explorer-enabled": false,
+    "headers": [
+      {
+        "key": "content-type",
+        "value": "application/json"
+      }
+    ],
+    "proxy-enabled": false
+  },
+  "x-readme-fauxas": true
+}

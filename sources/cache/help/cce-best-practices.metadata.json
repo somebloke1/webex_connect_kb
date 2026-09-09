@@ -1,0 +1,31 @@
+{
+  "category": "Webex Connect and Cisco Contact Center Enterprise System (CCE)",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182578cc",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "6bb92dfd3d1469f96c0da35366a020c96ea6a80847ae0526d1a19b7eae2e5073",
+    "source_path": "da7c954b68c1995676e373fbe9fd4db3a1fae0710be1cbb6f24e612cc3d2d6d8",
+    "text_path": "62d6427cdf04e28bf326f64a0f982679b4e12da15314e0e68444c2a16ea2bb09"
+  },
+  "headings": [],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/cce-best-practices.md",
+  "resolved_url": "https://help.webexconnect.io/docs/cce-best-practices",
+  "retrieved_at": "2026-09-08T23:29:25+00:00",
+  "sha256_html_response": "c1a6aeb0bb171063e43121ed0f8e9dc4ee53587e383901d1d8b0eb75983a774c",
+  "sha256_source_body": "da7c954b68c1995676e373fbe9fd4db3a1fae0710be1cbb6f24e612cc3d2d6d8",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/cce-best-practices.source.md",
+  "source_updated_at": "2026-04-14T07:38:08.152Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/cce-best-practices.txt",
+  "title": "Best Practices and Guidelines - CCE",
+  "url": "https://help.webexconnect.io/docs/cce-best-practices",
+  "word_count": 461,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/cce-best-practices.metadata.json"
+}

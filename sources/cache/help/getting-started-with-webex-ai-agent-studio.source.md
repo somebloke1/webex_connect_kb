@@ -1,0 +1,35 @@
+The <<WAIStu>> is a sophisticated platform that is designed to create, manage, and deploy automated AI Agents to fulfil customer service and support needs. Using artificial intelligence, AI Agents provide automated assistance to customers before they interact with human agents. These agents support voice interactions with intonation, language understanding, and contextual awareness within conversations. Also, AI Agents seamlessly and informatively handle digital channel interactions through text and online chat. Customers benefit from a concierge-like experience, receiving assistance with questions, information retrieval, and minimizing wait times.
+
+## Capabilities of <<WAIStu>>
+
+- Accurate and timely responses—Provides precise answers to customer inquiries in real-time.
+- Intelligent task execution—Executes tasks based on customer requests or inputs.
+
+## Key benefits for businesses
+
+- Enhanced customer experience—Delivers a real-time conversational experience for customers.
+- Personalized interactions—Tailors responses to individual customer needs and preferences.
+- Scalability and efficiency—Handles high volume of customer interactions without requiring additional human agents, leading to improved satisfaction, and reduced operational costs.
+
+> 📘 For more information, refer to our [help.webex.com guide](https://help.webex.com/article/ncs9r37)
+
+## Sign-in from Control Hub
+
+1. Sign in to Control Hub using the URL  <https://admin.webex.com>.
+2. Navigate to the  **Services ** section in the navigation pane and select **Contact Center**.
+3. In the right pane, under the **Quick Links** section, locate the **Contact Center Suite**.
+4. Click on**Webex AI Agent Studio **to open the application.
+5. The system opens the Webex AI Agent Studio application in a new browser tab, where you’ll be automatically signed in.
+
+> 📘 Note
+> 
+> If the Webex AI Agent Studio option is not visible, reach out to Cisco Support to have the corresponding feature flag enabled.
+
+## Sign-in from Webex Connect
+
+To access the Webex AI Agent Studio application, you must have access to Webex Connect.
+
+1. Sign in to Webex Connect application using the tenant URL provided for your enterprise and credentials.  
+   By default, the **Services** page will appear as the home page.
+2. From the **App Tray **menu in the left navigation pane, select **Webex AI Agent Studio **to open the application.  
+   The system will launch the Webex AI Agent Studio application in a new browser tab, where you will be automatically signed in.

@@ -1,0 +1,108 @@
+The close task is a global node. This node calls Webex CC Close task API to notify Webex CC whether closing a conversation was successful or not. While configuring flows in Webex Connect, you’d need to use this node for notifying Webex CC about the success/failure in closing a conversation. 
+
+## 
+
+Authorization
+
+Refer to section Node Authorizations for more information.  
+
+## 
+
+Methods and Outcomes
+
+Here’s a brief description of various methods, and corresponding output variables and node outcomes associated with each of the methods.
+
+ Method Name - Close Task Accept 
+
+ [Image: Screenshot of Close Task Accept configuration page.] 
+Screenshot of Close Task Accept configuration page
+
+ | Input Variables | Output Variables | Versions
+
+ | TASK ID - $(n2.webex.taskId)
+
+_ ID from the output variables of the closed event is the task ID
+
+ID - $(n2.webex.taskId)
+
+_ ID from the output variables of the closed event is the task ID
+
+QUEUE ID - $(n2.webex.queue)
+
+_ Queue from the output variables of the closed event is the Queue ID
+
+CONVERSATION ID
+
+_ ID from the output variables of the closed event
+
+Media Type - $(mediaType)
+
+* The output variables of the closed event is the Media Type | None | v1.1 and v1.0
+
+## 📘
+Note
+
+When the variable is selected from the previous node output variables, the nodetid will be the prefix for the variable. Eg., sms.serviceNumber is an output variable of start node (node id 2), then the variable becomes $(n2.sms.serviceNumber)
+
+Method Name - Close Task Reject 
+
+ [Image: Screenshot of Close Task Reject configuration page.] 
+Screenshot of Close Task Reject configuration page.
+
+ | Input Variable | Output Variable | Versions
+
+ | TASK ID - $(n2.webex.taskId)
+
+_ ID from the output variables of the closedevent is the task ID
+
+ID - $(n2.webex.taskId)
+
+_ ID from the output variables of the closed event is the task ID
+
+Agent ID - $(n2.webex.agent)
+
+_ Agent ID from the output variables of the closed event
+
+CONVERSATION ID- $(mediaResourceId)
+
+_ MediaResourceId from the output variables of the closed event is the Media Resource ID
+
+REASON - $(description)
+
+_ $(description) will have the close conversation failure reason
+
+Reason Code
+
+Contains the close conversation failure code
+
+Media Type - $(mediaType)
+
+_ The output variables of the closed event is the Media Type | None | v1.1 and v1.0
+
+## 📘
+Note
+
+When the variable is selected from the previous node output variables, the node Id will be the prefix for the variable. For example, if sms.serviceNumber is an output variable of start node (node Id 2), then the variable becomes $(n2.sms.serviceNumber).
+
+Method Name - Close Task on WxCC 
+
+ [Image: Screenshot of Close Task on WxCC configuration page.] 
+Screenshot of Close Task on WxCC configuration page.
+
+ | Input Variable | Output Variable | Versions
+
+ | TASK ID - $(n2.webex.taskId)
+
+_ ID from the output variables of the closed event is the task ID
+
+ID - $(n2.webex.taskId)
+
+_ ID from the output variables of the closed event is the task ID
+
+CONVERSATION ID- $(mediaResourceId)
+
+_ MediaResourceId from the output variables of the closed event is the Media Resource ID
+
+Media Type - $(mediaType)
+
+_ The output variables of the closed event is the Media Type | NA | v1.1 and v1.0

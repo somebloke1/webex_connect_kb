@@ -1,0 +1,36 @@
+{
+  "category": "Webex Engage Standalone Nodes",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257973",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "c9f20e0b6cb1e3d0133750c2c8dfec347d6fcda5433ab237a47cba64966ef6c6",
+    "source_path": "9d9cacf3452822a51b724a5c7fa78c488780d9f3127cdca6a19af2230446b1d3",
+    "text_path": "ee9693cc0243c0143c9d78fc157275bae62710c01c5df246c7a91a4dc2d06ade"
+  },
+  "headings": [
+    "➡️ Inbound Messages",
+    "⬅️ Outbound Messages",
+    "↩️ Announcement",
+    "Markdown Cheat Sheet"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/sms-1.md",
+  "resolved_url": "https://help.webexconnect.io/docs/sms-1",
+  "retrieved_at": "2026-09-08T23:29:27+00:00",
+  "sha256_html_response": "71d861863b270131442496cc92a63e9a4393d93df5d97635fcf280ee9230f32d",
+  "sha256_source_body": "9d9cacf3452822a51b724a5c7fa78c488780d9f3127cdca6a19af2230446b1d3",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/sms-1.source.md",
+  "source_updated_at": "2026-04-14T07:45:51.622Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/sms-1.txt",
+  "title": "Message Schema- SMS - WxEngage standalone",
+  "url": "https://help.webexconnect.io/docs/sms-1",
+  "word_count": 124,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/sms-1.metadata.json"
+}

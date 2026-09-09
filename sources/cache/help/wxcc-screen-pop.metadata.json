@@ -1,0 +1,37 @@
+{
+  "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257889",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "98268d16532708c065956807806fd82607c8a864834a553c27067e4c167983b3",
+    "source_path": "6410f8c85f90e841e3d0e2b969294765e408de735619602ced20c1f34bdde584",
+    "text_path": "54c942f58b821b9b5eef0a6c1ebadb8d80c74466d571937739592b0ade468560"
+  },
+  "headings": [
+    "Authorization",
+    "Methods and Outcomes",
+    "📘Note",
+    "📘Note",
+    "📘Note"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/wxcc-screen-pop.md",
+  "resolved_url": "https://help.webexconnect.io/docs/wxcc-screen-pop",
+  "retrieved_at": "2026-09-08T23:29:15+00:00",
+  "sha256_html_response": "8969f119db683cc3f2148e60486285f7e10910d3e907eb6a2fe0b39eabf30f50",
+  "sha256_source_body": "6410f8c85f90e841e3d0e2b969294765e408de735619602ced20c1f34bdde584",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/wxcc-screen-pop.source.md",
+  "source_updated_at": "2026-04-14T07:25:16.241Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/wxcc-screen-pop.txt",
+  "title": "Screen Pop - WXCC",
+  "url": "https://help.webexconnect.io/docs/wxcc-screen-pop",
+  "word_count": 367,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/wxcc-screen-pop.metadata.json"
+}

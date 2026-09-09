@@ -1,0 +1,100 @@
+# Overview
+
+Source: https://developers.webexconnect.io/reference/event-api-overview
+Documentation version: 6.20.0
+Retrieved: 2026-09-08T23:31:49+00:00
+
+The  Event API is a single API that allows third-party/external applications to make event requests using a RESTful API over HTTPS to the Webex Connect platform.
+
+The external application can raise one or more events in a single request. Each event can be attached to a set of parameters representing event-specific information. These parameters will be passed along as context parameters to the actions defined in the rules on these events. 
+
+Clients can create custom events and configure rules that are executed when the event API request is received on the Webex Connect platform.  Events are defined in the services section by defining parameter blocks that consist of variable names and types. These will then be passed when the event is invoked.
+
+
+> **info**
+> 
+> A **Service Key** must be passed with every API request.
+
+
+**Prerequisites:**
+
+  * A [Service Key](https://help.imiconnect.io/docs/api-settings). The Service Key is obtained by [creating a service](https://help.imiconnect.io/docs/creating-a-service).
+  * An event associated with the Service.
+  * At least one Rule associated with the Event.
+  * Properly defined actions for the Rule in order to complete the expected flow.
+[block:api-header]
+{
+  "type": "basic",
+  "title": "API Parameters"
+}
+[/block]
+
+
+
+> ****
+> 
+> For data privacy and security reasons, the REST API is served over encrypted HTTPS. Standard HTTP is not supported.
+
+
+
+
+
+| Parameter | Mandatory | Use | Description |
+| --- | --- | --- | --- |
+| key | Yes | Passed in the header. | The service key authenticates event API requests and must be passed with every request. |
+| events | Yes | Passed in the request body. | An array containing a list of events. |
+| notifyurl | No | Passed in the request body. | A notification is sent to the specified notifyurl after an event is executed. |
+| expiry | No | Passed in the request body. | Expiry time of event in UTC format. |
+
+
+
+[block:api-header]
+{
+  "type": "basic",
+  "title": "Response / Error Codes"
+}
+[/block]
+
+
+
+| Code | Message | Description |
+| --- | --- | --- |
+| 1002 | Queued | Returned when the request is accepted by Webex Connect. |
+| 7000 | Invalid JSON | Returned when an invalid JSON request is sent. |
+| 7001 | Authentication failed | Returned when an invalid service key or profile key is provided in the request. |
+| 7003 | Mandatory parameters missing | Returns when any mandatory parameter is missing in request body. |
+| 7004 | Invalid parameters/values | Returns when any invalid value is given for any parameter in request body. |
+| 7005 | Internal error occurred | Returned when an internal error occurs. |
+| 7025 | Mandatory custom parameters missing | Returns when any mandatory custom event parameter is missing,  where these custom parameters are created in custom event creation screen. |
+
+
+
+## API reference metadata
+
+These are source metadata and examples. `api.auth` is ReadMe metadata; verify authentication in the documented headers/security scheme.
+
+```json
+{
+  "results": {
+    "codes": [
+      {
+        "name": "",
+        "code": "{}",
+        "language": "json",
+        "status": 200
+      },
+      {
+        "name": "",
+        "code": "{}",
+        "language": "json",
+        "status": 400
+      }
+    ]
+  },
+  "settings": "",
+  "url": "",
+  "auth": "required",
+  "params": [],
+  "method": "get"
+}
+```

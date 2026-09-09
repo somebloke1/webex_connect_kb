@@ -1,0 +1,32 @@
+{
+  "api_metadata_path": "sources/cache/developer/sandbox-rate-limits-and-throughput.api.json",
+  "category": "API Reference for Sandbox",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f65b2",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "6d591ec1c1b4ece5f1b7695228291f827425dbfe6aa80ad7ab84dc63e3978c22",
+    "source_path": "ebcf4b1afdf93286ddd2074fcc328baa84672bf5b65f29d5144f7f93b9b88fad",
+    "text_path": "a2f146aa4eea501d0035f2bf0eec5f444c3dee925c4f5143a391d06673b06e8f"
+  },
+  "headings": [],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/sandbox-rate-limits-and-throughput.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/sandbox-rate-limits-and-throughput",
+  "retrieved_at": "2026-09-08T23:31:40+00:00",
+  "sha256_api_metadata": "02dffcf6cae9c67b1a3117b70bce7e59af220078350fee0ebd304921d9b945b8",
+  "sha256_html_response": "4ce8b6033d2ae3de041a6e7ec522fffd17e4139b1adabea29720a9457e30416f",
+  "sha256_source_body": "ebcf4b1afdf93286ddd2074fcc328baa84672bf5b65f29d5144f7f93b9b88fad",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/sandbox-rate-limits-and-throughput.source.md",
+  "source_updated_at": "2023-12-06T12:52:30.526Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/sandbox-rate-limits-and-throughput.txt",
+  "title": "Sandbox Rate Limits and Throughput",
+  "url": "https://developers.webexconnect.io/reference/sandbox-rate-limits-and-throughput",
+  "word_count": 192,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/developer/sandbox-rate-limits-and-throughput.metadata.json"
+}

@@ -1,0 +1,40 @@
+{
+  "category": "SERVICES & FLOWS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd81825790b",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "16e72bcdb1e4ee8229efe07fc21d8ed873cb958c33119231eabb89ac14f21118",
+    "source_path": "acdd1163eeb6429302480ea434073afa5e4d749de85cf853e1f4be643a4dd830",
+    "text_path": "1b3e383bae52bf1a72a53489adc1e5f036d6681b7f6b236a60bad6e07f8d06fe"
+  },
+  "headings": [
+    "📘Prerequisite",
+    "📘Usage cap",
+    "Node configuration",
+    "🚧Usage details",
+    "Output variables and node outcomes",
+    "Node outcomes",
+    "🚧Usage limit",
+    "Data and Privacy"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/summarize-text-beta-node.md",
+  "resolved_url": "https://help.webexconnect.io/docs/summarize-text-beta-node",
+  "retrieved_at": "2026-09-08T23:28:58+00:00",
+  "sha256_html_response": "f3af85d34531874c2998063845a42c0bb49dbd0af06b2b9e3939830a05c85b42",
+  "sha256_source_body": "acdd1163eeb6429302480ea434073afa5e4d749de85cf853e1f4be643a4dd830",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/summarize-text-beta-node.source.md",
+  "source_updated_at": "2026-01-26T14:23:04.769Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/summarize-text-beta-node.txt",
+  "title": "Summarize Text Beta Node",
+  "url": "https://help.webexconnect.io/docs/summarize-text-beta-node",
+  "word_count": 703,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/summarize-text-beta-node.metadata.json"
+}

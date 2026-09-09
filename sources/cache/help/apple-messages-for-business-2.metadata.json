@@ -1,0 +1,31 @@
+{
+  "category": "Webex Engage Standalone Nodes",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd81825796f",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "57f9a9c59c44cf8fc421ebf6fb2bfe41a4b01c11f3e877e9ff336339561c2555",
+    "source_path": "001c65fb23d4d31261e6b4b74a0f1190abb5d2406790acc962f13b3eeac05bca",
+    "text_path": "53aea969b8c31fef9434818abb37f681443f406ed38c2fb091276179c321101d"
+  },
+  "headings": [],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/apple-messages-for-business-2.md",
+  "resolved_url": "https://help.webexconnect.io/docs/apple-messages-for-business-2",
+  "retrieved_at": "2026-09-08T23:29:26+00:00",
+  "sha256_html_response": "853debaec6af58efcc550b7adea8db3bd1a367708b87cdeef1ad930d8f320cca",
+  "sha256_source_body": "001c65fb23d4d31261e6b4b74a0f1190abb5d2406790acc962f13b3eeac05bca",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/apple-messages-for-business-2.source.md",
+  "source_updated_at": "2026-04-14T07:45:21.094Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/apple-messages-for-business-2.txt",
+  "title": "Apple Messages for Business - WxEngage standalone",
+  "url": "https://help.webexconnect.io/docs/apple-messages-for-business-2",
+  "word_count": 284,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/apple-messages-for-business-2.metadata.json"
+}

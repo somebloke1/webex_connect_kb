@@ -1,0 +1,130 @@
+You can use Smart Links for generating shorter URLs to be sent as part of outbound messages on SMS and other channels to reduce overall message size while leveraging the following intelligent routing capabilities:
+
+- Support device-specific routing by embedding a device OS-agnostic link which when clicked can route recipients to a different URL depending on their mobile operating systems (such as Apple, or Android). This feature can be used to direct users to the right mobile app store for app downloads. 
+
+- Can be configured to expire after a certain duration. If a user clicks the like after the expiry, user will be redirected to a different URL that explains that the campaign/offer is no longer available.
+
+Smart links can be selected through the send node (such as in the SMS send node) or referenced in the Messaging API. 
+
+ [Image: Screenshot of Smart links page] 
+Screenshot of Smart links page
+
+ | Name | Description
+
+ | ID | Displays the unique identification number for the smart link.
+
+ | Smart Links | Displays the name of the smart link.
+
+ | Total Links Sent | Displays the count of link sent by various channels.
+
+Note: The data will be displayed only for the last 30 days.
+
+ | Total Clicks | Displays the total number of links clicked.
+
+Note: The data will be displayed only for the last 30 days. The bot/preview clicks are ignored when identified.
+
+ | Status | Displays the status.
+
+ | Device Based Routing | Enabled or Disabled is displayed based on the configuration.
+
+ | Actions | Manage - You can update the smart links information.
+
+Delete - You can delete the smart links.
+
+## 🚧
+Status : Active
+
+Only valid/enabled smartlinks are visible in the drop-down while trying to use it in the Send node.
+
+## 
+
+Smart Link Support across Channels
+
+The following table describes the supported channels for the Smart Link capability:
+
+ | Supported Channels | Messaging APIs v1 | Messaging APIs v2 | Send Nodes | Rules
+
+ | SMS | Yes | Yes | Yes | Yes
+
+ | Apple Messages for Business | Yes | NA | Yes | Yes
+
+ | Facebook Messenger | Yes | NA | Yes | Yes
+
+ | WhatsApp | Yes | NA | Yes | Yes
+
+ | Live Chat / In-App Messaging | Yes | No | Yes | Yes
+
+## 
+
+Configuring a Smart Link
+
+To configure a smart link, follow the procedure below:
+
+- Navigate to Tools > Smart Links.
+
+- Click Add New Smart Link. 
+
+ [Image: Screenshot of Configuring the New Smart Link] 
+Screenshot of Configuring the New Smart Link
+
+- Configure various details as per below:
+
+ | Options | Description
+
+ | Name | The name of the Smart Link you want to create. This name appears in the dropdown when you want to use the Smart Link feature.
+
+ | Long URL | The long URL that is to be shortened. Along with Http and Https URLs, below URLs are also supported for redirecting users from Smart links to SMS app on Android phones.
+
+Eg: <sms:webex-connect-cloud@abc.goog  ?body=survey&bot-name=Webex%20Connect%20Cloud>
+
+and  <sms:+4454XXXXX7435?service_id=webex-connect-cloud@abc.goog  &body=Hello%20Tom&bot-name=Webex%20Connect%20Cloud>
+
+ | Short Domain | The Default available short domain list  will be based on the Environment
+
+Eg: https://s-us.imiconnect.io and https://s.imiconnect.eu.
+
+Custom domains must be registered with Webex Connect. To register your domain with Webex Connect, contact the Webex Connect support team.
+
+ | Suffix | Specifies a text that will be suffixed to the short domain. This will be useful for branding the links. For example, https://s.imiconnect.co/cisco(Suffix)/Penhgy
+
+ | Device Routing | This capability allows you to intelligently route the user to an OS-specific link.
+
+ | Link Validity | This capability allows you to set up the validity of a link on the basis of the purpose and stipulated timeline of an event. For example, users get redirected to a link set up for a commercial offer page until the configured expiry date. After the expiry date of the first link, the user will be redirected to a different URL as per the configuration.
+
+- Click Save. This completes the Smart Link configuration.
+
+Once you're have configured a smart link you can use it while sending SMS messages or other channels using Messaging API or via the SMS Send Node. 
+
+### 
+
+Steps for configuring branded / short URLs for using 'shortenLinks' capability:
+
+- Work with your IT team to procure the short URL you want to use. 
+
+- Add a CNAME record with relevant redirection based on your Webex Connect tenant location (table below).
+
+- If you need HTTPS redirection (highly recommended), reach out to Webex Connect customer support team and provide the domain certificate to add to the Certificate Manager (ACM) for this purpose. This typically requires some lead time hence we recommend you to plan ahead of time for getting this set-up done and leave some time for end-to-end testing.
+
+- Once the backend set-up has been completed by Webex Connect team, you will be notified over email post which you can start using this.
+
+## 📘
+
+Please note that usage of short domains for SMS links can have an impact on deliverability in some cases. Operators and aggregators implement various firewalls and fraud mitigation services in order to protect customers from fraud.  This means URL shortening techniques can sometimes be blocked with no warning, particularly if the words around them seem fraudulent or related to a popular brand or financial entities.
+
+ | Webex Connect Region | CNAME
+
+ | AWS Canada | star-1176184099.ca-central-1.elb.amazonaws.com
+
+ | AWS Ireland | star-1747495833.eu-west-1.elb.amazonaws.com
+
+ | AWS London | star-1656037958.eu-west-2.elb.amazonaws.com
+
+ | AWS Oregon | star-1571873968.us-west-2.elb.amazonaws.com
+
+ | Azure (US) | 52.138.107.55 (A Record)
+
+ | AWS Mumbai | star-64546195.ap-south-1.elb.amazonaws.com
+
+ | AWS Sydney | star-131871454.ap-southeast-2.elb.amazonaws.com
+
+ | AWS Singapore | star-581943434.ap-southeast-1.elb.amazonaws.com

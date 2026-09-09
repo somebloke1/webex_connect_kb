@@ -1,0 +1,35 @@
+{
+  "category": "TOOLS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182577f2",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "40142f0ad03919b305eda8fd7f4881d8479073dc45bd20498c6a0f00b54f56fc",
+    "source_path": "46052425cf926e603152c26db95a590e8a07737f686333949a29888f22695e92",
+    "text_path": "17c6fb924416c45eddc6b67bb3a507d783c03063b1d8664dd6ca92df7e363be1"
+  },
+  "headings": [
+    "Search, filter, and sort templates",
+    "Filter templates",
+    "Sort templates"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/templates.md",
+  "resolved_url": "https://help.webexconnect.io/docs/templates",
+  "retrieved_at": "2026-09-08T23:29:32+00:00",
+  "sha256_html_response": "228b8bfea5e16152a32e1d7cd6d3f099713393efbf9b5ef7ec90be1d39ef1cdd",
+  "sha256_source_body": "46052425cf926e603152c26db95a590e8a07737f686333949a29888f22695e92",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/templates.source.md",
+  "source_updated_at": "2026-06-23T11:02:28.240Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/templates.txt",
+  "title": "Templates",
+  "url": "https://help.webexconnect.io/docs/templates",
+  "word_count": 394,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/templates.metadata.json"
+}

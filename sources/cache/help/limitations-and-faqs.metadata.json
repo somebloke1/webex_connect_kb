@@ -1,0 +1,34 @@
+{
+  "category": "Assets",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182578b1",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "4d4150831a4e4461d8f5e4bfdb4239787a5327b91d8f94c50693f9195fb126e9",
+    "source_path": "15e20386da4fc6a9d3b791c0b4354450118ca0b83a52b4560877999d204bc6f7",
+    "text_path": "79f6607a3fc9ec48ce118f346eeb36034242e1893f02f2671ac04cdd79b7579d"
+  },
+  "headings": [
+    "Limitations for Brands & Campaigns management",
+    "FAQs"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/limitations-and-faqs.md",
+  "resolved_url": "https://help.webexconnect.io/docs/limitations-and-faqs",
+  "retrieved_at": "2026-09-08T23:29:00+00:00",
+  "sha256_html_response": "a8a7390b867c56839f3c191d6dc4aa62afe216a6c07fde16f871b951ffa503de",
+  "sha256_source_body": "15e20386da4fc6a9d3b791c0b4354450118ca0b83a52b4560877999d204bc6f7",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/limitations-and-faqs.source.md",
+  "source_updated_at": "2025-01-10T10:10:04.333Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/limitations-and-faqs.txt",
+  "title": "Limitations and FAQs",
+  "url": "https://help.webexconnect.io/docs/limitations-and-faqs",
+  "word_count": 925,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/limitations-and-faqs.metadata.json"
+}

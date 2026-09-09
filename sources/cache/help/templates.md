@@ -1,0 +1,60 @@
+# Templates
+
+Source: https://help.webexconnect.io/docs/templates
+Documentation version: 6.20.0
+Retrieved: 2026-09-08T23:29:32+00:00
+
+You can configure Templates on the platform and use them within the Messaging API or flows. Here are a few points to note about templates:
+
+- Templates can be referenced in Messaging API
+- The platform identifies the replacement parameters in the template using the `${replacement_parameter}` notation. For example, if you have used `<reference_number>` in your API call, then you use the same name in the message as well. Use the same parameter names that you use in the API call.
+- The parameters sent as channel’s JSON override the template
+- Template text can include simple text and URLs
+- If fully formed messages are sent within the API call, then the template is ignored or overridden.
+
+## Search, filter, and sort templates
+
+You can use the Templates page to quickly find and manage templates across supported channels. The Templates page includes search, filter, and sort options to help you narrow the template list.
+
+To find templates:
+
+1. Go to **Tools > Templates**.
+2. In the search field, enter the template name or related keyword.
+3. To narrow the list further, click **Filter** and select one or more filter options.
+4. To change the order of the template list, click **Sort by** and select a sort option.
+
+### Filter templates
+
+You can filter templates using one or more of the following options:
+
+| Filter                 | Description                                                        |
+| ---------------------- | ------------------------------------------------------------------ |
+| Channel                | Shows templates for the selected channel.                          |
+| Template type/category | Shows templates that match the selected template type or category. |
+| Status                 | Shows templates that match the selected status.                    |
+| Created by             | Shows templates created by the selected user.                      |
+
+After you apply filters, the selected filters appear on the Templates page. You can clear an individual filter or reset all filters to view the full template list.
+
+### Sort templates
+
+You can sort the template list using the following options:
+
+- Template Name (A to Z)
+- Template Name (Z to A)
+- Date Created (Newest to Oldest)
+- Date Created (Oldest to Newest)
+- Last Modified (Newest to Oldest)
+- Last Modified (Oldest to Newest)
+
+Search, filter, sort, and pagination work together. If no templates match the selected search or filter criteria, an empty result message appears.
+
+You can create templates for the following channels:
+
+- [SMS](https://help.webexconnect.io/docs/templates-sms)
+- [RCS](https://help.imiconnect.io/docs/rcs-1)
+- [Email](https://help.webexconnect.io/docs/templates-email)
+- [Push](https://help.imiconnect.io/docs/push-template)
+- [Live Chat/In-App Messaging](https://help.imiconnect.io/docs/livechat-template)
+- [Messenger](https://help.imiconnect.io/docs/messenger-1)
+- [WhatsApp](https://help.webexconnect.io/docs/templates-whatsapp)

@@ -1,0 +1,36 @@
+{
+  "api_metadata_path": "sources/cache/developer/apple-message-for-business-time-picker.api.json",
+  "category": "MULTI CHANNEL COMMUNICATION API",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f660a",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "db5872bbb8e215db5566a15d41bbb82eecc0a45c341c01c134466fe2711ebb39",
+    "source_path": "137c0b496693d75c9b6c602b5163b9892664add5a06e2cef64ac54f575c51438",
+    "text_path": "509f093b4cd6af7d3488c282208f10fa3561490d105189ebbe47181c4fd75a7a"
+  },
+  "headings": [
+    "Error Codes"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/apple-message-for-business-time-picker.md",
+  "openapi_path": "sources/cache/openapi/6c9b32a5c7bb90c55b50297951b453432dd347d685ee72fda20331d81a44c204.json",
+  "resolved_url": "https://developers.webexconnect.io/reference/apple-message-for-business-time-picker",
+  "retrieved_at": "2026-09-08T23:31:42+00:00",
+  "sha256_api_metadata": "7053a22715a3bbb4559ba3f012ab0df8f2df136eb5409e38a5e619625dbae238",
+  "sha256_html_response": "6874cdee0940787e96b4fbb6b2460c9b1cec2f51ccf172b56e626008a6fbd755",
+  "sha256_openapi": "6c9b32a5c7bb90c55b50297951b453432dd347d685ee72fda20331d81a44c204",
+  "sha256_source_body": "137c0b496693d75c9b6c602b5163b9892664add5a06e2cef64ac54f575c51438",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/apple-message-for-business-time-picker.source.md",
+  "source_updated_at": "2025-10-14T08:37:23.348Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/apple-message-for-business-time-picker.txt",
+  "title": "Apple Message for Business: Time Picker",
+  "url": "https://developers.webexconnect.io/reference/apple-message-for-business-time-picker",
+  "word_count": 2239,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/apple-message-for-business-time-picker.metadata.json"
+}

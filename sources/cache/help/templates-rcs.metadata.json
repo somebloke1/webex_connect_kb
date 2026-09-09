@@ -1,0 +1,38 @@
+{
+  "category": "TOOLS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd81825790f",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "b96a73b3eaf1cd71bb39f4b6063773cb63e35948ba57a4fcabdbcf0552344780",
+    "source_path": "e52ed4ec1140dba45d60804ee526a59a61cc6fbfca10dbd85d3658e110eb3b02",
+    "text_path": "1ce93cf96f4aea641923e0cdbbb55c5482e0b580c5462328a40cc1eb7c983f91"
+  },
+  "headings": [
+    "📘",
+    "Configuring RCS Templates",
+    "Configuring the Text Option",
+    "Configuring the File Option",
+    "Configuring the Rich Card Option",
+    "Configuring the Carousel Card Option"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/templates-rcs.md",
+  "resolved_url": "https://help.webexconnect.io/docs/templates-rcs",
+  "retrieved_at": "2026-09-08T23:29:32+00:00",
+  "sha256_html_response": "daaf1cac25d4eef8a8b9e3195fdba18227c2f3feebe15a34dd5e7be50ef7be0d",
+  "sha256_source_body": "e52ed4ec1140dba45d60804ee526a59a61cc6fbfca10dbd85d3658e110eb3b02",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/templates-rcs.source.md",
+  "source_updated_at": "2026-04-15T12:13:25.508Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/templates-rcs.txt",
+  "title": "RCS",
+  "url": "https://help.webexconnect.io/docs/templates-rcs",
+  "word_count": 884,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/templates-rcs.metadata.json"
+}

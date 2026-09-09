@@ -1,0 +1,75 @@
+# Messaging Limits
+
+Source: https://help.webexconnect.io/docs/whatsapp-messaging-limits
+Documentation version: 6.20.0
+Retrieved: 2026-09-08T23:29:06+00:00
+
+> ❗️ Accessing Messaging Limit
+> 
+> Please note this metric cannot be accessed for your phone number within WhatsApp app 'Account/Number Updates' section at this moment.
+
+> 👍 Upcoming Changes to Messaging Limits
+> 
+> There are upcoming changes to messaging limits starting 7th October 2025. Please refer to [Upcoming changes to messaging limits](https://developers.facebook.com/docs/whatsapp/messaging-limits/upcoming-changes) for more information.
+
+Messaging limits determine the maximum number of business-initiated conversations you can initiate using each of your phone numbers in a rolling 24-hour period. A business-initiated conversation begins when the first template message is delivered to a customer and ends 24 hours later.
+
+Business phone numbers without an [approved display name](https://developers.facebook.com/micro_site/url/?click_from_context_menu=true&country=noam&destination=https%3A%2F%2Fwww.facebook.com%2Fbusiness%2Fhelp%2F338047025165344&event_type=click&last_nav_impression_id=0z90BGKEcON6K0dnh&max_percent_page_viewed=100&max_viewport_height_px=711&max_viewport_width_px=1440&orig_http_referrer=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fwhatsapp%2Fmessaging-limits&orig_request_uri=https%3A%2F%2Fdevelopers.facebook.com%2Fajax%2Fdocs%2Fnav%2F%3Fpath1%3Dwhatsapp%26path2%3Dmessaging-limits&region=noam&scrolled=true&session_id=1qrYGA9BbUNeXpA6l&site=developers) are limited to 250 business-initiated conversations in a rolling 24-hour period. This includes all business phone numbers of an unverified business, since these numbers cannot receive display name approval until the business is verified.
+
+Business phone numbers with a connected status and approved display name can initiate conversations with the following number of unique customers in a rolling 24-hour period:
+
+- 2K unique customers
+- 10K unique customers
+- 100K unique customers
+- An unlimited number of unique customers
+
+## How to increase the Messaging limit
+
+Messaging limits can be increased to the following:
+
+- 2K business-initiated conversations
+- 10K business-initiated conversations
+- 100K business-initiated conversations
+- An unlimited number of business-initiated conversations
+
+You can increase your messaging limit to 2,000 by completing one of the [scaling paths](#scaling-paths) below. After that, WhatsApp will automatically increase your limit to the next higher limit if you meet our [automatic scaling criteria](#automatic-scaling).
+
+### Scaling paths
+
+- Verify your business.
+- Send 2,000 delivered messages outside of customer service windows to unique WhatsApp user phone numbers in a 30-day moving period, using templates with a high quality rating.
+
+Once you complete one of these paths, WhatsApp will analyze your message quality. Based on this analysis, your number's eligibility for automatic scaling will either be approved or denied
+
+> 📘 Note
+> 
+> You can reach out to the support contact and request a messaging tier upgrade if you have completed business or identity verification or reached the 2K limit in the 30-day threshold, but you are still limited to 250 business-initiated discussions.
+
+### Approvals
+
+If you are approved, WhatsApp will immediately increase your business phone number's messaging limit to 2,000 and notify you by email and developer alert.  
+Additional messaging limit increases for your number can now happen automatically via [automatic scaling](#automatic-scaling).
+
+### Denials
+
+If you are denied, WhatsApp will keep your business phone number's messaging limit at its current level and notify you by email and developer alert.
+
+### Automatic Scaling
+
+Once you have reached the 2K business-initiated conversations limit, each time you open a business-initiated conversation, WhatsApp will determine if your limit should be increased according to the following criteria:
+
+- You are sending high-quality messages across all of your business phone numbers and templates.
+- In the last 7 days, your business phone number has been used to open X or more business-initiated conversations, where X is the business phone number's current messaging limit, divided by 2.
+
+If your business phone number meets all conditions, WhatsApp will increase its limit by one level 6 hours later. If its quality rating has been set to "Flagged" for the last 7 days, WhatsApp will decrease its limit by one level immediately.
+
+> 🚧 Quality Rating and Messaging Limit
+> 
+> If you meet these requirements but your business phone number has a low quality rating, you may continue to be limited to 250 business-initiated conversations until its quality rating improves. Please refer to [WhatsApp Business phone number quality rating documentation](https://help.imiconnect.io/edit/about-your-whatsapp-business-phone-numbers-quality-rating) page for more details.
+
+If you reach your messaging limit, you can initiate more conversations as soon as one or more active conversations end. For example:
+
+
+
+![Screenshot of Messaging Limit Example.](https://files.readme.io/8753a1f-2024-03-05_11-56-38.jpg)
+

@@ -1,0 +1,33 @@
+For more information on Contact Policy Error Codes, refer to [Channel Specific Status Codes](https://developers.imiconnect.io/reference/channel-specific-status-codes-1)
+
+## API reference metadata
+
+These are source metadata and examples. `api.auth` is ReadMe metadata; verify authentication in the documented headers/security scheme.
+
+```json
+{
+  "method": "get",
+  "url": "",
+  "auth": "required",
+  "results": {
+    "codes": [
+      {
+        "name": "",
+        "code": "{}",
+        "language": "json",
+        "status": 200
+      },
+      {
+        "name": "",
+        "code": "{}",
+        "language": "json",
+        "status": 400
+      }
+    ]
+  },
+  "params": [],
+  "examples": {
+    "codes": []
+  }
+}
+```

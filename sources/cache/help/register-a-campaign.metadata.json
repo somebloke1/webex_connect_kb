@@ -1,0 +1,40 @@
+{
+  "category": "Assets",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182578a9",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "bfcd052541b8742eb48d0afed8a658bed517392d5e60c2a6368d28e080a728df",
+    "source_path": "a280a22f8bb991d8ea8f4df075802ac1b181c80149b064a53b2611b3372b01a2",
+    "text_path": "d0819cb0ecff804b1d50f3535d4dbb7bc515b28188f78f3f537a8cf78911a925"
+  },
+  "headings": [
+    "📘Important Update on 10DLC Campaign Creation",
+    "📘",
+    "📘Note:",
+    "📘Note",
+    "📘Reseller Information",
+    "📘Campaign Status Notifications",
+    "Uploading a Multimedia File via Campaign",
+    "Validating Unsupported Use Cases for Standard and Special Campaign Type"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/register-a-campaign.md",
+  "resolved_url": "https://help.webexconnect.io/docs/register-a-campaign",
+  "retrieved_at": "2026-09-08T23:29:01+00:00",
+  "sha256_html_response": "844596bfb3acc8ecae8e83b71dbad52bdd83957e7a7c2aa61cd854af580f2fca",
+  "sha256_source_body": "a280a22f8bb991d8ea8f4df075802ac1b181c80149b064a53b2611b3372b01a2",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/register-a-campaign.source.md",
+  "source_updated_at": "2026-04-15T10:06:35.174Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/register-a-campaign.txt",
+  "title": "Registering a Campaign",
+  "url": "https://help.webexconnect.io/docs/register-a-campaign",
+  "word_count": 787,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/register-a-campaign.metadata.json"
+}

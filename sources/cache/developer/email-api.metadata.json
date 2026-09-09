@@ -1,0 +1,43 @@
+{
+  "api_metadata_path": "sources/cache/developer/email-api.api.json",
+  "category": "MULTI CHANNEL COMMUNICATION API",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f6648",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "00cb9e6b9acbc3c13b3187dbc2dc17fab9b15ec22da66d1aeca199d0f4921ae2",
+    "source_path": "7f70c6894f3dbb90973d763af2f0702d2732d5316f0bc35a88ac01611aa9c9ce",
+    "text_path": "8e60b3fb0be26144b55df392b191e9970ba96dc644e9196526eb0e1fe8de4037"
+  },
+  "headings": [
+    "Request Body for Email",
+    "Send Message API v2 for Email channel - Common Body Parameters",
+    "Examples",
+    "Send HTML Email",
+    "**Parameter table with parameters unique to HTML Email type**",
+    "Send Email with Attachments",
+    "**Parameter table with parameters unique to Email with Attachments**",
+    "Send Email Using Templates",
+    "**Parameter table with parameters unique to Email Using Templates**",
+    "Sample Response Body"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/email-api.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/email-api",
+  "retrieved_at": "2026-09-08T23:31:41+00:00",
+  "sha256_api_metadata": "575f65b7d8dc3ea0b617314bc47e22705dc85fc80ee114e6faa20ada4e8aafe2",
+  "sha256_html_response": "7d9d8aaab26c6930321b9f63e51514f3a1abaaebeb24063001af84f878c24e2d",
+  "sha256_source_body": "7f70c6894f3dbb90973d763af2f0702d2732d5316f0bc35a88ac01611aa9c9ce",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/email-api.source.md",
+  "source_updated_at": "2026-07-31T12:25:10.398Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/email-api.txt",
+  "title": "Email API",
+  "url": "https://developers.webexconnect.io/reference/email-api",
+  "word_count": 4228,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/email-api.metadata.json"
+}

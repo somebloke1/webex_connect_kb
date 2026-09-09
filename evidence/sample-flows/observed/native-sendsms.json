@@ -1,0 +1,868 @@
+{
+  "flowId": "96847",
+  "temporary_name": "KBSampleNative05",
+  "cells": [
+    {
+      "id": "1",
+      "parent": "0",
+      "vertex": false,
+      "edge": false,
+      "value": {
+        "tag": "workflowdata",
+        "attributes": {
+          "copy_used_vars": {
+            "2": {
+              "_usedVars": [],
+              "_usedTransVar": [],
+              "_dynamicVar": [
+                "aiAgent.timestamp",
+                "aiAgent.transId",
+                "aiAgent.payload",
+                "service.serviceKey",
+                "aiAgent.msisdn",
+                "aiAgent.messageContent"
+              ],
+              "_dynamicTransVar": [],
+              "_usedStreamVar": []
+            },
+            "3": {
+              "_usedVars": [
+                {
+                  "id": "n2",
+                  "nodeId": 2,
+                  "param": "aiAgent.msisdn",
+                  "fullPath": "n2.aiAgent.msisdn",
+                  "source": 3
+                },
+                {
+                  "id": "n2",
+                  "nodeId": 2,
+                  "param": "aiAgent.messageContent",
+                  "fullPath": "n2.aiAgent.messageContent",
+                  "source": 3
+                }
+              ],
+              "_usedTransVar": [],
+              "_dynamicVar": [],
+              "_dynamicTransVar": [],
+              "_usedStreamVar": []
+            }
+          },
+          "dynamic_output_vars": {
+            "2": [
+              "aiAgent.timestamp",
+              "aiAgent.transId",
+              "aiAgent.payload",
+              "service.serviceKey",
+              "aiAgent.msisdn",
+              "aiAgent.messageContent"
+            ],
+            "3": []
+          },
+          "logbooks": [],
+          "node_group_info": {},
+          "notes": {
+            "nodes": {},
+            "workflow": {}
+          },
+          "start_node_info": {
+            "channel": 501,
+            "type": "channel",
+            "subtype": "aiagent",
+            "isCheckLiveSessions": 0,
+            "extras": {},
+            "eventid": 501,
+            "v2EventId": 501
+          }
+        },
+        "text": ""
+      }
+    },
+    {
+      "id": "2",
+      "parent": "1",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "tag": "start",
+        "attributes": {
+          "hidecell": true,
+          "image": "start.svg",
+          "key": "start",
+          "keytype": "fullscreen",
+          "label": "Configure AI Agent Event",
+          "name": "Start",
+          "nodetype": "start",
+          "type": "start",
+          "updatedimage": "aiagent.svg",
+          "updatedon": "2025-04-14T12:43:08.119",
+          "view_restrict": true
+        },
+        "children": [
+          {
+            "tag": "event",
+            "attributes": {
+              "name": "onbegin",
+              "targetcount": 1
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "selectedChannel",
+              "type": "",
+              "view": ""
+            },
+            "text": {
+              "id": 501,
+              "name": "aiagent",
+              "description": "AI Agent",
+              "type": 3,
+              "extraData": {},
+              "subType": "aiagent",
+              "integrationId": "",
+              "image_url": ""
+            }
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "selectedRuleEvent",
+              "type": "",
+              "view": ""
+            },
+            "text": {
+              "id": 501,
+              "name": "",
+              "v2EventId": 501
+            }
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "ruleEvent",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "ruleConditionStatus",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "conditions",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "apiReqConditions",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "webHookData",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "customEvents",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "isKeyWordDisabled",
+              "type": "",
+              "view": ""
+            },
+            "text": true
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "isKeyWordVerifyReq",
+              "type": "",
+              "view": ""
+            },
+            "text": true
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "isKeyWordAvailable",
+              "type": "",
+              "view": ""
+            },
+            "text": true
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "output_variables",
+              "type": "",
+              "view": ""
+            },
+            "text": [
+              "aiAgent.timestamp",
+              "aiAgent.transId",
+              "aiAgent.payload",
+              "service.serviceKey",
+              "aiAgent.msisdn",
+              "aiAgent.messageContent"
+            ]
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "voiceServiceProvider",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "conditionData",
+              "type": "",
+              "view": ""
+            },
+            "text": [
+              {
+                "defaultvalue": "",
+                "mandatory": false,
+                "var_name": "msisdn",
+                "datatype": "string",
+                "channel_id": 501,
+                "event_id": 501,
+                "eventname": ""
+              },
+              {
+                "defaultvalue": "",
+                "mandatory": false,
+                "var_name": "messageContent",
+                "datatype": "string",
+                "channel_id": 501,
+                "event_id": 501,
+                "eventname": ""
+              },
+              {
+                "defaultvalue": "Type",
+                "mandatory": false,
+                "var_name": "CustomerIDType",
+                "datatype": "string",
+                "channel_id": 501,
+                "event_id": 501,
+                "eventname": ""
+              }
+            ]
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "syncWebHookData",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "isCheckLiveSessions",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "aiAgentData",
+              "type": "",
+              "view": ""
+            },
+            "text": {
+              "parseOutput": [
+                {
+                  "name": "msisdn",
+                  "defaultvalue": "",
+                  "mandatory": false,
+                  "type": "string"
+                },
+                {
+                  "name": "messageContent",
+                  "defaultvalue": "",
+                  "mandatory": false,
+                  "type": "string"
+                }
+              ],
+              "isAuthRequired": false,
+              "name": "",
+              "url": "https://example.invalid/flows/57801/trigger/aiagent",
+              "v2EventId": 501,
+              "jsonData": {
+                "msisdn": "",
+                "messageContent": ""
+              },
+              "xmlData": "",
+              "isExistingAIAgent": true,
+              "selectedEvent": 501,
+              "jsonSource": 0,
+              "conditionData": [],
+              "isValidateSignature": false,
+              "validateSignatureObj": {
+                "algorithm": "",
+                "secretType": "[redacted]",
+                "secretKey": "[redacted]",
+                "headerKey": "[redacted]"
+              }
+            }
+          },
+          {
+            "tag": "nodevariablestore",
+            "attributes": {
+              "name": "n2.aiAgent.msisdn",
+              "source": 3
+            },
+            "text": "$(aiAgent.msisdn)"
+          },
+          {
+            "tag": "nodevariablestore",
+            "attributes": {
+              "name": "n2.aiAgent.messageContent",
+              "source": 3
+            },
+            "text": "$(aiAgent.messageContent)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "3",
+      "parent": "1",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "tag": "umppublic",
+        "attributes": {
+          "image": "sms.svg",
+          "infolabel": "sendsms",
+          "key": "sendsms",
+          "label": "SMS",
+          "name": "SMS",
+          "paramhide": true,
+          "type": "UmpPublic",
+          "updatedimage": "sms.svg",
+          "updatedon": "2025-04-14T12:43:48.312",
+          "view_restrict": true
+        },
+        "children": [
+          {
+            "tag": "param",
+            "attributes": {
+              "label": "Remove Wait For",
+              "name": "hideWaitFor"
+            },
+            "text": false
+          },
+          {
+            "tag": "event",
+            "attributes": {
+              "name": "onerror",
+              "targetcount": 1
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "messagetype",
+              "type": "",
+              "view": ""
+            },
+            "text": 1
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "message",
+              "type": "",
+              "view": ""
+            },
+            "text": "$(n2.aiAgent.messageContent)"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "senderid",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "expiry",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "timeout",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "expiryType",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "channelId",
+              "type": "",
+              "view": ""
+            },
+            "text": 1
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "senderidViewFlag",
+              "type": "",
+              "view": ""
+            },
+            "text": false
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "deliverychannel",
+              "type": "",
+              "view": ""
+            },
+            "text": "SMS"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "callbackdata",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "correlationid",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "destination",
+              "type": "",
+              "view": ""
+            },
+            "text": "$(n2.aiAgent.msisdn)"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "destinationType",
+              "type": "",
+              "view": ""
+            },
+            "text": "msisdn"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "successoutcome",
+              "type": "",
+              "view": ""
+            },
+            "text": 1
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "notifyurl",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "linkValidityCheck",
+              "type": "",
+              "view": ""
+            },
+            "text": false
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "shortLinkId",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "linkValidityTime",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "extraParameters",
+              "type": "",
+              "view": ""
+            },
+            "text": {}
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "resourceinfo",
+              "type": "",
+              "view": ""
+            },
+            "text": {
+              "node_id": 3,
+              "node_name": "SMS",
+              "resource_list": [
+                {
+                  "resource_name": "senderid",
+                  "resource_values": [
+                    12135793390
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "viewmodeData",
+              "type": "",
+              "view": ""
+            },
+            "text": [
+              {
+                "name": "senderid",
+                "value": 12135793390
+              },
+              {
+                "name": "shortLinkId",
+                "value": ""
+              },
+              {
+                "name": "cnctTempId",
+                "value": ""
+              },
+              {
+                "name": "domain",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "templateId",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "cnctTempId",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "smstemplateinfo",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "template_object",
+              "type": "",
+              "view": ""
+            },
+            "text": {}
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "msgpriorityViewFlag",
+              "type": "",
+              "view": ""
+            },
+            "text": false
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "msgpriority",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "isMessagePriorityEnabled",
+              "type": "",
+              "view": ""
+            },
+            "text": 0
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "isTemplateDynamic",
+              "type": "",
+              "view": ""
+            },
+            "text": false
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "shortenLinks",
+              "type": "",
+              "view": ""
+            },
+            "text": false
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "domain",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "trackClicks",
+              "type": "",
+              "view": ""
+            },
+            "text": false
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "domainViewFlag",
+              "type": "",
+              "view": ""
+            },
+            "text": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "5128003",
+      "parent": "1",
+      "vertex": false,
+      "edge": true,
+      "source": "2",
+      "target": "3",
+      "value": {
+        "duplicatetarget": false,
+        "label": "onBegin",
+        "name": "onbegin",
+        "optionNodeType": "default",
+        "porttype": "MP",
+        "type": "EDGE",
+        "value": "onbegin"
+      }
+    }
+  ],
+  "customVariables": [],
+  "outcomes": [
+    {
+      "id": 1,
+      "order": 0,
+      "name": 100,
+      "value": "Last executed node event",
+      "tag": 15,
+      "tagName": "Last Execution Status",
+      "type": "default",
+      "notification": {
+        "method": "get",
+        "headers": "[redacted]",
+        "payload": {
+          "serviceName": "$(serviceName)",
+          "status": "success"
+        },
+        "payloadType": 1,
+        "custompayload": {
+          "transactionID": "$(transid)",
+          "flowname": "$(flowname)",
+          "serviceName": "$(serviceName)",
+          "statuscode": 1000
+        },
+        "notificationType": -2
+      },
+      "isNotify": true,
+      "statusCode": "All status codes"
+    },
+    {
+      "id": 2,
+      "order": 1,
+      "name": 101,
+      "value": "Successfully completed flow",
+      "tag": 11,
+      "tagName": "Success",
+      "type": "default",
+      "notification": null,
+      "isNotify": false,
+      "statusCode": null
+    },
+    {
+      "id": 3,
+      "order": 2,
+      "name": 102,
+      "value": "Flow completed with an error",
+      "tag": 12,
+      "tagName": "Error",
+      "type": "default",
+      "notification": null,
+      "isNotify": false,
+      "statusCode": null
+    },
+    {
+      "id": 4,
+      "order": 3,
+      "name": 103,
+      "value": "Flow ended due to an interruption",
+      "tag": 13,
+      "tagName": "Incomplete",
+      "type": "default",
+      "notification": null,
+      "isNotify": false,
+      "statusCode": null
+    }
+  ],
+  "label": "sendSMS.workflow",
+  "observed_at": "2026-09-09T00:00:41.982Z",
+  "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model",
+  "runtime_tested": false,
+  "redactions": "Header credentials and URL hosts redacted. Internal model properties are evidence, not a public import API."
+}

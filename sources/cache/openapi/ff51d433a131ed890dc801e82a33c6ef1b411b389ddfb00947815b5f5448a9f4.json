@@ -1,0 +1,157 @@
+{
+  "_id": "6a675233ec1c893d8a7f67bc:6a675233ec1c893d8a7f64f8",
+  "components": {
+    "securitySchemes": {
+      "sec0": {
+        "in": "header",
+        "name": "key",
+        "type": "apiKey"
+      }
+    }
+  },
+  "info": {
+    "title": "Topic APIs",
+    "version": "6.20.0"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/apps/$(appid)/topics/$(topicid)": {
+      "get": {
+        "deprecated": false,
+        "description": "This API should return the topic information for a specific topicId.",
+        "operationId": "get-2",
+        "parameters": [
+          {
+            "description": "The ID of the app asset that you can obtain from imiconnect platform",
+            "in": "path",
+            "name": "appid",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Specifies the ID of the topic",
+            "in": "path",
+            "name": "topicid",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{\n    \"code\": \"0\",\n    \"topics\": [\n        {\n            \"ref\": \"yes\",\n            \"topic_group\": \"Testing\",\n            \"created_on\": \"2020-08-24T05:00:47.264Z\",\n            \"name\": \"JWTSanityUK1\",\n            \"description\": \"Cordova\",\n            \"id\": \"5f43497fe4b0eae4f99c0f6e\"\n        }\n    ],\n    \"description\": \"success\",\n    \"trans_id\": \"d13b5c1c-96ba-478a-84e5-25b86f2de5b7\"\n}\n"
+                  }
+                },
+                "schema": {
+                  "properties": {
+                    "code": {
+                      "example": "0",
+                      "type": "string"
+                    },
+                    "description": {
+                      "example": "success",
+                      "type": "string"
+                    },
+                    "topics": {
+                      "items": {
+                        "properties": {
+                          "created_on": {
+                            "example": "2020-08-24T05:00:47.264Z",
+                            "type": "string"
+                          },
+                          "description": {
+                            "example": "Cordova",
+                            "type": "string"
+                          },
+                          "id": {
+                            "example": "5f43497fe4b0eae4f99c0f6e",
+                            "type": "string"
+                          },
+                          "name": {
+                            "example": "JWTSanityUK1",
+                            "type": "string"
+                          },
+                          "ref": {
+                            "example": "yes",
+                            "type": "string"
+                          },
+                          "topic_group": {
+                            "example": "Testing",
+                            "type": "string"
+                          }
+                        },
+                        "type": "object"
+                      },
+                      "type": "array"
+                    },
+                    "trans_id": {
+                      "example": "d13b5c1c-96ba-478a-84e5-25b86f2de5b7",
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "200"
+          }
+        },
+        "summary": "Get a Topic",
+        "x-readme": {
+          "code-samples": [
+            {
+              "code": "-X GET https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{{inappid}}/topics/\n-H \"secretKey: {secretKey}\"\n",
+              "language": "curl"
+            },
+            {
+              "code": "require 'httparty'\n# Create the HTTP objects and post request\nhttp = HTTParty.get(\"https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/topics\",\n    :headers => {\n                          'secretKey ' => '{secretKey}’\n            }\n)\n# Print on console\nputs http\n",
+              "language": "ruby"
+            },
+            {
+              "code": "var data = null;\n\nvar xhr = new XMLHttpRequest();\n\nxhr.addEventListener(\"readystatechange\", function () {\n  if (this.readyState === this.DONE) {\n    console.log(this.responseText);\n  }\n});\n\nxhr.open(\"GET\", \" https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/topics/\");\nxhr.setRequestHeader(\"secretKey\", \"{secretKey}\");\nxhr.send(data);\n",
+              "language": "javascript"
+            },
+            {
+              "code": "import requests\n\nurl = \" https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/topics/\"\n\nheaders = {'secretKey': '{secretKey}’}\n\nresponse = requests.request(\"GET\", url, headers=headers)\n\nprint(response.text)\n",
+              "language": "python"
+            }
+          ],
+          "samples-languages": [
+            "curl",
+            "ruby",
+            "javascript",
+            "python"
+          ]
+        }
+      }
+    }
+  },
+  "security": [
+    {
+      "sec0": []
+    }
+  ],
+  "servers": [
+    {
+      "url": "https://rtm.imiconnect.io/"
+    }
+  ],
+  "x-readme": {
+    "explorer-enabled": false,
+    "headers": [
+      {
+        "key": "content-type",
+        "value": "application/json"
+      }
+    ],
+    "proxy-enabled": false
+  },
+  "x-readme-fauxas": true
+}

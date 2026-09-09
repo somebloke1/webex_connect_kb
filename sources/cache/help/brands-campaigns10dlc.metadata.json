@@ -1,0 +1,35 @@
+{
+  "category": "Assets",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182578ab",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "25aae426bd0ec907a7d9ba1c2de797dbe37ea6e4c8556ce6f449e1bad515af78",
+    "source_path": "6344a3aa2bf2ba78520d20302d0f742ad8038935b99c59ad11fe7988235a7b58",
+    "text_path": "8822564fc6db9111892d820ae5e07ca135dac4bffe4bfdda718cb2d0d7c1578d"
+  },
+  "headings": [
+    "📘10DLC module available only in the US region",
+    "Accessing Brands & Campaigns",
+    "📘Notes"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/brands-campaigns10dlc.md",
+  "resolved_url": "https://help.webexconnect.io/docs/brands-campaigns10dlc",
+  "retrieved_at": "2026-09-08T23:29:00+00:00",
+  "sha256_html_response": "2597bde2cc0bf4e66dce16b372c5f5fd4efdda89f4337801b531421f6708940a",
+  "sha256_source_body": "6344a3aa2bf2ba78520d20302d0f742ad8038935b99c59ad11fe7988235a7b58",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/brands-campaigns10dlc.source.md",
+  "source_updated_at": "2025-05-26T10:19:18.878Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/brands-campaigns10dlc.txt",
+  "title": "Brands & Campaigns (10DLC)",
+  "url": "https://help.webexconnect.io/docs/brands-campaigns10dlc",
+  "word_count": 299,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/brands-campaigns10dlc.metadata.json"
+}

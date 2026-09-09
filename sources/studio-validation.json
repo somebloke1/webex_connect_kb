@@ -1,0 +1,106 @@
+{
+  "verified_at": "2026-09-08T23:49:48+00:00",
+  "boundary": "Local source extraction,link,table,and hash checks only; no tenant changes,flow executions,or additional independent QA.",
+  "studio_sources": [
+    {
+      "url": "https://help.webex.com/article/5a07xcb",
+      "source_tables": 2,
+      "markdown_tables": 2,
+      "headings": 3,
+      "word_count": 712,
+      "source_updated_at": "2026-05-26T12:14:04.495Z"
+    },
+    {
+      "url": "https://help.webex.com/article/mzpuseb",
+      "source_tables": 0,
+      "markdown_tables": 0,
+      "headings": 3,
+      "word_count": 1340,
+      "source_updated_at": "2025-06-04T06:25:55.485Z"
+    },
+    {
+      "url": "https://help.webex.com/article/n5uo60x",
+      "source_tables": 0,
+      "markdown_tables": 0,
+      "headings": 13,
+      "word_count": 1537,
+      "source_updated_at": "2026-04-07T04:21:19.540Z"
+    },
+    {
+      "url": "https://help.webex.com/article/n8mo4c",
+      "source_tables": 0,
+      "markdown_tables": 0,
+      "headings": 23,
+      "word_count": 3151,
+      "source_updated_at": "2026-04-14T16:43:59.661Z"
+    },
+    {
+      "url": "https://help.webex.com/article/ncs9r37",
+      "source_tables": 56,
+      "markdown_tables": 56,
+      "headings": 122,
+      "word_count": 24101,
+      "source_updated_at": "2026-09-08T17:48:52.503Z"
+    },
+    {
+      "url": "https://help.webex.com/article/ne6s80cb",
+      "source_tables": 0,
+      "markdown_tables": 0,
+      "headings": 4,
+      "word_count": 1000,
+      "source_updated_at": "2026-09-08T17:41:18.933Z"
+    },
+    {
+      "url": "https://help.webex.com/article/nelkmxk",
+      "source_tables": 1,
+      "markdown_tables": 1,
+      "headings": 10,
+      "word_count": 1933,
+      "source_updated_at": "2026-01-23T03:39:16.905Z"
+    },
+    {
+      "url": "https://help.webex.com/article/pdef2d",
+      "source_tables": 2,
+      "markdown_tables": 2,
+      "headings": 1,
+      "word_count": 2596,
+      "source_updated_at": "2026-07-16T09:54:08.286Z"
+    },
+    {
+      "url": "https://help.webex.com/article/s0qro1",
+      "source_tables": 0,
+      "markdown_tables": 0,
+      "headings": 7,
+      "word_count": 2284,
+      "source_updated_at": "2026-08-25T09:08:30.936Z"
+    },
+    {
+      "url": "https://help.webex.com/article/sz02k8",
+      "source_tables": 3,
+      "markdown_tables": 3,
+      "headings": 14,
+      "word_count": 3033,
+      "source_updated_at": "2026-07-16T12:38:10.244Z"
+    }
+  ],
+  "studio_local_links_checked": 91,
+  "corpus_verification": {
+    "records": 534,
+    "checked_files": 1868,
+    "errors": [],
+    "verified_at": "2026-09-08T23:49:48+00:00"
+  },
+  "search_queries": {
+    "instruction optimization": [
+      "Webex AI Agent Studio Administration guide"
+    ],
+    "guardrails": [
+      "Guidelines and best practices for automating with AI agent",
+      "Understand AI engines for AI agents"
+    ],
+    "custom events": [
+      "Configure custom data and custom events for AI agents",
+      "Use AI agents for customer interactions"
+    ]
+  }
+}

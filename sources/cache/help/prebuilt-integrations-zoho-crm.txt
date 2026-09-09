@@ -1,0 +1,694 @@
+## 
+
+Introduction
+
+Webex Connect offers a pre-built integration node for Zoho CRM to make it easier for you to create, view, delete, and/or update tickets or contacts in your Zoho CRM account. 
+
+This node needs to be enabled for your account and is not available by default. Please contact your account manager in case you wish to enable it for your account.
+
+## 
+
+Version Supported
+
+## 📘
+Webex Connect's integration is based on Zoho's API version 2.0.
+
+## 
+
+Pre-requisites
+
+To get Zoho CRM node-enabled:
+
+- Zoho CRM node needs to be enabled for your Webex Connect tenant and is not available by default. Please contact your account manager in case you wish to enable it for your account.
+
+- Callback URLs for all your pre-built integrations, custom integration configurations, that use OAuth 2.0 authorization with ‘Auth Code’ Grant Type will be updated with Webex Connect  branded URLs. This doesn’t impact functioning of any of your existing integration configurations until the Refresh Token for that integration expires or until you decide to reauthorize. In either of these two cases, you would need to start using the new Callback URL provided on Webex Connect  UI in the third-party application you have integrated with. Another example of this is OAuth 2.0 based authentication for Gmail when using SMTP for Outbound Email channel configuration which is currently available only for Webex Connect  tenants used for Webex Contact Center Integration.
+
+Please make sure your applications, firewalls, etc. do not restrict access to these new Callback URLs in case you have an internal policy/practice to add these URLs to the allow/accept/whitelist.
+
+- This integration is available only in the cloud version of Webex Connect.
+
+## 
+
+Node Configuration
+
+Drag-and-drop the node onto the visual flow builder and double-click the node to configure it. 
+
+## 📘
+Please note that the latest version of the Zoho integration node that you should use is v2.0.
+
+- Select the required Method Name from the drop-down list box. The following methods are supported currently: 
+
+- Insert Record- Allows to add a new record using module API name, company, last name, first name, email etc.
+
+- Get a Specific Record- Allows to retrieve a specific record by Record ID.
+
+- Update a Specific Record- Allows to modify a specific record by the unique identification number of the record.  
+
+- Delete a Specific Record- Allows to delete a specific record by the Record ID.
+
+- Add User- Allows to add a new user using the users personal information such as, role ID, email ,first name, profile Id and last name.
+
+- Get Data of a Specific User-Allows to retrieve data of a specific user using unique identification number of the user.
+
+- Update User- Allows to modify a user by the User ID.
+
+- Delete User- Allows to delete a specific user by the User ID.
+
+- Provide the Zoho auth token and other request parameters for the selected method and click 'Save'. For example, if you select the 'Insert Record' method, you need to provide parameters such as 'Module API Name', 'Zoho Auth Token', 'Company Name', 'First Name', 'Last Name', 'Email', and more.
+
+ [Image: Screenshot of Insert Record method configuration page.] 
+Screenshot of Insert Record method configuration page.
+
+- You can see the data that this node generates under the Output Variables section. These variables are available for use in subsequent nodes. 
+
+ [Image: Screenshot of Insert Record method configuration page.] 
+Screenshot of Insert Record method configuration page.
+
+- You can see the list of possible node outcomes for various methods supported by this node under the 'Node Outcomes' section. Examples include, 'Success', 'Error', 'OnTimeout', etc.
+
+## 
+
+Methods and Outcomes
+
+Here’s a brief description of various methods, and corresponding output variables and node outcomes associated with each of the methods.
+
+### 
+
+Method Name - Insert Record
+
+ | 
+Input Variables
+ | 
+Output Variables
+ | 
+Node Outcomes
+
+ | 
+Module API Name
+
+- This field specifies the module name to which the API belongs to
+
+Company
+
+- This field specifies the name of the company
+
+Last Name
+
+- Customer’s Last Name
+
+First Name
+
+- Customer’s First Name
+
+Email
+
+- This field specifies the email id of the user
+
+State
+
+- This field specifies the state of the record whether Active _or _Inactive
+
+Trigger (Optional)
+
+- The trigger input can be workflow, approval, or blueprint. If "trigger" is not mentioned, the workflows, approvals and blueprints related to the API will get executed. Enter the trigger value as [] to not execute the workflows. 
+ | 
+Code 
+
+- Contains only text whether "Success", "Invalid_Data", "Mandatory_Not_Found"
+
+Modified_Time
+
+- Contains the time on which the record is modified
+
+Modified_By_name
+
+- Contains the name of the user who have modified the record
+
+Modified_By_id
+
+- Contains the unique identification number of the user
+
+Created_Time
+
+- Contains the time on which the record is created
+
+Created_By_name
+
+- Contains the name of the user who has created the record
+
+Created_By_id
+
+- Contains the unique identification number of the user
+
+message
+
+- Contains the response of the API executed. 
+
+status
+
+- Contains the status of the record whether Success_or _Error
+
+responsePayload
+
+- Contains all the response JSON payload
+ | 
+onInsertRecordError
+
+- Contains the details if the insertion of a record is failed for any reason
+
+onInsertRecordSuccess
+
+- Contains the details if the insertion of a record is successful
+
+### 
+
+Method Name - Get a Specific Record
+
+ [Image: Screenshot of Get a Specific Record method configuration page.] 
+Screenshot of Get a Specific Record method configuration page.
+
+ | 
+Input Variables
+ | 
+Output Variables
+ | 
+Node Outcomes
+
+ | 
+Module API Name
+
+- This field specifies the module name to which the API belongs to
+
+Record ID
+
+- This field specifies the unique identification number of the record 
+ | 
+Owner_Name
+
+- Contains the name of the user to which it belongs to
+
+Owner_id
+
+- Contains the unique identification number of the owner
+
+Account_Name_name
+
+- Contains the name of the account
+
+Account_id
+
+- Contains the unique identification number of the account
+
+Created_Time
+
+- Contains the time on which the record is created. This is in the UTC format
+
+Created_By_name
+
+- Contains the name of the user who has created the record
+
+Created_By_id
+
+- Contains the unique identification number of the user
+
+responsePayload
+
+- Contains all the response JSON payload
+ | 
+
+- onNoRecordsFound
+
+- onGetRecordFailure
+
+- onGetRecordSuccess
+
+### 
+
+Method Name - Update a Specific Record
+
+ [Image: Screenshot of Update a Specific Record method configuration page] 
+Screenshot of Update a Specific Record method configuration page
+
+ | 
+Input Variables
+ | 
+Output Variables
+ | 
+Node Outcomes
+
+ | 
+Module API Name
+
+- This field specifies the module name to which the API belongs to
+
+Record ID
+
+- This field specifies the unique identification number of the record 
+
+Company
+
+- This field specifies the name of the company
+
+State
+
+- This field specifies the state of the record whether Active _or _Inactive
+ | 
+Code 
+
+- Contains only text whether "Success", "Invalid_Data", "Mandatory_Not_Found"
+
+details_created_time
+* Contains the time on which the record is created
+
+details_modified_time
+
+- Contains the time on which the record is modified
+
+details_modified_by_name
+
+- Contains the name of the user who has modified the record
+
+details_modified_by_id
+
+- Contains the unique identification number of the user who has modified the record
+
+details_created_by_name
+
+- Contains the name of the user who has modified the record
+
+details_created_by_id
+
+- Contains the unique identification number of the user who has created the record
+
+message
+
+- Contains the response of the API executed. 
+
+status
+
+- Contains the status of the record whether Success_or _Error
+
+responsePayload
+
+- Contains all the response JSON payload
+ | 
+onUpdateRecordError
+
+- Contains the details if the update of a record is failed for any reason
+
+onUpdateRecordSuccess
+
+- Contains the details if the update of a record is successful
+
+### 
+
+Method Name - Delete a Specific Record
+
+ [Image: Screenshot of Delete a Specific Record method configuration page.] 
+Screenshot of Delete a Specific Record method configuration page
+
+ | 
+Input Variables
+ | 
+Output Variables
+ | 
+Node Outcomes
+
+ | 
+Module API Name
+
+- This field specifies the module name to which the API belongs to
+
+Record ID 
+
+Workflow Trigger
+This field specifies if the workflow rules are to be triggered upon record deletion. The default value is True.
+Possible values - true: triggers associated workflows; false: does not trigger associated workflows.
+ | 
+Code 
+
+- Contains only text whether "Success", "Invalid_Data", "Mandatory_Not_Found"
+
+details_id
+
+- Contains the id of the record which is deleted
+
+message
+
+- Contains the response of the API executed. 
+
+status
+
+- Contains the status of the record whether Success_or _Error
+
+response
+
+- Contains all the response JSON payload
+ | 
+onDeleteRecordSuccess
+
+- Contains the details if the deletion of a record is successful
+
+onDeleteRecordError
+
+- Contains the details if the deletion of a record is failed for any reason
+
+### 
+
+Method Name - Add User
+
+ [Image: Screenshot of Add User method configuration page.] 
+Screenshot of Add User method configuration page.
+
+ | 
+Input Variables
+ | 
+Output Variables
+ | 
+Node Outcomes
+
+ | 
+Role ID
+
+- This field specifies the unique identification number based on the designation
+
+Email
+
+- This field specifies the email id of the user
+
+First Name
+
+- First Name of the user
+
+Profile ID
+Specify the unique ID of the profile you want to assign the user with, to decide the user's level of access to CRM data.
+
+Last Name
+
+- Last name of the user
+ | 
+Code 
+
+- Contains only text whether "Success", "Invalid_Data", "Mandatory_Not_Found"
+
+id
+
+- Contains the unique identification number of the user
+
+message
+
+- Contains the response of the API executed. 
+
+status
+
+- Contains the status of the record whether Success_or _Error
+
+responsePayload
+
+- Contains all the response JSON payload
+ | 
+onaddUserError
+
+- Contains the details of the added user has failed for any reason
+
+onaddUserSuccess
+
+- Contains the details of the user is added successfully
+
+### 
+
+Method Name - Get Details of a Specific User
+
+ [Image: Screenshot of Get Details of a Specific User method configuration page.] 
+Screenshot of Get Details of a Specific User method configuration page.
+
+ | 
+Input Variables
+ | 
+Output Variables
+ | 
+Node Outcomes
+
+ | 
+User ID
+
+- This field specifies the unique identification number of the user
+ | 
+role_name
+Represents the name of the role of the user.
+
+role_id
+
+- Represents the unique identification number of the role of the user.
+
+language
+
+- Represents the language in which the user accesses the CRM. For instance, 'en_US'.
+
+locale
+
+- Represents the user's locale. For instance, 'en_IN'.
+
+microsoft
+
+- Contains the Boolean value. Represents if the user is a Microsoft user.
+
+- True: The user is a Microsoft user.
+
+- False: The user is a Microsoft user.
+
+Isonline
+
+- Represents if the user is online.
+
+- True: The user is online.
+
+- False: The user is offline.
+
+modified_by_name
+
+- Contains the name of the user who has modified the record
+
+modified_by_id
+
+- Contains the unique identification number of the user who has modified the record
+
+user_id
+
+- Contains the unique identification number of the user
+
+user_country_locale
+
+users_first_name
+
+- Contains the first name of the user
+
+users_email
+
+- Contains the email address of the user
+
+users_created_time
+
+- Contains the time details at which the user was created
+
+users_modified_time
+
+- Contains the time on which the record is modified. 
+
+users_time_format
+
+- Contains the time format in  UTC format
+
+users_offset
+
+users_profile_name
+
+- Contains the profile name of the user
+
+users_profile_id
+
+- Contains the unique identification number for the profile
+
+users_last_name
+
+- Contains the last name of the user
+
+users_time_zone
+
+- Contains the time zone details of the user
+
+users_created_by_name
+
+- Contains the name of the user who has created the record
+
+users_created_by_id
+
+- Contains the unique identification number of the user who has created the record
+
+users_zuid
+
+- Represents the ZUID of the current user.
+
+users_confirm
+
+- Represents if the user is a confirmed user.
+
+- True: The user is a confirmed user.
+
+- False: The user is not a confirmed user.
+
+users_full_name
+
+- Contains the full name of the user
+
+users_date_format
+
+- Contains the date format . For instance, 'MM/dd/yyyy'.
+
+users_status
+
+- Contains the status of the record whether Success_or _Error
+
+responsePayload
+
+- Contains all the response JSON payload
+ | 
+onGetUserError
+
+- Contains thedetails of the user is retrieved has failed for any reason
+
+onGetUserSuccess
+
+- Contains the details of the user is retrieved successfully
+
+### 
+
+Method Name - Update User
+
+ [Image: Screenshot of Update User method configuration page.] 
+Screenshot of Update User method configuration page.
+
+ | 
+Input Variables
+ | 
+Output Variables
+ | 
+Node Outcomes
+
+ | 
+User ID
+
+- This field specifies the unique identification number of the user
+
+Phone
+
+- This field specifies the phone number of the user
+
+Email
+
+- This field specifies the email id of the user
+
+Date of Birth
+
+- This field specifies the date of birth of the user
+
+Role ID
+
+- This field specifies the unique identification number of the role
+
+Profile ID
+
+- This field specifies the unique identification number of the profile
+
+State
+
+- This field specifies the state of the user whether Active _or _Inactive
+ | 
+users_code
+
+- Contains only text whether "Success", "Invalid_Data", "Mandatory_Not_Found"
+
+users_details_id
+
+- Contains the id of the record which is deleted
+
+users_message
+
+- Contains the response of the API executed. 
+
+users_status
+
+- Contains the status of the record whether Success_or _Error
+
+responsePayload
+
+- Contains all the response JSON payload
+ | 
+
+- onInvalidData
+
+- onError
+
+- onInvalidChoice
+
+- onauthorizatonfail
+
+- onUpdateUserError
+
+- onUpdateUserSuccess
+
+- onTimeout
+
+### 
+
+Method Name - Delete User
+
+ [Image: Screenshot of Delete User method configuration page.] 
+Screenshot of Delete User method configuration page.
+
+ | 
+Input Variables
+ | 
+Output Variables
+ | 
+Node Outcomes
+
+ | 
+User ID
+
+- This field specifies the unique identification number of the user
+ | 
+users_code
+
+- Contains only text whether "Success", "Invalid_Data", "Mandatory_Not_Found"
+
+users_details
+
+- Contains the id of the record which is deleted
+
+users_message
+
+- Contains the response of the API executed. 
+
+users_status
+
+- Contains the status of the record whether Success_or _Error
+
+responsePayload 
+
+- Contains all the response JSON payload
+ | 
+
+- onInvalidData
+
+- onError
+
+- onInvalidChoice
+
+- onauthorizatonfail
+
+- onDeleteUserError
+
+- onDeleteUserSuccess
+
+- onTimeout

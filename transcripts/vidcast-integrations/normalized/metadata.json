@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "source": "https://app.vidcast.io/share/31b01641-f081-4163-886b-5f0612b37033",
+  "created_at": "2026-09-08T23:32:47.135472+00:00",
+  "requested_languages": [
+    "en"
+  ],
+  "title": "Reusable integrations made easy with the Integrations Studio for Webex Connect",
+  "uploader": null,
+  "versions": {
+    "python": "3.13.12",
+    "youtube-transcript-api": "1.2.4",
+    "yt-dlp": "2026.8.19",
+    "webvtt-py": "0.5.1",
+    "faster-whisper": "1.2.1",
+    "ctranslate2": "4.8.2"
+  },
+  "attempts": [],
+  "human_reviewed": false,
+  "input_path": "/home/dgk/workspace/webex_connect_kb/transcripts/vidcast-integrations/source.en.vtt",
+  "input_sha256": "fa49738c0bb038bddb1276655017d19d1ab1f3a4909150fc92bac92881b885cc",
+  "title_provenance": "user-supplied",
+  "method": "local-subtitle-import",
+  "language": "en",
+  "caption_kind": "local-unverified",
+  "segment_count": 483,
+  "transcript_end_seconds": 3222.169,
+  "artifact_sha256": {
+    "transcript.json": "c663081a4a79cfa0aafccdbb600a5e2f1441beab75f88e4038b306f6bd8d63ca",
+    "transcript.srt": "e1c3d44d6750a04a77e46aef2b9510b7bf22215515b359f539a3e229a0057866",
+    "transcript.md": "5922d6c9df24890af7d0eebff6d396077e499c7df0da9d0776d50e68e21c892c"
+  }
+}

@@ -1,0 +1,316 @@
+{
+  "generated_at": "2026-09-08T23:48:53+00:00",
+  "declared_scope": "All visible official platform-help navigation pages; all public developer API references plus app asset/profile prerequisites; current-page release and policy notices; selected Cisco tutorial; AI Agent Studio administration guide and directly linked essential articles.",
+  "total_sources": 534,
+  "status_counts": {
+    "ok": 534
+  },
+  "source_family_counts": {
+    "cisco": 1,
+    "developer": 176,
+    "studio": 10,
+    "changelog": 10,
+    "help": 337
+  },
+  "documentation_version_counts": {
+    "unspecified": 11,
+    "6.20.0": 523
+  },
+  "rendered_word_count": 745239,
+  "categories": [
+    {
+      "source_family": "changelog",
+      "category": "2026 product and policy updates",
+      "total": 10,
+      "cached": 10
+    },
+    {
+      "source_family": "cisco",
+      "category": "Developer tutorials",
+      "total": 1,
+      "cached": 1
+    },
+    {
+      "source_family": "developer",
+      "category": "API Reference for Sandbox",
+      "total": 13,
+      "cached": 13
+    },
+    {
+      "source_family": "developer",
+      "category": "Audit Logs API",
+      "total": 1,
+      "cached": 1
+    },
+    {
+      "source_family": "developer",
+      "category": "Contact Policy API",
+      "total": 22,
+      "cached": 22
+    },
+    {
+      "source_family": "developer",
+      "category": "Data Streams",
+      "total": 7,
+      "cached": 7
+    },
+    {
+      "source_family": "developer",
+      "category": "EVENT API",
+      "total": 2,
+      "cached": 2
+    },
+    {
+      "source_family": "developer",
+      "category": "FAQs",
+      "total": 12,
+      "cached": 12
+    },
+    {
+      "source_family": "developer",
+      "category": "GETTING STARTED",
+      "total": 5,
+      "cached": 5
+    },
+    {
+      "source_family": "developer",
+      "category": "GETTING STARTED WITH SDKs",
+      "total": 1,
+      "cached": 1
+    },
+    {
+      "source_family": "developer",
+      "category": "INBOUND WEBHOOKS",
+      "total": 1,
+      "cached": 1
+    },
+    {
+      "source_family": "developer",
+      "category": "MULTI CHANNEL COMMUNICATION API",
+      "total": 51,
+      "cached": 51
+    },
+    {
+      "source_family": "developer",
+      "category": "Make Outbound Calls Using Voice API v1",
+      "total": 1,
+      "cached": 1
+    },
+    {
+      "source_family": "developer",
+      "category": "OUTBOUND WEBHOOKS",
+      "total": 12,
+      "cached": 12
+    },
+    {
+      "source_family": "developer",
+      "category": "Profile API v2",
+      "total": 14,
+      "cached": 14
+    },
+    {
+      "source_family": "developer",
+      "category": "Programmable Voice Calls Using Voice API v1",
+      "total": 1,
+      "cached": 1
+    },
+    {
+      "source_family": "developer",
+      "category": "RATE LIMITS",
+      "total": 1,
+      "cached": 1
+    },
+    {
+      "source_family": "developer",
+      "category": "SEGMENT APIs",
+      "total": 8,
+      "cached": 8
+    },
+    {
+      "source_family": "developer",
+      "category": "Status Codes",
+      "total": 1,
+      "cached": 1
+    },
+    {
+      "source_family": "developer",
+      "category": "THREAD APIs",
+      "total": 8,
+      "cached": 8
+    },
+    {
+      "source_family": "developer",
+      "category": "TOPIC APIs",
+      "total": 11,
+      "cached": 11
+    },
+    {
+      "source_family": "developer",
+      "category": "TUTORIALS",
+      "total": 4,
+      "cached": 4
+    },
+    {
+      "source_family": "help",
+      "category": "ADMINISTRATION",
+      "total": 9,
+      "cached": 9
+    },
+    {
+      "source_family": "help",
+      "category": "AI Agent flow templates",
+      "total": 1,
+      "cached": 1
+    },
+    {
+      "source_family": "help",
+      "category": "APP TRAY",
+      "total": 9,
+      "cached": 9
+    },
+    {
+      "source_family": "help",
+      "category": "App Tray - Webex AI Agent Studio",
+      "total": 2,
+      "cached": 2
+    },
+    {
+      "source_family": "help",
+      "category": "Assets",
+      "total": 46,
+      "cached": 46
+    },
+    {
+      "source_family": "help",
+      "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+      "total": 47,
+      "cached": 47
+    },
+    {
+      "source_family": "help",
+      "category": "DATA MANAGEMENT",
+      "total": 2,
+      "cached": 2
+    },
+    {
+      "source_family": "help",
+      "category": "DEBUG",
+      "total": 2,
+      "cached": 2
+    },
+    {
+      "source_family": "help",
+      "category": "Data Streams",
+      "total": 1,
+      "cached": 1
+    },
+    {
+      "source_family": "help",
+      "category": "GETTING STARTED",
+      "total": 9,
+      "cached": 9
+    },
+    {
+      "source_family": "help",
+      "category": "MONITORING",
+      "total": 1,
+      "cached": 1
+    },
+    {
+      "source_family": "help",
+      "category": "PreBUILT Integrations",
+      "total": 25,
+      "cached": 25
+    },
+    {
+      "source_family": "help",
+      "category": "REFERENCES",
+      "total": 10,
+      "cached": 10
+    },
+    {
+      "source_family": "help",
+      "category": "REPORTS",
+      "total": 1,
+      "cached": 1
+    },
+    {
+      "source_family": "help",
+      "category": "SERVICES & FLOWS",
+      "total": 65,
+      "cached": 65
+    },
+    {
+      "source_family": "help",
+      "category": "TOOLS",
+      "total": 19,
+      "cached": 19
+    },
+    {
+      "source_family": "help",
+      "category": "TUTORIALS",
+      "total": 9,
+      "cached": 9
+    },
+    {
+      "source_family": "help",
+      "category": "WEBEX CONNECT SANDBOX",
+      "total": 8,
+      "cached": 8
+    },
+    {
+      "source_family": "help",
+      "category": "Watchtower",
+      "total": 3,
+      "cached": 3
+    },
+    {
+      "source_family": "help",
+      "category": "Webex Connect and Cisco Contact Center Enterprise System (CCE)",
+      "total": 34,
+      "cached": 34
+    },
+    {
+      "source_family": "help",
+      "category": "Webex Connect and Webex Campaign Integration",
+      "total": 1,
+      "cached": 1
+    },
+    {
+      "source_family": "help",
+      "category": "Webex Engage Standalone Nodes",
+      "total": 33,
+      "cached": 33
+    },
+    {
+      "source_family": "studio",
+      "category": "AI Agent Studio design and configuration",
+      "total": 10,
+      "cached": 10
+    }
+  ],
+  "developer_navigation_selection": {
+    "navigation_entries": 423,
+    "selected": 176,
+    "excluded": 247
+  },
+  "latest_observed_release_notice": {
+    "title": "Product Update - v6.22.0, September 2026",
+    "url": "https://help.webexconnect.io/changelog/product-update-v6220-september-2026",
+    "release_version": "6.22.0",
+    "source_published_at": "2026-09-03T07:45:54.844Z"
+  },
+  "version_note": "Default help/developer documentation versions and release-notice versions can differ. Neither proves a tenant deployment version.",
+  "api_metadata_documents": 171,
+  "openapi_documents": 95,
+  "unique_openapi_snapshots": 71,
+  "studio_source_count": 10,
+  "studio_table_count": 64,
+  "limitations": [
+    "SDK implementation navigation excluded; its app asset/profile prerequisites are included.",
+    "Images are linked to official originals; prose and schemas are local. Visual-only labels still require the source image or tenant UI.",
+    "Four SMS narrative reference pages supply no OpenAPI operation; cached API parameters/examples and narrative remain available.",
+    "Optional Cisco support article 222936 direct retrieval returned HTTP 403; its reviewed citation is retained in authored knowledge but it is outside this cached manifest.",
+    "No tenant configuration or messaging action performed by this source workflow."
+  ]
+}

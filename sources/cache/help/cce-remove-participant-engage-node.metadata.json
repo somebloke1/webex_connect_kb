@@ -1,0 +1,35 @@
+{
+  "category": "Webex Connect and Cisco Contact Center Enterprise System (CCE)",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182578d3",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "8f4983e80444f4a390074f1eb13f5f9e70a92759b81b142c59ef1a2db8004f7a",
+    "source_path": "90eca71ee851e15535884910b5a4b4bc45812683999992d0735af41869aa4464",
+    "text_path": "69f6b5d7af1c6e9e424be6d8e4b1a4334af7f8ffa20bd9ee600581ed1e386c63"
+  },
+  "headings": [
+    "Authorization",
+    "Methods and Outcomes",
+    "📘Note"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/cce-remove-participant-engage-node.md",
+  "resolved_url": "https://help.webexconnect.io/docs/cce-remove-participant-engage-node",
+  "retrieved_at": "2026-09-08T23:29:24+00:00",
+  "sha256_html_response": "b3c6fb4e51a83f972358c2d3e52e56d8286be2d8a5956550cd25245744fd0b5a",
+  "sha256_source_body": "90eca71ee851e15535884910b5a4b4bc45812683999992d0735af41869aa4464",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/cce-remove-participant-engage-node.source.md",
+  "source_updated_at": "2026-04-14T07:37:46.364Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/cce-remove-participant-engage-node.txt",
+  "title": "Remove Participant - CCE",
+  "url": "https://help.webexconnect.io/docs/cce-remove-participant-engage-node",
+  "word_count": 230,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/cce-remove-participant-engage-node.metadata.json"
+}

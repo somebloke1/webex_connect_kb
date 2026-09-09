@@ -1,0 +1,35 @@
+{
+  "api_metadata_path": "sources/cache/developer/voice-apis.api.json",
+  "category": "MULTI CHANNEL COMMUNICATION API",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f6639",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "d4dd5c007f474a1747eb49964c516b0885c88f1ffbfece7fcd139b1a23c98a44",
+    "source_path": "83fe10ec6f872444e84cc6ffaf07bff8df52ae483a7210945d40c126bb9d6f6e",
+    "text_path": "0569e2aee8abe02e2b7acaf364b70d6ad828e898d881a5714c2101ac66d66aa6"
+  },
+  "headings": [
+    "APIs for Sending Voice Messages",
+    "APIs to Retrieve the Status and Recording of a Voice Call Request"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/voice-apis.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/voice-apis",
+  "retrieved_at": "2026-09-08T23:31:43+00:00",
+  "sha256_api_metadata": "575f65b7d8dc3ea0b617314bc47e22705dc85fc80ee114e6faa20ada4e8aafe2",
+  "sha256_html_response": "743a769a3806593f563d3248a24b6721d7dca03bd7dee83a0f3cf7a241b1c509",
+  "sha256_source_body": "83fe10ec6f872444e84cc6ffaf07bff8df52ae483a7210945d40c126bb9d6f6e",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/voice-apis.source.md",
+  "source_updated_at": "2026-01-22T05:59:36.086Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/voice-apis.txt",
+  "title": "Voice APIs",
+  "url": "https://developers.webexconnect.io/reference/voice-apis",
+  "word_count": 324,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/developer/voice-apis.metadata.json"
+}

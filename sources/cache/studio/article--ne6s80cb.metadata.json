@@ -1,0 +1,58 @@
+{
+  "url": "https://help.webex.com/article/ne6s80cb",
+  "title": "Understand AI engines for AI agents",
+  "source_family": "studio",
+  "category": "AI Agent Studio design and configuration",
+  "extractor": "webex_help_article",
+  "discovered_from": "https://help.webex.com/article/ncs9r37",
+  "selection_reason": "Administration guide or directly linked essential for scripted/autonomous agent behavior, tools, knowledge, language, and digital interaction configuration.",
+  "retrieved_at": "2026-09-08T23:48:48+00:00",
+  "status": "ok",
+  "source_kind": "official_documentation",
+  "http_status": 200,
+  "resolved_url": "https://help.webex.com/article/ne6s80cb",
+  "doc_version": null,
+  "source_updated_at": "2026-09-08T17:41:18.933Z",
+  "doc_id": "ne6s80cb",
+  "headings": [
+    "Components of an AI engine",
+    "How to choose the right engine",
+    "Components of AI engine",
+    "How to choose the right engine"
+  ],
+  "word_count": 1000,
+  "sha256_source_body": "8729cf5ac9f1fccbc71cc722ddcbb87e5cb32a4b50fd2dce062234210815bb6f",
+  "sha256_html_response": "a084858744c38f9bddea625de8dc0942d66785abb3e374390a342ca5907dd921",
+  "extraction": "Webex Help public Next.js pageProps.chapters[*].divHtml for books or UIData for articles; navigation excluded; headings, table cells and original links preserved",
+  "deprecated": false,
+  "source_body_format": "html",
+  "publisher_metadata": {
+    "id": 241621,
+    "externalId": "ne6s80cb",
+    "language": "en-US",
+    "status": "COMPLETED",
+    "isBook": null,
+    "creationTime": "2025-03-17T05:06:01.511Z",
+    "lastModifiedTime": "2026-09-08T17:41:18.933Z",
+    "lastSyncTime": "2026-09-08T17:41:18.933Z",
+    "chapter_titles": [],
+    "table_count": 0,
+    "products": [
+      "Webex Contact Center"
+    ],
+    "version_note": "No product documentation version supplied; use publisher lastModifiedTime and retrieval date.",
+    "title_raw": "Understand AI engines for AI agents"
+  },
+  "source_path": "sources/cache/studio/article--ne6s80cb.source.md",
+  "markdown_path": "sources/cache/studio/article--ne6s80cb.md",
+  "text_path": "sources/cache/studio/article--ne6s80cb.txt",
+  "file_sha256": {
+    "source_path": "8729cf5ac9f1fccbc71cc722ddcbb87e5cb32a4b50fd2dce062234210815bb6f",
+    "markdown_path": "4b5415dfa893dd8614b2a47e7be1617586b0c7be160b0278eef15ec2e3234a56",
+    "text_path": "13f46fafb9e9b3d9977a1ba4de2f7559e7414cedd0a54081c0283b1d0c4f7502"
+  },
+  "metadata_path": "sources/cache/studio/article--ne6s80cb.metadata.json",
+  "previous_retrieved_at": "2026-09-08T23:45:53+00:00",
+  "previous_sha256_source_body": "8729cf5ac9f1fccbc71cc722ddcbb87e5cb32a4b50fd2dce062234210815bb6f",
+  "source_body_changed": false
+}

@@ -1,0 +1,953 @@
+{
+  "schema_version": 1,
+  "sample_key": "gallery-autoresponder",
+  "title": "Autoresponder",
+  "observed_at": "2026-09-08T23:58:25.886Z",
+  "source_path": "evidence/sample-flows/observed/gallery-autoresponder.json",
+  "source_sha256": "a889914aa49b54afc69f41ee861237389669fcf3c2774c515e17641e43646231",
+  "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model",
+  "runtime_tested": false,
+  "status": "observed_canvas_relationships_summarized",
+  "format_warning": "Internal loaded-canvas model observations only; not a public import schema. Event internal names and visible labels are recorded separately. Dynamic script behavior and missing canvas pages are not inferred.",
+  "counts": {
+    "cells": 7,
+    "operative_nodes": 2,
+    "explicit_edges": 1,
+    "terminal_bindings": 3,
+    "variable_references": 48
+  },
+  "start_configuration": {
+    "channel": 1,
+    "type": "channel",
+    "extras": {
+      "number": 441348800017,
+      "numberObject": {
+        "unid": 1310,
+        "key_id": "",
+        "reportnumber": 441348800017,
+        "resource_id": 441348800017,
+        "sub_channel_id": "",
+        "keyword": "",
+        "TYPE": "Phone number",
+        "channel_id": 3,
+        "channelsupport": "SMS,Voice"
+      },
+      "keyword": "*"
+    },
+    "eventid": 33,
+    "eventname": "MO"
+  },
+  "nodes": [
+    {
+      "id": "2",
+      "label": "Configure SMS Event",
+      "type_internal": "start",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "onbegin",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "isKeyWordAvailable": true
+      },
+      "transition_actions": [],
+      "declared_outputs": [
+        "sms.timestamp",
+        "sms.transid",
+        "sms.message",
+        "sms.sender_number"
+      ],
+      "output_mappings": []
+    },
+    {
+      "id": "33",
+      "label": "Send SMS",
+      "type_internal": "umppublic",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "onerror",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "hideWaitFor": false,
+        "messagetype": 1,
+        "message": "We acknowledge we have received your message - $(n2.sms.message)",
+        "channelId": 1,
+        "senderidViewFlag": false,
+        "deliverychannel": "SMS",
+        "destination": "$(n2.sms.sender_number)",
+        "destinationType": "msisdn",
+        "successoutcome": 1,
+        "linkValidityCheck": false
+      },
+      "transition_actions": [],
+      "declared_outputs": [],
+      "output_mappings": []
+    }
+  ],
+  "edges": [
+    {
+      "id": "36",
+      "source": "2",
+      "target": "33",
+      "event_internal": "onbegin",
+      "event_label": "",
+      "representation": "explicit_edge"
+    }
+  ],
+  "terminal_bindings": [
+    {
+      "id": "44",
+      "source": "33",
+      "target": "44",
+      "event_internal": "onsuccess",
+      "event_label": "onsuccess",
+      "outcome_id": 2,
+      "outcome_name": "Success",
+      "outcome_description": "Successfully completed flow",
+      "session_retry": "",
+      "async_check": null,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "51",
+      "source": "33",
+      "target": "51",
+      "event_internal": "onerror",
+      "event_label": "onerror",
+      "outcome_id": "",
+      "outcome_name": null,
+      "outcome_description": null,
+      "session_retry": "",
+      "async_check": null,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "59",
+      "source": "33",
+      "target": "59",
+      "event_internal": "onpolicyfail",
+      "event_label": "onpolicyfail",
+      "outcome_id": 4,
+      "outcome_name": "Incomplete",
+      "outcome_description": "Flow ended due to an interruption",
+      "session_retry": "",
+      "async_check": null,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    }
+  ],
+  "terminal_sources_not_captured": [],
+  "duplicate_terminal_binding_groups": [],
+  "variable_handoffs": [
+    {
+      "consumer": "33",
+      "location": "configuration.message",
+      "reference": "$(n2.sms.message)",
+      "variable": "n2.sms.message",
+      "producer_node": "2",
+      "producer_field": "sms.message",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "33",
+      "location": "configuration.destination",
+      "reference": "$(n2.sms.sender_number)",
+      "variable": "n2.sms.sender_number",
+      "producer_node": "2",
+      "producer_field": "sms.sender_number",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-custom-defaults",
+      "location": "customVariables[0].value",
+      "reference": "$(facebook.psid)",
+      "variable": "facebook.psid",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-custom-defaults",
+      "location": "customVariables[1].value",
+      "reference": "$(wechat.wechat_user_id)",
+      "variable": "wechat.wechat_user_id",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-custom-defaults",
+      "location": "customVariables[2].value",
+      "reference": "$(app.deviceId)",
+      "variable": "app.deviceId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-custom-defaults",
+      "location": "customVariables[3].value",
+      "reference": "$(app.pushId)",
+      "variable": "app.pushId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-custom-defaults",
+      "location": "customVariables[4].value",
+      "reference": "$(twitter.twitterid)",
+      "variable": "twitter.twitterid",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-custom-defaults",
+      "location": "customVariables[5].value",
+      "reference": "$(msisdn)",
+      "variable": "msisdn",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-custom-defaults",
+      "location": "customVariables[6].value",
+      "reference": "$(email)",
+      "variable": "email",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-custom-defaults",
+      "location": "customVariables[7].value",
+      "reference": "$(customerId)",
+      "variable": "customerId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-custom-defaults",
+      "location": "customVariables[8].value",
+      "reference": "$(app.imei)",
+      "variable": "app.imei",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-custom-defaults",
+      "location": "customVariables[9].value",
+      "reference": "$(app.os)",
+      "variable": "app.os",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-custom-defaults",
+      "location": "customVariables[10].value",
+      "reference": "$(app.model)",
+      "variable": "app.model",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-custom-defaults",
+      "location": "customVariables[11].value",
+      "reference": "$(app.telecom)",
+      "variable": "app.telecom",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-custom-defaults",
+      "location": "customVariables[12].value",
+      "reference": "$(app.imsi)",
+      "variable": "app.imsi",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-custom-defaults",
+      "location": "customVariables[13].value",
+      "reference": "$(app.location)",
+      "variable": "app.location",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-custom-defaults",
+      "location": "customVariables[14].value",
+      "reference": "$(app.language)",
+      "variable": "app.language",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-custom-defaults",
+      "location": "customVariables[15].value",
+      "reference": "$(facebook.birthday)",
+      "variable": "facebook.birthday",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-custom-defaults",
+      "location": "customVariables[16].value",
+      "reference": "$(facebook.email)",
+      "variable": "facebook.email",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-custom-defaults",
+      "location": "customVariables[17].value",
+      "reference": "$(facebook.first_name)",
+      "variable": "facebook.first_name",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-custom-defaults",
+      "location": "customVariables[18].value",
+      "reference": "$(facebook.gender)",
+      "variable": "facebook.gender",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-custom-defaults",
+      "location": "customVariables[19].value",
+      "reference": "$(facebook.last_name)",
+      "variable": "facebook.last_name",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-custom-defaults",
+      "location": "customVariables[20].value",
+      "reference": "$(facebook.location)",
+      "variable": "facebook.location",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-custom-defaults",
+      "location": "customVariables[21].value",
+      "reference": "$(facebook.middle_name)",
+      "variable": "facebook.middle_name",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-custom-defaults",
+      "location": "customVariables[22].value",
+      "reference": "$(facebook.name)",
+      "variable": "facebook.name",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-custom-defaults",
+      "location": "customVariables[23].value",
+      "reference": "$(facebook.timezone)",
+      "variable": "facebook.timezone",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-custom-defaults",
+      "location": "customVariables[24].value",
+      "reference": "$(twitter.username)",
+      "variable": "twitter.username",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-custom-defaults",
+      "location": "customVariables[25].value",
+      "reference": "$(app.rtmId)",
+      "variable": "app.rtmId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-custom-defaults",
+      "location": "customVariables[26].value",
+      "reference": "$(name)",
+      "variable": "name",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-custom-defaults",
+      "location": "customVariables[27].value",
+      "reference": "$(app.oldlocation)",
+      "variable": "app.oldlocation",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-custom-defaults",
+      "location": "customVariables[28].value",
+      "reference": "$(app.mcc)",
+      "variable": "app.mcc",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-custom-defaults",
+      "location": "customVariables[29].value",
+      "reference": "$(app.mnc)",
+      "variable": "app.mnc",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-custom-defaults",
+      "location": "customVariables[30].value",
+      "reference": "$(message)",
+      "variable": "message",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-custom-defaults",
+      "location": "customVariables[31].value",
+      "reference": "$(time)",
+      "variable": "time",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-custom-defaults",
+      "location": "customVariables[32].value",
+      "reference": "$(app.message)",
+      "variable": "app.message",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-custom-defaults",
+      "location": "customVariables[33].value",
+      "reference": "$(sms.message)",
+      "variable": "sms.message",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-custom-defaults",
+      "location": "customVariables[34].value",
+      "reference": "$(twitter.message)",
+      "variable": "twitter.message",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-custom-defaults",
+      "location": "customVariables[35].value",
+      "reference": "$(facebook.message)",
+      "variable": "facebook.message",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-custom-defaults",
+      "location": "customVariables[36].value",
+      "reference": "$(wechat.message)",
+      "variable": "wechat.message",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-custom-defaults",
+      "location": "customVariables[37].value",
+      "reference": "$(app.thread_id)",
+      "variable": "app.thread_id",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-custom-defaults",
+      "location": "customVariables[38].value",
+      "reference": "$(abc.attachmentCount)",
+      "variable": "abc.attachmentCount",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-custom-defaults",
+      "location": "customVariables[39].value",
+      "reference": "$(abc.message)",
+      "variable": "abc.message",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-custom-defaults",
+      "location": "customVariables[40].value",
+      "reference": "$(abc.requestIdentifier)",
+      "variable": "abc.requestIdentifier",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-custom-defaults",
+      "location": "customVariables[41].value",
+      "reference": "$(abc.interactive_type)",
+      "variable": "abc.interactive_type",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-custom-defaults",
+      "location": "customVariables[42].value",
+      "reference": "$(abc.hasattachment)",
+      "variable": "abc.hasattachment",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-custom-defaults",
+      "location": "customVariables[43].value",
+      "reference": "$(abc.abcUserId)",
+      "variable": "abc.abcUserId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "33",
+      "location": "_usedVars",
+      "reference": "$(n2.sms.sender_number)",
+      "variable": "n2.sms.sender_number",
+      "producer_node": "2",
+      "producer_field": "sms.sender_number",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "33",
+      "location": "_usedVars",
+      "reference": "$(n2.sms.message)",
+      "variable": "n2.sms.message",
+      "producer_node": "2",
+      "producer_field": "sms.message",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    }
+  ],
+  "custom_variable_assignments": [],
+  "custom_variables": [
+    {
+      "name": "facebook.psid",
+      "value": "$(facebook.psid)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "wechat.wechat_user_id",
+      "value": "$(wechat.wechat_user_id)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "app.deviceId",
+      "value": "$(app.deviceId)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "app.pushId",
+      "value": "$(app.pushId)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "twitter.twitterid",
+      "value": "$(twitter.twitterid)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "msisdn",
+      "value": "$(msisdn)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "email",
+      "value": "$(email)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "customerId",
+      "value": "$(customerId)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "app.imei",
+      "value": "$(app.imei)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "app.os",
+      "value": "$(app.os)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "app.model",
+      "value": "$(app.model)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "app.telecom",
+      "value": "$(app.telecom)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "app.imsi",
+      "value": "$(app.imsi)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "app.location",
+      "value": "$(app.location)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "app.language",
+      "value": "$(app.language)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "facebook.birthday",
+      "value": "$(facebook.birthday)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "facebook.email",
+      "value": "$(facebook.email)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "facebook.first_name",
+      "value": "$(facebook.first_name)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "facebook.gender",
+      "value": "$(facebook.gender)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "facebook.last_name",
+      "value": "$(facebook.last_name)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "facebook.location",
+      "value": "$(facebook.location)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "facebook.middle_name",
+      "value": "$(facebook.middle_name)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "facebook.name",
+      "value": "$(facebook.name)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "facebook.timezone",
+      "value": "$(facebook.timezone)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "twitter.username",
+      "value": "$(twitter.username)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "app.rtmId",
+      "value": "$(app.rtmId)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "name",
+      "value": "$(name)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "app.oldlocation",
+      "value": "$(app.oldlocation)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "app.mcc",
+      "value": "$(app.mcc)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "app.mnc",
+      "value": "$(app.mnc)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "message",
+      "value": "$(message)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "time",
+      "value": "$(time)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "app.message",
+      "value": "$(app.message)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "sms.message",
+      "value": "$(sms.message)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "twitter.message",
+      "value": "$(twitter.message)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "facebook.message",
+      "value": "$(facebook.message)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "wechat.message",
+      "value": "$(wechat.message)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "app.thread_id",
+      "value": "$(app.thread_id)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "abc.attachmentCount",
+      "value": "$(abc.attachmentCount)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "abc.message",
+      "value": "$(abc.message)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "abc.requestIdentifier",
+      "value": "$(abc.requestIdentifier)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "abc.interactive_type",
+      "value": "$(abc.interactive_type)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "abc.hasattachment",
+      "value": "$(abc.hasattachment)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "abc.abcUserId",
+      "value": "$(abc.abcUserId)",
+      "dec": "",
+      "type": ""
+    }
+  ],
+  "flow_outcomes": [
+    {
+      "id": 2,
+      "name": 101,
+      "value": "Successfully completed flow",
+      "tag": 11,
+      "tagName": "Success",
+      "type": "default",
+      "notification": null
+    },
+    {
+      "id": 3,
+      "name": 102,
+      "value": "Flow completed with an error",
+      "tag": 12,
+      "tagName": "Error",
+      "type": "default",
+      "notification": null
+    },
+    {
+      "id": 4,
+      "name": 103,
+      "value": "Flow ended due to an interruption",
+      "tag": 13,
+      "tagName": "Incomplete",
+      "type": "default",
+      "notification": null
+    },
+    {
+      "id": 1,
+      "name": 100,
+      "value": "Last executed node event",
+      "statusCode": "All status codes",
+      "tag": 15,
+      "tagName": "Last Execution Status",
+      "type": "default",
+      "notification": null
+    }
+  ],
+  "cycles": [],
+  "cross_page_or_flow_nodes": [],
+  "capture_pages": null,
+  "declared_events_without_captured_route": [],
+  "nodes_not_reached_from_captured_start": [],
+  "edge_endpoints_not_captured": [],
+  "node_variable_producers_not_captured": [],
+  "redactions": "Header credentials and URL hosts redacted. Internal model properties are evidence, not a public import API.",
+  "authored_walkthrough": {
+    "walkthrough": "SMS Start 2 immediately routes to Send SMS 33. The reply acknowledges the incoming message, and the send's End bindings map the observed outcomes. There is no Receive node because this flow handles one inbound event per invocation, rather than maintaining an in-flow conversation.",
+    "handoffs": "The reply text interpolates `$(n2.sms.message)` and its recipient is the inbound sender `$(n2.sms.sender_number)`. Reusing the source identity prevents accidentally addressing the business number, but actual sender/asset configuration still needs tenant binding.",
+    "limitations": "This sample contains no explicit keyword classifier, rate limiter, duplicate-event guard or bot invocation. It demonstrates acknowledgement only; configured End outcomes are not proof a handset received the response."
+  },
+  "walkthrough_status": "authored"
+}

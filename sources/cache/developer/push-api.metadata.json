@@ -1,0 +1,43 @@
+{
+  "api_metadata_path": "sources/cache/developer/push-api.api.json",
+  "category": "MULTI CHANNEL COMMUNICATION API",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f6659",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "36bce0d48cc7d729e09bddc5e1160021a3db13ad106edc012a5027c04057c681",
+    "source_path": "5abdf9d45fad22ddae1bed7a759fd6000f953083007708eb96f818a6e500dcff",
+    "text_path": "86d2689c74c7be58f7076676076ff0dea146fe549701ff6b1d055ba2bf32fd37"
+  },
+  "headings": [
+    "Request Body for Push Notification",
+    "Push Messaging Parameters",
+    "**Components of Push Object**",
+    "Android",
+    "**push > android > Android extras**",
+    "iOS",
+    "**push > ios > ios extras**",
+    "Web",
+    "**push > web > extras**",
+    "interactive"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/push-api.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/push-api",
+  "retrieved_at": "2026-09-08T23:31:41+00:00",
+  "sha256_api_metadata": "575f65b7d8dc3ea0b617314bc47e22705dc85fc80ee114e6faa20ada4e8aafe2",
+  "sha256_html_response": "eee8e551651fc724b1d004782d93efd78b5e3b41b943bc6958ccaef5e3aa16d5",
+  "sha256_source_body": "5abdf9d45fad22ddae1bed7a759fd6000f953083007708eb96f818a6e500dcff",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/push-api.source.md",
+  "source_updated_at": "2026-02-26T05:50:50.129Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/push-api.txt",
+  "title": "Push API",
+  "url": "https://developers.webexconnect.io/reference/push-api",
+  "word_count": 8467,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/push-api.metadata.json"
+}

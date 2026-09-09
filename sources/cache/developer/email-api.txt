@@ -1,0 +1,451 @@
+> 📘 Please Note
+> 
+> The Email channel is supported via Webex Connect Send Message API v2.
+> 
+> The API endpoint for it is: [https://{YourRegion}.webexconnect.io/v2/messages].
+> 
+> Please modify YourRegion in the URL to reflect your tenant’s region. See [Know your endpoint page](https://developers.imiconnect.io/reference/endpoints).
+> 
+> Refer to [our Postman Collection](https://www.postman.com/ciscodevnet/workspace/webex-connect/collection/26634274-03661a66-48a6-43a4-9a6f-77d6dc84654f) for trying various types of email notifications supported by Webex Connect.
+
+## Request Body for Email
+
+```json Send Text Email
+{
+    "channel": "email", //Mandatory. channel used for messaging.
+    "from": "{{fromEmailAddress}}", //Mandatory. Email id of the sender.
+    "to": [
+        {
+            "email": [
+                "{{toEmailAddress}}"
+            ], //Mandatory. email id of the recipients
+            "substitutions": { //Optional. 
+                "{{param1}}": "{{param1Value}}",
+                "{{param2}}": "{{param2Value}}"
+            },
+            "correlationId": "" //Optional. The CorrelationID is a unique identifier that you can attach to every request as a reference a particular transaction or event. This is configured as a part of the request.
+        }
+    ],
+    "substitutions": { //Optional. 
+        "{{param3}}": "{{param3Value}}",
+        "{{param4}}": "{{param4Value}}"
+    },
+    "cc": [], //Optional. Email id of the copied recipients.
+    "bcc": [], //Optional. Email id of the bcc recipients.
+    "multipleToRecipients": true, //Optional. If this parameter is not included then the same email is sent individually to each of the email addresses specified in 'to' field including all cc and bcc email ids.
+    "options": { //Optional.
+        "fromName": "{{emailSendername}}", //Optional. A string that will appear next to the from address in most email inboxes
+        "shortenLinks": "true",
+        "domain": "https://s.imiconnect.co",
+        "tag1": "tag1", // reporting tags for tracking the  shortened link creates and clicks
+        "tag2": "tag2",
+        "allowFallbackURL": "false" // if true, the long URL passed will be sent in case the SLS service is down or fails to create the shortened link.
+    },
+    "content": {
+        "type": "text", //Mandatory. Either text or html. Use text while sending text emails.
+        "subject": "{{subject}}", //Mandatory. Subject of the email
+        "replyTo": "{{replyToEmailAddress}}", //Optional. Reply path for the email when the customer responds
+        "text": "Simple text content" //Mandatory. Text content of the email
+    },
+    "requestedReceipts": [ //Optional.
+        "submitted",
+        "delivered",
+        "bounce",
+        "not verified",
+        "invalid",
+        "complaint",
+        "failed"
+    ], //JSON array that can filter message delivery web-hooks to the notifyURL. Can contain one or more of the following: "submitted", "delivered", "not verified", "invalid", "bounced", "complaint", "read", "clicked", "failed". Check Outbound Webhooks for more information on receipts. Note: All the above receipts are relevant for email via AWS SES. For email via SMTP, only "submitted" receipt is applicable
+    "callbackData": "", //Optional. Data that you have configured to receive on the notify Url. This is configured as a part of the request.
+    "notifyUrl": "", //Optional. Provide a URL to get notifications on message delivery status. Use requestedReceipts block to specify list of messages status you want to track.
+    "notifyUrlAuthId":"TNPXXXT09U", //Optional
+    "contactPolicy": { //Optional. 
+        "contactPolicyGroup": "", //the GroupID to be applied. Required if any of the following options are included and set to true
+        "channelCheckConsent": true, //optional, assumed false, set to true to require opt-in before sending the message,“channelCheckConsent” or “channelApplyFrequencyCap” either of the parameter should be “true” 
+        "channelApplyFrequencyCap": true //optional, assumed false, set to true to enforce group frequency cap for that channel,“channelCheckConsent” or “channelApplyFrequencyCap” either of the parameter should be “true” 
+    }
+}
+```
+
+## Send Message API v2 for Email channel - Common Body Parameters
+
+The following are the parameters of the request body:
+
+
+
+| Parameter | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| channel | string | yes | The value must be 'email' when sending an email. |
+| from | string | yes | Email ID, i.e., the email ID of the sender to be used for sending the email. |
+| to | JSONArray | yes | An array of "to" JSON objects that contain the mandatory email ID of the recipients and optional personalised substitutions for each "to" object. |
+| email | JSONArray | yes | Email ID of the recipients. |
+| substitutions | JSONObject | no | List of key-value pairs for dynamic fields in the Email content. They are typically used for specifying the values of dynamic fields in an email template.  <br>  <br>There are two ways to define the 'substitutions' parameter, one inside the 'to' block and another outside the 'to' block.  <br>  <br>The 'substitutions' parameter inside the 'to' block takes precedence over the 'substitutions' block that is outside the 'to' block, in case these values are provided in both places.  |
+| correlationId | string | no | User defined ID that is assigned to an individual message for unique identification. |
+| cc | JSONArray | no | Email ID of the copied recipients. |
+| bcc | JSONArray | no | Email ID of the BCC recipients. |
+| multipleToRecipients | boolean | no | _ When this option is set to true, the platform sends a single email to multiple recipients in the 'to' field list.  <br>_ When the option is set to false, the platform sends separate emails to multiple recipients in the 'to' field list. |
+| options | JSONObject | no | A JSON object that contains additional, email-specific options such as 'fromName', 'trackClicks', and 'trackOpens' in the API.  |
+| fromName | string | no | A string that will appear next to the 'from' address in most email inboxes. |
+| trackClicks | boolean | no | When enabled, this option tracks all links in the HTML body, unless a link is tagged as _no-track-connect_ within the anchor tags. |
+| shortenLinks | boolean | np | When enabled, this shortens any HTTPS links in the message request's body. The expiry of the shortened URL is 180 days. |
+| domain | string | no | It is the domain configuration for shortening the links.  <br>Note: 'domain' is mandatory only when 'options' object is used in the payload. |
+| tags | string | yes | Reporting tags for tracking the shortened link creates and clicks. |
+| allowFallbackUR |  | yes | if true, the long URL passed will be sent in case the SLS service is down or fails to create the shortened link. |
+| trackOpens | boolean | no | When enabled, this option tracks when the email is opened by the recipient of the email. |
+| listUnsubscribeUrl | string | no | Allows you to pass the link to your own subscription management portal, as part of the list-unsubscribe headers, instead of using Webex Connect subscription management capability. |
+| unsubscribeEmailAddress | string | no | Contains the email address to which the unsubscribe email will be sent, when the customer sends unsubscribe request via mail to unsubscribe route. |
+| unsubscribeEmailSubject | string | no | Specify the subject that you would like to use for the email unsubscribe requests triggered via mail to unsubscribe route. |
+| content | JSONObject | yes, if the template is not provided | It is the JSON object that contains mandatory parameters 'type', 'encoding', 'subject', 'replyTo', and 'text' for the email channel. |
+| type | string | yes | Used for specifying the message content type. The acceptable values are Text or HTML. |
+| subject | string | yes | Subject of the email. |
+| replyTo | string | no | An email header that allows recipients to reply to a different email address than the one used to send the original message. |
+| text | string | yes, when type=text  <br>optional, when type=html | Text content of the email. |
+| requestedReceipts | JSONArray | no | A JSON array that can filter message delivery webhooks to the notifyUrl.  <br>  <br>It can contain one or more of the following:  <br>"submitted",  <br>"delivered",  <br>"read",  <br>"clicked",  <br>"bounce",  <br>"not verified",  <br>"invalid",  <br>"complaint",  <br>"failed"  <br>  <br>Check [Outbound Webhooks](https://developers.webexconnect.io/reference/outbound-webhooks) for delivery receipt samples. |
+| callbackData | string | no | A string that is returned with each outbound webhook for the message (delivery, failed, etc.). The maximum number of characters allowed for callbackData including any spaces, is 2000. |
+| notifyUrl | string | no | If provided, updates related to the delivery status of this message will be posted to this URL. Refer to the [Email](https://developers.webexconnect.io/reference/email-outbound-webhooks) section for notification samples. |
+| notifyUrlAuthId | string | no | Unique Authentication ID. |
+| contactPolicy | JSONObject | no | JSON Object to specify Contact Policy checks before sending the outbound email. The Contact Policy App should be configured as a prerequisite to be able to use this feature. |
+| contactPolicyGroup | string | yes (if you want to apply Contact Policy checks before sending the message) | The GroupID is to be applied. It is required if any of the options below are included and set to true. |
+| channelCheckConsent | boolean | no | Optional, assumed false if not specified. Set to true to require 'Opt-In' before sending the message. At least one out of “channelCheckConsent”, or “channelApplyFrequencyCap” parameters, should be set to “true”. |
+| channelApplyFrequencyCap | boolean | no | Optional, assumed false. Set to true to enforce group frequency cap for that channel. At least one out of “channelCheckConsent”, or “channelApplyFrequencyCap” parameter, should be set to “true”. |
+
+
+
+
+> 📘 Note
+> 
+> It is recommended to use a valid authorization ID; the failure of notification won’t be logged in Debug Logs.
+> 
+> The notify URL should be filled with the proper URL format; otherwise, it would be considered an invalid URL.
+> 
+> The notify URL should be provided with proper spacing of the URL; when space is provided in front of the URL or at the end of the URL, it would be considered an invalid URL.
+
+> 📘 Multiple 'To' Recipients
+> 
+> - You have the ability to send emails to multiple ‘To’ recipients in a single email transaction using Messaging API v2. This would require you to pass an additional parameter ‘multipleToRecipients’ to be passed as part of the request with its value set to ‘true’. When multiple email IDs are mentioned in the “Email” parameter of the “To” block, Webex Connect submits a single request to AWS SES or to SMTP server to send the concerned email to all - To, CC, and BCC. In this case, the API response will contain only one transaction ID for all recipients. Refer API reference for more information.
+> - When Webex Connect is used to send emails to multiple email recipients (To, CC, BCC), the message submitted count reflects the total number of emails sent (counting each of the recipient in To, CC, and BCC fields individually). These changes will reflect in the ‘Reports’ and in the ‘Usage’ sections for email transactions.
+> - For email transactions with multiple recipients, the Status field in Debug Console and Export Logs, and Error Codes details, will only be updated for entries with the ‘Submitted’ Status. Email delivery status for each of the individual recipients will need to be tracked using Outbound Webhooks. Separate outbound notifications will be sent for email delivery or failure to each of the recipients mentioned in To, CC, and BCC sections with the same transaction ID. For outbound email transactions, destination will contain an email ID for scenarios where only one email ID has been mentioned (that can in be in either of to, bcc, or cc fields but overall one email ID is mentioned in one outbound request).  
+>   Read receipts are not generated for emails sent as plain text, i.e., when the email type is text.
+
+> 📘 List Unsubscribe Parameters
+> 
+> There is an option to pass list-unsubscribe headers when sending emails using Webex Connect Messaging API v2. This will allow you to pass the links to your own unsubscribe management portal as part of the list-unsubscribe headers instead of using Webex Connectunsubscribe management capability. The following headers can be passed:
+> 
+> - listUnsubscribeUrl
+> - unsubscribeEmailAddress
+> - unsubscribeEmailSubject
+> 
+> When the list-unsubscribe URL and/or unsubscribe mailto address are added, the Webex Connect platform will overwrite the asset setting with the values provided in the Messaging API, even for the assets for which the platform manages unsubscriptions. In such cases, the Webex Connect platform will no longer have control over the Outbound Webhook notifications for the unsubscribe events originated from the list-unsubscribe header. Therefore, you are recommended to use these options only when you have a mechanism to handle unsubscriptions (including one-click unsubscription) on your own.
+> 
+> Since it’s an email compliance requirement, the one-click unsubscribe header will be added to the outbound email, every time the list-unsubscribe URL is added in the Messaging API. You are expected to handle one-click unsubscriptions, i.e., receive postback from the email clients, perform action (add user email address to unsubscribe list), and respond with appropriate success status.
+
+## Examples
+
+### Send HTML Email
+
+```json Send HTML Email
+{
+    "channel": "email", //Mandatory. channel used for messaging.
+    "from": "{{fromEmailAddress}}", //Mandatory. Email id of the sender.
+    "to": [
+        {
+            "email": [
+                "{{toEmailAddress}}"
+            ], //Mandatory. email id of the recipients
+            "substitutions": { //Optional.
+                "{{param1}}": "{{param1Value}}",
+                "{{param2}}": "{{param2Value}}"
+            },
+            "correlationId": "" //Optional. The CorrelationID is a unique identifier that you can attach to every request as a reference a particular transaction or event. This is configured as a part of the request.
+        }
+    ],
+    "substitutions": { //Optional.
+        "{{param3}}": "{{param3Value}}",
+        "{{param4}}": "{{param4Value}}"
+    },
+    "cc": [], //Optional. Email id of the copied recipients.
+    "bcc": [], //Optional. Email id of the bcc recipients.
+    "options": { //Optional.
+        "fromName": "{{emailSendername}}", //Optional. A string that will appear next to the from address in most email inboxes
+        "trackClicks": true, //Optional. When enabled, this tracks all links in the HTML body unless a link is tagged as no-track-connect within the anchor tags. Link tracking is supported only for Email app assets configured using AWS SES.
+        "trackOpens": true, //Optional. When enabled, this tracks opens of the email. Open tracking is supported only for Email app assets configured using AWS SES. 
+        "shortenLinks": "true",
+        "domain": "https://s.imiconnect.co",
+        "tag1": "tag1", // reporting tags for tracking the  shortened link creates and clicks
+        "tag2": "tag2",
+        "allowFallbackURL": "false" // if true, the long URL passed will be sent in case the SLS service is down or fails to create the shortened link.
+    },
+    "content": {
+        "type": "html", //Mandatory. Either text or html. Use html while sending html emails.
+        "subject": "{{subject}}", //Mandatory. Subject of the email
+        "replyTo": "{{replyToEmailAddress}}", //Optional. Reply path for the email when the customer responds
+        "text": "Fallback text in the event the email client does not support HTML emails", //Optional. Text content of the email
+        "html": "<a track_enable href=\"http://example.com\">link text</a><footer><a data-mce-href='$(unsubscribe)' href='$(unsubscribe)' target='_blank' rel='noopener'><span st-unsubscribe='' style='text-decoration: none; color: #0088cc;' data-mce-style='text-decoration: none; color: #0088cc;'>unsubscribe</span></a></footer>" //Mandatory. Raw HTML for the email. Up to 350 kbps in size.
+    },
+    "requestedReceipts": [ //Optional.
+        "submitted",
+        "delivered",
+        "read",
+        "clicked",
+        "bounce",
+        "not verified",
+        "invalid",
+        "complaint",
+        "failed"
+    ], //JSON array that can filter message delivery web-hooks to the notifyURL. Can contain one or more of the following: "submitted", "delivered", "not verified", "invalid", "bounced", "complaint", "read", "clicked", "failed". Check Outbound Webhooks for more information on receipts. Note: All the above receipts are relevant for email via AWS SES. For email via SMTP, only "submitted" receipt is applicable
+    "callbackData": "", //Optional. Data that you have configured to receive on the notify Url. This is configured as a part of the request.
+    "notifyUrl": "", //Optional. Provide a URL to get notifications on message delivery status. Use requestedReceipts block to specify list of messages status you want to track.
+    "notifyUrlAuthId":"TNPXXXT09U", //Optional
+    "contactPolicy": { //Optional.
+        "contactPolicyGroup": "", //the GroupID to be applied. Required if any of the following options are included and set to true
+        "channelCheckConsent": true, //optional, assumed false, set to true to require opt-in before sending the message,“channelCheckConsent” or “channelApplyFrequencyCap” either of the parameter should be “true” 
+        "channelApplyFrequencyCap": true //optional, assumed false, set to true to enforce group frequency cap for that channel,“channelCheckConsent” or “channelApplyFrequencyCap” either of the parameter should be “true” 
+    }
+}
+```
+
+#### **Parameter table with parameters unique to HTML Email type**
+
+| Parameter | Type   | Mandatory              | Description                                                                                    |
+| :-------- | :----- | :--------------------- | :--------------------------------------------------------------------------------------------- |
+| type      | string | yes                    | Possible options are 'text' or 'html'. In this case, it is 'html' while sending 'html' emails. |
+| html      | string | yes, when type is HTML | Raw 'html' for the email. Up to 500 KB in size.                                                |
+
+> 📘 Email Size Limitations
+> 
+> The default email size limit for AWS SES based email assets in Webex Connect is 10 MB. This is the overall email size limit including (the email text, images, attachments, and the MIME encoding). Please note that the size increases post MIME encoding. If you attach a 5 MB file in your email, the attachment size after MIME encoding will be ~6.85MB (about 137% of the original file size).
+
+### Send Email with Attachments
+
+```json SendEmailwithAttachments
+{
+    "channel": "email", //Mandatory. channel used for messaging.
+    "from": "{{fromEmailAddress}}", //Mandatory. Email id of the sender.
+    "to": [
+        {
+            "email": [
+                "{{toEmailAddress}}"
+            ], //Mandatory. email id of the recipients
+            "substitutions": { //Optional.
+                "{{param1}}": "{{param1Value}}",
+                "{{param2}}": "{{param2Value}}"
+            },
+            "correlationId": "" //Optional. The CorrelationID is a unique identifier that you can attach to every request as a reference a particular transaction or event. This is configured as a part of the request.
+        }
+    ],
+    "substitutions": { //Optional.
+        "{{param3}}": "{{param3Value}}",
+        "{{param4}}": "{{param4Value}}"
+    },
+    "options": { //Optional.
+        "fromName": "{{emailSendername}}", //Optional. A string that will appear next to the from address in most email inboxes
+        "trackClicks": true, //Optional. When enabled, this tracks all links in the HTML body unless a link is tagged as no-track-connect within the anchor tags. Link tracking is supported only for Email app assets configured using AWS SES.
+        "trackOpens": true, //Optional. When enabled, this tracks opens of the email. Open tracking is supported only for Email app assets configured using AWS SES. 
+        "shortenLinks": "true",
+        "domain": "https://s.imiconnect.co",
+        "tag1": "tag1", // reporting tags for tracking the  shortened link creates and clicks
+        "tag2": "tag2",
+        "allowFallbackURL": "false" // if true, the long URL passed will be sent in case the SLS service is down or fails to create the shortened link.
+    },
+    "content": {
+        "type": "html", //Mandatory. Either text or html.
+        "subject": "{{subject}}", //Mandatory. Subject of the email
+        "text": "Fallback text in the event the email client does not support HTML emails", //Text content of the email Note:yes, when type=text optional, when type=html
+        "attachments": [
+            {
+                "mimetype": "image/png", //Mandatory. Supported mimeTpes
+                "name": "Flower", //Mandatory. Name of the attachments
+                "mediaUrl": "" //Mandatory. Direct URL pointing to the media file. The URL should end with specified file-format.
+            }
+        ]
+    },
+    "requestedReceipts": [ //Optional.
+        "submitted",
+        "delivered",
+        "read",
+        "clicked",
+        "bounce",
+        "not verified",
+        "invalid",
+        "complaint",
+        "failed"
+    ], //JSON array that can filter message delivery web-hooks to the notifyURL. Can contain one or more of the following: "submitted", "delivered", "not verified", "invalid", "bounced", "complaint", "read", "clicked", "failed". Check Outbound Webhooks for more information on receipts. Note: All the above receipts are relevant for email via AWS SES. For email via SMTP, only "submitted" receipt is applicable
+     "callbackData": "", //Optional. Data that you have configured to receive on the notify Url. This is configured as a part of the request.
+     "notifyUrl": "", //Optional. Provide a URL to get notifications on message delivery status. Use requestedReceipts block to specify list of messages status you want to track.
+    "notifyUrlAuthId": "TNPXXXT09U", //Optional.
+    "contactPolicy": { //Optional.
+        "contactPolicyGroup": "", //the GroupID to be applied. Required if any of the following options are included and set to true
+        "channelCheckConsent": true, //optional, assumed false, set to true to require opt-in before sending the message,“channelCheckConsent” or “channelApplyFrequencyCap” either of the parameter should be “true” 
+        "channelApplyFrequencyCap": true //optional, assumed false, set to true to enforce group frequency cap for that channel,“channelCheckConsent” or “channelApplyFrequencyCap” either of the parameter should be “true” 
+    }
+} 
+```
+```json Send Email with Inline Images
+{
+    "channel": "email", //Mandatory. channel used for messaging.
+    "from": "{{fromEmailAddress}}", //Mandatory. Email id of the sender.
+    "to": [
+        {
+            "email": [
+                "{{toEmailAddress}}"
+            ], //Mandatory. email id of the recipients
+            "substitutions": { //Optional. 
+                "{{param1}}": "{{param1Value}}",
+                "{{param2}}": "{{param2Value}}"
+            },
+            "correlationId": "" //Optional. The CorrelationID is a unique identifier that you can attach to every request as a reference a particular transaction or event. This is configured as a part of the request.
+        }
+    ],
+    "substitutions": { //Optional. 
+        "{{param3}}": "{{param3Value}}",
+        "{{param4}}": "{{param4Value}}"
+    },
+    "cc": [], //Optional. Email id of the copied recipients.
+    "bcc": [], //Optional. Email id of the bcc recipients.
+    "multipleToRecipients": true, //Optional. If this parameter is not included then the same email is sent individually to each of the email addresses specified in 'to' field including all cc and bcc email ids.
+    "options": { //Optional.
+        "fromName": "{{emailSendername}}", //Optional. A string that will appear next to the from address in most email inboxes
+        "shortenLinks": "true",
+        "domain": "https://s.imiconnect.co",
+        "tag1": "tag1", // reporting tags for tracking the  shortened link creates and clicks
+        "tag2": "tag2",
+        "allowFallbackURL": "false" // if true, the long URL passed will be sent in case the SLS service is down or fails to create the shortened link.
+    },
+    "content": {
+        "type": "html", //Mandatory. Either text or html. Use html while sending html emails.
+        "subject": "{{subject}}", //Mandatory. Subject of the email
+        "replyTo": "{{replyToEmailAddress}}", //Optional. Reply path for the email when the customer responds
+        "text": "Fallback text in the event the email client does not support HTML emails", //Optional. Text content of the email
+        "html": "<body> <h2>Thanks for placing order with us</h2> <p>Please find the confirmation of your order below</p> <img src=\"cid:orderconf\" alt=\"order confirmation image\" style=\"width:128px;height:128px;\"> </body>", //Mandatory. Raw HTML for the email. Up to 350 kbps in size.
+        "attachments": [
+            {
+                "mimetype": "image/jpg", //Mandatory. Supported mimeTpes
+                "name": "order_confirmation", //Mandatory. Name of the attachments
+                "mediaUrl": "https://res.cloudinary.com/demo/w_200,h_200,c_fill/order_confirmation.jpg", //Mandatory. Direct URL pointing to the media file. The URL should end with specified file-format.
+                "cid": "orderconf" //Optional. Used as inline image reference in the HTML payload
+            },
+    "requestedReceipts": [ //Optional.
+        "submitted",
+          "delivered",
+          },
+			}
+```
+
+#### **Parameter table with parameters unique to Email with Attachments**
+
+| Parameter   | Type      | Mandatory | Description                                                                                                                                                                           |
+| :---------- | :-------- | :-------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| attachments | JSONArray | no        | Attachment sizes are subject to the overall email message size limitations according to the parameters as part of the table below.                                                    |
+| mimetype    | no        | yes       | Mime type of the attachment that is being sent. For example, "image/png". Refer to [supported file types](https://help.webexconnect.io/docs/supported-file-types-for-channels#email). |
+| name        | string    | yes       | Name of the attachment.                                                                                                                                                               |
+| mediaUrl    | string    | yes       | Direct URL pointing to the media file.                                                                                                                                                |
+
+### Send Email Using Templates
+
+```json SendEmail-UsingTemplates
+{
+    "channel": "email", //Mandatory. channel used for messaging.
+    "from": "{{fromEmailAddress}}", //Mandatory. Email id of the sender.
+    "to": [
+        {
+            "email": [
+                "{{toEmailAddress}}"
+            ], //Mandatory. email id of the recipients
+            "substitutions": { //Optional.
+                "{{param1}}": "{{param1Value}}",
+                "{{param2}}": "{{param2Value}}"
+            },
+            "correlationId": "" //Optional. The CorrelationID is a unique identifier that you can attach to every request as a reference a particular transaction or event. This is configured as a part of the request.
+        }
+    ],
+    "substitutions": { //Optional.
+        "{{param3}}": "{{param3Value}}",
+        "{{param4}}": "{{param4Value}}",
+        "{{param5}}": "{{param5Value}}",
+        "{{param6}}": "{{param6Value}}"
+    },
+    "template": {
+        "id": "{{templateId}}", //Mandatory. Unique identifier of the email template used for constructing the email
+        "subject": "{{subject}}" //Optional. Subject of the email. If mentioned, this subject value takes precedence over that of the 'Template'.
+    },
+    "requestedReceipts": [ //Optional.
+        "submitted",
+        "delivered",
+        "read",
+        "clicked",
+        "bounce",
+        "not verified",
+        "invalid",
+        "complaint",
+        "failed"
+    ], //JSON array that can filter message delivery web-hooks to the notifyURL. Can contain one or more of the following: "submitted", "delivered", "not verified", "invalid", "bounce", "complaint", "read", "clicked", "failed". Check Outbound Webhooks for more information on receipts. Note: All the above receipts are relevant for email via AWS SES. For email via SMTP, only "submitted" receipt is applicable
+    "callbackData": "", //Optional. Data that you have configured to receive on the notify Url. This is configured as a part of the request.
+    "notifyUrl": "", //Optional. Provide a URL to get notifications on message delivery status. Use requestedReceipts block to specify list of messages status you want to track.
+    "notifyUrlAuthId": "TNPXXXT09U", //Optional.
+    "contactPolicy": { //Optional.
+        "contactPolicyGroup": "", //the GroupID to be applied. Required if any of the following options are included and set to true
+        "channelCheckConsent": true, //optional, assumed false, set to true to require opt-in before sending the message,“channelCheckConsent” or “channelApplyFrequencyCap” either of the parameter should be “true” 
+        "channelApplyFrequencyCap": true //optional, assumed false, set to true to enforce group frequency cap for that channel,“channelCheckConsent” or “channelApplyFrequencyCap” either of the parameter should be “true” 
+    }
+}
+```
+
+#### **Parameter table with parameters unique to Email Using Templates**
+
+| Parameter  | Type       | Mandatory | Description                                                              |
+| :--------- | :--------- | :-------- | :----------------------------------------------------------------------- |
+| template   | JSONObject | yes       | JSON Object for configuration of the template.                           |
+| templateid | string     | yes       | Unique identifier of the email template used for constructing the email. |
+| subject    | string     | no        | Subject of the email.                                                    |
+
+## Sample Response Body
+
+```json 201 Result
+{
+    "requestTimestamp": "2024-09-05T00:03:01.708-04:00",
+    "messageId": "a770f205-1234-XXXX-x5x3-6dc3e388b9b5",
+    "correlationId": "12345",
+    "status": "queued"
+}
+```
+```json 400 Bad Request
+   {
+        "code": "7000",
+        "message": "Invalid JSON"
+    }
+```
+```Text 401 Unauthorised
+No response body
+```
+
+## API reference metadata
+
+These are source metadata and examples. `api.auth` is ReadMe metadata; verify authentication in the documented headers/security scheme.
+
+```json
+{
+  "method": "get",
+  "url": "",
+  "auth": "required",
+  "results": {
+    "codes": [
+      {
+        "name": "",
+        "code": "{}",
+        "language": "json",
+        "status": 200
+      },
+      {
+        "name": "",
+        "code": "{}",
+        "language": "json",
+        "status": 400
+      }
+    ]
+  },
+  "params": [],
+  "examples": {
+    "codes": []
+  }
+}
+```

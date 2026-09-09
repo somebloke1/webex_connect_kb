@@ -1,0 +1,9 @@
+You can view the following digital channels message schemas in the consecutive sections:
+
+- SMS
+- Facebook Messenger
+- Livechat
+- Email
+- WhatsApp
+- Apple Messages for Business
+- API

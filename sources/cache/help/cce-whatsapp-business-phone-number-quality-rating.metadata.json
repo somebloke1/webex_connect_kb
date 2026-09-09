@@ -1,0 +1,33 @@
+{
+  "category": "Webex Connect and Cisco Contact Center Enterprise System (CCE)",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd81825795a",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "37235275aa946c12d49ae5a49ad200f7603dcf165af49c00b19eaca2e9791433",
+    "source_path": "0b413cd60551da23b2afbcc50a93fd7fb6c3080bb05c2dc35ded6a987515d84e",
+    "text_path": "49167fab0060a1c3c29b48dd2a97a661460415180c81fbf72dbf9aeb61a0212e"
+  },
+  "headings": [
+    "Improve your quality rating"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/cce-whatsapp-business-phone-number-quality-rating.md",
+  "resolved_url": "https://help.webexconnect.io/docs/cce-whatsapp-business-phone-number-quality-rating",
+  "retrieved_at": "2026-09-08T23:29:22+00:00",
+  "sha256_html_response": "f8f68bf961108a7cdeda63d1f9eae5b5668ea2a1bf36cf42cd10c9eff450bd62",
+  "sha256_source_body": "0b413cd60551da23b2afbcc50a93fd7fb6c3080bb05c2dc35ded6a987515d84e",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/cce-whatsapp-business-phone-number-quality-rating.source.md",
+  "source_updated_at": "2026-04-14T07:36:22.367Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/cce-whatsapp-business-phone-number-quality-rating.txt",
+  "title": "WhatsApp Business Phone Number Quality Rating - CCE",
+  "url": "https://help.webexconnect.io/docs/cce-whatsapp-business-phone-number-quality-rating",
+  "word_count": 407,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/cce-whatsapp-business-phone-number-quality-rating.metadata.json"
+}

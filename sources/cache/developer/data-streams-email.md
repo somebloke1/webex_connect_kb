@@ -1,0 +1,571 @@
+# Data Streams - Email
+
+Source: https://developers.webexconnect.io/reference/data-streams-email
+Documentation version: 6.20.0
+Retrieved: 2026-09-08T23:31:48+00:00
+
+**Email - Inbound Message**
+
+The following are the Email inbound message payloads.
+
+```json Inbound Email
+{
+  "textMessage": "Sent with [Proton Mail](https:\\/\\/proton.me\\/mail\\/home) secure email.",
+  "attachments": "[{\"name\":\"Audio_MP3_700kb.mp3\",\"contentType\":\"audio/mpeg\",\"url\":\"https://s3.amazonaws.com/stagingappleattachment/bcd95580-3ea5-49a7-a47f-353ce70fe04a_Audio_MP3_700kb.mp3\"},{\"name\":\"Audio_OGG.ogg\",\"contentType\":\"audio/ogg\",\"url\":\"https://s3.amazonaws.com/stagingappleattachment/f99b20e7-5113-482b-8f7f-5be99205263d_Audio_OGG.ogg\"},{\"name\":\"sample_3gp.3gp\",\"contentType\":\"video/3gpp\",\"url\":\"https://s3.amazonaws.com/stagingappleattachment/ca48ad35-63fc-4859-9b8d-19e01d386378_sample_3gp.3gp\"}]",
+  "subject": "Send mail with multiple Attachments",
+  "transid": "9c973908-a814-XXXX-a4be-1cd2fcbed08d",
+  "channel": "Email",
+  "htmlMessage": "<div style=\\\"font-family: Arial, sans-serif; font-size: 14px;\\\"><br><\\/div><div style=\\\"font-family: Arial, sans-serif; font-size: 14px;\\\"><br><\\/div>\\r\\n<div class=\\\"protonmail_signature_block\\\" style=\\\"font-family: Arial, sans-serif; font-size: 14px;\\\">\\r\\n    <div class=\\\"protonmail_signature_block-user protonmail_signature_block-empty\\\">\\r\\n        \\r\\n            <\\/div>\\r\\n    \\r\\n            <div class=\\\"protonmail_signature_block-proton\\\">\\r\\n        Sent with <a target=\\\"_blank\\\" href=\\\"https:\\/\\/proton.me\\/mail\\/home\\\">Proton Mail<\\/a> secure email.\\r\\n    <\\/div>\\r\\n<\\/div>\\r\\n",
+  "dataIntegration": [
+    {
+      "prebuiltId": 51052,
+      "outBoundEventNotificationEnabled": 1,
+      "drEventNotificationEnabled": 1,
+      "context": {
+        "serviceId": "",
+        "serviceName": "",
+        "flowId": "",
+        "flowName": "",
+        "messagingAPI": "false"
+      },
+      "userAuditNotificationEnabled": 0,
+      "assetLevel": 1,
+      "isInboundEventNotificationEnabled": 1,
+      "dataIntegrationid": 50528
+    }
+  ],
+  "appContext": {
+    },
+  "event_identifier": "MO",
+  "userId": "",
+  "tid": "9c973908-a814-XXXX-a4be-1cd2fcbed08d",
+  "clientUUID": "0d41b41a-a8e8-XXXX-a9fb-24ce5334e18f",
+  "x-wx-gtrid": "",
+  "channel_identifier": "EMAIL",
+  "appId": "a_638651XXXX99190000",
+  "tenantId": 8129,
+  "from": "testautocisco@protonmail.com",
+  "to": "[\"\\\"pavanqa@bayone.webexconnect.in.net\\\" <pavanqa@bayone.webexconnect.in.net>\"]",
+  "event": "Inbound Message",
+  "ts": "2025-03-25T11:41:42.601+05:30"
+}
+```
+```json Unsubscribe
+{
+  "transid": "97bc71e9-XXXX-XXXX-ad66-1384a0b2d533",
+  "channel": "Email",
+  "dataIntegration": {
+    "context": {
+      "serviceId": "",
+      "serviceName": "",
+      "flowId": "",
+      "flowName": "",
+      "messagingAPI": "false"
+    },
+    "appContext": {
+    }
+  },
+  "tid": "97bc71e9-29e2-XXXX-XXXX-1384a0b2d533",
+  "clientUUID": "0d41b41a-XXXX-XXXX-a9fb-24ce5334e18f",
+  "x-wx-gtrid": "",
+  "senderId": "jack@smith.webexconnect.in.net",
+  "appId": "a_638651XXXX99190000",
+  "from": "xyz@yahoo.com",
+  "correlationId": "",
+  "event": "Unsubscribe",
+  "ts": "2025-04-04T12:30:10.340+05:30"
+}
+```
+```json Subscribe
+{
+  "transid": "a4ca548d-X774-XXX5-XXX7-17386a31e98",
+  "channel": "Email",
+  "dataIntegration": {
+    "context": {
+      "serviceId": "",
+      "serviceName": "",
+      "flowId": "",
+      "flowName": "",
+      "messagingAPI": "false"
+    },
+    "appContext": {
+         }
+  },
+  "tid": "a4ca548d-XXX4-XXX5-XXX7-17386a31e985",
+  "clientUUID": "0d41b41a-a8e8-XXXX-XXXX-24ce5334e18f",
+  "x-wx-gtrid": "",
+  "senderId": "jack@smith.webexconnect.in.net",
+  "appId": "a_63865XXXXXX9190000",
+  "from": "xyz@yahoo.com",
+  "correlationId": "",
+  "event": "Subscribe",
+  "ts": "2025-04-04T12:30:12.652+05:30"
+}
+```
+
+**Email - Inbound Message Descriptions**
+
+
+
+| Field Name | Descriptions | Example |
+| --- | --- | --- |
+| textMessage | Contains the text message sent by the user. | Hello Customer,  <br>  <br>Thank you for using our services. For any further assistance, please reach us at [support@abc.tld]  <br>  <br>Thanks,  <br>Team ABC |
+| attachments | Contains the file attachment sent by the user. | Audio_MP3_700kb.mp3 |
+| subject | Email subject | Send mail with multiple Attachments |
+| transid | Unique transaction reference id of the request. | a4ca548d-X774-XXX5-XXX7-17386a31e985 |
+| channel | Refers to the channel name."Email” in this case. | Email |
+| htmlMessage | Email HTML Content | "\<html xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" \\r\\n \***\*REMOVED FOR READABILITY\*\***" |
+| dataIntegration | The object contains key-value pairs which are added either by Data Stream admin or in flow and also app context object. | "dataIntegration": {    "context":  <br>{  <br>"key1": "value1",  <br>"key2": "value2",  <br>"key3": "value3"  <br>},  <br>“appContext”: {  <br>}  <br>} |
+| context | The object contains key-value pairs which are added either by Data Stream admin or in flow. | "context": {  <br>"key1": "value1",  <br>"key2": "value2",  <br>"key3": "value3"  <br>} |
+| serviceId | Contains the unique reference ID of the service. | 12345 |
+| serviceName | Contains the name of the service. | New Service |
+| flowId | Contains the unique ID for the flow. | 54321 |
+| flowName | Contains the name of the flow. | Sample Flow |
+| messagingAPI | Indicates whether the request is sent through messaging API. | true/false |
+| appContext | The object is added as key-value pair either by Data Stream admin or in flow. | “appContext“: {  <br>“key1”: “value1“,  <br>“key2”: “value2“  <br>} |
+| event_identifier | Unique Identifier for an event as given by the client. | SampleInbound |
+| userId | Unique customer ID that identifies a customer profile. Populated if used in the flow. |  |
+| tid | Transaction Id. | a4ca548d-XXX4-XXX5-XXX7-17386a31e985 |
+| clientUUID | Contains the clients unique identification number. | 0d41b41a-a8e8-XXXX-XXXX-24ce5334e18f |
+| senderId | Email address used to send the concerned email to the recipient. | [jack@smith.webexconnect.in.net] |
+| x-wx-gtrid | Contains the global transaction ID between cross-products for a given request. | d7XXXX76-3XXa-4XXe-9XX3-d6XXXXXXXXf9 |
+| channel_identifier | Unique Identifier for a channel as given by the client. | EMAIL |
+| appId | Contains the application ID. | a_63865XXXXXX9190000 |
+| tenantId | Unique tenant ID. |  |
+| from | Email ID of the sender. | [sender@protonmail.com] |
+| to | Email ID of the receipent | [destination@jack.webexconnect.in.net] |
+| event | Contains the incoming event type. | Subscribe |
+| ts | Timestamp when MO received to Webex Connect | 2025-04-04T12:30:12.652+05:30 |
+| correlationId | The CorrelationID is a unique identifier that you can attach to every request as a reference a particular transaction or event. This is configured as a part of the request. | 12XXXX7e-5XXb-4XX9-9XXf-3bXXXXXXX90 |
+
+
+
+
+**Email - Delivery Receipt**
+
+```json Submitted
+{
+  "x-wx-gtrid": "7c55322b-a0bd-XXXX-XXXX-f4a78b641feb",
+  "deliveryInfoNotification": {
+    "deliveryInfo": {
+      "timeStamp": "2025-03-06T16:45:01.481+05:30",
+      "Description": "Submitted",
+      "code": "1234",
+      "deliveryChannel": "email",
+      "additionalInfo": "",
+      "destination": "xyz@yahoo.com",
+      "destinationType": "email",
+      "deliveryStatus": "Submitted"
+    },
+    "subtid": "",
+    "transid": "a00be223-XXXX-XXXX-a602-daaacca5c363",
+    "callbackData": "",
+    "correlationid": ""
+  },
+  "dataIntegration": {
+    "context": {
+      "serviceId": "54321",
+      "serviceName": "New Service",
+      "flowId": "",
+      "flowName": "",
+      "messagingAPI": "true"
+    },
+    "appContext": {
+    }
+  }
+}
+```
+```json Delivered
+{
+	"x-wx-gtrid": "7c55322b-a0bd-XXXX-XXXX-f4a78b641feb",
+	"deliveryInfoNotification": {
+		"deliveryInfo": {
+			"timeStamp": "2025-03-06T16:45:02.810+05:30",
+			"Description": "Delivered",
+			"code": "1234",
+			"deliveryChannel": "email",
+			"additionalInfo": "",
+			"destination": "xyz@yahoo.com",
+			"destinationType": "email",
+			"deliveryStatus": "Delivered"
+		},
+		"subtid": "",
+		"transid": "a00be223-bf3c-XXXX-XXXX-daaacca5c363",
+		"callbackData": "",
+		"correlationid": ""
+	},
+	"dataIntegration": {
+		"context": {
+			"serviceId": "54321",
+			"serviceName": "NewService",
+			"flowId": "",
+			"flowName": "",
+			"messagingAPI": "true"
+		},
+		"appContext": {}
+	}
+}
+```
+```json Read
+{
+	"x-wx-gtrid": "7c55322b-a0bd-XXXX-XXXX-f4a78b641feb",
+	"deliveryInfoNotification": {
+		"deliveryInfo": {
+			"timeStamp": "2025-03-06T16:45:14.928+05:30",
+			"Description": "Read",
+			"code": "1234",
+			"deliveryChannel": "email",
+			"additionalInfo": "",
+			"destination": "xyz@yahoo.com",
+			"destinationType": "email",
+			"deliveryStatus": "Read"
+		},
+		"subtid": "",
+		"transid": "a00be223-bf3c-XXXX-XXXX-daaacca5c363",
+		"callbackData": "",
+		"correlationid": ""
+	},
+	"dataIntegration": {
+		"context": {
+			"serviceId": "54321",
+			"serviceName": "NewService",
+			"flowId": "",
+			"flowName": "",
+			"messagingAPI": "true"
+		},
+		"appContext": {}
+	}
+}
+```
+```json Clicked
+{
+  "x-wx-gtrid": "7c55322b-a0bd-XXXX-XXXX-f4a78b641feb",
+  "deliveryInfoNotification": {
+    "deliveryInfo": {
+      "timeStamp": "2025-03-06T16:45:16.911+05:30",
+      "Description": "http://www.w3schools.com|72.163.220.5",
+      "code": "1234",
+      "deliveryChannel": "email",
+      "additionalInfo": "Mozilla\\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/133.0.0.0 Safari\\/537.36",
+      "destination": "xyz@yahoo.com",
+      "destinationType": "email",
+      "deliveryStatus": "Clicked"
+    },
+    "subtid": "",
+    "transid": "a00be223-bf3c-XXXX-XXXX-daaacca5c363",
+    "callbackData": "",
+    "correlationid": ""
+  },
+  "dataIntegration": {
+    "context": {
+      "serviceId": "54321",
+      "serviceName": "NewService",
+      "flowId": "",
+      "flowName": "",
+      "messagingAPI": "true"
+    },
+    "appContext": {
+          }
+  }
+}
+```
+```json Failed
+{
+  "x-wx-gtrid": "698c6b7e-572b-XXXX-XXXX-97894550d172",
+  "deliveryInfoNotification": {
+    "deliveryInfo": {
+      "timeStamp": "2025-04-09T17:21:43.514+05:30",
+      "Description": "already bounced : bounce@simulator.amazonses.com",
+      "code": "1234",
+      "deliveryChannel": "email",
+      "additionalInfo": "",
+      "destination": "bounce@simulator.amazonses.com",
+      "destinationType": "email",
+      "deliveryStatus": "Failed"
+    },
+    "subtid": "",
+    "transid": "8a97075b-52c0-XXXX-ade4-39e7ac7af43b",
+    "callbackData": "",
+    "correlationid": ""
+  },
+  "dataIntegration": {
+    "context": {
+      "serviceId": "54321",
+      "serviceName": "NewService",
+      "flowId": "",
+      "flowName": "",
+      "messagingAPI": "true"
+    },
+    "appContext": {
+          }
+  }
+}
+```
+```json Complaint
+{
+  "x-wx-gtrid": "148bf1fd-1746-XXXX-89d9-a0dc032e965a",
+  "deliveryInfoNotification": {
+    "deliveryInfo": {
+      "timeStamp": "2025-04-09T17:25:19.724+05:30",
+      "Description": "",
+      "code": "7521",
+      "deliveryChannel": "email",
+      "additionalInfo": "",
+      "destination": "complaint@simulator.amazonses.com",
+      "destinationType": "email",
+      "deliveryStatus": "Complaint"
+    },
+    "subtid": "",
+    "transid": "18480103-bc36-XXXX-bab3-59eb20b346b3",
+    "callbackData": "",
+    "correlationid": ""
+  },
+  "dataIntegration": {
+    "context": {
+      "serviceId": "31410",
+      "serviceName": "BayOneAkTest",
+      "flowId": "",
+      "flowName": "",
+      "messagingAPI": "true"
+    },
+    "appContext": {
+      "tenant_identifier": "BayOneTestAutomation",
+      "Topic": "BayOneDSAutomation",
+      "URL": "b-1.dev-campaign-integrat.tefj3j.c20.kafka.us-east-1.amazonaws.com:9096,b-3.dev-campaign-integrat.tefj3j.c20.kafka.us-east-1.amazonaws.com:9096,b-2.dev-campaign-integrat.tefj3j.c20.kafka.us-east-1.amazonaws.com:9096",
+      "webhookurl": "https://integrations.imiconnect.co/v1/integration/"
+    }
+  }
+}
+```
+```json Bounced
+{
+	"deliveryInfoNotification": {
+		"deliveryInfo": {
+			"deliveryChannel": "email",
+			"Description": "Permanent_General/Permanent_NoEmail/Permanent_Suppressed/Transient_General/Transient_MailboxFull/Transient_MessageTooLarge/Transient_ContentRejected/Transient_AttachmentRejected",
+			"destinationType": "email",
+			"timeStamp": "2023-02-07T03:51:52.322+05:30",
+			"code": "7520",
+			"deliveryStatus": "Bounce",
+			"destination": "destination@domain.tld",
+			"additionalInfo": "5.1.1|failed|smtp; 550-5.1.1 The email account that you tried to reach does not exist. Please try\\n550-5.1.1 double-checking the recipient's email address for typos or\\n550-5.1.1 unnecessary spaces. For more information, go to\\n550 5.1.1  https:\\/\\/support.google.com\\/mail\\/?p=NoSuchUser e16-20020a056402089000b0056023119210si1660773edy.317 - gsmtp"
+		},
+		"subtid": "",
+		"transid": "8a97075b-52c0-XXXX-ade4-39e7ac7af43b",
+		"callbackData": "",
+		"correlationid": ""
+	},
+	"dataIntegration": {
+		"context": {
+			"serviceId": "54321",
+			"serviceName": "NewService",
+			"flowId": "",
+			"flowName": "",
+			"messagingAPI": "true"
+		},
+		"appContext": {}
+	}
+}
+```
+```json Not Verified
+{
+	"deliveryInfoNotification": {
+        "deliveryInfo": {
+            "deliveryChannel": "email",
+            "Description": "Account in sandbox mode. Destination email address is not verified",
+            "destinationType": "emailid",
+            "timeStamp": "2016-07-21T12:44:23.644",
+            "code": "7522",
+            "deliveryStatus": "Not Verified",
+            "destination": "destination@domain.tld"
+		},
+		"subtid": "",
+		"transid": "8a97075b-52c0-XXXX-ade4-39e7ac7af43b",
+		"callbackData": "",
+		"correlationid": ""
+	},
+	"dataIntegration": {
+		"context": {
+			"serviceId": "54321",
+			"serviceName": "NewService",
+			"flowId": "",
+			"flowName": "",
+			"messagingAPI": "true"
+		},
+		"appContext": {}
+	}
+}
+```
+```json Invalid
+{
+	"deliveryInfoNotification": {
+		"deliveryInfo": {
+			"timeStamp": "2021-03-04T17:00:07.538Z",
+			"Description": "Invalid email address",
+			"code": "7523",
+			"deliveryChannel": "email",
+			"additionalInfo": "",
+			"destination": "destination@invalid",
+			"destinationType": "email",
+			"deliveryStatus": "Failed"
+		},
+		"subtid": "",
+		"transid": "8a97075b-52c0-XXXX-ade4-39e7ac7af43b",
+		"callbackData": "",
+		"correlationid": ""
+	},
+	"dataIntegration": {
+		"context": {
+			"serviceId": "54321",
+			"serviceName": "NewService",
+			"flowId": "",
+			"flowName": "",
+			"messagingAPI": "true"
+		},
+		"appContext": {}
+	}
+}
+```
+
+> 📘 Note
+> 
+> All the Delivery receipts except “Submitted” are applicable only to Email via Amazon SES and not to Email via SMTP.
+
+**Email - Delivery Receipt Descriptions **
+
+
+
+| Field Name | Description | Example |
+| --- | --- | --- |
+| x-wx-gtrid | Contains the global transaction ID between cross-products for a given request. | d7XXXX76-3XXa-4XXe  <br>-9XX3-d6XXXXXXXXf9 |
+| deliveryInfoNotification | Delivery info parent object | NA |
+| deliveryInfo | Delivery info child object | NA |
+| timeStamp | Timestamp of the event. The timestamp mentioned in the outbound webhook is as per the timezone of the tenant and not UTC as a standard. | 2023-03-06T17:53:02.270+05:30 |
+| Description | Detailed description of the delivery status. | Submitted |
+| code | Status code as mentioned in the documentation. | 1234 |
+| deliveryChannel | Channel used to send the message, i.e., email in this case. | email |
+| additionalInfo | This field contains additional contextual information for certain receipts. For example, it captures the details of device where the email has been clicked at in case of 'Clicked' event. Let's say the click event is received from a user who is using Chrome Browser version 125.0.6422.140 on a 64-bit Windows machine using the WebKit rendering engine, this field may have information like: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.6422.140 Safari/537.36".  <br>  <br>Alternatively, it contains the granular details about the reason behind an email getting bounced in case of bounced emails. Another example is when an email is bounced/rejected by the recipient email service provider such as Gmail because the sender is unauthenticated, additionalInfo field in such cases would contain details about 5.7.26 email errors. | Status Code 410 |
+| destination | Unique email ID for the recipient of the message on email | [xyz@yahoo.com] |
+| destinationType | This is always email for Email | Email |
+| deliveryStatus | Status of messages once sent. | Submitted |
+| subtid | A unique transaction id will be generated as subtid for the flow level transactions (or node tid) | 12XXXX3-fXXe-4XX4-aXX5-a6XXXXXXXXc |
+| transid | Unique transaction reference id of the request. | a00be223-XXXX-XXXX-a602-daaacca5c363 |
+| callbackData | Data that you have configured to receive on the notify Url. This is configured as a part of the request. | This is callback data. |
+| correlationid | The CorrelationID is a unique identifier that you can attach to every request as a reference a particular transaction or event. This is configured as a part of the request. | 12XXXX3e-4XXb-5XX6-7XXf-8bXXXXXXX90 |
+| dataIntegration | The object contains key-value pairs which are added either by Data Stream admin or in flow and also app context object. | "dataIntegration": {    "context":  <br>{  <br>"key1": "value1",  <br>"key2": "value2",  <br>"key3": "value3"  <br>},  <br>“appContext”: {  <br>}  <br>} |
+| context | The object contains key-value pairs which are added either by Data Stream admin or in flow. | "context": {  <br>"key1": "value1",  <br>"key2": "value2",  <br>"key3": "value3"  <br>} |
+| serviceId | Contains the unique reference id of the service. | 54321 |
+| serviceName | Contains the name of the service. | NewService |
+| flowId | Contains the unique ID for the flow. | 54321 |
+| messagingAPI | It is a boolean parameter. If the value is True, the message was sent using messaging API. If the value is False, the message was sent using either flow or rule. | true/false |
+| appContext | The object is added as key-value pair either by Data Stream admin or in flow. | “appContext“: {  <br>“key1”: “value1“,  <br>“key2”: “value2“  <br>} |
+
+
+
+
+**Email - Outbound Message**
+
+```json Outbound Email
+{
+  "attachments": [
+    {
+      "duration": 5,
+      "disposition": "attachment",
+      "mediaUrl": "https://www.fileformat.info/format/png/sample/40a6e65ed7fb44bc91a8a52aab47fdd4/MARBLE8.PNG",
+      "attachmentType": 2,
+      "name": "ImageAttachment",
+      "mimeType": "image/png"
+    }
+  ],
+  "subject": "Sample Subject",
+  "transid": "5e53b019-14e3-XXXX-XXXX-45c3f6e06202",
+  "validateDestination": false,
+  "dataIntegration": {
+    "context": {
+      "Key1": "value 1",
+      "Key2": "value 2"
+    },
+    "appContext": {
+    }
+  },
+  "body": "Hi this is Jack Smith",
+  "tid": "5e53b019-14e3-XXXX-XXXX-45c3f6e06202",
+  "clientUUID": "0a4a1900-98ef-XXXX-XXXX-5ef0927d6683",
+  "smtpHeaders": {
+    },
+  "appId": "a_637903XXXXX4180000",
+  "fromName": "Jack Smith",
+  "replyTo": "",
+  "from": "sender@gmail.com",
+  "x_msg_seq": 0,
+  "to": [
+    "destination@gmail.com"
+  ],
+  "serviceKey": "78970095-XXXX-XXX-XXXX-12dae3d9be6b",
+  "serviceId": 67891
+}
+```
+
+**Email - Outbound Message Descriptions **
+
+
+
+| Field Name | Description | Example |
+| --- | --- | --- |
+| attachments | Email attachment details | disposition and mediaUrl |
+| disposition | It is present for email with attachments | attachment |
+| mediaUrl | Direct URL pointing to the media file. | "<https://www.fileformat.info/format/png/sample/40a6e65ed>  <br>7fb44bc91a8a52aab47fdd4/MARBLE8.PNG" |
+| name | Name of the attachments | ImageAttachment |
+| mimeType | Mime type of the attachment that is being sent. For example, "image/png". | image/png |
+| subject | Subject of the email. | Sample Subject |
+| transid | Unique transaction reference ID of the request. | 5e53b019-14e3-XXXX-XXXX-45c3f6e06202 |
+| validateDestination | System variable. | False |
+| dataIntegration | The object contains key-value pairs which are added either by Data Stream admin or in flow and also app context object. | "dataIntegration": {    "context":  <br>{  <br>"key1": "value1",  <br>"key2": "value2",  <br>"key3": "value3"  <br>},  <br>“appContext”: {  <br>}  <br>} |
+| context | The object contains key-value pairs which are added either by Data Stream admin or in flow. | "context": {  <br>"key1": "value1",  <br>"key2": "value2",  <br>"key3": "value3"  <br>} |
+| appcontext | The object is added as key-value pair either by Data Stream admin or in flow. | “appContext“: {  <br>“key1”: “value1“,  <br>“key2”: “value2“  <br>} |
+| body | Contains the information sent by the user. | Hi this is Jack Smith |
+| tid | Transaction I | 5e53b019-14e3-XXXX-XXXX-45c3f6e06202 |
+| clientUUID | Contains the clients unique identification number. | 0a4a1900-98ef-XXXX-XXXX-5ef0927d6683 |
+| smtpHeaders | Includes SMTP header parameters and values at the time of sending email. | In-Reply-To |
+| appId | Contains the application ID. | a_637903XXXXX4180000 |
+| fromName | Name of the sender. A string that will appear next to the from address in most email inboxes. | Jack Smith |
+| replyTo | Reply path for the email when the customer responds | [operations@domain.tld] |
+| from |  Email ID of the sender | [sender@gmail.com] |
+| x_msg_seq | This parameter represents whether the request should process sequence or not | 0 |
+| to | Recipient's Email ID | [destination@gmail.com] |
+| serviceKey | Unique identification number for the service. | 78970095-XXXX-XXX-XXXX-12dae3d9be6b |
+| serviceId | Contains the unique reference ID of the service. | 12345 |
+
+
+
+## API reference metadata
+
+These are source metadata and examples. `api.auth` is ReadMe metadata; verify authentication in the documented headers/security scheme.
+
+```json
+{
+  "method": "get",
+  "url": "",
+  "auth": "required",
+  "results": {
+    "codes": [
+      {
+        "name": "",
+        "code": "{}",
+        "language": "json",
+        "status": 200
+      },
+      {
+        "name": "",
+        "code": "{}",
+        "language": "json",
+        "status": 400
+      }
+    ]
+  },
+  "params": [],
+  "examples": {
+    "codes": []
+  }
+}
+```

@@ -1,0 +1,33 @@
+<<prodname>> Sandbox is a pre-configured environment in which you can prototype applications with channels such as SMS, Voice and WhatsApp. It is designed to allow enterprise developers to try the APIs, SDKs and our advanced CPaaS capabilities such as flow builder, debugging tools and analytics.
+
+Here's a brief overview of the APIs that are available within <<prodname>> sandbox:
+
+> 📘 API Availability Differences between Sandbox Mode and Full Platform Mode
+> 
+> - Please note that communication API access in Sandbox is limited to SMS, Voice and WhatsApp in the new Sandbox Site.
+> - The sandbox limits you to sending messages and making voice calls only to your verified phone number(s). You can register up to 5 phone numbers (all belonging to the same country) for sending and receiving test messages or voice calls.
+> - The endpoint for each of the channels are separate, and some of these APIs are available only in Sandbox mode at the moment.
+> - [Custom Event API](https://developers.imiconnect.io/reference/external-event) and [Inbound Webhooks](https://developers.imiconnect.io/reference/custom-event-v2) are available in Sandbox mode.
+> - Other APIs such as Profile API, Thread APIs, Segment APIs, and Topic APIs are not available in the Sandbox mode.
+
+## API Endpoints for Sandbox
+
+| Sandbox API Type | API Capability                                                                                                          | Old Sandbox Endpoint                                                              | New Sandbox Endpoint                                                              |
+| :--------------- | :---------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------- |
+| SMS API          |                                                                                                                         |                                                                                   |                                                                                   |
+|                  | Send an SMS message                                                                                                     | <https://api-sandbox.imiconnect.io/v1/sms/messages>                               | <https://api.us.webexconnect.io/v1/sms/messages>                                  |
+|                  | Retrieve the status of a send SMS message request                                                                       | <https://api-sandbox.imiconnect.io/v1/sms/messages/{messageId}>                   | <https://api.us.webexconnect.io/v1/sms/messages/{messageId}>                      |
+| Voice            |                                                                                                                         |                                                                                   |                                                                                   |
+|                  | Place a new call, play an audio and disconnect i.e. play and drop                                                       | <https://api-sandbox.imiconnect.io/v1/voice/messages>                             | <https://api.us.webexconnect.io/v1/voice/messages>                                |
+|                  | Place a new call to a telephone number                                                                                  | <https://api-sandbox.imiconnect.io/v1/voice/calls>                                | <https://api.us.webexconnect.io/v1/voice/calls>                                   |
+|                  | Retrieve the status of an individual call                                                                               | <https://api-sandbox.imiconnect.io/v1/voice/calls/{sessionId}>                    | <https://api.us.webexconnect.io/v1/voice/calls/{sessionId}>                       |
+|                  | Retrieve information on any recordings taken during a call                                                              | <https://api-sandbox.imiconnect.io/v1/voice/calls/{sessionId}/recordings>         | <https://api.us.webexconnect.io/v1/voice/calls/{sessionId}/recordings>            |
+| WhatsApp         |                                                                                                                         |                                                                                   |                                                                                   |
+|                  | Send a WhatsApp message                                                                                                 | <https://api-sandbox.imiconnect.io/v1/whatsapp/messages>                          | <https://api.us.webexconnect.io/resources/v1/messaging/>                          |
+|                  | Retrieve the status of a WhatsApp message                                                                               | <https://api-sandbox.imiconnect.io/v1/whatsapp/messages/{messageId}>              | Currently not supported in New Sandbox Site                                       |
+| Custom Event     | Invoking or resuming an <<prodname>> flow by making an API call with a fixed pre-configured payload of key-value pairs. | [Refer Documentation](https://developers.imiconnect.io/reference#external-event)  | [Refer Documentation](https://developers.imiconnect.io/reference#external-event)  |
+| Inbound Webhooks | Invoking or resuming an <<prodname>> flow by making an API call with a flexible JSON/XML payload.                       | [Refer Documentation](https://developers.imiconnect.io/reference#custom-event-v2) | [Refer Documentation](https://developers.imiconnect.io/reference#custom-event-v2) |
+
+## Signing Up for Webex Connect Sandbox
+
+If you're an enterprise developer who wants to explore <<prodname>> APIs, SDKs, and capabilities before subscribing to the enterprise platform license can sign-up for a [sandbox account](https://sandbox.us.webexconnect.io/self-sign-up).

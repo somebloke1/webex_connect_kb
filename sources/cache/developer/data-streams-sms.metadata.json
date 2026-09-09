@@ -1,0 +1,32 @@
+{
+  "api_metadata_path": "sources/cache/developer/data-streams-sms.api.json",
+  "category": "Data Streams",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f664a",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "002df9398966608c214aeed77b9a9c7384c8a0e42e8604eed3d410ed38cd8cfb",
+    "source_path": "4ffa52f20bb5a483da8f40a041f64230d3b1fc949d5b10a7e05fea46cc9323cf",
+    "text_path": "160bc6e7518031c206602d50ed1cc70a59f9b8b792d2546435a2dc2f20d89c29"
+  },
+  "headings": [],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/data-streams-sms.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/data-streams-sms",
+  "retrieved_at": "2026-09-08T23:31:48+00:00",
+  "sha256_api_metadata": "575f65b7d8dc3ea0b617314bc47e22705dc85fc80ee114e6faa20ada4e8aafe2",
+  "sha256_html_response": "9bcc460492e958d5a39d2f2d7fadd6c5c95dc8087d59dacc45831509539feb21",
+  "sha256_source_body": "4ffa52f20bb5a483da8f40a041f64230d3b1fc949d5b10a7e05fea46cc9323cf",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/data-streams-sms.source.md",
+  "source_updated_at": "2026-07-27T13:17:22.857Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/data-streams-sms.txt",
+  "title": "Data Streams - SMS",
+  "url": "https://developers.webexconnect.io/reference/data-streams-sms",
+  "word_count": 1856,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/data-streams-sms.metadata.json"
+}

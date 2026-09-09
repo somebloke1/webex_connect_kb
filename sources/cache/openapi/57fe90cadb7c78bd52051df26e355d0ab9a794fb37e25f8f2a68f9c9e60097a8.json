@@ -1,0 +1,351 @@
+{
+  "_id": "6a675233ec1c893d8a7f67f5:6a675233ec1c893d8a7f662b",
+  "components": {
+    "securitySchemes": {}
+  },
+  "info": {
+    "title": "WhatsApp Contacts Message",
+    "version": "6.20.0"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/": {
+      "post": {
+        "deprecated": false,
+        "description": "Share contacts on WhatsApp to your customers. This message type can be sent within 24 hour window after a customer initiated message.   _Note: Modify YourRegion in the URL to the right to reflect your tenant’s region. See [Know your endpoint page](https://developers.imiconnect.io/reference/endpoints)._",
+        "operationId": "whatsapp-contacts-messages",
+        "parameters": [
+          {
+            "description": "Applicable when you want to use service key for API authentication. Available under API tab within a service in your WebexConnect tenant.",
+            "in": "header",
+            "name": "key",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "JSON Web Token (JWT) for authentication (e.g. bearer <token>) used alternatively to Service Key.",
+            "in": "header",
+            "name": "authorization",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "appid": {
+                    "description": "Contains the applicationid",
+                    "type": "string"
+                  },
+                  "callbackData": {
+                    "description": "Data that you have configured to receive on the notify Url. This is configured as a part of the request.",
+                    "type": "string"
+                  },
+                  "channels": {
+                    "description": "Channels used for incoming messages.",
+                    "properties": {
+                      "OTT-Messaging": {
+                        "description": "JSON object for social channel message configuration",
+                        "properties": {
+                          "wa": {
+                            "description": "JSON object for WhatsApp message configuration",
+                            "properties": {
+                              "contacts": {
+                                "description": "JSON object for contact details configuration",
+                                "items": {
+                                  "properties": {
+                                    "addresses": {
+                                      "description": "JSON Object for Address configuration",
+                                      "items": {
+                                        "properties": {
+                                          "city": {
+                                            "description": "City name",
+                                            "type": "string"
+                                          },
+                                          "country": {
+                                            "description": "Full country name",
+                                            "type": "string"
+                                          },
+                                          "country_code": {
+                                            "description": "Two-letter country abbreviation",
+                                            "type": "string"
+                                          },
+                                          "state": {
+                                            "description": "State abbreviation",
+                                            "type": "string"
+                                          },
+                                          "street": {
+                                            "description": "Street number and name",
+                                            "type": "string"
+                                          },
+                                          "type": {
+                                            "description": "Standard Values: HOME, WORK",
+                                            "type": "string"
+                                          },
+                                          "zip": {
+                                            "description": "ZIP code",
+                                            "type": "string"
+                                          }
+                                        },
+                                        "type": "object"
+                                      },
+                                      "type": "array"
+                                    },
+                                    "birthday": {
+                                      "description": "YYYY-MM-DD formatted string",
+                                      "type": "string"
+                                    },
+                                    "emails": {
+                                      "description": "Contact email address(es)",
+                                      "items": {
+                                        "properties": {
+                                          "email": {
+                                            "description": "Email address",
+                                            "type": "string"
+                                          },
+                                          "type": {
+                                            "description": "Standard Values: HOME, WORK",
+                                            "type": "string"
+                                          }
+                                        },
+                                        "type": "object"
+                                      },
+                                      "type": "array"
+                                    },
+                                    "name": {
+                                      "description": "Full contact name",
+                                      "properties": {
+                                        "first_name": {
+                                          "description": "First name",
+                                          "type": "string"
+                                        },
+                                        "formatted_name": {
+                                          "description": "Full name as it normally appears. At least one of the optional parameters needs to be included along with the formatted_name parameter.",
+                                          "type": "string"
+                                        },
+                                        "last_name": {
+                                          "description": "Last name",
+                                          "type": "string"
+                                        }
+                                      },
+                                      "required": [
+                                        "formatted_name"
+                                      ],
+                                      "type": "object"
+                                    },
+                                    "org": {
+                                      "description": "Contact organization information",
+                                      "properties": {
+                                        "company": {
+                                          "description": "Name of the contact's company",
+                                          "type": "string"
+                                        },
+                                        "department": {
+                                          "description": "Name of the contact's department",
+                                          "type": "string"
+                                        },
+                                        "title": {
+                                          "description": "Contact's business title",
+                                          "type": "string"
+                                        }
+                                      },
+                                      "type": "object"
+                                    },
+                                    "phone": {
+                                      "description": "Contact phone number(s)",
+                                      "items": {
+                                        "properties": {
+                                          "phone": {
+                                            "description": "Contact phone number",
+                                            "type": "string"
+                                          },
+                                          "type": {
+                                            "description": "Standard Values: CELL, MAIN, IPHONE, HOME, WORK",
+                                            "type": "string"
+                                          },
+                                          "wa_id": {
+                                            "description": "WhatsApp ID",
+                                            "type": "string"
+                                          }
+                                        },
+                                        "type": "object"
+                                      },
+                                      "type": "array"
+                                    },
+                                    "urls": {
+                                      "description": "Contact URL(s)",
+                                      "items": {
+                                        "properties": {
+                                          "type": {
+                                            "description": "Standard Values: HOME, WORK",
+                                            "type": "string"
+                                          },
+                                          "url": {
+                                            "description": "URL",
+                                            "type": "string"
+                                          }
+                                        },
+                                        "type": "object"
+                                      },
+                                      "type": "array"
+                                    }
+                                  },
+                                  "type": "object"
+                                },
+                                "type": "array"
+                              },
+                              "identity_key_hash": {
+                                "description": "Unique identity hash key to track the messages sent to the authorized customer.",
+                                "type": "string"
+                              },
+                              "type": {
+                                "default": "contacts",
+                                "description": "Specify the message type",
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ],
+                            "type": "object"
+                          }
+                        },
+                        "type": "object"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  "correlationid": {
+                    "description": "The correlationid is a unique identifier that you can attach to every request as a reference a particular transaction or event. This is configured as a part of the request.",
+                    "type": "string"
+                  },
+                  "deliverychannel": {
+                    "default": "whatsapp",
+                    "description": "Channel used to send the message i.e., WhatsApp in this case.",
+                    "type": "string"
+                  },
+                  "destination": {
+                    "description": "Unique user id for the recipient of the message on WhatsApp.",
+                    "items": {
+                      "properties": {}
+                    },
+                    "type": "array"
+                  },
+                  "notifyurl": {
+                    "description": "Configure a URL to get notifications on delivery reports for a WhatsApp message. This field accepts only a valid URL or a variable. If an invalid URL is passed in API request or via a variable, then such request will not be considered eligible for retries.",
+                    "type": "string"
+                  },
+                  "notifyurlAuthId": {
+                    "description": "Unique Authentication ID.",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "destination"
+                ],
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{\n    \"response\": [\n        {\n            \"code\": \"1001\",\n            \"transid\": \"3f09295d-9eb3-4c9e-8ee8-a3272e5f00c1\",\n            \"description\": \"Queued\"\n        }\n    ]\n}"
+                  }
+                },
+                "schema": {
+                  "properties": {
+                    "response": {
+                      "items": {
+                        "properties": {
+                          "code": {
+                            "example": "1001",
+                            "type": "string"
+                          },
+                          "description": {
+                            "example": "Queued",
+                            "type": "string"
+                          },
+                          "transid": {
+                            "example": "3f09295d-9eb3-4c9e-8ee8-a3272e5f00c1",
+                            "type": "string"
+                          }
+                        },
+                        "type": "object"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "200"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{\n  \"response\": {\n    \"code\": \"7001\",\n    \"description\": \"Authentication failed.\",\n    \"transid\": \"7670c9a8-131f-4166-ac30-17f6109340d6\"\n  }\n}"
+                  }
+                },
+                "schema": {
+                  "properties": {
+                    "response": {
+                      "properties": {
+                        "code": {
+                          "example": "7001",
+                          "type": "string"
+                        },
+                        "description": {
+                          "example": "Authentication failed.",
+                          "type": "string"
+                        },
+                        "transid": {
+                          "example": "7670c9a8-131f-4166-ac30-17f6109340d6",
+                          "type": "string"
+                        }
+                      },
+                      "type": "object"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "400"
+          }
+        },
+        "summary": "WhatsApp Contacts Messages"
+      }
+    }
+  },
+  "security": [
+    {}
+  ],
+  "servers": [
+    {
+      "url": "https://{YourRegion}.webexconnect.io/resources/v1/messaging",
+      "variables": {
+        "YourRegion": {
+          "default": "YourRegion"
+        }
+      }
+    }
+  ],
+  "x-readme": {
+    "explorer-enabled": true,
+    "headers": [],
+    "proxy-enabled": true
+  },
+  "x-readme-fauxas": true
+}

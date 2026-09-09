@@ -1,0 +1,1013 @@
+{
+  "generated_at": "2026-09-09T00:31:31+00:00",
+  "status": "complete",
+  "all_samples_complete": true,
+  "expected_count": 59,
+  "sample_count": 59,
+  "authored_walkthrough_count": 59,
+  "samples": [
+    {
+      "sample_key": "gallery-ai-doctor",
+      "title": "AI Agent Scripted Doctor Appointment",
+      "observed_at": "2026-09-08T23:56:36.255Z",
+      "source_path": "evidence/sample-flows/observed/gallery-ai-doctor.json",
+      "source_sha256": "e1c576ed4ccb66f79310001712b0024b9c95643afc24275fac6c6f90c99b809d",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 235,
+        "operative_nodes": 43,
+        "explicit_edges": 160,
+        "terminal_bindings": 31,
+        "variable_references": 403
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    },
+    {
+      "sample_key": "gallery-ai-livechat",
+      "title": "AI Agent Livechat Generic",
+      "observed_at": "2026-09-08T23:56:08.143Z",
+      "source_path": "evidence/sample-flows/observed/gallery-ai-livechat.json",
+      "source_sha256": "43caf3d533c6218d241e063385e6b47e0ced0ac0bff797c23ecd3806d1150e52",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 163,
+        "operative_nodes": 27,
+        "explicit_edges": 109,
+        "terminal_bindings": 26,
+        "variable_references": 297
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    },
+    {
+      "sample_key": "gallery-appointment-reminder",
+      "title": "AppointmentReminder",
+      "observed_at": "2026-09-08T23:58:37.146Z",
+      "source_path": "evidence/sample-flows/observed/gallery-appointment-reminder.json",
+      "source_sha256": "ad740d1438afd9b231ec233e18ab33f7d04e59620362323975d1a42a2a9c202b",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 41,
+        "operative_nodes": 11,
+        "explicit_edges": 10,
+        "terminal_bindings": 19,
+        "variable_references": 56
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    },
+    {
+      "sample_key": "gallery-autoresponder",
+      "title": "Autoresponder",
+      "observed_at": "2026-09-08T23:58:25.886Z",
+      "source_path": "evidence/sample-flows/observed/gallery-autoresponder.json",
+      "source_sha256": "a889914aa49b54afc69f41ee861237389669fcf3c2774c515e17641e43646231",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 7,
+        "operative_nodes": 2,
+        "explicit_edges": 1,
+        "terminal_bindings": 3,
+        "variable_references": 48
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    },
+    {
+      "sample_key": "gallery-chatbot",
+      "title": "Chatbot",
+      "observed_at": "2026-09-08T23:58:00.130Z",
+      "source_path": "evidence/sample-flows/observed/gallery-chatbot.json",
+      "source_sha256": "1bf0e4f9de54a21a091e7a7dc1c1a38fdf25f88d7c075af630569543b4750d2a",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 35,
+        "operative_nodes": 10,
+        "explicit_edges": 9,
+        "terminal_bindings": 15,
+        "variable_references": 58
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    },
+    {
+      "sample_key": "gallery-logistics",
+      "title": "LogisticsParcelNotifications",
+      "observed_at": "2026-09-08T23:56:52.097Z",
+      "source_path": "evidence/sample-flows/observed/gallery-logistics.json",
+      "source_sha256": "48e9abc02faf3b184d3e29bb4c518637b976885a5e08f94cc2053ef0079f33f5",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 59,
+        "operative_nodes": 16,
+        "explicit_edges": 16,
+        "terminal_bindings": 26,
+        "variable_references": 45
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    },
+    {
+      "sample_key": "gallery-sms-survey",
+      "title": "SMSSurvey",
+      "observed_at": "2026-09-08T23:57:36.392Z",
+      "source_path": "evidence/sample-flows/observed/gallery-sms-survey.json",
+      "source_sha256": "fde4d2efb38a605bccdde12555e30af57da1854a730b8d34323e1922c7e54462",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 22,
+        "operative_nodes": 6,
+        "explicit_edges": 6,
+        "terminal_bindings": 9,
+        "variable_references": 54
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    },
+    {
+      "sample_key": "gallery-track-package",
+      "title": "AI Agent Fulfilment - Track Package",
+      "observed_at": "2026-09-09T00:09:50.634Z",
+      "source_path": "evidence/sample-flows/observed/gallery-track-package.json",
+      "source_sha256": "b3f8ddd3c102fc0ed1d402650c0d79f0fa41e3135ca0d7fbeb4476fb362dac03",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 7,
+        "operative_nodes": 2,
+        "explicit_edges": 1,
+        "terminal_bindings": 3,
+        "variable_references": 10
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    },
+    {
+      "sample_key": "gallery-webhook-sms",
+      "title": "WebhooktoSMSalerts",
+      "observed_at": "2026-09-08T23:57:29.390Z",
+      "source_path": "evidence/sample-flows/observed/gallery-webhook-sms.json",
+      "source_sha256": "ed2852fd4c36b05b6af1f7cc020e0fb97489bca0b9f03c2ae48ddae68e1c19c4",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 4,
+        "operative_nodes": 2,
+        "explicit_edges": 1,
+        "terminal_bindings": 0,
+        "variable_references": 4
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    },
+    {
+      "sample_key": "native-block-card-and-order-replacement",
+      "title": "Block card and order replacement.workflow",
+      "observed_at": "2026-09-09T00:00:54.162Z",
+      "source_path": "evidence/sample-flows/observed/native-block-card-and-order-replacement.json",
+      "source_sha256": "c704f9ca97d804b7674d98255164ac89cd75a5c5907997fc604f7428eb08db3d",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 5,
+        "operative_nodes": 2,
+        "explicit_edges": 1,
+        "terminal_bindings": 1,
+        "variable_references": 11
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    },
+    {
+      "sample_key": "native-cancel-appointment",
+      "title": "cancel_appointment.workflow",
+      "observed_at": "2026-09-08T23:59:56.277Z",
+      "source_path": "evidence/sample-flows/observed/native-cancel-appointment.json",
+      "source_sha256": "616a5c826887e1d1eedaf1f0495872f4d0a847606c7e781e356405aeda4f2b51",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 4,
+        "operative_nodes": 2,
+        "explicit_edges": 1,
+        "terminal_bindings": 0,
+        "variable_references": 12
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    },
+    {
+      "sample_key": "native-cancel-booking",
+      "title": "cancel_booking.workflow",
+      "observed_at": "2026-09-09T00:01:47.372Z",
+      "source_path": "evidence/sample-flows/observed/native-cancel-booking.json",
+      "source_sha256": "82532780d36620ca65cc63df41d4531d99ced91f203a7bc5caff016ca589809f",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 6,
+        "operative_nodes": 2,
+        "explicit_edges": 1,
+        "terminal_bindings": 2,
+        "variable_references": 16
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    },
+    {
+      "sample_key": "native-cancel-checkin",
+      "title": "cancel_checkin.workflow",
+      "observed_at": "2026-09-09T00:01:50.901Z",
+      "source_path": "evidence/sample-flows/observed/native-cancel-checkin.json",
+      "source_sha256": "0ecaf827605b59f78a18036e15fa21581c90f94bc23bc39d6c7bb6ce7e62cc62",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 7,
+        "operative_nodes": 2,
+        "explicit_edges": 1,
+        "terminal_bindings": 3,
+        "variable_references": 16
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    },
+    {
+      "sample_key": "native-check-availability",
+      "title": "check_availability.workflow",
+      "observed_at": "2026-09-08T23:59:30.439Z",
+      "source_path": "evidence/sample-flows/observed/native-check-availability.json",
+      "source_sha256": "5ca30ae8ea26c6074f08412a042fd8fc8c15adfc5f36eaf0afeb9f33c91a8e5d",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 4,
+        "operative_nodes": 2,
+        "explicit_edges": 1,
+        "terminal_bindings": 0,
+        "variable_references": 12
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    },
+    {
+      "sample_key": "native-checkin",
+      "title": "checkin.workflow",
+      "observed_at": "2026-09-09T00:01:54.153Z",
+      "source_path": "evidence/sample-flows/observed/native-checkin.json",
+      "source_sha256": "2de2642b12b75fad99c9c60c9d251aa941e5eadf1e171beb771e4c516bcf5c1d",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 7,
+        "operative_nodes": 2,
+        "explicit_edges": 1,
+        "terminal_bindings": 3,
+        "variable_references": 16
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    },
+    {
+      "sample_key": "native-create-appointment",
+      "title": "create_appointment.workflow",
+      "observed_at": "2026-09-09T00:00:34.955Z",
+      "source_path": "evidence/sample-flows/observed/native-create-appointment.json",
+      "source_sha256": "f0b2c7dd88597095ed3e42a02b890d53e2a3326e43fbb4fc8d2a076e264e3ad1",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 4,
+        "operative_nodes": 2,
+        "explicit_edges": 1,
+        "terminal_bindings": 0,
+        "variable_references": 12
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    },
+    {
+      "sample_key": "native-fetch-account-balance",
+      "title": "Fetch account balance.workflow",
+      "observed_at": "2026-09-09T00:01:01.220Z",
+      "source_path": "evidence/sample-flows/observed/native-fetch-account-balance.json",
+      "source_sha256": "09ca52cb9bf590a46e681e0944a0149da9d9989a6124e16c162c03a05a17885e",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 10,
+        "operative_nodes": 5,
+        "explicit_edges": 4,
+        "terminal_bindings": 0,
+        "variable_references": 18
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    },
+    {
+      "sample_key": "native-fetch-recent-transactions",
+      "title": "Fetch Recent Transactions.workflow",
+      "observed_at": "2026-09-09T00:00:57.584Z",
+      "source_path": "evidence/sample-flows/observed/native-fetch-recent-transactions.json",
+      "source_sha256": "10b53f7476aa4526a0eba1f907427faa27e8e5fbddd4d1a1cdb8623908d892cd",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 10,
+        "operative_nodes": 5,
+        "explicit_edges": 4,
+        "terminal_bindings": 0,
+        "variable_references": 19
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    },
+    {
+      "sample_key": "native-get-flight-info",
+      "title": "get_flight_info.workflow",
+      "observed_at": "2026-09-09T00:02:04.734Z",
+      "source_path": "evidence/sample-flows/observed/native-get-flight-info.json",
+      "source_sha256": "024e86363b5044d0f434a70847c465c3fca7a723f60284aa65bbd5c1a610b215",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 6,
+        "operative_nodes": 2,
+        "explicit_edges": 1,
+        "terminal_bindings": 2,
+        "variable_references": 32
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    },
+    {
+      "sample_key": "native-lookup-appointment",
+      "title": "lookup_appointment.workflow",
+      "observed_at": "2026-09-09T00:00:38.393Z",
+      "source_path": "evidence/sample-flows/observed/native-lookup-appointment.json",
+      "source_sha256": "4dc6cacc607239a6581afa51e630b09ccbe2a261cea98d50a4d8eabd31c523ce",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 4,
+        "operative_nodes": 2,
+        "explicit_edges": 1,
+        "terminal_bindings": 0,
+        "variable_references": 12
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    },
+    {
+      "sample_key": "native-lookup-flights",
+      "title": "lookup_flights.workflow",
+      "observed_at": "2026-09-09T00:02:08.072Z",
+      "source_path": "evidence/sample-flows/observed/native-lookup-flights.json",
+      "source_sha256": "28319c933e49cef49a384e27c1481a68cf1f7c131275632406e1877d4ccb12b3",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 7,
+        "operative_nodes": 2,
+        "explicit_edges": 1,
+        "terminal_bindings": 3,
+        "variable_references": 14
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    },
+    {
+      "sample_key": "native-register-transaction-dispute",
+      "title": "Register Transaction Dispute.workflow",
+      "observed_at": "2026-09-09T00:01:22.827Z",
+      "source_path": "evidence/sample-flows/observed/native-register-transaction-dispute.json",
+      "source_sha256": "741620fd149c3abdc99dd33e4406683b5e59ed986752fd93fdf5e9922bbca643",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 5,
+        "operative_nodes": 2,
+        "explicit_edges": 1,
+        "terminal_bindings": 1,
+        "variable_references": 12
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    },
+    {
+      "sample_key": "native-request-priority-shipping",
+      "title": "Request priority shipping.workflow",
+      "observed_at": "2026-09-09T00:01:26.431Z",
+      "source_path": "evidence/sample-flows/observed/native-request-priority-shipping.json",
+      "source_sha256": "ef7ba5f7e1a50a91297e2e1e52d43477b476b09596a14f1798505077c3d53042",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 5,
+        "operative_nodes": 2,
+        "explicit_edges": 1,
+        "terminal_bindings": 1,
+        "variable_references": 7
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    },
+    {
+      "sample_key": "native-reschedule-flight",
+      "title": "reschedule_flight.workflow",
+      "observed_at": "2026-09-09T00:02:11.402Z",
+      "source_path": "evidence/sample-flows/observed/native-reschedule-flight.json",
+      "source_sha256": "16b2089931470a39dba024429e3ff1a291e7f6946340b7bfbdffb07449370902",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 6,
+        "operative_nodes": 2,
+        "explicit_edges": 1,
+        "terminal_bindings": 2,
+        "variable_references": 28
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    },
+    {
+      "sample_key": "native-sendsms",
+      "title": "sendSMS.workflow",
+      "observed_at": "2026-09-09T00:00:41.982Z",
+      "source_path": "evidence/sample-flows/observed/native-sendsms.json",
+      "source_sha256": "771a85f9ede5dfa326424b240389266f21a924dfd6ca61659531f912189d83c8",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 4,
+        "operative_nodes": 2,
+        "explicit_edges": 1,
+        "terminal_bindings": 0,
+        "variable_references": 8
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    },
+    {
+      "sample_key": "native-verify-user",
+      "title": "Verify user.workflow",
+      "observed_at": "2026-09-09T00:01:29.840Z",
+      "source_path": "evidence/sample-flows/observed/native-verify-user.json",
+      "source_sha256": "3929ef1777a758be50d3475838c3067a1909bc70ef5e6ebf5b120e589a17937c",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 7,
+        "operative_nodes": 2,
+        "explicit_edges": 1,
+        "terminal_bindings": 3,
+        "variable_references": 15
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    },
+    {
+      "sample_key": "wxcc-amb-simplified-flow",
+      "title": "AMB Simplified Flow.workflow",
+      "observed_at": "2026-09-09T00:07:06.551Z",
+      "source_path": "evidence/sample-flows/observed/wxcc-amb-simplified-flow.json",
+      "source_sha256": "f75f74ba8f55570cc81945b365225c55bf8260a25e425e11468854e5755f4ea3",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 78,
+        "operative_nodes": 13,
+        "explicit_edges": 36,
+        "terminal_bindings": 28,
+        "variable_references": 89
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    },
+    {
+      "sample_key": "wxcc-apple-basic-inbound-flow",
+      "title": "Apple Basic Inbound Flow.workflow",
+      "observed_at": "2026-09-09T00:07:13.174Z",
+      "source_path": "evidence/sample-flows/observed/wxcc-apple-basic-inbound-flow.json",
+      "source_sha256": "6da03000080c0194b9144bc291c4c4d33852dcd4ed525a5eb0bba5dc562cd7b4",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 77,
+        "operative_nodes": 13,
+        "explicit_edges": 49,
+        "terminal_bindings": 14,
+        "variable_references": 100
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    },
+    {
+      "sample_key": "wxcc-apple-form-response-flow",
+      "title": "Apple Form Response Flow.workflow",
+      "observed_at": "2026-09-09T00:06:00.411Z",
+      "source_path": "evidence/sample-flows/observed/wxcc-apple-form-response-flow.json",
+      "source_sha256": "7553fec8976712aab8d643798efb63afb233a17df0dc56e0e96fa38ea572d819",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 27,
+        "operative_nodes": 4,
+        "explicit_edges": 9,
+        "terminal_bindings": 13,
+        "variable_references": 30
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    },
+    {
+      "sample_key": "wxcc-apple-imessage-app-flow",
+      "title": "Apple iMessage App Flow.workflow",
+      "observed_at": "2026-09-09T00:06:09.966Z",
+      "source_path": "evidence/sample-flows/observed/wxcc-apple-imessage-app-flow.json",
+      "source_sha256": "3f1e239284ac0cdf79ab5528ca5dedbb99c3f7469d963f94096298e662e4b46b",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 31,
+        "operative_nodes": 5,
+        "explicit_edges": 13,
+        "terminal_bindings": 12,
+        "variable_references": 30
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    },
+    {
+      "sample_key": "wxcc-apple-inbound-flow-with-form",
+      "title": "Apple Inbound Flow with Form.workflow",
+      "observed_at": "2026-09-09T00:07:37.231Z",
+      "source_path": "evidence/sample-flows/observed/wxcc-apple-inbound-flow-with-form.json",
+      "source_sha256": "7f1dc1a4fe6344530d7f7244122f02804e5de1cc9100fb049407afbaa8cd4a1d",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 109,
+        "operative_nodes": 17,
+        "explicit_edges": 77,
+        "terminal_bindings": 14,
+        "variable_references": 124
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    },
+    {
+      "sample_key": "wxcc-apple-inbound-flow-with-intentid-groupid-based-routing",
+      "title": "Apple Inbound Flow with IntentId GroupId based Routing.workflow",
+      "observed_at": "2026-09-09T00:05:17.004Z",
+      "source_path": "evidence/sample-flows/observed/wxcc-apple-inbound-flow-with-intentid-groupid-based-routing.json",
+      "source_sha256": "06178c30282b2288238d2cdf7f0ba0f78691e11d94348e84246caf3bbb9446fa",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 87,
+        "operative_nodes": 14,
+        "explicit_edges": 58,
+        "terminal_bindings": 14,
+        "variable_references": 105
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    },
+    {
+      "sample_key": "wxcc-apple-list-picker-flow",
+      "title": "Apple List Picker Flow.workflow",
+      "observed_at": "2026-09-09T00:05:25.341Z",
+      "source_path": "evidence/sample-flows/observed/wxcc-apple-list-picker-flow.json",
+      "source_sha256": "092941deb52d6f728f687f0de66580c783503c60077e65d5c0fb9241c87f0235",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 119,
+        "operative_nodes": 18,
+        "explicit_edges": 86,
+        "terminal_bindings": 14,
+        "variable_references": 138
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    },
+    {
+      "sample_key": "wxcc-apple-time-picker-and-list-picker-response-flow",
+      "title": "Apple Time Picker and List Picker Response Flow.workflow",
+      "observed_at": "2026-09-09T00:06:05.466Z",
+      "source_path": "evidence/sample-flows/observed/wxcc-apple-time-picker-and-list-picker-response-flow.json",
+      "source_sha256": "c58da21f79f4fbbe33b03e8ad724b42ab631df3e885340ece4ac160d0b24a964",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 42,
+        "operative_nodes": 6,
+        "explicit_edges": 18,
+        "terminal_bindings": 17,
+        "variable_references": 43
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    },
+    {
+      "sample_key": "wxcc-apple-time-picker-flow",
+      "title": "Apple Time Picker Flow.workflow",
+      "observed_at": "2026-09-09T00:05:32.254Z",
+      "source_path": "evidence/sample-flows/observed/wxcc-apple-time-picker-flow.json",
+      "source_sha256": "853079ab65445283de2458dd9c5834191576210fc6335f1b0bedfe8a2d3e3ffa",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 86,
+        "operative_nodes": 14,
+        "explicit_edges": 57,
+        "terminal_bindings": 14,
+        "variable_references": 107
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    },
+    {
+      "sample_key": "wxcc-apple-unsubscribe-flow",
+      "title": "Apple Unsubscribe Flow.workflow",
+      "observed_at": "2026-09-09T00:07:41.477Z",
+      "source_path": "evidence/sample-flows/observed/wxcc-apple-unsubscribe-flow.json",
+      "source_sha256": "1b9522eece8caf2f517466e1b92be1ea72ccaa4df4f5016862b87bdcfc10d6da",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 22,
+        "operative_nodes": 3,
+        "explicit_edges": 5,
+        "terminal_bindings": 13,
+        "variable_references": 12
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    },
+    {
+      "sample_key": "wxcc-emailattachmentdropnotification",
+      "title": "EmailAttachmentDropNotification.workflow",
+      "observed_at": "2026-09-09T00:02:36.379Z",
+      "source_path": "evidence/sample-flows/observed/wxcc-emailattachmentdropnotification.json",
+      "source_sha256": "eb528eaeda722c95517186ded705dc1595641c8f24a6c6191d19428f6c616e80",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 65,
+        "operative_nodes": 11,
+        "explicit_edges": 39,
+        "terminal_bindings": 14,
+        "variable_references": 126
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    },
+    {
+      "sample_key": "wxcc-emailinboundflow",
+      "title": "EmailInboundFlow.workflow",
+      "observed_at": "2026-09-09T00:04:52.983Z",
+      "source_path": "evidence/sample-flows/observed/wxcc-emailinboundflow.json",
+      "source_sha256": "acd98703ba55af9885f7453a4272e25bcd1232a4891af94e56334d02d5cdd7e3",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 60,
+        "operative_nodes": 10,
+        "explicit_edges": 35,
+        "terminal_bindings": 14,
+        "variable_references": 125
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    },
+    {
+      "sample_key": "wxcc-emailinboundsampleflowwithcontactpriority",
+      "title": "EmailInboundSampleFlowWithContactPriority.workflow",
+      "observed_at": "2026-09-09T00:03:49.819Z",
+      "source_path": "evidence/sample-flows/observed/wxcc-emailinboundsampleflowwithcontactpriority.json",
+      "source_sha256": "7930a39130db39e85ef016bde0f91c203f092c5ca1336f1eefd48d56ee102cf2",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 64,
+        "operative_nodes": 11,
+        "explicit_edges": 38,
+        "terminal_bindings": 14,
+        "variable_references": 127
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    },
+    {
+      "sample_key": "wxcc-facebookattachmentdropnotification",
+      "title": "FacebookAttachmentDropNotification.workflow",
+      "observed_at": "2026-09-09T00:06:28.189Z",
+      "source_path": "evidence/sample-flows/observed/wxcc-facebookattachmentdropnotification.json",
+      "source_sha256": "d2e2f8caf7864d2e681c609508df313209fecba52da11c48b551d29147e535dc",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 65,
+        "operative_nodes": 11,
+        "explicit_edges": 39,
+        "terminal_bindings": 14,
+        "variable_references": 82
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    },
+    {
+      "sample_key": "wxcc-facebookclosewithwxmflow",
+      "title": "FacebookCloseWithWxmFlow.workflow",
+      "observed_at": "2026-09-09T00:06:34.924Z",
+      "source_path": "evidence/sample-flows/observed/wxcc-facebookclosewithwxmflow.json",
+      "source_sha256": "c8a5d2cb1c561707a763fede6088843a40ac00e7292dec179d0ccd2a51c35c65",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 76,
+        "operative_nodes": 12,
+        "explicit_edges": 36,
+        "terminal_bindings": 27,
+        "variable_references": 96
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    },
+    {
+      "sample_key": "wxcc-facebookinboundflow",
+      "title": "FacebookInboundFlow.workflow",
+      "observed_at": "2026-09-09T00:07:46.595Z",
+      "source_path": "evidence/sample-flows/observed/wxcc-facebookinboundflow.json",
+      "source_sha256": "bd33e441cc98853a5ba08117bca313ebcaf754a670b3229acccf75ff779fecb1",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 60,
+        "operative_nodes": 10,
+        "explicit_edges": 35,
+        "terminal_bindings": 14,
+        "variable_references": 85
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    },
+    {
+      "sample_key": "wxcc-facebooktaskbotinboundflow",
+      "title": "FacebookTaskBotInboundFlow.workflow",
+      "observed_at": "2026-09-09T00:03:05.707Z",
+      "source_path": "evidence/sample-flows/observed/wxcc-facebooktaskbotinboundflow.json",
+      "source_sha256": "a34fe64e7748a95f0f8ba2b117bd4baa49275b96e132140574950a92254d0853",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 165,
+        "operative_nodes": 31,
+        "explicit_edges": 98,
+        "terminal_bindings": 35,
+        "variable_references": 230
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    },
+    {
+      "sample_key": "wxcc-live-chat-close-flow",
+      "title": "Live Chat Close Flow.workflow",
+      "observed_at": "2026-09-09T00:08:02.557Z",
+      "source_path": "evidence/sample-flows/observed/wxcc-live-chat-close-flow.json",
+      "source_sha256": "4c3e6059a809e07bacaf3acf8733084b235c79c31d5dc02a15ec75a0029a62b9",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 29,
+        "operative_nodes": 4,
+        "explicit_edges": 5,
+        "terminal_bindings": 19,
+        "variable_references": 37
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    },
+    {
+      "sample_key": "wxcc-livechat-inbound-flow-with-proactive-chat-changes",
+      "title": "Livechat Inbound flow with proactive chat changes.workflow",
+      "observed_at": "2026-09-09T00:08:09.451Z",
+      "source_path": "evidence/sample-flows/observed/wxcc-livechat-inbound-flow-with-proactive-chat-changes.json",
+      "source_sha256": "c7352b1e1ff56f1c81dd79914d8b7bd42ba07b99eaceda5d816a2f0d223653cd",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 97,
+        "operative_nodes": 15,
+        "explicit_edges": 67,
+        "terminal_bindings": 14,
+        "variable_references": 154
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    },
+    {
+      "sample_key": "wxcc-livechatclosewithwxmflow",
+      "title": "LiveChatCloseWithWxmFlow.workflow",
+      "observed_at": "2026-09-09T00:06:41.662Z",
+      "source_path": "evidence/sample-flows/observed/wxcc-livechatclosewithwxmflow.json",
+      "source_sha256": "27a6cd73d4676dd100356ee94d317415da0f5acaeabb127dbc27d813ae66bfa7",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 76,
+        "operative_nodes": 12,
+        "explicit_edges": 36,
+        "terminal_bindings": 27,
+        "variable_references": 91
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    },
+    {
+      "sample_key": "wxcc-livechatinbound-flow",
+      "title": "LivechatInbound flow.workflow",
+      "observed_at": "2026-09-09T00:08:15.873Z",
+      "source_path": "evidence/sample-flows/observed/wxcc-livechatinbound-flow.json",
+      "source_sha256": "6a3a08760a8b54a672cac8596906150ad70e04e3c8a480c78708897880de4d70",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 83,
+        "operative_nodes": 13,
+        "explicit_edges": 55,
+        "terminal_bindings": 14,
+        "variable_references": 133
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    },
+    {
+      "sample_key": "wxcc-livechatinboundflowwithoutform",
+      "title": "LivechatInboundFlowWithoutForm.workflow",
+      "observed_at": "2026-09-09T00:08:44.986Z",
+      "source_path": "evidence/sample-flows/observed/wxcc-livechatinboundflowwithoutform.json",
+      "source_sha256": "3b8dd6797446ea50e7e7ef4e74bf55e942e00abd64fa5906236030d66790092b",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 56,
+        "operative_nodes": 9,
+        "explicit_edges": 32,
+        "terminal_bindings": 14,
+        "variable_references": 101
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    },
+    {
+      "sample_key": "wxcc-livechatinboundsampleflowwithsetvariable",
+      "title": "LiveChatInboundSampleFlowWithSetVariable.workflow",
+      "observed_at": "2026-09-09T00:04:00.804Z",
+      "source_path": "evidence/sample-flows/observed/wxcc-livechatinboundsampleflowwithsetvariable.json",
+      "source_sha256": "e5a43ae04e0f0101bd8efe2d3b600a938d9a7ae7717ab984a6d6343df610bd5d",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 95,
+        "operative_nodes": 14,
+        "explicit_edges": 66,
+        "terminal_bindings": 14,
+        "variable_references": 150
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    },
+    {
+      "sample_key": "wxcc-livechatinboundsampleflowwithsetvariablepiqandewt",
+      "title": "LiveChatInboundSampleFlowWithSetVariablePIQAndEWT.workflow",
+      "observed_at": "2026-09-09T00:07:00.851Z",
+      "source_path": "evidence/sample-flows/observed/wxcc-livechatinboundsampleflowwithsetvariablepiqandewt.json",
+      "source_sha256": "10a249a59e74461d6a5cd9824d80bed4fb0988597fb333234aad82868200be47",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 112,
+        "operative_nodes": 17,
+        "explicit_edges": 69,
+        "terminal_bindings": 25,
+        "variable_references": 175
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    },
+    {
+      "sample_key": "wxcc-livechatqabotinboundflow",
+      "title": "LiveChatQABotInboundFlow.workflow",
+      "observed_at": "2026-09-09T00:03:14.397Z",
+      "source_path": "evidence/sample-flows/observed/wxcc-livechatqabotinboundflow.json",
+      "source_sha256": "c7d4b6febf6bfafc6818e522bedf8a9c4e75325acce5d3b19da62b014392532e",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 168,
+        "operative_nodes": 29,
+        "explicit_edges": 114,
+        "terminal_bindings": 24,
+        "variable_references": 267
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    },
+    {
+      "sample_key": "wxcc-sms-inbound",
+      "title": "SMS inbound.workflow",
+      "observed_at": "2026-09-09T00:04:57.868Z",
+      "source_path": "evidence/sample-flows/observed/wxcc-sms-inbound.json",
+      "source_sha256": "42abcd9d20cc11f91f299077a57f185b01b35ab5e6f29981a351124b6a9aad34",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 60,
+        "operative_nodes": 10,
+        "explicit_edges": 32,
+        "terminal_bindings": 17,
+        "variable_references": 71
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    },
+    {
+      "sample_key": "wxcc-smsqabotinboundflow",
+      "title": "SmsQABotInboundFlow.workflow",
+      "observed_at": "2026-09-09T00:03:21.623Z",
+      "source_path": "evidence/sample-flows/observed/wxcc-smsqabotinboundflow.json",
+      "source_sha256": "49be12d3a9d0b7fddd1fe978bc2b9996742efd0a8b2416673b79af0a97ddb199",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 135,
+        "operative_nodes": 23,
+        "explicit_edges": 84,
+        "terminal_bindings": 27,
+        "variable_references": 139
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    },
+    {
+      "sample_key": "wxcc-task-close-flow-with-screen-pop",
+      "title": "Task Close Flow With Screen Pop.workflow",
+      "observed_at": "2026-09-09T00:03:53.840Z",
+      "source_path": "evidence/sample-flows/observed/wxcc-task-close-flow-with-screen-pop.json",
+      "source_sha256": "6551c05389dd4adda38c7c90c8f9e51dcd52207ff11b4a592269d954b6459caa",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 15,
+        "operative_nodes": 3,
+        "explicit_edges": 2,
+        "terminal_bindings": 9,
+        "variable_references": 16
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    },
+    {
+      "sample_key": "wxcc-task-close-flow",
+      "title": "Task Close Flow.workflow",
+      "observed_at": "2026-09-09T00:04:28.883Z",
+      "source_path": "evidence/sample-flows/observed/wxcc-task-close-flow.json",
+      "source_sha256": "f80663369609559bbf0afed21455282b0262d32f9982483adc898f2b8cd02443",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 15,
+        "operative_nodes": 3,
+        "explicit_edges": 2,
+        "terminal_bindings": 9,
+        "variable_references": 15
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    },
+    {
+      "sample_key": "wxcc-task-modified-flow",
+      "title": "Task Modified Flow.workflow",
+      "observed_at": "2026-09-09T00:04:32.908Z",
+      "source_path": "evidence/sample-flows/observed/wxcc-task-modified-flow.json",
+      "source_sha256": "cf603ac455c0476c08965702a2b962dcf569a3d5f11d0c8b81b8fadae4feba15",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 20,
+        "operative_nodes": 4,
+        "explicit_edges": 3,
+        "terminal_bindings": 12,
+        "variable_references": 20
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    },
+    {
+      "sample_key": "wxcc-task-routed-flow",
+      "title": "Task Routed Flow.workflow",
+      "observed_at": "2026-09-09T00:04:46.978Z",
+      "source_path": "evidence/sample-flows/observed/wxcc-task-routed-flow.json",
+      "source_sha256": "a05373937fc6c7dfec940bb50f16be5421fb2b6007302213ae600778d72499ca",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 15,
+        "operative_nodes": 3,
+        "explicit_edges": 2,
+        "terminal_bindings": 9,
+        "variable_references": 16
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    },
+    {
+      "sample_key": "wxcc-task-routed-sample-flow-for-extracting-variables",
+      "title": "Task Routed Sample Flow For Extracting Variables.workflow",
+      "observed_at": "2026-09-09T00:04:25.187Z",
+      "source_path": "evidence/sample-flows/observed/wxcc-task-routed-sample-flow-for-extracting-variables.json",
+      "source_sha256": "f43ac74a96be91b18c8dde631eeb518fba53c3ede321a49cbccf8c4994188b3e",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 15,
+        "operative_nodes": 3,
+        "explicit_edges": 2,
+        "terminal_bindings": 9,
+        "variable_references": 20
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    },
+    {
+      "sample_key": "wxcc-whatsapp-inbound",
+      "title": "Whatsapp inbound.workflow",
+      "observed_at": "2026-09-09T00:08:50.405Z",
+      "source_path": "evidence/sample-flows/observed/wxcc-whatsapp-inbound.json",
+      "source_sha256": "3d43a31d77fe0a85ac07a1256185b0261db06d6981526a38e9d5750c51c0c554",
+      "status": "observed_canvas_relationships_summarized",
+      "counts": {
+        "cells": 60,
+        "operative_nodes": 10,
+        "explicit_edges": 35,
+        "terminal_bindings": 14,
+        "variable_references": 93
+      },
+      "runtime_tested": false,
+      "walkthrough_status": "authored"
+    }
+  ]
+}

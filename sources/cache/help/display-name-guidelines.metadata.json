@@ -1,0 +1,31 @@
+{
+  "category": "Assets",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257920",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "c731e6f5a729cdbf5a09edde7a4e3b9b9097c367d10a143c770da11c041a99e1",
+    "source_path": "34b671c53b7c063b189673519d3d9c30e34b5f05c1296e7a6c35bf8334e47c53",
+    "text_path": "d7f729ab60d657641b958c1204dd311e0dd6c3d10ec41bf8666df0fcabae8bbf"
+  },
+  "headings": [],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/display-name-guidelines.md",
+  "resolved_url": "https://help.webexconnect.io/docs/display-name-guidelines",
+  "retrieved_at": "2026-09-08T23:29:06+00:00",
+  "sha256_html_response": "31b0f5387fac8816e8c8d7c9ae05e0c48c3edc38e6c22e18020f30ef30a5f517",
+  "sha256_source_body": "34b671c53b7c063b189673519d3d9c30e34b5f05c1296e7a6c35bf8334e47c53",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/display-name-guidelines.source.md",
+  "source_updated_at": "2024-08-11T15:47:36.101Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/display-name-guidelines.txt",
+  "title": "Display Name Guidelines",
+  "url": "https://help.webexconnect.io/docs/display-name-guidelines",
+  "word_count": 496,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/display-name-guidelines.metadata.json"
+}

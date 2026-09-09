@@ -1,0 +1,17 @@
+# Display Name Guidelines - CCE
+
+Source: https://help.webexconnect.io/docs/cce-display-name-guidelines
+Documentation version: 6.20.0
+Retrieved: 2026-09-08T23:29:21+00:00
+
+The following table contains the guidelines to be followed when you create a display name for your business:
+
+
+
+| Standard | Example |
+| --- | --- |
+| Compliance with policies | A display name should not violate WhatsApp Commerce and Business policies. An example for a shop that sells a variety of sporting goods:  <br>	•	Accepted: Sarah's Sporting Goods Shop  <br>	•	Not accepted: Sarah's Sporting Goods Shop - Guns department\|  <br>  <br>Within your company, you may have separate WhatsApp Business accounts for different divisions; only those divisions that are compliant with WhatsApp's Commerce policy may have a WhatsApp Business account. |
+| Accurate representation of your business | A display name should represent:  <br>	•	A business or its service, product or department.  <br>	•	A test account or a demo account and it must maintain an association to the business  <br>	•	For example: Fresh Produce Test  <br>  <br>A display name should not be:  <br>	•	A generic term. For example: Fashion  <br>	•	A generic geographic location. For example: New York  <br>	•	Appearing to have verification. For example: Official or Verified shouldn't be in the name  <br>	•	Contain the name of a Meta product. For example: WhatsApp, Facebook, Messenger  <br>  <br>An organisation with a government affiliation needs the WhatsApp team's approval. |
+| Consistency with external branding | A display name must have consistent branding with external sources, such as a company's website or marketing. What would be accepted and not accepted for a business named Fresh Produce Cold Pressed Juices is below:  <br>  <br>Accepted: Fresh Produce Cold Pressed Juices (how it is branded on your website).  <br>Accepted: Fresh Produce Cold Pressed Juices Mexico.  <br>Accepted: Fresh Produce Juices - Jessica  <br>Accepted: Fresh Produce Juices  <br>Accepted: FP Cold Pressed Juices (you added an abbreviation to the company name)  <br>Accepted: FPCP Juices  <br>Accepted: XY Fresh Cold Pressed Juices Service New York  <br>Not accepted: Digital Cloud Solutions(this can't be found anywhere on external sources like on your website)  <br>Not accepted: Juice (this is a generic term) |
+| Clear relationship with your business | A display name must have a clear relationship with your business's legal name. For example:  <br>  <br>Accepted: Legal name of a charity mentioned on a charity organisation's website.  <br>Not accepted: Legal name of a charity not mentioned on any external websites.  <br>  <br>If the relationship between your company and the brand is not obvious, indicate the relationship using "by [company name]".  <br>  <br>Accepted: Fruit Snacks by Fresh Produce  <br>Not accepted: Fruit Snacks (Fresh Produce owns the Fruit Snacks brand but their association is not mentioned on any external websites)  <br>  <br>If the display name represents a business that the company is working with (if the business is an agency, distributor, partner or parent company), then the relationship between the business represented in the display name and end-client business must be evident and clear on both parties' business websites.  <br>  <br>For example, if Global Voyager signs up for WhatsApp and wants to use the display name Commercial Air, they must submit links to both websites stating that Commercial Air is a subsidiary of Global Voyager. |
+

@@ -1,0 +1,126 @@
+{
+  "checked_at_utc": "2026-09-08T23:35:03.109181+00:00",
+  "scope": [
+    "scripts/sources.py",
+    "scripts/search_kb.py",
+    "sources/inventory.jsonl",
+    "actual generated source corpus"
+  ],
+  "qa_framing": "Reasoned, critical, constructive, proportionate, non-perfectionistic; concrete material defects only; no speculative expansion or QA-of-QA.",
+  "status": "one material extraction defect reported to owning agent; no source edits performed",
+  "checks": {
+    "inventory_records": 522,
+    "all_records_ok": true,
+    "referenced_file_hashes_checked": 1832,
+    "missing_files": 0,
+    "hash_mismatches": 0,
+    "source_path_collisions": 0,
+    "source_body_hashes_match": true,
+    "thread_and_event_raw_api_json_exactly_embedded_in_markdown_and_text": true,
+    "custom_event_operation_present": true,
+    "create_thread_operation_present": false,
+    "search_cases": [
+      {
+        "query": "secretKey",
+        "filters": "sources/developer/all",
+        "matches": 35
+      },
+      {
+        "query": "evtid correlationid",
+        "filters": "sources/developer/all",
+        "matches": 1,
+        "expected_match": "Custom Event v1"
+      },
+      {
+        "query": "Resume Key",
+        "filters": "sources/help/phrase",
+        "matches": 3,
+        "includes": "Receive Node"
+      },
+      {
+        "query": "abc.invitationAccepted",
+        "filters": "sources/help/version=6.20.0/phrase",
+        "matches": 3,
+        "includes": "Receive Node"
+      },
+      {
+        "query": "WebexNoSuchField_892827",
+        "filters": "sources/all",
+        "matches": 0
+      },
+      {
+        "query": "secretKey",
+        "filters": "sources/version=0.0.0",
+        "matches": 0
+      }
+    ],
+    "search_all_phrase_and_version_predicates_asserted_for_every_returned_document": true,
+    "snippet_line_bounds_valid": true,
+    "receive_rendered_source_evidence": [
+      {
+        "path": "sources/cache/help/receive-node.txt",
+        "line": 105,
+        "field": "Resume Key",
+        "description": "A unique key (per session) passed along with the custom event that resumes the flow"
+      },
+      {
+        "path": "sources/cache/help/receive-node.txt",
+        "line": 229,
+        "field": "abc.invitationAccepted",
+        "description": "true if the customer selected Yes. false if the customer selected No."
+      }
+    ]
+  },
+  "findings": [
+    {
+      "id": "SOURCE-QA-1",
+      "severity": "material",
+      "file": "scripts/sources.py",
+      "function": "api_material",
+      "issue": "Selects stale swagger.path ahead of valid api.url or operationId; silently emits empty selected_openapi.operation even when cached OpenAPI contains the actual operation.",
+      "example": {
+        "source": "sources/cache/developer/thread-apis-create-thread.api.json",
+        "selected_path": "/apps/{inappid}/threads",
+        "actual_cached_openapi_path": "/apps/{appId}/threads",
+        "actual_operation_id": "thread-apis-create-thread"
+      },
+      "affected_recoverable_slugs": [
+        "instagram-api",
+        "thread-apis-app-threads",
+        "thread-apis-create-thread",
+        "thread-apis-user-threads",
+        "update-thread",
+        "user-messages-1",
+        "user-messages-2"
+      ],
+      "impact": "Local readable references omit available request-body requiredness and response schemas for these endpoints. Raw ReadMe params and full OpenAPI cache remain preserved.",
+      "remediation": "Select a valid exact route/method first; fall back to a unique operationId match, retain the actual matching method/path, and refresh affected cache records. Explicitly label missing operations for basic pages with no matching OpenAPI endpoint rather than infer one."
+    }
+  ],
+  "limits": [
+    "No authenticated tenant API execution; this is retrieval/extraction/search QA.",
+    "No unchanged second independent QA pass performed; source owner verifies its fix."
+  ],
+  "parent_resolution": {
+    "resolved_at": "2026-09-08T23:37:55+00:00",
+    "change": "Select valid api.url or matching operationId when swagger.path is stale; label absent publisher operations explicitly. Normalize raw ReadMe blocks in Markdown-returning SSR search bodies, resolve only known source link aliases, and search only normalized transcript artifacts with provenance.",
+    "affected_operation_slugs": [
+      "instagram-api",
+      "thread-apis-app-threads",
+      "thread-apis-create-thread",
+      "thread-apis-user-threads",
+      "update-thread",
+      "user-messages-1",
+      "user-messages-2"
+    ],
+    "executed_verification": {
+      "records": 523,
+      "checked_files": 1835,
+      "hash_or_path_errors": 0,
+      "query": "evtid correlationid --scope sources --all",
+      "result": "Custom Event v1 only, field-table row preserved",
+      "transcript_query": "integrations --scope transcripts",
+      "transcript_result": "Normalized source SRT results include title, original URL and timestamps"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "category": "TOOLS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd81825791b",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "e65ee095c3014461a8efc79a61c23f7d1a1ffa29a2a40c4edaae78fabfa170d9",
+    "source_path": "a8b428a494df192fa96405973359478e7b5456285be7eaf359592d46bb9d471f",
+    "text_path": "41be2879f275f234e0a3c098d1ed70bc09f4be81d1132f5ff6afa419d10e0b4d"
+  },
+  "headings": [
+    "Marketing templates",
+    "📘Note",
+    "Utility templates",
+    "📘Note",
+    "Authentication templates"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/whatsapp-category-guidelines.md",
+  "resolved_url": "https://help.webexconnect.io/docs/whatsapp-category-guidelines",
+  "retrieved_at": "2026-09-08T23:29:33+00:00",
+  "sha256_html_response": "29e3bc058894c059529b7edbc95a752a4ba87905e5592cd5e9d4ed3d69f03690",
+  "sha256_source_body": "a8b428a494df192fa96405973359478e7b5456285be7eaf359592d46bb9d471f",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/whatsapp-category-guidelines.source.md",
+  "source_updated_at": "2024-09-18T13:34:11.584Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/whatsapp-category-guidelines.txt",
+  "title": "WhatsApp Category Guidelines",
+  "url": "https://help.webexconnect.io/docs/whatsapp-category-guidelines",
+  "word_count": 1361,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/whatsapp-category-guidelines.metadata.json"
+}

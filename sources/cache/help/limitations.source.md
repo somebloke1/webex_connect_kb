@@ -1,0 +1,2 @@
+- DRs and RRs do not apply to messages the BOTS/Flow builder sends in this mode.
+- You cannot append an inbound/outbound message to a closed conversation. You can add only announcements in the 'Closed' state.

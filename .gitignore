@@ -1,0 +1,51 @@
+# Local environments and runtime output
+.venv/
+venv/
+node_modules/
+__pycache__/
+.pytest_cache/
+.cache/
+*.pyc
+*.log
+*.tmp
+.coverage
+htmlcov/
+
+# Local configuration and authentication material
+.env
+.env.*
+.envrc
+!.env.example
+cookies*.txt
+*storage-state*.json
+
+# Keep the official reference corpus: it is essential KB data, not a build cache.
+# Keep normalized real transcripts; omit acquisition intermediates and fixtures.
+/transcripts/**
+!/transcripts/**/
+!/transcripts/**/metadata.json
+!/transcripts/**/transcript.json
+!/transcripts/**/transcript.md
+!/transcripts/**/transcript.srt
+!/transcripts/artifact-validation.json
+/transcripts/fixtures/
+/transcripts/local-asr-validation/
+
+# Media, browser state, private captures and opaque vendor imports
+media/
+*.wav
+*.mp3
+*.mp4
+*.webm
+*.m4a
+*.sqlite3
+.playwright-mcp/
+playwright-report/
+test-results/
+evidence/tenant-private/
+evidence/sample-flows/raw/
+
+# Transient validation outputs; retain the corresponding reports and source tests.
+evidence/qa/local-asr/
+evidence/qa/subtitle-import/
+evidence/qa/overwrite-io-failure/

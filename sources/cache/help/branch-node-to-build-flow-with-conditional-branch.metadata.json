@@ -1,0 +1,35 @@
+{
+  "category": "TUTORIALS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd81825781a",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "218c1e93204cf6699cdee27b3caa1ba9c415416b176235d85552e10cff3bf9d9",
+    "source_path": "4633c5e5c3ef9a5cd5ebaf103a1d594da98c882cabb3f92d19a266872f9722a3",
+    "text_path": "d6083fb82f8b8d50fd9a965d8326e88f1085ee0016992a9358345c053de4a29f"
+  },
+  "headings": [
+    "Step 1 – Add the Branch Node",
+    "Step 2 – Configure the branch flow",
+    "📘Note"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/branch-node-to-build-flow-with-conditional-branch.md",
+  "resolved_url": "https://help.webexconnect.io/docs/branch-node-to-build-flow-with-conditional-branch",
+  "retrieved_at": "2026-09-08T23:28:41+00:00",
+  "sha256_html_response": "bc2b1c32397693480e6261882a63f2bd9ef0c4d01faed6a323077a99500410e5",
+  "sha256_source_body": "4633c5e5c3ef9a5cd5ebaf103a1d594da98c882cabb3f92d19a266872f9722a3",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/branch-node-to-build-flow-with-conditional-branch.source.md",
+  "source_updated_at": "2026-01-26T13:25:52.680Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/branch-node-to-build-flow-with-conditional-branch.txt",
+  "title": "Using Branch Node to build a flow with conditional branching",
+  "url": "https://help.webexconnect.io/docs/branch-node-to-build-flow-with-conditional-branch",
+  "word_count": 216,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/branch-node-to-build-flow-with-conditional-branch.metadata.json"
+}

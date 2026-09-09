@@ -1,0 +1,88 @@
+## Background - GSM Encoding
+
+The most commonly used encoding for SMS is the [GSM-7 (Global System for Mobile Communications) character set defined by the GSM 03.38 standard](https://en.wikipedia.org/wiki/GSM_03.38#GSM_7-bit_default_alphabet_and_extension_table_of_3GPP_TS_23.038_.2F_GSM_03.38).
+
+The GSM-7 character set allows the following characters:
+
+|    |     |    |    |    |    |    |    |
+| :- | :-- | :- | :- | :- | :- | :- | :- |
+| @  | Δ   | SP | 0  | ¡  | P  | ¿  | p  |
+| £  | \_  | !  | 1  | A  | Q  | a  | q  |
+| $  | Φ   | "  | 2  | B  | R  | b  | r  |
+| ¥  | Γ   | #  | 3  | C  | S  | c  | s  |
+| è  | Λ   | ¤  | 4  | D  | T  | d  | t  |
+| é  | Ω   | %  | 5  | E  | U  | e  | u  |
+| ù  | Π   | &  | 6  | F  | V  | f  | v  |
+| ì  | Ψ   | '  | 7  | G  | W  | g  | w  |
+| ò  | Σ   | (  | 8  | H  | X  | h  | z  |
+| Ç  | Θ   | )  | 9  | I  | Y  | i  | y  |
+| LF | Ξ   | -  | :  | J  | Z  | j  | z  |
+| Ø  | ESC | -  | ;  | K  | Ä  | k  | ä  |
+| ø  | Æ   | ,  | \< | L  | Ö  | l  | ö  |
+| CR | æ   | -  | =  | M  | Ñ  | m  | ñ  |
+| Å  | ß   | .  | >  | N  | Ü  | n  | v  |
+| å  | É   | /  | ?  | O  | §  | o  | à  |
+
+- LF is a Line Feed control.
+- CR is a Carriage Return control, or filler.
+- ESC is an Escape to extension table (maps to NBSP).
+- SP is a Space character.
+
+There are also some characters in the GSM 03.38 Extension set that can be used for the cost of two characters:
+
+**|     ^     €     {     }     [     ]     ~**
+
+> 📘 Unicode SMS
+> 
+> If you use a character outside of the GSM-7 set, the SMS type will need to be set as a Unicode. Unicode SMS limits the length of the SMS to 70 characters because of the different character encoding.
+
+## Single vs Multi-Part SMS
+
+Using GSM-7 characters, the character limit for a single SMS message is 160 characters, however, most modern devices support SMS message concatenation, or multi-part messages.  
+When an SMS is sent with more than 160 characters (or 70 characters for Unicode), the message is split up into multiple message parts and are sent to the recipient's device separately. In order to concatenate the messages back together on the device, some characters are used to tell the device how they 'stitch together', allowing the message to appear as one, and in order, on the device. This affects how many characters are available in each message part:
+
+| Message Parts | GSM-7 Character Limit | Unicode Character Limit |
+| :------------ | :-------------------- | :---------------------- |
+| 1             | 160                   | 70                      |
+| 2             | 306                   | 134                     |
+| 3             | 459                   | 201                     |
+| 4             | 612                   | 268                     |
+| 5             | 765                   | 335                     |
+
+> 📘 Note
+> 
+> Webex Connect supports SMS message content up to 4000 characters. We recommend that you keep SMS messages below 450 characters for better deliverability and user experience.
+> 
+> Please refer to the [Messaging API v2 ](https://developers.imiconnect.io/reference/messagesv2)chapter as it is recommended version of the SMS API.
+
+## API reference metadata
+
+These are source metadata and examples. `api.auth` is ReadMe metadata; verify authentication in the documented headers/security scheme.
+
+```json
+{
+  "method": "get",
+  "url": "",
+  "auth": "required",
+  "results": {
+    "codes": [
+      {
+        "name": "",
+        "code": "{}",
+        "language": "json",
+        "status": 200
+      },
+      {
+        "name": "",
+        "code": "{}",
+        "language": "json",
+        "status": 400
+      }
+    ]
+  },
+  "params": [],
+  "examples": {
+    "codes": []
+  }
+}
+```

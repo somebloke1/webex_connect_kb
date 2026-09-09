@@ -1,0 +1,38 @@
+{
+  "category": "Webex Connect and Cisco Contact Center Enterprise System (CCE)",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd81825795b",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "2224115e21b8b9a9cae19dfb37f35f5d26b504b8eeef0ce340ea3d2d0d10274e",
+    "source_path": "697a5f553eb55b0e6332997210e45311fd09a9286c11a0e18a2b89422495901b",
+    "text_path": "fa2bd981f0d33c17678fb29e660faba9b33a5d4b5766470741b1b5aad2d7e20a"
+  },
+  "headings": [
+    "❗️Accessing Messaging Limit",
+    "How to increase the Messaging limit",
+    "Open 1K Conversations in 30 Days",
+    "📘Note",
+    "Automatic Scaling",
+    "🚧Quality Rating and Messaging Limit"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/cce-messaging-limits.md",
+  "resolved_url": "https://help.webexconnect.io/docs/cce-messaging-limits",
+  "retrieved_at": "2026-09-08T23:29:22+00:00",
+  "sha256_html_response": "b94b4cc20fc26f3bf43eb5a37f3ce8a41f2b0217bca82e18621b5f5fae21bc6c",
+  "sha256_source_body": "697a5f553eb55b0e6332997210e45311fd09a9286c11a0e18a2b89422495901b",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/cce-messaging-limits.source.md",
+  "source_updated_at": "2026-04-14T07:36:31.086Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/cce-messaging-limits.txt",
+  "title": "Messaging Limits - CCE",
+  "url": "https://help.webexconnect.io/docs/cce-messaging-limits",
+  "word_count": 589,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/cce-messaging-limits.metadata.json"
+}

@@ -1,0 +1,36 @@
+{
+  "api_metadata_path": "sources/cache/developer/apple-messages-for-business_-typing-indicator.api.json",
+  "category": "MULTI CHANNEL COMMUNICATION API",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f6606",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "9eb8863dcc216d2461c957c26ab542403f648b557185c885165dde1cbc4d0a38",
+    "source_path": "953acbd4ed990585268e52328763e38266634bfb64604a008823f667938ace0f",
+    "text_path": "bb3b8bd3b43d7f09918a4f44cd8211846fe59d083105f55e9c093255803d1c5b"
+  },
+  "headings": [
+    "Error Codes"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/apple-messages-for-business_-typing-indicator.md",
+  "openapi_path": "sources/cache/openapi/5959f5f173cc125989af6e0310177c730eb66f1e2ade8952ef8863f27f7b25d3.json",
+  "resolved_url": "https://developers.webexconnect.io/reference/apple-messages-for-business_-typing-indicator",
+  "retrieved_at": "2026-09-08T23:31:42+00:00",
+  "sha256_api_metadata": "8a9a38a550c2fabf66a2a261ee43f66e2f84b82bb75a8f1e19c7815542779831",
+  "sha256_html_response": "3edd80724e49a858c93fe5888d6eceba7ddddc561a093ca61296309ac6a1840b",
+  "sha256_openapi": "5959f5f173cc125989af6e0310177c730eb66f1e2ade8952ef8863f27f7b25d3",
+  "sha256_source_body": "953acbd4ed990585268e52328763e38266634bfb64604a008823f667938ace0f",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/apple-messages-for-business_-typing-indicator.source.md",
+  "source_updated_at": "2025-10-14T08:35:06.990Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/apple-messages-for-business_-typing-indicator.txt",
+  "title": "Apple Messages for Business: Typing Indicator",
+  "url": "https://developers.webexconnect.io/reference/apple-messages-for-business_-typing-indicator",
+  "word_count": 1290,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/apple-messages-for-business_-typing-indicator.metadata.json"
+}

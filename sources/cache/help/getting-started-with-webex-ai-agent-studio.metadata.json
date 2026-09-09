@@ -1,0 +1,38 @@
+{
+  "category": "App Tray - Webex AI Agent Studio",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257994",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "932c50eb145c648affcecb601481a666a1b80a9111cf04ad963fdceb3d76bf3e",
+    "source_path": "b7b22ac7df1e3e48ebae67787bcedb01023c9f16eba30f10727812493afe8a7a",
+    "text_path": "0301075c532f3acadc1bf09b6489286decb857e48aabdad9322f1fba10b54842"
+  },
+  "headings": [
+    "Capabilities of Webex AI Agent Studio",
+    "Key benefits for businesses",
+    "📘For more information, refer to our help.webex.com guide",
+    "Sign-in from Control Hub",
+    "📘Note",
+    "Sign-in from Webex Connect"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/getting-started-with-webex-ai-agent-studio.md",
+  "resolved_url": "https://help.webexconnect.io/docs/getting-started-with-webex-ai-agent-studio",
+  "retrieved_at": "2026-09-08T23:29:39+00:00",
+  "sha256_html_response": "03d1a1297eb8240ae0cfa129d40c655c612a1ee0d7f4d08110f03b9c6cf0bb17",
+  "sha256_source_body": "b7b22ac7df1e3e48ebae67787bcedb01023c9f16eba30f10727812493afe8a7a",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/getting-started-with-webex-ai-agent-studio.source.md",
+  "source_updated_at": "2025-08-25T05:10:51.585Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/getting-started-with-webex-ai-agent-studio.txt",
+  "title": "Getting Started with Webex AI Agent Studio",
+  "url": "https://help.webexconnect.io/docs/getting-started-with-webex-ai-agent-studio",
+  "word_count": 365,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/getting-started-with-webex-ai-agent-studio.metadata.json"
+}

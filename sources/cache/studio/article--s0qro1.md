@@ -1,0 +1,346 @@
+# Use AI agents for customer interactions
+
+Source: https://help.webex.com/article/s0qro1
+Documentation version: not specified by publisher
+Source last modified: 2026-08-25T09:08:30.936Z
+Retrieved: 2026-09-08T23:48:49+00:00
+
+<a id="content"></a>
+
+<a id="generic-template_a57806a8-d941-4ccd-b0a4-0fb52ce2c54e"></a>
+
+Once you've created and configured your AI agents in the Webex AI Agent Studio platform, the next step is to integrate them with the voice and digital channels. This integration allows the AI agents to handle both voice-based and digital conversations with your customers, providing a seamless and interactive user experience.
+
+Access to the autonomous AI agent for the voice calls is currently limited to specific customers. For more information, please reach out to Cisco support.
+
+- [Voice](https://help.webex.com/article/s0qro1#concept-template_923d7918-2e98-451d-8f4b-d3aaf4c4896b)
+
+- [Digital](https://help.webex.com/article/s0qro1#generic-template_76f2c5c1-4eb2-4f46-a3d6-04c0f0c75ba4)
+
+<a id="concept-template_923d7918-2e98-451d-8f4b-d3aaf4c4896b"></a>
+
+<a id="concept-template_923d7918-2e98-451d-8f4b-d3aaf4c4896b"></a>
+
+The following sections detail the configuration flow for integrating AI agents with the voice channel, enabling them to manage voice-based customer interactions effectively.
+
+<a id="section_lny_q4k_b2c"></a>
+
+## Prerequisites
+
+- Create and configure the AI agents. For more information, see [Set up scripted AI agent](https://help.webex.com/en-us/article/ncs9r37/Webex-AI-Agent-Studio-Administration-guide#task-template_72a02c77-a182-4301-b588-235a042809a2) and [Set up autonomous AI agent](https://help.webex.com/en-us/article/ncs9r37/Webex-AI-Agent-Studio-Administration-guide#task-template_cd5ff649-b94c-4546-82e9-6dac68310ab9) sections in the Webex AI Agent Studio Administration guide.
+
+- Set up the voice channel: 
+  
+  - Create an entry point for the voice channel.
+  
+  - Assign the routing flow to the entry point. For more information, see the article [Set up a channel](https://help.webex.com/en-us/article/ewuay1/Set-up-a-channel).
+
+- Set up a flow. For more information, see the [Create and Manage Flows](https://help.webex.com/en-us/article/nhovcy4/Flow-Designer#Cisco_Generic_Topic.dita_d32d6ead-60c0-4ae7-8750-9a1ba7663e56) section in the Flow Designer article.
+
+<a id="section_cnj_s4k_b2c"></a>
+
+## Configure AI agents in flow
+
+The Virtual Agent V2 activity provides a real-time conversational experience for your contacts. You can add the Virtual Agent V2 activity to the call flow to handle speech-based AI-enabled conversations. When a caller speaks, the system matches the speech to the best intent in the AI agent. Further, it assists the caller as part of the Interactive Voice Response (IVR) experience.
+
+ **Outcomes** 
+
+The outcome of the conversation between the caller and virtual agent determines this output path.
+
+- **Handled**—The outcome is invoked when the virtual agent execution is completed.
+ 
+- **Escalated**—The outcome is invoked when the call is required to be escalated to the human agent.
+
+ **Error Handling** 
+
+Any error that occurs during the conversation between the virtual agent and the caller determines this output path.
+
+**Errored**—The flow takes this path in any error scenarios.
+
+- Drag and drop the **Virtual Agent V2** activity from the **Activity Library** to the main flow canvas.
+ 
+- In **General Settings**, perform the following actions:
+  
+  - In the **Activity Label** field, enter a name for the activity.
+  
+  - In the **Activity Description** field, enter a description for the activity.
+ 
+- In the **Conversational Experience** settings,
+  
+  - For scripted AI agents:
+    
+    - Select **Webex AI Agent Scripted** from the **Contact Center AI Config** drop-down list.
+    
+    - Select one of the published scripted agents under the **Virtual Agent**drop-down list.
+  
+  - For autonomous AI agents:
+    
+    - Select **Webex AI Agent Autonomous** from the **Contact Center AI Config** drop-down list.
+    
+    - Select one of the published autonomous agents under the **Virtual Agent**drop-down list.
+
+  You need to set the global variables in the flow to configure the default input language and output voice for virtual agent.
+
+  If you want to override the default input language and output voice for the Webex AI Agent that are configured in AI Agent Studio, include Set Variable activities before the Virtual Agent V2 activity in the flow. For more information about how to add global variables in the flow, see [Global Variables in Flow Designer](https://help.webex.com/en-us/article/nhovcy4/Build-and-manage-flows-with-Flow-Designer#Cisco_Generic_Topic.dita_0a32bcfc-1bfc-4413-bf75-7e941b228a81).
+
+  For custom input language, configure the Set Variable activity as follows:
+
+  - Set the variable to Global_Language.
+  
+  - Set the variable value to the required language code (for example, fr-CA).
+
+  For custom output voice, configure the Set Variable activity as follows:
+
+  - Set the variable to Global_VoiceName.
+  
+  - Set the variable value to the required output voice name code (for example, en-US-Jennifer).
+    
+    **Important**: The voice you select must be supported by the engine your AI Agent uses. Otherwise, calls will exit the error path of the VAV2 activity.
+
+  For more information about the supported voices and languages, see [Supported languages and voices for AI agents](https://help.webex.com/en-us/article/pdef2d/Supported-languages-and-voices-for-AI-agents).
+ 
+- In the **State Event** settings, enter the custom event name and the data in the **Event Name - Event Data** columns. The State Event is a mechanism to trigger the event handler that is configured on the Webex AI agent. In the AI agent, you can configure how the event must be handled.
+  
+  - **Event Name**–(optional) Indicates the name of the event that is defined on the integrated third-party AI platform.
+  
+  - **Event Data**–(optional) Indicates the JSON data that the system sends (as part of the defined event name) to the integrated third-party AI platform.
+
+  You can specify the event name and the data in the form of a static value or expression. For expressions, use this syntax: `{{ variable }}`. The following is an example of the state event that is configured to greet the caller with a custom welcome message.
+
+  **Event Name**: `CustomWelcome`
+
+  **Event Data**: `{"Name": "John"}`
+ 
+- In Advanced Settings, check the Enable voice recording check box to allow recording of conversations between the AI agent and the customer. When enabled, the recordings appears in the **Sessions** page within AI Agent Studio application.
+  
+  The service applies layered controls, including automated detection of patterns that may indicate PCI data in AI Agent recordings and limit its visibility in AI Agent Studio. Automated detection may not identify every instance of such patterns, as demonstrated in the following scenarios:
+
+  - **Unprompted disclosure by the caller**: A caller may share payment card or related information outside of the expected call flow, which may affect detection reliability.
+  
+  - **Speech-to-Text (STT) transcription limitations**: If the STT model transcribes payment card related details incompletely, inaccurately, or in an unexpected format, detection may be less reliable.
+  
+  - **Abrupt call termination**: Calls may be disconnected before backend systems can fully analyze the conversation and identify sensitive content, resulting in missed or delayed detection.
+ 
+- Use the following **Activity Output Variables** to handle various use cases:
+  
+  - **VirtualAgentV2.TranscriptURL**—Stores the URL that points to the transcript of the conversation between the AI agent and the caller.
+  
+  - **VirtualAgentV2.MetaData**—Stores the JSON data that the system receives from the agent as part of the fulfillment, handling custom event, or transfer action. You can use this data to build more business logic in the flow builder.
+
+    See the following examples populated in the MetaData variable for different scenarios:
+
+    **Handled Outcome**
+
+    ```text
+    {
+    	"actions": {
+    		"get_flight_info": [
+    			{
+    				"input": {
+    					"booking_id": "IE428656",
+    					"last_name": "Joyce"
+                    },
+    				"type": "fulfillment"
+    			}
+    		]
+    
+    	}
+    }
+    ```
+
+    **Escalated Outcome**
+
+    **For custom transfer:**
+
+    The escalation metadata and the action information.
+
+    - escalation_type → custom
+    
+    - escalation_trigger → The name of the transfer action that triggered the escalation
+    
+    - actions - list of actions triggered during the invocation
+
+    ```text
+    {
+        "escalation_type": "custom",
+        "escalation_trigger": "booking_agent_transfer",
+    	"actions": {
+    		"booking_agent_transfer": [
+    			{
+    				"input": {
+    					"zipcode": "12345",
+    					"date_of_birth": "27-06-1973"
+                    },
+    				"type": "transfer"
+    			}
+    		]
+    
+    	}
+    }
+    ```
+
+    **For System Transfer**
+
+    This is the default system transfer output example.
+
+    - escalation_type → system
+    
+    - escalation_trigger → agent_transfer
+    
+    - actions - list of actions triggered during the invocation
+
+    ```text
+    {
+        "escalation_type": "system",
+        "escalation_trigger": "agent_transfer",
+    	"actions": {
+    		"agent_transfer": [
+    			{
+    				"input": {
+    					"message": "I’ll connect you with a human representative now. Please hold on for a moment while I transfer you."
+                    },
+    				"type": "transfer"
+    			}
+    		]
+    
+    	}
+    }
+    ```
+  
+  - **VirtualAgentV2.StateEventName**—Stores the name of the custom event that the system receives from the Webex AI agent after the system triggers a custom state event.
+
+See the following flow templates in the Flow Designer Guide for details on using AI agents on voice channels:
+
+- [AI Agent Autonomous (Package Tracking)](https://help.webex.com/en-us/article/nhovcy4/Build-and-manage-flows-with-Flow-Designer#ai-agent-autonomous-package-tracking)
+
+- [AI Agent Scripted (Package Tracking)](https://help.webex.com/en-us/article/nhovcy4/Build-and-manage-flows-with-Flow-Designer#ai-agent-scripted-package-tracking)
+
+- [AI Agent Scripted (Doctor's Appointment Booking)](https://help.webex.com/en-us/article/nhovcy4/Build-and-manage-flows-with-Flow-Designer#ai-agent-scripted-doctors-appointment-booking)
+
+<a id="section_j3r_hpk_b2c"></a>
+
+## Configure custom events
+
+In the voice channel, custom events allow the flow designer to orchestrate complex interactions with the AI agent. This is particularly useful when fulfilling intents requires actions such as retrieving data from external systems or making calls to third-party APIs. The flow designer implements the necessary logic for these fulfillment actions.
+
+Currently, custom events are supported for scripted and autonomous AI agents through voice channel only.
+
+ For more information, see the [Configure custom events for AI agent](https://help.webex.com/en-us/article/n5uo60x) article.
+
+<a id="generic-template_76f2c5c1-4eb2-4f46-a3d6-04c0f0c75ba4"></a>
+
+<a id="generic-template_76f2c5c1-4eb2-4f46-a3d6-04c0f0c75ba4"></a>
+
+The following sections outline the configuration flow for integrating AI agents with digital channels and enabling them to handle digital interactions with the customers.
+
+<a id="section_zfr_1jv_ycc"></a>
+
+## Prerequisites
+
+- Create and configure the AI agents. For more information, see [Set up scripted AI agent](https://help.webex.com/en-us/article/ncs9r37/Webex-AI-Agent-Studio-Administration-guide#task-template_72a02c77-a182-4301-b588-235a042809a2) and [Set up autonomous AI agent](https://help.webex.com/en-us/article/ncs9r37/Webex-AI-Agent-Studio-Administration-guide#task-template_cd5ff649-b94c-4546-82e9-6dac68310ab9) sections in the Webex AI Agent Studio Administration guide.
+
+- Configure your digital channel. Webex Connect and Webex Contact Center integration currently support six channels, namely WhatsApp, SMS, Email, Facebook Messenger, Apple Messages for Business, and Live Chat. For more information to configure the channel assets for each of these channels, see [Channel Asset Configuration](https://help.webexconnect.io/docs/wxcc-channel-assset-configuration-wxcc).
+
+- Create a flow on Webex Connect. For more information, see [Creating a Flow on Webex Connect](https://help.webexconnect.io/docs/create-a-new-flow).
+
+<a id="section_ztx_mkv_ycc"></a>
+
+## Configure AI agents in flow
+
+You can use an AI Agent node to answer specific queries from a corpus or knowledge base. You can also enable multiturn conversations. The AI agent can ask follow-up questions, understand context, and provide personalized responses.
+
+Simply drag and drop the AI Agent node onto your visual flow builder to get started. This node helps you use scripted and autonomous AI agents configured within the Webex AI Agent Studio.
+
+<a id="section_o1c_3cw_ycc"></a>
+
+## Configure input and output variables in AI agent node
+
+The AI Agent node contains two methods:
+
+- Process Message—Allows you to send user messages to the selected agent and get agent responses back.
+
+- Close session—Allows you to close a session in the AI agent. In certain scenarios, it may be necessary to close an existing AI agent session and initiate a new one. It can be achieved using a specific method within the AI Agent node. For example, if a session remains inactive for a specified period, the system closes the session automatically to optimize resources.
+
+- In the Process Message method, configure the following input variables:
+  
+  - Agent type—The type of agent used in the flow—whether scripted or autonomous.
+  
+  - Agent—The agent that processes the user message and gets a response.
+    
+    You can see the AI agents that you have access to in the Webex AI Agent Studio. For more information on managing users and agents in Webex AI Agent Studio, see [User roles and managing teammates](https://help.webexconnect.io/docs/user-roles-and-hierarchy).
+  
+  - Message—The variable name containing the incoming customer message sent to the chosen AI agent
+  
+  - Language—If the chosen AI agent is multilingual, you can choose the language of the incoming message in the **Language**drop-down list. We populate the drop-down list based on languages in AI agent settings.
+    
+    We disable this drop-down list for agents with a single language.
+  
+  - Channel—The name of the channel from which the system receives the customer's message.
+  
+  - User identifier—Provide the user's unique identifier for the chosen channel.
+  
+  - Custom Parameters (optional)—You can pass additional information about the customer to the Webex AI Agent Studio as a key value pair. We associate this information with the user's profile and use it for later conversations. For example, you can specify whether a user is a new customer or an existing customer.
+    
+    Keys passed as `Custom Parameters` are accessible as ${consumerData.extra_params.<your_key>} in agent responses.
+
+    Currently, custom parameters are supported only for scripted AI agent through digital channels.
+  
+  - Message Parameters (optional)—You can pass additional information about the current exchange to the Webex AI Agent Studio as a key value pair. 
+    
+    We don’t store this message and it’s only available for use in the next agent response. Keys passed as `Message Parameters` are accessible as ${extra_params.<your_key>} in agent responses.
+
+- Configure the following output variables in the Process Message method:
+
+  - TextResponse—The text output configured within the AI agent; works only if no other type of rich or special elements is present. Also, for multiple text items in the response, the first text item is returned.
+  
+  - FullResponse —The full response with all rich elements and multiple messages present in the output from the agent.
+  
+  - Datastore —A JSON/dict of all user-defined sessions variables within the agent
+  
+  - TransactionId —The transaction id for the request in Webex AI Agent Studio
+  
+  - SessionId—The session/conversation id in Webex AI Agent Studio
+  
+  - ConsumerId —The customer id in Webex AI Agent Studio
+  
+  - MessageMetadata —The metadata associated with the current response from the configured agent
+  
+  - SessionMetadata —The metadata associated with the session for the current response from the configured agent
+
+    Currently, MessageMetadata and SessionMetadata are supported only for scripted AI agent through digital channels.
+  
+  - ResponsePayload —The complete response payload from Webex AI Agent Studio
+
+- Configure the following input variables in the Close Session method:
+  
+  - Agent—The agent who processes the user message and gets a response.
+    
+    You can see the AI agents that you have access to in the Webex AI Agent Studio. For more information on managing users and agents in Webex AI Agent Studio, see [User roles and managing teammates](https://help.webexconnect.io/docs/user-roles-and-hierarchy).
+  
+  - Session ID—We close the AI agent session. Session ID is available as an output variable of the Process message method.
+
+For information on templates using AI agents on digital channels, see [Using AI Agent flow templates](https://help.webexconnect.io/docs/using-ai-agent-flow-templates#ai-agent-livechat-generic).
+
+<a id="section_qzc_bgb_1dc"></a>
+
+## Node Outcomes
+
+You can see the list of possible node outcomes for this node. You can customize the node labels using the Edit (pencil) icon. The node exits through one of the node edges corresponding to the outcome of the node. Each AI Agent node corresponds to a node outcome. Here’s a list of node outcomes.
+
+- Error (Red)—indicates the following: 
+  
+  - onError—when the agent hasn’t responded with a message.
+  
+  - onInvalidCustomerID—when a customer identifier is missing.
+  
+  - onInvalidMessage —when the message value is missing.
+
+- Success (Green)—indicates the following:
+  
+  - onSuccess—when the agent responds with a message.
+  
+  - onAgentHandover—when the agent raises a request to handover to the agents.
+
+- Timeout (Yellow/Amber)—indicates the following:
+  
+  - onTimeOut—when the agent hasn’t responded in not more than 15 seconds.

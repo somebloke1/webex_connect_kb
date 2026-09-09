@@ -1,0 +1,37 @@
+{
+  "category": "Webex Connect and Cisco Contact Center Enterprise System (CCE)",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182578dc",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "f2f6dc5dfd2afff7e13847379734134c443a191d69286e10af17f7b4444ed10f",
+    "source_path": "b315e368cbe239b3e90d972ea657dcfa62044288d543df3f263c81dfb2f9067c",
+    "text_path": "8bb9b47856f8c97f3f2a2c113f75c2a38557670452de5a709a1848e40ba845e2"
+  },
+  "headings": [
+    "Node and Methods",
+    "Node Authorization",
+    "Node Authorization for Webex Engage nodes",
+    "📘Note",
+    "📘Note"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/cce-webex-engage-nodes-and-node-authorizations.md",
+  "resolved_url": "https://help.webexconnect.io/docs/cce-webex-engage-nodes-and-node-authorizations",
+  "retrieved_at": "2026-09-08T23:29:23+00:00",
+  "sha256_html_response": "f986a27c949244129e848303540ba94b94c5a2675cf92bd6dc0dd2a4dba2fd5a",
+  "sha256_source_body": "b315e368cbe239b3e90d972ea657dcfa62044288d543df3f263c81dfb2f9067c",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/cce-webex-engage-nodes-and-node-authorizations.source.md",
+  "source_updated_at": "2026-04-14T07:37:16.767Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/cce-webex-engage-nodes-and-node-authorizations.txt",
+  "title": "Webex Engage Nodes and Node Authorizations - CCE",
+  "url": "https://help.webexconnect.io/docs/cce-webex-engage-nodes-and-node-authorizations",
+  "word_count": 652,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/cce-webex-engage-nodes-and-node-authorizations.metadata.json"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "31b01641-f081-4163-886b-5f0612b37033",
+  "url": "https://app.vidcast.io/share/31b01641-f081-4163-886b-5f0612b37033",
+  "title": "Reusable integrations made easy with the Integrations Studio for Webex Connect",
+  "publisher": "Webex Developer Evangelism",
+  "event_date": "2025-02-26",
+  "duration_ms": 3228432,
+  "created_at": "2025-03-04T19:19:12.460000+00:00",
+  "retrieved_at": "2026-09-08T23:32:05.694491+00:00",
+  "transcript_status": "ready",
+  "language": "en",
+  "segment_count": 483,
+  "provenance_url": "https://developer.webex.com/webinars",
+  "metadata_endpoint": "https://api.vidcast.io/v2/videos/shared/31b01641-f081-4163-886b-5f0612b37033",
+  "transcript_endpoint": "https://api.vidcast.io/v3/transcripts/31b01641-f081-4163-886b-5f0612b37033",
+  "raw_working_path": "transcripts/vidcast-integrations/transcript.raw.json",
+  "subtitle_path": "transcripts/vidcast-integrations/source.en.vtt"
+}

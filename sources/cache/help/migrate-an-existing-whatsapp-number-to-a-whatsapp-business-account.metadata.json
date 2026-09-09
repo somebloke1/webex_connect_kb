@@ -1,0 +1,33 @@
+{
+  "category": "Assets",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257924",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "dc9d239e1eeeed699ae52212e06eb891901081008fafe9470c516fa5cf7f2913",
+    "source_path": "199d2d2d2ba68c5c2461742e370cea30ada5601f2c9270e64431c2f4bce6eef8",
+    "text_path": "50c3faa1ee75476e07d748ba0a7032f16c27e6e273aa944857263579920cabff"
+  },
+  "headings": [
+    "📘Note"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/migrate-an-existing-whatsapp-number-to-a-whatsapp-business-account.md",
+  "resolved_url": "https://help.webexconnect.io/docs/migrate-an-existing-whatsapp-number-to-a-whatsapp-business-account",
+  "retrieved_at": "2026-09-08T23:29:06+00:00",
+  "sha256_html_response": "a6e2a4d86ec4ed1728266303f2b9fad894f2940d064eaca13aebcfc7dfa8ef87",
+  "sha256_source_body": "199d2d2d2ba68c5c2461742e370cea30ada5601f2c9270e64431c2f4bce6eef8",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/migrate-an-existing-whatsapp-number-to-a-whatsapp-business-account.source.md",
+  "source_updated_at": "2026-01-26T14:33:11.784Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/migrate-an-existing-whatsapp-number-to-a-whatsapp-business-account.txt",
+  "title": "Migrate an Existing WhatsApp Number to a Business Account",
+  "url": "https://help.webexconnect.io/docs/migrate-an-existing-whatsapp-number-to-a-whatsapp-business-account",
+  "word_count": 208,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/migrate-an-existing-whatsapp-number-to-a-whatsapp-business-account.metadata.json"
+}

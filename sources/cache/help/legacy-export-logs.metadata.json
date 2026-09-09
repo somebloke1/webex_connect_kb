@@ -1,0 +1,36 @@
+{
+  "category": "TOOLS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd81825790d",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "d0dcb1ae78ceef78452352969a7280a11c60b264efa5e67b0c6b7f7c13e065cf",
+    "source_path": "2e0a890ca1b703c1c2fbb3165ece92d431981b8f5caa9335eec4cce6d118202d",
+    "text_path": "b1131c0dc60a45ab33406c8f68e65999908d7103fa0449a7442518118333c92d"
+  },
+  "headings": [
+    "📘",
+    "📘Download Limits",
+    "Fields in the Export Logs",
+    "Channel-specific Fields in the Export Logs"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/legacy-export-logs.md",
+  "resolved_url": "https://help.webexconnect.io/docs/legacy-export-logs",
+  "retrieved_at": "2026-09-08T23:29:34+00:00",
+  "sha256_html_response": "e3027843f6e727f8dcf2172c8f32143ec398f9fe7a691e306489ea68b2a72ba1",
+  "sha256_source_body": "2e0a890ca1b703c1c2fbb3165ece92d431981b8f5caa9335eec4cce6d118202d",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/legacy-export-logs.source.md",
+  "source_updated_at": "2026-05-12T13:17:01.362Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/legacy-export-logs.txt",
+  "title": "Legacy Export Logs",
+  "url": "https://help.webexconnect.io/docs/legacy-export-logs",
+  "word_count": 465,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/legacy-export-logs.metadata.json"
+}

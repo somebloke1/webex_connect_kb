@@ -1,0 +1,272 @@
+{
+  "api": {
+    "examples": {
+      "codes": [
+        {
+          "code": "\t\t{\n \t \t\t\"name\" : \"JWTSegment\",\n \t \t\t\"criteria\":  \"Security Check & QATopic\"\n\t\t}",
+          "language": "json",
+          "name": "JSON"
+        },
+        {
+          "code": "-X POST https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/segments\n-H \"Content-Type : application/json\"\n-H \"secretKey: {secretKey}\"",
+          "language": "curl",
+          "name": "cURL"
+        },
+        {
+          "code": "var request=require(\"request\");\n var options = {\n          method: 'POST',\n          uri: ' https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{{inappid}}/segments',\n          headers: {\n            'Content-Type': 'application/json',\n\t'secretKey': '{secretKey}'\n            }\n        };\n  request(options, function(error, response, body) {\n               if(error){\n                  console.log(error);\n             }else{\n                  console.log(response);\n            }\n        });",
+          "language": "json",
+          "name": "Node"
+        },
+        {
+          "code": "require 'httparty'\n# Create the HTTP objects and post request\nhttp = HTTParty.post(\"https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/segments\",\n    :headers => {'Content-Type' => 'application/json',\n                          'secretKey ' => '{secretKey}’\n            }\n)\n# Print on console\nputs http",
+          "language": "ruby",
+          "name": "Ruby"
+        },
+        {
+          "code": "var data = null;\n\nvar xhr = new XMLHttpRequest();\n\nxhr.addEventListener(\"readystatechange\", function () {\n  if (this.readyState === this.DONE) {\n    console.log(this.responseText);\n  }\n});\n\nxhr.open(\"POST\", \" https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{{inappid}}/segments\");\nxhr.setRequestHeader(\"Content-Type\", \"application/json\");\nxhr.setRequestHeader(\"secretKey\", \"{secretKey}\");\nxhr.send(data);",
+          "language": "javascript",
+          "name": "JavaScript"
+        },
+        {
+          "code": "import requests\n\nurl = \" https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/segments\"\n\nheaders = {'Content-Type': 'application/json', 'secretKey': '{secretKey}’}\n\nresponse = requests.request(\"POST\", url, headers=headers)\n\nprint(response.text)",
+          "language": "python"
+        }
+      ]
+    },
+    "settings": "",
+    "results": {
+      "codes": [
+        {
+          "language": "json",
+          "code": "{\n    \"code\": 0,\n    \"description\": \"Success\",\n    \"trans_id\": \"a1ea3708-2541-433c-8d7f-ffa19044b7ea\",\n    \"id\": \"5f3a16c4e4b0eae4f99c0f56\"\n}\n",
+          "name": "API Response",
+          "status": 200
+        }
+      ]
+    },
+    "auth": "required",
+    "params": [
+      {
+        "name": "Content-Type",
+        "type": "string",
+        "enumValues": "",
+        "default": "",
+        "desc": "Application/JSON",
+        "required": false,
+        "in": "header",
+        "ref": "",
+        "_id": "5f412ce88ed4120057923f42",
+        "id": "5f412ce88ed4120057923f42"
+      },
+      {
+        "name": "secretKey",
+        "type": "string",
+        "enumValues": "",
+        "default": "",
+        "desc": "Client key that can be accessed from your app asset configuration page on imiconnect platform",
+        "required": false,
+        "in": "header",
+        "ref": "",
+        "_id": "5f412c46b112350059480fd6",
+        "id": "5f412c46b112350059480fd6"
+      },
+      {
+        "name": "name",
+        "type": "string",
+        "enumValues": "",
+        "default": "",
+        "desc": "Specifies the name of the segment",
+        "required": false,
+        "in": "body",
+        "ref": "",
+        "_id": "601949408592d4001379f78b",
+        "id": "601949408592d4001379f78b"
+      },
+      {
+        "name": "criteria",
+        "type": "string",
+        "enumValues": "",
+        "default": "",
+        "desc": "Criteria can be used to define a category of a segment, or it can be a combination of topics with logical operators (& | ! symbols). This is an optional parameter. You can add users to a segment and make a group without defining it's criteria . For topic-based criteria, based on the criteria condition the user base will be prepared to send push/in-app messages. For example, if Sports and News are topics, the criteria can be Sports&News *both Sports and News), or, Sports|News (either Sports or News).",
+        "required": false,
+        "in": "body",
+        "ref": "",
+        "_id": "601949408592d4001379f78a",
+        "id": "601949408592d4001379f78a"
+      },
+      {
+        "name": "inappid",
+        "type": "string",
+        "enumValues": "",
+        "default": "",
+        "desc": "The unique identifier corresponding to the app asset",
+        "required": false,
+        "in": "path",
+        "ref": "",
+        "_id": "601949970cf444003a116412",
+        "id": "601949970cf444003a116412"
+      }
+    ],
+    "url": "/apps/{inappid}/segments",
+    "method": "post",
+    "apiSetting": "6a675233ec1c893d8a7f67bb"
+  },
+  "swagger": {
+    "path": "/apps/{inappid}/segments"
+  },
+  "oas_public_id": "@imiconnect-apis/v6.20.0#iy3h4gl45vtxu1",
+  "selected_openapi": {
+    "openapi": "3.1.0",
+    "info": {
+      "title": "Segment APIs",
+      "version": "6.20.0"
+    },
+    "servers": [
+      {
+        "url": "https://rtm.imiconnect.io/rtmsAPI/api/v1"
+      }
+    ],
+    "security": [
+      {
+        "sec0": []
+      }
+    ],
+    "path": "/apps/{inappid}/segments",
+    "method": "post",
+    "path_parameters": [],
+    "operation": {
+      "summary": "Create Segment",
+      "description": "This API is used to create a segment. A segment can be created with or without criteria.",
+      "operationId": "segment-apis-create",
+      "parameters": [
+        {
+          "name": "Content-Type",
+          "in": "header",
+          "description": "Application/JSON",
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "secretKey",
+          "in": "header",
+          "description": "Client key that can be accessed from your app asset configuration page on imiconnect platform",
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "inappid",
+          "in": "path",
+          "description": "The unique identifier corresponding to the app asset",
+          "schema": {
+            "type": "string"
+          },
+          "required": true
+        }
+      ],
+      "requestBody": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "Specifies the name of the segment"
+                },
+                "criteria": {
+                  "type": "string",
+                  "description": "Criteria can be used to define a category of a segment, or it can be a combination of topics with logical operators (& | ! symbols). This is an optional parameter. You can add users to a segment and make a group without defining it's criteria . For topic-based criteria, based on the criteria condition the user base will be prepared to send push/in-app messages. For example, if Sports and News are topics, the criteria can be Sports&News *both Sports and News), or, Sports|News (either Sports or News)."
+                }
+              }
+            },
+            "examples": {
+              "JSON": {
+                "value": {
+                  "name": "JWTSegment",
+                  "criteria": "Security Check & QATopic"
+                }
+              }
+            }
+          }
+        }
+      },
+      "responses": {
+        "200": {
+          "description": "200",
+          "content": {
+            "application/json": {
+              "examples": {
+                "API Response": {
+                  "value": "{\n    \"code\": 0,\n    \"description\": \"Success\",\n    \"trans_id\": \"a1ea3708-2541-433c-8d7f-ffa19044b7ea\",\n    \"id\": \"5f3a16c4e4b0eae4f99c0f56\"\n}\n"
+                }
+              },
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "code": {
+                    "type": "integer",
+                    "example": 0,
+                    "default": 0
+                  },
+                  "description": {
+                    "type": "string",
+                    "example": "Success"
+                  },
+                  "trans_id": {
+                    "type": "string",
+                    "example": "a1ea3708-2541-433c-8d7f-ffa19044b7ea"
+                  },
+                  "id": {
+                    "type": "string",
+                    "example": "5f3a16c4e4b0eae4f99c0f56"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "deprecated": false,
+      "x-readme": {
+        "code-samples": [
+          {
+            "language": "curl",
+            "code": "-X POST https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/segments\n-H \"Content-Type : application/json\"\n-H \"secretKey: {secretKey}\"",
+            "name": "cURL"
+          },
+          {
+            "language": "ruby",
+            "code": "require 'httparty'\n# Create the HTTP objects and post request\nhttp = HTTParty.post(\"https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/segments\",\n    :headers => {'Content-Type' => 'application/json',\n                          'secretKey ' => '{secretKey}’\n            }\n)\n# Print on console\nputs http",
+            "name": "Ruby"
+          },
+          {
+            "language": "javascript",
+            "code": "var data = null;\n\nvar xhr = new XMLHttpRequest();\n\nxhr.addEventListener(\"readystatechange\", function () {\n  if (this.readyState === this.DONE) {\n    console.log(this.responseText);\n  }\n});\n\nxhr.open(\"POST\", \" https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{{inappid}}/segments\");\nxhr.setRequestHeader(\"Content-Type\", \"application/json\");\nxhr.setRequestHeader(\"secretKey\", \"{secretKey}\");\nxhr.send(data);",
+            "name": "JavaScript"
+          },
+          {
+            "language": "python",
+            "code": "import requests\n\nurl = \" https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/segments\"\n\nheaders = {'Content-Type': 'application/json', 'secretKey': '{secretKey}’}\n\nresponse = requests.request(\"POST\", url, headers=headers)\n\nprint(response.text)"
+          }
+        ],
+        "samples-languages": [
+          "curl",
+          "ruby",
+          "javascript",
+          "python"
+        ]
+      }
+    },
+    "components": {
+      "securitySchemes": {
+        "sec0": {
+          "type": "apiKey",
+          "in": "header",
+          "name": "key"
+        }
+      }
+    }
+  }
+}

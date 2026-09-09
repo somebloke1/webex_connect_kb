@@ -1,0 +1,64 @@
+{
+  "source": "https://help.webexconnect.io/docs/setup-appointment-reminder-webexconnect",
+  "image": "https://files.readme.io/ff67f80-appointment_reminder_flow.png",
+  "evidence_type": "visually inspected public diagram",
+  "node_ids": "not visible; labels below are analytical identifiers",
+  "nodes": [
+    {
+      "id": "event",
+      "label": "Configure Custom event"
+    },
+    {
+      "id": "send",
+      "label": "Send SMS"
+    },
+    {
+      "id": "receive",
+      "label": "Receive"
+    },
+    {
+      "id": "branch",
+      "label": "Branch"
+    },
+    {
+      "id": "confirm_sms",
+      "label": "Send SMS"
+    },
+    {
+      "id": "cancel_sms",
+      "label": "Send SMS"
+    }
+  ],
+  "edges": [
+    {
+      "source": "event",
+      "target": "send",
+      "label": "onBegin"
+    },
+    {
+      "source": "send",
+      "target": "receive",
+      "label": "onSuccess"
+    },
+    {
+      "source": "receive",
+      "target": "branch",
+      "label": "sms.mo"
+    },
+    {
+      "source": "branch",
+      "target": "confirm_sms",
+      "label": "Confirm"
+    },
+    {
+      "source": "branch",
+      "target": "cancel_sms",
+      "label": "Cancel"
+    }
+  ],
+  "limitations": [
+    "Error/timeout ports are visible without drawn outgoing edges.",
+    "The article describes invalid-response handling but the overall screenshot does not draw its path.",
+    "No backend appointment update is shown."
+  ]
+}

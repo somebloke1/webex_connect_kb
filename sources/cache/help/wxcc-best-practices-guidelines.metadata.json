@@ -1,0 +1,31 @@
+{
+  "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd81825787a",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "02951aaf0de48d18bae4e07eacae7a2d24a4cfb8da2f8c085386319eb0f79f91",
+    "source_path": "87f04165af76e0d59de03fb2dad8b82dc95a374d499fc0451285c125e42778a6",
+    "text_path": "729e738af15389c97670bfdb5993c8946e0ac27b775ee7aa2fd608648d962f9f"
+  },
+  "headings": [],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/wxcc-best-practices-guidelines.md",
+  "resolved_url": "https://help.webexconnect.io/docs/wxcc-best-practices-guidelines",
+  "retrieved_at": "2026-09-08T23:29:18+00:00",
+  "sha256_html_response": "a07f13a12cec8c578695c850fdf06b10b3f4e2445d247b37ab6d99148dafd2f4",
+  "sha256_source_body": "87f04165af76e0d59de03fb2dad8b82dc95a374d499fc0451285c125e42778a6",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/wxcc-best-practices-guidelines.source.md",
+  "source_updated_at": "2026-04-14T07:28:38.816Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/wxcc-best-practices-guidelines.txt",
+  "title": "Best Practices and Guidelines - WXCC",
+  "url": "https://help.webexconnect.io/docs/wxcc-best-practices-guidelines",
+  "word_count": 515,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/wxcc-best-practices-guidelines.metadata.json"
+}

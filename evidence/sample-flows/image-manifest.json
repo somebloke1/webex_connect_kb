@@ -1,0 +1,18 @@
+[
+  {
+    "file": "evidence/sample-flows/raw/appointment-reminder-topology.png",
+    "source_url": "https://files.readme.io/ff67f80-appointment_reminder_flow.png",
+    "source_page": "https://help.webexconnect.io/docs/setup-appointment-reminder-webexconnect",
+    "sha256": "b9e0b5a09f372e0ac20a03bdf27da6d9a0841d53eba837659323a383eb736724",
+    "bytes": 20506,
+    "retrieved_at": "2026-09-08T23:49:01.504456+00:00"
+  },
+  {
+    "file": "evidence/sample-flows/raw/automated-sms-topology.png",
+    "source_url": "https://files.readme.io/a1a1d11-Appointment_Reminder_Flow_1.png",
+    "source_page": "https://help.webexconnect.io/docs/sending-automated-sms",
+    "sha256": "55d211781329522fda69b045adc7430c453016aab73949402dd271a78f64d4a7",
+    "bytes": 35065,
+    "retrieved_at": "2026-09-08T23:54:46.645363+00:00"
+  }
+]

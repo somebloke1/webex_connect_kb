@@ -1,0 +1,913 @@
+{
+  "flowId": "96841",
+  "temporary_name": "KBSampleAutoresponder20260908",
+  "cells": [
+    {
+      "id": "1",
+      "parent": "0",
+      "vertex": false,
+      "edge": false,
+      "value": {
+        "tag": "workflowdata",
+        "attributes": {
+          "copy_used_vars": {
+            "2": {
+              "_usedVars": [],
+              "_usedTransVar": [],
+              "_dynamicVar": [
+                "sms.timestamp",
+                "sms.transid",
+                "sms.message",
+                "sms.sender_number"
+              ],
+              "_dynamicTransVar": []
+            },
+            "33": {
+              "_usedVars": [
+                {
+                  "id": "n2",
+                  "nodeId": 2,
+                  "param": "sms.sender_number",
+                  "fullPath": "n2.sms.sender_number",
+                  "source": 33
+                },
+                {
+                  "id": "n2",
+                  "nodeId": 2,
+                  "param": "sms.message",
+                  "fullPath": "n2.sms.message",
+                  "source": 33
+                }
+              ],
+              "_usedTransVar": [],
+              "_dynamicVar": [],
+              "_dynamicTransVar": []
+            }
+          },
+          "dynamic_output_vars": {
+            "2": [
+              "sms.timestamp",
+              "sms.transid",
+              "sms.message",
+              "sms.sender_number"
+            ],
+            "5": [],
+            "33": []
+          },
+          "logbooks": [],
+          "notes": {
+            "nodes": {},
+            "workflow": {}
+          },
+          "start_node_info": {
+            "channel": 1,
+            "type": "channel",
+            "extras": {
+              "number": 441348800017,
+              "numberObject": {
+                "unid": 1310,
+                "key_id": "",
+                "reportnumber": 441348800017,
+                "resource_id": 441348800017,
+                "sub_channel_id": "",
+                "keyword": "",
+                "TYPE": "Phone number",
+                "channel_id": 3,
+                "channelsupport": "SMS,Voice"
+              },
+              "keyword": "*"
+            },
+            "eventid": 33,
+            "eventname": "MO"
+          }
+        },
+        "text": ""
+      }
+    },
+    {
+      "id": "2",
+      "parent": "1",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "tag": "start",
+        "attributes": {
+          "hidecell": true,
+          "image": "start.svg",
+          "key": "start",
+          "keytype": "fullscreen",
+          "label": "Configure SMS Event",
+          "name": "Start",
+          "nodetype": "start",
+          "type": "start",
+          "updatedimage": "sms.svg",
+          "updatedon": "2018-12-31T12:21:50.390",
+          "view_restrict": true
+        },
+        "children": [
+          {
+            "tag": "event",
+            "attributes": {
+              "name": "onbegin",
+              "targetcount": 1
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "selectedChannel",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "selectedRuleEvent",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "ruleEvent",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "ruleConditionStatus",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "conditions",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "apiReqConditions",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "webHookData",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "customEvents",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "isKeyWordDisabled",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "isKeyWordVerifyReq",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "isKeyWordAvailable",
+              "type": "",
+              "view": ""
+            },
+            "text": true
+          },
+          {
+            "tag": "nodevariablestore",
+            "attributes": {
+              "name": "n2.sms.sender_number",
+              "source": 33
+            },
+            "text": "$(sms.sender_number)"
+          },
+          {
+            "tag": "nodevariablestore",
+            "attributes": {
+              "name": "n2.sms.message",
+              "source": 33
+            },
+            "text": "$(sms.message)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "33",
+      "parent": "1",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "tag": "umppublic",
+        "attributes": {
+          "image": "sms.svg",
+          "infolabel": "sendsms",
+          "key": "sendsms",
+          "label": "Send SMS",
+          "name": "Send SMS",
+          "paramhide": true,
+          "type": "UmpPublic",
+          "updatedimage": "sms.svg",
+          "updatedon": "2019-01-29T17:17:18.155",
+          "view_restrict": true
+        },
+        "children": [
+          {
+            "tag": "param",
+            "attributes": {
+              "label": "Remove Wait For",
+              "name": "hideWaitFor"
+            },
+            "text": false
+          },
+          {
+            "tag": "event",
+            "attributes": {
+              "name": "onerror",
+              "targetcount": 1
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "messagetype",
+              "type": "",
+              "view": ""
+            },
+            "text": 1
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "message",
+              "type": "",
+              "view": ""
+            },
+            "text": "We acknowledge we have received your message - $(n2.sms.message)"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "senderid",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "expiry",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "timeout",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "expiryType",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "channelId",
+              "type": "",
+              "view": ""
+            },
+            "text": 1
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "senderidViewFlag",
+              "type": "",
+              "view": ""
+            },
+            "text": false
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "deliverychannel",
+              "type": "",
+              "view": ""
+            },
+            "text": "SMS"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "callbackdata",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "correlationid",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "destination",
+              "type": "",
+              "view": ""
+            },
+            "text": "$(n2.sms.sender_number)"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "destinationType",
+              "type": "",
+              "view": ""
+            },
+            "text": "msisdn"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "successoutcome",
+              "type": "",
+              "view": ""
+            },
+            "text": 1
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "notifyurl",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "linkValidityCheck",
+              "type": "",
+              "view": ""
+            },
+            "text": false
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "shortLinkId",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "linkValidityTime",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "extraParameters",
+              "type": "",
+              "view": ""
+            },
+            "text": {}
+          }
+        ]
+      }
+    },
+    {
+      "id": "36",
+      "parent": "1",
+      "vertex": false,
+      "edge": true,
+      "source": "2",
+      "target": "33",
+      "value": {
+        "duplicatetarget": false,
+        "label": "",
+        "name": "onbegin",
+        "optionNodeType": "default",
+        "porttype": "MP",
+        "type": "EDGE",
+        "value": "onbegin"
+      }
+    },
+    {
+      "id": "44",
+      "parent": "38",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "eventtype": "default",
+        "label": "onsuccess",
+        "name": "onsuccess",
+        "nodeLabel": "End",
+        "nodeType": "end",
+        "parentInfo": {
+          "name": "onsuccess"
+        },
+        "portType": "MP",
+        "sessionRetryFlag": 0,
+        "type": "EN",
+        "value": "onsuccess",
+        "data": {
+          "parentNode": 33,
+          "type": "end"
+        },
+        "params": [
+          {
+            "hidden": 1,
+            "name": "sessionRetry",
+            "remove": 1,
+            "value": ""
+          },
+          {
+            "hidden": 1,
+            "name": "exitResult",
+            "value": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": "51",
+      "parent": "37",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "eventtype": "default",
+        "label": "onerror",
+        "name": "onerror",
+        "nodeLabel": "End",
+        "nodeType": "end",
+        "parentInfo": {
+          "name": "onerror"
+        },
+        "portType": "BP",
+        "sessionRetryFlag": 0,
+        "type": "EN",
+        "value": "onerror",
+        "data": {
+          "parentNode": 33,
+          "type": "end"
+        },
+        "params": [
+          {
+            "hidden": 1,
+            "name": "sessionRetry",
+            "remove": 1,
+            "value": ""
+          },
+          {
+            "hidden": 1,
+            "name": "exitResult",
+            "value": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "59",
+      "parent": "37",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "eventtype": "default",
+        "label": "onpolicyfail",
+        "name": "onpolicyfail",
+        "nodeLabel": "End",
+        "nodeType": "end",
+        "parentInfo": {
+          "name": "onpolicyfail"
+        },
+        "portType": "BP",
+        "sessionRetryFlag": 0,
+        "type": "EN",
+        "value": "onpolicyfail",
+        "data": {
+          "parentNode": 33,
+          "type": "end"
+        },
+        "params": [
+          {
+            "hidden": 1,
+            "name": "sessionRetry",
+            "remove": 1,
+            "value": ""
+          },
+          {
+            "hidden": 1,
+            "name": "exitResult",
+            "value": 4
+          }
+        ]
+      }
+    }
+  ],
+  "customVariables": [
+    {
+      "name": "facebook.psid",
+      "value": "$(facebook.psid)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "wechat.wechat_user_id",
+      "value": "$(wechat.wechat_user_id)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "app.deviceId",
+      "value": "$(app.deviceId)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "app.pushId",
+      "value": "$(app.pushId)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "twitter.twitterid",
+      "value": "$(twitter.twitterid)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "msisdn",
+      "value": "$(msisdn)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "email",
+      "value": "$(email)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "customerId",
+      "value": "$(customerId)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "app.imei",
+      "value": "$(app.imei)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "app.os",
+      "value": "$(app.os)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "app.model",
+      "value": "$(app.model)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "app.telecom",
+      "value": "$(app.telecom)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "app.imsi",
+      "value": "$(app.imsi)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "app.location",
+      "value": "$(app.location)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "app.language",
+      "value": "$(app.language)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "facebook.birthday",
+      "value": "$(facebook.birthday)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "facebook.email",
+      "value": "$(facebook.email)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "facebook.first_name",
+      "value": "$(facebook.first_name)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "facebook.gender",
+      "value": "$(facebook.gender)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "facebook.last_name",
+      "value": "$(facebook.last_name)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "facebook.location",
+      "value": "$(facebook.location)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "facebook.middle_name",
+      "value": "$(facebook.middle_name)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "facebook.name",
+      "value": "$(facebook.name)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "facebook.timezone",
+      "value": "$(facebook.timezone)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "twitter.username",
+      "value": "$(twitter.username)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "app.rtmId",
+      "value": "$(app.rtmId)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "name",
+      "value": "$(name)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "app.oldlocation",
+      "value": "$(app.oldlocation)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "app.mcc",
+      "value": "$(app.mcc)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "app.mnc",
+      "value": "$(app.mnc)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "message",
+      "value": "$(message)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "time",
+      "value": "$(time)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "app.message",
+      "value": "$(app.message)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "sms.message",
+      "value": "$(sms.message)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "twitter.message",
+      "value": "$(twitter.message)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "facebook.message",
+      "value": "$(facebook.message)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "wechat.message",
+      "value": "$(wechat.message)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "app.thread_id",
+      "value": "$(app.thread_id)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "abc.attachmentCount",
+      "value": "$(abc.attachmentCount)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "abc.message",
+      "value": "$(abc.message)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "abc.requestIdentifier",
+      "value": "$(abc.requestIdentifier)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "abc.interactive_type",
+      "value": "$(abc.interactive_type)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "abc.hasattachment",
+      "value": "$(abc.hasattachment)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "abc.abcUserId",
+      "value": "$(abc.abcUserId)",
+      "dec": "",
+      "type": ""
+    }
+  ],
+  "outcomes": [
+    {
+      "id": 2,
+      "name": 101,
+      "value": "Successfully completed flow",
+      "tag": 11,
+      "tagName": "Success",
+      "type": "default",
+      "notification": null
+    },
+    {
+      "id": 3,
+      "name": 102,
+      "value": "Flow completed with an error",
+      "tag": 12,
+      "tagName": "Error",
+      "type": "default",
+      "notification": null
+    },
+    {
+      "id": 4,
+      "name": 103,
+      "value": "Flow ended due to an interruption",
+      "tag": 13,
+      "tagName": "Incomplete",
+      "type": "default",
+      "notification": null
+    },
+    {
+      "id": 1,
+      "name": 100,
+      "value": "Last executed node event",
+      "statusCode": "All status codes",
+      "tag": 15,
+      "tagName": "Last Execution Status",
+      "type": "default",
+      "notification": null
+    }
+  ],
+  "label": "Autoresponder",
+  "observed_at": "2026-09-08T23:58:25.886Z",
+  "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model",
+  "runtime_tested": false,
+  "redactions": "Header credentials and URL hosts redacted. Internal model properties are evidence, not a public import API."
+}

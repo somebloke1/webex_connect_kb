@@ -1,0 +1,36 @@
+{
+  "api_metadata_path": "sources/cache/developer/delete-device-app-profile.api.json",
+  "category": "Profile API v2",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f64eb",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "715534450f4fc8275ba40a421314b917f710188fd4a5823af654808f2dbbaf83",
+    "source_path": "1c1adf3a06a0851cdf721b3afb596da99cabede179d2f1667885339ec483a761",
+    "text_path": "1eb21e62ba578070b69b01b2d384d71cac6bd186dff593bb03a3fd8080d8e661"
+  },
+  "headings": [
+    "Response Codes"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/delete-device-app-profile.md",
+  "openapi_path": "sources/cache/openapi/ab9b8490f7a313b973e9267e70cf0dcdd2684f5fc87f7eac4798754ea8cce49e.json",
+  "resolved_url": "https://developers.webexconnect.io/reference/delete-device-app-profile",
+  "retrieved_at": "2026-09-08T23:31:50+00:00",
+  "sha256_api_metadata": "3bab07caec190f4bd930340f2a6932758f81452f13571820fb4695331bf4a62d",
+  "sha256_html_response": "2c40c193ed43cd52a792e45449817c36b6f7551352f2f90b0061a6a6f6bffdfc",
+  "sha256_openapi": "ab9b8490f7a313b973e9267e70cf0dcdd2684f5fc87f7eac4798754ea8cce49e",
+  "sha256_source_body": "1c1adf3a06a0851cdf721b3afb596da99cabede179d2f1667885339ec483a761",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/delete-device-app-profile.source.md",
+  "source_updated_at": "2025-11-10T20:48:37.849Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/delete-device-app-profile.txt",
+  "title": "Delete Device App Profile",
+  "url": "https://developers.webexconnect.io/reference/delete-device-app-profile",
+  "word_count": 1287,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/delete-device-app-profile.metadata.json"
+}

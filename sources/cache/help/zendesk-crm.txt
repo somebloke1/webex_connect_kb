@@ -1,0 +1,395 @@
+## 
+
+Introduction
+
+Webex Connect offers a pre-built integration node for Zendesk to make it easier for you to create a ticket in Zendesk from within an Webex Connect flow. You can also fetch the details of your existing Zendesk tickets, or add a comment to an existing ticket.
+
+This node needs to be enabled for your account and is not available by default. Please contact your account manager in case you wish to enable it for your account.
+
+ [Image: Screenshot of Zendesk CRM.] 
+Screenshot of Zendesk CRM 
+
+## 
+
+Version Supported
+
+## 📘
+Webex Connect's integration is based on Zendesk API v2.
+
+## 
+
+Pre-requisites
+
+- Client would need Zendesk account.
+
+- Callback URLs for all your pre-built integrations, custom integration configurations, that use OAuth 2.0 authorization with ‘Auth Code’ Grant Type will be updated with Webex Connect  branded URLs. This doesn’t impact functioning of any of your existing integration configurations until the Refresh Token for that integration expires or until you decide to reauthorize. In either of these two cases, you would need to start using the new Callback URL provided on Webex Connect  UI in the third-party application you have integrated with. Another example of this is OAuth 2.0 based authentication for Gmail when using SMTP for Outbound Email channel configuration which is currently available only for Webex Connect  tenants used for Webex Contact Center Integration.
+
+Please make sure your applications, firewalls, etc. do not restrict access to these new Callback URLs in case you have an internal policy/practice to add these URLs to the allow/accept/whitelist.
+
+## 
+
+Node Configuration
+
+Drag-and-drop the node on to the visual flow builder and double-click the node to configure it.
+
+## 📘
+Please note that the latest version of the Zendesk integration node that you should use is v1.1.
+
+- Select the required Method Name from the drop-down list box. Examples include methods such as Create ticket, Get ticket, Update ticket, and Create Chat The following methods are supported currently:
+
+- Create ticket- Allows to create a new ticket with a subject, relevant description and priority of the ticket.
+
+- Get ticket- Allows to retrieve a ticket by unique identification number of the ticket.
+
+- Update ticket- Allows to modify the ticket by unique identification number of the ticket.
+
+- Delete ticket- Allows to delete a specific ticket by ticket ID.
+
+E.g., you can fetch all the details of the ticket like ticket number, description, category, etc. by using the Get ticket method
+
+ [Image: Screenshot of Node Configuration] 
+Node Configuration
+
+- Select add new authorization if you're using this node for the first time. You can select an existing authorization in case you've used this node in the past and have saved authorization credentials.
+
+- Enter the subdomain for your Zendesk account. E.g., if your Zendesk account URL is mycompanyname.zendesk.com, your subdomain is 'mycompanyname'
+
+- Click Save.
+
+- Once the authorization has been completed, add the request parameters for the selected method and click save. You can pass the available Input Variables or Custom Variables as request parameters.
+
+ [Image: Screenshot of Update Ticket method configuration page.] 
+Screenshot of Update Ticket method configuration page.
+
+- 
+
+You can see the data that this node generates under the Output Variables section. These variables are available for use in subsequent nodes. E.g., Get ticket method returns ticketDetails object as the output parameter.
+
+- 
+
+You can see the list of possible node outcomes for this node in the below table. You can customize the node labels using the Edit (pencil) icon. The node exits through one of the node edges corresponding to the outcome of the node.
+
+ | 
+Node Edge
+ | 
+Node Event/Outcome
+
+ | 
+Success (green)
+
+Note: You can see this node edge only when you complete the node configuration.
+ | 
+
+- success - the flow exits through this node when the specified Zendesk method has been invoked successfully
+
+ | 
+Timeout (yellow/amber)
+ | 
+
+- onTimeout - the flow exits through this node outcome when the method could not be invoked before the timeout duration
+
+ | 
+Error (red)
+ | 
+
+- onError - the flow exits through this node outcome when there is an error in invoking the method
+
+- onInvalidData - the flow exits through this node when the data is invalid
+
+- onInvalidChoice - the flow exits through this node when the choice is invalid
+
+- onauthorizationfail - the flow exits through this node outcome when there is an error in invoking the method
+
+## 
+
+Methods and Outcomes
+
+Here’s a brief description of various methods, and corresponding output variables and node outcomes associated with each of the methods.
+
+### 
+
+Method Name - Create Ticket
+
+ [Image: Screenshot of Create Ticket method configuration page.] 
+Screenshot of Create Ticket method configuration page.
+
+ | 
+Input Variables
+ | 
+Output Variables
+ | 
+Node Outcomes
+
+ | 
+Comment Body
+
+- Specifies the description of the ticket 
+
+Priority
+
+- Specifies the nature of the ticket (Urgent, Normal)
+
+Subject
+
+- Specifies the subject of the ticket 
+ | 
+ticket_id
+
+- Contains the unique identification number of the ticket
+
+ticket_url
+ticket_via_channel
+
+ticket_created_at
+
+- Contains the details of the place the ticket is created at
+
+ticket_updated_at
+
+- Contains the details of the place the ticket is updated at
+
+ticket_subject
+
+- Contains the subject for the ticket
+
+ticket_raw_subject
+
+- Contains the raw subject for the ticket
+
+ticket_description
+
+- Contains the description for the ticket
+
+ticket_priority
+
+- Contains the priority (Urgent, Normal) for the ticket
+
+ticket_status
+
+- Contains the status for the ticket
+
+ticket_requester_id
+
+- Contains the unique identification number of the requester 
+
+ticket_submitter_id
+
+- Contains the unique identification number of the submitter
+
+ticket_assignee_id
+
+- Contains the unique identification number of the assignee 
+
+ticket_organization_id
+
+- Contains the unique identification number of the organization
+
+ticket_group_id
+
+- Contains the unique identification number of the group
+
+ticket_has_incidents
+
+ticket_brand_id
+
+- Contains the unique identification number of the brand
+
+ticket_allow_channelback
+ticket_allow_attachments
+response
+ | 
+onCreateTicketError
+
+- Contains the details if the creation of a record is failed for any reason
+
+onCreateTicketSuccess
+
+- Contains the details if the creation of a record is successful
+
+### 
+
+Method Name - Get Ticket
+
+ [Image: Screenshot of Get Ticket method configuration page.] 
+Screenshot of Get Ticket method configuration page
+
+ | 
+Input Variables
+ | 
+Output Variables
+ | 
+Node Outcomes
+
+ | 
+Ticket ID 
+
+- Specifies the unique identification number of the ticket 
+ | 
+ticket_id
+
+- Contains the unique identification number of the ticket
+
+ticket_url
+ticket_via_channel
+
+ticket_created_at
+
+- Contains the details of the place the ticket is created at
+
+ticket_updated_at
+
+- Contains the details of the place the ticket is updated at
+
+ticket_subject
+
+- Contains the subject for the ticket
+
+ticket_raw_subject
+
+- Contains the raw subject for the ticket
+
+ticket_description
+
+- Contains the description for the ticket
+
+ticket_priority
+
+- Contains the priority (Urgent, Normal) for the ticket
+
+ticket_status
+
+- Contains the status for the ticket
+
+ticket_requester_id
+
+- Contains the unique identification number of the requester 
+
+ticket_submitter_id
+
+- Contains the unique identification number of the submitter
+
+ticket_assignee_id
+
+- Contains the unique identification number of the assignee
+
+ticket_organization_id
+
+- Contains the unique identification number of the organization
+
+ticket_group_id
+
+- Contains the unique identification number of the group
+
+ticket_has_incidents
+
+ticket_is_public
+Contains the details of the ticket if it is public or not
+
+ticket_brand_id
+
+- Contains the unique identification number of the brand
+
+ticket_form_id
+
+- Contains the unique identification number of the form
+
+ticket_allow_channelback
+ticket_allow_attachments
+result_type
+result_count
+response
+ | 
+onGetTicketError
+
+- Contains the details if the fetching of a record is failed for any reason
+
+onGetTicketSuccess
+
+- Contains the details if the fetching of a record is successful
+
+### 
+
+Method Name - Update Ticket
+
+ [Image: Screenshot of Update Ticket method configuration page.] 
+Screenshot of Update Ticket method configuration page.
+
+ | 
+Input Variables
+ | 
+Output Variables
+ | 
+Node Outcomes
+
+ | 
+Ticket ID 
+
+- Specifies the unique identification number of the ticket 
+
+Comment Body
+
+- Specifies the description of the ticket 
+
+Is Public?
+Specifies is the ticket is available to viewed by all ( True or False)
+
+Status 
+
+- Specifies the status of the ticket (Solved, Pending)
+ | 
+audit_events
+
+ticket_id
+
+- Contains the unique identification number of the ticket
+
+ticket_subject
+
+- Contains the subject for the ticket
+
+ticket_requester_id
+
+- Contains the unique identification number of the requester 
+
+ticket_status
+
+- Contains the status for the ticket
+
+response
+ | 
+onUpdateTicketError
+
+- Contains the details if the updating of a record is failed for any reason
+
+onUpdateTicketSuccess
+
+- Contains the details if the updating of a record is successful
+
+### 
+
+Method Name - Delete Ticket
+
+ [Image: Screenshot of Delete Ticket method configuration page.] 
+Screenshot of Delete Ticket method configuration page.
+
+ | 
+Input Variables
+ | 
+Output Variables
+ | 
+Node Outcomes
+
+ | 
+Ticket ID 
+
+- Specifies the unique identification number of the ticket
+ | 
+None
+ | 
+onDeleteTicketError
+
+- Contains the details if the deleting of a record is failed for any reason
+
+onDeleteTicketSuccess 
+
+- Contains the details if the deleting of a record is successful

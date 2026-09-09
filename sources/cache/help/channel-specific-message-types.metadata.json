@@ -1,0 +1,31 @@
+{
+  "category": "Webex Engage Standalone Nodes",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257971",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "1fb92f50a56a411080d5c8e0616ca34dee3e176757870a95a25a819f5adb0106",
+    "source_path": "8b6b2e2e34ae421b2e56be5be586ae84daed110649919e26dd335001f9b1afea",
+    "text_path": "d221f5a7a51b429fdb909c331bc9e2a7b40d22e76dda7ccddae2ca2f32fa8008"
+  },
+  "headings": [],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/channel-specific-message-types.md",
+  "resolved_url": "https://help.webexconnect.io/docs/channel-specific-message-types",
+  "retrieved_at": "2026-09-08T23:29:27+00:00",
+  "sha256_html_response": "f0a8bb54237ca114d9126db79284da5312e1d721bd8e5e56ff0143df5a5156c4",
+  "sha256_source_body": "8b6b2e2e34ae421b2e56be5be586ae84daed110649919e26dd335001f9b1afea",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/channel-specific-message-types.source.md",
+  "source_updated_at": "2026-04-14T07:45:31.093Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/channel-specific-message-types.txt",
+  "title": "Channel specific message types - WxEngage standalone",
+  "url": "https://help.webexconnect.io/docs/channel-specific-message-types",
+  "word_count": 356,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/channel-specific-message-types.metadata.json"
+}

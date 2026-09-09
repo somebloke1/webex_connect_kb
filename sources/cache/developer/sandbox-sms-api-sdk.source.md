@@ -1,0 +1,16 @@
+> 📘 Note
+> 
+> Please check [Countries supported in Sandbox](https://developers.imiconnect.io/reference/sms-and-voice-support-in-sandbox)  for the complete list of supported countries.
+
+## Overview
+
+<<prodname>> sandbox mode offer the following APIs for SMS channel:
+
+- Send SMS API for sending an SMS message
+- Retrieve SMS Status API to retrieve the delivery status of a message sent using <<prodname>> 
+
+This apart we offer a NodeJS SDK for sending SMS messages. You can access the [SDK](https://www.npmjs.com/package/connect-sdk-node#sending-a-sms-message) on npmjs portal.
+
+## Authentication
+
+<<prodname>> sandbox mode currently supports key based authentication using Service Key. JWT Authentication that's supported as part of the production accounts isn't available in sandbox mode at the moment.

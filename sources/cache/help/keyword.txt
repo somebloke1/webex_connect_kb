@@ -1,0 +1,24 @@
+A keyword is a short text that is associated with a shortcode, reserved by a business to run specific campaigns or targeted messaging. For example, HELP on 62255. 
+
+You can request any number of keywords if you already own a shortcode. On the contrary, if you do not have a shortcode and are interested only in obtaining a keyword, a default shortcode is created along with the requested keyword. 
+
+## 
+
+Get a Keyword
+
+Select Numbers from the Assets menu and choose the Keyword option from the Get Numbers drop-down list box.
+
+ [Image: Screenshot of Getting a Keyword.] 
+Screenshot of Getting a Keyword.
+
+Select the country for which you plan to use the keyword. Depending on the country selected, you have to either enter the keyword in the  Request Description field or Check Availability of the keyword.
+
+Request Description: Provide the keyword, its detailed description, and the shortcode with which the keyword must be associated.
+
+ [Image: Screenshot of Selecting the Keyword Country.] 
+Screenshot of Selecting the Keyword Country.
+
+Check Availability: Enter the name of the keyword to search for its availability. Buy the shortcode for the specified price if it suits your requirements.
+
+ [Image: Screenshot displaying the List of Available Keywords.] 
+Screenshot displaying the List of Available Keywords.

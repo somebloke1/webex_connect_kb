@@ -1,0 +1,39 @@
+{
+  "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257992",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "be2c679be815bd56db296c027b1e560972610b371dfa7e30dc623dc6f1f9cf90",
+    "source_path": "b6fd03108bd0fed98a5088d659de94fc6833a443b0ba41f701d928d0bdf118f1",
+    "text_path": "8e31a9d8ecf6836d6b170305ad2b65c50ea927829f418c29984534d154eb12e4"
+  },
+  "headings": [
+    "📘How are Business hours fetched?",
+    "❗️Limitations",
+    "Node screenshot - Business Hours",
+    "How to configure this node",
+    "❗️Do not see your Business hours?",
+    "Output variables",
+    "Node outcomes"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/wxcc-engage-business-hours.md",
+  "resolved_url": "https://help.webexconnect.io/docs/wxcc-engage-business-hours",
+  "retrieved_at": "2026-09-08T23:29:17+00:00",
+  "sha256_html_response": "67c1e643d38d94dbcd4201f000184ae33735a36c56b6d6735b0e98af29ad38ae",
+  "sha256_source_body": "b6fd03108bd0fed98a5088d659de94fc6833a443b0ba41f701d928d0bdf118f1",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/wxcc-engage-business-hours.source.md",
+  "source_updated_at": "2026-04-15T11:57:45.163Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/wxcc-engage-business-hours.txt",
+  "title": "Business Hours - WXCC",
+  "url": "https://help.webexconnect.io/docs/wxcc-engage-business-hours",
+  "word_count": 728,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/wxcc-engage-business-hours.metadata.json"
+}

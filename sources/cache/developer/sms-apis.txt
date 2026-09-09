@@ -1,0 +1,63 @@
+Webex Connect makes it easy for you to send and receive SMS messages programmatically by offering a rich set of Restful APIs and Webhooks.
+
+## APIs for Sending SMS Messages
+
+The following APIs are available for sending SMS messages using Webex Connect:
+
+- **[Send SMS API v1](https://developers.webexconnect.io/reference/send-sms-api-v1) ** - SMS channel-specific API that is recommended to be used for scenarios wherein your use case involves sending messages only to the SMS channel. 
+- **[Send Message API v2](https://developers.webexconnect.io/reference/send-sms-message-api-v2) ** - This is a multichannel messaging API that can be used for sending messages to one or more of the supported channels. If your use case involves more than one channel and you prefer to use a common structure for that, you can use Send Message API v2. 
+
+> 📘 Note
+> 
+> Send SMS API v1 and Send Message API v2 support SMS message content up to 4000 characters. We recommend that you keep SMS messages below 450 characters for better deliverability and user experience.
+
+This apart, while [Send Message API v1](https://developers.webexconnect.io/reference/send-message-api-v1) supports SMS as one of the channels, we do not recommend using this API for any new SMS services. We continue to support it to avoid any impact on the previously configured services. We no longer add any new capabilities to this API for the SMS channel.
+
+| API                 | Recommended for                                                                 | Features Supported                                                                                                                            | What's on roadmap?                                                                                |
+| :------------------ | :------------------------------------------------------------------------------ | :-------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------ |
+| Send SMS API v1     | Use cases that involve only SMS channel.                                        | Link Shortening                                                                                                                               | Contact Policy Integration, SmartLinks, Scheduling (using sendAt option), Batching, SMS Templates |
+| Send Message API v2 | Use cases that involve SMS and other channels supported by Send Message API v2. | Contact Policy Integration, Link Shortening, Scheduling (using sendAt option), Selective Delivery Receipts, Batching, SMS Templates, Validity | -                                                                                                 |
+| Send Message API v1 | **Not recommended to be used for any new SMS services.**                        | Not recommended to be used for any new SMS services.                                                                                          | -                                                                                                 |
+
+## APIs to Retrieve the Delivery Status of a Send SMS API Request
+
+The following APIs are available for retrieving the delivery status of SMS messages sent using Webex Connect:
+
+- **[Get SMS API v1](https://developers.webexconnect.io/reference/get-sms-api-v1)** - This API can be used to track the delivery status of SMS messages sent via the SMS API v1.  
+- **[Get Message API v2](https://developers.webexconnect.io/reference/retrieve-message-v2)** - This API can be used to track the delivery status of SMS messages sent via the Send Message API v2. Additionally, this API can be used to track message delivery status for messages sent to other channels supported via this API. 
+
+## Outbound Webhooks for Tracking SMS Delivery Status
+
+Webex Connect Messaging APIs are asynchronous. The immediate response provided to confirm whether your API requests were accepted or rejected is not reflective of the final delivery status of your outbound SMS requests. If you would like to programmatically track the delivery status of your outbound SMS requests, you will need to provide a callback/notify URL as part of the API requests.Webex Connectwill send postback SMS delivery receipts to the provided URL in real time. Alternatively, you can configure such callback URLs/webhooks within the Webex Connect Outbound Webhooks configuration section. Refer to the [SMS Outbound Webhook page](https://developers.webexconnect.io/reference/sms-1) to know more about this and to view postback samples.
+
+## API reference metadata
+
+These are source metadata and examples. `api.auth` is ReadMe metadata; verify authentication in the documented headers/security scheme.
+
+```json
+{
+  "method": "get",
+  "url": "",
+  "auth": "required",
+  "params": [],
+  "examples": {
+    "codes": []
+  },
+  "results": {
+    "codes": [
+      {
+        "name": "",
+        "code": "{}",
+        "language": "json",
+        "status": 200
+      },
+      {
+        "name": "",
+        "code": "{}",
+        "language": "json",
+        "status": 400
+      }
+    ]
+  }
+}
+```

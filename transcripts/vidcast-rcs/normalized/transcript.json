@@ -1,0 +1,1725 @@
+{
+  "schema_version": 1,
+  "segments": [
+    {
+      "start": 4.029,
+      "end": 7.349,
+      "text": "Hello everybody. Thank you for joining today's webinar."
+    },
+    {
+      "start": 7.989,
+      "end": 10.989,
+      "text": "It's another public webinar for Webex developers."
+    },
+    {
+      "start": 11.949,
+      "end": 14.469,
+      "text": "We're happy to present these webinars to you every month."
+    },
+    {
+      "start": 15.389,
+      "end": 19.429,
+      "text": "We have a really good one this month, so buckle up."
+    },
+    {
+      "start": 19.588,
+      "end": 22.789,
+      "text": "Here we go. This one's gonna be from the Webex Connect team."
+    },
+    {
+      "start": 23.989,
+      "end": 31.589,
+      "text": "Been talking about RCS messaging, which I know is a pretty hot topic for a lot of people, so we're excited for this one."
+    },
+    {
+      "start": 32.55,
+      "end": 42.51,
+      "text": "But, before we get to that main presentation, I just want to share quickly some of the latest news, and this is gonna be around, the Webex contact center for developers."
+    },
+    {
+      "start": 43.989,
+      "end": 51.749,
+      "text": "You know, there's been a lot of new content and updates over on the, the contact center platform, so we decided to kind of roll them all up for you here."
+    },
+    {
+      "start": 53.27,
+      "end": 61.15,
+      "text": "Uh. But I'm gonna start with the, you know, some of the recent contact center related items that can be found on the blog section."
+    },
+    {
+      "start": 61.83,
+      "end": 63.19,
+      "text": "Could you go ahead and go to the next slide?"
+    },
+    {
+      "start": 69.549,
+      "end": 73.23,
+      "text": "Thanks. So, you know, a lot of the items can be found."
+    },
+    {
+      "start": 73.829,
+      "end": 80.99,
+      "text": "Over on the blog section of our Webex for developers portal, that's a developer.webex.com/blog."
+    },
+    {
+      "start": 82.35,
+      "end": 89.75,
+      "text": "But, starting with our 1st one here on the, from the top left there, then this is from a Webex product manager or Aruna Badachari."
+    },
+    {
+      "start": 90.59,
+      "end": 93.27,
+      "text": "In, in this blog post, he introduces the, the contact center for."
+    },
+    {
+      "start": 93.51,
+      "end": 99.189,
+      "text": "Flow designer platform, this is for orchestrating and automating workflows inside of contact center."
+    },
+    {
+      "start": 100.189,
+      "end": 109.35,
+      "text": "So he shows us how this tool enables developers to create robust data driven integrations that, you know, this is all done through a, a NO code low code interface."
+    },
+    {
+      "start": 109.95,
+      "end": 121.27,
+      "text": "So essentially flow designer has a visual canvas, and that kind of simplifies the development process to create applications and contact center that, you know, create better customer experiences."
+    },
+    {
+      "start": 122.39,
+      "end": 129.67,
+      "text": "So that's a really good one that kind of introduces everything there, but that kind of sets the stage for the, for the next one, to get, get hands on."
+    },
+    {
+      "start": 129.95,
+      "end": 131.83,
+      "text": "With the the contact center flow designer."
+    },
+    {
+      "start": 132.79,
+      "end": 142.91,
+      "text": "So we have another post by my colleague Josinini, and he shows us how to build a custom HTTP connector, and this is to enhanced service and call routing queues."
+    },
+    {
+      "start": 143.43,
+      "end": 156.069,
+      "text": "So in Joe's blog post, he shows us how to plug in 3rd party apis and that essentially enables other services to run alongside Webex's built in call handling and routing software."
+    },
+    {
+      "start": 156.83,
+      "end": 158.069,
+      "text": "So be sure to check that one out."
+    },
+    {
+      "start": 158.999,
+      "end": 173.12,
+      "text": "But, so moving on to the topic of the contact center agent desktop, so in Josephine's latest blog, he explores how to create, web component widgets for the agent desktop."
+    },
+    {
+      "start": 173.839,
+      "end": 181.479,
+      "text": "So here it kind of gives a comprehensive guide on using webpack, and that's for using, you know, for the efficient bundling of static resources."
+    },
+    {
+      "start": 182.96,
+      "end": 193.16,
+      "text": "So, you know, Joe uses a real practical example from github, and that'll get you started with custom widget integrations right off the bat, so be sure to check out that blog post too."
+    },
+    {
+      "start": 194.32,
+      "end": 203.96,
+      "text": "But the the final one mentioned here in really continuing on the same topic is from the, you know, right from the leader of the Webex developer evangelism team, Adam Weeks."
+    },
+    {
+      "start": 204.669,
+      "end": 212.069,
+      "text": "And Adam provides us with a really nice, how to article for using dynamic store variables for the agent desktop widgets."
+    },
+    {
+      "start": 213.27,
+      "end": 223.83,
+      "text": "So, you know, using the store variable optimizes the creation process, to make more efficient workspace for agents, you know, enhance their customer service, drive increased productivity."
+    },
+    {
+      "start": 224.27,
+      "end": 231.95,
+      "text": "All that good stuff, so be sure to check that one out, so, give some ideas around widgets for the agent desktop."
+    },
+    {
+      "start": 233.989,
+      "end": 241.67,
+      "text": "And then finally, I just want to make special mention the the there's been a bunch of recent entries over in the."
+    },
+    {
+      "start": 242.58,
+      "end": 257.419,
+      "text": "The contact center API change log, so over the last month or so, you know, the latest item is gonna introduce some new apis, you know, these are gonna be around for like partial updating of users, you know, partial updating of auxiliary codes in"
+    },
+    {
+      "start": 257.419,
+      "end": 260.02,
+      "text": "bulk. So go ahead and check those out."
+    },
+    {
+      "start": 260.22,
+      "end": 261.779,
+      "text": "Those are new API endpoints."
+    },
+    {
+      "start": 262.58,
+      "end": 266.74,
+      "text": "There's also a deprecation notice for the agent profile apis."
+    },
+    {
+      "start": 267.539,
+      "end": 270.339,
+      "text": "Those are being replaced by the desktop profile apis."
+    },
+    {
+      "start": 271.459,
+      "end": 277.619,
+      "text": "So be sure to check out the the contact center API change log for more information on that than all the other recent additions there."
+    },
+    {
+      "start": 279.779,
+      "end": 284.379,
+      "text": "So with that, you know, that's the Webex developer news and callouts for, for this month."
+    },
+    {
+      "start": 284.899,
+      "end": 286.859,
+      "text": "I'm gonna go ahead and pass it over to Rami."
+    },
+    {
+      "start": 287.339,
+      "end": 289.659,
+      "text": "And the Webex Connect team for our main presentation."
+    },
+    {
+      "start": 290.859,
+      "end": 292.259,
+      "text": "Rami, please take it away."
+    },
+    {
+      "start": 293.028,
+      "end": 296.349,
+      "text": "Thanks Phil. So just quick introduction."
+    },
+    {
+      "start": 296.508,
+      "end": 302.909,
+      "text": "My name is Rami Riyad I head our innovation messaging strategy for the CPAS business unit."
+    },
+    {
+      "start": 303.029,
+      "end": 311.188,
+      "text": "And today we'll talk about Webex Connect and and how to upgrade some of your SMS experiences with branded messages."
+    },
+    {
+      "start": 312.179,
+      "end": 330.619,
+      "text": "So just a quick intro, so Webex C pass, we're part of the CX group and and we have the Webex Connect which is basically our cpaas platform that allows the digital orchestration between enterprises and digital channels, and we interface with the"
+    },
+    {
+      "start": 330.619,
+      "end": 341.539,
+      "text": "contact center as well. Well to upgrade conversations to a live agent at from an inbound perspective and from an outbound perspective allowing agents to communicate with customers through digital channels."
+    },
+    {
+      "start": 344.159,
+      "end": 352.719,
+      "text": "So a lot of developers today are using Webex Connect to automate their workflows that use SMS or some of the other channels that we're going to talk about."
+    },
+    {
+      "start": 353.079,
+      "end": 360.239,
+      "text": "But this is an example and Daryl will show us more about this later on today, on how to build a flow with kind of."
+    },
+    {
+      "start": 361.109,
+      "end": 377.349,
+      "text": "A drag and drop, low code, NO code interface where as a, as a developer you're driving the nodes and building the business functionality that you want in the Webex cpass flow builder that results with what you're seeing the screen on the right, where"
+    },
+    {
+      "start": 377.349,
+      "end": 379.269,
+      "text": "that's what shows up on the user's device."
+    },
+    {
+      "start": 379.889,
+      "end": 383.689,
+      "text": "And we'll go into into a lot more detail of that later on today."
+    },
+    {
+      "start": 385.049,
+      "end": 396.289,
+      "text": "So SMS has been around for quite some time and and with the SMS expansion, we're seeing a lot more around 18.7 billion smss are sent every day."
+    },
+    {
+      "start": 396.779,
+      "end": 400.979,
+      "text": "And that messages and that messaging volume continues to grow."
+    },
+    {
+      "start": 401.459,
+      "end": 409.498,
+      "text": "We're not seeing any slowdown on SMS, actually more and more enterprises are are embracing and using SMS for the day to day operations."
+    },
+    {
+      "start": 411.498,
+      "end": 416.619,
+      "text": "SMS we'd like to say it's the most ubiquitous channel across all of them because."
+    },
+    {
+      "start": 416.779,
+      "end": 432.478,
+      "text": "So every phone has SMS. But there are a lot more options on top, and that's where Webex Connect really enables the adoption of richer digital channels to allow you as an enterprise to communicate better and more effectively with your consume."
+    },
+    {
+      "start": 432.639,
+      "end": 437.479,
+      "text": "So some of the the the channels branded text and RCS, which we'll spend some time on today."
+    },
+    {
+      "start": 438.399,
+      "end": 444.799,
+      "text": "But some of the other channels we talk about is Instagram, whatsapp, Apple Messages for business, and Facebook messenger."
+    },
+    {
+      "start": 445.799,
+      "end": 448.319,
+      "text": "Now each channel has a suitable use case that goes with it."
+    },
+    {
+      "start": 449.958,
+      "end": 454.919,
+      "text": "For, for the sake of today's webinar, we're going to spend most of our time on branded text and RCS."
+    },
+    {
+      "start": 455.339,
+      "end": 457.178,
+      "text": "And talk a little bit about it."
+    },
+    {
+      "start": 458.179,
+      "end": 471.939,
+      "text": "So really if you look at any experience today that that has an SMS component is usually coming from either a short code or a long code, and this is what it looks like really on the far left hand side."
+    },
+    {
+      "start": 472.509,
+      "end": 485.988,
+      "text": "With branded texts, we're able to take the same hundred and 60 characters with NO additional work from an enterprise perspective and show you the experience in the middle, where it's the same content, we're just adding the logo, the verify check"
+    },
+    {
+      "start": 485.988,
+      "end": 489.949,
+      "text": "mark, and then the messages coming from the brand itself."
+    },
+    {
+      "start": 490.539,
+      "end": 505.459,
+      "text": "And then once the brand is comfortable and they're in the in the channel, now we can innovate and say, ok, hey, let's take this to the next step or we can introduce cards carousels and more rich features from an, from an RCS as a channel perspective."
+    },
+    {
+      "start": 506.389,
+      "end": 508.629,
+      "text": "Rather than just a hundred and 60 characters content."
+    },
+    {
+      "start": 510.469,
+      "end": 517.989,
+      "text": "Okay, so branded test, really as we mentioned, today, this is the message you get as a consumer."
+    },
+    {
+      "start": 518.189,
+      "end": 522.108,
+      "text": "It's coming from a number, you don't usually know it unless you've saved it in your contact list."
+    },
+    {
+      "start": 523.589,
+      "end": 525.829,
+      "text": "The message on the right, it's coming to the same inbox."
+    },
+    {
+      "start": 526.868,
+      "end": 536.909,
+      "text": "It's coming from Webex Connect, it's You see the blue check mark, so you know who you're talking with, and that logo shows up in your inbox when you're trying to retrieve the conversation."
+    },
+    {
+      "start": 537.349,
+      "end": 544.909,
+      "text": "It allows the brand to control the branding and appearance, strengthen the consumer confidence with the check mark and then increase engagement in response rates."
+    },
+    {
+      "start": 546.538,
+      "end": 547.819,
+      "text": "From an engagement perspective."
+    },
+    {
+      "start": 548.419,
+      "end": 550.739,
+      "text": "Now, why would we use branded text?"
+    },
+    {
+      "start": 550.899,
+      "end": 563.259,
+      "text": "Like, it, it really changes the the whole dynamic between interacting from a sender ID to a verified business name and logo that appears in your inbox."
+    },
+    {
+      "start": 565.049,
+      "end": 574.969,
+      "text": "We've done this with several customers around the world and and really there was NO objection in terms of this is higher security, this is better branding, this is verified."
+    },
+    {
+      "start": 575.129,
+      "end": 580.688,
+      "text": "And with a lot of spam going on in messaging today, this is giving an enterprise away."
+    },
+    {
+      "start": 581.729,
+      "end": 584.888,
+      "text": "That actually make sure that the consumer trusts who they're talking about."
+    },
+    {
+      "start": 587.809,
+      "end": 597.248,
+      "text": "So it's really from a, from a comparison perspective from SMS to branded text, today SMS is ubiquitous."
+    },
+    {
+      "start": 599.489,
+      "end": 616.249,
+      "text": "Branded text is available on Android today, but for those of you following this space closely, Apple announced a couple of times in November last year and then again at their developer conference in June, that RCS is coming to iOS in 2024."
+    },
+    {
+      "start": 617.478,
+      "end": 624.759,
+      "text": "So we're expecting more almost full coverage within the next six to twelve months in the market."
+    },
+    {
+      "start": 625.839,
+      "end": 634.919,
+      "text": "With SMS we got delivery receipts with our with branded text, we get the same, we got it in the same inbox, but now with branded texts we also get read receipts."
+    },
+    {
+      "start": 635.399,
+      "end": 644.519,
+      "text": "And we say alpha two way means that it actually the message is coming from a sender rather than like a brand name or display name rather than a phone number."
+    },
+    {
+      "start": 644.958,
+      "end": 647.958,
+      "text": "And to end encryption is supported today it's verified, it's branded."
+    },
+    {
+      "start": 648.918,
+      "end": 655.239,
+      "text": "An agent fallback currently is not required in branded text, it is required in some other channels like Instagram and."
+    },
+    {
+      "start": 655.519,
+      "end": 662.599,
+      "text": "Just for business. The way we'd like to talk about this is that also it's a zero technical change."
+    },
+    {
+      "start": 662.758,
+      "end": 672.959,
+      "text": "If you're an existing customer today using Webex Connect for your SMS traffic, all you need to do is really call your account manager and and say I want to upgrade to branded text."
+    },
+    {
+      "start": 674.459,
+      "end": 690.258,
+      "text": "We handle everything that from your SMS program today, we uplift it within the platform and then we choose whether it's an SMS or RCS message to be delivered to the device based on the device capabilities, replies and everything else comes back into"
+    },
+    {
+      "start": 690.258,
+      "end": 694.299,
+      "text": "your existing SMS stream, so if you have any flows built using our flow builder."
+    },
+    {
+      "start": 694.499,
+      "end": 704.018,
+      "text": "Or you have your back end systems expecting an SMS response, you're still getting the same format so that doesn't change your, your implementation and your existing integrations."
+    },
+    {
+      "start": 707.659,
+      "end": 713.578,
+      "text": "We did launch this with, a large financial institution in North America."
+    },
+    {
+      "start": 714.719,
+      "end": 722.399,
+      "text": "They were basically a large bank that wanted to grand their messaging, they were doing one time passwords and banking alerts."
+    },
+    {
+      "start": 723.479,
+      "end": 729.878,
+      "text": "We started with, we start, I think there's a question or did I."
+    },
+    {
+      "start": 730.319,
+      "end": 732.958,
+      "text": "Yeah, sorry, I was just looking at the questions."
+    },
+    {
+      "start": 734.159,
+      "end": 745.319,
+      "text": "We started with just taking their SMS traffic over, they repointed their apis to us, and from there we started doing the branded text upgrade."
+    },
+    {
+      "start": 745.439,
+      "end": 750.079,
+      "text": "So basically every consumer that was able to receive RCS was getting their one time."
+    },
+    {
+      "start": 750.399,
+      "end": 756.039,
+      "text": "Passwords from that bank, they're getting the verified check mark, and then we upgraded their banking notifications as well."
+    },
+    {
+      "start": 757.429,
+      "end": 764.229,
+      "text": "Again, the customer experience was highly enriched and enhanced by that logo just knowing that the message is coming from their bank."
+    },
+    {
+      "start": 765.428,
+      "end": 774.069,
+      "text": "And there was a really enhanced improvement in the consumer safety and trust factors that a richer and more secure channel provides."
+    },
+    {
+      "start": 778.609,
+      "end": 782.929,
+      "text": "A little bit about RCS. So RCS is the protocol that we use to enable branded text."
+    },
+    {
+      "start": 783.329,
+      "end": 786.168,
+      "text": "It's verified by carriers or by Google depending on where you are."
+    },
+    {
+      "start": 786.449,
+      "end": 788.769,
+      "text": "It's branded, it's encrypted in android messages."
+    },
+    {
+      "start": 789.209,
+      "end": 792.369,
+      "text": "It goes to your inbox, so there's NO additional app you need to install."
+    },
+    {
+      "start": 793.289,
+      "end": 797.328,
+      "text": "There's a growing audience as new phones and, and Apple we're launching out."
+    },
+    {
+      "start": 798.929,
+      "end": 802.809,
+      "text": "I think we have a Slido so I'd like to to put it out."
+    },
+    {
+      "start": 802.969,
+      "end": 805.889,
+      "text": "There's a fewer, you can see our Slido."
+    },
+    {
+      "start": 806.799,
+      "end": 810.559,
+      "text": "Or please log into the Slido to to to look at it."
+    },
+    {
+      "start": 810.759,
+      "end": 812.878,
+      "text": "But RCS has been there, it's been growing."
+    },
+    {
+      "start": 813.318,
+      "end": 817.118,
+      "text": "I think the 1st question, what stopped you from using RCS for business messaging?"
+    },
+    {
+      "start": 818.038,
+      "end": 822.479,
+      "text": "So if you can, I will collect your responses and I'll show you guys some of the responses we got."
+    },
+    {
+      "start": 827.929,
+      "end": 834.049,
+      "text": "So some of the capabilities that we have, for RCS, so again, it's the trusted, the branding."
+    },
+    {
+      "start": 835.329,
+      "end": 843.648,
+      "text": "What I like about it is you can actually be creative in terms of, you don't have to send everything in a hundred and 60 characters, meaning that, it is."
+    },
+    {
+      "start": 844.409,
+      "end": 853.369,
+      "text": "The the digital cards, you can build a rich card, you can build the buttons on it, there are better metrics in there, so you can get read receipts so you can know when your campaigns are effective."
+    },
+    {
+      "start": 853.968,
+      "end": 860.648,
+      "text": "The customer safety, the channel is very the the sender is verified, and of course you can send richer media, meaning that."
+    },
+    {
+      "start": 862.048,
+      "end": 867.129,
+      "text": "You can send images, videos, colors, it's it becomes a richer experience."
+    },
+    {
+      "start": 867.288,
+      "end": 872.168,
+      "text": "And then someone like me, it's very easy and convenient to tap rather than type."
+    },
+    {
+      "start": 872.329,
+      "end": 877.529,
+      "text": "So if you see on number six, you get suggested actions or or suggested replies."
+    },
+    {
+      "start": 878.739,
+      "end": 888.339,
+      "text": "Where you can just tap a reply or an action, so whether it's opened a URL or say yes, it makes that engagement a lot of, a lot easier."
+    },
+    {
+      "start": 888.698,
+      "end": 894.179,
+      "text": "So I think I'm seeing the results of the Slido, just pop it up here."
+    },
+    {
+      "start": 895.558,
+      "end": 906.598,
+      "text": "Technical complexity is looks like it's the number one winner, lack of awareness about RCS concerns about cost, integration challenges, concerns about reach."
+    },
+    {
+      "start": 906.759,
+      "end": 912.559,
+      "text": "So I think from technical complexity, I think that's where a tool like Webex Connect allows you to build this."
+    },
+    {
+      "start": 913.239,
+      "end": 923.599,
+      "text": "In a low code, NO code where you're uploading your images, designing your conversation in a drag and drop fashion and just connecting nodes, and then the platform takes care about all that complexity behind the scenes."
+    },
+    {
+      "start": 924.838,
+      "end": 926.918,
+      "text": "Lack of awareness, again, we're doing a lot of work."
+    },
+    {
+      "start": 927.399,
+      "end": 932.359,
+      "text": "The whole ecosystem is, is looking at RCS and how to make that a better channel."
+    },
+    {
+      "start": 932.599,
+      "end": 938.919,
+      "text": "I think we. The apple announcement that will change a little bit because now people are going to see RCS everywhere."
+    },
+    {
+      "start": 940.479,
+      "end": 945.399,
+      "text": "From a branded text perspective, I think from a cost perspective, it's almost the same as your SMS."
+    },
+    {
+      "start": 947.198,
+      "end": 956.119,
+      "text": "We want to, we want to enhance and we want the increase the adoption about RCS and and just grow it further from there."
+    },
+    {
+      "start": 962.948,
+      "end": 977.429,
+      "text": "So the discovery really from RCS is one, it's it's phone number based, so you can send out a message again the same way you send an SMS, we can upgrade it to say, you can send an RCS the same way using the phone number or we're seeing more and more"
+    },
+    {
+      "start": 977.429,
+      "end": 982.389,
+      "text": "like QR codes and deep links where they're embedded in your website, your storefronts and digital."
+    },
+    {
+      "start": 982.669,
+      "end": 985.549,
+      "text": "Signage where people just scan a QR to start a conversation."
+    },
+    {
+      "start": 988.969,
+      "end": 1005.529,
+      "text": "So really with Webex Connect, you can create your designs, whether you're creating the SMS flow or your RCS flow and then within Webex Connect and then the, the, the platform allows and is intelligent enough to do a capability check within the flow"
+    },
+    {
+      "start": 1005.529,
+      "end": 1008.649,
+      "text": "or even as a branded text to send out either."
+    },
+    {
+      "start": 1008.649,
+      "end": 1012.889,
+      "text": "There's an SMS or as an RCS message, and allowed."
+    },
+    {
+      "start": 1013.439,
+      "end": 1016.598,
+      "text": "The users to fall back between channels and manage the responses as well."
+    },
+    {
+      "start": 1020.359,
+      "end": 1028.479,
+      "text": "One of the examples we talk about is in the UK, we launched this with southern council, one of the 1st councils, and this was really."
+    },
+    {
+      "start": 1030.059,
+      "end": 1031.179,
+      "text": "It was a difficult conversation."
+    },
+    {
+      "start": 1031.459,
+      "end": 1043.619,
+      "text": "It was about people that are delinquent on their tax payments and they're trying to send them a message saying, it's always when you send a message saying we want money, then you don't get the best response back."
+    },
+    {
+      "start": 1045.218,
+      "end": 1048.779,
+      "text": "But in that collection I think engagement and trust."
+    },
+    {
+      "start": 1049.219,
+      "end": 1057.379,
+      "text": "Was the biggest factor, and they saw 90 % of the consumers were reassured and better served that they know who they're talking to."
+    },
+    {
+      "start": 1057.979,
+      "end": 1062.099,
+      "text": "And it was just not a random number saying, click on this link to pay money."
+    },
+    {
+      "start": 1063.619,
+      "end": 1070.219,
+      "text": "60 % there was an increase of people that chose to engage and in debt collection that is huge."
+    },
+    {
+      "start": 1071.618,
+      "end": 1084.899,
+      "text": "And of course 55 %. Increase in the people choosing to pay in, and when we say pay, they offer different payment plans as part of that, whether it's a one time payment or or installments or direct depart."
+    },
+    {
+      "start": 1085.019,
+      "end": 1090.179,
+      "text": "So giving the people the options made actually that possible and, and increasing the payment rates."
+    },
+    {
+      "start": 1093.268,
+      "end": 1097.549,
+      "text": "Smarty was a, a low cost for low cost provider in the UK as well."
+    },
+    {
+      "start": 1098.269,
+      "end": 1109.868,
+      "text": "Again, they saw a 500 % uplift in campaign engagement, a hundred percent increase of engagement over email, and their 70 % of their trust pilot reviews are now five star ratings."
+    },
+    {
+      "start": 1110.788,
+      "end": 1120.949,
+      "text": "Which was huge for them and and again it drives more usage, it drives more engagement with the consumers I'll I'll try to answer some of these questions that came in."
+    },
+    {
+      "start": 1121.148,
+      "end": 1123.549,
+      "text": "I think when will branded text be available on Apple devices?"
+    },
+    {
+      "start": 1125.108,
+      "end": 1129.149,
+      "text": "Apple didn't confirm or deny anything, but we we have a guess that this."
+    },
+    {
+      "start": 1129.889,
+      "end": 1132.849,
+      "text": "Could be available in, in the next iOS release in September."
+    },
+    {
+      "start": 1134.289,
+      "end": 1136.809,
+      "text": "Well the session I think is being recorded and it will be shared."
+    },
+    {
+      "start": 1138.649,
+      "end": 1149.369,
+      "text": "Phones today, a lot of Android phones are compatible with branded texts and we continue to see like the latest Samsung devices are compatible and then we'll hopefully see more iOS devices compatible with branded text as we go along."
+    },
+    {
+      "start": 1152.499,
+      "end": 1158.739,
+      "text": "Again, this was the screenshot that was shared during the developer conference and is available on the iOS page."
+    },
+    {
+      "start": 1159.059,
+      "end": 1170.418,
+      "text": "You'll see now people are, are, more aware of this because they now see as an I/O, as an iOS user that you're able to send this messages RCS."
+    },
+    {
+      "start": 1170.859,
+      "end": 1179.499,
+      "text": "Your image resolutions. For higher, there's tap backs and likes and all that, that there's just a lot of enhanced functionality even from a peer to peer perspective."
+    },
+    {
+      "start": 1181.059,
+      "end": 1189.739,
+      "text": "Now if everything goes as planned and Apple does release ADP messaging I think we'll see a massive change in reach once this goes live."
+    },
+    {
+      "start": 1191.849,
+      "end": 1199.048,
+      "text": "I think we had a 2nd Slido question, if RCS business messages become supported on Apple, would this be the tipping point?"
+    },
+    {
+      "start": 1201.769,
+      "end": 1206.248,
+      "text": "Would this be the tipping point for adopting the channel into the mix that you're currently using?"
+    },
+    {
+      "start": 1207.009,
+      "end": 1211.489,
+      "text": "So we'll give it a couple of minutes to to gather some responses here while we go to the next slide."
+    },
+    {
+      "start": 1212.529,
+      "end": 1228.888,
+      "text": "Daryl I think you're up, I think sorry before you move, we're still getting some answers on Slido, I think 33 % of the responses are saying yes that this maybe the tipping point and."
+    },
+    {
+      "start": 1229.639,
+      "end": 1234.119,
+      "text": "Well, then move 5050. Let me put the slides up right now."
+    },
+    {
+      "start": 1237.239,
+      "end": 1244.119,
+      "text": "It's going back and forth between don't NO and yes, which is a good because the the it hasn't been a NO yet."
+    },
+    {
+      "start": 1245.959,
+      "end": 1254.919,
+      "text": "So I I think that means is I think with Apple joining it gives us more of a ubiquitous channel to offer that rich experience for for all users and all devices."
+    },
+    {
+      "start": 1257.359,
+      "end": 1261.119,
+      "text": "Daryl switch over to you. Sounds good."
+    },
+    {
+      "start": 1262.078,
+      "end": 1263.549,
+      "text": "Thanks Formmy. Appreciate that."
+    },
+    {
+      "start": 1265.549,
+      "end": 1275.989,
+      "text": "Hi everyone, just gonna be discussing here and then showing our, our ability to utilize RCS in a flow."
+    },
+    {
+      "start": 1277.588,
+      "end": 1282.549,
+      "text": "So how this demo is gonna go is we're gonna set up the RCS channel within the Webex Connect platform."
+    },
+    {
+      "start": 1283.069,
+      "end": 1291.389,
+      "text": "I'm gonna show you how to build and utilize those nodes that Rami had spoken about, and, we're gonna see RCS in action as well."
+    },
+    {
+      "start": 1291.548,
+      "end": 1295.189,
+      "text": "So, I'm gonna do a very high level over the flow."
+    },
+    {
+      "start": 1295.429,
+      "end": 1297.949,
+      "text": "I'm gonna show it to you in action and then we're gonna go to a little deeper."
+    },
+    {
+      "start": 1298.149,
+      "end": 1302.709,
+      "text": "I'll open up the nodes and things like that and we'll, we'll kind of dig into what we're."
+    },
+    {
+      "start": 1303.069,
+      "end": 1304.509,
+      "text": "We're looking at and what we're doing."
+    },
+    {
+      "start": 1304.669,
+      "end": 1310.828,
+      "text": "So, with that said, I will share my workflow here, my apologies."
+    },
+    {
+      "start": 1313.019,
+      "end": 1324.859,
+      "text": "There we go. So, basically what's happening here is this is a fairly typical deployment of RCS."
+    },
+    {
+      "start": 1325.179,
+      "end": 1328.538,
+      "text": "We're receiving a communication from a back end system."
+    },
+    {
+      "start": 1329.619,
+      "end": 1335.138,
+      "text": "It's gonna do an RCS capability check based on that, it'll either go RCS or SMS."
+    },
+    {
+      "start": 1335.698,
+      "end": 1338.579,
+      "text": "We're gonna receive some data and then we're gonna process a payment."
+    },
+    {
+      "start": 1338.739,
+      "end": 1340.139,
+      "text": "So what does that look like?"
+    },
+    {
+      "start": 1341.699,
+      "end": 1342.858,
+      "text": "Well, that'll look like this."
+    },
+    {
+      "start": 1343.139,
+      "end": 1347.259,
+      "text": "I'm gonna I'm gonna use Postman in the background to trigger this flow."
+    },
+    {
+      "start": 1348.259,
+      "end": 1354.179,
+      "text": "And like I said before, after we see it in action, then we'll, we'll go back and take a look at how this was built."
+    },
+    {
+      "start": 1354.339,
+      "end": 1360.579,
+      "text": "So I do have my message here and you can see, great, build rich experiences with Webex Connect."
+    },
+    {
+      "start": 1360.778,
+      "end": 1362.778,
+      "text": "Hi Daryl, thanks for checking out Webex Connect."
+    },
+    {
+      "start": 1363.058,
+      "end": 1364.739,
+      "text": "Respond here with yes or NO."
+    },
+    {
+      "start": 1365.179,
+      "end": 1370.019,
+      "text": "Now, to Rami's slides. As earlier, you can see we have our logo."
+    },
+    {
+      "start": 1370.379,
+      "end": 1372.579,
+      "text": "It's interactive. We can select that."
+    },
+    {
+      "start": 1372.698,
+      "end": 1379.298,
+      "text": "So if I wanted to call the business, I could call the business via my dialer app, I could visit the website et cetera."
+    },
+    {
+      "start": 1380.619,
+      "end": 1389.938,
+      "text": "So with this, I'm going to respond with one of our chips or predefined yes or NO, built into the card, and here now you can see we have a carousel."
+    },
+    {
+      "start": 1390.098,
+      "end": 1398.459,
+      "text": "So this is another. Thing that RCS can provide, it's it's carousels, rich media, rich cri richer content and security."
+    },
+    {
+      "start": 1398.959,
+      "end": 1400.879,
+      "text": "Every step of this message is secured."
+    },
+    {
+      "start": 1401.159,
+      "end": 1405.919,
+      "text": "I can anytime click on the Webex logo and be brought to their, their card."
+    },
+    {
+      "start": 1406.079,
+      "end": 1410.678,
+      "text": "So in this case, I'm being asked which, which version of Webex Connect do I want to upgrade to?"
+    },
+    {
+      "start": 1410.959,
+      "end": 1412.879,
+      "text": "Well, I won't want the premium version."
+    },
+    {
+      "start": 1412.999,
+      "end": 1415.039,
+      "text": "So I'm gonna select the option one there."
+    },
+    {
+      "start": 1415.749,
+      "end": 1421.789,
+      "text": "What's gonna happen now is it's gonna take my option, it's gonna look up the pricing for it, things like that."
+    },
+    {
+      "start": 1422.028,
+      "end": 1423.309,
+      "text": "Mind you, this isn't real pricing."
+    },
+    {
+      "start": 1423.629,
+      "end": 1425.388,
+      "text": "This is just example demo pricing."
+    },
+    {
+      "start": 1426.388,
+      "end": 1431.589,
+      "text": "But right now I've been given a Securio payment link to go and pay for my ServiceNow."
+    },
+    {
+      "start": 1431.788,
+      "end": 1435.429,
+      "text": "So, this is us integrating with the payment service provider."
+    },
+    {
+      "start": 1435.669,
+      "end": 1444.909,
+      "text": "Again, because it's branded, because I can select that Webex logo, I know that it's the business sending me that, it's a verified check mark, all of those things."
+    },
+    {
+      "start": 1445.109,
+      "end": 1449.669,
+      "text": "So, we'll select that payment method."
+    },
+    {
+      "start": 1451.228,
+      "end": 1453.389,
+      "text": "Fantastic. I will go ahead and pay for."
+    },
+    {
+      "start": 1454.269,
+      "end": 1461.109,
+      "text": "My upgrade and the upgrade is not a hundred dollars, like I said, but you know, for demo purposes."
+    },
+    {
+      "start": 1464.309,
+      "end": 1466.589,
+      "text": "And this is not a real credit card number either, so."
+    },
+    {
+      "start": 1474.189,
+      "end": 1479.589,
+      "text": "So it'll go through the process, it'll."
+    },
+    {
+      "start": 1480.619,
+      "end": 1492.859,
+      "text": "It'll get back to me saying with an OTP now, so I'll just enter my OTP, verify my transaction, and we're all done."
+    },
+    {
+      "start": 1493.018,
+      "end": 1497.459,
+      "text": "So I have successfully purchased my upgrade and in a few short minutes."
+    },
+    {
+      "start": 1498.039,
+      "end": 1501.679,
+      "text": "I'm gonna receive a notification saying, hey, your payment is complete."
+    },
+    {
+      "start": 1502.119,
+      "end": 1504.519,
+      "text": "Thanks for your purchase. Now, how did we make this?"
+    },
+    {
+      "start": 1504.718,
+      "end": 1506.759,
+      "text": "How did this happen? How does this all work?"
+    },
+    {
+      "start": 1506.959,
+      "end": 1512.359,
+      "text": "So, I'm gonna go in and I'm gonna go through some of the pieces here."
+    },
+    {
+      "start": 1513.729,
+      "end": 1515.769,
+      "text": "That made this demo possible."
+    },
+    {
+      "start": 1517.369,
+      "end": 1521.048,
+      "text": "So, as Rami said, Webex Connect is a low code, NO code platform."
+    },
+    {
+      "start": 1521.249,
+      "end": 1525.888,
+      "text": "We have a set of pre built functions on the left here in a palette that you can see."
+    },
+    {
+      "start": 1527.129,
+      "end": 1530.049,
+      "text": "This is our low code, NO code kind of solution."
+    },
+    {
+      "start": 1531.208,
+      "end": 1532.889,
+      "text": "You drag and drop what we call nodes."
+    },
+    {
+      "start": 1533.169,
+      "end": 1537.889,
+      "text": "Which are like I said, the pre built functions and you can double click on them and fill in the blanks essentially."
+    },
+    {
+      "start": 1538.049,
+      "end": 1543.768,
+      "text": "So in this scenario I've created a webhook that my back end system or in this case postman connects to."
+    },
+    {
+      "start": 1544.339,
+      "end": 1548.979,
+      "text": "And I now have a variable set of data that I'm expecting as a payload to be received."
+    },
+    {
+      "start": 1549.178,
+      "end": 1552.779,
+      "text": "So in this, you can see 1st name, last name, number, and cruise."
+    },
+    {
+      "start": 1553.018,
+      "end": 1555.779,
+      "text": "This was previously used as a cruise for one of our clients."
+    },
+    {
+      "start": 1556.058,
+      "end": 1561.339,
+      "text": "We did demonstrate the ability to upgrade cruise rooms on a crews, right?"
+    },
+    {
+      "start": 1561.538,
+      "end": 1563.819,
+      "text": "So you could think of how many ways this could be used."
+    },
+    {
+      "start": 1564.289,
+      "end": 1576.649,
+      "text": "And because it's an out reached channel or a channel being reached out with validation and verification, you know, customers know that, you know, if they give up their credit card number or things like that, that it's not being used in a negative"
+    },
+    {
+      "start": 1576.649,
+      "end": 1580.689,
+      "text": "way. So with that said, RCS capability check."
+    },
+    {
+      "start": 1581.179,
+      "end": 1583.939,
+      "text": "We go in, we check against that phone number, right?"
+    },
+    {
+      "start": 1585.179,
+      "end": 1587.779,
+      "text": "Validate that it is RCS capable."
+    },
+    {
+      "start": 1587.938,
+      "end": 1593.938,
+      "text": "On the branch node, this is our if then logic, RCS, we take a look here."
+    },
+    {
+      "start": 1594.339,
+      "end": 1598.679,
+      "text": "Is it up to true yes? If it is, it goes down the RCS path."
+    },
+    {
+      "start": 1598.799,
+      "end": 1602.399,
+      "text": "If it's not, it'll go down the SMS path."
+    },
+    {
+      "start": 1602.559,
+      "end": 1606.479,
+      "text": "So if it's none of the above, you can see it's going down here, if it's RCS it goes here."
+    },
+    {
+      "start": 1607.399,
+      "end": 1610.038,
+      "text": "This is where the fun stuff comes in now with RCS."
+    },
+    {
+      "start": 1610.279,
+      "end": 1615.879,
+      "text": "So, our destination type this destination type is always gonna be the MSISDN."
+    },
+    {
+      "start": 1616.399,
+      "end": 1622.059,
+      "text": "So phone number. And now we can start selecting the type of cards we want to present."
+    },
+    {
+      "start": 1622.178,
+      "end": 1624.619,
+      "text": "So we can do a simple text based card."
+    },
+    {
+      "start": 1624.859,
+      "end": 1636.739,
+      "text": "We could do a file, we could do a rich card, a carousel card, as I showed you in my demo, a dynamic carousel where the variables are added as as based on the type of information provided in that payload."
+    },
+    {
+      "start": 1637.419,
+      "end": 1639.738,
+      "text": "We can also. To provide typing indicators and things like that."
+    },
+    {
+      "start": 1641.619,
+      "end": 1656.219,
+      "text": "The media that's used here, I just grabbed from our media manager in Webex Connect, so you can upload pictures, videos, things like that to media manager, and then it will provide you a URL that you can use."
+    },
+    {
+      "start": 1656.659,
+      "end": 1663.899,
+      "text": "Don't have to use. Media manager, but if you are going to be supplying a URL here, it does have to be publicly facing."
+    },
+    {
+      "start": 1665.178,
+      "end": 1667.939,
+      "text": "And you can see my title for the card and then just the text."
+    },
+    {
+      "start": 1668.219,
+      "end": 1670.739,
+      "text": "So, this is a fun part as well."
+    },
+    {
+      "start": 1670.899,
+      "end": 1673.019,
+      "text": "Yes and NO. So those were the suggestions."
+    },
+    {
+      "start": 1673.929,
+      "end": 1680.769,
+      "text": "We call them chips. You can add suggestions simply and then, you know, validate what type of, chip you want to add."
+    },
+    {
+      "start": 1680.888,
+      "end": 1688.128,
+      "text": "So these can be opening urls, adding a calendar event dialing phone number, and, you know, for my case, we use the simple reply."
+    },
+    {
+      "start": 1689.049,
+      "end": 1691.768,
+      "text": "In that reply, how does that get processed?"
+    },
+    {
+      "start": 1691.929,
+      "end": 1701.168,
+      "text": "Well, on the receive node, when we receive that information back from the person, we're receiving it from their phone number and we're receiving a post back response."
+    },
+    {
+      "start": 1701.769,
+      "end": 1714.789,
+      "text": "So when you select. The, the chip here, when you select reply, you'll see that you have a title, that's what will appear as the button, and then you have a post back."
+    },
+    {
+      "start": 1715.068,
+      "end": 1720.909,
+      "text": "So very important to note that when you're receiving that information, you're receiving it as post back."
+    },
+    {
+      "start": 1721.419,
+      "end": 1728.098,
+      "text": "Now, based on that post back we receive, and that is the post back data, if it's the S, it'll continue down the path."
+    },
+    {
+      "start": 1728.339,
+      "end": 1731.379,
+      "text": "If it's NO, it can go down another path, i."
+    },
+    {
+      "start": 1731.619,
+      "end": 1740.739,
+      "text": "E. SMS et cetera. In the next slide here, this is where we have the carousel, so to build a carousel very easy."
+    },
+    {
+      "start": 1742.039,
+      "end": 1743.959,
+      "text": "Select your message type carousel card."
+    },
+    {
+      "start": 1744.118,
+      "end": 1750.439,
+      "text": "And then again we have our media that I grabbed from our media manager, title, response."
+    },
+    {
+      "start": 1750.718,
+      "end": 1754.998,
+      "text": "Now, this is where it gets tricky, so there's a little arrow here on the on the right."
+    },
+    {
+      "start": 1755.279,
+      "end": 1759.279,
+      "text": "If you want to add another card or fill in that other card for that carousel."
+    },
+    {
+      "start": 1759.739,
+      "end": 1763.539,
+      "text": "That's where you would select it and then fill in the information there and your chip."
+    },
+    {
+      "start": 1763.859,
+      "end": 1770.019,
+      "text": "If you wanted to add a 3rd 4th or 5th, you could do so right here by clicking on the little plus sign."
+    },
+    {
+      "start": 1770.338,
+      "end": 1772.579,
+      "text": "It'll add another card to your carousel."
+    },
+    {
+      "start": 1775.019,
+      "end": 1779.579,
+      "text": "From there, we're gonna select the receive node and the receive node is gonna receive a post."
+    },
+    {
+      "start": 1779.779,
+      "end": 1788.779,
+      "text": "Back response. And based on that post back response, we either go down the path of doing the upgrade or not doing the upgrade."
+    },
+    {
+      "start": 1789.019,
+      "end": 1798.539,
+      "text": "In this case we did the upgrade, and again it was a simple text card this time and again just straight text."
+    },
+    {
+      "start": 1799.349,
+      "end": 1811.349,
+      "text": "Very similar to a text message, as Rami was saying, this is actually the form we use for branded text, and you can see even in the card builder, you can actually have a preview of what that will look like on the user's device."
+    },
+    {
+      "start": 1813.429,
+      "end": 1818.829,
+      "text": "So we've had a delay node here and then I'm doing an API lookup to our payment provider."
+    },
+    {
+      "start": 1819.509,
+      "end": 1829.349,
+      "text": "So I I do do a lookup to the payment provider, I see the debt amount and everything else, and then here I'm receiving that via custom payload that we get from our payment provider."
+    },
+    {
+      "start": 1829.628,
+      "end": 1834.949,
+      "text": "And then from there, we parse out that data and provide the user a payment link."
+    },
+    {
+      "start": 1836.569,
+      "end": 1842.328,
+      "text": "That payment link enables them to go to a PCI compliance payment window to go ahead and pay for their service."
+    },
+    {
+      "start": 1842.769,
+      "end": 1854.809,
+      "text": "Again, we can integrate with any payment provider as long as there's an API for us to interface with like you saw here, and, you know, clearly obviously a little bit more secure get clicking on that link and providing a credit card, things like that"
+    },
+    {
+      "start": 1854.809,
+      "end": 1856.369,
+      "text": "in the payment like link because."
+    },
+    {
+      "start": 1856.689,
+      "end": 1858.329,
+      "text": "This is a verified message."
+    },
+    {
+      "start": 1858.449,
+      "end": 1870.168,
+      "text": "And here again, another received, this is the payment success and you will see here on my phone, my apologies, your payment is complete."
+    },
+    {
+      "start": 1870.328,
+      "end": 1874.889,
+      "text": "So it did respond letting me know that my payment was complete and that the transaction was completed as well."
+    },
+    {
+      "start": 1875.999,
+      "end": 1884.639,
+      "text": "So that was done, and then that that's this message here you see here."
+    },
+    {
+      "start": 1885.279,
+      "end": 1889.198,
+      "text": "Payment is complete. So that all occurs in, Webex connect."
+    },
+    {
+      "start": 1889.679,
+      "end": 1892.919,
+      "text": "Now, how do we, how do we build this RCS card?"
+    },
+    {
+      "start": 1893.039,
+      "end": 1894.319,
+      "text": "Like how do I get this branding?"
+    },
+    {
+      "start": 1894.439,
+      "end": 1895.799,
+      "text": "Where, where do we go? For that."
+    },
+    {
+      "start": 1895.959,
+      "end": 1896.879,
+      "text": "How do, how do we do that?"
+    },
+    {
+      "start": 1897.359,
+      "end": 1906.599,
+      "text": "Well, we do have in the app assets and app section, you can click on create a new app and it'll be an RCS app."
+    },
+    {
+      "start": 1906.959,
+      "end": 1910.039,
+      "text": "You'd have to go through and build this whole section here as you see."
+    },
+    {
+      "start": 1911.079,
+      "end": 1913.159,
+      "text": "So you'd have to add in the pictures."
+    },
+    {
+      "start": 1913.318,
+      "end": 1915.518,
+      "text": "Now these pictures wouldn't come from media manager."
+    },
+    {
+      "start": 1915.839,
+      "end": 1921.718,
+      "text": "These would be ones you would upload, and they do have to follow strict sizing guidelines as you see here."
+    },
+    {
+      "start": 1921.919,
+      "end": 1924.879,
+      "text": "So you wouldn't be able to upload them unless they follow those guidelines."
+    },
+    {
+      "start": 1925.309,
+      "end": 1930.749,
+      "text": "You'd have to select the color, your asset name, things like that, and then down below is where you get all those links."
+    },
+    {
+      "start": 1930.909,
+      "end": 1938.669,
+      "text": "So if you wanted to add a link, e.g., you could add a website and use that website piece as a link to open an app, e.g.."
+    },
+    {
+      "start": 1938.828,
+      "end": 1944.869,
+      "text": "So if your client had an app, say it's a travel company an airline and their airline app is available there."
+    },
+    {
+      "start": 1945.309,
+      "end": 1949.709,
+      "text": "You can put in a deep link to open the app based on the operating system that they're using."
+    },
+    {
+      "start": 1949.909,
+      "end": 1954.549,
+      "text": "And then privacy terms and privacy policy and terms of service."
+    },
+    {
+      "start": 1955.229,
+      "end": 1961.749,
+      "text": "And then whenever we're building one of these for testing, we have to add our whitelisted numbers that we can test against."
+    },
+    {
+      "start": 1962.029,
+      "end": 1963.909,
+      "text": "In this case, you can see minor added there."
+    },
+    {
+      "start": 1964.149,
+      "end": 1968.668,
+      "text": "And then that. That's it. Once you've done that, it'll trigger a ticket on our end."
+    },
+    {
+      "start": 1969.109,
+      "end": 1972.589,
+      "text": "And somebody from our team will reach out to go over the final details."
+    },
+    {
+      "start": 1972.788,
+      "end": 1976.669,
+      "text": "And if this is going to be a production or if it's just gonna be remaining as a test."
+    },
+    {
+      "start": 1978.589,
+      "end": 1988.069,
+      "text": "So I'm gonna go back to my, to the presentation here Apologies."
+    },
+    {
+      "start": 1989.109,
+      "end": 2016.558,
+      "text": "Okay, uh. So, with everything I've shown today, you've seen how to complete a flow, how to build the asset, you know media manager was a portion there too where you could actually go in and upload some of that richer media to use in the card."
+    },
+    {
+      "start": 2018.719,
+      "end": 2022.639,
+      "text": "In order to use RCS, you do have to have a full version of our tenant."
+    },
+    {
+      "start": 2022.998,
+      "end": 2027.679,
+      "text": "So the the trial the capabilities, all those things, you do require a full tenant of Webex Connect."
+    },
+    {
+      "start": 2029.719,
+      "end": 2039.959,
+      "text": "But if you are a developer who doesn't have access to the full tenant yet of Webex Connect, you can still trial a selection of channels, voice, SMS and whatsapp within our sandbox or developer sandbox."
+    },
+    {
+      "start": 2041.519,
+      "end": 2042.599,
+      "text": "You can sign up for developer."
+    },
+    {
+      "start": 2042.879,
+      "end": 2048.839,
+      "text": "Sandbox right here on this QR code if you'd like, and you know, it'll, it'll bring you to the website where you can sign up for it."
+    },
+    {
+      "start": 2049.899,
+      "end": 2054.218,
+      "text": "There are a rich number of features that are available as well to test and play around with."
+    },
+    {
+      "start": 2056.778,
+      "end": 2064.459,
+      "text": "And resources for developers, we do have more developer resources, you can visit the Cisco devnet partner developer resources page."
+    },
+    {
+      "start": 2065.149,
+      "end": 2067.269,
+      "text": "Documentation gives you an introduction to Webex Connect."
+    },
+    {
+      "start": 2067.829,
+      "end": 2080.909,
+      "text": "Common use cases, some templates overview integrations, useful facts, links and other developer resources, learning labs for how to build your 1st flow on how the program integrates, integrates with other Cisco products such as Meraki."
+    },
+    {
+      "start": 2084.399,
+      "end": 2092.679,
+      "text": "And that's it for me. Phil Rami?"
+    },
+    {
+      "start": 2094.679,
+      "end": 2096.879,
+      "text": "Okay. Thank you very much."
+    },
+    {
+      "start": 2097.198,
+      "end": 2099.118,
+      "text": "Let me get back on camera here for you."
+    },
+    {
+      "start": 2101.539,
+      "end": 2118.538,
+      "text": "Right. Okay, we did have a few questions that came in if we wanna go ahead and address some of those here I think the 1st one that came in, I know is probably gonna be a pretty important one is that when will branded text be available on Apple"
+    },
+    {
+      "start": 2118.659,
+      "end": 2123.399,
+      "text": "devices? Phil, I think we covered most of these early on."
+    },
+    {
+      "start": 2123.678,
+      "end": 2128.398,
+      "text": "I think the the last three, the the last two were not the last two?"
+    },
+    {
+      "start": 2129.079,
+      "end": 2133.558,
+      "text": "Yeah. Okay, very good. And the one that came in."
+    },
+    {
+      "start": 2135.459,
+      "end": 2139.259,
+      "text": "How can you determine if the recipient's phone is RCS compatible?"
+    },
+    {
+      "start": 2139.619,
+      "end": 2141.419,
+      "text": "What if the phone is turned off at the moment?"
+    },
+    {
+      "start": 2142.338,
+      "end": 2153.059,
+      "text": "So the, we do offer the capability checks whether through the flow builder or through an API that will allow you to check the capabilities in real time."
+    },
+    {
+      "start": 2153.419,
+      "end": 2155.059,
+      "text": "We also do store a cache, so."
+    },
+    {
+      "start": 2155.459,
+      "end": 2161.899,
+      "text": "If you know the device is capable with that moment in time it's off, you can, you'll still get the capable result because of the cache."
+    },
+    {
+      "start": 2162.779,
+      "end": 2166.979,
+      "text": "Messages will be stored until the phone is online again, and you're delivering."
+    },
+    {
+      "start": 2167.899,
+      "end": 2182.299,
+      "text": "We did announce in our upcoming release of connect six.six.one you'll also be able to set message expiry time so if a message is not delivered within a certain time, you can expire so that you can send an SMS instead."
+    },
+    {
+      "start": 2182.619,
+      "end": 2194.218,
+      "text": "Yeah. Another one here is, is RCS working without Google Play Services, e.g., on GRAPHENOS or lineage OS?"
+    },
+    {
+      "start": 2197.058,
+      "end": 2200.619,
+      "text": "I I I think like from from what we know and what we've tested."
+    },
+    {
+      "start": 2202.469,
+      "end": 2212.708,
+      "text": "RCS is based on google messages on the Android or or messages, and that is, that comes in the base OS part of android."
+    },
+    {
+      "start": 2214.389,
+      "end": 2218.549,
+      "text": "But we don't know if it will work with some of the other OS versions that are out there or not."
+    },
+    {
+      "start": 2219.179,
+      "end": 2220.579,
+      "text": "That's something we haven't tested."
+    },
+    {
+      "start": 2222.139,
+      "end": 2228.818,
+      "text": "And, there was another question I think this is more from the demo that Daryl did."
+    },
+    {
+      "start": 2229.658,
+      "end": 2232.979,
+      "text": "Are we able to get a test flow that you use so we can play in a sandbox?"
+    },
+    {
+      "start": 2233.179,
+      "end": 2234.419,
+      "text": "You know, the flow looks great."
+    },
+    {
+      "start": 2236.559,
+      "end": 2243.759,
+      "text": "Yeah, the unfortunately RCS isn't available in the sandbox as a channel, it is only available in a full tenant of connect."
+    },
+    {
+      "start": 2244.039,
+      "end": 2256.399,
+      "text": "If you do have a full tenant, then you can use RCS in testing capacity and and maybe well actually testing capacity if it's a, if it's a tenant for developers, but yeah, the."
+    },
+    {
+      "start": 2256.559,
+      "end": 2261.918,
+      "text": "The the the the demo I use and the flow I use wouldn't be able to be used as a, as a template unfortunately."
+    },
+    {
+      "start": 2262.359,
+      "end": 2264.399,
+      "text": "You can test RCS with D cloud, right?"
+    },
+    {
+      "start": 2264.599,
+      "end": 2265.959,
+      "text": "Right Daryl? Is it available?"
+    },
+    {
+      "start": 2266.559,
+      "end": 2267.718,
+      "text": "Yeah, good point, good point."
+    },
+    {
+      "start": 2270.198,
+      "end": 2277.198,
+      "text": "Okay, and I think we put the the sandbox of self sign up, link inside of the, the chat there."
+    },
+    {
+      "start": 2277.359,
+      "end": 2282.159,
+      "text": "So if you want to get more information on that, just go ahead and visit that link around, get."
+    },
+    {
+      "start": 2282.359,
+      "end": 2287.399,
+      "text": "That yourself a sandbox. I think there was one more question that will be available in world tenant."
+    },
+    {
+      "start": 2287.649,
+      "end": 2295.528,
+      "text": "We have three levels of our, our tenant outside of sandbox, access edition advanced and premium."
+    },
+    {
+      "start": 2296.609,
+      "end": 2299.208,
+      "text": "RCS is available, access is API only."
+    },
+    {
+      "start": 2299.368,
+      "end": 2305.209,
+      "text": "Advanced and premium, you get your flow builder capabilities with that, and RCS is available on all three."
+    },
+    {
+      "start": 2306.01,
+      "end": 2320.809,
+      "text": "Of these versions or license levels of the platform Great, I think that wraps up all of the questions that we have here."
+    },
+    {
+      "start": 2322.69,
+      "end": 2324.61,
+      "text": "If any questions happen to pop up later on."
+    },
+    {
+      "start": 2325.439,
+      "end": 2335.56,
+      "text": "You know, you can feel free to drop a line over to, you know, the Webex developer evangelist team or, you know, anybody on the the Webex Connect team too, always happy to help you out."
+    },
+    {
+      "start": 2336.68,
+      "end": 2339.799,
+      "text": "But with that, that should wrap up our, our webinar for this month."
+    },
+    {
+      "start": 2340.71,
+      "end": 2344.87,
+      "text": "Again, thank you so much for, for joining today's session and participating in the Slido."
+    },
+    {
+      "start": 2345.99,
+      "end": 2347.55,
+      "text": "There'll be a post event survey."
+    },
+    {
+      "start": 2348.189,
+      "end": 2355.59,
+      "text": "We do ask for everybody's feedback on that so we can continue to present content that everybody would like to see."
+    },
+    {
+      "start": 2357.47,
+      "end": 2362.32,
+      "text": "So with that. Thank you for joining our webinar and have a great rest of your week."
+    },
+    {
+      "start": 2362.84,
+      "end": 2363.239,
+      "text": "Bye bye."
+    }
+  ]
+}

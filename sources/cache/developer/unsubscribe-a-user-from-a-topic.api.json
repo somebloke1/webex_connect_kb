@@ -1,0 +1,238 @@
+{
+  "api": {
+    "method": "delete",
+    "url": "/apps/$(appid)/topics/$(topicid)/users/$(userid)",
+    "auth": "required",
+    "results": {
+      "codes": [
+        {
+          "name": "",
+          "code": "{\n\t\"trans_id\" : \"f55be7ae-4af7-45aa-a062-ae0ef5c32e60\",\n\t\"description\" : \"success\",\n\t\"code\" : 0\n}",
+          "language": "json",
+          "status": 200
+        },
+        {
+          "name": "",
+          "code": "{}",
+          "language": "json",
+          "status": 400
+        }
+      ]
+    },
+    "params": [
+      {
+        "name": "Content-Type",
+        "type": "string",
+        "enumValues": "",
+        "default": "",
+        "desc": "Application/JSON",
+        "required": false,
+        "in": "header",
+        "ref": "",
+        "_id": "5f5712c85a1d6e004b461b30",
+        "id": "5f5712c85a1d6e004b461b30"
+      },
+      {
+        "name": "secretKey",
+        "type": "string",
+        "enumValues": "",
+        "default": "",
+        "desc": "Client key that can be accessed from your app asset configuration page on imiconnect platform",
+        "required": false,
+        "in": "header",
+        "ref": "",
+        "_id": "5f5712c85a1d6e004b461b2f",
+        "id": "5f5712c85a1d6e004b461b2f"
+      },
+      {
+        "name": "appid",
+        "type": "string",
+        "enumValues": "",
+        "default": "",
+        "desc": "The ID of the app asset that you can obtain from imiconnect platform",
+        "required": false,
+        "in": "path",
+        "ref": "",
+        "_id": "5f6d8ccb7f3feb0033d79852",
+        "id": "5f6d8ccb7f3feb0033d79852"
+      },
+      {
+        "name": "topicid",
+        "type": "string",
+        "enumValues": "",
+        "default": "",
+        "desc": "Specifies the ID of the topic",
+        "required": false,
+        "in": "path",
+        "ref": "",
+        "_id": "5f6d8ccb7f3feb0033d79851",
+        "id": "5f6d8ccb7f3feb0033d79851"
+      },
+      {
+        "name": "userid",
+        "type": "string",
+        "enumValues": "",
+        "default": "",
+        "desc": "Unique ID for a mobile/web app user",
+        "required": false,
+        "in": "path",
+        "ref": "",
+        "_id": "5f6d8ccb7f3feb0033d79850",
+        "id": "5f6d8ccb7f3feb0033d79850"
+      }
+    ],
+    "apiSetting": "6a675233ec1c893d8a7f67bc",
+    "examples": {
+      "codes": [
+        {
+          "code": "{\n//This API does not require any params in the request body\n}",
+          "language": "json"
+        }
+      ]
+    }
+  },
+  "swagger": {
+    "path": "/apps/$(appid)/topics/$(topicid)/users/$(userid)"
+  },
+  "oas_public_id": "@imiconnect-apis/v6.20.0#wk2xm71r8mur",
+  "selected_openapi": {
+    "openapi": "3.1.0",
+    "info": {
+      "title": "Topic APIs",
+      "version": "6.20.0"
+    },
+    "servers": [
+      {
+        "url": "https://rtm.imiconnect.io/"
+      }
+    ],
+    "security": [
+      {
+        "sec0": []
+      }
+    ],
+    "path": "/apps/$(appid)/topics/$(topicid)/users/$(userid)",
+    "method": "delete",
+    "path_parameters": [],
+    "operation": {
+      "summary": "Unsubscribe a User from a Topic",
+      "description": "",
+      "operationId": "unsubscribe-a-user-from-a-topic",
+      "parameters": [
+        {
+          "name": "Content-Type",
+          "in": "header",
+          "description": "Application/JSON",
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "secretKey",
+          "in": "header",
+          "description": "Client key that can be accessed from your app asset configuration page on imiconnect platform",
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "appid",
+          "in": "path",
+          "description": "The ID of the app asset that you can obtain from imiconnect platform",
+          "schema": {
+            "type": "string"
+          },
+          "required": true
+        },
+        {
+          "name": "topicid",
+          "in": "path",
+          "description": "Specifies the ID of the topic",
+          "schema": {
+            "type": "string"
+          },
+          "required": true
+        },
+        {
+          "name": "userid",
+          "in": "path",
+          "description": "Unique ID for a mobile/web app user",
+          "schema": {
+            "type": "string"
+          },
+          "required": true
+        }
+      ],
+      "responses": {
+        "200": {
+          "description": "200",
+          "content": {
+            "application/json": {
+              "examples": {
+                "Result": {
+                  "value": "{\n\t\"trans_id\" : \"f55be7ae-4af7-45aa-a062-ae0ef5c32e60\",\n\t\"description\" : \"success\",\n\t\"code\" : 0\n}"
+                }
+              },
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "trans_id": {
+                    "type": "string",
+                    "example": "f55be7ae-4af7-45aa-a062-ae0ef5c32e60"
+                  },
+                  "description": {
+                    "type": "string",
+                    "example": "success"
+                  },
+                  "code": {
+                    "type": "integer",
+                    "example": 0,
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "400": {
+          "description": "400",
+          "content": {
+            "application/json": {
+              "examples": {
+                "Result": {
+                  "value": "{}"
+                }
+              },
+              "schema": {
+                "type": "object",
+                "properties": {}
+              }
+            }
+          }
+        }
+      },
+      "deprecated": false,
+      "requestBody": {
+        "content": {
+          "application/json": {
+            "schema": {},
+            "examples": {
+              "Request Example": {
+                "value": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "securitySchemes": {
+        "sec0": {
+          "type": "apiKey",
+          "in": "header",
+          "name": "key"
+        }
+      }
+    }
+  }
+}

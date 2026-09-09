@@ -1,0 +1,36 @@
+{
+  "api_metadata_path": "sources/cache/developer/deleteappprofile.api.json",
+  "category": "Profile API v2",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f64e9",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "c7ab0ca660410afa7aa8a30e0ba671a70370c37b6134c8b8576c6e38f040cace",
+    "source_path": "4d0d0d1d50506052065e526767ea3032a809b59e93a004781d6cc338c69444e1",
+    "text_path": "bbe0f5858f0fa43ebc6419ac9b18249b112698cdea3e3de4174c1e7d065f027f"
+  },
+  "headings": [
+    "**Status Codes**"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/deleteappprofile.md",
+  "openapi_path": "sources/cache/openapi/e64b98bec4fd3a76e9aa7f04e73c40393a4436daa51535c6cb89230c82ce3650.json",
+  "resolved_url": "https://developers.webexconnect.io/reference/deleteappprofile",
+  "retrieved_at": "2026-09-08T23:31:50+00:00",
+  "sha256_api_metadata": "79cbd124dde3c8b758035e4e0c7ab6076848e4aac9f2a09fbc1ddf0799bfa97a",
+  "sha256_html_response": "5f999927322062e1cd7ba36f6e9998cdf79f94bb48a00b4c85b43f678183221e",
+  "sha256_openapi": "e64b98bec4fd3a76e9aa7f04e73c40393a4436daa51535c6cb89230c82ce3650",
+  "sha256_source_body": "4d0d0d1d50506052065e526767ea3032a809b59e93a004781d6cc338c69444e1",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/deleteappprofile.source.md",
+  "source_updated_at": "2026-04-16T06:02:41.702Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/deleteappprofile.txt",
+  "title": "Delete App Profile with User ID",
+  "url": "https://developers.webexconnect.io/reference/deleteappprofile",
+  "word_count": 1386,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/deleteappprofile.metadata.json"
+}

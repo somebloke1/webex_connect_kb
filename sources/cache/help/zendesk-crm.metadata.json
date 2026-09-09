@@ -1,0 +1,43 @@
+{
+  "category": "PreBUILT Integrations",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182578ee",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "1f2135b490ad68c2d4724a56f1a79b0e87387cf53916755277ac844c97fcc3ae",
+    "source_path": "3928cc194cf49d6c9b9524f1f8ce5d69c203c753d43cccc6d8b86032560d6936",
+    "text_path": "f7da62a6d5855d48013f4c40a305cc3d5349191d1261b8a81768f651ba77e8d1"
+  },
+  "headings": [
+    "Introduction",
+    "Version Supported",
+    "📘Webex Connect's integration is based on Zendesk API v2.",
+    "Pre-requisites",
+    "Node Configuration",
+    "📘Please note that the latest version of the Zendesk integration node that you should use is v1.1.",
+    "Methods and Outcomes",
+    "Method Name - Create Ticket",
+    "Method Name - Get Ticket",
+    "Method Name - Update Ticket",
+    "Method Name - Delete Ticket"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/zendesk-crm.md",
+  "resolved_url": "https://help.webexconnect.io/docs/zendesk-crm",
+  "retrieved_at": "2026-09-08T23:29:09+00:00",
+  "sha256_html_response": "72c6e305e35ac2839e3f59f021e0f4a80f0e1ed9380917c00f9e20e5bdb83afd",
+  "sha256_source_body": "3928cc194cf49d6c9b9524f1f8ce5d69c203c753d43cccc6d8b86032560d6936",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/zendesk-crm.source.md",
+  "source_updated_at": "2026-04-15T11:40:58.910Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/zendesk-crm.txt",
+  "title": "Zendesk CRM",
+  "url": "https://help.webexconnect.io/docs/zendesk-crm",
+  "word_count": 1455,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/zendesk-crm.metadata.json"
+}

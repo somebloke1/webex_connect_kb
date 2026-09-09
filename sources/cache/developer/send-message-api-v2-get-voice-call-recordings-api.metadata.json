@@ -1,0 +1,38 @@
+{
+  "api_metadata_path": "sources/cache/developer/send-message-api-v2-get-voice-call-recordings-api.api.json",
+  "category": "MULTI CHANNEL COMMUNICATION API",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f6720",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "b4ae420815d383582ae0366adc73ab4bb98fa771aee9612710157cf55f7a39ac",
+    "source_path": "92dad01a746cf1e8b1a1b54761fb2dec950b53b5fa0098b7b99c910dd02b9f7d",
+    "text_path": "a7f5ff65b9915eeae9828c0b03233e9ea48ece66cd8fbc6012516a70bc5780ca"
+  },
+  "headings": [
+    "Request Body for Get Voice Call Recordings API",
+    "Get Voice Call Recordings Path Parameters",
+    "Get Voice Call Recordings Header Parameters",
+    "Sample Response Body",
+    "Response Parameters"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/send-message-api-v2-get-voice-call-recordings-api.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/send-message-api-v2-get-voice-call-recordings-api",
+  "retrieved_at": "2026-09-08T23:31:44+00:00",
+  "sha256_api_metadata": "575f65b7d8dc3ea0b617314bc47e22705dc85fc80ee114e6faa20ada4e8aafe2",
+  "sha256_html_response": "4ec02848728aa349c8b2cefc6acb70fa0857b21049b90375662b29c25b8f73bf",
+  "sha256_source_body": "92dad01a746cf1e8b1a1b54761fb2dec950b53b5fa0098b7b99c910dd02b9f7d",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/send-message-api-v2-get-voice-call-recordings-api.source.md",
+  "source_updated_at": "2026-04-09T11:41:55.055Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/send-message-api-v2-get-voice-call-recordings-api.txt",
+  "title": "Get Voice Call Recordings Using Send Message API v2",
+  "url": "https://developers.webexconnect.io/reference/send-message-api-v2-get-voice-call-recordings-api",
+  "word_count": 428,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/developer/send-message-api-v2-get-voice-call-recordings-api.metadata.json"
+}

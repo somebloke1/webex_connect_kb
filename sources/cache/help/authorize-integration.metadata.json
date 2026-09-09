@@ -1,0 +1,31 @@
+{
+  "category": "Webex Engage Standalone Nodes",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd81825797a",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "c42788a4293f7af9e1dbe51cd4d83f5022c9f55b0c84b5f7d683d9c80c24c7d6",
+    "source_path": "371632376cbb98f1b7edffe391e9c58ac518a344760feeae27cfc78da903324a",
+    "text_path": "ff6ce88ed404d246cd4b3b2436d2e069c2d3e0d9ce2a6728d5ef2ae1814a5eab"
+  },
+  "headings": [],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/authorize-integration.md",
+  "resolved_url": "https://help.webexconnect.io/docs/authorize-integration",
+  "retrieved_at": "2026-09-08T23:29:29+00:00",
+  "sha256_html_response": "602f3814a770089dbfc1174a0a5a1446b2c014873314039d216dfd7f09dd17d3",
+  "sha256_source_body": "371632376cbb98f1b7edffe391e9c58ac518a344760feeae27cfc78da903324a",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/authorize-integration.source.md",
+  "source_updated_at": "2026-04-14T07:47:07.721Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/authorize-integration.txt",
+  "title": "Authorize Integration - WxEngage standalone",
+  "url": "https://help.webexconnect.io/docs/authorize-integration",
+  "word_count": 262,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/authorize-integration.metadata.json"
+}

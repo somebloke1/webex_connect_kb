@@ -1,0 +1,263 @@
+{
+  "_id": "6a675233ec1c893d8a7f67b7:6a675233ec1c893d8a7f6579",
+  "components": {
+    "securitySchemes": {
+      "sec0": {
+        "in": "header",
+        "name": "key",
+        "type": "apiKey"
+      }
+    }
+  },
+  "info": {
+    "title": "Messaging API v2",
+    "version": "6.20.0"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/messages/<messageId>": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "operationId": "retrieve-message-v2",
+        "parameters": [
+          {
+            "description": "application/json",
+            "in": "header",
+            "name": "Content-Type",
+            "schema": {
+              "default": "application/json",
+              "type": "string"
+            }
+          },
+          {
+            "description": "Applicable when you want to use service key for API authentication. Available under API tab within a service in your imiconnect tenant.",
+            "in": "header",
+            "name": "key",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Bearer {{token}}.. Applicable if you want to use JWT tokens for API authentication. Use either of 'key' or 'Authorization' header param.",
+            "in": "header",
+            "name": "Authorization",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{\n    \"clientId\": 1117,\n    \"toType\": \"msisdn\",\n    \"numSegments\": \"1\",\n    \"requestTimestamp\": \"2020-04-09T09:46:37.897Z\",\n    \"groupId\": 1387,\n    \"channel\": \"sms\",\n    \"messageId\": \"6173724b-c850-42b0-b9d7-eac73de28e95\",\n    \"requestedReceipts\": [],\n    \"version\": \"2.0\",\n    \"content\": {\n        \"text\": \"Here+is+a+message\",\n        \"type\": \"text\"\n    },\n    \"teamId\": 1992,\n    \"callbackData\": \"<notify data>\",\n    \"options\": {\n        \"trackOpens\": false,\n        \"smsFallback\": false,\n        \"bypassSuppression\": false,\n        \"domain\": \"https://sstg.imiconnect.net\",\n        \"trackClicks\": true,\n        \"shortenLinks\": true\n    },\n    \"notifyUrl\": \"https://webhook.site/f6fbab37-6d59-4fec-913a-021db78ce43b\",\n    \"from\": \"CONNCT\",\n    \"correlationId\": \"sit\",\n    \"to\": \"447500661610\",\n    \"direction\": \"outbound\",\n    \"status\": \"Submitted\"\n}"
+                  }
+                },
+                "schema": {
+                  "properties": {
+                    "callbackData": {
+                      "example": "<notify data>",
+                      "type": "string"
+                    },
+                    "channel": {
+                      "example": "sms",
+                      "type": "string"
+                    },
+                    "clientId": {
+                      "default": 0,
+                      "example": 1117,
+                      "type": "integer"
+                    },
+                    "content": {
+                      "properties": {
+                        "text": {
+                          "example": "Here+is+a+message",
+                          "type": "string"
+                        },
+                        "type": {
+                          "example": "text",
+                          "type": "string"
+                        }
+                      },
+                      "type": "object"
+                    },
+                    "correlationId": {
+                      "example": "sit",
+                      "type": "string"
+                    },
+                    "direction": {
+                      "example": "outbound",
+                      "type": "string"
+                    },
+                    "from": {
+                      "example": "CONNCT",
+                      "type": "string"
+                    },
+                    "groupId": {
+                      "default": 0,
+                      "example": 1387,
+                      "type": "integer"
+                    },
+                    "messageId": {
+                      "example": "6173724b-c850-42b0-b9d7-eac73de28e95",
+                      "type": "string"
+                    },
+                    "notifyUrl": {
+                      "example": "https://webhook.site/f6fbab37-6d59-4fec-913a-021db78ce43b",
+                      "type": "string"
+                    },
+                    "numSegments": {
+                      "example": "1",
+                      "type": "string"
+                    },
+                    "options": {
+                      "properties": {
+                        "bypassSuppression": {
+                          "default": true,
+                          "example": false,
+                          "type": "boolean"
+                        },
+                        "domain": {
+                          "example": "https://sstg.imiconnect.net",
+                          "type": "string"
+                        },
+                        "shortenLinks": {
+                          "default": true,
+                          "example": true,
+                          "type": "boolean"
+                        },
+                        "smsFallback": {
+                          "default": true,
+                          "example": false,
+                          "type": "boolean"
+                        },
+                        "trackClicks": {
+                          "default": true,
+                          "example": true,
+                          "type": "boolean"
+                        },
+                        "trackOpens": {
+                          "default": true,
+                          "example": false,
+                          "type": "boolean"
+                        }
+                      },
+                      "type": "object"
+                    },
+                    "requestTimestamp": {
+                      "example": "2020-04-09T09:46:37.897Z",
+                      "type": "string"
+                    },
+                    "requestedReceipts": {
+                      "items": {
+                        "properties": {},
+                        "type": "object"
+                      },
+                      "type": "array"
+                    },
+                    "status": {
+                      "example": "Submitted",
+                      "type": "string"
+                    },
+                    "teamId": {
+                      "default": 0,
+                      "example": 1992,
+                      "type": "integer"
+                    },
+                    "to": {
+                      "example": "447500661610",
+                      "type": "string"
+                    },
+                    "toType": {
+                      "example": "msisdn",
+                      "type": "string"
+                    },
+                    "version": {
+                      "example": "2.0",
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "200"
+          },
+          "401": {
+            "content": {
+              "text/plain": {
+                "examples": {
+                  "Result": {
+                    "value": ""
+                  }
+                }
+              }
+            },
+            "description": "401"
+          },
+          "404": {
+            "content": {
+              "text/plain": {
+                "examples": {
+                  "Result": {
+                    "value": ""
+                  }
+                }
+              }
+            },
+            "description": "404"
+          },
+          "405": {
+            "content": {
+              "text/plain": {
+                "examples": {
+                  "Result": {
+                    "value": ""
+                  }
+                }
+              }
+            },
+            "description": "405"
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": ""
+                  }
+                }
+              }
+            },
+            "description": "429"
+          }
+        },
+        "summary": "Get Message v2"
+      }
+    }
+  },
+  "security": [
+    {
+      "sec0": []
+    }
+  ],
+  "servers": [
+    {
+      "url": "https://api.us.webexconnect.io/v2"
+    }
+  ],
+  "x-readme": {
+    "explorer-enabled": false,
+    "headers": [
+      {
+        "key": "Content-Type",
+        "value": "application/json"
+      }
+    ],
+    "proxy-enabled": false
+  },
+  "x-readme-fauxas": true
+}

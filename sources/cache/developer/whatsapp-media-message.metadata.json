@@ -1,0 +1,37 @@
+{
+  "api_metadata_path": "sources/cache/developer/whatsapp-media-message.api.json",
+  "category": "MULTI CHANNEL COMMUNICATION API",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f6629",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "22eb3b0c185a76901377044ec2c5d78d398da1ccbf003665eb7d7e57fe8ec10c",
+    "source_path": "4ededd14b0168e15eeb9b3f406e93bcb978f81342237bb42b0301db6b693dc15",
+    "text_path": "18e3ae97c02e63613d5faacaf2493c495b8bfa0d5473d8fa7e9a32c34f92c74e"
+  },
+  "headings": [
+    "Other Media Types",
+    "Error Codes"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/whatsapp-media-message.md",
+  "openapi_path": "sources/cache/openapi/a12eddaa1414acf23d98be63c610da064f0be669f6408454371bb8a4faf18d9c.json",
+  "resolved_url": "https://developers.webexconnect.io/reference/whatsapp-media-message",
+  "retrieved_at": "2026-09-08T23:31:43+00:00",
+  "sha256_api_metadata": "1d5f76f42976d83d2975b7ca5bec74a4e70244c205a49850169585fc774d2078",
+  "sha256_html_response": "20986da3fb6bf64bbbdb19522fe0212e24a25e538f78cd62cf1d0e19a9824dca",
+  "sha256_openapi": "a12eddaa1414acf23d98be63c610da064f0be669f6408454371bb8a4faf18d9c",
+  "sha256_source_body": "4ededd14b0168e15eeb9b3f406e93bcb978f81342237bb42b0301db6b693dc15",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/whatsapp-media-message.source.md",
+  "source_updated_at": "2026-05-12T12:40:20.282Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/whatsapp-media-message.txt",
+  "title": "WhatsApp Media Message",
+  "url": "https://developers.webexconnect.io/reference/whatsapp-media-message",
+  "word_count": 4253,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/developer/whatsapp-media-message.metadata.json"
+}

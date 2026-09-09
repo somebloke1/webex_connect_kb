@@ -1,0 +1,38 @@
+## 📘
+Important update to Campaign creation and management process
+
+To accommodate system updates and enhancements, the 10DLC Campaign creation and management functionality has been temporarily disabled until further notice.
+
+We are working diligently to restore this functionality as soon as possible. In the meantime, if you require assistance with Campaign management or have any related inquiries, please contact our Support Team for guidance.
+
+To manage a campaign on the Webex Connect platform:
+
+- In the Brands & Campaigns (10DLC) page, expand the drop-down menu button for a brand record.
+
+ [Image: Screenshot Displaying Manage Button Under Action] 
+Screenshot Displaying Manage Button Under Action.
+
+- 
+
+In the Action column, click the drop-down button for a campaign record.
+
+- 
+
+Click Manage.
+
+## 📘
+
+The campaigns added by the Webex Connect Platform Admins are not allowed to be managed from the platform. Also, use case ‘information country’ and ‘vertical information’ will not be displayed on the listing page.
+
+- 
+
+In the New Campaign page, you can:
+
+*Edit required fields or options for Campaign and Content Attributes section.
+
+*Click Edit  to modify the message or messages.
+
+ [Image: Screenshot of Campaign and Content Attributes.] 
+Screenshot of Campaign and Content Attributes.
+
+- Click Save.

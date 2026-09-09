@@ -1,0 +1,35 @@
+{
+  "category": "SERVICES & FLOWS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182577d6",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "13827e06805634912ce83477c7da01d3aa84f504188a3d5bf0291b08ae0fc455",
+    "source_path": "a923c8d8597a05450b3d4b62b1b145f8593e25110cdd1109630dcc1661b03a24",
+    "text_path": "d57f4ec173c8a5a3dc0c2dec67f11e14c12a9f93a1f66156f4a1c342a54a7823"
+  },
+  "headings": [
+    "Node Configuration",
+    "Using AWS-KMS",
+    "Using Webex Connect Decryption"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/decryption-node.md",
+  "resolved_url": "https://help.webexconnect.io/docs/decryption-node",
+  "retrieved_at": "2026-09-08T23:28:54+00:00",
+  "sha256_html_response": "a0f1ec8387bd823e7105cc33af10b7ba5edbe1d868b6a1b4dc1536b28e523e26",
+  "sha256_source_body": "a923c8d8597a05450b3d4b62b1b145f8593e25110cdd1109630dcc1661b03a24",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/decryption-node.source.md",
+  "source_updated_at": "2026-04-15T09:32:24.842Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/decryption-node.txt",
+  "title": "Decryption Node",
+  "url": "https://help.webexconnect.io/docs/decryption-node",
+  "word_count": 412,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/decryption-node.metadata.json"
+}

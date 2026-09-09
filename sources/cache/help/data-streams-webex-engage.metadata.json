@@ -1,0 +1,36 @@
+{
+  "category": "Webex Engage Standalone Nodes",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257986",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "b51c86532bf25e1f6e1dc0a041c62cbb6035c041401bdadef63e7b51e64df0cd",
+    "source_path": "e5ab7fbb9d01c2f419d26ba390b91a0b8ab3c65247ae2aabdd38870e359eb0bf",
+    "text_path": "0ee15267d9fee8041f9faf136fecc19e93bf5b639191058ef875fe834a94f7dc"
+  },
+  "headings": [
+    "📘Note:",
+    "Enabling Data Streams for Apple Business for Messages (AMB) assets",
+    "📘Note:",
+    "Enabling Data Streams for select assets"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/data-streams-webex-engage.md",
+  "resolved_url": "https://help.webexconnect.io/docs/data-streams-webex-engage",
+  "retrieved_at": "2026-09-08T23:29:31+00:00",
+  "sha256_html_response": "9505faeb3a364c013aff8918cca5b6edc530446ba8b6f9648f1e4459268101eb",
+  "sha256_source_body": "e5ab7fbb9d01c2f419d26ba390b91a0b8ab3c65247ae2aabdd38870e359eb0bf",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/data-streams-webex-engage.source.md",
+  "source_updated_at": "2025-08-25T05:14:07.897Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/data-streams-webex-engage.txt",
+  "title": "Data streams for Webex Engage",
+  "url": "https://help.webexconnect.io/docs/data-streams-webex-engage",
+  "word_count": 344,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/data-streams-webex-engage.metadata.json"
+}

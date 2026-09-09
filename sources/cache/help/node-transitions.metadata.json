@@ -1,0 +1,33 @@
+{
+  "category": "SERVICES & FLOWS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257897",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "d7b258a877f0909b1628cd6dc767e7ab8e662f473adfde5c8526c6d1dc2c045a",
+    "source_path": "f0e478da5ca785263fad458fb3818f95314e54d8daedf08aa250a56cbc21f626",
+    "text_path": "6866eb63695dd75c7300f86c10b466c550ad544714d6baec7d3999b7125f2262"
+  },
+  "headings": [
+    "❗️Note"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/node-transitions.md",
+  "resolved_url": "https://help.webexconnect.io/docs/node-transitions",
+  "retrieved_at": "2026-09-08T23:28:51+00:00",
+  "sha256_html_response": "8cac1ed0a53bc3d4ad365b46573a1b57431a56de7e75db1b5e4bf88664d3feb3",
+  "sha256_source_body": "f0e478da5ca785263fad458fb3818f95314e54d8daedf08aa250a56cbc21f626",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/node-transitions.source.md",
+  "source_updated_at": "2025-05-13T11:22:24.033Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/node-transitions.txt",
+  "title": "Node Transitions",
+  "url": "https://help.webexconnect.io/docs/node-transitions",
+  "word_count": 230,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/node-transitions.metadata.json"
+}

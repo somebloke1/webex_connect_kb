@@ -1,0 +1,732 @@
+# WhatsApp Media Message
+
+Source: https://developers.webexconnect.io/reference/whatsapp-media-message
+Documentation version: 6.20.0
+Retrieved: 2026-09-08T23:31:43+00:00
+
+
+
+<div></div>
+
+<style>
+  .rm-ReferenceMain .rm-Article {
+ display callout; 
+    display: flex;
+    flex-direction: column;
+}
+ 
+.rm-ParamContainer {
+    order: 1;
+}
+ 
+.field-description, .markdown-body {
+    order: 2;
+}
+ 
+.rm-ReferenceMain .markdown-body {
+  margin-top: 10px
+}
+ 
+.rm-ReferenceMain .rm-Article .rm-APISectionHeader {
+    order: 3;
+}
+ 
+[class^="APIResponseSchemaPicker"] {
+    order: 4;
+}
+ 
+[class^="Footer-desktop"] {
+  order: 5
+}
+
+</style>
+
+
+
+
+## Other Media Types
+
+**The audio, document, video and sticker objects** 
+
+```json Video
+{
+    "deliverychannel": "whatsapp", //Mandatory. Channel used to send the message i.e., WhatsApp in this case.
+    "appid": "{{WAAppid}}", //Mandatory. Contains the applicationid
+    "destination": [
+        {
+            "waid": [
+                "{{waid}}" //Mandatory. WhatsApp ID or phone number for the person you want to send a message to.
+            ]
+        }
+    ],
+    "channels": {
+        "OTT-Messaging": {
+            "wa": {
+                "type": "video", //Mandatory. Specify the media type of WhatsApp message. Supported types are image, audio, document, video or sticker.
+                "video": {
+                    "url": "<your-media-url>", //Mandatory. Direct URL pointing to the media file. The URL should end with specified file-format. You can use our Media manager under Tools to upload a file and get a public URL.
+                    "mimeType": "<VIDEO/MP4>" //Mandatory. Specify mime type of media for e.g. image/png, video/mp4
+                },
+                "identity_key_hash": "<identity-key-hash-value>" //Optional. Pass this value to validate the identity of your customer.
+            }
+        }
+    },
+    "correlationid": "", //Optional. The correlationid is a unique identifier that you can attach to every request as a reference a particular transaction or event. This is configured as a part of the request.
+    "callbackData": "", //Optional. Data that you have configured to receive on the notify Url. This is configured as a part of the request.
+  "notifyurl": "", //Optional. Configure a URL to get notifications on delivery reports for a WhatsApp message. This field accepts only a valid URL or a variable. If an invalid URL is passed in API request or via a variable, then such request will not be considered eligible for retries.
+"notifyurlAuthId": "TNPBXKT09U" //Optional.
+}
+```
+```json Audio
+{
+    "deliverychannel": "whatsapp", //Mandatory. Channel used to send the message i.e., WhatsApp in this case.
+    "appid": "{{WAAppid}}", //Mandatory. Contains the applicationid
+    "destination": [
+        {
+            "waid": [
+                "{{waid}}" //Mandatory. WhatsApp ID or phone number for the person you want to send a message to.
+            ]
+        }
+    ],
+    "channels": {
+        "OTT-Messaging": {
+            "wa": {
+                "type": "audio", //Mandatory. Specify the media type of WhatsApp message. Supported types are image, audio, document, video or sticker.
+                "audio": {
+                    "url": "<your-media-url>", //Mandatory. Direct URL pointing to the media file. The URL should end with specified file-format. You can use our Media manager under Tools to upload a file and get a public URL.
+                    "mimeType": "audio/aac" //Mandatory. Specify mime type of media for e.g. image/png, video/mp4, audio/aac
+                },
+                "identity_key_hash": "<identity-key-hash-value>" //Optional. Pass this value to validate the identity of your customer.
+            }
+        }
+    },
+    "correlationid": "", //Optional. The correlationid is a unique identifier that you can attach to every request as a reference a particular transaction or event. This is configured as a part of the request.
+    "callbackData": "", //Optional. Data that you have configured to receive on the notify Url. This is configured as a part of the request.
+  "notifyurl": "", //Optional. Configure a URL to get notifications on delivery reports for a WhatsApp message. This field accepts only a valid URL or a variable. If an invalid URL is passed in API request or via a variable, then such request will not be considered eligible for retries.
+"notifyurlAuthId": "TNPBXKT09U" //Optional.
+}
+```
+```json Document
+{
+    "deliverychannel": "whatsapp", //Mandatory. Channel used to send the message i.e., WhatsApp in this case.
+    "appid": "{{WAAppid}}", //Mandatory. Contains the applicationid
+    "destination": [
+        {
+            "waid": [
+                "{{waid}}" //Mandatory. WhatsApp ID or phone number for the person you want to send a message to.
+            ]
+        }
+    ],
+    "channels": {
+        "OTT-Messaging": {
+            "wa": {
+                "type": "document", //Mandatory. Specify the media type of WhatsApp message. Supported types are image, audio, document, video or sticker.
+                "document": {
+                    "url": "<your-media-url>", //Mandatory. Direct URL pointing to the media file. The URL should end with specified file-format. You can use our Media manager under Tools to upload a file and get a public URL.
+                    "filename": "Document test", //Optional
+                    "mimeType": "application/pdf" //Mandatory. Specify mime type of media for e.g. image/jpg, image/png, image/webp, video/mp4, audio/aac, application/pdf
+                },
+                "identity_key_hash": "<identity-key-hash-value>" //Optional. Pass this value to validate the identity of your customer.
+            }
+        }
+    },
+    "correlationid": "", //Optional. The correlationid is a unique identifier that you can attach to every request as a reference a particular transaction or event. This is configured as a part of the request.
+    "callbackData": "", //Optional. Data that you have configured to receive on the notify Url. This is configured as a part of the request.
+  "notifyurl": "", //Optional. Configure a URL to get notifications on delivery reports for a WhatsApp message. This field accepts only a valid URL or a variable. If an invalid URL is passed in API request or via a variable, then such request will not be considered eligible for retries.
+"notifyurlAuthId": "TNPBXKT09U" //Optional.
+}
+```
+```json Sticker
+{
+    "deliverychannel": "whatsapp", //Mandatory. Channel used to send the message i.e., WhatsApp in this case.
+    "appid": "{{WAAppid}}", //Mandatory. Contains the applicationid
+    "destination": [
+        {
+            "waid": [
+                "{{waid}}" //Mandatory. WhatsApp ID or phone number for the person you want to send a message to.
+            ]
+        }
+    ],
+    "conversationid": "",
+    "channels": {
+        "OTT-Messaging": {
+            "wa": {
+                "type": "sticker", //Mandatory. Specify the media type of WhatsApp message. Supported types are image, audio, document, video or sticker.
+                "sticker": {
+                    "url": "<your-media-url>", //Mandatory. Direct URL pointing to the media file. The URL should end with specified file-format. You can use our Media manager under Tools to upload a file and get a public URL.
+                    "mimeType": "image/WEBP" //Mandatory. Specify mime type of media for e.g. image/jpg, image/png, image/webp, video/mp4, audio/aac
+                },
+                "identity_key_hash": "<identity-key-hash-value>" //Optional. Pass this value to validate the identity of your customer.
+            }
+        }
+    },
+    "correlationid": "", //Optional. The correlationid is a unique identifier that you can attach to every request as a reference a particular transaction or event. This is configured as a part of the request.
+    "callbackData": "", //Optional. Data that you have configured to receive on the notify Url. This is configured as a part of the request.
+  "notifyurl": "", //Optional. Configure a URL to get notifications on delivery reports for a WhatsApp message. This field accepts only a valid URL or a variable. If an invalid URL is passed in API request or via a variable, then such request will not be considered eligible for retries.
+ "notifyurlAuthId": "TNPBXKT09U" //Optional.
+}
+```
+
+Common Parameters for Other Media Types
+
+
+
+| Parameter/Object | Parameters with in the Object | Mandatory | Description |
+| --- | --- | --- | --- |
+| deliverychannel |  |  | Channel used to send the message i.e., WhatsApp in this case. |
+| appid |  |  | Contains the applicationid |
+| destination |  |  | Unique user id for the recipient of the message on WhatsApp. |
+|  | waid | Yes | WhatsApp ID or phone number for the person you want to send a message to. |
+|  | bsuid | When both WAID and BSUID are present, WAID takes priority as the** primary identifier**.  <br>  <br>A **single identifier** is used by preferring WAID or copying BSUID into WAID if empty.  <br>**  <br>Normalization** ensures consistent use across systems with flags indicating derived values and compatibility maintained in APIs and logs | The BSUID is a unique, business-specific identifier generated by Meta for every user-business portfolio pairing. |
+| correlationid |  |  | The corrrelationid is a unique identifier that you can attach to every request as a reference a particular transaction or event. This is configured as a part of the request. |
+| callbackData |  |  | Data that you have configured to receive on the notify Url. This is configured as a part of the request. |
+| notifyurl |  |  | Configure a URL to get notifications on delivery reports for a WhatsApp message. This field accepts only a valid URL or a variable. If an invalid URL is passed in API request or via a variable, then such request will not be considered eligible for retries. |
+| notifyurlAuthId | string | No | Unique Authenticaiton ID. |
+| type |  | Yes, when type is image, audio, document or sticker | image, audio, document, video or sticker. Refer below table to know more about each of these types. |
+| caption |  | No | Describes the specified image, video, or document media. Do not use with audio or sticker media. |
+| url |  | yes | Direct URL pointing to the media file. The URL should end with specified file-format. You can use our Media manager under Tools to upload a file and get a public URL. |
+| mimeType |  | yes | Supported mime types. |
+
+
+
+
+> 📘 Note
+> 
+> It is recommended to use a valid authorization ID; the failure of notification won’t be logged in Debug Logs.
+> 
+> The notify URL should be filled with the proper URL format; otherwise, it would be considered an invalid URL.
+> 
+> The notify URL should be provided with proper spacing of the URL; when space is provided in front of the URL or at the end of the URL, it would be considered an invalid URL.
+
+Additional details for the various media message types:
+
+**Video**
+
+
+
+| Parameter/Object | Parameters with in the Object | Mandatory | Description |
+| --- | --- | --- | --- |
+| channels |  |  |  |
+|  | OTT-Messaging |  | JSON object for social channel message configuration |
+|  | waid | Yes | WhatsApp ID or phone number for the person you want to send a message to. |
+|  | bsuid | When both WAID and BSUID are present, WAID takes priority as the** primary identifier**.  <br>  <br>A **single identifier** is used by preferring WAID or copying BSUID into WAID if empty.  <br>**  <br>Normalization** ensures consistent use across systems with flags indicating derived values and compatibility maintained in APIs and logs | The BSUID is a unique, business-specific identifier generated by Meta for every user-business portfolio pairing. |
+|  | type(Video) |  | video |
+|  | video |  | The media object containing a video |
+|  | url |  | Direct URL pointing to the media file. The URL should end with specified file-format. You can use our Media manager under Tools to upload a file and get a public URL. |
+|  | mimeType |  | Supported [mime types](https://help.imiconnect.io/docs/supported-file-types-for-channels#whatsapp). |
+
+
+
+
+**Audio**
+
+
+
+| Parameter/Object | Parameters with in the Object | Mandatory | Description |
+| --- | --- | --- | --- |
+| channels |  |  |  |
+|  | OTT-Messaging |  | JSON object for social channel message configuration |
+|  | waid | Yes | WhatsApp ID or phone number for the person you want to send a message to. |
+|  | bsuid | When both WAID and BSUID are present, WAID takes priority as the** primary identifier**.  <br>  <br>A **single identifier** is used by preferring WAID or copying BSUID into WAID if empty.  <br>**  <br>Normalization** ensures consistent use across systems with flags indicating derived values and compatibility maintained in APIs and logs | The BSUID is a unique, business-specific identifier generated by Meta for every user-business portfolio pairing. |
+|  | type (Audio) |  | audio  |
+|  | audio |  | The media object containing audio.  <br>Supported audio formats are aac, mp4, mpeg, amr and ogg (only opus codecs, base ogg is not supported) |
+|  | url |  | Direct URL pointing to the media file. The URL should end with specified file-format. You can use our Media manager under Tools to upload a file and get a public URL. |
+|  | mimeType |  | Supported [mime types](https://help.imiconnect.io/docs/supported-file-types-for-channels#whatsapp) . |
+
+
+
+
+**Document**
+
+
+
+| Parameter/Object | Parameters with in the Object | Mandatory | Description |
+| --- | --- | --- | --- |
+| channels |  |  |  |
+|  | OTT-Messaging |  | JSON object for social channel message configuration |
+|  | waid | Yes | WhatsApp ID or phone number for the person you want to send a message to. |
+|  | bsuid | When both WAID and BSUID are present, WAID takes priority as the** primary identifier**.  <br>  <br>A **single identifier** is used by preferring WAID or copying BSUID into WAID if empty.  <br>**  <br>Normalization** ensures consistent use across systems with flags indicating derived values and compatibility maintained in APIs and logs | The BSUID is a unique, business-specific identifier generated by Meta for every user-business portfolio pairing. |
+|  | type (document) |  | document  |
+|  | document |  | The media object containing a document.  <br>Supported document formats are PDF, DOC(X), PPT(X), The media object containing a videoXLS(X). |
+|  | url |  | Direct URL pointing to the media file. The URL should end with specified file-format. You can use our Media manager under Tools to upload a file and get a public URL. |
+|  | filename |  | filename of the document |
+|  | mimeType |  | Supported [mime types](https://help.imiconnect.io/docs/supported-file-types-for-channels#whatsapp) . |
+
+
+
+
+**Sticker**
+
+
+
+| Parameter/Object | Parameters with in the Object | Mandatory | Description |
+| --- | --- | --- | --- |
+| conversationid |  |  |  |
+| channels |  |  |  |
+|  | OTT-Messaging |  | JSON object for social channel message configuration |
+|  | waid | Yes | WhatsApp ID or phone number for the person you want to send a message to. |
+|  | bsuid | When both WAID and BSUID are present, WAID takes priority as the** primary identifier**.  <br>  <br>A **single identifier** is used by preferring WAID or copying BSUID into WAID if empty.  <br>**  <br>Normalization** ensures consistent use across systems with flags indicating derived values and compatibility maintained in APIs and logs | The BSUID is a unique, business-specific identifier generated by Meta for every user-business portfolio pairing. |
+|  | type(sticker) |  | sticker. |
+|  | sticker |  | The media object containing a sticker. |
+|  | url |  | Direct URL pointing to the media file. The URL should end with specified file-format. You can use our Media manager under Tools to upload a file and get a public URL. |
+|  | mimeType |  | Supported [mime types](https://help.imiconnect.io/docs/supported-file-types-for-channels#whatsapp) . |
+
+
+
+
+## Error Codes
+
+Refer to the [Apple Messages for Business](https://developers.imiconnect.io/reference/channel-specific-status-codes-1#apple-messages-for-business) section.
+
+## API reference metadata
+
+These are source metadata and examples. `api.auth` is ReadMe metadata; verify authentication in the documented headers/security scheme.
+
+```json
+{
+  "method": "post",
+  "url": "/",
+  "auth": "required",
+  "results": {
+    "codes": [
+      {
+        "name": "",
+        "code": "{\n    \"response\": [\n        {\n            \"code\": \"1001\",\n            \"transid\": \"3f09295d-9eb3-4c9e-8ee8-a3272e5f00c1\",\n            \"description\": \"Queued\"\n        }\n    ]\n}",
+        "language": "json",
+        "status": 200
+      },
+      {
+        "name": "",
+        "code": "{\n  \"response\": {\n    \"code\": \"7001\",\n    \"description\": \"Authentication failed.\",\n    \"transid\": \"7670c9a8-131f-4166-ac30-17f6109340d6\"\n  }\n}",
+        "language": "json",
+        "status": 400
+      }
+    ]
+  },
+  "params": [
+    {
+      "name": "deliverychannel",
+      "type": "string",
+      "enumValues": "",
+      "default": "whatsapp",
+      "desc": "Channel used to send the message i.e., whatsapp in this case.",
+      "required": true,
+      "in": "body",
+      "ref": "",
+      "_id": "645392bad4947b001f208434",
+      "id": "645392bad4947b001f208434"
+    },
+    {
+      "name": "appid",
+      "type": "string",
+      "enumValues": "",
+      "default": "",
+      "desc": "Contains the applicationid",
+      "required": true,
+      "in": "body",
+      "ref": "",
+      "_id": "645392bad4947b001f208433",
+      "id": "645392bad4947b001f208433"
+    },
+    {
+      "name": "destination",
+      "type": "array_object",
+      "enumValues": "",
+      "default": "",
+      "desc": "Unique user id for the recipient of the message on WhatsApp.",
+      "required": true,
+      "in": "body",
+      "ref": "bsuid",
+      "_id": "645392bad4947b001f208432",
+      "id": "645392bad4947b001f208432"
+    },
+    {
+      "name": "channels",
+      "type": "object",
+      "enumValues": "",
+      "default": "",
+      "desc": "Channels used for incoming messages",
+      "required": true,
+      "in": "body",
+      "ref": "channels",
+      "_id": "645392bad4947b001f208431",
+      "id": "645392bad4947b001f208431"
+    },
+    {
+      "name": "corrrelationid",
+      "type": "string",
+      "enumValues": "",
+      "default": "",
+      "desc": "The corrrelationid is a unique identifier that you can attach to every request as a reference a particular transaction or event. This is configured as a part of the request.",
+      "required": false,
+      "in": "body",
+      "ref": "",
+      "_id": "645392bad4947b001f208430",
+      "id": "645392bad4947b001f208430"
+    },
+    {
+      "name": "callbackData",
+      "type": "string",
+      "enumValues": "",
+      "default": "",
+      "desc": "Data that you have configured to receive on the notify Url. This is configured as a part of the request.",
+      "required": false,
+      "in": "body",
+      "ref": "",
+      "_id": "645392bad4947b001f20842f",
+      "id": "645392bad4947b001f20842f"
+    },
+    {
+      "name": "notifyurl",
+      "type": "string",
+      "enumValues": "",
+      "default": "",
+      "desc": "Configure a URL to get notifications on delivery reports for a WhatsApp message. This field accepts only a valid URL or a variable. If an invalid URL is passed in API request or via a variable, then such request will not be considered eligible for retries.",
+      "required": false,
+      "in": "body",
+      "ref": "",
+      "_id": "645392bad4947b001f20842e",
+      "id": "645392bad4947b001f20842e"
+    },
+    {
+      "name": "key",
+      "type": "string",
+      "enumValues": "",
+      "default": "",
+      "desc": "Applicable when you want to use service key for API authentication. Available under API tab within a service in your WebexConnect tenant.",
+      "required": false,
+      "in": "header",
+      "ref": "",
+      "_id": "645392bad4947b001f20842d",
+      "id": "645392bad4947b001f20842d"
+    },
+    {
+      "name": "authorization",
+      "type": "string",
+      "enumValues": "",
+      "default": "",
+      "desc": "JSON Web Token (JWT) for authentication (e.g. bearer <token>) used alternatively to Service Key.",
+      "required": false,
+      "in": "header",
+      "ref": "",
+      "_id": "64646c96e2f63a0bf72af601",
+      "id": "64646c96e2f63a0bf72af601"
+    },
+    {
+      "name": "notifyurlAuthId",
+      "type": "string",
+      "enumValues": "",
+      "default": "",
+      "desc": "Unique Authentication ID",
+      "required": false,
+      "in": "body",
+      "ref": "",
+      "_id": "68c04207d488f921e6aaa0a0",
+      "id": "68c04207d488f921e6aaa0a0"
+    }
+  ],
+  "examples": {
+    "codes": [
+      {
+        "code": "{\n    \"deliverychannel\": \"whatsapp\", //Mandatory. Channel used to send the message i.e., WhatsApp in this case.\n    \"appid\": \"{{WAAppid}}\", //Mandatory. Contains the applicationid\n    \"destination\": [\n        {\n            \"waid\": [\n                \"{{waid}}\" //Mandatory. WhatsApp ID or phone number for the person you want to send a message to.\n            ]\n        }\n    ],\n    \"channels\": {\n        \"OTT-Messaging\": {\n            \"wa\": {\n                \"type\": \"image\", //Mandatory. Specify the media type of WhatsApp message. Supported types are image, audio, document, video or sticker.\n                \"image\": {\n                    \"url\": \"<your-media-url>\", //Mandatory. Direct URL pointing to the media file. The URL should end with specified file-format. You can use our Media manager under Tools to upload a file and get a public URL.\n                    \"caption\": \"\", //Optional. Describes the specified image, video, or document media. Do not use with audio or sticker media.\n                    \"mimeType\": \"image/jpg\" //Mandatory. Specify mime type of media for e.g. image/jpg, image/png, video/mp4, audio/aac\n                },\n                \"identity_key_hash\": \"<identity-key-hash-value>\" //Optional. Pass this value to validate the identity of your customer.\n            }\n        }\n    },\n    \"correlationid\": \"\", //Optional. The correlationid is a unique identifier that you can attach to every request as a reference a particular transaction or event. This is configured as a part of the request.\n    \"callbackData\": \"\", //Optional. Data that you have configured to receive on the notify Url. This is configured as a part of the request.\n    \"notifyurl\": \"\" //Optional. Configure a URL to get notifications on delivery reports for a WhatsApp message. This field accepts only a valid URL or a variable. If an invalid URL is passed in API request or via a variable, then such request will not be considered eligible for retries.\n    \"notifyurlAuthId\": \"TNPBXKT09U\" //Optional.\n}",
+        "language": "json",
+        "name": "Image"
+      }
+    ]
+  },
+  "apiSetting": "6a675233ec1c893d8a7f67f3"
+}
+```
+
+## OpenAPI operation and component schemas
+
+```json
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "WhatsApp Media Message",
+    "version": "6.20.0"
+  },
+  "servers": [
+    {
+      "url": "https://{YourRegion}.webexconnect.io/resources/v1/messaging",
+      "variables": {
+        "YourRegion": {
+          "default": "YourRegion"
+        }
+      }
+    }
+  ],
+  "security": [
+    {}
+  ],
+  "path": "/",
+  "method": "post",
+  "path_parameters": [],
+  "operation": {
+    "summary": "WhatsApp Media Message",
+    "description": "Used for responding to an incoming customer message, or follow-up messages within the 24-hour reply window as per WhatsApp's messaging guidelines. Use this option when you want to send a response message with image, document, audio, video, or sticker.  _Note: The following is an example of sending a image media message. Examples of [other media types](https://developers.imiconnect.io/reference/whatsapp-media-message#other-media-types) can be found below._  _Note: Modify YourRegion in the URL to the right to reflect your tenant’s region. See [Know your endpoint page](https://developers.imiconnect.io/reference/endpoints)._",
+    "operationId": "whatsapp-media-message",
+    "parameters": [
+      {
+        "name": "key",
+        "in": "header",
+        "description": "Applicable when you want to use service key for API authentication. Available under API tab within a service in your WebexConnect tenant.",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "authorization",
+        "in": "header",
+        "description": "JSON Web Token (JWT) for authentication (e.g. bearer <token>) used alternatively to Service Key.",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "requestBody": {
+      "content": {
+        "application/json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "deliverychannel",
+              "appid",
+              "destination",
+              "channels"
+            ],
+            "properties": {
+              "deliverychannel": {
+                "type": "string",
+                "description": "Channel used to send the message i.e., whatsapp in this case.",
+                "default": "whatsapp"
+              },
+              "appid": {
+                "type": "string",
+                "description": "Contains the applicationid"
+              },
+              "destination": {
+                "type": "array",
+                "description": "Unique user id for the recipient of the message on WhatsApp.",
+                "items": {
+                  "properties": {}
+                }
+              },
+              "channels": {
+                "type": "object",
+                "description": "Channels used for incoming messages",
+                "properties": {
+                  "OTT-Messaging": {
+                    "type": "object",
+                    "description": "JSON object for social channel message configuration",
+                    "properties": {
+                      "wa": {
+                        "type": "object",
+                        "description": "JSON object for WhatsApp message configuration",
+                        "required": [
+                          "type"
+                        ],
+                        "properties": {
+                          "type": {
+                            "type": "string",
+                            "description": "Specify the media type of WhatsApp message. Supported types are image, audio, document, video or sticker.",
+                            "default": "image"
+                          },
+                          "image": {
+                            "type": "object",
+                            "description": "Configure object only if type is specified as 'image'. Supported image formats are JPG, JPEG, PNG. Refer to [this](https://help.imiconnect.io/docs/supported-file-types-for-channels#whatsapp) page for supported mime-type details.",
+                            "required": [
+                              "url",
+                              "mimeType"
+                            ],
+                            "properties": {
+                              "url": {
+                                "type": "string",
+                                "description": "Direct URL pointing to the image file. The URL should end with specified file-format. You can use our Media manager under Tools to upload a file and get a public URL."
+                              },
+                              "caption": {
+                                "type": "string",
+                                "description": "Describes the specified image or video media. Caption is not available with audio, document or sticker media."
+                              },
+                              "mimeType": {
+                                "type": "string",
+                                "description": "Specify mime type of media for e.g. image/png. Refer to [mime types](https://help.imiconnect.io/docs/supported-file-types-for-channels#whatsapp) page for more informations"
+                              }
+                            }
+                          },
+                          "video": {
+                            "type": "object",
+                            "description": "Configure object only if type is specified as 'video'. Supported video formats are mp4, 3gpp",
+                            "properties": {
+                              "url": {
+                                "type": "string",
+                                "description": "Direct URL pointing to the video file. The URL should end with specified file-format. You can use our Media manager under Tools to upload a file and get a public URL."
+                              },
+                              "caption": {
+                                "type": "string",
+                                "description": "Describes the specified image or video media. Caption is not available with audio, document or sticker media."
+                              },
+                              "mimeType": {
+                                "type": "string",
+                                "description": "Specify mime type of video. Refer to [mime types](https://help.imiconnect.io/docs/supported-file-types-for-channels#whatsapp) page for more informations."
+                              }
+                            }
+                          },
+                          "audio": {
+                            "type": "object",
+                            "description": "Configure object only if type is specified as 'audio'. Supported audio formats are aac, mp4, amr, mpeg and ogg",
+                            "properties": {
+                              "url": {
+                                "type": "string",
+                                "description": "Direct URL pointing to the audio file. The URL should end with specified file-format. You can use our Media manager under Tools to upload the file and get a public URL."
+                              },
+                              "mimeType": {
+                                "type": "string",
+                                "description": "Specify mime type of audio. Refer to [mime types](https://help.imiconnect.io/docs/supported-file-types-for-channels#whatsapp) page for more informations."
+                              }
+                            }
+                          },
+                          "document": {
+                            "type": "object",
+                            "description": "Configure object only if type is specified as 'document'. All valid mime types are supported",
+                            "properties": {
+                              "url": {
+                                "type": "string",
+                                "description": "Direct URL pointing to the document file. The URL should end with specified file-format. You can use our Media manager under Tools to upload the file and get a public URL."
+                              },
+                              "mimeType": {
+                                "type": "string",
+                                "description": "Specify mime type of document. Refer to [mime types](https://help.imiconnect.io/docs/supported-file-types-for-channels#whatsapp) page for more informations."
+                              },
+                              "filename": {
+                                "type": "string",
+                                "description": "File name for the document."
+                              }
+                            }
+                          },
+                          "sticker": {
+                            "type": "object",
+                            "description": "Configure object only if type is specified as 'sticker'. Supported sticker format is web",
+                            "properties": {
+                              "url": {
+                                "type": "string",
+                                "description": "Direct URL pointing to the sticker file. The URL should end with specified file-format. You can use our Media manager under Tools to upload the file and get a public URL."
+                              },
+                              "mimeType": {
+                                "type": "string",
+                                "description": "Specify mime type of sticker as image/WEBP"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "identity_key_hash": {
+                        "type": "string",
+                        "description": "Pass this value to validate the identity of your customer. More details on Identity Key Hash feature are documented [here](https://help.webexconnect.io/docs/whatsapp-node#identity-hash-field)."
+                      }
+                    }
+                  }
+                }
+              },
+              "corrrelationid": {
+                "type": "string",
+                "description": "The corrrelationid is a unique identifier that you can attach to every request as a reference a particular transaction or event. This is configured as a part of the request."
+              },
+              "callbackData": {
+                "type": "string",
+                "description": "Data that you have configured to receive on the notify Url. This is configured as a part of the request."
+              },
+              "notifyurl": {
+                "type": "string",
+                "description": "Configure a URL to get notifications on delivery reports for a WhatsApp message. This field accepts only a valid URL or a variable. If an invalid URL is passed in API request or via a variable, then such request will not be considered eligible for retries."
+              },
+              "notifyurlAuthId": {
+                "type": "string",
+                "description": "Unique Authentication ID"
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "200": {
+        "description": "200",
+        "content": {
+          "application/json": {
+            "examples": {
+              "Result": {
+                "value": "{\n    \"response\": [\n        {\n            \"code\": \"1001\",\n            \"transid\": \"3f09295d-9eb3-4c9e-8ee8-a3272e5f00c1\",\n            \"description\": \"Queued\"\n        }\n    ]\n}"
+              }
+            },
+            "schema": {
+              "type": "object",
+              "properties": {
+                "response": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "code": {
+                        "type": "string",
+                        "example": "1001"
+                      },
+                      "transid": {
+                        "type": "string",
+                        "example": "3f09295d-9eb3-4c9e-8ee8-a3272e5f00c1"
+                      },
+                      "description": {
+                        "type": "string",
+                        "example": "Queued"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "400": {
+        "description": "400",
+        "content": {
+          "application/json": {
+            "examples": {
+              "Result": {
+                "value": "{\n  \"response\": {\n    \"code\": \"7001\",\n    \"description\": \"Authentication failed.\",\n    \"transid\": \"7670c9a8-131f-4166-ac30-17f6109340d6\"\n  }\n}"
+              }
+            },
+            "schema": {
+              "type": "object",
+              "properties": {
+                "response": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "string",
+                      "example": "7001"
+                    },
+                    "description": {
+                      "type": "string",
+                      "example": "Authentication failed."
+                    },
+                    "transid": {
+                      "type": "string",
+                      "example": "7670c9a8-131f-4166-ac30-17f6109340d6"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "deprecated": false
+  },
+  "components": {
+    "securitySchemes": {}
+  }
+}
+```

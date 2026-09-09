@@ -1,0 +1,31 @@
+{
+  "category": "Webex Engage Standalone Nodes",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257967",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "fb68263067362082ac1cedd398016ce56a61d9979255c97ce8dc3af451895b29",
+    "source_path": "08c6fd0daa3fa65e55abea7fd32f6cb4be6afc400e807f0cc7b3a68c920b6a8f",
+    "text_path": "54aa414cdcd6aeb8bcb77d9addc83a5e168ba9026b7ddf333cdd99b2a35be2f5"
+  },
+  "headings": [],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/webex-engage-standalone-introduction.md",
+  "resolved_url": "https://help.webexconnect.io/docs/webex-engage-standalone-introduction",
+  "retrieved_at": "2026-09-08T23:29:25+00:00",
+  "sha256_html_response": "b6dba6cd4764ef4ed1c61960baeac305069f1079ee4eb46c88a44a4a42e8c500",
+  "sha256_source_body": "08c6fd0daa3fa65e55abea7fd32f6cb4be6afc400e807f0cc7b3a68c920b6a8f",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/webex-engage-standalone-introduction.source.md",
+  "source_updated_at": "2026-04-14T07:44:36.385Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/webex-engage-standalone-introduction.txt",
+  "title": "Introduction - WxEngage standalone",
+  "url": "https://help.webexconnect.io/docs/webex-engage-standalone-introduction",
+  "word_count": 175,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/webex-engage-standalone-introduction.metadata.json"
+}

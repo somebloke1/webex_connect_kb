@@ -1,0 +1,35 @@
+{
+  "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182578c3",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "5eeedf2703c65be5b9283f459d162bc0885d5b1f6069bfce626cd223314cd8e2",
+    "source_path": "35331cff17d5edf2aa5a700e114adfce86ec6571359ce68fae6847a9548cc342",
+    "text_path": "0dd88e6d392a550c1feba289d92ce8b33c6e1650743ba4677ca0268306aec684"
+  },
+  "headings": [
+    "Sample flow",
+    "Steps to use rich responses in a Webex Connect flow",
+    "Evaluate node code for data transformation"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/wxcc-using-bot-rich-responses-with-livechat.md",
+  "resolved_url": "https://help.webexconnect.io/docs/wxcc-using-bot-rich-responses-with-livechat",
+  "retrieved_at": "2026-09-08T23:29:18+00:00",
+  "sha256_html_response": "47c90496fa26d1430edc611b164ea995823baf81dff31e907efc73d0a28cb9fd",
+  "sha256_source_body": "35331cff17d5edf2aa5a700e114adfce86ec6571359ce68fae6847a9548cc342",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/wxcc-using-bot-rich-responses-with-livechat.source.md",
+  "source_updated_at": "2026-02-03T15:16:09.155Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/wxcc-using-bot-rich-responses-with-livechat.txt",
+  "title": "Using bot rich responses with Livechat",
+  "url": "https://help.webexconnect.io/docs/wxcc-using-bot-rich-responses-with-livechat",
+  "word_count": 938,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/wxcc-using-bot-rich-responses-with-livechat.metadata.json"
+}

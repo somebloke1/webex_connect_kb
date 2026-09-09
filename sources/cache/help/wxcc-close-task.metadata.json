@@ -1,0 +1,36 @@
+{
+  "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257881",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "10c2c6b5cada667efc55a9108eba4c34a10041a0073597862961e84f882d96d7",
+    "source_path": "874db1a0596388290390599d46c0e199cec447e0162a5f472f94febc95b7ed03",
+    "text_path": "8b71439f9072a349c8d53c6262480f0629cfec0184ecb2654a0ef36111445850"
+  },
+  "headings": [
+    "Authorization",
+    "Methods and Outcomes",
+    "📘Note",
+    "📘Note"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/wxcc-close-task.md",
+  "resolved_url": "https://help.webexconnect.io/docs/wxcc-close-task",
+  "retrieved_at": "2026-09-08T23:29:16+00:00",
+  "sha256_html_response": "ae7d9b084b611cbbd046522282cd1a121c8d9ca5b17945a6c5b674991edd1bb3",
+  "sha256_source_body": "874db1a0596388290390599d46c0e199cec447e0162a5f472f94febc95b7ed03",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/wxcc-close-task.source.md",
+  "source_updated_at": "2026-04-14T07:25:21.801Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/wxcc-close-task.txt",
+  "title": "Close Task - WXCC",
+  "url": "https://help.webexconnect.io/docs/wxcc-close-task",
+  "word_count": 531,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/wxcc-close-task.metadata.json"
+}

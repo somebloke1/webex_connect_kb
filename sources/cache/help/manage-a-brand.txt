@@ -1,0 +1,33 @@
+To manage a brand on the Webex Connect platform:
+
+- In the Brands & Campaigns (10DLC) page, click the indicator towards the end of a brand record and click Manage.
+
+## 📘
+Reusing Brand IDs
+
+If you have an existing brand listing in your account added by our Admin team, you can create a new campaign using the same brand ID.
+
+- In the Manage Brand page, click Edit Details.
+
+ [Image: Screenshot Displaying Manage Button Under Action.] 
+Screenshot Displaying Manage Button Under Action.
+
+- 
+
+Make required edits to fields in the sections.
+
+- 
+
+Click Save.
+
+- 
+
+Click Resubmit.
+
+ [Image: Screenshot of Manage Brand Page.] 
+Screenshot of Manage Brand Page.
+
+## 📘
+Note
+
+In case of errors during Brand registration or change in Brand information over time, you can reach out to the Operations or Support Team for help.

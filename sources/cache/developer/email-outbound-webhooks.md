@@ -1,0 +1,417 @@
+# Email
+
+Source: https://developers.webexconnect.io/reference/email-outbound-webhooks
+Documentation version: 6.20.0
+Retrieved: 2026-09-08T23:31:44+00:00
+
+You can configure Outbound Webhooks to receive a copy of delivery status notifications for Email channel and for a copy of incoming messages/events by navigating to 'Assets -> Integrations -> Outbound Webhooks' sections in the platform. 
+
+## Outbound Webhook configuration for tracking email delivery status
+
+> 📘 Note
+> 
+> Please note that the email delivery notifications are available only for AWS SES based Email Assets.
+> 
+> Further, 'Read' receipts are not generated for emails sent as plain text, i.e., when the email type is text.
+> 
+> Also, there can be multiple read notifications from a single recipient, depending on recipient’s email client security policy.
+
+If you want to track email message delivery status, select the Webex Connect Service you are sending the Email from under 'Entity' dropdown.
+
+```json Submitted
+{
+    "deliveryInfoNotification": {
+        "deliveryInfo": {
+            "deliveryChannel": "email",
+            "Description": "Submitted",
+            "destinationType": "email",
+            "timeStamp": "2023-02-07T03:51:03.311+05:30",
+            "code": "7501",
+            "deliveryStatus": "Submitted",
+            "destination": "destination@domain.tld",
+            "additionalInfo": ""
+        },
+        "correlationid": "3bd8edf31c81-4b72d8a2-XXXX-49e2-993e",
+        "callbackData": "callbackdata",
+        "transid": "4b72d8a2-290d-XXXX-993e-3bd8edf31c81",
+        "subtid": ""
+    }
+}
+```
+```json Delivered
+{
+    "deliveryInfoNotification": {
+        "deliveryInfo": {
+            "deliveryChannel": "email",
+            "Description": "Delivered",
+            "destinationType": "email",
+            "timeStamp": "2023-02-07T03:51:04.662+05:30",
+            "code": "7500",
+            "deliveryStatus": "Delivered",
+            "destination": "destination@domain.tld",
+            "additionalInfo": ""
+        },
+        "correlationid": "3bd8edf31c81-4b72d8a2-XXXX-49e2-993e",
+        "callbackData": "callbackdata",
+        "transid": "4b72d8a2-290d-XXXX-993e-3bd8edf31c81",
+        "subtid": ""
+    }
+}
+```
+```json Read
+{
+  "deliveryInfoNotification": {
+    "deliveryInfo": {
+      "timeStamp": "2023-04-14T22:13:17.290-04:00",
+      "Description": "Read",
+      "code": "7502",
+      "deliveryChannel": "email",
+      "additionalInfo": "",
+      "destination": "destination@domain.tld",
+      "destinationType": "email",
+      "deliveryStatus": "Read"
+    },
+    "subtid": "e1187b83-9566-48e2-XXXX-29474c7c39c0",
+    "transid": "c71c2927-6bb3-2021-XXXX-226b48d66ba0_0",
+    "callbackData": "callbackData",
+    "correlationid": "correlation id value"
+  }
+}
+```
+```json Clicked (v2 API only)
+{
+    "deliveryInfoNotification": {
+        "deliveryInfo": {
+            "deliveryChannel": "email",
+            "Description": "https://your.link.tld/files/sample.pdf|192.0.2.1",
+            "destinationType": "email",
+            "timeStamp": "2016-07-21T12:44:23.644Z",
+            "additionalInfo":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/125.0.6422.140 Safari\/537.36",
+            "code": "7528",
+            "deliveryStatus": "Clicked",
+            "destination": "destination@domain.tld"
+        },
+        "correlationid": "3bd8edf31c81-4b72d8a2-XXXX-49e2-993e",
+        "callbackData": "callbackdata",
+        "transid": "4b72d8a2-290d-XXXX-993e-3bd8edf31c81"
+    }
+}
+```
+```json Not verified
+{
+    "deliveryInfoNotification": {
+        "deliveryInfo": {
+            "deliveryChannel": "email",
+            "Description": "Account in sandbox mode. Destination email address is not verified",
+            "destinationType": "emailid",
+            "timeStamp": "2016-07-21T12:44:23.644",
+            "code": "7522",
+            "deliveryStatus": "Not Verified",
+            "destination": "destination@domain.tld"
+        },
+        "correlationid": "3bd8edf31c81-4b72d8a2-XXXX-49e2-993e",
+        "callbackData": "callbackdata",
+        "transid": "4b72d8a2-290d-XXXX-993e-3bd8edf31c81"
+    }
+}
+```
+```json Invalid
+{
+	"deliveryInfoNotification": {
+		"deliveryInfo": {
+			"timeStamp": "2021-03-04T17:00:07.538Z",
+			"Description": "Invalid email address",
+			"code": "7523",
+			"deliveryChannel": "email",
+			"additionalInfo": "",
+			"destination": "destination@invalid",
+			"destinationType": "email",
+			"deliveryStatus": "Failed"
+		},
+		"subtid": "",
+		"transid": "1a893a24-6517-XXXX-82ef-e7801be60f88",
+		"callbackData": "call back data",
+		"correlationid": "124521i1"
+	}
+}
+```
+```json Bounce
+{
+        "deliveryInfoNotification": {
+        "deliveryInfo": {
+            "deliveryChannel": "email",
+            "Description": "Permanent_General/Permanent_NoEmail/Permanent_Suppressed/Transient_General/Transient_MailboxFull/Transient_MessageTooLarge/Transient_ContentRejected/Transient_AttachmentRejected",
+            "destinationType": "email",
+            "timeStamp": "2023-02-07T03:51:52.322+05:30",
+            "code": "7520",
+            "deliveryStatus": "Bounce", 
+            "destination": "destination@domain.tld",
+            "additionalInfo": "5.1.1|failed|smtp; 550-5.1.1 The email account that you tried to reach does not exist. Please try\\n550-5.1.1 double-checking the recipient's email address for typos or\\n550-5.1.1 unnecessary spaces. For more information, go to\\n550 5.1.1  https:\\/\\/support.google.com\\/mail\\/?p=NoSuchUser e16-20020a056402089000b0056023119210si1660773edy.317 - gsmtp"
+        },
+        "correlationid": "3bd8edf31c81-4b72d8a2-XXXX-49e2-993e",
+        "callbackData": "callbackdata",
+        "transid": "4b72d8a2-290d-XXXX-993e-3bd8edf31c81",
+        "subtid": ""
+        }
+}
+```
+```json Complaint
+{
+    "deliveryInfoNotification": {
+        "deliveryInfo": {
+            "deliveryChannel": "email",
+            "Description": "abuse/auth-failure/fraud/not-spam/other/virus",
+            "destinationType": "emailid",
+            "timeStamp": "2016-07-21T12:44:23.644",
+            "code": "7521",
+            "deliveryStatus": "Complaint",
+            "destination": "destination@domain.tld"
+        },
+        "correlationid": "3bd8edf31c81-4b72d8a2-XXXX-49e2-993e",
+        "callbackData": "callbackdata",
+        "transid": "4b72d8a2-290d-XXXX-993e-3bd8edf31c81"
+    }
+}
+```
+```json Failed - Email Max Length Reached
+{ 
+"deliveryInfoNotification": {
+"deliveryInfo": {
+"timeStamp": "2021-06-04T12:52:04.009Z",
+"Description": "Email address max length reached",
+"code": "7524",
+"deliveryChannel": "email",
+"additionalInfo": "",
+"destination": "tevskeran.dhedldtaggggggggggggggggggggggggghhhhhhhhhhhhhhhhhhh5df@domain.tld",
+"destinationType": "email",
+"deliveryStatus": "Failed"
+},
+"subtid": "",
+"transid": "3df50805-464c-XXXX-99fd-c4197789538d",
+"callbackData": "",
+"correlationid": "124521i1"
+}
+}
+```
+```json Failed - Email Bounced
+{
+"deliveryInfoNotification": {
+"deliveryInfo": {
+"timeStamp": "2023-02-07T03:52:17.715+05:30",
+"Description": "already bounced : bouncetest@domain.tld",
+"code": "7240",
+"deliveryChannel": "email",
+"additionalInfo": "",
+"destination": "bouncetest@domain.tld",
+"destinationType": "email",
+"deliveryStatus": "Failed"
+},
+"subtid": "",
+"transid": "44970e48-6eae-493f-XXXX-4258f116771d",
+"callbackData": "",
+"correlationid": "124521i1"
+}
+}
+```
+```json Failed - Unsubscribed
+{
+  "deliveryInfoNotification": {
+    "deliveryInfo": {
+      "timeStamp": "2018-07-26T09:52:46.339Z",
+      "Description": "unsubscribed : support@imiconnect.com",
+      "code": "7241",
+      "deliveryChannel": "email",
+      "additionalInfo": "",
+      "destination": "destination@domain.tld",
+      "destinationType": "email",
+      "deliveryStatus": "Failed"
+    },
+    "subtid": "f06b174e-8830-XXXX-898f-dd9e893cc147",
+    "transid": "9736689f-0e7c-XXXX-a517-79ea21170354",
+    "callbackData": "",
+    "correlationid": "12345"
+  }
+}
+```
+
+
+
+| Field Name | Description |
+| --- | --- |
+| deliveryChannel | This is “email” in case of a email |
+| Description | Provides supplementary details about the delivery event when relevant. For instance, in the case of Clicked Receipts, this field includes the URL that was clicked, followed by the IP address from which the click originated. |
+| destinationType | This is "email" for Email channel. |
+| timeStamp | Timestamp of the event |
+| code | Status code as mentioned in the documentation |
+| deliveryStatus | Status of the Email |
+| destination | This contains the destination email id |
+| additionalInfo | This field contains additional contextual information for certain receipts. For example, it captures the details of device where the email has been clicked at in case of 'Clicked' event. Let's say the click event is received from a user who is using Chrome Browser version 125.0.6422.140 on a 64-bit Windows machine using the WebKit rendering engine, this field may have information like: "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/125.0.6422.140 Safari\/537.36".  <br>  <br>Alternatively, it contains the granular details about the reason behind an email getting bounced in case of bounced emails. Another example is when an email is bounced/rejected by the recipient email service provider such as Gmail because the sender is unauthenticated, additionalInfo field in such cases would contain details about 5.7.26 email errors. |
+| correlationid | The CorrelationID is a unique identifier that you can attach to every request as a reference a particular transaction or event. This is configured as a part of the request |
+| callbackData | Data that you have configured to receive on the notify Url. This is configured as a part of the request |
+| transid | Unique transaction reference id for this request |
+| subtid | Sub-transaction reference id for this request |
+
+
+
+
+> 📘 Multiple Recipients Scenario
+> 
+> - For email transactions with multiple recipients, the Status field in Debug Console and Export Logs, and Error Codes details, will only be updated for entries with the ‘Submitted’ Status. Email delivery status for each of the individual recipients will need to be tracked using Outbound Webhooks. Separate outbound notifications will be sent for email delivery or failure to each of the recipients mentioned in To, CC, and BCC sections with the same transaction ID. For outbound email transactions, destination will contain an email ID for scenarios where only one email ID has been mentioned (that can in be in either of to, bcc, or cc fields but overall one email ID is mentioned in one outbound request).
+> - The platform will not trigger or resume a flow, nor trigger a rule or an outbound webhook notification for incoming emails where Sender Email ID is same as the Recipient Email ID. However, details of such incoming emails will be available within Export Logs. 
+> - For email sent via SMTP channel, we do not support delivery tracking.
+> - AWS SES doesn’t provide the recipient details for events such as opening and/or clicking the link of an email by a specific recipient. The counts for Open and Click events can be higher than the Submit count. For multiple recipient scenarios, given the lack of information of unique recipient info from AWS SES, the redundancy is not uniquely identified, and all Open events are accounted for in reports.
+> - The default retention period for email bounce list is Seven days for email via AWS SES. To change the retention period, reach out to your account manager.
+
+### Factors that influence email delivery receipts
+
+Email client settings by an individual recipient can sometimes affect email delivery receipts in several ways. Here are some examples:
+
+- **Read Receipts**: If a recipient's email client is set to automatically block read receipts, the sender may not receive confirmation when the email is opened, even if the recipient has read it.
+- **Image Display Settings**: Some email clients block images by default. If a delivery receipt relies on tracking pixels (invisible images) to confirm email opens, the receipt may not be triggered if images are not displayed.
+- **Spam Filters**: If a recipient has aggressive spam filters, legitimate emails may be marked as spam or moved to a junk folder, preventing delivery receipts from being generated.
+- **Privacy Settings**: Email clients with enhanced privacy features might block tracking links or external content, which can interfere with the generation of delivery receipts.
+- **Email Client Version**: Different versions of an email client may handle delivery and read receipts differently, affecting the consistency of receipt generation.
+- **Manual Settings**: Some users may choose to manually handle delivery and read receipts, opting to send them selectively or not at all, impacting the sender's receipt of confirmation.
+
+These settings can lead to discrepancies in tracking and confirmation of email deliveries, affecting how senders interpret the success of their email communications.
+
+## Outbound Webhook configuration for tracking incoming emails and other events
+
+If you want to track incoming emails, select the Email app asset you are sending and receiving the emails from under 'Entity' dropdown.
+
+```json Inbound Email
+{
+                "to": ["destination@domain.tld"],
+                "ts": "2017-09-27T18:56:42.099Z",
+                "textMessage": "\r\n\r\nCheers,\r\nK Siva Krishna\r\nExtn: 604\r\n\r\nFrom: Siva Krishna Kesanapalli\r\n\r\n",
+                "subject": "Email Subject Line",
+                "event": "MO",
+                "from": "[sender@domain.tld]",
+                "tid": "1866c6b7-4f53-XXXX-bf40-e4a30ac6c114",
+                "messageId": "2dbk2k9580a7nhrXXXXXt553v8dnjusad6kjk101",
+                "returnPath": "replyto@domain.com",
+                "htmlMessage": "<html xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" \r\n ****REMOVED FOR READABILITY****",
+                "channel": "email"
+}
+```
+```json Inbound Email with Attachments
+{
+                "to": ["destination@domain.tld"],
+                "ts": "2017-09-27T18:56:42.099Z",
+                "textMessage": "\r\n\r\nCheers,\r\nK Siva Krishna\r\nExtn: 604\r\n\r\nFrom: Siva Krishna Kesanapalli\r\n\r\n",
+                "subject": "Email Subject Line",
+                "event": "MO",
+                "from": "[sender@domain.tld]",
+                "attachments": [{
+                                                "content": "****REMOVED FOR READABILITY****",
+                                                "name": "build-impl.xml",
+                                                "contentType": "application/xml",
+                                                "contentTransferEncoding": "base64"
+                                }, {
+                                                "content": "****REMOVED FOR READABILITY****",
+                                                "name": "project.xml",
+                                                "contentType": "application/xml",
+                                                "contentTransferEncoding": "base64"
+                                }, {
+                                                "content": "****REMOVED FOR READABILITY****",
+                                                "name": "groovy-build.xml",
+                                                "contentType": "application/xml",
+                                                "contentTransferEncoding": "base64"
+                                }
+                ],
+                "tid": "1866c6b7-4f53-XXXX-bf40-e4a30ac6c114",
+                "messageId": "2dbk2k9580a7nhra1XXXX553v8dnjusad6kjk101",
+                "returnPath": "replyto@domain.com",
+                "htmlMessage": "<html xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" \r\n ****REMOVED FOR READABILITY****",
+                "channel": "email"
+}
+```
+```json Inbound Email with Inline Image Attachments
+{
+  "userId": "",
+  "channel": "Email",
+  "from": "johndoe@gmail.com",
+  "to": "[\"operations@yourkart.com\"]",
+  "appId": "a_638737XXXX22060000",
+  "event": "Inbound Message",
+  "ts": "2025-07-22T12:41:22.562+01:00",
+  "tid": "c0fe6582-7e0f-XXXX-9ad5-0aa029fe3d3a",
+  "subject": "Order Confirmation",
+  "textMessage": "Hello John,\\r\\nThanks for placing the order. Please find the confirmation below:\\r\\n[image: 11_22_05.jpg]\\r\\n\\r\\nRegards,\\r\\nOperations, YourKart.com\\r\\n",
+  "htmlMessage": "<div dir=\\\"ltr\\\">Hello John,<div>Thanks for placing the order. Please find the confirmation below:<\\/div><div><img src=\\\"cid:ii_mdegptzr1\\\" alt=\\\"11_22_05.jpg\\\" width=\\\"562\\\" height=\\\"298\\\"><br><\\/div><div><br><\\/div><div>Regards,<\\/div><div>Operations, YourKart.com<\\/div><\\/div>\\r\\n",
+  "attachments": "[{\"name\":\"11_22_05.jpg\",\"contentType\":\"image/jpeg\",\"url\":\"https://imi-attacchment-uk.s3.amazonaws.com/f9920f0a-0efc-4290-912f-912a26c77ee9_11_22_05.jpg\",\"cid\":\"ii_mdegptzr1\"}]"
+}
+```
+```json Subscribe
+{
+  "channel": "Email",
+  "from": "domain@customer.tld",
+  "appId": "a_638249225282210000",
+  "event": "Subscribe",
+  "senderId":"promotions@mail.clientdomain.tld",
+  "correlationId":"9467xxxx-8ab5-XXXX-xx31-7ee82xx6be42",
+  "ts": "2023-12-08T23:33:51.900+05:30",
+  "tid": "80699122-9dbb-XXXX-836b-ea7d8dd1640b"
+}
+```
+```json Unsubscribe
+{
+  "channel": "Email",
+  "from": "customer@domain.tld",
+  "appId": "a_6382XXXXXXX2210000",
+  "event": "Unsubscribe",
+  "senderId":"promotions@mail.clientdomain.tld",
+  "correlationId":"94671841-8ab5-XXXX-b031-7ee82446be42",
+  "ts": "2023-12-08T23:33:44.823+05:30",
+  "tid": "a8169af2-3fa3-XXXX-ad61-71bcd424d626"
+}
+```
+
+| Field Name    | Description                                                                                                                                                                                                                                                                                                                                                                                                           |
+| :------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| channel       | Channel is email always for incoming emails                                                                                                                                                                                                                                                                                                                                                                           |
+| from          | Email id of the sender.                                                                                                                                                                                                                                                                                                                                                                                               |
+| to            | Recipient's Email Id                                                                                                                                                                                                                                                                                                                                                                                                  |
+| ts            | Timestamp - when incoming email was received by Webex Connect                                                                                                                                                                                                                                                                                                                                                         |
+| event         | Describes the incoming event type. For inbound email message it will be 'MO'. For email unsubscribes it will be 'Unsubscribe', and for resubscribes it will be 'Subscribe'.                                                                                                                                                                                                                                           |
+| textMessage   | Email text message context                                                                                                                                                                                                                                                                                                                                                                                            |
+| subject       | Email subject                                                                                                                                                                                                                                                                                                                                                                                                         |
+| attachments   | Email attachment details. Please note that .msg files attachments sent by customers might not be delivered to businesses if sent from the MS Outlook email client due to an issue with MS Outlook. It is an array of attachments. The essential parameters for each attachment inside the array are as mentioned below in the same table. Attachment sizes are subject to the overall email message size limitations. |
+| tid           | Transaction ID                                                                                                                                                                                                                                                                                                                                                                                                        |
+| messageId     | Message ID                                                                                                                                                                                                                                                                                                                                                                                                            |
+| returnPath    | Email Id mentioned in the replyTo field                                                                                                                                                                                                                                                                                                                                                                               |
+| htmlMessage   | Email HTML Content                                                                                                                                                                                                                                                                                                                                                                                                    |
+| senderId      | Email address used to send the concerned email to the recipient.                                                                                                                                                                                                                                                                                                                                                      |
+| correlationId | Value of the correlationId mentioned when sending the email. This is used to uniquely identify the email that was sent to recipient, when multiple emails were sent from the same sender Id.                                                                                                                                                                                                                          |
+
+## API reference metadata
+
+These are source metadata and examples. `api.auth` is ReadMe metadata; verify authentication in the documented headers/security scheme.
+
+```json
+{
+  "results": {
+    "codes": [
+      {
+        "status": 200,
+        "language": "json",
+        "code": "{}",
+        "name": ""
+      },
+      {
+        "status": 400,
+        "language": "json",
+        "code": "{}",
+        "name": ""
+      }
+    ]
+  },
+  "auth": "required",
+  "params": [],
+  "url": "",
+  "method": "get",
+  "examples": {
+    "codes": []
+  }
+}
+```

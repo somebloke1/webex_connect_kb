@@ -1,0 +1,34 @@
+{
+  "category": "Webex Engage Standalone Nodes",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd81825796e",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "6a12802cfc31fb941d1e5894545befeac014ce761d35bf6b00dec56f5985218b",
+    "source_path": "6b5f5e2c7accbfbcb9f3a365328c575eabe6d61e806141ef7727e833ead004a8",
+    "text_path": "6ac8e8da481a14f44f36b9a098cf9e22cf770551b1ee8149d9444b99a72238c0"
+  },
+  "headings": [
+    "📘Note:",
+    "📘Warning"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/email-1.md",
+  "resolved_url": "https://help.webexconnect.io/docs/email-1",
+  "retrieved_at": "2026-09-08T23:29:26+00:00",
+  "sha256_html_response": "42bf030e67940e4c54e0e60411e7739c09971be6f4cf87b3b2d0a0d43334dbe2",
+  "sha256_source_body": "6b5f5e2c7accbfbcb9f3a365328c575eabe6d61e806141ef7727e833ead004a8",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/email-1.source.md",
+  "source_updated_at": "2026-04-14T07:45:12.444Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/email-1.txt",
+  "title": "Email - WxEngage standalone",
+  "url": "https://help.webexconnect.io/docs/email-1",
+  "word_count": 412,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/email-1.metadata.json"
+}

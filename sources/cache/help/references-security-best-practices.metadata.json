@@ -1,0 +1,33 @@
+{
+  "category": "REFERENCES",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257875",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "2e1a2069e21cd766a7584f5535149da99cce05c0c5e348b853d75a6b306d5422",
+    "source_path": "d9f0375c5a9d00aa11f462c8008e577afa35578dbc8a2ef47a24c7ae631d90ad",
+    "text_path": "e02367f9b84a6ca1f0dbe64e8de70fed57ddeac5c45cf132f95ba492be6b8e59"
+  },
+  "headings": [
+    "🚧"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/references-security-best-practices.md",
+  "resolved_url": "https://help.webexconnect.io/docs/references-security-best-practices",
+  "retrieved_at": "2026-09-08T23:29:41+00:00",
+  "sha256_html_response": "1fb03846689dede6ccfb39147e6ee360654972034084a877e50dc8f6e5fc229c",
+  "sha256_source_body": "d9f0375c5a9d00aa11f462c8008e577afa35578dbc8a2ef47a24c7ae631d90ad",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/references-security-best-practices.source.md",
+  "source_updated_at": "2026-07-27T15:09:37.529Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/references-security-best-practices.txt",
+  "title": "Security Best Practices",
+  "url": "https://help.webexconnect.io/docs/references-security-best-practices",
+  "word_count": 316,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/references-security-best-practices.metadata.json"
+}

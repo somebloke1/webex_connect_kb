@@ -1,0 +1,37 @@
+{
+  "api_metadata_path": "sources/cache/developer/faqs-push-and-in-app-messaging.api.json",
+  "category": "FAQs",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f65ae",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "73a80de5ce51e0cb79709bf6cfe3bad4960482d800681f54de82de3773e58a25",
+    "source_path": "3348e8cdfdd16629ff7c3d6cf2c33d69e54b292106c38b8e4330ebf917407c53",
+    "text_path": "b1f2786dd293ad32305bb3a2ba95c5fc4f3d2367ebd8194f582054264e05d255"
+  },
+  "headings": [
+    "Can I get notified when a mobile app user revokes push notification permission?",
+    "Can I get notified when a customer uninstalls our mobile app?",
+    "What are the supported media attachment types in push notifications?",
+    "Are there any size limits for push, live chat, and in-app message payloads?"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/faqs-push-and-in-app-messaging.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/faqs-push-and-in-app-messaging",
+  "retrieved_at": "2026-09-08T23:31:52+00:00",
+  "sha256_api_metadata": "575f65b7d8dc3ea0b617314bc47e22705dc85fc80ee114e6faa20ada4e8aafe2",
+  "sha256_html_response": "41f4729ac2d04afb8e4cdc54a6bc9f3acc179a4495223476296bdcae438977e8",
+  "sha256_source_body": "3348e8cdfdd16629ff7c3d6cf2c33d69e54b292106c38b8e4330ebf917407c53",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/faqs-push-and-in-app-messaging.source.md",
+  "source_updated_at": "2026-02-12T09:18:48.110Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/faqs-push-and-in-app-messaging.txt",
+  "title": "Push, Live Chat & In-App Messaging FAQs",
+  "url": "https://developers.webexconnect.io/reference/faqs-push-and-in-app-messaging",
+  "word_count": 358,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/faqs-push-and-in-app-messaging.metadata.json"
+}

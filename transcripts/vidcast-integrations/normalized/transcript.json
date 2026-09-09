@@ -1,0 +1,2420 @@
+{
+  "schema_version": 1,
+  "segments": [
+    {
+      "start": 4.859,
+      "end": 9.219,
+      "text": "Hello, everyone, and welcome to our latest Webex developer webinar."
+    },
+    {
+      "start": 9.979,
+      "end": 13.699,
+      "text": "My name is Phil Bilanti. I'm from the Webex Developer evangelism team."
+    },
+    {
+      "start": 14.859,
+      "end": 16.619,
+      "text": "We're very excited about today's session."
+    },
+    {
+      "start": 17.739,
+      "end": 20.378,
+      "text": "This one is reusable integrations made easy."
+    },
+    {
+      "start": 20.94,
+      "end": 23.14,
+      "text": "With the integration studio for Webex Connect."
+    },
+    {
+      "start": 24.379,
+      "end": 30.579,
+      "text": "I'm gonna have our presenters, our presenters, Sam and Martin introduce themselves as well when we get to the main presentation."
+    },
+    {
+      "start": 31.78,
+      "end": 39.86,
+      "text": "But we will be utilizing Slido for audience Q and A you can find the Slido right inside the Webex app for this webinar."
+    },
+    {
+      "start": 40.48,
+      "end": 44.2,
+      "text": "Or you can participate from your mobile device by scanning the QR code here."
+    },
+    {
+      "start": 44.759,
+      "end": 55.4,
+      "text": "So I will need another few moments to allow people to do that if that's the way they want to join, but otherwise you can use this Slido app that's embedded inside the Webex app."
+    },
+    {
+      "start": 60.01,
+      "end": 75.89,
+      "text": "But before we get to the main presentation, I just want to call out some February news for Webex developers, and i'll try to get through this quickly cause I know we have a pretty packed presentation, but leading off is the the Webex developer beta"
+    },
+    {
+      "start": 75.89,
+      "end": 79.09,
+      "text": "program that has some great early access features that you'll."
+    },
+    {
+      "start": 79.569,
+      "end": 80.49,
+      "text": "Want to start testing out."
+    },
+    {
+      "start": 81.73,
+      "end": 90.089,
+      "text": "You can use that QR code to take you right to the developer beta portal, so if you want to get started, you can use that QR code or that URL at the bottom there."
+    },
+    {
+      "start": 91.69,
+      "end": 99.37,
+      "text": "But the 1st is the, you know, inside the beta is the Webex click to call, which is a brand new feature provided through the web call."
+    },
+    {
+      "start": 99.41,
+      "end": 111.969,
+      "text": "Calling SDK. With click to call apps for Webex calling enterprises can empower their customers to do things like connect with their support desk or their sales team, you know, just by a click of a button."
+    },
+    {
+      "start": 112.129,
+      "end": 119.13,
+      "text": "So, you know, really just removes the hassle of having to manually dial important phone numbers that are shown on the website, you know, on a phone."
+    },
+    {
+      "start": 119.37,
+      "end": 122.73,
+      "text": "So it enables like instant interactions right inside the browser."
+    },
+    {
+      "start": 122.89,
+      "end": 124.41,
+      "text": "The call can be done right inside there."
+    },
+    {
+      "start": 125.789,
+      "end": 131.03,
+      "text": "But, you know, next is AI assistant for Webex developers."
+    },
+    {
+      "start": 132.15,
+      "end": 144.709,
+      "text": "And this is a chat interface powered by a large language model, LLM to assist users to find the right Webex developer tools and generate working code to aid in building integrations."
+    },
+    {
+      "start": 146.11,
+      "end": 164.869,
+      "text": "So this AI assistant has extensive knowledge of the Webex developer platform, and that's really what truly separates it from other various GPT chatbots, and, you know, coming very soon to the beta program perhaps this week, maybe, is a preview of the"
+    },
+    {
+      "start": 164.869,
+      "end": 167.32,
+      "text": "new. Converge Webex developer portal."
+    },
+    {
+      "start": 167.48,
+      "end": 173.8,
+      "text": "And this combines resources for both the Webex suite and Webex Contact Center platforms."
+    },
+    {
+      "start": 173.96,
+      "end": 179.39,
+      "text": "So today. They're two separate portals for contact center and Webex suite."
+    },
+    {
+      "start": 180.03,
+      "end": 187.47,
+      "text": "So they really poses a challenge for developers who are, you know, interested in building an integration for the Webex suite and Webex contact center."
+    },
+    {
+      "start": 188.829,
+      "end": 191.829,
+      "text": "So, you know, now everything is put together inside one portal."
+    },
+    {
+      "start": 192.83,
+      "end": 196.03,
+      "text": "The converged portal has an updated layout and navigation."
+    },
+    {
+      "start": 196.31,
+      "end": 207.71,
+      "text": "It makes it real easy for developers to find all the different services inside Webex Suite and contact center, and it's a vastly improved experience all the way around."
+    },
+    {
+      "start": 207.869,
+      "end": 210.55,
+      "text": "So we're really excited about getting that started."
+    },
+    {
+      "start": 211.18,
+      "end": 226.819,
+      "text": "So we encourage everyone to join the developer beta program, get early access to these great new features, and there's also been some, interesting things recently announced for Webex contact center administrators."
+    },
+    {
+      "start": 227.62,
+      "end": 230.46,
+      "text": "And you can use that QR code next to that one."
+    },
+    {
+      "start": 230.61,
+      "end": 236.53,
+      "text": "You know, to learn a little bit more about all the things that are there, but I just want to highlight a few of them that are listed in inside that page."
+    },
+    {
+      "start": 237.85,
+      "end": 243.209,
+      "text": "You know, 1st is the new list and publish APIs, and that's for programmatic flow management."
+    },
+    {
+      "start": 244.53,
+      "end": 248.61,
+      "text": "These new APIs supplement the existing import and export APIs."
+    },
+    {
+      "start": 249.24,
+      "end": 257.839,
+      "text": "For flows and sub flows, but just it enables the full automation of flow management for both new and migrating contact center organizations."
+    },
+    {
+      "start": 259.879,
+      "end": 269.08,
+      "text": "And next is a new update for contact center users in the United States who can now request ten DLC and WhatsApp numbers and directly through web."
+    },
+    {
+      "start": 269.32,
+      "end": 272.0,
+      "text": "Webex connect, you know, as a self service feature."
+    },
+    {
+      "start": 273.04,
+      "end": 278.919,
+      "text": "So previously those were not available, and now this has been released for users in the United States."
+    },
+    {
+      "start": 281.519,
+      "end": 287.039,
+      "text": "And last but not least on this section is the Cisco AI assistant for contact center."
+    },
+    {
+      "start": 287.919,
+      "end": 293.839,
+      "text": "And this AI assistant is to enhance efficiency and elevate customer satisfaction inside a contact center."
+    },
+    {
+      "start": 295.278,
+      "end": 299.359,
+      "text": "So it has a rich set of functionality to generate insightful call."
+    },
+    {
+      "start": 299.679,
+      "end": 302.278,
+      "text": "Summaries, it does topic analytics."
+    },
+    {
+      "start": 302.759,
+      "end": 307.038,
+      "text": "It does agent well being assessments and, automatic CSAT."
+    },
+    {
+      "start": 307.319,
+      "end": 313.079,
+      "text": "So just another great AI tool that's built specifically for Webex contact center."
+    },
+    {
+      "start": 315.679,
+      "end": 322.759,
+      "text": "But before I conclude the the news here for this month, I just want to make special mention that our registrations are now open for our next."
+    },
+    {
+      "start": 322.839,
+      "end": 327.639,
+      "text": "Next developer webinar in March and that topic is on Webex Instant Connect."
+    },
+    {
+      "start": 328.329,
+      "end": 336.329,
+      "text": "It's gonna be a really, you know, interesting topic about getting instant meetings that you don't need an even an account for."
+    },
+    {
+      "start": 337.169,
+      "end": 339.688,
+      "text": "You can visit our webinars page to sign up for that one."
+    },
+    {
+      "start": 340.009,
+      "end": 341.728,
+      "text": "I think that's gonna be in 25 March."
+    },
+    {
+      "start": 343.289,
+      "end": 345.129,
+      "text": "And with that, that's the that's the news."
+    },
+    {
+      "start": 345.288,
+      "end": 348.009,
+      "text": "I'm gonna hand it over to Sam Watson to kick off our."
+    },
+    {
+      "start": 348.169,
+      "end": 351.409,
+      "text": "Our main presentation. So Sam, please take it away."
+    },
+    {
+      "start": 352.668,
+      "end": 371.469,
+      "text": "Thanks for that Phil. I all and welcome to the latest Webex customer experience developer webinar, you know, reusable integrations made easy."
+    },
+    {
+      "start": 371.909,
+      "end": 374.109,
+      "text": "With the integration studio for Webex Connect."
+    },
+    {
+      "start": 374.909,
+      "end": 379.628,
+      "text": "I'm Sam Watson, I'm a product marketing manager at Webex focusing on the customer experience portfolio."
+    },
+    {
+      "start": 380.669,
+      "end": 391.549,
+      "text": "And I've been working with, you know, CX and CPAS technologies for over ten plus years working across various products like Webex Connect, new channels such as RCS, new technologies like AI agents."
+    },
+    {
+      "start": 391.709,
+      "end": 395.348,
+      "text": "And in this webinar I'm going to be joined by Martin Hadtech."
+    },
+    {
+      "start": 395.709,
+      "end": 397.309,
+      "text": "Martin will take a minute to introduce yourself?"
+    },
+    {
+      "start": 397.869,
+      "end": 400.108,
+      "text": "Yep. Hi guys, my name is Martin Hardik."
+    },
+    {
+      "start": 400.348,
+      "end": 402.548,
+      "text": "I'm a solution architect here at Cisco Webex."
+    },
+    {
+      "start": 402.988,
+      "end": 409.789,
+      "text": "I've been with the company for over three years now kind of specializing in Webex Connect and cpass."
+    },
+    {
+      "start": 411.669,
+      "end": 417.469,
+      "text": "Cheers for that Martin. So the purpose of this webinar is to introduce you to our new integration studio."
+    },
+    {
+      "start": 418.068,
+      "end": 427.549,
+      "text": "Which is a new low code, you know, oh sorry it's an upcoming low code self serve platform for managing, you know, API integrations on Webex Connect."
+    },
+    {
+      "start": 427.989,
+      "end": 437.949,
+      "text": "So the agenda, and so what we'll do for the agenda for this webinar, I'll give a high level overview of the current integration challenges that our partner face, you know, how we."
+    },
+    {
+      "start": 438.079,
+      "end": 449.879,
+      "text": "Also solving that with the integration studio, before we get to probably what you most want to see, which is a live demo of the studio, which will be delivered by Martin, and then we'll wrap up with how to join our beta program."
+    },
+    {
+      "start": 450.389,
+      "end": 463.068,
+      "text": "And some Q and A as well. So to get started and just to set the scene a little, you know, how are partners currently building customer experience solutions with Webex Connect?"
+    },
+    {
+      "start": 463.789,
+      "end": 470.149,
+      "text": "You know, firstly, they're starting with their integrations ecosystem, which is made up of all the APIs into the."
+    },
+    {
+      "start": 470.469,
+      "end": 476.989,
+      "text": "Systems and applications that their customers most utilize as well as APIs that connect into their own proprietary systems."
+    },
+    {
+      "start": 477.309,
+      "end": 483.389,
+      "text": "And they're exposing these systems and applications on Webex Connect through its flexible integration framework."
+    },
+    {
+      "start": 485.249,
+      "end": 500.329,
+      "text": "And these systems, you know, are wide ranging with common examples being our CRM CDP platforms, appointment scheduling systems, workforce optimization systems, and although Webex Connect supports multiple types of integrations, you know, ultimately"
+    },
+    {
+      "start": 500.329,
+      "end": 503.249,
+      "text": "if a system and application offers a rest or a SOAP API."
+    },
+    {
+      "start": 503.739,
+      "end": 509.659,
+      "text": "Webex Connect can integrate with, with it to push data to that system or pull data from that system."
+    },
+    {
+      "start": 511.619,
+      "end": 523.579,
+      "text": "So what partners are doing is they're taking these integration APIs, you know, adding them, exposing them on Webex Connect and then using the flow builder to design, design various vertical and horizontal solution."
+    },
+    {
+      "start": 524.939,
+      "end": 533.619,
+      "text": "For their customers from, you know, campaigns and purchasing to appointment management solutions, billing and debt collection solutions, AI agents and surveys."
+    },
+    {
+      "start": 533.939,
+      "end": 543.419,
+      "text": "And, you know, and by this approach by using their AP, their integration APIs and the flow builder, they're able to capitalize on the demand for CPAs and customer experience."
+    },
+    {
+      "start": 543.899,
+      "end": 551.939,
+      "text": "Solutions, you know, unlocking new revenue streams, you know, and enhancing their brand stickiness with their customers by being able to offer more value to those customers."
+    },
+    {
+      "start": 557.039,
+      "end": 564.918,
+      "text": "Now when it comes to the flow builder, integrations are used by Webex, the Webex Connect Flow Builder in a couple of ways."
+    },
+    {
+      "start": 566.039,
+      "end": 576.839,
+      "text": "And the 1st way is as events, which is events and events are configured using the customer of custom event API, and they notify webex connect of events."
+    },
+    {
+      "start": 577.079,
+      "end": 581.199,
+      "text": "In a business system, which in turn triggers a flow or a rule on the platform."
+    },
+    {
+      "start": 582.419,
+      "end": 595.018,
+      "text": "You know, these events can be really wide ranging, but a typical example could be when a customer's details have been added to it, a new customer has been added to a CRM system, you know, that can trigger a welcome journey flow that will onboard the"
+    },
+    {
+      "start": 595.018,
+      "end": 597.339,
+      "text": "customer and introduce that customer to your business."
+    },
+    {
+      "start": 598.909,
+      "end": 604.588,
+      "text": "Another type of event when the flows can be triggered are by inbound customer actions on channels."
+    },
+    {
+      "start": 605.108,
+      "end": 617.589,
+      "text": "Now e.g., if a customer sends a message via SMS, that could trigger a flow which brings an AI agent into that into that into that chat to take over that interaction and allow the customer to self serve."
+    },
+    {
+      "start": 617.999,
+      "end": 621.239,
+      "text": "So that's two ways that an integration can be used as events to trigger flows."
+    },
+    {
+      "start": 624.079,
+      "end": 630.399,
+      "text": "2nd way integrations can be used within the flow builder are as knows that perform an action."
+    },
+    {
+      "start": 631.399,
+      "end": 637.839,
+      "text": "And this is where you are making an API call to a system to pull or push data to that system to."
+    },
+    {
+      "start": 638.079,
+      "end": 642.599,
+      "text": "To feel a certain action. You know, e.g., on the screen in front of you right here."
+    },
+    {
+      "start": 643.049,
+      "end": 651.369,
+      "text": "You're seeing we're integrating with Zoho CRM to check the customer details, to pull information from that system so we can personalize the message that we send to them."
+    },
+    {
+      "start": 652.969,
+      "end": 655.129,
+      "text": "It's an example of appointment reminder flow."
+    },
+    {
+      "start": 655.249,
+      "end": 662.889,
+      "text": "So e.g., when we ask the customer, do you want to confirm reschedule or cancel your appointment if they click."
+    },
+    {
+      "start": 663.129,
+      "end": 669.368,
+      "text": "We schedule, we need to look up in calendarly when the next available dates are and communicate that back to the customer."
+    },
+    {
+      "start": 669.928,
+      "end": 681.849,
+      "text": "So here's two examples of how integrations are used within the flow, not took it but to pull data from that system, you know, manipulate that data and then use it to power the interaction and to take the next step."
+    },
+    {
+      "start": 686.879,
+      "end": 702.558,
+      "text": "Now, as a partner developer, the challenge that you have with building and managing integrations is that, you know, for one integration and one customer, you know, Webex Connect customer tenant, you have to add the integration to Webex Connect and"
+    },
+    {
+      "start": 702.558,
+      "end": 704.359,
+      "text": "configure the rules of how that could be used."
+    },
+    {
+      "start": 704.759,
+      "end": 706.639,
+      "text": "You can con you need to configure how that."
+    },
+    {
+      "start": 706.999,
+      "end": 714.039,
+      "text": "Integration can be used as nodes and events setting the URL endpoints, the input fields, the output fields, the authentication level."
+    },
+    {
+      "start": 714.959,
+      "end": 720.359,
+      "text": "You then need to, you know, then you need to actually build the flow, you know, dragging the nodes onto the canvas."
+    },
+    {
+      "start": 720.948,
+      "end": 726.829,
+      "text": "Configuring the nodes, join up all the business logic between the nodes, testing it, and then publishing it."
+    },
+    {
+      "start": 727.508,
+      "end": 731.589,
+      "text": "And then once that's live, you now need to manage the integration, you know, do you need to update it?"
+    },
+    {
+      "start": 732.069,
+      "end": 738.549,
+      "text": "Is it working? Is it working as it should, should how many times does the flow been executing, how many times does that integration be used?"
+    },
+    {
+      "start": 738.948,
+      "end": 740.549,
+      "text": "And you have to just, you have to do that."
+    },
+    {
+      "start": 740.829,
+      "end": 746.269,
+      "text": "Process for every integration for one Webex connect tenant for a customer."
+    },
+    {
+      "start": 747.629,
+      "end": 757.549,
+      "text": "And as a partner developer, you know, when you as a partner developer, you have to repeat this process across all your customer tenants of Webex Connect."
+    },
+    {
+      "start": 758.148,
+      "end": 765.149,
+      "text": "You have to go and that puts a humongous strain on, you know, developer time, effort, and resources."
+    },
+    {
+      "start": 765.779,
+      "end": 769.099,
+      "text": "And it also slow, you know, it slow it hinders the partner as well."
+    },
+    {
+      "start": 769.339,
+      "end": 780.939,
+      "text": "It slows down the time to market for new solutions, it reduces their scalability and ultimately ultimately by managing integrations in silos it makes it more complex and you know hinders the partner."
+    },
+    {
+      "start": 786.959,
+      "end": 798.478,
+      "text": "And this this challenge is ultimately caused by the type of integration nodes that a partner can currently use, within Webex Connect to, you know, expose their integrations."
+    },
+    {
+      "start": 799.039,
+      "end": 806.599,
+      "text": "You know, the 1st type of node that they can be used is a HTTP node, which allows for the quick creation of API calls in the flow."
+    },
+    {
+      "start": 806.959,
+      "end": 821.678,
+      "text": "This node can be copied and reused within the same flow and can be exported in the flow template as well, but it cannot be easily used across, you know, web multiple Webex Connect tenants, and it offers limited functionality and authentication."
+    },
+    {
+      "start": 822.758,
+      "end": 825.199,
+      "text": "2nd option that they have are custom nodes."
+    },
+    {
+      "start": 825.809,
+      "end": 832.169,
+      "text": "And this is great when you want to create a reusable integration that can be used on the same tenant."
+    },
+    {
+      "start": 832.769,
+      "end": 837.689,
+      "text": "So you can configure the integration once on a tenant and then reuse it across multiple flows."
+    },
+    {
+      "start": 838.089,
+      "end": 840.089,
+      "text": "And it supports authentication as well."
+    },
+    {
+      "start": 840.989,
+      "end": 848.908,
+      "text": "But the problem is that with these nodes is that they cannot be used across multiple tenants and they cannot be exported when sharing flow templates as well."
+    },
+    {
+      "start": 856.989,
+      "end": 860.989,
+      "text": "So, you know, at Webex we're, you know, ever committed to providing robust tools."
+    },
+    {
+      "start": 861.109,
+      "end": 869.949,
+      "text": "Does that enhance our partners capabilities and, you know, solve the challenge and we want to solve the challenge and challenge of building and managing, you know, integrations for multiple."
+    },
+    {
+      "start": 871.229,
+      "end": 880.548,
+      "text": "Customer tenants of Webex Connect, you know, helping them to go live, helping to go to market quickly with new solutions and ultimately capitalize on the demand for cpass and customer experience solutions."
+    },
+    {
+      "start": 881.749,
+      "end": 890.669,
+      "text": "And you know with that we're really excited to, you know, announce the beta availability of our integration studio, which is a, you know, central self serve platform for building managing."
+    },
+    {
+      "start": 891.348,
+      "end": 895.949,
+      "text": "Deploying and monitoring proprietary or 3rd party API integrations on Webex Connect."
+    },
+    {
+      "start": 900.659,
+      "end": 918.059,
+      "text": "And, you know, one of the biggest advantages for, you know, partner developers that the studio will give them is that integrations will only have to be built once and then can be easily reused across multiple Webex Connect tenants."
+    },
+    {
+      "start": 919.138,
+      "end": 931.338,
+      "text": "So, once a partner developer, you know, has added the integration to the studio, configured how it can be used as events or nodes, nodes, it can then be submitted for approval and signed off by the Webex team."
+    },
+    {
+      "start": 932.138,
+      "end": 938.339,
+      "text": "Once that's done, once that's done, that integration can be instantly switched on for."
+    },
+    {
+      "start": 938.859,
+      "end": 944.938,
+      "text": "Instantly switched on for customer tenants for them to take that integration within the NO palette and use that integration within their flows."
+    },
+    {
+      "start": 946.769,
+      "end": 962.128,
+      "text": "In addition, you know, partner developers could embed these integrations nodes into the flows that they create, creating a template for these solutions, and then exporting these flows that contain these integration nodes in to their customer tenants,"
+    },
+    {
+      "start": 962.289,
+      "end": 966.129,
+      "text": "accelerating the time to market for new solutions, new solutions reduce."
+    },
+    {
+      "start": 966.289,
+      "end": 970.849,
+      "text": "And the amount of effort it requires to develop, you know, to, to build integrations and deploy solutions."
+    },
+    {
+      "start": 971.439,
+      "end": 984.559,
+      "text": "Yeah, and this approach will, you know, help partners developers to work quicker and smarter through usability and it will help our partners to scale with these and you know accelerate speed to market of getting solutions to live for their customers."
+    },
+    {
+      "start": 992.079,
+      "end": 1003.879,
+      "text": "Some other key features I'd like to highlight about the studio is that, you know, when an integration is ready, developers can publish, you know, have access to one, you know, one click deployment across multiple data centers and regions."
+    },
+    {
+      "start": 1004.998,
+      "end": 1008.799,
+      "text": "They'll be able to track in real time, you know, how that integration is being used."
+    },
+    {
+      "start": 1009.479,
+      "end": 1024.199,
+      "text": "Seeing how many tenants that integration is live on, how many services that integration powers, the number of flow executions that are using that integration, the target audience, is it private or is it public, the category, and other key metrics?"
+    },
+    {
+      "start": 1024.639,
+      "end": 1026.639,
+      "text": "And then most importantly, you know."
+    },
+    {
+      "start": 1027.359,
+      "end": 1040.719,
+      "text": "The studio offers change management and version controls, which will allow developers to easily update each integration and roll those updates seamlessly across multiple Webex Connect customer tenants without impacting live services."
+    },
+    {
+      "start": 1047.359,
+      "end": 1054.359,
+      "text": "So what we've covered there is from, you know, an, I guess an operational angle of helping, you know, helping you to work quicker and smarter."
+    },
+    {
+      "start": 1055.459,
+      "end": 1064.018,
+      "text": "So and you know if that would be fantastic if you are a managed service provider cause as I said before, you'll be able to go live quicker with reusable integrations and flows."
+    },
+    {
+      "start": 1064.619,
+      "end": 1075.459,
+      "text": "But another great opportunity that the studio provides to partners, it provides a way of showcasing and monetizing their solution expertise, their experience within."
+    },
+    {
+      "start": 1075.539,
+      "end": 1083.419,
+      "text": "Integrations and their proprietary functionality because as a partner, you know which systems your customers use the most and how they want to use them."
+    },
+    {
+      "start": 1084.138,
+      "end": 1094.699,
+      "text": "So with the studio, what you'll be able to do is you'll be able to take the 3rd party public APIs such as those offered by Salesforce, Zendesk, agile CRM, you'll be able to take, you know."
+    },
+    {
+      "start": 1095.638,
+      "end": 1100.639,
+      "text": "Api's that you may have limited access to or have private access to such as Epic and guidewire."
+    },
+    {
+      "start": 1100.879,
+      "end": 1104.639,
+      "text": "And what you'll be able to do is you'll be able to add your brand to the integration."
+    },
+    {
+      "start": 1105.359,
+      "end": 1110.199,
+      "text": "So what you can see in front of me is an example of a Zendesk node, which a partner can own."
+    },
+    {
+      "start": 1110.319,
+      "end": 1115.239,
+      "text": "So you can see that it has it says Zendesk, but you have to put your part, you might have to put your name there, your."
+    },
+    {
+      "start": 1115.239,
+      "end": 1116.158,
+      "text": "You'll be able to say that you own it."
+    },
+    {
+      "start": 1117.119,
+      "end": 1121.919,
+      "text": "You'll be able to, you know, say who's provided by them, you'll be able to provide links for customer support."
+    },
+    {
+      "start": 1122.529,
+      "end": 1124.449,
+      "text": "And any documentation that you have as well."
+    },
+    {
+      "start": 1124.608,
+      "end": 1135.489,
+      "text": "So you'll be able to own the commercial relationship with your customers that even though they are using the integration sort of 3rd party public APIs or 3rd party private limited access APIs."
+    },
+    {
+      "start": 1139.219,
+      "end": 1151.459,
+      "text": "So, you know, as a partner, you know, you could choose to simply say, you know, here is an integration, turned it on for your tenant of Webex Connect, go ahead and build the flow."
+    },
+    {
+      "start": 1151.738,
+      "end": 1159.019,
+      "text": "But the other opportunity you will provide is actually build these integrations, you can also choose to wrap a managed service around integration."
+    },
+    {
+      "start": 1159.219,
+      "end": 1160.818,
+      "text": "To unlock new revenue streams."
+    },
+    {
+      "start": 1161.089,
+      "end": 1164.409,
+      "text": "And to provide more value to that customer, to your customers."
+    },
+    {
+      "start": 1166.569,
+      "end": 1173.409,
+      "text": "So this is an example of 3rd party and public APIs, and then you'll be again be able to do the same with your proprietary system APIs."
+    },
+    {
+      "start": 1174.169,
+      "end": 1178.649,
+      "text": "Exposed them to Webex Webex customers, to brand it, add your logo."
+    },
+    {
+      "start": 1180.178,
+      "end": 1199.619,
+      "text": "Describe the services that can power and you'll be able to do this for all the different types of APIs that you offer because what you are able to do as a partner, you'll be able to create private integrations."
+    },
+    {
+      "start": 1199.819,
+      "end": 1200.779,
+      "text": "Are just for your customers."
+    },
+    {
+      "start": 1201.059,
+      "end": 1215.099,
+      "text": "But what you'll also be able to do is to make integrations public and list them on the Webex app hub for Webex customers and other partners to discover and use, you know, fostering collaboration and you know helping other Webex customers to say wow,"
+    },
+    {
+      "start": 1215.219,
+      "end": 1219.459,
+      "text": "that's how this partner's powering this integration powering a new solution lets use it."
+    },
+    {
+      "start": 1220.099,
+      "end": 1227.058,
+      "text": "So it's a great opportunity to drive awareness of your, your integration expertise and monetize your own APIs."
+    },
+    {
+      "start": 1227.709,
+      "end": 1229.189,
+      "text": "And 3rd party APIs as well."
+    },
+    {
+      "start": 1233.589,
+      "end": 1247.469,
+      "text": "So if a good example of that is Deep Medical who is an early access partner to the integration studio, beta program and Deep medical, you know, offer a AI powered tool that analyzes."
+    },
+    {
+      "start": 1247.909,
+      "end": 1257.348,
+      "text": "Various data points to predict patient NO shows to health care appointments, which we know is a huge challenge for healthcare providers costing millions of dollars every year."
+    },
+    {
+      "start": 1258.739,
+      "end": 1274.899,
+      "text": "So what we were able to do with with deep Medical is we were able to build an integration that combines their AI tool, exposes it and add it to Webex Connect and design an appointment reminder flow that powers so that when the AI toolbridge says,"
+    },
+    {
+      "start": 1274.979,
+      "end": 1278.699,
+      "text": "hey, that customer may not be able to attend their appointment, let's."
+    },
+    {
+      "start": 1278.819,
+      "end": 1286.299,
+      "text": "Trigger this flow that notifies the customer that, hey, you have an upcoming appointment, would you like to confirm, change or cancel or rearrange that appointment?"
+    },
+    {
+      "start": 1286.899,
+      "end": 1295.619,
+      "text": "So that's the solution, that's a good example of how an integration can be combined with the flow builder to power a valuable solution for customers."
+    },
+    {
+      "start": 1298.519,
+      "end": 1302.158,
+      "text": "And, you know, and, you know, now deep medical now they've done that."
+    },
+    {
+      "start": 1302.319,
+      "end": 1312.559,
+      "text": "They are now currently, you know, they are selling that solution to their customers, they're marketing that solution on their websites on their website as a service called DM connects."
+    },
+    {
+      "start": 1312.719,
+      "end": 1318.239,
+      "text": "And this is just a great example of showcasing of what the integration studio allow you to do when it comes."
+    },
+    {
+      "start": 1318.519,
+      "end": 1323.798,
+      "text": "To showcase your expertise, monetizing your APIs and creating new services for your customers."
+    },
+    {
+      "start": 1324.709,
+      "end": 1332.348,
+      "text": "So that's an overview, and with that I'm gonna pass over to the bit you've probably all been waiting for, which is the live demo of the integration studio."
+    },
+    {
+      "start": 1334.629,
+      "end": 1336.509,
+      "text": "Thanks Sam. Let me share my screen."
+    },
+    {
+      "start": 1340.789,
+      "end": 1344.309,
+      "text": "So hey guys, as Sam says, this is gonna be the demo of integration."
+    },
+    {
+      "start": 1344.668,
+      "end": 1350.909,
+      "text": "Studio. So if you can appreciate there's quite a lot to cover in terms of the studio itself, so we're gonna keep it fairly high level."
+    },
+    {
+      "start": 1351.709,
+      "end": 1364.069,
+      "text": "What we're gonna do today is we're gonna build ourselves an integration, so we're gonna build ourselves as a node that's gonna integrate with our coffee bar AI bots, and from that we're gonna import that into."
+    },
+    {
+      "start": 1364.509,
+      "end": 1373.309,
+      "text": "With Webex Connect and be able to test that so you should see kind of the end to end journey here is that you know to be able to show you how it works."
+    },
+    {
+      "start": 1373.999,
+      "end": 1380.719,
+      "text": "So before we get into the studio itself, I just wanted to clarify some terminology that you're gonna hear quite a lot on this call."
+    },
+    {
+      "start": 1381.278,
+      "end": 1386.638,
+      "text": "So, within integration studio, we use nodes."
+    },
+    {
+      "start": 1387.798,
+      "end": 1391.679,
+      "text": "So hopefully anyone familiar with Webex Connect will be familiar with nodes."
+    },
+    {
+      "start": 1391.799,
+      "end": 1393.999,
+      "text": "So these are your kind of plug and play out."
+    },
+    {
+      "start": 1394.439,
+      "end": 1401.159,
+      "text": "In Webex Connect to be able to say send an SMS, do decision branches, evaluations, all those kind of things."
+    },
+    {
+      "start": 1401.559,
+      "end": 1410.159,
+      "text": "So what integration Studio is doing is allowing us the ability to create nodes to be able to to be used in Flow Builder."
+    },
+    {
+      "start": 1411.169,
+      "end": 1418.609,
+      "text": "So what are nodes? So a node is essentially a collection of API requests which are refer to as methods."
+    },
+    {
+      "start": 1418.809,
+      "end": 1423.329,
+      "text": "So a method is an API request, a node is a collection of methods."
+    },
+    {
+      "start": 1423.449,
+      "end": 1426.169,
+      "text": "So each node must have at least one method."
+    },
+    {
+      "start": 1426.409,
+      "end": 1430.969,
+      "text": "So if we look at how we're doing this within the Epic nodes, we have."
+    },
+    {
+      "start": 1431.209,
+      "end": 1444.728,
+      "text": "Have say an appointment node with your methods to be able to change and update appointments and then you have a patient node, which is for creating patients, looking up patient details, et cetera et cetera."
+    },
+    {
+      "start": 1445.549,
+      "end": 1455.429,
+      "text": "In both of those, we have variables which hopefully you're all familiar with, but they are pretty much what they say on the TIN, they're just dynamic or static variables that we use in in each call."
+    },
+    {
+      "start": 1456.109,
+      "end": 1460.189,
+      "text": "Okay, just wanted to clarify that because you're gonna hear me say node about a hundred more times yet."
+    },
+    {
+      "start": 1460.828,
+      "end": 1463.769,
+      "text": "Okay. So let's get into the studio itself."
+    },
+    {
+      "start": 1463.969,
+      "end": 1468.929,
+      "text": "So the main studio is you have kind of two options at the top."
+    },
+    {
+      "start": 1469.488,
+      "end": 1471.049,
+      "text": "The 1st one just being your team."
+    },
+    {
+      "start": 1471.208,
+      "end": 1474.529,
+      "text": "So this is just where you add add users."
+    },
+    {
+      "start": 1474.649,
+      "end": 1478.489,
+      "text": "Quite basic really, you say you can add a user to put their email in."
+    },
+    {
+      "start": 1478.849,
+      "end": 1481.689,
+      "text": "There's two roles, so your developer is you can assist."
+    },
+    {
+      "start": 1481.769,
+      "end": 1485.849,
+      "text": "Admin role, your collaborator is more of like a tester role or."
+    },
+    {
+      "start": 1487.669,
+      "end": 1495.428,
+      "text": "Kind of admini role. So if you need more details on that, this ties nicely into the link to the documentation."
+    },
+    {
+      "start": 1495.629,
+      "end": 1503.348,
+      "text": "So we have documentation on here which can give you the kind of details on on all of that, but fairly basic in terms of creating users."
+    },
+    {
+      "start": 1504.029,
+      "end": 1507.349,
+      "text": "The main meat of this is your integrations tab."
+    },
+    {
+      "start": 1507.869,
+      "end": 1515.789,
+      "text": "So, within here, you'll have any published integrations, so once you've published anything, you'll see it in here, you can see the versioning, all that kind of thing."
+    },
+    {
+      "start": 1516.629,
+      "end": 1522.909,
+      "text": "This is our staging environment, so there's NO, there's NO published integrations on here."
+    },
+    {
+      "start": 1523.228,
+      "end": 1526.988,
+      "text": "This is a tenant that we were using for Cisco Live recently."
+    },
+    {
+      "start": 1527.709,
+      "end": 1528.909,
+      "text": "And for the lab sessions there."
+    },
+    {
+      "start": 1529.148,
+      "end": 1538.029,
+      "text": "So we do have a lot of drafts on here, so your drafts are the integrations that you're working on, anything that's in UAT that's not been published yet."
+    },
+    {
+      "start": 1538.819,
+      "end": 1542.859,
+      "text": "So you can see on here you can have as many integrations as you like."
+    },
+    {
+      "start": 1543.579,
+      "end": 1546.058,
+      "text": "To add a new integration, it's quite straightforward."
+    },
+    {
+      "start": 1546.219,
+      "end": 1551.498,
+      "text": "You just click add integration, give it a name, a description, upload a logo."
+    },
+    {
+      "start": 1552.378,
+      "end": 1555.419,
+      "text": "The key bit on here is whether you want it as public or private."
+    },
+    {
+      "start": 1556.039,
+      "end": 1560.999,
+      "text": "So public would mean it's available for any Webex Connect customers."
+    },
+    {
+      "start": 1561.159,
+      "end": 1564.479,
+      "text": "Private is more if you're doing this for your own tenants."
+    },
+    {
+      "start": 1565.678,
+      "end": 1569.479,
+      "text": "I should note on that, if you make it public, it doesn't mean that anybody could just use it."
+    },
+    {
+      "start": 1569.758,
+      "end": 1572.479,
+      "text": "It just means it is available to be requested."
+    },
+    {
+      "start": 1572.639,
+      "end": 1575.999,
+      "text": "So there's still that kind of request and approval process that you'd."
+    },
+    {
+      "start": 1576.119,
+      "end": 1579.438,
+      "text": "Have to go through there, but that's the difference between between those."
+    },
+    {
+      "start": 1580.318,
+      "end": 1591.359,
+      "text": "You've got your kind of standard things, your website, your contact details, as Sam mentioned, so support contacts, business contacts, those kind of things for when you push this out if somebody needs to get in touch with you."
+    },
+    {
+      "start": 1592.238,
+      "end": 1594.439,
+      "text": "So once you've created an integration."
+    },
+    {
+      "start": 1595.129,
+      "end": 1606.169,
+      "text": "There's a few kind of basic bits on here, so I'm gonna use one that we've already built just because I say this is already kind of synced to a tenant and it's just easier for me to to demo for speed."
+    },
+    {
+      "start": 1606.969,
+      "end": 1608.808,
+      "text": "So we're gonna use this one that we've already built here."
+    },
+    {
+      "start": 1609.529,
+      "end": 1614.129,
+      "text": "So a few bits to kind of cover before we get into an actual build on this."
+    },
+    {
+      "start": 1614.369,
+      "end": 1619.809,
+      "text": "So the. There are some doc, there is some documentation that you'd need to add to each of your integrations."
+    },
+    {
+      "start": 1620.129,
+      "end": 1622.049,
+      "text": "So there's a scope document."
+    },
+    {
+      "start": 1622.619,
+      "end": 1625.778,
+      "text": "There's the user guide and your data security and privacy policy."
+    },
+    {
+      "start": 1625.899,
+      "end": 1636.819,
+      "text": "So for the scope document we have a template here that you can, you can follow and say it's just got your kind of standard standard stuff on here in terms of detail and what the integration does."
+    },
+    {
+      "start": 1637.689,
+      "end": 1642.049,
+      "text": "Your user guides gonna be more about, you know, how you configure this."
+    },
+    {
+      "start": 1642.888,
+      "end": 1645.809,
+      "text": "Again, this is gonna depend on what your integration is."
+    },
+    {
+      "start": 1646.009,
+      "end": 1650.168,
+      "text": "If this is an internal one, you may not need to have too much detail on there."
+    },
+    {
+      "start": 1650.368,
+      "end": 1653.288,
+      "text": "Depends how simple or complex your your integration is."
+    },
+    {
+      "start": 1653.769,
+      "end": 1657.369,
+      "text": "And your data security and privacy policy is gonna be."
+    },
+    {
+      "start": 1657.609,
+      "end": 1661.209,
+      "text": "Issue company one and say we just need to to link that into into there as well."
+    },
+    {
+      "start": 1663.108,
+      "end": 1668.949,
+      "text": "Okay, another thing that we are, I'm gonna cover a couple of things that we're not actually using in here but are quite important."
+    },
+    {
+      "start": 1669.269,
+      "end": 1681.629,
+      "text": "So there is a concept of system variables, so if you are using something for your integration, so an integration will have, could just be one node or it could be multiple nodes."
+    },
+    {
+      "start": 1681.789,
+      "end": 1689.229,
+      "text": "So if we think about that example I gave you before of epic, Epic would be the integration, then you have different nodes in there."
+    },
+    {
+      "start": 1689.949,
+      "end": 1694.989,
+      "text": "But you may have variables that are used across all your nodes."
+    },
+    {
+      "start": 1695.149,
+      "end": 1701.589,
+      "text": "So e.g., like, I don't know, a reporting URL or username and password which are consistent across."
+    },
+    {
+      "start": 1702.469,
+      "end": 1707.068,
+      "text": "All of your integrations, so you may wanna add that as a as a system variable."
+    },
+    {
+      "start": 1707.628,
+      "end": 1710.989,
+      "text": "One thing that you can do here is you can define."
+    },
+    {
+      "start": 1712.339,
+      "end": 1729.019,
+      "text": "The variable type, so if you have something that's gonna be the same for every, every client, you can use that as an environmental variable or as say you have something like a client key or something that you want to use as a variable, you can set it"
+    },
+    {
+      "start": 1729.019,
+      "end": 1731.699,
+      "text": "as a tenant variable, so that could be def defined as."
+    },
+    {
+      "start": 1731.899,
+      "end": 1733.979,
+      "text": "Each tenant that you've distributed to."
+    },
+    {
+      "start": 1735.738,
+      "end": 1743.979,
+      "text": "The other thing that's gonna be, we're not gonna be using for our little demo is gonna be authentication, but obviously this is a big piece."
+    },
+    {
+      "start": 1744.178,
+      "end": 1752.778,
+      "text": "So I'm not gonna get too bogged down in it, but it's got your kind of standard authentication methods here, so your basic oauth, OAuth two."
+    },
+    {
+      "start": 1753.259,
+      "end": 1754.659,
+      "text": "I mean, anyone who's been familiar."
+    },
+    {
+      "start": 1754.699,
+      "end": 1757.259,
+      "text": "Really with Webex Connect, it's the kind of same."
+    },
+    {
+      "start": 1757.819,
+      "end": 1761.659,
+      "text": "You know, same setup here as as you'd be familiar with in, in Webex connect."
+    },
+    {
+      "start": 1761.939,
+      "end": 1766.498,
+      "text": "So being able to, you know, do refresh tokens, tokens, all that kind of stuff in here."
+    },
+    {
+      "start": 1768.498,
+      "end": 1777.178,
+      "text": "Once you've configured those off methods, you kind of can use them within your, within your nodes and reuse it across the anything in your integration."
+    },
+    {
+      "start": 1778.579,
+      "end": 1781.939,
+      "text": "The other bit I'm gonna skip over a little bit is events."
+    },
+    {
+      "start": 1782.138,
+      "end": 1784.859,
+      "text": "So Sam gave a good example of how events can work."
+    },
+    {
+      "start": 1785.059,
+      "end": 1787.659,
+      "text": "This is your kind of inbound triggers."
+    },
+    {
+      "start": 1789.019,
+      "end": 1790.099,
+      "text": "This is where you can set those up."
+    },
+    {
+      "start": 1790.378,
+      "end": 1797.619,
+      "text": "You can add events to be able to do inbound routing or webhooks or async calls."
+    },
+    {
+      "start": 1799.388,
+      "end": 1800.989,
+      "text": "If this actually loads for me."
+    },
+    {
+      "start": 1802.239,
+      "end": 1804.079,
+      "text": "This is always the way with live demos?"
+    },
+    {
+      "start": 1813.078,
+      "end": 1814.278,
+      "text": "Okay, let me try that again."
+    },
+    {
+      "start": 1816.318,
+      "end": 1821.559,
+      "text": "So yeah, in events I say you can just do either an inbound event or an asynchronous event."
+    },
+    {
+      "start": 1821.559,
+      "end": 1828.159,
+      "text": "And so you can define that to be used as a start node within rules or as a receive node to restart calls."
+    },
+    {
+      "start": 1828.909,
+      "end": 1835.509,
+      "text": "So I say I'm not gonna go into that too much and say you can get more details on that if if need be."
+    },
+    {
+      "start": 1835.789,
+      "end": 1839.669,
+      "text": "It's all in the, the documentation that we touched on a moment ago."
+    },
+    {
+      "start": 1841.428,
+      "end": 1845.069,
+      "text": "Okay, but what we are gonna do today is we're gonna use nodes."
+    },
+    {
+      "start": 1845.269,
+      "end": 1848.669,
+      "text": "So as I mentioned before, the node is what you."
+    },
+    {
+      "start": 1848.829,
+      "end": 1851.069,
+      "text": "Would actually publish on a."
+    },
+    {
+      "start": 1851.339,
+      "end": 1857.339,
+      "text": "Well, you would publish events as well, but primarily nodes would be what you can publish to to a tenant."
+    },
+    {
+      "start": 1857.819,
+      "end": 1861.099,
+      "text": "So we're gonna create a node for our coffee bar."
+    },
+    {
+      "start": 1861.299,
+      "end": 1867.619,
+      "text": "So anybody who's been to one of our Cisco events will hopefully have seen our Webex coffee bar."
+    },
+    {
+      "start": 1867.779,
+      "end": 1878.279,
+      "text": "So this is. A coffee bar that's using an AI chat bot, so you can order a coffee by your mobile phone that will send it through to our beresters."
+    },
+    {
+      "start": 1878.438,
+      "end": 1880.518,
+      "text": "They will then make a coffee for you."
+    },
+    {
+      "start": 1881.319,
+      "end": 1886.279,
+      "text": "So for the purpose of the demo, we're gonna be using our coffee bar bot, our demo bot."
+    },
+    {
+      "start": 1886.599,
+      "end": 1889.679,
+      "text": "It's just a nice bot to be able to integrate with so we can send it."
+    },
+    {
+      "start": 1889.839,
+      "end": 1893.639,
+      "text": "A message, it'll send us a message back and we can build a, build a flow out of it."
+    },
+    {
+      "start": 1894.589,
+      "end": 1903.509,
+      "text": "Okay, so what we're gonna do, we're gonna create a node, and we're gonna call it Martin's coffee bar."
+    },
+    {
+      "start": 1906.828,
+      "end": 1909.989,
+      "text": "I'll just give it a quick description, so AI coffee bar."
+    },
+    {
+      "start": 1910.889,
+      "end": 1922.689,
+      "text": "For demo. This output prefix variable is what you kind of set for as a unique identifier, this is set integration level don't really need that too much."
+    },
+    {
+      "start": 1923.249,
+      "end": 1929.889,
+      "text": "This is what I mentioned earlier in terms of your authentication, so we've not got any auth set, but if you did have like your."
+    },
+    {
+      "start": 1930.369,
+      "end": 1932.849,
+      "text": "Authentication methods, you can just select those here."
+    },
+    {
+      "start": 1933.049,
+      "end": 1934.889,
+      "text": "So we're gonna say like that as NO auth."
+    },
+    {
+      "start": 1935.129,
+      "end": 1939.609,
+      "text": "And if you need to do any kind of custom node UI, you can also add that here."
+    },
+    {
+      "start": 1940.749,
+      "end": 1942.749,
+      "text": "Let's say this is gonna be quite a basic node."
+    },
+    {
+      "start": 1942.949,
+      "end": 1947.909,
+      "text": "So we're gonna add that here and you can see we now have a node."
+    },
+    {
+      "start": 1948.028,
+      "end": 1953.349,
+      "text": "So we've got martin's coffee bot as a node, and we have NO methods assigned to it."
+    },
+    {
+      "start": 1954.149,
+      "end": 1957.989,
+      "text": "So we need to add a method, so we need to add our API call in here."
+    },
+    {
+      "start": 1958.609,
+      "end": 1963.968,
+      "text": "So we're gonna add a method, and this method is gonna be to send a message to the bot."
+    },
+    {
+      "start": 1964.089,
+      "end": 1969.689,
+      "text": "So we're gonna be send, send message to bot as the method name."
+    },
+    {
+      "start": 1970.489,
+      "end": 1977.289,
+      "text": "Connection and timeouts just standards you know what you wanna, how long do you wanna wait before considering it a timeout."
+    },
+    {
+      "start": 1977.409,
+      "end": 1980.689,
+      "text": "So we're gonna do 10 s. Is for that 10000 milliseconds on each."
+    },
+    {
+      "start": 1981.569,
+      "end": 1984.729,
+      "text": "Your HTTP methods are just your standard REST API calls here."
+    },
+    {
+      "start": 1985.089,
+      "end": 1987.769,
+      "text": "So we're gonna be doing a post."
+    },
+    {
+      "start": 1988.758,
+      "end": 1994.839,
+      "text": "And we're gonna be hitting our coffee bar endpoint, which now I'm gonna swing in here."
+    },
+    {
+      "start": 1996.719,
+      "end": 2007.079,
+      "text": "You can use variables in here as well, so if you have any variables in your URL, you can add them in just using the standard dollar and brackets."
+    },
+    {
+      "start": 2009.479,
+      "end": 2014.439,
+      "text": "Type and let's say just do the past variable, say we're not using that on here, so we're happy with that."
+    },
+    {
+      "start": 2014.678,
+      "end": 2021.398,
+      "text": "It's just a static URL. So we've got our API call, we now need to define what we're actually sending in it."
+    },
+    {
+      "start": 2021.598,
+      "end": 2024.719,
+      "text": "So this is in the defined input variable section."
+    },
+    {
+      "start": 2025.709,
+      "end": 2027.949,
+      "text": "So what we're gonna do, we're gonna expand that here."
+    },
+    {
+      "start": 2029.109,
+      "end": 2033.749,
+      "text": "Again, you can do custom UIs and and the likes using JavaScript if you, if you like."
+    },
+    {
+      "start": 2035.509,
+      "end": 2038.829,
+      "text": "Let's say we're not doing anything that fancy on here, so we're just using the default."
+    },
+    {
+      "start": 2040.108,
+      "end": 2045.389,
+      "text": "We are gonna encode values to UTF, UTF eight just to avoid any dodgy character."
+    },
+    {
+      "start": 2045.429,
+      "end": 2050.399,
+      "text": "Is. URL parameters is where you can do query strings."
+    },
+    {
+      "start": 2051.678,
+      "end": 2056.958,
+      "text": "We're not doing that we're actually using a request body, so we don't need to add anything in there."
+    },
+    {
+      "start": 2058.038,
+      "end": 2066.119,
+      "text": "We do need a HTTP header though, so we're gonna add a header to our request and this is just a standard content type."
+    },
+    {
+      "start": 2066.399,
+      "end": 2069.548,
+      "text": "Just to advise. What we're actually sending."
+    },
+    {
+      "start": 2069.749,
+      "end": 2073.429,
+      "text": "So this can be static, dynamic or a system variable."
+    },
+    {
+      "start": 2073.549,
+      "end": 2079.389,
+      "text": "So in this case, it's just static and we're just saying we're sending application JSON."
+    },
+    {
+      "start": 2081.028,
+      "end": 2088.069,
+      "text": "We don't need any help text on here cause I say it's a static variable, Nobody needs to change this or do anything with it, so we keep that as null."
+    },
+    {
+      "start": 2088.469,
+      "end": 2089.749,
+      "text": "And then we click add variable."
+    },
+    {
+      "start": 2090.619,
+      "end": 2093.419,
+      "text": "So you can see now we've got our header in the list below."
+    },
+    {
+      "start": 2094.419,
+      "end": 2097.019,
+      "text": "Now we just need to add our request body."
+    },
+    {
+      "start": 2098.259,
+      "end": 2107.139,
+      "text": "So you can add this in multiple ways, so similar to most systems, you can use text JSON, XML or form."
+    },
+    {
+      "start": 2107.339,
+      "end": 2108.858,
+      "text": "So we're gonna be using JSON."
+    },
+    {
+      "start": 2109.779,
+      "end": 2127.419,
+      "text": "You can just paste in your, the body of your request here and kind of if you use this kind of format in for variables, so we've got bot message and our thread ID as variables and we've got agent ID as static, and you can click on this format and add"
+    },
+    {
+      "start": 2127.419,
+      "end": 2128.619,
+      "text": "variables to bring that through."
+    },
+    {
+      "start": 2129.539,
+      "end": 2138.579,
+      "text": "There's a little bug on this unfortunately at the minute, but you guys won't ever see that, so that should be fixed by the time any of you get your hands on it, but I just need to pass that twice."
+    },
+    {
+      "start": 2139.538,
+      "end": 2148.858,
+      "text": "So what we've got here, you can see it's pulled through my thread ID, it's through my bot message as variables to use in this in this flow."
+    },
+    {
+      "start": 2149.099,
+      "end": 2150.938,
+      "text": "So we need to configure them now."
+    },
+    {
+      "start": 2151.139,
+      "end": 2156.859,
+      "text": "So by default they're just kind of static with nothing in there so as you can see it's prompted me to configure these."
+    },
+    {
+      "start": 2157.898,
+      "end": 2163.418,
+      "text": "So the thread ID that was sending to the bot, this is like the, the session ID."
+    },
+    {
+      "start": 2163.699,
+      "end": 2169.899,
+      "text": "So this is what we use to say, this is the same session, you know, it's not a new conversation each time."
+    },
+    {
+      "start": 2170.058,
+      "end": 2172.699,
+      "text": "This is how we kind of maintain the same conversation."
+    },
+    {
+      "start": 2173.138,
+      "end": 2177.539,
+      "text": "So this is gonna be a dynamic variable in the fact that it's gonna change on every."
+    },
+    {
+      "start": 2177.579,
+      "end": 2180.579,
+      "text": "Every request or potentially change on every request."
+    },
+    {
+      "start": 2180.938,
+      "end": 2182.699,
+      "text": "We'll need to provide it on every request."
+    },
+    {
+      "start": 2183.059,
+      "end": 2185.699,
+      "text": "So we're just gonna call it the same thing."
+    },
+    {
+      "start": 2185.979,
+      "end": 2189.339,
+      "text": "So thread ID, we're gonna need that on every request."
+    },
+    {
+      "start": 2189.579,
+      "end": 2196.499,
+      "text": "So we're gonna mark it as mandatory and this help text is optional, but I'm just gonna put like unique ID for."
+    },
+    {
+      "start": 2197.649,
+      "end": 2206.529,
+      "text": "Session. Your input types, so you can have either text box, date and time or a dropdown."
+    },
+    {
+      "start": 2206.649,
+      "end": 2210.449,
+      "text": "So if you set a dropdown you can just add the values that are available there."
+    },
+    {
+      "start": 2211.289,
+      "end": 2212.529,
+      "text": "We're just using text box."
+    },
+    {
+      "start": 2213.169,
+      "end": 2214.969,
+      "text": "You can also use regex to."
+    },
+    {
+      "start": 2215.979,
+      "end": 2227.699,
+      "text": "Make sure that it's a certain format, you know, if you wanted to, it to be a number or a date or whatever you want in there, you can use that regex validation to to enforce that."
+    },
+    {
+      "start": 2228.299,
+      "end": 2233.419,
+      "text": "But for us here, we just want thread ID dynamic and as a text box, so we're gonna update that."
+    },
+    {
+      "start": 2234.569,
+      "end": 2241.288,
+      "text": "We can see now that has been updated here, and we just need to do the same thing for our bot message."
+    },
+    {
+      "start": 2242.009,
+      "end": 2244.889,
+      "text": "So again, this is gonna be a dynamic variable."
+    },
+    {
+      "start": 2245.049,
+      "end": 2248.848,
+      "text": "This is the message that we send to the bot, so we're gonna be sending this on every request."
+    },
+    {
+      "start": 2249.909,
+      "end": 2262.389,
+      "text": "Again just gonna use the same key name for the name and I'm gonna mark that as mandatory, and I'll just put a help text of this is the message for the bot."
+    },
+    {
+      "start": 2265.229,
+      "end": 2271.829,
+      "text": "Oops. Again text box, NO regex on this quite straightforward field."
+    },
+    {
+      "start": 2273.709,
+      "end": 2275.509,
+      "text": "Okay, so what we got so far?"
+    },
+    {
+      "start": 2275.708,
+      "end": 2283.548,
+      "text": "We've got our node, we've got our methods with our API requests and our body and our input variables."
+    },
+    {
+      "start": 2284.148,
+      "end": 2286.148,
+      "text": "We just need to set the output now, so."
+    },
+    {
+      "start": 2286.989,
+      "end": 2288.989,
+      "text": "Can we go down to our defined output section."
+    },
+    {
+      "start": 2290.908,
+      "end": 2294.709,
+      "text": "Again, you can format this doing the past variables."
+    },
+    {
+      "start": 2294.868,
+      "end": 2298.029,
+      "text": "Again, you've got the different formats available."
+    },
+    {
+      "start": 2298.708,
+      "end": 2301.588,
+      "text": "You can do synchronous or async if needs to be."
+    },
+    {
+      "start": 2302.668,
+      "end": 2305.549,
+      "text": "For this we're just getting into a sync synchronous API call."
+    },
+    {
+      "start": 2306.469,
+      "end": 2309.349,
+      "text": "I'm not gonna. Past this one, I'm just gonna add my variable."
+    },
+    {
+      "start": 2309.668,
+      "end": 2314.069,
+      "text": "So this is what we want to get out of our bot, so we're sending a message to the bot."
+    },
+    {
+      "start": 2314.388,
+      "end": 2316.149,
+      "text": "This is what we're getting back from the bot."
+    },
+    {
+      "start": 2316.349,
+      "end": 2317.829,
+      "text": "So I'm just gonna call it."
+    },
+    {
+      "start": 2318.92,
+      "end": 2324.36,
+      "text": "Bot response. We're gonna be looking in the body of the request."
+    },
+    {
+      "start": 2324.96,
+      "end": 2333.52,
+      "text": "So when we get a response back from the bot, we're gonna look in the body of the request and we're gonna be looking for this dollar.response."
+    },
+    {
+      "start": 2333.919,
+      "end": 2338.2,
+      "text": "So that's just something unique to this, this part with just the inner."
+    },
+    {
+      "start": 2338.68,
+      "end": 2343.52,
+      "text": "The response, we're looking for the path of dollar.response, that's where our bot is gonna respond to."
+    },
+    {
+      "start": 2345.279,
+      "end": 2353.76,
+      "text": "We don't really need we can set this as mandatory, we should get a response on every call, we don't really need to, but for the purpose of this we will, and we're not gonna use any debug keys on this."
+    },
+    {
+      "start": 2354.7,
+      "end": 2359.42,
+      "text": "So we're gonna add that output variable, so that's our output of the bot."
+    },
+    {
+      "start": 2359.7,
+      "end": 2366.379,
+      "text": "We now just needed to determine whether we determine how we determine a success or a failure of this call."
+    },
+    {
+      "start": 2366.58,
+      "end": 2369.539,
+      "text": "So when we make that API request, how do we know."
+    },
+    {
+      "start": 2370.15,
+      "end": 2376.83,
+      "text": "If it's a success or a failure, like this determines the outcome branches when we when we put this into connect."
+    },
+    {
+      "start": 2377.27,
+      "end": 2383.43,
+      "text": "So for the success response, we're just gonna add a success outcome, simply call it success."
+    },
+    {
+      "start": 2385.43,
+      "end": 2387.67,
+      "text": "We're gonna look at the HTTP status."
+    },
+    {
+      "start": 2387.79,
+      "end": 2397.19,
+      "text": "So when we make an API. Well, IPR request, we should be getting a HTTP status of 200 back."
+    },
+    {
+      "start": 2397.469,
+      "end": 2402.99,
+      "text": "So we're basically saying if we get a 200 response back, we're considering it a success."
+    },
+    {
+      "start": 2403.15,
+      "end": 2405.31,
+      "text": "So we'll add that as a node outcome."
+    },
+    {
+      "start": 2405.67,
+      "end": 2408.39,
+      "text": "And we just need to add an error outcome as well."
+    },
+    {
+      "start": 2408.549,
+      "end": 2413.15,
+      "text": "So again, just calling this error, again looking at HTTP status."
+    },
+    {
+      "start": 2413.99,
+      "end": 2421.389,
+      "text": "If we know that 200 is a success, then we're gonna say if it doesn't equal 200, then it must be an error."
+    },
+    {
+      "start": 2422.11,
+      "end": 2423.35,
+      "text": "So we'll add that in as well."
+    },
+    {
+      "start": 2425.87,
+      "end": 2440.19,
+      "text": "Okay, so we're not gonna add a timeout said this should be fine, but we have now defined our our method, so we've got an API request, we've got our inputs, we've got our outputs, we should be able to submit this now."
+    },
+    {
+      "start": 2441.26,
+      "end": 2448.7,
+      "text": "And you can see we have Martin's coffee bar as the node with send message to Bot as our, as our method."
+    },
+    {
+      "start": 2448.9,
+      "end": 2453.94,
+      "text": "So we should be all good, but we can see here we have not tested this yet."
+    },
+    {
+      "start": 2454.06,
+      "end": 2458.98,
+      "text": "So we want to be able to push this to our UAT tenant, but 1st we need to test it."
+    },
+    {
+      "start": 2459.26,
+      "end": 2460.54,
+      "text": "So we can click back into."
+    },
+    {
+      "start": 2460.74,
+      "end": 2463.1,
+      "text": "The node. Into the method, sorry."
+    },
+    {
+      "start": 2464.259,
+      "end": 2468.62,
+      "text": "And we go down to this test method to test the method."
+    },
+    {
+      "start": 2469.419,
+      "end": 2473.859,
+      "text": "So you can either use a test data profile or instant test data."
+    },
+    {
+      "start": 2474.06,
+      "end": 2475.38,
+      "text": "I'll show you this in a moment."
+    },
+    {
+      "start": 2476.5,
+      "end": 2479.78,
+      "text": "So what we're gonna do is gonna run an instant test."
+    },
+    {
+      "start": 2481.0,
+      "end": 2488.24,
+      "text": "And this is where you can start to play around with what you've built, so you can see here we have our method which is what we called some message to bot."
+    },
+    {
+      "start": 2488.879,
+      "end": 2495.96,
+      "text": "We've got our thread ID with our, with our help text and our bot message variables here."
+    },
+    {
+      "start": 2496.4,
+      "end": 2500.72,
+      "text": "So I'm just going to add a unique variable for thread ID."
+    },
+    {
+      "start": 2501.24,
+      "end": 2505.72,
+      "text": "And then for the bot message I'm just gonna say hello to our bots."
+    },
+    {
+      "start": 2506.72,
+      "end": 2508.96,
+      "text": "So what we can do now, we can test that."
+    },
+    {
+      "start": 2509.2,
+      "end": 2511.48,
+      "text": "So this is gonna send that API request."
+    },
+    {
+      "start": 2512.36,
+      "end": 2516.04,
+      "text": "So it'll show you your kind of raw response here."
+    },
+    {
+      "start": 2516.24,
+      "end": 2518.92,
+      "text": "So you can see this is the payload that we're getting back from the."
+    },
+    {
+      "start": 2520.78,
+      "end": 2537.059,
+      "text": "On the bot, and if you go to this output variables and load outcome, you can see this is where it got the bot response, so this is the variable that we defined, and this is looking for that dollar.response which relates to this and you can see we're"
+    },
+    {
+      "start": 2537.059,
+      "end": 2540.58,
+      "text": "getting a 200 response back, so the node outcome is a success."
+    },
+    {
+      "start": 2541.06,
+      "end": 2554.69,
+      "text": "So, we're looking good. The last step we need to do here is just to save that as a test data profile, so it's just something you need to do for, to satisfy before pro promoting to UAT."
+    },
+    {
+      "start": 2555.65,
+      "end": 2563.09,
+      "text": "But it's also quite useful, so I'm gonna save this as an admin profile, and what that enables me to do then is if I came back in."
+    },
+    {
+      "start": 2563.25,
+      "end": 2565.17,
+      "text": "To this at a later date and I wanted to test that."
+    },
+    {
+      "start": 2565.77,
+      "end": 2573.889,
+      "text": "I can use that test data profile and it'll already have my my variables populated and I can just kind of trigger it again."
+    },
+    {
+      "start": 2574.5,
+      "end": 2588.019,
+      "text": "Quite easily, it may not seem very useful when you just have two basic variables, but trust me, when you have a whole heap of variables, it's it's very much a, a time saver and a lifesaver."
+    },
+    {
+      "start": 2589.54,
+      "end": 2591.9,
+      "text": "Okay, so we've tested our bot."
+    },
+    {
+      "start": 2592.68,
+      "end": 2597.16,
+      "text": "We should now be able to push this to our UAT tunnel."
+    },
+    {
+      "start": 2597.64,
+      "end": 2601.32,
+      "text": "So we can see it's it's now been successfully tested."
+    },
+    {
+      "start": 2601.68,
+      "end": 2604.04,
+      "text": "We're gonna come back out to this main screen here."
+    },
+    {
+      "start": 2604.919,
+      "end": 2607.48,
+      "text": "We can validate this integration."
+    },
+    {
+      "start": 2608.769,
+      "end": 2611.97,
+      "text": "You can see it has its documentation provided."
+    },
+    {
+      "start": 2612.21,
+      "end": 2619.889,
+      "text": "We've got our system variables, we're not using auth, but it satisfied it cause it's, you know, it's not in use, it's not tested."
+    },
+    {
+      "start": 2620.05,
+      "end": 2622.889,
+      "text": "And our node has got the green tick cause we've we've tested it."
+    },
+    {
+      "start": 2623.65,
+      "end": 2627.61,
+      "text": "So what we can do now, we can push this to our UAT tenant."
+    },
+    {
+      "start": 2628.169,
+      "end": 2639.609,
+      "text": "So when you get the integration studio, you will also be, provisioned a, a Webex Connect tenant that is connected to it, so your UAT tenant."
+    },
+    {
+      "start": 2639.769,
+      "end": 2643.09,
+      "text": "So this has already kind of been synced up, so I'm just gonna."
+    },
+    {
+      "start": 2643.49,
+      "end": 2652.969,
+      "text": "Push this to our test tenant, so I'll just republish to UAT and what it's gonna do is gonna push that node onto, onto our tenant."
+    },
+    {
+      "start": 2656.209,
+      "end": 2657.969,
+      "text": "So you can see that's been published."
+    },
+    {
+      "start": 2658.249,
+      "end": 2661.57,
+      "text": "We can now jump onto our Webex Connect tenant."
+    },
+    {
+      "start": 2662.05,
+      "end": 2667.57,
+      "text": "I've already got a template flow to use here just to speed this process up cause we're kind of against the clock."
+    },
+    {
+      "start": 2667.729,
+      "end": 2681.93,
+      "text": "So I'm gonna upload a flow, oh sorry copy that template flow, and I'm just gonna call it in test flow, so they should import that temp."
+    },
+    {
+      "start": 2682.529,
+      "end": 2687.61,
+      "text": "Which is a very basic flow which is gonna receive a message from, from WhatsApp."
+    },
+    {
+      "start": 2688.539,
+      "end": 2692.02,
+      "text": "And that message is then gonna be sent to our bots."
+    },
+    {
+      "start": 2693.06,
+      "end": 2696.5,
+      "text": "We can then respond to the to the bot."
+    },
+    {
+      "start": 2697.42,
+      "end": 2701.1,
+      "text": "I'm not sure why that's taking a moment, might have needed me to log back in."
+    },
+    {
+      "start": 2701.3,
+      "end": 2707.34,
+      "text": "Yep, so let me try that again."
+    },
+    {
+      "start": 2708.18,
+      "end": 2722.919,
+      "text": "Okay. So yeah, it's gonna be a very basic flow just to be able to send a message to our bots and that relayed to us on on WhatsApp."
+    },
+    {
+      "start": 2723.36,
+      "end": 2725.72,
+      "text": "So at the end of this, we're gonna be able to test this as well."
+    },
+    {
+      "start": 2725.959,
+      "end": 2732.0,
+      "text": "So this is the trigger for WhatsApp, so it's saying when we get an incoming message on WhatsApp, if it contains."
+    },
+    {
+      "start": 2732.28,
+      "end": 2738.12,
+      "text": "It's. And we're just gonna use the word testing then to trigger this flow."
+    },
+    {
+      "start": 2738.6,
+      "end": 2747.0,
+      "text": "What we're also doing here, we've got some variables for our thread ID and our bot message, so we just setting the thread ID to be the transaction ID of this flow."
+    },
+    {
+      "start": 2747.519,
+      "end": 2752.84,
+      "text": "We got our bot message that we're triggering just to say hello on the initial message because we're kind of triggering."
+    },
+    {
+      "start": 2753.04,
+      "end": 2758.75,
+      "text": "Get with our name. Okay, we've got a little templated flow already built here."
+    },
+    {
+      "start": 2759.549,
+      "end": 2760.509,
+      "text": "I'm gonna delete this node."
+    },
+    {
+      "start": 2761.589,
+      "end": 2772.31,
+      "text": "Now that we've synced this up, so this is your kind of nodes in the Webex Connect as I mentioned, and what we should see here is our coffee bart node."
+    },
+    {
+      "start": 2773.19,
+      "end": 2775.23,
+      "text": "If I can remember what I call it, that was the one."
+    },
+    {
+      "start": 2775.75,
+      "end": 2779.35,
+      "text": "Mark is coffee bot. So what I can do, I can just drag that in."
+    },
+    {
+      "start": 2780.91,
+      "end": 2793.67,
+      "text": "I can go into here, you can see similar to the test that we did a moment ago, you've got your method here, you've got your thread ID, bot message variables, which we can quickly map to the ones we have set in the flow."
+    },
+    {
+      "start": 2794.62,
+      "end": 2797.259,
+      "text": "And then we just need to define our output."
+    },
+    {
+      "start": 2797.38,
+      "end": 2798.74,
+      "text": "So this is the input of the node."
+    },
+    {
+      "start": 2798.899,
+      "end": 2802.86,
+      "text": "And then in the transition actions is gonna be where we set our output."
+    },
+    {
+      "start": 2803.02,
+      "end": 2810.94,
+      "text": "So we're gonna say when we leave this node, we want to send our bot response to be the response from."
+    },
+    {
+      "start": 2812.04,
+      "end": 2819.92,
+      "text": "This node. So we're configuring it to pass in the thread ID bot message and then we're getting the bot response when we come out of it."
+    },
+    {
+      "start": 2821.399,
+      "end": 2824.08,
+      "text": "Okay quite straightforward, just gonna hook this back up to the flow."
+    },
+    {
+      "start": 2824.88,
+      "end": 2827.839,
+      "text": "So we're getting a message, we're sending that to the bot."
+    },
+    {
+      "start": 2828.32,
+      "end": 2831.56,
+      "text": "That bot message is gonna relay to us in this node to."
+    },
+    {
+      "start": 2831.72,
+      "end": 2833.08,
+      "text": "To send us the bot response."
+    },
+    {
+      "start": 2833.559,
+      "end": 2839.68,
+      "text": "Then we're gonna listen for a response back from us on WhatsApp and we're gonna set that to be."
+    },
+    {
+      "start": 2840.52,
+      "end": 2852.079,
+      "text": "The, the bot message, sorry on the on the receive node, we're gonna send that to be the bot message, and then we're gonna send that back to the bot."
+    },
+    {
+      "start": 2853.159,
+      "end": 2855.079,
+      "text": "So really quite a straightforward flow there."
+    },
+    {
+      "start": 2855.52,
+      "end": 2857.08,
+      "text": "I'm gonna save this and put this live."
+    },
+    {
+      "start": 2859.51,
+      "end": 2872.43,
+      "text": "I'm gonna give that a moment to to trigger, and what we can do now, and I say you can test this as well if you like at home is we're gonna trigger this flow via via WhatsApp, so the keyword there was this testing."
+    },
+    {
+      "start": 2874.149,
+      "end": 2889.069,
+      "text": "So. If we open up this here, if you scan this QR code, say it may need a second to to sync kind of rubbing against this let me share my screen as well."
+    },
+    {
+      "start": 2889.55,
+      "end": 2915.909,
+      "text": "Sorry. Okay, so I've just scanned that QR code and take you to the screen, so I'm just gonna trigger this with testing, and this should if the demo gods on my side, trigger the flow and interact with our bot."
+    },
+    {
+      "start": 2916.069,
+      "end": 2921.39,
+      "text": "So you can see now it's hit our coffee bar bot, and I could say, I'd like."
+    },
+    {
+      "start": 2921.47,
+      "end": 2925.449,
+      "text": "Coffee please. And you've got that loop."
+    },
+    {
+      "start": 2925.61,
+      "end": 2929.609,
+      "text": "So it's saying the message I send back will then trigger the bot again."
+    },
+    {
+      "start": 2930.77,
+      "end": 2935.33,
+      "text": "And again, you can kind of ask, you know, what do you want to say I'll say all that day."
+    },
+    {
+      "start": 2937.009,
+      "end": 2943.05,
+      "text": "So that's it in a nutshell, I say it's quite a lot to cover in that time."
+    },
+    {
+      "start": 2943.17,
+      "end": 2947.09,
+      "text": "So you can scan that if. You'd like to to mess around with it yourself."
+    },
+    {
+      "start": 2948.73,
+      "end": 2962.09,
+      "text": "But hopefully that gives you a little flavor of how quickly we can kind of spin up integrations, how you can publish them to your environments, how it works in terms of the plug and play elements in, in Webex Connect."
+    },
+    {
+      "start": 2962.41,
+      "end": 2964.05,
+      "text": "And yeah, hopefully gives you."
+    },
+    {
+      "start": 2964.25,
+      "end": 2966.45,
+      "text": "A taste of what you can do with this."
+    },
+    {
+      "start": 2967.09,
+      "end": 2970.05,
+      "text": "And with that I will pass back to to Sam."
+    },
+    {
+      "start": 2971.81,
+      "end": 2982.929,
+      "text": "Thanks for that Martin. It's a really great example, like I said, how quickly you can configure an integration and then publish that integration to a Webex Connect event, whether that be your own or whether that be your customers, so that's a"
+    },
+    {
+      "start": 2982.929,
+      "end": 2995.73,
+      "text": "fantastic example. Okay, so just to wrap up the, just to wrap up this webinar, yeah, we are looking for partners to join our integration studio, beta program."
+    },
+    {
+      "start": 3002.31,
+      "end": 3015.23,
+      "text": "And if if you, you know, if you're a partner who's interested in, you know, talking to us more about how you can potentially leverage the integration studio, how you can leverage Webex Connect, you know, what sort of use cases that you might be able"
+    },
+    {
+      "start": 3015.23,
+      "end": 3022.31,
+      "text": "to power, you know, sign up to the beta program, and then you, you know, if you are accepted, you know, be able to start building."
+    },
+    {
+      "start": 3022.31,
+      "end": 3024.91,
+      "text": "In reasonable integration nodes that will help you to go live quicker."
+    },
+    {
+      "start": 3025.79,
+      "end": 3030.829,
+      "text": "You'll be able to, you know, receive a bit more personalized support, you know, to successfully publish your 1st integrations."
+    },
+    {
+      "start": 3031.83,
+      "end": 3039.03,
+      "text": "And you'll be, you know, some of the 1st partners to use the studio and potentially promo, you know, publish or promote your integrations on the Webex app hub."
+    },
+    {
+      "start": 3039.99,
+      "end": 3050.63,
+      "text": "And not only that you'll be able to, you know, provide us feedback on the studio to help us you know shape the studio as it moves forward towards GA, so I'll just leave that on the screen for a moment to give you all the chance to scan the QR code."
+    },
+    {
+      "start": 3051.1,
+      "end": 3056.06,
+      "text": "And, I also believe there is a link being posted in the chat as well."
+    },
+    {
+      "start": 3060.54,
+      "end": 3062.86,
+      "text": "So with that I think we've come to the end of our webinar."
+    },
+    {
+      "start": 3063.859,
+      "end": 3066.659,
+      "text": "If there's any chance for Q and A, we can do that now."
+    },
+    {
+      "start": 3067.26,
+      "end": 3069.939,
+      "text": "Okay, great. Thank you Sam and Martin."
+    },
+    {
+      "start": 3070.139,
+      "end": 3072.3,
+      "text": "That was a great presentation and demo."
+    },
+    {
+      "start": 3072.46,
+      "end": 3076.66,
+      "text": "Super insightful. There was only two questions that came in."
+    },
+    {
+      "start": 3077.34,
+      "end": 3079.7,
+      "text": "One of them was the pertinent to the material."
+    },
+    {
+      "start": 3080.7,
+      "end": 3083.539,
+      "text": "It was answered inside there, but I don't know if you wanted to expand a little."
+    },
+    {
+      "start": 3084.5,
+      "end": 3087.26,
+      "text": "And the question was, can integrations be published."
+    },
+    {
+      "start": 3087.26,
+      "end": 3090.86,
+      "text": "Like, like Salesforce.com which you then customize for your tenant."
+    },
+    {
+      "start": 3092.02,
+      "end": 3097.94,
+      "text": "Yeah, if you've if you've marked that integration as public, it will be."
+    },
+    {
+      "start": 3099.22,
+      "end": 3111.82,
+      "text": "So, like I said, you'll be able like I mentioned in, in earlier in the webinar, you'll be able to take that integration and figure it via the studio choose whether or not you want it to be a private or public, and then if it is public, it then."
+    },
+    {
+      "start": 3111.98,
+      "end": 3117.96,
+      "text": "It can be. You know, it can be accessible by any Webex Connect customer tenants."
+    },
+    {
+      "start": 3119.119,
+      "end": 3133.28,
+      "text": "Fantastic. And there was another question around, you know, where can they find previous you know webinar recordings, you know, when it comes to like all of these series of webinars, which includes some web."
+    },
+    {
+      "start": 3133.36,
+      "end": 3137.32,
+      "text": "Webex Connect topics. You can find those over at a developer portal."
+    },
+    {
+      "start": 3137.8,
+      "end": 3140.76,
+      "text": "Developer.webex.com/webinars."
+    },
+    {
+      "start": 3141.68,
+      "end": 3151.28,
+      "text": "But if you want to look, for, you know, specific content on Webex Connect, you can also go directly to their developer portal."
+    },
+    {
+      "start": 3151.72,
+      "end": 3156.8,
+      "text": "That's developer.cisco.com/Webex-connect."
+    },
+    {
+      "start": 3158.04,
+      "end": 3161.16,
+      "text": "And that's where you can find all the, you know, the developer content."
+    },
+    {
+      "start": 3161.36,
+      "end": 3163.36,
+      "text": "You know, specifically for Webex Connect."
+    },
+    {
+      "start": 3164.36,
+      "end": 3178.16,
+      "text": "And, I was gonna say, yeah, that's a great link to use because that only not that only not has links to our documentation, but you're able to find links to labs that will help you build your 1st flows and you'll also provide a link to the sandbox,"
+    },
+    {
+      "start": 3178.28,
+      "end": 3181.36,
+      "text": "which is our, you know, a way of trying webex connect with."
+    },
+    {
+      "start": 3181.4,
+      "end": 3184.279,
+      "text": "Without having access to a full tenant, so it's a great link to use."
+    },
+    {
+      "start": 3185.02,
+      "end": 3189.7,
+      "text": "Yep, I know developers love getting hands on and getting all the tools to be able to do that."
+    },
+    {
+      "start": 3190.059,
+      "end": 3195.419,
+      "text": "It's fantastic. So it looks like that's, that's about it for today's session."
+    },
+    {
+      "start": 3196.78,
+      "end": 3202.5,
+      "text": "This session is has been recorded, so it's gonna be up on our webinars page within the next few days or so."
+    },
+    {
+      "start": 3203.54,
+      "end": 3204.58,
+      "text": "So just be on the lookout for the."
+    },
+    {
+      "start": 3204.74,
+      "end": 3215.299,
+      "text": "That if you want to pass that along to any of your colleagues or friends that want to check this one out, and you can always reach out to any of us if you ever have any questions that weren't answered here today."
+    },
+    {
+      "start": 3216.33,
+      "end": 3218.77,
+      "text": "And with that, this concludes our session."
+    },
+    {
+      "start": 3218.969,
+      "end": 3219.89,
+      "text": "Thank you again for joining."
+    },
+    {
+      "start": 3220.609,
+      "end": 3222.169,
+      "text": "Have a great day. Thank you."
+    }
+  ]
+}

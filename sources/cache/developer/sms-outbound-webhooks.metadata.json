@@ -1,0 +1,36 @@
+{
+  "api_metadata_path": "sources/cache/developer/sms-outbound-webhooks.api.json",
+  "category": "OUTBOUND WEBHOOKS",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f654e",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "78cc0dc6d6b6f14a75a9f651cd8bbe9222a6c4fc3db341aa6e98af749f019dd4",
+    "source_path": "d6d0e48d5ecbd706d4b2c9b7b7f54abdb8ae2cf6031d6cec4c6b919f573b6663",
+    "text_path": "f968213346beccc55ed8b9bf26bfa786a6da0f9b6900b37cda895dbfe5695879"
+  },
+  "headings": [
+    "**SMS Delivery Receipts**",
+    "**SMS Incoming Messages**",
+    "**Error Codes**"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/sms-outbound-webhooks.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/sms-outbound-webhooks",
+  "retrieved_at": "2026-09-08T23:31:45+00:00",
+  "sha256_api_metadata": "187de124aa8aa8acf032d1bfec486640b94ec306193dfc1e0feb2652279c3c88",
+  "sha256_html_response": "f44d1df0b2b5f3639d0c78e439fef31ef3e5288685a4b43058e3b299c7605b0d",
+  "sha256_source_body": "d6d0e48d5ecbd706d4b2c9b7b7f54abdb8ae2cf6031d6cec4c6b919f573b6663",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/sms-outbound-webhooks.source.md",
+  "source_updated_at": "2026-08-19T13:31:51.126Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/sms-outbound-webhooks.txt",
+  "title": "SMS",
+  "url": "https://developers.webexconnect.io/reference/sms-outbound-webhooks",
+  "word_count": 1396,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/developer/sms-outbound-webhooks.metadata.json"
+}

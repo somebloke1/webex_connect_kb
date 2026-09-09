@@ -1,0 +1,1234 @@
+[
+  {
+    "url": "https://developers.webexconnect.io/docs/app-profile-management",
+    "title": "App Profile Management in Webex Connect",
+    "source_family": "developer",
+    "category": "GETTING STARTED WITH SDKs",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/docs/set-up-a-new-mobile-or-web-app-asset",
+    "title": "Set-up a new Mobile / Web App Asset",
+    "source_family": "developer",
+    "category": "TUTORIALS",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/docs/configure-push-notification-channel-for-android",
+    "title": "Configure Push-Notification for Android channel",
+    "source_family": "developer",
+    "category": "TUTORIALS",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/docs/configure-push-notification-for-ios-channel",
+    "title": "Configure Push-Notification for iOS channel",
+    "source_family": "developer",
+    "category": "TUTORIALS",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/docs/configure-push-notification-channel-for-web-browser",
+    "title": "Configure Push-Notification channel for Web-browser",
+    "source_family": "developer",
+    "category": "TUTORIALS",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/apioverview",
+    "title": "Overview",
+    "source_family": "developer",
+    "category": "GETTING STARTED",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/know-your-api-endpoints",
+    "title": "Know Your API Endpoints",
+    "source_family": "developer",
+    "category": "GETTING STARTED",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/api-authentication",
+    "title": "API Authentication",
+    "source_family": "developer",
+    "category": "GETTING STARTED",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/using-jwt-for-api-authentication",
+    "title": "Using JWT for API Authentication",
+    "source_family": "developer",
+    "category": "GETTING STARTED",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/postman-collection",
+    "title": "Postman Collection",
+    "source_family": "developer",
+    "category": "GETTING STARTED",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/rate-limits-for-messaging-apis-event-api-and-inbound-webhook",
+    "title": "Rate Limits for Messaging APIs, Event API, and Inbound Webhook",
+    "source_family": "developer",
+    "category": "RATE LIMITS",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/sandbox-apis-overview",
+    "title": "Sandbox APIs Overview",
+    "source_family": "developer",
+    "category": "API Reference for Sandbox",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/sandbox-sms-api-sdk",
+    "title": "SMS APIs & SDKs",
+    "source_family": "developer",
+    "category": "API Reference for Sandbox",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/sandbox-post_v1-sms-messages",
+    "title": "Send an SMS message to a mobile device",
+    "source_family": "developer",
+    "category": "API Reference for Sandbox",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/sandbox-get_v1-sms-messages-messageid",
+    "title": "Retrieve the status of an SMS message",
+    "source_family": "developer",
+    "category": "API Reference for Sandbox",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/sandbox-voice-api-sdk",
+    "title": "Voice APIs & SDKs",
+    "source_family": "developer",
+    "category": "API Reference for Sandbox",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/sandbox-post_v1-voice-messages",
+    "title": "Place a new call, play an audio and disconnect i.e. play and drop",
+    "source_family": "developer",
+    "category": "API Reference for Sandbox",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/sandbox-post_v1-voice-calls",
+    "title": "Place a new call to a telephone number",
+    "source_family": "developer",
+    "category": "API Reference for Sandbox",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/sandbox-get_v1-voice-calls-sessionid",
+    "title": "Retrieve the status of an individual call",
+    "source_family": "developer",
+    "category": "API Reference for Sandbox",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/sandbox-get_v1-voice-calls-sessionid-recordings",
+    "title": "Retrieve information on any recordings taken during a call",
+    "source_family": "developer",
+    "category": "API Reference for Sandbox",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/sandbox-answer-incoming-calls-to-a-connect-asset-handle-via-events-and-actions",
+    "title": "Answer Incoming Calls to a Connect Asset (Handle via Events and Actions)",
+    "source_family": "developer",
+    "category": "API Reference for Sandbox",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/sandbox-whatsapp-api-sdk",
+    "title": "WhatsApp APIs & SDKs",
+    "source_family": "developer",
+    "category": "API Reference for Sandbox",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/sms-and-voice-support-in-sandbox",
+    "title": "SMS and Voice Support in Sandbox",
+    "source_family": "developer",
+    "category": "API Reference for Sandbox",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/sandbox-rate-limits-and-throughput",
+    "title": "Sandbox Rate Limits and Throughput",
+    "source_family": "developer",
+    "category": "API Reference for Sandbox",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/getting-started-with-your-messaging-api",
+    "title": "Introduction",
+    "source_family": "developer",
+    "category": "MULTI CHANNEL COMMUNICATION API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/sms-apis",
+    "title": "SMS APIs",
+    "source_family": "developer",
+    "category": "MULTI CHANNEL COMMUNICATION API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/send-sms-api-v1",
+    "title": "Send SMS API v1",
+    "source_family": "developer",
+    "category": "MULTI CHANNEL COMMUNICATION API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/get-sms-api-v1",
+    "title": "Get SMS API v1",
+    "source_family": "developer",
+    "category": "MULTI CHANNEL COMMUNICATION API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/send-sms-message-api-v2",
+    "title": "Send Message API v2",
+    "source_family": "developer",
+    "category": "MULTI CHANNEL COMMUNICATION API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/send-message-api-v1",
+    "title": "Send Message API v1",
+    "source_family": "developer",
+    "category": "MULTI CHANNEL COMMUNICATION API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/sms-length-and-encoding",
+    "title": "SMS Length and Encoding",
+    "source_family": "developer",
+    "category": "MULTI CHANNEL COMMUNICATION API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/sms-carrier-mapping",
+    "title": "SMS Carrier Mapping",
+    "source_family": "developer",
+    "category": "MULTI CHANNEL COMMUNICATION API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/mms-api",
+    "title": "MMS API",
+    "source_family": "developer",
+    "category": "MULTI CHANNEL COMMUNICATION API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/send-message-v2",
+    "title": "Send Message v2",
+    "source_family": "developer",
+    "category": "MULTI CHANNEL COMMUNICATION API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/rcs-apis",
+    "title": "RCS APIs",
+    "source_family": "developer",
+    "category": "MULTI CHANNEL COMMUNICATION API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/capability-api",
+    "title": "RCS Capability Lookup API",
+    "source_family": "developer",
+    "category": "MULTI CHANNEL COMMUNICATION API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/rcs-api",
+    "title": "RCS API",
+    "source_family": "developer",
+    "category": "MULTI CHANNEL COMMUNICATION API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/email-api",
+    "title": "Email API",
+    "source_family": "developer",
+    "category": "MULTI CHANNEL COMMUNICATION API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/push-api",
+    "title": "Push API",
+    "source_family": "developer",
+    "category": "MULTI CHANNEL COMMUNICATION API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/live-chat-in-app-messaging-api",
+    "title": "Live Chat/In-App Messaging API",
+    "source_family": "developer",
+    "category": "MULTI CHANNEL COMMUNICATION API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/apple-messages-for-business-apis",
+    "title": "Apple Messages for Business API",
+    "source_family": "developer",
+    "category": "MULTI CHANNEL COMMUNICATION API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/apple-message-for-business-text-copy",
+    "title": "Apple Messages for Business: Invitation Message",
+    "source_family": "developer",
+    "category": "MULTI CHANNEL COMMUNICATION API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/apple-message-for-business-_text",
+    "title": "Apple Message for Business: Text",
+    "source_family": "developer",
+    "category": "MULTI CHANNEL COMMUNICATION API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/apple-messages-for-business_-typing-indicator",
+    "title": "Apple Messages for Business: Typing Indicator",
+    "source_family": "developer",
+    "category": "MULTI CHANNEL COMMUNICATION API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/apple-message-for-business_text-with-attachments",
+    "title": "Apple Message for Business: Text with Attachments",
+    "source_family": "developer",
+    "category": "MULTI CHANNEL COMMUNICATION API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/apple-message-for-business-rich-link",
+    "title": "Apple Message for Business: Rich Link",
+    "source_family": "developer",
+    "category": "MULTI CHANNEL COMMUNICATION API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/apple-message-for-business_-list-picker",
+    "title": "Apple Message for Business: List Picker",
+    "source_family": "developer",
+    "category": "MULTI CHANNEL COMMUNICATION API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/apple-message-for-business-time-picker",
+    "title": "Apple Message for Business: Time Picker",
+    "source_family": "developer",
+    "category": "MULTI CHANNEL COMMUNICATION API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/apple-message-for-business-apple-pay-authentication",
+    "title": "Apple Message for Business: Apple Pay & Authentication",
+    "source_family": "developer",
+    "category": "MULTI CHANNEL COMMUNICATION API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/apple-message-for-business_-quick-reply",
+    "title": "Apple Message for Business: Quick Reply",
+    "source_family": "developer",
+    "category": "MULTI CHANNEL COMMUNICATION API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/apple-message-for-business-form-messages",
+    "title": "Apple Message for Business: Form Messages",
+    "source_family": "developer",
+    "category": "MULTI CHANNEL COMMUNICATION API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/apple-message-for-business-imessage-app",
+    "title": "Apple Message for Business: iMessage App",
+    "source_family": "developer",
+    "category": "MULTI CHANNEL COMMUNICATION API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/more-variables",
+    "title": "More Variables",
+    "source_family": "developer",
+    "category": "MULTI CHANNEL COMMUNICATION API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/facebook-messenger-api",
+    "title": "Facebook Messenger API",
+    "source_family": "developer",
+    "category": "MULTI CHANNEL COMMUNICATION API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/instagram-api",
+    "title": "Instagram API (Deprecated)",
+    "source_family": "developer",
+    "category": "MULTI CHANNEL COMMUNICATION API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/whatsapp-apis",
+    "title": "WhatsApp API",
+    "source_family": "developer",
+    "category": "MULTI CHANNEL COMMUNICATION API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/whatsapp-text-message",
+    "title": "WhatsApp Text Message",
+    "source_family": "developer",
+    "category": "MULTI CHANNEL COMMUNICATION API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/whatsapp-media-message",
+    "title": "WhatsApp Media Message",
+    "source_family": "developer",
+    "category": "MULTI CHANNEL COMMUNICATION API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/whatsapp-location-message",
+    "title": "WhatsApp Location Message",
+    "source_family": "developer",
+    "category": "MULTI CHANNEL COMMUNICATION API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/whatsapp-contacts-messages",
+    "title": "WhatsApp Contacts Messages",
+    "source_family": "developer",
+    "category": "MULTI CHANNEL COMMUNICATION API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/whatsapp-list-messages",
+    "title": "WhatsApp List Messages",
+    "source_family": "developer",
+    "category": "MULTI CHANNEL COMMUNICATION API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/whatsapp-reply-buttons",
+    "title": "WhatsApp Reply Buttons",
+    "source_family": "developer",
+    "category": "MULTI CHANNEL COMMUNICATION API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/whatsapp-template-messages",
+    "title": "WhatsApp Template Messages",
+    "source_family": "developer",
+    "category": "MULTI CHANNEL COMMUNICATION API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/whatsapp-hsms-text-based-proactive-notification-message",
+    "title": "WhatsApp HSMs-Text based proactive notification message(Deprecated)",
+    "source_family": "developer",
+    "category": "MULTI CHANNEL COMMUNICATION API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/send-message-v1",
+    "title": "Send Message v1",
+    "source_family": "developer",
+    "category": "MULTI CHANNEL COMMUNICATION API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/retrieve-message-v2",
+    "title": "Get Message v2",
+    "source_family": "developer",
+    "category": "MULTI CHANNEL COMMUNICATION API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/voice-apis",
+    "title": "Voice APIs",
+    "source_family": "developer",
+    "category": "MULTI CHANNEL COMMUNICATION API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/voice-only-api-v1-make-outbound-calls",
+    "title": "Make Outbound Calls Using Voice API v1",
+    "source_family": "developer",
+    "category": "MULTI CHANNEL COMMUNICATION API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/voice-only-api-v1-programmable-voice-api",
+    "title": "Programmable Voice Calls Using Voice API v1",
+    "source_family": "developer",
+    "category": "MULTI CHANNEL COMMUNICATION API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/voice-only-api-v1-get-call-status-api",
+    "title": "Get Call Status Using Voice API v1",
+    "source_family": "developer",
+    "category": "MULTI CHANNEL COMMUNICATION API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/voice-only-api-v1-get-call-recordings-api",
+    "title": "Get Call Recordings Using Voice API v1",
+    "source_family": "developer",
+    "category": "MULTI CHANNEL COMMUNICATION API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/send-message-api-v2-make-voice-call",
+    "title": "Make Calls Using Send Message API v2",
+    "source_family": "developer",
+    "category": "MULTI CHANNEL COMMUNICATION API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/send-message-api-v2-get-voice-call-recordings-api",
+    "title": "Get Voice Call Recordings Using Send Message API v2",
+    "source_family": "developer",
+    "category": "MULTI CHANNEL COMMUNICATION API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/send-message-api-v2-get-voice-call-status-api",
+    "title": "Get Voice Call Status Using Send Message API v2",
+    "source_family": "developer",
+    "category": "MULTI CHANNEL COMMUNICATION API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/number-intelligence-api",
+    "title": "Number Intelligence API",
+    "source_family": "developer",
+    "category": "MULTI CHANNEL COMMUNICATION API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/channel-specific-status-codes",
+    "title": "Channel Specific Status Codes",
+    "source_family": "developer",
+    "category": "Status Codes",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/outbound-webhooks-api-ref",
+    "title": "Outbound Webhooks",
+    "source_family": "developer",
+    "category": "OUTBOUND WEBHOOKS",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/amb-outbound-webhooks",
+    "title": "Apple Messages for Business",
+    "source_family": "developer",
+    "category": "OUTBOUND WEBHOOKS",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/email-outbound-webhooks",
+    "title": "Email",
+    "source_family": "developer",
+    "category": "OUTBOUND WEBHOOKS",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/live-chat-in-app-messages-outbound-webhooks",
+    "title": "Live Chat / In-App Messages",
+    "source_family": "developer",
+    "category": "OUTBOUND WEBHOOKS",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/mms-outbound-webhooks",
+    "title": "MMS",
+    "source_family": "developer",
+    "category": "OUTBOUND WEBHOOKS",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/messenger-outbound-webhooks",
+    "title": "Messenger",
+    "source_family": "developer",
+    "category": "OUTBOUND WEBHOOKS",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/instagram-outbound-webhooks",
+    "title": "Instagram (Deprecated)",
+    "source_family": "developer",
+    "category": "OUTBOUND WEBHOOKS",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/push-outbound-webhooks",
+    "title": "Push",
+    "source_family": "developer",
+    "category": "OUTBOUND WEBHOOKS",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/rcs-outbound-webhooks",
+    "title": "RCS",
+    "source_family": "developer",
+    "category": "OUTBOUND WEBHOOKS",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/sms-outbound-webhooks",
+    "title": "SMS",
+    "source_family": "developer",
+    "category": "OUTBOUND WEBHOOKS",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/voice-outbound-webhooks",
+    "title": "Voice",
+    "source_family": "developer",
+    "category": "OUTBOUND WEBHOOKS",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/whatsapp-outbound-webhooks",
+    "title": "WhatsApp",
+    "source_family": "developer",
+    "category": "OUTBOUND WEBHOOKS",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/groups-4",
+    "title": "Groups",
+    "source_family": "developer",
+    "category": "Contact Policy API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/post_v1-groups-4",
+    "title": "Create a new consent group",
+    "source_family": "developer",
+    "category": "Contact Policy API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/get_v1-groups-4",
+    "title": "Get all consent groups belonging to a tenant.",
+    "source_family": "developer",
+    "category": "Contact Policy API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/get_v1-groups-groupid-4",
+    "title": "Get a consent group",
+    "source_family": "developer",
+    "category": "Contact Policy API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/delete_v1-groups-groupid-4",
+    "title": "Deletes a consent group and all its consumer records.",
+    "source_family": "developer",
+    "category": "Contact Policy API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/put_v1-groups-groupid-4",
+    "title": "Updates an existing consent group.",
+    "source_family": "developer",
+    "category": "Contact Policy API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/consumers-4",
+    "title": "Consumers",
+    "source_family": "developer",
+    "category": "Contact Policy API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/post_v1-groups-groupid-counters-4",
+    "title": "Verify consent and increment frequency counter.",
+    "source_family": "developer",
+    "category": "Contact Policy API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/put_v1-groups-groupid-counters-4",
+    "title": "Set frequency counter for consumer.",
+    "source_family": "developer",
+    "category": "Contact Policy API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/post_v1-groups-groupid-members-4",
+    "title": "Add or update consent",
+    "source_family": "developer",
+    "category": "Contact Policy API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/get_v1-groups-groupid-members-4",
+    "title": "Get group member(s)",
+    "source_family": "developer",
+    "category": "Contact Policy API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/delete_v1-groups-groupid-members-4",
+    "title": "Delete a consumer from a consent group",
+    "source_family": "developer",
+    "category": "Contact Policy API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/get_v1-groups-groupid-members-count-4",
+    "title": "Get group membership count",
+    "source_family": "developer",
+    "category": "Contact Policy API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/post_v1-groups-members-4",
+    "title": "Add or update consent across all groups.",
+    "source_family": "developer",
+    "category": "Contact Policy API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/get_v1-groups-members-4",
+    "title": "Get all groups for consumer",
+    "source_family": "developer",
+    "category": "Contact Policy API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/post_v1-groups-members-optout-3",
+    "title": "Opt-out a consumer from all groups.",
+    "source_family": "developer",
+    "category": "Contact Policy API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/get_v1-groups-groupid-history-4",
+    "title": "Get group consumer history",
+    "source_family": "developer",
+    "category": "Contact Policy API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/notifications-4",
+    "title": "Notifications",
+    "source_family": "developer",
+    "category": "Contact Policy API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/get_v1-groups-groupid-notifications-4",
+    "title": "Get notification subscriptions",
+    "source_family": "developer",
+    "category": "Contact Policy API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/post_v1-groups-groupid-notifications-4",
+    "title": "Add or update a subscription",
+    "source_family": "developer",
+    "category": "Contact Policy API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/delete_v1-groups-groupid-notifications-4",
+    "title": "Deletes a subscription",
+    "source_family": "developer",
+    "category": "Contact Policy API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/contact-policy-error-codes",
+    "title": "Contact Policy Error Codes",
+    "source_family": "developer",
+    "category": "Contact Policy API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/data-streams-api-ref",
+    "title": "Data Streams",
+    "source_family": "developer",
+    "category": "Data Streams",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/data-streams-sms",
+    "title": "Data Streams - SMS",
+    "source_family": "developer",
+    "category": "Data Streams",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/data-streams-rcs",
+    "title": "Data Streams - RCS",
+    "source_family": "developer",
+    "category": "Data Streams",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/data-streams-email",
+    "title": "Data Streams - Email",
+    "source_family": "developer",
+    "category": "Data Streams",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/data-streams-in-app",
+    "title": "Data Streams - Live Chat / In-App Messaging",
+    "source_family": "developer",
+    "category": "Data Streams",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/data-streams-apple-messages-for-business",
+    "title": "Data Streams - Apple Messages for Business",
+    "source_family": "developer",
+    "category": "Data Streams",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/data-streams-audit-logs",
+    "title": "Data Streams - Audit Logs",
+    "source_family": "developer",
+    "category": "Data Streams",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/inbound-webhooks",
+    "title": "Inbound Webhooks",
+    "source_family": "developer",
+    "category": "INBOUND WEBHOOKS",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/event-api-overview",
+    "title": "Overview",
+    "source_family": "developer",
+    "category": "EVENT API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/custom-event-v1",
+    "title": "Custom Event v1",
+    "source_family": "developer",
+    "category": "EVENT API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/user-audit-logs-api",
+    "title": "User Audit Logs API",
+    "source_family": "developer",
+    "category": "Audit Logs API",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/profile-api-overview",
+    "title": "Overview",
+    "source_family": "developer",
+    "category": "Profile API v2",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/createprofile",
+    "title": "Create Customer Profile",
+    "source_family": "developer",
+    "category": "Profile API v2",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/createappprofile",
+    "title": "Create App Profile",
+    "source_family": "developer",
+    "category": "Profile API v2",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/getappprofile",
+    "title": "Get App Profile by Customer ID",
+    "source_family": "developer",
+    "category": "Profile API v2",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/get-app-profile-by-user-id",
+    "title": "Get App Profile by User ID",
+    "source_family": "developer",
+    "category": "Profile API v2",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/getprofile",
+    "title": "Get Customer Profile",
+    "source_family": "developer",
+    "category": "Profile API v2",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/get-profile-status",
+    "title": "Get Profile Status",
+    "source_family": "developer",
+    "category": "Profile API v2",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/updateprofile",
+    "title": "Update Customer Profile",
+    "source_family": "developer",
+    "category": "Profile API v2",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/updateappprofile",
+    "title": "Update App Profile",
+    "source_family": "developer",
+    "category": "Profile API v2",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/delete-app-profile-with-customer-id",
+    "title": "Delete App Profile with Customer ID",
+    "source_family": "developer",
+    "category": "Profile API v2",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/deleteappprofile",
+    "title": "Delete App Profile with User ID",
+    "source_family": "developer",
+    "category": "Profile API v2",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/deleteprofile",
+    "title": "Delete Customer Profile",
+    "source_family": "developer",
+    "category": "Profile API v2",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/delete-device-app-profile",
+    "title": "Delete Device App Profile",
+    "source_family": "developer",
+    "category": "Profile API v2",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/delete-device-profile-by-customer-id",
+    "title": "Delete Device Profile by Customer ID",
+    "source_family": "developer",
+    "category": "Profile API v2",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/overview-of-thread-apis",
+    "title": "Overview",
+    "source_family": "developer",
+    "category": "THREAD APIs",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/thread-apis-create-thread",
+    "title": "Create Thread",
+    "source_family": "developer",
+    "category": "THREAD APIs",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/thread-apis-app-threads",
+    "title": "Get App Threads",
+    "source_family": "developer",
+    "category": "THREAD APIs",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/thread-apis-user-threads",
+    "title": "Get User Threads",
+    "source_family": "developer",
+    "category": "THREAD APIs",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/user-messages-1",
+    "title": "Get User Messages",
+    "source_family": "developer",
+    "category": "THREAD APIs",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/user-messages-2",
+    "title": "Get User Messages v2",
+    "source_family": "developer",
+    "category": "THREAD APIs",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/update-thread",
+    "title": "Update Thread",
+    "source_family": "developer",
+    "category": "THREAD APIs",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/list-streams",
+    "title": "Get Streams - Legacy",
+    "source_family": "developer",
+    "category": "THREAD APIs",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/segment-apis-overview",
+    "title": "Overview",
+    "source_family": "developer",
+    "category": "SEGMENT APIs",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/segment-apis-create",
+    "title": "Create Segment",
+    "source_family": "developer",
+    "category": "SEGMENT APIs",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/segment-apis-list",
+    "title": "List Segments in an App",
+    "source_family": "developer",
+    "category": "SEGMENT APIs",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/segment-apis-update",
+    "title": "Update a Segment",
+    "source_family": "developer",
+    "category": "SEGMENT APIs",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/segment-apis-delete",
+    "title": "Delete Segment",
+    "source_family": "developer",
+    "category": "SEGMENT APIs",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/add-users",
+    "title": "Add Users to a Segment",
+    "source_family": "developer",
+    "category": "SEGMENT APIs",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/get-all-users",
+    "title": "Get All Users of  a Segment",
+    "source_family": "developer",
+    "category": "SEGMENT APIs",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/delete-users-from-segment",
+    "title": "Delete Users from a Segment",
+    "source_family": "developer",
+    "category": "SEGMENT APIs",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/topic-apis-overview",
+    "title": "Overview",
+    "source_family": "developer",
+    "category": "TOPIC APIs",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/createtopic",
+    "title": "Create a Topic",
+    "source_family": "developer",
+    "category": "TOPIC APIs",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/delete",
+    "title": "Delete a Topic",
+    "source_family": "developer",
+    "category": "TOPIC APIs",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/list",
+    "title": "List All Topics",
+    "source_family": "developer",
+    "category": "TOPIC APIs",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/get-2",
+    "title": "Get a Topic",
+    "source_family": "developer",
+    "category": "TOPIC APIs",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/subscribe",
+    "title": "Subscribe Users to a Topic",
+    "source_family": "developer",
+    "category": "TOPIC APIs",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/get-all-subscribers",
+    "title": "Get All Subscribers of a Topic",
+    "source_family": "developer",
+    "category": "TOPIC APIs",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/get-all-topics",
+    "title": "Get All Topics of a Subscriber",
+    "source_family": "developer",
+    "category": "TOPIC APIs",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/unsubscribe-users-from-topics",
+    "title": "Unsubscribe multiple users from a Topic",
+    "source_family": "developer",
+    "category": "TOPIC APIs",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/unsubscribe-a-user-from-a-topic",
+    "title": "Unsubscribe a User from a Topic",
+    "source_family": "developer",
+    "category": "TOPIC APIs",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/unsubscribe-user-from-topics",
+    "title": "Unsubscribe a User from Topics",
+    "source_family": "developer",
+    "category": "TOPIC APIs",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/api-faqs",
+    "title": "API FAQs",
+    "source_family": "developer",
+    "category": "FAQs",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/numbers-faqs",
+    "title": "Numbers FAQs",
+    "source_family": "developer",
+    "category": "FAQs",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/channels-faqs",
+    "title": "Channels FAQs",
+    "source_family": "developer",
+    "category": "FAQs",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/faqs-apple-messages-for-business",
+    "title": "Apple Messages for Business FAQs",
+    "source_family": "developer",
+    "category": "FAQs",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/faqs-email",
+    "title": "Email FAQs",
+    "source_family": "developer",
+    "category": "FAQs",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/faq-facebook-messenger",
+    "title": "Facebook Messenger FAQs",
+    "source_family": "developer",
+    "category": "FAQs",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/faqs-push-and-in-app-messaging",
+    "title": "Push, Live Chat & In-App Messaging FAQs",
+    "source_family": "developer",
+    "category": "FAQs",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/faqs-rich-communication-services",
+    "title": "RCS FAQs",
+    "source_family": "developer",
+    "category": "FAQs",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/faqs-sms",
+    "title": "SMS FAQs",
+    "source_family": "developer",
+    "category": "FAQs",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/faqs-voice",
+    "title": "Voice FAQs",
+    "source_family": "developer",
+    "category": "FAQs",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/faqs-whatsapp",
+    "title": "WhatsApp FAQs",
+    "source_family": "developer",
+    "category": "FAQs",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/faqs-miscellaneous",
+    "title": "Miscellaneous FAQs",
+    "source_family": "developer",
+    "category": "FAQs",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/getting-started-with-your-api-3",
+    "title": "Getting Started With Your API",
+    "source_family": "developer",
+    "category": "Make Outbound Calls Using Voice API v1",
+    "doc_version": "6.20.0"
+  },
+  {
+    "url": "https://developers.webexconnect.io/reference/getting-started-with-your-api-12",
+    "title": "Getting Started With Your API",
+    "source_family": "developer",
+    "category": "Programmable Voice Calls Using Voice API v1",
+    "doc_version": "6.20.0"
+  }
+]

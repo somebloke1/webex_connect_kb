@@ -1,0 +1,55 @@
+# Message Schema- SMS - WxEngage standalone
+
+Source: https://help.webexconnect.io/docs/sms-1
+Documentation version: 6.20.0
+Retrieved: 2026-09-08T23:29:27+00:00
+
+## ➡️ Inbound Messages
+
+```json
+text
+
+{
+    "aliasId": "6ee6ce94-9940-44a6-a017-d99ed4d97dd7",
+    "direction": "inbound",
+    "type": "text",
+    "text": "Hi there, this is a sample inbound text containing credit card info: XXXX XXXX XXXX XXXX",
+    "timestamp": "2019-08-24T14:15:22Z",
+    "redacted": false
+}
+```
+
+## ⬅️ Outbound Messages
+
+```json
+{
+    "aliasId": "6ee6ce94-9940-44a6-a017-d99ed4d97dd7",
+    "direction": "outbound",
+    "type": "text",
+    "text": "Hi there, this is a sample inbound text containing credit card info: XXXX XXXX XXXX XXXX",
+    "timestamp": "2019-08-24T14:15:22Z",
+    "redacted": false,
+    "attemptGwDelivery": true
+}
+```
+
+## ↩️ Announcement
+
+Announcements support markdown content. Refer to the cheat sheet below
+
+```json
+{
+    "aliasId": "6ee6ce94-9940-44a6-a017-d99ed4d97dd7",
+    "direction": "announcement",
+    "type": "text",
+    "text": "Sample **Announcement**",
+    "timestamp": "2019-08-24T14:15:22Z"
+}
+```
+
+## Markdown Cheat Sheet
+
+| Formatting | Synax                                       |
+| :--------- | :------------------------------------------ |
+| Bold       | Embed within double star symbols (\*\*)     |
+| Italics    | Embed within single underscore symbols (\_) |

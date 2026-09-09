@@ -1,0 +1,42 @@
+{
+  "api_metadata_path": "sources/cache/developer/get-sms-api-v1.api.json",
+  "category": "MULTI CHANNEL COMMUNICATION API",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f6662",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "a9e167bbc6c8c0d3bdd20a4f0d98b351c9585bde394b6e1f4697563d1479ee31",
+    "source_path": "f5c0c3dc290226fddeef4bc2cd1165d7e16382a01e6382b5e456bf2ccac81fa5",
+    "text_path": "73565a6fd206f382123dd923a307424dc10f6f08c7c6c259107bef00a5134f27"
+  },
+  "headings": [
+    "Request Body for Get SMS API v1",
+    "Get SMS API v1 Path Parameter",
+    "Get SMS API v1 Header Parameters",
+    "Sample Response Body"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/get-sms-api-v1.md",
+  "metadata_path": "sources/cache/developer/get-sms-api-v1.metadata.json",
+  "openapi_path": "sources/cache/openapi/a72d7ea8df8a4dfff01d583e82ef4ff65ab16f8be95687146eeaa4573e5bbd18.json",
+  "previous_retrieved_at": "2026-09-08T23:31:40+00:00",
+  "previous_sha256_source_body": "f5c0c3dc290226fddeef4bc2cd1165d7e16382a01e6382b5e456bf2ccac81fa5",
+  "resolved_url": "https://developers.webexconnect.io/reference/get-sms-api-v1",
+  "retrieved_at": "2026-09-08T23:35:06+00:00",
+  "sha256_api_metadata": "3fb0b72fe0ed52089012f40f8e347dff569728767626910d185460ef3f5e90d1",
+  "sha256_html_response": "54eaad80b174a1300338a3dbb2b35db17448e4b8f6518b3256a1595702b8bccc",
+  "sha256_openapi": "a72d7ea8df8a4dfff01d583e82ef4ff65ab16f8be95687146eeaa4573e5bbd18",
+  "sha256_source_body": "f5c0c3dc290226fddeef4bc2cd1165d7e16382a01e6382b5e456bf2ccac81fa5",
+  "source_body_changed": false,
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/get-sms-api-v1.source.md",
+  "source_updated_at": "2026-04-16T05:32:56.538Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/get-sms-api-v1.txt",
+  "title": "Get SMS API v1",
+  "url": "https://developers.webexconnect.io/reference/get-sms-api-v1",
+  "word_count": 646,
+  "normalized_at": "2026-09-08T23:37:54+00:00"
+}

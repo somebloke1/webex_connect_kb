@@ -1,0 +1,15 @@
+Submissions are commonly rejected for the following reasons, so make sure you avoid these mistakes.
+
+- Variable parameters are missing or have mismatched curly braces. The correct format is {{1}}.
+
+- Variable parameters contain special characters such as a #, $, or %.
+
+- Variable parameters are not sequential. For example, {{1}}, {{2}}, {{4}}, {{5}} are defined but {{3}} does not exist.
+
+- The message template contains content that violates WhatsApp’s Commerce Policy: When you offer goods or services for sale, we consider all messages and media related to your goods or services, including any descriptions, prices, fees, taxes and/or any required legal disclosures, to constitute transactions. Transactions must comply with the WhatsApp Commerce Policy.
+
+- The message template contains content that violates the WhatsApps Business Policy: Do not request sensitive identifiers from users. For example, do not ask people to share full length individual payment card numbers, financial account numbers, National Identification numbers, or other sensitive identifiers. This also includes not requesting documents from users that might contain sensitive identifiers. Requesting partial identifiers (ex: last 4 digits of their Social Security number) is OK.
+
+- The content contains potentially abusive or threatening content, such as threatening a customer with legal action or threatening to publicly shame them.
+
+- The message template is a duplicate of an existing template. If a template is submitted with the same wording in the body and footer of an existing template, the duplicate template will be rejected.

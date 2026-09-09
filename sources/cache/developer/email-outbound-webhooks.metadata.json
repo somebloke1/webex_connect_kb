@@ -1,0 +1,36 @@
+{
+  "api_metadata_path": "sources/cache/developer/email-outbound-webhooks.api.json",
+  "category": "OUTBOUND WEBHOOKS",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f6553",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "99dfd400af05fb9c035910dfc618752c3f5dc1959dad166b78d2c6c12a9e3ba5",
+    "source_path": "15af6005ba9917dd9c88139cb68230e5fa569de6072f02e5a8f73344d61d03b1",
+    "text_path": "8b5cfe7ca67767970a7c0f93b24f5d9773e01796dce77168d599cdf73f4c02f2"
+  },
+  "headings": [
+    "Outbound Webhook configuration for tracking email delivery status",
+    "Factors that influence email delivery receipts",
+    "Outbound Webhook configuration for tracking incoming emails and other events"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/email-outbound-webhooks.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/email-outbound-webhooks",
+  "retrieved_at": "2026-09-08T23:31:44+00:00",
+  "sha256_api_metadata": "187de124aa8aa8acf032d1bfec486640b94ec306193dfc1e0feb2652279c3c88",
+  "sha256_html_response": "02d1585158baf71f42586570c1fc9034eef379d0d74bc708d7398439926590c4",
+  "sha256_source_body": "15af6005ba9917dd9c88139cb68230e5fa569de6072f02e5a8f73344d61d03b1",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/email-outbound-webhooks.source.md",
+  "source_updated_at": "2026-02-26T06:49:24.899Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/email-outbound-webhooks.txt",
+  "title": "Email",
+  "url": "https://developers.webexconnect.io/reference/email-outbound-webhooks",
+  "word_count": 1990,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/email-outbound-webhooks.metadata.json"
+}

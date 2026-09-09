@@ -1,0 +1,1711 @@
+##  
+
+Customers can interact with AI agents in their preferred language across various digital and
+      voice channels. Webex AI Agent Studio supports multiple languages, allowing the AI agents to
+      understand customer input and respond in the same language. 
+
+You can create and configure an AI agent in the desired language and voice and make one as
+      default, based on the requirements. 
+
+- Autonomous AI agent
+
+- Scripted AI agent
+
+Based on the chosen AI engine, you can configure only one language at a time, but you can
+      change it to another language, as needed. For more information, see the  Configure conversation settings section in the Webex AI Agent Studio
+      Administration guide.
+
+The following table lists the languages and voices supported for autonomous AI agents:
+
+        Table 1. Supported languages for autonomous AI agents
+ | 
+              
+Language
+
+             | Locale | 
+              
+Voice name
+
+             | AI engine | Digital/Voice support | General Availability/Beta
+
+                 | Arabic
+                 | ar-AE
+                 | 
+
+- ar-AE-Sara
+
+- ar-AE-Ahmed
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  Beta
+
+                 | Arabic
+                 | ar-SA
+                 | 
+
+- ar-SA-Fatima
+
+- ar-SA-Mohammed
+
+- ar-SA-Layan
+
+- ar-SA-Sara
+
+- ar-SA-Noura
+
+- ar-SA-Faisal
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  Beta
+
+                 | Bengali
+                 | bn-IN
+                 | 
+
+- bn-IN-Ishani
+
+- bn-IN-Arjun
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  Beta
+
+                 | Bulgarian
+                 | bg-BG
+                 | 
+
+- bg-BG-Blagovesta
+
+- bg-BG-Hristo
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  General Availability
+
+                 | Catalan
+                 | ca-ES
+                 | 
+
+- ca-ES-Mireia
+
+- ca-ES-Arnau
+
+- ca-ES-Aina
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  Beta
+
+                 | Chinese (Mandarin, Simplified)
+                 | zh-CN
+                 | 
+
+- zh-CN-LiNa
+
+- zh-CN-WeiMing
+
+- zh-CN-JingFei
+
+- zh-CN-HaoRan
+
+- zh-CN-Yanyang
+
+- zh-CN-Xiaomei
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  Beta
+
+                 | Chinese (Taiwanese Mandarin)
+                 | zh-TW
+                 | 
+
+- zh-TW-HsiaoLi
+
+- zh-TW-YunKai
+
+- zh-TW-ShuFen
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  Beta
+
+                 | Chinese (Cantonese, Traditional)
+                 | zh-HK
+                 | 
+
+- zh-HK-Nga-Si
+
+- zh-HK-Ka-Ho
+
+- Zh-HK-Tsz-Ching
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  Beta
+
+                 | Croatian
+                 | hr-HR
+                 | 
+
+- hr-HR-Ana
+
+- hr-HR-Marko
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  Beta
+
+                 | Czech
+                 | cs-CZ
+                 | 
+
+- cs-CZ-Tereza
+
+- cs-CZ-Jakub
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  Beta
+
+                 | Danish
+                 | da-DK 
+                 | 
+
+- da-DK-Anne
+
+- da-DK-Albert
+
+- da-DK-Lucas
+
+- da-DK-Ida
+
+- da-DK-Oliver
+
+- da-DK-Emma
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  Beta
+
+                 | Dutch
+                 | nl-NL
+                 | 
+
+- nl-NL-Adriana
+
+- nl-NL-Edwin
+
+- nl-NL-Daan
+
+- nl-NL-Sanne
+
+- nl-NL-Milan
+
+- nl-NL-Lotte
+
+- nl-NL-Femke
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  Beta
+
+                 | Dutch
+                 | nl-BE
+                 | 
+
+- nl-BE-Marie
+
+- nl-BE-Lucas
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  Beta
+
+                 | English
+                 | en-US
+                 | 
+
+- en-US-Maria
+
+- en-US-Daniel
+
+- en-US-Jennifer
+
+- en-US-Henry
+
+- en-US-Sophia
+
+- en-US-Ezra
+
+- en-US-Hazel
+
+- en-US-Oliver
+
+- en-US-Clara
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  General Availability
+
+                 | 
+
+- en-US-Jess
+
+- en-US-Lisa
+
+- en-US-Frank
+
+- en-US-Mia
+
+- en-US-Chris
+
+- en-US-Aaron
+
+                 | Webex AI Pro-US 1.0
+
+                 | 
+
+- en-US-Jess
+
+- en-US-Lisa
+
+- en-US-Mia
+
+- en-US-Frank
+
+- en-US-Chris
+
+- en-US-Aaron
+
+                 | Webex AI Pro-Europe 1.0
+
+                 | English
+                 | en-IN
+                 | 
+
+- en-IN-Ananya  
+
+- en-IN-Veer
+
+- en-IN-Arjun
+
+- en-IN-Aarav
+
+- en-IN-Kavita
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  General Availability
+
+                 | English
+                 | en-GB
+                 | 
+
+- en-GB-Agnes
+
+- en-GB-Colton 
+
+- en-GB-Emma  
+
+- en-GB-John
+
+- en-GB-Charlotte
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  General Availability
+
+                 | 
+
+- en-GB-Lillian
+
+                 | Webex AI Pro-US 1.0
+
+                 | 
+
+- en-GB-Thomas
+
+- en-GB-Ben
+
+- en-GB-Grace
+
+- en-GB-Linda
+
+                 | Webex AI Pro-Europe 1.0
+
+                 | English
+                 | en-AU 
+                 | 
+
+- en-AU-Amelia  
+
+- en-AU-Chris  
+
+- en-AU-Mia
+
+- en-AU-Henry
+
+- en-AU-Olivia
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  General Availability
+
+                 | English
+                 | en-IE
+                 | 
+
+- en-IE-Liam 
+
+- en-IE-Fiona
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  General Availability
+
+                 | 
+
+- en-IE-Fionn 
+
+- en-IE-Rory
+
+- en-IE-Clodagh
+
+- en-IE-Aoife
+
+                 | Webex AI Pro-Europe 1.0
+
+                 | English
+                 | en-PH
+                 | 
+
+- en-PH-Angela
+
+- en-PH-James
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  General Availability
+
+                 | English
+                 | en-SG
+                 | 
+
+- en-SG-Emma
+
+- en-SG-Lucas
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  General Availability
+
+                 | Finnish
+                 | fi-FI
+                 | 
+
+- fi-FI-Eero
+
+- fi-FI-Aino
+
+- fi-FI-Emilia
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  Beta
+
+                 | French
+                 | fr-FR
+                 | 
+
+- fr-FR-Ariane
+
+- fr-FR-Adrien
+
+- fr-FR-Alice
+
+- fr-FR-Vincent
+
+- fr-FR-Louis
+
+- fr-FR-Pauline
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  General Availability
+
+                 | French
+                 | fr-CA
+                 | 
+
+- fr-CA-Lea   
+
+- fr-CA-Andre
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  General Availability
+
+                 | Georgian
+                 | ka-GE
+                 | 
+
+- ka-GE-Nino
+
+- ka-GE-Davit
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  Beta
+
+                 | German
+                 | de-DE
+                 | 
+
+- de-DE-Emma  
+
+- de-DE-Jonas  
+
+- de-DE-Ella  
+
+- de-DE-Leo
+
+- de-DE-Oskar
+
+- de-DE-Lena
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  General Availability
+
+                 | German
+                 | de-CH
+                 | 
+
+- de-CH-Eva
+
+- de-CH-Luca
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  Beta
+
+                 | Greek
+                 | el-GR
+                 | 
+
+- el-GR-Athena
+
+- el-GR-Apollo
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  Beta
+
+                 | Gujarati
+                 | gu-IN
+                 | 
+
+- gu-IN-Kavita
+
+- gu-IN-Siddharth
+
+- gu-IN-Pooja
+
+- gu-IN-Rohit
+
+- gu-IN-Riya
+
+- gu-IN-Anmol
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  General Availability
+
+                 | Hebrew
+                 | he-IL
+                 | 
+
+- he-IL-Hannah
+
+- he-IL-Yosef
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  Beta
+
+                 | Hindi
+                 | hi-IN
+                 | 
+
+- hi-IN-Kiara
+
+- hi-IN-Karan
+
+- hi-IN-Gayatri
+
+- hi-IN-Rehman
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  General Availability
+
+                 | Hungarian
+                 | hu-HU
+                 | 
+
+- hu-HU-Bence
+
+- hu-HU-Réka
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  General Availability
+
+                 | Icelandic
+                 | is-IS
+                 | 
+
+- is-IS-Anna
+
+- is-IS-Baldur
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  Beta
+
+                 | Indonesian
+                 | id-ID
+                 | 
+
+- id-ID-Ayu
+
+- id-ID-Budi
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  Beta
+
+                 | Irish
+                 | ga-IE
+                 | 
+
+- ga-IE-Sophie
+
+- ga-IE-Jack
+
+- ga-IE-James
+
+- ga-IE-Grace
+
+- ga-IE-Emily
+
+- ga-IE-Aoife
+
+- ga-IE-Finn
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  Beta
+
+                 | Italian
+                 | it-IT
+                 | 
+
+- it-IT-Alice 
+
+- it-IT-Nico 
+
+- it-IT-Anna
+
+- it-IT-Marco
+
+- it-IT-Giovanni
+
+- it-IT-Sofia
+
+- it-IT-Luca
+
+- it-IT-Giulia
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  General Availability
+
+                 | Japanese
+                 | ja-JP
+                 | 
+
+- ja-JP-Yui
+
+- ja-JP-Kaito
+
+- ja-JP-Haru
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  General Availability
+
+                 | Kannada
+                 | kn-IN
+                 | 
+
+- kn-IN-Meghana
+
+- kn-IN-Arjun
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  General Availability
+
+                 | Korean
+                 | ko-KR
+                 | 
+
+- ko-KR-Jiwoo
+
+- ko-KR-Doyoon
+
+- ko-KR-Soomin
+
+- ko-KR-Hyunwoo
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  General Availability
+
+                 | Latvian
+                 | lv-LV
+                 | 
+
+- lv-LV-Sofija
+
+- lv-LV-Andris
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  Beta
+
+                 | Malay
+                 | ms-MY
+                 | 
+
+- ms-MY-Nurul
+
+- ms-MY-Amir
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  Beta
+
+                 | Malayalam
+                 | ml-IN
+                 | 
+
+- ml-IN-Anjali
+
+- ml-IN-Soman
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  Beta
+
+                 | Marathi
+                 | mr-IN
+                 | 
+
+- mr-IN-Aarti
+
+- mr-IN-Manoj
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  General Availability
+
+                 | Norwegian
+                 | nb-NO
+                 | 
+
+- nb-NO-Jakob
+
+- nb-No-Agnes
+
+- nb-NO-Elias
+
+- nb-NO-Oda
+
+- nb-NO-Emil
+
+- nb-NO-Nora
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  Beta
+
+                 | Polish
+                 | pl-PL
+                 | 
+
+- pl-PL-Natalia
+
+- pl-PL-Filip 
+
+- pl-PL-Zuzanna
+
+- pl-PL-Hanna
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  General Availability
+
+                 | Portuguese
+                 | pt-BR
+                 | 
+
+- pt-BR-Camila
+
+- pt-BR-Davi
+
+- pt-BR-Ana  
+
+- pt-BR-Carlos
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  General Availability
+
+                 | Portuguese
+                 | pt-PT
+                 | 
+
+- pt-PT-Leonor
+
+- pt-PT-Francisco
+
+- pt-PT-Francisca
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  Beta
+
+                 | Romanian
+                 | ro-RO
+                 | 
+
+- ro-RO-Elena
+
+- ro-RO-Radu
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  Beta
+
+                 | Russian
+                 | ru-RU
+                 | 
+
+- ru-RU-Anya
+
+- ru-RU-Ivan
+
+- ru-RU-Olga
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  Beta
+
+                 | Serbian
+                 | sr-RS
+                 | 
+
+- sr-RS-Jelena
+
+- sr-RS-Nikola
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  Beta
+
+                 | Slovak
+                 | sk-SK
+                 | 
+
+- sk-SK-Sofia
+
+- sk-SK-Peter
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  Beta
+
+                 | Slovenian
+                 | sl-SI
+                 | 
+
+- si-SI-Marija
+
+- si-SI-Luka
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  Beta
+
+                 | Spanish
+                 | es-ES
+                 | 
+
+- es-ES-Cristina
+
+- es-ES-Pablo
+
+- es-ES-Maria
+
+- es-ES-Diego
+
+- en-ES-Javier
+
+- en-ES-Carmen
+
+- en-ES-Marco
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  General Availability
+
+                 | Spanish
+                 | es-MX
+                 | 
+
+- es-MX-Luna
+
+- es-MX-Arturo
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  General Availability
+
+                 | Spanish
+                 | es-US
+                 | 
+
+- es-US-Alonso
+
+- es-US-Paloma
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  General Availability
+
+                 | Swedish
+                 | sv-SE
+                 | 
+
+- sv-SE-Hugo
+
+- sv-SE-Kristina
+
+- sv-SE-Olle
+
+- sv-SE-Astrid
+
+- sv-SE-Erik
+
+- sv-SE-Wilma
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  Beta
+
+                 | Tagalog
+                 | fil-PH
+                 | 
+
+- fil-PH-Sofia
+
+- fil-PH-Luis
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  Beta
+
+                 | Tamil
+                 | ta-IN
+                 | 
+
+- ta-IN-Kavitha
+
+- ta-IN-Karthik
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  Beta
+
+                 | Telugu
+                 | te-IN
+                 | 
+
+- te-IN-Sravani
+
+- te-IN-Prakash
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  Beta
+
+                 | Thai
+                 | th-TH
+                 | 
+
+- th-TH-Mali
+
+- th-TH-Anong
+
+- th-TH-Chaisai
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  Beta
+
+                 | Turkish
+                 | tr-TR
+                 | 
+
+- tr-TR-Zeynep
+
+- tr-TR-Mustafa
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  Beta
+
+                 | Ukrainian
+                 | uk-UA
+                 | 
+
+- uk-UA-Anastasia
+
+- uk-UA-Andriy
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  Beta
+
+                 | Vietnamese
+                 | vi-VN
+                 | 
+
+- vi-VN-Linh
+
+- vi-VN-Tai
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  General Availability
+
+                 | Welsh
+                 | cy-GB
+                 | 
+
+- cy-GB-Rhys
+
+- cy-GB-Carys
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  Beta
+
+                 | IsiZulu
+                 | zu-ZA
+                 | 
+
+- zu-ZA-Zanele
+
+- zu-ZA-Lethokuhle
+
+                 | Webex AI Pro 1.0
+                 | ✓
+                 | 
+                  Beta
+
+- The Webex AI agent configured in hi-IN, en-SG, and fil-PH can handle conversations in
+            Hinglish, Singlish and Taglish respectively.
+
+- Beta language support is limited; however, there are no billing limits applied per
+            organization.
+
+For scripted AI agents, you can configure multiple languages simultaneously and set one
+      language as the default. For more information, see the  Configure language and voice section in the Set up
+        scripted AI agent topic.
+
+      Supported language models
+
+Webex AI Agent Studio supports Polymatch and Language Encoder multilingual
+      models for training scripted AI agents. These models are available as part of the Webex AI
+        Agent Pro 1.0 (with Swiftmatch)  AI engine's settings. 
+
+- 
+        
+For an AI agent trained using Polymatch, a distinct model is created for each language
+          and added to the AI agent. The AI engine performs inference based on the language of the
+          customer query. 
+
+- 
+        
+The Language Encoder model performs best for training data on long utterances, while
+          Polymatch does the same for short utterances. 
+
+- 
+        
+The languages supported by Polymatch and the Language Encoder differ. For more
+          information, refer to the following table. 
+
+      Accuracy and Performance
+
+- 
+        
+The accuracy and performance of an AI agent trained with the Webex AI Agent Pro 2.0
+            (with Swiftmatch) model depend on advanced generative AI capabilities integrated
+          during the training phase and the semantic analysis of incoming user messages. The key
+          features that determine its language support and intent accuracy include:
+
+- 
+
+              Text and Script Support: Comprehensive support for the target language and its
+              specific script, ensuring the engine can process global communication effectively.
+
+- 
+
+              LLM-generated Linguistic Patterns: Leveraging Large Language Models (LLMs) to
+              interpret a vast array of phrasing variations. This allows the agent to accurately
+              classify intents even when the user's input does not exactly match the training
+              data.
+
+- 
+
+              Semantic Intent Classification: Moving beyond simple keyword matching, this
+              feature uses advanced algorithms to understand the underlying meaning and context of a
+              query, significantly reducing the impact of ambiguous language.
+
+- 
+
+              Adaptive Generalization: The ability of the model to effectively generalize
+              across similar utterances, which minimizes the need for exhaustive manual examples
+              while maintaining high precision during inference.
+
+The following table lists the languages and voices supported for scripted AI agent: 
+
+        Table 2. Supported languages for scripted AI agents
+ | 
+              
+Language
+
+             | Locale | Voice name | 
+              
+AI engine
+
+             | Digital/Voice support | General Availability/Beta
+
+                 | Danish
+                 | da-DK
+                 | 
+
+- da-DK-Anne
+
+- da-DK-Albert
+
+- da-DK-Lucas
+
+- da-DK-Ida
+
+- da-DK-Oliver
+
+- da-DK-Emma
+
+                 | 
+
+- Webex AI Pro 2.0 (with Swiftmatch)
+
+- Webex AI Pro 1.0 (with Swiftmatch)**
+
+                 | ✓
+                 | 
+              Beta
+
+                 | Dutch
+                 | nl-NL
+                 | 
+
+- 
+                  
+nl-NL-Adriana
+
+- 
+                  
+nl-NL-Edwin
+
+- nl-NL-Daan
+
+- nl-NL-Sanne
+
+- nl-NL-Milan
+
+- nl-NL-Lotte
+
+- nl-NL-Femke
+
+                 | 
+
+- Webex AI Pro 2.0 (with Swiftmatch)
+
+- Webex AI Pro 1.0 (with Swiftmatch)**
+
+                 | ✓
+                 | 
+              Beta
+
+                 | English
+                 | en-US
+                 | 
+
+- 
+                  
+en-US-Maria
+
+- 
+                  
+en-US-Daniel
+
+- 
+                  
+en-US-Jennifer
+
+- 
+                  
+en-US-Henry
+
+- 
+                  
+en-US-Sophia
+
+- 
+                  
+en-US-Ezra
+
+- 
+                  
+en-US-Hazel
+
+- 
+                  
+en-US-Oliver
+
+                 | 
+
+- Webex AI Pro 2.0 (with Swiftmatch)
+
+- Webex AI Pro 1.0 (with Swiftmatch)**
+
+                 | ✓
+                 | 
+              General Availability
+
+                 | English
+                 | en-IN
+                 | 
+
+- 
+                  
+en-IN-Ananya
+
+- 
+                  
+en-IN-Veer
+
+                 | 
+
+- Webex AI Pro 2.0 (with Swiftmatch)
+
+- Webex AI Pro 1.0 (with Swiftmatch)**
+
+                 | ✓
+                 | 
+              General Availability
+
+                 | English
+                 | en-GB
+                 | 
+
+- 
+                  
+en-GB-Agnes
+
+- 
+                  
+en-GB-Colton
+
+- 
+                  
+en-GB-Emma
+
+- 
+                  
+en-GB-John
+
+- en-GB-Charlotte
+
+                 | 
+
+- Webex AI Pro 2.0 (with Swiftmatch)
+
+- Webex AI Pro 1.0 (with Swiftmatch)**
+
+                 | ✓
+                 | 
+              General Availability
+
+                 | English
+                 | en-AU
+                 | 
+
+- 
+                  
+en-AU-Amelia
+
+- 
+                  
+en-AU-Chris
+
+- 
+                  
+en-AU-Mia
+
+- 
+                  
+en-AU-Henry
+
+- en-AU-Olivia
+
+                 | 
+
+- Webex AI Pro 2.0 (with Swiftmatch)
+
+- Webex AI Pro 1.0 (with Swiftmatch)**
+
+                 | ✓
+                 | 
+              General Availability
+
+                 | English
+                 | en-IE
+                 | 
+
+- 
+                  
+en-IE-Liam
+
+- 
+                  
+en-IE-Fiona 
+
+                 | 
+
+- Webex AI Pro 2.0 (with Swiftmatch)
+
+- Webex AI Pro 1.0 (with Swiftmatch)**
+
+                 | ✓
+                 | 
+              General Availability
+
+                 | French
+                 | fr-FR
+                 | 
+
+- 
+                  
+fr-FR-Ariane
+
+- 
+                  
+fr-FR-Adrien
+
+- 
+                  
+fr-FR-Alice
+
+- 
+                  
+fr-FR-Vincent
+
+- fr-FR-Louis
+
+- fr-FR-Pauline
+
+                 | 
+
+- Webex AI Pro 2.0 (with Swiftmatch)
+
+- Webex AI Pro 1.0 (with Swiftmatch)**
+
+                 | ✓
+                 | 
+              Beta
+
+                 | French
+                 | fr-CA
+                 | 
+
+- 
+                  
+fr-CA-Lea
+
+- 
+                  
+fr-CA-Andre
+
+                 | 
+
+- Webex AI Pro 2.0 (with Swiftmatch)
+
+- Webex AI Pro 1.0 (with Swiftmatch)**
+
+                 | ✓
+                 | 
+              Beta
+
+                 | German
+                 | de-DE
+                 | 
+
+- 
+                  
+de-DE-Emma  
+
+- 
+                  
+de-DE-Jonas
+
+- 
+                  
+de-DE-Ella
+
+- 
+                  
+de-DE-Leo
+
+- de-DE-Oskar
+
+- de-DE-Lena
+
+                 | 
+
+- Webex AI Pro 2.0 (with Swiftmatch)
+
+- Webex AI Pro 1.0 (with Swiftmatch)**
+
+                 | ✓
+                 | 
+              Beta
+
+                 | Italian
+                 | it-IT
+                 | 
+
+- 
+                  
+it-IT-Alice 
+
+- 
+                  
+it-IT-Nico
+
+- 
+                  
+it-IT-Anna
+
+- 
+                  
+it-IT-Marco
+
+- it-IT-Giovanni
+
+- it-IT-Sofia
+
+- it-IT-Luca
+
+- it-IT-Giulia
+
+                 | 
+
+- Webex AI Pro 2.0 (with Swiftmatch)
+
+- Webex AI Pro 1.0 (with Swiftmatch)**
+
+                 | ✓
+                 | 
+              Beta
+
+                 | Norwegian
+                 | nb-NO
+                 | 
+
+- 
+                  
+nb-NO-Jakob
+
+- 
+                  
+nb-NO-Agnes
+
+- nb-NO-Elias
+
+- nb-NO-Oda
+
+- nb-NO-Emil
+
+- nb-NO-Nora
+
+                 | 
+
+- Webex AI Pro 2.0 (with Swiftmatch)
+
+- Webex AI Pro 1.0 (with Swiftmatch)**
+
+                 | ✓
+                 | 
+              Beta
+
+                 | Polish
+                 | pl-PL
+                 | 
+
+- 
+                  
+pl-PL-Natalia
+
+- 
+                  
+pl-PL-Filip
+
+- pl-PL-Zuzanna
+
+- pl-PL-Hanna
+
+                 | 
+
+- Webex AI Pro 2.0 (with Swiftmatch)
+
+- Webex AI Pro 1.0 (with Swiftmatch)*
+
+                 | ✓
+                 | 
+              Beta
+
+                 | Portuguese
+                 | pt-BR
+                 | 
+
+- 
+                  
+pt-BR-Camila
+
+- 
+                  
+pt-BR-Davi
+
+- 
+                  
+pt-BR-Ana
+
+- 
+                  
+pt-BR-Carlos
+
+                 | 
+
+- Webex AI Pro 2.0 (with Swiftmatch)
+
+- Webex AI Pro 1.0 (with Swiftmatch)**
+
+                 | ✓
+                 | 
+              Beta
+
+                 | Spanish
+                 | es-ES
+                 | 
+
+- 
+                  
+es-ES-Cristina
+
+- 
+                  
+es-ES-Pablo
+
+- 
+                  
+es-ES-Maria
+
+- 
+                  
+es-ES-Diego
+
+- en-ES-Javier
+
+- en-ES-Carmen
+
+- en-ES-Marco
+
+                 | 
+
+- Webex AI Pro 2.0 (with Swiftmatch)
+
+- Webex AI Pro 1.0 (with Swiftmatch)**
+
+                 | ✓
+                 | 
+              Beta
+
+                 | Spanish
+                 | es-MX
+                 | 
+
+- 
+                  
+es-MX-Luna
+
+- 
+                  
+es-MX-Arturo
+
+                 | 
+
+- Webex AI Pro 2.0 (with Swiftmatch)
+
+- Webex AI Pro 1.0 (with Swiftmatch)**
+
+                 | ✓
+                 | 
+              Beta
+
+                 | Spanish
+                 | es-US
+                 | 
+
+- 
+                  
+es-US-Alonso
+
+- 
+                  
+es-US-Paloma
+
+                 | 
+
+- Webex AI Pro 2.0 (with Swiftmatch)
+
+- Webex AI Pro 1.0 (with Swiftmatch)**
+
+                 | ✓
+                 | 
+              Beta
+
+                 | Swedish
+                 | sv-SE
+                 | 
+
+- 
+                  
+sv-SE-Hugo 
+
+- 
+                  
+sv-SE-Kristina
+
+- sv-SE-Olle
+
+- sv-SE-Astrid
+
+- sv-SE-Erik
+
+- sv-SE-Wilma
+
+                 | 
+
+- Webex AI Pro 2.0 (with Swiftmatch)
+
+- Webex AI Pro 1.0 (with Swiftmatch)**
+
+                 | ✓
+                 | 
+              Beta
+
+- * - Only supported by Language Encoder
+
+- ** - Supported by both Language Encoder and Polymatch

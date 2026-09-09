@@ -1,0 +1,2775 @@
+{
+  "schema_version": 1,
+  "segments": [
+    {
+      "start": 1.675,
+      "end": 6.265,
+      "text": "My name is Carmen Lamson with the Webex developer evangelism team for today's webinar."
+    },
+    {
+      "start": 6.265,
+      "end": 12.955,
+      "text": "We will be using the slideshow embedded app for Q, and a look for it to pop up on the right side of your screen."
+    },
+    {
+      "start": 12.955,
+      "end": 16.825,
+      "text": "You can also participate on your mobile device by scanning that QR code."
+    },
+    {
+      "start": 17.545,
+      "end": 19.705,
+      "text": "Joining us for today's webinar are."
+    },
+    {
+      "start": 20.865,
+      "end": 32.325,
+      "text": "And Stephanie with the Webex connect team, giving us an introduction to the platform developer tools and building blocks you can use to integrate communications capabilities into your apps."
+    },
+    {
+      "start": 33.145,
+      "end": 37.615,
+      "text": "But before we jump into all of that fun, Phil, we'll share some exciting things to look out for."
+    },
+    {
+      "start": 38.125,
+      "end": 41.185,
+      "text": "Take it away from. Okay. Hi."
+    },
+    {
+      "start": 41.185,
+      "end": 43.405,
+      "text": "Everybody thanks a lot for joining this session."
+    },
+    {
+      "start": 43.435,
+      "end": 47.185,
+      "text": "I just want to quickly highlight some of the latest news for Webex developers."
+    },
+    {
+      "start": 47.43,
+      "end": 55.645,
+      "text": "Before we start our main presentation majority of these things you can find and read more about on developer dot Webex dot com slash blogs."
+    },
+    {
+      "start": 56.125,
+      "end": 63.085,
+      "text": "So, 1st, uh, we just released our new, uh, Webex web, calling SDK uh, that's a tool kit for developers."
+    },
+    {
+      "start": 63.325,
+      "end": 66.955,
+      "text": "We're looking to integrate the Webex calling features into web applications."
+    },
+    {
+      "start": 67.17,
+      "end": 75.655,
+      "text": "So, it leverages our JavaScript web RTC and that powers, bespoke web apps, or even really complex enterprise solutions."
+    },
+    {
+      "start": 75.955,
+      "end": 85.315,
+      "text": "Uh, you read all about the, uh, highlights on the key features benefits a potential integration use cases, uh, right on the blogs page."
+    },
+    {
+      "start": 86.425,
+      "end": 100.075,
+      "text": "But next, uh, the leader of the Webex developer relations team, lose Delgado author to really helpful white paper showing us how to optimize an incident management with custom built command bots in Webex messaging."
+    },
+    {
+      "start": 100.225,
+      "end": 104.395,
+      "text": "So there's a lot of great info there on the benefits of automation."
+    },
+    {
+      "start": 104.395,
+      "end": 109.605,
+      "text": "The power of customers. Patient in a variety of ways that we can integrate with the Webex platform."
+    },
+    {
+      "start": 109.634,
+      "end": 111.505,
+      "text": "So. Be sure to check that 1."
+    },
+    {
+      "start": 111.505,
+      "end": 120.055,
+      "text": "now, uh, 3rd, uh, we've revamped 2 of our developer guides, uh, for Webex for wholesale APIs."
+    },
+    {
+      "start": 120.3,
+      "end": 122.905,
+      "text": "Uh, and Webex for broad works APIs."
+    },
+    {
+      "start": 122.965,
+      "end": 128.575,
+      "text": "Um, and so this brings together the most current and comprehensive information for these product platforms."
+    },
+    {
+      "start": 128.97,
+      "end": 134.395,
+      "text": "Uh, you could find these new guys, right in the documentation section on the dev portal, um, and forth."
+    },
+    {
+      "start": 134.425,
+      "end": 145.045,
+      "text": "We have a really nice. Post event round up by comic analysis on the activities of our Webex app hub integration partners at Cisco live and Amsterdam that just happened at the beginning of the month."
+    },
+    {
+      "start": 146.065,
+      "end": 148.495,
+      "text": "This is a particular focus and the power of AI."
+    },
+    {
+      "start": 148.705,
+      "end": 151.585,
+      "text": "So it's a great way to learn about what our partners are building."
+    },
+    {
+      "start": 151.615,
+      "end": 153.775,
+      "text": "So I encourage everybody to go check that 1 out."
+    },
+    {
+      "start": 155.485,
+      "end": 164.005,
+      "text": "Um, next week recently published some new, how 2 blogs, and that shows us how to work with 3 different application types in Webex."
+    },
+    {
+      "start": 164.52,
+      "end": 169.375,
+      "text": "Uh, so the 1st, 1, the leader of Webex developer evangelism Adam weeks."
+    },
+    {
+      "start": 169.56,
+      "end": 178.645,
+      "text": "He takes us through a step by step lab to create an RSS feed reader and that's inside Webex contact center in the agent desktop."
+    },
+    {
+      "start": 179.185,
+      "end": 180.565,
+      "text": "What's called a header widget?"
+    },
+    {
+      "start": 180.895,
+      "end": 186.985,
+      "text": "So, he kind of takes us through the entire of building and deploying it inside of like, a self contained lab."
+    },
+    {
+      "start": 187.645,
+      "end": 196.305,
+      "text": "Very, very cool. And the. 2nd, 1, uh, the Webex developer evangelist Joseph authored a guide to create and manage Webex service apps."
+    },
+    {
+      "start": 197.035,
+      "end": 208.285,
+      "text": "And that's for streamlining the authorization of org level integrations for administrators and it also enables efficient token consumption for high scale API calls."
+    },
+    {
+      "start": 209.035,
+      "end": 217.555,
+      "text": "So, I know we've been getting a lot of questions around new service apps and with this 1, they should answer pretty much all the questions for getting started."
+    },
+    {
+      "start": 218.155,
+      "end": 225.745,
+      "text": "And 3rd, Webex engineer, cassava, Christian, and he shows us how we can streamline the development process."
+    },
+    {
+      "start": 225.96,
+      "end": 236.605,
+      "text": "And the Webex calling SDK with yarn workspaces he also explain how these yarn workspace strategies can be deployed to various other web integration types."
+    },
+    {
+      "start": 237.355,
+      "end": 239.125,
+      "text": "So that's a really cool blog, too."
+    },
+    {
+      "start": 240.445,
+      "end": 244.105,
+      "text": "But really, that's it for the Webex developer news for this month."
+    },
+    {
+      "start": 244.255,
+      "end": 248.725,
+      "text": "Um, we also have a newsletter that they actually puts all these together too."
+    },
+    {
+      "start": 248.725,
+      "end": 251.335,
+      "text": "So, um, you know, you should be receiving that."
+    },
+    {
+      "start": 251.335,
+      "end": 253.375,
+      "text": "If you signed in for the developer portal."
+    },
+    {
+      "start": 253.62,
+      "end": 259.045,
+      "text": "Uh, if you are not getting those newsletters, please let us know and we'll get you added to the list."
+    },
+    {
+      "start": 259.32,
+      "end": 261.775,
+      "text": "Uh, but with that, that's it for the news this month."
+    },
+    {
+      "start": 261.805,
+      "end": 266.095,
+      "text": "So let's get started with the main presentation so, take it away."
+    },
+    {
+      "start": 268.884,
+      "end": 270.654,
+      "text": "Thank you for, uh, hi, everyone."
+    },
+    {
+      "start": 270.654,
+      "end": 272.994,
+      "text": "Welcome to the Webex connect masterclass webinar."
+    },
+    {
+      "start": 273.354,
+      "end": 278.904,
+      "text": "My name is, I am the product manager and leader for Webex Connect, which is our enterprise cloud communications platform."
+    },
+    {
+      "start": 279.179,
+      "end": 285.414,
+      "text": "In today's session, uh, I will be giving you an introduction to Webex connect and its capabilities before handing over to my colleagues."
+    },
+    {
+      "start": 285.414,
+      "end": 291.804,
+      "text": "Stephan, who will walk you through a live demo of how you can use Webex Connect for automating your customer interactions."
+    },
+    {
+      "start": 291.989,
+      "end": 299.214,
+      "text": "With that, let's dive in, uh, to start with the, you know, I quickly wanted to touch upon, you know, what is because."
+    },
+    {
+      "start": 299.489,
+      "end": 302.754,
+      "text": "Some of you may not necessarily be familiar with this terminology."
+    },
+    {
+      "start": 303.294,
+      "end": 308.604,
+      "text": "To keep things simple cloud, communications platform as a service, or is a cloud based platform."
+    },
+    {
+      "start": 308.879,
+      "end": 312.654,
+      "text": "Uh, that offers you developers as well as business users."
+    },
+    {
+      "start": 312.929,
+      "end": 326.844,
+      "text": "Uh, the ability to embed customer communication capabilities into your existing apps and business processes, uh, what you see below is a little more expensive, uh, a view of what, you know, uh, entails a comprehensive enterprise cloud communications"
+    },
+    {
+      "start": 326.844,
+      "end": 332.904,
+      "text": "platform, right? From APIs, for being able to do, uh, you know, communications with your customers to a business capability."
+    },
+    {
+      "start": 333.404,
+      "end": 346.184,
+      "text": "Which allows you to handle all the orchestration and automation of interactive customer journey is, uh, you know, when we touch upon some of the other capabilities, like NLP and so with that high level introduction, uh, let me, you know, quickly jump"
+    },
+    {
+      "start": 346.184,
+      "end": 349.484,
+      "text": "onto. Why do we, as developers need."
+    },
+    {
+      "start": 349.799,
+      "end": 361.794,
+      "text": "See past platform, so the crux of it really is the evolving customer experience expectations, you know, as we all know, uh, nowadays, consumers, including ourselves want to do things digitally."
+    },
+    {
+      "start": 361.884,
+      "end": 364.524,
+      "text": "Everything is getting everything is going digital."
+    },
+    {
+      "start": 364.859,
+      "end": 376.584,
+      "text": "We, as consumers want to do more and more self service, so, you know, instead of walking into a store, we want to place our orders online and, you know, just go and pick up, pick it up from the store or simply get it delivered to our home steps, uh,"
+    },
+    {
+      "start": 376.614,
+      "end": 383.874,
+      "text": "doctor appointments are moving from, you know, in person, physical appointments to virtual appointments, wherever possible, uh, you know, more and more banking related."
+    },
+    {
+      "start": 383.874,
+      "end": 394.094,
+      "text": "Things are becoming. And, you know, small things, 2, big things, everything is essentially going digital and in this word, consumers want the ability to do things on their own."
+    },
+    {
+      "start": 394.274,
+      "end": 397.874,
+      "text": "They expect to be informed about what to expect from the brands."
+    },
+    {
+      "start": 397.904,
+      "end": 404.774,
+      "text": "They really love and engage with and they want to do so on the channels that they're using today to interact and engage with their friends and families."
+    },
+    {
+      "start": 405.694,
+      "end": 412.894,
+      "text": "What this means what this has led to is enterprises wanting realizing that there is a need for."
+    },
+    {
+      "start": 413.219,
+      "end": 429.174,
+      "text": "Uh, doing CX transformation from meeting all these customer expectations, uh, which essentially has led to increase demand on enterprise ID to be able to support the CX transformation initiative across various lines of business, any large end within"
+    },
+    {
+      "start": 429.174,
+      "end": 433.044,
+      "text": "any large enterprise. Uh, but what is also happening is many."
+    },
+    {
+      "start": 433.219,
+      "end": 443.774,
+      "text": "So, initiatives that are being initiated are taking too long to complete, uh, you know, oftentimes reports suggest they take too much time to realize value."
+    },
+    {
+      "start": 444.044,
+      "end": 446.474,
+      "text": "Uh, and and the question comes, you know, why is that?"
+    },
+    {
+      "start": 446.474,
+      "end": 461.334,
+      "text": "So. So, at the heart of it really, you know, is the, the, the challenges which are related to, you know, how do you support such seamless customer experiences without replacing your existing technology stack that you have built over years right uh,"
+    },
+    {
+      "start": 461.334,
+      "end": 466.524,
+      "text": "or, you know, how do you overcome some of the challenges that you have in terms of being able to."
+    },
+    {
+      "start": 467.024,
+      "end": 474.944,
+      "text": "Average data that sits across various siloed systems in the context of a customer interaction to make it contextual and seamless for your end customers."
+    },
+    {
+      "start": 475.244,
+      "end": 478.214,
+      "text": "And that is, you know, clearly not a simple challenge."
+    },
+    {
+      "start": 478.974,
+      "end": 487.854,
+      "text": "More so, you know, when we, uh, look at today's word of various channels, so to put things into perspective, you know, we'll quickly look at 1 use case."
+    },
+    {
+      "start": 488.094,
+      "end": 491.034,
+      "text": "The example that we see here is from banking industry."
+    },
+    {
+      "start": 491.184,
+      "end": 496.644,
+      "text": "There's a proactive notification being sent out to the customer about an upcoming credit card payment."
+    },
+    {
+      "start": 496.914,
+      "end": 498.474,
+      "text": "Uh, the customer is being given."
+    },
+    {
+      "start": 498.499,
+      "end": 507.404,
+      "text": "An option to say, you know, whether the customer would like to defer the payment, the customer is able to seamlessly respond to the message that she or he has received."
+    },
+    {
+      "start": 508.604,
+      "end": 514.124,
+      "text": "And then, therefore, the payment by a week by which they are expecting to get some extra funds in their account."
+    },
+    {
+      "start": 514.409,
+      "end": 520.644,
+      "text": "And on top of that, they are being given the ability to schedule a conversation with a financial advisor to you, you know."
+    },
+    {
+      "start": 521.394,
+      "end": 523.734,
+      "text": "Get into a conversation about how to better manage."
+    },
+    {
+      "start": 524.664,
+      "end": 528.444,
+      "text": "The finances overall, so this is a simple example."
+    },
+    {
+      "start": 528.749,
+      "end": 535.764,
+      "text": "Uh, you know, of the kind of things, uh, customers expect today, you know, being informed, proactively about."
+    },
+    {
+      "start": 536.069,
+      "end": 541.674,
+      "text": "Uh, things that are going to happen, uh, you know, in the sense of all the service and products that they're using."
+    },
+    {
+      "start": 541.979,
+      "end": 553.254,
+      "text": "And then also having the ability to be able to make changes, et cetera seamlessly without having to, you know, uh, as an example, call somebody or, you know, walk into a bank branch to be able to do simple things like that."
+    },
+    {
+      "start": 554.514,
+      "end": 556.644,
+      "text": "Now, why, why is this, you know, a."
+    },
+    {
+      "start": 556.974,
+      "end": 560.934,
+      "text": "Challenging problem, and how CPS platforms make it easy to handle it."
+    },
+    {
+      "start": 560.934,
+      "end": 571.644,
+      "text": "Right. So if you look at any large, big enterprise, the technologies stack that enterprises, uh, have today has been built over decades and many of these systems that any large enterprise used."
+    },
+    {
+      "start": 571.854,
+      "end": 580.674,
+      "text": "Uh, they were, you know. Design a PC error, and they were not designed to be able to facilitate customer interactions, over the channels that we use nowadays."
+    },
+    {
+      "start": 580.674,
+      "end": 586.074,
+      "text": "Right from SMS to things like, you know, um, RCS, or, uh, Apple messages."
+    },
+    {
+      "start": 586.074,
+      "end": 588.804,
+      "text": "So, business or what'sapp and all the other new channels."
+    },
+    {
+      "start": 588.804,
+      "end": 590.904,
+      "text": "That we, as consumers are using increasingly."
+    },
+    {
+      "start": 591.204,
+      "end": 601.034,
+      "text": "So how do you go about. Uh, delivering these seamless experiences on all those channels without ripping or replacing your existing technologies systems."
+    },
+    {
+      "start": 601.214,
+      "end": 603.344,
+      "text": "Now, a lot of, uh, you know."
+    },
+    {
+      "start": 604.104,
+      "end": 616.344,
+      "text": "Developers are enterprises what what they end up doing for solving the challenges is, uh, you know, get developers involved, you know, get various APIs for various channels, uh, get."
+    },
+    {
+      "start": 616.704,
+      "end": 622.224,
+      "text": "Getting too long and complex application development projects to essentially automate various journeys."
+    },
+    {
+      "start": 622.224,
+      "end": 625.404,
+      "text": "Right? So, as you see in this screen, uh, you know."
+    },
+    {
+      "start": 626.274,
+      "end": 630.114,
+      "text": "In in any large organization, there are multiple sub journeys to be automated."
+    },
+    {
+      "start": 630.444,
+      "end": 635.844,
+      "text": "So what you are essentially looking at is, uh, the need for being able to."
+    },
+    {
+      "start": 637.014,
+      "end": 647.544,
+      "text": "Uh, do multiple such application development projects for each of the journeys so, in a banking context, you know, on 1 hand, you have credit card business and all the journeys that we may have in the product card context."
+    },
+    {
+      "start": 647.724,
+      "end": 656.064,
+      "text": "Uh, you know, then you may have savings or retail banking, um, you may have, you know, mortgage and all such divisions and imagine, you know, various."
+    },
+    {
+      "start": 656.264,
+      "end": 664.424,
+      "text": "Ideally teams, uh, solving the same challenge by integrating these APIs into existing business systems in their own silos."
+    },
+    {
+      "start": 664.454,
+      "end": 676.124,
+      "text": "What this essentially leads to overtime is various siloed applications many of, which are in part solving the same challenge by doing redundant development and, you know, creating this whole."
+    },
+    {
+      "start": 676.594,
+      "end": 680.794,
+      "text": "A mesh of various applications, which are not only complex."
+    },
+    {
+      "start": 681.029,
+      "end": 684.594,
+      "text": "To build, but they are increasingly complex to maintain over time."
+    },
+    {
+      "start": 685.254,
+      "end": 690.864,
+      "text": "Right. So again, just to reiterate this point, you know, as a large business, we'll have multiple core business systems."
+    },
+    {
+      "start": 690.864,
+      "end": 694.344,
+      "text": "It may be a systems. If you are a bank, it may be a fraud banking system."
+    },
+    {
+      "start": 694.344,
+      "end": 696.894,
+      "text": "It may be a, uh, you know, retail banking system."
+    },
+    {
+      "start": 697.104,
+      "end": 704.694,
+      "text": "Uh, just trying to integrate each of those business systems with each of those, uh, you know, each of the channels that you want to support."
+    },
+    {
+      "start": 704.929,
+      "end": 718.004,
+      "text": "Introduction, and then doing application development in between, uh, you know, writing layers of code to be able to handle all of this, uh, is not, uh, you know, the right approach for CX transformation because 1, it is complex and effort heavy."
+    },
+    {
+      "start": 718.004,
+      "end": 720.524,
+      "text": "And, secondly, it is very, very difficult to maintain overtime."
+    },
+    {
+      "start": 720.764,
+      "end": 724.574,
+      "text": "So, how does the platform, like, help solve this problem?"
+    },
+    {
+      "start": 725.254,
+      "end": 728.434,
+      "text": "The, uh, you know, Webex connect like CBS platforms."
+    },
+    {
+      "start": 728.674,
+      "end": 741.064,
+      "text": "Uh, they sit at the center of, you know, all the existing enterprise business systems that any large enterprise has as well as all the consumer touch points where we are looking at delivering seamless customer experiences."
+    },
+    {
+      "start": 741.273,
+      "end": 744.394,
+      "text": "And it provides out of box ability to facilitate."
+    },
+    {
+      "start": 744.929,
+      "end": 758.784,
+      "text": "Customer. Interactions on all these channels, the consumers preferred to have conversations on in today's world and then also the ability to, uh, you know, leverage out of box integrations to a large number of 3rd party applications as well as the"
+    },
+    {
+      "start": 758.784,
+      "end": 765.804,
+      "text": "ability to seamlessly configure usable integrations with your existing proprietary enterprise systems and then reuse them across."
+    },
+    {
+      "start": 765.919,
+      "end": 771.164,
+      "text": "We use customer journeys what we mean, by that it will become a little more clear as we, uh, go from here on."
+    },
+    {
+      "start": 771.194,
+      "end": 782.504,
+      "text": "But essentially, you know, this platform really takes the complexity out by providing many of the capabilities that you would have to otherwise build your own development capacity, uh, in building applications to solve these challenges."
+    },
+    {
+      "start": 782.504,
+      "end": 785.504,
+      "text": "Right 1 of the examples would be all these communication channels."
+    },
+    {
+      "start": 785.504,
+      "end": 793.474,
+      "text": "They are. Constantly evolving there are new things that are happening, you know, the API payloads are changing over time how the, you know, various web payloads them all that is changing."
+    },
+    {
+      "start": 793.654,
+      "end": 805.834,
+      "text": "So, you, as a business want to really are you, as a developer really want to focus on delivering seamless customer experience, rather than having to constantly deal with changing APIs and then also on top of that trying to do."
+    },
+    {
+      "start": 805.919,
+      "end": 816.234,
+      "text": "In various applications, so instead of that, you get a centralized cloud communications platform that helps you manage, build and manage such interactive customer journeys across various."
+    },
+    {
+      "start": 816.894,
+      "end": 820.464,
+      "text": "Systems now, Webex Connect is an enterprise CPS platform."
+    },
+    {
+      "start": 820.523,
+      "end": 833.844,
+      "text": "What that means is. Not only do we provide the functional capabilities that you need in the context of automating a customer interaction, but we also provide a large number of relevant enterprise controls, uh, and the right kind of, uh, you know,"
+    },
+    {
+      "start": 833.844,
+      "end": 840.684,
+      "text": "service assurance so that you as an enterprise can confidently run your mission critical customer interactions on a platform like this."
+    },
+    {
+      "start": 841.584,
+      "end": 848.934,
+      "text": "To make things, you know, understandable and simple take any simple example of let's say you want to automate, uh, the, you know, uh."
+    },
+    {
+      "start": 849.294,
+      "end": 859.254,
+      "text": "Journey of receiving order notifications or parcel delivery notifications on a channel like what'sapp and, you know, provide seamless options to customers to reschedule those deliveries."
+    },
+    {
+      "start": 859.254,
+      "end": 869.004,
+      "text": "If there is the need, what you would need is 1st of all the ability to integrate, uh, you know, with your existing business systems, where such parcel, delivery related events get."
+    },
+    {
+      "start": 869.849,
+      "end": 876.114,
+      "text": "Uh, you know, on top of that you will need the ability to handle, you know, BI, directional communications over channel like what'sapp."
+    },
+    {
+      "start": 876.324,
+      "end": 888.444,
+      "text": "So that's where communication channel management module comes in now, you know, when you want to automate such experiences, you need the ability to interpret, you know, what the customer is trying to convey when you receive an incoming message from"
+    },
+    {
+      "start": 888.444,
+      "end": 889.824,
+      "text": "the customer. So, for that."
+    },
+    {
+      "start": 889.849,
+      "end": 900.194,
+      "text": "You know, the natural language processing, understanding, and chat bot and of capabilities, come in to be able to automatically identify the intent and handle the conversation automatically and on top of that."
+    },
+    {
+      "start": 900.194,
+      "end": 902.504,
+      "text": "You need to be able to handle all the business logic."
+    },
+    {
+      "start": 902.534,
+      "end": 905.894,
+      "text": "That goes on in terms of delivering such seamless conversations."
+    },
+    {
+      "start": 906.774,
+      "end": 910.614,
+      "text": "Uh, and then on top of that, there are enterprise intelligent controls and touch upon it."
+    },
+    {
+      "start": 910.854,
+      "end": 912.594,
+      "text": "Uh, as as we proceed further."
+    },
+    {
+      "start": 914.099,
+      "end": 917.064,
+      "text": "So, starting, you know, going a bit deeper into each of those areas."
+    },
+    {
+      "start": 917.339,
+      "end": 923.424,
+      "text": "Uh, you know, how developers can leverage Webex Connect for being able to, uh, deliver seamless customer experiences."
+    },
+    {
+      "start": 923.604,
+      "end": 935.004,
+      "text": "Uh, you can use our communication APIs, and we offer a set of a rich set of APIs and web hooks for being able to both stand as well as receive customer communications over 13+channels."
+    },
+    {
+      "start": 935.004,
+      "end": 944.694,
+      "text": "plus channels You know, spanning from, uh, uh, things like SMS, voice and email to all the advanced newish channels, like copying messages for business or what'sapp this apart."
+    },
+    {
+      "start": 944.694,
+      "end": 952.854,
+      "text": "We also offer and Android and iOS and JavaScript for being able to send push notifications and facilitate 2 way customer conversations."
+    },
+    {
+      "start": 952.974,
+      "end": 955.824,
+      "text": "Over mobile apps as well as our websites using live chat."
+    },
+    {
+      "start": 956.054,
+      "end": 960.464,
+      "text": "Channel, uh, this apart, we offer a very robust, uh, integrations module."
+    },
+    {
+      "start": 960.464,
+      "end": 963.914,
+      "text": "We offer out of box integration with a number of, uh, you know."
+    },
+    {
+      "start": 964.374,
+      "end": 978.354,
+      "text": "3rd party systems, like Salesforce, then there's, uh, you know, vertical systems, like, Epic, uh, in the healthcare domain, uh, as well, as the ability to configure usable integration using best or so based APIs, or, you know, integrating with your"
+    },
+    {
+      "start": 978.444,
+      "end": 984.144,
+      "text": "data related systems with capabilities such as a file based integrations or data streams, which are."
+    },
+    {
+      "start": 984.229,
+      "end": 990.674,
+      "text": "You to stream a copy of, uh, you know, all the customer conversations that you're having with your customers using technology is like."
+    },
+    {
+      "start": 991.824,
+      "end": 1004.844,
+      "text": "On top of that, we provide a very comprehensive tools that that both developers and business users need in an organization to be able to handle customer interactions in an automated fashion examples include, uh, you know, modules like template"
+    },
+    {
+      "start": 1004.844,
+      "end": 1007.693,
+      "text": "management which allow people who are responsible for content."
+    },
+    {
+      "start": 1007.724,
+      "end": 1011.204,
+      "text": "To configure, uh, you know, rich and interactive."
+    },
+    {
+      "start": 1011.439,
+      "end": 1023.764,
+      "text": "Uh, customer interaction, messages and templates, uh, you know, what you see what you get kind of an interface on top of that, you know, we offer something that we refer to as a visual flow builder, which is essentially a low port visual flow builder"
+    },
+    {
+      "start": 1024.064,
+      "end": 1031.354,
+      "text": "to accelerate your CX transformation initiatives, uh, you know, by giving a rich set of existing."
+    },
+    {
+      "start": 1031.884,
+      "end": 1037.674,
+      "text": "Capabilities that you can simply drag and drop on a canvas, uh, you know, do various, uh, uh, configurations."
+    },
+    {
+      "start": 1037.969,
+      "end": 1049.214,
+      "text": "And, uh, using a 1 click, kind of an approach, uh, launch those applications in a highly secure and scalable cloud environment, which, you know, automatically scales to support, uh."
+    },
+    {
+      "start": 1049.964,
+      "end": 1052.394,
+      "text": "Increasing volumes of customer interactions as you go."
+    },
+    {
+      "start": 1052.699,
+      "end": 1058.184,
+      "text": "Uh, the application development, uh, you know, capability, uh, is really very, very rich."
+    },
+    {
+      "start": 1058.214,
+      "end": 1063.314,
+      "text": "It offers you everything that you need from a full life cycle perspective of application development."
+    },
+    {
+      "start": 1063.314,
+      "end": 1072.674,
+      "text": "You have, uh, you know, in built compilation capabilities when you configure a flow and you try to publish it, it compiles and tells you if there are any errors, uh, you know, there are things like version control."
+    },
+    {
+      "start": 1072.699,
+      "end": 1076.654,
+      "text": "Debugging and troubleshooting, and then very rich reporting, you know, flow analytics."
+    },
+    {
+      "start": 1076.894,
+      "end": 1080.044,
+      "text": "We refer to it as flow analytics that allows you to understand how you are."
+    },
+    {
+      "start": 1080.329,
+      "end": 1089.864,
+      "text": "You know, journeys are performing, you know, at what steps customers are dropping off or finding it difficult to, you know, have interactions with you and you can constantly, uh, optimize those journeys."
+    },
+    {
+      "start": 1090.044,
+      "end": 1093.374,
+      "text": "Uh, Stephan would be covering more of it as we go for the webinar."
+    },
+    {
+      "start": 1093.974,
+      "end": 1099.614,
+      "text": "We already touched upon the, you know, NLP capabilities, which are also available as part of the platform."
+    },
+    {
+      "start": 1099.614,
+      "end": 1107.564,
+      "text": "We also offer a very rich bot builder module, which allows you to configure both as well as, you know."
+    },
+    {
+      "start": 1107.869,
+      "end": 1115.604,
+      "text": "The and task related bots, which can automate various operations, uh, while using natural language, to make it easy for your customers."
+    },
+    {
+      "start": 1115.814,
+      "end": 1122.354,
+      "text": "Uh, we also have various atomic capabilities, which you may want to use selectively in the, you know, context of various use cases."
+    },
+    {
+      "start": 1122.354,
+      "end": 1127.814,
+      "text": "Simple example, would be, let's say a customer comes, you know, and starts having interaction with you on a channel like Apple business chat."
+    },
+    {
+      "start": 1127.869,
+      "end": 1130.234,
+      "text": "And says, can you book an appointment for next Friday?"
+    },
+    {
+      "start": 1130.234,
+      "end": 1137.284,
+      "text": "You know, converting that next Friday into a specific date, to be able to do a look up in a system to find out what slots are available on the day."
+    },
+    {
+      "start": 1137.284,
+      "end": 1145.684,
+      "text": "The customer is interested in scheduling an appointment on, right uh, we also have some generative capabilities such as text summarization."
+    },
+    {
+      "start": 1145.684,
+      "end": 1147.574,
+      "text": "So, let's say, you know, a conversation."
+    },
+    {
+      "start": 1147.869,
+      "end": 1155.933,
+      "text": "Uh, it starts, you send out a reminder to a customer, the customer starts interacting with you and then there arises a need to escalate that conversation to a human agent."
+    },
+    {
+      "start": 1155.933,
+      "end": 1165.144,
+      "text": "So, before you do that, you can use text summarization node to create a summarized version of the interaction that happened between the customer and the bot so that the agent is able to understand the context quickly."
+    },
+    {
+      "start": 1165.944,
+      "end": 1173.804,
+      "text": "Uh, finally, uh, you know, we also apart from these functional capabilities, which are very, very critical to be able to, uh, do end to end customer journey introduction."
+    },
+    {
+      "start": 1173.804,
+      "end": 1184.784,
+      "text": "We offer a lot of relevant enterprise control, uh, because going back to the point where we were saying, you have multiple businesses within any large enterprise, and all those, you know, teams have they need to do the such customer journey"
+    },
+    {
+      "start": 1184.784,
+      "end": 1188.974,
+      "text": "orchestration. In an automation, which today is happening in silos, uh."
+    },
+    {
+      "start": 1189.674,
+      "end": 1198.674,
+      "text": "Functional silos, so we are essentially providing a centralized platform for everybody to be able to do such application development collaboratively on a single platform."
+    },
+    {
+      "start": 1198.884,
+      "end": 1203.024,
+      "text": "So, in that context, we offer very rich capabilities in terms of enterprise controls things."
+    },
+    {
+      "start": 1203.024,
+      "end": 1209.174,
+      "text": "Like, let's say, you know, I imagine there is a team that works on credit card related journeys and there's a team that works on, uh, retail banking related."
+    },
+    {
+      "start": 1209.289,
+      "end": 1212.884,
+      "text": "You know, journeys, you have the ability to provide dedicated workspaces to them."
+    },
+    {
+      "start": 1212.884,
+      "end": 1216.724,
+      "text": "You have things like, you know, locking your existing use case or service workspace."
+    },
+    {
+      "start": 1216.724,
+      "end": 1226.324,
+      "text": "So that, uh, you know, another developer who is for developing on the same platform, doesn't accidentally make changes to something that you have configured in, uh, you know, end up disrupting your life services."
+    },
+    {
+      "start": 1226.534,
+      "end": 1229.204,
+      "text": "Uh, you know, are the ability to selectively give."
+    },
+    {
+      "start": 1229.314,
+      "end": 1242.634,
+      "text": "Access to look at sensitive customer data on the platform, even though multiple people are using the platform to automate a journey so that you are able to, uh, ensure compliance with, you know, various regulations, such as GDPR or HIPPA, et cetera."
+    },
+    {
+      "start": 1242.754,
+      "end": 1249.234,
+      "text": "So, uh, you know, to summarize it, the Webex Connect platform, provides you all the key capabilities that you need."
+    },
+    {
+      "start": 1249.289,
+      "end": 1261.944,
+      "text": "For automating customer interactions, there's a lot of relevant, uh, enterprise controls that any, you know, enterprise ity, department and large enterprise would need for being able to collaboratively do such customer journey, automation, across"
+    },
+    {
+      "start": 1261.944,
+      "end": 1266.414,
+      "text": "channels, uh, you know, very quickly, touching upon the, uh, you know, at 1 of the."
+    },
+    {
+      "start": 1266.719,
+      "end": 1274.514,
+      "text": "Key capabilities that we offer really in the platform is this drag and drop builder as you can see there are various, you know, notes available for various channels."
+    },
+    {
+      "start": 1274.514,
+      "end": 1282.733,
+      "text": "Uh, you know, so that, uh, you don't really have to, as a developer, start your journey from going through, uh, detailed API documentation for each of these channels."
+    },
+    {
+      "start": 1282.733,
+      "end": 1286.604,
+      "text": "You, you know, have a lot of capability available in you, what you see what you get kind of."
+    },
+    {
+      "start": 1287.014,
+      "end": 1297.184,
+      "text": "So that you can really focus on, uh, you know, optimizing customer interactions without having to deal with, you know, changing the underlying complexities of these messaging ecosystems."
+    },
+    {
+      "start": 1297.364,
+      "end": 1299.104,
+      "text": "So, it's a drag and drop environment."
+    },
+    {
+      "start": 1299.134,
+      "end": 1302.344,
+      "text": "You know, you can drag and drop, uh, the nodes in the logical order."
+    },
+    {
+      "start": 1302.344,
+      "end": 1306.574,
+      "text": "Do a little bit of a configuration click on a make live button in your journey is life and you can."
+    },
+    {
+      "start": 1306.744,
+      "end": 1309.774,
+      "text": "Are testing it and then I creating it with your teams with that."
+    },
+    {
+      "start": 1309.774,
+      "end": 1314.454,
+      "text": "I'll hand over to my colleagues, Stephanie, to give us a live walk through of some of these capabilities."
+    },
+    {
+      "start": 1315.194,
+      "end": 1320.054,
+      "text": "Great thanks to and I'm going to share my screen here."
+    },
+    {
+      "start": 1320.779,
+      "end": 1327.014,
+      "text": "And there's 2 things I want to show you guys 1, is I want to walk you through the platform just a little bit to highlight."
+    },
+    {
+      "start": 1327.014,
+      "end": 1329.594,
+      "text": "Some of the enterprise controls that 2 new reference."
+    },
+    {
+      "start": 1329.894,
+      "end": 1333.044,
+      "text": "And then we'll get into the meat of the conversation here or the demo."
+    },
+    {
+      "start": 1333.044,
+      "end": 1344.594,
+      "text": "Rather, which is. Me literally building a workflow from scratch and hoping it works for you guys to understand the efficiencies that were that we're talking about."
+    },
+    {
+      "start": 1345.794,
+      "end": 1355.814,
+      "text": "So, um, as my screen loads, I believe we can see it now, it is a so this is a container of services that we refer to."
+    },
+    {
+      "start": 1355.814,
+      "end": 1358.544,
+      "text": "And what I've done is just in a demo environment, of course."
+    },
+    {
+      "start": 1358.874,
+      "end": 1364.184,
+      "text": "I've created a few services that are representative of some of our large verticals right?"
+    },
+    {
+      "start": 1364.184,
+      "end": 1367.484,
+      "text": "That that we sell into quite a bit and that utilize our platform."
+    },
+    {
+      "start": 1368.024,
+      "end": 1371.834,
+      "text": "Um, in these, you can come in and you'll get a glance."
+    },
+    {
+      "start": 1372.049,
+      "end": 1379.754,
+      "text": "Of traffic, um, you'll obviously have access to your workflows, any rules that you have associated with those workflows and event APIs."
+    },
+    {
+      "start": 1380.029,
+      "end": 1386.804,
+      "text": "Then your API credentials themselves, whether they're tokens or service keys that you're leveraging um."
+    },
+    {
+      "start": 1388.034,
+      "end": 1393.914,
+      "text": "This all becomes important, whether you're leveraging us for the workflow, automation, the orchestration canvas that."
+    },
+    {
+      "start": 1394.669,
+      "end": 1407.594,
+      "text": "Highlighted that is going to represent 95% of the demo today, but there is also the, um, the conversational as, as we refer to them as that allow you to just simply send and receive messages."
+    },
+    {
+      "start": 1407.594,
+      "end": 1412.004,
+      "text": "receive messages On any given, um, channel that we support."
+    },
+    {
+      "start": 1412.124,
+      "end": 1419.864,
+      "text": "All right so so these are the more traditional base layer APIs that you might be familiar with when the term C pass is floated out there."
+    },
+    {
+      "start": 1420.674,
+      "end": 1427.754,
+      "text": "Um. Beyond the services themselves, there's obviously groups and teams hierarchy."
+    },
+    {
+      "start": 1427.784,
+      "end": 1429.854,
+      "text": "I'm in a demo team right now."
+    },
+    {
+      "start": 1430.154,
+      "end": 1441.464,
+      "text": "Um, but to point if you had an HR organization and a marketing organization and a development organization, all within the same company, they would all roll up to the same tenant."
+    },
+    {
+      "start": 1442.204,
+      "end": 1455.884,
+      "text": "Webex connect, and then within those groups and or teams, you'd be able to assign different roles and, uh, capabilities for your teammates as it referred to as I just invited my personal Gmail account in here."
+    },
+    {
+      "start": 1456.124,
+      "end": 1458.044,
+      "text": "And then you can see the different types of roles."
+    },
+    {
+      "start": 1458.299,
+      "end": 1464.894,
+      "text": "That you'd have access to and then a rules guide here to help you understand how role based access controls would be governed."
+    },
+    {
+      "start": 1466.844,
+      "end": 1469.303,
+      "text": "From an asset management standpoint."
+    },
+    {
+      "start": 1469.579,
+      "end": 1473.624,
+      "text": "Um, you have the ability to come in here and manage integrations."
+    },
+    {
+      "start": 1473.653,
+      "end": 1476.924,
+      "text": "So, this is where you can build custom integrations into the solution."
+    },
+    {
+      "start": 1476.924,
+      "end": 1484.484,
+      "text": "So if you have a proprietary system or a, uh, vendor that you leverage quite extensively across."
+    },
+    {
+      "start": 1484.669,
+      "end": 1491.684,
+      "text": "Uh, use cases, this is where you would come in and build, um, a integration with that with that system or systems."
+    },
+    {
+      "start": 1491.929,
+      "end": 1497.204,
+      "text": "So, you could quickly access it in your canvas and this will make more sense."
+    },
+    {
+      "start": 1497.204,
+      "end": 1502.244,
+      "text": "Once I pull up the actual orchestration workflow in a minute on the app side."
+    },
+    {
+      "start": 1502.394,
+      "end": 1511.274,
+      "text": "I have some, um. Richard channels with the exception of email that I've included in here where you can come in and you can literally configure your own."
+    },
+    {
+      "start": 1511.579,
+      "end": 1522.074,
+      "text": "Um, uh, rich messaging channel, whatever it might be, uh, in order to facilitate communications and meet your customers where they want to be met their moments of need."
+    },
+    {
+      "start": 1523.274,
+      "end": 1527.564,
+      "text": "And then, of course, you have the ability to manage your phone numbers as well."
+    },
+    {
+      "start": 1527.564,
+      "end": 1531.704,
+      "text": "These can be short codes. They can be what were formerly known as long codes."
+    },
+    {
+      "start": 1531.704,
+      "end": 1536.834,
+      "text": "And now, because they're all being regulated, at least in the United States is starting to be the case in Canada."
+    },
+    {
+      "start": 1537.614,
+      "end": 1542.174,
+      "text": "They're referred to as 10 so, 10 digit, long codes it's just a different naming."
+    },
+    {
+      "start": 1542.349,
+      "end": 1548.374,
+      "text": "That the carriers use, and then, of course, these could be 1, 800 numbers as well or toll free numbers."
+    },
+    {
+      "start": 1548.374,
+      "end": 1551.044,
+      "text": "However, however you want to turn those."
+    },
+    {
+      "start": 1551.044,
+      "end": 1553.714,
+      "text": "You'll notice here that we have SMS."
+    },
+    {
+      "start": 1553.714,
+      "end": 1559.274,
+      "text": "sms And then the little phone number for void, or the phone handle for voice."
+    },
+    {
+      "start": 1560.384,
+      "end": 1565.244,
+      "text": "Indicating that those are all capabilities that are associated with this number specifically."
+    },
+    {
+      "start": 1566.504,
+      "end": 1570.614,
+      "text": "And again that's all going to be subject to how you decide to deploy the platform and and use it."
+    },
+    {
+      "start": 1572.564,
+      "end": 1583.694,
+      "text": "So, with that, um, the documentation page, this will become relevant towards the end of the presentation where we're will advertise our sandbox environment that's free to use as well."
+    },
+    {
+      "start": 1584.024,
+      "end": 1591.944,
+      "text": "But this is where a lot of the information about the platform itself is available from a full feature kind of scenario where."
+    },
+    {
+      "start": 1592.054,
+      "end": 1601.084,
+      "text": "Leveraging the flow builder and all the bells and whistles or more specifically to where I am in the in the, um, documentation page."
+    },
+    {
+      "start": 1601.114,
+      "end": 1603.454,
+      "text": "Now, this is where the API reference lives."
+    },
+    {
+      "start": 1603.634,
+      "end": 1611.914,
+      "text": "So, if you're just using this from a true kind of base layer, communication, API standpoint, and you're building."
+    },
+    {
+      "start": 1612.029,
+      "end": 1621.594,
+      "text": "Colleges and integration logic on your side this is where you would come to benefit from our APIs to send message is probably our most predominantly used 1."
+    },
+    {
+      "start": 1622.524,
+      "end": 1625.734,
+      "text": "and in fact, just to kick us off here."
+    },
+    {
+      "start": 1625.944,
+      "end": 1632.924,
+      "text": "Um, I'm gonna. Leverage that I'm using postman is I'm sure a lot of you are familiar with."
+    },
+    {
+      "start": 1633.169,
+      "end": 1637.754,
+      "text": "To generate a voice call I have my."
+    },
+    {
+      "start": 1638.354,
+      "end": 1643.544,
+      "text": "Andy, uh, phone over here I'm working off of 1 screen, so."
+    },
+    {
+      "start": 1644.084,
+      "end": 1647.474,
+      "text": "Apologies, I'm going to send myself a phone, a phone call."
+    },
+    {
+      "start": 1647.534,
+      "end": 1656.114,
+      "text": "I'm going to edit this. To make it long enough to where I can I have time to hit the, uh, speaker phone button on my phone."
+    },
+    {
+      "start": 1656.114,
+      "end": 1662.564,
+      "text": "So, this is a very long message for the, uh, webinar."
+    },
+    {
+      "start": 1664.394,
+      "end": 1673.634,
+      "text": "Okay, thank you. Okay, so I'm going to send this through."
+    },
+    {
+      "start": 1674.474,
+      "end": 1676.334,
+      "text": "Hey, well, hopefully pick up in time."
+    },
+    {
+      "start": 1684.524,
+      "end": 1687.554,
+      "text": "Maybe I did pray enough to the demo gods."
+    },
+    {
+      "start": 1689.024,
+      "end": 1691.184,
+      "text": "Oh, I have do not disturb on hold on 3rd."
+    },
+    {
+      "start": 1691.184,
+      "end": 1696.344,
+      "text": "second Let's try that again."
+    },
+    {
+      "start": 1705.224,
+      "end": 1714.644,
+      "text": "There we go. They show and I was not ready for that."
+    },
+    {
+      "start": 1714.644,
+      "end": 1718.034,
+      "text": "So, let me do it 1 more time just so you can understand what it said."
+    },
+    {
+      "start": 1718.574,
+      "end": 1728.564,
+      "text": "Uh, test 3. Send this through now, receive the call at the volume up now."
+    },
+    {
+      "start": 1729.104,
+      "end": 1733.424,
+      "text": "And you'll see, hopefully."
+    },
+    {
+      "start": 1734.264,
+      "end": 1739.004,
+      "text": "Corporate through again, today, thank you."
+    },
+    {
+      "start": 1739.814,
+      "end": 1742.034,
+      "text": "Enjoy the show test 3. okay."
+    },
+    {
+      "start": 1742.424,
+      "end": 1749.894,
+      "text": "Generally. Let me get the screen up here for Webex."
+    },
+    {
+      "start": 1751.334,
+      "end": 1760.514,
+      "text": "And there we go. So now, let me translate, let me navigate over to."
+    },
+    {
+      "start": 1760.789,
+      "end": 1763.064,
+      "text": "Uh, the PowerPoint presentation."
+    },
+    {
+      "start": 1764.684,
+      "end": 1769.124,
+      "text": "And this is really going to kick off the work flow."
+    },
+    {
+      "start": 1769.634,
+      "end": 1771.974,
+      "text": "That we're going to be supporting for."
+    },
+    {
+      "start": 1773.384,
+      "end": 1777.254,
+      "text": "The demo here, so essentially, what I'm going to do is."
+    },
+    {
+      "start": 1777.439,
+      "end": 1785.384,
+      "text": "I'm going to walk through the, the build out from scratch of a integration where there's an external system."
+    },
+    {
+      "start": 1785.564,
+      "end": 1787.274,
+      "text": "Let's call it. A point of sale."
+    },
+    {
+      "start": 1787.274,
+      "end": 1789.614,
+      "text": "Doesn't matter that's going to trigger a."
+    },
+    {
+      "start": 1789.889,
+      "end": 1802.634,
+      "text": "Uh, workflow and connect, and then the workflow and connect is gonna be responsible for, uh, generating an integration, uh, or benefiting from an integration to interrogate database and understand."
+    },
+    {
+      "start": 1802.969,
+      "end": 1809.624,
+      "text": "Uh, information metadata, in this case, on a location for an end user, where we're then going to determine time zone."
+    },
+    {
+      "start": 1809.929,
+      "end": 1819.284,
+      "text": "Uh, for this end user, and then we're going to make sure that that time zone is within the social hours the acceptable timeframe."
+    },
+    {
+      "start": 1819.589,
+      "end": 1829.454,
+      "text": "To send somebody a message, this is predominantly used in marketing scenarios or proactive communications, where you don't want to send somebody a message in the middle of the night."
+    },
+    {
+      "start": 1829.454,
+      "end": 1840.764,
+      "text": "For example. Any additional logic and decisioning that needs to be done with, with that message determining channel making sure this person is opted in to receive messages in the 1st place."
+    },
+    {
+      "start": 1841.124,
+      "end": 1844.514,
+      "text": "Um, and then we're actually going to send the person to message myself in this case."
+    },
+    {
+      "start": 1845.474,
+      "end": 1862.274,
+      "text": "And we're going to, um. Open up a, um, response opportunity so that effectively creating a 2 way conversation in a structured workflow that you'll see here in Webex Connect, um, allowing the person to respond."
+    },
+    {
+      "start": 1862.579,
+      "end": 1866.444,
+      "text": "In this case, we're just going to integrate with a 3rd party API that I use."
+    },
+    {
+      "start": 1866.444,
+      "end": 1882.044,
+      "text": "It's a, it's a stock. Api, that allows you to check the current price on a given stock ticker symbol and then we're going to reopen that conversation back to the end user, uh, allowing him or her to respond again."
+    },
+    {
+      "start": 1882.074,
+      "end": 1886.694,
+      "text": "So very simple use case very, very high level."
+    },
+    {
+      "start": 1886.694,
+      "end": 1887.924,
+      "text": "To a degree. We're gonna focus on."
+    },
+    {
+      "start": 1887.949,
+      "end": 1896.164,
+      "text": "A happy path, but I do want to also take time to go through where the error path, and can be included into these workflows as we all know."
+    },
+    {
+      "start": 1896.164,
+      "end": 1897.604,
+      "text": "That's incredibly important."
+    },
+    {
+      "start": 1897.634,
+      "end": 1899.464,
+      "text": "In real life production scenarios."
+    },
+    {
+      "start": 1901.069,
+      "end": 1906.434,
+      "text": "So, navigating back over to Webex Connect now."
+    },
+    {
+      "start": 1907.304,
+      "end": 1910.574,
+      "text": "We're going to focus on the."
+    },
+    {
+      "start": 1910.849,
+      "end": 1914.834,
+      "text": "So, going back to the services, I'm going to start from scratch and going to create our own service."
+    },
+    {
+      "start": 1915.049,
+      "end": 1918.254,
+      "text": "For this, we're going to call it a webinar."
+    },
+    {
+      "start": 1919.334,
+      "end": 1925.184,
+      "text": "Demo and again, I got my service keys here."
+    },
+    {
+      "start": 1925.184,
+      "end": 1932.054,
+      "text": "If I need them, I'm not going to use them for the sake of this demonstration, but I am going to navigate over to workflows."
+    },
+    {
+      "start": 1932.294,
+      "end": 1935.084,
+      "text": "And then once I'm in workflows, I'm going to click on create."
+    },
+    {
+      "start": 1935.329,
+      "end": 1939.974,
+      "text": "I'm gonna call this demo 1 we'll go ahead and start from scratch."
+    },
+    {
+      "start": 1940.004,
+      "end": 1948.014,
+      "text": "If you had any template, any desire to use the templates as a, as a kind of shortcut to get started by all means these are."
+    },
+    {
+      "start": 1948.289,
+      "end": 1958.724,
+      "text": "Available here as well and the 1st thing, the, the system asks for is a web hook or a."
+    },
+    {
+      "start": 1959.234,
+      "end": 1962.024,
+      "text": "Initiation, how is this workflow going to be triggered?"
+    },
+    {
+      "start": 1962.054,
+      "end": 1963.524,
+      "text": "We're going to start with web hooks."
+    },
+    {
+      "start": 1963.739,
+      "end": 1967.574,
+      "text": "But this could be a custom event stemming from a file that gets dropped."
+    },
+    {
+      "start": 1967.813,
+      "end": 1973.304,
+      "text": "Um, it could be a series of integrations that are, uh, predefined in accordance with."
+    },
+    {
+      "start": 1973.609,
+      "end": 1983.534,
+      "text": "Your, um, your tenant, how it's being leveraged, if it's in concert with contact center, for example, or if it's a standalone application of the tool or if you're actually leveraging."
+    },
+    {
+      "start": 1983.809,
+      "end": 1999.224,
+      "text": "Um, end users, a call to action somewhere where you're asking them to scan, uh, QR code, send in a text message, or whatever, have whatever they might be doing to initiate a conversation with your brand, or your workflow."
+    },
+    {
+      "start": 1999.224,
+      "end": 2010.114,
+      "text": "In this case. Just to keep things on the more technical side, we're going to go ahead and assume that this is going to be triggered via a external system."
+    },
+    {
+      "start": 2010.294,
+      "end": 2014.584,
+      "text": "So we're going to go ahead here and select web hook as we just did."
+    },
+    {
+      "start": 2014.734,
+      "end": 2015.874,
+      "text": "I'm going to create a new event."
+    },
+    {
+      "start": 2015.904,
+      "end": 2022.384,
+      "text": "I'm going to call it. Um, webinar demo, 1, just to match my service name."
+    },
+    {
+      "start": 2022.689,
+      "end": 2037.444,
+      "text": "And then this is where the efficiency really starts pouring in, um, the sample input allows you to suggest what that Jason or XML might be that is gonna be adjusted into the workflow to then start."
+    },
+    {
+      "start": 2037.779,
+      "end": 2040.894,
+      "text": "Having the work flow do something for you in this case."
+    },
+    {
+      "start": 2041.199,
+      "end": 2045.034,
+      "text": "Um, I'm just gonna use the customer ID, uh, parameter."
+    },
+    {
+      "start": 2046.234,
+      "end": 2051.424,
+      "text": "When I click on Parse here, you'll now see that customer ID presents it so it presents itself."
+    },
+    {
+      "start": 2051.724,
+      "end": 2057.184,
+      "text": "As an output variable so you'll see, I have my standard metadata that comes with the."
+    },
+    {
+      "start": 2057.544,
+      "end": 2066.724,
+      "text": "Just kind of standard, uh, variables and parameters that come with the platform and then I'm gonna use, uh, customer ID as 1 here as well."
+    },
+    {
+      "start": 2069.009,
+      "end": 2075.124,
+      "text": "To integrate with an external database, I'm going to be using Google sheets here."
+    },
+    {
+      "start": 2075.154,
+      "end": 2081.154,
+      "text": "So this is just. Google sheets these are my 2 records that I have in this hypothetical database."
+    },
+    {
+      "start": 2081.574,
+      "end": 2084.754,
+      "text": "And when I connect these 2."
+    },
+    {
+      "start": 2085.239,
+      "end": 2088.174,
+      "text": "This then allows me to perform a get against."
+    },
+    {
+      "start": 2088.504,
+      "end": 2093.904,
+      "text": "My, um, end point here, let me pull up my."
+    },
+    {
+      "start": 2095.224,
+      "end": 2105.304,
+      "text": "Candy sheet there we go. And then what's really cool about this is that it allows me to."
+    },
+    {
+      "start": 2105.754,
+      "end": 2114.364,
+      "text": "Test over here. And you'll see that it gives me the full response of the values."
+    },
+    {
+      "start": 2114.579,
+      "end": 2118.204,
+      "text": "Um, associated with the database, so again, if."
+    },
+    {
+      "start": 2118.479,
+      "end": 2123.814,
+      "text": "I were to come over here and change this to just add a bunch of ease there."
+    },
+    {
+      "start": 2124.119,
+      "end": 2129.394,
+      "text": "Um, you know, and I hit test again, let me get rid of the documentation when I."
+    },
+    {
+      "start": 2129.669,
+      "end": 2135.424,
+      "text": "Quick test here, you'll see that it's updated dynamically in real time."
+    },
+    {
+      "start": 2135.454,
+      "end": 2137.823,
+      "text": "Now what I can do is I can copy this."
+    },
+    {
+      "start": 2138.544,
+      "end": 2149.434,
+      "text": "I don't have access to postman for whatever reason, or something like that and I can import my sample output or response that I'm going to parse against."
+    },
+    {
+      "start": 2149.619,
+      "end": 2152.584,
+      "text": "In here and the system will parse for me."
+    },
+    {
+      "start": 2152.859,
+      "end": 2155.854,
+      "text": "It's going to give me a bunch of values that I got back."
+    },
+    {
+      "start": 2155.974,
+      "end": 2162.514,
+      "text": "Obviously, Google sheets doesn't do a good job of leveraging the headers field to give these friendly names."
+    },
+    {
+      "start": 2162.664,
+      "end": 2164.104,
+      "text": "So I'm just going to by memory."
+    },
+    {
+      "start": 2164.104,
+      "end": 2166.654,
+      "text": "I suppose say this is my customer ID."
+    },
+    {
+      "start": 2166.774,
+      "end": 2169.384,
+      "text": "My 1st name last name, my location, my phone number."
+    },
+    {
+      "start": 2169.684,
+      "end": 2181.174,
+      "text": "And my channel preference, my fallback channel and my status right especially when we start talking about SMS, we're gonna keep this what'sapp focused just because it's easier to demo."
+    },
+    {
+      "start": 2181.564,
+      "end": 2183.694,
+      "text": "Um, and it's Richard channel."
+    },
+    {
+      "start": 2184.474,
+      "end": 2188.584,
+      "text": "But if this were SMS, for example, you would definitely want to be able to check against."
+    },
+    {
+      "start": 2188.769,
+      "end": 2191.494,
+      "text": "Whether this person is opted in to receive messages or not."
+    },
+    {
+      "start": 2192.514,
+      "end": 2197.224,
+      "text": "Um, so go ahead and import there with me as I go through here."
+    },
+    {
+      "start": 2197.224,
+      "end": 2201.094,
+      "text": "So we'll call this 1 customer ID and these can be completely friendly names."
+    },
+    {
+      "start": 2201.094,
+      "end": 2206.764,
+      "text": "They don't really need to respect any sort of traditional syntax or naming convention."
+    },
+    {
+      "start": 2207.004,
+      "end": 2217.444,
+      "text": "So we'll go. 1st. We'll do last, uh, what was next with the location phone channel so location."
+    },
+    {
+      "start": 2221.734,
+      "end": 2232.654,
+      "text": "Channel. And we'll do fall back and status so fall back."
+    },
+    {
+      "start": 2233.734,
+      "end": 2237.604,
+      "text": "And status, so this sets us up pretty well."
+    },
+    {
+      "start": 2237.879,
+      "end": 2246.634,
+      "text": "To now apply a ton of conditional logic as well as dynamic attribution to the bodies of messages, or subsequent API calls that we're going to make."
+    },
+    {
+      "start": 2247.354,
+      "end": 2255.124,
+      "text": "Um, so at this point. We want to hit the social hours check."
+    },
+    {
+      "start": 2255.994,
+      "end": 2260.044,
+      "text": "To make sure that this person is being messaged within."
+    },
+    {
+      "start": 2260.319,
+      "end": 2264.604,
+      "text": "Um, a acceptable time time frame, right?"
+    },
+    {
+      "start": 2264.604,
+      "end": 2270.874,
+      "text": "So we're going to leverage the location API to determine um."
+    },
+    {
+      "start": 2273.874,
+      "end": 2277.804,
+      "text": "Timezone right so we're going to go ahead and actually we're going to use."
+    },
+    {
+      "start": 2278.049,
+      "end": 2285.394,
+      "text": "Uh, this guy here. There's 1 called location."
+    },
+    {
+      "start": 2286.264,
+      "end": 2301.745,
+      "text": "Zip code here we go. Actually, well, I think there was a better 1."
+    },
+    {
+      "start": 2306.88,
+      "end": 2309.965,
+      "text": "Yeah, this gives us time zone here, so perfect."
+    },
+    {
+      "start": 2309.965,
+      "end": 2313.805,
+      "text": "So we're going to go ahead and call this request."
+    },
+    {
+      "start": 2326.47,
+      "end": 2331.115,
+      "text": "And we're going to leverage the."
+    },
+    {
+      "start": 2333.19,
+      "end": 2338.465,
+      "text": "City, which is going to be the location here."
+    },
+    {
+      "start": 2339.185,
+      "end": 2342.875,
+      "text": "Well, let's just go ahead and assume for a 2nd, it's Boston."
+    },
+    {
+      "start": 2342.875,
+      "end": 2345.095,
+      "text": "We'll go ahead and get the."
+    },
+    {
+      "start": 2346.505,
+      "end": 2353.225,
+      "text": "Test it, Ah, API key. Of course."
+    },
+    {
+      "start": 2359.98,
+      "end": 2365.585,
+      "text": "And for those of you wondering, if you'll be able to use my API key, that is just going to get changed right?"
+    },
+    {
+      "start": 2365.585,
+      "end": 2370.805,
+      "text": "After this call. So. I've had it until then API."
+    },
+    {
+      "start": 2370.835,
+      "end": 2372.815,
+      "text": "Ninjas is great by the way."
+    },
+    {
+      "start": 2373.505,
+      "end": 2378.845,
+      "text": "Highly recommend their 3rd party api's if you need them for demos or whatever the case might be."
+    },
+    {
+      "start": 2381.245,
+      "end": 2387.095,
+      "text": "So, here we go test. Uh, doesn't like that either what am I doing?"
+    },
+    {
+      "start": 2387.095,
+      "end": 2399.695,
+      "text": "Wrong? Well, I guess we need a state and we'll do Massachusetts."
+    },
+    {
+      "start": 2403.355,
+      "end": 2409.685,
+      "text": "Okay, so we want to get. All right, well, this was working."
+    },
+    {
+      "start": 2409.715,
+      "end": 2413.075,
+      "text": "Let's see, Boston. Okay, that's right."
+    },
+    {
+      "start": 2418.895,
+      "end": 2422.615,
+      "text": "All right, well, we'll skip this step so let's assume here that we can."
+    },
+    {
+      "start": 2422.92,
+      "end": 2428.105,
+      "text": "In for time zone as a dynamic parameter, um."
+    },
+    {
+      "start": 2428.765,
+      "end": 2432.035,
+      "text": "And we'll just move on to the social hours check node here."
+    },
+    {
+      "start": 2432.28,
+      "end": 2436.025,
+      "text": "Which is now going to go ahead and tell us all right?"
+    },
+    {
+      "start": 2436.055,
+      "end": 2440.525,
+      "text": "What. Time of day is it acceptable to send this person a message?"
+    },
+    {
+      "start": 2440.77,
+      "end": 2444.575,
+      "text": "We'll go ahead and do it by day just to show you the full range of features here."
+    },
+    {
+      "start": 2444.85,
+      "end": 2449.975,
+      "text": "Um, this allows you to go down day of the week, whatever the case might be."
+    },
+    {
+      "start": 2449.975,
+      "end": 2451.985,
+      "text": "You can make these dynamic if you want."
+    },
+    {
+      "start": 2451.985,
+      "end": 2454.805,
+      "text": "In fact, I was trying to get down to the path where."
+    },
+    {
+      "start": 2455.405,
+      "end": 2456.845,
+      "text": "We would make this dynamic."
+    },
+    {
+      "start": 2457.115,
+      "end": 2462.995,
+      "text": "Whoops. Um. Or we would have dynamic time zone, but we'll just go ahead."
+    },
+    {
+      "start": 2462.995,
+      "end": 2469.115,
+      "text": "And do. America's New York that's -4."
+    },
+    {
+      "start": 2469.144,
+      "end": 2478.955,
+      "text": "four We'll do East Coast and."
+    },
+    {
+      "start": 2480.34,
+      "end": 2483.275,
+      "text": "Whatever that is, we'll just go ahead and we'll do."
+    },
+    {
+      "start": 2484.145,
+      "end": 2487.055,
+      "text": "We'll do some follow up because I know that is within."
+    },
+    {
+      "start": 2488.345,
+      "end": 2503.045,
+      "text": "the time range right now within the nine to six zero pm range so it's going to let us through what we could do here also is we could branch requests not in a social hour but we could send them down a separate path so for example If it's not in social"
+    },
+    {
+      "start": 2503.045,
+      "end": 2507.635,
+      "text": "ours, we could send somebody an email instead, which is a less intrusive."
+    },
+    {
+      "start": 2509.585,
+      "end": 2517.145,
+      "text": "Channel, and if it is within social hours, which is obviously going to be the case for this demo, at least we'll go ahead and send them."
+    },
+    {
+      "start": 2517.925,
+      "end": 2519.215,
+      "text": "What's that? Communication."
+    },
+    {
+      "start": 2519.52,
+      "end": 2527.075,
+      "text": "And we'll do this by the what'sapp ID, which is going to be represented by the phone number in this case, right?"
+    },
+    {
+      "start": 2527.105,
+      "end": 2529.085,
+      "text": "If this was Apple, it would be a."
+    },
+    {
+      "start": 2529.42,
+      "end": 2536.225,
+      "text": "Uh, okay ID, if it was Google, Google ID, so on and so forth and then in this message here we're gonna go ahead and say."
+    },
+    {
+      "start": 2538.085,
+      "end": 2546.665,
+      "text": "What company. Companies doc to up."
+    },
+    {
+      "start": 2548.135,
+      "end": 2551.915,
+      "text": "And 1 of the cool things here that you can do, also, I'm going to be leveraging."
+    },
+    {
+      "start": 2551.975,
+      "end": 2556.205,
+      "text": "Um. Web hook got set another 3rd party application, just to showcase."
+    },
+    {
+      "start": 2556.835,
+      "end": 2562.865,
+      "text": "How correlation IDs and notification URLs and callback URLs, depending on how you refer to these as."
+    },
+    {
+      "start": 2563.645,
+      "end": 2566.735,
+      "text": "Can be referenced we'll go ahead and call this."
+    },
+    {
+      "start": 2567.065,
+      "end": 2576.005,
+      "text": "What's that? Message? 1. And then you can add extra metadata in here if you wanted to, like a like a timestamp for example."
+    },
+    {
+      "start": 2576.28,
+      "end": 2578.075,
+      "text": "That can all be applied there?"
+    },
+    {
+      "start": 2578.675,
+      "end": 2583.295,
+      "text": "Um. And then, of course, we're going to give the person the option to respond."
+    },
+    {
+      "start": 2583.63,
+      "end": 2588.155,
+      "text": "For this message, these are common received notes by the way."
+    },
+    {
+      "start": 2588.155,
+      "end": 2595.055,
+      "text": "So it could be. You could be managing multiple channels all in a single workflow."
+    },
+    {
+      "start": 2595.055,
+      "end": 2597.125,
+      "text": "So, in this case, I'm going to give myself 120 seconds to respond."
+    },
+    {
+      "start": 2597.125,
+      "end": 2603.755,
+      "text": "This could be 28,000 or however, many seconds or in a day or a week, I think, is the limit."
+    },
+    {
+      "start": 2603.755,
+      "end": 2612.725,
+      "text": "And then you can have. and then you can have They can get into a design principles conversation where you could have a catch all workflow."
+    },
+    {
+      "start": 2613.0,
+      "end": 2629.465,
+      "text": "That basically place traffic cop and anybody who responds outside of the specific window hits that catch all and then based on the conditional logic applied in that workflow, we'll then get farmed out to the appropriate subsequent workflow that you"
+    },
+    {
+      "start": 2629.465,
+      "end": 2632.315,
+      "text": "would want to manage that that end user's request."
+    },
+    {
+      "start": 2634.265,
+      "end": 2637.205,
+      "text": "And then over here, we're going to go ahead and use phone again."
+    },
+    {
+      "start": 2637.415,
+      "end": 2642.605,
+      "text": "So. Say, it's going to be an incoming message."
+    },
+    {
+      "start": 2643.805,
+      "end": 2646.535,
+      "text": "They were going to mind that message and."
+    },
+    {
+      "start": 2647.435,
+      "end": 2651.695,
+      "text": "Provide a response, so, in this case again, we're going to make another API call."
+    },
+    {
+      "start": 2652.565,
+      "end": 2658.235,
+      "text": "To a 3rd party system this is the stocks API that I was talking about originally."
+    },
+    {
+      "start": 2658.48,
+      "end": 2661.205,
+      "text": "Uh, let's do stock market here."
+    },
+    {
+      "start": 2661.205,
+      "end": 2668.525,
+      "text": "Stock price. These guys copy this 1 is."
+    },
+    {
+      "start": 2670.39,
+      "end": 2672.935,
+      "text": "The standard gap will do the."
+    },
+    {
+      "start": 2674.285,
+      "end": 2688.985,
+      "text": "Api. This thing again, we go."
+    },
+    {
+      "start": 2689.675,
+      "end": 2693.725,
+      "text": "And then these, these are examples of where you could actually be leveraging."
+    },
+    {
+      "start": 2694.06,
+      "end": 2700.475,
+      "text": "Um, a custom node, I decided not to go that route for the demo, because we would then spend the majority of the demo building."
+    },
+    {
+      "start": 2700.475,
+      "end": 2709.085,
+      "text": "The actual custom node. Uh, which essentially is what you're looking at here, except with a variety of methods prepopulated against it, that you would then just leveraged dynamic."
+    },
+    {
+      "start": 2709.33,
+      "end": 2715.235,
+      "text": "Parameters to populate it as needed, like the specific ticker symbol in this case."
+    },
+    {
+      "start": 2715.39,
+      "end": 2720.575,
+      "text": "Um, let's go ahead and just do, uh, well, we're here with Cisco."
+    },
+    {
+      "start": 2720.575,
+      "end": 2728.585,
+      "text": "Let's do Cisco. And if we test this, do we get a response in this case?"
+    },
+    {
+      "start": 2729.605,
+      "end": 2732.515,
+      "text": "We're going to go ahead and put this in here."
+    },
+    {
+      "start": 2732.545,
+      "end": 2741.845,
+      "text": "We're going to parse it. It's going to give us the values that we're looking for along with the naming convention, which is helpful and then you can determine which ones are relevant, which ones aren't."
+    },
+    {
+      "start": 2741.875,
+      "end": 2743.555,
+      "text": "Right? So, we're going to want to."
+    },
+    {
+      "start": 2743.86,
+      "end": 2749.135,
+      "text": "We'll just do all of them for now, but if, for example, the timestamp wasn't necessary you could, um."
+    },
+    {
+      "start": 2749.735,
+      "end": 2753.035,
+      "text": "Leave that off I think that's everything we need."
+    },
+    {
+      "start": 2753.155,
+      "end": 2757.865,
+      "text": "So import. Great. We'll just give them a ticker."
+    },
+    {
+      "start": 2758.975,
+      "end": 2768.035,
+      "text": "Place a company. And we'll call this 1, the exchange."
+    },
+    {
+      "start": 2768.575,
+      "end": 2770.495,
+      "text": "And this will be timestamp."
+    },
+    {
+      "start": 2772.115,
+      "end": 2779.465,
+      "text": "Great say so now I can leverage anything that was collected in here and send that down."
+    },
+    {
+      "start": 2779.975,
+      "end": 2783.035,
+      "text": "A, subsequent message to the end user."
+    },
+    {
+      "start": 2783.905,
+      "end": 2788.315,
+      "text": "Sending him or her, the response that they're that they're looking for."
+    },
+    {
+      "start": 2788.345,
+      "end": 2792.875,
+      "text": "So again we go back through here and benefit from our parsed parameters."
+    },
+    {
+      "start": 2793.415,
+      "end": 2802.595,
+      "text": "Um, the, uh. Whatever the following information was provided."
+    },
+    {
+      "start": 2802.9,
+      "end": 2808.445,
+      "text": "And then you can start providing the information that you would like here."
+    },
+    {
+      "start": 2808.445,
+      "end": 2814.805,
+      "text": "So you just say ticker. Is this, uh, price."
+    },
+    {
+      "start": 2815.05,
+      "end": 2823.595,
+      "text": "Is this, um. Company name is this."
+    },
+    {
+      "start": 2824.195,
+      "end": 2831.335,
+      "text": "And then if you wanted to get real fancy, we'll go ahead and do the notification URL again just so you can see."
+    },
+    {
+      "start": 2833.08,
+      "end": 2837.275,
+      "text": "How this gets all populated once I run it and call this what's up?"
+    },
+    {
+      "start": 2837.665,
+      "end": 2844.565,
+      "text": "Message to, um. Let's do a timestamp there say."
+    },
+    {
+      "start": 2845.855,
+      "end": 2855.245,
+      "text": "And now now we're essentially done, I'll wrap it up because I know we want to leave time for questions and answers but, um."
+    },
+    {
+      "start": 2856.025,
+      "end": 2861.185,
+      "text": "At this point you could basically include in the body of your message."
+    },
+    {
+      "start": 2861.43,
+      "end": 2865.385,
+      "text": "Whatever you want at the end of the day, but in here, you can say, uh, reply."
+    },
+    {
+      "start": 2865.81,
+      "end": 2871.295,
+      "text": "Um, or I guess we could just do, do you want to."
+    },
+    {
+      "start": 2873.095,
+      "end": 2884.945,
+      "text": "Um, do this again. And then you would essentially, I'm just copying and pasting notes at this point."
+    },
+    {
+      "start": 2885.635,
+      "end": 2893.315,
+      "text": "Let's go ahead down here message."
+    },
+    {
+      "start": 2893.315,
+      "end": 2897.485,
+      "text": "Everything's the same. And then if the person replies yes or no."
+    },
+    {
+      "start": 2897.79,
+      "end": 2900.245,
+      "text": "You can just use a standard condition."
+    },
+    {
+      "start": 2900.485,
+      "end": 2905.075,
+      "text": "You could use what I was starting to say earlier as you could use the evaluate condition."
+    },
+    {
+      "start": 2905.35,
+      "end": 2909.695,
+      "text": "Which is, uh, allows you to inject JavaScript into the workflow itself."
+    },
+    {
+      "start": 2909.815,
+      "end": 2919.745,
+      "text": "So, if you wanted to take that that time stamp that was provided in seconds and turn that into something that a normal person would read, um, you could use JavaScript for that."
+    },
+    {
+      "start": 2919.775,
+      "end": 2925.295,
+      "text": "You could also use it for this conditional logic, but a standard branch will suffice for now."
+    },
+    {
+      "start": 2926.785,
+      "end": 2928.645,
+      "text": "Uh, go down the yes. Path."
+    },
+    {
+      "start": 2929.215,
+      "end": 2933.655,
+      "text": "Um, and this will be the person's, uh, response."
+    },
+    {
+      "start": 2937.715,
+      "end": 2959.285,
+      "text": "I think I need to select. Here yes."
+    },
+    {
+      "start": 2959.555,
+      "end": 2963.065,
+      "text": "Give that branch a name the variable itself."
+    },
+    {
+      "start": 2963.34,
+      "end": 2966.845,
+      "text": "There we go will be the, what's that message?"
+    },
+    {
+      "start": 2968.105,
+      "end": 2970.085,
+      "text": "And then we could just make it, um."
+    },
+    {
+      "start": 2970.715,
+      "end": 2980.555,
+      "text": "Contains yes. Then you can have your standard and or conditions as well you could add another branch for no, in this case."
+    },
+    {
+      "start": 2980.74,
+      "end": 2984.905,
+      "text": "It's a binary decision, so none of the above is the else condition."
+    },
+    {
+      "start": 2985.175,
+      "end": 2987.095,
+      "text": "I'll just go ahead and say, save."
+    },
+    {
+      "start": 2987.43,
+      "end": 2991.145,
+      "text": "And then if they go down the yes path, we will basically."
+    },
+    {
+      "start": 2992.465,
+      "end": 2997.865,
+      "text": "Loop them back to. The beginning of the experience, if they say no."
+    },
+    {
+      "start": 2999.275,
+      "end": 3001.735,
+      "text": "Or something else will say, okay, goodbye."
+    },
+    {
+      "start": 3002.785,
+      "end": 3015.805,
+      "text": "Um. Okay, thank you. And then this will be, uh."
+    },
+    {
+      "start": 3017.965,
+      "end": 3023.935,
+      "text": "Message all right so now we have."
+    },
+    {
+      "start": 3024.295,
+      "end": 3031.135,
+      "text": "A BI, directional workflow that integrates with at least 2 or 3 different systems and you can save it."
+    },
+    {
+      "start": 3031.44,
+      "end": 3041.335,
+      "text": "And then edit it if you'd like, you see that we get a bunch of errors and warnings these are in the, uh, yellow or amber color, meaning that you can still go live with this."
+    },
+    {
+      "start": 3041.43,
+      "end": 3048.925,
+      "text": "There is nothing critical that's missing, but you may want to check these out and what it's referring to basically are these."
+    },
+    {
+      "start": 3049.11,
+      "end": 3055.375,
+      "text": "Uh, yellow and red nodules that you see, this is where all the error passing and time out conditions can be applied."
+    },
+    {
+      "start": 3055.645,
+      "end": 3060.505,
+      "text": "Obviously, in a production workflow, those would exist and you would, you would want to include those."
+    },
+    {
+      "start": 3060.775,
+      "end": 3066.175,
+      "text": "But as I make this live. You can add version so version."
+    },
+    {
+      "start": 3067.495,
+      "end": 3074.425,
+      "text": "1 stock price. Everything is version controlled as well."
+    },
+    {
+      "start": 3075.025,
+      "end": 3081.835,
+      "text": "Um. And once you're in a go live status, you lose the ability to edit, but you can see here that it's publishing."
+    },
+    {
+      "start": 3082.015,
+      "end": 3089.635,
+      "text": "If I had multiple versions in here, you would see those and then you can fall back or forward into whatever version makes sense."
+    },
+    {
+      "start": 3090.955,
+      "end": 3101.095,
+      "text": "While that's publishing, it only takes a minute or so you have your access to the channels here integrations is another 1."
+    },
+    {
+      "start": 3101.095,
+      "end": 3117.535,
+      "text": "this is where all the. Uh, prebuilt, integrations can come with your work flow or if you were to build custom integrations like we did with Google search, for example, they would live here and you would have access to these freely within your, your,"
+    },
+    {
+      "start": 3117.565,
+      "end": 3121.465,
+      "text": "your workflow as, as a person who's building and deploying these."
+    },
+    {
+      "start": 3122.515,
+      "end": 3125.185,
+      "text": "All right, so let's see if this works, um."
+    },
+    {
+      "start": 3126.475,
+      "end": 3131.395,
+      "text": "Let me go ahead and. And that back on."
+    },
+    {
+      "start": 3132.745,
+      "end": 3139.465,
+      "text": "Great. So. Now, essentially what I'm going to do is I'm just going to copy this."
+    },
+    {
+      "start": 3140.995,
+      "end": 3143.694,
+      "text": "At some point, we're going to come over here."
+    },
+    {
+      "start": 3143.725,
+      "end": 3146.155,
+      "text": "I already have this kind of Pre populated."
+    },
+    {
+      "start": 3146.155,
+      "end": 3147.625,
+      "text": "I'm updating the end point."
+    },
+    {
+      "start": 3147.87,
+      "end": 3149.965,
+      "text": "Customer ID is gonna be 1:2:3 4."
+    },
+    {
+      "start": 3149.965,
+      "end": 3154.225,
+      "text": "three four Uh, customer ID, that's the same parameter there."
+    },
+    {
+      "start": 3154.5,
+      "end": 3157.075,
+      "text": "So, let's go ahead and hit send."
+    },
+    {
+      "start": 3159.06,
+      "end": 3162.775,
+      "text": "There is that it? Okay what company stock would you like to look up?"
+    },
+    {
+      "start": 3163.465,
+      "end": 3165.265,
+      "text": "I'm sure. And video is on."
+    },
+    {
+      "start": 3165.265,
+      "end": 3170.755,
+      "text": "Everybody's mind. Lately, let's do Nvidia and there it is."
+    },
+    {
+      "start": 3170.784,
+      "end": 3172.885,
+      "text": "Oh, I hard coded it to Cisco."
+    },
+    {
+      "start": 3172.885,
+      "end": 3178.585,
+      "text": "That's why. And what's really cool about this before we run out of time."
+    },
+    {
+      "start": 3178.92,
+      "end": 3185.125,
+      "text": "Is you have live debugging so you have the ability to see everything that happened in accordance with that transaction?"
+    },
+    {
+      "start": 3187.015,
+      "end": 3188.395,
+      "text": "As it's as it's happening."
+    },
+    {
+      "start": 3188.395,
+      "end": 3191.305,
+      "text": "So if I come in here and I couldn't figure out what it was."
+    },
+    {
+      "start": 3191.64,
+      "end": 3197.755,
+      "text": "Um, I would. Be able to come in here and."
+    },
+    {
+      "start": 3200.07,
+      "end": 3203.155,
+      "text": "Interrogate essentially all the different steps."
+    },
+    {
+      "start": 3203.37,
+      "end": 3206.155,
+      "text": "That the work flow went through, it's all encrypted."
+    },
+    {
+      "start": 3206.43,
+      "end": 3210.865,
+      "text": "Um, so you, you would need special access to be able to do that."
+    },
+    {
+      "start": 3211.14,
+      "end": 3214.015,
+      "text": "But let's see here real quick."
+    },
+    {
+      "start": 3214.795,
+      "end": 3218.395,
+      "text": "That is something that a platform user would have the ability to view."
+    },
+    {
+      "start": 3218.995,
+      "end": 3220.435,
+      "text": "So I'm going to make this."
+    },
+    {
+      "start": 3220.68,
+      "end": 3228.925,
+      "text": "The 1st received message. Here save live again."
+    },
+    {
+      "start": 3229.2,
+      "end": 3231.385,
+      "text": "So, now we'll have 2 versions."
+    },
+    {
+      "start": 3233.155,
+      "end": 3252.115,
+      "text": "Fixed. All right. So, now I'm going to go ahead."
+    },
+    {
+      "start": 3252.39,
+      "end": 3258.085,
+      "text": "And fire away, let me just close this out."
+    },
+    {
+      "start": 3258.205,
+      "end": 3262.615,
+      "text": "No. Then we'll send this again."
+    },
+    {
+      "start": 3269.425,
+      "end": 3272.125,
+      "text": "Okay, what company start? Let's try that again in video."
+    },
+    {
+      "start": 3277.645,
+      "end": 3281.965,
+      "text": "There we go a little down compared to where they were their all time high yesterday."
+    },
+    {
+      "start": 3281.995,
+      "end": 3290.965,
+      "text": "So. With that, um, that conclude the live build, um, thank you for your patients as I walked through that."
+    },
+    {
+      "start": 3291.055,
+      "end": 3294.775,
+      "text": "Um, but as you can hopefully see that for an enterprise."
+    },
+    {
+      "start": 3294.96,
+      "end": 3299.125,
+      "text": "This might be a more efficient path forward than handling code."
+    },
+    {
+      "start": 3299.365,
+      "end": 3301.375,
+      "text": "Um, depending on the scenario."
+    },
+    {
+      "start": 3301.375,
+      "end": 3305.545,
+      "text": "Of course. Um, before I, um."
+    },
+    {
+      "start": 3306.175,
+      "end": 3308.905,
+      "text": "Stop sharing my screen or give up the share."
+    },
+    {
+      "start": 3309.15,
+      "end": 3312.595,
+      "text": "Um, I do want to advertise our."
+    },
+    {
+      "start": 3313.375,
+      "end": 3316.885,
+      "text": "Sandbox it's free to use. There's the link."
+    },
+    {
+      "start": 3316.885,
+      "end": 3320.875,
+      "text": "I think it will be shared in the space as well and please sign up."
+    },
+    {
+      "start": 3321.175,
+      "end": 3323.965,
+      "text": "Test it out. There's user guides in our documentation That'll help."
+    },
+    {
+      "start": 3323.965,
+      "end": 3326.005,
+      "text": "You get started. Thank you."
+    },
+    {
+      "start": 3326.005,
+      "end": 3327.355,
+      "text": "I hope you found this insightful."
+    },
+    {
+      "start": 3331.315,
+      "end": 3332.455,
+      "text": "Awesome. Thank you Stefan."
+    },
+    {
+      "start": 3332.455,
+      "end": 3344.005,
+      "text": "And thank you. Okay. We've got a few minutes before our session ends and we have some questions for those asking about the webinar recording."
+    },
+    {
+      "start": 3344.005,
+      "end": 3351.145,
+      "text": "Yes, this session is recorded and you can find this and all other previous webinar recordings at a developer."
+    },
+    {
+      "start": 3351.2,
+      "end": 3354.225,
+      "text": "Dot Webex dot com forward slash webinars."
+    },
+    {
+      "start": 3355.56,
+      "end": 3358.915,
+      "text": "And we'll touch on some of your questions that you had today."
+    },
+    {
+      "start": 3367.585,
+      "end": 3371.095,
+      "text": "Uh, so, 1 of the questions that came up was I would love it."
+    },
+    {
+      "start": 3371.095,
+      "end": 3377.695,
+      "text": "If you had evaluate nodes, that supported more language, more languages, other than Java script."
+    },
+    {
+      "start": 3378.085,
+      "end": 3379.105,
+      "text": "Thank you for that feedback."
+    },
+    {
+      "start": 3379.105,
+      "end": 3380.575,
+      "text": "That's actually really great feedback."
+    },
+    {
+      "start": 3380.605,
+      "end": 3383.935,
+      "text": "Um, please do share what languages you are interested in, and we."
+    },
+    {
+      "start": 3384.02,
+      "end": 3387.555,
+      "text": "Pass that feedback over to our product team for evaluation."
+    },
+    {
+      "start": 3388.135,
+      "end": 3391.705,
+      "text": "So, if you want to just drop it in, um, I know it's not a question, but you can drop it in there."
+    },
+    {
+      "start": 3391.705,
+      "end": 3393.895,
+      "text": "And we'll share that feedback with the product team."
+    },
+    {
+      "start": 3399.205,
+      "end": 3402.025,
+      "text": "Next question is, is there a Webex contact center?"
+    },
+    {
+      "start": 3402.565,
+      "end": 3405.595,
+      "text": "Or Webex rooms, utilities for messaging channel."
+    },
+    {
+      "start": 3406.885,
+      "end": 3419.395,
+      "text": "And we do integration with Webex app can be done using custom integration, nodes, http node and Webex connect event API and inbound web."
+    },
+    {
+      "start": 3421.62,
+      "end": 3426.475,
+      "text": "We'll answer all these questions in this space as well team."
+    },
+    {
+      "start": 3426.475,
+      "end": 3429.715,
+      "text": "Is there anything that stood out that you want to touch on?"
+    },
+    {
+      "start": 3434.875,
+      "end": 3444.235,
+      "text": "Right. Let me call out when I saw I have had issues with http."
+    },
+    {
+      "start": 3444.235,
+      "end": 3450.295,
+      "text": "No utilizing post. Can you demo this with the body of the post populated with an attribute."
+    },
+    {
+      "start": 3450.57,
+      "end": 3453.535,
+      "text": "See, the message and quote that attribute appropriately."
+    },
+    {
+      "start": 3454.885,
+      "end": 3460.075,
+      "text": "So, we can't do that in today's session for the sake of time, but we would be happy to cover that in a future session."
+    },
+    {
+      "start": 3461.035,
+      "end": 3466.225,
+      "text": "But in the meantime, we recommend you post your issues on Webex, connect community forum."
+    },
+    {
+      "start": 3466.225,
+      "end": 3470.455,
+      "text": "If you haven't done that already and our experts will be able to help you out with that."
+    },
+    {
+      "start": 3470.815,
+      "end": 3473.095,
+      "text": "That link was also shared."
+    },
+    {
+      "start": 3473.43,
+      "end": 3478.465,
+      "text": "Um, in the chat, the long 1, so I won't read it out, but I'll share it again."
+    },
+    {
+      "start": 3479.035,
+      "end": 3481.825,
+      "text": "For any questions and additional questions."
+    },
+    {
+      "start": 3484.675,
+      "end": 3488.185,
+      "text": "We have time for 1 more. Where can I find all the demos related to Webex?"
+    },
+    {
+      "start": 3488.185,
+      "end": 3492.655,
+      "text": "Connect flows? Domain base like health care, et cetera."
+    },
+    {
+      "start": 3492.655,
+      "end": 3496.495,
+      "text": "We found that it is in a D cloud so I'll share that."
+    },
+    {
+      "start": 3497.725,
+      "end": 3500.785,
+      "text": "Link as well in the space."
+    },
+    {
+      "start": 3503.605,
+      "end": 3514.645,
+      "text": "And with that we are at the top of the hour, so thank you for joining us today, and be sure to pop over to the Webex developer community forum, uh, where you can connect with the Webex developers and the support team in case, you run into any"
+    },
+    {
+      "start": 3514.645,
+      "end": 3516.625,
+      "text": "challenges what building running your apps on?"
+    },
+    {
+      "start": 3516.625,
+      "end": 3520.645,
+      "text": "Webex. We love your feedback, so please do fill out the survey."
+    },
+    {
+      "start": 3521.515,
+      "end": 3524.815,
+      "text": "And let us know what you wanna, what you want to see next."
+    },
+    {
+      "start": 3525.805,
+      "end": 3529.585,
+      "text": "And with that, thank you to the Webex connect team."
+    },
+    {
+      "start": 3529.615,
+      "end": 3532.615,
+      "text": "Thank you developer evangelism team and thank you to."
+    },
+    {
+      "start": 3532.615,
+      "end": 3535.975,
+      "text": "Our attendees have a great rest of your day at night."
+    },
+    {
+      "start": 3537.9,
+      "end": 3538.23,
+      "text": "And."
+    }
+  ]
+}

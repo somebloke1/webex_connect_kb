@@ -1,0 +1,409 @@
+Navigate to Integrations -> Outbound Webhooks 
+
+## WhatsApp Delivery Receipts
+
+- Select the service you are sending the WhatsApp messages from
+- Select the channel as WhatsApp
+
+```json Submitted
+{
+    "deliveryInfoNotification": {
+        "deliveryInfo": {
+            "timeStamp": "2026-05-08T16:42:13.217+05:30",
+            "waid": "919876543210",
+            "Description": "Submitted",
+            "code": "7501",
+            "bsuid": "",
+            "deliveryChannel": "whatsapp",
+            "additionalInfo": "",
+            "waidNormalized": "false",
+            "destination": "9198765xxxxx",
+            "destinationType": "waid",
+            "identityKeyHash": "8VVxxxxxmtw=",
+            "deliveryStatus": "Submitted"
+        },
+        "subtid": "1f7d224c-d37d-4a6d-b663-a485b95159ec",
+        "transid": "35add3c9-353d-4f67-b2a0-1852048f4d65_0",
+        "callbackData": "",
+        "correlationid": ""
+    }
+}
+
+
+```
+```json Delivered
+{
+    "deliveryInfoNotification": {
+        "deliveryInfo": {
+            "timeStamp": "2026-05-08T16:42:14.238+05:30",
+            "waid": "919876543210",
+            "Description": "Delivered",
+            "code": "7500",
+            "bsuid": "IN.2146020959550167",
+            "deliveryChannel": "whatsapp",
+            "additionalInfo": "",
+            "waidNormalized": "false",
+            "destination": "9198765xxxxx",
+            "destinationType": "waid",
+            "identityKeyHash": "8VVxxxxxmtw=",
+            "deliveryStatus": "Delivered"
+        },
+        "subtid": "1f7d224c-d37d-4a6d-b663-a485b95159ec",
+        "transid": "35add3c9-353d-4f67-b2a0-1852048f4d65_0",
+        "callbackData": "",
+        "correlationid": ""
+    }
+}
+
+```
+```json Read
+{
+    "deliveryInfoNotification": {
+        "deliveryInfo": {
+            "timeStamp": "2026-05-08T16:42:14.238+05:30",
+            "waid": "919876543210",
+            "Description": "Read",
+            "code": "7502",
+            "bsuid": "IN.2146020959550167",
+            "deliveryChannel": "whatsapp",
+            "additionalInfo": "",
+            "waidNormalized": "false",
+            "destination": "9198765xxxxx",
+            "destinationType": "waid",
+            "identityKeyHash": "8VVxxxxxmtw=",
+            "deliveryStatus": "Read",
+        },
+        "subtid": "1f7d224c-d37d-4a6d-b663-a485b95159ec",
+        "transid": "35add3c9-353d-4f67-b2a0-1852048f4d65_0",
+        "callbackData": "",
+        "correlationid": ""
+    }
+}
+
+```
+```json Failed
+"deliveryInfoNotification": {
+        "deliveryInfo": {
+            "timeStamp": "2026-05-08T16:42:10.973+05:30",
+            "waid": "",
+            "Description": "Parameter is invalid. The request included one or more unsupported or misspelled parameters.",
+            "code": "7838",
+            "bsuid": "IN.2146020959550167",
+            "deliveryChannel": "whatsapp",
+            "additionalInfo": "(#100)  | Recipient is a BSUID but the feature is not enabled.",
+            "waidNormalized": "false",
+            "destination": "IN.2146020959550167",
+            "destinationType": "bsuid",
+            "identityKeyHash": "8VVxxxxxmtw=",
+            "deliveryStatus": "Failed",
+        },
+        "subtid": "",
+        "transid": "e9dcc7bb-bdb9-4587-be1b-36314ddfc6c9_0",
+        "callbackData": "",
+        "correlationid": ""
+    }
+}
+
+```
+
+> 📘 Note
+> 
+> The additional info fields will capture WhatsApp error codes and descriptions as highlighted in [Cloud API error code](https://developers.facebook.com/docs/whatsapp/cloud-api/support/error-codes/#error-codes) page.
+> 
+> For example, You are trying to send MP4 and MP4 some codec is not supported by WhatsApp. WhatsApp would dynamically tell us that you have provided incorrect mime type and supported mime type is suppose to be MP4. So, in such scenarios we were not able to have any mapping for the descriptions. To reconsider such scenarios, additional info helps to capture WhatsApp error codes and descriptions.
+
+### WhatsApp Incoming Messages & Events
+
+Select the app that you expect to receive messages or events from as the Entity.
+
+```json Incoming Message
+{
+  "userId": "4567",
+  "channel": "WhatsApp",
+  "appId": "a_170xxxxx5235133300",
+  "event": "MO",
+  "waid": "+91xxxxx85090",
+  "message": "hi",
+  "attachments": "[]",
+  "system": "",
+  "location": "",
+  "ts": "2024-09-xxxxx:49:36.049+05:30",
+  "tid": "9dc93d51-xxxx-4fec-92ce-31a5aca410fd_0",
+  "contacts": "[]",
+  "username": "John",
+  "identityKeyHash": "8VVxxxxxmtw=",
+  "type": "text",
+  "bsuid": "IN.2146020959550167",
+  "userHandle": "",
+  "waidDerived": "false",
+
+}
+
+```
+```json Text
+{
+    "userId": "",
+    "username": "",
+    "channel": "WhatsApp",
+    "appId": "a_155054536910425280",
+    "event": "MO",
+    "waid": "9199xxxxxxxx",
+    "message": "Hello",
+    "attachments": "[]",
+    "system": "",
+    "location": "",
+    "ts": "2019-03-03T07:40:51.297Z",
+    "tid": "0cab6280-9d98-XXXX-4877-0bde6515b15a_0",
+    "identityKeyHash": "8VVxxxxxmtw=",
+    "bsuid": "IN.2146020959550167",
+    "userHandle": "",
+    "waidDerived": "false",
+
+
+}
+
+```
+```json Image
+{
+  "userId": "7654",
+  "channel": "WhatsApp",
+  "appId": "a_1701xxxxx235133300",
+  "event": "MO",
+  "waid": "+91xxxxx85090",
+  "message": "",
+  "attachments": "[{\"mime_type\":\"image/jpeg\",\"url\":\"https://attachments.imiconnect.site/v1/download-media?exp=1725358814530&sid=st%2BX6O5uygVsy2FNW%2BGAWk9BTc%2F76opyBI%2F5nh3okhT4F3MC5AaIPaK3SpWBgq8jnOsKuduPwvDj1%2FAVYVpfEQ%3D%3D&path=3%2F2024-09-03%2F8%2Fa_170141525235133300%2F1246009770160071.jpg\"}]",
+  "system": "",
+  "location": "",
+  "ts": "2024-09-xxxxx:50:12.694+05:30",
+  "tid": "c5704af4-xxxx-4dcb-9d64-31e5ec580618_0",
+  "contacts": "[]",
+  "username": "John",
+  "identityKeyHash": "8VVxxxxxmtw=",
+  "type": "image",
+   "bsuid": "IN.2146020959550167",
+   "userHandle": "",
+   "waidDerived": "false",
+}
+
+
+```
+```json Video
+{
+    "userId": "",
+    "username": "",
+    "channel": "WhatsApp",
+    "appId": "a_154623235593581600",
+    "event": "MO",
+    "waid": "9187xxxxxxxx",
+    "message": "",
+    "attachments": "[{\"mime_type\":\"video/mp4\",\"url\":\"https://stgrtmedia.s3.amazonaws.com/a_154623235593581600/aa9b851f-94b6-49f6-878c-ea8a8d7b3098.mp4\"}]",
+    "system": "",
+    "location": "",
+    "ts": "2019-01-03T09:23:26.386Z",
+    "tid": "ff0f3e02-e812-XXXX-dc15-dba71dabde53_0",
+     "bsuid": "IN.2146020959550167",
+     "userHandle": "",
+     "waidDerived": "false",
+}
+
+```
+```json Location
+{
+    "userId": "",
+    "username": "",
+    "channel": "WhatsApp",
+    "appId": "a_1545298XXXX9452060",
+    "event": "MO",
+    "waid": "9187xxxxxxxx",
+    "message": "",
+    "attachments": "[]",
+    "system": "",
+    "location": "{\"address\":\"Plot No. 123, Road No. 56, Jubilee Hills, Hyderabad\",\"latitude\":\"17.434901060022\",\"name\":\"Imimobile\",\"url\":\"https://www.facebook.com/pages/Imimobile/204627936239899\",\"longitude\":\"78.398435572505\"}",
+    "ts": "2019-01-08T08:59:02.717Z",
+    "tid": "3beecbfb-73fd-803e-a27f-4e797fb22ffd_0",
+    "identityKeyHash": "8VVxxxxxmtw=",
+     "bsuid": "IN.2146020959550167",
+     "userHandle": "",
+     "waidDerived": "false",
+}
+
+```
+```json Audio
+{
+    "userId": "",
+    "username": "",
+    "channel": "WhatsApp",
+    "appId": "a_15462323XXXX581600",
+    "event": "MO",
+    "waid": "9187xxxxxxxx",
+    "message": "",
+    "attachments": "[{\"mime_type\":\"audio/mpeg\",\"url\":\"https://stgrtmedia.s3.amazonaws.com/a_154623235593581600/ef484891-d99c-45b9-af97-c5ad0e7abef6\"}]",
+    "system": "",
+    "location": "",
+    "ts": "2019-01-03T08:03:04.866Z",
+    "tid": "88be8081-8579-XXXX-3e03-cee8b01afdb2_0",
+     "bsuid": "IN.2146020959550167",
+     "userHandle": "",
+     "waidDerived": "false",
+}
+
+```
+```json Document
+{
+  "userId": "3645",
+  "channel": "WhatsApp",
+  "appId": "a_17014152xxxxx33300",
+  "event": "MO",
+  "waid": "+9xxxx3585090",
+  "message": "",
+  "attachments": "[{\"mime_type\":\"application/pdf\",\"caption\":\"BothPass.pdf\",\"url\":\"https://attachments.imiconnect.site/v1/download-media?exp=1725358916274&sid=wzcchcJr7%2BpH4sKBQ6ne3HQ6j6%2F7hwzy24CYXp%2FjIwlnsVtj7LqGZwaFA%2B9F2gqVOIkqOpdKcn0jc80tIB4xEA%3D%3D&path=3%2F2024-09-03%2F8%2Fa_170141525235133300%2F2244130192617002.pdf\"}]",
+  "system": "",
+  "location": "",
+  "ts": "2024-09-xxxxx:51:54.696+05:30",
+  "tid": "6784cbd5-144f-xxxx-b903-0a36dda92892_0",
+  "contacts": "[]",
+  "username": "John",
+  "identityKeyHash": "8VVxxxxxmtw=",
+  "type": "document",
+  "bsuid": "IN.2146020959550167",
+  "userHandle": "",
+  "waidDerived": "false",
+
+}
+
+```
+```json Contact
+{
+  "userId": "",
+  "channel": "WhatsApp",
+  "appId": "a_1596689XXXX1987230",
+  "event": "MO",
+  "waid": "91809XXXXXXX",
+  "message": "",
+  "attachments": "[]",
+  "system": "",
+  "location": "",
+  "ts": "2023-05-17T06:48:11.203-04:00",
+  "tid": "6481de56-44c7-XXXX-120d-f3e26ea3b9c5_0",
+  "contacts": "[{\"emails\":[],\"addresses\":[],\"urls\":[],\"org\":{},\"name\":{\"last_name\":\"last_name\",\"first_name\":\"first_name\",\"formatted_name\":\"Self Jio\"},\"phones\":[{\"phone\":\"+91 78xxxxxxxx\",\"wa_id\":\"9178xxxxxxxx\",\"type\":\"Mobile\"}]}]",
+  "username": "Username",
+  "identityKeyHash": "8VVxxxxxmtw=",
+  "bsuid": "IN.2146020959550167",
+  "userHandle": "",
+  "waidDerived": "false",
+}
+
+
+```
+```json Sticker
+{
+  "userId": "",
+  "channel": "WhatsApp",
+  "appId": "a_1596689XXXX1987230",
+  "event": "MO",
+  "waid": "91809XXXXXXX",
+  "message": "",
+  "attachments": "[{\"sticker\":{\"metadata\":{\"emojis\":[null],\"sticker_pack_id\":\"\",\"sticker_pack_name\":\"\",\"android_app_store_link\":\"\",\"ios_app_store_link\":\"\",\"is_first_party_sticker\":\"\",\"sticker_pack_publisher\":\"\"},\"sha256\":\"80c2cee74b49bfd30c2552d30cbd8b5295b4c20958643a94715362e52d8bf0d4\",\"mime_type\":\"image/webp\",\"id\":\"42ca7cdb-7a23-481a-a4c0-51a0f0cd1b8c\"},\"url\":\"https://imi-wamedia-us.s3.amazonaws.com/a_159668984XXXX87230/42ca7cdb-7a23-481a-a4c0-51a0f0cd1b8c.webp\"}]",
+  "system": "",
+  "location": "",
+  "ts": "2023-05-17T06:52:50.641-04:00",
+  "tid": "5c981edd-5446-XXXX-f722-7646454606bd_0",
+  "contacts": "[]",
+  "username": "Username",
+  "bsuid": "IN.2146020959550167",
+  "userHandle": "",
+  "waidDerived": "false",
+
+}
+
+
+```
+```json Postback
+{
+    "userId": "",
+    "username": "",
+    "channel": "WhatsApp",
+    "appId": "a_1609813XXXX4574140",
+    "event": "postback",
+    "waid": "9199xxxxxxxx",
+    "ts": "2021-02-05T11:49:57.374Z",
+    "tid": "b1fbebed-d6a5-XXXX-11b7-bf82b1a18fea_0",
+    "buttonPayload": "aGlzIHRoaXMgaXMgY29vZHNhc2phZHdpcXdlMGZoIGFTIEZISUQgV1FEV0RT",
+    "buttonText": "Yes",
+    "errors": "",
+    "identityKeyHash": "8VVxxxxxmtw=",
+    "bsuid": "IN.2146020959550167",
+    "userHandle": "",
+    "waidDerived": "false",
+  }
+
+
+```
+```json List Message
+{
+  "userId": "",
+  "channel": "WhatsApp",
+  "appId": "a_159668984XXXX87230",
+  "event": "list",
+  "waid": "91809XXXXXXX",
+  "listRowIdentifier": "unique-row-identifier-1",
+  "listRowTitle": "Row-title-1",
+  "listRowDescription": "Row-description",
+  "contextId": "gBEGkYCWEgQIXXXXulCWGFk3SCE",
+  "ts": "2023-05-17T06:43:12.051-04:00",
+  "tid": "1b702833-a885-XXXX-408f-ccfb61da74fa_0",
+  "username": "ABCD",
+  "identityKeyHash": "8VVxxxxxmtw=",
+  "bsuid": "IN.2146020959550167",
+  "userHandle": "",
+  "waidDerived": "false",
+}
+
+
+```
+```json Reply Buttons
+{
+  "userId": "",
+  "channel": "WhatsApp",
+  "appId": "a_159668984XXXX87230",
+  "event": "reply",
+  "waid": "91809XXXXXXX",
+  "replyButtonIdentifier": "ButtonId1",
+  "replyButtonTitle": "First Button",
+  "contextId": "gBEGkYCWEgQIXXXXrPKN2uP0DOw",
+  "ts": "2023-05-17T06:46:42.568-04:00",
+  "tid": "7168c0d1-2b41-XXXX-c952-202afe053842_0",
+  "username": "ABCD",
+  "identityKeyHash": "8VVxxxxxmtw=",
+  "bsuid": "IN.2146020959550167",
+  "userHandle": "",
+  "waidDerived": "false",
+}
+
+```
+```json User Preferences
+{
+   "userId":"",
+   "username":"",
+   "channel":"WhatsApp",
+   "appId":"a_155054XXXX10425280",
+   "event":"user_preference",
+   "waid":"9199xxxxxxxx",
+   "user_preferences":[
+      {
+         "waNumber":"<WHATSAPP_USER_PHONE_NUMBER>",// for e.g., +1650XXXX234
+         "detail":"<PREFERENCE_DESCRIPTION>", //Description of marketing message preference. Values can be:User requested to stop marketing messages / User requested to resume marketing messages
+         "category":"marketing_messages",
+         "value":"<PREFERENCE>",//Marketing message preference. Values can be: stop, resume
+         "timestamp":"<WEBHOOK_SENT_TIMESTAMP>" //Unix timestamp indicating when the webhook was sent.
+      }
+   ],
+   "ts":"2019-03-03T07:40:51.297Z",
+   "tid":"0cab6280-9d98-XXXX-4877-0bde6515b15a_0",
+   "identityKeyHash":"z2XXXXXXbBA=",
+   "bsuid": "IN.2146020959550167",
+   "userHandle": "",
+   "waidDerived": "false",
+}
+
+```

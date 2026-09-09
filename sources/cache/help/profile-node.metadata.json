@@ -1,0 +1,43 @@
+{
+  "category": "SERVICES & FLOWS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182577d7",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "771d60b88125b140e9004449088d52c887d2fc4568705e801f6cd9b07e686955",
+    "source_path": "827ebca8e7f315e91cb1b1eff683dbd0393b764c58df16e101533c7dffe68b62",
+    "text_path": "03f630f03401dbf0704d53cb6420c91d20ebfe52c43d57846f437d2e2969a71f"
+  },
+  "headings": [
+    "Node Configuration",
+    "Fetch a Profile",
+    "Update a Profile",
+    "Create a Profile",
+    "📘Profile Creation",
+    "Delete a Profile",
+    "Input Variables",
+    "Custom Variables",
+    "Output Variables",
+    "Node Outcomes",
+    "Transition Actions"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/profile-node.md",
+  "resolved_url": "https://help.webexconnect.io/docs/profile-node",
+  "retrieved_at": "2026-09-08T23:28:56+00:00",
+  "sha256_html_response": "3d3b4442e6ac8c4519b28d97ed0494eb04eb1f13898499182606dc3a4007fb2f",
+  "sha256_source_body": "827ebca8e7f315e91cb1b1eff683dbd0393b764c58df16e101533c7dffe68b62",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/profile-node.source.md",
+  "source_updated_at": "2025-04-02T17:22:36.582Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/profile-node.txt",
+  "title": "Profile Node",
+  "url": "https://help.webexconnect.io/docs/profile-node",
+  "word_count": 906,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/profile-node.metadata.json"
+}

@@ -1,0 +1,36 @@
+{
+  "api_metadata_path": "sources/cache/developer/whatsapp-location-message.api.json",
+  "category": "MULTI CHANNEL COMMUNICATION API",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f662a",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "9b57cc01a1f26dafadf029ff72147f362eca1d37a9cd430b57f830e9a7919e57",
+    "source_path": "953acbd4ed990585268e52328763e38266634bfb64604a008823f667938ace0f",
+    "text_path": "a73540d09166f208ac2e8870ea94fd97c3bd0e4c74b0b0c95fc72e55ca7e1ee2"
+  },
+  "headings": [
+    "Error Codes"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/whatsapp-location-message.md",
+  "openapi_path": "sources/cache/openapi/39f9fb94cbf74bdb1e4d092d07754a6c5944322d56a2c8bf4cafb5270d703ec7.json",
+  "resolved_url": "https://developers.webexconnect.io/reference/whatsapp-location-message",
+  "retrieved_at": "2026-09-08T23:31:43+00:00",
+  "sha256_api_metadata": "8d17a5521b89f712b2d9670fc66044e13922007439f0ac096750f07fb401f9df",
+  "sha256_html_response": "792cc8783bd54e3187a87f28185d4374d71d0017c240e6feb4a6b7e47ab01ebd",
+  "sha256_openapi": "39f9fb94cbf74bdb1e4d092d07754a6c5944322d56a2c8bf4cafb5270d703ec7",
+  "sha256_source_body": "953acbd4ed990585268e52328763e38266634bfb64604a008823f667938ace0f",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/whatsapp-location-message.source.md",
+  "source_updated_at": "2026-05-12T12:32:59.188Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/whatsapp-location-message.txt",
+  "title": "WhatsApp Location Message",
+  "url": "https://developers.webexconnect.io/reference/whatsapp-location-message",
+  "word_count": 1514,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/developer/whatsapp-location-message.metadata.json"
+}

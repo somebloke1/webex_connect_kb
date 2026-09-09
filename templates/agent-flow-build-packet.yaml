@@ -1,0 +1,200 @@
+{
+  "packet_format": "webex_connect_kb.logical_build_packet.v1",
+  "format_notice": "JSON-compatible YAML for agent planning. Not a Cisco import/export schema. All property names below belong to this KB.",
+  "status": "design_incomplete",
+  "instructions": "Replace nulls with evidenced values or an explicit not_applicable decision. Duplicate contract records as needed. Preserve unresolved bindings; never invent native node IDs, field names, outcome labels, or runtime results.",
+  "request": {
+    "business_result": null,
+    "success_evidence": null,
+    "primary_pattern": null,
+    "pattern_choices": ["autonomous_knowledge", "autonomous_actions", "scripted_digital", "legacy_maintenance"],
+    "channels": [],
+    "task_route_ids": [],
+    "scope_instruction_reference": null
+  },
+  "authorization": {
+    "purpose": "Record actual user authorization separately from implementation readiness; this template grants none.",
+    "local_design": {"state": "unresolved", "evidence_ref": null},
+    "connect_read": {"state": "unresolved", "evidence_ref": null},
+    "connect_create_or_edit": {"state": "unresolved", "evidence_ref": null},
+    "connect_execute_or_send": {"state": "unresolved", "evidence_ref": null},
+    "connect_publish": {"state": "unresolved", "evidence_ref": null},
+    "control_hub_read": {"state": "unresolved", "evidence_ref": null},
+    "control_hub_mutation": {"state": "unresolved", "evidence_ref": null},
+    "business_system_write": {"state": "unresolved", "evidence_ref": null}
+  },
+  "bindings": [
+    {"key": "tenant", "value": null, "status": "unresolved", "evidence_ref": null},
+    {"key": "service_workspace", "value": null, "status": "unresolved", "evidence_ref": null},
+    {"key": "channel_assets", "value": null, "status": "unresolved", "evidence_ref": null},
+    {"key": "studio_agent_and_version", "value": null, "status": "unresolved", "evidence_ref": null},
+    {"key": "integration_auth_reference", "value": null, "status": "unresolved", "evidence_ref": null},
+    {"key": "human_queue_or_destination", "value": null, "status": "unresolved", "evidence_ref": null}
+  ],
+  "agent_contract": {
+    "type_and_engine": null,
+    "goal_and_instruction_reference": null,
+    "knowledge_sources_and_revisions": [],
+    "action_contract_ids": [],
+    "language_and_response_policy": null,
+    "human_handover_policy": null,
+    "session_identity_and_concurrent_thread_policy": null,
+    "session_close_owner_and_conditions": null
+  },
+  "flow_units": [
+    {
+      "logical_id": "channel_to_agent",
+      "applicability": "select_or_mark_not_applicable",
+      "purpose": "Customer event to agent turn, channel reply, continuation or human handoff.",
+      "entry_contract_ref": null,
+      "graph_node_ids": [],
+      "graph_edge_ids": [],
+      "completion_contract": null
+    },
+    {
+      "logical_id": "agent_to_fulfillment",
+      "applicability": "select_or_mark_not_applicable",
+      "purpose": "Autonomous action to separate short backend flow, returning a business result to the agent.",
+      "entry_contract_ref": null,
+      "graph_node_ids": [],
+      "graph_edge_ids": [],
+      "completion_contract": null,
+      "reference": "knowledge/13-ai-agent-flows.md#4-autonomous-action-fulfillment-exact-connect-setup"
+    },
+    {
+      "logical_id": "scripted_digital_fulfillment",
+      "applicability": "select_or_mark_not_applicable",
+      "purpose": "Response-triggered business work within the outer scripted conversation flow; not a third assumed deployed flow.",
+      "containing_flow_unit": "channel_to_agent",
+      "entry_contract_ref": null,
+      "graph_node_ids": [],
+      "graph_edge_ids": [],
+      "completion_contract": null
+    }
+  ],
+  "entry_contracts": [
+    {
+      "logical_id": "replace_entry_key",
+      "trigger_category_and_event_exact": null,
+      "sample_payload_reference": null,
+      "schema_reference": null,
+      "authentication_reference": null,
+      "duplicate_identity": null,
+      "correlation_and_thread_rule": null,
+      "invalid_missing_empty_payload_behavior": null,
+      "evidence_refs": []
+    }
+  ],
+  "node_contracts": [
+    {
+      "logical_id": "replace_node_key",
+      "native_node_id": null,
+      "platform_type_exact": null,
+      "node_version": null,
+      "method_exact": null,
+      "purpose": null,
+      "field_bindings": [
+        {
+          "ui_label_exact": null,
+          "binding_kind": null,
+          "binding_kind_choices": ["literal", "picker_reference", "expression", "resource_reference"],
+          "value_or_reference": null,
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": null,
+          "requiredness_and_missing_behavior": null,
+          "evidence_refs": []
+        }
+      ],
+      "outputs": [{"picker_name_exact": null, "type_or_schema_ref": null, "availability_by_outcome": null, "evidence_refs": []}],
+      "displayed_outcomes_exact": [],
+      "outcome_coverage_complete": false,
+      "timeout_retry_and_ambiguous_result_policy": null,
+      "evidence_refs": []
+    }
+  ],
+  "edge_contracts": [
+    {
+      "logical_id": "replace_edge_key",
+      "from_logical_node": null,
+      "outcome_label_exact": null,
+      "condition_exact_or_not_applicable": null,
+      "to_logical_node": null,
+      "terminal_disposition_if_no_target": null,
+      "transition_assignments": [{"target_variable": null, "expression_exact": null, "availability_reason": null}],
+      "loop_update_and_exit_rule_if_applicable": null,
+      "evidence_refs": []
+    }
+  ],
+  "variable_contracts": [
+    {
+      "logical_name": "replace_variable_key",
+      "native_reference_exact": null,
+      "origin_kind": null,
+      "origin_kind_choices": ["documented_output", "observed_output", "proposed_custom_variable"],
+      "producer": null,
+      "type_required_default": null,
+      "scope_lifetime_owner": null,
+      "consumers": [],
+      "available_on_all_consuming_paths": "unresolved",
+      "sensitivity_and_log_policy": null,
+      "evidence_refs": []
+    }
+  ],
+  "business_operation_contracts": [
+    {
+      "logical_id": "replace_operation_key",
+      "action_selection_and_slot_contract": null,
+      "input_schema_ref": null,
+      "sample_input_ref": null,
+      "validation_and_record_authorization": null,
+      "api_method_endpoint_auth_reference": null,
+      "request_mapping_ref": null,
+      "response_schema_and_mapping_ref": null,
+      "business_success_condition": null,
+      "return_payload_and_terminal_branch_mapping": null,
+      "duplicate_prevention_and_uncertain_write_policy": null,
+      "deadline_and_retry_budget": null,
+      "evidence_refs": []
+    }
+  ],
+  "channel_and_ownership_contract": {
+    "inbound_message_receipt_attachment_classification": null,
+    "customer_business_asset_thread_event_id_mapping": null,
+    "full_response_to_channel_rendering": null,
+    "recipient_and_reply_thread_bindings": null,
+    "send_acceptance_delivery_and_transcript_states": null,
+    "receive_matching_late_reply_and_timeout": null,
+    "human_owner_detection_handoff_and_failure": null
+  },
+  "evidence": [
+    {
+      "id": "replace_evidence_key",
+      "kind": null,
+      "kind_choices": ["official_document", "release_note", "tenant_ui", "executed_case", "native_artifact", "video_transcript", "engineering_recommendation"],
+      "path_or_url": null,
+      "section_line_or_timestamp": null,
+      "observed_or_retrieved_at": null,
+      "product_tenant_node_version_scope": null,
+      "establishes": null,
+      "does_not_establish": null
+    }
+  ],
+  "unresolved": [
+    {"id": "replace_gap_key", "binding_or_claim": null, "impact": null, "next_evidence_needed": null, "blocks": ["implementation"], "status": "open"}
+  ],
+  "verification_cases": [
+    {"id": "replace_case_key", "input_fixture_ref": null, "expected_path_and_result": null, "expected_external_effect": null, "execution_status": "not_run", "actual_evidence_refs": []}
+  ],
+  "readiness": {
+    "design_reviewable": false,
+    "all_required_bindings_resolved": false,
+    "all_node_outcomes_accounted_for": false,
+    "producer_consumer_paths_checked": false,
+    "business_and_transport_completion_separated": false,
+    "material_cases_defined": false,
+    "implementation_status": "not_started",
+    "execution_status": "not_run",
+    "publication_status": "not_published"
+  }
+}

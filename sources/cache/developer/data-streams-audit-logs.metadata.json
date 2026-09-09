@@ -1,0 +1,36 @@
+{
+  "api_metadata_path": "sources/cache/developer/data-streams-audit-logs.api.json",
+  "category": "Data Streams",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f66d3",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "81a2850e510f12a573bba4296cbc7e2beda42170f9af782d5152f1ba37a3992f",
+    "source_path": "905132fb0d68d2d4a663dff798614445857b2f34feac3babac79f61abc39c2b3",
+    "text_path": "db3a7182ac6a4fec04cb38d8643d57225d34cdd257d458de3f119bb14d2e7965"
+  },
+  "headings": [
+    "Audit Logs Payload Sample",
+    "Message Descriptions",
+    "User Actions (User Audit - Event Categories)"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/data-streams-audit-logs.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/data-streams-audit-logs",
+  "retrieved_at": "2026-09-08T23:31:49+00:00",
+  "sha256_api_metadata": "575f65b7d8dc3ea0b617314bc47e22705dc85fc80ee114e6faa20ada4e8aafe2",
+  "sha256_html_response": "11ab82d920ce25e930676f5246ae25cb0c0d75d08f15eeb34566e8e39bb42592",
+  "sha256_source_body": "905132fb0d68d2d4a663dff798614445857b2f34feac3babac79f61abc39c2b3",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/data-streams-audit-logs.source.md",
+  "source_updated_at": "2026-06-23T17:52:45.853Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/data-streams-audit-logs.txt",
+  "title": "Data Streams - Audit Logs",
+  "url": "https://developers.webexconnect.io/reference/data-streams-audit-logs",
+  "word_count": 1416,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/data-streams-audit-logs.metadata.json"
+}

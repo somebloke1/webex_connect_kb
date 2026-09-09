@@ -1,0 +1,38 @@
+{
+  "api_metadata_path": "sources/cache/developer/send-message-api-v2-get-voice-call-status-api.api.json",
+  "category": "MULTI CHANNEL COMMUNICATION API",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f6721",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "5533fe03c8d221ee4eecc753c783416dbe668f2dde4514ba5f7b01e4d9ff04e6",
+    "source_path": "fddb5d22cd9c7e237a13640da89d6b5a76b85e8b38ef1e07513a51eff8be7435",
+    "text_path": "75eb0b079f679f0d5c0e91761c0fb3f096d34e29b13e3e2b4f23b7bccb6eb1f5"
+  },
+  "headings": [
+    "Request Body for Get Voice Call Status API",
+    "Get Voice Call Status Path Parameters",
+    "Get Voice Call Status Header Parameters",
+    "Sample Response Body",
+    "Response Parameters"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/send-message-api-v2-get-voice-call-status-api.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/send-message-api-v2-get-voice-call-status-api",
+  "retrieved_at": "2026-09-08T23:31:44+00:00",
+  "sha256_api_metadata": "575f65b7d8dc3ea0b617314bc47e22705dc85fc80ee114e6faa20ada4e8aafe2",
+  "sha256_html_response": "2a40595451a9beaadb2e941d92d5eccb59b623bdc5cc72b238618cdfbd747787",
+  "sha256_source_body": "fddb5d22cd9c7e237a13640da89d6b5a76b85e8b38ef1e07513a51eff8be7435",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/send-message-api-v2-get-voice-call-status-api.source.md",
+  "source_updated_at": "2026-04-09T11:42:58.226Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/send-message-api-v2-get-voice-call-status-api.txt",
+  "title": "Get Voice Call Status Using Send Message API v2",
+  "url": "https://developers.webexconnect.io/reference/send-message-api-v2-get-voice-call-status-api",
+  "word_count": 915,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/developer/send-message-api-v2-get-voice-call-status-api.metadata.json"
+}

@@ -1,0 +1,1900 @@
+{
+  "schema_version": 1,
+  "segments": [
+    {
+      "start": 3.7,
+      "end": 8.5,
+      "text": "Okay, so good morning, good afternoon. Good evening everybody and thank you for joining."
+    },
+    {
+      "start": 8.5,
+      "end": 14.98,
+      "text": "We have a special guest here today and his name is Manoj Muthavarupu."
+    },
+    {
+      "start": 14.98,
+      "end": 24.34,
+      "text": "Rarapu, excuse me. Manoj is the director of product management. He comes to us from Hyderabad, India today."
+    },
+    {
+      "start": 24.34,
+      "end": 31.42,
+      "text": "And he actually did a session that I went to at Web X 1 on the agent."
+    },
+    {
+      "start": 31.42,
+      "end": 35.5,
+      "text": "And this is something new and different from Cisco."
+    },
+    {
+      "start": 35.5,
+      "end": 40.14,
+      "text": "And so I thought you guys would be interested in hearing more about it."
+    },
+    {
+      "start": 40.14,
+      "end": 45.58,
+      "text": "And so with that, I'm going to turn over the call to Manoj. Thank you, Manoj."
+    },
+    {
+      "start": 45.58,
+      "end": 51.5,
+      "text": "Alright, thank you, Dana. Hello, everyone. Thank you for joining in today."
+    },
+    {
+      "start": 51.5,
+      "end": 55.98,
+      "text": "So we have about 40 minutes or so, right? So I won't do too many slides."
+    },
+    {
+      "start": 55.98,
+      "end": 61.82,
+      "text": "We'll probably just introduce the product and the positioning for about 10 minutes,"
+    },
+    {
+      "start": 61.82,
+      "end": 70.46,
+      "text": "and then we'll jump into a demo. And then, yeah, we can come back to slides and do some more material"
+    },
+    {
+      "start": 70.46,
+      "end": 81.34,
+      "text": "or we can do Q&A, whatever works for you. Cool. So before we do a deeper dive into AI agents"
+    },
+    {
+      "start": 81.42,
+      "end": 89.42,
+      "text": "specifically, I wanted to introduce how we are thinking about the product set from our customer"
+    },
+    {
+      "start": 89.42,
+      "end": 95.9,
+      "text": "experience portfolio. We'll not do like a deeper dive into any of these, but at least to give you"
+    },
+    {
+      "start": 95.9,
+      "end": 101.66,
+      "text": "the broad pillars and layers, right? So you have all the customer touch points on your left."
+    },
+    {
+      "start": 101.66,
+      "end": 108.06,
+      "text": "These are all the channels that the customers wish to communicate with the business today."
+    },
+    {
+      "start": 108.06,
+      "end": 112.7,
+      "text": "And on the right, you have all the business systems, back office systems,"
+    },
+    {
+      "start": 113.74,
+      "end": 121.5,
+      "text": "ticketing and any sort of IT infrastructure that may be there in your business that helps"
+    },
+    {
+      "start": 121.5,
+      "end": 126.06,
+      "text": "you communicate better with your customers. So our portfolio kind of plays in between these"
+    },
+    {
+      "start": 126.06,
+      "end": 133.18,
+      "text": "two bookends. So the layers are various, so particularly on the bottom ones,"
+    },
+    {
+      "start": 133.82,
+      "end": 138.86,
+      "text": "they're basically building blocks and serve as a foundation for the three pillars which are"
+    },
+    {
+      "start": 138.86,
+      "end": 145.18,
+      "text": "more of an application level constructs or the kind of workloads that we wish to serve."
+    },
+    {
+      "start": 145.18,
+      "end": 151.1,
+      "text": "So we have proactive journeys, which is being able to communicate to the customer even before"
+    },
+    {
+      "start": 151.1,
+      "end": 156.46,
+      "text": "they come in as an inbound contact. We have AI agents, which we'll do a deeper dive into today."
+    },
+    {
+      "start": 156.46,
+      "end": 159.42,
+      "text": "And then, of course, you have the contact center in the form of human agents."
+    },
+    {
+      "start": 160.14,
+      "end": 165.5,
+      "text": "So on the very top, you have the developer ecosystem and extensibility that the portfolio"
+    },
+    {
+      "start": 165.5,
+      "end": 175.06,
+      "text": "offers. So today's focus is going to be AI agents, right? So most of this is probably already"
+    },
+    {
+      "start": 176.26,
+      "end": 182.1,
+      "text": "obvious to you if you've been in the industry for a while. The demands from the customer side"
+    },
+    {
+      "start": 183.3,
+      "end": 188.18,
+      "text": "have definitely been going up over the last few years. This is about wanting to communicate"
+    },
+    {
+      "start": 188.18,
+      "end": 192.66,
+      "text": "with businesses on a channel of their choice at a time that is convenient to them."
+    },
+    {
+      "start": 193.3,
+      "end": 199.14,
+      "text": "And in a mode that works for them, right? So typically voice tends to be a very synchronous"
+    },
+    {
+      "start": 199.14,
+      "end": 206.18,
+      "text": "channel. You have to be able to serve that kind of contact very quickly by providing"
+    },
+    {
+      "start": 206.18,
+      "end": 210.82,
+      "text": "the right agent at the right time from your contact center. And that's a challenge that's"
+    },
+    {
+      "start": 210.82,
+      "end": 221.46,
+      "text": "easier solved than said. So what AI agents really help you do is bring in this element of an elastic"
+    },
+    {
+      "start": 221.46,
+      "end": 227.38,
+      "text": "supply because you can then instantiate and terminate them on demand without a lot of"
+    },
+    {
+      "start": 228.74,
+      "end": 235.3,
+      "text": "lead time training or having to manage some kind of onboarding into your contact center itself."
+    },
+    {
+      "start": 235.7,
+      "end": 242.42,
+      "text": "Right? So they obviously bring you the benefit of containment, which is where a customer calling in"
+    },
+    {
+      "start": 242.42,
+      "end": 248.74,
+      "text": "or messaging in to your contact center gets fully served by the AI agent without ever having to"
+    },
+    {
+      "start": 249.86,
+      "end": 254.82,
+      "text": "be attached to a human agent. Or even if they do not do that in all the cases,"
+    },
+    {
+      "start": 255.62,
+      "end": 262.1,
+      "text": "they definitely help you play the role of a concierge where a lot of repeatable portions"
+    },
+    {
+      "start": 262.1,
+      "end": 268.02,
+      "text": "of conversation such as identifying your customer, authenticating them, finding out the"
+    },
+    {
+      "start": 268.02,
+      "end": 273.7,
+      "text": "reason for their contact, maybe doing a data dip and serving some preliminary information."
+    },
+    {
+      "start": 274.42,
+      "end": 278.98,
+      "text": "These are the kind of workloads that AI agents can then offload so that your human agents can"
+    },
+    {
+      "start": 278.98,
+      "end": 286.18,
+      "text": "then build on top of a summary that these AI agents generate and then continue the conversation"
+    },
+    {
+      "start": 286.18,
+      "end": 291.54,
+      "text": "from there on so that they'll actually get lower handling times, better metrics and solve"
+    },
+    {
+      "start": 291.54,
+      "end": 296.26,
+      "text": "real problems instead of going through the process. So with that said,"
+    },
+    {
+      "start": 298.18,
+      "end": 304.42,
+      "text": "what is WebEx AI agent? So WebEx AI agent is a platform that allows you to build these"
+    },
+    {
+      "start": 304.42,
+      "end": 310.5,
+      "text": "omnichannel AI agents, which means you can build an AI agent to serve customers in both"
+    },
+    {
+      "start": 310.5,
+      "end": 317.94,
+      "text": "voice and messaging. And in the future version, you could have a multi-model conversation"
+    },
+    {
+      "start": 317.94,
+      "end": 324.5,
+      "text": "as well, wherein the customer may be in conversation with your AI agent on voice while"
+    },
+    {
+      "start": 325.06,
+      "end": 331.3,
+      "text": "also texting the same business and having a conversational session going on another channel"
+    },
+    {
+      "start": 331.3,
+      "end": 337.22,
+      "text": "as well. This could be useful for sending in some images, sending in some transaction IDs,"
+    },
+    {
+      "start": 337.22,
+      "end": 341.78,
+      "text": "which tend to be more easy or more convenient on messaging channels versus"
+    },
+    {
+      "start": 341.78,
+      "end": 347.54,
+      "text": "having to say them out in a typical voice channel. Now these AI agents can operate"
+    },
+    {
+      "start": 347.54,
+      "end": 353.78,
+      "text": "either in an autonomous mode where they leverage large language models and generative AI for"
+    },
+    {
+      "start": 354.58,
+      "end": 360.98,
+      "text": "the entire conversational orchestration, figuring out what to say when a customer says something."
+    },
+    {
+      "start": 361.62,
+      "end": 367.14,
+      "text": "So that whole dialogue and back and forth and state management is taken care of by the"
+    },
+    {
+      "start": 367.14,
+      "end": 372.42,
+      "text": "large language models in the autonomous case. Or they can actually run in a scripted mode,"
+    },
+    {
+      "start": 372.42,
+      "end": 378.18,
+      "text": "which is where you build more traditional machine learning algorithms by bringing in your own"
+    },
+    {
+      "start": 378.18,
+      "end": 385.06,
+      "text": "training data. If you're familiar with popular vendors in the market like Google Dialogflow"
+    },
+    {
+      "start": 385.06,
+      "end": 391.62,
+      "text": "or Amazon Lex or any of those developer platforms, you can think of this mode as similar to that."
+    },
+    {
+      "start": 391.62,
+      "end": 396.1,
+      "text": "So you define your entities, you define your intents and then basically"
+    },
+    {
+      "start": 396.42,
+      "end": 403.22,
+      "text": "code up or write up what the agent must say at different states in the conversation"
+    },
+    {
+      "start": 404.34,
+      "end": 412.5,
+      "text": "when they're actively conversing. And then in terms of the jobs to be done for these AI agents,"
+    },
+    {
+      "start": 413.62,
+      "end": 418.42,
+      "text": "they can either answer questions from a knowledge source that you attach to them"
+    },
+    {
+      "start": 419.22,
+      "end": 426.58,
+      "text": "or actually go a step further and take actions or even do fulfillment on top of those actions"
+    },
+    {
+      "start": 426.58,
+      "end": 433.54,
+      "text": "for your customers. By that I mean they'll be able to either connect to a business system that"
+    },
+    {
+      "start": 433.54,
+      "end": 439.14,
+      "text": "you might have and post data into it or read data from it, process any kind of automation"
+    },
+    {
+      "start": 439.14,
+      "end": 445.38,
+      "text": "logic that may be there already today and basically provide that true end-to-end fulfillment"
+    },
+    {
+      "start": 445.94,
+      "end": 452.34,
+      "text": "without just limiting themselves to a conversational wrapper for logging a ticket somewhere"
+    },
+    {
+      "start": 452.34,
+      "end": 459.22,
+      "text": "and someone else has to come in and action on top of that ticket. So that's the capability we'll be"
+    },
+    {
+      "start": 459.22,
+      "end": 467.38,
+      "text": "demonstrating today. And of course lastly, needless to say, all these AI agents will have tight"
+    },
+    {
+      "start": 467.38,
+      "end": 471.86,
+      "text": "integrations with our contact center offering. You'll be able to consume them without"
+    },
+    {
+      "start": 471.86,
+      "end": 478.98,
+      "text": "having to rep and replace your contact center flows. So to begin with, we're only exposing them"
+    },
+    {
+      "start": 478.98,
+      "end": 484.5,
+      "text": "to be consumed within our contact center offerings, that is our Pebex contact center and the Brem versions,"
+    },
+    {
+      "start": 485.46,
+      "end": 491.7,
+      "text": "but in a future iteration, you will be able to just build an AI agent on our platform and"
+    },
+    {
+      "start": 491.7,
+      "end": 499.4,
+      "text": "connect it to any contact center out there. With that, I'll switch to a demo of the product"
+    },
+    {
+      "start": 499.4,
+      "end": 509.7,
+      "text": "itself. If I can just bring back my browser, hopefully my screen share has come through."
+    },
+    {
+      "start": 510.98,
+      "end": 518.66,
+      "text": "So I'm on the AI agent dashboard right now where you can see the various AI agents that are already"
+    },
+    {
+      "start": 518.66,
+      "end": 527.78,
+      "text": "built in my account. So like I said, they can be either of an autonomous kind or a scripted kind."
+    },
+    {
+      "start": 527.86,
+      "end": 535.3,
+      "text": "So today, we'll be focusing more on the autonomous option. So I want to show you how"
+    },
+    {
+      "start": 535.3,
+      "end": 541.86,
+      "text": "the create journey looks like to start with. So you can either build one from scratch or build on"
+    },
+    {
+      "start": 541.86,
+      "end": 548.66,
+      "text": "top of a bunch of existing templates. So obviously, we're working on expanding this set. Today,"
+    },
+    {
+      "start": 548.66,
+      "end": 557.38,
+      "text": "it just has a few handful of templates to serve as a starter kit to reduce the time"
+    },
+    {
+      "start": 557.38,
+      "end": 562.9,
+      "text": "it takes for you to build. So I'll just do the start from scratch. And this is where"
+    },
+    {
+      "start": 562.9,
+      "end": 568.74,
+      "text": "you take the two important decisions that we briefly touched upon. Do you want the AI agent"
+    },
+    {
+      "start": 568.74,
+      "end": 575.06,
+      "text": "to run in an autonomous mode or in a scripted mode? And within whatever mode that you select,"
+    },
+    {
+      "start": 575.06,
+      "end": 580.26,
+      "text": "what is the primary function you want the AI agent to play? Now, one question that might"
+    },
+    {
+      "start": 580.26,
+      "end": 585.46,
+      "text": "naturally come to you is, do I really have to differentiate between answering questions"
+    },
+    {
+      "start": 585.46,
+      "end": 590.5,
+      "text": "and performing actions? Because most enterprise cases would really require both of them to be"
+    },
+    {
+      "start": 590.5,
+      "end": 597.86,
+      "text": "available. So this is just a temporary constraint until the GA in January, at which point"
+    },
+    {
+      "start": 598.58,
+      "end": 604.66,
+      "text": "this second layer of decision is not necessary. Every AI agent can both work with knowledge"
+    },
+    {
+      "start": 604.66,
+      "end": 611.62,
+      "text": "as well as perform actions. But just to help us get there in the process today,"
+    },
+    {
+      "start": 611.62,
+      "end": 617.3,
+      "text": "these two are demarcated into separate AI agents. So this is where you make your selection and then"
+    },
+    {
+      "start": 617.3,
+      "end": 624.66,
+      "text": "click Next and give a few basic details. You just give it a name and then give it a goal"
+    },
+    {
+      "start": 624.66,
+      "end": 629.78,
+      "text": "and select a knowledge base to work with. So in the interest of time, I'll not create one from"
+    },
+    {
+      "start": 629.78,
+      "end": 635.3,
+      "text": "scratch, but I'll actually show you something that I've created a couple of hours ago"
+    },
+    {
+      "start": 636.26,
+      "end": 642.26,
+      "text": "in preparation for this. So this is the one we'll be looking at today. But before we enter the agent"
+    },
+    {
+      "start": 642.26,
+      "end": 648.5,
+      "text": "itself, let's look at how knowledge management happens on the product. So this is your knowledge"
+    },
+    {
+      "start": 648.5,
+      "end": 655.06,
+      "text": "basis section. You can create as many knowledge bases as you want. So I have created a simple"
+    },
+    {
+      "start": 655.06,
+      "end": 661.94,
+      "text": "restaurant knowledge base for today's demo. It has some basic information. So I've gone to this"
+    },
+    {
+      "start": 662.9,
+      "end": 668.66,
+      "text": "web page of Adrop Cafe. So obviously it has a couple of branches here in Hyderabad."
+    },
+    {
+      "start": 669.38,
+      "end": 676.5,
+      "text": "So I've copied some information from the website onto my knowledge base. Like you can see,"
+    },
+    {
+      "start": 676.5,
+      "end": 683.14,
+      "text": "it was just literally a copy base where the HTML formatting was also retained and maintained"
+    },
+    {
+      "start": 683.14,
+      "end": 689.78,
+      "text": "in the database. So I've added a couple of location information. And then some questions"
+    },
+    {
+      "start": 689.78,
+      "end": 697.14,
+      "text": "about can I host parties? What is the benefit of hosting parties in Hard Rock and so on."
+    },
+    {
+      "start": 697.78,
+      "end": 703.86,
+      "text": "So obviously you can use this native knowledge base to scale to whatever level you want. There is"
+    },
+    {
+      "start": 703.86,
+      "end": 711.06,
+      "text": "a rich text editor. There are various levels of permissions control here. You can create and"
+    },
+    {
+      "start": 711.06,
+      "end": 716.9,
+      "text": "manage your knowledge entirely here if you choose to. But of course, you could also bring in"
+    },
+    {
+      "start": 716.9,
+      "end": 723.14,
+      "text": "existing files of knowledge and add them to your knowledge base. So what I've done is,"
+    },
+    {
+      "start": 723.14,
+      "end": 730.98,
+      "text": "so the menu at the Hard Rock Cafe in Hyderabad is available as a PDF file. So I've downloaded this"
+    },
+    {
+      "start": 730.98,
+      "end": 738.5,
+      "text": "and ingested it into my knowledge base in this cafe. So if you see that, it's not a typical"
+    },
+    {
+      "start": 738.5,
+      "end": 744.34,
+      "text": "PDF. It's not well formatted for a demo or easy ingestion. So there's images. There's all"
+    },
+    {
+      "start": 744.42,
+      "end": 752.1,
+      "text": "sorts of font. And the information is not really structured to be machine readable."
+    },
+    {
+      "start": 752.1,
+      "end": 759.06,
+      "text": "It's meant to be human readable. So I've already ingested this knowledge base. Now let's see"
+    },
+    {
+      "start": 759.06,
+      "end": 768.18,
+      "text": "how I can connect it with an AI agent. So like I said, I just created this a while ago. So you"
+    },
+    {
+      "start": 768.18,
+      "end": 773.38,
+      "text": "just give it a simple goal. And in this case, I wasn't very prescriptive. It can be as brief"
+    },
+    {
+      "start": 773.38,
+      "end": 779.14,
+      "text": "as saying, answer questions about Hard Rock Cafe in Hyderabad. You can also give it some persona."
+    },
+    {
+      "start": 779.14,
+      "end": 783.78,
+      "text": "You can basically go much more detailed in your instructions if you choose to,"
+    },
+    {
+      "start": 783.78,
+      "end": 787.38,
+      "text": "but it's not necessary. That's an optional step to give it a conversational step."
+    },
+    {
+      "start": 788.26,
+      "end": 796.58,
+      "text": "So I also gave a chatty welcome message. So with these two basic things out of the way,"
+    },
+    {
+      "start": 796.58,
+      "end": 800.02,
+      "text": "the only other step that you need to do is actually connect it to a knowledge base."
+    },
+    {
+      "start": 800.66,
+      "end": 805.54,
+      "text": "So there are three knowledge bases in my tenant. I've connected it to the Hard Rock Cafe one."
+    },
+    {
+      "start": 807.22,
+      "end": 810.98,
+      "text": "With this much setup already in place, let's go ahead and preview."
+    },
+    {
+      "start": 811.78,
+      "end": 819.46,
+      "text": "So whatever welcome message I've chosen is played back to me. Then I can say, where is the cafe?"
+    },
+    {
+      "start": 823.35,
+      "end": 829.35,
+      "text": "And let's go back and make sure that whatever answer we get, we can validate."
+    },
+    {
+      "start": 832.97,
+      "end": 839.13,
+      "text": "Okay. So I got the two addresses, the phone number, the maps link, and so on."
+    },
+    {
+      "start": 840.25,
+      "end": 853.5,
+      "text": "Okay, cool. Are you open until 2 a.m. on Vitis? That's probably the kind of a question"
+    },
+    {
+      "start": 854.38,
+      "end": 861.82,
+      "text": "a customer might have. And let's see how I've actually captured these timings, right? So the"
+    },
+    {
+      "start": 861.82,
+      "end": 867.34,
+      "text": "timings themselves, they're not really too specific. This is how restaurants and cafes would"
+    },
+    {
+      "start": 867.34,
+      "end": 871.42,
+      "text": "list their timings. There's the weekdays, there's weekends, and then some starting time and ending"
+    },
+    {
+      "start": 871.42,
+      "end": 880.22,
+      "text": "time. So I could ask the question directly and say, what are your open hours? That wouldn't"
+    },
+    {
+      "start": 880.22,
+      "end": 886.94,
+      "text": "have been a very hard one to solve for. But given the sophistication that large language"
+    },
+    {
+      "start": 886.94,
+      "end": 893.42,
+      "text": "models bring in, so all such indirect questions are also understood and answered accordingly."
+    },
+    {
+      "start": 893.42,
+      "end": 901.5,
+      "text": "So none of the two cafes are open until 2 a.m. on Vitis is the right answer, as you can see."
+    },
+    {
+      "start": 902.62,
+      "end": 913.96,
+      "text": "Okay. So I want to host a party. Yeah, by now these answers probably won't surprise you."
+    },
+    {
+      "start": 913.96,
+      "end": 921.0,
+      "text": "So whatever information we had created in the party's document is being rehashed."
+    },
+    {
+      "start": 922.76,
+      "end": 929.48,
+      "text": "So let's try out some questions around the menu, right? So I can say something like, hope you serve"
+    },
+    {
+      "start": 930.36,
+      "end": 946.39,
+      "text": "salads, okay? So I'm responded back with three different salads with some additional details"
+    },
+    {
+      "start": 946.39,
+      "end": 955.03,
+      "text": "about it. Let's cross check, maybe one of them at least. So okay, so I do have three different"
+    },
+    {
+      "start": 955.03,
+      "end": 968.39,
+      "text": "salads. The name seemed right, the prices seem right. So it's pretty much accurate. And yeah,"
+    },
+    {
+      "start": 968.39,
+      "end": 974.79,
+      "text": "so because this whole thing is backed by a large language model and because I have not given it"
+    },
+    {
+      "start": 975.35,
+      "end": 980.31,
+      "text": "explicit instructions, the style of interaction might vary from customer to customer."
+    },
+    {
+      "start": 980.31,
+      "end": 984.87,
+      "text": "To a different customer, it might not give these full details. Maybe it would just say,"
+    },
+    {
+      "start": 984.87,
+      "end": 989.51,
+      "text": "yes, we do serve salads. These are the three salads. And then I can ask a variety of follow-up"
+    },
+    {
+      "start": 989.51,
+      "end": 995.67,
+      "text": "questions on top of it. And I don't need to ask it in an active voice and use direct references."
+    },
+    {
+      "start": 996.31,
+      "end": 1003.59,
+      "text": "So let's say I'm quite busy. I didn't read all of this. But I remember that maybe I have"
+    },
+    {
+      "start": 1003.67,
+      "end": 1017.56,
+      "text": "nut allergy or some of the guests have nut allergy. I do any of them have nuts, okay? So it does say that"
+    },
+    {
+      "start": 1017.56,
+      "end": 1025.08,
+      "text": "the honey citrus salad has some spiced walnuts, okay? That looks accurate. And we can cross check"
+    },
+    {
+      "start": 1025.08,
+      "end": 1032.6,
+      "text": "that with the menu itself. Honey nut salad, spiced walnuts. Hopefully you get the idea."
+    },
+    {
+      "start": 1033.16,
+      "end": 1038.44,
+      "text": "So like this, you can keep having a real conversation based on whatever knowledge"
+    },
+    {
+      "start": 1038.44,
+      "end": 1047.48,
+      "text": "you fit in. Now, of course, knowledge is only one part of the game. And where enterprises will really"
+    },
+    {
+      "start": 1047.48,
+      "end": 1053.64,
+      "text": "have a value on log is not if these AI agents can just answer questions, but actually connect"
+    },
+    {
+      "start": 1053.64,
+      "end": 1060.28,
+      "text": "to their systems. Maybe I want to take an appointment or maybe I want to do a reservation for a party"
+    },
+    {
+      "start": 1060.28,
+      "end": 1064.68,
+      "text": "that I want to throw. So I'll need many details like the expected number of guests,"
+    },
+    {
+      "start": 1065.4,
+      "end": 1070.52,
+      "text": "what date am I looking to throw the party, what are my instructions on the menu and so on."
+    },
+    {
+      "start": 1070.52,
+      "end": 1077.08,
+      "text": "So typically, this whole information might actually happen on a contact center with an agent"
+    },
+    {
+      "start": 1077.08,
+      "end": 1082.68,
+      "text": "taking in all these details filling in some system while he's interacting with the customer."
+    },
+    {
+      "start": 1082.68,
+      "end": 1087.48,
+      "text": "So can we automate or can we achieve that level of sophistication with the AI agents"
+    },
+    {
+      "start": 1088.04,
+      "end": 1095.48,
+      "text": "is the natural next step. So for that, I thought I'll showcase the healthcare"
+    },
+    {
+      "start": 1096.92,
+      "end": 1100.92,
+      "text": "AI agent that I've built, again, very recently, like a couple of days ago."
+    },
+    {
+      "start": 1102.52,
+      "end": 1108.44,
+      "text": "So this is the other agent category. So it's autonomous and it's taking actions."
+    },
+    {
+      "start": 1109.08,
+      "end": 1114.68,
+      "text": "And really the structure is more or less the same. So you again, give it a goal."
+    },
+    {
+      "start": 1114.76,
+      "end": 1120.52,
+      "text": "And then you give it some instructions to follow. And again, you could be as detailed."
+    },
+    {
+      "start": 1120.52,
+      "end": 1123.96,
+      "text": "So for example, if I show you the other agent that I have here,"
+    },
+    {
+      "start": 1123.96,
+      "end": 1129.0,
+      "text": "which is meant to be for a hospital management system. So I gave a lot more instructions because"
+    },
+    {
+      "start": 1129.96,
+      "end": 1136.04,
+      "text": "I need it to follow a certain style. I need it to obey some rules that I'm setting. So all"
+    },
+    {
+      "start": 1136.04,
+      "end": 1142.12,
+      "text": "those instructions can go here. Or it can even be as lightweight as what I'm doing in this case,"
+    },
+    {
+      "start": 1142.12,
+      "end": 1150.2,
+      "text": "if the entire goal is about just taking appointments. So yeah, so those are the instructions."
+    },
+    {
+      "start": 1150.2,
+      "end": 1156.84,
+      "text": "And then this is the heart of the agent here. So it has what are called as actions. And inside"
+    },
+    {
+      "start": 1156.84,
+      "end": 1162.28,
+      "text": "an action, it's again, really something simple and easy to manage. So you give it a name."
+    },
+    {
+      "start": 1162.92,
+      "end": 1166.36,
+      "text": "And then you give it a description of when this action must be invoked."
+    },
+    {
+      "start": 1167.24,
+      "end": 1172.36,
+      "text": "So in this particular case, I'm trying to fetch the patient details based on a unique identifier."
+    },
+    {
+      "start": 1173.08,
+      "end": 1181.96,
+      "text": "So every patient registered in Epic has a four digit number preceded by the letter E in a certain"
+    },
+    {
+      "start": 1181.96,
+      "end": 1187.72,
+      "text": "context. So as soon as I get that identified, I want to fetch the details of the patient,"
+    },
+    {
+      "start": 1187.72,
+      "end": 1191.64,
+      "text": "do some validation, or maybe start addressing the patient by his or her name."
+    },
+    {
+      "start": 1191.64,
+      "end": 1198.92,
+      "text": "So once I define the action, I also define whether I want this action to just be about"
+    },
+    {
+      "start": 1198.92,
+      "end": 1205.16,
+      "text": "slot filling or have slot filling and fulfillment. So slot filling is when typically,"
+    },
+    {
+      "start": 1205.16,
+      "end": 1211.4,
+      "text": "so you just want this AI agent to collect the necessary information, but not really act upon"
+    },
+    {
+      "start": 1211.4,
+      "end": 1218.2,
+      "text": "it. This will be useful where you use these agents inside your contact center flows. Maybe"
+    },
+    {
+      "start": 1218.2,
+      "end": 1225.64,
+      "text": "you don't want to invest in separate automation logic to be wired up directly with the AI agent."
+    },
+    {
+      "start": 1225.64,
+      "end": 1229.32,
+      "text": "And you just want to handle it within your contact center flow. So that is when you would"
+    },
+    {
+      "start": 1229.32,
+      "end": 1233.4,
+      "text": "choose something like slot filling, where all the gathered details are available as"
+    },
+    {
+      "start": 1234.44,
+      "end": 1238.36,
+      "text": "variables or attributes inside your flow. And then your flow logic can continue"
+    },
+    {
+      "start": 1239.48,
+      "end": 1244.92,
+      "text": "and act upon those variables. But that's less powerful. And the more powerful option is to"
+    },
+    {
+      "start": 1245.0,
+      "end": 1249.24,
+      "text": "actually go ahead and do end to end fulfillment. So that is the mode I'm choosing here."
+    },
+    {
+      "start": 1249.24,
+      "end": 1254.36,
+      "text": "So I'm again defining the bare minimum details that I would want. If I go to the book appointment"
+    },
+    {
+      "start": 1254.36,
+      "end": 1260.6,
+      "text": "action, you would see other critical information like the appointment date and time also being"
+    },
+    {
+      "start": 1260.6,
+      "end": 1267.08,
+      "text": "captured. So these are essentially the details that are needed to invoke this action. Again,"
+    },
+    {
+      "start": 1267.08,
+      "end": 1271.72,
+      "text": "inside the action, nothing fancy, some description of what this attribute is about"
+    },
+    {
+      "start": 1271.72,
+      "end": 1276.28,
+      "text": "and what data type are we expecting to gather so that the agent can do some validations and"
+    },
+    {
+      "start": 1276.28,
+      "end": 1281.72,
+      "text": "all of that. So for example, in a case like a date, you can define the format also to invoke"
+    },
+    {
+      "start": 1281.72,
+      "end": 1286.44,
+      "text": "this fulfillment. You define whether it is a mandatory attribute or an optional attribute"
+    },
+    {
+      "start": 1286.44,
+      "end": 1295.48,
+      "text": "as well. So once you do all of that, you can then link it up to a workflow on WebExConnect."
+    },
+    {
+      "start": 1295.48,
+      "end": 1300.84,
+      "text": "Now, those of you who are familiar with Connect may relate to the low code, no code"
+    },
+    {
+      "start": 1301.96,
+      "end": 1307.96,
+      "text": "flow engine that we have in our CX portfolio. So for example, the book appointment flow"
+    },
+    {
+      "start": 1307.96,
+      "end": 1313.96,
+      "text": "will look something like this. Obviously, this is a toy flow. It can become as complex as you want"
+    },
+    {
+      "start": 1313.96,
+      "end": 1319.96,
+      "text": "and you can have 50, 100 nodes inside this. And all of that is just encapsulated in a"
+    },
+    {
+      "start": 1320.84,
+      "end": 1326.12,
+      "text": "in a simple webhook that you can wire up with your AI agent. So this is the webhook that I'm using."
+    },
+    {
+      "start": 1327.16,
+      "end": 1333.0,
+      "text": "These are the details that I'm capturing and using those details and then invoking some operation on"
+    },
+    {
+      "start": 1333.72,
+      "end": 1339.96,
+      "text": "the EPIC system, which is a healthcare patient management system. So I put in all the necessary"
+    },
+    {
+      "start": 1339.96,
+      "end": 1345.88,
+      "text": "details. I pass the variables that I've captured. And then based on whatever is the outcome of"
+    },
+    {
+      "start": 1345.88,
+      "end": 1351.0,
+      "text": "this operation, I notify the AI agent back. So that's what's happening here in the flow."
+    },
+    {
+      "start": 1351.64,
+      "end": 1355.88,
+      "text": "So you just link it up to your AI agent and your action is good to me."
+    },
+    {
+      "start": 1357.0,
+      "end": 1363.61,
+      "text": "So now let's see this in action. Okay, I'll help you."
+    },
+    {
+      "start": 1364.41,
+      "end": 1385.74,
+      "text": "Okay, so I have one patient ID that I know for sure exists in my EPIC integration."
+    },
+    {
+      "start": 1387.1,
+      "end": 1391.34,
+      "text": "Okay, so what the AI agent did in the background is picked this up"
+    },
+    {
+      "start": 1391.34,
+      "end": 1398.86,
+      "text": "and executed the fetch patient details by using my patient identifier."
+    },
+    {
+      "start": 1398.86,
+      "end": 1405.18,
+      "text": "So now it knows what my name is and it is able to retain this information for subsequent actions."
+    },
+    {
+      "start": 1405.74,
+      "end": 1418.15,
+      "text": "Okay, so then I can say something like show my appointment. So as you can see in the"
+    },
+    {
+      "start": 1419.03,
+      "end": 1425.75,
+      "text": "get appointments action, patient ID is a mandatory attribute, but I did not have to"
+    },
+    {
+      "start": 1425.75,
+      "end": 1433.03,
+      "text": "give that again because I've already given that and that information and context is retained by the"
+    },
+    {
+      "start": 1433.03,
+      "end": 1438.63,
+      "text": "AI agent. Okay, looks like I have a lot of appointments coming in. Now I can choose"
+    },
+    {
+      "start": 1438.63,
+      "end": 1446.63,
+      "text": "to reschedule some of these, cancel one of them, do whatever, right? So let's look at the July"
+    },
+    {
+      "start": 1446.63,
+      "end": 1453.03,
+      "text": "10th one that's too far out into the future, right? So I can say something like cancel the last one."
+    },
+    {
+      "start": 1455.78,
+      "end": 1461.06,
+      "text": "I don't need to specifically reference that. Now why is it asking me a cancellation reason?"
+    },
+    {
+      "start": 1462.58,
+      "end": 1466.5,
+      "text": "Because I have defined cancellation reason as a mandatory attribute in my"
+    },
+    {
+      "start": 1467.14,
+      "end": 1488.55,
+      "text": "action here. I will be traveling. Okay, cool, spin cancel. So we can verify that it"
+    },
+    {
+      "start": 1488.55,
+      "end": 1501.4,
+      "text": "is actually canceled. Okay, we had 11 appointments earlier and now we have 10 appointments and that"
+    },
+    {
+      "start": 1501.4,
+      "end": 1506.52,
+      "text": "one's canceled. So hopefully you get the idea of how actions really help in driving end-to-end"
+    },
+    {
+      "start": 1506.52,
+      "end": 1512.44,
+      "text": "fulfillment. So that's kind of the autonomous mode which I wanted to showcase today."
+    },
+    {
+      "start": 1513.16,
+      "end": 1519.08,
+      "text": "So I'll stop sharing and go back to the presentation. We'll do a few more slides and then"
+    },
+    {
+      "start": 1520.04,
+      "end": 1524.2,
+      "text": "we can do question and answer. Sorry, if I, if you run out of time, I'll make sure,"
+    },
+    {
+      "start": 1525.4,
+      "end": 1532.74,
+      "text": "you know, I answer your questions while you're done. Cool. Now, okay, all of that is great."
+    },
+    {
+      "start": 1532.74,
+      "end": 1540.18,
+      "text": "So autonomous users, large language models, which means many organizations may have some"
+    },
+    {
+      "start": 1540.18,
+      "end": 1546.58,
+      "text": "data concerns. Maybe their security posture is not ready to leverage large language models."
+    },
+    {
+      "start": 1546.58,
+      "end": 1552.02,
+      "text": "So does that mean we don't have a solution for those use cases? No, this is where the"
+    },
+    {
+      "start": 1552.02,
+      "end": 1556.58,
+      "text": "scripted agents come in, come into the picture. I didn't want to give like a full-blown demo of"
+    },
+    {
+      "start": 1556.58,
+      "end": 1562.26,
+      "text": "scripted agents, but just play a couple of videos of the experience of how that looks like. So"
+    },
+    {
+      "start": 1563.46,
+      "end": 1570.5,
+      "text": "here I'm building a credit card related agent. So you just give a couple of variations of"
+    },
+    {
+      "start": 1571.06,
+      "end": 1577.46,
+      "text": "how someone might express this losing of credit card and you can then use generative error at design"
+    },
+    {
+      "start": 1577.46,
+      "end": 1582.66,
+      "text": "time. So what's happening here is those two examples are taken and then relevant training"
+    },
+    {
+      "start": 1582.66,
+      "end": 1588.74,
+      "text": "data is, is then generated by the system. So if your use case, like maybe, maybe you don't"
+    },
+    {
+      "start": 1588.74,
+      "end": 1594.34,
+      "text": "have existing training data, but you do have a use case to solve with automation. This,"
+    },
+    {
+      "start": 1594.34,
+      "end": 1598.02,
+      "text": "these kind of features can then help you bootstrap and quickly build a bot."
+    },
+    {
+      "start": 1598.98,
+      "end": 1605.22,
+      "text": "So that's one feature which should tell you that it's not like there's no AI in scripted agents."
+    },
+    {
+      "start": 1605.22,
+      "end": 1611.62,
+      "text": "It's just that for those use cases where customers want full control, you could still use AI to"
+    },
+    {
+      "start": 1611.62,
+      "end": 1616.42,
+      "text": "build the bot itself or build the agent itself. But at runtime, you will still get a classical"
+    },
+    {
+      "start": 1616.42,
+      "end": 1623.06,
+      "text": "machine learning model, which you may be more comfortable with. And then the other"
+    },
+    {
+      "start": 1623.06,
+      "end": 1630.74,
+      "text": "advantage of going with the scripted model is you can then leverage our channel-aware response"
+    },
+    {
+      "start": 1630.74,
+      "end": 1638.42,
+      "text": "designer, which means the same scripted agent. You can take advantage of the underlying"
+    },
+    {
+      "start": 1638.42,
+      "end": 1645.14,
+      "text": "channel's nuances. So in this example, in WhatsApp, I can respond a bit more smartly by sending"
+    },
+    {
+      "start": 1645.14,
+      "end": 1650.5,
+      "text": "these buttons. Whereas on voice and let's say on a channel like SMS, you won't have that"
+    },
+    {
+      "start": 1650.5,
+      "end": 1656.42,
+      "text": "level of richness incorporated. So you just build your intents and build your agent ones,"
+    },
+    {
+      "start": 1656.42,
+      "end": 1660.42,
+      "text": "and then you can choose to respond differently on different channels. So this is also another"
+    },
+    {
+      "start": 1660.42,
+      "end": 1665.78,
+      "text": "benefit that you get because you're pre-defining all the responses for various intents as a part"
+    },
+    {
+      "start": 1665.78,
+      "end": 1676.47,
+      "text": "of your agent building exercise. Did want to touch upon the high-level architecture and"
+    },
+    {
+      "start": 1676.47,
+      "end": 1684.07,
+      "text": "how we are making sure that the risks of AI are also managed properly. So this is roughly like a"
+    },
+    {
+      "start": 1684.87,
+      "end": 1691.67,
+      "text": "system architecture. So you have AI agents that work in conjunction with the contact center."
+    },
+    {
+      "start": 1691.67,
+      "end": 1697.43,
+      "text": "So I did not demonstrate it today due to time constraints. But of course, any AI agent interaction"
+    },
+    {
+      "start": 1697.43,
+      "end": 1702.31,
+      "text": "can then be seamlessly escalated to a human agent. The human agent will be presented with a"
+    },
+    {
+      "start": 1703.11,
+      "end": 1707.67,
+      "text": "clean, crisp summary of the conversation till that point so that you don't have to go through"
+    },
+    {
+      "start": 1707.67,
+      "end": 1711.83,
+      "text": "the full transcript. And then of course, the integrations and workflows is something"
+    },
+    {
+      "start": 1711.83,
+      "end": 1717.11,
+      "text": "you have seen in the demo. So you have all these entities. And then the connectivity with"
+    },
+    {
+      "start": 1718.31,
+      "end": 1723.19,
+      "text": "the large language models themselves is through input and output guardrails."
+    },
+    {
+      "start": 1723.91,
+      "end": 1730.55,
+      "text": "So what that means is every request that we are making to the large language model"
+    },
+    {
+      "start": 1730.55,
+      "end": 1736.07,
+      "text": "goes through a multi-layered guardrail set that has been developed in house in Cisco."
+    },
+    {
+      "start": 1737.03,
+      "end": 1743.35,
+      "text": "And these could be doing things like they can detect jailbreaking attempts. They can detect"
+    },
+    {
+      "start": 1744.07,
+      "end": 1750.07,
+      "text": "any harmful content or any kind of injection type of attacks that may happen on your data"
+    },
+    {
+      "start": 1750.07,
+      "end": 1755.91,
+      "text": "and so on. So if those things happen, there's a way to detect it and seamlessly recover from it"
+    },
+    {
+      "start": 1756.71,
+      "end": 1763.35,
+      "text": "by not even allowing access to the data. And similarly, on the output, no matter how magical"
+    },
+    {
+      "start": 1763.35,
+      "end": 1768.15,
+      "text": "they might have looked, so the large language models today will still have some propensity to"
+    },
+    {
+      "start": 1768.15,
+      "end": 1773.27,
+      "text": "hallucinate. Although a lot of these guardrails reduce the probability of that, it's still a"
+    },
+    {
+      "start": 1773.27,
+      "end": 1779.19,
+      "text": "non-zero probability. So when such hallucinations happen, do we have a way of detecting it and"
+    },
+    {
+      "start": 1779.19,
+      "end": 1785.43,
+      "text": "then creating a feedback loop in maybe tweaking our knowledge a little bit to support it or"
+    },
+    {
+      "start": 1786.63,
+      "end": 1790.31,
+      "text": "alerting the right people to see whether we have the right"
+    },
+    {
+      "start": 1792.07,
+      "end": 1798.39,
+      "text": "documents ingested or maybe there is overlapping answers which are giving you conflicting information."
+    },
+    {
+      "start": 1798.39,
+      "end": 1803.03,
+      "text": "So the system can suggest signals like that and then you can go and fix it."
+    },
+    {
+      "start": 1806.52,
+      "end": 1813.0,
+      "text": "And then these are not videos. I just also wanted to give you a glimpse into the"
+    },
+    {
+      "start": 1813.56,
+      "end": 1819.24,
+      "text": "UX refresh that we are doing. So as I mentioned earlier, this is still a pre-GA product."
+    },
+    {
+      "start": 1819.24,
+      "end": 1825.64,
+      "text": "We are slated to go GA in January at which point the entire offering will be orderable"
+    },
+    {
+      "start": 1825.64,
+      "end": 1831.0,
+      "text": "via your standard channels. But yeah, so we are also going through UX refresh"
+    },
+    {
+      "start": 1831.0,
+      "end": 1835.56,
+      "text": "and these are some screenshots from how it will look like when it goes GA."
+    },
+    {
+      "start": 1836.52,
+      "end": 1842.2,
+      "text": "Right? So obviously, a lot more richer and cleaner to give you a standard WebEx product"
+    },
+    {
+      "start": 1843.24,
+      "end": 1851.64,
+      "text": "experience. Right? Lots of analytics, etc., also bundled. Cool. With that, I think"
+    },
+    {
+      "start": 1851.64,
+      "end": 1855.48,
+      "text": "we're at the end of my session. I'll stop there and see if there are any questions."
+    },
+    {
+      "start": 1862.84,
+      "end": 1871.58,
+      "text": "Team, what questions do we have? So I have a question. Sorry. When you had"
+    },
+    {
+      "start": 1871.58,
+      "end": 1876.3,
+      "text": "those appointments listed, how did you grab those appointments? Did you have like,"
+    },
+    {
+      "start": 1876.3,
+      "end": 1882.78,
+      "text": "I'm sorry if I missed it. When you asked when the list of all the appointments showed up after the"
+    },
+    {
+      "start": 1885.02,
+      "end": 1891.66,
+      "text": "customer asked for the appointments. Sure. So I have a get appointments"
+    },
+    {
+      "start": 1892.94,
+      "end": 1900.94,
+      "text": "action listed here and it is calling a specific workflow. And the workflow looks something like"
+    },
+    {
+      "start": 1900.94,
+      "end": 1908.38,
+      "text": "this. So I had shown the book appointment workflow, but let's go to the get appointments one."
+    },
+    {
+      "start": 1910.7,
+      "end": 1921.7,
+      "text": "There is this one. So I'm grabbing the patient ID that I already know"
+    },
+    {
+      "start": 1923.06,
+      "end": 1928.1,
+      "text": "and querying an Epic integration that is already there in the system."
+    },
+    {
+      "start": 1929.06,
+      "end": 1934.1,
+      "text": "So I'm making a get future appointments call and passing the relevant information here."
+    },
+    {
+      "start": 1934.1,
+      "end": 1941.46,
+      "text": "The output of this operation is then passed back to an API call that will intimate my AI agent"
+    },
+    {
+      "start": 1941.46,
+      "end": 1947.06,
+      "text": "on the relevant appointments. So that's how it works. So that HTTP"
+    },
+    {
+      "start": 1947.06,
+      "end": 1951.94,
+      "text": "node goes back to where? Like if you click on it, do you want to open it?"
+    },
+    {
+      "start": 1951.94,
+      "end": 1959.54,
+      "text": "Yeah, this one goes to the AI agent. So this is a, so if you see in the web hook,"
+    },
+    {
+      "start": 1960.18,
+      "end": 1967.46,
+      "text": "I'm also passing a callback URL and that is what I'm using to communicate back with my agent."
+    },
+    {
+      "start": 1967.46,
+      "end": 1973.7,
+      "text": "So today this process is a little more manual. So one feature that you can expect by our GA"
+    },
+    {
+      "start": 1973.7,
+      "end": 1981.3,
+      "text": "timelines is not having to do all of this. If you're using an AI agent in your flow,"
+    },
+    {
+      "start": 1981.3,
+      "end": 1986.66,
+      "text": "the flow will know where to post the outcome of the flow to. So you don't even need to do this"
+    },
+    {
+      "start": 1986.66,
+      "end": 1990.58,
+      "text": "step. You just define the variables you want to send back to the agent and that's it."
+    },
+    {
+      "start": 1991.7,
+      "end": 1997.46,
+      "text": "And then if you had for the same list, I know you said delete the last one. Could you have said"
+    },
+    {
+      "start": 1997.46,
+      "end": 2001.38,
+      "text": "delete the fifth one? And it would have comprehended that."
+    },
+    {
+      "start": 2002.18,
+      "end": 2023.85,
+      "text": "Yeah, so let's try that. So delete the fifth one. So let's verify that this is the right one,"
+    },
+    {
+      "start": 2023.85,
+      "end": 2056.22,
+      "text": "right? So fifth one is November 18, 3.30pm, November 18, 3.30pm. Okay. Yeah, the November 18th one is gone."
+    },
+    {
+      "start": 2057.34,
+      "end": 2064.38,
+      "text": "So the sophistication now with, you know, large language model powered conversations,"
+    },
+    {
+      "start": 2065.34,
+      "end": 2071.66,
+      "text": "like anything that you normally say to a human, the way you would expect them to understand,"
+    },
+    {
+      "start": 2072.3,
+      "end": 2075.82,
+      "text": "you can expect that kind of an experience with AI agents as well."
+    },
+    {
+      "start": 2076.38,
+      "end": 2082.22,
+      "text": "So you have another flow, I'm going to assume, that's doing this job for you where you are going,"
+    },
+    {
+      "start": 2082.22,
+      "end": 2088.94,
+      "text": "like update, update appointments. Yeah, I think you're sending that."
+    },
+    {
+      "start": 2089.74,
+      "end": 2093.74,
+      "text": "Okay, so you have a flow for basically every action that you need to take."
+    },
+    {
+      "start": 2095.96,
+      "end": 2101.96,
+      "text": "Correct. So I have an EPIC integration to specifically cancel appointment."
+    },
+    {
+      "start": 2101.96,
+      "end": 2106.92,
+      "text": "Now, this is how the EPIC integration was chosen to be done. You could have,"
+    },
+    {
+      "start": 2108.04,
+      "end": 2113.4,
+      "text": "like if it was another system, maybe you don't have such granular actions, maybe you just have"
+    },
+    {
+      "start": 2114.36,
+      "end": 2118.84,
+      "text": "an update appointment and then maybe you can pass those details. So it depends on the underlying"
+    },
+    {
+      "start": 2118.84,
+      "end": 2124.84,
+      "text": "integration, but yes, in this case, cancellation is a separate flow. So how do you determine"
+    },
+    {
+      "start": 2125.32,
+      "end": 2133.64,
+      "text": "the fifth one out of that list? Yeah, that is the part where AI comes in, right? So when we make"
+    },
+    {
+      "start": 2133.64,
+      "end": 2142.6,
+      "text": "the large language model call, we pass relevant information from the prior conversation also as"
+    },
+    {
+      "start": 2142.6,
+      "end": 2150.12,
+      "text": "a part of it. So it'll know exactly how to interpret what I'm saying when I say fifth one,"
+    },
+    {
+      "start": 2150.12,
+      "end": 2154.44,
+      "text": "because the previous information is also passed to the agent for reference."
+    },
+    {
+      "start": 2155.24,
+      "end": 2161.88,
+      "text": "Okay, so I don't have to build anything to determine all of that back and the AI will do it."
+    },
+    {
+      "start": 2170.86,
+      "end": 2178.86,
+      "text": "I have a question, since we're on this page, because this fulfillment is a select flow,"
+    },
+    {
+      "start": 2180.22,
+      "end": 2183.9,
+      "text": "what other choice other than the WebEx connect flow builder?"
+    },
+    {
+      "start": 2184.78,
+      "end": 2192.22,
+      "text": "Yeah, great question. So as of now, this is the only one. There are no other tools. So originally,"
+    },
+    {
+      "start": 2192.22,
+      "end": 2198.62,
+      "text": "we wanted to integrate with some third party flow builders as well. So that will be on the road map,"
+    },
+    {
+      "start": 2198.62,
+      "end": 2204.46,
+      "text": "but the more important ones will come here. So let's say when you select a flow,"
+    },
+    {
+      "start": 2204.46,
+      "end": 2208.46,
+      "text": "the default one, because we natively integrate with like our own systems,"
+    },
+    {
+      "start": 2208.46,
+      "end": 2214.7,
+      "text": "WebEx connect may be the only one, but let's say you just want to execute some code."
+    },
+    {
+      "start": 2215.74,
+      "end": 2221.5,
+      "text": "If you're exposed to the scripted agents from our previous iteration called bot builder,"
+    },
+    {
+      "start": 2221.5,
+      "end": 2226.06,
+      "text": "there is the option of writing code within the product itself, and you can execute that."
+    },
+    {
+      "start": 2226.06,
+      "end": 2232.86,
+      "text": "So multiple options can be expected here, but flow is the easiest and the most convenient one."
+    },
+    {
+      "start": 2233.82,
+      "end": 2241.18,
+      "text": "Yeah, the code option will be ideal because when I see this builder or studio,"
+    },
+    {
+      "start": 2242.06,
+      "end": 2250.62,
+      "text": "every action with the flow is through the webhook and then HTTPS call. Is there any limit"
+    },
+    {
+      "start": 2250.62,
+      "end": 2256.78,
+      "text": "of concern in terms of flow control? Because if we are dealing a very busy contact center,"
+    },
+    {
+      "start": 2256.78,
+      "end": 2264.22,
+      "text": "many concurrent user, there's any concern where we should consider when we build the system"
+    },
+    {
+      "start": 2264.86,
+      "end": 2270.3,
+      "text": "past the scalability? Yeah, so I mean, connect today handles"
+    },
+    {
+      "start": 2271.34,
+      "end": 2276.22,
+      "text": "reasonably good transactions per second. I'm sorry, transactions per second throughput."
+    },
+    {
+      "start": 2277.18,
+      "end": 2281.42,
+      "text": "I think it's in the default itself that you get even in the lowest year is probably in"
+    },
+    {
+      "start": 2281.42,
+      "end": 2288.7,
+      "text": "thousands per second. So yeah, I mean, there's many customers who are running campaigns that send out,"
+    },
+    {
+      "start": 2289.58,
+      "end": 2292.78,
+      "text": "we're talking about what, hundreds and thousands of messages in an hour."
+    },
+    {
+      "start": 2293.98,
+      "end": 2298.46,
+      "text": "So it shouldn't be a problem and even if it is, we'll definitely scale up to"
+    },
+    {
+      "start": 2298.46,
+      "end": 2304.22,
+      "text": "meet the contact center volume and demands. Okay, yeah, since it's a detailed channel,"
+    },
+    {
+      "start": 2305.1,
+      "end": 2309.26,
+      "text": "the slide delay won't be so obvious. I agree. I'm not too worried about that."
+    },
+    {
+      "start": 2310.06,
+      "end": 2314.94,
+      "text": "I agree. So before voice, that is where we are doing all of the latency optimization."
+    },
+    {
+      "start": 2315.58,
+      "end": 2320.54,
+      "text": "So on voice, there are even things like while I'm executing a flow,"
+    },
+    {
+      "start": 2321.82,
+      "end": 2326.78,
+      "text": "as soon as I initiate the flow execution, I can also start playing a holding message"
+    },
+    {
+      "start": 2326.78,
+      "end": 2333.1,
+      "text": "saying, please wait while I look that up for you or do that up for you. That kind of keeps"
+    },
+    {
+      "start": 2333.1,
+      "end": 2338.38,
+      "text": "the conversation going for a couple of seconds, reducing the perception of latency."
+    },
+    {
+      "start": 2338.38,
+      "end": 2344.94,
+      "text": "So all those features are being prepared. That's kind of like comforting the caller or customer"
+    },
+    {
+      "start": 2344.94,
+      "end": 2349.74,
+      "text": "while waiting while we're requiring behind the scene. Exactly. Cool. Thank you."
+    },
+    {
+      "start": 2352.78,
+      "end": 2357.98,
+      "text": "So I have a question for you Manosh. So you talked about the large language model."
+    },
+    {
+      "start": 2357.98,
+      "end": 2366.3,
+      "text": "Can you talk about that a little bit more and how that's a competitive differentiator versus Cisco?"
+    },
+    {
+      "start": 2367.18,
+      "end": 2375.26,
+      "text": "Sure. So as you saw here when I was building the agent, there's something called as engine here."
+    },
+    {
+      "start": 2376.06,
+      "end": 2385.66,
+      "text": "So an engine is a combination of the speech to text module we are using and then the large language"
+    },
+    {
+      "start": 2385.66,
+      "end": 2390.38,
+      "text": "model we are using, the text to speech. Obviously the speech modules are relevant for voice,"
+    },
+    {
+      "start": 2390.38,
+      "end": 2398.06,
+      "text": "not so much for messaging. And also the prompts that we use, the glue code that binds all of this"
+    },
+    {
+      "start": 2398.06,
+      "end": 2405.42,
+      "text": "together. So this entire package is an engine. So today we are using the best available model"
+    },
+    {
+      "start": 2405.42,
+      "end": 2411.1,
+      "text": "out there, best in the sense that it's at the sweet spot of providing us good accuracy,"
+    },
+    {
+      "start": 2411.1,
+      "end": 2418.38,
+      "text": "but also making this commercially viable, so which is the GPT-4O model from Microsoft's"
+    },
+    {
+      "start": 2418.38,
+      "end": 2424.38,
+      "text": "OpenAI service. Now you can expect more engines to be available here in the future at different"
+    },
+    {
+      "start": 2424.38,
+      "end": 2432.3,
+      "text": "price points. So I'd say the underlying large language model itself is not a differentiator for us,"
+    },
+    {
+      "start": 2432.3,
+      "end": 2437.18,
+      "text": "but the way we are wrapping that up in our own prompt engineering, our own guardrails,"
+    },
+    {
+      "start": 2437.18,
+      "end": 2445.66,
+      "text": "our own speech layer and packaging them up to provide different benefits for different contact"
+    },
+    {
+      "start": 2445.66,
+      "end": 2451.02,
+      "text": "center or communications use cases, I think that's where we really bring in the value."
+    },
+    {
+      "start": 2453.1,
+      "end": 2460.06,
+      "text": "Perfect, thank you. Team, we're getting close to time. Oh, I see Nick Papas has a question."
+    },
+    {
+      "start": 2460.06,
+      "end": 2465.5,
+      "text": "Are you going to have vertical specific engines in the future, Manoj, such as for healthcare?"
+    },
+    {
+      "start": 2466.22,
+      "end": 2470.22,
+      "text": "Yeah, great one, Nick. So in fact, we were speaking to a partner yesterday,"
+    },
+    {
+      "start": 2470.22,
+      "end": 2480.7,
+      "text": "Spensai, and this came up there as well. So will we ever build a healthcare LLM by ourselves to expose"
+    },
+    {
+      "start": 2480.7,
+      "end": 2488.22,
+      "text": "it for AI agents? Probably not. Will we integrate with those vertical LLMs once they become"
+    },
+    {
+      "start": 2489.98,
+      "end": 2496.38,
+      "text": "popular enough and become a market standard where a lot of our customer footprint exists there?"
+    },
+    {
+      "start": 2496.38,
+      "end": 2502.14,
+      "text": "Absolutely. There is also a third route where one of the roadmap items for"
+    },
+    {
+      "start": 2503.1,
+      "end": 2509.9,
+      "text": "kind of like mid next year is to do a bring your own LLM. And this is where large enterprises"
+    },
+    {
+      "start": 2509.9,
+      "end": 2516.14,
+      "text": "that may have already had a head start in investing in their own AI journeys by either fine"
+    },
+    {
+      "start": 2516.14,
+      "end": 2522.38,
+      "text": "tuning some LLM with their own data or maybe partnering with one of these LLM providers and"
+    },
+    {
+      "start": 2523.26,
+      "end": 2529.34,
+      "text": "getting some kind of fresh custom flavor of those LLMs. If they want to bring in their LLM and"
+    },
+    {
+      "start": 2529.34,
+      "end": 2535.58,
+      "text": "connect to our AI agent, that is something we definitely want to support. So yeah, healthcare"
+    },
+    {
+      "start": 2535.58,
+      "end": 2540.78,
+      "text": "specific LLMs is definitely on the radar, but we probably won't build them in-house. We'll look"
+    },
+    {
+      "start": 2540.78,
+      "end": 2546.62,
+      "text": "to integrate with whatever is the best of the breed. Oh, thank you so much. Yeah, so we're"
+    },
+    {
+      "start": 2546.7,
+      "end": 2553.82,
+      "text": "wrapping up and with regard to roadmap and what's coming, we're working right now through our customer"
+    },
+    {
+      "start": 2553.82,
+      "end": 2561.26,
+      "text": "experience business unit to see if we can get a unified roadmap for you all, our top partners"
+    },
+    {
+      "start": 2561.26,
+      "end": 2567.9,
+      "text": "here that are on this call, so that everybody can see everything in on a quarterly basis and not"
+    },
+    {
+      "start": 2567.9,
+      "end": 2572.06,
+      "text": "have the different roadmaps get out there at different times. So we're working on simplifying"
+    },
+    {
+      "start": 2572.06,
+      "end": 2578.62,
+      "text": "that experience as well. So we are at time. I want to thank each and every one of you for"
+    },
+    {
+      "start": 2578.62,
+      "end": 2585.82,
+      "text": "attending today and giving applause to you, Manoj. Thank you for leading us in the session today,"
+    },
+    {
+      "start": 2585.82,
+      "end": 2591.74,
+      "text": "and I hope everybody has a great rest of the week. Thank you. Bye now. Thanks, Son. Thanks for your"
+    },
+    {
+      "start": 2591.74,
+      "end": 2603.42,
+      "text": "time. Thank you. Bye. Thanks, guys."
+    }
+  ]
+}

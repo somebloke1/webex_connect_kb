@@ -1,0 +1,11 @@
+Webex Connect allows you to build and manage each of your customer interactions/journeys in dedicated named workspaces referred to as 'services'. You can create a new service by clicking the Create New Service button on the top-right corner of the Webex Connect home page.
+
+ [Image: Creating a new service in Webex Connect] 
+Creating a new service in Webex Connect
+
+Once clicked, provide a name for your service and click CREATE.
+
+ [Image: Screenshot of the Create New Service dialogue window."] 
+Create New Service Dialog
+
+This takes you to the Service Dashboard of the newly created service where you can buy numbers for SMS and voice interactions, configure app assets for Push, In-App messaging, Apple Messages for Business, Messenger, WhatsApp, and other messaging channels, access service key or JWT token i.e. needed for using the Messaging and Event APIs, and build rules and flows for automating customer interactions.

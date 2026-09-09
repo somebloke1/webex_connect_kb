@@ -1,0 +1,36 @@
+{
+  "api_metadata_path": "sources/cache/developer/whatsapp-hsms-text-based-proactive-notification-message.api.json",
+  "category": "MULTI CHANNEL COMMUNICATION API",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f662e",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "24f471ad770b129d0710c8236577b652721d2ea1dee7de398e197804ee9c4b46",
+    "source_path": "2d391e9d95a144bf5711cff715307f89ae9d571f42b8113c42b08c8d89c0e342",
+    "text_path": "2e5c3ca82da7803dccecaddcabc0e5c25d826d3dc30c35cba232ed09fcff27c8"
+  },
+  "headings": [
+    "Error Codes"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/whatsapp-hsms-text-based-proactive-notification-message.md",
+  "openapi_path": "sources/cache/openapi/a687b92e75059b3378de3ad672404fcfa52a4e5efde78ce0077fb78b406b5992.json",
+  "resolved_url": "https://developers.webexconnect.io/reference/whatsapp-hsms-text-based-proactive-notification-message",
+  "retrieved_at": "2026-09-08T23:31:43+00:00",
+  "sha256_api_metadata": "16454b11d25f089b0101556c24a576b3f1834e0400fb3c29e198911dcb51f867",
+  "sha256_html_response": "18b890aa4365346bb71229d173940d5fd17416c1986171060bc39c0f1da8f53a",
+  "sha256_openapi": "a687b92e75059b3378de3ad672404fcfa52a4e5efde78ce0077fb78b406b5992",
+  "sha256_source_body": "2d391e9d95a144bf5711cff715307f89ae9d571f42b8113c42b08c8d89c0e342",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/whatsapp-hsms-text-based-proactive-notification-message.source.md",
+  "source_updated_at": "2026-05-12T12:35:34.438Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/whatsapp-hsms-text-based-proactive-notification-message.txt",
+  "title": "WhatsApp HSMs-Text based proactive notification message(Deprecated)",
+  "url": "https://developers.webexconnect.io/reference/whatsapp-hsms-text-based-proactive-notification-message",
+  "word_count": 1689,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/developer/whatsapp-hsms-text-based-proactive-notification-message.metadata.json"
+}

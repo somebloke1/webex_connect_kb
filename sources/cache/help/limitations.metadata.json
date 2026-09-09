@@ -1,0 +1,31 @@
+{
+  "category": "Webex Engage Standalone Nodes",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257987",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "9d82fe3bc98c28efee98b38059ffe2d28a0f008beeb81d8ee7c8f5c508d30b44",
+    "source_path": "76522f04afc1d3b99530f4c8bda35b41fd2054ed27531d1e82a010ee3dcb8228",
+    "text_path": "ada3b65fe96ef1f03014ac9ec33b4da4b59cd5e2164104965bb4e73b80854ff1"
+  },
+  "headings": [],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/limitations.md",
+  "resolved_url": "https://help.webexconnect.io/docs/limitations",
+  "retrieved_at": "2026-09-08T23:29:31+00:00",
+  "sha256_html_response": "675cff161f831ef5717ee782a62d10e34e431a518937155e378bd6c4ade45692",
+  "sha256_source_body": "76522f04afc1d3b99530f4c8bda35b41fd2054ed27531d1e82a010ee3dcb8228",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/limitations.source.md",
+  "source_updated_at": "2026-04-14T11:20:45.502Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/limitations.txt",
+  "title": "Limitations - WxEngage standalone",
+  "url": "https://help.webexconnect.io/docs/limitations",
+  "word_count": 36,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/limitations.metadata.json"
+}

@@ -1,0 +1,630 @@
+{
+  "api": {
+    "method": "post",
+    "url": "/",
+    "auth": "required",
+    "results": {
+      "codes": [
+        {
+          "name": "",
+          "code": "{\n    \"response\": [\n        {\n            \"code\": \"1001\",\n            \"transid\": \"3f09295d-9eb3-4c9e-8ee8-a3272e5f00c1\",\n            \"description\": \"Queued\"\n        }\n    ]\n}",
+          "language": "json",
+          "status": 200
+        },
+        {
+          "name": "",
+          "code": "{\n  \"response\": {\n    \"code\": \"7001\",\n    \"description\": \"Authentication failed.\",\n    \"transid\": \"7670c9a8-131f-4166-ac30-17f6109340d6\"\n  }\n}",
+          "language": "json",
+          "status": 400
+        }
+      ]
+    },
+    "params": [
+      {
+        "name": "key",
+        "type": "string",
+        "enumValues": "",
+        "default": "",
+        "desc": "Applicable when you want to use service key for API authentication. Available under API tab within a service in your webexconnect tenant.",
+        "required": false,
+        "in": "header",
+        "ref": "",
+        "_id": "642be1ab189593001116d015",
+        "id": "642be1ab189593001116d015"
+      },
+      {
+        "name": "deliverychannel",
+        "type": "string",
+        "enumValues": "",
+        "default": "AppleBusinessChat",
+        "desc": "Channel used to send the message i.e., AppleBusinessChat in this case.",
+        "required": false,
+        "in": "body",
+        "ref": "",
+        "_id": "643186ec5c6444002d74be6f",
+        "id": "643186ec5c6444002d74be6f"
+      },
+      {
+        "name": "appid",
+        "type": "string",
+        "enumValues": "",
+        "default": "",
+        "desc": "The ID of the app asset that you can obtain from the Connect platform.",
+        "required": false,
+        "in": "body",
+        "ref": "",
+        "_id": "643186ec5c6444002d74be6e",
+        "id": "643186ec5c6444002d74be6e"
+      },
+      {
+        "name": "destination",
+        "type": "array_object",
+        "enumValues": "",
+        "default": "",
+        "desc": "User's Opaque ID that uniquely identifies a user and is specific to the business.",
+        "required": false,
+        "in": "body",
+        "ref": "destination",
+        "_id": "643186ec5c6444002d74be6d",
+        "id": "643186ec5c6444002d74be6d"
+      },
+      {
+        "name": "channels",
+        "type": "object",
+        "enumValues": "",
+        "default": "",
+        "desc": "Channels object used for messaging.",
+        "required": false,
+        "in": "body",
+        "ref": "channels",
+        "_id": "643186ec5c6444002d74be6c",
+        "id": "643186ec5c6444002d74be6c"
+      },
+      {
+        "name": "correlationid",
+        "type": "string",
+        "enumValues": "",
+        "default": "",
+        "desc": "The correlationid is a unique identifier that you can attach to every request as a reference a particular transaction or event. This is configured as a part of the request.",
+        "required": false,
+        "in": "body",
+        "ref": "",
+        "_id": "643186ec5c6444002d74be6b",
+        "id": "643186ec5c6444002d74be6b"
+      },
+      {
+        "name": "callbackData",
+        "type": "string",
+        "enumValues": "",
+        "default": "",
+        "desc": "Data that you have configured to receive on the notify Url. This is configured as a part of the request.",
+        "required": false,
+        "in": "body",
+        "ref": "",
+        "_id": "643186ec5c6444002d74be6a",
+        "id": "643186ec5c6444002d74be6a"
+      },
+      {
+        "name": "notifyurl",
+        "type": "string",
+        "enumValues": "",
+        "default": "",
+        "desc": "Configure a URL to get notifications on delivery reports for a Apple message. This field accepts only a valid URL or a variable. If an invalid URL is passed in API request or via a variable, then such request will not be considered eligible for retries.",
+        "required": false,
+        "in": "body",
+        "ref": "",
+        "_id": "643186ec5c6444002d74be69",
+        "id": "643186ec5c6444002d74be69"
+      },
+      {
+        "name": "authorization",
+        "type": "string",
+        "enumValues": "",
+        "default": "",
+        "desc": "JSON Web Token (JWT) for authentication (e.g. bearer [token]) used alternatively to Service Key",
+        "required": false,
+        "in": "header",
+        "ref": "",
+        "_id": "6465f1849e813d005957058c",
+        "id": "6465f1849e813d005957058c"
+      },
+      {
+        "name": "notifyurlAuthId",
+        "type": "string",
+        "enumValues": "",
+        "default": "No",
+        "desc": "Unique Authentication ID",
+        "required": false,
+        "in": "body",
+        "ref": "",
+        "_id": "68c06288f9043cd9b97a761c",
+        "id": "68c06288f9043cd9b97a761c"
+      }
+    ],
+    "examples": {
+      "codes": [
+        {
+          "code": "{\n\t\"deliverychannel\": \"AppleBusinessChat\",\n\t\"appid\": \"<ambAppid>\",\n\t\"destination\": [{\n\t\t\"abcUserId\": [\"{{abcUserId}}\"]\n\t}],\n\t\"channels\": {\n\t\t\"AppleBusinessChat\": {\n\t\t\t\"type\": \"interactive\",\n\t\t\t\"interactiveData\": {\n\t\t\t\t\"bid\": \"com.apple.messages.MSMessageExtensionBalloonPlugin:0000000000:com.apple.icloud.apps.messages.business.extension\",\n\t\t\t\t\"data\": {\n\t\t\t\t\t\"version\": \"1.0\",\n\t\t\t\t\t\"requestIdentifier\": \"b0291fd1-d2ac-4109-bd53-9258d6748619\",\n\t\t\t\t\t\"images\": [{\n\t\t\t\t\t\t\"identifier\": \"a9b37a98-92a2-4f65-b74a-6a0cabf51b93\",\n\t\t\t\t\t\t\"data\": \"url1\"\n\t\t\t\t\t}],\n\t\t\t\t\t\"event\": {\n\t\t\t\t\t\t\"timezoneOffset\": -100,\n\t\t\t\t\t\t\"identifier\": \"fd296699-6ad1-4c96-af78-ae10dee1f19c\",\n\t\t\t\t\t\t\"title\": \"NHS Appointments\",\n\t\t\t\t\t\t\"timeslots\": [{\n\t\t\t\t\t\t\t\t\"duration\": 1800,\n\t\t\t\t\t\t\t\t\"startTime\": \"2022-09-23T15:30+0000\",\n\t\t\t\t\t\t\t\t\"identifier\": \"0\"\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"duration\": 1800,\n\t\t\t\t\t\t\t\t\"startTime\": \"2022-09-24T16:30+0000\",\n\t\t\t\t\t\t\t\t\"identifier\": \"1\"\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"duration\": 1800,\n\t\t\t\t\t\t\t\t\"startTime\": \"2022-09-24T16:30+0000\",\n\t\t\t\t\t\t\t\t\"identifier\": \"2\"\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"duration\": 1800,\n\t\t\t\t\t\t\t\t\"startTime\": \"2022-09-24T12:30+0000\",\n\t\t\t\t\t\t\t\t\"identifier\": \"3\"\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"duration\": 1800,\n\t\t\t\t\t\t\t\t\"startTime\": \"2022-09-24T13:30+0000\",\n\t\t\t\t\t\t\t\t\"identifier\": \"4\"\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"duration\": 1800,\n\t\t\t\t\t\t\t\t\"startTime\": \"2022-09-24T17:30+0000\",\n\t\t\t\t\t\t\t\t\"identifier\": \"5\"\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"duration\": 1800,\n\t\t\t\t\t\t\t\t\"startTime\": \"2022-09-28T15:30+0000\",\n\t\t\t\t\t\t\t\t\"identifier\": \"6\"\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"duration\": 1800,\n\t\t\t\t\t\t\t\t\"startTime\": \"2022-09-27T15:30+0000\",\n\t\t\t\t\t\t\t\t\"identifier\": \"7\"\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"duration\": 1800,\n\t\t\t\t\t\t\t\t\"startTime\": \"2022-09-24T15:30+0000\",\n\t\t\t\t\t\t\t\t\"identifier\": \"8\"\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"duration\": 1800,\n\t\t\t\t\t\t\t\t\"startTime\": \"2022-09-25T15:30+0000\",\n\t\t\t\t\t\t\t\t\"identifier\": \"9\"\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"duration\": 1800,\n\t\t\t\t\t\t\t\t\"startTime\": \"2022-09-26T15:30+0000\",\n\t\t\t\t\t\t\t\t\"identifier\": \"10\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t],\n\t\t\t\t\t\t\"location\": {\n\t\t\t\t\t\t\t\"title\": \"5 St Johns Street\",\n\t\t\t\t\t\t\t\"latitude\": 51.5209041,\n\t\t\t\t\t\t\t\"longitude\": -0.1025591,\n\t\t\t\t\t\t\t\"radius\": 16\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"useLiveLayout\": true,\n\t\t\t\t\"replyMessage\": {\n\t\t\t\t\t\"style\": \"small\",\n\t\t\t\t\t\"title\": \"Selected time\",\n\t\t\t\t\t\"alternateTitle\": \"06-Aug-2018 at 10:00 AM\"\n\t\t\t\t},\n\t\t\t\t\"requestIdentifier\": \"b0291fd1-d2ac-4109-bd53-9258d6748619\",\n\t\t\t\t\"receivedMessage\": {\n\t\t\t\t\t\"style\": \"small\",\n\t\t\t\t\t\"title\": \"NHS Appointment\",\n\t\t\t\t\t\"subtitle\": \"Available appointments at your locall GP\",\n\t\t\t\t\t\"imageIdentifier\": \"a9b37a98-92a2-4f65-b74a-6a0cabf51b93\"\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t},\n\t\"correlationid\": \"\",\n\t\"callbackData\": \"\",\n  \"notifyurl\": \"\",\n  \"notifyurlAuthId\": \"TNPBXKT09U\" //Optional.\n}",
+          "language": "json"
+        }
+      ]
+    },
+    "apiSetting": "6a675233ec1c893d8a7f67e4"
+  },
+  "swagger": {
+    "path": "/"
+  },
+  "oas_public_id": "@imiconnect-apis/v6.20.0#34z3q1r5gemfctkerg",
+  "selected_openapi": {
+    "openapi": "3.1.0",
+    "info": {
+      "title": "Apple Message for Business_Time Picker",
+      "version": "6.20.0"
+    },
+    "servers": [
+      {
+        "url": "https://api.{YourRegion}.webexconnect.io/resources/v1/messaging",
+        "variables": {
+          "YourRegion": {
+            "default": "YourRegion"
+          }
+        }
+      }
+    ],
+    "security": [
+      {}
+    ],
+    "path": "/",
+    "method": "post",
+    "path_parameters": [],
+    "operation": {
+      "summary": "Apple Message for Business: Time Picker",
+      "description": "\"Allows the customer to schedule an appointment. The customer can also get directions to the location or add the event to their calendar by tapping Get Directions or Add to Calendar.\" _Note : Modify YourRegion in the URL to the right to reflect your tenant’s region. See [Know your endpoint page](https://developers.imiconnect.io/reference/endpoints)._",
+      "operationId": "apple-message-for-business-time-picker",
+      "parameters": [
+        {
+          "name": "key",
+          "in": "header",
+          "description": "Applicable when you want to use service key for API authentication. Available under API tab within a service in your webexconnect tenant.",
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "authorization",
+          "in": "header",
+          "description": "JSON Web Token (JWT) for authentication (e.g. bearer [token]) used alternatively to Service Key",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "requestBody": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "deliverychannel": {
+                  "type": "string",
+                  "description": "Channel used to send the message i.e., AppleBusinessChat in this case.",
+                  "default": "AppleBusinessChat"
+                },
+                "appid": {
+                  "type": "string",
+                  "description": "The ID of the app asset that you can obtain from the Connect platform."
+                },
+                "destination": {
+                  "type": "array",
+                  "description": "User's Opaque ID that uniquely identifies a user and is specific to the business.",
+                  "items": {
+                    "properties": {
+                      "abcUserId": {
+                        "type": "array",
+                        "description": "User's Opaque ID. _Note: For more information [refer](https://register.apple.com/resources/messages/messaging-documentation/faq)_",
+                        "default": [],
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "type": "object"
+                  }
+                },
+                "channels": {
+                  "type": "object",
+                  "description": "Channels object used for messaging.",
+                  "properties": {
+                    "AppleBusinessChat": {
+                      "type": "object",
+                      "description": "JSON object for Apple Business Chat configuration.",
+                      "required": [
+                        "type"
+                      ],
+                      "properties": {
+                        "type": {
+                          "type": "string",
+                          "description": "Options: text, richlink, interactive"
+                        },
+                        "interactiveData": {
+                          "type": "object",
+                          "description": "Contains the list/Time Picker (Date Picker) and Quick Reply data",
+                          "properties": {
+                            "data": {
+                              "type": "object",
+                              "description": "JSON object for data configuration.",
+                              "required": [
+                                "version",
+                                "requestIdentifier"
+                              ],
+                              "properties": {
+                                "version": {
+                                  "type": "string",
+                                  "description": "A string representing the version number of the message extension schema. Should be 1.0."
+                                },
+                                "requestIdentifier": {
+                                  "type": "string",
+                                  "description": "A string that representing a unique identifier for the request. imiconnect returns the ID in the response it sends back to the client application"
+                                },
+                                "images": {
+                                  "type": "array",
+                                  "description": "An array of images object",
+                                  "items": {
+                                    "properties": {
+                                      "identifier": {
+                                        "type": "string",
+                                        "description": "A string containing the image identifier, which must be unique within the list of images."
+                                      },
+                                      "data": {
+                                        "type": "string",
+                                        "description": "Direct link to the image"
+                                      }
+                                    },
+                                    "required": [
+                                      "identifier",
+                                      "data"
+                                    ],
+                                    "type": "object"
+                                  }
+                                },
+                                "event": {
+                                  "type": "object",
+                                  "description": "JSON object for event configuration",
+                                  "properties": {
+                                    "timezoneOffset": {
+                                      "type": "string",
+                                      "description": "An integer representing the number of minutes from GMT, specifying the timezone of the event’s location. If not set, times are shown according to the customer’s current time zone. If set, the times are shown according to the event’s time zone, regardless of the customer’s location."
+                                    },
+                                    "identifier": {
+                                      "type": "string",
+                                      "description": "A string field identifying the event that must be unique within the payload, if more than one exists."
+                                    },
+                                    "title": {
+                                      "type": "string",
+                                      "description": "A string field of the event title."
+                                    },
+                                    "timeslots": {
+                                      "type": "array",
+                                      "description": "JSON object for timeslots configuration. The time slots past the time of message delivery will not be displayed in the time picker delivered to the customer.",
+                                      "items": {
+                                        "properties": {
+                                          "duration": {
+                                            "type": "integer",
+                                            "description": "An integer representing the duration of the time slot, in seconds.",
+                                            "format": "int32"
+                                          },
+                                          "startTime": {
+                                            "type": "string",
+                                            "description": "A UTC date string, represented by a valid date in ISO-8601 format and specified as absolute GMT +0000 date; for example, 2017-05-26T08:27:55+00:00, 2017-05-26T08:27:55+0000, or 2017-05-26T08:27:55Z. The timezoneOffset, from the event object, determines whether the startTime is in a specific time zone or in the customer's current time zone."
+                                          },
+                                          "identifier": {
+                                            "type": "string",
+                                            "description": "A string field identifying the time item that must be unique within the payload, if more than one exists."
+                                          },
+                                          "location": {
+                                            "type": "object",
+                                            "description": "An object describing a location.",
+                                            "properties": {
+                                              "title": {
+                                                "type": "string",
+                                                "description": "A string field of the location title."
+                                              },
+                                              "latitude": {
+                                                "type": "number",
+                                                "description": "Representing the latitude of the location.",
+                                                "format": "float"
+                                              },
+                                              "longitude": {
+                                                "type": "number",
+                                                "description": "Representing the longitude of the location.",
+                                                "format": "float"
+                                              },
+                                              "radius": {
+                                                "type": "number",
+                                                "description": "Representing the location radius, in meters. Messages for Business ignores this field when latitude and longitude are missing or empty.",
+                                                "format": "float"
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "type": "object"
+                                      }
+                                    }
+                                  }
+                                },
+                                "useLiveLayout": {
+                                  "type": "boolean",
+                                  "description": "A Boolean that determines whether the Messages app should use Live Layout. The default is true. Default: true"
+                                },
+                                "replyMessage": {
+                                  "type": "object",
+                                  "description": "JSON object for reply message configuration",
+                                  "properties": {
+                                    "style": {
+                                      "type": "string",
+                                      "description": "A style that controls the size of the view rendered by Live Layout. The default is icon. The list of possible values: icon, small, large"
+                                    },
+                                    "title": {
+                                      "type": "string",
+                                      "description": "The main title that the Messages app shows in the header of the reply message bubble. When the user taps the reply message bubble, the Messages app replaces the title with the user’s selection. Limited to 512 characters."
+                                    },
+                                    "alternateTitle": {
+                                      "type": "string",
+                                      "description": "Alternate Title of the reply message"
+                                    }
+                                  }
+                                },
+                                "requestindentifier": {
+                                  "type": "string",
+                                  "description": "An identifier for the authenticate request. Recommended value: uuid."
+                                },
+                                "receivedMessage": {
+                                  "type": "object",
+                                  "description": "JSON object for received message configuration",
+                                  "properties": {
+                                    "style": {
+                                      "type": "string",
+                                      "description": "A style that controls the size of the view rendered by Live Layout. The default is icon. The list of possible values: icon, small, large."
+                                    },
+                                    "title": {
+                                      "type": "string",
+                                      "description": "The main title that the Messages app shows in the header of the received message bubble. Limited to 512 characters."
+                                    },
+                                    "subtitle": {
+                                      "type": "string",
+                                      "description": "The subtitle that appears under the main title in the received message bubble. Limited to 512 characters."
+                                    },
+                                    "imageIdentifier": {
+                                      "type": "string",
+                                      "description": "The identifier for one of the images specified in data.images."
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "correlationid": {
+                  "type": "string",
+                  "description": "The correlationid is a unique identifier that you can attach to every request as a reference a particular transaction or event. This is configured as a part of the request."
+                },
+                "callbackData": {
+                  "type": "string",
+                  "description": "Data that you have configured to receive on the notify Url. This is configured as a part of the request."
+                },
+                "notifyurl": {
+                  "type": "string",
+                  "description": "Configure a URL to get notifications on delivery reports for a Apple message. This field accepts only a valid URL or a variable. If an invalid URL is passed in API request or via a variable, then such request will not be considered eligible for retries."
+                },
+                "notifyurlAuthId": {
+                  "type": "string",
+                  "description": "Unique Authentication ID",
+                  "default": "No"
+                }
+              }
+            },
+            "examples": {
+              "Request Example": {
+                "value": {
+                  "deliverychannel": "AppleBusinessChat",
+                  "appid": "<ambAppid>",
+                  "destination": [
+                    {
+                      "abcUserId": [
+                        "{{abcUserId}}"
+                      ]
+                    }
+                  ],
+                  "channels": {
+                    "AppleBusinessChat": {
+                      "type": "interactive",
+                      "interactiveData": {
+                        "bid": "com.apple.messages.MSMessageExtensionBalloonPlugin:0000000000:com.apple.icloud.apps.messages.business.extension",
+                        "data": {
+                          "version": "1.0",
+                          "requestIdentifier": "b0291fd1-d2ac-4109-bd53-9258d6748619",
+                          "images": [
+                            {
+                              "identifier": "a9b37a98-92a2-4f65-b74a-6a0cabf51b93",
+                              "data": "url1"
+                            }
+                          ],
+                          "event": {
+                            "timezoneOffset": -100,
+                            "identifier": "fd296699-6ad1-4c96-af78-ae10dee1f19c",
+                            "title": "NHS Appointments",
+                            "timeslots": [
+                              {
+                                "duration": 1800,
+                                "startTime": "2022-09-23T15:30+0000",
+                                "identifier": "0"
+                              },
+                              {
+                                "duration": 1800,
+                                "startTime": "2022-09-24T16:30+0000",
+                                "identifier": "1"
+                              },
+                              {
+                                "duration": 1800,
+                                "startTime": "2022-09-24T16:30+0000",
+                                "identifier": "2"
+                              },
+                              {
+                                "duration": 1800,
+                                "startTime": "2022-09-24T12:30+0000",
+                                "identifier": "3"
+                              },
+                              {
+                                "duration": 1800,
+                                "startTime": "2022-09-24T13:30+0000",
+                                "identifier": "4"
+                              },
+                              {
+                                "duration": 1800,
+                                "startTime": "2022-09-24T17:30+0000",
+                                "identifier": "5"
+                              },
+                              {
+                                "duration": 1800,
+                                "startTime": "2022-09-28T15:30+0000",
+                                "identifier": "6"
+                              },
+                              {
+                                "duration": 1800,
+                                "startTime": "2022-09-27T15:30+0000",
+                                "identifier": "7"
+                              },
+                              {
+                                "duration": 1800,
+                                "startTime": "2022-09-24T15:30+0000",
+                                "identifier": "8"
+                              },
+                              {
+                                "duration": 1800,
+                                "startTime": "2022-09-25T15:30+0000",
+                                "identifier": "9"
+                              },
+                              {
+                                "duration": 1800,
+                                "startTime": "2022-09-26T15:30+0000",
+                                "identifier": "10"
+                              }
+                            ],
+                            "location": {
+                              "title": "5 St Johns Street",
+                              "latitude": 51.5209041,
+                              "longitude": -0.1025591,
+                              "radius": 16
+                            }
+                          }
+                        },
+                        "useLiveLayout": true,
+                        "replyMessage": {
+                          "style": "small",
+                          "title": "Selected time",
+                          "alternateTitle": "06-Aug-2018 at 10:00 AM"
+                        },
+                        "requestIdentifier": "b0291fd1-d2ac-4109-bd53-9258d6748619",
+                        "receivedMessage": {
+                          "style": "small",
+                          "title": "NHS Appointment",
+                          "subtitle": "Available appointments at your locall GP",
+                          "imageIdentifier": "a9b37a98-92a2-4f65-b74a-6a0cabf51b93"
+                        }
+                      }
+                    }
+                  },
+                  "correlationid": "",
+                  "callbackData": "",
+                  "notifyurl": "",
+                  "notifyurlAuthId": "TNPBXKT09U"
+                }
+              }
+            }
+          }
+        }
+      },
+      "responses": {
+        "200": {
+          "description": "200",
+          "content": {
+            "application/json": {
+              "examples": {
+                "Result": {
+                  "value": "{\n    \"response\": [\n        {\n            \"code\": \"1001\",\n            \"transid\": \"3f09295d-9eb3-4c9e-8ee8-a3272e5f00c1\",\n            \"description\": \"Queued\"\n        }\n    ]\n}"
+                }
+              },
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "response": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "code": {
+                          "type": "string",
+                          "example": "1001"
+                        },
+                        "transid": {
+                          "type": "string",
+                          "example": "3f09295d-9eb3-4c9e-8ee8-a3272e5f00c1"
+                        },
+                        "description": {
+                          "type": "string",
+                          "example": "Queued"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "400": {
+          "description": "400",
+          "content": {
+            "application/json": {
+              "examples": {
+                "Result": {
+                  "value": "{\n  \"response\": {\n    \"code\": \"7001\",\n    \"description\": \"Authentication failed.\",\n    \"transid\": \"7670c9a8-131f-4166-ac30-17f6109340d6\"\n  }\n}"
+                }
+              },
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "response": {
+                    "type": "object",
+                    "properties": {
+                      "code": {
+                        "type": "string",
+                        "example": "7001"
+                      },
+                      "description": {
+                        "type": "string",
+                        "example": "Authentication failed."
+                      },
+                      "transid": {
+                        "type": "string",
+                        "example": "7670c9a8-131f-4166-ac30-17f6109340d6"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "deprecated": false
+    },
+    "components": {
+      "securitySchemes": {}
+    }
+  }
+}

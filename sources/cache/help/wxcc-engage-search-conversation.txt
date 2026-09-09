@@ -1,0 +1,332 @@
+This node calls imengage Search Conversation API to check for existing conversations on imiengage. While configuring flows in Webex Connect, you’d need to use this node for searching for an existing conversation using the channel identifier such as PS Is, Email Id etc. 
+
+## 
+
+Authorization
+
+Refer to section Node Authorizations for more information.   
+
+## 
+
+Methods and Outcomes
+
+Here’s a brief description of various methods, and corresponding output variables and node outcomes associated with each of the methods.
+
+Method Name - Search Conversation 
+
+ [Image: Screenshot of Search Conversion configuration page.] 
+Screenshot of Search Conversion configuration page.
+
+ | Method Name | Output Variables | Node Outcomes
+
+ | Search Conversation |    conversationId
+
+ aliasId
+ conversationExistsBool
+
+ status
+ teamId
+
+ userId
+ apiStatus
+
+ code
+ description
+
+ responsePayload  |    onInvalidData
+
+ onError
+ onInvalidChoice
+
+ onauthorizationfail
+ noConversationFound
+
+ conversationActive
+ conversationClosed
+
+ conversationInQueue
+ conversationOnHold
+
+ onTimeout 
+
+ | Channel | Field Value
+
+ | Facebook | FACEBOOK PAGE ID - $(FBpageid)
+
+FACEBOOK PS ID - $(n2.messenger.psId)
+
+ | SMS | BUSINESS LONGCODE/SHORTCODE - $(n2.sms.serviceNumber)
+
+CUSTOMER MOBILE NUMBER - $(n2.sms.serviceNumber)
+
+ | Email | BUSINESS EMAIL ID - $(n2.sms.serviceNumber)
+
+FROM EMAIL ID - $(n2.email.emailId)
+
+EMAIL SUBJECT - $(n2.email.subject)
+
+TO RECEPIENTS - $(n2.email.toAddresses)
+
+CC RECEPIENTS - $(n2.email.ccRecipients)
+
+INREPLY TO - $(modifiedInReplyTo)
+
+ | LiveChat | CUSTOMER ADDRESS - $(n2.inappmessaging.userId)
+
+BIZ ADDRESS - IM28095016
+
+THREADID - $(n2.inappmessaging.threadId)
+
+LIVECHAT BROWSER FINGERPRINT - $(n2.inappmessaging.userId)
+
+ | WhatsApp | WA BUSINESS ID - $(WANumber)
+
+CUSTOMER ID - $(n2.whatsapp.waId)
+
+ | Input Variables | Output Variables | Versions
+
+ | CHANNEL – Facebook Messenger
+
+FACEBOOK PAGE ID - $(FBpageid)
+
+_ Messenger page Id is available in the Facebook section in the Assets section. When the flow is imported, the user must copy the Facebook page id from the assets section to the FBpageid custom variable
+
+FACEBOOK PS ID - $(n2.messenger.psId)
+
+_ psId from the output variables of the start node is the Facebook PS ID |    description
+
+ conversationId
+ conversationExistsBool
+
+ status  | The below Output variables are available in the v1.1
+ description
+
+ conversationId
+ conversationExistsBool
+
+ status
+
+The The below Output variables are available in the v1.3
+ conversationId
+
+ aliasId
+ conversationExistsBool
+
+ status
+ teamId
+
+ userId
+ apiStatus
+
+ code
+ description
+
+ responsePayload
+
+## 📘
+Note
+
+When the variable is selected from the previous node output variables, the node Id will be the prefix for the variable. For example, if sms.serviceNumber is an output variable of start node (node Id 2), then the variable becomes $(n2.sms.serviceNumber).
+
+Method Name - Search Conversation 
+
+ | Input Variables | Output Variables | Versions
+
+ | CHANNEL – SMS
+
+BUSINESS LONGCODE/SHORTCODE
+
+- $(n2.sms.serviceNumber)  _ ServiceNumber from the output variables of the start node is the Business longcode/shortcode
+
+CUSTOMER MOBILE NUMBER
+
+- $(n2.sms.msisdn)
+
+_ Msisdn from the output variables of the start node is the customer mobile number |    description
+
+ conversationId
+ conversationExistsBool
+
+ status  | The below Output variables are available in the v1.1
+ description
+
+ conversationId
+ conversationExistsBool
+
+ status
+
+The The below Output variables are available in the v1.3
+ conversationId
+
+ aliasId
+ conversationExistsBool
+
+ status
+ teamId
+
+ userId
+ apiStatus
+
+ code
+ description
+
+ responsePayload
+
+## 📘
+Note
+
+When the variable is selected from the previous node output variables, the nodetid will be the prefix for the variable. Eg., sms.serviceNumber is an output variable of start node (node id 2), then the variable becomes $(n2.sms.serviceNumber)
+
+Method Name - Search Conversation 
+
+ | Input Variables | Output Variables | Versions
+
+ | CHANNEL – Email
+
+BUSINESS EMAIL ID - $(bizemailid)
+
+_ email id is available in the email section in the Assets section. When the flow is imported, the user must copy the email id from the assets section to the bizemailid custom variable
+
+FROM EMAIL ID - $(n2.email.emailId)
+
+_ emailId in the output variables of the start node is from email id
+
+EMAIL SUBJECT - $(n2.email.subject)
+
+_ Subject in the output variables of the start node is the subject
+
+TO RECEPIENTS - $(n2.email.toAddresses)
+
+_ ToAddresses in the output variables of the start node is the To Recepients
+
+CC RECEPIENTS - $(n2.email.ccRecipients)
+
+_ CcRecepients in the output variables of the start node is the CC Recepients
+
+INREPLY TO - $(modifiedInReplyTo)
+
+_ ModifiedInReplyTo in the output variables of the start node is the In reply to |    description
+
+ conversationId
+ conversationExistsBool
+
+ status  | The below Output variables are available in the v1.1
+ description
+
+ conversationId
+ conversationExistsBool
+
+ status
+
+The The below Output variables are available in the v1.3
+ conversationId
+
+ aliasId
+ conversationExistsBool
+
+ status
+ teamId
+
+ userId
+ apiStatus
+
+ code
+ description
+
+ responsePayload
+
+## 📘
+Note
+
+When the variable is selected from the previous node output variables, the nodetid will be the prefix for the variable. Eg., sms.serviceNumber is an output variable of start node (node id 2), then the variable becomes $(n2.sms.serviceNumber)
+
+Method Name - Search Conversation 
+
+ | Input Variables | Output Variables | Versions
+
+ | CHANNEL – Livechat
+
+CUSTOMER ADDRESS - $(n2.inappmessaging.userId)
+
+_ UserId from the output variables of the start node is the Customer Address
+
+Live chat App Id – $(n2,inappmessaging.appId)
+
+_ BIZ address is available in the livechat section in the Assets section. When the flow is imported, the user must copy the livechat biz address id from the assets section to the livechatbizaddress custom variable
+
+THREADID - $(n2.inappmessaging.threadId)
+
+_ ThreadId from the output variables of the start node is the Thread Id
+
+LIVECHAT BROWSER FINGERPRINT - $(n2.inappmessaging.userId)
+
+_ UserId from the output variables of the start node is the Livechat Browser Fingerprint |    description
+
+ conversationId
+ conversationExistsBool
+
+ status  | The below Output variables are available in the v1.1
+ description
+
+ conversationId
+ conversationExistsBool
+
+ status
+
+The The below Output variables are available in the v1.3
+ conversationId
+
+ aliasId
+ conversationExistsBool
+
+ status
+ teamId
+
+ userId
+ apiStatus
+
+ code
+ description
+
+ responsePayload
+
+## 📘
+Note
+
+When the variable is selected from the previous node output variables, the nodetid will be the prefix for the variable. Eg., sms.serviceNumber is an output variable of start node (node id 2), then the variable becomes $(n2.sms.serviceNumber)
+
+Method Name - Search Conversation 
+
+ | Input Variables | Output  Variables | Versions
+
+ | WA BUSINESS ID
+
+CUSTOMER ID - $(n2.whatsapp.waId) |  description
+
+ conversationId
+ conversationExistsBool
+
+ status | The below Output variables are available in the v1.1
+ description
+
+ conversationId
+ conversationExistsBool
+
+ status
+
+The The below Output variables are available in the v1.3
+ conversationId
+
+ aliasId
+ conversationExistsBool
+
+ status
+ teamId
+
+ userId
+ apiStatus
+
+ code
+ description
+
+ responsePayload

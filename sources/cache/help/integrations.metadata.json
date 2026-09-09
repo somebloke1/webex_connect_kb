@@ -1,0 +1,39 @@
+{
+  "category": "Watchtower",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd81825795f",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "7ad2226eb4a2f004c6be1776b76bd1cb26414d4141412970b53af15119c893b8",
+    "source_path": "806af6381cd7c002d896f1515799b3a282ccb5381fac0cb98089c2dd964905ca",
+    "text_path": "aa1cf9f03e26321ebbd8a66b7f293550133946b06849694f5f105b20169bf2d6"
+  },
+  "headings": [
+    "Integration Overview",
+    "Total Count and Percentage Change",
+    "📘Custom Time Period",
+    "Counts of Integration Executions and Failures",
+    "Trends",
+    "Failures in Integrations",
+    "Common Errors for Various Integrations"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/integrations.md",
+  "resolved_url": "https://help.webexconnect.io/docs/integrations",
+  "retrieved_at": "2026-09-08T23:28:59+00:00",
+  "sha256_html_response": "a3d527f2ea2d1fe722045cc09797a698fc7e3ee83918d7172dbb86d8014d8877",
+  "sha256_source_body": "806af6381cd7c002d896f1515799b3a282ccb5381fac0cb98089c2dd964905ca",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/integrations.source.md",
+  "source_updated_at": "2026-04-15T09:56:23.044Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/integrations.txt",
+  "title": "Integrations",
+  "url": "https://help.webexconnect.io/docs/integrations",
+  "word_count": 3115,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/integrations.metadata.json"
+}

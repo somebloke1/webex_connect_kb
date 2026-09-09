@@ -1,0 +1,39 @@
+{
+  "api_metadata_path": "sources/cache/developer/push-outbound-webhooks.api.json",
+  "category": "OUTBOUND WEBHOOKS",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f6551",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "a6f86a1956e96f77709d8d159ae0e658afa0f40be0120363805b86475f77b2b9",
+    "source_path": "f2d64a78fa660f30fcb81b7591871b52333ad6dfa29c84a53ce025e7b07e8e24",
+    "text_path": "2eb14582f5827a3dcba31ffb535c6a3533d2d1e65bef814eba9e3bc2696b2580"
+  },
+  "headings": [
+    "Outbound Webhook configuration for tracking message status",
+    "Android",
+    "Android Application States",
+    "iOS",
+    "iOS Application States",
+    "Web"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/push-outbound-webhooks.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/push-outbound-webhooks",
+  "retrieved_at": "2026-09-08T23:31:45+00:00",
+  "sha256_api_metadata": "187de124aa8aa8acf032d1bfec486640b94ec306193dfc1e0feb2652279c3c88",
+  "sha256_html_response": "14b5f5e51862c7c9a4a621b1fb772a1b2ad990f14f37b7130a9c66b7748dd1e7",
+  "sha256_source_body": "f2d64a78fa660f30fcb81b7591871b52333ad6dfa29c84a53ce025e7b07e8e24",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/push-outbound-webhooks.source.md",
+  "source_updated_at": "2026-02-26T10:58:47.941Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/push-outbound-webhooks.txt",
+  "title": "Push",
+  "url": "https://developers.webexconnect.io/reference/push-outbound-webhooks",
+  "word_count": 1400,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/push-outbound-webhooks.metadata.json"
+}

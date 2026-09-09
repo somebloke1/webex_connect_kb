@@ -1,0 +1,31 @@
+{
+  "category": "REFERENCES",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257856",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "5651019155e3a67504399f3ed6f6b54b162258a7cbc1f338bde7055bbdb4d483",
+    "source_path": "12362b18483bbcb605f27f16897068476f6712f6236b5fce31e6c98cb8c60b1b",
+    "text_path": "54e00d0269802d7d480ea5434f3ec6fee09cfd898d23ad05020d4642285fcd1b"
+  },
+  "headings": [],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/references-carrier-ids-for-rcs-capability-and-rcs-message-nodes.md",
+  "resolved_url": "https://help.webexconnect.io/docs/references-carrier-ids-for-rcs-capability-and-rcs-message-nodes",
+  "retrieved_at": "2026-09-08T23:29:40+00:00",
+  "sha256_html_response": "7fd736100a2ddf3317b803dca5aa0ec93cb2c86500d05c17d319a7801629b167",
+  "sha256_source_body": "12362b18483bbcb605f27f16897068476f6712f6236b5fce31e6c98cb8c60b1b",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/references-carrier-ids-for-rcs-capability-and-rcs-message-nodes.source.md",
+  "source_updated_at": "2026-02-03T15:19:23.064Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/references-carrier-ids-for-rcs-capability-and-rcs-message-nodes.txt",
+  "title": "Carrier IDs for RCS Capability and RCS Message Nodes",
+  "url": "https://help.webexconnect.io/docs/references-carrier-ids-for-rcs-capability-and-rcs-message-nodes",
+  "word_count": 9405,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/references-carrier-ids-for-rcs-capability-and-rcs-message-nodes.metadata.json"
+}

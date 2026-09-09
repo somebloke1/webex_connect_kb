@@ -1,0 +1,38 @@
+{
+  "api_metadata_path": "sources/cache/developer/voice-only-api-v1-get-call-recordings-api.api.json",
+  "category": "MULTI CHANNEL COMMUNICATION API",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f671f",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "8744300932f81143d876771840b97ae00d2ae32ddbd0030e263a4b38170e9346",
+    "source_path": "9a00dadcb61addada8d48f7275c5276823aef476470068beaefddcd0dfc6554a",
+    "text_path": "2a50c907d0306bc88db72a08897dcd3f83fc8b2bf99057429209efdd7e7546ee"
+  },
+  "headings": [
+    "Request Body for Get Call Recordings API",
+    "Get Call Recordings Path Parameters",
+    "Get Call Recordings Header Parameters",
+    "Sample Response Body",
+    "Response Parameters"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/voice-only-api-v1-get-call-recordings-api.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/voice-only-api-v1-get-call-recordings-api",
+  "retrieved_at": "2026-09-08T23:31:44+00:00",
+  "sha256_api_metadata": "575f65b7d8dc3ea0b617314bc47e22705dc85fc80ee114e6faa20ada4e8aafe2",
+  "sha256_html_response": "5f555e1eee62c1f84f72b4ebda32a38cf830b658d0bf859b323a361b7618c87a",
+  "sha256_source_body": "9a00dadcb61addada8d48f7275c5276823aef476470068beaefddcd0dfc6554a",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/voice-only-api-v1-get-call-recordings-api.source.md",
+  "source_updated_at": "2026-04-16T05:51:33.335Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/voice-only-api-v1-get-call-recordings-api.txt",
+  "title": "Get Call Recordings Using Voice API v1",
+  "url": "https://developers.webexconnect.io/reference/voice-only-api-v1-get-call-recordings-api",
+  "word_count": 403,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/developer/voice-only-api-v1-get-call-recordings-api.metadata.json"
+}

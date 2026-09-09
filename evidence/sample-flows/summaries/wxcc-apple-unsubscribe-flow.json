@@ -1,0 +1,1235 @@
+{
+  "schema_version": 1,
+  "sample_key": "wxcc-apple-unsubscribe-flow",
+  "title": "Apple Unsubscribe Flow.workflow",
+  "observed_at": "2026-09-09T00:07:41.477Z",
+  "source_path": "evidence/sample-flows/observed/wxcc-apple-unsubscribe-flow.json",
+  "source_sha256": "1b9522eece8caf2f517466e1b92be1ea72ccaa4df4f5016862b87bdcfc10d6da",
+  "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model",
+  "runtime_tested": false,
+  "status": "observed_canvas_relationships_summarized",
+  "format_warning": "Internal loaded-canvas model observations only; not a public import schema. Event internal names and visible labels are recorded separately. Dynamic script behavior and missing canvas pages are not inferred.",
+  "counts": {
+    "cells": 22,
+    "operative_nodes": 3,
+    "explicit_edges": 5,
+    "terminal_bindings": 13,
+    "variable_references": 12
+  },
+  "start_configuration": {
+    "channel": 23,
+    "type": "channel",
+    "isCheckLiveSessions": 0,
+    "extras": {},
+    "eventid": 100,
+    "eventname": "CONVERSATIONCLOSED"
+  },
+  "nodes": [
+    {
+      "id": "2",
+      "label": "Configure Apple Messages for Business Event",
+      "type_internal": "start",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "onbegin",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "selectedChannel": {
+          "id": 23,
+          "name": "AppleBusinessChat",
+          "description": "Apple Messages for Business",
+          "type": 1,
+          "extraData": {}
+        },
+        "selectedRuleEvent": {
+          "name": "Conversation closed",
+          "id": 100,
+          "eventname": "CONVERSATIONCLOSED",
+          "desc": "This event occurs when a user closes the iMessage conversation with your Messages for Business account."
+        },
+        "ruleEvent": "Conversation closed",
+        "isKeyWordDisabled": true,
+        "isKeyWordVerifyReq": true,
+        "isKeyWordAvailable": true,
+        "output_variables": [
+          "abc.abcUserId",
+          "service.serviceKey",
+          "abc.capabilityList",
+          "abc.appId",
+          "abc.accountId",
+          "abc.type",
+          "abc.timestamp"
+        ]
+      },
+      "transition_actions": [],
+      "declared_outputs": [
+        "abc.abcUserId",
+        "service.serviceKey",
+        "abc.capabilityList",
+        "abc.appId",
+        "abc.accountId",
+        "abc.type",
+        "abc.timestamp"
+      ],
+      "output_mappings": []
+    },
+    {
+      "id": "3",
+      "label": "Search Conversation",
+      "type_internal": "prebuiltnode",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "oninvaliddata",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "onerror",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "oninvalidchoice",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "ontimeout",
+          "declared_target_count": null
+        }
+      ],
+      "configuration": {
+        "referencekey": 50033,
+        "versionIds": "undefined",
+        "integration_id": 50033,
+        "client_uuid": "50d97e6a-ad14-4a77-898a-7f6f104bfb14",
+        "method_id": 57894,
+        "version_id": 52318,
+        "auth_id": -1,
+        "methodResponseParameters": [
+          {
+            "order": 0,
+            "id": "99903af4-557d-4e0c-b152-3e968b4f6113",
+            "name": "conversationId",
+            "path": "$.value.conversationId",
+            "value": "",
+            "desc": "",
+            "type": "body",
+            "validation": {
+              "type": "",
+              "condition": null,
+              "regex": "",
+              "mandatory": true,
+              "format_validator": null
+            },
+            "key": null,
+            "debugKey": false,
+            "node_ui_type": null,
+            "node_ui_group_name": null,
+            "ui_field_configuration": null
+          },
+          {
+            "order": 1,
+            "id": "4909d72d-8414-42a0-b0be-8848975646d9",
+            "name": "aliasId",
+            "path": "$.value.aliasId",
+            "value": "",
+            "desc": "",
+            "type": "body",
+            "validation": {
+              "type": "",
+              "condition": null,
+              "regex": "",
+              "mandatory": true,
+              "format_validator": null
+            },
+            "key": null,
+            "debugKey": false,
+            "node_ui_type": null,
+            "node_ui_group_name": null,
+            "ui_field_configuration": null
+          },
+          {
+            "order": 2,
+            "id": "154e719a-9091-4d6e-8628-0503dbf785db",
+            "name": "conversationExistsBool",
+            "path": "$.value.chatExist",
+            "value": "",
+            "desc": "",
+            "type": "body",
+            "validation": {
+              "type": "",
+              "condition": null,
+              "regex": "",
+              "mandatory": true,
+              "format_validator": null
+            },
+            "key": null,
+            "debugKey": false,
+            "node_ui_type": null,
+            "node_ui_group_name": null,
+            "ui_field_configuration": null
+          },
+          {
+            "order": 3,
+            "id": "beb555b7-19af-47b4-b214-f5c7a1858dd2",
+            "name": "status",
+            "path": "$.value.status",
+            "value": "",
+            "desc": "",
+            "type": "body",
+            "validation": {
+              "type": "",
+              "condition": null,
+              "regex": "",
+              "mandatory": true,
+              "format_validator": null
+            },
+            "key": null,
+            "debugKey": false,
+            "node_ui_type": null,
+            "node_ui_group_name": null,
+            "ui_field_configuration": null
+          },
+          {
+            "order": 4,
+            "id": "186672f2-81b7-4cd1-8c9b-f43d44c77d13",
+            "name": "teamId",
+            "path": "$.value.teamId",
+            "value": "",
+            "desc": "",
+            "type": "body",
+            "validation": {
+              "type": "",
+              "condition": null,
+              "regex": "",
+              "mandatory": true,
+              "format_validator": null
+            },
+            "key": null,
+            "debugKey": false,
+            "node_ui_type": null,
+            "node_ui_group_name": null,
+            "ui_field_configuration": null
+          },
+          {
+            "order": 5,
+            "id": "6c5e5c7a-bc65-4ea0-b65a-9b3ef5d554d6",
+            "name": "userId",
+            "path": "$.value.userId",
+            "value": "",
+            "desc": "",
+            "type": "body",
+            "validation": {
+              "type": "",
+              "condition": null,
+              "regex": "",
+              "mandatory": true,
+              "format_validator": null
+            },
+            "key": null,
+            "debugKey": false,
+            "node_ui_type": null,
+            "node_ui_group_name": null,
+            "ui_field_configuration": null
+          },
+          {
+            "order": 6,
+            "id": "b484dd0a-439b-4d68-a4d3-5d7d9e9a5b5d",
+            "name": "apiStatus",
+            "path": "$.status",
+            "value": "",
+            "desc": "",
+            "type": "body",
+            "validation": {
+              "type": "",
+              "condition": null,
+              "regex": "",
+              "mandatory": true,
+              "format_validator": null
+            },
+            "key": null,
+            "debugKey": false,
+            "node_ui_type": null,
+            "node_ui_group_name": null,
+            "ui_field_configuration": null
+          },
+          {
+            "order": 7,
+            "id": "4da8811e-757c-4637-a1fd-d46eaac9908f",
+            "name": "code",
+            "path": "$.code",
+            "value": "",
+            "desc": "",
+            "type": "body",
+            "validation": {
+              "type": "",
+              "condition": null,
+              "regex": "",
+              "mandatory": true,
+              "format_validator": null
+            },
+            "key": null,
+            "debugKey": false,
+            "node_ui_type": null,
+            "node_ui_group_name": null,
+            "ui_field_configuration": null
+          },
+          {
+            "order": 8,
+            "id": "fd47fb48-014a-4ad5-ac2a-0f844cba1cd0",
+            "name": "description",
+            "path": "$.description",
+            "value": "",
+            "desc": "",
+            "type": "body",
+            "validation": {
+              "type": "",
+              "condition": null,
+              "regex": "",
+              "mandatory": true,
+              "format_validator": null
+            },
+            "key": null,
+            "debugKey": false,
+            "node_ui_type": null,
+            "node_ui_group_name": null,
+            "ui_field_configuration": null
+          },
+          {
+            "order": 9,
+            "id": "b1b0b741-dc2a-444c-8e62-032185c68bec",
+            "name": "responsePayload",
+            "path": "$",
+            "value": "",
+            "desc": "",
+            "type": "body",
+            "validation": {
+              "type": "",
+              "condition": null,
+              "regex": "",
+              "mandatory": true,
+              "format_validator": null
+            },
+            "key": null,
+            "debugKey": false,
+            "node_ui_type": null,
+            "node_ui_group_name": null,
+            "ui_field_configuration": null
+          }
+        ],
+        "request_body": [
+          {
+            "name": "channel",
+            "value": "amb",
+            "id": "9f048553-c1c1-42f6-5e5a-a28e0c4afcdc"
+          },
+          {
+            "name": "customeraddress",
+            "value": "$(n2.abc.abcUserId)",
+            "id": "39ae0eb8-1409-db03-9869-67dc2643003d"
+          },
+          {
+            "name": "bizaddress",
+            "value": "6fe67ece-e9fc-40fa-afac-fcbdd4353165",
+            "id": "0504fd49-9acf-aa6e-9cd9-b1dc5c33783b"
+          },
+          {
+            "name": "subject",
+            "value": null,
+            "id": "588518d1-0ca2-4b13-df21-cf98e4a0ab5b"
+          },
+          {
+            "name": "threadid",
+            "value": null,
+            "id": "ae91e42d-943a-6656-2f2c-1c88e2cff60f"
+          },
+          {
+            "name": "browserfingerprint",
+            "value": null,
+            "id": "9cacc794-1dcd-013e-42cd-dfaa65bc9342"
+          },
+          {
+            "name": "toRecipients",
+            "value": null,
+            "id": "833d28d7-01ae-e928-d997-7b26de781468"
+          },
+          {
+            "name": "ccRecipients",
+            "value": null,
+            "id": "c31da7a0-d9b9-ccd5-82c6-4320f2cbc051"
+          },
+          {
+            "name": "inReplyTo",
+            "value": null,
+            "id": "f52cd50e-720e-4146-8c2d-da2a1c77ae60"
+          }
+        ],
+        "path_parameters": [
+          {
+            "name": "domain",
+            "id": "761a1780-1258-924a-84e9-6c73332cf2dd"
+          }
+        ],
+        "custom_output_vars": [
+          "conversationId",
+          "aliasId",
+          "conversationExistsBool",
+          "status",
+          "teamId",
+          "userId",
+          "apiStatus",
+          "code",
+          "description",
+          "responsePayload"
+        ],
+        "viewmodeData": [
+          {
+            "name": "auth_id",
+            "value": "Engage",
+            "isNgSelectBox": true
+          },
+          {
+            "name": "version_id",
+            "value": ""
+          },
+          {
+            "name": "method_id",
+            "value": "Search Chat"
+          }
+        ],
+        "isAuthPresent": true,
+        "isComponentNode": 1,
+        "container_name": "https://example.invalid/integration_node_file_search-conversation_1701704943759_12186986634806872.js",
+        "nodeType": "https://example.invalid/integration_node_file_search-conversation_1701704943759_12186986634806872.js",
+        "nodeInput": {
+          "conversationid": "",
+          "channel": "amb",
+          "customeraddress": "$(n2.abc.abcUserId)",
+          "bizaddress": "7ed2e45e-af30-4a9c-bcb9-582c6dadf346",
+          "livechatApp": "",
+          "livechatThreadID": "",
+          "emailFromAddress": "",
+          "emailInReplyTo": null,
+          "emailToRecipients": null,
+          "emailCcRecipients": null,
+          "emailSubject": null,
+          "threadid": null,
+          "browserfingerprint": null,
+          "appleAccountID": "",
+          "subject": null,
+          "toRecipients": null,
+          "ccRecipients": null,
+          "inReplyTo": null,
+          "methodName": "search",
+          "nodeRunTimeAuth": "auth",
+          "gbmAgentId": ""
+        },
+        "group_id": 50021,
+        "customUiAuthStatus": 0,
+        "adminParameters": {
+          "oauth_callbackurl_type": 0,
+          "clientId": "1ec92647-d32e-4555-ad01-f72d0d02cd37",
+          "tenant_identifier": "1ec92647-d32e-4555-ad01-f72d0d02cd37",
+          "domain": "Preprodengageapi.imiengage.net",
+          "integration_identifier": "https://example.invalid/v1/integration/cnteng",
+          "clientSecret": "[redacted]"
+        },
+        "customuiWebcomponentElementName": "node-ui-template1701704943759",
+        "extraParamsData": {
+          "conversationid": "",
+          "channel": "amb",
+          "customeraddress": "$(n2.abc.abcUserId)",
+          "bizaddress": "6fe67ece-e9fc-40fa-afac-fcbdd4353165",
+          "livechatApp": "",
+          "livechatThreadID": "",
+          "emailFromAddress": "",
+          "emailInReplyTo": null,
+          "emailToRecipients": null,
+          "emailCcRecipients": null,
+          "emailSubject": null,
+          "threadid": null,
+          "browserfingerprint": null,
+          "appleAccountID": "",
+          "subject": null,
+          "toRecipients": null,
+          "ccRecipients": null,
+          "inReplyTo": null,
+          "methodName": "search",
+          "nodeRunTimeAuth": "auth",
+          "gbmAgentId": ""
+        },
+        "isCustomUiAuthPresent": false,
+        "integration_version": 3,
+        "runTimeAuthorizationId": "[redacted]",
+        "nodeUiAuthorizationId": "[redacted]"
+      },
+      "transition_actions": [],
+      "declared_outputs": [
+        "conversationId",
+        "aliasId",
+        "conversationExistsBool",
+        "status",
+        "teamId",
+        "userId",
+        "apiStatus",
+        "code",
+        "description",
+        "responsePayload"
+      ],
+      "output_mappings": [
+        {
+          "order": 0,
+          "id": "99903af4-557d-4e0c-b152-3e968b4f6113",
+          "name": "conversationId",
+          "path": "$.value.conversationId",
+          "value": "",
+          "desc": "",
+          "type": "body",
+          "validation": {
+            "type": "",
+            "condition": null,
+            "regex": "",
+            "mandatory": true,
+            "format_validator": null
+          },
+          "key": null,
+          "debugKey": false,
+          "node_ui_type": null,
+          "node_ui_group_name": null,
+          "ui_field_configuration": null
+        },
+        {
+          "order": 1,
+          "id": "4909d72d-8414-42a0-b0be-8848975646d9",
+          "name": "aliasId",
+          "path": "$.value.aliasId",
+          "value": "",
+          "desc": "",
+          "type": "body",
+          "validation": {
+            "type": "",
+            "condition": null,
+            "regex": "",
+            "mandatory": true,
+            "format_validator": null
+          },
+          "key": null,
+          "debugKey": false,
+          "node_ui_type": null,
+          "node_ui_group_name": null,
+          "ui_field_configuration": null
+        },
+        {
+          "order": 2,
+          "id": "154e719a-9091-4d6e-8628-0503dbf785db",
+          "name": "conversationExistsBool",
+          "path": "$.value.chatExist",
+          "value": "",
+          "desc": "",
+          "type": "body",
+          "validation": {
+            "type": "",
+            "condition": null,
+            "regex": "",
+            "mandatory": true,
+            "format_validator": null
+          },
+          "key": null,
+          "debugKey": false,
+          "node_ui_type": null,
+          "node_ui_group_name": null,
+          "ui_field_configuration": null
+        },
+        {
+          "order": 3,
+          "id": "beb555b7-19af-47b4-b214-f5c7a1858dd2",
+          "name": "status",
+          "path": "$.value.status",
+          "value": "",
+          "desc": "",
+          "type": "body",
+          "validation": {
+            "type": "",
+            "condition": null,
+            "regex": "",
+            "mandatory": true,
+            "format_validator": null
+          },
+          "key": null,
+          "debugKey": false,
+          "node_ui_type": null,
+          "node_ui_group_name": null,
+          "ui_field_configuration": null
+        },
+        {
+          "order": 4,
+          "id": "186672f2-81b7-4cd1-8c9b-f43d44c77d13",
+          "name": "teamId",
+          "path": "$.value.teamId",
+          "value": "",
+          "desc": "",
+          "type": "body",
+          "validation": {
+            "type": "",
+            "condition": null,
+            "regex": "",
+            "mandatory": true,
+            "format_validator": null
+          },
+          "key": null,
+          "debugKey": false,
+          "node_ui_type": null,
+          "node_ui_group_name": null,
+          "ui_field_configuration": null
+        },
+        {
+          "order": 5,
+          "id": "6c5e5c7a-bc65-4ea0-b65a-9b3ef5d554d6",
+          "name": "userId",
+          "path": "$.value.userId",
+          "value": "",
+          "desc": "",
+          "type": "body",
+          "validation": {
+            "type": "",
+            "condition": null,
+            "regex": "",
+            "mandatory": true,
+            "format_validator": null
+          },
+          "key": null,
+          "debugKey": false,
+          "node_ui_type": null,
+          "node_ui_group_name": null,
+          "ui_field_configuration": null
+        },
+        {
+          "order": 6,
+          "id": "b484dd0a-439b-4d68-a4d3-5d7d9e9a5b5d",
+          "name": "apiStatus",
+          "path": "$.status",
+          "value": "",
+          "desc": "",
+          "type": "body",
+          "validation": {
+            "type": "",
+            "condition": null,
+            "regex": "",
+            "mandatory": true,
+            "format_validator": null
+          },
+          "key": null,
+          "debugKey": false,
+          "node_ui_type": null,
+          "node_ui_group_name": null,
+          "ui_field_configuration": null
+        },
+        {
+          "order": 7,
+          "id": "4da8811e-757c-4637-a1fd-d46eaac9908f",
+          "name": "code",
+          "path": "$.code",
+          "value": "",
+          "desc": "",
+          "type": "body",
+          "validation": {
+            "type": "",
+            "condition": null,
+            "regex": "",
+            "mandatory": true,
+            "format_validator": null
+          },
+          "key": null,
+          "debugKey": false,
+          "node_ui_type": null,
+          "node_ui_group_name": null,
+          "ui_field_configuration": null
+        },
+        {
+          "order": 8,
+          "id": "fd47fb48-014a-4ad5-ac2a-0f844cba1cd0",
+          "name": "description",
+          "path": "$.description",
+          "value": "",
+          "desc": "",
+          "type": "body",
+          "validation": {
+            "type": "",
+            "condition": null,
+            "regex": "",
+            "mandatory": true,
+            "format_validator": null
+          },
+          "key": null,
+          "debugKey": false,
+          "node_ui_type": null,
+          "node_ui_group_name": null,
+          "ui_field_configuration": null
+        },
+        {
+          "order": 9,
+          "id": "b1b0b741-dc2a-444c-8e62-032185c68bec",
+          "name": "responsePayload",
+          "path": "$",
+          "value": "",
+          "desc": "",
+          "type": "body",
+          "validation": {
+            "type": "",
+            "condition": null,
+            "regex": "",
+            "mandatory": true,
+            "format_validator": null
+          },
+          "key": null,
+          "debugKey": false,
+          "node_ui_type": null,
+          "node_ui_group_name": null,
+          "ui_field_configuration": null
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "label": "Close Task",
+      "type_internal": "prebuiltnode",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "oninvaliddata",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "onerror",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "oninvalidchoice",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "ontimeout",
+          "declared_target_count": null
+        }
+      ],
+      "configuration": {
+        "referencekey": 50022,
+        "versionIds": "undefined",
+        "integration_id": 50022,
+        "client_uuid": "80bd20eb-296d-435a-8160-793ba617a39e",
+        "method_id": 50348,
+        "version_id": 50163,
+        "auth_id": -1,
+        "request_body": [
+          {
+            "name": "Task Id",
+            "value": "$(n3.aliasId)",
+            "id": "ff9e7104-2c35-4e00-95bd-e886b793dc4d"
+          },
+          {
+            "name": "tenant_identifier",
+            "value": "",
+            "id": "31e84e4f-2bad-b743-0a69-537e5be2edc6"
+          },
+          {
+            "name": "Conversation ID",
+            "value": "$(n3.conversationId)",
+            "id": "051e4b74-6a19-cb0e-1e09-b29decd9dcae"
+          },
+          {
+            "name": "Media Type",
+            "value": "social",
+            "id": "70ca0e89-14be-cb0d-7baf-baf71dc3b954"
+          },
+          {
+            "name": "webhookurl",
+            "value": "",
+            "id": "a5395711-fe55-4e41-ac63-63114440bc3e"
+          }
+        ],
+        "path_parameters": [
+          {
+            "name": "domain",
+            "value": "",
+            "id": "35a59252-32a4-f8f9-afe2-7c3287052a51"
+          },
+          {
+            "name": "ID",
+            "value": "$(n3.aliasId)",
+            "id": "a01f1704-493b-4a7f-8252-c3dfd1340f3f"
+          }
+        ],
+        "viewmodeData": [
+          {
+            "name": "auth_id",
+            "value": "Wxcc_Latest_V4",
+            "isNgSelectBox": true
+          },
+          {
+            "name": "version_id",
+            "value": ""
+          },
+          {
+            "name": "method_id",
+            "value": "Close Task on WxCC"
+          }
+        ],
+        "isAuthPresent": true,
+        "isComponentNode": 3,
+        "nodeInput": {
+          "tenant_identifier": "",
+          "domain": "",
+          "ID": "$(n3.aliasId)",
+          "Task Id": "$(n3.aliasId)",
+          "Conversation ID": "$(n3.conversationId)",
+          "Media Type": "social",
+          "webhookurl": ""
+        },
+        "group_id": 50020,
+        "customUiAuthStatus": 0,
+        "adminParameters": {
+          "oauth_callbackurl_type": 1,
+          "tenant_identifier": "1b598f3e-447e-45fd-928e-7357b8a4a895",
+          "domain": "intgus1",
+          "integration_identifier": "https://example.invalid/v1/integration/cntwct"
+        },
+        "isCustomUiAuthPresent": true,
+        "integration_version": 3,
+        "runTimeAuthorizationId": "[redacted]",
+        "nodeUiAuthorizationId": "[redacted]"
+      },
+      "transition_actions": [],
+      "declared_outputs": [],
+      "output_mappings": []
+    }
+  ],
+  "edges": [
+    {
+      "id": "5128004",
+      "source": "2",
+      "target": "3",
+      "event_internal": "onbegin",
+      "event_label": "onBegin",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128028",
+      "source": "3",
+      "target": "4",
+      "event_internal": "conversationClosed",
+      "event_label": "conversationClosed",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128032",
+      "source": "3",
+      "target": "4",
+      "event_internal": "conversationOnHold",
+      "event_label": "conversationOnHold",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128034",
+      "source": "3",
+      "target": "4",
+      "event_internal": "conversationInQueue",
+      "event_label": "conversationInQueue",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128258",
+      "source": "3",
+      "target": "4",
+      "event_internal": "conversationActive",
+      "event_label": "conversationActive",
+      "representation": "explicit_edge"
+    }
+  ],
+  "terminal_bindings": [
+    {
+      "id": "64",
+      "source": "4",
+      "target": "64",
+      "event_internal": "oninvaliddata",
+      "event_label": "onInvalidData",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "65",
+      "source": "4",
+      "target": "65",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "66",
+      "source": "4",
+      "target": "66",
+      "event_internal": "oninvalidchoice",
+      "event_label": "onInvalidChoice",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "67",
+      "source": "4",
+      "target": "67",
+      "event_internal": "onauthorizationfail",
+      "event_label": "onauthorizationfail",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "68",
+      "source": "4",
+      "target": "68",
+      "event_internal": "Error",
+      "event_label": "Error",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "69",
+      "source": "4",
+      "target": "69",
+      "event_internal": "ontimeout",
+      "event_label": "onTimeout",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "152",
+      "source": "4",
+      "target": "152",
+      "event_internal": "Success",
+      "event_label": "Success",
+      "outcome_id": 2,
+      "outcome_name": "Success",
+      "outcome_description": "Successfully completed flow",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "165",
+      "source": "3",
+      "target": "165",
+      "event_internal": "oninvaliddata",
+      "event_label": "onInvalidData",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "166",
+      "source": "3",
+      "target": "166",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "167",
+      "source": "3",
+      "target": "167",
+      "event_internal": "oninvalidchoice",
+      "event_label": "onInvalidChoice",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "168",
+      "source": "3",
+      "target": "168",
+      "event_internal": "onauthorizationfail",
+      "event_label": "onauthorizationfail",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "169",
+      "source": "3",
+      "target": "169",
+      "event_internal": "ontimeout",
+      "event_label": "onTimeout",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "170",
+      "source": "3",
+      "target": "170",
+      "event_internal": "noConversationFound",
+      "event_label": "noConversationFound",
+      "outcome_id": 2,
+      "outcome_name": "Success",
+      "outcome_description": "Successfully completed flow",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    }
+  ],
+  "terminal_sources_not_captured": [],
+  "duplicate_terminal_binding_groups": [],
+  "variable_handoffs": [
+    {
+      "consumer": "3",
+      "location": "configuration.request_body[1].value",
+      "reference": "$(n2.abc.abcUserId)",
+      "variable": "n2.abc.abcUserId",
+      "producer_node": "2",
+      "producer_field": "abc.abcUserId",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "3",
+      "location": "configuration.nodeInput.customeraddress",
+      "reference": "$(n2.abc.abcUserId)",
+      "variable": "n2.abc.abcUserId",
+      "producer_node": "2",
+      "producer_field": "abc.abcUserId",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "3",
+      "location": "configuration.extraParamsData.customeraddress",
+      "reference": "$(n2.abc.abcUserId)",
+      "variable": "n2.abc.abcUserId",
+      "producer_node": "2",
+      "producer_field": "abc.abcUserId",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "4",
+      "location": "configuration.request_body[0].value",
+      "reference": "$(n3.aliasId)",
+      "variable": "n3.aliasId",
+      "producer_node": "3",
+      "producer_field": "aliasId",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "4",
+      "location": "configuration.request_body[2].value",
+      "reference": "$(n3.conversationId)",
+      "variable": "n3.conversationId",
+      "producer_node": "3",
+      "producer_field": "conversationId",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "4",
+      "location": "configuration.path_parameters[1].value",
+      "reference": "$(n3.aliasId)",
+      "variable": "n3.aliasId",
+      "producer_node": "3",
+      "producer_field": "aliasId",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "4",
+      "location": "configuration.nodeInput.ID",
+      "reference": "$(n3.aliasId)",
+      "variable": "n3.aliasId",
+      "producer_node": "3",
+      "producer_field": "aliasId",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "4",
+      "location": "configuration.nodeInput.Task Id",
+      "reference": "$(n3.aliasId)",
+      "variable": "n3.aliasId",
+      "producer_node": "3",
+      "producer_field": "aliasId",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "4",
+      "location": "configuration.nodeInput.Conversation ID",
+      "reference": "$(n3.conversationId)",
+      "variable": "n3.conversationId",
+      "producer_node": "3",
+      "producer_field": "conversationId",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "3",
+      "location": "_usedVars",
+      "reference": "$(n2.abc.abcUserId)",
+      "variable": "n2.abc.abcUserId",
+      "producer_node": "2",
+      "producer_field": "abc.abcUserId",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "4",
+      "location": "_usedVars",
+      "reference": "$(n3.aliasId)",
+      "variable": "n3.aliasId",
+      "producer_node": "3",
+      "producer_field": "aliasId",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "4",
+      "location": "_usedVars",
+      "reference": "$(n3.conversationId)",
+      "variable": "n3.conversationId",
+      "producer_node": "3",
+      "producer_field": "conversationId",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    }
+  ],
+  "custom_variable_assignments": [],
+  "custom_variables": [
+    {
+      "name": "customtimestamp",
+      "desc": "",
+      "type": "default"
+    }
+  ],
+  "flow_outcomes": [
+    {
+      "id": 2,
+      "order": 0,
+      "name": 101,
+      "value": "Successfully completed flow",
+      "tag": 11,
+      "tagName": "Success",
+      "type": "default",
+      "notification": null
+    },
+    {
+      "id": 3,
+      "order": 1,
+      "name": 102,
+      "value": "Flow completed with an error",
+      "tag": 12,
+      "tagName": "Error",
+      "type": "default",
+      "notification": null
+    },
+    {
+      "id": 4,
+      "order": 2,
+      "name": 103,
+      "value": "Flow ended due to an interruption",
+      "tag": 13,
+      "tagName": "Incomplete",
+      "type": "default",
+      "notification": null
+    },
+    {
+      "id": 1,
+      "name": 100,
+      "value": "Last executed node event",
+      "statusCode": "All status codes",
+      "tag": 15,
+      "tagName": "Last Execution Status",
+      "type": "default",
+      "notification": null
+    }
+  ],
+  "cycles": [],
+  "cross_page_or_flow_nodes": [],
+  "capture_pages": null,
+  "declared_events_without_captured_route": [],
+  "nodes_not_reached_from_captured_start": [],
+  "edge_endpoints_not_captured": [],
+  "node_variable_producers_not_captured": [],
+  "redactions": "Header credentials and URL hosts redacted. Internal model properties are evidence, not a public import API.",
+  "authored_walkthrough": {
+    "walkthrough": "Apple Conversation closed triggers Start 2 and Search Conversation 3. Search results conversationClosed, conversationOnHold, conversationInQueue and conversationActive all route to Close Task 4. Close Task Success terminates Success; its Error, authorization, invalid-data/choice, general-error and timeout events terminate Error. Search noConversationFound terminates Success without a close attempt, while search failures/timeouts end Error. This is an event-to-cleanup flow with no outgoing customer message, Receive or loop.",
+    "handoffs": "Search identifies the conversation using the incoming Apple identity. Its output `$(n3.aliasId)` becomes both Close Task’s Task Id request value and ID path parameter. `$(n3.conversationId)` becomes Conversation ID, with Media Type social. These are separate identifiers; the alias/task ID is not replaced by the conversation ID.",
+    "limitations": "The sample name Unsubscribe describes Apple conversation-close handling. The graph does not show an SMS opt-out list, consent database, subscription API or cross-channel contact-policy update. It also deliberately attempts Close Task for the conversationClosed search result; do not silently remove that path from the observed design. No retries are present, and imported authorization/tenant bindings are examples. Terminal configuration is not proof a real task was closed."
+  },
+  "walkthrough_status": "authored"
+}

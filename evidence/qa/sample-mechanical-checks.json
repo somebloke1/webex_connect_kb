@@ -1,0 +1,1107 @@
+{
+  "scope": "59 = 9 gallery + 17 AI native + 33 WxCC v3.5; CCE15 remain documented-only",
+  "coverage": "pass",
+  "files_checked": 59,
+  "totals": {
+    "cells": 2958,
+    "operative_nodes": 534,
+    "explicit_edges": 1670,
+    "terminal_bindings": 695,
+    "variable_references": 4382
+  },
+  "graphs_with_stale_end_sources": 15,
+  "all_graph_invariants": "pass",
+  "all_authored_narratives_present": "pass",
+  "source_manifest_hash_checks": {
+    "public-native-manifest.json": {
+      "records": 17,
+      "local_hashes_checked": 17
+    },
+    "public-wxcc-manifest.json": {
+      "records": 43,
+      "local_hashes_checked": 43
+    }
+  },
+  "cce_source_only_count": 15,
+  "samples_search_count": 59,
+  "samples_search_excludes_raw_and_observed_fixture": "pass",
+  "search_examples": {
+    "AI Agent Livechat": [
+      {
+        "path": "evidence/sample-flows/summaries/gallery-ai-livechat.json",
+        "kind": "sample",
+        "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model",
+        "runtime_tested": false
+      },
+      {
+        "path": "evidence/sample-flows/summaries/wxcc-livechat-inbound-flow-with-proactive-chat-changes.json",
+        "kind": "sample",
+        "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model",
+        "runtime_tested": false
+      },
+      {
+        "path": "evidence/sample-flows/summaries/gallery-ai-doctor.json",
+        "kind": "sample",
+        "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model",
+        "runtime_tested": false
+      }
+    ],
+    "MessageMetadata": [
+      {
+        "path": "evidence/sample-flows/summaries/gallery-ai-doctor.json",
+        "kind": "sample",
+        "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model",
+        "runtime_tested": false
+      },
+      {
+        "path": "evidence/sample-flows/summaries/gallery-ai-livechat.json",
+        "kind": "sample",
+        "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model",
+        "runtime_tested": false
+      }
+    ],
+    "Email Inbound": [
+      {
+        "path": "evidence/sample-flows/summaries/wxcc-livechat-inbound-flow-with-proactive-chat-changes.json",
+        "kind": "sample",
+        "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model",
+        "runtime_tested": false
+      },
+      {
+        "path": "evidence/sample-flows/summaries/wxcc-whatsapp-inbound.json",
+        "kind": "sample",
+        "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model",
+        "runtime_tested": false
+      },
+      {
+        "path": "evidence/sample-flows/summaries/wxcc-apple-inbound-flow-with-form.json",
+        "kind": "sample",
+        "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model",
+        "runtime_tested": false
+      }
+    ],
+    "lookup_appointment": [
+      {
+        "path": "evidence/sample-flows/summaries/native-lookup-appointment.json",
+        "kind": "sample",
+        "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model",
+        "runtime_tested": false
+      },
+      {
+        "path": "evidence/sample-flows/summaries/gallery-ai-doctor.json",
+        "kind": "sample",
+        "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model",
+        "runtime_tested": false
+      }
+    ],
+    "sendSMS": [
+      {
+        "path": "evidence/sample-flows/summaries/native-sendsms.json",
+        "kind": "sample",
+        "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model",
+        "runtime_tested": false
+      }
+    ]
+  },
+  "records": [
+    {
+      "key": "gallery-ai-doctor",
+      "counts": {
+        "cells": 235,
+        "operative_nodes": 43,
+        "explicit_edges": 160,
+        "terminal_bindings": 31,
+        "variable_references": 403
+      },
+      "start_nodes": 1,
+      "cycle_groups": 1,
+      "stale_end_sources": [],
+      "missing_node_reference_producers": [
+        "9"
+      ],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    },
+    {
+      "key": "gallery-ai-livechat",
+      "counts": {
+        "cells": 163,
+        "operative_nodes": 27,
+        "explicit_edges": 109,
+        "terminal_bindings": 26,
+        "variable_references": 297
+      },
+      "start_nodes": 1,
+      "cycle_groups": 1,
+      "stale_end_sources": [],
+      "missing_node_reference_producers": [
+        "9"
+      ],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    },
+    {
+      "key": "gallery-appointment-reminder",
+      "counts": {
+        "cells": 41,
+        "operative_nodes": 11,
+        "explicit_edges": 10,
+        "terminal_bindings": 19,
+        "variable_references": 56
+      },
+      "start_nodes": 1,
+      "cycle_groups": 0,
+      "stale_end_sources": [],
+      "missing_node_reference_producers": [],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    },
+    {
+      "key": "gallery-autoresponder",
+      "counts": {
+        "cells": 7,
+        "operative_nodes": 2,
+        "explicit_edges": 1,
+        "terminal_bindings": 3,
+        "variable_references": 48
+      },
+      "start_nodes": 1,
+      "cycle_groups": 0,
+      "stale_end_sources": [],
+      "missing_node_reference_producers": [],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    },
+    {
+      "key": "gallery-chatbot",
+      "counts": {
+        "cells": 35,
+        "operative_nodes": 10,
+        "explicit_edges": 9,
+        "terminal_bindings": 15,
+        "variable_references": 58
+      },
+      "start_nodes": 1,
+      "cycle_groups": 0,
+      "stale_end_sources": [],
+      "missing_node_reference_producers": [],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    },
+    {
+      "key": "gallery-logistics",
+      "counts": {
+        "cells": 59,
+        "operative_nodes": 16,
+        "explicit_edges": 16,
+        "terminal_bindings": 26,
+        "variable_references": 45
+      },
+      "start_nodes": 1,
+      "cycle_groups": 1,
+      "stale_end_sources": [],
+      "missing_node_reference_producers": [],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    },
+    {
+      "key": "gallery-sms-survey",
+      "counts": {
+        "cells": 22,
+        "operative_nodes": 6,
+        "explicit_edges": 6,
+        "terminal_bindings": 9,
+        "variable_references": 54
+      },
+      "start_nodes": 1,
+      "cycle_groups": 1,
+      "stale_end_sources": [],
+      "missing_node_reference_producers": [],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    },
+    {
+      "key": "gallery-track-package",
+      "counts": {
+        "cells": 7,
+        "operative_nodes": 2,
+        "explicit_edges": 1,
+        "terminal_bindings": 3,
+        "variable_references": 10
+      },
+      "start_nodes": 1,
+      "cycle_groups": 0,
+      "stale_end_sources": [],
+      "missing_node_reference_producers": [],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    },
+    {
+      "key": "gallery-webhook-sms",
+      "counts": {
+        "cells": 4,
+        "operative_nodes": 2,
+        "explicit_edges": 1,
+        "terminal_bindings": 0,
+        "variable_references": 4
+      },
+      "start_nodes": 1,
+      "cycle_groups": 0,
+      "stale_end_sources": [],
+      "missing_node_reference_producers": [],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    },
+    {
+      "key": "native-block-card-and-order-replacement",
+      "counts": {
+        "cells": 5,
+        "operative_nodes": 2,
+        "explicit_edges": 1,
+        "terminal_bindings": 1,
+        "variable_references": 11
+      },
+      "start_nodes": 1,
+      "cycle_groups": 0,
+      "stale_end_sources": [],
+      "missing_node_reference_producers": [],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    },
+    {
+      "key": "native-cancel-appointment",
+      "counts": {
+        "cells": 4,
+        "operative_nodes": 2,
+        "explicit_edges": 1,
+        "terminal_bindings": 0,
+        "variable_references": 12
+      },
+      "start_nodes": 1,
+      "cycle_groups": 0,
+      "stale_end_sources": [],
+      "missing_node_reference_producers": [],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    },
+    {
+      "key": "native-cancel-booking",
+      "counts": {
+        "cells": 6,
+        "operative_nodes": 2,
+        "explicit_edges": 1,
+        "terminal_bindings": 2,
+        "variable_references": 16
+      },
+      "start_nodes": 1,
+      "cycle_groups": 0,
+      "stale_end_sources": [],
+      "missing_node_reference_producers": [],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    },
+    {
+      "key": "native-cancel-checkin",
+      "counts": {
+        "cells": 7,
+        "operative_nodes": 2,
+        "explicit_edges": 1,
+        "terminal_bindings": 3,
+        "variable_references": 16
+      },
+      "start_nodes": 1,
+      "cycle_groups": 0,
+      "stale_end_sources": [],
+      "missing_node_reference_producers": [],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    },
+    {
+      "key": "native-check-availability",
+      "counts": {
+        "cells": 4,
+        "operative_nodes": 2,
+        "explicit_edges": 1,
+        "terminal_bindings": 0,
+        "variable_references": 12
+      },
+      "start_nodes": 1,
+      "cycle_groups": 0,
+      "stale_end_sources": [],
+      "missing_node_reference_producers": [],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    },
+    {
+      "key": "native-checkin",
+      "counts": {
+        "cells": 7,
+        "operative_nodes": 2,
+        "explicit_edges": 1,
+        "terminal_bindings": 3,
+        "variable_references": 16
+      },
+      "start_nodes": 1,
+      "cycle_groups": 0,
+      "stale_end_sources": [],
+      "missing_node_reference_producers": [],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    },
+    {
+      "key": "native-create-appointment",
+      "counts": {
+        "cells": 4,
+        "operative_nodes": 2,
+        "explicit_edges": 1,
+        "terminal_bindings": 0,
+        "variable_references": 12
+      },
+      "start_nodes": 1,
+      "cycle_groups": 0,
+      "stale_end_sources": [],
+      "missing_node_reference_producers": [],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    },
+    {
+      "key": "native-fetch-account-balance",
+      "counts": {
+        "cells": 10,
+        "operative_nodes": 5,
+        "explicit_edges": 4,
+        "terminal_bindings": 0,
+        "variable_references": 18
+      },
+      "start_nodes": 1,
+      "cycle_groups": 0,
+      "stale_end_sources": [],
+      "missing_node_reference_producers": [],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    },
+    {
+      "key": "native-fetch-recent-transactions",
+      "counts": {
+        "cells": 10,
+        "operative_nodes": 5,
+        "explicit_edges": 4,
+        "terminal_bindings": 0,
+        "variable_references": 19
+      },
+      "start_nodes": 1,
+      "cycle_groups": 0,
+      "stale_end_sources": [],
+      "missing_node_reference_producers": [],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    },
+    {
+      "key": "native-get-flight-info",
+      "counts": {
+        "cells": 6,
+        "operative_nodes": 2,
+        "explicit_edges": 1,
+        "terminal_bindings": 2,
+        "variable_references": 32
+      },
+      "start_nodes": 1,
+      "cycle_groups": 0,
+      "stale_end_sources": [],
+      "missing_node_reference_producers": [],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    },
+    {
+      "key": "native-lookup-appointment",
+      "counts": {
+        "cells": 4,
+        "operative_nodes": 2,
+        "explicit_edges": 1,
+        "terminal_bindings": 0,
+        "variable_references": 12
+      },
+      "start_nodes": 1,
+      "cycle_groups": 0,
+      "stale_end_sources": [],
+      "missing_node_reference_producers": [],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    },
+    {
+      "key": "native-lookup-flights",
+      "counts": {
+        "cells": 7,
+        "operative_nodes": 2,
+        "explicit_edges": 1,
+        "terminal_bindings": 3,
+        "variable_references": 14
+      },
+      "start_nodes": 1,
+      "cycle_groups": 0,
+      "stale_end_sources": [],
+      "missing_node_reference_producers": [],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    },
+    {
+      "key": "native-register-transaction-dispute",
+      "counts": {
+        "cells": 5,
+        "operative_nodes": 2,
+        "explicit_edges": 1,
+        "terminal_bindings": 1,
+        "variable_references": 12
+      },
+      "start_nodes": 1,
+      "cycle_groups": 0,
+      "stale_end_sources": [],
+      "missing_node_reference_producers": [],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    },
+    {
+      "key": "native-request-priority-shipping",
+      "counts": {
+        "cells": 5,
+        "operative_nodes": 2,
+        "explicit_edges": 1,
+        "terminal_bindings": 1,
+        "variable_references": 7
+      },
+      "start_nodes": 1,
+      "cycle_groups": 0,
+      "stale_end_sources": [],
+      "missing_node_reference_producers": [],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    },
+    {
+      "key": "native-reschedule-flight",
+      "counts": {
+        "cells": 6,
+        "operative_nodes": 2,
+        "explicit_edges": 1,
+        "terminal_bindings": 2,
+        "variable_references": 28
+      },
+      "start_nodes": 1,
+      "cycle_groups": 0,
+      "stale_end_sources": [],
+      "missing_node_reference_producers": [],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    },
+    {
+      "key": "native-sendsms",
+      "counts": {
+        "cells": 4,
+        "operative_nodes": 2,
+        "explicit_edges": 1,
+        "terminal_bindings": 0,
+        "variable_references": 8
+      },
+      "start_nodes": 1,
+      "cycle_groups": 0,
+      "stale_end_sources": [],
+      "missing_node_reference_producers": [],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    },
+    {
+      "key": "native-verify-user",
+      "counts": {
+        "cells": 7,
+        "operative_nodes": 2,
+        "explicit_edges": 1,
+        "terminal_bindings": 3,
+        "variable_references": 15
+      },
+      "start_nodes": 1,
+      "cycle_groups": 0,
+      "stale_end_sources": [],
+      "missing_node_reference_producers": [],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    },
+    {
+      "key": "wxcc-amb-simplified-flow",
+      "counts": {
+        "cells": 78,
+        "operative_nodes": 13,
+        "explicit_edges": 36,
+        "terminal_bindings": 28,
+        "variable_references": 89
+      },
+      "start_nodes": 1,
+      "cycle_groups": 0,
+      "stale_end_sources": [],
+      "missing_node_reference_producers": [],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    },
+    {
+      "key": "wxcc-apple-basic-inbound-flow",
+      "counts": {
+        "cells": 77,
+        "operative_nodes": 13,
+        "explicit_edges": 49,
+        "terminal_bindings": 14,
+        "variable_references": 100
+      },
+      "start_nodes": 1,
+      "cycle_groups": 0,
+      "stale_end_sources": [],
+      "missing_node_reference_producers": [],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    },
+    {
+      "key": "wxcc-apple-form-response-flow",
+      "counts": {
+        "cells": 27,
+        "operative_nodes": 4,
+        "explicit_edges": 9,
+        "terminal_bindings": 13,
+        "variable_references": 30
+      },
+      "start_nodes": 1,
+      "cycle_groups": 0,
+      "stale_end_sources": [
+        "27"
+      ],
+      "missing_node_reference_producers": [],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    },
+    {
+      "key": "wxcc-apple-imessage-app-flow",
+      "counts": {
+        "cells": 31,
+        "operative_nodes": 5,
+        "explicit_edges": 13,
+        "terminal_bindings": 12,
+        "variable_references": 30
+      },
+      "start_nodes": 1,
+      "cycle_groups": 0,
+      "stale_end_sources": [],
+      "missing_node_reference_producers": [],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    },
+    {
+      "key": "wxcc-apple-inbound-flow-with-form",
+      "counts": {
+        "cells": 109,
+        "operative_nodes": 17,
+        "explicit_edges": 77,
+        "terminal_bindings": 14,
+        "variable_references": 124
+      },
+      "start_nodes": 1,
+      "cycle_groups": 0,
+      "stale_end_sources": [],
+      "missing_node_reference_producers": [],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    },
+    {
+      "key": "wxcc-apple-inbound-flow-with-intentid-groupid-based-routing",
+      "counts": {
+        "cells": 87,
+        "operative_nodes": 14,
+        "explicit_edges": 58,
+        "terminal_bindings": 14,
+        "variable_references": 105
+      },
+      "start_nodes": 1,
+      "cycle_groups": 0,
+      "stale_end_sources": [],
+      "missing_node_reference_producers": [],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    },
+    {
+      "key": "wxcc-apple-list-picker-flow",
+      "counts": {
+        "cells": 119,
+        "operative_nodes": 18,
+        "explicit_edges": 86,
+        "terminal_bindings": 14,
+        "variable_references": 138
+      },
+      "start_nodes": 1,
+      "cycle_groups": 0,
+      "stale_end_sources": [],
+      "missing_node_reference_producers": [
+        "194"
+      ],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    },
+    {
+      "key": "wxcc-apple-time-picker-and-list-picker-response-flow",
+      "counts": {
+        "cells": 42,
+        "operative_nodes": 6,
+        "explicit_edges": 18,
+        "terminal_bindings": 17,
+        "variable_references": 43
+      },
+      "start_nodes": 1,
+      "cycle_groups": 0,
+      "stale_end_sources": [
+        "27"
+      ],
+      "missing_node_reference_producers": [],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    },
+    {
+      "key": "wxcc-apple-time-picker-flow",
+      "counts": {
+        "cells": 86,
+        "operative_nodes": 14,
+        "explicit_edges": 57,
+        "terminal_bindings": 14,
+        "variable_references": 107
+      },
+      "start_nodes": 1,
+      "cycle_groups": 0,
+      "stale_end_sources": [],
+      "missing_node_reference_producers": [],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    },
+    {
+      "key": "wxcc-apple-unsubscribe-flow",
+      "counts": {
+        "cells": 22,
+        "operative_nodes": 3,
+        "explicit_edges": 5,
+        "terminal_bindings": 13,
+        "variable_references": 12
+      },
+      "start_nodes": 1,
+      "cycle_groups": 0,
+      "stale_end_sources": [],
+      "missing_node_reference_producers": [],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    },
+    {
+      "key": "wxcc-emailattachmentdropnotification",
+      "counts": {
+        "cells": 65,
+        "operative_nodes": 11,
+        "explicit_edges": 39,
+        "terminal_bindings": 14,
+        "variable_references": 126
+      },
+      "start_nodes": 1,
+      "cycle_groups": 0,
+      "stale_end_sources": [
+        "1878"
+      ],
+      "missing_node_reference_producers": [],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    },
+    {
+      "key": "wxcc-emailinboundflow",
+      "counts": {
+        "cells": 60,
+        "operative_nodes": 10,
+        "explicit_edges": 35,
+        "terminal_bindings": 14,
+        "variable_references": 125
+      },
+      "start_nodes": 1,
+      "cycle_groups": 0,
+      "stale_end_sources": [
+        "1878"
+      ],
+      "missing_node_reference_producers": [],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    },
+    {
+      "key": "wxcc-emailinboundsampleflowwithcontactpriority",
+      "counts": {
+        "cells": 64,
+        "operative_nodes": 11,
+        "explicit_edges": 38,
+        "terminal_bindings": 14,
+        "variable_references": 127
+      },
+      "start_nodes": 1,
+      "cycle_groups": 0,
+      "stale_end_sources": [
+        "1878"
+      ],
+      "missing_node_reference_producers": [],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    },
+    {
+      "key": "wxcc-facebookattachmentdropnotification",
+      "counts": {
+        "cells": 65,
+        "operative_nodes": 11,
+        "explicit_edges": 39,
+        "terminal_bindings": 14,
+        "variable_references": 82
+      },
+      "start_nodes": 1,
+      "cycle_groups": 0,
+      "stale_end_sources": [
+        "1825",
+        "1980"
+      ],
+      "missing_node_reference_producers": [],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    },
+    {
+      "key": "wxcc-facebookclosewithwxmflow",
+      "counts": {
+        "cells": 76,
+        "operative_nodes": 12,
+        "explicit_edges": 36,
+        "terminal_bindings": 27,
+        "variable_references": 96
+      },
+      "start_nodes": 1,
+      "cycle_groups": 0,
+      "stale_end_sources": [
+        "305",
+        "683"
+      ],
+      "missing_node_reference_producers": [],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    },
+    {
+      "key": "wxcc-facebookinboundflow",
+      "counts": {
+        "cells": 60,
+        "operative_nodes": 10,
+        "explicit_edges": 35,
+        "terminal_bindings": 14,
+        "variable_references": 85
+      },
+      "start_nodes": 1,
+      "cycle_groups": 0,
+      "stale_end_sources": [
+        "1825"
+      ],
+      "missing_node_reference_producers": [],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    },
+    {
+      "key": "wxcc-facebooktaskbotinboundflow",
+      "counts": {
+        "cells": 165,
+        "operative_nodes": 31,
+        "explicit_edges": 98,
+        "terminal_bindings": 35,
+        "variable_references": 230
+      },
+      "start_nodes": 1,
+      "cycle_groups": 1,
+      "stale_end_sources": [
+        "1681",
+        "1730"
+      ],
+      "missing_node_reference_producers": [
+        "1405"
+      ],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    },
+    {
+      "key": "wxcc-live-chat-close-flow",
+      "counts": {
+        "cells": 29,
+        "operative_nodes": 4,
+        "explicit_edges": 5,
+        "terminal_bindings": 19,
+        "variable_references": 37
+      },
+      "start_nodes": 1,
+      "cycle_groups": 0,
+      "stale_end_sources": [],
+      "missing_node_reference_producers": [],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    },
+    {
+      "key": "wxcc-livechat-inbound-flow-with-proactive-chat-changes",
+      "counts": {
+        "cells": 97,
+        "operative_nodes": 15,
+        "explicit_edges": 67,
+        "terminal_bindings": 14,
+        "variable_references": 154
+      },
+      "start_nodes": 1,
+      "cycle_groups": 0,
+      "stale_end_sources": [
+        "2238",
+        "2291",
+        "2577"
+      ],
+      "missing_node_reference_producers": [],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    },
+    {
+      "key": "wxcc-livechatclosewithwxmflow",
+      "counts": {
+        "cells": 76,
+        "operative_nodes": 12,
+        "explicit_edges": 36,
+        "terminal_bindings": 27,
+        "variable_references": 91
+      },
+      "start_nodes": 1,
+      "cycle_groups": 0,
+      "stale_end_sources": [
+        "305",
+        "683"
+      ],
+      "missing_node_reference_producers": [
+        "1477"
+      ],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    },
+    {
+      "key": "wxcc-livechatinbound-flow",
+      "counts": {
+        "cells": 83,
+        "operative_nodes": 13,
+        "explicit_edges": 55,
+        "terminal_bindings": 14,
+        "variable_references": 133
+      },
+      "start_nodes": 1,
+      "cycle_groups": 0,
+      "stale_end_sources": [
+        "2238",
+        "2291",
+        "2577"
+      ],
+      "missing_node_reference_producers": [],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    },
+    {
+      "key": "wxcc-livechatinboundflowwithoutform",
+      "counts": {
+        "cells": 56,
+        "operative_nodes": 9,
+        "explicit_edges": 32,
+        "terminal_bindings": 14,
+        "variable_references": 101
+      },
+      "start_nodes": 1,
+      "cycle_groups": 0,
+      "stale_end_sources": [
+        "2238",
+        "2291"
+      ],
+      "missing_node_reference_producers": [],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    },
+    {
+      "key": "wxcc-livechatinboundsampleflowwithsetvariable",
+      "counts": {
+        "cells": 95,
+        "operative_nodes": 14,
+        "explicit_edges": 66,
+        "terminal_bindings": 14,
+        "variable_references": 150
+      },
+      "start_nodes": 1,
+      "cycle_groups": 0,
+      "stale_end_sources": [
+        "2238",
+        "2291",
+        "2577"
+      ],
+      "missing_node_reference_producers": [],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    },
+    {
+      "key": "wxcc-livechatinboundsampleflowwithsetvariablepiqandewt",
+      "counts": {
+        "cells": 112,
+        "operative_nodes": 17,
+        "explicit_edges": 69,
+        "terminal_bindings": 25,
+        "variable_references": 175
+      },
+      "start_nodes": 1,
+      "cycle_groups": 0,
+      "stale_end_sources": [
+        "2238",
+        "2291",
+        "2577"
+      ],
+      "missing_node_reference_producers": [],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    },
+    {
+      "key": "wxcc-livechatqabotinboundflow",
+      "counts": {
+        "cells": 168,
+        "operative_nodes": 29,
+        "explicit_edges": 114,
+        "terminal_bindings": 24,
+        "variable_references": 267
+      },
+      "start_nodes": 1,
+      "cycle_groups": 1,
+      "stale_end_sources": [],
+      "missing_node_reference_producers": [
+        "9"
+      ],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    },
+    {
+      "key": "wxcc-sms-inbound",
+      "counts": {
+        "cells": 60,
+        "operative_nodes": 10,
+        "explicit_edges": 32,
+        "terminal_bindings": 17,
+        "variable_references": 71
+      },
+      "start_nodes": 1,
+      "cycle_groups": 0,
+      "stale_end_sources": [],
+      "missing_node_reference_producers": [],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    },
+    {
+      "key": "wxcc-smsqabotinboundflow",
+      "counts": {
+        "cells": 135,
+        "operative_nodes": 23,
+        "explicit_edges": 84,
+        "terminal_bindings": 27,
+        "variable_references": 139
+      },
+      "start_nodes": 1,
+      "cycle_groups": 1,
+      "stale_end_sources": [],
+      "missing_node_reference_producers": [],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    },
+    {
+      "key": "wxcc-task-close-flow",
+      "counts": {
+        "cells": 15,
+        "operative_nodes": 3,
+        "explicit_edges": 2,
+        "terminal_bindings": 9,
+        "variable_references": 15
+      },
+      "start_nodes": 1,
+      "cycle_groups": 0,
+      "stale_end_sources": [],
+      "missing_node_reference_producers": [],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    },
+    {
+      "key": "wxcc-task-close-flow-with-screen-pop",
+      "counts": {
+        "cells": 15,
+        "operative_nodes": 3,
+        "explicit_edges": 2,
+        "terminal_bindings": 9,
+        "variable_references": 16
+      },
+      "start_nodes": 1,
+      "cycle_groups": 0,
+      "stale_end_sources": [],
+      "missing_node_reference_producers": [],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    },
+    {
+      "key": "wxcc-task-modified-flow",
+      "counts": {
+        "cells": 20,
+        "operative_nodes": 4,
+        "explicit_edges": 3,
+        "terminal_bindings": 12,
+        "variable_references": 20
+      },
+      "start_nodes": 1,
+      "cycle_groups": 0,
+      "stale_end_sources": [],
+      "missing_node_reference_producers": [],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    },
+    {
+      "key": "wxcc-task-routed-flow",
+      "counts": {
+        "cells": 15,
+        "operative_nodes": 3,
+        "explicit_edges": 2,
+        "terminal_bindings": 9,
+        "variable_references": 16
+      },
+      "start_nodes": 1,
+      "cycle_groups": 0,
+      "stale_end_sources": [],
+      "missing_node_reference_producers": [],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    },
+    {
+      "key": "wxcc-task-routed-sample-flow-for-extracting-variables",
+      "counts": {
+        "cells": 15,
+        "operative_nodes": 3,
+        "explicit_edges": 2,
+        "terminal_bindings": 9,
+        "variable_references": 20
+      },
+      "start_nodes": 1,
+      "cycle_groups": 0,
+      "stale_end_sources": [],
+      "missing_node_reference_producers": [],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    },
+    {
+      "key": "wxcc-whatsapp-inbound",
+      "counts": {
+        "cells": 60,
+        "operative_nodes": 10,
+        "explicit_edges": 35,
+        "terminal_bindings": 14,
+        "variable_references": 93
+      },
+      "start_nodes": 1,
+      "cycle_groups": 0,
+      "stale_end_sources": [],
+      "missing_node_reference_producers": [],
+      "narrative_and_report_coverage": "pass",
+      "graph_record_invariants": "pass"
+    }
+  ]
+}

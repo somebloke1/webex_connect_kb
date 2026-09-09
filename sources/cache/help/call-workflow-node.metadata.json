@@ -1,0 +1,39 @@
+{
+  "category": "SERVICES & FLOWS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182577d1",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "377799c55bfd538ab3696e445bc6982d65bed163d7e524f66f16ca070906eb05",
+    "source_path": "49c787acac681dfbd2f8b38342fae585ced2b9c14dfb9f995f8c7bc626a7a7c8",
+    "text_path": "da97c5856c62aff23f4e374bb51ae6f279b2a1d49b73bcfa2e141b3d2a72766a"
+  },
+  "headings": [
+    "🚧Variable Management for Context Transfer across Flows",
+    "Call Workflow Node Configuration",
+    "Optionally configure Transition Actions",
+    "📘Page Connector vs Call Workflow - When to use which node",
+    "🚧Publishing a flow with Call Workflow Nodes",
+    "Notify URL",
+    "📘Note:"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/call-workflow-node.md",
+  "resolved_url": "https://help.webexconnect.io/docs/call-workflow-node",
+  "retrieved_at": "2026-09-08T23:28:42+00:00",
+  "sha256_html_response": "a1f620e23c2861cc17d3913cb4dc14868ef036bdabca2b6ec31e33ab3d7ce84a",
+  "sha256_source_body": "49c787acac681dfbd2f8b38342fae585ced2b9c14dfb9f995f8c7bc626a7a7c8",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/call-workflow-node.source.md",
+  "source_updated_at": "2026-01-26T13:39:36.022Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/call-workflow-node.txt",
+  "title": "Call Workflow Node",
+  "url": "https://help.webexconnect.io/docs/call-workflow-node",
+  "word_count": 1541,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/call-workflow-node.metadata.json"
+}

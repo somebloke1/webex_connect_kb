@@ -1,0 +1,614 @@
+# WhatsApp FAQs
+
+Source: https://developers.webexconnect.io/reference/faqs-whatsapp
+Documentation version: 6.20.0
+Retrieved: 2026-09-08T23:31:52+00:00
+
+## What is WhatsApp Business API?
+
+For medium and large businesses, the WhatsApp Business API powers your communication with customers all over the world, so you can connect with them on WhatsApp in a simple, secure, and reliable way.
+
+With WhatsApp for Business API, you will be able to 
+
+1. Send notifications to your customers
+2. Provide customer support
+
+Cisco is an official WhatsApp for Business API partner.
+
+## How is this different from WhatsApp Business app?
+
+WhatsApp Business API is different from WhatsApp Business App.
+
+## WhatsApp Business API
+
+The WhatsApp Business API is a solution for mid to large businesses that engage with their customers on a scale usually through a programmatic implementation and integration with other business systems. Business API is suitable if you:
+
+- Send bulk notifications
+- Integrate with other business systems
+- Use automation/bots for handling conversations
+- Have customer care agents to support customers 
+
+## WhatsApp Business App
+
+WhatsApp Business App on iOS and Android is the perfect solution for a home-based and small business where a single business owner supports customers. You can't create chatbots or send automated notifications to customers using this. We don't support this.
+
+## Registration for WhatsApp Business API Access
+
+Before your business can offer WhatsApp to your customers, you must submit your business to us so that we can get approval from WhatsApp for you. 
+
+To complete the form you will need your Facebook Business Manager ID which you can find within your Facebook Business Manager.
+
+
+
+![Screenshot of Business Settings Page.](https://files.readme.io/6850c38-frXM4LNm5O4sboA0WTSwVVNyTjrtCTjpuzqTqQ5jWOHu56hH3FDVwIhhGRq1_B5aYJwWcLprxi5R4Rs0ltEYF_-WawKnWlhk8BLTuIIkvVke4ufFcM0V2LKusVcOFRDZgDVX2MPg)
+
+
+
+
+To register, refer to [WhatsApp Business Account](https://app.smartsheet.com/b/form/ab42527ce39149988616d3d8ea9aefb4).
+
+Once submitted with the right credentials, you will receive a request from Facebook as shown below within 2-4 working days which you will need to approve. You will need contact your Facebook Business Manager Admin to get this approved.
+
+
+
+![Screenshot of Business Settings Page.](https://files.readme.io/756aa7e-D_OTrMn67E0vCluERaTaN_APit6eyE6qcltewy_XxIKaNi3vz80opT0MiQyEM2t7zOF77XKXlNIthudHC1G3S_8_dvFFzfqqHmnWO3qo9xvvX3rJiZK4Q2LaFY60tsPQ4zRLsxo0)
+
+
+
+
+## Approve messaging on behalf of your business
+
+You will receive a notification within Business Manager and by email. To approve this request:
+
+1. Click on the link in your email or log in to [Business Manager](https://business.facebook.com/).
+2. Within Business Manager, click Business Settings.
+3. Click Requests.
+4. Under Received, find your request and click Approve.
+
+Once these steps are done, your business is ready to be [verified](https://faqs.imiconnect.io/en/articles/3846294-verifying-your-business).
+
+## Verifying your business
+
+After you approve a “messaging on behalf of” request, you will need to verify your business in Business Manager. WhatsApp uses this process to validate the true identity of a business.
+
+1. Within Business Manager, click Business Settings.
+2. Click Security Center.
+3. Below Verification, click Start Verification.
+
+> 📘 Note
+> 
+> “Start Verification” is disabled until you approve the “messaging on behalf of” request from Cisco.
+
+After your business is verified, Cisco will have access to message on behalf of your business and move on to setting up your number.
+
+## Setting up your WhatsApp Business number
+
+Once your business is registered as an official WhatsApp Business Account (WABA) you can request for certificate.
+
+Choosing a phone number  
+Your business must use a valid phone number. 
+
+Short codes are not allowed on the WhatsApp platform. The number must include a country and area code. Landline and cell phone numbers are acceptable phone numbers to use. Since a phone number is tied to a WhatsApp account, **you must own this number**. This phone number must be able to **receive voice calls or SMS** in order to complete registration. This phone number must also not have been used with the WhatsApp Business API before.
+
+> 📘 Important Note
+> 
+> - We recommend using landline numbers, as mobile numbers are recycled by operators after a period of inactivity. Your landline number will receive a one-off voice called with a one-time password during the setup of the WhatsApp number.  
+>   **The landline number should not be behind an IVR and someone should be able to answer the call and note down the one-time password.**
+> - If you use a mobile number, it is the your responsibility to keep the ownership of the number and not allow it to be recycled by the mobile operator
+
+Please send an email to the support team with your **number **and **display name**.
+
+All display names should have a relationship with your business and should not violate WhatsApp [Commerce ](https://www.whatsapp.com/legal/commerce-policy/?fbclid=IwAR0bhQV0MrK2bvAMiEf4Ts1FRuBNZvKs1EiXOj9Sea13rXs3sRHo3BOeO6I)and [Business ](https://www.whatsapp.com/legal/business-policy/?fbclid=IwAR2TdRM9GjDzfUipj6XUoIQstvxat3dTIS1B2mEg1y4tSNHXQPAecHlc8Qo)policies. You can change the display name up to three times in the first 30 days; once you have reached that limit, you must wait 30 days before submitting a name change again.
+
+This display name should -
+
+- Be Compliant with policies - WhatsApp [Commerce ](https://www.whatsapp.com/legal/commerce-policy/?fbclid=IwAR2ypgxlmwt4FhSEuJX18lsGiTXcpcYPB1lVt3CaKcqBKBaplF85tOC36GY) and [Business](https://www.whatsapp.com/legal/business-policy/?fbclid=IwAR1LUDqqWl6wym9LQ-2rnol51yWr4D8fjlzFNTgcYBZ2Zug4O8K861g1aVA)
+- Be a accurate representation of your business
+- Consistent with external branding
+- Have a clear relationship with your business
+- Correctly formatted
+
+For e.g., +4475006611111 and "My New Business"
+
+Our operations team will get back to you with a certificate that you can use to start setting up your app on Webex Connect.
+
+> 📘 Note
+> 
+> If you don't own a compatible number, we will be able to provide a number for you for a charge. Please contact your account manager
+
+## Migrating a mobile phone number
+
+You can use a phone number that is already registered in the Android, iPhone, or Business application versions of WhatsApp. However, in order to register this phone number on WhatsApp Business API, you will need to follow the steps below to delete the WhatsApp account associated with that phone number.
+
+Any incoming messages after deleting the WhatsApp account on your Android or iPhone will be queued by the WhatsApp servers and delivered upon successful registration.
+
+1. Open the WhatsApp (or WhatsApp Business) application on your Android or iPhone.
+2. Navigate to the Settings page.
+3. Select Account.Account Settings
+4. Select Delete my account - Delete My Account
+5. Follow the steps to delete the WhatsApp account for that phone number.
+
+Once the above process is completed, please reach out to the support team with your number if you have already registered your business for WhatsApp business access. If not, please complete this step first.
+
+## Creating WhatsApp App on Webex Connect
+
+By now, you should've completed the following steps -
+
+1. Registration
+2. Verification
+3. Number setup
+
+Make sure your number can receive a text message or a voice call before you proceed with the next few steps. If you use a landline number, ensure it's not behind an IVR or temporarily switch off the IVR to answer the call and note down the one time password. It will take anywhere between 5-10 minutes to receive the one time password.
+
+- Navigate to the "Apps" screen on Webex Connect  interface and create a new WhatsApp app using the number and the certificate. Please ensure you entire the number in the correct format. For example, for UK select country as UK from the dropdown and enter the number **without the leading 0**. 
+
+
+
+![Screenshot of Configure WhatsApp Page.](https://files.readme.io/fe34668-2db3ca213c5b549076d020f6702dfb1b.png)
+
+
+
+
+- You will then be shown a pop-up where you will need to enter a one-time password received on your phone. This pop-up will last for 48 hours. If an app is not verified within 48 hours, it will be auto-deleted.
+- Once an app is successfully verified, you can then start configuring your profile. 
+
+
+
+![Screenshot of Business Account Settings Section.](https://files.readme.io/e949dd9-106efc5909190165d92debf309a68999.png)
+
+
+
+
+## Business Account Settings
+
+About - Maximum of 256 characters  
+Address - Maximum of 256 characters  
+Contact Email - Maximum of 128 characters  
+Description - Maximum of 256 characters  
+
+Only JPEG images are allowed. Image should be at least 1024x1024px with 1:1 or a squarish aspect ratio.
+
+## Creating and managing templates (HSMs)
+
+New WhatsApp templates can be submitted for approval from the templates section of Webex Connect . Once submitted, you can view the status of the template in the template listing UI.
+
+All WhatsApp templates need to fall into one of the following categories and WhatsApp mandates their selection. They are:
+
+- Marketing
+- Utility
+- Authentication
+
+WhatsApp message template name can only include _lowercase alphanumeric characters_ and _underscores_.
+
+To speed up the approval process, WhatsApp advises businesses to use descriptive names for their templates rather than random ones like “message_124a” it will make it easier for the person that will be approving your message as well as for you who will manage in a sea of other templates.
+
+## Message types
+
+WhatsApp allows businesses to send two primary types of messages -
+
+1. Session Messages - These messages can be sent to the customer only within 24 hours of the last customer message and are not charged for by WhatsApp
+2. Template Messages - These messages can be sent to the user proactively but the content of the message requires prior approval from WhatsApp
+
+## Session Messages
+
+As these messages can only be sent in response to a customer message, session messages usually correspond to a customer care agent response or an automated bot response.  
+Session messages can be -
+
+1. Text messages - Text upto 4096 characters and can contain links
+2. Media messages - Audio, contact, document, image, location and video attachments are supported
+
+## Template Messages
+
+Template messages require prior approval from WhatsApp. You can add them on the UI under Tools>Templates
+
+> 📘 Note
+> 
+> Template messages are charged on a per message basis by WhatsApp when sent out of the 24 hour window
+
+
+
+![Screenshot of Configure New Template.](https://files.readme.io/29b158e-dfad8e332a446d8e5a59829d083e3929.png)
+
+
+
+
+Media templates can optionally contain headers and footers -
+
+1. Headers can either be a document or image that can be passed dynamically in the API or a flow send node
+2. Footers can only be text messages
+
+Here is a sample media message with a **image **header and a **text footer**.
+
+
+
+![Screenshot of Sample Media Message - Ticket.](https://files.readme.io/dba390c-70129256_415817289048977_6233957271353688064_n.png)
+
+
+
+
+## Using API to send WhatsApp messages
+
+We support outbound messages through messaging API. More information on the API is available in our [developer documentation](https://developers.imiconnect.io/reference#send-message).
+
+## Setting up Delivery Receipts and Inbound Messages
+
+You can start receiving WhatsApp delivery receipts for outbound messages, message content for inbound messages from your customers by setting "Outbound Webhooks" under Integrations.
+
+For outbound messages, we support -
+
+**Submitted** 
+
+```json Submitted
+{
+   "deliveryInfoNotification":{
+      "subtid":"",
+      "deliveryInfo":{
+         "deliveryChannel":"whatsapp",
+         "Description":"Submitted",
+         "destinationType":"waid",
+         "timeStamp":"2019-03-04T09:49:20.429Z",
+         "code":"7501",
+         "additionalInfo":"",
+         "deliveryStatus":"Submitted",
+         "destination":"9199xxxxxxxx"
+      },
+      "correlationid":"",
+      "callbackData":"",
+      "transid":"5c9f6594-a371-4e78-8561-b695f9647472"
+   }
+}
+```
+```json
+{
+   "deliveryInfoNotification":{
+      "subtid":"",
+      "deliveryInfo":{
+         "deliveryChannel":"whatsapp",
+         "Description":"Submitted",
+         "destinationType":"waid",
+         "timeStamp":"2019-03-04T09:49:20.429Z",
+         "code":"7501",
+         "additionalInfo":"",
+         "deliveryStatus":"Submitted",
+         "destination":"9199xxxxxxxx"
+      },
+      "correlationid":"",
+      "callbackData":"",
+      "transid":"5c9f6594-a371-4e78-8561-b695f9647472"
+   }
+}
+```
+
+[block:textarea]
+{
+  "text": "**Delivered** ",
+  "sidebar": true
+}
+[/block]
+
+
+```json Delivered
+{
+   "deliveryInfoNotification":{
+      "subtid":"",
+      "deliveryInfo":{
+         "deliveryChannel":"whatsapp",
+         "Description":"Delivered",
+         "destinationType":"waid",
+         "timeStamp":"2019-03-04T09:49:21.157Z",
+         "code":"7500",
+         "additionalInfo":"",
+         "deliveryStatus":"Delivered",
+         "destination":"9199xxxxxxxx"
+      },
+      "correlationid":"",
+      "callbackData":"",
+      "transid":"5c9f6594-a371-4e78-8561-b695f9647472"
+   }
+}
+```
+
+**Read** 
+
+```json Read
+{
+   "deliveryInfoNotification":{
+      "subtid":"",
+      "deliveryInfo":{
+         "deliveryChannel":"whatsapp",
+         "Description":"Read",
+         "destinationType":"waid",
+         "timeStamp":"2019-03-04T09:49:24.849Z",
+         "code":"7502",
+         "additionalInfo":"",
+         "deliveryStatus":"Read",
+         "destination":"9199xxxxxxxx"
+      },
+      "correlationid":"",
+      "callbackData":"",
+      "transid":"5c9f6594-a371-4e78-8561-b695f9647472"
+   }
+}
+```
+
+**Failed** 
+
+```json Failed
+{
+   "deliveryInfoNotification":{
+      "deliveryInfo":{
+         "timeStamp":"2020-02-27T17:12:07.567Z",
+         "Description":"Re-engagement message",
+         "code":"7710",
+         "deliveryChannel":"whatsapp",
+         "additionalInfo":"Message failed to send because more than 24 hours have passed since the customer last replied to this number",
+         "destination":"9199XXXXXXXX",
+         "destinationType":"waid",
+         "deliveryStatus":"Failed"
+      },
+      "subtid":"",
+      "transid":"108dd36b-9bca-48e5-ae8b-5f59c64b40a3",
+      "callbackData":"",
+      "correlationid":"123456789"
+   }
+}
+```
+
+For inbound messages, we support -
+
+**Text** 
+
+```json Text
+{
+   "userId":"",
+   "channel":"WhatsApp",
+   "appId":"a_155054536910425280",
+   "event":"MO",
+   "waid":"9199xxxxxxxx",
+   "message":"Hello",
+   "attachments":"[]",
+   "system":"",
+   "location":"",
+   "ts":"2019-03-03T07:40:51.297Z",
+   "tid":"0cab6280-9d98-0041-4877-0bde6515b15a_0"
+}
+```
+
+**Image** 
+
+```json Image
+{
+   "userId":"",
+   "channel":"WhatsApp",
+   "appId":"a_154623235593581600",
+   "event":"MO",
+   "waid":"9187xxxxxxxx",
+   "message":"",
+   "attachments":"[{\"mime_type\":\"image/jpeg\",\"url\":\"https://stgrtmedia.s3.amazonaws.com/a_154623235593581600/d3aa15e8-93ee-4e79-bb31-0ad3f0fe7430.jpg\"}]",
+   "system":"",
+   "location":"",
+   "ts":"2019-01-03T09:04:42.726Z",
+   "tid":"5b11ed3b-36fb-9336-bb58-11429b0b78aa_0"
+}
+```
+
+**Video** 
+
+```json Video
+{
+   "userId":"",
+   "channel":"WhatsApp",
+   "appId":"a_154623235593581600",
+   "event":"MO",
+   "waid":"9187xxxxxxxx",
+   "message":"",
+   "attachments":"[{\"mime_type\":\"video/mp4\",\"url\":\"https://stgrtmedia.s3.amazonaws.com/a_154623235593581600/aa9b851f-94b6-49f6-878c-ea8a8d7b3098.mp4\"}]",
+   "system":"",
+   "location":"",
+   "ts":"2019-01-03T09:23:26.386Z",
+   "tid":"ff0f3e02-e812-22f7-dc15-dba71dabde53_0"
+}
+```
+
+**Location** 
+
+```json Location
+{
+   "userId":"",
+   "channel":"WhatsApp",
+   "appId":"a_154529859479452060",
+   "event":"MO",
+   "waid":"9187xxxxxxxx",
+   "message":"",
+   "attachments":"[]",
+   "system":"",
+   "location":"{\"address\":\"Plot No. 770, Road No. 44, Jubilee Hills, Hyderabad\",\"latitude\":\"17.434901060022\",\"name\":\"Imimobile\",\"url\":\"https://www.facebook.com/pages/Imimobile/204627936239899\",\"longitude\":\"78.398435572505\"}",
+   "ts":"2019-01-08T08:59:02.717Z",
+   "tid":"3beecbfb-73fd-803e-a27f-4e797fb22ffd_0"
+}
+```
+
+**Audio** 
+
+```json Audio
+{
+   "userId":"",
+   "channel":"WhatsApp",
+   "appId":"a_154623235593581600",
+   "event":"MO",
+   "waid":"9187xxxxxxxx",
+   "message":"",
+   "attachments":"[{\"mime_type\":\"audio/mpeg\",\"url\":\"https://stgrtmedia.s3.amazonaws.com/a_154623235593581600/ef484891-d99c-45b9-af97-c5ad0e7abef6\"}]",
+   "system":"",
+   "location":"",
+   "ts":"2019-01-03T08:03:04.866Z",
+   "tid":"88be8081-8579-2a56-3e03-cee8b01afdb2_0"
+}
+```
+
+Document
+
+```json Document
+{
+   "userId":"",
+   "channel":"WhatsApp",
+   "appId":"a_154623235593581600",
+   "event":"MO",
+   "waid":"9187xxxxxxxx",
+   "message":"",
+   "attachments":"[{\"mime_type\":\"application/msword\",\"caption\":\"This is PPT-1\",\"url\":\"https://stgrtmedia.s3.amazonaws.com/a_154623235593581600/21bb5a4a-fd0e-47d3-a02d-b1af0eddbe88.ppt\"}]",
+   "system":"",
+   "location":"",
+   "ts":"2019-01-03T08:59:16.192Z",
+   "tid":"5a7898e0-d80b-7316-dd80-7849f84fa304_0"
+}
+```
+
+## GDPR compliance
+
+Facebook operates a global infrastructure and processes data in both EU and US-based servers. WhatsApp stores data in the United States and stores encrypted media worldwide to increase efficiency.
+
+This processing is supported by strict legal compliance for safeguarding any transfers of personal data outside of the EU. WhatsApp has certified for cases in which it acts as a data Processor under Privacy Shield, as explained further in its Privacy Shield Addendum and certification.
+
+For more information, refer to [WhatsApp's data and legal policies](https://www.whatsapp.com/legal/business-terms/).
+
+## Opt-in management
+
+A user must first consent to receive messages in WhatsApp by opting into them via a third-party channel. This can be any channel your business uses to communicate with people today — your website, app, email, SMS, retail location, etc.
+
+- The opt-in must be an active opt-in. This means it must be triggered by a user action, such as entering a phone number or checking a box to indicate consent.
+- Clear opt-in messaging so that a user knows what type(s) of messaging the person is signing up for. 
+
+## Language
+
+Required language elements:
+
+“receive [noun], [logo and name], on [number]"
+
+Where noun is type of information related to the flow.
+
+## User Interface
+
+User must be asked to opt-in via a visual element (checkbox or similar) shown next to the WhatsApp name and logo on your chosen third party channel. The user should have control over what number is used through explicit action (e.g., editing). In addition, language must be shown adjacent to the UI elements to explain clearly what information will be received and make specific reference to this information being sent as messages on WhatsApp
+
+
+
+![Screenshot of Opt-in management.](https://files.readme.io/1b4c632-38224295_221014428558660_4109247416857788416_n.png)
+
+
+
+
+## Legal policy
+
+WhatsApp Business API is governed by [WhatsApp's policy](https://www.whatsapp.com/legal/business-policy/).
+
+Your business also subject to [WhatsApp's commerce policy](https://www.whatsapp.com/legal/commerce-policy/) for approval.
+
+## How do I get a green check mark for my phone number?
+
+When you [verify](https://www.facebook.com/business/help/2058515294227817?id=180505742745347) your business you will get a green check mark on your phone number that shows that it is an official business account.
+
+This is purely at WhatsApp's discretion.
+
+If you don't have the green check mark even after verification, you will need raise a request with Support team  including business manager ID and the phone number that you need the check mark for.
+
+## Can I send marketing content on WhatsApp?
+
+Promotional content on WhatsApp is restricted and may result in the number getting blocked if reported by a user. 
+
+## Is end-to-end encryption maintained through the WhatsApp Business API?
+
+Yes, end-to-end encryption of the message happens between the WhatsApp Business API Client and the end user. 
+
+In addition to that, data is fully encrypted at rest and in transit on Webex Connect platform
+
+## Can I use multiple solution providers with the same phone number?
+
+No. At any given time, you can only have one instance of the WhatsApp Business API Client running for a single phone number. 
+
+## Are there any rate-limits imposed?
+
+Please check Facebook's official policy for WhatsApp [rate](https://developers.facebook.com/docs/whatsapp/api/rate-limits) limits
+
+## Can I send any message to any user at any time?
+
+No.
+
+If a user contacts an enterprise, the enterprise can respond with any type of message in the next 24 hours. This type of message is free.
+
+But if the enterprise is contacting a user before the user sends a message or after more than 24 hours have passed, the enterprise can only send a message template. This is a paid notification.
+
+## Can I choose to disable chat functionality when interacting with my business?
+
+Currently, there is no way to do this. If you are not capable of handling inbound responses from your users over WhatsApp, we suggest sending an auto-reply message redirecting them to your proper support channels.
+
+## Can we use toll-free numbers as our business account number?
+
+Toll-free numbers are allowed as long as your country code is included. The reason is that toll-free numbers without country codes cannot be uniquely identified — the same number can apply for two different countries.
+
+Also note that there are added complexities around toll-free numbers. Typically, if you call a toll-free number with the country code when you're inside the country, it will fail. This means that there is a chance your customers from your country will try to dial what shows in the business contact (country code included) and they won't be able to reach you. If this is a concern, you will need to let them know explicitly
+
+## Can I change the phone number or verified name at a later time?
+
+Yes, we can set up a new phone number or change the verified name when you are ready to go live.
+
+Please reach out to the support team for this.
+
+## Why is my delivery rate not 100%?
+
+There can be multiple reasons why delivery rates are not 100%. Some common cases include users having sporadic access to network or being inactive for a period of time.
+
+Messages that can be delivered with WhatsApp will have a very high delivery rate. However there are many reasons why a message may not be delivered. You will have access to the exact status of a message by monitoring your webhooks. This is different from sending messages with SMS, for example, where you do not have access to final delivered status and resending the message may indeed produce a different outcome.
+
+Messages may remain undelivered because a user's phone is out of service, or battery, or they have lost it and are getting a new one and have disabled their SIM.
+
+If and when a user does reconnect to the network all the messages you sent will be delivered to them. Receiving more than one message with the same content will be a bad experience for them. They will be more likely to block you or complain. You will be more likely to be banned.
+
+## What are the reasons Message Templates might be rejected?
+
+Reasons a Message Template might be rejected include:
+
+- Contains potentially abusive content such as abusive language or spam-like content
+- Contains promotional content
+- Does not match the select tag type
+- Formatted incorrectly 
+
+## What are the media file size limits?
+
+The maximum file upload size is 64 MB, which means this limit also applies to any image, document, or video you send with a message.
+
+## I already use WhatsApp to provide customer service. Can I reuse the number?
+
+No. The WhatsApp Business API solution requires a clean number.
+
+## API reference metadata
+
+These are source metadata and examples. `api.auth` is ReadMe metadata; verify authentication in the documented headers/security scheme.
+
+```json
+{
+  "method": "get",
+  "url": "",
+  "auth": "required",
+  "results": {
+    "codes": [
+      {
+        "name": "",
+        "code": "{}",
+        "language": "json",
+        "status": 200
+      },
+      {
+        "name": "",
+        "code": "{}",
+        "language": "json",
+        "status": 400
+      }
+    ]
+  },
+  "params": [],
+  "examples": {
+    "codes": []
+  }
+}
+```

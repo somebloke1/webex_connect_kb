@@ -1,0 +1,37 @@
+{
+  "category": "Assets",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182578a7",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "a122a801b24a0b4ae3c03a4c851403e08d25eac28a9df4a936e7394f8698c502",
+    "source_path": "dc57d61edd14595c84fede2f600be1ca218e8b39cacc8248d717475625767488",
+    "text_path": "9c82eda55b91dfcc69ede75c4d42d6c1b241e1625a7141a26f1d7ffc7090ae43"
+  },
+  "headings": [
+    "🚧Identity verification requirement and Auth+ compliance for new and existing brands",
+    "📘Note",
+    "📘Note",
+    "🚧10DLC Reseller",
+    "📘Note"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/create-brand.md",
+  "resolved_url": "https://help.webexconnect.io/docs/create-brand",
+  "retrieved_at": "2026-09-08T23:29:00+00:00",
+  "sha256_html_response": "9495e8c84096e1b37cb2ec97d29b9626b96af5be4c63a1e937ccb6e3f5ef759c",
+  "sha256_source_body": "dc57d61edd14595c84fede2f600be1ca218e8b39cacc8248d717475625767488",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/create-brand.source.md",
+  "source_updated_at": "2025-10-14T12:30:41.498Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/create-brand.txt",
+  "title": "Creating a Brand",
+  "url": "https://help.webexconnect.io/docs/create-brand",
+  "word_count": 613,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/create-brand.metadata.json"
+}

@@ -1,0 +1,31 @@
+{
+  "category": "SERVICES & FLOWS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182577ff",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "ee0ba77a52466e678684d485afcc63e458f3f410e626c25ecbbc8aa1a1317289",
+    "source_path": "c904a1fb222d7c1869b67f99ce6756b352a7110b748040508440065b1524e312",
+    "text_path": "c7173bcd2004d0a5a2534fd2a33fea4b25b4d0b6cdd882b379816a11c45681f8"
+  },
+  "headings": [],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/trigger-flow.md",
+  "resolved_url": "https://help.webexconnect.io/docs/trigger-flow",
+  "retrieved_at": "2026-09-08T23:28:41+00:00",
+  "sha256_html_response": "72513754aaed809f47a75c7c647fba31f5cdd424bb0cf40af954679065a8d630",
+  "sha256_source_body": "c904a1fb222d7c1869b67f99ce6756b352a7110b748040508440065b1524e312",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/trigger-flow.source.md",
+  "source_updated_at": "2023-12-07T12:46:22.547Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/trigger-flow.txt",
+  "title": "Triggering a Flow",
+  "url": "https://help.webexconnect.io/docs/trigger-flow",
+  "word_count": 99,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/trigger-flow.metadata.json"
+}

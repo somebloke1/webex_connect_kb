@@ -1,0 +1,571 @@
+{
+  "api": {
+    "auth": "required",
+    "examples": {
+      "codes": [
+        {
+          "name": "JSON",
+          "language": "json",
+          "code": "{\n    \"notifyurl\":\"\",   \n    \"events\":[\n        {\n            \"evtid\":\"4451\",\n            \"correlationid\":\"ABC123\",\n            \"parameters\":\n             {\n                \"firstName\":\"a\",\n                \"lastName\":\"b\",\n                \"ContactNumber\":\"2\"\n               \n             }\n        }\n    ]\n}\n"
+        },
+        {
+          "name": "JavaScript",
+          "language": "javascript",
+          "code": "(async () => {\n                          const rawResponse = await fetch(target_api , {\n                              method: 'POST',\n                              headers: {\n                                  'Accept': 'application/json',\n                                  'Content-Type': 'application/json',\n\t\t\t\t\t\t\t\t  'key': ' Service key available within the API settings in a service '\n                              },\n                              body: JSON.stringify({\n\t\t\t\t\t\t\t\t\"events\":[\n\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\t\"evtid\":\" <Event ID> \",\n\t\t\t\t\t\t\t\t\t\t\"parameters\":\n\t\t\t\t\t\t\t\t\t\t {\n\t\t\t\t\t\t\t\t\t\t\t\"msisdn\":\"919000000009\"\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t }\n\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t  ]\n\t\t\t\t\t\t\t})\n                          });\n                          const content = await rawResponse.json();\n\t\t\t\t\t\t \n                          if (content.response[0].code == 1001 || content.response[0].code == '1001') {\n\t\t\t\t\t\t\t$(\".container\").html('');\n\t\t\t\t\t\t\tvar str = 'code:'+content.response[0].code+'<br>'+'correlationid:'+content.response[0].correlationid+'<br>description:'+content.response[0].description+\"<br>transid:\"+content.response[0].transid\n\t\t\t\t\t\t\t$(\".container\").html(str);\n      \n                          } else {\n      \t\t\t\t\t      $(\".container\").html('');\n\t\t\t\t\t\t\tvar str = 'code:'+content.response[0].code+'<br>'+'correlationid:'+content.response[0].correlationid+'<br>description:'+content.response[0].description+\"<br>transid:\"+content.response[0].transid\n\t\t\t\t\t\t\t$(\".container\").html(str);\n                          }\n                      })();"
+        },
+        {
+          "code": "var request=require(\"request\");\n var options = {\n          method: 'POST',\n          uri: 'https://api-us.imiconnect.io/resources/v1/events/externalevent',\n          body: JSON.stringify({\n    \"events\":[\n        {\n            \"evtid\":\" <Event ID> \",\n            \"parameters\":\n             {\n                \"msisdn\":\"919000000009\"\n                \n             }\n        }\n      ]\n}),\n          headers: {\n            'Accept': 'application/json',\n            'Content-Type': 'application/json',\n\t\t\t'key': ' Service key available within the API settings in a service '\n            }\n        };\n  request(options, function(error, response, body) {\n               if(error){\n                  console.log(error);\n             }else{\n                  console.log(response);\n            }\n        });",
+          "language": "javascript",
+          "name": "NodeJS"
+        },
+        {
+          "code": "require 'httparty'\nhttp = HTTParty.post(\"https://api-us.imiconnect.io/resources/v1/events/externalevent\",\n    :body => {\n    \"events\"=>[\n        {\n            \"evtid\" => \" <Event ID> \",\n            \"parameters\" =>\n             {\n                \"msisdn\" => \"919000000009\"\n                \n             }\n        }\n      ]\n\t}.to_json,\n    :headers => {'Accept' => 'application/json',\n\t'Content-Type' => 'application/json',\n\t'key' => ' Service key available within the API settings in a service '})\nputs http",
+          "language": "ruby",
+          "name": "Ruby"
+        },
+        {
+          "code": "import requests , json;\nheaders = {\n\t'Accept': 'application/json',\n\t'Content-Type': 'application/json',\n\t'key': 'Service key available within the API settings in a service'\n\t}\npayload = {\n    \"events\":[\n        {\n            \"evtid\":\" <Event ID> \",\n            \"parameters\":\n             {\n                \"msisdn\":\"919000000009\"\n                \n             }\n        }\n      ]\n\t}\nurl = 'https://api-us.imiconnect.io/resources/v1/events/externalevent'\nresponse = requests.post(url, headers=headers,data=json.dumps(payload))\nresponse.raise_for_status()\nprint(response.json());",
+          "language": "python",
+          "name": "Python"
+        },
+        {
+          "name": "cURL",
+          "language": "curl",
+          "code": "$ch = curl_init();\n  $postvars = array(\"events\"=>array(array(\"evtid\"=>\" <Event ID> \",\"parameters\"=>array(\"msisdn\"=>\"919000000009\"))));\n  $postvars = json_encode($postvars);\n  $url = \"https://api-us.imiconnect.io/resources/v1/events/externalevent\";\n  curl_setopt($ch,CURLOPT_URL,$url);\n  curl_setopt($ch,CURLOPT_POST, 1);\n  curl_setopt($ch, CURLOPT_HTTPHEADER, array(\n    'Accept: application/json',\n    'Content-Type: application/json',\n\t'key: Service key available within the API settings in a service '\n\t));\n  curl_setopt($ch,CURLOPT_POSTFIELDS,$postvars);\n  curl_setopt($ch,CURLOPT_RETURNTRANSFER, true);\n  curl_setopt($ch,CURLOPT_CONNECTTIMEOUT ,3);\n  curl_setopt($ch,CURLOPT_TIMEOUT, 20);\n  $response = curl_exec($ch);\n  print \"curl response is:\" . $response;\n  curl_close ($ch);"
+        }
+      ]
+    },
+    "method": "post",
+    "params": [
+      {
+        "name": "Content-Type",
+        "type": "string",
+        "enumValues": "",
+        "default": "application/json",
+        "desc": "application/json",
+        "required": false,
+        "in": "header",
+        "ref": "",
+        "_id": "60981c6d6cdbab004b74a276",
+        "id": "60981c6d6cdbab004b74a276"
+      },
+      {
+        "name": "key",
+        "type": "string",
+        "enumValues": "",
+        "default": "",
+        "desc": "Applicable when you want to use service key for API authentication. Available under API tab within a service in your imiconnect tenant.",
+        "required": false,
+        "in": "header",
+        "ref": "",
+        "_id": "60981c6d6cdbab004b74a275",
+        "id": "60981c6d6cdbab004b74a275"
+      },
+      {
+        "name": "Authorization",
+        "type": "string",
+        "enumValues": "",
+        "default": "",
+        "desc": "Applicable if you want to use JWT tokens for API authentication. Use either of 'key' or 'Authorization' header param.",
+        "required": false,
+        "in": "header",
+        "ref": "",
+        "_id": "60981c6d6cdbab004b74a274",
+        "id": "60981c6d6cdbab004b74a274"
+      }
+    ],
+    "results": {
+      "codes": [
+        {
+          "language": "json",
+          "code": "{\n    \"response\": [\n        {\n            \"code\": \"1002\",\n            \"description\": \"Queued\",\n            \"transid\": \"9f2b2d79-1684-4ca5-addb-9d6d18fd9a70\",\n            \"correlationid\": \"sivacharancustomevent\"\n        }\n    ]\n}",
+          "status": 200,
+          "name": "Queued"
+        },
+        {
+          "code": "{\n    \"response\": {\n        \"code\": \"7001\",\n        \"description\": \"Authentication failed\",\n        \"transid\": \"98cc4a33-2c50-4778-8027-45cb3523d47f\"\n    }\n}",
+          "language": "json",
+          "status": 200,
+          "name": "Authentication Failed"
+        },
+        {
+          "code": "{\n    \"response\": {\n        \"code\": \"7000\",\n        \"description\": \"Invalid JSON\",\n        \"transid\": \"f08eb7b1-2cea-42d6-bcc4-cb2d492f4608\"\n    }\n}",
+          "language": "json",
+          "status": 200,
+          "name": "Invalid JSON"
+        },
+        {
+          "code": "{\n    \"response\": [\n        {\n            \"code\": \"7025\",\n            \"description\": \"mandatory parameter name missing\",\n            \"transid\": \"201bc023-87b3-450a-aa76-8bb665835837\",\n            \"correlationid\": \"890789\"\n        }\n    ]\n}",
+          "language": "json",
+          "status": 200,
+          "name": "Mandatory Custom Parameter Missing"
+        },
+        {
+          "code": "{\n    \"response\": [\n        {\n            \"code\": \"7004\",\n            \"description\": \"invalid value for param evtid\",\n            \"transid\": \"0f4b9a01-179f-490d-a782-3f053d8ff1c5\",\n            \"correlationid\": \"890789\"\n        }\n    ]\n}",
+          "language": "json",
+          "status": 200,
+          "name": "Invalid Event ID"
+        },
+        {
+          "code": "{\n    \"response\": {\n        \"code\": \"7003\",\n        \"description\": \"Mandatory parameter 'events' missing\",\n        \"transid\": \"0554049e-9f9c-4cee-82e0-1d95b6c1cbcd\"\n    }\n}",
+          "language": "json",
+          "status": 200,
+          "name": "Mandatory parameter 'events' missing"
+        },
+        {
+          "code": "{\n    \"response\": {\n        \"code\": \"7002\",\n        \"description\": \"Service Key Missing\",\n        \"transid\": \"9a80f1c0-0eb6-4b06-9c79-addc494d4a5f\"\n    }\n}",
+          "language": "json",
+          "status": 200,
+          "name": "Service Key Missing"
+        },
+        {
+          "code": "{\n    \"response\": {\n        \"code\": \"7010\",\n        \"transid\": \"a8c2ff0c-d64a-4530-8cca-955c530cd7a5\",\n        \"description\": \"Source IP is not allowlisted\"\n    }\n}",
+          "language": "json",
+          "status": 200,
+          "name": "Source IP is not allowlisted"
+        },
+        {
+          "code": "{\n    \"response\": {\n            \"code\": \"7020\",\n            \"transid\": \"672de29e-0724-454b-9f9f-d4df16d2a661_5\",\n            \"description\": \"You have reached maximum transaction limit (rate).\",\n            \"correlationid\": \"ABC12\"\n        }\n}",
+          "language": "json",
+          "status": 200,
+          "name": "You have reached maximum transaction limit (rate)"
+        },
+        {
+          "code": "{\n    \"response\": {\n        \"code\": \"7019\",\n        \"description\": \"Request expired\",\n        \"transid\": \"00f12add-64c5-4a82-86b3-2c1a1a5c1ace\"\n    }\n}",
+          "language": "json",
+          "status": 200,
+          "name": "Request expired"
+        }
+      ]
+    },
+    "settings": "",
+    "url": "/events/externalevent/",
+    "apiSetting": "6a675233ec1c893d8a7f67b6"
+  },
+  "swagger": {
+    "path": "/events/externalevent/"
+  },
+  "oas_public_id": "@imiconnect-apis/v6.20.0#3f3jj5fdlo74k6tk",
+  "selected_openapi": {
+    "openapi": "3.1.0",
+    "info": {
+      "title": "Messaging API v1",
+      "version": "6.20.0"
+    },
+    "servers": [
+      {
+        "url": "https://api.us.webexconnect.io/resources/v1"
+      }
+    ],
+    "security": [
+      {
+        "sec0": []
+      }
+    ],
+    "path": "/events/externalevent/",
+    "method": "post",
+    "path_parameters": [],
+    "operation": {
+      "summary": "Custom Event v1",
+      "description": "This API allows third party/external applications to make event requests using a RESTful API over HTTPS to the Webex Connect platform.",
+      "operationId": "custom-event-v1",
+      "parameters": [
+        {
+          "name": "Content-Type",
+          "in": "header",
+          "description": "application/json",
+          "schema": {
+            "type": "string",
+            "default": "application/json"
+          }
+        },
+        {
+          "name": "key",
+          "in": "header",
+          "description": "Applicable when you want to use service key for API authentication. Available under API tab within a service in your imiconnect tenant.",
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "Authorization",
+          "in": "header",
+          "description": "Applicable if you want to use JWT tokens for API authentication. Use either of 'key' or 'Authorization' header param.",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "responses": {
+        "200": {
+          "description": "200",
+          "content": {
+            "application/json": {
+              "examples": {
+                "Queued": {
+                  "value": "{\n    \"response\": [\n        {\n            \"code\": \"1002\",\n            \"description\": \"Queued\",\n            \"transid\": \"9f2b2d79-1684-4ca5-addb-9d6d18fd9a70\",\n            \"correlationid\": \"sivacharancustomevent\"\n        }\n    ]\n}"
+                },
+                "Authentication Failed": {
+                  "value": "{\n    \"response\": {\n        \"code\": \"7001\",\n        \"description\": \"Authentication failed\",\n        \"transid\": \"98cc4a33-2c50-4778-8027-45cb3523d47f\"\n    }\n}"
+                },
+                "Invalid JSON": {
+                  "value": "{\n    \"response\": {\n        \"code\": \"7000\",\n        \"description\": \"Invalid JSON\",\n        \"transid\": \"f08eb7b1-2cea-42d6-bcc4-cb2d492f4608\"\n    }\n}"
+                },
+                "Mandatory Custom Parameter Missing": {
+                  "value": "{\n    \"response\": [\n        {\n            \"code\": \"7025\",\n            \"description\": \"mandatory parameter name missing\",\n            \"transid\": \"201bc023-87b3-450a-aa76-8bb665835837\",\n            \"correlationid\": \"890789\"\n        }\n    ]\n}"
+                },
+                "Invalid Event ID": {
+                  "value": "{\n    \"response\": [\n        {\n            \"code\": \"7004\",\n            \"description\": \"invalid value for param evtid\",\n            \"transid\": \"0f4b9a01-179f-490d-a782-3f053d8ff1c5\",\n            \"correlationid\": \"890789\"\n        }\n    ]\n}"
+                },
+                "Mandatory parameter 'events' missing": {
+                  "value": "{\n    \"response\": {\n        \"code\": \"7003\",\n        \"description\": \"Mandatory parameter 'events' missing\",\n        \"transid\": \"0554049e-9f9c-4cee-82e0-1d95b6c1cbcd\"\n    }\n}"
+                },
+                "Service Key Missing": {
+                  "value": "{\n    \"response\": {\n        \"code\": \"7002\",\n        \"description\": \"Service Key Missing\",\n        \"transid\": \"9a80f1c0-0eb6-4b06-9c79-addc494d4a5f\"\n    }\n}"
+                },
+                "Source IP is not allowlisted": {
+                  "value": "{\n    \"response\": {\n        \"code\": \"7010\",\n        \"transid\": \"a8c2ff0c-d64a-4530-8cca-955c530cd7a5\",\n        \"description\": \"Source IP is not allowlisted\"\n    }\n}"
+                },
+                "You have reached maximum transaction limit (rate)": {
+                  "value": "{\n    \"response\": {\n            \"code\": \"7020\",\n            \"transid\": \"672de29e-0724-454b-9f9f-d4df16d2a661_5\",\n            \"description\": \"You have reached maximum transaction limit (rate).\",\n            \"correlationid\": \"ABC12\"\n        }\n}"
+                },
+                "Request expired": {
+                  "value": "{\n    \"response\": {\n        \"code\": \"7019\",\n        \"description\": \"Request expired\",\n        \"transid\": \"00f12add-64c5-4a82-86b3-2c1a1a5c1ace\"\n    }\n}"
+                }
+              },
+              "schema": {
+                "oneOf": [
+                  {
+                    "title": "Queued",
+                    "type": "object",
+                    "properties": {
+                      "response": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "code": {
+                              "type": "string",
+                              "example": "1002"
+                            },
+                            "description": {
+                              "type": "string",
+                              "example": "Queued"
+                            },
+                            "transid": {
+                              "type": "string",
+                              "example": "9f2b2d79-1684-4ca5-addb-9d6d18fd9a70"
+                            },
+                            "correlationid": {
+                              "type": "string",
+                              "example": "sivacharancustomevent"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "title": "Authentication Failed",
+                    "type": "object",
+                    "properties": {
+                      "response": {
+                        "type": "object",
+                        "properties": {
+                          "code": {
+                            "type": "string",
+                            "example": "7001"
+                          },
+                          "description": {
+                            "type": "string",
+                            "example": "Authentication failed"
+                          },
+                          "transid": {
+                            "type": "string",
+                            "example": "98cc4a33-2c50-4778-8027-45cb3523d47f"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "title": "Invalid JSON",
+                    "type": "object",
+                    "properties": {
+                      "response": {
+                        "type": "object",
+                        "properties": {
+                          "code": {
+                            "type": "string",
+                            "example": "7000"
+                          },
+                          "description": {
+                            "type": "string",
+                            "example": "Invalid JSON"
+                          },
+                          "transid": {
+                            "type": "string",
+                            "example": "f08eb7b1-2cea-42d6-bcc4-cb2d492f4608"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "title": "Mandatory Custom Parameter Missing",
+                    "type": "object",
+                    "properties": {
+                      "response": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "code": {
+                              "type": "string",
+                              "example": "7025"
+                            },
+                            "description": {
+                              "type": "string",
+                              "example": "mandatory parameter name missing"
+                            },
+                            "transid": {
+                              "type": "string",
+                              "example": "201bc023-87b3-450a-aa76-8bb665835837"
+                            },
+                            "correlationid": {
+                              "type": "string",
+                              "example": "890789"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "title": "Invalid Event ID",
+                    "type": "object",
+                    "properties": {
+                      "response": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "code": {
+                              "type": "string",
+                              "example": "7004"
+                            },
+                            "description": {
+                              "type": "string",
+                              "example": "invalid value for param evtid"
+                            },
+                            "transid": {
+                              "type": "string",
+                              "example": "0f4b9a01-179f-490d-a782-3f053d8ff1c5"
+                            },
+                            "correlationid": {
+                              "type": "string",
+                              "example": "890789"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "title": "Mandatory parameter 'events' missing",
+                    "type": "object",
+                    "properties": {
+                      "response": {
+                        "type": "object",
+                        "properties": {
+                          "code": {
+                            "type": "string",
+                            "example": "7003"
+                          },
+                          "description": {
+                            "type": "string",
+                            "example": "Mandatory parameter 'events' missing"
+                          },
+                          "transid": {
+                            "type": "string",
+                            "example": "0554049e-9f9c-4cee-82e0-1d95b6c1cbcd"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "title": "Service Key Missing",
+                    "type": "object",
+                    "properties": {
+                      "response": {
+                        "type": "object",
+                        "properties": {
+                          "code": {
+                            "type": "string",
+                            "example": "7002"
+                          },
+                          "description": {
+                            "type": "string",
+                            "example": "Service Key Missing"
+                          },
+                          "transid": {
+                            "type": "string",
+                            "example": "9a80f1c0-0eb6-4b06-9c79-addc494d4a5f"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "title": "Source IP is not allowlisted",
+                    "type": "object",
+                    "properties": {
+                      "response": {
+                        "type": "object",
+                        "properties": {
+                          "code": {
+                            "type": "string",
+                            "example": "7010"
+                          },
+                          "transid": {
+                            "type": "string",
+                            "example": "a8c2ff0c-d64a-4530-8cca-955c530cd7a5"
+                          },
+                          "description": {
+                            "type": "string",
+                            "example": "Source IP is not allowlisted"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "title": "You have reached maximum transaction limit (rate)",
+                    "type": "object",
+                    "properties": {
+                      "response": {
+                        "type": "object",
+                        "properties": {
+                          "code": {
+                            "type": "string",
+                            "example": "7020"
+                          },
+                          "transid": {
+                            "type": "string",
+                            "example": "672de29e-0724-454b-9f9f-d4df16d2a661_5"
+                          },
+                          "description": {
+                            "type": "string",
+                            "example": "You have reached maximum transaction limit (rate)."
+                          },
+                          "correlationid": {
+                            "type": "string",
+                            "example": "ABC12"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "title": "Request expired",
+                    "type": "object",
+                    "properties": {
+                      "response": {
+                        "type": "object",
+                        "properties": {
+                          "code": {
+                            "type": "string",
+                            "example": "7019"
+                          },
+                          "description": {
+                            "type": "string",
+                            "example": "Request expired"
+                          },
+                          "transid": {
+                            "type": "string",
+                            "example": "00f12add-64c5-4a82-86b3-2c1a1a5c1ace"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "deprecated": false,
+      "x-readme": {
+        "code-samples": [
+          {
+            "language": "javascript",
+            "code": "(async () => {\n                          const rawResponse = await fetch(target_api , {\n                              method: 'POST',\n                              headers: {\n                                  'Accept': 'application/json',\n                                  'Content-Type': 'application/json',\n\t\t\t\t\t\t\t\t  'key': ' Service key available within the API settings in a service '\n                              },\n                              body: JSON.stringify({\n\t\t\t\t\t\t\t\t\"events\":[\n\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\t\"evtid\":\" <Event ID> \",\n\t\t\t\t\t\t\t\t\t\t\"parameters\":\n\t\t\t\t\t\t\t\t\t\t {\n\t\t\t\t\t\t\t\t\t\t\t\"msisdn\":\"919000000009\"\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t }\n\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t  ]\n\t\t\t\t\t\t\t})\n                          });\n                          const content = await rawResponse.json();\n\t\t\t\t\t\t \n                          if (content.response[0].code == 1001 || content.response[0].code == '1001') {\n\t\t\t\t\t\t\t$(\".container\").html('');\n\t\t\t\t\t\t\tvar str = 'code:'+content.response[0].code+'<br>'+'correlationid:'+content.response[0].correlationid+'<br>description:'+content.response[0].description+\"<br>transid:\"+content.response[0].transid\n\t\t\t\t\t\t\t$(\".container\").html(str);\n      \n                          } else {\n      \t\t\t\t\t      $(\".container\").html('');\n\t\t\t\t\t\t\tvar str = 'code:'+content.response[0].code+'<br>'+'correlationid:'+content.response[0].correlationid+'<br>description:'+content.response[0].description+\"<br>transid:\"+content.response[0].transid\n\t\t\t\t\t\t\t$(\".container\").html(str);\n                          }\n                      })();",
+            "name": "JavaScript"
+          },
+          {
+            "language": "javascript",
+            "code": "var request=require(\"request\");\n var options = {\n          method: 'POST',\n          uri: 'https://api-us.imiconnect.io/resources/v1/events/externalevent',\n          body: JSON.stringify({\n    \"events\":[\n        {\n            \"evtid\":\" <Event ID> \",\n            \"parameters\":\n             {\n                \"msisdn\":\"919000000009\"\n                \n             }\n        }\n      ]\n}),\n          headers: {\n            'Accept': 'application/json',\n            'Content-Type': 'application/json',\n\t\t\t'key': ' Service key available within the API settings in a service '\n            }\n        };\n  request(options, function(error, response, body) {\n               if(error){\n                  console.log(error);\n             }else{\n                  console.log(response);\n            }\n        });",
+            "name": "NodeJS"
+          },
+          {
+            "language": "ruby",
+            "code": "require 'httparty'\nhttp = HTTParty.post(\"https://api-us.imiconnect.io/resources/v1/events/externalevent\",\n    :body => {\n    \"events\"=>[\n        {\n            \"evtid\" => \" <Event ID> \",\n            \"parameters\" =>\n             {\n                \"msisdn\" => \"919000000009\"\n                \n             }\n        }\n      ]\n\t}.to_json,\n    :headers => {'Accept' => 'application/json',\n\t'Content-Type' => 'application/json',\n\t'key' => ' Service key available within the API settings in a service '})\nputs http",
+            "name": "Ruby"
+          },
+          {
+            "language": "python",
+            "code": "import requests , json;\nheaders = {\n\t'Accept': 'application/json',\n\t'Content-Type': 'application/json',\n\t'key': 'Service key available within the API settings in a service'\n\t}\npayload = {\n    \"events\":[\n        {\n            \"evtid\":\" <Event ID> \",\n            \"parameters\":\n             {\n                \"msisdn\":\"919000000009\"\n                \n             }\n        }\n      ]\n\t}\nurl = 'https://api-us.imiconnect.io/resources/v1/events/externalevent'\nresponse = requests.post(url, headers=headers,data=json.dumps(payload))\nresponse.raise_for_status()\nprint(response.json());",
+            "name": "Python"
+          },
+          {
+            "language": "curl",
+            "code": "$ch = curl_init();\n  $postvars = array(\"events\"=>array(array(\"evtid\"=>\" <Event ID> \",\"parameters\"=>array(\"msisdn\"=>\"919000000009\"))));\n  $postvars = json_encode($postvars);\n  $url = \"https://api-us.imiconnect.io/resources/v1/events/externalevent\";\n  curl_setopt($ch,CURLOPT_URL,$url);\n  curl_setopt($ch,CURLOPT_POST, 1);\n  curl_setopt($ch, CURLOPT_HTTPHEADER, array(\n    'Accept: application/json',\n    'Content-Type: application/json',\n\t'key: Service key available within the API settings in a service '\n\t));\n  curl_setopt($ch,CURLOPT_POSTFIELDS,$postvars);\n  curl_setopt($ch,CURLOPT_RETURNTRANSFER, true);\n  curl_setopt($ch,CURLOPT_CONNECTTIMEOUT ,3);\n  curl_setopt($ch,CURLOPT_TIMEOUT, 20);\n  $response = curl_exec($ch);\n  print \"curl response is:\" . $response;\n  curl_close ($ch);",
+            "name": "cURL"
+          }
+        ],
+        "samples-languages": [
+          "javascript",
+          "ruby",
+          "python",
+          "curl"
+        ]
+      },
+      "requestBody": {
+        "content": {
+          "application/json": {
+            "schema": {},
+            "examples": {
+              "JSON": {
+                "value": {
+                  "notifyurl": "",
+                  "events": [
+                    {
+                      "evtid": "4451",
+                      "correlationid": "ABC123",
+                      "parameters": {
+                        "firstName": "a",
+                        "lastName": "b",
+                        "ContactNumber": "2"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "securitySchemes": {
+        "sec0": {
+          "type": "apiKey",
+          "in": "header",
+          "name": "key"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,182 @@
+{
+  "api": {
+    "method": "post",
+    "url": "/",
+    "auth": "required",
+    "results": {
+      "codes": [
+        {
+          "name": "",
+          "code": "{\n   \"messageId\":\"0a129aee-e1cd-480d-b08d-4f48548ff48d\",\n   \"correlationId\":\"k1l2\",\n   \"status\":\"queued\",\n   \"requestTimestamp\":\"2014-02-17T07:25:01.4178645-05:00\"\n}",
+          "language": "json",
+          "status": 201
+        },
+        {
+          "name": "",
+          "code": "{\n  \"code\": 8000,\n  \"message\": \"Invalid parameter: 'asdf'\"\n}",
+          "language": "json",
+          "status": 400
+        }
+      ]
+    },
+    "params": [
+      {
+        "name": "Content-Type",
+        "type": "string",
+        "enumValues": "",
+        "default": "Application/JSON",
+        "desc": "",
+        "required": false,
+        "in": "header",
+        "ref": "",
+        "_id": "60ed14971f0b29007be6198a",
+        "id": "60ed14971f0b29007be6198a"
+      },
+      {
+        "name": "Authorization",
+        "type": "string",
+        "enumValues": "",
+        "default": "Bearer <JWT Token>",
+        "desc": "Bearer {{token}}. Applicable if you want to use JWT tokens for API authentication. Use either of 'key' or 'Authorization' header param.",
+        "required": false,
+        "in": "header",
+        "ref": "",
+        "_id": "60ed35e99b398000106b4182",
+        "id": "60ed35e99b398000106b4182"
+      }
+    ],
+    "examples": {
+      "codes": []
+    },
+    "apiSetting": "6a675233ec1c893d8a7f67cd"
+  },
+  "swagger": {
+    "path": "/messages"
+  },
+  "oas_public_id": "@imiconnect-apis/v6.20.0#4dfvd11dlwysqmg6",
+  "selected_openapi": {
+    "openapi": "3.1.0",
+    "info": {
+      "title": "Instagram APIs",
+      "version": "6.20.0"
+    },
+    "servers": [
+      {
+        "url": "https://api.us.webexconnect.io/v1/instagram/messages"
+      }
+    ],
+    "security": [
+      {
+        "sec0": [],
+        "sec1": []
+      }
+    ],
+    "path": "/",
+    "method": "post",
+    "path_parameters": [],
+    "operation": {
+      "summary": "Instagram API (Deprecated)",
+      "description": "",
+      "operationId": "instagram-api",
+      "parameters": [
+        {
+          "name": "Content-Type",
+          "in": "header",
+          "schema": {
+            "type": "string",
+            "default": "Application/JSON"
+          }
+        },
+        {
+          "name": "Authorization",
+          "in": "header",
+          "description": "Bearer {{token}}. Applicable if you want to use JWT tokens for API authentication. Use either of 'key' or 'Authorization' header param.",
+          "schema": {
+            "type": "string",
+            "default": "Bearer <JWT Token>"
+          }
+        }
+      ],
+      "responses": {
+        "201": {
+          "description": "201",
+          "content": {
+            "application/json": {
+              "examples": {
+                "Result": {
+                  "value": "{\n   \"messageId\":\"0a129aee-e1cd-480d-b08d-4f48548ff48d\",\n   \"correlationId\":\"k1l2\",\n   \"status\":\"queued\",\n   \"requestTimestamp\":\"2014-02-17T07:25:01.4178645-05:00\"\n}"
+                }
+              },
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "messageId": {
+                    "type": "string",
+                    "example": "0a129aee-e1cd-480d-b08d-4f48548ff48d"
+                  },
+                  "correlationId": {
+                    "type": "string",
+                    "example": "k1l2"
+                  },
+                  "status": {
+                    "type": "string",
+                    "example": "queued"
+                  },
+                  "requestTimestamp": {
+                    "type": "string",
+                    "example": "2014-02-17T07:25:01.4178645-05:00"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "400": {
+          "description": "400",
+          "content": {
+            "application/json": {
+              "examples": {
+                "Result": {
+                  "value": "{\n  \"code\": 8000,\n  \"message\": \"Invalid parameter: 'asdf'\"\n}"
+                }
+              },
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "code": {
+                    "type": "integer",
+                    "example": 8000,
+                    "default": 0
+                  },
+                  "message": {
+                    "type": "string",
+                    "example": "Invalid parameter: 'asdf'"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "deprecated": false
+    },
+    "components": {
+      "securitySchemes": {
+        "sec0": {
+          "type": "apiKey",
+          "in": "header",
+          "name": "Content-Type",
+          "x-default": "application/json"
+        },
+        "sec1": {
+          "type": "apiKey",
+          "in": "header",
+          "name": "Authorization",
+          "x-bearer-format": "bearer",
+          "x-default": "{{jwt-token}}"
+        }
+      }
+    },
+    "operation_status": "selected"
+  }
+}

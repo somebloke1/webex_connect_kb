@@ -1,0 +1,38 @@
+{
+  "api_metadata_path": "sources/cache/developer/retrieve-message-v2.api.json",
+  "category": "MULTI CHANNEL COMMUNICATION API",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f6579",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "0ed04f25018a6de04e31a2e58cea51270bf1512f06e9367b539097b580c4d395",
+    "source_path": "84784fb9c758cec6812a6ede7e9b0000cd4db37c6a14d8dd5f1558c2b569842e",
+    "text_path": "b46ae99966f017952389b8b7327d3be9ceadb79f5319c80151991343d81c3402"
+  },
+  "headings": [
+    "Prerequisites",
+    "Postman Collection",
+    "Headers"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/retrieve-message-v2.md",
+  "openapi_path": "sources/cache/openapi/c80a6792934e4a27cad955572f459a6d98b55faded7a2830d5ba8f3a8fee2938.json",
+  "resolved_url": "https://developers.webexconnect.io/reference/retrieve-message-v2",
+  "retrieved_at": "2026-09-08T23:31:43+00:00",
+  "sha256_api_metadata": "c112348cdb315d83671d34e0b7b47ecc1f986ddd8e137a163b19b7a11140b7a3",
+  "sha256_html_response": "ce30dc6c8dca0417365ea33a69a76cb687d8a2ec60d599ff289f8fdd3c398e8a",
+  "sha256_openapi": "c80a6792934e4a27cad955572f459a6d98b55faded7a2830d5ba8f3a8fee2938",
+  "sha256_source_body": "84784fb9c758cec6812a6ede7e9b0000cd4db37c6a14d8dd5f1558c2b569842e",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/retrieve-message-v2.source.md",
+  "source_updated_at": "2026-04-09T11:35:30.620Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/retrieve-message-v2.txt",
+  "title": "Get Message v2",
+  "url": "https://developers.webexconnect.io/reference/retrieve-message-v2",
+  "word_count": 1122,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/retrieve-message-v2.metadata.json"
+}

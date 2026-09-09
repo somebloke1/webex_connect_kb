@@ -1,0 +1,38 @@
+{
+  "category": "Assets",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257989",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "f40845d9b6dd680c3cbe430084a8d7d126f87ccd90721029d45eb11a157a093d",
+    "source_path": "376a76bdb4207fe15b373521c34eaa2d02c8dce26198a51e7580efce38ccc01c",
+    "text_path": "a202024687f9651cca75ca40990258899e6d42e67c9c5379eb73e52a00fdcbf4"
+  },
+  "headings": [
+    "Prerequisites",
+    "SVG file of your logo",
+    "BIMI standard requirements for SVG files",
+    "VMC or CMC for your domain",
+    "DMARC Setup",
+    "Add a BIMI TXT record"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/setting-up-brand-indicators-for-message-identification-bimi.md",
+  "resolved_url": "https://help.webexconnect.io/docs/setting-up-brand-indicators-for-message-identification-bimi",
+  "retrieved_at": "2026-09-08T23:29:03+00:00",
+  "sha256_html_response": "8898aaae35cb1427c861c07aab6e18ac59d6ff0a3ae2c0a40cefc8d193b4bc04",
+  "sha256_source_body": "376a76bdb4207fe15b373521c34eaa2d02c8dce26198a51e7580efce38ccc01c",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/setting-up-brand-indicators-for-message-identification-bimi.source.md",
+  "source_updated_at": "2026-04-15T10:10:58.710Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/setting-up-brand-indicators-for-message-identification-bimi.txt",
+  "title": "Setting up Brand Indicators for Message Identification (BIMI)",
+  "url": "https://help.webexconnect.io/docs/setting-up-brand-indicators-for-message-identification-bimi",
+  "word_count": 630,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/setting-up-brand-indicators-for-message-identification-bimi.metadata.json"
+}

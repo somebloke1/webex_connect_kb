@@ -1,0 +1,36 @@
+{
+  "category": "ADMINISTRATION",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182577f4",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "f32673926032c54bb095dfc6104f8b08bc750c320904a7847c35e95f968fe81e",
+    "source_path": "81b7cc7eeb759a8df5a3dc85aa610b85014c2c2e2f2e5a96a032eae25484e13b",
+    "text_path": "ce6bd05c474b7f5f51e9476f637119e9731b4860f34818641df8fa59aefa8334"
+  },
+  "headings": [
+    "Account Details",
+    "Notifications",
+    "Change Password",
+    "🚧Password Expiry"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/profile-settings.md",
+  "resolved_url": "https://help.webexconnect.io/docs/profile-settings",
+  "retrieved_at": "2026-09-08T23:29:36+00:00",
+  "sha256_html_response": "f36303206dcf80676f3fa17b105d8583d4c64962bc0374395f28e2516eb1c5a4",
+  "sha256_source_body": "81b7cc7eeb759a8df5a3dc85aa610b85014c2c2e2f2e5a96a032eae25484e13b",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/profile-settings.source.md",
+  "source_updated_at": "2025-03-17T13:27:12.840Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/profile-settings.txt",
+  "title": "Profile Settings",
+  "url": "https://help.webexconnect.io/docs/profile-settings",
+  "word_count": 197,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/profile-settings.metadata.json"
+}

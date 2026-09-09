@@ -1,0 +1,76 @@
+# Record Node
+
+Source: https://help.webexconnect.io/docs/record-node
+Documentation version: 6.20.0
+Retrieved: 2026-09-08T23:28:55+00:00
+
+The _Record_ node is used to record a message from the caller. You can choose to play an audio message before recording the user's message. For example, record the caller's name when the call comes in.<br>
+
+The _Record_ node can exist only within the [Voice Node Group](https://help.webexconnect.io/docs/voice-node-group).
+
+
+
+![Record Node](https://files.readme.io/b3706b4-record.png)
+
+
+
+
+> 📘 Automatic fallback to an alternate TTS Provider
+> 
+> The ability for automatic fallback to an alternate TTS Provider is supported for Voice TTS, when the primary TTS service provider is experiencing a higher failure rate.  
+> This feature is not enabled by default for all the tenants. Please reach out to your account manager to get this feature enabled for your tenant. The Fallback feature is enabled only for a specific set of languages.  
+> Example: If English US is supposed on Azure, and you’re experiencing failures, we will fallback to the same language on the alternate TTS Provider. If the same language is not available on the alternate TTS Provider, we will fallback to English. We do not recommend getting this feature enabled if SSML is being used as part of nodes or APIs. This is because the SSML tags are different for the primary service provider and the secondary service provider.
+
+## Node Configuration
+
+Drag-and-drop the node on to the visual flow builder and double-click it to configure the audio that should be played (if required) prior to starting the recording. You can also set the maximum duration of the recording and the customizable file name.
+
+1. Click the **Play Audio** toggle button ON if you want to play audio to the user before proceeding with the recording. This button is OFF by default. This is an optional step.  
+   If you want to play audio, see the [Play Node](https://help.webexconnect.io/docs/play-node) section for steps about configuration.
+
+
+
+![Configuring a Record node](https://files.readme.io/f4d207a-Record.jpg)
+
+
+
+
+2. Select the **Play short beep before starting the recording** checkbox if you want to indicate to the user that the recording is about to start after the beep sound. This is optional.
+3. Enter or select details for the following **Recording Settings**:
+   - **Recording Timeout (in seconds)** - enter the number of seconds after which the recording will end. The maximum timeout is **300** seconds.
+   - **Stop Recording on Keypress** - select the key that if pressed stops the recording. If this key is configured and no key is pressed, then the flow exits through the timeout edge.
+   - **Audio File Prefix Name** - provide a prefix with which the recording will be prefixed for easy identification. The recordings will be saved to the Voice Recordings folder with the configured prefix and a unique node transaction id. The prefix can contain only alphabets, numbers, dollar, underscore, or variables.
+4. Click **Save** to complete the configuration.
+
+## Input Variables
+
+You can see a list of all the flow variables available for use within this node under the **Input Variables** pane. You can also search for a variable using the **Search** field.
+
+You can see the list of variables that you explicitly create and configure for this node under the **Custom Variables** pane. You can also add a custom variable to the flow using the **Add New Custom Variable** button. For more information, see [Custom Variables](https://help.webexconnect.io/docs/variable-management-in-flows#section-custom-variables).
+
+## Output Variables
+
+You can see the data that this node generates as output variables. These [variables](https://help.webexconnect.io/docs/variable-management-in-flows) are available for use in subsequent nodes. The following are the standard output variables for the _Record_ node:
+
+- **record.recordingFilePath** - stores the path of the file that contains the call recording.
+
+
+
+![Output Variables](https://files.readme.io/161b4e7-Record1.jpg)
+
+
+
+
+## Node Outcomes
+
+You can see the list of possible node outcomes for this node under this pane. You can customize the node labels using the **Edit** (pencil) icon. The node exits through one of the node edges corresponding to the outcome of the node.
+
+| Node Edge              | Node Event/Outcome                                                                                             |
+| :--------------------- | :------------------------------------------------------------------------------------------------------------- |
+| Success (green)        | - **onSuccess** - the flow exits through this node when the recording of a voice call is successful            |
+| Timeout (yellow/amber) | - **onrecordingTimeout** - the flow exits through this node outcome when the voice call recording is timed out |
+| Error (red)            | - **onError** - the flow exits through this node outcome when there is an error in recording the voice call    |
+
+## Transition Actions
+
+Use this tab to configure the transition actions for `On-enter`/`On-leave` events. However, configuring transition actions is optional. For detailed instructions about configuring the transition actions, see [Node Transition Actions](https://help.webexconnect.io/docs/transition-actions).

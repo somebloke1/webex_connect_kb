@@ -1,0 +1,94 @@
+📘 API Endpoints & Postman Collection
+
+> The Voice channel is supported via Voice API v1 and Send Message API v2. 
+>
+> The API endpoint for it is: [https://api.{YourRegion}.webexconnect.io/v1/voice/calls/{sessionId}]. 
+>
+> Please modify YourRegion in the URL as per your tenant’s region. See [Know Your Endpoint Page](https://developers.imiconnect.io/reference/endpoints).
+>
+> Refer to [Postman Collection](https://www.postman.com/cisco/webex-connect/collection/pyjw227/webex-connect-apis) for trying Get Call Status Using Voice API v1.
+
+> 📘 API Response and Error Codes
+> 
+> Voice API v1 is asynchronous. When you invoke the API, you receive an HTTP response confirming acceptance of your request. Further processing details are sent to your callback URL (notify URL) specified in the API request. For more information, see [Channel Specific Status Codes](https://developers.imiconnect.io/reference/channel-specific-status-codes-1).
+
+## Request Body for Get Call Status API
+
+```curl Get Call Status API
+curl --location 'https://baseURL/v1/voice/calls/{sessionId}' \
+--header 'Accept: application/json' \
+--header 'Authorization: ServiceKey'
+```
+
+## Get Call Status Path Parameters
+
+| Parameter | Type   | Mandatory | Description                                                                    |
+| :-------- | :----- | :-------- | :----------------------------------------------------------------------------- |
+| sessionId | string | yes       | Unique identifier for the call. Returned in the response body of Voice API v1. |
+
+## Get Call Status Header Parameters
+
+| Parameter     | Type   | Mandatory | Description                                                                               |
+| :------------ | :----- | :-------- | :---------------------------------------------------------------------------------------- |
+| Authorization | string | yes       | Authorization token (this can be either a JWT signed by a secret key or the service key). |
+
+## Sample Response Body
+
+```json Success
+{
+    "durationSeconds": 21,
+    "statusTime": "2025-01-28T19:37:09.875+05:30",
+    "offeredTime": "2025-01-28T19:36:49.739+05:30",
+    "answeredTime": "2025-01-28T19:37:09.875+05:30",
+    "status": "ANSWERED"
+}
+```
+```Text 404 Not Found
+<No Response Body>
+```
+
+### Response Parameters
+
+
+
+| Parameter | Type | Description |
+| --- | --- | --- |
+| durationSeconds | Integer | Duration of the call, in seconds. |
+| statusTime | string | Timestamp of the call status, in UTC format. |
+| offeredTime | string | Timestamp when the call was placed, in UTC format. |
+| answeredTime | string | Timestamp when the call was answered, in UTC format. |
+| status | string | **Status of the call. Possible values:**  <br>**Answered**: The end customer answered the call.  <br>**Dropped: ** The call was dropped due to a technical error.  <br>**Rejected: ** The call was rejected (e.g., network failure, busy, or declined by the customer).  <br>**Released: ** The call was ended by the platform.  <br>**Disconnected: ** The end customer disconnected the call.  <br>**Trombone Connected: ** Both the end customer and agent are connected.  <br>**Trombone Released: ** The agent exited the call.  <br>**Message Expired: ** The call request expired after the configured expiry time. |
+
+
+
+## API reference metadata
+
+These are source metadata and examples. `api.auth` is ReadMe metadata; verify authentication in the documented headers/security scheme.
+
+```json
+{
+  "method": "get",
+  "url": "",
+  "auth": "required",
+  "results": {
+    "codes": [
+      {
+        "name": "",
+        "code": "{}",
+        "language": "json",
+        "status": 200
+      },
+      {
+        "name": "",
+        "code": "{}",
+        "language": "json",
+        "status": 400
+      }
+    ]
+  },
+  "params": [],
+  "examples": {
+    "codes": []
+  }
+}
+```

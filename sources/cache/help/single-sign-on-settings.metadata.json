@@ -1,0 +1,43 @@
+{
+  "category": "ADMINISTRATION",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd81825784b",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "e45634be2022e0120cf9a32f1798a5b74784873fc69fdae3ea969fc8db8fc8a3",
+    "source_path": "eb6aa3c6b09424c60fbe4990c14dd07bd2a7dd8f6a9de3d9f24e2c8ea563725f",
+    "text_path": "eed2007f3b75abf78eeec37f9e56eb1cb7eb18302d02c7fa9cf1348a2cad7dc9"
+  },
+  "headings": [
+    "📘SSO for tenant Owner",
+    "Prerequisites",
+    "📘Attributes in assertion data",
+    "SSO Settings",
+    "📘",
+    "Inviting New Users",
+    "📘Password Reset",
+    "Password vs SSO",
+    "Testing your SSO configuration",
+    "📘Note",
+    "Remote Log-off for SSO"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/single-sign-on-settings.md",
+  "resolved_url": "https://help.webexconnect.io/docs/single-sign-on-settings",
+  "retrieved_at": "2026-09-08T23:29:36+00:00",
+  "sha256_html_response": "388309248df647b5d5ed7455b545e75e43cc0f6242f16b30c5511c90b18b6605",
+  "sha256_source_body": "eb6aa3c6b09424c60fbe4990c14dd07bd2a7dd8f6a9de3d9f24e2c8ea563725f",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/single-sign-on-settings.source.md",
+  "source_updated_at": "2026-04-21T05:39:53.122Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/single-sign-on-settings.txt",
+  "title": "Single Sign-On (SSO) Using SAML",
+  "url": "https://help.webexconnect.io/docs/single-sign-on-settings",
+  "word_count": 1276,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/single-sign-on-settings.metadata.json"
+}

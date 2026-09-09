@@ -1,0 +1,397 @@
+> 📘 Know Your Endpoint
+> 
+> Based on the domain you use to log in to imiconnect, the endpoint for your API varies. See the [endpoint](https://developers.imiconnect.io/reference/endpoints) section to understand which endpoint to use for your domain.
+
+> ❗️ API Access
+> 
+> This API is currently in beta and only available to select clients. Please reach out to your account manager for access.
+
+## Prerequisites
+
+- messageId - Generated when you send message using API v2
+
+## Postman Collection
+
+Here is a Postman collection to test our APIs. 
+
+Latest Collection: [![Run in Postman](https://run.pstmn.io/button.svg)](https://www.postman.com/cisco/webex-connect/collection/pyjw227/webex-connect-apis)
+
+Archived Collection: Refer [Postman Collection](https://www.postman.com/cisco/webex-connect/folder/68yfedu/archived-collections)
+
+[Download](https://www.getpostman.com/) Postman from official site.
+
+## Headers
+
+> 🚧 Authentication
+> 
+> Messaging API v2 supports both "key" and JWT based authentication. The method of authentication can be selected under the API settings tab in a service.
+> 
+> If you are passing both JWT authentication and Service Key in an API request, the JWT authentication takes priority.
+
+> 👍 Generating the JWT Token
+> 
+> Connect uses a subset of the JWT fields, described here:
+> 
+> alg  
+> A string used in the header, identifying the algorithm used to encode the payload. The alg value is always HS256 when exchanging messages with Business Chat.
+> 
+> iss  
+> A claim that is a string identifying the principal that issued the JWT. The value is always the Service ID when exchanging messages with API V2.
+> 
+> iat  
+> A claim that is a numeric date—that is, an integer—identifying the time at which the JWT was issued. The value is the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date and time, ignoring leap seconds. For more information, see the Terminology section in RFC 7519.
+> 
+> A Service Secret that is a Base64-encoded string. Decode the string before using the key to sign the JWT
+
+A decoded JWT token should contain the following -
+
+```json Decoded JWT Token
+header
+{
+  "alg": HS256,
+}
+claims
+{
+  "iss": <Service ID>,
+  "iat": <issued at unix-timestamp (in seconds)>
+}
+```
+
+## API reference metadata
+
+These are source metadata and examples. `api.auth` is ReadMe metadata; verify authentication in the documented headers/security scheme.
+
+```json
+{
+  "method": "get",
+  "url": "/messages/<messageId>",
+  "auth": "required",
+  "results": {
+    "codes": [
+      {
+        "name": null,
+        "code": "{\n    \"clientId\": 1117,\n    \"toType\": \"msisdn\",\n    \"numSegments\": \"1\",\n    \"requestTimestamp\": \"2020-04-09T09:46:37.897Z\",\n    \"groupId\": 1387,\n    \"channel\": \"sms\",\n    \"messageId\": \"6173724b-c850-42b0-b9d7-eac73de28e95\",\n    \"requestedReceipts\": [],\n    \"version\": \"2.0\",\n    \"content\": {\n        \"text\": \"Here+is+a+message\",\n        \"type\": \"text\"\n    },\n    \"teamId\": 1992,\n    \"callbackData\": \"<notify data>\",\n    \"options\": {\n        \"trackOpens\": false,\n        \"smsFallback\": false,\n        \"bypassSuppression\": false,\n        \"domain\": \"https://sstg.imiconnect.net\",\n        \"trackClicks\": true,\n        \"shortenLinks\": true\n    },\n    \"notifyUrl\": \"https://webhook.site/f6fbab37-6d59-4fec-913a-021db78ce43b\",\n    \"from\": \"CONNCT\",\n    \"correlationId\": \"sit\",\n    \"to\": \"447500661610\",\n    \"direction\": \"outbound\",\n    \"status\": \"Submitted\"\n}",
+        "language": "json",
+        "status": 200
+      },
+      {
+        "code": "",
+        "language": "text",
+        "status": 401
+      },
+      {
+        "code": "",
+        "language": "text",
+        "status": 404
+      },
+      {
+        "code": "",
+        "language": "text",
+        "status": 405
+      },
+      {
+        "code": "",
+        "language": "json",
+        "status": 429
+      }
+    ]
+  },
+  "params": [
+    {
+      "name": "Content-Type",
+      "type": "string",
+      "enumValues": "",
+      "default": "application/json",
+      "desc": "application/json",
+      "required": false,
+      "in": "header",
+      "ref": "",
+      "_id": "60996bde45fabd028a644bcb",
+      "id": "60996bde45fabd028a644bcb"
+    },
+    {
+      "name": "key",
+      "type": "string",
+      "enumValues": "",
+      "default": "",
+      "desc": "Applicable when you want to use service key for API authentication. Available under API tab within a service in your imiconnect tenant.",
+      "required": false,
+      "in": "header",
+      "ref": "",
+      "_id": "60996bde45fabd028a644bca",
+      "id": "60996bde45fabd028a644bca"
+    },
+    {
+      "name": "Authorization",
+      "type": "string",
+      "enumValues": "",
+      "default": "",
+      "desc": "Bearer {{token}}.. Applicable if you want to use JWT tokens for API authentication. Use either of 'key' or 'Authorization' header param.",
+      "required": false,
+      "in": "header",
+      "ref": "",
+      "_id": "60996bde45fabd028a644bc9",
+      "id": "60996bde45fabd028a644bc9"
+    }
+  ],
+  "apiSetting": "6a675233ec1c893d8a7f67b7",
+  "examples": {
+    "codes": []
+  }
+}
+```
+
+## OpenAPI operation and component schemas
+
+```json
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Messaging API v2",
+    "version": "6.20.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.us.webexconnect.io/v2"
+    }
+  ],
+  "security": [
+    {
+      "sec0": []
+    }
+  ],
+  "path": "/messages/<messageId>",
+  "method": "get",
+  "path_parameters": [],
+  "operation": {
+    "summary": "Get Message v2",
+    "description": "",
+    "operationId": "retrieve-message-v2",
+    "parameters": [
+      {
+        "name": "Content-Type",
+        "in": "header",
+        "description": "application/json",
+        "schema": {
+          "type": "string",
+          "default": "application/json"
+        }
+      },
+      {
+        "name": "key",
+        "in": "header",
+        "description": "Applicable when you want to use service key for API authentication. Available under API tab within a service in your imiconnect tenant.",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "Authorization",
+        "in": "header",
+        "description": "Bearer {{token}}.. Applicable if you want to use JWT tokens for API authentication. Use either of 'key' or 'Authorization' header param.",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "200",
+        "content": {
+          "application/json": {
+            "examples": {
+              "Result": {
+                "value": "{\n    \"clientId\": 1117,\n    \"toType\": \"msisdn\",\n    \"numSegments\": \"1\",\n    \"requestTimestamp\": \"2020-04-09T09:46:37.897Z\",\n    \"groupId\": 1387,\n    \"channel\": \"sms\",\n    \"messageId\": \"6173724b-c850-42b0-b9d7-eac73de28e95\",\n    \"requestedReceipts\": [],\n    \"version\": \"2.0\",\n    \"content\": {\n        \"text\": \"Here+is+a+message\",\n        \"type\": \"text\"\n    },\n    \"teamId\": 1992,\n    \"callbackData\": \"<notify data>\",\n    \"options\": {\n        \"trackOpens\": false,\n        \"smsFallback\": false,\n        \"bypassSuppression\": false,\n        \"domain\": \"https://sstg.imiconnect.net\",\n        \"trackClicks\": true,\n        \"shortenLinks\": true\n    },\n    \"notifyUrl\": \"https://webhook.site/f6fbab37-6d59-4fec-913a-021db78ce43b\",\n    \"from\": \"CONNCT\",\n    \"correlationId\": \"sit\",\n    \"to\": \"447500661610\",\n    \"direction\": \"outbound\",\n    \"status\": \"Submitted\"\n}"
+              }
+            },
+            "schema": {
+              "type": "object",
+              "properties": {
+                "clientId": {
+                  "type": "integer",
+                  "example": 1117,
+                  "default": 0
+                },
+                "toType": {
+                  "type": "string",
+                  "example": "msisdn"
+                },
+                "numSegments": {
+                  "type": "string",
+                  "example": "1"
+                },
+                "requestTimestamp": {
+                  "type": "string",
+                  "example": "2020-04-09T09:46:37.897Z"
+                },
+                "groupId": {
+                  "type": "integer",
+                  "example": 1387,
+                  "default": 0
+                },
+                "channel": {
+                  "type": "string",
+                  "example": "sms"
+                },
+                "messageId": {
+                  "type": "string",
+                  "example": "6173724b-c850-42b0-b9d7-eac73de28e95"
+                },
+                "requestedReceipts": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                },
+                "version": {
+                  "type": "string",
+                  "example": "2.0"
+                },
+                "content": {
+                  "type": "object",
+                  "properties": {
+                    "text": {
+                      "type": "string",
+                      "example": "Here+is+a+message"
+                    },
+                    "type": {
+                      "type": "string",
+                      "example": "text"
+                    }
+                  }
+                },
+                "teamId": {
+                  "type": "integer",
+                  "example": 1992,
+                  "default": 0
+                },
+                "callbackData": {
+                  "type": "string",
+                  "example": "<notify data>"
+                },
+                "options": {
+                  "type": "object",
+                  "properties": {
+                    "trackOpens": {
+                      "type": "boolean",
+                      "example": false,
+                      "default": true
+                    },
+                    "smsFallback": {
+                      "type": "boolean",
+                      "example": false,
+                      "default": true
+                    },
+                    "bypassSuppression": {
+                      "type": "boolean",
+                      "example": false,
+                      "default": true
+                    },
+                    "domain": {
+                      "type": "string",
+                      "example": "https://sstg.imiconnect.net"
+                    },
+                    "trackClicks": {
+                      "type": "boolean",
+                      "example": true,
+                      "default": true
+                    },
+                    "shortenLinks": {
+                      "type": "boolean",
+                      "example": true,
+                      "default": true
+                    }
+                  }
+                },
+                "notifyUrl": {
+                  "type": "string",
+                  "example": "https://webhook.site/f6fbab37-6d59-4fec-913a-021db78ce43b"
+                },
+                "from": {
+                  "type": "string",
+                  "example": "CONNCT"
+                },
+                "correlationId": {
+                  "type": "string",
+                  "example": "sit"
+                },
+                "to": {
+                  "type": "string",
+                  "example": "447500661610"
+                },
+                "direction": {
+                  "type": "string",
+                  "example": "outbound"
+                },
+                "status": {
+                  "type": "string",
+                  "example": "Submitted"
+                }
+              }
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "401",
+        "content": {
+          "text/plain": {
+            "examples": {
+              "Result": {
+                "value": ""
+              }
+            }
+          }
+        }
+      },
+      "404": {
+        "description": "404",
+        "content": {
+          "text/plain": {
+            "examples": {
+              "Result": {
+                "value": ""
+              }
+            }
+          }
+        }
+      },
+      "405": {
+        "description": "405",
+        "content": {
+          "text/plain": {
+            "examples": {
+              "Result": {
+                "value": ""
+              }
+            }
+          }
+        }
+      },
+      "429": {
+        "description": "429",
+        "content": {
+          "application/json": {
+            "examples": {
+              "Result": {
+                "value": ""
+              }
+            }
+          }
+        }
+      }
+    },
+    "deprecated": false
+  },
+  "components": {
+    "securitySchemes": {
+      "sec0": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "key"
+      }
+    }
+  }
+}
+```

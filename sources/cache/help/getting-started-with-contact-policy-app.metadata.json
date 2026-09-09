@@ -1,0 +1,35 @@
+{
+  "category": "APP TRAY",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182578b8",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "a4385f6dae59d322d57823d6f6e111c779e114e7d5c02b186d584d5ea3dacf75",
+    "source_path": "4220d116fdc7c5c3ebd4d4c1a6c20b034dff8ad125be9e5e924f23d8b9237647",
+    "text_path": "26956f21700939357bd32af314d921c54d68c3be706b557d2d52f60d4d7e33f9"
+  },
+  "headings": [
+    "Overview",
+    "Access Contact Policy App",
+    "Permissions"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/getting-started-with-contact-policy-app.md",
+  "resolved_url": "https://help.webexconnect.io/docs/getting-started-with-contact-policy-app",
+  "retrieved_at": "2026-09-08T23:29:37+00:00",
+  "sha256_html_response": "a8535be1b7136d451029b424f6efdc0e3739caa412a6e6e55fba73913e274988",
+  "sha256_source_body": "4220d116fdc7c5c3ebd4d4c1a6c20b034dff8ad125be9e5e924f23d8b9237647",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/getting-started-with-contact-policy-app.source.md",
+  "source_updated_at": "2025-02-28T12:57:06.718Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/getting-started-with-contact-policy-app.txt",
+  "title": "Getting Started with Contact Policy",
+  "url": "https://help.webexconnect.io/docs/getting-started-with-contact-policy-app",
+  "word_count": 253,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/getting-started-with-contact-policy-app.metadata.json"
+}

@@ -1,0 +1,35 @@
+{
+  "category": "PreBUILT Integrations",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182578ec",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "5a84e82ac4a4dce3c88371267fbcefaa33bb552bafaad1c9e1f51a5c6e21eff8",
+    "source_path": "d15732d4aea8beb82eb1d03f420aa72573edeb946b72c4e0467f132c1e39da00",
+    "text_path": "414c0a776af3fb81074c8194819be287d90a77f3f32344be7236187ef59e9730"
+  },
+  "headings": [
+    "📘Deprecation Alert",
+    "Configure IMIchat Details",
+    "CONFIGURE RULES BASED ON IMIchat EVENTS"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/webex-chat-webex-engage.md",
+  "resolved_url": "https://help.webexconnect.io/docs/webex-chat-webex-engage",
+  "retrieved_at": "2026-09-08T23:29:10+00:00",
+  "sha256_html_response": "5fda11fe093f7c26d4a8dc3dac7f7aa7f87029143ea0fed93949a202ccf92131",
+  "sha256_source_body": "d15732d4aea8beb82eb1d03f420aa72573edeb946b72c4e0467f132c1e39da00",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/webex-chat-webex-engage.source.md",
+  "source_updated_at": "2025-04-02T14:07:27.641Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/webex-chat-webex-engage.txt",
+  "title": "Webex Chat/ Webex Engage",
+  "url": "https://help.webexconnect.io/docs/webex-chat-webex-engage",
+  "word_count": 329,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/webex-chat-webex-engage.metadata.json"
+}

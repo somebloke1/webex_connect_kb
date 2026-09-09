@@ -1,0 +1,33 @@
+{
+  "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd81825799f",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "529e61cc37acc5ef61b97417e5a2a4f5c0335fce4b3fa77e3c7898471c06f3d1",
+    "source_path": "cd75a9f80511b964e04cefca6d12f0657a1c713416c3cc33406d4fd068427c68",
+    "text_path": "a83c58470f432f2add641999c2d447761f227c65853ba29551e53c035cb2d1f7"
+  },
+  "headings": [
+    "How to increase messaging limits"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/wxcc-messaging-customers-on-whatsapp-business-platform.md",
+  "resolved_url": "https://help.webexconnect.io/docs/wxcc-messaging-customers-on-whatsapp-business-platform",
+  "retrieved_at": "2026-09-08T23:29:14+00:00",
+  "sha256_html_response": "4292579cc13004c41172202788d2c92e9ab98066a4bfe0859be0599022c2e252",
+  "sha256_source_body": "cd75a9f80511b964e04cefca6d12f0657a1c713416c3cc33406d4fd068427c68",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/wxcc-messaging-customers-on-whatsapp-business-platform.source.md",
+  "source_updated_at": "2026-04-14T07:24:02.910Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/wxcc-messaging-customers-on-whatsapp-business-platform.txt",
+  "title": "Messaging Customers on WhatsApp Business Platform - WXCC",
+  "url": "https://help.webexconnect.io/docs/wxcc-messaging-customers-on-whatsapp-business-platform",
+  "word_count": 305,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/wxcc-messaging-customers-on-whatsapp-business-platform.metadata.json"
+}

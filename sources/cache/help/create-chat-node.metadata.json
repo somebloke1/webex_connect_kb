@@ -1,0 +1,40 @@
+{
+  "category": "SERVICES & FLOWS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182577d8",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "f4513e3f4ee1a51b54a08387b26664ece934cf648f0ccfd8aadcdf4e747d0810",
+    "source_path": "5eb52f3632ebf19c83b8498f287a9de42bb719cac9175ca2145eeb13d316c41b",
+    "text_path": "89da8176d893353c237b9ce62dc3c199a1708422a8f779835b994a15e4a20f11"
+  },
+  "headings": [
+    "📘Deprecation Alert",
+    "Interface Elements",
+    "Configuring a Chat",
+    "Configuring a Static Message##",
+    "Configuring a Conversation##",
+    "Testing a Sample",
+    "Configuring Transitions",
+    "📘Tip"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/create-chat-node.md",
+  "resolved_url": "https://help.webexconnect.io/docs/create-chat-node",
+  "retrieved_at": "2026-09-08T23:28:57+00:00",
+  "sha256_html_response": "2af822c494a12bb713499715c90bf6cd0dbc40fbb16bd872d80e689f1a276dec",
+  "sha256_source_body": "5eb52f3632ebf19c83b8498f287a9de42bb719cac9175ca2145eeb13d316c41b",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/create-chat-node.source.md",
+  "source_updated_at": "2026-04-15T09:44:08.441Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/create-chat-node.txt",
+  "title": "Create Chat Node",
+  "url": "https://help.webexconnect.io/docs/create-chat-node",
+  "word_count": 736,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/create-chat-node.metadata.json"
+}

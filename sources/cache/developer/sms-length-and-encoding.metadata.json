@@ -1,0 +1,35 @@
+{
+  "api_metadata_path": "sources/cache/developer/sms-length-and-encoding.api.json",
+  "category": "MULTI CHANNEL COMMUNICATION API",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f666c",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "5b664f5e6ef3a97156b661f908b7691fe1e7f6b11815bf78fce1a98190b8f3e1",
+    "source_path": "5dae92f518934b3898a0bb3fef4c8ec773b2b4c98c2e1abd3074d1931c0742e2",
+    "text_path": "86df007be1d8f5a7c4258e4ef2b1071303fa9f513577e426518ce4e0a6eea533"
+  },
+  "headings": [
+    "Background - GSM Encoding",
+    "Single vs Multi-Part SMS"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/sms-length-and-encoding.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/sms-length-and-encoding",
+  "retrieved_at": "2026-09-08T23:31:41+00:00",
+  "sha256_api_metadata": "575f65b7d8dc3ea0b617314bc47e22705dc85fc80ee114e6faa20ada4e8aafe2",
+  "sha256_html_response": "378a85cd3a6cb513cdbbbbaf9dd8fdb31500c75d51b4f06c4c90aa85aa70d12b",
+  "sha256_source_body": "5dae92f518934b3898a0bb3fef4c8ec773b2b4c98c2e1abd3074d1931c0742e2",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/sms-length-and-encoding.source.md",
+  "source_updated_at": "2026-06-23T15:36:11.992Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/sms-length-and-encoding.txt",
+  "title": "SMS Length and Encoding",
+  "url": "https://developers.webexconnect.io/reference/sms-length-and-encoding",
+  "word_count": 717,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/developer/sms-length-and-encoding.metadata.json"
+}

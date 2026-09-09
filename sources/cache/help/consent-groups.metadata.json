@@ -1,0 +1,35 @@
+{
+  "category": "APP TRAY",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182578b9",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "51fd9793124d09aaed7712ab915112c63b76a606ef97a7b7c3233816868488fd",
+    "source_path": "313437252aecff06a1ea7a93e789559bbd650d11621f5b1e8dafee87caeeb2de",
+    "text_path": "bb50a80112cddd5758d2db8be049d9e7352e8d56151738f7b9416348a2e7501c"
+  },
+  "headings": [
+    "Consent Group Types",
+    "Add a New Group",
+    "🚧"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/consent-groups.md",
+  "resolved_url": "https://help.webexconnect.io/docs/consent-groups",
+  "retrieved_at": "2026-09-08T23:29:38+00:00",
+  "sha256_html_response": "f894c21bc22d8e9e9a9e9639f00b1fb186f1f3611974df210f779736d771b84b",
+  "sha256_source_body": "313437252aecff06a1ea7a93e789559bbd650d11621f5b1e8dafee87caeeb2de",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/consent-groups.source.md",
+  "source_updated_at": "2026-06-24T10:16:17.015Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/consent-groups.txt",
+  "title": "Consent Groups",
+  "url": "https://help.webexconnect.io/docs/consent-groups",
+  "word_count": 999,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/consent-groups.metadata.json"
+}

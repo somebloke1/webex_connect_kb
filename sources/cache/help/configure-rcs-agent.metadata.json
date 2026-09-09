@@ -1,0 +1,34 @@
+{
+  "category": "Assets",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182579ab",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "faee2d72483ec97d97735e5f5e60c54adf437b60a9867506e989e559248d3442",
+    "source_path": "60fc25f64a4f53f1d1fb18be7f049ae7dc161ec71c161df632eeaa3dde46fd43",
+    "text_path": "2eec01647e851efabf3af8c2bbad900ce77b6ed87724ac8fa6768c758f7cfb84"
+  },
+  "headings": [
+    "Prerequisites",
+    "Configuration steps"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/configure-rcs-agent.md",
+  "resolved_url": "https://help.webexconnect.io/docs/configure-rcs-agent",
+  "retrieved_at": "2026-09-08T23:29:04+00:00",
+  "sha256_html_response": "981759503285f2a41ff9d11a33e9fe3ad712999a9e12cde6f2fea1c75858d1cd",
+  "sha256_source_body": "60fc25f64a4f53f1d1fb18be7f049ae7dc161ec71c161df632eeaa3dde46fd43",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/configure-rcs-agent.source.md",
+  "source_updated_at": "2026-07-08T14:17:18.070Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/configure-rcs-agent.txt",
+  "title": "Configure RCS Agent",
+  "url": "https://help.webexconnect.io/docs/configure-rcs-agent",
+  "word_count": 278,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/configure-rcs-agent.metadata.json"
+}

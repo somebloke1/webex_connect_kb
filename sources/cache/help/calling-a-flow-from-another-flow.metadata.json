@@ -1,0 +1,34 @@
+{
+  "category": "SERVICES & FLOWS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd81825784c",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "60cf6661cdd4c83fb92dccc4caf3dd316beef6a0c724a882835d326367de9a74",
+    "source_path": "c47476d9d9abfcd37e3dbf6e5f9da63d83480a003e9d9e98114c609d557253d6",
+    "text_path": "fc13a4bb137021c7e8d34b6b9350c53b24a4e8a0459b358ebaf3c6e41cfe77da"
+  },
+  "headings": [
+    "Using Call Flow Node",
+    "🚧Variable Management across Flows when using Call Flow Node"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/calling-a-flow-from-another-flow.md",
+  "resolved_url": "https://help.webexconnect.io/docs/calling-a-flow-from-another-flow",
+  "retrieved_at": "2026-09-08T23:28:42+00:00",
+  "sha256_html_response": "23b25a045ec577f7b901ce067a392c648d37b1712270f7a3cd618a27b5b60194",
+  "sha256_source_body": "c47476d9d9abfcd37e3dbf6e5f9da63d83480a003e9d9e98114c609d557253d6",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/calling-a-flow-from-another-flow.source.md",
+  "source_updated_at": "2026-01-26T13:34:09.614Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/calling-a-flow-from-another-flow.txt",
+  "title": "Calling a Flow from another Flow",
+  "url": "https://help.webexconnect.io/docs/calling-a-flow-from-another-flow",
+  "word_count": 183,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/calling-a-flow-from-another-flow.metadata.json"
+}

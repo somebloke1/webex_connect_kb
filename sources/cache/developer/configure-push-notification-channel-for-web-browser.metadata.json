@@ -1,0 +1,33 @@
+{
+  "category": "TUTORIALS",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f6725",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "a232fdbce4f648364b7f862b6f63fc7fae03a803bade8d7bffb630de132dd07b",
+    "source_path": "4ef6b4d8d7c478f51ee9c03e8862cc0957f253086fbb7a007801f54b29541d21",
+    "text_path": "2dc7d1ee835abeae389ff773bc709b0e57612d2074055ed77ea3c5fa32070c76"
+  },
+  "headings": [
+    "Configure Push-Notification channel for Web-browser",
+    "📘Note"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/configure-push-notification-channel-for-web-browser.md",
+  "resolved_url": "https://developers.webexconnect.io/docs/configure-push-notification-channel-for-web-browser",
+  "retrieved_at": "2026-09-08T23:31:39+00:00",
+  "sha256_html_response": "38564049981b1dbcdaeaf8d2d44d615b3194274c894af91358fb98576ce01896",
+  "sha256_source_body": "4ef6b4d8d7c478f51ee9c03e8862cc0957f253086fbb7a007801f54b29541d21",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/configure-push-notification-channel-for-web-browser.source.md",
+  "source_updated_at": "2026-01-28T07:24:29.924Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/configure-push-notification-channel-for-web-browser.txt",
+  "title": "Configure Push-Notification channel for Web-browser",
+  "url": "https://developers.webexconnect.io/docs/configure-push-notification-channel-for-web-browser",
+  "word_count": 352,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/configure-push-notification-channel-for-web-browser.metadata.json"
+}

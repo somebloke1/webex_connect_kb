@@ -1,0 +1,34 @@
+{
+  "api_metadata_path": "sources/cache/developer/api-faqs.api.json",
+  "category": "FAQs",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f65a5",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "5a9995e234432afe90c754a679563fe14cfba341e01f4859287d7395e6f3ff0f",
+    "source_path": "337b061c938369c5b9f63f16619326dd6ae995fb0742f69027e46820c4154f19",
+    "text_path": "44e68cecd20a6fa6b1c06ded0fc08af7db7024b24d42008a389c15d09b024a8c"
+  },
+  "headings": [
+    "Does Webex Connect messaging API support batching?"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/api-faqs.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/api-faqs",
+  "retrieved_at": "2026-09-08T23:31:52+00:00",
+  "sha256_api_metadata": "575f65b7d8dc3ea0b617314bc47e22705dc85fc80ee114e6faa20ada4e8aafe2",
+  "sha256_html_response": "deeff37dddc74b6ab1493a6861c04ed1f3013b2a8a21cdbe90f1afa4689b33cd",
+  "sha256_source_body": "337b061c938369c5b9f63f16619326dd6ae995fb0742f69027e46820c4154f19",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/api-faqs.source.md",
+  "source_updated_at": "2024-09-13T10:56:19.272Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/api-faqs.txt",
+  "title": "API FAQs",
+  "url": "https://developers.webexconnect.io/reference/api-faqs",
+  "word_count": 218,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/api-faqs.metadata.json"
+}

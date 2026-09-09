@@ -1,0 +1,84 @@
+## 
+
+Configure Push-Notification for iOS channel
+
+In the pop-up that appears, you can configure iOS push notifications in three different ways. To configure iOS push notifications for any of the three options, select the appropriate option: 
+
+- Configure the Firebase Service Account JSON-based push
+
+- APNs
+
+- APNs token based push
+
+### 
+
+Firebase Service Account JSON-based push
+
+For more information on obtaining the Firebase Service Account JSON, please refer to the "Setup Firebase Cloud Messaging Project" guide.
+
+If you want to use Firebase Service Account JSON-based push, follow the steps below:
+
+- Select "Firebase Service Account JSON based push" as the type.
+
+- Click on "Choose file" and upload the JSON file downloaded from the Firebase Project.
+
+- Click on "Save".
+
+### 
+
+Apple Push Notification Service (APNS)
+
+If you want to use APNS as the Push Notification gateway, follow the steps below:
+
+Prerequisite: To create to the certificate, refer to the iOS SDK Quickstart Guide 
+
+- Enter the Certificate Password.
+
+- Select APNS Type gateway from dropdown for your project.
+
+- Sandbox: Select the Sandbox option to target your development app.
+
+- Production: Select the Production option when sending push message to your production ready app.
+
+- Upload the APNS Certificate file.
+
+- Enter the Name and click the Validate.
+
+## 📘
+Supported Certificate Format
+
+Currently, .p12 is the only certificate format supported.
+
+### 
+
+APNS token based push
+
+Prerequisite: To create to the certificate, click the link: iOS SDK Quickstart Guide
+
+- 
+
+Enter the KeyId for the Authentication token.
+
+- 
+
+Enter the Team ID for your Apple Account. You can find it from “View Account”.
+
+- 
+
+Enter the BundleId of your Package project.
+
+- 
+
+Select one of the Gateway from dropdown:
+
+- Sandbox: To target your development app select the Sandbox.
+
+- Production: Select the Production when sending push to your production ready app.
+
+- 
+
+Upload the Private Key file.
+
+- 
+
+Click Save.

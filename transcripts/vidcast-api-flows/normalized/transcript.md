@@ -1,0 +1,562 @@
+# Webex Connect Masterclass
+
+Source: https://app.vidcast.io/share/debc5583-a8ff-4a54-9a2e-c40b867f7be3
+Method: local-subtitle-import; language: en; kind: local-unverified
+Retrieved/processed: 2026-09-08T23:32:31.826501+00:00
+
+Unedited machine/caption evidence. Verify exact UI fields, API names and numbers against the official text documentation.
+
+- 00:00:01.675 — My name is Carmen Lamson with the Webex developer evangelism team for today's webinar.
+- 00:00:06.265 — We will be using the slideshow embedded app for Q, and a look for it to pop up on the right side of your screen.
+- 00:00:12.955 — You can also participate on your mobile device by scanning that QR code.
+- 00:00:17.545 — Joining us for today's webinar are.
+- 00:00:20.865 — And Stephanie with the Webex connect team, giving us an introduction to the platform developer tools and building blocks you can use to integrate communications capabilities into your apps.
+- 00:00:33.145 — But before we jump into all of that fun, Phil, we'll share some exciting things to look out for.
+- 00:00:38.125 — Take it away from. Okay. Hi.
+- 00:00:41.185 — Everybody thanks a lot for joining this session.
+- 00:00:43.435 — I just want to quickly highlight some of the latest news for Webex developers.
+- 00:00:47.430 — Before we start our main presentation majority of these things you can find and read more about on developer dot Webex dot com slash blogs.
+- 00:00:56.125 — So, 1st, uh, we just released our new, uh, Webex web, calling SDK uh, that's a tool kit for developers.
+- 00:01:03.325 — We're looking to integrate the Webex calling features into web applications.
+- 00:01:07.170 — So, it leverages our JavaScript web RTC and that powers, bespoke web apps, or even really complex enterprise solutions.
+- 00:01:15.955 — Uh, you read all about the, uh, highlights on the key features benefits a potential integration use cases, uh, right on the blogs page.
+- 00:01:26.425 — But next, uh, the leader of the Webex developer relations team, lose Delgado author to really helpful white paper showing us how to optimize an incident management with custom built command bots in Webex messaging.
+- 00:01:40.225 — So there's a lot of great info there on the benefits of automation.
+- 00:01:44.395 — The power of customers. Patient in a variety of ways that we can integrate with the Webex platform.
+- 00:01:49.634 — So. Be sure to check that 1.
+- 00:01:51.505 — now, uh, 3rd, uh, we've revamped 2 of our developer guides, uh, for Webex for wholesale APIs.
+- 00:02:00.300 — Uh, and Webex for broad works APIs.
+- 00:02:02.965 — Um, and so this brings together the most current and comprehensive information for these product platforms.
+- 00:02:08.970 — Uh, you could find these new guys, right in the documentation section on the dev portal, um, and forth.
+- 00:02:14.425 — We have a really nice. Post event round up by comic analysis on the activities of our Webex app hub integration partners at Cisco live and Amsterdam that just happened at the beginning of the month.
+- 00:02:26.065 — This is a particular focus and the power of AI.
+- 00:02:28.705 — So it's a great way to learn about what our partners are building.
+- 00:02:31.615 — So I encourage everybody to go check that 1 out.
+- 00:02:35.485 — Um, next week recently published some new, how 2 blogs, and that shows us how to work with 3 different application types in Webex.
+- 00:02:44.520 — Uh, so the 1st, 1, the leader of Webex developer evangelism Adam weeks.
+- 00:02:49.560 — He takes us through a step by step lab to create an RSS feed reader and that's inside Webex contact center in the agent desktop.
+- 00:02:59.185 — What's called a header widget?
+- 00:03:00.895 — So, he kind of takes us through the entire of building and deploying it inside of like, a self contained lab.
+- 00:03:07.645 — Very, very cool. And the. 2nd, 1, uh, the Webex developer evangelist Joseph authored a guide to create and manage Webex service apps.
+- 00:03:17.035 — And that's for streamlining the authorization of org level integrations for administrators and it also enables efficient token consumption for high scale API calls.
+- 00:03:29.035 — So, I know we've been getting a lot of questions around new service apps and with this 1, they should answer pretty much all the questions for getting started.
+- 00:03:38.155 — And 3rd, Webex engineer, cassava, Christian, and he shows us how we can streamline the development process.
+- 00:03:45.960 — And the Webex calling SDK with yarn workspaces he also explain how these yarn workspace strategies can be deployed to various other web integration types.
+- 00:03:57.355 — So that's a really cool blog, too.
+- 00:04:00.445 — But really, that's it for the Webex developer news for this month.
+- 00:04:04.255 — Um, we also have a newsletter that they actually puts all these together too.
+- 00:04:08.725 — So, um, you know, you should be receiving that.
+- 00:04:11.335 — If you signed in for the developer portal.
+- 00:04:13.620 — Uh, if you are not getting those newsletters, please let us know and we'll get you added to the list.
+- 00:04:19.320 — Uh, but with that, that's it for the news this month.
+- 00:04:21.805 — So let's get started with the main presentation so, take it away.
+- 00:04:28.884 — Thank you for, uh, hi, everyone.
+- 00:04:30.654 — Welcome to the Webex connect masterclass webinar.
+- 00:04:33.354 — My name is, I am the product manager and leader for Webex Connect, which is our enterprise cloud communications platform.
+- 00:04:39.179 — In today's session, uh, I will be giving you an introduction to Webex connect and its capabilities before handing over to my colleagues.
+- 00:04:45.414 — Stephan, who will walk you through a live demo of how you can use Webex Connect for automating your customer interactions.
+- 00:04:51.989 — With that, let's dive in, uh, to start with the, you know, I quickly wanted to touch upon, you know, what is because.
+- 00:04:59.489 — Some of you may not necessarily be familiar with this terminology.
+- 00:05:03.294 — To keep things simple cloud, communications platform as a service, or is a cloud based platform.
+- 00:05:08.879 — Uh, that offers you developers as well as business users.
+- 00:05:12.929 — Uh, the ability to embed customer communication capabilities into your existing apps and business processes, uh, what you see below is a little more expensive, uh, a view of what, you know, uh, entails a comprehensive enterprise cloud communications
+- 00:05:26.844 — platform, right? From APIs, for being able to do, uh, you know, communications with your customers to a business capability.
+- 00:05:33.404 — Which allows you to handle all the orchestration and automation of interactive customer journey is, uh, you know, when we touch upon some of the other capabilities, like NLP and so with that high level introduction, uh, let me, you know, quickly jump
+- 00:05:46.184 — onto. Why do we, as developers need.
+- 00:05:49.799 — See past platform, so the crux of it really is the evolving customer experience expectations, you know, as we all know, uh, nowadays, consumers, including ourselves want to do things digitally.
+- 00:06:01.884 — Everything is getting everything is going digital.
+- 00:06:04.859 — We, as consumers want to do more and more self service, so, you know, instead of walking into a store, we want to place our orders online and, you know, just go and pick up, pick it up from the store or simply get it delivered to our home steps, uh,
+- 00:06:16.614 — doctor appointments are moving from, you know, in person, physical appointments to virtual appointments, wherever possible, uh, you know, more and more banking related.
+- 00:06:23.874 — Things are becoming. And, you know, small things, 2, big things, everything is essentially going digital and in this word, consumers want the ability to do things on their own.
+- 00:06:34.274 — They expect to be informed about what to expect from the brands.
+- 00:06:37.904 — They really love and engage with and they want to do so on the channels that they're using today to interact and engage with their friends and families.
+- 00:06:45.694 — What this means what this has led to is enterprises wanting realizing that there is a need for.
+- 00:06:53.219 — Uh, doing CX transformation from meeting all these customer expectations, uh, which essentially has led to increase demand on enterprise ID to be able to support the CX transformation initiative across various lines of business, any large end within
+- 00:07:09.174 — any large enterprise. Uh, but what is also happening is many.
+- 00:07:13.219 — So, initiatives that are being initiated are taking too long to complete, uh, you know, oftentimes reports suggest they take too much time to realize value.
+- 00:07:24.044 — Uh, and and the question comes, you know, why is that?
+- 00:07:26.474 — So. So, at the heart of it really, you know, is the, the, the challenges which are related to, you know, how do you support such seamless customer experiences without replacing your existing technology stack that you have built over years right uh,
+- 00:07:41.334 — or, you know, how do you overcome some of the challenges that you have in terms of being able to.
+- 00:07:47.024 — Average data that sits across various siloed systems in the context of a customer interaction to make it contextual and seamless for your end customers.
+- 00:07:55.244 — And that is, you know, clearly not a simple challenge.
+- 00:07:58.974 — More so, you know, when we, uh, look at today's word of various channels, so to put things into perspective, you know, we'll quickly look at 1 use case.
+- 00:08:08.094 — The example that we see here is from banking industry.
+- 00:08:11.184 — There's a proactive notification being sent out to the customer about an upcoming credit card payment.
+- 00:08:16.914 — Uh, the customer is being given.
+- 00:08:18.499 — An option to say, you know, whether the customer would like to defer the payment, the customer is able to seamlessly respond to the message that she or he has received.
+- 00:08:28.604 — And then, therefore, the payment by a week by which they are expecting to get some extra funds in their account.
+- 00:08:34.409 — And on top of that, they are being given the ability to schedule a conversation with a financial advisor to you, you know.
+- 00:08:41.394 — Get into a conversation about how to better manage.
+- 00:08:44.664 — The finances overall, so this is a simple example.
+- 00:08:48.749 — Uh, you know, of the kind of things, uh, customers expect today, you know, being informed, proactively about.
+- 00:08:56.069 — Uh, things that are going to happen, uh, you know, in the sense of all the service and products that they're using.
+- 00:09:01.979 — And then also having the ability to be able to make changes, et cetera seamlessly without having to, you know, uh, as an example, call somebody or, you know, walk into a bank branch to be able to do simple things like that.
+- 00:09:14.514 — Now, why, why is this, you know, a.
+- 00:09:16.974 — Challenging problem, and how CPS platforms make it easy to handle it.
+- 00:09:20.934 — Right. So if you look at any large, big enterprise, the technologies stack that enterprises, uh, have today has been built over decades and many of these systems that any large enterprise used.
+- 00:09:31.854 — Uh, they were, you know. Design a PC error, and they were not designed to be able to facilitate customer interactions, over the channels that we use nowadays.
+- 00:09:40.674 — Right from SMS to things like, you know, um, RCS, or, uh, Apple messages.
+- 00:09:46.074 — So, business or what'sapp and all the other new channels.
+- 00:09:48.804 — That we, as consumers are using increasingly.
+- 00:09:51.204 — So how do you go about. Uh, delivering these seamless experiences on all those channels without ripping or replacing your existing technologies systems.
+- 00:10:01.214 — Now, a lot of, uh, you know.
+- 00:10:04.104 — Developers are enterprises what what they end up doing for solving the challenges is, uh, you know, get developers involved, you know, get various APIs for various channels, uh, get.
+- 00:10:16.704 — Getting too long and complex application development projects to essentially automate various journeys.
+- 00:10:22.224 — Right? So, as you see in this screen, uh, you know.
+- 00:10:26.274 — In in any large organization, there are multiple sub journeys to be automated.
+- 00:10:30.444 — So what you are essentially looking at is, uh, the need for being able to.
+- 00:10:37.014 — Uh, do multiple such application development projects for each of the journeys so, in a banking context, you know, on 1 hand, you have credit card business and all the journeys that we may have in the product card context.
+- 00:10:47.724 — Uh, you know, then you may have savings or retail banking, um, you may have, you know, mortgage and all such divisions and imagine, you know, various.
+- 00:10:56.264 — Ideally teams, uh, solving the same challenge by integrating these APIs into existing business systems in their own silos.
+- 00:11:04.454 — What this essentially leads to overtime is various siloed applications many of, which are in part solving the same challenge by doing redundant development and, you know, creating this whole.
+- 00:11:16.594 — A mesh of various applications, which are not only complex.
+- 00:11:21.029 — To build, but they are increasingly complex to maintain over time.
+- 00:11:25.254 — Right. So again, just to reiterate this point, you know, as a large business, we'll have multiple core business systems.
+- 00:11:30.864 — It may be a systems. If you are a bank, it may be a fraud banking system.
+- 00:11:34.344 — It may be a, uh, you know, retail banking system.
+- 00:11:37.104 — Uh, just trying to integrate each of those business systems with each of those, uh, you know, each of the channels that you want to support.
+- 00:11:44.929 — Introduction, and then doing application development in between, uh, you know, writing layers of code to be able to handle all of this, uh, is not, uh, you know, the right approach for CX transformation because 1, it is complex and effort heavy.
+- 00:11:58.004 — And, secondly, it is very, very difficult to maintain overtime.
+- 00:12:00.764 — So, how does the platform, like, help solve this problem?
+- 00:12:05.254 — The, uh, you know, Webex connect like CBS platforms.
+- 00:12:08.674 — Uh, they sit at the center of, you know, all the existing enterprise business systems that any large enterprise has as well as all the consumer touch points where we are looking at delivering seamless customer experiences.
+- 00:12:21.273 — And it provides out of box ability to facilitate.
+- 00:12:24.929 — Customer. Interactions on all these channels, the consumers preferred to have conversations on in today's world and then also the ability to, uh, you know, leverage out of box integrations to a large number of 3rd party applications as well as the
+- 00:12:38.784 — ability to seamlessly configure usable integrations with your existing proprietary enterprise systems and then reuse them across.
+- 00:12:45.919 — We use customer journeys what we mean, by that it will become a little more clear as we, uh, go from here on.
+- 00:12:51.194 — But essentially, you know, this platform really takes the complexity out by providing many of the capabilities that you would have to otherwise build your own development capacity, uh, in building applications to solve these challenges.
+- 00:13:02.504 — Right 1 of the examples would be all these communication channels.
+- 00:13:05.504 — They are. Constantly evolving there are new things that are happening, you know, the API payloads are changing over time how the, you know, various web payloads them all that is changing.
+- 00:13:13.654 — So, you, as a business want to really are you, as a developer really want to focus on delivering seamless customer experience, rather than having to constantly deal with changing APIs and then also on top of that trying to do.
+- 00:13:25.919 — In various applications, so instead of that, you get a centralized cloud communications platform that helps you manage, build and manage such interactive customer journeys across various.
+- 00:13:36.894 — Systems now, Webex Connect is an enterprise CPS platform.
+- 00:13:40.523 — What that means is. Not only do we provide the functional capabilities that you need in the context of automating a customer interaction, but we also provide a large number of relevant enterprise controls, uh, and the right kind of, uh, you know,
+- 00:13:53.844 — service assurance so that you as an enterprise can confidently run your mission critical customer interactions on a platform like this.
+- 00:14:01.584 — To make things, you know, understandable and simple take any simple example of let's say you want to automate, uh, the, you know, uh.
+- 00:14:09.294 — Journey of receiving order notifications or parcel delivery notifications on a channel like what'sapp and, you know, provide seamless options to customers to reschedule those deliveries.
+- 00:14:19.254 — If there is the need, what you would need is 1st of all the ability to integrate, uh, you know, with your existing business systems, where such parcel, delivery related events get.
+- 00:14:29.849 — Uh, you know, on top of that you will need the ability to handle, you know, BI, directional communications over channel like what'sapp.
+- 00:14:36.324 — So that's where communication channel management module comes in now, you know, when you want to automate such experiences, you need the ability to interpret, you know, what the customer is trying to convey when you receive an incoming message from
+- 00:14:48.444 — the customer. So, for that.
+- 00:14:49.849 — You know, the natural language processing, understanding, and chat bot and of capabilities, come in to be able to automatically identify the intent and handle the conversation automatically and on top of that.
+- 00:15:00.194 — You need to be able to handle all the business logic.
+- 00:15:02.534 — That goes on in terms of delivering such seamless conversations.
+- 00:15:06.774 — Uh, and then on top of that, there are enterprise intelligent controls and touch upon it.
+- 00:15:10.854 — Uh, as as we proceed further.
+- 00:15:14.099 — So, starting, you know, going a bit deeper into each of those areas.
+- 00:15:17.339 — Uh, you know, how developers can leverage Webex Connect for being able to, uh, deliver seamless customer experiences.
+- 00:15:23.604 — Uh, you can use our communication APIs, and we offer a set of a rich set of APIs and web hooks for being able to both stand as well as receive customer communications over 13+channels.
+- 00:15:35.004 — plus channels You know, spanning from, uh, uh, things like SMS, voice and email to all the advanced newish channels, like copying messages for business or what'sapp this apart.
+- 00:15:44.694 — We also offer and Android and iOS and JavaScript for being able to send push notifications and facilitate 2 way customer conversations.
+- 00:15:52.974 — Over mobile apps as well as our websites using live chat.
+- 00:15:56.054 — Channel, uh, this apart, we offer a very robust, uh, integrations module.
+- 00:16:00.464 — We offer out of box integration with a number of, uh, you know.
+- 00:16:04.374 — 3rd party systems, like Salesforce, then there's, uh, you know, vertical systems, like, Epic, uh, in the healthcare domain, uh, as well, as the ability to configure usable integration using best or so based APIs, or, you know, integrating with your
+- 00:16:18.444 — data related systems with capabilities such as a file based integrations or data streams, which are.
+- 00:16:24.229 — You to stream a copy of, uh, you know, all the customer conversations that you're having with your customers using technology is like.
+- 00:16:31.824 — On top of that, we provide a very comprehensive tools that that both developers and business users need in an organization to be able to handle customer interactions in an automated fashion examples include, uh, you know, modules like template
+- 00:16:44.844 — management which allow people who are responsible for content.
+- 00:16:47.724 — To configure, uh, you know, rich and interactive.
+- 00:16:51.439 — Uh, customer interaction, messages and templates, uh, you know, what you see what you get kind of an interface on top of that, you know, we offer something that we refer to as a visual flow builder, which is essentially a low port visual flow builder
+- 00:17:04.064 — to accelerate your CX transformation initiatives, uh, you know, by giving a rich set of existing.
+- 00:17:11.884 — Capabilities that you can simply drag and drop on a canvas, uh, you know, do various, uh, uh, configurations.
+- 00:17:17.969 — And, uh, using a 1 click, kind of an approach, uh, launch those applications in a highly secure and scalable cloud environment, which, you know, automatically scales to support, uh.
+- 00:17:29.964 — Increasing volumes of customer interactions as you go.
+- 00:17:32.699 — Uh, the application development, uh, you know, capability, uh, is really very, very rich.
+- 00:17:38.214 — It offers you everything that you need from a full life cycle perspective of application development.
+- 00:17:43.314 — You have, uh, you know, in built compilation capabilities when you configure a flow and you try to publish it, it compiles and tells you if there are any errors, uh, you know, there are things like version control.
+- 00:17:52.699 — Debugging and troubleshooting, and then very rich reporting, you know, flow analytics.
+- 00:17:56.894 — We refer to it as flow analytics that allows you to understand how you are.
+- 00:18:00.329 — You know, journeys are performing, you know, at what steps customers are dropping off or finding it difficult to, you know, have interactions with you and you can constantly, uh, optimize those journeys.
+- 00:18:10.044 — Uh, Stephan would be covering more of it as we go for the webinar.
+- 00:18:13.974 — We already touched upon the, you know, NLP capabilities, which are also available as part of the platform.
+- 00:18:19.614 — We also offer a very rich bot builder module, which allows you to configure both as well as, you know.
+- 00:18:27.869 — The and task related bots, which can automate various operations, uh, while using natural language, to make it easy for your customers.
+- 00:18:35.814 — Uh, we also have various atomic capabilities, which you may want to use selectively in the, you know, context of various use cases.
+- 00:18:42.354 — Simple example, would be, let's say a customer comes, you know, and starts having interaction with you on a channel like Apple business chat.
+- 00:18:47.869 — And says, can you book an appointment for next Friday?
+- 00:18:50.234 — You know, converting that next Friday into a specific date, to be able to do a look up in a system to find out what slots are available on the day.
+- 00:18:57.284 — The customer is interested in scheduling an appointment on, right uh, we also have some generative capabilities such as text summarization.
+- 00:19:05.684 — So, let's say, you know, a conversation.
+- 00:19:07.869 — Uh, it starts, you send out a reminder to a customer, the customer starts interacting with you and then there arises a need to escalate that conversation to a human agent.
+- 00:19:15.933 — So, before you do that, you can use text summarization node to create a summarized version of the interaction that happened between the customer and the bot so that the agent is able to understand the context quickly.
+- 00:19:25.944 — Uh, finally, uh, you know, we also apart from these functional capabilities, which are very, very critical to be able to, uh, do end to end customer journey introduction.
+- 00:19:33.804 — We offer a lot of relevant enterprise control, uh, because going back to the point where we were saying, you have multiple businesses within any large enterprise, and all those, you know, teams have they need to do the such customer journey
+- 00:19:44.784 — orchestration. In an automation, which today is happening in silos, uh.
+- 00:19:49.674 — Functional silos, so we are essentially providing a centralized platform for everybody to be able to do such application development collaboratively on a single platform.
+- 00:19:58.884 — So, in that context, we offer very rich capabilities in terms of enterprise controls things.
+- 00:20:03.024 — Like, let's say, you know, I imagine there is a team that works on credit card related journeys and there's a team that works on, uh, retail banking related.
+- 00:20:09.289 — You know, journeys, you have the ability to provide dedicated workspaces to them.
+- 00:20:12.884 — You have things like, you know, locking your existing use case or service workspace.
+- 00:20:16.724 — So that, uh, you know, another developer who is for developing on the same platform, doesn't accidentally make changes to something that you have configured in, uh, you know, end up disrupting your life services.
+- 00:20:26.534 — Uh, you know, are the ability to selectively give.
+- 00:20:29.314 — Access to look at sensitive customer data on the platform, even though multiple people are using the platform to automate a journey so that you are able to, uh, ensure compliance with, you know, various regulations, such as GDPR or HIPPA, et cetera.
+- 00:20:42.754 — So, uh, you know, to summarize it, the Webex Connect platform, provides you all the key capabilities that you need.
+- 00:20:49.289 — For automating customer interactions, there's a lot of relevant, uh, enterprise controls that any, you know, enterprise ity, department and large enterprise would need for being able to collaboratively do such customer journey, automation, across
+- 00:21:01.944 — channels, uh, you know, very quickly, touching upon the, uh, you know, at 1 of the.
+- 00:21:06.719 — Key capabilities that we offer really in the platform is this drag and drop builder as you can see there are various, you know, notes available for various channels.
+- 00:21:14.514 — Uh, you know, so that, uh, you don't really have to, as a developer, start your journey from going through, uh, detailed API documentation for each of these channels.
+- 00:21:22.733 — You, you know, have a lot of capability available in you, what you see what you get kind of.
+- 00:21:27.014 — So that you can really focus on, uh, you know, optimizing customer interactions without having to deal with, you know, changing the underlying complexities of these messaging ecosystems.
+- 00:21:37.364 — So, it's a drag and drop environment.
+- 00:21:39.134 — You know, you can drag and drop, uh, the nodes in the logical order.
+- 00:21:42.344 — Do a little bit of a configuration click on a make live button in your journey is life and you can.
+- 00:21:46.744 — Are testing it and then I creating it with your teams with that.
+- 00:21:49.774 — I'll hand over to my colleagues, Stephanie, to give us a live walk through of some of these capabilities.
+- 00:21:55.194 — Great thanks to and I'm going to share my screen here.
+- 00:22:00.779 — And there's 2 things I want to show you guys 1, is I want to walk you through the platform just a little bit to highlight.
+- 00:22:07.014 — Some of the enterprise controls that 2 new reference.
+- 00:22:09.894 — And then we'll get into the meat of the conversation here or the demo.
+- 00:22:13.044 — Rather, which is. Me literally building a workflow from scratch and hoping it works for you guys to understand the efficiencies that were that we're talking about.
+- 00:22:25.794 — So, um, as my screen loads, I believe we can see it now, it is a so this is a container of services that we refer to.
+- 00:22:35.814 — And what I've done is just in a demo environment, of course.
+- 00:22:38.874 — I've created a few services that are representative of some of our large verticals right?
+- 00:22:44.184 — That that we sell into quite a bit and that utilize our platform.
+- 00:22:48.024 — Um, in these, you can come in and you'll get a glance.
+- 00:22:52.049 — Of traffic, um, you'll obviously have access to your workflows, any rules that you have associated with those workflows and event APIs.
+- 00:23:00.029 — Then your API credentials themselves, whether they're tokens or service keys that you're leveraging um.
+- 00:23:08.034 — This all becomes important, whether you're leveraging us for the workflow, automation, the orchestration canvas that.
+- 00:23:14.669 — Highlighted that is going to represent 95% of the demo today, but there is also the, um, the conversational as, as we refer to them as that allow you to just simply send and receive messages.
+- 00:23:27.594 — receive messages On any given, um, channel that we support.
+- 00:23:32.124 — All right so so these are the more traditional base layer APIs that you might be familiar with when the term C pass is floated out there.
+- 00:23:40.674 — Um. Beyond the services themselves, there's obviously groups and teams hierarchy.
+- 00:23:47.784 — I'm in a demo team right now.
+- 00:23:50.154 — Um, but to point if you had an HR organization and a marketing organization and a development organization, all within the same company, they would all roll up to the same tenant.
+- 00:24:02.204 — Webex connect, and then within those groups and or teams, you'd be able to assign different roles and, uh, capabilities for your teammates as it referred to as I just invited my personal Gmail account in here.
+- 00:24:16.124 — And then you can see the different types of roles.
+- 00:24:18.299 — That you'd have access to and then a rules guide here to help you understand how role based access controls would be governed.
+- 00:24:26.844 — From an asset management standpoint.
+- 00:24:29.579 — Um, you have the ability to come in here and manage integrations.
+- 00:24:33.653 — So, this is where you can build custom integrations into the solution.
+- 00:24:36.924 — So if you have a proprietary system or a, uh, vendor that you leverage quite extensively across.
+- 00:24:44.669 — Uh, use cases, this is where you would come in and build, um, a integration with that with that system or systems.
+- 00:24:51.929 — So, you could quickly access it in your canvas and this will make more sense.
+- 00:24:57.204 — Once I pull up the actual orchestration workflow in a minute on the app side.
+- 00:25:02.394 — I have some, um. Richard channels with the exception of email that I've included in here where you can come in and you can literally configure your own.
+- 00:25:11.579 — Um, uh, rich messaging channel, whatever it might be, uh, in order to facilitate communications and meet your customers where they want to be met their moments of need.
+- 00:25:23.274 — And then, of course, you have the ability to manage your phone numbers as well.
+- 00:25:27.564 — These can be short codes. They can be what were formerly known as long codes.
+- 00:25:31.704 — And now, because they're all being regulated, at least in the United States is starting to be the case in Canada.
+- 00:25:37.614 — They're referred to as 10 so, 10 digit, long codes it's just a different naming.
+- 00:25:42.349 — That the carriers use, and then, of course, these could be 1, 800 numbers as well or toll free numbers.
+- 00:25:48.374 — However, however you want to turn those.
+- 00:25:51.044 — You'll notice here that we have SMS.
+- 00:25:53.714 — sms And then the little phone number for void, or the phone handle for voice.
+- 00:26:00.384 — Indicating that those are all capabilities that are associated with this number specifically.
+- 00:26:06.504 — And again that's all going to be subject to how you decide to deploy the platform and and use it.
+- 00:26:12.564 — So, with that, um, the documentation page, this will become relevant towards the end of the presentation where we're will advertise our sandbox environment that's free to use as well.
+- 00:26:24.024 — But this is where a lot of the information about the platform itself is available from a full feature kind of scenario where.
+- 00:26:32.054 — Leveraging the flow builder and all the bells and whistles or more specifically to where I am in the in the, um, documentation page.
+- 00:26:41.114 — Now, this is where the API reference lives.
+- 00:26:43.634 — So, if you're just using this from a true kind of base layer, communication, API standpoint, and you're building.
+- 00:26:52.029 — Colleges and integration logic on your side this is where you would come to benefit from our APIs to send message is probably our most predominantly used 1.
+- 00:27:02.524 — and in fact, just to kick us off here.
+- 00:27:05.944 — Um, I'm gonna. Leverage that I'm using postman is I'm sure a lot of you are familiar with.
+- 00:27:13.169 — To generate a voice call I have my.
+- 00:27:18.354 — Andy, uh, phone over here I'm working off of 1 screen, so.
+- 00:27:24.084 — Apologies, I'm going to send myself a phone, a phone call.
+- 00:27:27.534 — I'm going to edit this. To make it long enough to where I can I have time to hit the, uh, speaker phone button on my phone.
+- 00:27:36.114 — So, this is a very long message for the, uh, webinar.
+- 00:27:44.394 — Okay, thank you. Okay, so I'm going to send this through.
+- 00:27:54.474 — Hey, well, hopefully pick up in time.
+- 00:28:04.524 — Maybe I did pray enough to the demo gods.
+- 00:28:09.024 — Oh, I have do not disturb on hold on 3rd.
+- 00:28:11.184 — second Let's try that again.
+- 00:28:25.224 — There we go. They show and I was not ready for that.
+- 00:28:34.644 — So, let me do it 1 more time just so you can understand what it said.
+- 00:28:38.574 — Uh, test 3. Send this through now, receive the call at the volume up now.
+- 00:28:49.104 — And you'll see, hopefully.
+- 00:28:54.264 — Corporate through again, today, thank you.
+- 00:28:59.814 — Enjoy the show test 3. okay.
+- 00:29:02.424 — Generally. Let me get the screen up here for Webex.
+- 00:29:11.334 — And there we go. So now, let me translate, let me navigate over to.
+- 00:29:20.789 — Uh, the PowerPoint presentation.
+- 00:29:24.684 — And this is really going to kick off the work flow.
+- 00:29:29.634 — That we're going to be supporting for.
+- 00:29:33.384 — The demo here, so essentially, what I'm going to do is.
+- 00:29:37.439 — I'm going to walk through the, the build out from scratch of a integration where there's an external system.
+- 00:29:45.564 — Let's call it. A point of sale.
+- 00:29:47.274 — Doesn't matter that's going to trigger a.
+- 00:29:49.889 — Uh, workflow and connect, and then the workflow and connect is gonna be responsible for, uh, generating an integration, uh, or benefiting from an integration to interrogate database and understand.
+- 00:30:02.969 — Uh, information metadata, in this case, on a location for an end user, where we're then going to determine time zone.
+- 00:30:09.929 — Uh, for this end user, and then we're going to make sure that that time zone is within the social hours the acceptable timeframe.
+- 00:30:19.589 — To send somebody a message, this is predominantly used in marketing scenarios or proactive communications, where you don't want to send somebody a message in the middle of the night.
+- 00:30:29.454 — For example. Any additional logic and decisioning that needs to be done with, with that message determining channel making sure this person is opted in to receive messages in the 1st place.
+- 00:30:41.124 — Um, and then we're actually going to send the person to message myself in this case.
+- 00:30:45.474 — And we're going to, um. Open up a, um, response opportunity so that effectively creating a 2 way conversation in a structured workflow that you'll see here in Webex Connect, um, allowing the person to respond.
+- 00:31:02.579 — In this case, we're just going to integrate with a 3rd party API that I use.
+- 00:31:06.444 — It's a, it's a stock. Api, that allows you to check the current price on a given stock ticker symbol and then we're going to reopen that conversation back to the end user, uh, allowing him or her to respond again.
+- 00:31:22.074 — So very simple use case very, very high level.
+- 00:31:26.694 — To a degree. We're gonna focus on.
+- 00:31:27.949 — A happy path, but I do want to also take time to go through where the error path, and can be included into these workflows as we all know.
+- 00:31:36.164 — That's incredibly important.
+- 00:31:37.634 — In real life production scenarios.
+- 00:31:41.069 — So, navigating back over to Webex Connect now.
+- 00:31:47.304 — We're going to focus on the.
+- 00:31:50.849 — So, going back to the services, I'm going to start from scratch and going to create our own service.
+- 00:31:55.049 — For this, we're going to call it a webinar.
+- 00:31:59.334 — Demo and again, I got my service keys here.
+- 00:32:05.184 — If I need them, I'm not going to use them for the sake of this demonstration, but I am going to navigate over to workflows.
+- 00:32:12.294 — And then once I'm in workflows, I'm going to click on create.
+- 00:32:15.329 — I'm gonna call this demo 1 we'll go ahead and start from scratch.
+- 00:32:20.004 — If you had any template, any desire to use the templates as a, as a kind of shortcut to get started by all means these are.
+- 00:32:28.289 — Available here as well and the 1st thing, the, the system asks for is a web hook or a.
+- 00:32:39.234 — Initiation, how is this workflow going to be triggered?
+- 00:32:42.054 — We're going to start with web hooks.
+- 00:32:43.739 — But this could be a custom event stemming from a file that gets dropped.
+- 00:32:47.813 — Um, it could be a series of integrations that are, uh, predefined in accordance with.
+- 00:32:53.609 — Your, um, your tenant, how it's being leveraged, if it's in concert with contact center, for example, or if it's a standalone application of the tool or if you're actually leveraging.
+- 00:33:03.809 — Um, end users, a call to action somewhere where you're asking them to scan, uh, QR code, send in a text message, or whatever, have whatever they might be doing to initiate a conversation with your brand, or your workflow.
+- 00:33:19.224 — In this case. Just to keep things on the more technical side, we're going to go ahead and assume that this is going to be triggered via a external system.
+- 00:33:30.294 — So we're going to go ahead here and select web hook as we just did.
+- 00:33:34.734 — I'm going to create a new event.
+- 00:33:35.904 — I'm going to call it. Um, webinar demo, 1, just to match my service name.
+- 00:33:42.689 — And then this is where the efficiency really starts pouring in, um, the sample input allows you to suggest what that Jason or XML might be that is gonna be adjusted into the workflow to then start.
+- 00:33:57.779 — Having the work flow do something for you in this case.
+- 00:34:01.199 — Um, I'm just gonna use the customer ID, uh, parameter.
+- 00:34:06.234 — When I click on Parse here, you'll now see that customer ID presents it so it presents itself.
+- 00:34:11.724 — As an output variable so you'll see, I have my standard metadata that comes with the.
+- 00:34:17.544 — Just kind of standard, uh, variables and parameters that come with the platform and then I'm gonna use, uh, customer ID as 1 here as well.
+- 00:34:29.009 — To integrate with an external database, I'm going to be using Google sheets here.
+- 00:34:35.154 — So this is just. Google sheets these are my 2 records that I have in this hypothetical database.
+- 00:34:41.574 — And when I connect these 2.
+- 00:34:45.239 — This then allows me to perform a get against.
+- 00:34:48.504 — My, um, end point here, let me pull up my.
+- 00:34:55.224 — Candy sheet there we go. And then what's really cool about this is that it allows me to.
+- 00:35:05.754 — Test over here. And you'll see that it gives me the full response of the values.
+- 00:35:14.579 — Um, associated with the database, so again, if.
+- 00:35:18.479 — I were to come over here and change this to just add a bunch of ease there.
+- 00:35:24.119 — Um, you know, and I hit test again, let me get rid of the documentation when I.
+- 00:35:29.669 — Quick test here, you'll see that it's updated dynamically in real time.
+- 00:35:35.454 — Now what I can do is I can copy this.
+- 00:35:38.544 — I don't have access to postman for whatever reason, or something like that and I can import my sample output or response that I'm going to parse against.
+- 00:35:49.619 — In here and the system will parse for me.
+- 00:35:52.859 — It's going to give me a bunch of values that I got back.
+- 00:35:55.974 — Obviously, Google sheets doesn't do a good job of leveraging the headers field to give these friendly names.
+- 00:36:02.664 — So I'm just going to by memory.
+- 00:36:04.104 — I suppose say this is my customer ID.
+- 00:36:06.774 — My 1st name last name, my location, my phone number.
+- 00:36:09.684 — And my channel preference, my fallback channel and my status right especially when we start talking about SMS, we're gonna keep this what'sapp focused just because it's easier to demo.
+- 00:36:21.564 — Um, and it's Richard channel.
+- 00:36:24.474 — But if this were SMS, for example, you would definitely want to be able to check against.
+- 00:36:28.769 — Whether this person is opted in to receive messages or not.
+- 00:36:32.514 — Um, so go ahead and import there with me as I go through here.
+- 00:36:37.224 — So we'll call this 1 customer ID and these can be completely friendly names.
+- 00:36:41.094 — They don't really need to respect any sort of traditional syntax or naming convention.
+- 00:36:47.004 — So we'll go. 1st. We'll do last, uh, what was next with the location phone channel so location.
+- 00:37:01.734 — Channel. And we'll do fall back and status so fall back.
+- 00:37:13.734 — And status, so this sets us up pretty well.
+- 00:37:17.879 — To now apply a ton of conditional logic as well as dynamic attribution to the bodies of messages, or subsequent API calls that we're going to make.
+- 00:37:27.354 — Um, so at this point. We want to hit the social hours check.
+- 00:37:35.994 — To make sure that this person is being messaged within.
+- 00:37:40.319 — Um, a acceptable time time frame, right?
+- 00:37:44.604 — So we're going to leverage the location API to determine um.
+- 00:37:53.874 — Timezone right so we're going to go ahead and actually we're going to use.
+- 00:37:58.049 — Uh, this guy here. There's 1 called location.
+- 00:38:06.264 — Zip code here we go. Actually, well, I think there was a better 1.
+- 00:38:26.880 — Yeah, this gives us time zone here, so perfect.
+- 00:38:29.965 — So we're going to go ahead and call this request.
+- 00:38:46.470 — And we're going to leverage the.
+- 00:38:53.190 — City, which is going to be the location here.
+- 00:38:59.185 — Well, let's just go ahead and assume for a 2nd, it's Boston.
+- 00:39:02.875 — We'll go ahead and get the.
+- 00:39:06.505 — Test it, Ah, API key. Of course.
+- 00:39:19.980 — And for those of you wondering, if you'll be able to use my API key, that is just going to get changed right?
+- 00:39:25.585 — After this call. So. I've had it until then API.
+- 00:39:30.835 — Ninjas is great by the way.
+- 00:39:33.505 — Highly recommend their 3rd party api's if you need them for demos or whatever the case might be.
+- 00:39:41.245 — So, here we go test. Uh, doesn't like that either what am I doing?
+- 00:39:47.095 — Wrong? Well, I guess we need a state and we'll do Massachusetts.
+- 00:40:03.355 — Okay, so we want to get. All right, well, this was working.
+- 00:40:09.715 — Let's see, Boston. Okay, that's right.
+- 00:40:18.895 — All right, well, we'll skip this step so let's assume here that we can.
+- 00:40:22.920 — In for time zone as a dynamic parameter, um.
+- 00:40:28.765 — And we'll just move on to the social hours check node here.
+- 00:40:32.280 — Which is now going to go ahead and tell us all right?
+- 00:40:36.055 — What. Time of day is it acceptable to send this person a message?
+- 00:40:40.770 — We'll go ahead and do it by day just to show you the full range of features here.
+- 00:40:44.850 — Um, this allows you to go down day of the week, whatever the case might be.
+- 00:40:49.975 — You can make these dynamic if you want.
+- 00:40:51.985 — In fact, I was trying to get down to the path where.
+- 00:40:55.405 — We would make this dynamic.
+- 00:40:57.115 — Whoops. Um. Or we would have dynamic time zone, but we'll just go ahead.
+- 00:41:02.995 — And do. America's New York that's -4.
+- 00:41:09.144 — four We'll do East Coast and.
+- 00:41:20.340 — Whatever that is, we'll just go ahead and we'll do.
+- 00:41:24.145 — We'll do some follow up because I know that is within.
+- 00:41:28.345 — the time range right now within the nine to six zero pm range so it's going to let us through what we could do here also is we could branch requests not in a social hour but we could send them down a separate path so for example If it's not in social
+- 00:41:43.045 — ours, we could send somebody an email instead, which is a less intrusive.
+- 00:41:49.585 — Channel, and if it is within social hours, which is obviously going to be the case for this demo, at least we'll go ahead and send them.
+- 00:41:57.925 — What's that? Communication.
+- 00:41:59.520 — And we'll do this by the what'sapp ID, which is going to be represented by the phone number in this case, right?
+- 00:42:07.105 — If this was Apple, it would be a.
+- 00:42:09.420 — Uh, okay ID, if it was Google, Google ID, so on and so forth and then in this message here we're gonna go ahead and say.
+- 00:42:18.085 — What company. Companies doc to up.
+- 00:42:28.135 — And 1 of the cool things here that you can do, also, I'm going to be leveraging.
+- 00:42:31.975 — Um. Web hook got set another 3rd party application, just to showcase.
+- 00:42:36.835 — How correlation IDs and notification URLs and callback URLs, depending on how you refer to these as.
+- 00:42:43.645 — Can be referenced we'll go ahead and call this.
+- 00:42:47.065 — What's that? Message? 1. And then you can add extra metadata in here if you wanted to, like a like a timestamp for example.
+- 00:42:56.280 — That can all be applied there?
+- 00:42:58.675 — Um. And then, of course, we're going to give the person the option to respond.
+- 00:43:03.630 — For this message, these are common received notes by the way.
+- 00:43:08.155 — So it could be. You could be managing multiple channels all in a single workflow.
+- 00:43:15.055 — So, in this case, I'm going to give myself 120 seconds to respond.
+- 00:43:17.125 — This could be 28,000 or however, many seconds or in a day or a week, I think, is the limit.
+- 00:43:23.755 — And then you can have. and then you can have They can get into a design principles conversation where you could have a catch all workflow.
+- 00:43:33.000 — That basically place traffic cop and anybody who responds outside of the specific window hits that catch all and then based on the conditional logic applied in that workflow, we'll then get farmed out to the appropriate subsequent workflow that you
+- 00:43:49.465 — would want to manage that that end user's request.
+- 00:43:54.265 — And then over here, we're going to go ahead and use phone again.
+- 00:43:57.415 — So. Say, it's going to be an incoming message.
+- 00:44:03.805 — They were going to mind that message and.
+- 00:44:07.435 — Provide a response, so, in this case again, we're going to make another API call.
+- 00:44:12.565 — To a 3rd party system this is the stocks API that I was talking about originally.
+- 00:44:18.480 — Uh, let's do stock market here.
+- 00:44:21.205 — Stock price. These guys copy this 1 is.
+- 00:44:30.390 — The standard gap will do the.
+- 00:44:34.285 — Api. This thing again, we go.
+- 00:44:49.675 — And then these, these are examples of where you could actually be leveraging.
+- 00:44:54.060 — Um, a custom node, I decided not to go that route for the demo, because we would then spend the majority of the demo building.
+- 00:45:00.475 — The actual custom node. Uh, which essentially is what you're looking at here, except with a variety of methods prepopulated against it, that you would then just leveraged dynamic.
+- 00:45:09.330 — Parameters to populate it as needed, like the specific ticker symbol in this case.
+- 00:45:15.390 — Um, let's go ahead and just do, uh, well, we're here with Cisco.
+- 00:45:20.575 — Let's do Cisco. And if we test this, do we get a response in this case?
+- 00:45:29.605 — We're going to go ahead and put this in here.
+- 00:45:32.545 — We're going to parse it. It's going to give us the values that we're looking for along with the naming convention, which is helpful and then you can determine which ones are relevant, which ones aren't.
+- 00:45:41.875 — Right? So, we're going to want to.
+- 00:45:43.860 — We'll just do all of them for now, but if, for example, the timestamp wasn't necessary you could, um.
+- 00:45:49.735 — Leave that off I think that's everything we need.
+- 00:45:53.155 — So import. Great. We'll just give them a ticker.
+- 00:45:58.975 — Place a company. And we'll call this 1, the exchange.
+- 00:46:08.575 — And this will be timestamp.
+- 00:46:12.115 — Great say so now I can leverage anything that was collected in here and send that down.
+- 00:46:19.975 — A, subsequent message to the end user.
+- 00:46:23.905 — Sending him or her, the response that they're that they're looking for.
+- 00:46:28.345 — So again we go back through here and benefit from our parsed parameters.
+- 00:46:33.415 — Um, the, uh. Whatever the following information was provided.
+- 00:46:42.900 — And then you can start providing the information that you would like here.
+- 00:46:48.445 — So you just say ticker. Is this, uh, price.
+- 00:46:55.050 — Is this, um. Company name is this.
+- 00:47:04.195 — And then if you wanted to get real fancy, we'll go ahead and do the notification URL again just so you can see.
+- 00:47:13.080 — How this gets all populated once I run it and call this what's up?
+- 00:47:17.665 — Message to, um. Let's do a timestamp there say.
+- 00:47:25.855 — And now now we're essentially done, I'll wrap it up because I know we want to leave time for questions and answers but, um.
+- 00:47:36.025 — At this point you could basically include in the body of your message.
+- 00:47:41.430 — Whatever you want at the end of the day, but in here, you can say, uh, reply.
+- 00:47:45.810 — Um, or I guess we could just do, do you want to.
+- 00:47:53.095 — Um, do this again. And then you would essentially, I'm just copying and pasting notes at this point.
+- 00:48:05.635 — Let's go ahead down here message.
+- 00:48:13.315 — Everything's the same. And then if the person replies yes or no.
+- 00:48:17.790 — You can just use a standard condition.
+- 00:48:20.485 — You could use what I was starting to say earlier as you could use the evaluate condition.
+- 00:48:25.350 — Which is, uh, allows you to inject JavaScript into the workflow itself.
+- 00:48:29.815 — So, if you wanted to take that that time stamp that was provided in seconds and turn that into something that a normal person would read, um, you could use JavaScript for that.
+- 00:48:39.775 — You could also use it for this conditional logic, but a standard branch will suffice for now.
+- 00:48:46.785 — Uh, go down the yes. Path.
+- 00:48:49.215 — Um, and this will be the person's, uh, response.
+- 00:48:57.715 — I think I need to select. Here yes.
+- 00:49:19.555 — Give that branch a name the variable itself.
+- 00:49:23.340 — There we go will be the, what's that message?
+- 00:49:28.105 — And then we could just make it, um.
+- 00:49:30.715 — Contains yes. Then you can have your standard and or conditions as well you could add another branch for no, in this case.
+- 00:49:40.740 — It's a binary decision, so none of the above is the else condition.
+- 00:49:45.175 — I'll just go ahead and say, save.
+- 00:49:47.430 — And then if they go down the yes path, we will basically.
+- 00:49:52.465 — Loop them back to. The beginning of the experience, if they say no.
+- 00:49:59.275 — Or something else will say, okay, goodbye.
+- 00:50:02.785 — Um. Okay, thank you. And then this will be, uh.
+- 00:50:17.965 — Message all right so now we have.
+- 00:50:24.295 — A BI, directional workflow that integrates with at least 2 or 3 different systems and you can save it.
+- 00:50:31.440 — And then edit it if you'd like, you see that we get a bunch of errors and warnings these are in the, uh, yellow or amber color, meaning that you can still go live with this.
+- 00:50:41.430 — There is nothing critical that's missing, but you may want to check these out and what it's referring to basically are these.
+- 00:50:49.110 — Uh, yellow and red nodules that you see, this is where all the error passing and time out conditions can be applied.
+- 00:50:55.645 — Obviously, in a production workflow, those would exist and you would, you would want to include those.
+- 00:51:00.775 — But as I make this live. You can add version so version.
+- 00:51:07.495 — 1 stock price. Everything is version controlled as well.
+- 00:51:15.025 — Um. And once you're in a go live status, you lose the ability to edit, but you can see here that it's publishing.
+- 00:51:22.015 — If I had multiple versions in here, you would see those and then you can fall back or forward into whatever version makes sense.
+- 00:51:30.955 — While that's publishing, it only takes a minute or so you have your access to the channels here integrations is another 1.
+- 00:51:41.095 — this is where all the. Uh, prebuilt, integrations can come with your work flow or if you were to build custom integrations like we did with Google search, for example, they would live here and you would have access to these freely within your, your,
+- 00:51:57.565 — your workflow as, as a person who's building and deploying these.
+- 00:52:02.515 — All right, so let's see if this works, um.
+- 00:52:06.475 — Let me go ahead and. And that back on.
+- 00:52:12.745 — Great. So. Now, essentially what I'm going to do is I'm just going to copy this.
+- 00:52:20.995 — At some point, we're going to come over here.
+- 00:52:23.725 — I already have this kind of Pre populated.
+- 00:52:26.155 — I'm updating the end point.
+- 00:52:27.870 — Customer ID is gonna be 1:2:3 4.
+- 00:52:29.965 — three four Uh, customer ID, that's the same parameter there.
+- 00:52:34.500 — So, let's go ahead and hit send.
+- 00:52:39.060 — There is that it? Okay what company stock would you like to look up?
+- 00:52:43.465 — I'm sure. And video is on.
+- 00:52:45.265 — Everybody's mind. Lately, let's do Nvidia and there it is.
+- 00:52:50.784 — Oh, I hard coded it to Cisco.
+- 00:52:52.885 — That's why. And what's really cool about this before we run out of time.
+- 00:52:58.920 — Is you have live debugging so you have the ability to see everything that happened in accordance with that transaction?
+- 00:53:07.015 — As it's as it's happening.
+- 00:53:08.395 — So if I come in here and I couldn't figure out what it was.
+- 00:53:11.640 — Um, I would. Be able to come in here and.
+- 00:53:20.070 — Interrogate essentially all the different steps.
+- 00:53:23.370 — That the work flow went through, it's all encrypted.
+- 00:53:26.430 — Um, so you, you would need special access to be able to do that.
+- 00:53:31.140 — But let's see here real quick.
+- 00:53:34.795 — That is something that a platform user would have the ability to view.
+- 00:53:38.995 — So I'm going to make this.
+- 00:53:40.680 — The 1st received message. Here save live again.
+- 00:53:49.200 — So, now we'll have 2 versions.
+- 00:53:53.155 — Fixed. All right. So, now I'm going to go ahead.
+- 00:54:12.390 — And fire away, let me just close this out.
+- 00:54:18.205 — No. Then we'll send this again.
+- 00:54:29.425 — Okay, what company start? Let's try that again in video.
+- 00:54:37.645 — There we go a little down compared to where they were their all time high yesterday.
+- 00:54:41.995 — So. With that, um, that conclude the live build, um, thank you for your patients as I walked through that.
+- 00:54:51.055 — Um, but as you can hopefully see that for an enterprise.
+- 00:54:54.960 — This might be a more efficient path forward than handling code.
+- 00:54:59.365 — Um, depending on the scenario.
+- 00:55:01.375 — Of course. Um, before I, um.
+- 00:55:06.175 — Stop sharing my screen or give up the share.
+- 00:55:09.150 — Um, I do want to advertise our.
+- 00:55:13.375 — Sandbox it's free to use. There's the link.
+- 00:55:16.885 — I think it will be shared in the space as well and please sign up.
+- 00:55:21.175 — Test it out. There's user guides in our documentation That'll help.
+- 00:55:23.965 — You get started. Thank you.
+- 00:55:26.005 — I hope you found this insightful.
+- 00:55:31.315 — Awesome. Thank you Stefan.
+- 00:55:32.455 — And thank you. Okay. We've got a few minutes before our session ends and we have some questions for those asking about the webinar recording.
+- 00:55:44.005 — Yes, this session is recorded and you can find this and all other previous webinar recordings at a developer.
+- 00:55:51.200 — Dot Webex dot com forward slash webinars.
+- 00:55:55.560 — And we'll touch on some of your questions that you had today.
+- 00:56:07.585 — Uh, so, 1 of the questions that came up was I would love it.
+- 00:56:11.095 — If you had evaluate nodes, that supported more language, more languages, other than Java script.
+- 00:56:18.085 — Thank you for that feedback.
+- 00:56:19.105 — That's actually really great feedback.
+- 00:56:20.605 — Um, please do share what languages you are interested in, and we.
+- 00:56:24.020 — Pass that feedback over to our product team for evaluation.
+- 00:56:28.135 — So, if you want to just drop it in, um, I know it's not a question, but you can drop it in there.
+- 00:56:31.705 — And we'll share that feedback with the product team.
+- 00:56:39.205 — Next question is, is there a Webex contact center?
+- 00:56:42.565 — Or Webex rooms, utilities for messaging channel.
+- 00:56:46.885 — And we do integration with Webex app can be done using custom integration, nodes, http node and Webex connect event API and inbound web.
+- 00:57:01.620 — We'll answer all these questions in this space as well team.
+- 00:57:06.475 — Is there anything that stood out that you want to touch on?
+- 00:57:14.875 — Right. Let me call out when I saw I have had issues with http.
+- 00:57:24.235 — No utilizing post. Can you demo this with the body of the post populated with an attribute.
+- 00:57:30.570 — See, the message and quote that attribute appropriately.
+- 00:57:34.885 — So, we can't do that in today's session for the sake of time, but we would be happy to cover that in a future session.
+- 00:57:41.035 — But in the meantime, we recommend you post your issues on Webex, connect community forum.
+- 00:57:46.225 — If you haven't done that already and our experts will be able to help you out with that.
+- 00:57:50.815 — That link was also shared.
+- 00:57:53.430 — Um, in the chat, the long 1, so I won't read it out, but I'll share it again.
+- 00:57:59.035 — For any questions and additional questions.
+- 00:58:04.675 — We have time for 1 more. Where can I find all the demos related to Webex?
+- 00:58:08.185 — Connect flows? Domain base like health care, et cetera.
+- 00:58:12.655 — We found that it is in a D cloud so I'll share that.
+- 00:58:17.725 — Link as well in the space.
+- 00:58:23.605 — And with that we are at the top of the hour, so thank you for joining us today, and be sure to pop over to the Webex developer community forum, uh, where you can connect with the Webex developers and the support team in case, you run into any
+- 00:58:34.645 — challenges what building running your apps on?
+- 00:58:36.625 — Webex. We love your feedback, so please do fill out the survey.
+- 00:58:41.515 — And let us know what you wanna, what you want to see next.
+- 00:58:45.805 — And with that, thank you to the Webex connect team.
+- 00:58:49.615 — Thank you developer evangelism team and thank you to.
+- 00:58:52.615 — Our attendees have a great rest of your day at night.
+- 00:58:57.900 — And.

@@ -1,0 +1,726 @@
+{
+  "schema_version": 1,
+  "sample_key": "native-fetch-account-balance",
+  "title": "Fetch account balance.workflow",
+  "observed_at": "2026-09-09T00:01:01.220Z",
+  "source_path": "evidence/sample-flows/observed/native-fetch-account-balance.json",
+  "source_sha256": "09ca52cb9bf590a46e681e0944a0149da9d9989a6124e16c162c03a05a17885e",
+  "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model",
+  "runtime_tested": false,
+  "status": "observed_canvas_relationships_summarized",
+  "format_warning": "Internal loaded-canvas model observations only; not a public import schema. Event internal names and visible labels are recorded separately. Dynamic script behavior and missing canvas pages are not inferred.",
+  "counts": {
+    "cells": 10,
+    "operative_nodes": 5,
+    "explicit_edges": 4,
+    "terminal_bindings": 0,
+    "variable_references": 18
+  },
+  "start_configuration": {
+    "channel": 501,
+    "type": "channel",
+    "subtype": "aiagent",
+    "isCheckLiveSessions": 0,
+    "extras": {},
+    "eventid": 501,
+    "v2EventId": 501
+  },
+  "nodes": [
+    {
+      "id": "2",
+      "label": "Configure AI Agent Event",
+      "type_internal": "start",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "onbegin",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "selectedChannel": {
+          "id": 501,
+          "name": "aiagent",
+          "description": "AI Agent",
+          "type": 3,
+          "extraData": {},
+          "subType": "aiagent",
+          "integrationId": "",
+          "image_url": ""
+        },
+        "selectedRuleEvent": {
+          "id": 501,
+          "name": "",
+          "v2EventId": 501
+        },
+        "isKeyWordDisabled": true,
+        "isKeyWordVerifyReq": true,
+        "isKeyWordAvailable": true,
+        "output_variables": [
+          "aiAgent.timestamp",
+          "aiAgent.transId",
+          "aiAgent.payload",
+          "service.serviceKey",
+          "aiAgent.customer_id"
+        ],
+        "conditionData": [
+          {
+            "defaultvalue": "",
+            "mandatory": false,
+            "var_name": "customer_id",
+            "datatype": "string",
+            "channel_id": 501,
+            "event_id": 501,
+            "eventname": ""
+          },
+          {
+            "defaultvalue": "",
+            "mandatory": false,
+            "var_name": "customer_id",
+            "datatype": "string",
+            "channel_id": 501,
+            "event_id": 501,
+            "eventname": ""
+          }
+        ],
+        "aiAgentData": {
+          "parseOutput": [
+            {
+              "name": "customer_id",
+              "defaultvalue": "",
+              "mandatory": false,
+              "type": "string"
+            }
+          ],
+          "isAuthRequired": false,
+          "name": "",
+          "url": "https://example.invalid/flows/62169/trigger/aiagent",
+          "v2EventId": 501,
+          "jsonData": {
+            "customer_id": ""
+          },
+          "xmlData": "",
+          "isExistingAIAgent": true,
+          "selectedEvent": 501,
+          "jsonSource": 0,
+          "conditionData": [],
+          "isValidateSignature": false,
+          "validateSignatureObj": {
+            "algorithm": "",
+            "secretType": "[redacted]",
+            "secretKey": "[redacted]",
+            "headerKey": "[redacted]"
+          }
+        }
+      },
+      "transition_actions": [],
+      "declared_outputs": [
+        "aiAgent.timestamp",
+        "aiAgent.transId",
+        "aiAgent.payload",
+        "service.serviceKey",
+        "aiAgent.customer_id"
+      ],
+      "output_mappings": []
+    },
+    {
+      "id": "3",
+      "label": "HTTP Request",
+      "type_internal": "http",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "oncomplete",
+          "declared_target_count": 1
+        },
+        {
+          "event_internal": "onerror",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "method": "get",
+        "url": "https://example.invalid/get_balance/$(n2.aiAgent.customer_id)",
+        "connctiontimeout": 10000,
+        "requesttimeout": 10000,
+        "checkAll": false,
+        "dataformate": "json",
+        "type": "extract",
+        "outputvariablelist": {
+          "parameters": [
+            {
+              "id": "maeBsXXQ14",
+              "name": "account_balance",
+              "path": "$.account_balance",
+              "type": "body",
+              "order": 0
+            },
+            {
+              "id": "mDLuPuzqQT",
+              "name": "status",
+              "path": "$.status",
+              "type": "body",
+              "order": 1
+            }
+          ],
+          "type": "json"
+        },
+        "isNewnode": true
+      },
+      "transition_actions": [],
+      "declared_outputs": [
+        "account_balance",
+        "status"
+      ],
+      "output_mappings": {
+        "parameters": [
+          {
+            "id": "maeBsXXQ14",
+            "name": "account_balance",
+            "path": "$.account_balance",
+            "type": "body",
+            "order": 0
+          },
+          {
+            "id": "mDLuPuzqQT",
+            "name": "status",
+            "path": "$.status",
+            "type": "body",
+            "order": 1
+          }
+        ],
+        "type": "json"
+      }
+    },
+    {
+      "id": "5",
+      "label": "Branch",
+      "type_internal": "evaluate",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "onerror",
+          "declared_target_count": null
+        }
+      ],
+      "configuration": {
+        "evaluteIsOptimization": true,
+        "outcomes": [
+          {
+            "outcome": "user found",
+            "order": "",
+            "open": true,
+            "isEditOn": false,
+            "tempVal": "user found",
+            "isOutcomeChangedOnce": false,
+            "conditions": [
+              {
+                "pills": [],
+                "varaible": "$(n3.http.statusCode)",
+                "condition": "==",
+                "value": 200,
+                "operation": "",
+                "index": "r5bwh645"
+              }
+            ],
+            "index": "27i3e4ba"
+          }
+        ],
+        "allConditionsFail": "user not found",
+        "expression": "if(\"$(n3.http.statusCode)\"  == 200){\"user found\";}else{'user not found';}",
+        "counter": 2,
+        "successEvents": [
+          "user found",
+          "user not found"
+        ],
+        "nodeVersion": 1
+      },
+      "transition_actions": [],
+      "declared_outputs": [],
+      "output_mappings": []
+    },
+    {
+      "id": "7",
+      "label": "Evaluate",
+      "type_internal": "evaluate",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "oninvalidchoice",
+          "declared_target_count": 1
+        },
+        {
+          "event_internal": "onerror",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "evaluteIsOptimization": true,
+        "expression": 1,
+        "exp": 1,
+        "isTestExecuted": true,
+        "nodeVersion": 1
+      },
+      "transition_actions": [
+        {
+          "kind": "session",
+          "name": "status",
+          "when": "onenter",
+          "value": "success"
+        },
+        {
+          "kind": "session",
+          "name": "balance",
+          "when": "onenter",
+          "value": "$(n3.account_balance)"
+        },
+        {
+          "kind": "session",
+          "name": "message",
+          "when": "onenter",
+          "value": "Balance fetched successfully"
+        }
+      ],
+      "declared_outputs": [],
+      "output_mappings": []
+    },
+    {
+      "id": "8",
+      "label": "Evaluate",
+      "type_internal": "evaluate",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "oninvalidchoice",
+          "declared_target_count": 1
+        },
+        {
+          "event_internal": "onerror",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "evaluteIsOptimization": true,
+        "expression": 1,
+        "exp": 1,
+        "isTestExecuted": true,
+        "nodeVersion": 1
+      },
+      "transition_actions": [
+        {
+          "kind": "session",
+          "name": "status",
+          "when": "onenter",
+          "value": "failure"
+        },
+        {
+          "kind": "session",
+          "name": "message",
+          "when": "onenter",
+          "value": "user not found"
+        }
+      ],
+      "declared_outputs": [],
+      "output_mappings": []
+    }
+  ],
+  "edges": [
+    {
+      "id": "5128009",
+      "source": "2",
+      "target": "3",
+      "event_internal": "onbegin",
+      "event_label": "onBegin",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128023",
+      "source": "3",
+      "target": "5",
+      "event_internal": "oncomplete",
+      "event_label": "onSuccess",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128030",
+      "source": "5",
+      "target": "7",
+      "event_internal": "user found",
+      "event_label": "user found",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128035",
+      "source": "5",
+      "target": "8",
+      "event_internal": "user not found",
+      "event_label": "user not found",
+      "representation": "explicit_edge"
+    }
+  ],
+  "terminal_bindings": [],
+  "terminal_sources_not_captured": [],
+  "duplicate_terminal_binding_groups": [],
+  "variable_handoffs": [
+    {
+      "consumer": "3",
+      "location": "configuration.url",
+      "reference": "$(n2.aiAgent.customer_id)",
+      "variable": "n2.aiAgent.customer_id",
+      "producer_node": "2",
+      "producer_field": "aiAgent.customer_id",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "5",
+      "location": "configuration.outcomes[0].conditions[0].varaible",
+      "reference": "$(n3.http.statusCode)",
+      "variable": "n3.http.statusCode",
+      "producer_node": "3",
+      "producer_field": "http.statusCode",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "5",
+      "location": "configuration.expression",
+      "reference": "$(n3.http.statusCode)",
+      "variable": "n3.http.statusCode",
+      "producer_node": "3",
+      "producer_field": "http.statusCode",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "7",
+      "location": "transition_actions[1].value",
+      "reference": "$(n3.account_balance)",
+      "variable": "n3.account_balance",
+      "producer_node": "3",
+      "producer_field": "account_balance",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "outcome[1].notification.payload.transactionID",
+      "reference": "$(transid)",
+      "variable": "transid",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "outcome[1].notification.payload.status",
+      "reference": "$(status)",
+      "variable": "status",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": [
+        "7",
+        "8"
+      ]
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "outcome[1].notification.payload.balance",
+      "reference": "$(balance)",
+      "variable": "balance",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": [
+        "7"
+      ]
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "outcome[1].notification.payload.message",
+      "reference": "$(message)",
+      "variable": "message",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": [
+        "7",
+        "8"
+      ]
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "outcome[1].notification.custompayload",
+      "reference": "$(transid)",
+      "variable": "transid",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "outcome[1].notification.custompayload",
+      "reference": "$(flowname)",
+      "variable": "flowname",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "outcome[1].notification.custompayload",
+      "reference": "$(serviceName)",
+      "variable": "serviceName",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "outcome[1].notification.custompayload",
+      "reference": "$(status)",
+      "variable": "status",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": [
+        "7",
+        "8"
+      ]
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "outcome[1].notification.custompayload",
+      "reference": "$(message)",
+      "variable": "message",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": [
+        "7",
+        "8"
+      ]
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "outcome[1].notification.custompayload",
+      "reference": "$(transactions)",
+      "variable": "transactions",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "3",
+      "location": "_usedVars",
+      "reference": "$(n2.aiAgent.customer_id)",
+      "variable": "n2.aiAgent.customer_id",
+      "producer_node": "2",
+      "producer_field": "aiAgent.customer_id",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "5",
+      "location": "_usedVars",
+      "reference": "$(n3.http.statusCode)",
+      "variable": "n3.http.statusCode",
+      "producer_node": "3",
+      "producer_field": "http.statusCode",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "7",
+      "location": "_usedTransVar",
+      "reference": "$(n3.account_balance)",
+      "variable": "n3.account_balance",
+      "producer_node": "3",
+      "producer_field": "account_balance",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "_usedVars",
+      "reference": "$(n3.status)",
+      "variable": "n3.status",
+      "producer_node": "3",
+      "producer_field": "status",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    }
+  ],
+  "custom_variable_assignments": [
+    {
+      "writer_node": "7",
+      "kind": "session",
+      "name": "status",
+      "when": "onenter",
+      "value": "success"
+    },
+    {
+      "writer_node": "7",
+      "kind": "session",
+      "name": "balance",
+      "when": "onenter",
+      "value": "$(n3.account_balance)"
+    },
+    {
+      "writer_node": "7",
+      "kind": "session",
+      "name": "message",
+      "when": "onenter",
+      "value": "Balance fetched successfully"
+    },
+    {
+      "writer_node": "8",
+      "kind": "session",
+      "name": "status",
+      "when": "onenter",
+      "value": "failure"
+    },
+    {
+      "writer_node": "8",
+      "kind": "session",
+      "name": "message",
+      "when": "onenter",
+      "value": "user not found"
+    }
+  ],
+  "custom_variables": [
+    {
+      "name": "status",
+      "value": "",
+      "type": "default"
+    },
+    {
+      "name": "transactions",
+      "value": "",
+      "type": "default"
+    },
+    {
+      "name": "message",
+      "value": "",
+      "type": "default"
+    },
+    {
+      "name": "balance",
+      "value": "",
+      "type": "default"
+    }
+  ],
+  "flow_outcomes": [
+    {
+      "id": 1,
+      "order": 0,
+      "name": 100,
+      "value": "Last executed node event",
+      "tag": 15,
+      "tagName": "Last Execution Status",
+      "type": "default",
+      "notification": {
+        "method": "get",
+        "headers": "[redacted]",
+        "payload": {
+          "transactionID": "$(transid)",
+          "status": "$(status)",
+          "balance": "$(balance)",
+          "message": "$(message)"
+        },
+        "payloadType": 1,
+        "custompayload": "{\n    \"transactionID\": \"$(transid)\",\n    \"flowname\": \"$(flowname)\",\n    \"serviceName\": \"$(serviceName)\",\n    \"statuscode\": \"1000\",\n    \"status\" : \"$(status)\",\n    \"message\" : \"$(message)\",\n    \"transactions\" : $(transactions)\n}",
+        "notificationType": -2
+      },
+      "isNotify": true,
+      "statusCode": "All status codes"
+    },
+    {
+      "id": 2,
+      "order": 1,
+      "name": 101,
+      "value": "Successfully completed flow",
+      "tag": 11,
+      "tagName": "Success",
+      "type": "default",
+      "notification": null,
+      "isNotify": false,
+      "statusCode": null
+    },
+    {
+      "id": 3,
+      "order": 2,
+      "name": 102,
+      "value": "Flow completed with an error",
+      "tag": 12,
+      "tagName": "Error",
+      "type": "default",
+      "notification": null,
+      "isNotify": false,
+      "statusCode": null
+    },
+    {
+      "id": 4,
+      "order": 3,
+      "name": 103,
+      "value": "Flow ended due to an interruption",
+      "tag": 13,
+      "tagName": "Incomplete",
+      "type": "default",
+      "notification": null,
+      "isNotify": false,
+      "statusCode": null
+    }
+  ],
+  "cycles": [],
+  "cross_page_or_flow_nodes": [],
+  "capture_pages": null,
+  "declared_events_without_captured_route": [
+    {
+      "node": "3",
+      "event_internal": "onerror",
+      "declared_target_count": 1
+    },
+    {
+      "node": "5",
+      "event_internal": "onerror",
+      "declared_target_count": null
+    },
+    {
+      "node": "7",
+      "event_internal": "oninvalidchoice",
+      "declared_target_count": 1
+    },
+    {
+      "node": "7",
+      "event_internal": "onerror",
+      "declared_target_count": 1
+    },
+    {
+      "node": "8",
+      "event_internal": "oninvalidchoice",
+      "declared_target_count": 1
+    },
+    {
+      "node": "8",
+      "event_internal": "onerror",
+      "declared_target_count": 1
+    }
+  ],
+  "nodes_not_reached_from_captured_start": [],
+  "edge_endpoints_not_captured": [],
+  "node_variable_producers_not_captured": [],
+  "redactions": "Header credentials and URL hosts redacted. Internal model properties are evidence, not a public import API.",
+  "authored_walkthrough": {
+    "walkthrough": "AI Agent Start 2 takes optional string `customer_id` and enters HTTP 3 through `onbegin`/`onBegin`. HTTP GET `/get_balance/$(n2.aiAgent.customer_id)` uses connection/request timeout values 10000. Its internal `oncomplete`, rendered `onSuccess`, leads to Branch 5. Status code 200 chooses `user found` and Evaluate 7; the fallback `user not found` goes to Evaluate 8.",
+    "handoffs": "HTTP extracts `$.account_balance` and `$.status`. Evaluate 7 has constant expression 1, but its on-enter session actions perform the useful transformation: set `status=success`, `balance=$(n3.account_balance)`, and a success message. Evaluate 8 assigns `status=failure` and a not-found message. Last Execution Status uses `payloadType=1` and stores `payload` fields transactionID, `$(status)`, `$(balance)`, and `$(message)`. Its separate custompayload instead mentions transactions; that alternate stored object should not be silently treated as the balance contract.",
+    "limitations": "The HTTP onerror port has no explicit recovery edge, so it does not necessarily pass through the not-found assignment. The branch classifies all non-200 completed responses as not found; it does not inspect body semantics. No retry, channel send, or other flow call appears. Embedded `isTestExecuted=true` and response examples belong to the template, not this inspection. Hosts/headers are redacted, the model is internal rather than an import schema, and `runtime_tested=false`."
+  },
+  "walkthrough_status": "authored"
+}

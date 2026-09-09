@@ -1,0 +1,34 @@
+{
+  "category": "Assets",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182578b3",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "5ef9f775aa7d8cc3180253fe7db60862216a506a272c2a3c3bbb63cbe38be28d",
+    "source_path": "8ce96a0d79456f071340f6439a11203c5a19d0bcd777379e28f88fc1e7087b62",
+    "text_path": "8613610a545e5fb2347b1e6e557ed2b40a04b55df4d5c2ad8eb9af8e10f550d0"
+  },
+  "headings": [
+    "Reason for Unverified Status",
+    "Resubmitting the Details"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/unverified-scenarios-and-resubmission-of-brands.md",
+  "resolved_url": "https://help.webexconnect.io/docs/unverified-scenarios-and-resubmission-of-brands",
+  "retrieved_at": "2026-09-08T23:29:01+00:00",
+  "sha256_html_response": "9c14a4c435d9e58dca953d7512c342aa33121910b45b8879c7320fbd79ba1e5e",
+  "sha256_source_body": "8ce96a0d79456f071340f6439a11203c5a19d0bcd777379e28f88fc1e7087b62",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/unverified-scenarios-and-resubmission-of-brands.source.md",
+  "source_updated_at": "2025-04-02T20:07:04.111Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/unverified-scenarios-and-resubmission-of-brands.txt",
+  "title": "Unverified Scenarios and Resubmission of Brands",
+  "url": "https://help.webexconnect.io/docs/unverified-scenarios-and-resubmission-of-brands",
+  "word_count": 168,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/unverified-scenarios-and-resubmission-of-brands.metadata.json"
+}

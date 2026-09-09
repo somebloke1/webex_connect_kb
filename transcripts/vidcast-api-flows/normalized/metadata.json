@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "source": "https://app.vidcast.io/share/debc5583-a8ff-4a54-9a2e-c40b867f7be3",
+  "created_at": "2026-09-08T23:32:31.826501+00:00",
+  "requested_languages": [
+    "en"
+  ],
+  "title": "Webex Connect Masterclass",
+  "uploader": null,
+  "versions": {
+    "python": "3.13.12",
+    "youtube-transcript-api": "1.2.4",
+    "yt-dlp": "2026.8.19",
+    "webvtt-py": "0.5.1",
+    "faster-whisper": "1.2.1",
+    "ctranslate2": "4.8.2"
+  },
+  "attempts": [],
+  "human_reviewed": false,
+  "input_path": "/home/dgk/workspace/webex_connect_kb/transcripts/vidcast-api-flows/source.en.vtt",
+  "input_sha256": "8e004d709b6ad4b788cb7cd1dd5c8cb1f271db1f31a741043176062d09975483",
+  "title_provenance": "user-supplied",
+  "method": "local-subtitle-import",
+  "language": "en",
+  "caption_kind": "local-unverified",
+  "segment_count": 554,
+  "transcript_end_seconds": 3538.23,
+  "artifact_sha256": {
+    "transcript.json": "06acfa96b2d8c25ecc7317a0cd872c79891fcd03fdb2ca96ff7904c006097f54",
+    "transcript.srt": "d6a71a17056e9d012e684d18c11608a2bcf4bd8997d0ca0905991a73e8ef3a7a",
+    "transcript.md": "53104cd4b0683cf248e7066a8113500376bb1525add5cb3e9eb3aedc224c4886"
+  }
+}

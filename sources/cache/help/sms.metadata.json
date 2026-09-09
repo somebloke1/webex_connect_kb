@@ -1,0 +1,33 @@
+{
+  "category": "Webex Engage Standalone Nodes",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd81825796b",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "9a73c3e19be879e27d17aa53c55de84b928113c980f2f91e119d12f4af35155f",
+    "source_path": "7798360a6bacd982dc519a209db43a6709a3716691a0817ebc0444f6bfbec88b",
+    "text_path": "d3f4601ff4b6401bf5990cefb5740a94c3792f06e79c1ec51f6e3a9e35bc9583"
+  },
+  "headings": [
+    "📘Warning"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/sms.md",
+  "resolved_url": "https://help.webexconnect.io/docs/sms",
+  "retrieved_at": "2026-09-08T23:29:26+00:00",
+  "sha256_html_response": "d23febc7e660ff1916b11db9447d5e644e38e8216f5093bc42eecf7027ea7dfa",
+  "sha256_source_body": "7798360a6bacd982dc519a209db43a6709a3716691a0817ebc0444f6bfbec88b",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/sms.source.md",
+  "source_updated_at": "2026-04-14T07:44:56.736Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/sms.txt",
+  "title": "SMS - WxEngage standalone",
+  "url": "https://help.webexconnect.io/docs/sms",
+  "word_count": 456,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/sms.metadata.json"
+}

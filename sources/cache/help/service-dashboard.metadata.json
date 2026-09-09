@@ -1,0 +1,31 @@
+{
+  "category": "SERVICES & FLOWS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182577c5",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "b1e5ce3cc74104a764dbd23d71741927d8f8d9b76a7afd3de7e30acbfb529336",
+    "source_path": "4d243a9a44e5354b3cc0ddece47b8789a0673dcb3e80928ae7506316c6d8e071",
+    "text_path": "8c48fa72344e907e4eed41b432a136eb28bba9897d8a70d9bf621968bf3f6d3a"
+  },
+  "headings": [],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/service-dashboard.md",
+  "resolved_url": "https://help.webexconnect.io/docs/service-dashboard",
+  "retrieved_at": "2026-09-08T23:28:50+00:00",
+  "sha256_html_response": "6661466be90332f20e3a916a35a2efdc86c468ac0443f58f72082b9965d9a03e",
+  "sha256_source_body": "4d243a9a44e5354b3cc0ddece47b8789a0673dcb3e80928ae7506316c6d8e071",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/service-dashboard.source.md",
+  "source_updated_at": "2026-01-26T13:31:08.558Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/service-dashboard.txt",
+  "title": "Inside a Service",
+  "url": "https://help.webexconnect.io/docs/service-dashboard",
+  "word_count": 154,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/service-dashboard.metadata.json"
+}

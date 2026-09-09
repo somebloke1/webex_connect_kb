@@ -1,0 +1,93 @@
+{
+  "_id": "6a675233ec1c893d8a7f6846:6a675233ec1c893d8a7f671d",
+  "components": {
+    "securitySchemes": {}
+  },
+  "info": {
+    "title": "Programmable Voice Calls Using Voice API v1",
+    "version": "6.20.0"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/calls": {
+      "post": {
+        "deprecated": false,
+        "description": "Make, receive and control voice calls using simple API commands using Voice API v1.",
+        "operationId": "voice-only-api-v1-programmable-voice-api",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Content-type",
+            "schema": {
+              "default": "application/json",
+              "type": "string"
+            }
+          },
+          {
+            "description": "If you are using service key, enter the service key as the value. If you are using JWT authentication then enter Bearer Token. You can get the JWT token or Service key from within a service in your Webex connect tenant.",
+            "in": "header",
+            "name": "Authorization",
+            "schema": {
+              "default": "Service key or Bearer <Token>",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                },
+                "schema": {
+                  "properties": {},
+                  "type": "object"
+                }
+              }
+            },
+            "description": "200"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{}"
+                  }
+                },
+                "schema": {
+                  "properties": {},
+                  "type": "object"
+                }
+              }
+            },
+            "description": "400"
+          }
+        },
+        "summary": "Programmable Voice Calls Using Voice API v1"
+      }
+    }
+  },
+  "security": [
+    {}
+  ],
+  "servers": [
+    {
+      "url": "https://api.{YourRegion}.webexconnect.io/v1/voice",
+      "variables": {
+        "YourRegion": {
+          "default": "YourRegion"
+        }
+      }
+    }
+  ],
+  "x-readme": {
+    "explorer-enabled": true,
+    "headers": [],
+    "proxy-enabled": true
+  },
+  "x-readme-fauxas": true
+}

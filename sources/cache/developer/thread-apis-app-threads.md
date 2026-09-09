@@ -1,0 +1,308 @@
+# Get App Threads
+
+Source: https://developers.webexconnect.io/reference/thread-apis-app-threads
+Documentation version: 6.20.0
+Retrieved: 2026-09-08T23:35:07+00:00
+
+> 📘 Know Your Endpoint
+> 
+> Based on the domain you use to log in to Webex Connect, the endpoint for your API varies. See the [endpoint](https://developers.webexconnect.io/reference/know-your-api-endpoints) section to understand which endpoint to use for your domain.
+
+## API reference metadata
+
+These are source metadata and examples. `api.auth` is ReadMe metadata; verify authentication in the documented headers/security scheme.
+
+```json
+{
+  "apiSetting": "6a675233ec1c893d8a7f67ba",
+  "examples": {
+    "codes": [
+      {
+        "code": "-X GET https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/$(appid)/threads?start=0\n-H \"Content-Type : application/json\"\n-H \"secretKey: {secretKey}\"\n\n",
+        "language": "curl",
+        "name": "cURL"
+      },
+      {
+        "code": "var request=require(\"request\");\n var options = {\n          method: 'GET',\n          uri: ' https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/$(appid)/threads?start=0',\n          headers: {\n            'Content-Type': 'application/json',\n\t'secretKey': '{secretKey}'\n            }\n        };\n  request(options, function(error, response, body) {\n               if(error){\n                  console.log(error);\n             }else{\n                  console.log(response);\n            }\n        });\n\n\n",
+        "language": "json",
+        "name": "Node"
+      },
+      {
+        "code": "require 'httparty'\n# Create the HTTP objects and post request\nhttp = HTTParty.get(\"https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/$(appid)/threads?start=0\",\n    :headers => {'Content-Type' => 'application/json',\n\t'secretKey ' => '{secretKey}’})\n# Print on console\nputs http\n\n\n",
+        "language": "ruby"
+      },
+      {
+        "code": "var data = null;\n\nvar xhr = new XMLHttpRequest();\n\nxhr.addEventListener(\"readystatechange\", function () {\n  if (this.readyState === this.DONE) {\n    console.log(this.responseText);\n  }\n});\n\nxhr.open(\"GET\", \" https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/$(appid)/threads?start=0\");\nxhr.setRequestHeader(\"Content-Type\", \"application/json\");\nxhr.setRequestHeader(\"secretKey\", \"{secretKey}\");\nxhr.send(data);\n\n\n",
+        "language": "javascript"
+      },
+      {
+        "code": "import requests\n\nurl = \" https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/$(appid)/threads?start=0\"\n\nheaders = {'Content-Type': 'application/json', 'secretKey': '{secretKey}'}\n\nresponse = requests.request(\"GET\", url, headers=headers)\n\nprint(response.text)\n",
+        "language": "python"
+      }
+    ]
+  },
+  "results": {
+    "codes": [
+      {
+        "language": "json",
+        "code": "{\n    \"total\": 3,\n    \"code\": \"0\",\n    \"count\": 3,\n    \"threads\": [\n        {\n            \"updated_on\": \"\",\n            \"stream_name\": \"\",\n            \"created_on\": \"2020-07-24T15:38:24.920Z\",\n            \"extras\": {\n                \"icFirstName\": \"John\",\n                \"icEmailId\": \"john@doe.com\",\n                \"icLastName\": \"Doe\"\n            },\n            \"id\": \"44119efd-db68-4394-8e5d-666889ba288b\",\n            \"title\": \"Fraud/dispute-[2020-07-24T21:08:22.827Z]\",\n            \"type\": \"Conversation\",\n            \"category\": \"Fraud/dispute\",\n            \"status\": \"Active\"\n        },\n        {\n            \"updated_on\": \"\",\n            \"stream_name\": \"\",\n            \"created_on\": \"2020-07-24T15:37:50.751Z\",\n            \"extras\": {\n                \"icFirstName\": \"John\",\n                \"icEmailId\": \"john@doe.com\",\n                \"icLastName\": \"Doe\"\n            },\n            \"id\": \"67e485fa-d952-4b6c-94da-1ba12692d1fb\",\n            \"title\": \"Enquiry-[2020-07-24T21:07:48.667Z]\",\n            \"type\": \"Conversation\",\n            \"category\": \"Enquiry\",\n            \"status\": \"Active\"\n        },\n        {\n            \"updated_on\": \"\",\n            \"stream_name\": \"\",\n            \"created_on\": \"2020-07-24T12:11:30.973Z\",\n            \"extras\": {\n                \"icFirstName\": \"John\",\n                \"icEmailId\": \"john@doe.com\",\n                \"icLastName\": \"Doe\"\n            },\n            \"id\": \"24c34ae5-f85e-4c1f-b4bc-d59b17610491\",\n            \"title\": \"Fraud/dispute-[2020-07-24T17:41:29.126Z]\",\n            \"type\": \"Conversation\",\n            \"category\": \"Fraud/dispute\",\n            \"status\": \"Active\"\n        }\n    ],\n    \"description\": \"success\"\n}",
+        "status": 200
+      }
+    ]
+  },
+  "auth": "required",
+  "params": [
+    {
+      "name": "Content-Type",
+      "type": "string",
+      "enumValues": "",
+      "default": "",
+      "desc": "application/json",
+      "required": false,
+      "in": "header",
+      "ref": "",
+      "_id": "5f1976479303d703db2153a9",
+      "id": "5f1976479303d703db2153a9"
+    },
+    {
+      "name": "secretKey",
+      "type": "string",
+      "enumValues": "",
+      "default": "",
+      "desc": "Client key that can be accessed from your app asset configuration page on Webex Connect platform",
+      "required": false,
+      "in": "header",
+      "ref": "",
+      "_id": "5f1976479303d703db2153a8",
+      "id": "5f1976479303d703db2153a8"
+    },
+    {
+      "name": "appid",
+      "type": "string",
+      "enumValues": "",
+      "default": "",
+      "desc": "Specifies the ID of the app asset on Webex Connect platform",
+      "required": false,
+      "in": "path",
+      "ref": "",
+      "_id": "5f6d69504d72eb006fb4470e",
+      "id": "5f6d69504d72eb006fb4470e"
+    },
+    {
+      "name": "start",
+      "type": "int",
+      "enumValues": "",
+      "default": "0",
+      "desc": "Specifies the index of the first thread entry to return. This parameter is zero-based, meaning that if you set start=0, the response will include the first thread entry. For example, setting start=9 will return the 10th thread entry in the list, as indexing begins at 0.",
+      "required": false,
+      "in": "query",
+      "ref": "",
+      "_id": "67ad25f22840f00024fbf7e0",
+      "id": "67ad25f22840f00024fbf7e0"
+    }
+  ],
+  "url": "/apps/{appid}/threads?start=0",
+  "method": "get"
+}
+```
+
+## OpenAPI operation and component schemas
+
+Operation extraction: selected. Missing operation definitions must not be inferred from this cache.
+
+```json
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Thread API",
+    "version": "6.20.0"
+  },
+  "servers": [
+    {
+      "url": "https://rtm.imiconnect.io/rtmsAPI/api/v1/"
+    }
+  ],
+  "security": [
+    {
+      "sec0": []
+    }
+  ],
+  "path": "/apps/{appid}/threads?start=0",
+  "method": "get",
+  "path_parameters": [],
+  "operation": {
+    "summary": "Get App Threads",
+    "description": "This API allows you to get the list of all the threads associated with a given app ID.",
+    "operationId": "thread-apis-app-threads",
+    "parameters": [
+      {
+        "name": "Content-Type",
+        "in": "header",
+        "description": "application/json",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "secretKey",
+        "in": "header",
+        "description": "Client key that can be accessed from your app asset configuration page on Webex Connect platform",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "appid",
+        "in": "path",
+        "description": "Specifies the ID of the app asset on Webex Connect platform",
+        "schema": {
+          "type": "string"
+        },
+        "required": true
+      },
+      {
+        "name": "start",
+        "in": "query",
+        "description": "Specifies the index of the first thread entry to return. This parameter is zero-based, meaning that if you set start=0, the response will include the first thread entry. For example, setting start=9 will return the 10th thread entry in the list, as indexing begins at 0.",
+        "schema": {
+          "type": "integer",
+          "format": "int32",
+          "default": 0
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "200",
+        "content": {
+          "application/json": {
+            "examples": {
+              "Result": {
+                "value": "{\n    \"total\": 3,\n    \"code\": \"0\",\n    \"count\": 3,\n    \"threads\": [\n        {\n            \"updated_on\": \"\",\n            \"stream_name\": \"\",\n            \"created_on\": \"2020-07-24T15:38:24.920Z\",\n            \"extras\": {\n                \"icFirstName\": \"John\",\n                \"icEmailId\": \"john@doe.com\",\n                \"icLastName\": \"Doe\"\n            },\n            \"id\": \"44119efd-db68-4394-8e5d-666889ba288b\",\n            \"title\": \"Fraud/dispute-[2020-07-24T21:08:22.827Z]\",\n            \"type\": \"Conversation\",\n            \"category\": \"Fraud/dispute\",\n            \"status\": \"Active\"\n        },\n        {\n            \"updated_on\": \"\",\n            \"stream_name\": \"\",\n            \"created_on\": \"2020-07-24T15:37:50.751Z\",\n            \"extras\": {\n                \"icFirstName\": \"John\",\n                \"icEmailId\": \"john@doe.com\",\n                \"icLastName\": \"Doe\"\n            },\n            \"id\": \"67e485fa-d952-4b6c-94da-1ba12692d1fb\",\n            \"title\": \"Enquiry-[2020-07-24T21:07:48.667Z]\",\n            \"type\": \"Conversation\",\n            \"category\": \"Enquiry\",\n            \"status\": \"Active\"\n        },\n        {\n            \"updated_on\": \"\",\n            \"stream_name\": \"\",\n            \"created_on\": \"2020-07-24T12:11:30.973Z\",\n            \"extras\": {\n                \"icFirstName\": \"John\",\n                \"icEmailId\": \"john@doe.com\",\n                \"icLastName\": \"Doe\"\n            },\n            \"id\": \"24c34ae5-f85e-4c1f-b4bc-d59b17610491\",\n            \"title\": \"Fraud/dispute-[2020-07-24T17:41:29.126Z]\",\n            \"type\": \"Conversation\",\n            \"category\": \"Fraud/dispute\",\n            \"status\": \"Active\"\n        }\n    ],\n    \"description\": \"success\"\n}"
+              }
+            },
+            "schema": {
+              "type": "object",
+              "properties": {
+                "total": {
+                  "type": "integer",
+                  "example": 3,
+                  "default": 0
+                },
+                "code": {
+                  "type": "string",
+                  "example": "0"
+                },
+                "count": {
+                  "type": "integer",
+                  "example": 3,
+                  "default": 0
+                },
+                "threads": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "updated_on": {
+                        "type": "string",
+                        "example": ""
+                      },
+                      "stream_name": {
+                        "type": "string",
+                        "example": ""
+                      },
+                      "created_on": {
+                        "type": "string",
+                        "example": "2020-07-24T15:38:24.920Z"
+                      },
+                      "extras": {
+                        "type": "object",
+                        "properties": {
+                          "icFirstName": {
+                            "type": "string",
+                            "example": "John"
+                          },
+                          "icEmailId": {
+                            "type": "string",
+                            "example": "john@doe.com"
+                          },
+                          "icLastName": {
+                            "type": "string",
+                            "example": "Doe"
+                          }
+                        }
+                      },
+                      "id": {
+                        "type": "string",
+                        "example": "44119efd-db68-4394-8e5d-666889ba288b"
+                      },
+                      "title": {
+                        "type": "string",
+                        "example": "Fraud/dispute-[2020-07-24T21:08:22.827Z]"
+                      },
+                      "type": {
+                        "type": "string",
+                        "example": "Conversation"
+                      },
+                      "category": {
+                        "type": "string",
+                        "example": "Fraud/dispute"
+                      },
+                      "status": {
+                        "type": "string",
+                        "example": "Active"
+                      }
+                    }
+                  }
+                },
+                "description": {
+                  "type": "string",
+                  "example": "success"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "deprecated": false,
+    "x-readme": {
+      "code-samples": [
+        {
+          "language": "curl",
+          "code": "-X GET https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/$(appid)/threads?start=0\n-H \"Content-Type : application/json\"\n-H \"secretKey: {secretKey}\"\n\n",
+          "name": "cURL"
+        },
+        {
+          "language": "ruby",
+          "code": "require 'httparty'\n# Create the HTTP objects and post request\nhttp = HTTParty.get(\"https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/$(appid)/threads?start=0\",\n    :headers => {'Content-Type' => 'application/json',\n\t'secretKey ' => '{secretKey}’})\n# Print on console\nputs http\n\n\n"
+        },
+        {
+          "language": "javascript",
+          "code": "var data = null;\n\nvar xhr = new XMLHttpRequest();\n\nxhr.addEventListener(\"readystatechange\", function () {\n  if (this.readyState === this.DONE) {\n    console.log(this.responseText);\n  }\n});\n\nxhr.open(\"GET\", \" https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/$(appid)/threads?start=0\");\nxhr.setRequestHeader(\"Content-Type\", \"application/json\");\nxhr.setRequestHeader(\"secretKey\", \"{secretKey}\");\nxhr.send(data);\n\n\n"
+        },
+        {
+          "language": "python",
+          "code": "import requests\n\nurl = \" https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/$(appid)/threads?start=0\"\n\nheaders = {'Content-Type': 'application/json', 'secretKey': '{secretKey}'}\n\nresponse = requests.request(\"GET\", url, headers=headers)\n\nprint(response.text)\n"
+        }
+      ],
+      "samples-languages": [
+        "curl",
+        "ruby",
+        "javascript",
+        "python"
+      ]
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "sec0": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "key"
+      }
+    }
+  },
+  "operation_status": "selected"
+}
+```

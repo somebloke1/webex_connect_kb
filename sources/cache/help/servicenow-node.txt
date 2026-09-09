@@ -1,0 +1,1068 @@
+## 
+
+Introduction
+
+ServiceNow is being used to track and manage incidents within a large organization, with integration primarily focusing on incidents. ServiceNow facilitates Webex Connect users with three of its methods:
+
+- Create Incident- This method creates incident tickets in the ServiceNow Desk.
+
+- Get Incident- This method fetches incident tickets in the ServiceNow Desk.
+
+- Update Incident- This method updates existing incident tickets in the ServiceNow Desk.
+
+This node needs to be enabled for your account and is not available by default. Please contact your account manager in case you wish to enable it for your account.
+
+ [Image: Screenshot of ServiceNow Node] 
+Screenshot of ServiceNow 
+
+## 
+
+Version Supported
+
+## 📘
+
+This integration is based on ServiceNow API v1.0.0
+
+## 
+
+Pre-requisites
+
+To enable the ServiceNow node, the following are the mandatory steps that need to be performed at the ServiceNow portal:
+
+- Enable client credential system properties.
+
+- Add User and Assign roles.
+
+- Register system OAuth client from application registry(endpoints for client to access the instance).
+
+## 
+
+Step 1: Enable Client Credential System Property
+
+Create the glide.oauth.inbound.client.credential.grant_type.enabled system property to use Client Credentials grant type for OAuth inbound integrations.
+
+Before you begin
+
+Role required: admin
+
+Plugin required: OAuth 2.0.
+
+Procedure
+
+- In the navigation filter, enter sys_properties.list.
+
+The entire list of properties in the System Properties [sys_properties] table appears.
+
+- Select New.
+
+- On the form, fill in the following fields.
+
+ | Fields | Description
+
+ | Name | Name of the property you’re creating. In this case,
+
+glide.oauth.inbound.client.credential.grant_type enabled.
+
+ | Description | Type a brief, descriptive phrase describing the function of the property.
+
+ | Type | Select the appropriate data type from the list. The possible values for the field are True and False.
+
+ | Value | To enable the client credentials grant type for OAuth inbound integrations, you should set the desired property to True. The possible values for the field are True and False.
+
+## 📘
+Note
+
+Other fields in the form such as Choices, Ignore cache, Private, Read roles, and Write roles can be configured according to your requirements.
+
+ [Image: Screenshot of Enabling Client Credential System Property] 
+Enable Client Credential System Property
+
+- Select Submit
+
+## 📘
+Note
+
+If the Ignore cache check box is selected, the system flushes the server cache when the parameter is changed.
+
+Next, you must create an OAuth client (OAuth API endpoint for external client) and add OAuth Application User field to the OAuth client record.
+
+For detailed steps, refer to ServiceNow documentationto enable client credential system properties.
+
+## 
+
+Step 2: Add User and Assign Roles
+
+You can add a user to your instance to enable them to log in and use designated application features.
+
+Before you begin
+
+Role required: user_admin
+
+Procedure
+
+- 
+
+Navigate to All > User Administration > Users.
+
+- 
+
+Select New.
+
+- 
+
+On the form, fill in the fields:
+
+ | Field | Description
+
+ | User ID | Create a unique identifier for this user's ServiceNow login user name. Examples of user IDs are cwitherspoon and charlie.witherspoon.
+
+Note:You can’t create a user whose User ID duplicates an existing user. If you do import duplicates from an update set, the more recently created name takes the duplicate User ID.
+
+Example:
+
+For a user named "Charlie Witherspoon":
+
+1. Start with the base ID: cwitherspoon.
+
+2. Check for duplicates:
+
+- If none exist, assign the ID.
+
+- If a conflict arises, append a unique suffix: cwitherspoon1, cwitherspoon_20231205, etc.
+
+ | Given name | Enter the user's given (often their first) name.
+
+ | Family name | Enter the user's family name.
+Note: You can clear the First Name field, or the Last Name field in an existing user record, but you can’t clear both at the same time.
+
+ | Title | Enter a title or job description, or select one from the list.
+
+ | Department | Select the user's department from the list.
+
+ | Password | Assign a password to the user. This password can be permanent or temporary.
+
+ | Password needs reset | Select this check box to enforce a password change upon the user's first login.
+
+ | Locked out | Select this check box to lock the user out of the instance and terminate all active sessions. The system includes safeguards to prevent users with the admin role from locking themselves out.
+
+ | Active | Select this check box to make user active. Inactive users are visible only to administrators in the following areas:
+
+o User lists.
+
+o Selection list on reference fields (accessed via the magnifying glass icon)
+
+o Auto-complete list that appears when typing into a reference field
+
+ | Web service access only | Select this check box to designate the user as a non-interactive user. This field is applicable for Non-Interactive Sessions.  
+Note: In our case leave this checkbox un-checked
+
+ | Internal Integration User | Select this check box to designate this user as an
+Mark service accounts as internal integration users.
+Note: In our case leave this checkbox un-checked
+
+ | Date format | Select the user's preferred date format.
+
+ | Email | Enter the user's email address.
+
+To enter a non-standard email address that fails field validation, deactivate the validation script first.
+
+To deactivate the validation script:
+
+a.Navigate to System Definition > Validation Scripts.
+
+b.Select the email validation script record.
+
+c.Clear the Active check box and Save the change.
+
+d.Complete the user profile, including the email address.
+
+e.Update or Submit the record.
+
+f.Reactivate the email validation script by selecting the Active check box and saving the changes.
+
+ | Notification | Specify if email notifications should be sent to the user.
+
+oEnable: Select Enable to send email notifications to the user.
+
+oDisable: to allow the user to receive notifications only if they subscribe to the notification or are specified as a recipient in the Email and SMS notifications form.
+
+To prevent notification completely, configure a condition on the email notification form to block delivery when this field is set to Disable.
+
+ | Calendar integration | Select Outlook to enable the user to receive meeting notifications directly via email to the calendar. Select None if no meeting notifications should be sent.
+
+ | Time zone | Select the user's time zone.
+
+ | Business phone | Enter this user's business phone number.
+
+ | Mobile phone | Enter this user's mobile phone number.
+
+ | Photo | If appropriate,attach a photo of the user.
+
+ | Geolocation tracked | Select the check box to enable location tracking. The Geolocation tracked field,
+
+is applicable, upon activation of Geolocationand provides the option to track a user's location.
+
+ | Location | Select the user's location. This field appears when geolocation is enabled.
+
+Optionally, you can customize the user form by adding fields such as Company, Location, and other fields available in ServiceNow, based on your requirements
+
+Set Password
+
+Click on the Set Password field and create a password for the user. Ensure the password is stored securely.
+
+Add Roles
+
+After filling in the above fields, we must assign below roles to the user:-
+
+itil, itil_admin, admin, agent_admin, approval_admin, approver_user,  app_engine_admin, catalog_admin, catalog_editor, category_manager, credential_admin, data_manager_admin, rest_api_explorer, sn_incident_read, sn_incident_write
+
+For detailed steps, refer to create/add a user.
+
+## 
+
+Step 3: Create an endpoint for the Client to Access the Instance
+
+Create an OAuth application endpoint for external client applications to access the ServiceNow instance.
+
+Before you begin
+
+Role required: admin
+
+Procedure
+
+- 
+
+Navigate to All > System OAuth > Application Registry and then click New.
+
+- 
+
+On the interceptor page, click Create an OAuth API endpoint for external clients and then fill in the form.
+
+ | Field | Descriptions
+
+ | Name | A unique name that identifies the application requiring OAuth access.
+
+ | Client ID | [Read-Only] The auto-generated unique ID of the application.
+
+The instance uses the client ID to request an access token.
+
+ | Client Secret | [Required] The shared secret string used by both the instance and the client application or
+
+website to authorize communications. The instance uses the client's secret when requesting an access token.
+
+Leave this field blank to have the instance
+
+auto-generate a client secret. To display existing client secrets, click the lock icon.
+
+ | Redirect URL | The callback URL to which the authorization server redirects. Enter the full URLs of the clients  requesting access to the resource, appending by /oauthredirect.do.
+
+For example, http://token_consumer:port/oauth_redirect.do.
+
+Enter as many URLs as needed for all possible token consumers. The instance matches the URL of the incoming request to one of the redirect URLs. If no match is made, the instance uses the first redirect URL.
+
+_Note: For Client credentials, we don’t need to fill any callback URLs
+
+ | Logo URL | The URL of the image to use as the application logo.
+
+The logo appears on the approval page when the user is prompted to grant a client
+
+application access to a restricted resource on the instance.
+
+ | Active | Select the check box to activate the application registry.
+
+ | Refresh Token   Lifespan | The number of seconds a refresh token is valid. The instance uses the lifespan value to request a refresh token. By default, refresh tokens expire in 100 days (8640000 seconds).
+
+ | Enforce Token   Restrictions | Select this option to restrict tokens to APIs configured to allow the authentication profile.You can grant access by setting an API access policy.
+
+For more information, see
+
+Create REST API access policy.
+
+Default: Unselected.
+
+ | Mobile Client | Represents the entity for a mobile app or web. This information is used to analyze the login
+
+information with mobile or web.
+
+ | Access Token Lifespan | The number of seconds a access token is valid. The instance uses the lifespan value to request an access token. By default, access tokens expire in 30 minutes (1800 seconds).
+
+ | Comments | Additional information to associate with the application.
+
+### 
+
+Add the OAuth Application User
+
+Add the OAuth Application User field on the OAuth Entity form to use the Client Credentials grant type for OAuth inbound integrations.
+
+Before you begin
+
+Role required: admin
+
+Plugin required: OAuth 2.0.
+
+Procedure
+
+- Open the OAuth client record that was created.
+
+- Select the More options icon on the page header.
+
+- Select Configure > Form Design.
+
+- On the Form Design page, add OAuth Application User from the list of fields.
+
+- Click Save or Update the form.
+
+- Select the user for the OAuth Application User.
+
+For example, System Administrator. In our case, search and select the user that is created through step 2(Add user step)
+
+- 
+
+Click Submit.
+
+For detailed steps, refer to create an OAuth application endpoint for external client applications.
+
+## 📘
+Note for known limitation
+
+When duplicate keys are passed dynamically in Create or Update incident by selecting request body as “Individual Parmeter”,the node will fail and follow the “onerror” edge. Adding this space ensures the variable persists after you save the node. If you do not add the space, the variable will not remain persistent.
+
+## 
+
+Adding a New Authorization
+
+To create a new authorization:
+
+- 
+
+Login to the Webex Connect platform.
+
+- 
+
+Navigate to Integrations.
+
+- 
+
+Filter the Integrations page with Pre-built Integrations or search for ServiceNow.
+
+- 
+
+Select ServiceNow and click Actions > Manage.
+
+- 
+
+On the Manage Integrations – ServiceNow screen, under Node Authorizations, click the dropdown in the Action column and then click Add authentication.
+
+ [Image: Screenshot of Add New Authentication] 
+Add New Authentication
+
+- 
+
+Enter an appropriate Authentication Name.
+
+- 
+
+Enter the Client ID, and Client Secret details. For more information on obtaining the Client ID and Client Secret of ServiceNow, refer [here].
+
+- 
+
+Enter Access Token URL and Refresh Token URL, obtained only after registering for Oauth Application registry in ServiceNow.
+
+[https://{org-instanceId}.service-now.com/oauth_token.do]
+
+## 📘
+Note
+
+Every user has their own organizational instance ID associated with ServiceNow account and Please modify ‘org-instanceId’ in the URL to reflect your organization instanceId.
+
+- 
+
+Click Authenticate.
+
+If the credentials are successfully verified by ServiceNow, then a new authorization is added, and the access token is saved to theWebex Connect.
+
+Upon successful authentication, a new tab is displayed to capture the credentials of your ServiceNow account
+
+ [Image: Screenshot of Authentication Added Successfully] 
+Authentication added successfully
+
+### 
+
+Obtaining the Client ID and Client Secret of ServiceNow
+
+- 
+
+Login to the ServiceNow Instance.
+
+- 
+
+Navigate to All, search for oAuth then click Application Registry from the search results.
+
+- 
+
+Click New > Create an oAuth API endpoint for external clients.
+
+- 
+
+Enter an appropriate Name for the OAuth 2.0 client.
+
+- 
+
+Client ID is prefilled. When provided with mandatory information, click Submit.
+
+- 
+
+Upon submitting the request, the Client Secret gets auto-populated. Click the lock icon adjacent to the Client Secret to reveal the Client Secret Key.
+
+The created Client ID and Client Secret can be used for authentication in Webex Connect.
+
+ [Image: Screenshot of Obtaining the Client ID and Client Secret of ServiceNow] 
+Obtaining the Client ID and Client Secret of ServiceNow
+
+## 
+
+Configuring ServiceNow node in flows
+
+Here’s a brief description of various methods, and corresponding output variables and node outcomes associated with each of the methods.
+
+## 📘
+Known Limitation-Adding Values from Input Variables
+
+When you retrieve values from Input Variables (Custom Variables, Start Node Variables), ensure you add a space after entering values in subsequent fields. Adding this space ensures the variable persists after you save the node. If you do not add the space, the variable will not remain persistent.
+
+### 
+
+Method Name-Create Incident
+
+This method is used for creating incident tickets in ServiceNow Desk. Below, are the UI parameters that are required to call this method.
+
+ [Image: Screenshot of Create Incident method configuration page.] 
+Screenshot of Create Incident method configuration page.
+
+ | Input Variables | Output Variables | Node Outcomes
+
+ | Authorization
+
+•Need to select valid Authorization configured inside Assets>Integration>Pre-built Integration(Authorization configuration must be the first step before using ServiceNow pre-built integration)
+
+InstanceId
+
+•	The unique identifier for your ServiceNow instance and is used to differentiate between multiple instances of ServiceNow that may exist | Number
+
+•incident number
+
+sys_id
+
+•unique GUID of the incident
+
+task_effective_number
+
+•Incident number.
+
+responsePayload
+
+•This will contain all the JSON response objects in a single variable. | onInvalidData
+
+•Invalid data
+
+onError
+
+•Error while invoking the method
+
+onInvalidChoice
+
+•Invalid choice
+
+onBadRequest
+
+•If HTTP status received is 400
+
+onNotFound
+
+•If HTTP status received is 404
+
+onIncidentCreated
+
+•If HTTP status received is 201
+
+onCreateIncidentFailure
+
+•If HTTP status received is other than 201 and configured error HTTP status codes
+
+onTimeout
+
+•When the method could not be invoked before the timeout(5 seconds) duration
+
+HTTP Status Codes
+
+ | Status code | Description
+
+ | 400 | onBadRequest
+
+ | 201 | onIncidentCreated
+
+ | All HTTP Status codes other than 400, 404, and 201 | onCreateIncidentFailure
+
+### 
+
+Method Name-Get Incident
+
+This method is used for fetching incident tickets in ServiceNow Desk. Below, are the UI parameters that are required to call this method.
+
+ [Image: Screenshot of Get Incident method configuration page.] 
+Screenshot of Get Incident method configuration page.
+
+ | Input Variables | Output Variables | Node Outcomes
+
+ | Authorization
+
+•Need to select valid Authorization configured inside Assets>Integration>Pre-built Integration(Authorization configuration must be the first step before using ServiceNow pre-built integration).
+
+InstanceId
+
+•The unique identifier for your ServiceNow instance and is used to differentiate between multiple instances of ServiceNow that may exist.
+
+Incident Id
+
+•Please specify the number output variable received from Create Incident method. | parent
+
+•a parent incident is a way to link related incidents together. This functionality is used to handle multiple incidents that have the same categorization and communication needs.
+
+For example: {"displayvalue":"CHG0000003","link":"https://{domain}.service-now.com/api/now/table/task/46e9b4afa9fe198101026e122b85f442"}
+
+_Note: This output variable is an object which contains two object parameters called display_value and link. To extract display_valueandlink` parameters as variable in flow, it can be either done by using evaluate node or data parser node.
+
+causedby
+
+•a reference field that points to the change_request table. This field is used to indicate that an incident was caused by a change.
+
+For example {"display_value":"CHG0040007","link":"https://{domain}.service-now.com/api/now/table/change_request/c83c5e5347c12200e0ef563dbb9a7190"}
+
+_Note: This output variable is an object which contains two object parameters called display_value and link. To extract display_valueandlink` parameters as variable in flow, it can be either done by using evaluate node or data parser node. 
+
+watchlist
+
+•the list of people like caller or other user who might like to know about any updates or progress with the task
+
+For example: System Administrator, Sean Bonnet
+
+State
+
+•the stage of the incident's life cycle. For example: Closed
+
+Impact
+
+•a measure of the negative consequences of an incident on an organization, its customers, its stakeholders, and its reputation. It is based on how the quality of service is affected. For example: 3 – Low
+
+active
+
+•represents the users which are presents on the ServiceNow and will do tasks or based on the role other criteria they will perform.  If Active is false they will not able log into the ServiceNow. For example: false
+
+priority
+
+•The priority field in a ServiceNow incident indicates the order in which the incident should be resolved. For example:5 – Planning
+
+assigned_to
+
+•a reference field that points to the Users table and is used to designate a user to work on or be responsible for a task.
+
+For example: {"display_value":"Fred Luddy","link":"https://{domain}.service-now.com/api/now/table/sys_user/5137153cc611227c000bbd1bd8cd2005"}-``
+
+_Note: This output variable is an object which contains two object parameters called display_value and link. To extract display_valueandlink` parameters as variable in flow, it can be either done by using evaluate node or data parser node. 
+
+taskeffective_number
+
+•displays the display number of a Universal Request (UR) ticket as a string. For example: INC0010030
+
+opened_by
+
+•opened by is a reference to the user table that created the incident.
+
+For example:{"display_value":"John Wick","link":"https://{domain}.service-now.com/api/now/table/sys_user/f19d5ff183d15210d81dc590ceaad3d7"}
+
+_Note: This output variable is an object which contains two object parameters called display_value and link. To extract display_valueandlink` parameters as variable in flow, it can be either done by using evaluate node or data parser node.
+
+syscreated_on
+
+•contains the date and time when a task record was created. For example: 2024-10-28 04:14:47
+
+opened_at
+
+•the field that is populated when the incident form is opened in the user interface (UI). For example:  2024-10-28 04:14:47
+
+sys_id
+
+•the sys_id is basically a record's fingerprint. It's a unique identifier that the system assigns to every single record. For example: 189d7fc183a51210d81dc590ceaad387
+
+number
+
+•a unique number and prefix that automatically numbers records. The "Number" field is a string that is made up of a prefix and a number that is specific to the task class.
+
+For example: INC0010030
+
+contact_type
+
+•indicates the type of contact for the incident
+
+For example: Walk-in
+
+made_sla
+
+•a legacy field that was part of the old SLA engine
+
+upon_reject For example: true
+
+•a string data type field that is eligible for mapping
+
+For example: Cancel all future Tasks
+
+sys_updated_on
+
+•is the timestamp for system updates
+
+For example: 2024-11-03 23:07:58
+
+child_incidents
+
+•used to link a child incident to a parent incident
+
+For example: 1
+
+hold_reason
+
+•field in ServiceNow's Incident table is used to indicate why an incident is being paused
+
+approval_history
+
+•System Administrator (Approval history)a journal field that tracks approval details for a record. For example:  2024-10-30 00:25:33
+
+resolved_by
+
+•indicates who resolved the incident
+
+For example: {"display_value":"System Administrator","link":"https://{domain}.service-now.com/api/now/table/sys_user/6816f79cc0a8016401c5a33be04be441"}
+
+_Note: This output variable is an object which contains two object parameters called display_value and link. To extract display_valueandlink` parameters as variable in flow, it can be either done by using evaluate node or data parser node.
+
+sysupdated_by
+
+•a system field that displays the UserID of the user who most recently updated the incident admin For example: admin
+
+user_input
+
+•is used to capture input provided by users, typically in the context of workflows, surveys, or other interactive processes For example: user input by {user_name}
+
+sys_domain
+
+•	identifies the domain of an override record in a table. For example: {"display_value":"global","link":"https://{domain}.service-now.com/api/now/table/sys_user_group/global"}
+
+_Note: This output variable is an object which contains two object parameters called display_value and link. To extract display_valueandlink` parameters as variable in flow, it can be either done by using evaluate node or data parser node.
+
+syscreated_by
+
+•a system field that stores the user ID of the person who created the incident For example: John wick
+
+knowledge
+
+•allows users to attach knowledge base articles to incidents For example: true
+
+order
+
+•controls the order of items in category lists For example:10
+
+calendar_stc
+
+•field in an incident uses the dateDiff function to calculate the duration between when an incident is opened and resolved. For example:589,991
+
+closed_at
+
+•records the date when the incident was closed. For example:2024-10-29 23:59:25
+
+cmdb_ci
+
+•is a Configuration Item field that displays CIs that match the incident's company. The cmdb_ci field's dictionary entry has a dependent field called "company". When an incident is created, the "company" field is empty, so all CIs are displayed. When the incident is saved, the "company" field is populated with the caller's company. For example: {"display_value":"*BETH-IBM","link":"https://{domain}.service-now.com/api/now/table/cmdb_ci/affd3c8437201000deeabfc8bcbe5dc3"}
+
+_Note: This output variable is an object which contains two object parameters called display_value and link. To extract display_valueandlink` parameters as variable in flow, it can be either done by using evaluate node or data parser node.
+
+deliveryplan
+
+•is used to sequence work, and to describe when the work will take place and when it is expected to be finished. For example: {"display_value":"Blackberry Delivery Plan","link":"https://{domain}.service-now.com/api/now/table/sc_cat_item_delivery_plan/8bb57b8ac0a8006400e2e4d738d24dde"}
+
+work_notes_list
+
+•is a list of people who are working on an incident. For example: System Administrator
+
+business_service
+
+•allows users to select a business service and see the available service offerings. The Service Offering field is dependent on the Business Service that is chosen
+
+For example: {"display_value":"Email","link":"https://{domain}.service-now.com/api/now/table/cmdb_ci_service/27d32778c0a8000b00db970eeaa60f16"}
+
+_Note: This output variable is an object which contains two object parameters called display_value and link. To extract display_valueandlink` parameters as variable in flow, it can be either done by using evaluate node or data parser node.
+
+businessimpact
+
+•is part of a business impact analysis (BIA), which is a process that assesses the potential impact of a disruption on a business
+
+For example: Business impact reason to be filled by John Wick
+
+sys_domain_path
+
+•The sys_domain_path value is unique in the Domain table
+
+rfc
+
+•stands for Request for Change, which is a formal request to implement a change in
+
+ServiceNow
+
+For example:
+
+{"display_value":"CHG0040007","link":"https://{domain}.service-now.com/api/now/table/change_request/c83c5e5347c12200e0ef563dbb9a7190"} -
+
+_Note: This output variable is an object which contains two object parameters called display_value and link. To extract display_valueandlink` parameters as variable in flow, it can be either done by using evaluate node or data parser node.
+
+timeworked
+
+•is a time-tracking field in the Task table that can be used for incidents For example: 1 Hour
+
+expected_start
+
+•is populated with the task's created time when a new Catalog Task is created from a workflow. For example: 2024-10-22 00:26:20
+
+business_duration
+
+•is the time difference between the incident's opened and closed times. For example:1 Day 16 Hours
+
+group_list
+
+•interested groups For example: Analytics Settings Managers
+
+caller_id
+
+•is a reference field that identifies the caller of an incident For example: {"display_value":"John Wick","link":"https://{domain}.service-now.com/api/now/table/sys_user/f19d5ff183d15210d81dc590ceaad3d7"}
+
+_Note: This output variable is an object which contains two object parameters called display_value and link. To extract display_valueandlink` parameters as variable in flow, it can be either done by using evaluate node or data parser node.
+
+reopenedtime
+
+•is a field that indicates the last time the incident was reopened For example: 2024-11-03 22:46:34
+
+resolved_at
+
+•is the date and time when an incident is resolved For example: 2024-11-03 23:07:58
+
+approval_set
+
+•is a glide_date_time data type field For example:  2024-10-29 00:24:25
+
+subcategory
+
+•is used to provide more specific divisions within broad topics represented by categories For example: Email
+
+short_description
+
+•is a field for a short description of the task (with a default character limit of 255), whereas Description [description] field is for a more comprehensive explanation of the issue, often tincluding specific instructions. For example: Short Description by John Wick
+
+close_code
+
+•is the Resolution Code field, which is required to be populated when an incident is set to Resolved or Closed. For example: User error
+
+correlation_display
+
+•is used to identify the source of an incident For example: correlation display by John Wick
+
+delivery_task
+
+•For example: {"display_value":"Procure PC Hardware","link":"https://{domain}.service-now.com/api/now/table/sc_cat_item_delivery_task/8a3ff7dbc61122780008ffafccebb2a2"}
+
+_Note: This output variable is an object which contains two object parameters called display_value and link. To extract display_valueandlink` parameters as variable in flow, it can be either done by using evaluate node or data parser node.
+
+assignmentgroup
+
+•The "assignment_group" field in a ServiceNow incident is a field that can be constrained
+
+For example:
+
+{"display_value":"Help Desk","link":"https://{domain}.service-now.com/api/now/table/sys_user_group/679434f053231300e321ddeeff7b12d8"}
+
+_Note: This output variable is an object which contains two object parameters called display_value and link. To extract display_valueandlink` parameters as variable in flow, it can be either done by using evaluate node or data parser node.
+
+additionalassignee_list
+
+•is a tool that allows users to select multiple additional assignees for an incident
+
+For example: System Administrator
+
+business_stc
+
+•is the data type for the business resolve time of an incident For example:144,000
+
+description
+
+•is a place to provide a detailed explanation of the issue, often including specific instructions. For example: Description from John Wick
+
+calendar_duration
+
+•is one of two duration fields that calculate the time difference between an incident's open and closed times For example:6 Days 19 Hours 53 Minutes
+
+close_notes
+
+•the Resolution Notes field that must be populated when an incident is set to Resolved or Closed For example: user error
+
+notify
+
+•allows users to communicate with customers. Email notifications, SMS notifications, and Push notifications. For example: Do Not Notify
+
+service_offering
+
+•is used to define the level of service for a given request. For example: {"display_value":"service2828","link":"https://{domain}.service-now.com/api/now/table/service_offering/39a1a17d8365d210d81dc590ceaad3ec"}
+
+_Note: This output variable is an object which contains two object parameters called display_value and link. To extract display_valueandlink` parameters as variable in flow, it can be either done by using evaluate node or data parser node.
+
+sysclass_name
+
+•also known as the Task Type field, indicates the type of task a record is, such as an incident, change, or problem For example: Incident
+
+closed_by
+
+•indicates who closed the incident
+
+For example: {"display_value":"System Administrator","link":"https://{domain}.service-now.com/api/now/table/sys_user/6816f79cc0a8016401c5a33be04be441"}
+
+_Note: This output variable is an object which contains two object parameters called display_value and link. To extract display_valueandlink` parameters as variable in flow, it can be either done by using evaluate node or data parser node.
+
+parentincident
+
+•is used to establish a parent-child relationship between incidents For example: {"display_value":"INC0010031","link":"https://{domain}.service-now.com/api/now/table/incident/1f46c05183e51210d81dc590ceaad34f"}
+
+_Note: This output variable is an object which contains two object parameters called display_value and link. To extract display_valueandlink` parameters as variable in flow, it can be either done by using evaluate node or data parser node.
+
+reopenedby
+
+•is used to track user who has opened the resolved incident  For example: {"display_value":"System Administrator","link":"https://{domain}.service-now.com/api/now/table/sys_user/6816f79cc0a8016401c5a33be04be441"}
+
+_Note: This output variable is an object which contains two object parameters called display_value and link. To extract display_valueandlink` parameters as variable in flow, it can be either done by using evaluate node or data parser node.
+
+incidentstate
+
+•is used to track the state of an incident For example:Closed
+
+urgency
+
+•is a measure of how quickly a resolution is required for the incident For example: 3 – Low
+
+problem_id
+
+•In incidents the problem_id field is a reference to the problem table For example: {"display_value":"PRB0001002","link":"https://{domain}.service-now.com/api/now/table/problem/6632130c730123002728660c4cf6a734"} -
+
+_Note: This output variable is an object which contains two object parameters called display_value and link. To extract display_valueandlink` parameters as variable in flow, it can be either done by using evaluate node or data parser node.
+
+company
+
+•is a lookup list that allows users to specify the company associated with an incident For example: {"displayvalue":"ACME North America","link":"https://{domain}.service-now.com/api/now/table/core_company/31bea3d53790200044e0bfc8bcbe5dec"} -
+
+_Note: This output variable is an object which contains two object parameters called display_value and link. To extract display_valueandlink` parameters as variable in flow, it can be either done by using evaluate node or data parser node.
+
+reassignmentcount
+
+•how many times an incident has been reassigned between groups For example:1
+
+activity_due
+
+•is a due date field that indicates when an activity is expected to be completed For example: UNKNOWN
+
+severity
+
+•measures the impact an incident has on a business For example:3 – Low
+
+comments
+
+•is called the "Additional Comments" field. It's where users can add comments to an incident
+
+2024-11-03 22:46:34 - System Administrator (Additional comments)
+
+For example:
+
+Hold by John Wick /n 2024-11-03 22:43:20 - System Administrator (Additional comments) /John Wick wants to reopen the incident
+
+approval
+
+•is a process that assigns a group, user, or authorized member to either approve or reject a task
+
+For example: Not Yet Requested
+
+sla_due
+
+•is part of the legacy SLA engine, which is used to associate a single SLA with each Task record
+
+For example: UNKNOWN
+
+comments_and_work_notes
+
+•visible entries and IT-team-only entries
+
+For example: contains both customer
+
+due_date
+
+•It is essentially a date field that can be used to track and capture follow-up dates or deadlines related to specific records or tasks For example: 2024-10-30 00:26:12
+
+sys_mod_count
+
+•is a counter that increases each time a record is updated For example: 33
+
+reopen_count
+
+•tracks the number of times an incident has been reopened For example:2
+
+escalation
+
+•is a UI option that can be used to escalate an incident to a more experienced resource for help For example: Normal
+
+upon_approval
+
+•stores work instructions if the incident is approved For example: Proceed to Next Task
+
+correlation_id
+
+•stores the unique identifier for an incoming task or alert from another system For example: Correlation ID goes here
+
+location
+
+•populates information from the location field in the user record
+
+For example: {"display_value":"3260 Street, CA","link":"https://{domain}.service-now.com/api/now/table/cmn_location/6808184aeb211100420124e05206fe12"}
+
+_Note: This output variable is an object which contains two object parameters called display_value and link. To extract display_valueandlink` parameters as variable in flow, it can be either done by using evaluate node or data parser node.
+
+category
+
+•is a choice field that helps define incidents better. Incidents can be categorized based on the nature of the issue, the service or application affected, or the impact on the business
+
+For example: Inquiry / Help
+
+responsePayload | onInvalidData
+
+•Invalid data
+
+onError
+
+•Error while invoking the method
+
+onInvalidChoice
+
+•Invalid choice
+
+onTimeout
+
+•When the method could not be invoked before the timeout(5 seconds) duration
+
+onauthorizationfail
+
+onGetIncidentSuccess
+
+•If HTTP status received is 200 and X-Total-Count header response = 1.
+
+onIncidentNotFound
+
+•If HTTP status received is 200 and X-Total-Count header response = 0.
+
+onGetIncidentFailure
+
+•If HTTP status received is other than 200 and configured error HTTP status codes
+
+HTTP Status Codes
+
+ | Status code | Description
+
+ | 404 | onIncidentNotFound
+
+ | 200 | onGetIncidentSuccess
+
+ | All HTTP Status codes other than 200 | onGetIncidentFailure
+
+### 
+
+Method Name- Update Incident
+
+This method is used for updating existing incident ticket in ServiceNow Desk. Below, are the UI parameters that are required to call this method.
+
+ [Image: Screenshot of Update Incident method configuration page.] 
+Screenshot of Update Incident method configuration page.
+
+ | Input Variables | Output Variables | Node Outcomes
+
+ | Authorization
+
+•Need to select valid Authorization configured inside Assets>Integration>Pre-built Integration(Authorization configuration must be the first step before using ServiceNow pre-built integration)
+
+InstanceId
+
+•The unique identifier for your ServiceNow instance and is used to differentiate between multiple instances of ServiceNow that may exist.
+
+Sys Id
+
+•Please specify the sys_id(unique GUID of incident ticket) output variable received from Create Incident or Get Incident  method.
+
+Request Body
+
+•Please specify how you want to pass request body variables. Request body variables can be passed as JSON Object or as a individual key/value pair.	number   | number
+
+•incident number
+
+task_effective_number
+
+•Incident number.
+
+sys_id
+
+•unique GUID of the incident
+
+.
+
+responsePayload
+
+•This will contain all the JSON response object in single variable. | onInvalidData
+
+•Invalid data
+
+onError
+
+•Error while invoking the method
+
+onInvalidChoice
+
+•Invalid choice
+
+onIncidentUpdateSuccess
+
+•If HTTP status received is 200
+
+onBadRequest
+
+•If HTTP status received is 400
+
+onIncidentNotFound
+
+•If HTTP status received is 404
+
+onIncidentUpdateFailure
+
+•If HTTP status received is other than 200 and configured error HTTP status codes
+
+onTimeout
+
+•When the method could not be invoked before the timeout(5 seconds) duration
+
+HTTP Status Codes
+
+ | Status code | Description
+
+ | 400 | onBadRequest
+
+ | 404 | onIncidentNotFound
+
+ | 200 | onIncidentUpdateSuccess
+
+ | All HTTP Status codes other than 400, 404 and 200 | ontIncidentUpdateFailure

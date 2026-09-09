@@ -1,0 +1,67 @@
+## 
+
+Prerequisites
+
+- The redirection or Access Token URLs need to be configured in the Unified Contact Center Enterprise Management portal under the Digital Channel Settings, before activating the Authorizations on the Webex Connect Tenant. This will ensure that the inbound webhook authorization functions correctly.
+
+ | Access Token URLs | Regions
+
+ | https://keycloak-authservice.imiconnect.eu/auth/realms/imiconnect_ln_prod/token | London
+
+ | https://keycloak-authservice.imiconnect.com.au/auth/realms/imiconnect_syd_prod/token | Sydney
+
+ | https://keycloak-authservice.imiconnect.ca/auth/realms/imiconnect_cn_prod/token | Canada
+
+ | https://keycloak-authservice-us.imiconnect.io/auth/realms/imiconnect_us_prod/token | Oregon (US)
+
+ | https://keycloak-authservice.imiconnect.io/auth/realms/imiconnect_uk_prod/token | Ireland
+
+ | https://keycloak-authservice.imiconnect.in/auth/realms/imiconnect_ind_prod/token | Mumbai
+
+ | https://keycloak-authservice.sg.webexconnect.io/auth/realms/imiconnect_sg_prod/token | Singapore
+
+- For more information on configuration details, refer to Unified Contact Center Enterprise Management (UCCE) Documentation Portal.
+
+## 
+
+Activating Authorizations at the Webex Connect Tenant
+
+- Login to Webex Connect tenant using your login credentials.
+
+- Click Assets > Integrations.
+
+ [Image: Screenshot showing the user interface with the highlighted path: Assets menu expanded to reveal the Integrations option.] 
+Navigating to the Integrations section under Assets.
+
+   The Integrations listing page is displayed.
+
+ [Image: Screenshot of the Integrations listing page, displaying a list of available integrations.] 
+View of the Integrations listing page.
+
+- 
+
+Search for the pre-built integration that you have configured. The integration is displayed.
+
+- 
+
+In the Actions drop-down menu, click Manage.
+
+ [Image: Screenshot showing the Actions drop-down menu opened with the Manage option highlighted, allowing users to manage selected integrations.] 
+Accessing the Manage option from the Actions drop-down menu.
+
+- In the Manage Integration - Prebuilt Integration page, click the Activate button.
+
+ [Image: Screenshot of the Manage Integration - Prebuilt Integration page with the Activate button highlighted, enabling the activation of the selected integration.] 
+Activating a prebuilt integration from the Manage Integration page.
+
+The activation success message is displayed, and the status is changed to Activated.
+
+ [Image: Screenshot showing the activation success message displayed on the Manage Integration page, with the integration status updated to Activated.] 
+Integration successfully activated.
+
+ [Image: Screenshot highlighting the section displaying the Client ID and Client Secret.] 
+Screenshot highlighting the section displaying the Client ID and Client Secret.
+
+- Copy your Client ID and Client Secret and save it on your system for reference.
+
+The same credentials used in step 6 are to be used at the Contact Centre Enterprise side in ‘Unified Contact Center Enterprise Management’ for configuring OAuth 2.0 to post async events to Webex Connect.

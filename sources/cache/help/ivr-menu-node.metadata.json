@@ -1,0 +1,40 @@
+{
+  "category": "SERVICES & FLOWS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257843",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "c00838799f35e266fa70b47898c158b8e456c7f5ca1922cb915e36cfea5b5a71",
+    "source_path": "9d08560bc7dd8b698b02fc7a743329699a4c3b0e9b25bc2c6ab92fc5075603d8",
+    "text_path": "3b803963e140867dd4a7dff87b219bc478e90e22c61d1c068ad947da522bb08d"
+  },
+  "headings": [
+    "📘Automatic fallback to an alternate TTS Provider",
+    "Node Configuration",
+    "Configuring Keypress",
+    "Configuring Speech Recognition",
+    "Input Variables",
+    "Output Variables",
+    "Node Outcomes",
+    "Transition Actions"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/ivr-menu-node.md",
+  "resolved_url": "https://help.webexconnect.io/docs/ivr-menu-node",
+  "retrieved_at": "2026-09-08T23:28:55+00:00",
+  "sha256_html_response": "fe6e5b60951e1cfb04fee77d076f15a407e1c011b46633032e8d19536342cecf",
+  "sha256_source_body": "9d08560bc7dd8b698b02fc7a743329699a4c3b0e9b25bc2c6ab92fc5075603d8",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/ivr-menu-node.source.md",
+  "source_updated_at": "2026-03-27T08:11:43.811Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/ivr-menu-node.txt",
+  "title": "IVR Menu Node",
+  "url": "https://help.webexconnect.io/docs/ivr-menu-node",
+  "word_count": 863,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/ivr-menu-node.metadata.json"
+}

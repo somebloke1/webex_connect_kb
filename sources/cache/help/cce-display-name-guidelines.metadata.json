@@ -1,0 +1,31 @@
+{
+  "category": "Webex Connect and Cisco Contact Center Enterprise System (CCE)",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257958",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "43b7e3cf453f8103f3beacfca677207547e3aa5990c39f9ce85e40f74d558c5a",
+    "source_path": "34b671c53b7c063b189673519d3d9c30e34b5f05c1296e7a6c35bf8334e47c53",
+    "text_path": "d7f729ab60d657641b958c1204dd311e0dd6c3d10ec41bf8666df0fcabae8bbf"
+  },
+  "headings": [],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/cce-display-name-guidelines.md",
+  "resolved_url": "https://help.webexconnect.io/docs/cce-display-name-guidelines",
+  "retrieved_at": "2026-09-08T23:29:21+00:00",
+  "sha256_html_response": "0c6c683e40b27fb6fdefe2c3395e8dbf73b1adcf3f530265ac9cf4b07ea496ed",
+  "sha256_source_body": "34b671c53b7c063b189673519d3d9c30e34b5f05c1296e7a6c35bf8334e47c53",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/cce-display-name-guidelines.source.md",
+  "source_updated_at": "2026-04-14T07:36:07.878Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/cce-display-name-guidelines.txt",
+  "title": "Display Name Guidelines - CCE",
+  "url": "https://help.webexconnect.io/docs/cce-display-name-guidelines",
+  "word_count": 496,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/cce-display-name-guidelines.metadata.json"
+}

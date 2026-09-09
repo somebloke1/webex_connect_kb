@@ -1,0 +1,150 @@
+{
+  "_id": "6a675233ec1c893d8a7f67bc:6a675233ec1c893d8a7f64f7",
+  "components": {
+    "securitySchemes": {
+      "sec0": {
+        "in": "header",
+        "name": "key",
+        "type": "apiKey"
+      }
+    }
+  },
+  "info": {
+    "title": "Topic APIs",
+    "version": "6.20.0"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/apps/$(appid)/user/$(userid)/topics?topics=$(topicid)": {
+      "delete": {
+        "deprecated": false,
+        "description": "",
+        "operationId": "unsubscribe-user-from-topics",
+        "parameters": [
+          {
+            "description": "Application/JSON",
+            "in": "header",
+            "name": "Content-Type",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Client key that can be accessed from your app asset configuration page on imiconnect platform",
+            "in": "header",
+            "name": "secretKey",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "The ID of the app asset that you can obtain from imiconnect platform",
+            "in": "path",
+            "name": "appid",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Unique ID for a mobile/web app user",
+            "in": "path",
+            "name": "userid",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Specifies the ID of the topic",
+            "in": "query",
+            "name": "topicid",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "examples": {
+                "Request Example": {
+                  "value": {}
+                }
+              },
+              "schema": {}
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{\n\t\"trans_id\" : \"f2cc5fca-715e-4a86-b457-574bb7ba48d4\",\n\t\"description\" : \"Failed\",\n\t\"code\" : 1,\n\t\"success_topics\" : [\"591d3af1e4b0be20f3fc3eb9\"],\n\t\"fail_topics\" : [\"591d44c3e4b09eee109c1541\"]\n}"
+                  }
+                },
+                "schema": {
+                  "properties": {
+                    "code": {
+                      "default": 0,
+                      "example": 1,
+                      "type": "integer"
+                    },
+                    "description": {
+                      "example": "Failed",
+                      "type": "string"
+                    },
+                    "fail_topics": {
+                      "items": {
+                        "example": "591d44c3e4b09eee109c1541",
+                        "type": "string"
+                      },
+                      "type": "array"
+                    },
+                    "success_topics": {
+                      "items": {
+                        "example": "591d3af1e4b0be20f3fc3eb9",
+                        "type": "string"
+                      },
+                      "type": "array"
+                    },
+                    "trans_id": {
+                      "example": "f2cc5fca-715e-4a86-b457-574bb7ba48d4",
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "200"
+          }
+        },
+        "summary": "Unsubscribe a User from Topics"
+      }
+    }
+  },
+  "security": [
+    {
+      "sec0": []
+    }
+  ],
+  "servers": [
+    {
+      "url": "https://rtm.imiconnect.io/"
+    }
+  ],
+  "x-readme": {
+    "explorer-enabled": false,
+    "headers": [
+      {
+        "key": "content-type",
+        "value": "application/json"
+      }
+    ],
+    "proxy-enabled": false
+  },
+  "x-readme-fauxas": true
+}

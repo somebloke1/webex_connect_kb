@@ -1,0 +1,481 @@
+{
+  "_id": "6a675233ec1c893d8a7f67c6",
+  "components": {
+    "headers": {
+      "RequestId": {
+        "description": "Unique ID that identifies this HTTP request.",
+        "example": "ca44810a-acc0-4f5e-851f-95c02e03110a",
+        "schema": {
+          "type": "string"
+        }
+      }
+    },
+    "parameters": {
+      "IdempotencyKey": {
+        "description": "An optional user provided value that is used to prevent duplicate requests.  API requests with an Idempotency-Key value that has been used in the previous 1 hours will be rejected as a duplicate request.",
+        "example": "5a38810a-acc0-4f5e-851f-95c02e03930c",
+        "in": "header",
+        "name": "Idempotency-Key",
+        "required": true,
+        "schema": {
+          "maxLength": 64,
+          "pattern": "^[\\w=\\-]+$",
+          "type": "string"
+        }
+      }
+    },
+    "schemas": {
+      "AcceptedTime": {
+        "description": "Timestamp in ISO8601 format when message was received by the API",
+        "example": "2021-07-29T13:45:33.404Z",
+        "type": "string"
+      },
+      "CallbackData": {
+        "description": "Additional data that will be echoed back in all callback requests made to callbackUrl",
+        "example": "customerID123|1234|new_sale",
+        "type": "string"
+      },
+      "CallbackMessageEvent": {
+        "properties": {
+          "callbackData": {
+            "$ref": "#/components/schemas/CallbackData"
+          },
+          "correlationId": {
+            "$ref": "#/components/schemas/CorrelationId"
+          },
+          "error": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ErrorResponse"
+              }
+            ],
+            "description": "This is only included if the status is FAILED"
+          },
+          "messageId": {
+            "description": "Message's unique ID",
+            "example": "96fe8948-bc7c-4eae-8118-78f0ad64f27c",
+            "type": "string"
+          },
+          "status": {
+            "description": "Message status",
+            "enum": [
+              "QUEUED",
+              "SENT",
+              "DELIVERED",
+              "FAILED"
+            ],
+            "type": "string"
+          },
+          "statusTime": {
+            "description": "Timestamp in ISO8601 format reflecting when the message status was updated",
+            "example": "2021-07-29T13:45:33.404Z",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "ContentType": {
+        "default": "TEXT",
+        "description": "Denotes whether the content string is the actual text content to be sent or a reference to a template ID.",
+        "enum": [
+          "TEXT",
+          "TEMPLATE",
+          "UNICODE",
+          "FLASH",
+          "BINARY"
+        ],
+        "type": "string"
+      },
+      "CorrelationId": {
+        "description": "User defined ID that is assigned to an individual message",
+        "example": "de36bb32-3f5d-46c9-b132-15e010a80ccc",
+        "type": "string"
+      },
+      "DltTemplateId": {
+        "description": "Specifies the DLT template ID used for this message.  This is only used in certain regions.",
+        "example": "2kRCRhhxOmT28jMn",
+        "type": "string"
+      },
+      "ErrorResponse": {
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "message": {
+            "description": "Human readable description of error state",
+            "type": "string"
+          }
+        },
+        "required": [
+          "code",
+          "message"
+        ],
+        "type": "object"
+      },
+      "MessageStatusResponse": {
+        "properties": {
+          "acceptedTime": {
+            "$ref": "#/components/schemas/AcceptedTime"
+          },
+          "content": {
+            "description": "Actual message content that was sent to the device.  This contains any substitutions that may have been made.",
+            "example": "Hello, world!",
+            "type": "string"
+          },
+          "contentType": {
+            "$ref": "#/components/schemas/ContentType"
+          },
+          "correlationId": {
+            "$ref": "#/components/schemas/CorrelationId"
+          },
+          "dltTemplateId": {
+            "$ref": "#/components/schemas/DltTemplateId"
+          },
+          "error": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ErrorResponse"
+              }
+            ],
+            "description": "This is only included if the status is FAILED"
+          },
+          "from": {
+            "description": "Short or long code that the message was sent from",
+            "example": 34343,
+            "type": "string"
+          },
+          "messageId": {
+            "description": "Message's unique ID",
+            "example": "96fe8948-bc7c-4eae-8118-78f0ad64f27c",
+            "type": "string"
+          },
+          "status": {
+            "description": "Message status",
+            "enum": [
+              "QUEUED",
+              "SENT",
+              "DELIVERED",
+              "FAILED"
+            ],
+            "type": "string"
+          },
+          "statusTime": {
+            "description": "Timestamp in ISO8601 format reflecting when the message status was updated",
+            "example": "2021-07-29T13:45:33.404Z",
+            "type": "string"
+          },
+          "to": {
+            "description": "Mobile device phone number in E.164 format that the message was sent to",
+            "example": "+19545551212",
+            "format": "E.164",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "SendSmsRequest": {
+        "properties": {
+          "callbackData": {
+            "$ref": "#/components/schemas/CallbackData"
+          },
+          "callbackUrl": {
+            "description": "If provided, events related to the delivery of this message will be POSTed to this URL.",
+            "example": "https://my.website.com/callback",
+            "format": "URI",
+            "type": "string"
+          },
+          "content": {
+            "description": "Text message content or template ID to be used to send to the mobile device",
+            "example": "Hello world!",
+            "maxLength": 1024,
+            "type": "string"
+          },
+          "contentType": {
+            "$ref": "#/components/schemas/ContentType"
+          },
+          "correlationId": {
+            "$ref": "#/components/schemas/CorrelationId"
+          },
+          "dltTemplateId": {
+            "$ref": "#/components/schemas/DltTemplateId"
+          },
+          "expireAt": {
+            "description": "If the message has not been sent by this date & time, it will be removed from the sending queue",
+            "example": "2021-08-01T14:24:33.000Z",
+            "format": "ISO8601",
+            "type": "string"
+          },
+          "from": {
+            "description": "Short or long code that the message should be sent from",
+            "example": 34343,
+            "type": "string"
+          },
+          "substitutions": {
+            "description": "Members of this object are used to replace placeholders within the content or template specified.",
+            "properties": {
+              "key1": {
+                "type": "string"
+              },
+              "key2": {
+                "type": "string"
+              },
+              "key3": {
+                "type": "string"
+              }
+            },
+            "type": "object"
+          },
+          "to": {
+            "description": "The mobile device phone number in E.164 format that should receive the message",
+            "example": "+19545551212",
+            "format": "E.164",
+            "type": "string"
+          }
+        },
+        "required": [
+          "from",
+          "to",
+          "content"
+        ],
+        "type": "object"
+      },
+      "SendSmsResponse": {
+        "properties": {
+          "acceptedTime": {
+            "$ref": "#/components/schemas/AcceptedTime"
+          },
+          "correlationId": {
+            "$ref": "#/components/schemas/CorrelationId"
+          },
+          "messageId": {
+            "description": "Unique ID identifying this message",
+            "example": "0e36bb32-5f5d-46c9-b132-85e010a80c2a",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "securitySchemes": {
+      "BearerToken": {
+        "description": "Authorization token (this can be either a JWT signed by a secret key or a service key)",
+        "scheme": "bearer",
+        "type": "http"
+      }
+    }
+  },
+  "info": {
+    "description": "",
+    "title": "SMS API",
+    "version": "1"
+  },
+  "openapi": "3.0.0",
+  "paths": {
+    "/v1/sms/messages": {
+      "post": {
+        "callbacks": {
+          "Message Events": {
+            "${request.body#/callbackUrl}": {
+              "post": {
+                "requestBody": {
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/CallbackMessageEvent"
+                      }
+                    }
+                  }
+                },
+                "responses": {
+                  "200": {
+                    "description": "Success"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/IdempotencyKey"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SendSmsRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "202": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SendSmsResponse"
+                }
+              }
+            },
+            "description": "Message has been accepted and queued for delivery",
+            "headers": {
+              "Request-Id": {
+                "$ref": "#/components/headers/RequestId"
+              }
+            }
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "code": "7000",
+                  "message": "Invalid JSON"
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "There was an error in the request and it was not accepted for delivery",
+            "headers": {
+              "Request-Id": {
+                "$ref": "#/components/headers/RequestId"
+              }
+            }
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "code": "7001",
+                  "message": "Authentication failed"
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "The provided authorization token is invalid",
+            "headers": {
+              "Request-Id": {
+                "$ref": "#/components/headers/RequestId"
+              }
+            }
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "code": "7006",
+                  "message": "Internal error"
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "There was an internal error",
+            "headers": {
+              "Request-Id": {
+                "$ref": "#/components/headers/RequestId"
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerToken": []
+          }
+        ],
+        "summary": "Send an SMS message to a mobile device",
+        "tags": [
+          "Sending"
+        ]
+      }
+    },
+    "/v1/sms/messages/{messageId}": {
+      "get": {
+        "parameters": [
+          {
+            "description": "The message ID being queried",
+            "in": "path",
+            "name": "messageId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageStatusResponse"
+                }
+              }
+            },
+            "description": "Message status",
+            "headers": {
+              "Request-Id": {
+                "$ref": "#/components/headers/RequestId"
+              }
+            }
+          },
+          "404": {
+            "description": "Invalid message ID",
+            "headers": {
+              "Request-Id": {
+                "$ref": "#/components/headers/RequestId"
+              }
+            }
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Internal error processing the request",
+            "headers": {
+              "Request-Id": {
+                "$ref": "#/components/headers/RequestId"
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerToken": []
+          }
+        ],
+        "summary": "Retrieve the status of an SMS message",
+        "tags": [
+          "Status"
+        ]
+      }
+    }
+  },
+  "servers": [
+    {
+      "url": "https://api-sandbox.imiconnect.io"
+    }
+  ],
+  "tags": [
+    {
+      "description": "APIs for sending SMS text messages",
+      "name": "Sending"
+    },
+    {
+      "description": "APIs for querying the status of sent SMS text messages",
+      "name": "Status"
+    }
+  ],
+  "x-readme": {
+    "explorer-enabled": true,
+    "proxy-enabled": true
+  }
+}

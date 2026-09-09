@@ -1,0 +1,36 @@
+{
+  "api_metadata_path": "sources/cache/developer/apple-message-for-business-_text.api.json",
+  "category": "MULTI CHANNEL COMMUNICATION API",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f6605",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "e9ec586c155eff6c486dd53e0681d2ea37193c6f2b28ce30c383115c4bd9efa9",
+    "source_path": "6abc262ddc84ee3903f1f82f7628a3be2729cb2471d7d0e0c83e269be816da96",
+    "text_path": "2e4995c5e093bd8d94ef981e052627a04f215aac563c446c331ea5d09de8ae71"
+  },
+  "headings": [
+    "Error Codes"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/apple-message-for-business-_text.md",
+  "openapi_path": "sources/cache/openapi/17f6ae4349ed5f6a46e25857f0c6102b830885166241ab82561f0d32d262af10.json",
+  "resolved_url": "https://developers.webexconnect.io/reference/apple-message-for-business-_text",
+  "retrieved_at": "2026-09-08T23:31:41+00:00",
+  "sha256_api_metadata": "5ea8835b41496926dbd6eca56eadde6cd833ba3078f445f6ea61121704c02a16",
+  "sha256_html_response": "3f22a3942b56796d82134e9a259d00e4f73db6a2cf6d84b2ffbbd7793015099a",
+  "sha256_openapi": "17f6ae4349ed5f6a46e25857f0c6102b830885166241ab82561f0d32d262af10",
+  "sha256_source_body": "6abc262ddc84ee3903f1f82f7628a3be2729cb2471d7d0e0c83e269be816da96",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/apple-message-for-business-_text.source.md",
+  "source_updated_at": "2025-10-08T21:50:02.979Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/apple-message-for-business-_text.txt",
+  "title": "Apple Message for Business: Text",
+  "url": "https://developers.webexconnect.io/reference/apple-message-for-business-_text",
+  "word_count": 1507,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/apple-message-for-business-_text.metadata.json"
+}

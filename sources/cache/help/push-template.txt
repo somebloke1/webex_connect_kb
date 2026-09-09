@@ -1,0 +1,41 @@
+## 
+
+Configuring Push Templates
+
+ [Image: Screenshot of Push Template Configuration] 
+Screenshot of Push Template Configuration
+
+To configure a new RCS template:
+
+- Go to Tools > Templates.
+
+- Click Add New Template.
+
+- Enter a Name for the template. Only lower case letters and underscores are allowed in this field. Do not use spaces in the template name.
+
+- Select the Channel as Push.
+
+- Enter the details for:
+
+- Title
+
+- Expiry In Seconds
+
+- Click one of the options below based on the type of device or OS configuration:
+
+- Android
+
+- iOS
+
+- Webpush
+
+- Interactions
+
+- Select Lock this template to prevent other users to make changes.
+
+- Click Save.
+
+## 📘
+Note
+
+Only the configured data from the earlier steps will be considered when a template ID is passed in the messaging API. The messaging API will not take into consideration any extra parameters that are sent in separately.

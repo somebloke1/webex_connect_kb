@@ -1,0 +1,265 @@
+{
+  "_id": "6a675233ec1c893d8a7f67e1:6a675233ec1c893d8a7f6607",
+  "components": {
+    "securitySchemes": {}
+  },
+  "info": {
+    "title": "Apple Message for Business_Text with Attachments",
+    "version": "6.20.0"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/": {
+      "post": {
+        "deprecated": false,
+        "description": "A text message with unicode object replacement character (\\\\\\uFFFC) at the text position where the attachment should appear in the message text. _Note: The following is an example of Text with Multiple Attachments. Examples of [other Text Attachment types](https://developers.imiconnect.io/reference/apple-message-for-business_text-with-attachments#other-text-attachments) can be found below._ _Note: Modify YourRegion in the URL to the right to reflect your tenant’s region. See [Know your endpoint page](https://developers.imiconnect.io/reference/endpoints)._",
+        "operationId": "apple-message-for-business_text-with-attachments",
+        "parameters": [
+          {
+            "description": "Applicable when you want to use service key for API authentication. Available under API tab within a service in your webexconnect tenant.",
+            "in": "header",
+            "name": "key",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "JSON Web Token (JWT) for authentication (e.g. bearer [token]) used alternatively to Service Key",
+            "in": "header",
+            "name": "authorization",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "examples": {
+                "Multiple Attachments": {
+                  "value": {
+                    "appid": "<ambAppid>",
+                    "callbackData": "",
+                    "channels": {
+                      "AppleBusinessChat": {
+                        "attachments": [
+                          {
+                            "mimeType": "image/jpeg",
+                            "url": "https://4.img-dpreview.com/files/p/E~TS590x0~articles/3925134721/0266554465.jpeg"
+                          }
+                        ],
+                        "text": "Attachment text",
+                        "type": "text"
+                      }
+                    },
+                    "conversationid": "",
+                    "correlationid": "",
+                    "deliverychannel": "AppleBusinessChat",
+                    "destination": [
+                      {
+                        "abcUserId": [
+                          "{{abcUserId}}"
+                        ]
+                      }
+                    ],
+                    "notifyurl": "",
+                    "notifyurlAuthId": "TNPBXKT09U"
+                  }
+                }
+              },
+              "schema": {
+                "properties": {
+                  "appid": {
+                    "description": "The ID of the app asset that you can obtain from the Connect platform.",
+                    "type": "string"
+                  },
+                  "callbackData": {
+                    "description": "Data that you have configured to receive on the notify Url. This is configured as a part of the request.",
+                    "type": "string"
+                  },
+                  "channels": {
+                    "description": "Channels object used for messaging",
+                    "properties": {
+                      "AppleBusinessChat": {
+                        "description": "JSON object for AppleBusinessChat configuration.",
+                        "properties": {
+                          "attachments": {
+                            "description": "Contains array of attachment objects",
+                            "items": {
+                              "properties": {
+                                "mimeType": {
+                                  "description": "The MIME type. For more information [refer](https://help.imiconnect.io/docs/supported-file-types-for-channels#apple-messages-for-business)",
+                                  "type": "string"
+                                },
+                                "url": {
+                                  "description": "Publicly accessible URL that is a direct link to the media. _Note: Please use URL-friendly file names for attachments, and avoid using special characters such as “+” in file names._",
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "url",
+                                "mimeType"
+                              ],
+                              "type": "object"
+                            },
+                            "type": "array"
+                          },
+                          "text": {
+                            "description": "The text of the text message, which can contain URLs and formatting",
+                            "type": "string"
+                          },
+                          "type": {
+                            "default": "text",
+                            "description": "Type of the outbound event. It can be text (eg: Attachment text), typing_start, typing_end, richLink, or interactivetext",
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "type",
+                          "text"
+                        ],
+                        "type": "object"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  "conversationid": {
+                    "type": "string"
+                  },
+                  "correlationid": {
+                    "description": "The correlationid is a unique identifier that you can attach to every request as a reference a particular transaction or event. This is configured as a part of the request.",
+                    "type": "string"
+                  },
+                  "delivery channel": {
+                    "default": "AppleBusinessChat",
+                    "description": "Channel used to send the message i.e., AppleBusinessChat in this case.",
+                    "type": "string"
+                  },
+                  "destination": {
+                    "description": "User's Opaque ID that uniquely identifies a user and is specific to the business.",
+                    "items": {
+                      "properties": {
+                        "abcUserId": {
+                          "default": [],
+                          "description": "User's Opaque ID _Note: For more information [refer](https://register.apple.com/resources/messages/messaging-documentation/faq)_",
+                          "items": {
+                            "type": "string"
+                          },
+                          "type": "array"
+                        }
+                      },
+                      "type": "object"
+                    },
+                    "type": "array"
+                  },
+                  "notifyurl": {
+                    "description": "Configure a URL to get notifications on delivery reports for a Apple message. This field accepts only a valid URL or a variable. If an invalid URL is passed in API request or via a variable, then such request will not be considered eligible for retries.",
+                    "type": "string"
+                  },
+                  "notifyurlAuthId": {
+                    "description": "Unique Authentication ID",
+                    "type": "string"
+                  }
+                },
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{\n    \"response\": [\n        {\n            \"code\": \"1001\",\n            \"transid\": \"3f09295d-9eb3-4c9e-8ee8-a3272e5f00c1\",\n            \"description\": \"Queued\"\n        }\n    ]\n}"
+                  }
+                },
+                "schema": {
+                  "properties": {
+                    "response": {
+                      "items": {
+                        "properties": {
+                          "code": {
+                            "example": "1001",
+                            "type": "string"
+                          },
+                          "description": {
+                            "example": "Queued",
+                            "type": "string"
+                          },
+                          "transid": {
+                            "example": "3f09295d-9eb3-4c9e-8ee8-a3272e5f00c1",
+                            "type": "string"
+                          }
+                        },
+                        "type": "object"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "200"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{\n  \"response\": {\n    \"code\": \"7001\",\n    \"description\": \"Authentication failed.\",\n    \"transid\": \"7670c9a8-131f-4166-ac30-17f6109340d6\"\n  }\n}"
+                  }
+                },
+                "schema": {
+                  "properties": {
+                    "response": {
+                      "properties": {
+                        "code": {
+                          "example": "7001",
+                          "type": "string"
+                        },
+                        "description": {
+                          "example": "Authentication failed.",
+                          "type": "string"
+                        },
+                        "transid": {
+                          "example": "7670c9a8-131f-4166-ac30-17f6109340d6",
+                          "type": "string"
+                        }
+                      },
+                      "type": "object"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "400"
+          }
+        },
+        "summary": "Apple Message for Business: Text with Attachments"
+      }
+    }
+  },
+  "security": [
+    {}
+  ],
+  "servers": [
+    {
+      "url": "https://api.{YourRegion}.webexconnect.io/resources/v1/messaging",
+      "variables": {
+        "YourRegion": {
+          "default": "YourRegion"
+        }
+      }
+    }
+  ],
+  "x-readme": {
+    "explorer-enabled": true,
+    "headers": [],
+    "proxy-enabled": true
+  },
+  "x-readme-fauxas": true
+}

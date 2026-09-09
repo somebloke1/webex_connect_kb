@@ -1,0 +1,11 @@
+The Watchtower Dashboard tracks Integration and Throughput utilization, with dedicated tabs for each.
+
+- Integrations Tab: This tab offers insights into the operational health of the platform’s integrations with other systems. It enables users to continuously monitor the status of these integrations and drill down into specific failures when they occur. This includes analyzing the root causes of integration issues, which helps in identifying patterns and resolving problems efficiently to maintain smooth inter-system communication.
+
+- Throughput Utilization Tab: This tab focuses on displaying real-time Transactions Per Second (TPS) for both the Messaging API and the Event API. In addition to TPS metrics, the dashboard highlights the number of transactions that were rejected due to TPS limits or message volume thresholds. It also provides visibility into channel-level utilization, allowing users to understand how traffic is distributed across different channels.
+
+ [Image: Screenshot of Watchtower Dashboard- Integration Overview] 
+Watchtower Dashboard - Integrations Overview
+
+ [Image: Screenshot for Watchtower Dashboard - Throughput Utilization] 
+Watchtower Dashboard - Throughput Utilization

@@ -1,0 +1,142 @@
+The WEBEX CAMPAIGN Profile node enables you to manage any profile of selected IMICAMPAIGN  accounts, which includes creating, updating, fetching, and deleting them.
+
+## 📘
+Note:
+
+This node is available in Node Palette only if it has been provisioned for you.
+
+ [Image: Screenshot of Webex Campaign Profile Node.] 
+WEBEX CAMPAIGN Profile Node
+
+## 
+
+Manage Customer Profiles
+
+Use this node to perform regular CRUD operations with profiles directly on IMICAMPAIGN from Webex Connect. Double-click the node to configure it.
+
+ [Image: Screenshot of Profile Node Configuration Page.] 
+Node Configuration
+
+## 
+
+Fetch a Profile##
+
+To fetch a profile:
+
+- Select Fetch Profile in the Actions drop-down list box.
+
+- Select the required Profile. The Profile corresponds to an account on IMICAMPAIGN.
+
+- Select the Group to which the selected profile belongs.
+
+- Enter a Primary Key that uniquely identifies the selected profile.
+
+- Click Save.
+
+ [Image: Screenshot of Fetch a Profile.] 
+Fetch Profile
+
+The specified customer profile is fetched. 
+
+## 
+
+Update a Profile##
+
+To update a profile:
+
+- Select Update Profile in the Actions drop-down list box.
+
+- Select the required Profile. The Profile corresponds to an account on IMICAMPAIGN .
+
+ [Image: Screenshot of Update a Profile] 
+Update Profile
+
+- Select the Group to which the selected profile belongs.
+
+- Enter a Primary Key that uniquely identifies the selected profile.
+
+- Select the Attribute that you want to update. The available attributes are:
+
+- MSISDN - the mobile number of the customer
+
+- Email - the email address of the customer
+
+- Country - the country of residence of the customer.
+
+- Enter a Value for the selected attribute.
+
+- Click Add Attribute if you want to add other attributes and repeat steps 5 and 6.
+
+- Click Save.
+
+The specified customer profile is updated. 
+
+## 
+
+Create a Profile##
+
+To update a profile:
+
+- Select Create Profile in the Actions drop-down list box.
+
+- Select the required Profile. The Profile corresponds to an account on IMICAMPAIGN.
+
+ [Image: Screenshot of Create Profile] 
+Create Profile
+
+- Select the Group to which the selected profile belongs.
+
+- Enter a Primary Key that uniquely identifies the selected profile.
+
+- Select the Attribute that you want to update. The available attributes are:
+
+- MSISDN - the mobile number of the customer
+
+- Email - the email address of the customer
+
+- Country - the country of residence of the customer.
+
+- Enter a Value for the selected attribute.
+
+- Click Add Attribute if you want to add other attributes and repeat steps 5 and 6.
+
+- Click Save.
+
+A customer profile with specified details is created. 
+
+## 
+
+Delete a Profile##
+
+To delete a profile:
+
+- Select Fetch Profile in the Actions drop-down list box.
+
+- Select the required Profile. The Profile corresponds to an account on IMICAMPAIGN.
+
+- Enter a Primary Key that uniquely identifies the selected profile.
+
+ [Image: Screenshot of Delete Profile] 
+Delete Profile
+
+- Click Save.
+
+The specified customer profile is deleted. 
+
+## 
+
+Node Outcomes
+
+You can see the list of possible node outcomes for this node under the Node Outcomes pane.
+
+ | Node Edge | Node Event/Outcome
+
+ | Success (green) | onSuccess - the flow exits through this node when it is a success
+
+ | Error (red) | onError - the flow exits through this node outcome when there is an error
+
+## 
+
+Transition Actions
+
+Use this tab to configure the transition actions for On-enter/On-leave events. However, configuring transition actions is optional. For detailed instructions about configuring the transition actions, see Node Transition Actions.

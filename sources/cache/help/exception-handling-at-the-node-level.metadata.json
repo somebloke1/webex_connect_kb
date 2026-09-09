@@ -1,0 +1,35 @@
+{
+  "category": "TUTORIALS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257819",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "1a784ab7412a433f87ac3507b8bac24871a17eaadd144e917e864aa30c5bc4ed",
+    "source_path": "f32204f614191936cbb0049feb4064f7a6468291dc535a3af662809e8dea0b85",
+    "text_path": "e1ea425b9731750b4ceba7b148936e1d6117212d14168f25e6898b14325f5484"
+  },
+  "headings": [
+    "1. Configure \"onError\" event for a node",
+    "2. Configure \"onPolicyFail\" event for a node",
+    "3. Configure \"onTimeOut\" event for a node"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/exception-handling-at-the-node-level.md",
+  "resolved_url": "https://help.webexconnect.io/docs/exception-handling-at-the-node-level",
+  "retrieved_at": "2026-09-08T23:28:49+00:00",
+  "sha256_html_response": "d6c6dd51eb5a49907291e211ed971d06418d53fbb1d8c127a903c8638a780c6c",
+  "sha256_source_body": "f32204f614191936cbb0049feb4064f7a6468291dc535a3af662809e8dea0b85",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/exception-handling-at-the-node-level.source.md",
+  "source_updated_at": "2026-01-26T13:25:08.685Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/exception-handling-at-the-node-level.txt",
+  "title": "Exception handling at the node level",
+  "url": "https://help.webexconnect.io/docs/exception-handling-at-the-node-level",
+  "word_count": 518,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/exception-handling-at-the-node-level.metadata.json"
+}

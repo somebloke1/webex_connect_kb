@@ -1,0 +1,32 @@
+{
+  "api_metadata_path": "sources/cache/developer/sandbox-answer-incoming-calls-to-a-connect-asset-handle-via-events-and-actions.api.json",
+  "category": "API Reference for Sandbox",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f6647",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "676c83970db637e9ccbcfa54a3b43a49bf0ad3f0aeaba02d4b322b2ff6f16d51",
+    "source_path": "4b25ce83d7ef7aceb849e664ac902ca0d750b9a23be5d37770858c87791fa196",
+    "text_path": "08f6ddaefe63d75588a5c91270e13c408029cea0f8cba40733a6492afa27f616"
+  },
+  "headings": [],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/sandbox-answer-incoming-calls-to-a-connect-asset-handle-via-events-and-actions.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/sandbox-answer-incoming-calls-to-a-connect-asset-handle-via-events-and-actions",
+  "retrieved_at": "2026-09-08T23:31:40+00:00",
+  "sha256_api_metadata": "575f65b7d8dc3ea0b617314bc47e22705dc85fc80ee114e6faa20ada4e8aafe2",
+  "sha256_html_response": "17859f50d963a400e9b210ff03eb9c341f17812457b2ac868f37fda74c50c3da",
+  "sha256_source_body": "4b25ce83d7ef7aceb849e664ac902ca0d750b9a23be5d37770858c87791fa196",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/sandbox-answer-incoming-calls-to-a-connect-asset-handle-via-events-and-actions.source.md",
+  "source_updated_at": "2026-01-22T15:20:14.649Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/sandbox-answer-incoming-calls-to-a-connect-asset-handle-via-events-and-actions.txt",
+  "title": "Answer Incoming Calls to a Connect Asset (Handle via Events and Actions)",
+  "url": "https://developers.webexconnect.io/reference/sandbox-answer-incoming-calls-to-a-connect-asset-handle-via-events-and-actions",
+  "word_count": 158,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/sandbox-answer-incoming-calls-to-a-connect-asset-handle-via-events-and-actions.metadata.json"
+}

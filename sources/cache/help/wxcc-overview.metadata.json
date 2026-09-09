@@ -1,0 +1,31 @@
+{
+  "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257876",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "ad7b7cf527a6428ba0fe241b97a2f3082a9064cef9c4c252b0a7049f546e57ad",
+    "source_path": "1bbd1e5e11e86f26bc565d8f82e417db7acda87afc02eda91f85daab0dbabe08",
+    "text_path": "714483ea481c789c18dd2de2f60844e1174a819b55d3d820ed7897f6621d7630"
+  },
+  "headings": [],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/wxcc-overview.md",
+  "resolved_url": "https://help.webexconnect.io/docs/wxcc-overview",
+  "retrieved_at": "2026-09-08T23:29:11+00:00",
+  "sha256_html_response": "d844cf63a626467afbbc6ce2c279fc2ab37c92abe79bdb3cc786f82a2c80ad07",
+  "sha256_source_body": "1bbd1e5e11e86f26bc565d8f82e417db7acda87afc02eda91f85daab0dbabe08",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/wxcc-overview.source.md",
+  "source_updated_at": "2026-04-14T07:22:43.422Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/wxcc-overview.txt",
+  "title": "Overview - WXCC",
+  "url": "https://help.webexconnect.io/docs/wxcc-overview",
+  "word_count": 394,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/wxcc-overview.metadata.json"
+}

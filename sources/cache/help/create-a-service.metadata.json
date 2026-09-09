@@ -1,0 +1,31 @@
+{
+  "category": "SERVICES & FLOWS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd81825784e",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "c5548c593536f7c8e63d2fcce6c10cdfca32eb50a4c39c7c09364810a285d8e9",
+    "source_path": "aebfc5a06493d70cd59781a6eb41745354160b7e4cfe9a3c4b3b1f7cd0e0dee1",
+    "text_path": "c86b28425d75c34095a763a67a9472358a9719aae208389792ff677f3714a5a1"
+  },
+  "headings": [],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/create-a-service.md",
+  "resolved_url": "https://help.webexconnect.io/docs/create-a-service",
+  "retrieved_at": "2026-09-08T23:28:50+00:00",
+  "sha256_html_response": "41a74710f7760aebf7a55eee0ab46abb2d1bc598282c472ba625f234ff429c0d",
+  "sha256_source_body": "aebfc5a06493d70cd59781a6eb41745354160b7e4cfe9a3c4b3b1f7cd0e0dee1",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/create-a-service.source.md",
+  "source_updated_at": "2026-01-26T13:30:50.212Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/create-a-service.txt",
+  "title": "Creating a Service",
+  "url": "https://help.webexconnect.io/docs/create-a-service",
+  "word_count": 146,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/create-a-service.metadata.json"
+}

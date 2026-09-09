@@ -1,0 +1,33 @@
+{
+  "category": "WEBEX CONNECT SANDBOX",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182578b6",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "59e17efe0279d8152d3ebf06cd5c4c9fefa379a801fa6b8521eacbff6aaad179",
+    "source_path": "c422ac2e19754b5d9e71d60931b6d3dbb6508f99c4f4ecde3a7b054a3b250618",
+    "text_path": "35b62dc3e44257d0e65114114ece6db9e67f8db99afd46bcbf2404a916be2e32"
+  },
+  "headings": [
+    "📘Note"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/webex-ai-agent-in-sandbox.md",
+  "resolved_url": "https://help.webexconnect.io/docs/webex-ai-agent-in-sandbox",
+  "retrieved_at": "2026-09-08T23:28:49+00:00",
+  "sha256_html_response": "58066e93e4675a5506919a39eaef2bbe8463246f3c3d0859c293eb9cbc967298",
+  "sha256_source_body": "c422ac2e19754b5d9e71d60931b6d3dbb6508f99c4f4ecde3a7b054a3b250618",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/webex-ai-agent-in-sandbox.source.md",
+  "source_updated_at": "2026-01-26T13:24:00.543Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/webex-ai-agent-in-sandbox.txt",
+  "title": "Accessing Webex AI Agent Studio in Sandbox",
+  "url": "https://help.webexconnect.io/docs/webex-ai-agent-in-sandbox",
+  "word_count": 188,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/webex-ai-agent-in-sandbox.metadata.json"
+}

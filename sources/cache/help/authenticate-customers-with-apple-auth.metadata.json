@@ -1,0 +1,36 @@
+{
+  "category": "TUTORIALS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257855",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "5a8d6338b5c73dd02df4c5f012561da57c65b51fcaa21ca5c1d9aec17f164c5f",
+    "source_path": "a15a2325a8741817b7df50bdae31668484eaf19064c0f06a92a90ab9dd6a212f",
+    "text_path": "1d1ee449a3839b186e306ac198e296b973792a2218c2f41dbbd141061e463206"
+  },
+  "headings": [
+    "Prerequisites",
+    "Using Authentication in a flow",
+    "Sample API Request",
+    "Webhook Payload"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/authenticate-customers-with-apple-auth.md",
+  "resolved_url": "https://help.webexconnect.io/docs/authenticate-customers-with-apple-auth",
+  "retrieved_at": "2026-09-08T23:28:50+00:00",
+  "sha256_html_response": "5a48398433eb39a98815fe4c6076874e7d6c4f7c4305c4d08119c7ccf5c8981d",
+  "sha256_source_body": "a15a2325a8741817b7df50bdae31668484eaf19064c0f06a92a90ab9dd6a212f",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/authenticate-customers-with-apple-auth.source.md",
+  "source_updated_at": "2026-04-15T08:31:14.322Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/authenticate-customers-with-apple-auth.txt",
+  "title": "Authenticating Customers with Apple Auth",
+  "url": "https://help.webexconnect.io/docs/authenticate-customers-with-apple-auth",
+  "word_count": 517,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/authenticate-customers-with-apple-auth.metadata.json"
+}

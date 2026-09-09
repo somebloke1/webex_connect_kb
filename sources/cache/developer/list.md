@@ -1,0 +1,279 @@
+# List All Topics
+
+Source: https://developers.webexconnect.io/reference/list
+Documentation version: 6.20.0
+Retrieved: 2026-09-08T23:31:51+00:00
+
+
+
+> **Know Your Endpoint**
+> 
+> Based on the domain you use to log in to imiconnect, the endpoint for your API varies. See the [endpoint](https://developers.imiconnect.io/reference/endpoints) section to understand which endpoint to use for your domain.
+
+
+**For Topic**: 
+
+The following is the error code displayed when the Topic messaging is disabled for your tenant.
+
+
+```json
+{
+
+"code": 69,
+
+"description": "Topics based messaging feature is not available for your tenant"
+
+}
+```
+
+
+
+
+
+> **Note**
+> 
+> To enable the Topic messaging for your tenant, contact your account manager.
+
+
+
+## API reference metadata
+
+These are source metadata and examples. `api.auth` is ReadMe metadata; verify authentication in the documented headers/security scheme.
+
+```json
+{
+  "results": {
+    "codes": [
+      {
+        "language": "json",
+        "code": "{\n\t\"topics\" : [{\n\t\t\t\"id\" : \"591d44c3e4b09eee109c1541\",\n\t\t\t\"ref\" : \"World News\",\n\t\t\t\"created_on\" : \"2017-05-26T18 12:22:51.001Z\",\n\t\t\t\"description\" : \"World wide news will be anounced\",\n\t\t\t\"topic\" : \"news\",\n\t\t\t\"topic_group\" : \"newsGroup\"\n\t\t}, {\n\t\t\t\"id\" : \"591d7b7de4b09e0d95d4f73d\",\n\t\t\t\"ref\" : \"offer ref\",\n\t\t\t\"created_on\" : \"2017-05-26T18 12:22:51.001Z\",\n\t\t\t\"description\" : \"Get Benifits by subscribe\",\n\t\t\t\"topic\" : \"offers\",\n\t\t\t\"topic_group\" : \"Extra Benifits\"\n\t\t}\n\t],\n\t\"trans_id\" : \"0c19ad72-179c-4d89-bf6d-2e104e3d62f5\",\n\t\"description\" : \"success\",\n\t\"code\" : \"0\"\n}",
+        "status": 200
+      }
+    ]
+  },
+  "settings": "",
+  "examples": {
+    "codes": [
+      {
+        "code": "-X GET https://{{rtmsapi}}/rtmsAPI/api/v1/apps/{{inappid}}/topics/\n-H \"secretKey: {secretKey}\"\n",
+        "language": "curl"
+      },
+      {
+        "code": "var request=require(\"request\");\n var options = {\n          method: 'GET',\n          uri: ' https://{{rtmsapi}}/rtmsAPI/api/v1/apps/{{inappid}}/topics/',\n          headers: {\n\t'secretKey': '{secretKey}'\n            }\n        };\n  request(options, function(error, response, body) {\n               if(error){\n                  console.log(error);\n             }else{\n                  console.log(response);\n            }\n        });\n",
+        "language": "json",
+        "name": "Node"
+      },
+      {
+        "code": "require 'httparty'\n# Create the HTTP objects and post request\nhttp = HTTParty.get(\"https://{{rtmsapi}}/rtmsAPI/api/v1/apps/{{inappid}}/topics\",\n    :headers => {\n                          'secretKey ' => '{secretKey}’\n            }\n)\n# Print on console\nputs http\n",
+        "language": "ruby"
+      },
+      {
+        "code": "var data = null;\n\nvar xhr = new XMLHttpRequest();\n\nxhr.addEventListener(\"readystatechange\", function () {\n  if (this.readyState === this.DONE) {\n    console.log(this.responseText);\n  }\n});\n\nxhr.open(\"GET\", \" https://{{rtmsapi}}/rtmsAPI/api/v1/apps/{{inappid}}/topics/\");\nxhr.setRequestHeader(\"secretKey\", \"{secretKey}\");\nxhr.send(data);\n",
+        "language": "javascript"
+      },
+      {
+        "code": "import requests\n\nurl = \" https://{{rtmsapi}}/rtmsAPI/api/v1/apps/{{inappid}}/topics/\"\n\nheaders = {'secretKey': '{secretKey}’}\n\nresponse = requests.request(\"GET\", url, headers=headers)\n\nprint(response.text)\n",
+        "language": "python"
+      }
+    ]
+  },
+  "auth": "required",
+  "params": [
+    {
+      "name": "Content-Type",
+      "type": "string",
+      "enumValues": "",
+      "default": "",
+      "desc": "Application/JSON",
+      "required": false,
+      "in": "header",
+      "ref": "",
+      "_id": "5f521b42cca4df0020ca5a60",
+      "id": "5f521b42cca4df0020ca5a60"
+    },
+    {
+      "name": "secretKey",
+      "type": "string",
+      "enumValues": "",
+      "default": "",
+      "desc": "Client key that can be accessed from your app asset configuration page on imiconnect platform",
+      "required": false,
+      "in": "header",
+      "ref": "",
+      "_id": "5f521b42cca4df0020ca5a5f",
+      "id": "5f521b42cca4df0020ca5a5f"
+    },
+    {
+      "name": "appid",
+      "type": "string",
+      "enumValues": "",
+      "default": "",
+      "desc": "The ID of the app asset that you can obtain from IMIconnect platform",
+      "required": false,
+      "in": "path",
+      "ref": "",
+      "_id": "5f6d87463481d40052c796a0",
+      "id": "5f6d87463481d40052c796a0"
+    }
+  ],
+  "url": "/apps/$(appid)/topics",
+  "method": "get",
+  "apiSetting": "6a675233ec1c893d8a7f67bc"
+}
+```
+
+## OpenAPI operation and component schemas
+
+```json
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Topic APIs",
+    "version": "6.20.0"
+  },
+  "servers": [
+    {
+      "url": "https://rtm.imiconnect.io/"
+    }
+  ],
+  "security": [
+    {
+      "sec0": []
+    }
+  ],
+  "path": "/apps/$(appid)/topics",
+  "method": "get",
+  "path_parameters": [],
+  "operation": {
+    "summary": "List All Topics",
+    "description": "This API is used to list the topics for a specific appID",
+    "operationId": "list",
+    "parameters": [
+      {
+        "name": "Content-Type",
+        "in": "header",
+        "description": "Application/JSON",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "secretKey",
+        "in": "header",
+        "description": "Client key that can be accessed from your app asset configuration page on imiconnect platform",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "appid",
+        "in": "path",
+        "description": "The ID of the app asset that you can obtain from IMIconnect platform",
+        "schema": {
+          "type": "string"
+        },
+        "required": true
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "200",
+        "content": {
+          "application/json": {
+            "examples": {
+              "Result": {
+                "value": "{\n\t\"topics\" : [{\n\t\t\t\"id\" : \"591d44c3e4b09eee109c1541\",\n\t\t\t\"ref\" : \"World News\",\n\t\t\t\"created_on\" : \"2017-05-26T18 12:22:51.001Z\",\n\t\t\t\"description\" : \"World wide news will be anounced\",\n\t\t\t\"topic\" : \"news\",\n\t\t\t\"topic_group\" : \"newsGroup\"\n\t\t}, {\n\t\t\t\"id\" : \"591d7b7de4b09e0d95d4f73d\",\n\t\t\t\"ref\" : \"offer ref\",\n\t\t\t\"created_on\" : \"2017-05-26T18 12:22:51.001Z\",\n\t\t\t\"description\" : \"Get Benifits by subscribe\",\n\t\t\t\"topic\" : \"offers\",\n\t\t\t\"topic_group\" : \"Extra Benifits\"\n\t\t}\n\t],\n\t\"trans_id\" : \"0c19ad72-179c-4d89-bf6d-2e104e3d62f5\",\n\t\"description\" : \"success\",\n\t\"code\" : \"0\"\n}"
+              }
+            },
+            "schema": {
+              "type": "object",
+              "properties": {
+                "topics": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "example": "591d44c3e4b09eee109c1541"
+                      },
+                      "ref": {
+                        "type": "string",
+                        "example": "World News"
+                      },
+                      "created_on": {
+                        "type": "string",
+                        "example": "2017-05-26T18 12:22:51.001Z"
+                      },
+                      "description": {
+                        "type": "string",
+                        "example": "World wide news will be anounced"
+                      },
+                      "topic": {
+                        "type": "string",
+                        "example": "news"
+                      },
+                      "topic_group": {
+                        "type": "string",
+                        "example": "newsGroup"
+                      }
+                    }
+                  }
+                },
+                "trans_id": {
+                  "type": "string",
+                  "example": "0c19ad72-179c-4d89-bf6d-2e104e3d62f5"
+                },
+                "description": {
+                  "type": "string",
+                  "example": "success"
+                },
+                "code": {
+                  "type": "string",
+                  "example": "0"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "deprecated": false,
+    "x-readme": {
+      "code-samples": [
+        {
+          "language": "curl",
+          "code": "-X GET https://{{rtmsapi}}/rtmsAPI/api/v1/apps/{{inappid}}/topics/\n-H \"secretKey: {secretKey}\"\n"
+        },
+        {
+          "language": "ruby",
+          "code": "require 'httparty'\n# Create the HTTP objects and post request\nhttp = HTTParty.get(\"https://{{rtmsapi}}/rtmsAPI/api/v1/apps/{{inappid}}/topics\",\n    :headers => {\n                          'secretKey ' => '{secretKey}’\n            }\n)\n# Print on console\nputs http\n"
+        },
+        {
+          "language": "javascript",
+          "code": "var data = null;\n\nvar xhr = new XMLHttpRequest();\n\nxhr.addEventListener(\"readystatechange\", function () {\n  if (this.readyState === this.DONE) {\n    console.log(this.responseText);\n  }\n});\n\nxhr.open(\"GET\", \" https://{{rtmsapi}}/rtmsAPI/api/v1/apps/{{inappid}}/topics/\");\nxhr.setRequestHeader(\"secretKey\", \"{secretKey}\");\nxhr.send(data);\n"
+        },
+        {
+          "language": "python",
+          "code": "import requests\n\nurl = \" https://{{rtmsapi}}/rtmsAPI/api/v1/apps/{{inappid}}/topics/\"\n\nheaders = {'secretKey': '{secretKey}’}\n\nresponse = requests.request(\"GET\", url, headers=headers)\n\nprint(response.text)\n"
+        }
+      ],
+      "samples-languages": [
+        "curl",
+        "ruby",
+        "javascript",
+        "python"
+      ]
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "sec0": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "key"
+      }
+    }
+  }
+}
+```

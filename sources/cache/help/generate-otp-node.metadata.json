@@ -1,0 +1,40 @@
+{
+  "category": "SERVICES & FLOWS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182577d2",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "909caa19a7777ea3bba6405a57166a7bfbf3f72fd93dddc96a24159b64e82a32",
+    "source_path": "f424bd9a7c1e9efbf97de235d742da04b4a688dfa5fc8c9760dacd9fb98eea98",
+    "text_path": "6705371a772750e808e25ccae6b5fc051611d06ae3724482ee7fd9eecc7327c5"
+  },
+  "headings": [
+    "🚧Known UI issue",
+    "Node Configuration",
+    "🚧OTP Node",
+    "Input Variables",
+    "Output Variables",
+    "Node Outcomes",
+    "Transition Actions",
+    "Example"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/generate-otp-node.md",
+  "resolved_url": "https://help.webexconnect.io/docs/generate-otp-node",
+  "retrieved_at": "2026-09-08T23:28:54+00:00",
+  "sha256_html_response": "b0dfe3961091df3324aa1ab672a1cffcb777742acf1aa1f6491fa8bb96817199",
+  "sha256_source_body": "f424bd9a7c1e9efbf97de235d742da04b4a688dfa5fc8c9760dacd9fb98eea98",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/generate-otp-node.source.md",
+  "source_updated_at": "2026-04-15T09:31:42.270Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/generate-otp-node.txt",
+  "title": "Generate OTP Node",
+  "url": "https://help.webexconnect.io/docs/generate-otp-node",
+  "word_count": 854,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/generate-otp-node.metadata.json"
+}

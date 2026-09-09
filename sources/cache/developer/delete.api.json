@@ -1,0 +1,226 @@
+{
+  "api": {
+    "examples": {
+      "codes": [
+        {
+          "code": "-X DELETE https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/topics/{topicid}-H \"secretKey: {secretKey}\"",
+          "language": "curl"
+        },
+        {
+          "code": "var request=require(\"request\");\n var options = {\n          method: 'DELETE',\n          uri: ' https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/topics/{topicid}',\n          headers: {\n\t'secretKey': '{secretKey}'\n            }\n        };\n  request(options, function(error, response, body) {\n               if(error){\n                  console.log(error);\n             }else{\n                  console.log(response);\n            }\n        });\n",
+          "language": "json",
+          "name": "Node"
+        },
+        {
+          "code": "require 'httparty'\n# Create the HTTP objects and post request\nhttp = HTTParty.delete(\"https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/topics/{topicid}\",\n    :headers => {\n                          'secretKey ' => '{secretKey}’\n            }\n)\n# Print on console\nputs http\n",
+          "language": "ruby"
+        },
+        {
+          "code": "var data = null;\n\nvar xhr = new XMLHttpRequest();\n\nxhr.addEventListener(\"readystatechange\", function () {\n  if (this.readyState === this.DONE) {\n    console.log(this.responseText);\n  }\n});\n\nxhr.open(\"DELETE\", \" https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/topics/{topicid}\");\nxhr.setRequestHeader(\"secretKey\", \"{secretKey}\");\nxhr.send(data);\n",
+          "language": "javascript"
+        },
+        {
+          "code": "import requests\n\nurl = \" https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/topics/{topicid}\"\n\nheaders = {'secretKey': '{secretKey}’}\n\nresponse = requests.request(\"DELETE\", url, headers=headers)\n\nprint(response.text)\n",
+          "language": "python"
+        }
+      ]
+    },
+    "settings": "",
+    "results": {
+      "codes": [
+        {
+          "language": "json",
+          "code": "{\n    \"code\": 0,\n    \"description\": \"success\",\n    \"trans_id\": \"03fc3921-1a68-4274-a151-f60c3fd0c2c8\"\n}\n",
+          "status": 200
+        }
+      ]
+    },
+    "auth": "required",
+    "params": [
+      {
+        "name": "Content-Type",
+        "type": "string",
+        "enumValues": "",
+        "default": "",
+        "desc": "Application/JSON",
+        "required": false,
+        "in": "header",
+        "ref": "",
+        "_id": "5f5219051d9c99002b28866a",
+        "id": "5f5219051d9c99002b28866a"
+      },
+      {
+        "name": "secretKey",
+        "type": "string",
+        "enumValues": "",
+        "default": "",
+        "desc": "Client key that can be accessed from your app asset configuration page on imiconnect platform",
+        "required": false,
+        "in": "header",
+        "ref": "",
+        "_id": "5f5219051d9c99002b288669",
+        "id": "5f5219051d9c99002b288669"
+      },
+      {
+        "name": "appid",
+        "type": "string",
+        "enumValues": "",
+        "default": "",
+        "desc": "The ID of the app asset that you can obtain from IMIconnect platform",
+        "required": false,
+        "in": "path",
+        "ref": "",
+        "_id": "5f6d86e54589ca001525772f",
+        "id": "5f6d86e54589ca001525772f"
+      },
+      {
+        "name": "topicid",
+        "type": "string",
+        "enumValues": "",
+        "default": "",
+        "desc": "Specifies the ID of the topic",
+        "required": false,
+        "in": "path",
+        "ref": "",
+        "_id": "5f6d86e54589ca001525772e",
+        "id": "5f6d86e54589ca001525772e"
+      }
+    ],
+    "url": "/apps/$(appid)/topics/$(topicid)",
+    "method": "delete",
+    "apiSetting": "6a675233ec1c893d8a7f67bc"
+  },
+  "swagger": {
+    "path": "/apps/$(appid)/topics/$(topicid)"
+  },
+  "oas_public_id": "@imiconnect-apis/v6.20.0#wk2xm71r8mur",
+  "selected_openapi": {
+    "openapi": "3.1.0",
+    "info": {
+      "title": "Topic APIs",
+      "version": "6.20.0"
+    },
+    "servers": [
+      {
+        "url": "https://rtm.imiconnect.io/"
+      }
+    ],
+    "security": [
+      {
+        "sec0": []
+      }
+    ],
+    "path": "/apps/$(appid)/topics/$(topicid)",
+    "method": "delete",
+    "path_parameters": [],
+    "operation": {
+      "summary": "Delete a Topic",
+      "description": "This API is used to delete a topic.",
+      "operationId": "delete",
+      "parameters": [
+        {
+          "name": "Content-Type",
+          "in": "header",
+          "description": "Application/JSON",
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "secretKey",
+          "in": "header",
+          "description": "Client key that can be accessed from your app asset configuration page on imiconnect platform",
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "appid",
+          "in": "path",
+          "description": "The ID of the app asset that you can obtain from IMIconnect platform",
+          "schema": {
+            "type": "string"
+          },
+          "required": true
+        },
+        {
+          "name": "topicid",
+          "in": "path",
+          "description": "Specifies the ID of the topic",
+          "schema": {
+            "type": "string"
+          },
+          "required": true
+        }
+      ],
+      "responses": {
+        "200": {
+          "description": "200",
+          "content": {
+            "application/json": {
+              "examples": {
+                "Result": {
+                  "value": "{\n    \"code\": 0,\n    \"description\": \"success\",\n    \"trans_id\": \"03fc3921-1a68-4274-a151-f60c3fd0c2c8\"\n}\n"
+                }
+              },
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "code": {
+                    "type": "integer",
+                    "example": 0,
+                    "default": 0
+                  },
+                  "description": {
+                    "type": "string",
+                    "example": "success"
+                  },
+                  "trans_id": {
+                    "type": "string",
+                    "example": "03fc3921-1a68-4274-a151-f60c3fd0c2c8"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "deprecated": false,
+      "x-readme": {
+        "code-samples": [
+          {
+            "language": "curl",
+            "code": "-X DELETE https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/topics/{topicid}-H \"secretKey: {secretKey}\""
+          },
+          {
+            "language": "ruby",
+            "code": "require 'httparty'\n# Create the HTTP objects and post request\nhttp = HTTParty.delete(\"https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/topics/{topicid}\",\n    :headers => {\n                          'secretKey ' => '{secretKey}’\n            }\n)\n# Print on console\nputs http\n"
+          },
+          {
+            "language": "javascript",
+            "code": "var data = null;\n\nvar xhr = new XMLHttpRequest();\n\nxhr.addEventListener(\"readystatechange\", function () {\n  if (this.readyState === this.DONE) {\n    console.log(this.responseText);\n  }\n});\n\nxhr.open(\"DELETE\", \" https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/topics/{topicid}\");\nxhr.setRequestHeader(\"secretKey\", \"{secretKey}\");\nxhr.send(data);\n"
+          },
+          {
+            "language": "python",
+            "code": "import requests\n\nurl = \" https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/topics/{topicid}\"\n\nheaders = {'secretKey': '{secretKey}’}\n\nresponse = requests.request(\"DELETE\", url, headers=headers)\n\nprint(response.text)\n"
+          }
+        ],
+        "samples-languages": [
+          "curl",
+          "ruby",
+          "javascript",
+          "python"
+        ]
+      }
+    },
+    "components": {
+      "securitySchemes": {
+        "sec0": {
+          "type": "apiKey",
+          "in": "header",
+          "name": "key"
+        }
+      }
+    }
+  }
+}

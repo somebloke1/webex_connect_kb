@@ -1,0 +1,35 @@
+This node calls Webex Engage Update Conversation API to update the conversation on Webex Engage. While configuring flows in Webex Connect, you’d need to use this node for updating the conversation.
+
+## 
+
+Authorization
+
+Refer to section Node Authorizations for more information.
+
+## 
+
+Methods and Outcomes
+
+Here’s a brief description of various methods, and corresponding output variables and node outcomes associated with each of the methods.
+
+Method Name - Update Conversation
+
+ [Image: Interface section displaying the method name "Update Conversation"] 
+Interface section displaying the method name "Update Conversation"
+
+ | Method Name | Output  Variables | Node Outcomes
+
+ | Update Conversation | transID |    onInvalidData
+
+ onError
+ onInvalidChoice
+
+ onauthorizationfail
+ Failure
+
+ onConversationUpdatedFailure
+ onConversationUpdatedSuccess
+
+ Success
+
+* onTimeout

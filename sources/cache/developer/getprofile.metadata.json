@@ -1,0 +1,36 @@
+{
+  "api_metadata_path": "sources/cache/developer/getprofile.api.json",
+  "category": "Profile API v2",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f64e4",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "58e2c143cd9e333768856f56f979fcb29db748f7f0b7ce72b0b88f12c7f91e8a",
+    "source_path": "f936e821f1e2d0d24b0d80cbdbf1a2c3af23de9cf8aaf3937f6621741581e28d",
+    "text_path": "e4edae7587dacb6328e99a6431031c9961da6d969412ee7003bd8d9533dddf9f"
+  },
+  "headings": [
+    "**Status Codes**"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/getprofile.md",
+  "openapi_path": "sources/cache/openapi/6c7a2ccf36cdbbd15f78640aa97b8fa42a01475d083f6f202cd403cdb21d64c2.json",
+  "resolved_url": "https://developers.webexconnect.io/reference/getprofile",
+  "retrieved_at": "2026-09-08T23:31:49+00:00",
+  "sha256_api_metadata": "ea911377abb80e9153baa58566900e0562e00ba69303b93eeb41493cbcaa17dd",
+  "sha256_html_response": "95a5734b34ead2178e7093936c26b8bd9e84bc8aa9a7463f90c4f5aa616df195",
+  "sha256_openapi": "6c7a2ccf36cdbbd15f78640aa97b8fa42a01475d083f6f202cd403cdb21d64c2",
+  "sha256_source_body": "f936e821f1e2d0d24b0d80cbdbf1a2c3af23de9cf8aaf3937f6621741581e28d",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/getprofile.source.md",
+  "source_updated_at": "2026-04-16T06:01:25.768Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/getprofile.txt",
+  "title": "Get Customer Profile",
+  "url": "https://developers.webexconnect.io/reference/getprofile",
+  "word_count": 1764,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/getprofile.metadata.json"
+}

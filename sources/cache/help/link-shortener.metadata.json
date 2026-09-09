@@ -1,0 +1,43 @@
+{
+  "category": "PreBUILT Integrations",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257991",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "c97a876a88399377e6d10beef9052449553c4bc0bdfd4a501bb025f83436803f",
+    "source_path": "c940de51826ea397904100f4b1480f72e4ad6d8bd6543674b70bb162dc580f4d",
+    "text_path": "325ca32dad2da1e53789e5688fd47840fecb57ad705453e33a948975ad0e109f"
+  },
+  "headings": [
+    "Introduction",
+    "Version Supported",
+    "📘",
+    "Pre-requisites",
+    "Generate Client Credentials",
+    "📘Note",
+    "Add a Valid Authorization",
+    "Node Configuration",
+    "Methods and Outcomes",
+    "Method Name - Create Shortlink",
+    "Limitation"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/link-shortener.md",
+  "resolved_url": "https://help.webexconnect.io/docs/link-shortener",
+  "retrieved_at": "2026-09-08T23:29:10+00:00",
+  "sha256_html_response": "c4420cfebf05bd99d4c64d57728d092184893bcf5421c149d51a8dd53a4a995a",
+  "sha256_source_body": "c940de51826ea397904100f4b1480f72e4ad6d8bd6543674b70bb162dc580f4d",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/link-shortener.source.md",
+  "source_updated_at": "2026-04-15T11:42:55.599Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/link-shortener.txt",
+  "title": "Link Shortener",
+  "url": "https://help.webexconnect.io/docs/link-shortener",
+  "word_count": 1313,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/link-shortener.metadata.json"
+}

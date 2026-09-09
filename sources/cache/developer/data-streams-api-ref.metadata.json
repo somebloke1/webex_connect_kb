@@ -1,0 +1,32 @@
+{
+  "api_metadata_path": "sources/cache/developer/data-streams-api-ref.api.json",
+  "category": "Data Streams",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f6649",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "6d581098ae27b526643e118d40fd38ba1ec91c619a41428729cb8c66d9638921",
+    "source_path": "41a169a16c9905d4eabc68b90faf06a82c89f1f29fc3b0ae64613cdd7528776b",
+    "text_path": "9f0e7a4513616570b5838716ee5fd59e0c47f443f4f8611504606efa88ffa30b"
+  },
+  "headings": [],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/data-streams-api-ref.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/data-streams-api-ref",
+  "retrieved_at": "2026-09-08T23:31:48+00:00",
+  "sha256_api_metadata": "575f65b7d8dc3ea0b617314bc47e22705dc85fc80ee114e6faa20ada4e8aafe2",
+  "sha256_html_response": "13b6e98aaee42f2d4599389a1bd6de806643fae483e5954c9efdc226d1c4c230",
+  "sha256_source_body": "41a169a16c9905d4eabc68b90faf06a82c89f1f29fc3b0ae64613cdd7528776b",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/data-streams-api-ref.source.md",
+  "source_updated_at": "2026-01-22T16:12:05.419Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/data-streams-api-ref.txt",
+  "title": "Data Streams",
+  "url": "https://developers.webexconnect.io/reference/data-streams-api-ref",
+  "word_count": 92,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/data-streams-api-ref.metadata.json"
+}

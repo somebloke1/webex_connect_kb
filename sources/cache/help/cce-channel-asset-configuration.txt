@@ -1,0 +1,20 @@
+Webex Connect and Cisco Contact Center Enterprise (CCE) integration currently supports three channels - SMS, Email, and Live Chat. Here are the details of how you can configure the channel assets for each of these channels within Webex Connect.
+
+ | Channel | Documentation
+
+ | SMS | SMS Asset Creation
+
+ | Email | Email Asset Creation
+
+ | Live Chat | LiveChat Asset Creation
+
+ | Apple Messages for Business | Apple Messages for Business Asset Creation
+
+ | Facebook Messenger | Facebook Messenger Asset Creation
+
+ | WhatsApp | WhatsApp Asset Creation
+
+## 📘
+Web CallBack
+
+Web CallBack is not a native channel of Webex Connect Please refer to the configuration related details on nodes in the Flow Configurations topic.

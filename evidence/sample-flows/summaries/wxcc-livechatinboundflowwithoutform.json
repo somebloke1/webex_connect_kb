@@ -1,0 +1,4754 @@
+{
+  "schema_version": 1,
+  "sample_key": "wxcc-livechatinboundflowwithoutform",
+  "title": "LivechatInboundFlowWithoutForm.workflow",
+  "observed_at": "2026-09-09T00:08:44.986Z",
+  "source_path": "evidence/sample-flows/observed/wxcc-livechatinboundflowwithoutform.json",
+  "source_sha256": "3b8dd6797446ea50e7e7ef4e74bf55e942e00abd64fa5906236030d66790092b",
+  "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model",
+  "runtime_tested": false,
+  "status": "observed_canvas_relationships_summarized",
+  "format_warning": "Internal loaded-canvas model observations only; not a public import schema. Event internal names and visible labels are recorded separately. Dynamic script behavior and missing canvas pages are not inferred.",
+  "counts": {
+    "cells": 56,
+    "operative_nodes": 9,
+    "explicit_edges": 32,
+    "terminal_bindings": 14,
+    "variable_references": 101
+  },
+  "start_configuration": {
+    "channel": 15,
+    "type": "channel",
+    "isCheckLiveSessions": 0,
+    "extras": {},
+    "eventid": 9,
+    "eventname": "MO",
+    "conditions": [
+      {
+        "startag": "((",
+        "varname": "inappmessaging.message",
+        "opr": "notequals",
+        "value": "typing_indicator",
+        "datatype": "string",
+        "endtag": "))"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "2",
+      "label": "Configure APP Event",
+      "type_internal": "start",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "onbegin",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "selectedChannel": {
+          "id": 15,
+          "name": "APP",
+          "description": "APP",
+          "type": 1,
+          "extraData": {}
+        },
+        "selectedRuleEvent": {
+          "name": "Incoming message",
+          "id": 9,
+          "eventname": "MO",
+          "desc": "This event is triggered when a new message is received from the user on this channel"
+        },
+        "ruleEvent": "Incoming message",
+        "ruleConditionStatus": true,
+        "conditions": [
+          {
+            "conditions": [
+              {
+                "variableConOption": {
+                  "inputType": "select",
+                  "selectOption": {
+                    "selectName": "name",
+                    "selectValue": "value",
+                    "selectFlag": false,
+                    "defaultList": [],
+                    "placeholderFlag": false,
+                    "uploadStatus": false
+                  }
+                },
+                "operatorConOption": {
+                  "inputType": "select",
+                  "selectOption": {
+                    "selectName": "name",
+                    "selectValue": "value",
+                    "selectFlag": false,
+                    "defaultList": [
+                      {
+                        "opr_name": "equals"
+                      },
+                      {
+                        "opr_name": "notequals"
+                      },
+                      {
+                        "opr_name": "in"
+                      },
+                      {
+                        "opr_name": "contains"
+                      },
+                      {
+                        "opr_name": "notin"
+                      },
+                      {
+                        "opr_name": "equalsignorecase"
+                      },
+                      {
+                        "opr_name": "startswith"
+                      },
+                      {
+                        "opr_name": "endswith"
+                      },
+                      {
+                        "opr_name": "regex"
+                      },
+                      {
+                        "opr_name": "containsignorecase"
+                      }
+                    ],
+                    "placeholderFlag": false,
+                    "uploadStatus": false
+                  }
+                },
+                "valueConOption": {
+                  "inputType": "text",
+                  "selectOption": {
+                    "selectName": "name",
+                    "selectValue": "value",
+                    "selectFlag": false,
+                    "defaultList": [],
+                    "placeholderFlag": false,
+                    "uploadStatus": false
+                  }
+                },
+                "pills": [],
+                "index": "91zlf0hl",
+                "variable": "inappmessaging.message",
+                "variableObject": {
+                  "event_id": 9,
+                  "v1_param": "app.message",
+                  "channel_id": 7,
+                  "var_name": "inappmessaging.message",
+                  "eventname": "MO"
+                },
+                "operator": "notequals",
+                "value": "typing_indicator"
+              }
+            ],
+            "index": "ephsh30c"
+          }
+        ],
+        "apiReqConditions": [
+          {
+            "startag": "((",
+            "varname": "inappmessaging.message",
+            "opr": "notequals",
+            "value": "typing_indicator",
+            "datatype": "string",
+            "endtag": "))"
+          }
+        ],
+        "isKeyWordDisabled": true,
+        "isKeyWordVerifyReq": true,
+        "isKeyWordAvailable": true,
+        "output_variables": [
+          "inappmessaging.timestamp",
+          "inappmessaging.userId",
+          "inappmessaging.threadId",
+          "inappmessaging.completedOn",
+          "inappmessaging.threadTitle",
+          "inappmessaging.threadStatus",
+          "inappmessaging.message",
+          "inappmessaging.attachment",
+          "inappmessaging.version",
+          "inappmessaging.deviceId",
+          "inappmessaging.origin",
+          "inappmessaging.pushId",
+          "inappmessaging.os",
+          "inappmessaging.tid",
+          "inappmessaging.customTags",
+          "inappmessaging.extras",
+          "inappmessaging.attachmentCount",
+          "inappmessaging.appId",
+          "service.serviceKey",
+          "inappmessaging.message.extras",
+          "inappmessaging.message.customTags",
+          "inappmessaging.pciInfo.isPCICompliance",
+          "inappmessaging.pciInfo.isPCIValidationDone",
+          "inappmessaging.pciInfo.isAttachmentEnabled",
+          "inappmessaging.pciInfo.nonPCIComplianceReason",
+          "inappmessaging.pciInfo.droppedAttachmentCount",
+          "inappmessaging.malwareinfo.isMalwareCompliance",
+          "inappmessaging.malwareinfo.isMalwareValidationDone",
+          "inappmessaging.malwareinfo.malwareFailedReason",
+          "inappmessaging.malwareinfo.droppedAttachmentCount",
+          "inappmessaging.securityscaninfo.isSecurityCompliance",
+          "inappmessaging.securityscaninfo.isSecurityValidationDone",
+          "inappmessaging.securityscaninfo.securityFailedReason",
+          "inappmessaging.securityscaninfo.droppedAttachmentCount"
+        ]
+      },
+      "transition_actions": [
+        {
+          "kind": "session",
+          "name": "message",
+          "when": "onleave",
+          "value": "$(n2.inappmessaging.message)"
+        },
+        {
+          "kind": "session",
+          "name": "inappPayloadObject",
+          "when": "onleave",
+          "value": "$(n2.inappmessaging.attachment)"
+        },
+        {
+          "kind": "session",
+          "name": "nonPCIComplianceReasonObject",
+          "when": "onleave",
+          "value": "$(n2.inappmessaging.pciInfo.nonPCIComplianceReason)"
+        },
+        {
+          "kind": "session",
+          "name": "isPCIValidationDone",
+          "when": "onleave",
+          "value": "$(n2.inappmessaging.pciInfo.isPCIValidationDone)"
+        },
+        {
+          "kind": "session",
+          "name": "extras",
+          "when": "onleave",
+          "value": "$(n2.inappmessaging.extras)"
+        },
+        {
+          "kind": "session",
+          "name": "appId",
+          "when": "onleave",
+          "value": "$(n2.inappmessaging.appId)"
+        },
+        {
+          "kind": "session",
+          "name": "threadId",
+          "when": "onleave",
+          "value": "$(n2.inappmessaging.threadId)"
+        },
+        {
+          "kind": "session",
+          "name": "threadTitle",
+          "when": "onleave",
+          "value": "$(n2.inappmessaging.threadTitle)"
+        },
+        {
+          "kind": "session",
+          "name": "threadStatus",
+          "when": "onleave",
+          "value": "$(n2.inappmessaging.threadStatus)"
+        },
+        {
+          "kind": "session",
+          "name": "userId",
+          "when": "onleave",
+          "value": "$(n2.inappmessaging.userId)"
+        },
+        {
+          "kind": "session",
+          "name": "attachmentCount",
+          "when": "onleave",
+          "value": "$(n2.inappmessaging.attachmentCount)"
+        },
+        {
+          "kind": "session",
+          "name": "attachment",
+          "when": "onleave",
+          "value": "$(n2.inappmessaging.attachment)"
+        },
+        {
+          "kind": "session",
+          "name": "version",
+          "when": "onleave",
+          "value": "$(n2.inappmessaging.version)"
+        },
+        {
+          "kind": "session",
+          "name": "timestamp",
+          "when": "onleave",
+          "value": "$(n2.inappmessaging.timestamp)"
+        },
+        {
+          "kind": "session",
+          "name": "tid",
+          "when": "onleave",
+          "value": "$(n2.inappmessaging.tid)"
+        },
+        {
+          "kind": "session",
+          "name": "serviceKey",
+          "when": "onleave",
+          "value": "$(n2.service.serviceKey)"
+        },
+        {
+          "kind": "session",
+          "name": "isAttachmentEnabled",
+          "when": "onleave",
+          "value": "$(n2.inappmessaging.pciInfo.isAttachmentEnabled)"
+        },
+        {
+          "kind": "session",
+          "name": "droppedAttachmentCount",
+          "when": "onleave",
+          "value": "$(n2.inappmessaging.pciInfo.droppedAttachmentCount)"
+        },
+        {
+          "kind": "session",
+          "name": "isPCICompliance",
+          "when": "onleave",
+          "value": "$(n2.inappmessaging.pciInfo.isPCICompliance)"
+        },
+        {
+          "kind": "session",
+          "name": "resolveConversationMessage",
+          "when": "onleave",
+          "value": "$(n2.inappmessaging.message)"
+        },
+        {
+          "kind": "session",
+          "name": "resolveConversationNonPCIComplianceReasonObject",
+          "when": "onleave",
+          "value": "$(n2.inappmessaging.pciInfo.nonPCIComplianceReasonObject)"
+        },
+        {
+          "kind": "session",
+          "name": "resolveConversationIsPCIValidationDone",
+          "when": "onleave",
+          "value": "$(n2.inappmessaging.pciInfo.isPCIValidationDone)"
+        },
+        {
+          "kind": "session",
+          "name": "resolveConversationtid",
+          "when": "onleave",
+          "value": "$(n2.inappmessaging.tid)"
+        },
+        {
+          "kind": "session",
+          "name": "transId",
+          "when": "onleave",
+          "value": "$(n2.inappmessaging.tid)"
+        },
+        {
+          "kind": "session",
+          "name": "securityScanDroppedAttachmentCount",
+          "when": "onleave",
+          "value": "$(n2.inappmessaging.securityscaninfo.droppedAttachmentCount)"
+        },
+        {
+          "kind": "session",
+          "name": "securityNonComplianceReasonObject",
+          "when": "onleave",
+          "value": "$(n2.inappmessaging.securityscaninfo.securityFailedReason)"
+        },
+        {
+          "kind": "session",
+          "name": "isSecurityValidationDone",
+          "when": "onleave",
+          "value": "$(n2.inappmessaging.securityscaninfo.isSecurityValidationDone)"
+        },
+        {
+          "kind": "session",
+          "name": "isSecurityCompliance",
+          "when": "onleave",
+          "value": "$(n2.inappmessaging.securityscaninfo.isSecurityCompliance)"
+        },
+        {
+          "kind": "session",
+          "name": "isMalwareValidationDone",
+          "when": "onleave",
+          "value": "$(n2.inappmessaging.malwareinfo.isMalwareValidationDone)"
+        },
+        {
+          "kind": "session",
+          "name": "isMalwareCompliance",
+          "when": "onleave",
+          "value": "$(n2.inappmessaging.malwareinfo.isMalwareCompliance)"
+        },
+        {
+          "kind": "session",
+          "name": "malwareNonComplianceReasonObject",
+          "when": "onleave",
+          "value": "$(n2.inappmessaging.malwareinfo.malwareFailedReason)"
+        },
+        {
+          "kind": "session",
+          "name": "malwareScanDroppedAttachmentCount",
+          "when": "onleave",
+          "value": "$(n2.inappmessaging.malwareinfo.droppedAttachmentCount)"
+        }
+      ],
+      "declared_outputs": [
+        "inappmessaging.timestamp",
+        "inappmessaging.userId",
+        "inappmessaging.threadId",
+        "inappmessaging.completedOn",
+        "inappmessaging.threadTitle",
+        "inappmessaging.threadStatus",
+        "inappmessaging.message",
+        "inappmessaging.attachment",
+        "inappmessaging.version",
+        "inappmessaging.deviceId",
+        "inappmessaging.origin",
+        "inappmessaging.pushId",
+        "inappmessaging.os",
+        "inappmessaging.tid",
+        "inappmessaging.customTags",
+        "inappmessaging.extras",
+        "inappmessaging.attachmentCount",
+        "inappmessaging.appId",
+        "service.serviceKey",
+        "inappmessaging.message.extras",
+        "inappmessaging.message.customTags",
+        "inappmessaging.pciInfo.isPCICompliance",
+        "inappmessaging.pciInfo.isPCIValidationDone",
+        "inappmessaging.pciInfo.isAttachmentEnabled",
+        "inappmessaging.pciInfo.nonPCIComplianceReason",
+        "inappmessaging.pciInfo.droppedAttachmentCount",
+        "inappmessaging.malwareinfo.isMalwareCompliance",
+        "inappmessaging.malwareinfo.isMalwareValidationDone",
+        "inappmessaging.malwareinfo.malwareFailedReason",
+        "inappmessaging.malwareinfo.droppedAttachmentCount",
+        "inappmessaging.securityscaninfo.isSecurityCompliance",
+        "inappmessaging.securityscaninfo.isSecurityValidationDone",
+        "inappmessaging.securityscaninfo.securityFailedReason",
+        "inappmessaging.securityscaninfo.droppedAttachmentCount"
+      ],
+      "output_mappings": []
+    },
+    {
+      "id": "1727",
+      "label": "Queued",
+      "type_internal": "umppublic",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "onerror",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "hideWaitFor": false,
+        "channelId": 7,
+        "deliverychannel": "rtm",
+        "destinationType": "userid",
+        "destination": "$(n2.inappmessaging.userId)",
+        "msgcreationtype": "createnew",
+        "successoutcome": 1,
+        "message": "Message successfully queued",
+        "linkValidityCheck": false,
+        "thread_id": "$(n2.inappmessaging.threadId)",
+        "interactionsEnabled": false,
+        "push_table_extras": [
+          {
+            "index": "3ui0vy76"
+          }
+        ],
+        "rtm_os_status": {
+          "android": true,
+          "ios": true,
+          "windows": false,
+          "chrome": true,
+          "firefox": true,
+          "safari": true,
+          "rtm": true,
+          "push": true
+        },
+        "msgType": "msg",
+        "templateInfo": {
+          "name": ""
+        },
+        "contentType": "static",
+        "quickReplies": {
+          "options": [
+            {
+              "title": "",
+              "identifier": "",
+              "imageUrl": "",
+              "payload": "",
+              "type": "quickReplyPostback"
+            }
+          ]
+        },
+        "generic_template": {
+          "elements": [
+            {
+              "buttons": [
+                {
+                  "type": "templatePostback",
+                  "title": "",
+                  "url": "",
+                  "identifier": "",
+                  "payload": ""
+                }
+              ]
+            }
+          ]
+        },
+        "notifyAuthorization": "[redacted]",
+        "authorizationViewFlag": "[redacted]",
+        "viewmodeData": [
+          {
+            "name": "notifyurl_authid",
+            "value": ""
+          }
+        ]
+      },
+      "transition_actions": [
+        {
+          "kind": "all",
+          "name": "all",
+          "when": "onenter",
+          "value": ""
+        }
+      ],
+      "declared_outputs": [],
+      "output_mappings": []
+    },
+    {
+      "id": "2227",
+      "label": "Error Notif",
+      "type_internal": "umppublic",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "onerror",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "hideWaitFor": false,
+        "channelId": 7,
+        "deliverychannel": "rtm",
+        "destinationType": "userid",
+        "destination": "$(n2.inappmessaging.userId)",
+        "msgcreationtype": "createnew",
+        "successoutcome": 1,
+        "message": "$(errorMsg1)",
+        "linkValidityCheck": false,
+        "thread_id": "$(n2.inappmessaging.threadId)",
+        "interactionsEnabled": false,
+        "push_table_extras": [
+          {
+            "index": "3ui0vy76"
+          }
+        ],
+        "rtm_os_status": {
+          "android": true,
+          "ios": true,
+          "windows": false,
+          "chrome": true,
+          "firefox": true,
+          "safari": true,
+          "rtm": true,
+          "push": true
+        },
+        "msgType": "msg",
+        "templateInfo": {
+          "name": ""
+        },
+        "contentType": "static",
+        "quickReplies": {
+          "options": [
+            {
+              "title": "",
+              "identifier": "",
+              "imageUrl": "",
+              "payload": "",
+              "type": "quickReplyPostback"
+            }
+          ]
+        },
+        "generic_template": {
+          "elements": [
+            {
+              "buttons": [
+                {
+                  "type": "templatePostback",
+                  "title": "",
+                  "url": "",
+                  "identifier": "",
+                  "payload": ""
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "transition_actions": [
+        {
+          "kind": "all",
+          "name": "all",
+          "when": "onleave",
+          "value": ""
+        }
+      ],
+      "declared_outputs": [],
+      "output_mappings": []
+    },
+    {
+      "id": "2234",
+      "label": "Error Notif",
+      "type_internal": "umppublic",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "onerror",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "hideWaitFor": false,
+        "channelId": 7,
+        "deliverychannel": "rtm",
+        "destinationType": "userid",
+        "destination": "$(n2.inappmessaging.userId)",
+        "msgcreationtype": "createnew",
+        "successoutcome": 1,
+        "message": "$(errorMsg1)",
+        "linkValidityCheck": false,
+        "thread_id": "$(n2.inappmessaging.threadId)",
+        "interactionsEnabled": false,
+        "push_table_extras": [
+          {
+            "index": "3ui0vy76"
+          }
+        ],
+        "rtm_os_status": {
+          "android": true,
+          "ios": true,
+          "windows": false,
+          "chrome": true,
+          "firefox": true,
+          "safari": true,
+          "rtm": true,
+          "push": true
+        },
+        "msgType": "msg",
+        "templateInfo": {
+          "name": ""
+        },
+        "contentType": "static",
+        "quickReplies": {
+          "options": [
+            {
+              "title": "",
+              "identifier": "",
+              "imageUrl": "",
+              "payload": "",
+              "type": "quickReplyPostback"
+            }
+          ]
+        },
+        "generic_template": {
+          "elements": [
+            {
+              "buttons": [
+                {
+                  "type": "templatePostback",
+                  "title": "",
+                  "url": "",
+                  "identifier": "",
+                  "payload": ""
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "transition_actions": [
+        {
+          "kind": "all",
+          "name": "all",
+          "when": "onleave",
+          "value": ""
+        }
+      ],
+      "declared_outputs": [],
+      "output_mappings": []
+    },
+    {
+      "id": "2259",
+      "label": "Queue Task",
+      "type_internal": "prebuiltnode",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "oninvaliddata",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "onerror",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "oninvalidchoice",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "ontimeout",
+          "declared_target_count": null
+        }
+      ],
+      "configuration": {
+        "referencekey": 50021,
+        "versionIds": "undefined",
+        "integration_id": 50021,
+        "client_uuid": "68f84aaa-5892-4e60-a1dd-2697274bc1f2",
+        "method_id": 58765,
+        "version_id": 52964,
+        "auth_id": -1,
+        "methodResponseParameters": [
+          {
+            "order": 0,
+            "id": "5f7dbaa2-74f1-4e8e-9a13-f712d97b9a23",
+            "name": "taskId",
+            "path": "$.id",
+            "value": "",
+            "desc": "",
+            "type": "body",
+            "validation": {
+              "type": "",
+              "condition": null,
+              "regex": "",
+              "mandatory": true,
+              "format_validator": null
+            },
+            "key": null,
+            "debugKey": false,
+            "node_ui_type": null,
+            "node_ui_group_name": null,
+            "ui_field_configuration": null
+          },
+          {
+            "order": 1,
+            "id": "96e9fbcb-a5d8-4bb4-b01e-85bbb13a2624",
+            "name": "agentId",
+            "path": "$.data.agentId",
+            "value": "",
+            "desc": "",
+            "type": "body",
+            "validation": {
+              "type": "",
+              "condition": null,
+              "regex": "",
+              "mandatory": true,
+              "format_validator": null
+            },
+            "key": null,
+            "debugKey": false,
+            "node_ui_type": null,
+            "node_ui_group_name": null,
+            "ui_field_configuration": null
+          }
+        ],
+        "request_body": [
+          {
+            "name": "id",
+            "value": "$(taskId)",
+            "id": "fe686042-a932-4583-afab-639d75fdbe92"
+          },
+          {
+            "name": "tenant_identifier",
+            "id": "278f27c4-33b5-4dec-9d13-b219c30e9a82"
+          },
+          {
+            "name": "queueid",
+            "value": "aaa1b71f-eebe-449d-bfb9-9bde5cc68f23",
+            "id": "8cee6079-d764-4a1b-b916-76562659ec73"
+          },
+          {
+            "name": "conversationid",
+            "value": "$(conversationId)",
+            "id": "59d29903-e969-4417-a440-0ca13f486912"
+          },
+          {
+            "name": "mediatype",
+            "value": "chat",
+            "id": "d5593c82-9bbd-4d86-9f2c-a43f7633eb37"
+          },
+          {
+            "name": "skillRequirements",
+            "value": "{\\\"requirements\\\":[],\\\"relaxations\\\":[],\\\"relaxationToggle\\\":false}",
+            "id": "c388b1c1-b52c-4841-89ff-dc699fd6596f"
+          },
+          {
+            "name": "contactPriority",
+            "value": "",
+            "id": "3311060c-c23e-4cb0-be4f-5f8cc3512a4c"
+          },
+          {
+            "name": "webhookurl",
+            "id": "e1271f37-8f38-4037-830e-2535dfa60f0a"
+          }
+        ],
+        "path_parameters": [
+          {
+            "name": "domain",
+            "id": "f4bdc968-4573-787b-caa0-66256e73ffa9"
+          },
+          {
+            "name": "id",
+            "value": "$(taskId)",
+            "id": "351695bc-1fa7-2d65-ef79-6bcaafa98c8a"
+          }
+        ],
+        "custom_output_vars": [
+          "taskId",
+          "agentId"
+        ],
+        "viewmodeData": [
+          {
+            "name": "auth_id",
+            "value": "Wxcc Node Authorization",
+            "isNgSelectBox": true
+          },
+          {
+            "name": "version_id",
+            "value": ""
+          },
+          {
+            "name": "method_id",
+            "value": "Queue task"
+          }
+        ],
+        "isAuthPresent": true,
+        "isComponentNode": 1,
+        "container_name": "https://example.invalid/integration_node_file_queue-task_1738062066620.js",
+        "nodeType": "https://example.invalid/integration_node_file_queue-task_1738062066620.js",
+        "nodeInput": {
+          "id": "$(taskId)",
+          "queueid": "aaa1b71f-eebe-449d-bfb9-9bde5cc68f23",
+          "mediatype": "chat",
+          "channel": "web",
+          "isskillrouting": false,
+          "conversationid": "$(conversationId)",
+          "relaxationToggle": false,
+          "requirements": [],
+          "relaxations": [],
+          "singleOrDynamic": "single",
+          "queuenameOptions": [
+            {
+              "value": "SkillBased",
+              "key": "05f686fa-7109-4f7e-9bcb-884ba9cbf4a2"
+            },
+            {
+              "value": "Chat_Queue",
+              "key": "0a8d84d1-ef68-44c3-9823-73d25726a22f"
+            },
+            {
+              "value": "engageautomation chat",
+              "key": "19ff7729-0cf9-4c19-9dd1-498475f2c37b"
+            },
+            {
+              "value": "GT Chat Q5 Agent Based LAA - Self Assign Enabled",
+              "key": "1d072332-8392-4f24-aad1-b19737a0ff1f"
+            },
+            {
+              "value": "GT Chat Q2 Team Based LAA - ACD ONLY",
+              "key": "24503bd9-9fc1-4b1d-9e6d-3f38946bd47f"
+            },
+            {
+              "value": "accessibility test",
+              "key": "2b6fba48-b2e8-4276-921a-31596898a0dd"
+            },
+            {
+              "value": "GT Chat Q6 Agent Based LAA - ACD ONLY",
+              "key": "3a1fa1c7-966e-4149-b9b4-e65615695bdf"
+            },
+            {
+              "value": "GT Chat Q4 Agent Based Circular - ACD ONLY",
+              "key": "3e5f9eb3-3696-4950-90d6-c51125d7c178"
+            },
+            {
+              "value": "GT Chat Q1 Team Based LAA - Self Assign Enabled",
+              "key": "552c8ccc-aeb5-47c5-8fb3-a91a5d2e0a79"
+            },
+            {
+              "value": "cherry_pick_test",
+              "key": "78b4c4ab-e942-40f5-8b92-133e4335989c"
+            },
+            {
+              "value": "Test Queue",
+              "key": "9cbccde4-9e0b-4cf1-809a-02878edc2045"
+            },
+            {
+              "value": "GT Chat Q3 Agent Based Circular - Self Assign Enabled",
+              "key": "a4c0e98e-f274-4f6e-a5f9-dfc691cc7f83"
+            },
+            {
+              "value": "DigitalChannel_ChatQueue",
+              "key": "aaa1b71f-eebe-449d-bfb9-9bde5cc68f23"
+            }
+          ],
+          "queueInfo": [
+            {
+              "organizationId": "56bbfaf9-5767-4971-8e1e-b5b737dfc08c",
+              "id": "05f686fa-7109-4f7e-9bcb-884ba9cbf4a2",
+              "version": 1,
+              "dbId": "05f686fa-7109-4f7e-9bcb-884ba9cbf4a2",
+              "name": "SkillBased",
+              "description": "SkillBased",
+              "queueType": "INBOUND",
+              "checkAgentAvailability": false,
+              "channelType": "CHAT",
+              "serviceLevelThreshold": 60,
+              "maxActiveContacts": 0,
+              "maxTimeInQueue": 60,
+              "active": true,
+              "outdialCampaignEnabled": true,
+              "routingType": "SKILLS_BASED",
+              "skillBasedRoutingType": "LONGEST_AVAILABLE_AGENT",
+              "queueRoutingType": "TEAM_BASED",
+              "queueSkillRequirements": [],
+              "agents": [],
+              "imiOrgType": "IMI",
+              "manuallyAssignable": false,
+              "queueLevelSummariesInclusion": "EXCLUDED",
+              "queueLevelSentimentAnalysisInclusion": "EXCLUDED",
+              "queueLevelPredictedWaitTimeInclusion": "EXCLUDED",
+              "queueLevelAutoCsatInclusion": "EXCLUDED",
+              "queueLevelRealTimeTranscriptionsInclusion": "EXCLUDED",
+              "personalizedAIRouting": {
+                "aiRoutingMode": "NONE"
+              },
+              "links": [],
+              "createdTime": 1746179370000,
+              "lastUpdatedTime": 1746179371000
+            },
+            {
+              "organizationId": "56bbfaf9-5767-4971-8e1e-b5b737dfc08c",
+              "id": "0a8d84d1-ef68-44c3-9823-73d25726a22f",
+              "version": 1,
+              "dbId": "0a8d84d1-ef68-44c3-9823-73d25726a22f",
+              "name": "Chat_Queue",
+              "description": "Live chat queue",
+              "queueType": "INBOUND",
+              "checkAgentAvailability": false,
+              "channelType": "CHAT",
+              "serviceLevelThreshold": 200,
+              "maxActiveContacts": 0,
+              "maxTimeInQueue": 200,
+              "active": true,
+              "outdialCampaignEnabled": true,
+              "routingType": "LONGEST_AVAILABLE_AGENT",
+              "queueRoutingType": "TEAM_BASED",
+              "queueSkillRequirements": [],
+              "agents": [],
+              "imiOrgType": "IMI",
+              "manuallyAssignable": false,
+              "queueLevelSummariesInclusion": "EXCLUDED",
+              "queueLevelSentimentAnalysisInclusion": "EXCLUDED",
+              "queueLevelPredictedWaitTimeInclusion": "EXCLUDED",
+              "queueLevelAutoCsatInclusion": "EXCLUDED",
+              "queueLevelRealTimeTranscriptionsInclusion": "EXCLUDED",
+              "personalizedAIRouting": {
+                "aiRoutingMode": "NONE"
+              },
+              "links": [],
+              "createdTime": 1724757794000,
+              "lastUpdatedTime": 1724757794000
+            },
+            {
+              "organizationId": "56bbfaf9-5767-4971-8e1e-b5b737dfc08c",
+              "id": "19ff7729-0cf9-4c19-9dd1-498475f2c37b",
+              "version": 1,
+              "dbId": "19ff7729-0cf9-4c19-9dd1-498475f2c37b",
+              "name": "engageautomation chat",
+              "description": "engageautomation chat",
+              "queueType": "INBOUND",
+              "channelType": "CHAT",
+              "serviceLevelThreshold": 120,
+              "maxActiveContacts": 0,
+              "maxTimeInQueue": 60,
+              "active": true,
+              "routingType": "LONGEST_AVAILABLE_AGENT",
+              "queueRoutingType": "TEAM_BASED",
+              "queueSkillRequirements": [],
+              "agents": [],
+              "imiOrgType": "IMI",
+              "manuallyAssignable": false,
+              "queueLevelSummariesInclusion": "EXCLUDED",
+              "queueLevelSentimentAnalysisInclusion": "EXCLUDED",
+              "queueLevelPredictedWaitTimeInclusion": "EXCLUDED",
+              "queueLevelAutoCsatInclusion": "EXCLUDED",
+              "queueLevelRealTimeTranscriptionsInclusion": "EXCLUDED",
+              "personalizedAIRouting": {
+                "aiRoutingMode": "NONE"
+              },
+              "links": [],
+              "createdTime": 1711433240000,
+              "lastUpdatedTime": 1711433240000
+            },
+            {
+              "organizationId": "56bbfaf9-5767-4971-8e1e-b5b737dfc08c",
+              "id": "1d072332-8392-4f24-aad1-b19737a0ff1f",
+              "version": 2,
+              "dbId": "1d072332-8392-4f24-aad1-b19737a0ff1f",
+              "name": "GT Chat Q5 Agent Based LAA - Self Assign Enabled",
+              "description": "Do NOT edit",
+              "queueType": "INBOUND",
+              "checkAgentAvailability": false,
+              "channelType": "CHAT",
+              "serviceLevelThreshold": 1000,
+              "maxActiveContacts": 0,
+              "maxTimeInQueue": 600,
+              "active": true,
+              "routingType": "LONGEST_AVAILABLE_AGENT",
+              "queueRoutingType": "AGENT_BASED",
+              "queueSkillRequirements": [],
+              "agents": [],
+              "imiOrgType": "IMI",
+              "manuallyAssignable": true,
+              "queueLevelSummariesInclusion": "EXCLUDED",
+              "queueLevelSentimentAnalysisInclusion": "EXCLUDED",
+              "queueLevelPredictedWaitTimeInclusion": "EXCLUDED",
+              "queueLevelAutoCsatInclusion": "EXCLUDED",
+              "queueLevelRealTimeTranscriptionsInclusion": "EXCLUDED",
+              "personalizedAIRouting": {
+                "aiRoutingMode": "NONE"
+              },
+              "links": [],
+              "createdTime": 1749596717000,
+              "lastUpdatedTime": 1749809729000
+            },
+            {
+              "organizationId": "56bbfaf9-5767-4971-8e1e-b5b737dfc08c",
+              "id": "24503bd9-9fc1-4b1d-9e6d-3f38946bd47f",
+              "version": 8,
+              "dbId": "24503bd9-9fc1-4b1d-9e6d-3f38946bd47f",
+              "name": "GT Chat Q2 Team Based LAA - ACD ONLY",
+              "description": "Do NOT edit",
+              "queueType": "INBOUND",
+              "checkAgentAvailability": false,
+              "channelType": "CHAT",
+              "serviceLevelThreshold": 1000,
+              "maxActiveContacts": 0,
+              "maxTimeInQueue": 600,
+              "active": true,
+              "routingType": "LONGEST_AVAILABLE_AGENT",
+              "queueRoutingType": "TEAM_BASED",
+              "queueSkillRequirements": [],
+              "agents": [],
+              "imiOrgType": "IMI",
+              "manuallyAssignable": false,
+              "queueLevelSummariesInclusion": "EXCLUDED",
+              "queueLevelSentimentAnalysisInclusion": "EXCLUDED",
+              "queueLevelPredictedWaitTimeInclusion": "EXCLUDED",
+              "queueLevelAutoCsatInclusion": "EXCLUDED",
+              "queueLevelRealTimeTranscriptionsInclusion": "EXCLUDED",
+              "personalizedAIRouting": {
+                "aiRoutingMode": "NONE"
+              },
+              "links": [],
+              "createdTime": 1749202105000,
+              "lastUpdatedTime": 1749742506000
+            },
+            {
+              "organizationId": "56bbfaf9-5767-4971-8e1e-b5b737dfc08c",
+              "id": "2b6fba48-b2e8-4276-921a-31596898a0dd",
+              "version": 3,
+              "dbId": "2b6fba48-b2e8-4276-921a-31596898a0dd",
+              "name": "accessibility test",
+              "description": "accessibilty test",
+              "queueType": "INBOUND",
+              "checkAgentAvailability": false,
+              "channelType": "CHAT",
+              "serviceLevelThreshold": 60,
+              "maxActiveContacts": 0,
+              "maxTimeInQueue": 240,
+              "active": true,
+              "outdialCampaignEnabled": true,
+              "routingType": "LONGEST_AVAILABLE_AGENT",
+              "queueRoutingType": "TEAM_BASED",
+              "queueSkillRequirements": [],
+              "agents": [],
+              "imiOrgType": "IMI",
+              "manuallyAssignable": false,
+              "queueLevelSummariesInclusion": "EXCLUDED",
+              "queueLevelSentimentAnalysisInclusion": "EXCLUDED",
+              "queueLevelPredictedWaitTimeInclusion": "EXCLUDED",
+              "queueLevelAutoCsatInclusion": "EXCLUDED",
+              "queueLevelRealTimeTranscriptionsInclusion": "EXCLUDED",
+              "personalizedAIRouting": {
+                "aiRoutingMode": "NONE"
+              },
+              "links": [],
+              "createdTime": 1717002116000,
+              "lastUpdatedTime": 1718290769000
+            },
+            {
+              "organizationId": "56bbfaf9-5767-4971-8e1e-b5b737dfc08c",
+              "id": "3a1fa1c7-966e-4149-b9b4-e65615695bdf",
+              "version": 3,
+              "dbId": "3a1fa1c7-966e-4149-b9b4-e65615695bdf",
+              "name": "GT Chat Q6 Agent Based LAA - ACD ONLY",
+              "description": "Do NOT edit",
+              "queueType": "INBOUND",
+              "checkAgentAvailability": false,
+              "channelType": "CHAT",
+              "serviceLevelThreshold": 1000,
+              "maxActiveContacts": 0,
+              "maxTimeInQueue": 600,
+              "active": true,
+              "routingType": "LONGEST_AVAILABLE_AGENT",
+              "queueRoutingType": "AGENT_BASED",
+              "queueSkillRequirements": [],
+              "agents": [],
+              "imiOrgType": "IMI",
+              "manuallyAssignable": false,
+              "queueLevelSummariesInclusion": "EXCLUDED",
+              "queueLevelSentimentAnalysisInclusion": "EXCLUDED",
+              "queueLevelPredictedWaitTimeInclusion": "EXCLUDED",
+              "queueLevelAutoCsatInclusion": "EXCLUDED",
+              "queueLevelRealTimeTranscriptionsInclusion": "EXCLUDED",
+              "personalizedAIRouting": {
+                "aiRoutingMode": "NONE"
+              },
+              "links": [],
+              "createdTime": 1749596758000,
+              "lastUpdatedTime": 1749809986000
+            },
+            {
+              "organizationId": "56bbfaf9-5767-4971-8e1e-b5b737dfc08c",
+              "id": "3e5f9eb3-3696-4950-90d6-c51125d7c178",
+              "version": 8,
+              "dbId": "3e5f9eb3-3696-4950-90d6-c51125d7c178",
+              "name": "GT Chat Q4 Agent Based Circular - ACD ONLY",
+              "description": "Do NOT edit",
+              "queueType": "INBOUND",
+              "checkAgentAvailability": false,
+              "channelType": "CHAT",
+              "serviceLevelThreshold": 1000,
+              "maxActiveContacts": 0,
+              "maxTimeInQueue": 600,
+              "active": true,
+              "routingType": "CIRCULAR",
+              "queueRoutingType": "AGENT_BASED",
+              "queueSkillRequirements": [],
+              "agents": [],
+              "imiOrgType": "IMI",
+              "manuallyAssignable": false,
+              "queueLevelSummariesInclusion": "EXCLUDED",
+              "queueLevelSentimentAnalysisInclusion": "EXCLUDED",
+              "queueLevelPredictedWaitTimeInclusion": "EXCLUDED",
+              "queueLevelAutoCsatInclusion": "EXCLUDED",
+              "queueLevelRealTimeTranscriptionsInclusion": "EXCLUDED",
+              "personalizedAIRouting": {
+                "aiRoutingMode": "NONE"
+              },
+              "links": [],
+              "createdTime": 1749552107000,
+              "lastUpdatedTime": 1749809693000
+            },
+            {
+              "organizationId": "56bbfaf9-5767-4971-8e1e-b5b737dfc08c",
+              "id": "552c8ccc-aeb5-47c5-8fb3-a91a5d2e0a79",
+              "version": 10,
+              "dbId": "552c8ccc-aeb5-47c5-8fb3-a91a5d2e0a79",
+              "name": "GT Chat Q1 Team Based LAA - Self Assign Enabled",
+              "description": "Do NOT edit",
+              "queueType": "INBOUND",
+              "checkAgentAvailability": false,
+              "channelType": "CHAT",
+              "serviceLevelThreshold": 1000,
+              "maxActiveContacts": 0,
+              "maxTimeInQueue": 600,
+              "active": true,
+              "routingType": "LONGEST_AVAILABLE_AGENT",
+              "queueRoutingType": "TEAM_BASED",
+              "queueSkillRequirements": [],
+              "agents": [],
+              "imiOrgType": "IMI",
+              "manuallyAssignable": true,
+              "queueLevelSummariesInclusion": "EXCLUDED",
+              "queueLevelSentimentAnalysisInclusion": "EXCLUDED",
+              "queueLevelPredictedWaitTimeInclusion": "EXCLUDED",
+              "queueLevelAutoCsatInclusion": "EXCLUDED",
+              "queueLevelRealTimeTranscriptionsInclusion": "EXCLUDED",
+              "personalizedAIRouting": {
+                "aiRoutingMode": "NONE"
+              },
+              "links": [],
+              "createdTime": 1749202063000,
+              "lastUpdatedTime": 1750760808000
+            },
+            {
+              "organizationId": "56bbfaf9-5767-4971-8e1e-b5b737dfc08c",
+              "id": "78b4c4ab-e942-40f5-8b92-133e4335989c",
+              "version": 2,
+              "dbId": "78b4c4ab-e942-40f5-8b92-133e4335989c",
+              "name": "cherry_pick_test",
+              "description": "cherry pick test",
+              "queueType": "INBOUND",
+              "checkAgentAvailability": false,
+              "channelType": "CHAT",
+              "serviceLevelThreshold": 240,
+              "maxActiveContacts": 0,
+              "maxTimeInQueue": 240,
+              "active": true,
+              "routingType": "LONGEST_AVAILABLE_AGENT",
+              "queueRoutingType": "TEAM_BASED",
+              "queueSkillRequirements": [],
+              "agents": [],
+              "imiOrgType": "IMI",
+              "manuallyAssignable": true,
+              "queueLevelSummariesInclusion": "EXCLUDED",
+              "queueLevelSentimentAnalysisInclusion": "EXCLUDED",
+              "queueLevelPredictedWaitTimeInclusion": "EXCLUDED",
+              "queueLevelAutoCsatInclusion": "EXCLUDED",
+              "queueLevelRealTimeTranscriptionsInclusion": "EXCLUDED",
+              "personalizedAIRouting": {
+                "aiRoutingMode": "NONE"
+              },
+              "links": [],
+              "createdTime": 1749811058000,
+              "lastUpdatedTime": 1749811291000
+            },
+            {
+              "organizationId": "56bbfaf9-5767-4971-8e1e-b5b737dfc08c",
+              "id": "9cbccde4-9e0b-4cf1-809a-02878edc2045",
+              "version": 1,
+              "dbId": "9cbccde4-9e0b-4cf1-809a-02878edc2045",
+              "name": "Test Queue",
+              "description": "test",
+              "queueType": "INBOUND",
+              "channelType": "CHAT",
+              "serviceLevelThreshold": 10,
+              "maxActiveContacts": 0,
+              "maxTimeInQueue": 10,
+              "active": true,
+              "routingType": "LONGEST_AVAILABLE_AGENT",
+              "queueRoutingType": "TEAM_BASED",
+              "queueSkillRequirements": [],
+              "agents": [],
+              "imiOrgType": "IMI",
+              "manuallyAssignable": false,
+              "queueLevelSummariesInclusion": "EXCLUDED",
+              "queueLevelSentimentAnalysisInclusion": "EXCLUDED",
+              "queueLevelPredictedWaitTimeInclusion": "EXCLUDED",
+              "queueLevelAutoCsatInclusion": "EXCLUDED",
+              "queueLevelRealTimeTranscriptionsInclusion": "EXCLUDED",
+              "personalizedAIRouting": {
+                "aiRoutingMode": "NONE"
+              },
+              "links": [],
+              "createdTime": 1756808877000,
+              "lastUpdatedTime": 1756808877000
+            },
+            {
+              "organizationId": "56bbfaf9-5767-4971-8e1e-b5b737dfc08c",
+              "id": "a4c0e98e-f274-4f6e-a5f9-dfc691cc7f83",
+              "version": 4,
+              "dbId": "a4c0e98e-f274-4f6e-a5f9-dfc691cc7f83",
+              "name": "GT Chat Q3 Agent Based Circular - Self Assign Enabled",
+              "description": "Do NOT edit",
+              "queueType": "INBOUND",
+              "checkAgentAvailability": false,
+              "channelType": "CHAT",
+              "serviceLevelThreshold": 1000,
+              "maxActiveContacts": 0,
+              "maxTimeInQueue": 600,
+              "active": true,
+              "routingType": "CIRCULAR",
+              "queueRoutingType": "AGENT_BASED",
+              "queueSkillRequirements": [],
+              "agents": [],
+              "imiOrgType": "IMI",
+              "manuallyAssignable": true,
+              "queueLevelSummariesInclusion": "EXCLUDED",
+              "queueLevelSentimentAnalysisInclusion": "EXCLUDED",
+              "queueLevelPredictedWaitTimeInclusion": "EXCLUDED",
+              "queueLevelAutoCsatInclusion": "EXCLUDED",
+              "queueLevelRealTimeTranscriptionsInclusion": "EXCLUDED",
+              "personalizedAIRouting": {
+                "aiRoutingMode": "NONE"
+              },
+              "links": [],
+              "createdTime": 1749552033000,
+              "lastUpdatedTime": 1749809605000
+            },
+            {
+              "organizationId": "56bbfaf9-5767-4971-8e1e-b5b737dfc08c",
+              "id": "aaa1b71f-eebe-449d-bfb9-9bde5cc68f23",
+              "version": 5,
+              "dbId": "aaa1b71f-eebe-449d-bfb9-9bde5cc68f23",
+              "name": "DigitalChannel_ChatQueue",
+              "description": "Queue for Digital channels",
+              "queueType": "INBOUND",
+              "checkAgentAvailability": false,
+              "channelType": "CHAT",
+              "serviceLevelThreshold": 30,
+              "maxActiveContacts": 0,
+              "maxTimeInQueue": 60,
+              "active": true,
+              "routingType": "LONGEST_AVAILABLE_AGENT",
+              "queueRoutingType": "TEAM_BASED",
+              "queueSkillRequirements": [],
+              "agents": [],
+              "imiOrgType": "IMI",
+              "manuallyAssignable": true,
+              "queueLevelSummariesInclusion": "EXCLUDED",
+              "queueLevelSentimentAnalysisInclusion": "EXCLUDED",
+              "queueLevelPredictedWaitTimeInclusion": "EXCLUDED",
+              "queueLevelAutoCsatInclusion": "EXCLUDED",
+              "queueLevelRealTimeTranscriptionsInclusion": "EXCLUDED",
+              "personalizedAIRouting": {
+                "aiRoutingMode": "NONE"
+              },
+              "links": [],
+              "createdTime": 1694016811000,
+              "lastUpdatedTime": 1758019942000
+            }
+          ],
+          "skillInfo": [
+            {
+              "id": "28132b93-11c0-44ba-b4cb-860abe884ff8",
+              "type": "skill",
+              "attributes": {
+                "organizationId": "56bbfaf9-5767-4971-8e1e-b5b737dfc08c",
+                "tid": "56bbfaf9-5767-4971-8e1e-b5b737dfc08c",
+                "sid": "28132b93-11c0-44ba-b4cb-860abe884ff8",
+                "productVersion": 2,
+                "status__i": 1,
+                "type__i": 0,
+                "_type__s": "skill",
+                "cstts": 1694000802000,
+                "_lmts__l": 1694000802000,
+                "enumSkillValues": [],
+                "name__s": "English",
+                "serviceLevelThreshold__i": 100,
+                "description__s": "Profile for IMI digital channels including whatsApp",
+                "dbId__s": "28132b93-11c0-44ba-b4cb-860abe884ff8"
+              },
+              "auxiliaryDataType": "RESOURCES"
+            },
+            {
+              "id": "42e8a427-441b-4122-9d40-fbc7701aa8c4",
+              "type": "skill",
+              "attributes": {
+                "organizationId": "56bbfaf9-5767-4971-8e1e-b5b737dfc08c",
+                "tid": "56bbfaf9-5767-4971-8e1e-b5b737dfc08c",
+                "sid": "42e8a427-441b-4122-9d40-fbc7701aa8c4",
+                "productVersion": 2,
+                "status__i": 1,
+                "type__i": 0,
+                "_type__s": "skill",
+                "cstts": 1736751640000,
+                "_lmts__l": 1736751640000,
+                "enumSkillValues": [],
+                "name__s": "English_copy",
+                "serviceLevelThreshold__i": 100,
+                "description__s": "Profile for IMI digital channels including whatsApp",
+                "dbId__s": "42e8a427-441b-4122-9d40-fbc7701aa8c4"
+              },
+              "auxiliaryDataType": "RESOURCES"
+            },
+            {
+              "id": "b104a15f-4ec5-43ce-8436-ab5d27d93f50",
+              "type": "skill",
+              "attributes": {
+                "organizationId": "56bbfaf9-5767-4971-8e1e-b5b737dfc08c",
+                "tid": "56bbfaf9-5767-4971-8e1e-b5b737dfc08c",
+                "sid": "b104a15f-4ec5-43ce-8436-ab5d27d93f50",
+                "productVersion": 2,
+                "status__i": 1,
+                "type__i": 0,
+                "_type__s": "skill",
+                "cstts": 1762807163000,
+                "_lmts__l": 1762807163000,
+                "enumSkillValues": [],
+                "name__s": "Sales Pro",
+                "serviceLevelThreshold__i": 75,
+                "description__s": "professional salesman",
+                "dbId__s": "b104a15f-4ec5-43ce-8436-ab5d27d93f50"
+              },
+              "auxiliaryDataType": "RESOURCES"
+            },
+            {
+              "id": "f9b0ff8f-8a5e-478c-91ed-2a40b47ac7e6",
+              "type": "skill",
+              "attributes": {
+                "organizationId": "56bbfaf9-5767-4971-8e1e-b5b737dfc08c",
+                "tid": "56bbfaf9-5767-4971-8e1e-b5b737dfc08c",
+                "sid": "f9b0ff8f-8a5e-478c-91ed-2a40b47ac7e6",
+                "productVersion": 2,
+                "status__i": 1,
+                "type__i": 3,
+                "_type__s": "skill",
+                "cstts": 1746179426000,
+                "_lmts__l": 1746179427000,
+                "enumSkillValues": [
+                  {
+                    "name__s": 0,
+                    "skillId__s": "f9b0ff8f-8a5e-478c-91ed-2a40b47ac7e6"
+                  },
+                  {
+                    "name__s": 2,
+                    "skillId__s": "f9b0ff8f-8a5e-478c-91ed-2a40b47ac7e6"
+                  },
+                  {
+                    "name__s": 3,
+                    "skillId__s": "f9b0ff8f-8a5e-478c-91ed-2a40b47ac7e6"
+                  },
+                  {
+                    "name__s": 5,
+                    "skillId__s": "f9b0ff8f-8a5e-478c-91ed-2a40b47ac7e6"
+                  },
+                  {
+                    "name__s": 4,
+                    "skillId__s": "f9b0ff8f-8a5e-478c-91ed-2a40b47ac7e6"
+                  },
+                  {
+                    "name__s": 1,
+                    "skillId__s": "f9b0ff8f-8a5e-478c-91ed-2a40b47ac7e6"
+                  }
+                ],
+                "name__s": "Test",
+                "serviceLevelThreshold__i": 60,
+                "description__s": "Test",
+                "dbId__s": "f9b0ff8f-8a5e-478c-91ed-2a40b47ac7e6"
+              },
+              "auxiliaryDataType": "RESOURCES"
+            }
+          ],
+          "skillOptions": [],
+          "skillRequirements": "{\\\"requirements\\\":[],\\\"relaxations\\\":[],\\\"relaxationToggle\\\":false}",
+          "requirementsArrayThatNeedToBeSentToAPI": [],
+          "contactPriority": ""
+        },
+        "group_id": 50020,
+        "customUiAuthStatus": 1,
+        "adminParameters": {
+          "oauth_callbackurl_type": 1,
+          "tenant_identifier": "56bbfaf9-5767-4971-8e1e-b5b737dfc08c",
+          "domain": "intgus1",
+          "integration_identifier": "https://example.invalid/v1/integration/cntwct"
+        },
+        "customuiWebcomponentElementName": "node-ui-template1738062066620",
+        "extraParamsData": {
+          "id": "$(taskId)",
+          "queueid": "aaa1b71f-eebe-449d-bfb9-9bde5cc68f23",
+          "mediatype": "chat",
+          "channel": "web",
+          "isskillrouting": false,
+          "conversationid": "$(conversationId)",
+          "relaxationToggle": false,
+          "requirements": [],
+          "relaxations": [],
+          "singleOrDynamic": "single",
+          "queuenameOptions": [
+            {
+              "value": "SkillBased",
+              "key": "05f686fa-7109-4f7e-9bcb-884ba9cbf4a2"
+            },
+            {
+              "value": "Chat_Queue",
+              "key": "0a8d84d1-ef68-44c3-9823-73d25726a22f"
+            },
+            {
+              "value": "engageautomation chat",
+              "key": "19ff7729-0cf9-4c19-9dd1-498475f2c37b"
+            },
+            {
+              "value": "GT Chat Q5 Agent Based LAA - Self Assign Enabled",
+              "key": "1d072332-8392-4f24-aad1-b19737a0ff1f"
+            },
+            {
+              "value": "GT Chat Q2 Team Based LAA - ACD ONLY",
+              "key": "24503bd9-9fc1-4b1d-9e6d-3f38946bd47f"
+            },
+            {
+              "value": "accessibility test",
+              "key": "2b6fba48-b2e8-4276-921a-31596898a0dd"
+            },
+            {
+              "value": "GT Chat Q6 Agent Based LAA - ACD ONLY",
+              "key": "3a1fa1c7-966e-4149-b9b4-e65615695bdf"
+            },
+            {
+              "value": "GT Chat Q4 Agent Based Circular - ACD ONLY",
+              "key": "3e5f9eb3-3696-4950-90d6-c51125d7c178"
+            },
+            {
+              "value": "GT Chat Q1 Team Based LAA - Self Assign Enabled",
+              "key": "552c8ccc-aeb5-47c5-8fb3-a91a5d2e0a79"
+            },
+            {
+              "value": "cherry_pick_test",
+              "key": "78b4c4ab-e942-40f5-8b92-133e4335989c"
+            },
+            {
+              "value": "Test Queue",
+              "key": "9cbccde4-9e0b-4cf1-809a-02878edc2045"
+            },
+            {
+              "value": "GT Chat Q3 Agent Based Circular - Self Assign Enabled",
+              "key": "a4c0e98e-f274-4f6e-a5f9-dfc691cc7f83"
+            },
+            {
+              "value": "DigitalChannel_ChatQueue",
+              "key": "aaa1b71f-eebe-449d-bfb9-9bde5cc68f23"
+            }
+          ],
+          "queueInfo": [
+            {
+              "organizationId": "56bbfaf9-5767-4971-8e1e-b5b737dfc08c",
+              "id": "05f686fa-7109-4f7e-9bcb-884ba9cbf4a2",
+              "version": 1,
+              "dbId": "05f686fa-7109-4f7e-9bcb-884ba9cbf4a2",
+              "name": "SkillBased",
+              "description": "SkillBased",
+              "queueType": "INBOUND",
+              "checkAgentAvailability": false,
+              "channelType": "CHAT",
+              "serviceLevelThreshold": 60,
+              "maxActiveContacts": 0,
+              "maxTimeInQueue": 60,
+              "active": true,
+              "outdialCampaignEnabled": true,
+              "routingType": "SKILLS_BASED",
+              "skillBasedRoutingType": "LONGEST_AVAILABLE_AGENT",
+              "queueRoutingType": "TEAM_BASED",
+              "queueSkillRequirements": [],
+              "agents": [],
+              "imiOrgType": "IMI",
+              "manuallyAssignable": false,
+              "queueLevelSummariesInclusion": "EXCLUDED",
+              "queueLevelSentimentAnalysisInclusion": "EXCLUDED",
+              "queueLevelPredictedWaitTimeInclusion": "EXCLUDED",
+              "queueLevelAutoCsatInclusion": "EXCLUDED",
+              "queueLevelRealTimeTranscriptionsInclusion": "EXCLUDED",
+              "personalizedAIRouting": {
+                "aiRoutingMode": "NONE"
+              },
+              "links": [],
+              "createdTime": 1746179370000,
+              "lastUpdatedTime": 1746179371000
+            },
+            {
+              "organizationId": "56bbfaf9-5767-4971-8e1e-b5b737dfc08c",
+              "id": "0a8d84d1-ef68-44c3-9823-73d25726a22f",
+              "version": 1,
+              "dbId": "0a8d84d1-ef68-44c3-9823-73d25726a22f",
+              "name": "Chat_Queue",
+              "description": "Live chat queue",
+              "queueType": "INBOUND",
+              "checkAgentAvailability": false,
+              "channelType": "CHAT",
+              "serviceLevelThreshold": 200,
+              "maxActiveContacts": 0,
+              "maxTimeInQueue": 200,
+              "active": true,
+              "outdialCampaignEnabled": true,
+              "routingType": "LONGEST_AVAILABLE_AGENT",
+              "queueRoutingType": "TEAM_BASED",
+              "queueSkillRequirements": [],
+              "agents": [],
+              "imiOrgType": "IMI",
+              "manuallyAssignable": false,
+              "queueLevelSummariesInclusion": "EXCLUDED",
+              "queueLevelSentimentAnalysisInclusion": "EXCLUDED",
+              "queueLevelPredictedWaitTimeInclusion": "EXCLUDED",
+              "queueLevelAutoCsatInclusion": "EXCLUDED",
+              "queueLevelRealTimeTranscriptionsInclusion": "EXCLUDED",
+              "personalizedAIRouting": {
+                "aiRoutingMode": "NONE"
+              },
+              "links": [],
+              "createdTime": 1724757794000,
+              "lastUpdatedTime": 1724757794000
+            },
+            {
+              "organizationId": "56bbfaf9-5767-4971-8e1e-b5b737dfc08c",
+              "id": "19ff7729-0cf9-4c19-9dd1-498475f2c37b",
+              "version": 1,
+              "dbId": "19ff7729-0cf9-4c19-9dd1-498475f2c37b",
+              "name": "engageautomation chat",
+              "description": "engageautomation chat",
+              "queueType": "INBOUND",
+              "channelType": "CHAT",
+              "serviceLevelThreshold": 120,
+              "maxActiveContacts": 0,
+              "maxTimeInQueue": 60,
+              "active": true,
+              "routingType": "LONGEST_AVAILABLE_AGENT",
+              "queueRoutingType": "TEAM_BASED",
+              "queueSkillRequirements": [],
+              "agents": [],
+              "imiOrgType": "IMI",
+              "manuallyAssignable": false,
+              "queueLevelSummariesInclusion": "EXCLUDED",
+              "queueLevelSentimentAnalysisInclusion": "EXCLUDED",
+              "queueLevelPredictedWaitTimeInclusion": "EXCLUDED",
+              "queueLevelAutoCsatInclusion": "EXCLUDED",
+              "queueLevelRealTimeTranscriptionsInclusion": "EXCLUDED",
+              "personalizedAIRouting": {
+                "aiRoutingMode": "NONE"
+              },
+              "links": [],
+              "createdTime": 1711433240000,
+              "lastUpdatedTime": 1711433240000
+            },
+            {
+              "organizationId": "56bbfaf9-5767-4971-8e1e-b5b737dfc08c",
+              "id": "1d072332-8392-4f24-aad1-b19737a0ff1f",
+              "version": 2,
+              "dbId": "1d072332-8392-4f24-aad1-b19737a0ff1f",
+              "name": "GT Chat Q5 Agent Based LAA - Self Assign Enabled",
+              "description": "Do NOT edit",
+              "queueType": "INBOUND",
+              "checkAgentAvailability": false,
+              "channelType": "CHAT",
+              "serviceLevelThreshold": 1000,
+              "maxActiveContacts": 0,
+              "maxTimeInQueue": 600,
+              "active": true,
+              "routingType": "LONGEST_AVAILABLE_AGENT",
+              "queueRoutingType": "AGENT_BASED",
+              "queueSkillRequirements": [],
+              "agents": [],
+              "imiOrgType": "IMI",
+              "manuallyAssignable": true,
+              "queueLevelSummariesInclusion": "EXCLUDED",
+              "queueLevelSentimentAnalysisInclusion": "EXCLUDED",
+              "queueLevelPredictedWaitTimeInclusion": "EXCLUDED",
+              "queueLevelAutoCsatInclusion": "EXCLUDED",
+              "queueLevelRealTimeTranscriptionsInclusion": "EXCLUDED",
+              "personalizedAIRouting": {
+                "aiRoutingMode": "NONE"
+              },
+              "links": [],
+              "createdTime": 1749596717000,
+              "lastUpdatedTime": 1749809729000
+            },
+            {
+              "organizationId": "56bbfaf9-5767-4971-8e1e-b5b737dfc08c",
+              "id": "24503bd9-9fc1-4b1d-9e6d-3f38946bd47f",
+              "version": 8,
+              "dbId": "24503bd9-9fc1-4b1d-9e6d-3f38946bd47f",
+              "name": "GT Chat Q2 Team Based LAA - ACD ONLY",
+              "description": "Do NOT edit",
+              "queueType": "INBOUND",
+              "checkAgentAvailability": false,
+              "channelType": "CHAT",
+              "serviceLevelThreshold": 1000,
+              "maxActiveContacts": 0,
+              "maxTimeInQueue": 600,
+              "active": true,
+              "routingType": "LONGEST_AVAILABLE_AGENT",
+              "queueRoutingType": "TEAM_BASED",
+              "queueSkillRequirements": [],
+              "agents": [],
+              "imiOrgType": "IMI",
+              "manuallyAssignable": false,
+              "queueLevelSummariesInclusion": "EXCLUDED",
+              "queueLevelSentimentAnalysisInclusion": "EXCLUDED",
+              "queueLevelPredictedWaitTimeInclusion": "EXCLUDED",
+              "queueLevelAutoCsatInclusion": "EXCLUDED",
+              "queueLevelRealTimeTranscriptionsInclusion": "EXCLUDED",
+              "personalizedAIRouting": {
+                "aiRoutingMode": "NONE"
+              },
+              "links": [],
+              "createdTime": 1749202105000,
+              "lastUpdatedTime": 1749742506000
+            },
+            {
+              "organizationId": "56bbfaf9-5767-4971-8e1e-b5b737dfc08c",
+              "id": "2b6fba48-b2e8-4276-921a-31596898a0dd",
+              "version": 3,
+              "dbId": "2b6fba48-b2e8-4276-921a-31596898a0dd",
+              "name": "accessibility test",
+              "description": "accessibilty test",
+              "queueType": "INBOUND",
+              "checkAgentAvailability": false,
+              "channelType": "CHAT",
+              "serviceLevelThreshold": 60,
+              "maxActiveContacts": 0,
+              "maxTimeInQueue": 240,
+              "active": true,
+              "outdialCampaignEnabled": true,
+              "routingType": "LONGEST_AVAILABLE_AGENT",
+              "queueRoutingType": "TEAM_BASED",
+              "queueSkillRequirements": [],
+              "agents": [],
+              "imiOrgType": "IMI",
+              "manuallyAssignable": false,
+              "queueLevelSummariesInclusion": "EXCLUDED",
+              "queueLevelSentimentAnalysisInclusion": "EXCLUDED",
+              "queueLevelPredictedWaitTimeInclusion": "EXCLUDED",
+              "queueLevelAutoCsatInclusion": "EXCLUDED",
+              "queueLevelRealTimeTranscriptionsInclusion": "EXCLUDED",
+              "personalizedAIRouting": {
+                "aiRoutingMode": "NONE"
+              },
+              "links": [],
+              "createdTime": 1717002116000,
+              "lastUpdatedTime": 1718290769000
+            },
+            {
+              "organizationId": "56bbfaf9-5767-4971-8e1e-b5b737dfc08c",
+              "id": "3a1fa1c7-966e-4149-b9b4-e65615695bdf",
+              "version": 3,
+              "dbId": "3a1fa1c7-966e-4149-b9b4-e65615695bdf",
+              "name": "GT Chat Q6 Agent Based LAA - ACD ONLY",
+              "description": "Do NOT edit",
+              "queueType": "INBOUND",
+              "checkAgentAvailability": false,
+              "channelType": "CHAT",
+              "serviceLevelThreshold": 1000,
+              "maxActiveContacts": 0,
+              "maxTimeInQueue": 600,
+              "active": true,
+              "routingType": "LONGEST_AVAILABLE_AGENT",
+              "queueRoutingType": "AGENT_BASED",
+              "queueSkillRequirements": [],
+              "agents": [],
+              "imiOrgType": "IMI",
+              "manuallyAssignable": false,
+              "queueLevelSummariesInclusion": "EXCLUDED",
+              "queueLevelSentimentAnalysisInclusion": "EXCLUDED",
+              "queueLevelPredictedWaitTimeInclusion": "EXCLUDED",
+              "queueLevelAutoCsatInclusion": "EXCLUDED",
+              "queueLevelRealTimeTranscriptionsInclusion": "EXCLUDED",
+              "personalizedAIRouting": {
+                "aiRoutingMode": "NONE"
+              },
+              "links": [],
+              "createdTime": 1749596758000,
+              "lastUpdatedTime": 1749809986000
+            },
+            {
+              "organizationId": "56bbfaf9-5767-4971-8e1e-b5b737dfc08c",
+              "id": "3e5f9eb3-3696-4950-90d6-c51125d7c178",
+              "version": 8,
+              "dbId": "3e5f9eb3-3696-4950-90d6-c51125d7c178",
+              "name": "GT Chat Q4 Agent Based Circular - ACD ONLY",
+              "description": "Do NOT edit",
+              "queueType": "INBOUND",
+              "checkAgentAvailability": false,
+              "channelType": "CHAT",
+              "serviceLevelThreshold": 1000,
+              "maxActiveContacts": 0,
+              "maxTimeInQueue": 600,
+              "active": true,
+              "routingType": "CIRCULAR",
+              "queueRoutingType": "AGENT_BASED",
+              "queueSkillRequirements": [],
+              "agents": [],
+              "imiOrgType": "IMI",
+              "manuallyAssignable": false,
+              "queueLevelSummariesInclusion": "EXCLUDED",
+              "queueLevelSentimentAnalysisInclusion": "EXCLUDED",
+              "queueLevelPredictedWaitTimeInclusion": "EXCLUDED",
+              "queueLevelAutoCsatInclusion": "EXCLUDED",
+              "queueLevelRealTimeTranscriptionsInclusion": "EXCLUDED",
+              "personalizedAIRouting": {
+                "aiRoutingMode": "NONE"
+              },
+              "links": [],
+              "createdTime": 1749552107000,
+              "lastUpdatedTime": 1749809693000
+            },
+            {
+              "organizationId": "56bbfaf9-5767-4971-8e1e-b5b737dfc08c",
+              "id": "552c8ccc-aeb5-47c5-8fb3-a91a5d2e0a79",
+              "version": 10,
+              "dbId": "552c8ccc-aeb5-47c5-8fb3-a91a5d2e0a79",
+              "name": "GT Chat Q1 Team Based LAA - Self Assign Enabled",
+              "description": "Do NOT edit",
+              "queueType": "INBOUND",
+              "checkAgentAvailability": false,
+              "channelType": "CHAT",
+              "serviceLevelThreshold": 1000,
+              "maxActiveContacts": 0,
+              "maxTimeInQueue": 600,
+              "active": true,
+              "routingType": "LONGEST_AVAILABLE_AGENT",
+              "queueRoutingType": "TEAM_BASED",
+              "queueSkillRequirements": [],
+              "agents": [],
+              "imiOrgType": "IMI",
+              "manuallyAssignable": true,
+              "queueLevelSummariesInclusion": "EXCLUDED",
+              "queueLevelSentimentAnalysisInclusion": "EXCLUDED",
+              "queueLevelPredictedWaitTimeInclusion": "EXCLUDED",
+              "queueLevelAutoCsatInclusion": "EXCLUDED",
+              "queueLevelRealTimeTranscriptionsInclusion": "EXCLUDED",
+              "personalizedAIRouting": {
+                "aiRoutingMode": "NONE"
+              },
+              "links": [],
+              "createdTime": 1749202063000,
+              "lastUpdatedTime": 1750760808000
+            },
+            {
+              "organizationId": "56bbfaf9-5767-4971-8e1e-b5b737dfc08c",
+              "id": "78b4c4ab-e942-40f5-8b92-133e4335989c",
+              "version": 2,
+              "dbId": "78b4c4ab-e942-40f5-8b92-133e4335989c",
+              "name": "cherry_pick_test",
+              "description": "cherry pick test",
+              "queueType": "INBOUND",
+              "checkAgentAvailability": false,
+              "channelType": "CHAT",
+              "serviceLevelThreshold": 240,
+              "maxActiveContacts": 0,
+              "maxTimeInQueue": 240,
+              "active": true,
+              "routingType": "LONGEST_AVAILABLE_AGENT",
+              "queueRoutingType": "TEAM_BASED",
+              "queueSkillRequirements": [],
+              "agents": [],
+              "imiOrgType": "IMI",
+              "manuallyAssignable": true,
+              "queueLevelSummariesInclusion": "EXCLUDED",
+              "queueLevelSentimentAnalysisInclusion": "EXCLUDED",
+              "queueLevelPredictedWaitTimeInclusion": "EXCLUDED",
+              "queueLevelAutoCsatInclusion": "EXCLUDED",
+              "queueLevelRealTimeTranscriptionsInclusion": "EXCLUDED",
+              "personalizedAIRouting": {
+                "aiRoutingMode": "NONE"
+              },
+              "links": [],
+              "createdTime": 1749811058000,
+              "lastUpdatedTime": 1749811291000
+            },
+            {
+              "organizationId": "56bbfaf9-5767-4971-8e1e-b5b737dfc08c",
+              "id": "9cbccde4-9e0b-4cf1-809a-02878edc2045",
+              "version": 1,
+              "dbId": "9cbccde4-9e0b-4cf1-809a-02878edc2045",
+              "name": "Test Queue",
+              "description": "test",
+              "queueType": "INBOUND",
+              "channelType": "CHAT",
+              "serviceLevelThreshold": 10,
+              "maxActiveContacts": 0,
+              "maxTimeInQueue": 10,
+              "active": true,
+              "routingType": "LONGEST_AVAILABLE_AGENT",
+              "queueRoutingType": "TEAM_BASED",
+              "queueSkillRequirements": [],
+              "agents": [],
+              "imiOrgType": "IMI",
+              "manuallyAssignable": false,
+              "queueLevelSummariesInclusion": "EXCLUDED",
+              "queueLevelSentimentAnalysisInclusion": "EXCLUDED",
+              "queueLevelPredictedWaitTimeInclusion": "EXCLUDED",
+              "queueLevelAutoCsatInclusion": "EXCLUDED",
+              "queueLevelRealTimeTranscriptionsInclusion": "EXCLUDED",
+              "personalizedAIRouting": {
+                "aiRoutingMode": "NONE"
+              },
+              "links": [],
+              "createdTime": 1756808877000,
+              "lastUpdatedTime": 1756808877000
+            },
+            {
+              "organizationId": "56bbfaf9-5767-4971-8e1e-b5b737dfc08c",
+              "id": "a4c0e98e-f274-4f6e-a5f9-dfc691cc7f83",
+              "version": 4,
+              "dbId": "a4c0e98e-f274-4f6e-a5f9-dfc691cc7f83",
+              "name": "GT Chat Q3 Agent Based Circular - Self Assign Enabled",
+              "description": "Do NOT edit",
+              "queueType": "INBOUND",
+              "checkAgentAvailability": false,
+              "channelType": "CHAT",
+              "serviceLevelThreshold": 1000,
+              "maxActiveContacts": 0,
+              "maxTimeInQueue": 600,
+              "active": true,
+              "routingType": "CIRCULAR",
+              "queueRoutingType": "AGENT_BASED",
+              "queueSkillRequirements": [],
+              "agents": [],
+              "imiOrgType": "IMI",
+              "manuallyAssignable": true,
+              "queueLevelSummariesInclusion": "EXCLUDED",
+              "queueLevelSentimentAnalysisInclusion": "EXCLUDED",
+              "queueLevelPredictedWaitTimeInclusion": "EXCLUDED",
+              "queueLevelAutoCsatInclusion": "EXCLUDED",
+              "queueLevelRealTimeTranscriptionsInclusion": "EXCLUDED",
+              "personalizedAIRouting": {
+                "aiRoutingMode": "NONE"
+              },
+              "links": [],
+              "createdTime": 1749552033000,
+              "lastUpdatedTime": 1749809605000
+            },
+            {
+              "organizationId": "56bbfaf9-5767-4971-8e1e-b5b737dfc08c",
+              "id": "aaa1b71f-eebe-449d-bfb9-9bde5cc68f23",
+              "version": 5,
+              "dbId": "aaa1b71f-eebe-449d-bfb9-9bde5cc68f23",
+              "name": "DigitalChannel_ChatQueue",
+              "description": "Queue for Digital channels",
+              "queueType": "INBOUND",
+              "checkAgentAvailability": false,
+              "channelType": "CHAT",
+              "serviceLevelThreshold": 30,
+              "maxActiveContacts": 0,
+              "maxTimeInQueue": 60,
+              "active": true,
+              "routingType": "LONGEST_AVAILABLE_AGENT",
+              "queueRoutingType": "TEAM_BASED",
+              "queueSkillRequirements": [],
+              "agents": [],
+              "imiOrgType": "IMI",
+              "manuallyAssignable": true,
+              "queueLevelSummariesInclusion": "EXCLUDED",
+              "queueLevelSentimentAnalysisInclusion": "EXCLUDED",
+              "queueLevelPredictedWaitTimeInclusion": "EXCLUDED",
+              "queueLevelAutoCsatInclusion": "EXCLUDED",
+              "queueLevelRealTimeTranscriptionsInclusion": "EXCLUDED",
+              "personalizedAIRouting": {
+                "aiRoutingMode": "NONE"
+              },
+              "links": [],
+              "createdTime": 1694016811000,
+              "lastUpdatedTime": 1758019942000
+            }
+          ],
+          "skillInfo": [
+            {
+              "id": "28132b93-11c0-44ba-b4cb-860abe884ff8",
+              "type": "skill",
+              "attributes": {
+                "organizationId": "56bbfaf9-5767-4971-8e1e-b5b737dfc08c",
+                "tid": "56bbfaf9-5767-4971-8e1e-b5b737dfc08c",
+                "sid": "28132b93-11c0-44ba-b4cb-860abe884ff8",
+                "productVersion": 2,
+                "status__i": 1,
+                "type__i": 0,
+                "_type__s": "skill",
+                "cstts": 1694000802000,
+                "_lmts__l": 1694000802000,
+                "enumSkillValues": [],
+                "name__s": "English",
+                "serviceLevelThreshold__i": 100,
+                "description__s": "Profile for IMI digital channels including whatsApp",
+                "dbId__s": "28132b93-11c0-44ba-b4cb-860abe884ff8"
+              },
+              "auxiliaryDataType": "RESOURCES"
+            },
+            {
+              "id": "42e8a427-441b-4122-9d40-fbc7701aa8c4",
+              "type": "skill",
+              "attributes": {
+                "organizationId": "56bbfaf9-5767-4971-8e1e-b5b737dfc08c",
+                "tid": "56bbfaf9-5767-4971-8e1e-b5b737dfc08c",
+                "sid": "42e8a427-441b-4122-9d40-fbc7701aa8c4",
+                "productVersion": 2,
+                "status__i": 1,
+                "type__i": 0,
+                "_type__s": "skill",
+                "cstts": 1736751640000,
+                "_lmts__l": 1736751640000,
+                "enumSkillValues": [],
+                "name__s": "English_copy",
+                "serviceLevelThreshold__i": 100,
+                "description__s": "Profile for IMI digital channels including whatsApp",
+                "dbId__s": "42e8a427-441b-4122-9d40-fbc7701aa8c4"
+              },
+              "auxiliaryDataType": "RESOURCES"
+            },
+            {
+              "id": "b104a15f-4ec5-43ce-8436-ab5d27d93f50",
+              "type": "skill",
+              "attributes": {
+                "organizationId": "56bbfaf9-5767-4971-8e1e-b5b737dfc08c",
+                "tid": "56bbfaf9-5767-4971-8e1e-b5b737dfc08c",
+                "sid": "b104a15f-4ec5-43ce-8436-ab5d27d93f50",
+                "productVersion": 2,
+                "status__i": 1,
+                "type__i": 0,
+                "_type__s": "skill",
+                "cstts": 1762807163000,
+                "_lmts__l": 1762807163000,
+                "enumSkillValues": [],
+                "name__s": "Sales Pro",
+                "serviceLevelThreshold__i": 75,
+                "description__s": "professional salesman",
+                "dbId__s": "b104a15f-4ec5-43ce-8436-ab5d27d93f50"
+              },
+              "auxiliaryDataType": "RESOURCES"
+            },
+            {
+              "id": "f9b0ff8f-8a5e-478c-91ed-2a40b47ac7e6",
+              "type": "skill",
+              "attributes": {
+                "organizationId": "56bbfaf9-5767-4971-8e1e-b5b737dfc08c",
+                "tid": "56bbfaf9-5767-4971-8e1e-b5b737dfc08c",
+                "sid": "f9b0ff8f-8a5e-478c-91ed-2a40b47ac7e6",
+                "productVersion": 2,
+                "status__i": 1,
+                "type__i": 3,
+                "_type__s": "skill",
+                "cstts": 1746179426000,
+                "_lmts__l": 1746179427000,
+                "enumSkillValues": [
+                  {
+                    "name__s": 5,
+                    "skillId__s": "f9b0ff8f-8a5e-478c-91ed-2a40b47ac7e6"
+                  },
+                  {
+                    "name__s": 3,
+                    "skillId__s": "f9b0ff8f-8a5e-478c-91ed-2a40b47ac7e6"
+                  },
+                  {
+                    "name__s": 1,
+                    "skillId__s": "f9b0ff8f-8a5e-478c-91ed-2a40b47ac7e6"
+                  },
+                  {
+                    "name__s": 2,
+                    "skillId__s": "f9b0ff8f-8a5e-478c-91ed-2a40b47ac7e6"
+                  },
+                  {
+                    "name__s": 0,
+                    "skillId__s": "f9b0ff8f-8a5e-478c-91ed-2a40b47ac7e6"
+                  },
+                  {
+                    "name__s": 4,
+                    "skillId__s": "f9b0ff8f-8a5e-478c-91ed-2a40b47ac7e6"
+                  }
+                ],
+                "name__s": "Test",
+                "serviceLevelThreshold__i": 60,
+                "description__s": "Test",
+                "dbId__s": "f9b0ff8f-8a5e-478c-91ed-2a40b47ac7e6"
+              },
+              "auxiliaryDataType": "RESOURCES"
+            }
+          ],
+          "skillOptions": [],
+          "skillRequirements": "{\\\"requirements\\\":[],\\\"relaxations\\\":[],\\\"relaxationToggle\\\":false}",
+          "requirementsArrayThatNeedToBeSentToAPI": [],
+          "contactPriority": ""
+        },
+        "isCustomUiAuthPresent": true,
+        "integration_version": 3,
+        "runTimeAuthorizationId": "[redacted]",
+        "nodeUiAuthorizationId": "[redacted]"
+      },
+      "transition_actions": [
+        {
+          "kind": "all",
+          "name": "all",
+          "when": "onleave",
+          "value": ""
+        }
+      ],
+      "declared_outputs": [
+        "taskId",
+        "agentId"
+      ],
+      "output_mappings": [
+        {
+          "order": 0,
+          "id": "5f7dbaa2-74f1-4e8e-9a13-f712d97b9a23",
+          "name": "taskId",
+          "path": "$.id",
+          "value": "",
+          "desc": "",
+          "type": "body",
+          "validation": {
+            "type": "",
+            "condition": null,
+            "regex": "",
+            "mandatory": true,
+            "format_validator": null
+          },
+          "key": null,
+          "debugKey": false,
+          "node_ui_type": null,
+          "node_ui_group_name": null,
+          "ui_field_configuration": null
+        },
+        {
+          "order": 1,
+          "id": "96e9fbcb-a5d8-4bb4-b01e-85bbb13a2624",
+          "name": "agentId",
+          "path": "$.data.agentId",
+          "value": "",
+          "desc": "",
+          "type": "body",
+          "validation": {
+            "type": "",
+            "condition": null,
+            "regex": "",
+            "mandatory": true,
+            "format_validator": null
+          },
+          "key": null,
+          "debugKey": false,
+          "node_ui_type": null,
+          "node_ui_group_name": null,
+          "ui_field_configuration": null
+        }
+      ]
+    },
+    {
+      "id": "2261",
+      "label": "Close Task",
+      "type_internal": "prebuiltnode",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "oninvaliddata",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "onerror",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "oninvalidchoice",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "ontimeout",
+          "declared_target_count": null
+        }
+      ],
+      "configuration": {
+        "referencekey": 50022,
+        "versionIds": "undefined",
+        "integration_id": 50022,
+        "client_uuid": "68f84aaa-5892-4e60-a1dd-2697274bc1f2",
+        "method_id": 50348,
+        "version_id": 50163,
+        "auth_id": -1,
+        "request_body": [
+          {
+            "name": "Task Id",
+            "value": "$(taskId)",
+            "id": "ff9e7104-2c35-4e00-95bd-e886b793dc4d"
+          },
+          {
+            "name": "tenant_identifier",
+            "value": "",
+            "id": "31e84e4f-2bad-b743-0a69-537e5be2edc6"
+          },
+          {
+            "name": "Conversation ID",
+            "value": "$(conversationId)",
+            "id": "051e4b74-6a19-cb0e-1e09-b29decd9dcae"
+          },
+          {
+            "name": "Media Type",
+            "value": "social",
+            "id": "70ca0e89-14be-cb0d-7baf-baf71dc3b954"
+          },
+          {
+            "name": "webhookurl",
+            "value": "",
+            "id": "a5395711-fe55-4e41-ac63-63114440bc3e"
+          }
+        ],
+        "path_parameters": [
+          {
+            "name": "domain",
+            "value": "",
+            "id": "35a59252-32a4-f8f9-afe2-7c3287052a51"
+          },
+          {
+            "name": "ID",
+            "value": "$(taskId)",
+            "id": "a01f1704-493b-4a7f-8252-c3dfd1340f3f"
+          }
+        ],
+        "viewmodeData": [
+          {
+            "name": "auth_id",
+            "value": "Wxcc Node Authorization",
+            "isNgSelectBox": true
+          },
+          {
+            "name": "version_id",
+            "value": ""
+          },
+          {
+            "name": "method_id",
+            "value": "Close Task on WxCC"
+          }
+        ],
+        "isAuthPresent": true,
+        "isComponentNode": 3,
+        "nodeInput": {
+          "tenant_identifier": "",
+          "domain": "",
+          "ID": "$(taskId)",
+          "Task Id": "$(taskId)",
+          "Conversation ID": "$(conversationId)",
+          "Media Type": "social",
+          "webhookurl": ""
+        },
+        "group_id": 50020,
+        "customUiAuthStatus": 0,
+        "adminParameters": {
+          "oauth_callbackurl_type": 1,
+          "tenant_identifier": "56bbfaf9-5767-4971-8e1e-b5b737dfc08c",
+          "domain": "intgus1",
+          "integration_identifier": "https://example.invalid/v1/integration/cntwct"
+        },
+        "isCustomUiAuthPresent": true,
+        "integration_version": 3,
+        "runTimeAuthorizationId": "[redacted]",
+        "nodeUiAuthorizationId": "[redacted]"
+      },
+      "transition_actions": [
+        {
+          "kind": "all",
+          "name": "all",
+          "when": "onleave",
+          "value": ""
+        }
+      ],
+      "declared_outputs": [],
+      "output_mappings": []
+    },
+    {
+      "id": "2307",
+      "label": "Resolve Conversation",
+      "type_internal": "prebuiltnode",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "oninvaliddata",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "onerror",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "oninvalidchoice",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "ontimeout",
+          "declared_target_count": null
+        }
+      ],
+      "configuration": {
+        "referencekey": 50302,
+        "versionIds": "undefined",
+        "integration_id": 50302,
+        "client_uuid": "68f84aaa-5892-4e60-a1dd-2697274bc1f2",
+        "method_id": 57868,
+        "version_id": 52306,
+        "auth_id": -1,
+        "methodResponseParameters": [
+          {
+            "order": 0,
+            "id": "b1e142f3-147f-4979-9685-afd59669f428",
+            "name": "transId",
+            "path": "$.transId",
+            "value": "",
+            "desc": "",
+            "type": "body",
+            "validation": {
+              "type": "",
+              "condition": null,
+              "regex": "",
+              "mandatory": true,
+              "format_validator": null
+            },
+            "key": null,
+            "debugKey": false,
+            "node_ui_type": null,
+            "node_ui_group_name": null,
+            "ui_field_configuration": null
+          },
+          {
+            "order": 1,
+            "id": "8d1a2153-82b3-45c3-97d0-8c40209cf61f",
+            "name": "taskId",
+            "path": "$.taskId",
+            "value": "",
+            "desc": "",
+            "type": "body",
+            "validation": {
+              "type": "",
+              "condition": null,
+              "regex": "",
+              "mandatory": true,
+              "format_validator": null
+            },
+            "key": null,
+            "debugKey": false,
+            "node_ui_type": null,
+            "node_ui_group_name": null,
+            "ui_field_configuration": null
+          },
+          {
+            "order": 2,
+            "id": "3f8b9b65-053c-4be7-b0fc-e47d48c1bb4b",
+            "name": "conversationOperation",
+            "path": "$.conversationOperation",
+            "value": "",
+            "desc": "",
+            "type": "body",
+            "validation": {
+              "type": "",
+              "condition": null,
+              "regex": "",
+              "mandatory": true,
+              "format_validator": null
+            },
+            "key": null,
+            "debugKey": false,
+            "node_ui_type": null,
+            "node_ui_group_name": null,
+            "ui_field_configuration": null
+          }
+        ],
+        "request_body": [
+          {
+            "name": "Trans Id",
+            "value": "$(transId)",
+            "id": "969b36c1-d92a-48c3-822f-ee34b282462e"
+          },
+          {
+            "name": "Media Type",
+            "value": "chat",
+            "id": "b611a9fe-d5ff-4967-96cb-98806e423574"
+          },
+          {
+            "name": "Media Channel",
+            "value": "web",
+            "id": "80b510f4-70dd-42e0-b711-2549dc964319"
+          },
+          {
+            "name": "tenant_identifier",
+            "id": "1d0cca74-9d4f-40b5-8bbb-c13ac69aba08"
+          },
+          {
+            "name": "webhookurl",
+            "id": "62b8dcc0-cb65-469c-9ed2-0ab2271b7adb"
+          },
+          {
+            "name": "overrideDefaultClose",
+            "value": false,
+            "id": "2fdbf4d3-2924-442b-871c-07435bdbdf21"
+          },
+          {
+            "name": "Details JSON",
+            "value": "$(detailsJson)",
+            "id": "3cb815d1-c4bd-4ec4-9339-847798f1d37a"
+          }
+        ],
+        "path_parameters": [
+          {
+            "name": "domain",
+            "id": "29f23013-459d-4c28-aa3f-8bc91536bcc5"
+          }
+        ],
+        "custom_output_vars": [
+          "transId",
+          "taskId",
+          "conversationOperation"
+        ],
+        "viewmodeData": [
+          {
+            "name": "auth_id",
+            "value": "Wxcc Node Authorization",
+            "isNgSelectBox": true
+          },
+          {
+            "name": "version_id",
+            "value": ""
+          },
+          {
+            "name": "method_id",
+            "value": "Resolve Conversation"
+          }
+        ],
+        "isAuthPresent": true,
+        "isComponentNode": 1,
+        "container_name": "https://example.invalid/integration_node_file_webex-cc-task-resolve-conversation_1701421030212_11480657604508611.js",
+        "nodeType": "https://example.invalid/integration_node_file_webex-cc-task-resolve-conversation_1701421030212_11480657604508611.js",
+        "nodeInput": {
+          "transId": "$(transId)",
+          "trackingId": "$(transId)",
+          "flowId": 170674,
+          "details": "$(detailsJson)",
+          "mediatype": "chat",
+          "channel": "web",
+          "overrideDefaultClose": false,
+          "sourcenumber": null,
+          "customerid": "",
+          "customername": "",
+          "origin": "",
+          "subject": ""
+        },
+        "group_id": 50020,
+        "customUiAuthStatus": 0,
+        "adminParameters": {
+          "oauth_callbackurl_type": 1,
+          "tenant_identifier": "56bbfaf9-5767-4971-8e1e-b5b737dfc08c",
+          "domain": "intgus1",
+          "integration_identifier": "https://example.invalid/v1/integration/cntwct"
+        },
+        "customuiWebcomponentElementName": "node-ui-template1701421030212",
+        "extraParamsData": {
+          "transId": "$(transId)",
+          "trackingId": "$(transId)",
+          "flowId": 170674,
+          "details": "$(detailsJson)",
+          "mediatype": "chat",
+          "channel": "web",
+          "overrideDefaultClose": false,
+          "sourcenumber": null,
+          "customerid": "",
+          "customername": "",
+          "origin": "",
+          "subject": ""
+        },
+        "isCustomUiAuthPresent": false,
+        "integration_version": 3,
+        "runTimeAuthorizationId": "[redacted]",
+        "nodeUiAuthorizationId": "[redacted]"
+      },
+      "transition_actions": [],
+      "declared_outputs": [
+        "transId",
+        "taskId",
+        "conversationOperation"
+      ],
+      "output_mappings": [
+        {
+          "order": 0,
+          "id": "b1e142f3-147f-4979-9685-afd59669f428",
+          "name": "transId",
+          "path": "$.transId",
+          "value": "",
+          "desc": "",
+          "type": "body",
+          "validation": {
+            "type": "",
+            "condition": null,
+            "regex": "",
+            "mandatory": true,
+            "format_validator": null
+          },
+          "key": null,
+          "debugKey": false,
+          "node_ui_type": null,
+          "node_ui_group_name": null,
+          "ui_field_configuration": null
+        },
+        {
+          "order": 1,
+          "id": "8d1a2153-82b3-45c3-97d0-8c40209cf61f",
+          "name": "taskId",
+          "path": "$.taskId",
+          "value": "",
+          "desc": "",
+          "type": "body",
+          "validation": {
+            "type": "",
+            "condition": null,
+            "regex": "",
+            "mandatory": true,
+            "format_validator": null
+          },
+          "key": null,
+          "debugKey": false,
+          "node_ui_type": null,
+          "node_ui_group_name": null,
+          "ui_field_configuration": null
+        },
+        {
+          "order": 2,
+          "id": "3f8b9b65-053c-4be7-b0fc-e47d48c1bb4b",
+          "name": "conversationOperation",
+          "path": "$.conversationOperation",
+          "value": "",
+          "desc": "",
+          "type": "body",
+          "validation": {
+            "type": "",
+            "condition": null,
+            "regex": "",
+            "mandatory": true,
+            "format_validator": null
+          },
+          "key": null,
+          "debugKey": false,
+          "node_ui_type": null,
+          "node_ui_group_name": null,
+          "ui_field_configuration": null
+        }
+      ]
+    },
+    {
+      "id": "2465",
+      "label": "Evaluate",
+      "type_internal": "evaluate",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "oninvalidchoice",
+          "declared_target_count": 1
+        },
+        {
+          "event_internal": "onerror",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "evaluteIsOptimization": true,
+        "expression": "//Handle blank message\nvar message = message;\nif (message === '' || message === 'undefined' || message === undefined) {\n    message = 'No text'\n} else {\n    message = message;\n    message = JSON.stringify(message);\n    message = message.replace(/\\\\n/g, \"\\\\n\").replace(/\\\\'/g, \"\\\\'\").replace(/\\\\\"/g, '\\\\\"').replace(/\\\\&/g, \"\\\\&\").replace(/\\\\r/g, \"\\\\r\").replace(/\\\\t/g, \"\\\\t\").replace(/\\\\b/g, \"\\\\b\").replace(/\\\\f/g, \"\\\\f\").replace(/\\//g, \"\\\\/\");\n    message = message.replace(/(^\")|(\"$)/g, '');\n}\n//Parse PCI Compliance attachment payload For LiveChat\n/*\n1. create one custom variable with name `inappPayloadObject` and assign value `inappmessaging.attachment`\n2. create one custom variable with name `nonPCIComplianceReasonObject` and assign value `inappmessaging.pciInfo.nonPCIComplianceReason`\n*/\nvar arr = [];\nvar parseDataAttachment = \"\";\n// inappPayloadObject = \"\";\nif (inappPayloadObject !== '' && inappPayloadObject !== null) {\n    inappPayloadObject = JSON.parse(inappPayloadObject);\n}\nif (nonPCIComplianceReasonObject !== null && nonPCIComplianceReasonObject !== '' && nonPCIComplianceReasonObject !== 'NA') {\n    var nonPCIComplianceReasonObject = JSON.parse(nonPCIComplianceReasonObject);\n\n    if ((\"attachments\" in nonPCIComplianceReasonObject)) {\n        //Some attachment has been sent\n\n        if (nonPCIComplianceReasonObject.attachments.length) {\n            //Attachment was dropped\n            arr[0] = {};\n            arr[0][\"mimeType\"] = nonPCIComplianceReasonObject.attachments[0].type;\n            arr[0][\"fileName\"] = \"[Dropped]\";\n            arr[0][\"url\"] = \"\";\n            arr[0][\"dropped\"] = true;\n\n        } else {\n            //Attachment was passed\n            var url = inappPayloadObject[0].file;\n            var fileName = url.substring(url.lastIndexOf('/') + 1);\n            fileName = fileName.split('?')[0];\n            arr[0] = {};\n            arr[0][\"mimeType\"] = inappPayloadObject[0].contentType;\n            arr[0][\"fileName\"] = fileName;\n            arr[0][\"url\"] = url;\n            arr[0][\"dropped\"] = false;\n        }\n    }\n}\n\nif (isPCIValidationDone == 'NA' && inappPayloadObject.length > 0) {\n    var url = inappPayloadObject[0].file;\n    var fileName = url.substring(url.lastIndexOf('/') + 1);\n    arr[0] = {};\n    arr[0][\"mimeType\"] = inappPayloadObject[0].contentType;\n    arr[0][\"fileName\"] = fileName;\n    arr[0][\"url\"] = url;\n    arr[0][\"dropped\"] = false;\n\n}\n//`parseDataAttachment` variable can be used as payload\nif (arr.length) {\n    parseDataAttachment = JSON.stringify(arr);\n\n} else {\n    var emptyArray = [];\n    parseDataAttachment = JSON.stringify(emptyArray);\n}\n\nif (attachmentCount === \"\") {\n    attachmentCount = \"0\";\n}\n\nvar customerEmail = customerEmail;\nif (customerEmail === '' || customerEmail === 'undefined' || customerEmail === undefined) {\n    customerEmail = userId\n}\nvar customerName = customerName;\nif (customerName === '' || customerName === 'undefined' || customerName === undefined) {\n    customerName = userId\n}\n\nvar messageDetails = {\n    \"appId\": appId,\n    \"domain\": liveChatDomain,\n    \"threadId\": threadId,\n    \"threadTitle\": threadTitle,\n    \"threadStatus\": threadStatus,\n    \"userId\": userId,\n    \"message\": resolveConversationMessage,\n    \"attachmentCount\": parseInt(attachmentCount),\n    \"attachment\": attachment,\n    \"extras\": extras,\n    \"version\": version,\n    \"tid\": transId,\n    \"serviceKey\": serviceKey,\n    \"customerName\": customerName,\n    \"customerEmail\": customerEmail,\n    \"timestamp\": timestamp\n};\n\nvar pci = {\n    \"isPCICompliant\": JSON.parse(isPCICompliance.replace(\"NA\", \"true\")),\n    \"isPCIValidationDone\": resolveConversationIsPCIValidationDone,\n    \"nonPCIComplianceReason\": resolveConversationNonPCIComplianceReasonObject,\n    \"isAttachmentEnabled\": JSON.parse(isAttachmentEnabled.replace(\"NA\", \"true\")),\n    \"droppedAttachmentCount\": JSON.parse(droppedAttachmentCount.replace(\"NA\", \"0\"))\n};\n\nvar malwareScanDetails = {\n    \"isMalwareCompliant\": JSON.parse(isMalwareCompliance.replace(\"NA\", \"true\")),\n    \"isMalwareValidationDone\": isMalwareValidationDone,\n    \"malwareFailedReason\": malwareNonComplianceReasonObject,\n    \"droppedAttachmentCount\": JSON.parse(malwareScanDroppedAttachmentCount.replace(\"NA\", \"0\"))\n};\n\nvar securityScanDetails = {\n    \"isSecurityCompliant\": JSON.parse(isSecurityCompliance.replace(\"NA\", \"true\")),\n    \"isSecurityValidationDone\": isSecurityValidationDone,\n    \"securityFailedReason\": securityNonComplianceReasonObject,\n    \"droppedAttachmentCount\": JSON.parse(securityScanDroppedAttachmentCount.replace(\"NA\", \"0\"))\n};\n\nvar details = {\n    \"messageDetails\": messageDetails,\n    \"pciDetails\": pci,\n    \"malwareScanDetails\": malwareScanDetails,\n    \"securityScanDetails\": securityScanDetails\n};\n\nvar detailsJson = JSON.stringify(details);\n1;",
+        "exp": "//Handle blank message\nvar message = message;\nif (message === '' || message === 'undefined' || message === undefined) {\n    message = 'No text'\n} else {\n    message = message;\n    message = JSON.stringify(message);\n    message = message.replace(/\\\\n/g, \"\\\\n\").replace(/\\\\'/g, \"\\\\'\").replace(/\\\\\"/g, '\\\\\"').replace(/\\\\&/g, \"\\\\&\").replace(/\\\\r/g, \"\\\\r\").replace(/\\\\t/g, \"\\\\t\").replace(/\\\\b/g, \"\\\\b\").replace(/\\\\f/g, \"\\\\f\").replace(/\\//g, \"\\\\/\");\n    message = message.replace(/(^\")|(\"$)/g, '');\n}\n//Parse PCI Compliance attachment payload For LiveChat\n/*\n1. create one custom variable with name `inappPayloadObject` and assign value `inappmessaging.attachment`\n2. create one custom variable with name `nonPCIComplianceReasonObject` and assign value `inappmessaging.pciInfo.nonPCIComplianceReason`\n*/\nvar arr = [];\nvar parseDataAttachment = \"\";\n// inappPayloadObject = \"\";\nif (inappPayloadObject !== '' && inappPayloadObject !== null) {\n    inappPayloadObject = JSON.parse(inappPayloadObject);\n}\nif (nonPCIComplianceReasonObject !== null && nonPCIComplianceReasonObject !== '' && nonPCIComplianceReasonObject !== 'NA') {\n    var nonPCIComplianceReasonObject = JSON.parse(nonPCIComplianceReasonObject);\n\n    if ((\"attachments\" in nonPCIComplianceReasonObject)) {\n        //Some attachment has been sent\n\n        if (nonPCIComplianceReasonObject.attachments.length) {\n            //Attachment was dropped\n            arr[0] = {};\n            arr[0][\"mimeType\"] = nonPCIComplianceReasonObject.attachments[0].type;\n            arr[0][\"fileName\"] = \"[Dropped]\";\n            arr[0][\"url\"] = \"\";\n            arr[0][\"dropped\"] = true;\n\n        } else {\n            //Attachment was passed\n            var url = inappPayloadObject[0].file;\n            var fileName = url.substring(url.lastIndexOf('/') + 1);\n            fileName = fileName.split('?')[0];\n            arr[0] = {};\n            arr[0][\"mimeType\"] = inappPayloadObject[0].contentType;\n            arr[0][\"fileName\"] = fileName;\n            arr[0][\"url\"] = url;\n            arr[0][\"dropped\"] = false;\n        }\n    }\n}\n\nif (isPCIValidationDone == 'NA' && inappPayloadObject.length > 0) {\n    var url = inappPayloadObject[0].file;\n    var fileName = url.substring(url.lastIndexOf('/') + 1);\n    arr[0] = {};\n    arr[0][\"mimeType\"] = inappPayloadObject[0].contentType;\n    arr[0][\"fileName\"] = fileName;\n    arr[0][\"url\"] = url;\n    arr[0][\"dropped\"] = false;\n\n}\n//`parseDataAttachment` variable can be used as payload\nif (arr.length) {\n    parseDataAttachment = JSON.stringify(arr);\n\n} else {\n    var emptyArray = [];\n    parseDataAttachment = JSON.stringify(emptyArray);\n}\n\nif (attachmentCount === \"\") {\n    attachmentCount = \"0\";\n}\n\nvar customerEmail = customerEmail;\nif (customerEmail === '' || customerEmail === 'undefined' || customerEmail === undefined) {\n    customerEmail = userId\n}\nvar customerName = customerName;\nif (customerName === '' || customerName === 'undefined' || customerName === undefined) {\n    customerName = userId\n}\n\nvar messageDetails = {\n    \"appId\": appId,\n    \"domain\": liveChatDomain,\n    \"threadId\": threadId,\n    \"threadTitle\": threadTitle,\n    \"threadStatus\": threadStatus,\n    \"userId\": userId,\n    \"message\": resolveConversationMessage,\n    \"attachmentCount\": parseInt(attachmentCount),\n    \"attachment\": attachment,\n    \"extras\": extras,\n    \"version\": version,\n    \"tid\": transId,\n    \"serviceKey\": serviceKey,\n    \"customerName\": customerName,\n    \"customerEmail\": customerEmail,\n    \"timestamp\": timestamp\n};\n\nvar pci = {\n    \"isPCICompliant\": JSON.parse(isPCICompliance.replace(\"NA\", \"true\")),\n    \"isPCIValidationDone\": resolveConversationIsPCIValidationDone,\n    \"nonPCIComplianceReason\": resolveConversationNonPCIComplianceReasonObject,\n    \"isAttachmentEnabled\": JSON.parse(isAttachmentEnabled.replace(\"NA\", \"true\")),\n    \"droppedAttachmentCount\": JSON.parse(droppedAttachmentCount.replace(\"NA\", \"0\"))\n};\n\nvar malwareScanDetails = {\n    \"isMalwareCompliant\": JSON.parse(isMalwareCompliance.replace(\"NA\", \"true\")),\n    \"isMalwareValidationDone\": isMalwareValidationDone,\n    \"malwareFailedReason\": malwareNonComplianceReasonObject,\n    \"droppedAttachmentCount\": JSON.parse(malwareScanDroppedAttachmentCount.replace(\"NA\", \"0\"))\n};\n\nvar securityScanDetails = {\n    \"isSecurityCompliant\": JSON.parse(isSecurityCompliance.replace(\"NA\", \"true\")),\n    \"isSecurityValidationDone\": isSecurityValidationDone,\n    \"securityFailedReason\": securityNonComplianceReasonObject,\n    \"droppedAttachmentCount\": JSON.parse(securityScanDroppedAttachmentCount.replace(\"NA\", \"0\"))\n};\n\nvar details = {\n    \"messageDetails\": messageDetails,\n    \"pciDetails\": pci,\n    \"malwareScanDetails\": malwareScanDetails,\n    \"securityScanDetails\": securityScanDetails\n};\n\nvar detailsJson = JSON.stringify(details);\n1;",
+        "isTestExecuted": true,
+        "nodeVersion": 1
+      },
+      "transition_actions": [],
+      "declared_outputs": [],
+      "output_mappings": []
+    },
+    {
+      "id": "2481",
+      "label": "Branch",
+      "type_internal": "evaluate",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "onerror",
+          "declared_target_count": null
+        }
+      ],
+      "configuration": {
+        "evaluteIsOptimization": true,
+        "outcomes": [
+          {
+            "outcome": "Create/Reopen Path",
+            "order": "",
+            "open": true,
+            "isEditOn": false,
+            "tempVal": "Create/Reopen Path",
+            "conditions": [
+              {
+                "pills": [],
+                "varaible": "$(n2307.conversationOperation)",
+                "condition": "==",
+                "value": "created",
+                "operation": "OR",
+                "index": "nxyhyo9d"
+              },
+              {
+                "pills": [],
+                "varaible": "$(n2307.conversationOperation)",
+                "condition": "==",
+                "value": "reopened",
+                "operation": "",
+                "index": "60tn5nd7"
+              }
+            ],
+            "index": "socbdntn"
+          },
+          {
+            "outcome": "Append Path",
+            "order": "",
+            "open": false,
+            "isEditOn": false,
+            "tempVal": "Append Path",
+            "conditions": [
+              {
+                "pills": [],
+                "varaible": "$(n2307.conversationOperation)",
+                "condition": "==",
+                "value": "appended",
+                "operation": "",
+                "index": "pdrt1l0e"
+              }
+            ],
+            "index": "ximayhdy"
+          }
+        ],
+        "allConditionsFail": "None of the above",
+        "expression": "if(\"$(n2307.conversationOperation)\"  == \"created\" || \"$(n2307.conversationOperation)\"  == \"reopened\"){\"Create/Reopen Path\";}else if(\"$(n2307.conversationOperation)\"  == \"appended\"){\"Append Path\";}else{'None of the above';}",
+        "counter": 3,
+        "successEvents": [
+          "Create/Reopen Path",
+          "Append Path",
+          "None of the above"
+        ],
+        "nodeVersion": 1
+      },
+      "transition_actions": [],
+      "declared_outputs": [],
+      "output_mappings": []
+    }
+  ],
+  "edges": [
+    {
+      "id": "5132205",
+      "source": "2259",
+      "target": "2261",
+      "event_internal": "ontimeout",
+      "event_label": "onTimeout",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5132207",
+      "source": "2259",
+      "target": "2261",
+      "event_internal": "oninvaliddata",
+      "event_label": "onInvalidData",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5132209",
+      "source": "2259",
+      "target": "2261",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5132211",
+      "source": "2259",
+      "target": "2261",
+      "event_internal": "oninvalidchoice",
+      "event_label": "onInvalidChoice",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5132213",
+      "source": "2259",
+      "target": "2261",
+      "event_internal": "Error",
+      "event_label": "Error",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5132215",
+      "source": "2259",
+      "target": "2261",
+      "event_internal": "taskFailed",
+      "event_label": "taskFailed",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5132217",
+      "source": "2261",
+      "target": "2227",
+      "event_internal": "ontimeout",
+      "event_label": "onTimeout",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5132219",
+      "source": "2261",
+      "target": "2227",
+      "event_internal": "oninvaliddata",
+      "event_label": "onInvalidData",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5132221",
+      "source": "2261",
+      "target": "2227",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5132223",
+      "source": "2261",
+      "target": "2227",
+      "event_internal": "oninvalidchoice",
+      "event_label": "onInvalidChoice",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5132228",
+      "source": "2261",
+      "target": "2227",
+      "event_internal": "Success",
+      "event_label": "",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5132230",
+      "source": "2261",
+      "target": "2227",
+      "event_internal": "Error",
+      "event_label": "",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5132943",
+      "source": "2259",
+      "target": "2261",
+      "event_internal": "onauthorizationfail",
+      "event_label": "onauthorizationfail",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5132949",
+      "source": "2261",
+      "target": "2227",
+      "event_internal": "onauthorizationfail",
+      "event_label": "",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5133422",
+      "source": "2307",
+      "target": "2234",
+      "event_internal": "oninvaliddata",
+      "event_label": "onInvalidData",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5133424",
+      "source": "2307",
+      "target": "2234",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5133426",
+      "source": "2307",
+      "target": "2234",
+      "event_internal": "oninvalidchoice",
+      "event_label": "onInvalidChoice",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5133436",
+      "source": "2307",
+      "target": "2234",
+      "event_internal": "tooManyRequests",
+      "event_label": "",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5133438",
+      "source": "2307",
+      "target": "2234",
+      "event_internal": "serviceUnavailable",
+      "event_label": "",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5133440",
+      "source": "2307",
+      "target": "2234",
+      "event_internal": "error",
+      "event_label": "",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5133448",
+      "source": "2307",
+      "target": "2234",
+      "event_internal": "taskFailed",
+      "event_label": "",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5133456",
+      "source": "2307",
+      "target": "2234",
+      "event_internal": "appendFailed",
+      "event_label": "",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5134493",
+      "source": "2465",
+      "target": "2307",
+      "event_internal": 1,
+      "event_label": "success",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5134495",
+      "source": "2465",
+      "target": "2234",
+      "event_internal": "oninvalidchoice",
+      "event_label": "onInvalidChoice",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5134497",
+      "source": "2465",
+      "target": "2234",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5134572",
+      "source": "2",
+      "target": "2465",
+      "event_internal": "onbegin",
+      "event_label": "onBegin",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5134707",
+      "source": "2307",
+      "target": "2481",
+      "event_internal": "ontimeout",
+      "event_label": "onTimeout",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5134711",
+      "source": "2481",
+      "target": "2261",
+      "event_internal": "Create/Reopen Path",
+      "event_label": "Create/Reopen Path",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5134743",
+      "source": "2259",
+      "target": "1727",
+      "event_internal": "Queued",
+      "event_label": "Queued",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5134854",
+      "source": "2307",
+      "target": "2234",
+      "event_internal": "onauthorizationfail",
+      "event_label": "",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5135152",
+      "source": "2307",
+      "target": "2259",
+      "event_internal": "created",
+      "event_label": "created",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5135154",
+      "source": "2307",
+      "target": "2259",
+      "event_internal": "reopened",
+      "event_label": "reopened",
+      "representation": "explicit_edge"
+    }
+  ],
+  "terminal_bindings": [
+    {
+      "id": "2475",
+      "source": "2291",
+      "target": "2475",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": false,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "2476",
+      "source": "2291",
+      "target": "2476",
+      "event_internal": "onpolicyfail",
+      "event_label": "onPolicyFail",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": false,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "2477",
+      "source": "2291",
+      "target": "2477",
+      "event_internal": "onsuccess",
+      "event_label": "onSuccess",
+      "outcome_id": 2,
+      "outcome_name": "Success",
+      "outcome_description": "Successfully completed flow",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": false,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "2478",
+      "source": "2238",
+      "target": "2478",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": false,
+      "same_binding_record_count": 2
+    },
+    {
+      "id": "2479",
+      "source": "2238",
+      "target": "2479",
+      "event_internal": "onpolicyfail",
+      "event_label": "onPolicyFail",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": false,
+      "same_binding_record_count": 2
+    },
+    {
+      "id": "2480",
+      "source": "2238",
+      "target": "2480",
+      "event_internal": "onsuccess",
+      "event_label": "onSuccess",
+      "outcome_id": 2,
+      "outcome_name": "Success",
+      "outcome_description": "Successfully completed flow",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": false,
+      "same_binding_record_count": 2
+    },
+    {
+      "id": "2482",
+      "source": "2481",
+      "target": "2482",
+      "event_internal": "Append Path",
+      "event_label": "Append Path",
+      "outcome_id": 2,
+      "outcome_name": "Success",
+      "outcome_description": "Successfully completed flow",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "2484",
+      "source": "2481",
+      "target": "2484",
+      "event_internal": "None of the above",
+      "event_label": "None of the above",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "2487",
+      "source": "2481",
+      "target": "2487",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "2508",
+      "source": "2307",
+      "target": "2508",
+      "event_internal": "appended",
+      "event_label": "appended",
+      "outcome_id": 2,
+      "outcome_name": "Success",
+      "outcome_description": "Successfully completed flow",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "2509",
+      "source": "2307",
+      "target": "2509",
+      "event_internal": "accepted",
+      "event_label": "accepted",
+      "outcome_id": 2,
+      "outcome_name": "Success",
+      "outcome_description": "Successfully completed flow",
+      "session_retry": "",
+      "async_check": true,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "2510",
+      "source": "2238",
+      "target": "2510",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": false,
+      "same_binding_record_count": 2
+    },
+    {
+      "id": "2511",
+      "source": "2238",
+      "target": "2511",
+      "event_internal": "onpolicyfail",
+      "event_label": "onPolicyFail",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": false,
+      "same_binding_record_count": 2
+    },
+    {
+      "id": "2512",
+      "source": "2238",
+      "target": "2512",
+      "event_internal": "onsuccess",
+      "event_label": "onSuccess",
+      "outcome_id": 2,
+      "outcome_name": "Success",
+      "outcome_description": "Successfully completed flow",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": false,
+      "same_binding_record_count": 2
+    }
+  ],
+  "terminal_sources_not_captured": [
+    "2238",
+    "2291"
+  ],
+  "duplicate_terminal_binding_groups": [
+    {
+      "source": "2238",
+      "event_internal": "onerror",
+      "outcome_id": "3",
+      "record_count": 2
+    },
+    {
+      "source": "2238",
+      "event_internal": "onpolicyfail",
+      "outcome_id": "3",
+      "record_count": 2
+    },
+    {
+      "source": "2238",
+      "event_internal": "onsuccess",
+      "outcome_id": "2",
+      "record_count": 2
+    }
+  ],
+  "variable_handoffs": [
+    {
+      "consumer": "2",
+      "location": "transition_actions[0].value",
+      "reference": "$(n2.inappmessaging.message)",
+      "variable": "n2.inappmessaging.message",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.message",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[1].value",
+      "reference": "$(n2.inappmessaging.attachment)",
+      "variable": "n2.inappmessaging.attachment",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.attachment",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[2].value",
+      "reference": "$(n2.inappmessaging.pciInfo.nonPCIComplianceReason)",
+      "variable": "n2.inappmessaging.pciInfo.nonPCIComplianceReason",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.pciInfo.nonPCIComplianceReason",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[3].value",
+      "reference": "$(n2.inappmessaging.pciInfo.isPCIValidationDone)",
+      "variable": "n2.inappmessaging.pciInfo.isPCIValidationDone",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.pciInfo.isPCIValidationDone",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[4].value",
+      "reference": "$(n2.inappmessaging.extras)",
+      "variable": "n2.inappmessaging.extras",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.extras",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[5].value",
+      "reference": "$(n2.inappmessaging.appId)",
+      "variable": "n2.inappmessaging.appId",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.appId",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[6].value",
+      "reference": "$(n2.inappmessaging.threadId)",
+      "variable": "n2.inappmessaging.threadId",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.threadId",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[7].value",
+      "reference": "$(n2.inappmessaging.threadTitle)",
+      "variable": "n2.inappmessaging.threadTitle",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.threadTitle",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[8].value",
+      "reference": "$(n2.inappmessaging.threadStatus)",
+      "variable": "n2.inappmessaging.threadStatus",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.threadStatus",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[9].value",
+      "reference": "$(n2.inappmessaging.userId)",
+      "variable": "n2.inappmessaging.userId",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.userId",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[10].value",
+      "reference": "$(n2.inappmessaging.attachmentCount)",
+      "variable": "n2.inappmessaging.attachmentCount",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.attachmentCount",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[11].value",
+      "reference": "$(n2.inappmessaging.attachment)",
+      "variable": "n2.inappmessaging.attachment",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.attachment",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[12].value",
+      "reference": "$(n2.inappmessaging.version)",
+      "variable": "n2.inappmessaging.version",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.version",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[13].value",
+      "reference": "$(n2.inappmessaging.timestamp)",
+      "variable": "n2.inappmessaging.timestamp",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.timestamp",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[14].value",
+      "reference": "$(n2.inappmessaging.tid)",
+      "variable": "n2.inappmessaging.tid",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.tid",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[15].value",
+      "reference": "$(n2.service.serviceKey)",
+      "variable": "n2.service.serviceKey",
+      "producer_node": "2",
+      "producer_field": "service.serviceKey",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[16].value",
+      "reference": "$(n2.inappmessaging.pciInfo.isAttachmentEnabled)",
+      "variable": "n2.inappmessaging.pciInfo.isAttachmentEnabled",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.pciInfo.isAttachmentEnabled",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[17].value",
+      "reference": "$(n2.inappmessaging.pciInfo.droppedAttachmentCount)",
+      "variable": "n2.inappmessaging.pciInfo.droppedAttachmentCount",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.pciInfo.droppedAttachmentCount",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[18].value",
+      "reference": "$(n2.inappmessaging.pciInfo.isPCICompliance)",
+      "variable": "n2.inappmessaging.pciInfo.isPCICompliance",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.pciInfo.isPCICompliance",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[19].value",
+      "reference": "$(n2.inappmessaging.message)",
+      "variable": "n2.inappmessaging.message",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.message",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[20].value",
+      "reference": "$(n2.inappmessaging.pciInfo.nonPCIComplianceReasonObject)",
+      "variable": "n2.inappmessaging.pciInfo.nonPCIComplianceReasonObject",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.pciInfo.nonPCIComplianceReasonObject",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[21].value",
+      "reference": "$(n2.inappmessaging.pciInfo.isPCIValidationDone)",
+      "variable": "n2.inappmessaging.pciInfo.isPCIValidationDone",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.pciInfo.isPCIValidationDone",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[22].value",
+      "reference": "$(n2.inappmessaging.tid)",
+      "variable": "n2.inappmessaging.tid",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.tid",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[23].value",
+      "reference": "$(n2.inappmessaging.tid)",
+      "variable": "n2.inappmessaging.tid",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.tid",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[24].value",
+      "reference": "$(n2.inappmessaging.securityscaninfo.droppedAttachmentCount)",
+      "variable": "n2.inappmessaging.securityscaninfo.droppedAttachmentCount",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.securityscaninfo.droppedAttachmentCount",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[25].value",
+      "reference": "$(n2.inappmessaging.securityscaninfo.securityFailedReason)",
+      "variable": "n2.inappmessaging.securityscaninfo.securityFailedReason",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.securityscaninfo.securityFailedReason",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[26].value",
+      "reference": "$(n2.inappmessaging.securityscaninfo.isSecurityValidationDone)",
+      "variable": "n2.inappmessaging.securityscaninfo.isSecurityValidationDone",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.securityscaninfo.isSecurityValidationDone",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[27].value",
+      "reference": "$(n2.inappmessaging.securityscaninfo.isSecurityCompliance)",
+      "variable": "n2.inappmessaging.securityscaninfo.isSecurityCompliance",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.securityscaninfo.isSecurityCompliance",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[28].value",
+      "reference": "$(n2.inappmessaging.malwareinfo.isMalwareValidationDone)",
+      "variable": "n2.inappmessaging.malwareinfo.isMalwareValidationDone",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.malwareinfo.isMalwareValidationDone",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[29].value",
+      "reference": "$(n2.inappmessaging.malwareinfo.isMalwareCompliance)",
+      "variable": "n2.inappmessaging.malwareinfo.isMalwareCompliance",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.malwareinfo.isMalwareCompliance",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[30].value",
+      "reference": "$(n2.inappmessaging.malwareinfo.malwareFailedReason)",
+      "variable": "n2.inappmessaging.malwareinfo.malwareFailedReason",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.malwareinfo.malwareFailedReason",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[31].value",
+      "reference": "$(n2.inappmessaging.malwareinfo.droppedAttachmentCount)",
+      "variable": "n2.inappmessaging.malwareinfo.droppedAttachmentCount",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.malwareinfo.droppedAttachmentCount",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1727",
+      "location": "configuration.destination",
+      "reference": "$(n2.inappmessaging.userId)",
+      "variable": "n2.inappmessaging.userId",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.userId",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1727",
+      "location": "configuration.thread_id",
+      "reference": "$(n2.inappmessaging.threadId)",
+      "variable": "n2.inappmessaging.threadId",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.threadId",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2227",
+      "location": "configuration.destination",
+      "reference": "$(n2.inappmessaging.userId)",
+      "variable": "n2.inappmessaging.userId",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.userId",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2227",
+      "location": "configuration.message",
+      "reference": "$(errorMsg1)",
+      "variable": "errorMsg1",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2227",
+      "location": "configuration.thread_id",
+      "reference": "$(n2.inappmessaging.threadId)",
+      "variable": "n2.inappmessaging.threadId",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.threadId",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2234",
+      "location": "configuration.destination",
+      "reference": "$(n2.inappmessaging.userId)",
+      "variable": "n2.inappmessaging.userId",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.userId",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2234",
+      "location": "configuration.message",
+      "reference": "$(errorMsg1)",
+      "variable": "errorMsg1",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2234",
+      "location": "configuration.thread_id",
+      "reference": "$(n2.inappmessaging.threadId)",
+      "variable": "n2.inappmessaging.threadId",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.threadId",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2259",
+      "location": "configuration.request_body[0].value",
+      "reference": "$(taskId)",
+      "variable": "taskId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2259",
+      "location": "configuration.request_body[3].value",
+      "reference": "$(conversationId)",
+      "variable": "conversationId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2259",
+      "location": "configuration.path_parameters[1].value",
+      "reference": "$(taskId)",
+      "variable": "taskId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2259",
+      "location": "configuration.nodeInput.id",
+      "reference": "$(taskId)",
+      "variable": "taskId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2259",
+      "location": "configuration.nodeInput.conversationid",
+      "reference": "$(conversationId)",
+      "variable": "conversationId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2259",
+      "location": "configuration.extraParamsData.id",
+      "reference": "$(taskId)",
+      "variable": "taskId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2259",
+      "location": "configuration.extraParamsData.conversationid",
+      "reference": "$(conversationId)",
+      "variable": "conversationId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2261",
+      "location": "configuration.request_body[0].value",
+      "reference": "$(taskId)",
+      "variable": "taskId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2261",
+      "location": "configuration.request_body[2].value",
+      "reference": "$(conversationId)",
+      "variable": "conversationId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2261",
+      "location": "configuration.path_parameters[1].value",
+      "reference": "$(taskId)",
+      "variable": "taskId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2261",
+      "location": "configuration.nodeInput.ID",
+      "reference": "$(taskId)",
+      "variable": "taskId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2261",
+      "location": "configuration.nodeInput.Task Id",
+      "reference": "$(taskId)",
+      "variable": "taskId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2261",
+      "location": "configuration.nodeInput.Conversation ID",
+      "reference": "$(conversationId)",
+      "variable": "conversationId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2307",
+      "location": "configuration.request_body[0].value",
+      "reference": "$(transId)",
+      "variable": "transId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": [
+        "2"
+      ]
+    },
+    {
+      "consumer": "2307",
+      "location": "configuration.request_body[6].value",
+      "reference": "$(detailsJson)",
+      "variable": "detailsJson",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2307",
+      "location": "configuration.nodeInput.transId",
+      "reference": "$(transId)",
+      "variable": "transId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": [
+        "2"
+      ]
+    },
+    {
+      "consumer": "2307",
+      "location": "configuration.nodeInput.trackingId",
+      "reference": "$(transId)",
+      "variable": "transId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": [
+        "2"
+      ]
+    },
+    {
+      "consumer": "2307",
+      "location": "configuration.nodeInput.details",
+      "reference": "$(detailsJson)",
+      "variable": "detailsJson",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2307",
+      "location": "configuration.extraParamsData.transId",
+      "reference": "$(transId)",
+      "variable": "transId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": [
+        "2"
+      ]
+    },
+    {
+      "consumer": "2307",
+      "location": "configuration.extraParamsData.trackingId",
+      "reference": "$(transId)",
+      "variable": "transId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": [
+        "2"
+      ]
+    },
+    {
+      "consumer": "2307",
+      "location": "configuration.extraParamsData.details",
+      "reference": "$(detailsJson)",
+      "variable": "detailsJson",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2481",
+      "location": "configuration.outcomes[0].conditions[0].varaible",
+      "reference": "$(n2307.conversationOperation)",
+      "variable": "n2307.conversationOperation",
+      "producer_node": "2307",
+      "producer_field": "conversationOperation",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2481",
+      "location": "configuration.outcomes[0].conditions[1].varaible",
+      "reference": "$(n2307.conversationOperation)",
+      "variable": "n2307.conversationOperation",
+      "producer_node": "2307",
+      "producer_field": "conversationOperation",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2481",
+      "location": "configuration.outcomes[1].conditions[0].varaible",
+      "reference": "$(n2307.conversationOperation)",
+      "variable": "n2307.conversationOperation",
+      "producer_node": "2307",
+      "producer_field": "conversationOperation",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2481",
+      "location": "configuration.expression",
+      "reference": "$(n2307.conversationOperation)",
+      "variable": "n2307.conversationOperation",
+      "producer_node": "2307",
+      "producer_field": "conversationOperation",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-custom-defaults",
+      "location": "customVariables[4].value",
+      "reference": "$(n2.inappmessaging.message)",
+      "variable": "n2.inappmessaging.message",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.message",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.inappmessaging.message)",
+      "variable": "n2.inappmessaging.message",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.message",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.inappmessaging.attachment)",
+      "variable": "n2.inappmessaging.attachment",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.attachment",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.inappmessaging.pciInfo.nonPCIComplianceReason)",
+      "variable": "n2.inappmessaging.pciInfo.nonPCIComplianceReason",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.pciInfo.nonPCIComplianceReason",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.inappmessaging.pciInfo.isPCIValidationDone)",
+      "variable": "n2.inappmessaging.pciInfo.isPCIValidationDone",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.pciInfo.isPCIValidationDone",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.inappmessaging.extras)",
+      "variable": "n2.inappmessaging.extras",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.extras",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.inappmessaging.appId)",
+      "variable": "n2.inappmessaging.appId",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.appId",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.inappmessaging.threadId)",
+      "variable": "n2.inappmessaging.threadId",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.threadId",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.inappmessaging.threadTitle)",
+      "variable": "n2.inappmessaging.threadTitle",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.threadTitle",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.inappmessaging.threadStatus)",
+      "variable": "n2.inappmessaging.threadStatus",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.threadStatus",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.inappmessaging.userId)",
+      "variable": "n2.inappmessaging.userId",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.userId",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.inappmessaging.attachmentCount)",
+      "variable": "n2.inappmessaging.attachmentCount",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.attachmentCount",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.inappmessaging.version)",
+      "variable": "n2.inappmessaging.version",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.version",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.inappmessaging.timestamp)",
+      "variable": "n2.inappmessaging.timestamp",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.timestamp",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.inappmessaging.tid)",
+      "variable": "n2.inappmessaging.tid",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.tid",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.service.serviceKey)",
+      "variable": "n2.service.serviceKey",
+      "producer_node": "2",
+      "producer_field": "service.serviceKey",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.inappmessaging.pciInfo.isAttachmentEnabled)",
+      "variable": "n2.inappmessaging.pciInfo.isAttachmentEnabled",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.pciInfo.isAttachmentEnabled",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.inappmessaging.pciInfo.droppedAttachmentCount)",
+      "variable": "n2.inappmessaging.pciInfo.droppedAttachmentCount",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.pciInfo.droppedAttachmentCount",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.inappmessaging.pciInfo.isPCICompliance)",
+      "variable": "n2.inappmessaging.pciInfo.isPCICompliance",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.pciInfo.isPCICompliance",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.inappmessaging.pciInfo.nonPCIComplianceReasonObject)",
+      "variable": "n2.inappmessaging.pciInfo.nonPCIComplianceReasonObject",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.pciInfo.nonPCIComplianceReasonObject",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.inappmessaging.securityscaninfo.droppedAttachmentCount)",
+      "variable": "n2.inappmessaging.securityscaninfo.droppedAttachmentCount",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.securityscaninfo.droppedAttachmentCount",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.inappmessaging.securityscaninfo.securityFailedReason)",
+      "variable": "n2.inappmessaging.securityscaninfo.securityFailedReason",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.securityscaninfo.securityFailedReason",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.inappmessaging.securityscaninfo.isSecurityValidationDone)",
+      "variable": "n2.inappmessaging.securityscaninfo.isSecurityValidationDone",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.securityscaninfo.isSecurityValidationDone",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.inappmessaging.securityscaninfo.isSecurityCompliance)",
+      "variable": "n2.inappmessaging.securityscaninfo.isSecurityCompliance",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.securityscaninfo.isSecurityCompliance",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.inappmessaging.malwareinfo.isMalwareValidationDone)",
+      "variable": "n2.inappmessaging.malwareinfo.isMalwareValidationDone",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.malwareinfo.isMalwareValidationDone",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.inappmessaging.malwareinfo.isMalwareCompliance)",
+      "variable": "n2.inappmessaging.malwareinfo.isMalwareCompliance",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.malwareinfo.isMalwareCompliance",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.inappmessaging.malwareinfo.malwareFailedReason)",
+      "variable": "n2.inappmessaging.malwareinfo.malwareFailedReason",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.malwareinfo.malwareFailedReason",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.inappmessaging.malwareinfo.droppedAttachmentCount)",
+      "variable": "n2.inappmessaging.malwareinfo.droppedAttachmentCount",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.malwareinfo.droppedAttachmentCount",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1727",
+      "location": "_usedVars",
+      "reference": "$(n2.inappmessaging.userId)",
+      "variable": "n2.inappmessaging.userId",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.userId",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1727",
+      "location": "_usedVars",
+      "reference": "$(n2.inappmessaging.threadId)",
+      "variable": "n2.inappmessaging.threadId",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.threadId",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2227",
+      "location": "_usedVars",
+      "reference": "$(n2.inappmessaging.userId)",
+      "variable": "n2.inappmessaging.userId",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.userId",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2227",
+      "location": "_usedVars",
+      "reference": "$(n2.inappmessaging.threadId)",
+      "variable": "n2.inappmessaging.threadId",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.threadId",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2234",
+      "location": "_usedVars",
+      "reference": "$(n2.inappmessaging.userId)",
+      "variable": "n2.inappmessaging.userId",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.userId",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2234",
+      "location": "_usedVars",
+      "reference": "$(n2.inappmessaging.threadId)",
+      "variable": "n2.inappmessaging.threadId",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.threadId",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2481",
+      "location": "_usedVars",
+      "reference": "$(n2307.conversationOperation)",
+      "variable": "n2307.conversationOperation",
+      "producer_node": "2307",
+      "producer_field": "conversationOperation",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "_usedVars",
+      "reference": "$(n2.inappmessaging.message)",
+      "variable": "n2.inappmessaging.message",
+      "producer_node": "2",
+      "producer_field": "inappmessaging.message",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    }
+  ],
+  "custom_variable_assignments": [
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "message",
+      "when": "onleave",
+      "value": "$(n2.inappmessaging.message)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "inappPayloadObject",
+      "when": "onleave",
+      "value": "$(n2.inappmessaging.attachment)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "nonPCIComplianceReasonObject",
+      "when": "onleave",
+      "value": "$(n2.inappmessaging.pciInfo.nonPCIComplianceReason)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "isPCIValidationDone",
+      "when": "onleave",
+      "value": "$(n2.inappmessaging.pciInfo.isPCIValidationDone)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "extras",
+      "when": "onleave",
+      "value": "$(n2.inappmessaging.extras)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "appId",
+      "when": "onleave",
+      "value": "$(n2.inappmessaging.appId)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "threadId",
+      "when": "onleave",
+      "value": "$(n2.inappmessaging.threadId)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "threadTitle",
+      "when": "onleave",
+      "value": "$(n2.inappmessaging.threadTitle)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "threadStatus",
+      "when": "onleave",
+      "value": "$(n2.inappmessaging.threadStatus)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "userId",
+      "when": "onleave",
+      "value": "$(n2.inappmessaging.userId)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "attachmentCount",
+      "when": "onleave",
+      "value": "$(n2.inappmessaging.attachmentCount)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "attachment",
+      "when": "onleave",
+      "value": "$(n2.inappmessaging.attachment)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "version",
+      "when": "onleave",
+      "value": "$(n2.inappmessaging.version)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "timestamp",
+      "when": "onleave",
+      "value": "$(n2.inappmessaging.timestamp)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "tid",
+      "when": "onleave",
+      "value": "$(n2.inappmessaging.tid)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "serviceKey",
+      "when": "onleave",
+      "value": "$(n2.service.serviceKey)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "isAttachmentEnabled",
+      "when": "onleave",
+      "value": "$(n2.inappmessaging.pciInfo.isAttachmentEnabled)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "droppedAttachmentCount",
+      "when": "onleave",
+      "value": "$(n2.inappmessaging.pciInfo.droppedAttachmentCount)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "isPCICompliance",
+      "when": "onleave",
+      "value": "$(n2.inappmessaging.pciInfo.isPCICompliance)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "resolveConversationMessage",
+      "when": "onleave",
+      "value": "$(n2.inappmessaging.message)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "resolveConversationNonPCIComplianceReasonObject",
+      "when": "onleave",
+      "value": "$(n2.inappmessaging.pciInfo.nonPCIComplianceReasonObject)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "resolveConversationIsPCIValidationDone",
+      "when": "onleave",
+      "value": "$(n2.inappmessaging.pciInfo.isPCIValidationDone)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "resolveConversationtid",
+      "when": "onleave",
+      "value": "$(n2.inappmessaging.tid)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "transId",
+      "when": "onleave",
+      "value": "$(n2.inappmessaging.tid)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "securityScanDroppedAttachmentCount",
+      "when": "onleave",
+      "value": "$(n2.inappmessaging.securityscaninfo.droppedAttachmentCount)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "securityNonComplianceReasonObject",
+      "when": "onleave",
+      "value": "$(n2.inappmessaging.securityscaninfo.securityFailedReason)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "isSecurityValidationDone",
+      "when": "onleave",
+      "value": "$(n2.inappmessaging.securityscaninfo.isSecurityValidationDone)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "isSecurityCompliance",
+      "when": "onleave",
+      "value": "$(n2.inappmessaging.securityscaninfo.isSecurityCompliance)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "isMalwareValidationDone",
+      "when": "onleave",
+      "value": "$(n2.inappmessaging.malwareinfo.isMalwareValidationDone)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "isMalwareCompliance",
+      "when": "onleave",
+      "value": "$(n2.inappmessaging.malwareinfo.isMalwareCompliance)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "malwareNonComplianceReasonObject",
+      "when": "onleave",
+      "value": "$(n2.inappmessaging.malwareinfo.malwareFailedReason)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "malwareScanDroppedAttachmentCount",
+      "when": "onleave",
+      "value": "$(n2.inappmessaging.malwareinfo.droppedAttachmentCount)"
+    }
+  ],
+  "custom_variables": [
+    {
+      "name": "liveChatDomain",
+      "value": "tranquil-marigold-5e5c36.netlify.app",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "appId",
+      "value": "CI12124933",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "inappPayloadObject",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "nonPCIComplianceReasonObject",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "messagetext",
+      "value": "$(n2.inappmessaging.message)",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "isPCIValidationDone",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "conversationId",
+      "value": "000000000000000",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "errorMsg1",
+      "value": "Sorry, unable to process your request right now. Please try again later.",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "errorMsg2",
+      "value": "Unable to deliver message. Please resend.",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "message",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "err_msg_toomanyrequests",
+      "value": "There are too many requests currently",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "issueType",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "issueDescription",
+      "value": "No Description",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "inAppTs",
+      "value": 0,
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "attachmentCount",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "attachment",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "extras",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "threadId",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "threadTitle",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "threadStatus",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "userId",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "version",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "timestamp",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "tid",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "serviceKey",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "isAttachmentEnabled",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "droppedAttachmentCount",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "isPCICompliance",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "resolveConversationMessage",
+      "value": 0,
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "resolveConversationNonPCIComplianceReasonObject",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "resolveConversationIsPCIValidationDone",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "resolveConversationtid",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "name",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "origin",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "parseDataAttachment",
+      "value": [],
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "customerName",
+      "value": "Customer",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "transId",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "taskId",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "conversationOperation",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "securityScanDroppedAttachmentCount",
+      "value": "",
+      "desc": "",
+      "type": "default"
+    },
+    {
+      "name": "isSecurityCompliance",
+      "value": "",
+      "desc": "",
+      "type": "default"
+    },
+    {
+      "name": "securityNonComplianceReasonObject",
+      "value": "",
+      "desc": "",
+      "type": "default"
+    },
+    {
+      "name": "isSecurityValidationDone",
+      "value": "",
+      "desc": "",
+      "type": "default"
+    },
+    {
+      "name": "isMalwareValidationDone",
+      "value": "",
+      "desc": "",
+      "type": "default"
+    },
+    {
+      "name": "isMalwareCompliance",
+      "value": "",
+      "desc": "",
+      "type": "default"
+    },
+    {
+      "name": "malwareNonComplianceReasonObject",
+      "value": "",
+      "desc": "",
+      "type": "default"
+    },
+    {
+      "name": "malwareScanDroppedAttachmentCount",
+      "value": "",
+      "desc": "",
+      "type": "default"
+    },
+    {
+      "name": "flowVersion",
+      "value": 3.3,
+      "desc": "",
+      "type": "default"
+    }
+  ],
+  "flow_outcomes": [
+    {
+      "id": 2,
+      "order": 0,
+      "name": 101,
+      "value": "Successfully completed flow",
+      "tag": 11,
+      "tagName": "Success",
+      "type": "default",
+      "notification": null,
+      "isNotify": false,
+      "statusCode": null
+    },
+    {
+      "id": 3,
+      "order": 1,
+      "name": 102,
+      "value": "Flow completed with an error",
+      "tag": 12,
+      "tagName": "Error",
+      "type": "default",
+      "notification": null,
+      "isNotify": false,
+      "statusCode": null
+    },
+    {
+      "id": 4,
+      "order": 2,
+      "name": 103,
+      "value": "Flow ended due to an interruption",
+      "tag": 13,
+      "tagName": "Incomplete",
+      "type": "default",
+      "notification": null,
+      "isNotify": false,
+      "statusCode": null
+    },
+    {
+      "id": 1,
+      "order": 3,
+      "name": 100,
+      "value": "Last executed node event",
+      "tag": 15,
+      "tagName": "Last Execution Status",
+      "type": "default",
+      "notification": {
+        "method": "get",
+        "headers": "[redacted]"
+      },
+      "isNotify": false,
+      "statusCode": "All status codes"
+    }
+  ],
+  "cycles": [],
+  "cross_page_or_flow_nodes": [],
+  "capture_pages": null,
+  "declared_events_without_captured_route": [
+    {
+      "node": "1727",
+      "event_internal": "onerror",
+      "declared_target_count": 1
+    },
+    {
+      "node": "2227",
+      "event_internal": "onerror",
+      "declared_target_count": 1
+    },
+    {
+      "node": "2234",
+      "event_internal": "onerror",
+      "declared_target_count": 1
+    }
+  ],
+  "nodes_not_reached_from_captured_start": [],
+  "edge_endpoints_not_captured": [],
+  "node_variable_producers_not_captured": [],
+  "redactions": "Header credentials and URL hosts redacted. Internal model properties are evidence, not a public import API.",
+  "authored_walkthrough": {
+    "walkthrough": "APP Start 2 enters Evaluate 2465 and Resolve Conversation 2307 directly: there is no Search Conversation, form send, Receive wait or form-append operation. Resolve created/reopened events queue Task 2259, and `Queued` sends acknowledgment 1727. Resolve appended ends with Success; accepted also ends with Success and asynchronous checking. A Resolve timeout enters Branch 2481, whose created/reopened path closes Task 2261, appended path succeeds and unmatched/error paths fail. Queue timeout and other configured failures also close Task 2261; its outcomes all send error notification 2227. Evaluate errors and the other Resolve failure events instead send notification 2234.",
+    "handoffs": "Start supplies the in-app message, user/thread identities, attachments and scan values. Evaluate substitutes userId when customerName/customerEmail are empty, assembles message/PCI/malware/security details, and serializes `detailsJson` for Resolve. Branch 2481 explicitly tests `$(n2307.conversationOperation)`. Queue/Close take `$(taskId)` and `$(conversationId)`; all chat sends target `$(n2.inappmessaging.userId)` on `$(n2.inappmessaging.threadId)`. No autonomous customer-answering or business-action node is present.",
+    "limitations": "The flow has no explicit cycle or retry. Close Task specifies media type social while Resolve/Queue specify chat. Extra terminal metadata references absent producer nodes, and final message failures lack captured recovery routes. Fixed queue and integration bindings need tenant-specific replacement; no resource availability is established. This internal model records configuration rather than a public import schema, and runtime testing is false."
+  },
+  "walkthrough_status": "authored"
+}

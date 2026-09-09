@@ -1,0 +1,31 @@
+{
+  "_id": "6a675233ec1c893d8a7f6823:6a675233ec1c893d8a7f6662",
+  "components": {
+    "securitySchemes": {}
+  },
+  "info": {
+    "title": "Get SMS v1 New",
+    "version": "6.20.0"
+  },
+  "openapi": "3.1.0",
+  "paths": {},
+  "security": [
+    {}
+  ],
+  "servers": [
+    {
+      "url": "https://api.{YourRegion}.webexconnect.io/v1/sms/messages/",
+      "variables": {
+        "YourRegion": {
+          "default": "YourRegion"
+        }
+      }
+    }
+  ],
+  "x-readme": {
+    "explorer-enabled": true,
+    "headers": [],
+    "proxy-enabled": true
+  },
+  "x-readme-fauxas": true
+}

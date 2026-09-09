@@ -1,0 +1,31 @@
+{
+  "category": "Webex Connect and Cisco Contact Center Enterprise System (CCE)",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257956",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "1cd00a4dc336461448cbce16d132d78bbdf085cbeccf6ae7b085857dff9dcee9",
+    "source_path": "b80b80c34be2de62ddd1d446d863103b12c1521f2ae5a143734b8aa8ff75113b",
+    "text_path": "da54ff069a33ac8d49ed20a193f92cecf3d7e9db7734ebe3611c6a05e0494b7c"
+  },
+  "headings": [],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/cce-additional-information-on-whatsapp-onboarding.md",
+  "resolved_url": "https://help.webexconnect.io/docs/cce-additional-information-on-whatsapp-onboarding",
+  "retrieved_at": "2026-09-08T23:29:21+00:00",
+  "sha256_html_response": "be6c8dade71256d3731b89f53cb6a31f3fb6adee80cdc533cfd71dc3123c37f2",
+  "sha256_source_body": "b80b80c34be2de62ddd1d446d863103b12c1521f2ae5a143734b8aa8ff75113b",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/cce-additional-information-on-whatsapp-onboarding.source.md",
+  "source_updated_at": "2026-04-14T07:35:54.381Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/cce-additional-information-on-whatsapp-onboarding.txt",
+  "title": "Additional Information on WhatsApp Onboarding - CCE",
+  "url": "https://help.webexconnect.io/docs/cce-additional-information-on-whatsapp-onboarding",
+  "word_count": 118,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/cce-additional-information-on-whatsapp-onboarding.metadata.json"
+}

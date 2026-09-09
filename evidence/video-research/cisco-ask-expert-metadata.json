@@ -1,0 +1,249 @@
+{
+  "schema_version": 1,
+  "verified_at": "2026-09-08",
+  "official_index_url": "https://developer.cisco.com/docs/webex-connect-partner-resources/ask-the-expert/",
+  "retrieval_method": "Index links extracted from raw official Cisco HTML. YouTube metadata and advertised caption tracks verified using urllib HTTP GET of watch pages and JSON parsing of ytInitialPlayerResponse; titles and channel corroborated by public YouTube oEmbed. This artifact reconstructs only observed fields from completed tool results. No caption retry performed for artifact creation.",
+  "limitations": [
+    "Session date is decoded from video title, with month precision except the June 2024 recording; it is not the upload date.",
+    "Caption track advertisement does not establish successful caption content access. All attempted caption endpoints returned HTTP 429. No transcript has been downloaded, read, or summarized.",
+    "Caption download URLs are temporary signed URLs and intentionally omitted.",
+    "Non-ASR track labels describe YouTube metadata, not independent quality verification.",
+    "Companion decks are links verified on the Cisco index; deck contents were not retrieved."
+  ],
+  "videos": [
+    {
+      "id": "jAHkQZKn-1Y",
+      "source_url": "https://www.youtube.com/watch?v=jAHkQZKn-1Y",
+      "embed_url": "https://www.youtube.com/embed/jAHkQZKn-1Y",
+      "title": "CPaaS Ask the Expert 20240613",
+      "topic_from_official_index": "Digital-channel orchestration, business logic, integrations, and contact-center agent assistance",
+      "official_index_period": "FY2024 June",
+      "session_date_from_title": "2024-06-13",
+      "duration_seconds": 2143,
+      "duration_display": "35:43",
+      "published_at": "2024-06-24T07:20:40-07:00",
+      "channel_name": "Webex CPaaS Solutions",
+      "channel_id": "UCkwetV9yooqyFm8Bije3gDw",
+      "channel_url": "https://www.youtube.com/@webexcpaassolutions",
+      "playability_status": "OK",
+      "caption_tracks": [
+        {
+          "language_code": "en",
+          "label": "English (auto-generated)",
+          "kind": "asr",
+          "acquisition_status": "http_429",
+          "transcript_acquired": false
+        },
+        {
+          "language_code": "en-GB",
+          "label": "English (United Kingdom)",
+          "kind": "not_marked_asr",
+          "acquisition_status": "http_429",
+          "transcript_acquired": false
+        }
+      ],
+      "caption_attempt_evidence": {
+        "date": "2026-09-08",
+        "method": "HTTP GET advertised timedtext URL with fmt=json3",
+        "result": "HTTP Error 429: Too Many Requests",
+        "downloaded_caption_bytes": null,
+        "content_saved": false
+      },
+      "companion_deck_url": "https://cisco.app.box.com/file/1564769039100"
+    },
+    {
+      "id": "rj6KsqT9LOo",
+      "source_url": "https://www.youtube.com/watch?v=rj6KsqT9LOo",
+      "embed_url": "https://www.youtube.com/embed/rj6KsqT9LOo",
+      "title": "CPaaS Ask the Expert 202402",
+      "topic_from_official_index": "Coffee Bar sample flow; JavaScript prerequisite",
+      "official_index_period": "FY2024 February",
+      "session_date_from_title": "2024-02",
+      "duration_seconds": 1782,
+      "duration_display": "29:42",
+      "published_at": "2024-02-21T06:20:48-08:00",
+      "channel_name": "Webex CPaaS Solutions",
+      "channel_id": "UCkwetV9yooqyFm8Bije3gDw",
+      "channel_url": "https://www.youtube.com/@webexcpaassolutions",
+      "playability_status": "OK",
+      "caption_tracks": [
+        {
+          "language_code": "en",
+          "label": "English (auto-generated)",
+          "kind": "asr",
+          "acquisition_status": "http_429",
+          "transcript_acquired": false
+        }
+      ],
+      "caption_attempt_evidence": {
+        "date": "2026-09-08",
+        "method": "HTTP GET advertised timedtext URL with fmt=json3",
+        "result": "HTTP Error 429: Too Many Requests",
+        "downloaded_caption_bytes": null,
+        "content_saved": false
+      },
+      "companion_deck_url": null,
+      "deck_link_defect": "Official index href is malformed: /pubhub/(https://cisco.app.box.com/file/1445707916812 . Intended target is unverified."
+    },
+    {
+      "id": "5TzxFpDzIPs",
+      "source_url": "https://www.youtube.com/watch?v=5TzxFpDzIPs",
+      "embed_url": "https://www.youtube.com/embed/5TzxFpDzIPs",
+      "title": "CPaaS Ask the Expert 202311",
+      "topic_from_official_index": "Email capabilities and flow setup demo; first portion includes sales enablement",
+      "official_index_period": "FY2024 November",
+      "session_date_from_title": "2023-11",
+      "duration_seconds": 2494,
+      "duration_display": "41:34",
+      "published_at": "2023-12-19T04:18:49-08:00",
+      "channel_name": "Webex CPaaS Solutions",
+      "channel_id": "UCkwetV9yooqyFm8Bije3gDw",
+      "channel_url": "https://www.youtube.com/@webexcpaassolutions",
+      "playability_status": "OK",
+      "caption_tracks": [
+        {
+          "language_code": "en",
+          "label": "English (auto-generated)",
+          "kind": "asr",
+          "acquisition_status": "http_429",
+          "transcript_acquired": false
+        },
+        {
+          "language_code": "en-GB",
+          "label": "English (United Kingdom)",
+          "kind": "not_marked_asr",
+          "acquisition_status": "http_429",
+          "transcript_acquired": false
+        }
+      ],
+      "caption_attempt_evidence": {
+        "date": "2026-09-08",
+        "method": "HTTP GET advertised timedtext URL with fmt=json3",
+        "result": "HTTP Error 429: Too Many Requests",
+        "downloaded_caption_bytes": null,
+        "content_saved": false
+      },
+      "companion_deck_url": "https://cisco.box.com/s/nwa1ih8m00zkrhcnxvf72rapv4idmmhl"
+    },
+    {
+      "id": "Hupt-VJE27Y",
+      "source_url": "https://www.youtube.com/watch?v=Hupt-VJE27Y",
+      "embed_url": "https://www.youtube.com/embed/Hupt-VJE27Y",
+      "title": "CPaaS Ask the Expert 202310",
+      "topic_from_official_index": "Webex Engage overview; SSO, MFA, and biometric validation",
+      "official_index_period": "FY2024 October",
+      "session_date_from_title": "2023-10",
+      "duration_seconds": 2652,
+      "duration_display": "44:12",
+      "published_at": "2023-12-19T04:01:46-08:00",
+      "channel_name": "Webex CPaaS Solutions",
+      "channel_id": "UCkwetV9yooqyFm8Bije3gDw",
+      "channel_url": "https://www.youtube.com/@webexcpaassolutions",
+      "playability_status": "OK",
+      "caption_tracks": [
+        {
+          "language_code": "en",
+          "label": "English (auto-generated)",
+          "kind": "asr",
+          "acquisition_status": "http_429",
+          "transcript_acquired": false
+        },
+        {
+          "language_code": "en-GB",
+          "label": "English (United Kingdom)",
+          "kind": "not_marked_asr",
+          "acquisition_status": "http_429",
+          "transcript_acquired": false
+        }
+      ],
+      "caption_attempt_evidence": {
+        "date": "2026-09-08",
+        "method": "HTTP GET advertised timedtext URL with fmt=json3",
+        "result": "HTTP Error 429: Too Many Requests",
+        "downloaded_caption_bytes": null,
+        "content_saved": false
+      },
+      "companion_deck_url": "https://cisco.box.com/s/7syg539l9klj3hlgfs5mu1c8m6gobw8s"
+    },
+    {
+      "id": "wTiy-mp_1wk",
+      "source_url": "https://www.youtube.com/watch?v=wTiy-mp_1wk",
+      "embed_url": "https://www.youtube.com/embed/wTiy-mp_1wk",
+      "title": "CPaaS Ask the Expert 202309",
+      "topic_from_official_index": "Financial-services use cases and outbound campaign management demo",
+      "official_index_period": "FY2024 September",
+      "session_date_from_title": "2023-09",
+      "duration_seconds": 2435,
+      "duration_display": "40:35",
+      "published_at": "2023-12-19T04:25:30-08:00",
+      "channel_name": "Webex CPaaS Solutions",
+      "channel_id": "UCkwetV9yooqyFm8Bije3gDw",
+      "channel_url": "https://www.youtube.com/@webexcpaassolutions",
+      "playability_status": "OK",
+      "caption_tracks": [
+        {
+          "language_code": "en",
+          "label": "English (auto-generated)",
+          "kind": "asr",
+          "acquisition_status": "http_429",
+          "transcript_acquired": false
+        },
+        {
+          "language_code": "en-GB",
+          "label": "English (United Kingdom)",
+          "kind": "not_marked_asr",
+          "acquisition_status": "http_429",
+          "transcript_acquired": false
+        }
+      ],
+      "caption_attempt_evidence": {
+        "date": "2026-09-08",
+        "method": "HTTP GET advertised timedtext URL with fmt=json3",
+        "result": "HTTP Error 429: Too Many Requests",
+        "downloaded_caption_bytes": null,
+        "content_saved": false
+      },
+      "companion_deck_url": "https://cisco.box.com/s/6mk3estfdj3sa4womn2htqmhel4jd7j1"
+    },
+    {
+      "id": "AGDmhRoNFT4",
+      "source_url": "https://www.youtube.com/watch?v=AGDmhRoNFT4",
+      "embed_url": "https://www.youtube.com/embed/AGDmhRoNFT4",
+      "title": "CPaaS Ask the Expert 202411",
+      "topic_from_official_index": "AI Agent customer-service capabilities",
+      "official_index_period": "FY2025 November",
+      "session_date_from_title": "2024-11",
+      "duration_seconds": 2597,
+      "duration_display": "43:17",
+      "published_at": "2024-12-03T08:10:58-08:00",
+      "channel_name": "Webex CPaaS Solutions",
+      "channel_id": "UCkwetV9yooqyFm8Bije3gDw",
+      "channel_url": "https://www.youtube.com/@webexcpaassolutions",
+      "playability_status": "OK",
+      "caption_tracks": [
+        {
+          "language_code": "en",
+          "label": "English (auto-generated)",
+          "kind": "asr",
+          "acquisition_status": "http_429",
+          "transcript_acquired": false
+        },
+        {
+          "language_code": "en-GB",
+          "label": "English (United Kingdom)",
+          "kind": "not_marked_asr",
+          "acquisition_status": "http_429",
+          "transcript_acquired": false
+        }
+      ],
+      "caption_attempt_evidence": {
+        "date": "2026-09-08",
+        "method": "HTTP GET advertised timedtext URL with fmt=json3",
+        "result": "HTTP Error 429: Too Many Requests",
+        "downloaded_caption_bytes": null,
+        "content_saved": false
+      },
+      "companion_deck_url": "https://cisco.app.box.com/file/1704471428465"
+    }
+  ]
+}

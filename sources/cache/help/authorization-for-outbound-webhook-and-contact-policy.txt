@@ -1,0 +1,160 @@
+## 
+
+Adding a New Authorization
+
+Adding authorization for outbound webhook allows the notification receiving server to confirm that the notifications are being sent from an authorized system. The receiving server can verify the token received in the header of the request. Successful verification of the token indicates that the notification is received from the authorized system.
+
+To add an authorization for an Outbound Webhook, follow the below steps:
+
+- 
+
+Navigate to Assets → Integrations.
+
+- 
+
+Click Add Authorization.
+
+- 
+
+Enter a name for the authorization.
+
+- 
+
+For the Type option, select one of the following authorization types below. Jump to the respective sections after this procedure for learning more about the configuration details.
+
+- No Auth - Select this type when you do not need an authorization.
+
+- Basic Auth - Select this type when you need to authorize using username and password.
+
+- Digest Auth - Select this option when you need to validate the user identity before sending any sensitive information like online banking transactional details.
+
+- AWS Signature - Select this option when you want to use the Amazon Web Services workflow for authorization.
+
+- API Key - Enter the Key and Key Value.
+
+- OAuth 2.0 - It is a well-adopted delegated authorization framework. Supports two different grant types for OAuth 2.0.
+
+- 
+
+Click Save.
+
+The created authorization will be displayed in the list of authorizations which you can associate with the desired Outbound Webhook configuration.
+
+## 📘
+Note
+
+We are extending the existing capabilities of authorizations supported in Webex Connect and integrating it within Contact Policy Group Subscription Notification API.
+
+### 
+
+Basic Auth
+
+The configuration details are mentioned below as follows:
+
+ | Field | Description
+
+ | Username/Password | Login credentials that you want to use for authentication.
+
+ | Parameter value | This is applicable if the parameter is static. Provide value.
+
+### 
+
+Digest Auth
+
+In this type of authorization, a network server receives the request from a user and then sends it to a domain controller. The domain controller responds with a special session key.
+
+ | Field | Description
+
+ | Username | Username to authenticate the request.
+
+ | Realm | String from the server within the www-Authenticate response header.
+
+ | Password | The password to authenticate the request.
+
+ | Nonce | Unique string from the server within the www-Authenticate response header.
+
+ | Algorithm | String that indicates a pair of algorithms used to produce the digest and a checksum.
+
+ | QOP | The quality of protection applied to the message. The value must be one of the alternatives specified by the server in the www-Authenticate response header.
+
+ | Nonce Count | The hexadecimal count of the number of requests (including the current request) that the client has sent with the nonce value in this request. You must specify the count only if a QOP directive is sent in the www-Authenticate response header.
+
+ | Client Nonce | An opaque quoted string value provided by the client. This value is used by both client and server to avoid chosen plaintext attacks, provide mutual authentication, and message integrity protection. You must specify the count only if a QOP directive is sent in the www-Authenticate response header.
+
+ | Opaque | A string specified by the server in the www-Authenticate response header. Use this string as is with URLs in the same protection space. Webex Connect recommends that this string be base-64 encoded data.
+
+### 
+
+AWS Signature
+
+You must use a custom HTTP scheme based on a keyed-HMAC (Hash Message Authentication Code) for authentication.
+
+ | Field | Description
+
+ | Access_Key | Unique access key for an account used to send the request.
+
+ | Secret_Key | The unique secret key for an account used to send the request.
+
+ | Region | The region that receives the request.
+
+ | Service_name | Service that receives the request.
+
+### 
+
+OAuth 2.0.
+
+Two grant types are supported for OAuth 2.0.
+
+- Authorization Code - server issues the token in the context of a user.
+
+- Client Credentials - grant type is used to obtain an access token outside of the context of a user.
+
+The following details are to be added on the Add Authorization page after selecting the Grant Type. Some fields or options are displayed when selecting either of the two types or both.
+
+ | Field | Description
+
+ | Consumer ID | Unique identifier of the consumer obtained during the registration process.
+
+ | Grant Type | Type of authentication - Authorization Code or Client Credentials. Its selection depends on the grant type offered by the API.
+
+ | Client ID (Client Credentials only) | Unique identifier of the client obtained from the platform through which the authorization is done.
+
+ | Client Secret (Client Credentials only) | The unique secret of the client obtained from the platform through which the authorization is done.
+
+ | Consumer ID (Authorization Code only) | Unique identifier of the consumer obtained during the registration process.
+
+ | Consumer Secret (Authorization Code only) | The unique secret of the consumer obtained during the registration process.
+
+ | Call Back URL (Authorization Code only) | Webex Connect callback URL will be used during the registration process at the authorization provider’s end. Note: The callback URL is not accessible from a web browser. You need to test it using the Custom Node only.
+
+ | Authorization URL (Authorization Code only) | Endpoint for authorization server, which retrieves the authorization code must be provided by the authorization provider.
+
+ | Scope | Scope of the access request (multiple space-separated values). This is optional.
+
+ | Access Token URL | Endpoint for the resource server, which exchanges the authorization code for an access token.
+
+ | Access token has a limited validity | Specifies if the token has a limited validity and must be provided by the authorization provider.
+
+ | Validity | Validity of the token. This is based on the the OAuth Provider. The value is mostly returned in seconds.
+
+ | Refresh URL Token | It should be provided by the authorization provider.
+
+It ensures smooth functioning of authorization in the case provided access token has limited validity.
+
+ | Advance Settings | Toggle button that allows you to enable or disable advanced settings.
+
+ | Access Token URL Method | An additional method for the access token.
+
+ | Access Token URL Parameter type | Type of access token URL parameter – Body or URL.
+
+ | Access Token URL Headers | Additional URL header parameters for the access token
+
+ | Get Access Token | Button to retrieve the access token.
+
+ | Access Token | Displays the refresh token.
+
+ | Refresh Token | Displays the refresh token.
+
+ | Client Authentication | Value of Client Authentication is defined by the authorization provider’s API.
+
+Send client credentials in body is selected by default.

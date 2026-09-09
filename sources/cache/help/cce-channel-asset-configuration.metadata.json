@@ -1,0 +1,33 @@
+{
+  "category": "Webex Connect and Cisco Contact Center Enterprise System (CCE)",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182578d6",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "eca73d7079552304798c2b97ea0934ec92f89cb5ba167e31b21b7de6673ddd30",
+    "source_path": "d8415a861b1dada3169097b0c57652638d5b8a0fff9bab6f03f13558c26c6e6c",
+    "text_path": "1e8ccdcbee0297a6847f291aecfd93cfad74bd3c8b12519e2cde413ab3ba1e19"
+  },
+  "headings": [
+    "📘Web CallBack"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/cce-channel-asset-configuration.md",
+  "resolved_url": "https://help.webexconnect.io/docs/cce-channel-asset-configuration",
+  "retrieved_at": "2026-09-08T23:29:19+00:00",
+  "sha256_html_response": "9e3cf3a8fbdf18e1b69ebce60ca5e15672953c919c73f9b0ec8180c57b6f66f7",
+  "sha256_source_body": "d8415a861b1dada3169097b0c57652638d5b8a0fff9bab6f03f13558c26c6e6c",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/cce-channel-asset-configuration.source.md",
+  "source_updated_at": "2026-04-14T07:34:14.037Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/cce-channel-asset-configuration.txt",
+  "title": "Channel Asset Configuration - CCE",
+  "url": "https://help.webexconnect.io/docs/cce-channel-asset-configuration",
+  "word_count": 116,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/cce-channel-asset-configuration.metadata.json"
+}

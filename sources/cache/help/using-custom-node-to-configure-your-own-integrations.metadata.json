@@ -1,0 +1,41 @@
+{
+  "category": "TUTORIALS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257817",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "530b8d5d760fe03df0fda6f31195f1bfc1afd6d7d1301707e10b9ec713d57dc0",
+    "source_path": "8d07a98fcca42a0c27000a489e5a7cf2f5551f2618db26bc5c26a7e62cb1e940",
+    "text_path": "1f8891a713a5ebc42de8a5134c37480542f509cd3590f22d7bac967388dd46bb"
+  },
+  "headings": [
+    "Step 1: Go to Integrations",
+    "Step 2: Add a custom node",
+    "📘Note:",
+    "Step 1: Configure the Watson REST API under the SETTINGS tab",
+    "Step 1.1: Configure the Authorization",
+    "Step 1.2: Configure the Headers",
+    "Step 1.3: Configure the Body",
+    "Step 1.4 : Configure the Response",
+    "Step 2: Configure the NODE UI Tab"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/using-custom-node-to-configure-your-own-integrations.md",
+  "resolved_url": "https://help.webexconnect.io/docs/using-custom-node-to-configure-your-own-integrations",
+  "retrieved_at": "2026-09-08T23:28:49+00:00",
+  "sha256_html_response": "6e71364d2957645a0eebfe6e5ce39187b25b33f545607922c2e92750ec8175b1",
+  "sha256_source_body": "8d07a98fcca42a0c27000a489e5a7cf2f5551f2618db26bc5c26a7e62cb1e940",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/using-custom-node-to-configure-your-own-integrations.source.md",
+  "source_updated_at": "2026-01-26T13:27:37.463Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/using-custom-node-to-configure-your-own-integrations.txt",
+  "title": "Using Custom Node to configure your own integrations",
+  "url": "https://help.webexconnect.io/docs/using-custom-node-to-configure-your-own-integrations",
+  "word_count": 845,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/using-custom-node-to-configure-your-own-integrations.metadata.json"
+}

@@ -1,0 +1,387 @@
+# Webex AI Agent — Ask the Expert
+
+Source: https://www.youtube.com/watch?v=AGDmhRoNFT4
+Method: faster-whisper; language: en; kind: local-asr
+Retrieved/processed: 2026-09-08T23:43:29.779242+00:00
+
+Unedited machine/caption evidence. Verify exact UI fields, API names and numbers against the official text documentation.
+
+- [00:00:03.700](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=3s) — Okay, so good morning, good afternoon. Good evening everybody and thank you for joining.
+- [00:00:08.500](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=8s) — We have a special guest here today and his name is Manoj Muthavarupu.
+- [00:00:14.980](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=14s) — Rarapu, excuse me. Manoj is the director of product management. He comes to us from Hyderabad, India today.
+- [00:00:24.340](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=24s) — And he actually did a session that I went to at Web X 1 on the agent.
+- [00:00:31.420](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=31s) — And this is something new and different from Cisco.
+- [00:00:35.500](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=35s) — And so I thought you guys would be interested in hearing more about it.
+- [00:00:40.140](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=40s) — And so with that, I'm going to turn over the call to Manoj. Thank you, Manoj.
+- [00:00:45.580](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=45s) — Alright, thank you, Dana. Hello, everyone. Thank you for joining in today.
+- [00:00:51.500](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=51s) — So we have about 40 minutes or so, right? So I won't do too many slides.
+- [00:00:55.980](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=55s) — We'll probably just introduce the product and the positioning for about 10 minutes,
+- [00:01:01.820](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=61s) — and then we'll jump into a demo. And then, yeah, we can come back to slides and do some more material
+- [00:01:10.460](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=70s) — or we can do Q&A, whatever works for you. Cool. So before we do a deeper dive into AI agents
+- [00:01:21.420](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=81s) — specifically, I wanted to introduce how we are thinking about the product set from our customer
+- [00:01:29.420](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=89s) — experience portfolio. We'll not do like a deeper dive into any of these, but at least to give you
+- [00:01:35.900](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=95s) — the broad pillars and layers, right? So you have all the customer touch points on your left.
+- [00:01:41.660](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=101s) — These are all the channels that the customers wish to communicate with the business today.
+- [00:01:48.060](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=108s) — And on the right, you have all the business systems, back office systems,
+- [00:01:53.740](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=113s) — ticketing and any sort of IT infrastructure that may be there in your business that helps
+- [00:02:01.500](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=121s) — you communicate better with your customers. So our portfolio kind of plays in between these
+- [00:02:06.060](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=126s) — two bookends. So the layers are various, so particularly on the bottom ones,
+- [00:02:13.820](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=133s) — they're basically building blocks and serve as a foundation for the three pillars which are
+- [00:02:18.860](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=138s) — more of an application level constructs or the kind of workloads that we wish to serve.
+- [00:02:25.180](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=145s) — So we have proactive journeys, which is being able to communicate to the customer even before
+- [00:02:31.100](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=151s) — they come in as an inbound contact. We have AI agents, which we'll do a deeper dive into today.
+- [00:02:36.460](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=156s) — And then, of course, you have the contact center in the form of human agents.
+- [00:02:40.140](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=160s) — So on the very top, you have the developer ecosystem and extensibility that the portfolio
+- [00:02:45.500](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=165s) — offers. So today's focus is going to be AI agents, right? So most of this is probably already
+- [00:02:56.260](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=176s) — obvious to you if you've been in the industry for a while. The demands from the customer side
+- [00:03:03.300](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=183s) — have definitely been going up over the last few years. This is about wanting to communicate
+- [00:03:08.180](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=188s) — with businesses on a channel of their choice at a time that is convenient to them.
+- [00:03:13.300](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=193s) — And in a mode that works for them, right? So typically voice tends to be a very synchronous
+- [00:03:19.140](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=199s) — channel. You have to be able to serve that kind of contact very quickly by providing
+- [00:03:26.180](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=206s) — the right agent at the right time from your contact center. And that's a challenge that's
+- [00:03:30.820](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=210s) — easier solved than said. So what AI agents really help you do is bring in this element of an elastic
+- [00:03:41.460](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=221s) — supply because you can then instantiate and terminate them on demand without a lot of
+- [00:03:48.740](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=228s) — lead time training or having to manage some kind of onboarding into your contact center itself.
+- [00:03:55.700](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=235s) — Right? So they obviously bring you the benefit of containment, which is where a customer calling in
+- [00:04:02.420](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=242s) — or messaging in to your contact center gets fully served by the AI agent without ever having to
+- [00:04:09.860](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=249s) — be attached to a human agent. Or even if they do not do that in all the cases,
+- [00:04:15.620](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=255s) — they definitely help you play the role of a concierge where a lot of repeatable portions
+- [00:04:22.100](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=262s) — of conversation such as identifying your customer, authenticating them, finding out the
+- [00:04:28.020](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=268s) — reason for their contact, maybe doing a data dip and serving some preliminary information.
+- [00:04:34.420](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=274s) — These are the kind of workloads that AI agents can then offload so that your human agents can
+- [00:04:38.980](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=278s) — then build on top of a summary that these AI agents generate and then continue the conversation
+- [00:04:46.180](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=286s) — from there on so that they'll actually get lower handling times, better metrics and solve
+- [00:04:51.540](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=291s) — real problems instead of going through the process. So with that said,
+- [00:04:58.180](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=298s) — what is WebEx AI agent? So WebEx AI agent is a platform that allows you to build these
+- [00:05:04.420](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=304s) — omnichannel AI agents, which means you can build an AI agent to serve customers in both
+- [00:05:10.500](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=310s) — voice and messaging. And in the future version, you could have a multi-model conversation
+- [00:05:17.940](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=317s) — as well, wherein the customer may be in conversation with your AI agent on voice while
+- [00:05:25.060](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=325s) — also texting the same business and having a conversational session going on another channel
+- [00:05:31.300](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=331s) — as well. This could be useful for sending in some images, sending in some transaction IDs,
+- [00:05:37.220](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=337s) — which tend to be more easy or more convenient on messaging channels versus
+- [00:05:41.780](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=341s) — having to say them out in a typical voice channel. Now these AI agents can operate
+- [00:05:47.540](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=347s) — either in an autonomous mode where they leverage large language models and generative AI for
+- [00:05:54.580](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=354s) — the entire conversational orchestration, figuring out what to say when a customer says something.
+- [00:06:01.620](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=361s) — So that whole dialogue and back and forth and state management is taken care of by the
+- [00:06:07.140](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=367s) — large language models in the autonomous case. Or they can actually run in a scripted mode,
+- [00:06:12.420](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=372s) — which is where you build more traditional machine learning algorithms by bringing in your own
+- [00:06:18.180](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=378s) — training data. If you're familiar with popular vendors in the market like Google Dialogflow
+- [00:06:25.060](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=385s) — or Amazon Lex or any of those developer platforms, you can think of this mode as similar to that.
+- [00:06:31.620](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=391s) — So you define your entities, you define your intents and then basically
+- [00:06:36.420](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=396s) — code up or write up what the agent must say at different states in the conversation
+- [00:06:44.340](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=404s) — when they're actively conversing. And then in terms of the jobs to be done for these AI agents,
+- [00:06:53.620](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=413s) — they can either answer questions from a knowledge source that you attach to them
+- [00:06:59.220](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=419s) — or actually go a step further and take actions or even do fulfillment on top of those actions
+- [00:07:06.580](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=426s) — for your customers. By that I mean they'll be able to either connect to a business system that
+- [00:07:13.540](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=433s) — you might have and post data into it or read data from it, process any kind of automation
+- [00:07:19.140](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=439s) — logic that may be there already today and basically provide that true end-to-end fulfillment
+- [00:07:25.940](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=445s) — without just limiting themselves to a conversational wrapper for logging a ticket somewhere
+- [00:07:32.340](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=452s) — and someone else has to come in and action on top of that ticket. So that's the capability we'll be
+- [00:07:39.220](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=459s) — demonstrating today. And of course lastly, needless to say, all these AI agents will have tight
+- [00:07:47.380](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=467s) — integrations with our contact center offering. You'll be able to consume them without
+- [00:07:51.860](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=471s) — having to rep and replace your contact center flows. So to begin with, we're only exposing them
+- [00:07:58.980](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=478s) — to be consumed within our contact center offerings, that is our Pebex contact center and the Brem versions,
+- [00:08:05.460](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=485s) — but in a future iteration, you will be able to just build an AI agent on our platform and
+- [00:08:11.700](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=491s) — connect it to any contact center out there. With that, I'll switch to a demo of the product
+- [00:08:19.400](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=499s) — itself. If I can just bring back my browser, hopefully my screen share has come through.
+- [00:08:30.980](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=510s) — So I'm on the AI agent dashboard right now where you can see the various AI agents that are already
+- [00:08:38.660](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=518s) — built in my account. So like I said, they can be either of an autonomous kind or a scripted kind.
+- [00:08:47.860](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=527s) — So today, we'll be focusing more on the autonomous option. So I want to show you how
+- [00:08:55.300](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=535s) — the create journey looks like to start with. So you can either build one from scratch or build on
+- [00:09:01.860](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=541s) — top of a bunch of existing templates. So obviously, we're working on expanding this set. Today,
+- [00:09:08.660](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=548s) — it just has a few handful of templates to serve as a starter kit to reduce the time
+- [00:09:17.380](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=557s) — it takes for you to build. So I'll just do the start from scratch. And this is where
+- [00:09:22.900](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=562s) — you take the two important decisions that we briefly touched upon. Do you want the AI agent
+- [00:09:28.740](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=568s) — to run in an autonomous mode or in a scripted mode? And within whatever mode that you select,
+- [00:09:35.060](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=575s) — what is the primary function you want the AI agent to play? Now, one question that might
+- [00:09:40.260](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=580s) — naturally come to you is, do I really have to differentiate between answering questions
+- [00:09:45.460](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=585s) — and performing actions? Because most enterprise cases would really require both of them to be
+- [00:09:50.500](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=590s) — available. So this is just a temporary constraint until the GA in January, at which point
+- [00:09:58.580](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=598s) — this second layer of decision is not necessary. Every AI agent can both work with knowledge
+- [00:10:04.660](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=604s) — as well as perform actions. But just to help us get there in the process today,
+- [00:10:11.620](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=611s) — these two are demarcated into separate AI agents. So this is where you make your selection and then
+- [00:10:17.300](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=617s) — click Next and give a few basic details. You just give it a name and then give it a goal
+- [00:10:24.660](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=624s) — and select a knowledge base to work with. So in the interest of time, I'll not create one from
+- [00:10:29.780](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=629s) — scratch, but I'll actually show you something that I've created a couple of hours ago
+- [00:10:36.260](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=636s) — in preparation for this. So this is the one we'll be looking at today. But before we enter the agent
+- [00:10:42.260](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=642s) — itself, let's look at how knowledge management happens on the product. So this is your knowledge
+- [00:10:48.500](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=648s) — basis section. You can create as many knowledge bases as you want. So I have created a simple
+- [00:10:55.060](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=655s) — restaurant knowledge base for today's demo. It has some basic information. So I've gone to this
+- [00:11:02.900](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=662s) — web page of Adrop Cafe. So obviously it has a couple of branches here in Hyderabad.
+- [00:11:09.380](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=669s) — So I've copied some information from the website onto my knowledge base. Like you can see,
+- [00:11:16.500](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=676s) — it was just literally a copy base where the HTML formatting was also retained and maintained
+- [00:11:23.140](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=683s) — in the database. So I've added a couple of location information. And then some questions
+- [00:11:29.780](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=689s) — about can I host parties? What is the benefit of hosting parties in Hard Rock and so on.
+- [00:11:37.780](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=697s) — So obviously you can use this native knowledge base to scale to whatever level you want. There is
+- [00:11:43.860](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=703s) — a rich text editor. There are various levels of permissions control here. You can create and
+- [00:11:51.060](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=711s) — manage your knowledge entirely here if you choose to. But of course, you could also bring in
+- [00:11:56.900](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=716s) — existing files of knowledge and add them to your knowledge base. So what I've done is,
+- [00:12:03.140](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=723s) — so the menu at the Hard Rock Cafe in Hyderabad is available as a PDF file. So I've downloaded this
+- [00:12:10.980](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=730s) — and ingested it into my knowledge base in this cafe. So if you see that, it's not a typical
+- [00:12:18.500](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=738s) — PDF. It's not well formatted for a demo or easy ingestion. So there's images. There's all
+- [00:12:24.420](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=744s) — sorts of font. And the information is not really structured to be machine readable.
+- [00:12:32.100](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=752s) — It's meant to be human readable. So I've already ingested this knowledge base. Now let's see
+- [00:12:39.060](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=759s) — how I can connect it with an AI agent. So like I said, I just created this a while ago. So you
+- [00:12:48.180](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=768s) — just give it a simple goal. And in this case, I wasn't very prescriptive. It can be as brief
+- [00:12:53.380](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=773s) — as saying, answer questions about Hard Rock Cafe in Hyderabad. You can also give it some persona.
+- [00:12:59.140](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=779s) — You can basically go much more detailed in your instructions if you choose to,
+- [00:13:03.780](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=783s) — but it's not necessary. That's an optional step to give it a conversational step.
+- [00:13:08.260](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=788s) — So I also gave a chatty welcome message. So with these two basic things out of the way,
+- [00:13:16.580](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=796s) — the only other step that you need to do is actually connect it to a knowledge base.
+- [00:13:20.660](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=800s) — So there are three knowledge bases in my tenant. I've connected it to the Hard Rock Cafe one.
+- [00:13:27.220](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=807s) — With this much setup already in place, let's go ahead and preview.
+- [00:13:31.780](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=811s) — So whatever welcome message I've chosen is played back to me. Then I can say, where is the cafe?
+- [00:13:43.350](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=823s) — And let's go back and make sure that whatever answer we get, we can validate.
+- [00:13:52.970](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=832s) — Okay. So I got the two addresses, the phone number, the maps link, and so on.
+- [00:14:00.250](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=840s) — Okay, cool. Are you open until 2 a.m. on Vitis? That's probably the kind of a question
+- [00:14:14.380](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=854s) — a customer might have. And let's see how I've actually captured these timings, right? So the
+- [00:14:21.820](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=861s) — timings themselves, they're not really too specific. This is how restaurants and cafes would
+- [00:14:27.340](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=867s) — list their timings. There's the weekdays, there's weekends, and then some starting time and ending
+- [00:14:31.420](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=871s) — time. So I could ask the question directly and say, what are your open hours? That wouldn't
+- [00:14:40.220](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=880s) — have been a very hard one to solve for. But given the sophistication that large language
+- [00:14:46.940](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=886s) — models bring in, so all such indirect questions are also understood and answered accordingly.
+- [00:14:53.420](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=893s) — So none of the two cafes are open until 2 a.m. on Vitis is the right answer, as you can see.
+- [00:15:02.620](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=902s) — Okay. So I want to host a party. Yeah, by now these answers probably won't surprise you.
+- [00:15:13.960](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=913s) — So whatever information we had created in the party's document is being rehashed.
+- [00:15:22.760](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=922s) — So let's try out some questions around the menu, right? So I can say something like, hope you serve
+- [00:15:30.360](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=930s) — salads, okay? So I'm responded back with three different salads with some additional details
+- [00:15:46.390](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=946s) — about it. Let's cross check, maybe one of them at least. So okay, so I do have three different
+- [00:15:55.030](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=955s) — salads. The name seemed right, the prices seem right. So it's pretty much accurate. And yeah,
+- [00:16:08.390](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=968s) — so because this whole thing is backed by a large language model and because I have not given it
+- [00:16:15.350](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=975s) — explicit instructions, the style of interaction might vary from customer to customer.
+- [00:16:20.310](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=980s) — To a different customer, it might not give these full details. Maybe it would just say,
+- [00:16:24.870](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=984s) — yes, we do serve salads. These are the three salads. And then I can ask a variety of follow-up
+- [00:16:29.510](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=989s) — questions on top of it. And I don't need to ask it in an active voice and use direct references.
+- [00:16:36.310](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=996s) — So let's say I'm quite busy. I didn't read all of this. But I remember that maybe I have
+- [00:16:43.670](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1003s) — nut allergy or some of the guests have nut allergy. I do any of them have nuts, okay? So it does say that
+- [00:16:57.560](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1017s) — the honey citrus salad has some spiced walnuts, okay? That looks accurate. And we can cross check
+- [00:17:05.080](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1025s) — that with the menu itself. Honey nut salad, spiced walnuts. Hopefully you get the idea.
+- [00:17:13.160](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1033s) — So like this, you can keep having a real conversation based on whatever knowledge
+- [00:17:18.440](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1038s) — you fit in. Now, of course, knowledge is only one part of the game. And where enterprises will really
+- [00:17:27.480](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1047s) — have a value on log is not if these AI agents can just answer questions, but actually connect
+- [00:17:33.640](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1053s) — to their systems. Maybe I want to take an appointment or maybe I want to do a reservation for a party
+- [00:17:40.280](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1060s) — that I want to throw. So I'll need many details like the expected number of guests,
+- [00:17:45.400](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1065s) — what date am I looking to throw the party, what are my instructions on the menu and so on.
+- [00:17:50.520](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1070s) — So typically, this whole information might actually happen on a contact center with an agent
+- [00:17:57.080](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1077s) — taking in all these details filling in some system while he's interacting with the customer.
+- [00:18:02.680](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1082s) — So can we automate or can we achieve that level of sophistication with the AI agents
+- [00:18:08.040](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1088s) — is the natural next step. So for that, I thought I'll showcase the healthcare
+- [00:18:16.920](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1096s) — AI agent that I've built, again, very recently, like a couple of days ago.
+- [00:18:22.520](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1102s) — So this is the other agent category. So it's autonomous and it's taking actions.
+- [00:18:29.080](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1109s) — And really the structure is more or less the same. So you again, give it a goal.
+- [00:18:34.760](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1114s) — And then you give it some instructions to follow. And again, you could be as detailed.
+- [00:18:40.520](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1120s) — So for example, if I show you the other agent that I have here,
+- [00:18:43.960](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1123s) — which is meant to be for a hospital management system. So I gave a lot more instructions because
+- [00:18:49.960](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1129s) — I need it to follow a certain style. I need it to obey some rules that I'm setting. So all
+- [00:18:56.040](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1136s) — those instructions can go here. Or it can even be as lightweight as what I'm doing in this case,
+- [00:19:02.120](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1142s) — if the entire goal is about just taking appointments. So yeah, so those are the instructions.
+- [00:19:10.200](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1150s) — And then this is the heart of the agent here. So it has what are called as actions. And inside
+- [00:19:16.840](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1156s) — an action, it's again, really something simple and easy to manage. So you give it a name.
+- [00:19:22.920](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1162s) — And then you give it a description of when this action must be invoked.
+- [00:19:27.240](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1167s) — So in this particular case, I'm trying to fetch the patient details based on a unique identifier.
+- [00:19:33.080](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1173s) — So every patient registered in Epic has a four digit number preceded by the letter E in a certain
+- [00:19:41.960](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1181s) — context. So as soon as I get that identified, I want to fetch the details of the patient,
+- [00:19:47.720](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1187s) — do some validation, or maybe start addressing the patient by his or her name.
+- [00:19:51.640](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1191s) — So once I define the action, I also define whether I want this action to just be about
+- [00:19:58.920](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1198s) — slot filling or have slot filling and fulfillment. So slot filling is when typically,
+- [00:20:05.160](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1205s) — so you just want this AI agent to collect the necessary information, but not really act upon
+- [00:20:11.400](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1211s) — it. This will be useful where you use these agents inside your contact center flows. Maybe
+- [00:20:18.200](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1218s) — you don't want to invest in separate automation logic to be wired up directly with the AI agent.
+- [00:20:25.640](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1225s) — And you just want to handle it within your contact center flow. So that is when you would
+- [00:20:29.320](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1229s) — choose something like slot filling, where all the gathered details are available as
+- [00:20:34.440](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1234s) — variables or attributes inside your flow. And then your flow logic can continue
+- [00:20:39.480](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1239s) — and act upon those variables. But that's less powerful. And the more powerful option is to
+- [00:20:45.000](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1245s) — actually go ahead and do end to end fulfillment. So that is the mode I'm choosing here.
+- [00:20:49.240](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1249s) — So I'm again defining the bare minimum details that I would want. If I go to the book appointment
+- [00:20:54.360](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1254s) — action, you would see other critical information like the appointment date and time also being
+- [00:21:00.600](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1260s) — captured. So these are essentially the details that are needed to invoke this action. Again,
+- [00:21:07.080](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1267s) — inside the action, nothing fancy, some description of what this attribute is about
+- [00:21:11.720](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1271s) — and what data type are we expecting to gather so that the agent can do some validations and
+- [00:21:16.280](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1276s) — all of that. So for example, in a case like a date, you can define the format also to invoke
+- [00:21:21.720](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1281s) — this fulfillment. You define whether it is a mandatory attribute or an optional attribute
+- [00:21:26.440](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1286s) — as well. So once you do all of that, you can then link it up to a workflow on WebExConnect.
+- [00:21:35.480](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1295s) — Now, those of you who are familiar with Connect may relate to the low code, no code
+- [00:21:41.960](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1301s) — flow engine that we have in our CX portfolio. So for example, the book appointment flow
+- [00:21:47.960](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1307s) — will look something like this. Obviously, this is a toy flow. It can become as complex as you want
+- [00:21:53.960](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1313s) — and you can have 50, 100 nodes inside this. And all of that is just encapsulated in a
+- [00:22:00.840](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1320s) — in a simple webhook that you can wire up with your AI agent. So this is the webhook that I'm using.
+- [00:22:07.160](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1327s) — These are the details that I'm capturing and using those details and then invoking some operation on
+- [00:22:13.720](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1333s) — the EPIC system, which is a healthcare patient management system. So I put in all the necessary
+- [00:22:19.960](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1339s) — details. I pass the variables that I've captured. And then based on whatever is the outcome of
+- [00:22:25.880](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1345s) — this operation, I notify the AI agent back. So that's what's happening here in the flow.
+- [00:22:31.640](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1351s) — So you just link it up to your AI agent and your action is good to me.
+- [00:22:37.000](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1357s) — So now let's see this in action. Okay, I'll help you.
+- [00:22:44.410](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1364s) — Okay, so I have one patient ID that I know for sure exists in my EPIC integration.
+- [00:23:07.100](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1387s) — Okay, so what the AI agent did in the background is picked this up
+- [00:23:11.340](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1391s) — and executed the fetch patient details by using my patient identifier.
+- [00:23:18.860](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1398s) — So now it knows what my name is and it is able to retain this information for subsequent actions.
+- [00:23:25.740](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1405s) — Okay, so then I can say something like show my appointment. So as you can see in the
+- [00:23:39.030](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1419s) — get appointments action, patient ID is a mandatory attribute, but I did not have to
+- [00:23:45.750](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1425s) — give that again because I've already given that and that information and context is retained by the
+- [00:23:53.030](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1433s) — AI agent. Okay, looks like I have a lot of appointments coming in. Now I can choose
+- [00:23:58.630](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1438s) — to reschedule some of these, cancel one of them, do whatever, right? So let's look at the July
+- [00:24:06.630](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1446s) — 10th one that's too far out into the future, right? So I can say something like cancel the last one.
+- [00:24:15.780](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1455s) — I don't need to specifically reference that. Now why is it asking me a cancellation reason?
+- [00:24:22.580](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1462s) — Because I have defined cancellation reason as a mandatory attribute in my
+- [00:24:27.140](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1467s) — action here. I will be traveling. Okay, cool, spin cancel. So we can verify that it
+- [00:24:48.550](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1488s) — is actually canceled. Okay, we had 11 appointments earlier and now we have 10 appointments and that
+- [00:25:01.400](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1501s) — one's canceled. So hopefully you get the idea of how actions really help in driving end-to-end
+- [00:25:06.520](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1506s) — fulfillment. So that's kind of the autonomous mode which I wanted to showcase today.
+- [00:25:13.160](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1513s) — So I'll stop sharing and go back to the presentation. We'll do a few more slides and then
+- [00:25:20.040](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1520s) — we can do question and answer. Sorry, if I, if you run out of time, I'll make sure,
+- [00:25:25.400](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1525s) — you know, I answer your questions while you're done. Cool. Now, okay, all of that is great.
+- [00:25:32.740](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1532s) — So autonomous users, large language models, which means many organizations may have some
+- [00:25:40.180](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1540s) — data concerns. Maybe their security posture is not ready to leverage large language models.
+- [00:25:46.580](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1546s) — So does that mean we don't have a solution for those use cases? No, this is where the
+- [00:25:52.020](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1552s) — scripted agents come in, come into the picture. I didn't want to give like a full-blown demo of
+- [00:25:56.580](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1556s) — scripted agents, but just play a couple of videos of the experience of how that looks like. So
+- [00:26:03.460](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1563s) — here I'm building a credit card related agent. So you just give a couple of variations of
+- [00:26:11.060](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1571s) — how someone might express this losing of credit card and you can then use generative error at design
+- [00:26:17.460](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1577s) — time. So what's happening here is those two examples are taken and then relevant training
+- [00:26:22.660](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1582s) — data is, is then generated by the system. So if your use case, like maybe, maybe you don't
+- [00:26:28.740](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1588s) — have existing training data, but you do have a use case to solve with automation. This,
+- [00:26:34.340](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1594s) — these kind of features can then help you bootstrap and quickly build a bot.
+- [00:26:38.980](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1598s) — So that's one feature which should tell you that it's not like there's no AI in scripted agents.
+- [00:26:45.220](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1605s) — It's just that for those use cases where customers want full control, you could still use AI to
+- [00:26:51.620](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1611s) — build the bot itself or build the agent itself. But at runtime, you will still get a classical
+- [00:26:56.420](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1616s) — machine learning model, which you may be more comfortable with. And then the other
+- [00:27:03.060](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1623s) — advantage of going with the scripted model is you can then leverage our channel-aware response
+- [00:27:10.740](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1630s) — designer, which means the same scripted agent. You can take advantage of the underlying
+- [00:27:18.420](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1638s) — channel's nuances. So in this example, in WhatsApp, I can respond a bit more smartly by sending
+- [00:27:25.140](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1645s) — these buttons. Whereas on voice and let's say on a channel like SMS, you won't have that
+- [00:27:30.500](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1650s) — level of richness incorporated. So you just build your intents and build your agent ones,
+- [00:27:36.420](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1656s) — and then you can choose to respond differently on different channels. So this is also another
+- [00:27:40.420](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1660s) — benefit that you get because you're pre-defining all the responses for various intents as a part
+- [00:27:45.780](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1665s) — of your agent building exercise. Did want to touch upon the high-level architecture and
+- [00:27:56.470](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1676s) — how we are making sure that the risks of AI are also managed properly. So this is roughly like a
+- [00:28:04.870](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1684s) — system architecture. So you have AI agents that work in conjunction with the contact center.
+- [00:28:11.670](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1691s) — So I did not demonstrate it today due to time constraints. But of course, any AI agent interaction
+- [00:28:17.430](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1697s) — can then be seamlessly escalated to a human agent. The human agent will be presented with a
+- [00:28:23.110](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1703s) — clean, crisp summary of the conversation till that point so that you don't have to go through
+- [00:28:27.670](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1707s) — the full transcript. And then of course, the integrations and workflows is something
+- [00:28:31.830](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1711s) — you have seen in the demo. So you have all these entities. And then the connectivity with
+- [00:28:38.310](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1718s) — the large language models themselves is through input and output guardrails.
+- [00:28:43.910](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1723s) — So what that means is every request that we are making to the large language model
+- [00:28:50.550](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1730s) — goes through a multi-layered guardrail set that has been developed in house in Cisco.
+- [00:28:57.030](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1737s) — And these could be doing things like they can detect jailbreaking attempts. They can detect
+- [00:29:04.070](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1744s) — any harmful content or any kind of injection type of attacks that may happen on your data
+- [00:29:10.070](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1750s) — and so on. So if those things happen, there's a way to detect it and seamlessly recover from it
+- [00:29:16.710](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1756s) — by not even allowing access to the data. And similarly, on the output, no matter how magical
+- [00:29:23.350](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1763s) — they might have looked, so the large language models today will still have some propensity to
+- [00:29:28.150](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1768s) — hallucinate. Although a lot of these guardrails reduce the probability of that, it's still a
+- [00:29:33.270](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1773s) — non-zero probability. So when such hallucinations happen, do we have a way of detecting it and
+- [00:29:39.190](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1779s) — then creating a feedback loop in maybe tweaking our knowledge a little bit to support it or
+- [00:29:46.630](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1786s) — alerting the right people to see whether we have the right
+- [00:29:52.070](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1792s) — documents ingested or maybe there is overlapping answers which are giving you conflicting information.
+- [00:29:58.390](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1798s) — So the system can suggest signals like that and then you can go and fix it.
+- [00:30:06.520](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1806s) — And then these are not videos. I just also wanted to give you a glimpse into the
+- [00:30:13.560](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1813s) — UX refresh that we are doing. So as I mentioned earlier, this is still a pre-GA product.
+- [00:30:19.240](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1819s) — We are slated to go GA in January at which point the entire offering will be orderable
+- [00:30:25.640](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1825s) — via your standard channels. But yeah, so we are also going through UX refresh
+- [00:30:31.000](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1831s) — and these are some screenshots from how it will look like when it goes GA.
+- [00:30:36.520](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1836s) — Right? So obviously, a lot more richer and cleaner to give you a standard WebEx product
+- [00:30:43.240](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1843s) — experience. Right? Lots of analytics, etc., also bundled. Cool. With that, I think
+- [00:30:51.640](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1851s) — we're at the end of my session. I'll stop there and see if there are any questions.
+- [00:31:02.840](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1862s) — Team, what questions do we have? So I have a question. Sorry. When you had
+- [00:31:11.580](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1871s) — those appointments listed, how did you grab those appointments? Did you have like,
+- [00:31:16.300](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1876s) — I'm sorry if I missed it. When you asked when the list of all the appointments showed up after the
+- [00:31:25.020](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1885s) — customer asked for the appointments. Sure. So I have a get appointments
+- [00:31:32.940](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1892s) — action listed here and it is calling a specific workflow. And the workflow looks something like
+- [00:31:40.940](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1900s) — this. So I had shown the book appointment workflow, but let's go to the get appointments one.
+- [00:31:50.700](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1910s) — There is this one. So I'm grabbing the patient ID that I already know
+- [00:32:03.060](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1923s) — and querying an Epic integration that is already there in the system.
+- [00:32:09.060](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1929s) — So I'm making a get future appointments call and passing the relevant information here.
+- [00:32:14.100](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1934s) — The output of this operation is then passed back to an API call that will intimate my AI agent
+- [00:32:21.460](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1941s) — on the relevant appointments. So that's how it works. So that HTTP
+- [00:32:27.060](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1947s) — node goes back to where? Like if you click on it, do you want to open it?
+- [00:32:31.940](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1951s) — Yeah, this one goes to the AI agent. So this is a, so if you see in the web hook,
+- [00:32:40.180](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1960s) — I'm also passing a callback URL and that is what I'm using to communicate back with my agent.
+- [00:32:47.460](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1967s) — So today this process is a little more manual. So one feature that you can expect by our GA
+- [00:32:53.700](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1973s) — timelines is not having to do all of this. If you're using an AI agent in your flow,
+- [00:33:01.300](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1981s) — the flow will know where to post the outcome of the flow to. So you don't even need to do this
+- [00:33:06.660](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1986s) — step. You just define the variables you want to send back to the agent and that's it.
+- [00:33:11.700](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1991s) — And then if you had for the same list, I know you said delete the last one. Could you have said
+- [00:33:17.460](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=1997s) — delete the fifth one? And it would have comprehended that.
+- [00:33:22.180](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2002s) — Yeah, so let's try that. So delete the fifth one. So let's verify that this is the right one,
+- [00:33:43.850](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2023s) — right? So fifth one is November 18, 3.30pm, November 18, 3.30pm. Okay. Yeah, the November 18th one is gone.
+- [00:34:17.340](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2057s) — So the sophistication now with, you know, large language model powered conversations,
+- [00:34:25.340](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2065s) — like anything that you normally say to a human, the way you would expect them to understand,
+- [00:34:32.300](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2072s) — you can expect that kind of an experience with AI agents as well.
+- [00:34:36.380](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2076s) — So you have another flow, I'm going to assume, that's doing this job for you where you are going,
+- [00:34:42.220](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2082s) — like update, update appointments. Yeah, I think you're sending that.
+- [00:34:49.740](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2089s) — Okay, so you have a flow for basically every action that you need to take.
+- [00:34:55.960](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2095s) — Correct. So I have an EPIC integration to specifically cancel appointment.
+- [00:35:01.960](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2101s) — Now, this is how the EPIC integration was chosen to be done. You could have,
+- [00:35:08.040](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2108s) — like if it was another system, maybe you don't have such granular actions, maybe you just have
+- [00:35:14.360](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2114s) — an update appointment and then maybe you can pass those details. So it depends on the underlying
+- [00:35:18.840](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2118s) — integration, but yes, in this case, cancellation is a separate flow. So how do you determine
+- [00:35:25.320](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2125s) — the fifth one out of that list? Yeah, that is the part where AI comes in, right? So when we make
+- [00:35:33.640](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2133s) — the large language model call, we pass relevant information from the prior conversation also as
+- [00:35:42.600](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2142s) — a part of it. So it'll know exactly how to interpret what I'm saying when I say fifth one,
+- [00:35:50.120](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2150s) — because the previous information is also passed to the agent for reference.
+- [00:35:55.240](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2155s) — Okay, so I don't have to build anything to determine all of that back and the AI will do it.
+- [00:36:10.860](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2170s) — I have a question, since we're on this page, because this fulfillment is a select flow,
+- [00:36:20.220](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2180s) — what other choice other than the WebEx connect flow builder?
+- [00:36:24.780](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2184s) — Yeah, great question. So as of now, this is the only one. There are no other tools. So originally,
+- [00:36:32.220](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2192s) — we wanted to integrate with some third party flow builders as well. So that will be on the road map,
+- [00:36:38.620](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2198s) — but the more important ones will come here. So let's say when you select a flow,
+- [00:36:44.460](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2204s) — the default one, because we natively integrate with like our own systems,
+- [00:36:48.460](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2208s) — WebEx connect may be the only one, but let's say you just want to execute some code.
+- [00:36:55.740](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2215s) — If you're exposed to the scripted agents from our previous iteration called bot builder,
+- [00:37:01.500](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2221s) — there is the option of writing code within the product itself, and you can execute that.
+- [00:37:06.060](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2226s) — So multiple options can be expected here, but flow is the easiest and the most convenient one.
+- [00:37:13.820](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2233s) — Yeah, the code option will be ideal because when I see this builder or studio,
+- [00:37:22.060](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2242s) — every action with the flow is through the webhook and then HTTPS call. Is there any limit
+- [00:37:30.620](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2250s) — of concern in terms of flow control? Because if we are dealing a very busy contact center,
+- [00:37:36.780](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2256s) — many concurrent user, there's any concern where we should consider when we build the system
+- [00:37:44.860](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2264s) — past the scalability? Yeah, so I mean, connect today handles
+- [00:37:51.340](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2271s) — reasonably good transactions per second. I'm sorry, transactions per second throughput.
+- [00:37:57.180](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2277s) — I think it's in the default itself that you get even in the lowest year is probably in
+- [00:38:01.420](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2281s) — thousands per second. So yeah, I mean, there's many customers who are running campaigns that send out,
+- [00:38:09.580](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2289s) — we're talking about what, hundreds and thousands of messages in an hour.
+- [00:38:13.980](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2293s) — So it shouldn't be a problem and even if it is, we'll definitely scale up to
+- [00:38:18.460](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2298s) — meet the contact center volume and demands. Okay, yeah, since it's a detailed channel,
+- [00:38:25.100](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2305s) — the slide delay won't be so obvious. I agree. I'm not too worried about that.
+- [00:38:30.060](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2310s) — I agree. So before voice, that is where we are doing all of the latency optimization.
+- [00:38:35.580](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2315s) — So on voice, there are even things like while I'm executing a flow,
+- [00:38:41.820](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2321s) — as soon as I initiate the flow execution, I can also start playing a holding message
+- [00:38:46.780](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2326s) — saying, please wait while I look that up for you or do that up for you. That kind of keeps
+- [00:38:53.100](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2333s) — the conversation going for a couple of seconds, reducing the perception of latency.
+- [00:38:58.380](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2338s) — So all those features are being prepared. That's kind of like comforting the caller or customer
+- [00:39:04.940](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2344s) — while waiting while we're requiring behind the scene. Exactly. Cool. Thank you.
+- [00:39:12.780](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2352s) — So I have a question for you Manosh. So you talked about the large language model.
+- [00:39:17.980](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2357s) — Can you talk about that a little bit more and how that's a competitive differentiator versus Cisco?
+- [00:39:27.180](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2367s) — Sure. So as you saw here when I was building the agent, there's something called as engine here.
+- [00:39:36.060](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2376s) — So an engine is a combination of the speech to text module we are using and then the large language
+- [00:39:45.660](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2385s) — model we are using, the text to speech. Obviously the speech modules are relevant for voice,
+- [00:39:50.380](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2390s) — not so much for messaging. And also the prompts that we use, the glue code that binds all of this
+- [00:39:58.060](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2398s) — together. So this entire package is an engine. So today we are using the best available model
+- [00:40:05.420](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2405s) — out there, best in the sense that it's at the sweet spot of providing us good accuracy,
+- [00:40:11.100](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2411s) — but also making this commercially viable, so which is the GPT-4O model from Microsoft's
+- [00:40:18.380](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2418s) — OpenAI service. Now you can expect more engines to be available here in the future at different
+- [00:40:24.380](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2424s) — price points. So I'd say the underlying large language model itself is not a differentiator for us,
+- [00:40:32.300](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2432s) — but the way we are wrapping that up in our own prompt engineering, our own guardrails,
+- [00:40:37.180](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2437s) — our own speech layer and packaging them up to provide different benefits for different contact
+- [00:40:45.660](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2445s) — center or communications use cases, I think that's where we really bring in the value.
+- [00:40:53.100](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2453s) — Perfect, thank you. Team, we're getting close to time. Oh, I see Nick Papas has a question.
+- [00:41:00.060](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2460s) — Are you going to have vertical specific engines in the future, Manoj, such as for healthcare?
+- [00:41:06.220](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2466s) — Yeah, great one, Nick. So in fact, we were speaking to a partner yesterday,
+- [00:41:10.220](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2470s) — Spensai, and this came up there as well. So will we ever build a healthcare LLM by ourselves to expose
+- [00:41:20.700](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2480s) — it for AI agents? Probably not. Will we integrate with those vertical LLMs once they become
+- [00:41:29.980](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2489s) — popular enough and become a market standard where a lot of our customer footprint exists there?
+- [00:41:36.380](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2496s) — Absolutely. There is also a third route where one of the roadmap items for
+- [00:41:43.100](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2503s) — kind of like mid next year is to do a bring your own LLM. And this is where large enterprises
+- [00:41:49.900](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2509s) — that may have already had a head start in investing in their own AI journeys by either fine
+- [00:41:56.140](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2516s) — tuning some LLM with their own data or maybe partnering with one of these LLM providers and
+- [00:42:03.260](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2523s) — getting some kind of fresh custom flavor of those LLMs. If they want to bring in their LLM and
+- [00:42:09.340](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2529s) — connect to our AI agent, that is something we definitely want to support. So yeah, healthcare
+- [00:42:15.580](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2535s) — specific LLMs is definitely on the radar, but we probably won't build them in-house. We'll look
+- [00:42:20.780](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2540s) — to integrate with whatever is the best of the breed. Oh, thank you so much. Yeah, so we're
+- [00:42:26.700](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2546s) — wrapping up and with regard to roadmap and what's coming, we're working right now through our customer
+- [00:42:33.820](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2553s) — experience business unit to see if we can get a unified roadmap for you all, our top partners
+- [00:42:41.260](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2561s) — here that are on this call, so that everybody can see everything in on a quarterly basis and not
+- [00:42:47.900](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2567s) — have the different roadmaps get out there at different times. So we're working on simplifying
+- [00:42:52.060](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2572s) — that experience as well. So we are at time. I want to thank each and every one of you for
+- [00:42:58.620](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2578s) — attending today and giving applause to you, Manoj. Thank you for leading us in the session today,
+- [00:43:05.820](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2585s) — and I hope everybody has a great rest of the week. Thank you. Bye now. Thanks, Son. Thanks for your
+- [00:43:11.740](https://www.youtube.com/watch?v=AGDmhRoNFT4&t=2591s) — time. Thank you. Bye. Thanks, guys.

@@ -1,0 +1,38 @@
+{
+  "category": "SERVICES & FLOWS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257842",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "7aa34c00bb3db93cbeab0b10c36427ee2a25d8142b979c4a761d4dea7ea6ece4",
+    "source_path": "61d4c095d36ee8abb87bbf6b798f339fbe4762cd1a6ebded153e2eec2c3946ac",
+    "text_path": "ebc2cf795e2949539209283958439b026d9115a6ae9e4049274f11289f2ccfd3"
+  },
+  "headings": [
+    "📘Automatic fallback to an alternate TTS Provider",
+    "Node Configuration",
+    "Input Variables",
+    "Output Variables",
+    "Node Outcomes",
+    "Transition Actions"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/record-node.md",
+  "resolved_url": "https://help.webexconnect.io/docs/record-node",
+  "retrieved_at": "2026-09-08T23:28:55+00:00",
+  "sha256_html_response": "96e58fb8efea3d25d376d265dd81b3438d3e4d10c2a282bbe7ccf9dfb14d0604",
+  "sha256_source_body": "61d4c095d36ee8abb87bbf6b798f339fbe4762cd1a6ebded153e2eec2c3946ac",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/record-node.source.md",
+  "source_updated_at": "2026-03-27T08:10:37.726Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/record-node.txt",
+  "title": "Record Node",
+  "url": "https://help.webexconnect.io/docs/record-node",
+  "word_count": 754,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/record-node.metadata.json"
+}

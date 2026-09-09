@@ -1,0 +1,18 @@
+{
+  "id": "debc5583-a8ff-4a54-9a2e-c40b867f7be3",
+  "url": "https://app.vidcast.io/share/debc5583-a8ff-4a54-9a2e-c40b867f7be3",
+  "title": "Webinar: Webex Connect Masterclass",
+  "publisher": "Webex Developer Evangelism",
+  "event_date": "2024-02-28",
+  "duration_ms": 3541270,
+  "created_at": "2024-02-29T18:56:39.772000+00:00",
+  "retrieved_at": "2026-09-08T23:32:07.652995+00:00",
+  "transcript_status": "ready",
+  "language": "en",
+  "segment_count": 554,
+  "provenance_url": "https://developer.webex.com/webinars",
+  "metadata_endpoint": "https://api.vidcast.io/v2/videos/shared/debc5583-a8ff-4a54-9a2e-c40b867f7be3",
+  "transcript_endpoint": "https://api.vidcast.io/v3/transcripts/debc5583-a8ff-4a54-9a2e-c40b867f7be3",
+  "raw_working_path": "transcripts/vidcast-api-flows/transcript.raw.json",
+  "subtitle_path": "transcripts/vidcast-api-flows/source.en.vtt"
+}

@@ -1,0 +1,36 @@
+{
+  "api_metadata_path": "sources/cache/developer/apple-message-for-business_-list-picker.api.json",
+  "category": "MULTI CHANNEL COMMUNICATION API",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f6609",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "5f8ab8a81d5820fede5318eab6ef5db350905e2e5cfb5ef0412d28acbab3d9cf",
+    "source_path": "137c0b496693d75c9b6c602b5163b9892664add5a06e2cef64ac54f575c51438",
+    "text_path": "5e0636f02d4c5566d559283cdf5c75557654a9a8d724ad97f5d8befacc3397da"
+  },
+  "headings": [
+    "Error Codes"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/apple-message-for-business_-list-picker.md",
+  "openapi_path": "sources/cache/openapi/582f44b02527a6ff1f1719bc7266b726520f119dd6fe0ef74206ce3af3fc3c24.json",
+  "resolved_url": "https://developers.webexconnect.io/reference/apple-message-for-business_-list-picker",
+  "retrieved_at": "2026-09-08T23:31:42+00:00",
+  "sha256_api_metadata": "44d53d18bf9ebae47eed6edab191657c195ccf6bf1446c49e1f8e66d18b29ae0",
+  "sha256_html_response": "a8d5633378b944ac852b972851007ea26d0c896eef29c40f8e3b6a9bf69004bf",
+  "sha256_openapi": "582f44b02527a6ff1f1719bc7266b726520f119dd6fe0ef74206ce3af3fc3c24",
+  "sha256_source_body": "137c0b496693d75c9b6c602b5163b9892664add5a06e2cef64ac54f575c51438",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/apple-message-for-business_-list-picker.source.md",
+  "source_updated_at": "2025-10-14T08:36:47.144Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/apple-message-for-business_-list-picker.txt",
+  "title": "Apple Message for Business: List Picker",
+  "url": "https://developers.webexconnect.io/reference/apple-message-for-business_-list-picker",
+  "word_count": 2051,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/apple-message-for-business_-list-picker.metadata.json"
+}

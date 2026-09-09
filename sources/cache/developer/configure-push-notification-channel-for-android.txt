@@ -1,0 +1,31 @@
+## 
+
+Configure Push-Notification channel for Android
+
+In the pop-up that appears, you'll see both FCM and HMS configurations. You can configure either one or both.
+
+- FCM based Push Notification
+
+- HMS based Push Notification
+
+### 
+
+FCM based Push Notification
+
+For more information on obtaining the Firebase Service Account JSON, please refer to the "Setup Firebase Cloud Messaging Project" guide.
+
+- Select "Firebase Service Account JSON based authentication" as the authentication type.
+
+- Click on "Choose file" and upload the JSON file downloaded from the Firebase Project.
+
+- Click on "Save".
+
+### 
+
+HMS based Push Notification
+
+For more information on obtaining the Huawei App ID and Huawei App Secret, please refer to the "Set-up Huawei Mobile Services" guide.
+
+- Enter the Huawei In-App ID and Huawei In-App Secret. 
+
+- Click on "Save".

@@ -1,0 +1,41 @@
+{
+  "api_metadata_path": "sources/cache/developer/voice-only-api-v1-programmable-voice-api.api.json",
+  "category": "MULTI CHANNEL COMMUNICATION API",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f671d",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "b3546cd7c192f3efdf06c047b74850f34df85a1d5dcdd681d1dc1570ef9bfff4",
+    "source_path": "c0b8a8c54c23174c144ca856f3f3b0909ec12d255b64696c1014a90f16e41ebf",
+    "text_path": "f857c043871892c958481139b7e77b6fe0da706385ca90ee2ba4c06250c1b189"
+  },
+  "headings": [
+    "Make a Phone Call",
+    "Request Body to Making a Phone Call",
+    "Make a Phone Call Body Parameters",
+    "Receive a Phone Call",
+    "Events",
+    "Actions"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/voice-only-api-v1-programmable-voice-api.md",
+  "openapi_path": "sources/cache/openapi/60ea512f59c653661622394de8f7921e80f4990a0a45fe1ca2a1e06050be0ea8.json",
+  "resolved_url": "https://developers.webexconnect.io/reference/voice-only-api-v1-programmable-voice-api",
+  "retrieved_at": "2026-09-08T23:31:43+00:00",
+  "sha256_api_metadata": "b48e6e0e239f14b568168709154aee4b81c6ae0ef8128bb6bc57c1764ae56760",
+  "sha256_html_response": "8f36fd473ff6d99609f119bdfd093b07c9eef83e3071d4a3a50510d7405b130d",
+  "sha256_openapi": "60ea512f59c653661622394de8f7921e80f4990a0a45fe1ca2a1e06050be0ea8",
+  "sha256_source_body": "c0b8a8c54c23174c144ca856f3f3b0909ec12d255b64696c1014a90f16e41ebf",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/voice-only-api-v1-programmable-voice-api.source.md",
+  "source_updated_at": "2026-04-09T11:44:19.798Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/voice-only-api-v1-programmable-voice-api.txt",
+  "title": "Programmable Voice Calls Using Voice API v1",
+  "url": "https://developers.webexconnect.io/reference/voice-only-api-v1-programmable-voice-api",
+  "word_count": 2081,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/developer/voice-only-api-v1-programmable-voice-api.metadata.json"
+}

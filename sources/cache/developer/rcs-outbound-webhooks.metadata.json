@@ -1,0 +1,35 @@
+{
+  "api_metadata_path": "sources/cache/developer/rcs-outbound-webhooks.api.json",
+  "category": "OUTBOUND WEBHOOKS",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f656d",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "5a9c73f016cfe357743c55336c3e5f1843c503f2a4bb53aa59dfe67c3fe11f62",
+    "source_path": "36f2029c41dd360389d8b760338d58ce5875943aa15c5005546090eff86f21ef",
+    "text_path": "c2d2de97ac6103d18fca1f42b9a116d390d1a1cf1c99d0871396fbfdb03f0b2b"
+  },
+  "headings": [
+    "RCS Delivery Receipts",
+    "RCS Incoming Messages & Events"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/rcs-outbound-webhooks.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/rcs-outbound-webhooks",
+  "retrieved_at": "2026-09-08T23:31:45+00:00",
+  "sha256_api_metadata": "187de124aa8aa8acf032d1bfec486640b94ec306193dfc1e0feb2652279c3c88",
+  "sha256_html_response": "971e4b553fc35af8de5739aea74dbe140926a41a4aa722b4282baa7e1c530b57",
+  "sha256_source_body": "36f2029c41dd360389d8b760338d58ce5875943aa15c5005546090eff86f21ef",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/rcs-outbound-webhooks.source.md",
+  "source_updated_at": "2026-04-16T05:56:24.978Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/rcs-outbound-webhooks.txt",
+  "title": "RCS",
+  "url": "https://developers.webexconnect.io/reference/rcs-outbound-webhooks",
+  "word_count": 409,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/rcs-outbound-webhooks.metadata.json"
+}

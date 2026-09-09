@@ -1,0 +1,41 @@
+{
+  "category": "Assets",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257923",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "e987f562981b1a2c655163dd636db99c434d54f63ae62df0b7ab3c2e36d490cd",
+    "source_path": "19853eee1f39a35ff6a218d3076e0fd447e1bc267013a05bf61952034640574c",
+    "text_path": "3f290a3b8876c2a0c9329f08a7d98c5ca8849885bf18c35f94109a0a71c77a79"
+  },
+  "headings": [
+    "❗️Accessing Messaging Limit",
+    "👍Upcoming Changes to Messaging Limits",
+    "How to increase the Messaging limit",
+    "Scaling paths",
+    "📘Note",
+    "Approvals",
+    "Denials",
+    "Automatic Scaling",
+    "🚧Quality Rating and Messaging Limit"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/whatsapp-messaging-limits.md",
+  "resolved_url": "https://help.webexconnect.io/docs/whatsapp-messaging-limits",
+  "retrieved_at": "2026-09-08T23:29:06+00:00",
+  "sha256_html_response": "50fa0ebb11e8f160076c23904699cf271272fbe3df58430107672fed81145db2",
+  "sha256_source_body": "19853eee1f39a35ff6a218d3076e0fd447e1bc267013a05bf61952034640574c",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/whatsapp-messaging-limits.source.md",
+  "source_updated_at": "2026-04-15T11:25:24.788Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/whatsapp-messaging-limits.txt",
+  "title": "Messaging Limits",
+  "url": "https://help.webexconnect.io/docs/whatsapp-messaging-limits",
+  "word_count": 634,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/whatsapp-messaging-limits.metadata.json"
+}

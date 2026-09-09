@@ -1,0 +1,75 @@
+{
+  "sample_documents": 59,
+  "transcript_documents": 6,
+  "all_samples_not_runtime_tested": true,
+  "queries": [
+    {
+      "query": "packageNum",
+      "results": [
+        {
+          "path": "evidence/sample-flows/summaries/gallery-track-package.json",
+          "kind": "sample",
+          "title": "AI Agent Fulfilment - Track Package",
+          "runtime_tested": false
+        },
+        {
+          "path": "evidence/sample-flows/summaries/gallery-ai-doctor.json",
+          "kind": "sample",
+          "title": "AI Agent Scripted Doctor Appointment",
+          "runtime_tested": false
+        }
+      ]
+    },
+    {
+      "query": "droppedAttachmentNotificationMessage",
+      "results": [
+        {
+          "path": "evidence/sample-flows/summaries/wxcc-facebookattachmentdropnotification.json",
+          "kind": "sample",
+          "title": "FacebookAttachmentDropNotification.workflow",
+          "runtime_tested": false
+        },
+        {
+          "path": "evidence/sample-flows/summaries/wxcc-emailattachmentdropnotification.json",
+          "kind": "sample",
+          "title": "EmailAttachmentDropNotification.workflow",
+          "runtime_tested": false
+        }
+      ]
+    },
+    {
+      "query": "preferred_date",
+      "results": [
+        {
+          "path": "evidence/sample-flows/summaries/native-check-availability.json",
+          "kind": "sample",
+          "title": "check_availability.workflow",
+          "runtime_tested": false
+        },
+        {
+          "path": "evidence/sample-flows/summaries/gallery-ai-doctor.json",
+          "kind": "sample",
+          "title": "AI Agent Scripted Doctor Appointment",
+          "runtime_tested": false
+        }
+      ]
+    },
+    {
+      "query": "AI Agent Livechat Generic",
+      "results": [
+        {
+          "path": "evidence/sample-flows/summaries/gallery-ai-livechat.json",
+          "kind": "sample",
+          "title": "AI Agent Livechat Generic",
+          "runtime_tested": false
+        },
+        {
+          "path": "evidence/sample-flows/summaries/gallery-ai-doctor.json",
+          "kind": "sample",
+          "title": "AI Agent Scripted Doctor Appointment",
+          "runtime_tested": false
+        }
+      ]
+    }
+  ]
+}

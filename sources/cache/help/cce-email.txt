@@ -1,0 +1,509 @@
+Webex Engage users who want to use Email as a channel of customer support with Webex Contact Center can configure an email asset. We support the following email service providers:
+
+- Gmail
+
+- Microsoft 365
+
+For the above service providers, we have two authentication methods:
+
+- Username and Password
+
+- OAuth 2.0
+
+You can map your support email addresses with Webex Connect by following the steps below:
+
+## 📘
+Note
+
+The following Email App Configuration instructions are applicable only for Webex Contact Center and Webex Connect integration. If you have a standalone Webex Connect tenant please refer to Email App configuration for instructions.
+
+## 
+
+Configuring Email channel asset on Webex Connect
+
+Follow the below steps to map your support email addresses with Webex Connect:
+
+- Log in to Webex Connect platform.
+
+- Go to Assets → Apps.
+
+- Click Configure New App and then select Email.
+
+Configure New Application - Email page displays.
+
+ [Image: Screenshot of Creating the New Email App Page] 
+Screenshot of Creating the New Email App Page
+
+- Enter a user-friendly name for the Asset.
+
+- Enter a valid Email address (such as support@CLIENT-DOMAIN). 
+
+- Copy the forwarding email address and configure an email forwarding rule in your email client to forward emails sent to your support email id (i.e., same as the email id mentioned in step 6) to this email address.
+
+## 📘
+Receiving Inbound Emails
+
+- Please note that you’d need to mandatorily configure an auto-forwarding rule to forward the emails received on the email address configured in ‘EMAIL ID' field to the email address available in the ‘FORWARDING ADDRESS’ field. Webex Connect won’t receive the inbound emails unless this step is completed. Please note that Email via SMTP has a 25MB size limitation on the inbound email attachments. Due to this limitation, if an inbound Email fails, customer gets a delivery failure email and is expected to resend the email with smaller attachment.
+
+- In the case of Gmail, you must verify the email forwarding address by either confirming through the URL provided or entering the OTP sent to the provided address as applicable. You can retrieve the URL or OTP as applicable either looking up the Outbound Webhook payload (requires configuring Outbound Webhook for inbound email) or decrypting the Debug Logs for the Email asset. It is found in the full email body of the logs. Earlier, the OTP was found in the subject of the email in the downloaded Export Logs.
+
+## 📘
+Note
+
+Please note that for email sent via SMTP channel, Webex Connect does not support delivery tracking and also does not receive delivery failure notification emails even if the auto-forwarding rule is set up No Delivery Failure Notifications
+
+## 📘
+Inbound email with inline images
+
+If an inbound email contains inline images, they will be received as attachments on the agent's desktop. If PCI scan is enabled, the images will be blocked.
+
+- 
+
+Enter the domain name for the SMTP Server.
+
+- 
+
+Follow one of the two authentication protocol below based on your use case:
+
+- Username Password 
+
+- OAuth 2.0 (Recommended)
+
+ [Image: Screenshot displaying to select the Authentication Type] 
+Screenshot displaying to select the Authentication Type
+
+## 📘
+
+Based on your selection in step 8 in the procedure above, follow one of the two procedures below for authentication.
+
+## 
+
+Authentication using Username and Password
+
+- Enter a valid Username and Password to be used to authenticate the SMTP server connection.
+
+- Enter the Port number to which you want to configure your email asset.
+
+- Select the Security type as SSL or STARTTLS if required, otherwise leave it as None.
+
+- Click Test Connection. 
+
+If the connection is successful, you will receive a confirmation message.
+
+ [Image: Screenshot of Toast Message Displaying SMTP Connection Established Successfully.] 
+Screenshot of Toast Message Displaying SMTP Connection Established Successfully.
+
+## 
+
+Authentication using OAuth 2.0
+
+Follow the below steps to configure OAuth 2.0:
+
+- Enter the SMTP Server, Username, Port , Client ID, Client Secret, Authorization URL, Scope, Access Token URL, Validity and Refresh Token URL.
+
+- Select Use different email address than the asset email ID for generating tokens if you want to configure a shared mailbox as email app asset and enter the user ID to generate the access token in the Login ID For Generating Token field.
+
+## 📘
+Note
+
+Use the Copy icon to copy and enter the same user ID in the Login pop-up, when you click Generate Token.
+
+- Click Generate Token.
+
+- Click Save to complete email channel asset creation.
+
+## 📘
+Note
+
+To get details such as Client ID, Client Secret, Authorization URL, Scope, Access Token URL, Validity and Refresh Token URL, based on your email provider, follow one of the following procedures.
+
+## 📘
+Shared Mailbox
+
+A Shared Mailbox is simply a mailbox that doesn't have login credentials of its own and requires a user's (who can access the shared mailbox, mainly 'Send As' access) credentials to generate tokens. The user need not have Admin access. In a typical enterprise setup, a user (user1@domain.tld) can have access to multiple shared mailboxes such as sales@domain.tld, operations@domain.tld, etc. They can access these mailboxes using their own credentials (user1@domain.tld). Also, while sending or replying to emails, they can choose to 'Send As' any of these email addresses.
+
+ [Image: Screenshot of Configuring New Email App.] 
+Screenshot of Configuring New Email App.
+
+If your administrator restricts the users from providing consent for applications by choosing the option “Do not allow user consent“ or a similar option in the user consent settings of the email service provider, please make sure that you clear the option “I would like to explicitly review before providing consent for authentication“, when you are trying to create an email asset. Selecting the option may result in authentication failure as you might not have permission to provide consent for application, but the authentication request expects you to provide consent.
+
+## ❗️
+Missing Incoming Attachments
+
+Incoming emails with .msg and .eml attachments sent from Microsoft Outlook might be received without the attachments due to a limitation from Microsoft Outlook.
+
+## 📘
+User Consent Settings
+
+In case of Microsoft 365, if the user consent settings on Azure Active Directory are recently changed, please make sure that the new settings have taken effect, before adding an email asset on Webex Connect platform.
+
+## 📘
+Access Token
+
+The Access Token, Refresh Token, and Validity are auto populated after a token is generated.
+
+In some cases, Refresh Token needs to be generated manually. Email is sent by connect to the tenant owners email ID. Clients will receive an automated email. They must navigate to the Email asset page and must re-generate the token.
+
+In some cases, Gmail might not provide a Refresh Token. In such scenarios, the asset owner will have to re-generate tokens after selecting the checkbox "I would like to explicitly review before providing consent for authentication".
+
+Token has a fixed expiry time and the backend application automatically calls the API to regenerate token before that.
+
+## 
+
+Registering  on Google Cloud
+
+- Login to your https://console.cloud.google.com/
+
+- Create a new project or select an existing project.
+
+ [Image: Screenshot of Create a new project or select an existing project.] 
+Create a new project or select an existing project.
+
+- Hover over the left-hand side menu and click APIs & Services.
+
+ [Image: Screenshot of API and Services.] 
+Screenshot of API and Services.
+
+The APIs & Services page appears.
+
+ [Image: Screenshot of API and Services Page.] 
+Screenshot of API and Services Page.
+
+- Click OAuth consent screen. The page appears.
+
+ [Image: Screenshot of OAuth consent screen.] 
+Screenshot of OAuth consent screen.
+
+- Select External and click Create.
+
+The Edit app registration page appears.
+
+ [Image: Screenshot of Edit App Registration Page.] 
+Screenshot of Edit App Registration Page.
+
+- Enter the  App name, User support email  in App Information and email address under Developers Contact information.
+
+- Click Save and Continue. The Scopes page appears.
+
+ [Image: Screenshot of Add or Remove Scopes.] 
+Screenshot of Add or Remove Scopes.
+
+## 📘
+Note
+
+Click Learn more option shown in the above image to get the appropriate value of the Scope based on your use-case. Alternatively, you can find the required information here
+
+- Click Save and Continue. The Test users page appears.
+
+ [Image: Screenshot of Test users page.] 
+Screenshot of Test users page.
+
+- To add test users, click + Add Users.
+
+ [Image: Screenshot of Add users page.] 
+Screenshot of Add users page.
+
+## 📘
+Note
+
+A project can have only 100 test users at max.
+
+- Enter the test user email address and click Add.
+
+ [Image: Screenshot of Add users page.] 
+Screenshot of Add users page.
+
+- Click Save and Continue.
+
+The Summary page appears.
+
+ [Image: Screenshot of Edit App Registration page.] 
+Screenshot of Edit App Registration page.
+
+## 
+
+Adding Test Users
+
+To add test users to an existing project.
+
+- Navigate to OAuth Consent Screen
+
+ [Image: Screenshot of OAuth Consent Screen page.] 
+Screenshot of OAuth Consent Screen page.
+
+- Click +Add Users to add test users.
+
+## 📘
+Note
+
+A project can have only 100 test users. It is mandatory to add the test users email address in your tenant asset creation page.
+
+- Add the callback URL in the ‘Credentials’ section (can be found on connect platform’s OAuth email asset creation page)
+
+ [Image: Screenshot of Adding the callback URL.] 
+Screenshot of Adding the callback URL.
+
+ [Image: Screenshot of Adding the callback URL.] 
+Screenshot of Adding the callback URL.
+
+- The Client ID and Client Secret values are available in the Credentials page.
+
+ [Image: Screenshot Displaying the Client ID and Client Secrets.] 
+Screenshot Displaying the Client ID and Client Secrets.
+
+- Select Use different email address than the asset email ID for generating tokens if you want to configure a shared mailbox as email app asset and enter the user ID to generate the access token in the Login ID For Generating Token field.
+
+## 📘
+Note
+
+Use the Copy icon to copy and enter the same user ID in the Login pop-up, when you click Generate Token.
+
+- Click Generate Token. Access Token and Refresh Token are generated.
+
+ [Image: Screenshot of Manage Email Page.] 
+Screenshot of Manage Email Page.
+
+- Click Save.
+
+## 📘
+Note
+
+Please note that, the app is still in Testing state on Gcloud. To publish the app, click "PUBLISH APP" under Publishing Status on the OAuth consent screen Dashboard as shown below.
+
+Unless published, the authorizations by test users will expire 7 days from the time of consent.
+
+ [Image: Screenshot for Highlighting Publish App] 
+Highlighting Publish App
+
+## 
+
+Configure a rule in Gmail to forward incoming emails to Webex Connect
+
+- Configure an Outbound Webhook in Webex Connect under 'Assets->Integrations' to track incoming emails. This would require you to select the email channel asset configured newly in the Entity dropdown. Refer this link for more details.
+
+- Navigate to the email channel app asset configuration screen again and copy the value of the Forwarding Address.
+
+ [Image: Screenshot Highlighting the Forwarding Address.] 
+Screenshot Highlighting the Forwarding Address.
+
+- Now, navigate to the Settings page in your Gmail account and click Forwarding and POP/IMAP tab and paste the Forwarding Address in that field and then click Add. Gmail will send an verification URL or OTP to this forwarding address at this stage.
+
+- You can retrieve the verification URL or OTP by either looking up the Outbound Webhook payload (requires configuring Outbound Webhook for inbound email) or decrypting the Debug Logs for the Email asset. It is found in the full email body. Earlier, the OTP was found in the subject of the email in the downloaded Export Logs.
+
+- Select Forward a copy of Incoming mail to radio button in Gmail and click Save changes.
+
+ [Image: Screenshot of Select Forward a copy of Incoming mail.] 
+Screenshot of Select Forward a copy of Incoming mail.
+
+## 
+
+Registering on Microsoft 365
+
+- Create app in Azure portal.
+
+Please check on how to create app on Microsoft 365.
+
+a. Enter the App Name.
+
+ [Image: Screenshot of Brand and Properties Page.] 
+Screenshot of Brand and Properties Page.
+
+b. Click Authentication on the left panel, to add the Redirect URLs. This value should be taken from your app asset
+
+ [Image: Screenshot of Authentication Page.] 
+Screenshot of Authentication Page.
+
+c. Select the required Tokens and types for authentication from Authentication page.
+
+ [Image: Authentication] 
+Authentication
+
+d. Click Certificates & secrets on the left panel and click Client secrets tab to generate and copy the value under the Value field.
+
+ [Image: Screenshot of Certificates & secrets Page.] 
+Screenshot of Certificates & secrets Page.
+
+e. Click API Permissions on the left panel to add and grant permissions to send mail through SMTP. After clicking 'Add a permission', you will need to click on 'APIs my organization uses', search for 'Office 365 Exchange Online', choose 'Application permissions' (not 'Delegated permissions'), and add 'Mail.Send' permission.
+
+ [Image: Screenshot of API Permissions] 
+API Permissions
+
+ [Image: Screenshot of Request API Permissions - Office 365] 
+Request API Permissions - Office 365
+
+ [Image: Screenshot of Granting Application Permissions] 
+Granting Application Permissions
+
+- Enabling SMTP authentication for User - Login as admin and enable SMTP for a user for which the above app has been created.
+
+Use the Microsoft 365 admin center to enable or disable SMTP AUTH for specific mailboxes
+
+a. Open the Microsoft 365 admin center and go to Users > Active users.
+
+b. Select the user, and a flyout appears, click Mail.
+
+c. In the Email apps section, click Manage email apps.
+
+d. Verify the Authenticated SMTP setting: unchecked = disabled, checked = enabled.
+
+e. When you're finished, click Save changes.
+
+- 
+
+Once app is created ,you can find Tenant ID, Client ID and other details. Capture tenant id
+
+In the below screenshot Tenant id is “7f5XXX-e6XX-4aXX-bdXX-9fXXXXXXXX”.
+
+ [Image: Screenshot of Overview Page.] 
+Screenshot of Overview Page.
+
+- Create Email asset in Webex Connect with above details.
+
+ [Image: Screenshot of Manage Email App Page.] 
+Screenshot of Manage Email App Page.
+
+ a. Replace respective Tenant ID in authorization, Access Token and Refresh Token urls. For example if tenant id is “tenant_abcd_123” then below are the urls to be configured
+
+- Authorization URL: https://login.microsoftonline.com/tenant_abcd_123/oauth2/v2.0/authorize
+
+- Scope: offline_access https://outlook.office.com/SMTP.Send
+
+- Access Token URL: https://login.microsoftonline.com/tenant_abcd_123/oauth2/v2.0/token
+
+- Refresh Token URL: https://login.microsoftonline.com/tenant_abcd_123/oauth2/v2.0/token
+
+- Select Use different email address than the asset email ID for generating tokens if you want to configure a shared mailbox as email app asset and enter the user ID to generate the access token in the Login ID For Generating Token field.
+
+## 📘
+Note
+
+Use the Copy icon to copy and enter the same user ID in the Login pop-up, when you click Generate Token.
+
+- Click Generate Token to authorize and save the asset.
+
+## 
+
+To enable SMTP authentication for an Active User
+
+- Login to the Admin.microsoft.com
+
+- Click the three horizontal lines on the left-hand side menu and click Users.
+
+- Under Users, click Active Users.
+
+ [Image: Screenshot Highlighting Active Users.] 
+Screenshot Highlighting Active Users.
+
+ Active Users page is displayed.
+
+ [Image: Screenshot of Active Users Page.] 
+Screenshot of Active Users Page.
+
+- Select the required user from the list and click Manage product licenses under settings.
+
+A pop-up appears to the right-hand side menu of the window.
+
+ [Image: Screenshot of Manage product licenses.] 
+Screenshot of Manage product licenses.
+
+- Click Mail tab and click Manage email apps under Email apps.
+
+ [Image: Screenshot of Mail Tab.] 
+Screenshot of Mail Tab.
+
+A pop-up appears.
+
+ [Image: Screenshot of Manage email apps popup.] 
+Screenshot of Manage email apps popup.
+
+- Select all the fields and click Save changes.
+
+## 
+
+Configure Anti-spam policies
+
+- Click the three horizontal lines on the left-hand side menu and under Show all --> click Settings.
+
+ [Image: Screenshot highlighting Show all in Menu.] 
+Screenshot highlighting Show all in Menu.
+
+ Welcome to Microsoft 365 Defender page appears.
+
+ [Image: Screenshot highlighting Policies & rules in Menu.] 
+Screenshot highlighting Policies & rules in Menu.
+
+- Click Policies & rules on the left-hand side menu
+
+- Click Threat policies and click Anti-spam under Threat Policies.
+
+Anti-spam policies page appears.
+
+ [Image: Screenshot highlighting Threat policies Page.] 
+Screenshot highlighting Threat policies Page.
+
+- Click + Create policy and select Outbound from the drop-down.
+
+Name your policy page appears.
+
+- Enter the Name, Description and click Next.
+
+ [Image: Screenshot of Name Your Policy Page.] 
+Screenshot of Name Your Policy Page.
+
+- Enter the username in Users field and select the required user from the suggested contacts in User, groups, and domains page. 
+
+ [Image: Screenshot of User, groups, and domains page.] 
+Screenshot of User, groups, and domains page.
+
+- Click Next.
+
+- Enter values in the Set an external message limit, Set an internal message, and Set a daily messages.
+
+ [Image: Screenshot of Protection settings page.] 
+Screenshot of Protection settings page.
+
+- Select Restrict the user from sending the mail until the following day from Restriction placed on users who reach the message limit drop-down.
+
+- Select On - Forwarding is enabled from Automatic forwarding rules. 
+
+- Select Notify these users and groups if a sender is blocked due to sending outbound spam from Notifications and enter the email address of the user.
+
+- Click Next and click Create.
+
+A New anti-spam policy created page is displayed with a message “Your anti-spam policy OutboundEmail has been created. It will go into effect immediately”.
+
+## 
+
+Registering your Webex Connect Email App Asset with Webex Engage
+
+Once you’ve successfully configured your Email asset with Webex Connect and saved it, you can register it with Webex Engage by following the below steps:
+
+- Go to Assets →Apps.
+
+- Select Email in the App Type drop-down list box.
+
+- Click the required Email.
+
+- Click Register To Webex Engage.
+
+The Register To Webex Engage pop-up displays.
+
+ [Image: Screenshot of Register To Webex Engage Page.] 
+Screenshot of Register To Webex Engage Page.
+
+- Select the required service (Note: this should be the Webex Connect service that would be used for configuring Email flows for Webex Contact Center integration and click Register. 
+
+## 🚧
+
+- 
+
+You cannot change the service mapping once done. Hence, the asset registration on Webex Contact Center should be done after the service to be used has been decided.
+
+- Do not delete an Email asset once it's been registered with Webex Contact Center. Once deleted it cannot be restored. Doing so would lead to asset deletion within Webex Connect alone while the entry continues to be in Webex Contact Center and Webex Engage.
+
+A message displays “Asset registered successfully”. This completes the asset registration for Webex Contact Center integration.
+
+ [Image: Screenshot of Email App Displaying Webex Engage icon and PCI check enabled flag.] 
+Screenshot of Email App Displaying Webex Engage icon and PCI check enabled flag.
+
+As shown above, you will see a Webex Engage icon and a PCI check enabled flag next to the email asset once it's been successfully mapped with Webex Contact Center.

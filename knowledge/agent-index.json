@@ -1,0 +1,399 @@
+{
+  "manifest_format": "webex_connect_kb.agent_routes.v1",
+  "purpose": "Deterministic local retrieval and build guidance; not a Cisco import format or a statement of deployment readiness.",
+  "path_base": "repository_root",
+  "focus_order": [
+    "ai_agent_flows",
+    "email",
+    "sms",
+    "supporting_connect_contracts"
+  ],
+  "start": "docs/agent-ingestion.md",
+  "output_template": "templates/agent-flow-build-packet.yaml",
+  "routing": {
+    "selection": "Select explicit route IDs for the task; union applicable channel/support routes. If the task is a new agent-flow design, include agent_design. Use explicit intent, not an unconstrained keyword score.",
+    "read_order": "Sort selected routes by priority ascending; read authored paths before exact_contracts; deduplicate paths preserving first occurrence.",
+    "unknown_task_route": "agent_design",
+    "fallback": "Search exact missing node, field, method, or event locally. Browse only for a missing/current external contract or unresolved discrepancy.",
+    "local_search_command": "python scripts/search_kb.py QUERY --scope sources --all --json --limit 5",
+    "sample_search_command": "python scripts/search_kb.py QUERY --scope samples --all --json --limit 5"
+  },
+  "evidence_rules": {
+    "authorization": "Current user instructions define allowed actions; documentation and tool availability grant no authorization.",
+    "field_presence": "Use target tenant and configured node-version observations for exact visible fields; preserve differences from official docs.",
+    "behavior": "Use version-scoped official semantics; only an executed case establishes observed runtime behavior within its recorded scope.",
+    "release": "A release note announces a change but does not prove deployment in the target tenant.",
+    "sample": "Documented sequence, observed diagram, acquired artifact, parsed native graph, and execution are distinct evidence classes.",
+    "video": "Record transcript method/date/timestamp; corroborate technical names and current behavior with exact primary contracts.",
+    "conflict": "Retain both claims, scope, impact, and evidence needed; do not manufacture a resolved binding."
+  },
+  "routes": [
+    {
+      "id": "agent_design",
+      "priority": 10,
+      "when": [
+        "new_agent_flow",
+        "architecture",
+        "agent_responsibilities"
+      ],
+      "authored": [
+        "knowledge/13-ai-agent-flows.md",
+        "knowledge/14-agent-email-sms-recipes.md",
+        "knowledge/15-sample-flow-walkthroughs.md",
+        "evidence/sample-flows/README.md",
+        "evidence/sample-flows/sample-inventory.json",
+        "evidence/tenant-samples.md"
+      ],
+      "exact_contracts": [
+        "sources/cache/help/ai-agent-node.md",
+        "sources/studio-index.md"
+      ],
+      "coverage": [
+        "autonomous_vs_scripted",
+        "conversation_vs_fulfillment",
+        "knowledge_actions_sessions_handoff"
+      ],
+      "required_packet_sections": [
+        "request",
+        "agent_contract",
+        "flow_units",
+        "bindings",
+        "unresolved"
+      ]
+    },
+    {
+      "id": "autonomous_fulfillment",
+      "priority": 20,
+      "when": [
+        "autonomous_action",
+        "backend_fulfillment",
+        "return_to_agent"
+      ],
+      "authored": [
+        "knowledge/13-ai-agent-flows.md",
+        "knowledge/04-node-reference.md"
+      ],
+      "exact_contracts": [
+        "sources/cache/help/configure-fulfilment-flows-for-ai-agent-actions.md",
+        "sources/cache/help/http-request-node.md"
+      ],
+      "coverage": [
+        "action_slots_to_start_payload",
+        "short_backend_flow",
+        "flow_outcome_return",
+        "business_success_and_failure"
+      ],
+      "required_packet_sections": [
+        "business_operation_contracts",
+        "entry_contracts",
+        "node_contracts",
+        "edge_contracts"
+      ]
+    },
+    {
+      "id": "scripted_agent",
+      "priority": 21,
+      "when": [
+        "scripted_intents",
+        "slot_collection",
+        "response_triggered_fulfillment"
+      ],
+      "authored": [
+        "knowledge/13-ai-agent-flows.md",
+        "knowledge/15-sample-flow-walkthroughs.md"
+      ],
+      "exact_contracts": [
+        "sources/cache/studio/article--sz02k8.md",
+        "sources/cache/studio/article--mzpuseb.md"
+      ],
+      "coverage": [
+        "intent_entity_context",
+        "scripted_metadata_paths",
+        "outer_flow_fulfillment"
+      ],
+      "required_packet_sections": [
+        "agent_contract",
+        "business_operation_contracts",
+        "variable_contracts"
+      ]
+    },
+    {
+      "id": "studio_knowledge_tools",
+      "priority": 22,
+      "when": [
+        "knowledge_ingestion",
+        "instructions",
+        "studio_actions",
+        "mcp_tools",
+        "engine_language"
+      ],
+      "authored": [
+        "knowledge/13-ai-agent-flows.md"
+      ],
+      "exact_contracts": [
+        "sources/studio-index.md",
+        "sources/cache/studio/article--ncs9r37.md",
+        "sources/cache/studio/article--nelkmxk.md"
+      ],
+      "coverage": [
+        "knowledge_configuration",
+        "instructions",
+        "action_fields",
+        "engine_and_language_source_routes"
+      ],
+      "required_packet_sections": [
+        "agent_contract",
+        "business_operation_contracts",
+        "evidence"
+      ]
+    },
+    {
+      "id": "email_adapter",
+      "priority": 30,
+      "when": [
+        "email_agent",
+        "email_threading",
+        "email_attachments",
+        "email_reply"
+      ],
+      "authored": [
+        "knowledge/14-agent-email-sms-recipes.md",
+        "knowledge/05-channels.md"
+      ],
+      "exact_contracts": [
+        "sources/cache/help/email-node.md",
+        "sources/cache/help/receive-node.md"
+      ],
+      "coverage": [
+        "sender_asset_thread_identity",
+        "reply_fields",
+        "attachment_handling",
+        "concurrent_session_caveat"
+      ],
+      "required_packet_sections": [
+        "channel_and_ownership_contract",
+        "entry_contracts",
+        "variable_contracts"
+      ]
+    },
+    {
+      "id": "sms_adapter",
+      "priority": 31,
+      "when": [
+        "sms_agent",
+        "sms_reply",
+        "sms_delivery"
+      ],
+      "authored": [
+        "knowledge/14-agent-email-sms-recipes.md",
+        "knowledge/05-channels.md"
+      ],
+      "exact_contracts": [
+        "sources/cache/help/sms-node.md",
+        "sources/cache/help/receive-node.md"
+      ],
+      "coverage": [
+        "sender_asset_identity",
+        "send_receive_matching",
+        "delivery_states",
+        "late_reply"
+      ],
+      "required_packet_sections": [
+        "channel_and_ownership_contract",
+        "entry_contracts",
+        "verification_cases"
+      ]
+    },
+    {
+      "id": "graph_and_variables",
+      "priority": 40,
+      "when": [
+        "node_fields",
+        "edge_wiring",
+        "variable_mapping",
+        "loop",
+        "sample_graph"
+      ],
+      "authored": [
+        "knowledge/15-sample-flow-walkthroughs.md",
+        "knowledge/03-variables-and-expressions.md",
+        "knowledge/04-node-reference.md",
+        "evidence/sample-flows/README.md",
+        "evidence/sample-flows/sample-inventory.json",
+        "evidence/tenant-samples.md"
+      ],
+      "exact_contracts": [
+        "sources/cache/help/variable-management-in-flows.md",
+        "sources/cache/help/start-node.md",
+        "sources/cache/help/receive-node.md"
+      ],
+      "coverage": [
+        "producer_transform_consumer",
+        "outcome_edges",
+        "scope_lifetime",
+        "sample_evidence_limits"
+      ],
+      "required_packet_sections": [
+        "node_contracts",
+        "edge_contracts",
+        "variable_contracts"
+      ]
+    },
+    {
+      "id": "human_handoff",
+      "priority": 41,
+      "when": [
+        "queue_human",
+        "conversation_ownership",
+        "wxcc",
+        "cce"
+      ],
+      "authored": [
+        "knowledge/06-integrations-and-contact-center.md",
+        "knowledge/14-agent-email-sms-recipes.md",
+        "knowledge/16-additional-sample-walkthroughs.md"
+      ],
+      "exact_contracts": [
+        "sources/catalog.md"
+      ],
+      "coverage": [
+        "standalone_wxcc_cce_distinctions",
+        "conversation_task_lifecycle",
+        "ownership_handoff_failure"
+      ],
+      "required_packet_sections": [
+        "bindings",
+        "channel_and_ownership_contract",
+        "edge_contracts"
+      ]
+    },
+    {
+      "id": "external_api",
+      "priority": 42,
+      "when": [
+        "http_call",
+        "api_trigger",
+        "authentication",
+        "custom_integration"
+      ],
+      "authored": [
+        "knowledge/10-api-contracts.md",
+        "knowledge/06-integrations-and-contact-center.md",
+        "knowledge/04-node-reference.md"
+      ],
+      "exact_contracts": [
+        "sources/cache/help/http-request-node.md",
+        "sources/catalog.md"
+      ],
+      "coverage": [
+        "request_response_mapping",
+        "authentication_reference",
+        "input_envelope",
+        "business_error_vs_transport_error"
+      ],
+      "required_packet_sections": [
+        "entry_contracts",
+        "business_operation_contracts",
+        "bindings"
+      ]
+    },
+    {
+      "id": "troubleshoot_or_review",
+      "priority": 50,
+      "when": [
+        "failure",
+        "timeout",
+        "duplicate",
+        "review",
+        "execution_evidence"
+      ],
+      "authored": [
+        "knowledge/07-testing-and-operations.md",
+        "knowledge/12-tenant-observations.md"
+      ],
+      "exact_contracts": [
+        "sources/catalog.md"
+      ],
+      "coverage": [
+        "first_divergent_boundary",
+        "retry_uncertain_write",
+        "configured_vs_executed",
+        "material_cases"
+      ],
+      "required_packet_sections": [
+        "verification_cases",
+        "evidence",
+        "unresolved",
+        "readiness"
+      ]
+    },
+    {
+      "id": "lifecycle",
+      "priority": 51,
+      "when": [
+        "create_draft",
+        "import_export",
+        "publish",
+        "rollback",
+        "migration"
+      ],
+      "authored": [
+        "knowledge/02-flow-lifecycle.md",
+        "knowledge/01-platform-and-design.md"
+      ],
+      "exact_contracts": [
+        "sources/catalog.md"
+      ],
+      "coverage": [
+        "resource_dependencies",
+        "version_and_publication",
+        "native_format_caveats"
+      ],
+      "required_packet_sections": [
+        "authorization",
+        "bindings",
+        "readiness"
+      ]
+    },
+    {
+      "id": "video_or_refresh",
+      "priority": 60,
+      "when": [
+        "transcribe_video",
+        "video_evidence",
+        "refresh_sources"
+      ],
+      "authored": [
+        "knowledge/09-video-guide.md",
+        "docs/transcription-workflow.md",
+        "docs/source-maintenance.md"
+      ],
+      "exact_contracts": [
+        "sources/inventory.jsonl",
+        "sources/coverage.json"
+      ],
+      "coverage": [
+        "venv_workflow",
+        "transcript_provenance",
+        "source_refresh"
+      ],
+      "required_packet_sections": [
+        "evidence",
+        "unresolved"
+      ]
+    }
+  ],
+  "coverage_limits": [
+    "This manifest routes documented coverage; it does not claim every tenant field or runtime behavior is resolved.",
+    "Current node-version differences and same-customer concurrent AI session isolation require scoped evidence.",
+    "Static opaque files alone do not establish graphs. Supported UI sample captures and their separate derived summaries establish observed configuration, not execution.",
+    "Business API schemas, credentials, assets, destinations, consent, and authorization are task-specific bindings.",
+    "Voice Flow Designer has different activities and expressions; do not transplant it into Connect digital flows."
+  ],
+  "freshness_sources": [
+    "sources/inventory.jsonl",
+    "sources/coverage.json",
+    "sources/studio-index.md",
+    "knowledge/12-tenant-observations.md"
+  ]
+}

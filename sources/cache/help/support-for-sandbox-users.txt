@@ -1,0 +1,32 @@
+## 
+
+Developer Community
+
+Whether you're a developer who is integrating with Webex Connect APIs and webhooks, or a business user who is using Webex Connect Templates, Visual Flow Builder or Reporting features, engage and network with Webex Connect developer community by visiting Webex Connect Developer forum.
+
+ [Image: Screenshot of the Developer Community portal homepage] 
+Screenshot of the Developer Community portal homepage
+
+As an Webex Connect developer community member, you can raise questions, share your knowledge of Webex Connect with others users, sign-up for our upcoming events and webinars and do more.
+
+## 
+
+Webex Connect Sandbox Status
+
+Visit Webex Connect status page for real-time status information on Webex Connect Developer Sandbox platform and messaging services.
+
+## 
+
+Key Resources
+
+- 
+
+If you're a developer looking to integrate with Webex Connect messaging or voice APIs for embedding communication capabilities with your app, you can refer to Webex Connect Developer Sandbox Specific API Reference.
+
+- 
+
+Additionally, you can download Postman Collection for Developer Sandbox Specific APIs.
+
+- 
+
+If you're looking for information on Webex Connect visual flow builder, refer to the Flows section.

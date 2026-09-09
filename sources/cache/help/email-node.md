@@ -1,0 +1,353 @@
+# Email Node
+
+Source: https://help.webexconnect.io/docs/email-node
+Documentation version: 6.20.0
+Retrieved: 2026-09-08T23:28:51+00:00
+
+The Email node enables you to send emails. You can either configure the Email text within the node, or select one of the HTML email templates configured using the Email Composer by setting Email Type to Template. Once you select the available template, all the replaceable parameters from the template are loaded and you can map them to session variables in the flow.
+
+Webex Connect offers the ability to send Emails via two routes. One of the following two routes will be available in your tenant depending on the tenant configuration at the time of onboarding:
+
+- AWS SES for sending and receiving emails.
+- SMTP for sending emails and email forwarding for sending a copy of incoming emails to Webex Connect. 
+
+
+
+![Email Node](https://files.readme.io/625b440-Email.jpg)
+
+
+
+
+## Node Configuration
+
+
+
+![Configuring an Email ](https://files.readme.io/a8bc12a-Email_Node.jpg)
+
+
+
+
+### Destination type
+
+For sending an Email, Webex Connect supports the below two destination types:
+
+1. **Customer Id** is a master ID that is linked to all different channel-specific destination IDs of a user. It is useful in cross channel communication. For e.g: You want to send an exclusive promo code to a user’s email address, because of previous positive feedback that they have given via Messenger. In that case, you can use the Customer-ID of the user since it will remain constant across both the channels. 
+
+2. **Email Id** 
+
+### Destination ID
+
+This field contains the destination value corresponding to the selected Destination Type. The value can be static or dynamic. For example, if the destination type is Customer Id, the destination can be made dynamic by declaring the path of the value, such as $(customerID).
+
+If the destination is an email id, SES does not support the SMTPUTF8 extension, as described in RFC6531 [1]. The part of the email address that precedes the @ sign can only contain 7-bit ASCII characters[2]. If the domain part of an address (the part after the @ sign) contains non-ASCII characters, they must be encoded using Punycode, as described in RFC3492 [3].
+
+You can enter multiple values separated by commas.
+
+### From Email
+
+The email address that you are going to use, to send this email, needs to be provided here.  
+This field is disabled and will be picked up from the app asset configuration of the app you select while making the flow live.
+
+### From Name
+
+You can specify the name by which you want to send the email, in this field. 
+
+### ReplyTo Email
+
+You can specify the email address to which the replies will be sent instead of the sender.
+
+### CC Recipients (Optional)
+
+Comma separated list of email addresses to be kept in CC.
+
+### BCC Recipients (Optional)
+
+Comma separated list of email addresses to be kept in BCC.
+
+### List Unsubscribe URL (Optional)
+
+Allows you to pass the link to your own subscription management portal, as part of the list-unsubscribe headers, instead of using Webex Connect subscription management capability.
+
+### Unsubscribe Mail To Address (Optional)
+
+Contains the email address to which the unsubscribe email will be sent, when the customer sends an unsubscribe request through email to unsubscribe route.
+
+### Unsubscribe Email Subject (Optional)
+
+Specify the subject that you would like to use for the email unsubscribe requests triggered through email to unsubscribe route.
+
+> 📘 Note
+> 
+> If you are using the Unsubscribe management capability of the Webex Connect platform, you can uniquely identify the email from which a customer has unsubscribed or resubscribed to, with the help of the Sender ID and the Correlation ID combination.
+> 
+> When the list-unsubscribe URL and/or unsubscribe mail-to address are added, the Webex Connect  platform will overwrite the email app-asset level setting with the values provided in the Send Node, even for the assets for which the platform manages unsubscriptions. In such cases, the Webex Connect platform will no longer have control over the Outbound Webhook notifications for the unsubscribe events originated from the list-unsubscribe header. Therefore, you are expected to use these options only when you have a mechanism to handle unsubscriptions (including one-click unsubscription) on your own.
+
+### Message Source
+
+#### Email type
+
+1. Text
+2. Template 
+3. HTML
+
+When you select the type as **Template or HTML**, you can see a new textbox **Fallback Text** is added. You can provide the fallback text in this field. This text will be displayed to the customers when HTML content within the template is not supported by their email application. 
+
+
+
+![Fallback Text for Email](https://files.readme.io/45631a6-Email_Node.jpg)
+
+
+
+
+#### Subject
+
+Email subject line.
+
+#### Template Type
+
+Select 'Full template' in case the entire email content is available in a single email template configured using Email Composer. Select the Template name from 'Template' dropdown.
+
+Alternatively, select 'Partial template' in case you want to combine multiple partial templates that you want to combine in runtime to build a complete template (e.g., you may have configured three partial templates for Header, Body and Footer content respectively using Email Composer). Use 'Add More Partial Templates' option to select various partial templates you want to combine.
+
+#### HTML Content
+
+If you select HTML as Email Type, the Message field changes to HTML Content. Enter the HTML email body.
+
+#### Enable link tracking
+
+You can use the Enable link tracking option to track any link clicks from within the email. the tracked links will be sent as **Clicked** delivery receipt in the outbound webhook. For the format of the outbound webhooks, see the [Email Delivery Receipts](https://developers.imiconnect.io/reference/email-outbound-webhooks#email-delivery-receipts) section.
+
+
+
+![Link Tracking](https://files.readme.io/d4208dc-email_html_1.png)
+
+
+
+
+#### Track Opens
+
+You can use the Track Opens option to track the event of email opening.
+
+> 📘 Note
+> 
+> For some of the old flows created or modified before v6.3.0 (July 2023), the checkbox values for Link Tracking and Track Opens may not appear correctly, i.e., although the system tracks link clicks and email opens, the UI may not show these options as enabled. 
+> 
+> In such cases, if you open the node in Edit mode and Save it without manually selecting the tracking options,  the system stops tracking from that point onwards.
+
+#### Correlation ID
+
+You can assign a unique ID of your choice to each Email. This ID is returned to the platform with the delivery report and can be used to identify the message.
+
+#### Callback Data
+
+In case there is additional data to be sent along with the delivery reports to the URL, you must specify that here.
+
+**Validations for Callback Data & Correlation ID**:
+
+1. Callback Data, Correlation Id fields are optional for all the channels. Send node can be saved without providing these fields.
+2. All characters, Alphabets, Numbers, and special characters are accepted.
+3. Variables can be added.
+4. Hard coded values are accepted.
+5. On Platform side, there is no Max or Min length validation for these fields.
+
+#### Notify Status
+
+> 🚧 
+> 
+> Please note that email delivery status tracking is available for emails sent via AWS SES or SMTP based Email App Assets.
+> 
+> Read receipts are not generated for emails sent as plain text, i.e., when the email type is text.
+
+#### Notify URL
+
+You can choose to notify a URL with the delivery report for your preferred channel. This field accepts only a valid URL or a variable. If an invalid URL is passed in an API request or via a variable, then such a request will not be considered eligible for retries.
+
+**Validations for Notify URL field:**
+
+- It is an optional field for all the channels. Send node can be executed without including these values.
+- The notify URL should be updated with the proper URL format. The system returns the error message when the Notify URL field is not updated correctly as ‘Invalid URL: field accepts only valid URL or variable.’
+- When you provide a space in front of the URL, the system displays the 'Invalid URL: field accepts only valid URLs or variables' error message.
+- When you provide space at the end of the URL, the system trims and ignores the space, and the URL receives delivery receipts (DRs).
+- Select the **Enable Notify URL Auth** checkbox to activate the authentication of the notify URL.
+- There is no maximum length validation defined for this field.
+- Variables can be added to this field.
+
+> 📘 Note:
+> 
+> Notify URLs track the status of delivery receipts (DRs) for sent messages.
+> 
+> If Enable Notify URL Auth is enabled for your node and an Auth ID that is random, invalid, or deleted is used, the payload will be parked in Webex Connect and not forwarded to the receiver's server. However, this does not impact the delivery of the message.
+> 
+> If Enable Notify URL Auth is not enabled, the payload is forwarded to the receiver's server regardless of any invalid Auth ID used.
+
+**For AWS SES based email app assets**:
+
+You can choose to notify a URL about the status of the transaction, for each of the following events:
+
+- Sent
+- Delivered
+- Read
+- Bounce
+- Spam
+- Rejected
+- Answered
+
+> 📘 Note
+> 
+> The default retention period for email bounce list is **Seven** days for email via AWS SES. To change the retention period, reach out to your account manager.
+
+**For SMTP based email app assets**:
+
+You can choose to notify a URL about the status of the transaction, for each of the following events:
+
+- Sent
+- Failed
+
+If an invalid URL is passed in API request or via a variable, then such request will not be considered eligible for retries.
+
+**Attachments (Optional)**
+
+The email node supports attachments and dynamic attachments payload.
+
+Webex Connectrecommends uploading the required attachments to Media Manager and use that URL in the attachments section. The URL is valid and complete only when it ends with the file extension.
+
+To add an attachment:
+
+1. Select **Add Attachments**.
+2. Click **Add Attachment**.
+3. Select the **MIME Type**. The different MIME types supported for the attachments are mentioned below.
+4. Provide a **Name** and the Media URL for the attachment.
+
+You can add up to 5 attachments and the size cannot exceed 10 MB including all the attachments
+
+
+
+![Screenshot of Add Attachments](https://files.readme.io/1374d4a-email_add_attachment.jpg)
+
+
+
+
+To add a dynamic attachment payload:
+
+1. Select Dynamic Attachments Payload.
+2. In the Attachment Payload field, enter the variables or the json payload representing the attachment block as mentioned in the example below.
+
+
+
+![Screenshot of Add Attachments.](https://files.readme.io/78d853b-email_add_attachment.jpg)
+
+
+
+
+3. Provide attachments payload as mentioned below. It's recommended that you use “attachmentType”: 2 (using media URL) for sending attachments. Alternatively, you can send attachments using base64 encoded string as well, and for that, use “attachmentType”: 1 and instead of "mediaUrl", use “content”: "base64-encoded-file-content":
+
+```Text Attachments Payload
+[
+    {
+        "mimeType": "application/msword",
+        "name": "doc file1 with dynamic payload",
+        "attachmentType": 2,
+        "mediaUrl": http: //iiswc.org/iiswc2012/sample.doc
+    },
+    {
+        "mimeType": "application/pdf",
+        "name": "pdf file test",
+        "attachmentType": 2,
+        "mediaUrl": https: //imichat-preprod-app-share.s3.amazonaws.com/consoleuploads/7202003240541972020032405252SAMPLEPDF_5MB.PDF
+    }
+]
+```
+
+
+
+![Screenshot of Adding Dynamic Attachments Payload.](https://files.readme.io/d37dc56-image.png)
+
+
+
+
+## SMTP Headers (Applicable only when SMTP based Email Sending option is enabled for your tenant)
+
+1. Select one of the following as the Header Parameter.
+
+- Cc when you want to send a copy of the email to anyone else
+- Bcc when you want to send a copy of the email to undisclosed recipients
+- In-Reply-To when you want to send a reply to a previous message
+
+2. Enter the Value for the selected header parameter.
+
+
+
+![Screenshot of SMTP Headers.](https://files.readme.io/3b481fa-4ec4c492-8108-42a0-814b-29632172c98b.png)
+
+
+
+
+## Advance Options
+
+### Wait For
+
+Before proceeding to the next node, you can choose to wait for a delivery report. You can also limit the maximum wait time by defining it in the Timeout field.
+
+### Expiry
+
+You can define the maximum time, within which the node execution must complete by providing the expiry time in UTC or seconds.
+
+## MIME Types for Sending Email Attachments
+
+| Supported MIME Types                            | File Extension(s)                        |
+| :---------------------------------------------- | :--------------------------------------- |
+| application/msword                              | doc, docx                                |
+| application/pdf                                 | pdf                                      |
+| application/rss+xml                             | rss                                      |
+| application/vnd.google-earth.kml+xml            | kml                                      |
+| application/vnd.google-earth.kmz                | kmz                                      |
+| application/vnd.ms-excel                        | xls, xlsx                                |
+| application/vnd.ms-powerpoint                   | pps, ppt, pptx                           |
+| application/vnd.oasis.opendocument.presentation | odp                                      |
+| application/vnd.oasis.opendocument.spreadsheet  | ods                                      |
+| application/vnd.oasis.opendocument.text         | odt                                      |
+| application/vnd.sun.xml.calc                    | sxc                                      |
+| application/vnd.sun.xml.writer                  | sxw                                      |
+| application/x-gzip                              | gzip                                     |
+| application/zip                                 | zip                                      |
+| audio/basic                                     | au snd                                   |
+| audio/flac                                      | flac                                     |
+| audio/mid                                       | mid, rmi                                 |
+| audio/mp4                                       | m4a                                      |
+| audio/mpeg                                      | mp3                                      |
+| audio/ogg                                       | oga, ogg                                 |
+| audio/x-aiff                                    | aif, aifc, aiff                          |
+| audio/x-wav                                     | wav                                      |
+| image/gif                                       | gif                                      |
+| image/jpeg                                      | jpeg, jpg, jpe                           |
+| image/png                                       | png                                      |
+| image/tiff                                      | tiff, tif                                |
+| image/vnd.wap.wbmp                              | wbmp                                     |
+| image/x-ms-bmp                                  | bmp                                      |
+| text/calendar                                   | ics                                      |
+| text/comma-separated-values                     | csv                                      |
+| text/css                                        | css                                      |
+| text/html                                       | htm, html                                |
+| text/plain                                      | asc, c, diff, log, patch, pot, text, txt |
+| text/x-vcard                                    | vcf                                      |
+| video/mp4                                       | mp4                                      |
+| video/mpeg                                      | mpeg, mpg, mpe                           |
+| video/ogg                                       | ogv                                      |
+| video/quicktime                                 | qt, mov                                  |
+| video/x-msvideo                                 | avi                                      |
+
+## Output Variables
+
+You can see the data that this node generates as output variables.
+
+
+
+| Output Variable | Description | Example |
+| --- | --- | --- |
+| send.sentDateTime | The date and time on which the message is sent. | 2019-06-02T17:17:15.575Z |
+| send.gatewayTid | The system generated transaction Id received from gateway. | [{"code":"1001","transid":"48ceebcb-8035-40d0-8f22-3608b915e2b6","description":"Queued"}] |
+| send.deliveryStatusDescription | Status of the delivery. | Submitted/Delivered/Read. |
+| send.deliveryStatusCode | The status code of the delivery message. | 101 |
+| send.response_data | The response data received from the user. | [{"code":"1001","transid":"48ceebcb-8035-40d0-8f22-3608b915e2b6","description":"Queued"}] |
+| send.response_interactive  <br>  <br>The interactive response data. | Captures if the interactive button in the message is tapped. |  |
+

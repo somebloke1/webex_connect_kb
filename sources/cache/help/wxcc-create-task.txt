@@ -1,0 +1,241 @@
+This node calls Cisco Webex Contact Center Task API to create a new Task. While configuring flows in Webex Connect, you’d need to use this node for creating the task on Webex CC.
+
+## 
+
+Authorization
+
+Refer to section Node Authorizations for more information. 
+
+## 
+
+Methods and Outcomes
+
+Here’s a brief description of various methods, and corresponding output variables and node outcomes associated with each of the methods.
+
+Method Name - Create Task 
+
+ [Image: Screenshot of Create Task configuration page.] 
+Screenshot of Create Task configuration page.
+
+## 📘
+Note
+
+Based on the Channel you have selected, the Conversation ID will change accordingly.
+
+ | Input Variables | Output Variables | Node Outcomes | Versions
+
+ | TASK ID - $(flid) 
+
+Flow transaction id from the state node is converted into UUID in the evaluate node, and passed to create task node, for creating task with flid as task id.
+
+CONVERSATION ID - $(ConversationID) 
+
+Conversation id from the create conversation node
+
+DESTINATION 
+
+ Destination refers to the app id for the channel apps, and service number for SMS channel, which will be available as start node output variable
+
+ For Facebook Messenger - destination is $(nodetid.messenger.appid)
+ For Email – destination is $(nodetid.email.appid)
+
+ For Livechat – destination is $(nodetid.inappmessaging.appid)
+ For SMS – destination is $(nodetid.sms.serviceNumber)
+
+ For WhatsApp WA  ID(ORIGIN) - desitnation is $(n2.whatsapp.waId)
+
+MEDIA TYPE 
+
+ This field specifies the type of media on Webex CC while making task API call
+
+ Media type can be selected from the dropdown
+ For SMS and Facebook Messenger, media type is “Social”
+
+ For Email. Media type is “Email”
+
+_ For Live chat, media is “Chat”
+
+MEDIA CHANNEL
+ This field specifies the channel on Webex CC while making task API call
+
+ Channel (Facebook Messenger, SMS, Email, Livechat and WhatsApp) can be selected from the dropdown
+
+Subject
+
+The subject line of the incoming email is to be mapped to this field. This field appears only when the option selected in the 'MEDIA TYPE' and 'MEDIA CHANNEL' field is 'Email'.
+
+To Recipients
+
+This field appears only when the option selected in the 'MEDIA TYPE' and 'MEDIA CHANNEL' field is 'Email'.  The values related to this field are received as part of the Start Node variables and is expected to be mapped here.
+
+CC Recipients
+
+This field appears only when the option selected in the 'MEDIA TYPE' and 'MEDIA CHANNEL' field is 'Email'. The values related to this field are received as part of the Start Node variables and is expected to be mapped here.
+
+Has Attachments
+
+This field appears only when the option selected in the 'MEDIA TYPE' and 'MEDIA CHANNEL' field is 'Email'. Please refer to this link for more information on Media-specific Work Flow logic.
+
+CUSTOMER NAME - $(n2.messenger.name)
+
+ Customer name is available in the output variables of start node
+
+ For Facebook Messenger, customer name is $(n2.messenger.name)
+ For SMS, customer name is $(n2.sms.senderNumber)
+
+ For  Email , customer name is $(n2.email.senderName)
+ For Livechat, customer name is $(n2.inappmessaging.name)
+
+ For WhatsApp , customer name is $(n2.whatsapp.username)
+
+CUSTOMER ID - $(n2.messenger.psId)
+
+ Customer Ids available in the output variables of start node
+
+ For Facebook Messenger, customer id is $(n2.messenger.psid)
+ For SMS, customer id is $(n2.sms.senderNumber)
+
+ For Email , customer id is $(n2.email.emailId)
+
+_ For Livechat, customer id is $(n2.inappmessaging.appid)
+
+* For WhatsApp, customer id is $(n2.whatsapp.waId) | Task ID
+
+Conversation ID |    onInvalidData
+
+ onError
+ onInvalidChoice
+
+ onauthorizationfail
+ Error
+
+ Task failed
+ created
+
+ onTimeout  | v1.2 and v.1.0
+
+## 📘
+Note:
+
+When the variable is selected from the previous node output variables, the nodetid will be the prefix for the variable. Eg., sms.serviceNumber is an output variable of start node (node id 2), then the variable becomes $(n2.sms.serviceNumber)
+
+## 📘
+Version Upgrade
+
+It is recommended for all users to move to the latest version that consists of simplified flows for hassle-free and optimal performance. The workaround suggested above for the ‘Has Attachments field’ is not necessary to be executed after the version upgrade.
+
+## 
+
+Sample configurations for various channels
+
+## 📘
+Note:
+
+Below are the channel specific field. These will be applicable for the respective channels
+
+FACEBOOK PS ID(ORIGIN) - $(n2.messenger.psId)
+
+EMAIL ID(ORIGIN) - $(n2.email.emailId)
+
+MOBILE NUMBER(ORIGIN) - $(n2.sms.senderNumber)
+
+LIVECHAT USER ID(ORIGIN) - $(n2.livechat.userId)
+
+WhatsApp WA  ID(ORIGIN) - $(n2.whatsapp.waId)
+
+ | Channel | Field Value
+
+ | Messenger | TASK ID - $(flid)
+
+CONVERSATION ID - $(conversationId)
+
+DESTINATION - $(appid)
+
+MEDIA TYPE - Social
+
+MEDIA CHANNEL – Facebook Messenger
+
+CUSTOMER NAME - $(n2.messenger.name)
+
+CUSTOMER ID - $(n2.messenger.psId)
+
+FACEBOOK PS ID(ORIGIN) - $(n2.messenger.psId)
+
+ | SMS | TASK ID - $(flid)
+
+CONVERSATION ID - $(conversationId)
+
+DESTINATION - $(n2.sms.serviceNumber)
+
+MEDIA TYPE - Social
+
+MEDIA CHANNEL - SMS
+
+CUSTOMER NAME - $(n2.sms.senderNumber)
+
+CUSTOMER ID - $(n2.sms.senderNumber)
+
+Mobile Number(ORIGIN) - $(n2.sms.senderNumber)
+
+ | Email | TASK ID - $(flid)
+
+CONVERSATION ID - $(conversationId)
+
+DESTINATION - $(n2.email.appId)
+
+MEDIA TYPE - Email
+
+MEDIA CHANNEL - Email
+
+CUSTOMER NAME - $(n2.email.senderName)
+
+CUSTOMER ID - $(n2.email.emailId)
+
+EMAIL ID(ORIGIN) $(n2.email.emailId)
+
+Subject $(n2.email.subject)
+
+ | Live Chat | TASK ID - $(flid)
+
+CONVERSATION ID - $(conversationId)
+
+DESTINATION - $(n2.inappmessaging.appId)
+
+MEDIA TYPE - Chat
+
+MEDIA CHANNEL - Livechat
+
+CHAT TYPE - Regular / Proactive
+
+DIRECTION - Inbound / Outbound
+
+CUSTOMER NAME - $(n38.inappmessaging.formFields.Name)
+
+CUSTOMER ID - $(n38.inappmessaging.formFields.Email)
+
+LIVECHAT USER ID (ORIGIN) - $(n38.inappmessaging.userId)
+
+ | WhatsApp | TASK ID - $(n2.whatsapp.transId)
+
+CONVERSATION ID - $(conversationId)
+
+DESTINATION - $(n2.whatsapp.waId)
+
+Source Number - $(sourceNumber)
+
+MEDIA TYPE - Social
+
+MEDIA CHANNEL - WhatsApp
+
+CUSTOMER ID - $(n2.whatsapp.waId)
+
+WhatsApp WA ID(Origin)- $(n2.whatsapp.waId)
+
+CUSTOMER NAME - $(n2.whatsapp.username)
+
+## 📘
+Note
+
+WhatsApp Source Number is "WhatsApp Business Number" without country code.
+
+It is configured in flow using custom variable. For e.g., in this case we have created a custom variable with name 'sourceNumber' and it is passed as '$(sourceNumber)' in 'Source Number' field at Create Task node

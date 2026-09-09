@@ -1,0 +1,33 @@
+{
+  "category": "APP TRAY",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257890",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "7838d2bfe82a3cf3c394fe4325656f118e47e192b4878b3b85f4ff9e61c5b639",
+    "source_path": "bf1f274d7e41d4da90dee877515b23abab7a3ec6478cec04eecaebce1f7d8ee2",
+    "text_path": "a0be13e930992f9e89a726e8cb27a0b9e100d1ec6ff2bda63b5c0948ff956886"
+  },
+  "headings": [
+    "📘End of Sale Announcement"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/mobile-wallet.md",
+  "resolved_url": "https://help.webexconnect.io/docs/mobile-wallet",
+  "retrieved_at": "2026-09-08T23:29:38+00:00",
+  "sha256_html_response": "74580e9477bbb170ae1ff93435609cfb68f9c38d8d904821706ed6e6e825c862",
+  "sha256_source_body": "bf1f274d7e41d4da90dee877515b23abab7a3ec6478cec04eecaebce1f7d8ee2",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/mobile-wallet.source.md",
+  "source_updated_at": "2024-07-03T09:20:02.233Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/mobile-wallet.txt",
+  "title": "Mobile Wallet",
+  "url": "https://help.webexconnect.io/docs/mobile-wallet",
+  "word_count": 712,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/mobile-wallet.metadata.json"
+}

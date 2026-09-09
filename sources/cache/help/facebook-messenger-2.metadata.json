@@ -1,0 +1,33 @@
+{
+  "category": "Webex Engage Standalone Nodes",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd81825796c",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "f8d6b9d77cd1e13aa86b058fcfd5b4e47f61b399386dc65223f43d6b4e6d7cc2",
+    "source_path": "b7eae858f0f477714b4160b1242c8b3608a35b3996a1336e3a4c9060c1f852fa",
+    "text_path": "80e6a68a771e3f9cc8f398f08f0b0490efc69de7d0729bc2b2140c1d56e68dc0"
+  },
+  "headings": [
+    "📘Warning"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/facebook-messenger-2.md",
+  "resolved_url": "https://help.webexconnect.io/docs/facebook-messenger-2",
+  "retrieved_at": "2026-09-08T23:29:26+00:00",
+  "sha256_html_response": "a5bc8efe4bb0886e0fe7092695c011eb0ea6809806d81fc08f6a3f0f8640ea83",
+  "sha256_source_body": "b7eae858f0f477714b4160b1242c8b3608a35b3996a1336e3a4c9060c1f852fa",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/facebook-messenger-2.source.md",
+  "source_updated_at": "2026-04-14T07:45:01.277Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/facebook-messenger-2.txt",
+  "title": "Facebook Messenger - WxEngage standalone",
+  "url": "https://help.webexconnect.io/docs/facebook-messenger-2",
+  "word_count": 436,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/facebook-messenger-2.metadata.json"
+}

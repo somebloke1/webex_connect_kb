@@ -1,0 +1,35 @@
+{
+  "id": "CUi_pTCI-ls",
+  "url": "https://www.youtube.com/watch?v=CUi_pTCI-ls",
+  "retrieved_at": "2026-09-08",
+  "title": "Get to know Webex Connect",
+  "author": "Webex CPaaS Solutions",
+  "channel_id": "UCkwetV9yooqyFm8Bije3gDw",
+  "duration_seconds": 1603,
+  "published_at": "2023-09-19T08:10:38-07:00",
+  "uploaded_at": "2023-09-19T08:10:38-07:00",
+  "availability": "OK",
+  "caption_tracks": [
+    {
+      "language_code": "en",
+      "kind": "asr",
+      "name": "English (auto-generated)"
+    }
+  ],
+  "chapters_from_description": [
+    "00:00 Introduction",
+    "01:52 Connected customer journeys",
+    "03:13 An ever evolving landscape",
+    "04:44 Enterprises have many journey to orchestrate",
+    "05:51 Centralised cloud communications platform",
+    "06:35 Webex Connect is a flexible CPaaS platform",
+    "08:39 APIs and SDKs for enterprise developers",
+    "09:20 Low-code 'configure' approach",
+    "10:05 Tool to support enterprise developers",
+    "12:32 Webex Connect is a enterprise CPaaS offering",
+    "16:43 Building blocks for great customer experiences",
+    "19:16 Drag-and-drop building blocks",
+    "19:42 Orchestrating a typical customer journey",
+    "22:33 Committed to our platform values"
+  ]
+}

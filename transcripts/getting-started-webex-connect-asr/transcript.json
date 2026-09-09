@@ -1,0 +1,1990 @@
+{
+  "schema_version": 1,
+  "segments": [
+    {
+      "start": 2.61,
+      "end": 9.17,
+      "text": "Hello, I am David James. I lead our global sales engineering team here in the Webex see-pass solutions team"
+    },
+    {
+      "start": 9.77,
+      "end": 12.41,
+      "text": "Webex connect is a product that I'll be taking you through"
+    },
+    {
+      "start": 12.97,
+      "end": 19.41,
+      "text": "In this video series as a slightly deeper dive into the platform getting a little bit more technical"
+    },
+    {
+      "start": 19.41,
+      "end": 21.41,
+      "text": "But hopefully not too technical"
+    },
+    {
+      "start": 21.93,
+      "end": 23.93,
+      "text": "And yeah, let's get into it"
+    },
+    {
+      "start": 24.21,
+      "end": 29.85,
+      "text": "Before I jump in you would have heard Brian ready talk about in video one the disconnect"
+    },
+    {
+      "start": 30.69,
+      "end": 35.69,
+      "text": "And I cover the platform product story, so I'm not going to try and repeat his words too much"
+    },
+    {
+      "start": 35.69,
+      "end": 39.97,
+      "text": "But maybe a little recap about why we built the platform that we built"
+    },
+    {
+      "start": 40.33,
+      "end": 44.33,
+      "text": "So digital natives Ubers, Tetzlers, Netflix of the world other disruptors"
+    },
+    {
+      "start": 44.33,
+      "end": 46.33,
+      "text": "They made it look very easy to"
+    },
+    {
+      "start": 46.65,
+      "end": 53.41,
+      "text": "Manage this increasing complexity of all these emerging channels because they don't have all this legacy core business systems on the left hand side"
+    },
+    {
+      "start": 53.49,
+      "end": 58.49,
+      "text": "So challenges around complex communication integration scale managing protocols"
+    },
+    {
+      "start": 59.21,
+      "end": 61.21,
+      "text": "Single points of orchestration"
+    },
+    {
+      "start": 61.25,
+      "end": 64.57,
+      "text": "They're not challenges that they face they didn't come with that tech debt"
+    },
+    {
+      "start": 64.57,
+      "end": 69.57,
+      "text": "So the fragmentation of channels and consumer journey is an ultimately delivering poor personal experience"
+    },
+    {
+      "start": 69.77,
+      "end": 72.53,
+      "text": "Is a lesser faced challenge for those guys"
+    },
+    {
+      "start": 72.97,
+      "end": 75.17,
+      "text": "The problem for a lot of large enterprises"
+    },
+    {
+      "start": 75.17,
+      "end": 78.81,
+      "text": "We pull millions of dollars into apps that promise great digital presence"
+    },
+    {
+      "start": 78.97,
+      "end": 86.53,
+      "text": "But yet digital leaders digital natives still gain ground on us. They still grand gap gain ground on these companies, right?"
+    },
+    {
+      "start": 88.57,
+      "end": 92.33,
+      "text": "They're building great platforms as well. They're building their own IP"
+    },
+    {
+      "start": 92.33,
+      "end": 95.13,
+      "text": "And so how do we also start to look at it from a"
+    },
+    {
+      "start": 96.21,
+      "end": 101.53,
+      "text": "big tech debt large legacy kind of financial services or healthcare or"
+    },
+    {
+      "start": 101.97,
+      "end": 105.89,
+      "text": "enterprise type companies, how do we look at it from your perspective and"
+    },
+    {
+      "start": 107.33,
+      "end": 110.33,
+      "text": "See how we can help you overcome this challenge"
+    },
+    {
+      "start": 110.49,
+      "end": 116.81,
+      "text": "You know, we totally appreciate the modern enterprise for a lot of many systems applications to power their day-to-day"
+    },
+    {
+      "start": 117.33,
+      "end": 121.05,
+      "text": "Operations and so this is not about moving away from those systems"
+    },
+    {
+      "start": 121.65,
+      "end": 125.89,
+      "text": "This is not about one-stop shop potentially wasting years of cumulative investment"
+    },
+    {
+      "start": 126.21,
+      "end": 133.09,
+      "text": "Whenever there isn't one-stop shop, we think the market is covered by an ever-growing list of best-in-breed vendors"
+    },
+    {
+      "start": 133.61,
+      "end": 137.05,
+      "text": "Many different parts of our own business will probably want to bring their own technology"
+    },
+    {
+      "start": 137.05,
+      "end": 142.69,
+      "text": "You've got e-commerce platforms payment solutions CRMs or the management systems fraud management systems"
+    },
+    {
+      "start": 143.69,
+      "end": 147.85,
+      "text": "CRM and case management different transactional platforms"
+    },
+    {
+      "start": 147.85,
+      "end": 154.41,
+      "text": "It's impossible to just buy a single data source or data lake and just process this all in one place the promise of a"
+    },
+    {
+      "start": 154.41,
+      "end": 158.89,
+      "text": "Just one CDP even still isn't going to get you everything in one single place"
+    },
+    {
+      "start": 159.21,
+      "end": 168.01,
+      "text": "So there's a compelling need to connect these about back-end systems essentially with these communication channels and create consistent customer experiences"
+    },
+    {
+      "start": 168.01,
+      "end": 171.29,
+      "text": "So that's the bit that we focus on and we do this"
+    },
+    {
+      "start": 171.49,
+      "end": 176.29,
+      "text": "Which we're going to talk about today and we've been talking through the series with WebEx connect this brings it together"
+    },
+    {
+      "start": 176.29,
+      "end": 181.89,
+      "text": "It's a cloud communications platform. It doesn't rip or replace access glue connective tissue"
+    },
+    {
+      "start": 182.13,
+      "end": 185.69,
+      "text": "It augments it plays well alongside these existing investments"
+    },
+    {
+      "start": 185.81,
+      "end": 190.85,
+      "text": "So let's dive a little bit deeper into what this platform actually is and does and what's inside this box"
+    },
+    {
+      "start": 191.85,
+      "end": 194.29,
+      "text": "So they help navigate through some of the different elements"
+    },
+    {
+      "start": 194.29,
+      "end": 199.01,
+      "text": "We've broken the platform down into six key areas and they're the areas I'm going to talk to one by one"
+    },
+    {
+      "start": 199.41,
+      "end": 207.33,
+      "text": "The central four pillars they essentially allow you to build and deliver great experiences right for your developers or your line of business working together or"
+    },
+    {
+      "start": 207.69,
+      "end": 208.65,
+      "text": "individually"
+    },
+    {
+      "start": 208.65,
+      "end": 212.21,
+      "text": "You've got your integrations into your own and systems. We're going to talk more about that"
+    },
+    {
+      "start": 212.21,
+      "end": 216.05,
+      "text": "You've got your business logic and flow builder drag-and-drop if this then that logic"
+    },
+    {
+      "start": 216.29,
+      "end": 222.49,
+      "text": "You've got AI conversational capabilities of course AI conversational automation is key in this day and age"
+    },
+    {
+      "start": 222.49,
+      "end": 226.41,
+      "text": "especially with all the advancements in LLM and of course we wouldn't be a"
+    },
+    {
+      "start": 226.81,
+      "end": 230.81,
+      "text": "Communication platform if we weren't going to talk to you about the communication channels and our rich"
+    },
+    {
+      "start": 231.37,
+      "end": 234.01,
+      "text": "heritage and the future of messaging that we see there"
+    },
+    {
+      "start": 235.21,
+      "end": 242.29,
+      "text": "Around this we have an enterprise grave wrapper. So think about control center service assurance layers reporting"
+    },
+    {
+      "start": 243.37,
+      "end": 247.49,
+      "text": "Infrastructure management those types of things. So we'll also talk about that as well"
+    },
+    {
+      "start": 247.53,
+      "end": 250.61,
+      "text": "So I'm going to bring them all to life a little bit more detail as we go through"
+    },
+    {
+      "start": 257.74,
+      "end": 261.82,
+      "text": "Starting off with communication channel management. We think it's the key pillar really"
+    },
+    {
+      "start": 262.42,
+      "end": 267.5,
+      "text": "We of course can expose these my rapi's and we can just be a simple API and"
+    },
+    {
+      "start": 268.66,
+      "end": 273.42,
+      "text": "Partner for for you guys to just send payloads to us and we push to the messaging channel"
+    },
+    {
+      "start": 273.42,
+      "end": 275.42,
+      "text": "We have 16 of these channels out box"
+    },
+    {
+      "start": 275.9,
+      "end": 279.06,
+      "text": "We can even develop custom channels into your own"
+    },
+    {
+      "start": 279.86,
+      "end": 284.26,
+      "text": "own channel of choice to bring your own channel we can almost call it and so a"
+    },
+    {
+      "start": 284.34,
+      "end": 290.5,
+      "text": "Quick overview here would be that we are not just a tier one SMS aggregator in many markets as we're known in many markets"
+    },
+    {
+      "start": 290.62,
+      "end": 298.26,
+      "text": "Which gives us the best price points the best deliverability and lowest latency and there's only a few of those tier one SMS aggregators in the world"
+    },
+    {
+      "start": 298.98,
+      "end": 305.42,
+      "text": "But we also have a wider range of traditional channels like email voice our own app in that push SDK"
+    },
+    {
+      "start": 305.78,
+      "end": 311.42,
+      "text": "Live chat SDK and I think more importantly as well as in terms of future proofing"
+    },
+    {
+      "start": 312.38,
+      "end": 316.1,
+      "text": "We we have deep relationships with the likes of meta apple and Google"
+    },
+    {
+      "start": 316.1,
+      "end": 319.94,
+      "text": "But what that actually means is we've launched first in market solutions on some of these"
+    },
+    {
+      "start": 321.06,
+      "end": 323.82,
+      "text": "We have a future proof platform"
+    },
+    {
+      "start": 324.5,
+      "end": 330.02,
+      "text": "So all of your communication channels under one proof the advantage for you working on a single platform"
+    },
+    {
+      "start": 330.02,
+      "end": 332.02,
+      "text": "Your future proof you consolidate"
+    },
+    {
+      "start": 332.1,
+      "end": 336.42,
+      "text": "And we insulate all the complexity of multi-channel of what's next of all of the different"
+    },
+    {
+      "start": 336.98,
+      "end": 342.22,
+      "text": "Channel rich channel aware capabilities that you that you see across these emerging channels"
+    },
+    {
+      "start": 342.22,
+      "end": 348.78,
+      "text": "And I'm talking about carousels and list pickers and rich buttons and all of the ways in which these channels become"
+    },
+    {
+      "start": 348.94,
+      "end": 355.26,
+      "text": "Interactive and we give you those tools and capabilities in a very easy and intuitive manner within our platform"
+    },
+    {
+      "start": 355.26,
+      "end": 357.26,
+      "text": "And I'll show you a little bit about that now"
+    },
+    {
+      "start": 357.34,
+      "end": 362.94,
+      "text": "So first up from an API perspective simple send receive message when you log into the platform"
+    },
+    {
+      "start": 362.94,
+      "end": 370.06,
+      "text": "You're going to see some of these services each services a name workspace that addresses a customer interaction use case for some context here"
+    },
+    {
+      "start": 370.46,
+      "end": 373.02,
+      "text": "And we're not going to go deep into an overview of the platform"
+    },
+    {
+      "start": 373.98,
+      "end": 377.42,
+      "text": "We have API documentation available on our developer portal"
+    },
+    {
+      "start": 377.9,
+      "end": 384.06,
+      "text": "Helps developers navigate all of this has helpful code snippets and samples that aid that configuration"
+    },
+    {
+      "start": 385.1,
+      "end": 388.14,
+      "text": "And so that when we do come back into the services you can use"
+    },
+    {
+      "start": 388.7,
+      "end": 391.02,
+      "text": "apis for outbound communication"
+    },
+    {
+      "start": 391.02,
+      "end": 395.26,
+      "text": "You can configure these outbound webhooks we call them very easily for incoming events"
+    },
+    {
+      "start": 395.42,
+      "end": 397.9,
+      "text": "So an appointment reminder or something like that that might be coming in"
+    },
+    {
+      "start": 398.38,
+      "end": 404.3,
+      "text": "And we have a set of authentication tokens for enterprise grade security as well. That's really important businesses need those"
+    },
+    {
+      "start": 404.86,
+      "end": 407.98,
+      "text": "So typically an enterprise developers are responsible for the API integration"
+    },
+    {
+      "start": 408.06,
+      "end": 411.66,
+      "text": "But messaging and content is often handled by functional teams in the line of business"
+    },
+    {
+      "start": 411.98,
+      "end": 415.34,
+      "text": "So we have rich template management capabilities. We have things like"
+    },
+    {
+      "start": 415.9,
+      "end": 417.9,
+      "text": "WhatsApp template management apis"
+    },
+    {
+      "start": 418.38,
+      "end": 420.86,
+      "text": "That can all be managed from within the platform"
+    },
+    {
+      "start": 421.5,
+      "end": 427.66,
+      "text": "SMS templates and other things here and I'm going to show you some of our email template capability as well"
+    },
+    {
+      "start": 427.9,
+      "end": 431.9,
+      "text": "So we have an email our email composer just one of the channels and one of the"
+    },
+    {
+      "start": 432.3,
+      "end": 434.3,
+      "text": "richer channel elements that we can show you here"
+    },
+    {
+      "start": 435.98,
+      "end": 439.5,
+      "text": "While I'm showing this is because it allows you to do a couple of things"
+    },
+    {
+      "start": 439.66,
+      "end": 443.02,
+      "text": "So you can import your own HTML and edit it from within the platform"
+    },
+    {
+      "start": 443.42,
+      "end": 446.86,
+      "text": "This gives you rich previews on different devices, which is really cool"
+    },
+    {
+      "start": 446.94,
+      "end": 448.94,
+      "text": "So you can see how that comes to life"
+    },
+    {
+      "start": 449.1,
+      "end": 452.7,
+      "text": "But what a number of our customers really like doing our clients really like doing"
+    },
+    {
+      "start": 453.26,
+      "end": 455.5,
+      "text": "Is using these configurable set of building blocks"
+    },
+    {
+      "start": 455.74,
+      "end": 459.1,
+      "text": "We call them conditional logic and we things like partials"
+    },
+    {
+      "start": 459.34,
+      "end": 464.14,
+      "text": "So blocks of code that can be consistent across multiple templates that you only edit once in one place"
+    },
+    {
+      "start": 464.7,
+      "end": 467.58,
+      "text": "And this reduces the number of templates needed"
+    },
+    {
+      "start": 468.3,
+      "end": 473.5,
+      "text": "An organization needs to manage essentially by using if this then that logic and really drives"
+    },
+    {
+      "start": 474.14,
+      "end": 478.54,
+      "text": "Personalization based off your data. So highly targeted highly rich"
+    },
+    {
+      "start": 478.94,
+      "end": 482.54,
+      "text": "And data driven campaigning messaging"
+    },
+    {
+      "start": 483.66,
+      "end": 487.02,
+      "text": "Which is at the core of what I guess one of our value promises is"
+    },
+    {
+      "start": 494.09,
+      "end": 498.01,
+      "text": "Okay, moving on to AI. We talked a little bit about this already"
+    },
+    {
+      "start": 498.81,
+      "end": 503.29,
+      "text": "Let's go a step deeper. So what do we mean when we talk about conversation automation? So"
+    },
+    {
+      "start": 504.97,
+      "end": 510.25,
+      "text": "This layer provides multiple options for conversation automation ranging from what we would call basic structured"
+    },
+    {
+      "start": 510.73,
+      "end": 514.49,
+      "text": "scripted kind of menu driven bots to query based in FAQ bots"
+    },
+    {
+      "start": 514.97,
+      "end": 522.25,
+      "text": "And even all the way through to fully unstructured, of course, the advancements in llm are slightly better for this but unstructured"
+    },
+    {
+      "start": 523.37,
+      "end": 525.37,
+      "text": "natural language smart bots"
+    },
+    {
+      "start": 525.61,
+      "end": 530.25,
+      "text": "And we we even have powerful integrations into bring your own bots"
+    },
+    {
+      "start": 530.25,
+      "end": 536.65,
+      "text": "So if you wanted to bring a dialogue flow bot, we are not suggesting that you can only use our own IP when building these experiences"
+    },
+    {
+      "start": 537.13,
+      "end": 541.77,
+      "text": "We we play nicely as I mentioned before and we can integrate into any bot platform"
+    },
+    {
+      "start": 542.01,
+      "end": 545.21,
+      "text": "And you can propagate that into your your messaging"
+    },
+    {
+      "start": 545.53,
+      "end": 547.53,
+      "text": "But if you want to use our own bot builder"
+    },
+    {
+      "start": 547.85,
+      "end": 551.05,
+      "text": "We have a rich set of low code functions in here as well"
+    },
+    {
+      "start": 551.45,
+      "end": 555.13,
+      "text": "Utilize invest in breed libraries in the market our own toolkit"
+    },
+    {
+      "start": 556.33,
+      "end": 558.49,
+      "text": "and essentially we have some"
+    },
+    {
+      "start": 559.45,
+      "end": 565.45,
+      "text": "Routine nlp functions that are very specific to messaging as well like date time recognition spell check"
+    },
+    {
+      "start": 566.01,
+      "end": 568.01,
+      "text": "OCR things like that"
+    },
+    {
+      "start": 570.42,
+      "end": 577.22,
+      "text": "A quick demo of our bot capabilities. So as mentioned key aspects of conversational experiences are chatbots"
+    },
+    {
+      "start": 577.54,
+      "end": 580.98,
+      "text": "And this is our bot builder as part of WebEx connect"
+    },
+    {
+      "start": 582.18,
+      "end": 586.82,
+      "text": "Here we can define our bot as you see here. We click into our bots. We see things like"
+    },
+    {
+      "start": 587.46,
+      "end": 589.46,
+      "text": "status the languages supported"
+    },
+    {
+      "start": 590.02,
+      "end": 591.54,
+      "text": "handover instructions"
+    },
+    {
+      "start": 591.54,
+      "end": 598.74,
+      "text": "We can configure things like live agent fallback because of course if a bot fails what then happens as a very common use case"
+    },
+    {
+      "start": 599.46,
+      "end": 606.74,
+      "text": "And we define as well in here things like articles and variants of those and then start to define responses to that input"
+    },
+    {
+      "start": 606.82,
+      "end": 612.5,
+      "text": "So without getting too deep here. I think one thing that's really cool is we can define these on a channel by channel basis"
+    },
+    {
+      "start": 613.14,
+      "end": 618.42,
+      "text": "What do we mean by that? So apple message for business, for example, might have rich list pickers"
+    },
+    {
+      "start": 618.74,
+      "end": 622.98,
+      "text": "What's out has a click buttons and rich cards that you can pull through that are different"
+    },
+    {
+      "start": 623.22,
+      "end": 626.34,
+      "text": "Whereas sms is just plain text only and what this means is"
+    },
+    {
+      "start": 626.98,
+      "end": 631.94,
+      "text": "Because we have the channel where capabilities it prevents sms and plain text from being the lowest common denominator"
+    },
+    {
+      "start": 632.5,
+      "end": 638.34,
+      "text": "Across these channel experiences allows us to focus on delivering the best experience across any channel"
+    },
+    {
+      "start": 639.54,
+      "end": 644.66,
+      "text": "Again, one of our key themes, you know deliver the best experience across any channel broad, but also deep"
+    },
+    {
+      "start": 645.14,
+      "end": 650.42,
+      "text": "Uh, we want to democratize the experience of building these to allow non-technical folks to participate as well"
+    },
+    {
+      "start": 651.38,
+      "end": 652.66,
+      "text": "Again a step further"
+    },
+    {
+      "start": 652.66,
+      "end": 657.22,
+      "text": "We also do things within our bot environment, of course around testing and previewing the bots"
+    },
+    {
+      "start": 657.3,
+      "end": 659.3,
+      "text": "I said, I'm not going to go too deep"
+    },
+    {
+      "start": 659.38,
+      "end": 664.18,
+      "text": "In this session today, but this allows us to create optimize the bot based on actionable data"
+    },
+    {
+      "start": 664.42,
+      "end": 668.42,
+      "text": "Like sessions in the history of all the interactions. Of course, we are introducing"
+    },
+    {
+      "start": 668.9,
+      "end": 671.14,
+      "text": "LLM driven bot development"
+    },
+    {
+      "start": 671.46,
+      "end": 675.06,
+      "text": "What does that mean? It essentially means reducing training time for developers"
+    },
+    {
+      "start": 675.54,
+      "end": 680.82,
+      "text": "Or to make the learning and efficiency of your chat bot. So again an ever-evolving toolkit here"
+    },
+    {
+      "start": 681.3,
+      "end": 683.3,
+      "text": "With a constantly innovative roadmap"
+    },
+    {
+      "start": 692.17,
+      "end": 694.17,
+      "text": "integrations and set up"
+    },
+    {
+      "start": 694.41,
+      "end": 698.41,
+      "text": "Set up and management. So just going to talk a little bit about what does this mean?"
+    },
+    {
+      "start": 698.81,
+      "end": 702.57,
+      "text": "So we think this is a usp for us in the cpass space as well"
+    },
+    {
+      "start": 702.73,
+      "end": 705.77,
+      "text": "Many many companies have what you call a marketplace"
+    },
+    {
+      "start": 706.49,
+      "end": 708.73,
+      "text": "So they might have some his ones we've done earlier"
+    },
+    {
+      "start": 708.89,
+      "end": 714.25,
+      "text": "But we'll talk a little bit about how we can also integrate into basically any system of record on your side"
+    },
+    {
+      "start": 715.29,
+      "end": 719.37,
+      "text": "So a quick context set that existing systems are designed"
+    },
+    {
+      "start": 719.61,
+      "end": 722.81,
+      "text": "Usually for specific purposes like processing a payment"
+    },
+    {
+      "start": 723.05,
+      "end": 726.97,
+      "text": "They're not designed for custom experience and many of these were designed a while ago as well"
+    },
+    {
+      "start": 727.29,
+      "end": 731.85,
+      "text": "Before the kind of digital age that we're currently in and they were designed designed to augment"
+    },
+    {
+      "start": 731.85,
+      "end": 735.21,
+      "text": "So you don't have to rip and replace. That's why we integrate into any system"
+    },
+    {
+      "start": 735.77,
+      "end": 740.25,
+      "text": "We have a set of upcoming integrations that we do build out of the box that you can use"
+    },
+    {
+      "start": 740.33,
+      "end": 742.33,
+      "text": "So you can see those on your screen here"
+    },
+    {
+      "start": 742.97,
+      "end": 747.93,
+      "text": "Adding things like epic and server to those as we know that they are very common platforms with an organization"
+    },
+    {
+      "start": 748.01,
+      "end": 753.37,
+      "text": "And we can make your lives a lot easier by building a custom node and I'll show you what I mean by that in a second"
+    },
+    {
+      "start": 754.41,
+      "end": 758.33,
+      "text": "But unlike vendors who just provide out of the box integrations or marketplaces"
+    },
+    {
+      "start": 758.89,
+      "end": 760.89,
+      "text": "We've rather flexibility and integrate with"
+    },
+    {
+      "start": 761.53,
+      "end": 768.49,
+      "text": "Any existing business system and applications that are part of a vendor's tech stack as well as third party providers partner systems"
+    },
+    {
+      "start": 769.69,
+      "end": 776.65,
+      "text": "And I think this is essentially where you can tailor the products to you the enterprise by building a custom palette of integrations"
+    },
+    {
+      "start": 777.45,
+      "end": 779.85,
+      "text": "essentially build it once single configuration"
+    },
+    {
+      "start": 780.57,
+      "end": 788.89,
+      "text": "multi-use and reuse them across multiple departments and workflows and control any downstream or changes to those and you only have to edit it once and it will"
+    },
+    {
+      "start": 789.61,
+      "end": 795.85,
+      "text": "Especially propagate or and take effect across all customer journeys, which is really cool. Really powerful"
+    },
+    {
+      "start": 796.73,
+      "end": 800.73,
+      "text": "So diving into custom integrations a layer deeper"
+    },
+    {
+      "start": 801.13,
+      "end": 803.61,
+      "text": "So here you see our our integration palette"
+    },
+    {
+      "start": 804.17,
+      "end": 809.53,
+      "text": "You can see how we go to create a custom node. You can see all the other integrations that are within this section"
+    },
+    {
+      "start": 810.17,
+      "end": 815.69,
+      "text": "We're going to have a little bit of a deeper look here. You'll see us navigate through some quite technical components"
+    },
+    {
+      "start": 816.25,
+      "end": 820.65,
+      "text": "Um, we'll see us look at things in the in the platform UI itself and how these are configured"
+    },
+    {
+      "start": 822.09,
+      "end": 824.09,
+      "text": "Here's one we did earlier a dialogue flow one"
+    },
+    {
+      "start": 824.09,
+      "end": 826.65,
+      "text": "We did earlier along with all the other customer integrations"
+    },
+    {
+      "start": 826.65,
+      "end": 830.01,
+      "text": "We have configured in the tenant as we dive into it. You're going to see here"
+    },
+    {
+      "start": 830.09,
+      "end": 834.01,
+      "text": "So we've built a post method custom node for intent detection"
+    },
+    {
+      "start": 834.73,
+      "end": 836.73,
+      "text": "You can see the other methods available"
+    },
+    {
+      "start": 836.89,
+      "end": 844.17,
+      "text": "The level of authorization we can configure and how we can pass parameters through in a dynamic or a static fashion"
+    },
+    {
+      "start": 844.89,
+      "end": 850.81,
+      "text": "Sample response code we have we've got that from the other tab the google the google dialogue flow api docs"
+    },
+    {
+      "start": 851.53,
+      "end": 858.17,
+      "text": "You can see the parameters that we've configured against those session id and the developers map those responses to node edges or outcomes"
+    },
+    {
+      "start": 858.65,
+      "end": 862.65,
+      "text": "Success error timeout, etc. And then we can test and save this"
+    },
+    {
+      "start": 863.93,
+      "end": 866.17,
+      "text": "And whilst this is perhaps a more technical configuration"
+    },
+    {
+      "start": 866.25,
+      "end": 871.37,
+      "text": "As I said the brilliance of this these custom nodes is it's won't stay unconfigured as you see here"
+    },
+    {
+      "start": 871.37,
+      "end": 876.65,
+      "text": "They can easily be used by anyone on the flow builder and you see us here simply dragging"
+    },
+    {
+      "start": 877.29,
+      "end": 880.41,
+      "text": "Our dialogue flow node onto the palette from our list of integrations"
+    },
+    {
+      "start": 880.81,
+      "end": 885.29,
+      "text": "Quickly configuring some basic details to add intent detection to an existing flow"
+    },
+    {
+      "start": 885.77,
+      "end": 890.81,
+      "text": "And this will then essentially in this case evaluate an inbound message input from the customer and simply add"
+    },
+    {
+      "start": 891.53,
+      "end": 894.57,
+      "text": "The past input variable into the node just like that"
+    },
+    {
+      "start": 894.65,
+      "end": 898.25,
+      "text": "You've seen how easy it is to configure one and reuse it across any"
+    },
+    {
+      "start": 898.41,
+      "end": 900.89,
+      "text": "so like"
+    },
+    {
+      "start": 900.89,
+      "end": 903.21,
+      "text": "Okay, so you have a little introduction into our"
+    },
+    {
+      "start": 904.41,
+      "end": 907.61,
+      "text": "Flow builder there on the previous on the previous example"
+    },
+    {
+      "start": 908.25,
+      "end": 911.69,
+      "text": "I'm going to bring this to life a little bit more. What is our flow builder? Why does it matter?"
+    },
+    {
+      "start": 912.25,
+      "end": 915.29,
+      "text": "so traditionally c pass caters to the last mile of"
+    },
+    {
+      "start": 916.73,
+      "end": 920.73,
+      "text": "Essentially procuring numbers and apis for sending and receiving messages"
+    },
+    {
+      "start": 921.29,
+      "end": 922.41,
+      "text": "apis and SDKs"
+    },
+    {
+      "start": 922.41,
+      "end": 926.09,
+      "text": "So we showed you some of our api documentation up front and whilst that's great"
+    },
+    {
+      "start": 926.57,
+      "end": 929.61,
+      "text": "And and it does abstract a lot of complexity in itself"
+    },
+    {
+      "start": 930.73,
+      "end": 933.69,
+      "text": "It's very developer first and developer only you know"
+    },
+    {
+      "start": 933.69,
+      "end": 940.65,
+      "text": "It still leaves a heavy lifting of writing application logic for automating customer journeys and interacting with business systems as we saw on the previous slide"
+    },
+    {
+      "start": 940.89,
+      "end": 946.01,
+      "text": "Two developers, you know, you're not really getting economies of scale. You're redoing everything over and over"
+    },
+    {
+      "start": 946.25,
+      "end": 948.97,
+      "text": "You can't quickly respond to changing business customer requirements"
+    },
+    {
+      "start": 949.21,
+      "end": 953.21,
+      "text": "You can't quickly configure business logic through pre pre-built modules and nodes"
+    },
+    {
+      "start": 953.93,
+      "end": 959.69,
+      "text": "You want to launch run in a serverless environment and you want interactive reports to analyze and optimize customer journeys"
+    },
+    {
+      "start": 960.57,
+      "end": 961.53,
+      "text": "and so"
+    },
+    {
+      "start": 961.53,
+      "end": 968.41,
+      "text": "We provide what we would say is more of a configure not code approach here helping it expand its talent pool a collaboration between"
+    },
+    {
+      "start": 968.81,
+      "end": 970.81,
+      "text": "technical and non-technical users"
+    },
+    {
+      "start": 971.45,
+      "end": 974.57,
+      "text": "Easiest pressure on it and speeds up go to market"
+    },
+    {
+      "start": 974.65,
+      "end": 982.17,
+      "text": "And you can imagine a white boarding session a story boarding easily being reimagined with this physio like builder and mapping it onto"
+    },
+    {
+      "start": 983.05,
+      "end": 985.05,
+      "text": "Onto this canvas step by step"
+    },
+    {
+      "start": 985.77,
+      "end": 991.61,
+      "text": "And and our platform really does give IT the control over the tools integrations and automation capabilities"
+    },
+    {
+      "start": 992.01,
+      "end": 994.01,
+      "text": "while inviting"
+    },
+    {
+      "start": 994.09,
+      "end": 999.61,
+      "text": "analysts cx professionals and other live business users to collaborate across building great customer journeys"
+    },
+    {
+      "start": 1000.65,
+      "end": 1006.81,
+      "text": "One way it doesn't alienate the developer one way it helps the developer and makes the developer more efficient"
+    },
+    {
+      "start": 1007.77,
+      "end": 1014.73,
+      "text": "Is by these drag-and-drop building blocks and if we take a quick step in one one level deeper into what are these"
+    },
+    {
+      "start": 1014.97,
+      "end": 1017.53,
+      "text": "So we basically created a set of"
+    },
+    {
+      "start": 1018.17,
+      "end": 1019.45,
+      "text": "Nodes or functions"
+    },
+    {
+      "start": 1019.45,
+      "end": 1025.45,
+      "text": "They could be known as the package up a bit of code and they perform a task that you don't have the code and build yourself"
+    },
+    {
+      "start": 1025.77,
+      "end": 1028.25,
+      "text": "Tailor towards building great communications, right?"
+    },
+    {
+      "start": 1028.81,
+      "end": 1032.17,
+      "text": "So think of them as like lego blocks or a set of building blocks"
+    },
+    {
+      "start": 1032.65,
+      "end": 1034.65,
+      "text": "And we have everything from social hour nodes"
+    },
+    {
+      "start": 1034.65,
+      "end": 1039.93,
+      "text": "So you can just open up a social hours node and say I don't want to send an sms between 9 am and 9 p.m"
+    },
+    {
+      "start": 1040.17,
+      "end": 1042.33,
+      "text": "And then you can configure that"
+    },
+    {
+      "start": 1043.29,
+      "end": 1045.53,
+      "text": "Out of ours response to do something different"
+    },
+    {
+      "start": 1046.41,
+      "end": 1051.13,
+      "text": "We have packaged up otp multifactor authentication capabilities"
+    },
+    {
+      "start": 1052.01,
+      "end": 1058.49,
+      "text": "We have packaged up the ability to take variables and to take and store and share variables between flows"
+    },
+    {
+      "start": 1059.21,
+      "end": 1066.33,
+      "text": "And and include the interaction details store and track them and keep context and information across flows and across the customer journey"
+    },
+    {
+      "start": 1067.21,
+      "end": 1069.21,
+      "text": "We also have"
+    },
+    {
+      "start": 1069.29,
+      "end": 1072.89,
+      "text": "A custom business logic so you can write your own code bring your own code"
+    },
+    {
+      "start": 1072.97,
+      "end": 1075.29,
+      "text": "We have an evaluate node where you can write json"
+    },
+    {
+      "start": 1075.85,
+      "end": 1079.85,
+      "text": "Um, and and we of course have external connections as well"
+    },
+    {
+      "start": 1079.93,
+      "end": 1083.37,
+      "text": "So you don't always want to build these integration rich integration nodes"
+    },
+    {
+      "start": 1083.37,
+      "end": 1089.69,
+      "text": "You might just want to make an htp request to an external api service. You can do all of that from within these drag and drop nodes"
+    },
+    {
+      "start": 1091.37,
+      "end": 1096.25,
+      "text": "And I talked about bring your own code and and us trying to make the developers more efficient"
+    },
+    {
+      "start": 1096.81,
+      "end": 1098.17,
+      "text": "Definitely not alienate them"
+    },
+    {
+      "start": 1098.17,
+      "end": 1103.21,
+      "text": "So one of the advancements and developments that we have on our roadmap at the minute that we are we are launching is"
+    },
+    {
+      "start": 1103.53,
+      "end": 1107.77,
+      "text": "The ability to apply a large language model driven developer acceleration"
+    },
+    {
+      "start": 1108.49,
+      "end": 1112.41,
+      "text": "Essentially we're integrating it into that driver script node where you can bring your own code"
+    },
+    {
+      "start": 1112.65,
+      "end": 1115.93,
+      "text": "Provide prompts and queries that use generative ai to produce"
+    },
+    {
+      "start": 1116.73,
+      "end": 1118.73,
+      "text": "The code snippet the developer needs"
+    },
+    {
+      "start": 1120.09,
+      "end": 1123.61,
+      "text": "On their behalf to be using the customer journey just by typing in that prompt"
+    },
+    {
+      "start": 1123.93,
+      "end": 1127.61,
+      "text": "Yeah, making life easy for them and of course if you are not a developer"
+    },
+    {
+      "start": 1127.93,
+      "end": 1134.65,
+      "text": "This is an even more powerful feature for you essentially turning a platform from low code to almost no code at some point in the future"
+    },
+    {
+      "start": 1143.02,
+      "end": 1146.78,
+      "text": "Okay, so i'm going to bring this to life now in a in a demo"
+    },
+    {
+      "start": 1147.5,
+      "end": 1151.18,
+      "text": "There's a lot of capability here the channel you're going to see is apple messages for business"
+    },
+    {
+      "start": 1151.66,
+      "end": 1155.1,
+      "text": "We're going to show a combination channels. Actually sms will be brought in as well"
+    },
+    {
+      "start": 1155.82,
+      "end": 1157.74,
+      "text": "You'll see some conversational"
+    },
+    {
+      "start": 1157.74,
+      "end": 1159.74,
+      "text": "Capabilities in here. You'll see some nlp"
+    },
+    {
+      "start": 1160.22,
+      "end": 1164.3,
+      "text": "You'll see some of the otp thing. I just mentioned some payment features and some integrations"
+    },
+    {
+      "start": 1164.38,
+      "end": 1169.18,
+      "text": "So, uh, hopefully this starts to make sense if it hasn't already at this juncture"
+    },
+    {
+      "start": 1169.82,
+      "end": 1171.5,
+      "text": "So this flow kicks off"
+    },
+    {
+      "start": 1171.5,
+      "end": 1175.18,
+      "text": "Customer messages in over apple messages for business and we automate the response"
+    },
+    {
+      "start": 1175.26,
+      "end": 1181.42,
+      "text": "You can see us moving through the flow in the background and the customer handset shows what's happening on the customer experience side"
+    },
+    {
+      "start": 1182.3,
+      "end": 1184.94,
+      "text": "We want to identify who this customer is. We don't know who they are"
+    },
+    {
+      "start": 1184.94,
+      "end": 1190.06,
+      "text": "So they provide a mobile number which we do have in our crm and this allows us to do a one-time pin"
+    },
+    {
+      "start": 1190.7,
+      "end": 1192.94,
+      "text": "Lookup so we can send them with authentication"
+    },
+    {
+      "start": 1193.82,
+      "end": 1198.94,
+      "text": "Six digits seven digit code they put that in we immediately can look them up in sales for crm and say"
+    },
+    {
+      "start": 1199.02,
+      "end": 1200.54,
+      "text": "Jordan, it's you"
+    },
+    {
+      "start": 1200.54,
+      "end": 1205.58,
+      "text": "We verified you. We know who you are. We even know what you're talking about because we're an apple message for business"
+    },
+    {
+      "start": 1205.66,
+      "end": 1211.18,
+      "text": "We can show them a rich image. We can show them a nest doorbell. We can show them what they've actually purchased"
+    },
+    {
+      "start": 1211.9,
+      "end": 1215.98,
+      "text": "We can use some nlp in response when someone replies. Yes and open text"
+    },
+    {
+      "start": 1216.14,
+      "end": 1222.22,
+      "text": "But we can also use some of apple's richer capabilities with the list picker as you see here to select that option"
+    },
+    {
+      "start": 1222.94,
+      "end": 1224.94,
+      "text": "As we continue to triage through"
+    },
+    {
+      "start": 1225.9,
+      "end": 1229.74,
+      "text": "We're able to then confirm an appointment. So we're integrating now"
+    },
+    {
+      "start": 1229.9,
+      "end": 1232.94,
+      "text": "I'll be using a little bit of nlp date time day after tomorrow"
+    },
+    {
+      "start": 1233.02,
+      "end": 1239.42,
+      "text": "We know day after tomorrow is you know, the 24th of august or in this case, it's the 4th of april"
+    },
+    {
+      "start": 1239.82,
+      "end": 1244.22,
+      "text": "And so we can then structure that into a format that the back end system the appointment scheduling system"
+    },
+    {
+      "start": 1244.3,
+      "end": 1247.74,
+      "text": "Understands and retrieve the available slots for jordan"
+    },
+    {
+      "start": 1248.46,
+      "end": 1250.46,
+      "text": "Once we tell the system yet"
+    },
+    {
+      "start": 1250.7,
+      "end": 1255.18,
+      "text": "Jordan has confirmed this appointment. Please put that on hold. We received the information back to say"
+    },
+    {
+      "start": 1255.26,
+      "end": 1257.18,
+      "text": "Yep, that has been confirmed all good"
+    },
+    {
+      "start": 1257.26,
+      "end": 1263.9,
+      "text": "We can confirm that with jordan and we can even offer the ability to pay by integrating with a rich apple capability of apple pay"
+    },
+    {
+      "start": 1264.54,
+      "end": 1269.98,
+      "text": "a quick double tap and a look at the face and jordan has not only completed his"
+    },
+    {
+      "start": 1270.7,
+      "end": 1277.26,
+      "text": "Appointment scheduling, but he's also paid for it too. And of course the brand has saved a significant amount of money on"
+    },
+    {
+      "start": 1278.14,
+      "end": 1280.38,
+      "text": "Very lightweight customer service experience"
+    },
+    {
+      "start": 1288.87,
+      "end": 1290.87,
+      "text": "So we've talked about the middle four pillars"
+    },
+    {
+      "start": 1290.87,
+      "end": 1292.79,
+      "text": "I said there was"
+    },
+    {
+      "start": 1292.79,
+      "end": 1293.99,
+      "text": "I guess this wrapper"
+    },
+    {
+      "start": 1293.99,
+      "end": 1299.99,
+      "text": "Let's call it around the outside that makes this truly truly enterprise grade and to be truly enterprise grade"
+    },
+    {
+      "start": 1300.47,
+      "end": 1306.39,
+      "text": "Um, you need all of this you need to be able to enforce it and security policies actual insights"
+    },
+    {
+      "start": 1306.39,
+      "end": 1307.99,
+      "text": "You need these controls"
+    },
+    {
+      "start": 1307.99,
+      "end": 1313.35,
+      "text": "role-based access controls for different users and different teams to only give access to certain people who need certain access"
+    },
+    {
+      "start": 1313.75,
+      "end": 1315.75,
+      "text": "Read write capabilities"
+    },
+    {
+      "start": 1315.83,
+      "end": 1322.71,
+      "text": "You need to be able to deliver communications with the latest brand and legal guidelines and opt-in and opt-out policy and consent"
+    },
+    {
+      "start": 1322.95,
+      "end": 1324.95,
+      "text": "Etc that we all manage"
+    },
+    {
+      "start": 1325.59,
+      "end": 1326.95,
+      "text": "um"
+    },
+    {
+      "start": 1326.95,
+      "end": 1329.35,
+      "text": "We have rich dashboards to evaluate journey data"
+    },
+    {
+      "start": 1329.75,
+      "end": 1334.87,
+      "text": "Optimization manage renew and enforce these customer preference and contact frequency policies as well"
+    },
+    {
+      "start": 1335.03,
+      "end": 1337.03,
+      "text": "And this can all be done from a single platform"
+    },
+    {
+      "start": 1337.11,
+      "end": 1341.43,
+      "text": "And it really all should be done from a single platform because it's the only way to really guarantee"
+    },
+    {
+      "start": 1341.91,
+      "end": 1346.79,
+      "text": "You are effectively managing this across the entire enterprise without one customer told us"
+    },
+    {
+      "start": 1347.03,
+      "end": 1353.27,
+      "text": "But they don't know where 20 of their messages originated from so even just looking into an issue with a short code or or a bot"
+    },
+    {
+      "start": 1353.59,
+      "end": 1358.23,
+      "text": "Or a whatsapp id or um any or an email id or or voice number"
+    },
+    {
+      "start": 1358.71,
+      "end": 1361.67,
+      "text": "Um, you don't have to scrap around looking in multiple different systems"
+    },
+    {
+      "start": 1361.75,
+      "end": 1367.91,
+      "text": "You can manage it all under one umbrella and I actually have access to everything very very quickly to resolve customer issues"
+    },
+    {
+      "start": 1368.07,
+      "end": 1370.87,
+      "text": "Or make changes to services within the organization"
+    },
+    {
+      "start": 1373.7,
+      "end": 1378.58,
+      "text": "And the other uh part to that was the service assurance and infrastructure management and essentially"
+    },
+    {
+      "start": 1379.14,
+      "end": 1385.46,
+      "text": "None of this would mean anything without um being able to monitor the heartbeat are your systems responding"
+    },
+    {
+      "start": 1386.02,
+      "end": 1388.02,
+      "text": "Solving problems before they happen"
+    },
+    {
+      "start": 1388.26,
+      "end": 1395.06,
+      "text": "Knowing that things are working um and ensuring you have the uptime the zero downtime up to updates"
+    },
+    {
+      "start": 1395.62,
+      "end": 1399.46,
+      "text": "the availability disaster recovery all required um"
+    },
+    {
+      "start": 1400.42,
+      "end": 1403.46,
+      "text": "Um handling peaks, you know highest customer volume"
+    },
+    {
+      "start": 1403.46,
+      "end": 1406.26,
+      "text": "We deploy some of the largest messaging programs in the world"
+    },
+    {
+      "start": 1406.66,
+      "end": 1410.74,
+      "text": "Um, and so this world class support account management professional services that come with it"
+    },
+    {
+      "start": 1411.3,
+      "end": 1415.38,
+      "text": "Uh, we are a very trusted partner to help you deliver your communication programs"
+    },
+    {
+      "start": 1417.3,
+      "end": 1420.58,
+      "text": "Here's a quick look at some of those enterprise grade features"
+    },
+    {
+      "start": 1420.66,
+      "end": 1423.46,
+      "text": "So we wanted to show you some of the enterprise rich features"
+    },
+    {
+      "start": 1423.54,
+      "end": 1427.78,
+      "text": "We can configure tenant iraqi here. You'll see in the drop down as we put it up"
+    },
+    {
+      "start": 1428.74,
+      "end": 1433.54,
+      "text": "Groups teams roles and access permissions can all be configured for this"
+    },
+    {
+      "start": 1434.18,
+      "end": 1435.94,
+      "text": "We can allow multiple teams"
+    },
+    {
+      "start": 1436.02,
+      "end": 1440.34,
+      "text": "This means to benefit from our platform in a managed and controlled"
+    },
+    {
+      "start": 1440.98,
+      "end": 1441.78,
+      "text": "Environment"
+    },
+    {
+      "start": 1441.78,
+      "end": 1443.78,
+      "text": "I'll explain what that means in a second"
+    },
+    {
+      "start": 1443.78,
+      "end": 1449.62,
+      "text": "Each of these teams has the access to procure their own numbers assets relevant to that team in that region"
+    },
+    {
+      "start": 1449.94,
+      "end": 1451.94,
+      "text": "in self-service manner"
+    },
+    {
+      "start": 1451.94,
+      "end": 1455.46,
+      "text": "Certainly to go to it every time they want to do something or buy something however"
+    },
+    {
+      "start": 1456.02,
+      "end": 1463.86,
+      "text": "Um all the while we have the ability for an overall admin or it team to have full visibility control over all the programs"
+    },
+    {
+      "start": 1464.18,
+      "end": 1468.74,
+      "text": "And they can manage all of the reports for the specific services either across the entire enterprise"
+    },
+    {
+      "start": 1468.74,
+      "end": 1471.62,
+      "text": "Or as I said, each team can manage their own reports"
+    },
+    {
+      "start": 1477.42,
+      "end": 1479.42,
+      "text": "So we've talked a little bit about"
+    },
+    {
+      "start": 1479.82,
+      "end": 1481.9,
+      "text": "the platform and just to finish off"
+    },
+    {
+      "start": 1483.18,
+      "end": 1489.18,
+      "text": "Some of you guys must be wondering a little bit about webx and the rest of webx and where we fit in"
+    },
+    {
+      "start": 1489.5,
+      "end": 1495.34,
+      "text": "So I guess finally from a from a demo perspective as well. I do want to touch on that. Um, you know, we mentioned, um"
+    },
+    {
+      "start": 1496.06,
+      "end": 1501.42,
+      "text": "I guess some differentiators from us and others in the marketplace and certainly the webx advantage is one of them"
+    },
+    {
+      "start": 1501.9,
+      "end": 1507.1,
+      "text": "Um, I'm going to show you a little bit around how we fit in to webx in general"
+    },
+    {
+      "start": 1507.42,
+      "end": 1513.9,
+      "text": "Um, I think our aim is to power great custom experiences as webx for businesses to support their transformation"
+    },
+    {
+      "start": 1514.38,
+      "end": 1518.7,
+      "text": "So we are one element of that and we are just one solution within the webx cx portfolio"
+    },
+    {
+      "start": 1519.82,
+      "end": 1524.14,
+      "text": "We are fully webx branded products alongside the contact center solution"
+    },
+    {
+      "start": 1524.3,
+      "end": 1527.5,
+      "text": "Which we've heavily integrated with and I'll show you an example of that in a minute"
+    },
+    {
+      "start": 1528.06,
+      "end": 1535.1,
+      "text": "And of course our our ucast platform or the webx app, which includes calling messages and meetings"
+    },
+    {
+      "start": 1535.82,
+      "end": 1539.9,
+      "text": "And so we are able to leverage our webx technology and capabilities to enhance"
+    },
+    {
+      "start": 1540.7,
+      "end": 1544.06,
+      "text": "our cx products essentially, which I'll now show you now with two"
+    },
+    {
+      "start": 1545.02,
+      "end": 1547.26,
+      "text": "examples, so I'm going to show you um"
+    },
+    {
+      "start": 1548.22,
+      "end": 1552.22,
+      "text": "A c path digital channel capability in the contact center, which I mentioned"
+    },
+    {
+      "start": 1552.46,
+      "end": 1558.38,
+      "text": "But also how c pass can integrate with the webx platform as well for a really powerful use case"
+    },
+    {
+      "start": 1559.1,
+      "end": 1565.02,
+      "text": "So first up in this demo, we have a chat bot journey essentially over sms"
+    },
+    {
+      "start": 1565.02,
+      "end": 1567.02,
+      "text": "So we've jumped in halfway through"
+    },
+    {
+      "start": 1567.1,
+      "end": 1570.3,
+      "text": "The customer has now requested escalation to an agent"
+    },
+    {
+      "start": 1570.3,
+      "end": 1574.14,
+      "text": "We've tried to triage them and automate them as much as possible as we showed in a previous example"
+    },
+    {
+      "start": 1574.54,
+      "end": 1576.54,
+      "text": "But at this point we can package up"
+    },
+    {
+      "start": 1576.94,
+      "end": 1579.98,
+      "text": "All of the previous conversation all of the history of this"
+    },
+    {
+      "start": 1580.54,
+      "end": 1585.26,
+      "text": "Automated conversation we have when the customer responds chat within our flow builder"
+    },
+    {
+      "start": 1585.42,
+      "end": 1589.5,
+      "text": "We package this up and we hand it off into webx contact center"
+    },
+    {
+      "start": 1589.9,
+      "end": 1594.22,
+      "text": "And you can see these these nodes out of the box here that are performing those tasks"
+    },
+    {
+      "start": 1594.3,
+      "end": 1599.66,
+      "text": "And so when the agent logs into webx contact center, they can easily pick up this chat in their queue"
+    },
+    {
+      "start": 1600.06,
+      "end": 1605.1,
+      "text": "They ensure that we ensure that they have the full context across the entire conversation"
+    },
+    {
+      "start": 1605.26,
+      "end": 1607.26,
+      "text": "So the customer doesn't have to repeat themselves"
+    },
+    {
+      "start": 1607.34,
+      "end": 1609.34,
+      "text": "The agent doesn't have to ask them questions"
+    },
+    {
+      "start": 1609.34,
+      "end": 1612.62,
+      "text": "The agent can be productive as all the information available to them"
+    },
+    {
+      "start": 1612.86,
+      "end": 1617.5,
+      "text": "And once they pick up the chat, there's no bouncing the customer around into live chat through links, etc"
+    },
+    {
+      "start": 1617.58,
+      "end": 1620.78,
+      "text": "They stay in the sms channel that they entered in their channel of choice"
+    },
+    {
+      "start": 1621.26,
+      "end": 1623.26,
+      "text": "Or whatever channel they came in via"
+    },
+    {
+      "start": 1623.82,
+      "end": 1626.78,
+      "text": "It's seamless. It's easy and it's a happy agent and happy customer"
+    },
+    {
+      "start": 1628.74,
+      "end": 1634.66,
+      "text": "And secondarily, I I'm just going to show you how we do this in a slightly different environment with the webx app"
+    },
+    {
+      "start": 1634.74,
+      "end": 1636.5,
+      "text": "So here you see again"
+    },
+    {
+      "start": 1636.5,
+      "end": 1638.5,
+      "text": "It's a customer conversation"
+    },
+    {
+      "start": 1638.5,
+      "end": 1642.5,
+      "text": "The customer's trying to self serve that they're in an automotive situation"
+    },
+    {
+      "start": 1642.58,
+      "end": 1644.74,
+      "text": "But they're not talking to a customer service agent here"
+    },
+    {
+      "start": 1644.82,
+      "end": 1650.18,
+      "text": "They're they're they're automating with a dealership a car dealership and the employees on the ground are remote"
+    },
+    {
+      "start": 1651.14,
+      "end": 1655.38,
+      "text": "So at this point when we want to package this up and hand it over we have to do something a little different"
+    },
+    {
+      "start": 1655.38,
+      "end": 1661.78,
+      "text": "We're actually going to pass it into the webx app because the agent can be or the the agent inverted commons can be"
+    },
+    {
+      "start": 1662.26,
+      "end": 1667.78,
+      "text": "Deskless and can be walking around using the app. So in this instance, we package everything up as you see here"
+    },
+    {
+      "start": 1668.42,
+      "end": 1671.62,
+      "text": "We're ensuring all of the context is handed across again"
+    },
+    {
+      "start": 1671.7,
+      "end": 1676.5,
+      "text": "The agent can pick up the conversation moving to a one-to-one chat with the customer whilst letting the team know"
+    },
+    {
+      "start": 1677.38,
+      "end": 1679.94,
+      "text": "It's been assigned and they can pick it up like"
+    },
+    {
+      "start": 1680.66,
+      "end": 1682.66,
+      "text": "Nothing had happened before again"
+    },
+    {
+      "start": 1682.66,
+      "end": 1688.02,
+      "text": "The customer has a seamless experience on their channel of choice. They could be on sms. What's app insert channel"
+    },
+    {
+      "start": 1688.5,
+      "end": 1694.26,
+      "text": "The dealership staff in this case are empowered and the business have a fully auditable conversation for their records"
+    },
+    {
+      "start": 1694.34,
+      "end": 1699.46,
+      "text": "Avoid personal devices being used and I think in the financial services space right now. That's a really top"
+    },
+    {
+      "start": 1700.1,
+      "end": 1702.1,
+      "text": "hot topic for"
+    },
+    {
+      "start": 1702.26,
+      "end": 1705.22,
+      "text": "Avoiding huge industry fines. It's got a lot pr at the minute"
+    },
+    {
+      "start": 1705.78,
+      "end": 1706.58,
+      "text": "um"
+    },
+    {
+      "start": 1706.58,
+      "end": 1708.58,
+      "text": "It's a really powerful solution"
+    },
+    {
+      "start": 1709.3,
+      "end": 1710.58,
+      "text": "to demonstrate"
+    },
+    {
+      "start": 1710.58,
+      "end": 1715.14,
+      "text": "I guess a solution that integrates with the webx app across a deskless workforce"
+    },
+    {
+      "start": 1717.06,
+      "end": 1719.14,
+      "text": "So to summarize and and to finish"
+    },
+    {
+      "start": 1719.7,
+      "end": 1720.74,
+      "text": "um"
+    },
+    {
+      "start": 1720.74,
+      "end": 1722.66,
+      "text": "We have a proven"
+    },
+    {
+      "start": 1722.66,
+      "end": 1726.58,
+      "text": "centralized communications platform. This means providing tools to invite"
+    },
+    {
+      "start": 1727.54,
+      "end": 1733.3,
+      "text": "The entire enterprise to collaborate to building great cx as we mentioned make developers more efficient"
+    },
+    {
+      "start": 1733.7,
+      "end": 1735.46,
+      "text": "low code tools"
+    },
+    {
+      "start": 1735.46,
+      "end": 1739.46,
+      "text": "economies of scale reuse of integrations all that great stuff"
+    },
+    {
+      "start": 1740.98,
+      "end": 1745.86,
+      "text": "In the second column, we've got enterprise grade. I mentioned the word enterprise grade over and over again"
+    },
+    {
+      "start": 1745.94,
+      "end": 1751.06,
+      "text": "Hopefully resonated so greater controls slas regional instances dc security"
+    },
+    {
+      "start": 1751.46,
+      "end": 1756.66,
+      "text": "A platform benefits from being part of sysfo implement the highest standards that they maintain across security"
+    },
+    {
+      "start": 1756.74,
+      "end": 1760.5,
+      "text": "And we recognize that that is a critical need in the large enterprise"
+    },
+    {
+      "start": 1761.14,
+      "end": 1763.14,
+      "text": "high touch arena"
+    },
+    {
+      "start": 1763.62,
+      "end": 1768.1,
+      "text": "And finally the webx advantage as I showcase the integrations we have with contact center and the app"
+    },
+    {
+      "start": 1768.58,
+      "end": 1773.7,
+      "text": "We live with customers in market with those today. These aren't in beta. These are things we're doing with other customers"
+    },
+    {
+      "start": 1773.7,
+      "end": 1775.94,
+      "text": "We'd love to tell you more about some of those in your"
+    },
+    {
+      "start": 1776.58,
+      "end": 1778.82,
+      "text": "Sector or space or even outside of your sector"
+    },
+    {
+      "start": 1779.94,
+      "end": 1785.22,
+      "text": "And this actually goes beyond just webx, you know, we've we've explored broader sysco integrations into"
+    },
+    {
+      "start": 1786.18,
+      "end": 1789.3,
+      "text": "maraki's network d.a spaces location-based technology"
+    },
+    {
+      "start": 1790.5,
+      "end": 1792.18,
+      "text": "thousand eyes at d"
+    },
+    {
+      "start": 1792.18,
+      "end": 1795.22,
+      "text": "Monitoring software. So again, we would love to help"
+    },
+    {
+      "start": 1795.78,
+      "end": 1801.14,
+      "text": "Explore how cpass can help you take advantage of your other investments in sysco as well"
+    },
+    {
+      "start": 1801.54,
+      "end": 1803.06,
+      "text": "Thanks for staying with me and listening to this"
+    },
+    {
+      "start": 1803.14,
+      "end": 1807.46,
+      "text": "I hope you understood a little bit more about the platform and enjoyed some of these videos we provided for you"
+    },
+    {
+      "start": 1807.78,
+      "end": 1809.78,
+      "text": "I'm David Jennings and have a good day"
+    }
+  ]
+}

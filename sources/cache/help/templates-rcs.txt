@@ -1,0 +1,218 @@
+## 📘
+
+Please note that RCS message templates can be used only with Messaging API v2 at the moment.
+
+## 
+
+Configuring RCS Templates
+
+ [Image: Screenshot of Configuring New RCS Template] 
+Screenshot of Configuring New RCS Template
+
+To configure a new RCS template:
+
+- 
+
+Go to Tools > Templates.
+
+- 
+
+Click Add New Template.
+
+- 
+
+Enter a Name for the template. Only lower case letters and underscores are allowed in this field. Do not use spaces in the template name.
+
+- 
+
+Select the Channel as RCS.
+
+- 
+
+Select the required Notification Type for the RCS template. The available message types are as stated below. Refer to the procedures for each of the individual message options and return to continue with the current procedure.
+
+- Text
+
+- File
+
+- Rich Card
+
+- Carousal Card
+
+- 
+
+(Optional) Click Add Suggestions and add one of the following:
+
+- Simple Reply
+
+- View Location
+
+- Dial Phone
+
+- Share Location
+
+- Open URL
+
+- Calendar Event
+
+- 
+
+Select Lock this template to prevent other users to make changes if you want the template to remain inaccessible for other users to make changes.
+
+- 
+
+Click Save. The template is created.
+
+## 
+
+Configuring the Text Option
+
+- 
+
+In the Notification Type drop-down menu, select Text.
+
+- 
+
+(Optional) Enter the carrier code in the Carrier field, if you are aware of the carrier that the customer is subscribed to.
+
+- 
+
+Enter the message that you want to send to the users in the Message field.You can add parameters ($name, $designation) to the message to send customized and personalized messages to users. 
+
+- 
+
+Return to the Step 7 in the main procedure Configuring RCS Templates to complete the remaining steps.
+
+ [Image: Manage Template] 
+ Manage Template
+
+## 
+
+Configuring the File Option
+
+- In the Notification Type drop-down menu, select File.
+
+(Optional) Enter the carrier code in the Carrier field, if you are aware of the carrier that the customer is subscribed to.
+
+- In the Thumbnail URL field, enter the URL of the thumbnail that you want to display on the user’s screen, also specifying the Size.
+
+- In the field below the Thumbnail URL field, enter the example URL of the thumbnail that you want to display on the user’s screen, also specifying the Size.
+
+- Return to the Step 7 in the main procedure Configuring RCS Templates to complete the remaining steps.
+
+## 
+
+Configuring the Rich Card Option
+
+- 
+
+In the Notification Type drop-down menu, select Rich Card.
+
+- 
+
+(Optional) Enter the carrier code in the Carrier field, if you are aware of the carrier that the customer is subscribed to.
+
+- 
+
+For Card Orientation, select one of the following:
+
+- Vertical
+
+- Horizontal
+
+- 
+
+For Media, select one of the following:
+
+- Short
+
+- Medium
+
+- Tall
+
+- 
+
+In the Media URL field, enter the URL of the media image that you want to display on the user’s screen, also specifying the Size.
+
+- 
+
+For Thumbnail URL, enter the URL of the thumbnail image that you want to display on the user’s screen, also specifying the Size.
+
+- 
+
+In the Title, enter the template title to be displayed on the user’s screen. You can add parameters ($name) to the title to send customized and personalized messages to users.
+
+- 
+
+In the Description field, enter the message to be displayed in the user’s screen.You can add parameters ($designation) to the description to send customized and personalized messages to users.
+
+(Optional) Click Add Suggestions and add one of the following:
+
+- Simple Reply
+
+- View Location
+
+- Dial Phone
+
+- Share Location
+
+- Open URL
+
+- Calendar Event
+
+- 
+
+Return to the Step 7 in the main procedure Configuring RCS Templates to complete the remaining steps.
+
+ [Image: Manage Template for Rich Card] 
+Manage Template for Rich Card
+
+## 
+
+Configuring the Carousel Card Option
+
+- In the Notification Type drop-down menu, select Carousal Card.
+
+- (Optional) Enter the carrier code in the Carrier field, if you are aware of the carrier that the customer is subscribed to.
+
+- For Card Orientation, select one of the following:
+
+- Vertical
+
+- Horizontal
+
+- For Media, select one of the following:
+
+- Short
+
+- Medium
+
+- Tall
+
+- In the Media URL field, enter the URL of the media image that you want to display on the user’s screen, also specifying the Size.
+
+- For Thumbnail URL, enter the URL of the thumbnail image that you want to display on the user’s screen, also specifying the Size.
+
+- In the Title, enter the template title to be displayed on the user’s screen. You can add parameters ($name) to the title to send customized and personalized messages to users.
+
+- In the Description field, enter the message to be displayed in the user’s screen.You can add parameters ($designation) to the description to send customized and personalized messages to users.
+
+(Optional) Click Add Suggestions and add one of the following:
+
+- Simple Reply
+
+- View Location
+
+- Dial Phone
+
+- Share Location
+
+- Open URL
+
+- Calendar Event
+
+- Return to Step 7 in the main procedure Configuring RCS Templates to complete the remaining steps.
+
+Refer to the Limits and Best Practices section for more information on Field/Element and their best practices.
+
+Refer to the Supported File Type for RCS Channel  section for more information on RCS file formats.

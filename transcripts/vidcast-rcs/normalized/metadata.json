@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "source": "https://app.vidcast.io/share/1b8cf04c-353a-4dda-a515-2c1fb9b9b483",
+  "created_at": "2026-09-08T23:32:47.070464+00:00",
+  "requested_languages": [
+    "en"
+  ],
+  "title": "Webex Connect Branded RCS Messaging",
+  "uploader": null,
+  "versions": {
+    "python": "3.13.12",
+    "youtube-transcript-api": "1.2.4",
+    "yt-dlp": "2026.8.19",
+    "webvtt-py": "0.5.1",
+    "faster-whisper": "1.2.1",
+    "ctranslate2": "4.8.2"
+  },
+  "attempts": [],
+  "human_reviewed": false,
+  "input_path": "/home/dgk/workspace/webex_connect_kb/transcripts/vidcast-rcs/source.en.vtt",
+  "input_sha256": "1c51a375ac194281d7567574424f35d2c9fdd0f7b4a0d3dafade7b26544d5175",
+  "title_provenance": "user-supplied",
+  "method": "local-subtitle-import",
+  "language": "en",
+  "caption_kind": "local-unverified",
+  "segment_count": 344,
+  "transcript_end_seconds": 2363.239,
+  "artifact_sha256": {
+    "transcript.json": "db3799002a5b5eb842b329fecc127cb810d86ee6804ec3aac667538e342f4433",
+    "transcript.srt": "3aab142826c431cc3bcefb3e808c2af0325af242a5bbecda65816155042139eb",
+    "transcript.md": "4cfee33c55c56c7dad7c31c90f8ee3915086ed783bcdebb5dce56116bbccb6c4"
+  }
+}

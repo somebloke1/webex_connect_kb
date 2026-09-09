@@ -1,0 +1,444 @@
+# Delete App Profile with User ID
+
+Source: https://developers.webexconnect.io/reference/deleteappprofile
+Documentation version: 6.20.0
+Retrieved: 2026-09-08T23:31:50+00:00
+
+> 📘 Know Your Endpoint
+> 
+> Based on the domain you use to log in to imiconnect, the endpoint for your API varies. See the [endpoint](https://developers.imiconnect.io/reference/endpoints) section to understand which endpoint to use for your domain.
+
+> 🚧 Cautionary Notice
+> 
+> Once a customer application profile is deleted, it cannot be recovered. However, customers can authenticate with the application and have it re-linked to their profile.<br>  
+> This process is irreversible.
+
+> 📘 
+> 
+> For data privacy and security reasons, the REST API is served over encrypted HTTPS. Standard HTTP is not supported.
+
+## **Status Codes**
+
+The following are the response codes this method may return:
+
+| Response Code | Message                              | Description                                                                                |
+| :------------ | :----------------------------------- | :----------------------------------------------------------------------------------------- |
+| 1000          | Queued                               | Returned when the request is queued                                                        |
+| 7001          | Authentication failed                | Returned when an invalid service key or profile key is provided in the request             |
+| 7002          | Service Key Missing                  | Returned when the parameter key is missing in the message request                          |
+| 7003          | Mandatory parameters missing         | Returned when the mandatory parameters configured in the custom event are missing          |
+| 7010          | Source IP is not in the allowed list | Returned when a request is sent from an IP that is not in the allowed list in Webex Connect |
+| 7014          | app profile not found                | Returned when the app profile is not found                                                 |
+
+## API reference metadata
+
+These are source metadata and examples. `api.auth` is ReadMe metadata; verify authentication in the documented headers/security scheme.
+
+```json
+{
+  "method": "delete",
+  "params": [
+    {
+      "name": "appid",
+      "type": "string",
+      "enumValues": "",
+      "default": "",
+      "desc": "The ID of the app asset that you can obtain from IMIconnect platform",
+      "required": false,
+      "in": "path",
+      "ref": "",
+      "_id": "5f6df7d50d460b0043318562",
+      "id": "5f6df7d50d460b0043318562"
+    },
+    {
+      "name": "Content-Type",
+      "type": "string",
+      "enumValues": "",
+      "default": "",
+      "desc": "Application/JSON",
+      "required": false,
+      "in": "header",
+      "ref": "",
+      "_id": "5f6df7d50d460b0043318561",
+      "id": "5f6df7d50d460b0043318561"
+    },
+    {
+      "name": "secretKey",
+      "type": "string",
+      "enumValues": "",
+      "default": "",
+      "desc": "Client key that can be accessed from your app asset configuration page on IMIconnect platform",
+      "required": false,
+      "in": "header",
+      "ref": "",
+      "_id": "5f6df7d50d460b0043318560",
+      "id": "5f6df7d50d460b0043318560"
+    },
+    {
+      "name": "appprofilekey",
+      "type": "string",
+      "enumValues": "",
+      "default": "",
+      "desc": "Key for the profile",
+      "required": false,
+      "in": "path",
+      "ref": "",
+      "_id": "5f6df7d50d460b004331855f",
+      "id": "5f6df7d50d460b004331855f"
+    }
+  ],
+  "results": {
+    "codes": [
+      {
+        "language": "json",
+        "code": "{\n    \"TotalCount\": 1,\n    \"code\": \"1000\",\n    \"FailureCount\": 0,\n    \"Results\": [\n        {\n            \"code\": \"1000\",\n            \"customerId\": \"777777\",\n            \"description\": \"SUCCESS\"\n        }\n    ],\n    \"transid\": \"fdc657f4-f052-421f-8110-d3437f028c8d\",\n    \"description\": \"SUCCESS\",\n    \"SuccessCount\": 1\n}\n",
+        "status": 200
+      },
+      {
+        "code": "{\n    \"FailureCount\": 0,\n    \"TotalCount\": 1,\n    \"description\": \"QUEUED\",\n    \"SuccessCount\": 1,\n    \"code\": \"1000\",\n    \"Results\": [{\n        \"customerId\": \"9876\",\n        \"description\": \"QUEUED\",\n        \"code\": \"1000\"\n    }],\n    \"transid\": \"e0de0ab3-9f99-4602-bf03-09916f8d6bcc\"\n}",
+        "language": "json",
+        "status": 202,
+        "name": "Delete Single App Profile"
+      },
+      {
+        "code": "{\n    \"FailureCount\": 0,\n    \"TotalCount\": 1,\n    \"description\": \"QUEUED\",\n    \"SuccessCount\": 1,\n    \"code\": \"1000\",\n    \"Results\": [{\n        \"customerId\": \"9876\",\n        \"description\": \"QUEUED\",\n        \"code\": \"1000\"\n    },\n               {\n        \"customerId\": \"9877\",\n        \"description\": \"QUEUED\",\n        \"code\": \"1000\"\n    }],\n    \"transid\": \"e0de0ab3-9f99-4602-bf03-09916f8d6bcc\"\n}",
+        "language": "json",
+        "status": 202,
+        "name": "Delete Multiple App Profiles"
+      }
+    ]
+  },
+  "settings": "",
+  "url": "/customerappprofile/{{inappid}}?identifier=userid",
+  "auth": "required",
+  "examples": {
+    "codes": [
+      {
+        "code": "-X DELETE http://api.imiconnect.io/resources/v2/customerappprofile/{{inappid}}?identifier=userid\\\n-H \"Content-Type : application/json\"\n-H \"key : {profilekey}\"\n",
+        "language": "curl"
+      },
+      {
+        "code": "var request=require(\"request\");\n var options = {\n          method: 'POST',\n          uri: ' http://api.imiconnect.io/resources/v2/customerappprofile/{{inappid}}?identifier=userid',\n          headers: {\n            'Content-Type': 'application/json',\n\t'key': ' Profile key present in tenant setting '\n            }\n        };\n  request(options, function(error, response, body) {\n               if(error){\n                  console.log(error);\n             }else{\n                  console.log(response);\n            }\n        });\n",
+        "language": "json",
+        "name": "Node"
+      },
+      {
+        "code": "require 'httparty'\n# Create the HTTP objects and post request\nhttp = HTTParty.post(\"http://api.imiconnect.io/resources/v2/customerappprofile/{{inappid}}?identifier=userid\",\n    :headers => {'Content-Type' => 'application/json',\n\t'key' => ' Profile key present in tenant setting’})\n# Print on console\nputs http\n",
+        "language": "ruby"
+      },
+      {
+        "code": "var data = null;\n\nvar xhr = new XMLHttpRequest();\n\nxhr.addEventListener(\"readystatechange\", function () {\n  if (this.readyState === this.DONE) {\n    console.log(this.responseText);\n  }\n});\n\nxhr.open(\"DELETE\", \" http://api.imiconnect.io/resources/v2/customerappprofile/{{inappid}}?identifier=userid\");\nxhr.setRequestHeader(\"Content-Type\", \"application/json\");\nxhr.setRequestHeader(\"key\", \"Profile key present in tenant setting\");\nxhr.send(data);\n",
+        "language": "javascript"
+      },
+      {
+        "code": "import requests\n\nurl = \" http://api.imiconnect.io/resources/v2/customerappprofile/{{inappid}}?identifier=userid\");\"\n\nheaders = {'Content-Type': 'application/json', 'key': ' Profile key present in tenant setting '}\n\nresponse = requests.request(\"DELETE\", url, headers=headers)\n\nprint(response.text)\n",
+        "language": "python"
+      },
+      {
+        "code": "https://api.imiconnect.com/resources/v2/customerappprofile/a_635736738702976937/9876",
+        "language": "json",
+        "name": "Delete Single App Profile"
+      },
+      {
+        "code": "https://api.imiconnect.com/resources/v2/customerappprofile/a_635736738702976937?customerId=9876&customerId=9877",
+        "language": "json",
+        "name": "Delete Multiple App Profiles"
+      }
+    ]
+  },
+  "apiSetting": "6a675233ec1c893d8a7f67b8"
+}
+```
+
+## OpenAPI operation and component schemas
+
+```json
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Profile API v2",
+    "version": "6.20.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.imiconnect.io/resources/v2"
+    }
+  ],
+  "security": [
+    {
+      "sec0": []
+    }
+  ],
+  "path": "/customerappprofile/{{inappid}}?identifier=userid",
+  "method": "delete",
+  "path_parameters": [],
+  "operation": {
+    "summary": "Delete App Profile with User ID",
+    "description": "This API is used to delete application profile of a customer.",
+    "operationId": "deleteappprofile",
+    "parameters": [
+      {
+        "name": "appid",
+        "in": "path",
+        "description": "The ID of the app asset that you can obtain from IMIconnect platform",
+        "schema": {
+          "type": "string"
+        },
+        "required": true
+      },
+      {
+        "name": "Content-Type",
+        "in": "header",
+        "description": "Application/JSON",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "secretKey",
+        "in": "header",
+        "description": "Client key that can be accessed from your app asset configuration page on IMIconnect platform",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "appprofilekey",
+        "in": "path",
+        "description": "Key for the profile",
+        "schema": {
+          "type": "string"
+        },
+        "required": true
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "200",
+        "content": {
+          "application/json": {
+            "examples": {
+              "Result": {
+                "value": "{\n    \"TotalCount\": 1,\n    \"code\": \"1000\",\n    \"FailureCount\": 0,\n    \"Results\": [\n        {\n            \"code\": \"1000\",\n            \"customerId\": \"777777\",\n            \"description\": \"SUCCESS\"\n        }\n    ],\n    \"transid\": \"fdc657f4-f052-421f-8110-d3437f028c8d\",\n    \"description\": \"SUCCESS\",\n    \"SuccessCount\": 1\n}\n"
+              }
+            },
+            "schema": {
+              "type": "object",
+              "properties": {
+                "TotalCount": {
+                  "type": "integer",
+                  "example": 1,
+                  "default": 0
+                },
+                "code": {
+                  "type": "string",
+                  "example": "1000"
+                },
+                "FailureCount": {
+                  "type": "integer",
+                  "example": 0,
+                  "default": 0
+                },
+                "Results": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "code": {
+                        "type": "string",
+                        "example": "1000"
+                      },
+                      "customerId": {
+                        "type": "string",
+                        "example": "777777"
+                      },
+                      "description": {
+                        "type": "string",
+                        "example": "SUCCESS"
+                      }
+                    }
+                  }
+                },
+                "transid": {
+                  "type": "string",
+                  "example": "fdc657f4-f052-421f-8110-d3437f028c8d"
+                },
+                "description": {
+                  "type": "string",
+                  "example": "SUCCESS"
+                },
+                "SuccessCount": {
+                  "type": "integer",
+                  "example": 1,
+                  "default": 0
+                }
+              }
+            }
+          }
+        }
+      },
+      "202": {
+        "description": "202",
+        "content": {
+          "application/json": {
+            "examples": {
+              "Delete Single App Profile": {
+                "value": "{\n    \"FailureCount\": 0,\n    \"TotalCount\": 1,\n    \"description\": \"QUEUED\",\n    \"SuccessCount\": 1,\n    \"code\": \"1000\",\n    \"Results\": [{\n        \"customerId\": \"9876\",\n        \"description\": \"QUEUED\",\n        \"code\": \"1000\"\n    }],\n    \"transid\": \"e0de0ab3-9f99-4602-bf03-09916f8d6bcc\"\n}"
+              },
+              "Delete Multiple App Profiles": {
+                "value": "{\n    \"FailureCount\": 0,\n    \"TotalCount\": 1,\n    \"description\": \"QUEUED\",\n    \"SuccessCount\": 1,\n    \"code\": \"1000\",\n    \"Results\": [{\n        \"customerId\": \"9876\",\n        \"description\": \"QUEUED\",\n        \"code\": \"1000\"\n    },\n               {\n        \"customerId\": \"9877\",\n        \"description\": \"QUEUED\",\n        \"code\": \"1000\"\n    }],\n    \"transid\": \"e0de0ab3-9f99-4602-bf03-09916f8d6bcc\"\n}"
+              }
+            },
+            "schema": {
+              "oneOf": [
+                {
+                  "title": "Delete Single App Profile",
+                  "type": "object",
+                  "properties": {
+                    "FailureCount": {
+                      "type": "integer",
+                      "example": 0,
+                      "default": 0
+                    },
+                    "TotalCount": {
+                      "type": "integer",
+                      "example": 1,
+                      "default": 0
+                    },
+                    "description": {
+                      "type": "string",
+                      "example": "QUEUED"
+                    },
+                    "SuccessCount": {
+                      "type": "integer",
+                      "example": 1,
+                      "default": 0
+                    },
+                    "code": {
+                      "type": "string",
+                      "example": "1000"
+                    },
+                    "Results": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "customerId": {
+                            "type": "string",
+                            "example": "9876"
+                          },
+                          "description": {
+                            "type": "string",
+                            "example": "QUEUED"
+                          },
+                          "code": {
+                            "type": "string",
+                            "example": "1000"
+                          }
+                        }
+                      }
+                    },
+                    "transid": {
+                      "type": "string",
+                      "example": "e0de0ab3-9f99-4602-bf03-09916f8d6bcc"
+                    }
+                  }
+                },
+                {
+                  "title": "Delete Multiple App Profiles",
+                  "type": "object",
+                  "properties": {
+                    "FailureCount": {
+                      "type": "integer",
+                      "example": 0,
+                      "default": 0
+                    },
+                    "TotalCount": {
+                      "type": "integer",
+                      "example": 1,
+                      "default": 0
+                    },
+                    "description": {
+                      "type": "string",
+                      "example": "QUEUED"
+                    },
+                    "SuccessCount": {
+                      "type": "integer",
+                      "example": 1,
+                      "default": 0
+                    },
+                    "code": {
+                      "type": "string",
+                      "example": "1000"
+                    },
+                    "Results": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "customerId": {
+                            "type": "string",
+                            "example": "9876"
+                          },
+                          "description": {
+                            "type": "string",
+                            "example": "QUEUED"
+                          },
+                          "code": {
+                            "type": "string",
+                            "example": "1000"
+                          }
+                        }
+                      }
+                    },
+                    "transid": {
+                      "type": "string",
+                      "example": "e0de0ab3-9f99-4602-bf03-09916f8d6bcc"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "deprecated": false,
+    "x-readme": {
+      "code-samples": [
+        {
+          "language": "curl",
+          "code": "-X DELETE http://api.imiconnect.io/resources/v2/customerappprofile/{{inappid}}?identifier=userid\\\n-H \"Content-Type : application/json\"\n-H \"key : {profilekey}\"\n"
+        },
+        {
+          "language": "ruby",
+          "code": "require 'httparty'\n# Create the HTTP objects and post request\nhttp = HTTParty.post(\"http://api.imiconnect.io/resources/v2/customerappprofile/{{inappid}}?identifier=userid\",\n    :headers => {'Content-Type' => 'application/json',\n\t'key' => ' Profile key present in tenant setting’})\n# Print on console\nputs http\n"
+        },
+        {
+          "language": "javascript",
+          "code": "var data = null;\n\nvar xhr = new XMLHttpRequest();\n\nxhr.addEventListener(\"readystatechange\", function () {\n  if (this.readyState === this.DONE) {\n    console.log(this.responseText);\n  }\n});\n\nxhr.open(\"DELETE\", \" http://api.imiconnect.io/resources/v2/customerappprofile/{{inappid}}?identifier=userid\");\nxhr.setRequestHeader(\"Content-Type\", \"application/json\");\nxhr.setRequestHeader(\"key\", \"Profile key present in tenant setting\");\nxhr.send(data);\n"
+        },
+        {
+          "language": "python",
+          "code": "import requests\n\nurl = \" http://api.imiconnect.io/resources/v2/customerappprofile/{{inappid}}?identifier=userid\");\"\n\nheaders = {'Content-Type': 'application/json', 'key': ' Profile key present in tenant setting '}\n\nresponse = requests.request(\"DELETE\", url, headers=headers)\n\nprint(response.text)\n"
+        }
+      ],
+      "samples-languages": [
+        "curl",
+        "ruby",
+        "javascript",
+        "python"
+      ]
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "sec0": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "key"
+      }
+    }
+  }
+}
+```

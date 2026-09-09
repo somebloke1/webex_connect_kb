@@ -1,0 +1,33 @@
+{
+  "category": "Webex Engage Standalone Nodes",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257970",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "6707dd8eb2ba02673becacc306ecab9860f74ea07674c62d592ba054b201b1be",
+    "source_path": "d8b2228244b538b3682a70a693ad806dc1f6cc422bfe37b07d904ecc3a40381d",
+    "text_path": "4d3bbb12d022fb36549d0164c7146dc57d7bff84cad3ea94c6db1059c5d09a6e"
+  },
+  "headings": [
+    "📘Warning"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/whatsapp-1.md",
+  "resolved_url": "https://help.webexconnect.io/docs/whatsapp-1",
+  "retrieved_at": "2026-09-08T23:29:27+00:00",
+  "sha256_html_response": "0605748c4afdfca744f6fda01fee9b986cdda4956a54a36e3bfdd5cdb4a65bf0",
+  "sha256_source_body": "d8b2228244b538b3682a70a693ad806dc1f6cc422bfe37b07d904ecc3a40381d",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/whatsapp-1.source.md",
+  "source_updated_at": "2026-04-14T07:45:25.920Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/whatsapp-1.txt",
+  "title": "WhatsApp - WxEngage standalone",
+  "url": "https://help.webexconnect.io/docs/whatsapp-1",
+  "word_count": 352,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/whatsapp-1.metadata.json"
+}

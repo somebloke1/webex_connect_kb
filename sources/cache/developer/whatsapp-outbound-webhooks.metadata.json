@@ -1,0 +1,35 @@
+{
+  "api_metadata_path": "sources/cache/developer/whatsapp-outbound-webhooks.api.json",
+  "category": "OUTBOUND WEBHOOKS",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f6555",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "021571823d132073ecfbf2c86c2c50612a3873b7334049ed8472102e67c34040",
+    "source_path": "dc7779826d90892511ffe37ddf4fa4007cf663ca4a245a835cb2ac27d7a4612d",
+    "text_path": "da07dc31f2a19f3213a44287a0fe8a25f82b01ed66e96f83a90da86cea1089ec"
+  },
+  "headings": [
+    "WhatsApp Delivery Receipts",
+    "WhatsApp Incoming Messages & Events"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/whatsapp-outbound-webhooks.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/whatsapp-outbound-webhooks",
+  "retrieved_at": "2026-09-08T23:31:45+00:00",
+  "sha256_api_metadata": "187de124aa8aa8acf032d1bfec486640b94ec306193dfc1e0feb2652279c3c88",
+  "sha256_html_response": "d534427bdcc3f850aae1112a8816627dd8caed6e900f3dcc3d860cc9fdea318f",
+  "sha256_source_body": "dc7779826d90892511ffe37ddf4fa4007cf663ca4a245a835cb2ac27d7a4612d",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/whatsapp-outbound-webhooks.source.md",
+  "source_updated_at": "2026-05-12T13:31:35.425Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/whatsapp-outbound-webhooks.txt",
+  "title": "WhatsApp",
+  "url": "https://developers.webexconnect.io/reference/whatsapp-outbound-webhooks",
+  "word_count": 931,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/developer/whatsapp-outbound-webhooks.metadata.json"
+}

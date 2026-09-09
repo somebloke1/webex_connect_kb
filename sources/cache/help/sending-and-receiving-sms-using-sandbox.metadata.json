@@ -1,0 +1,40 @@
+{
+  "category": "WEBEX CONNECT SANDBOX",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd81825789c",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "942b61894772fb1325389f2efffe4d042f652982259074fead5301a32edc9f01",
+    "source_path": "9d915541fbcd770e614d4182db1f1d57dacb52355787c237e87d6042e4b44573",
+    "text_path": "3c3728c25f946c17d4648bcda9c0c1abcc6d1cab8c9eaf50ae028a92162d2d73"
+  },
+  "headings": [
+    "📘SMS Support in Sandbox",
+    "Sandbox Home UI",
+    "Sending SMS from Sandbox Home screen",
+    "Receiving SMS from Sandbox Home screen",
+    "📘Note",
+    "SMS API",
+    "Visual Flow Builder",
+    "📘"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/sending-and-receiving-sms-using-sandbox.md",
+  "resolved_url": "https://help.webexconnect.io/docs/sending-and-receiving-sms-using-sandbox",
+  "retrieved_at": "2026-09-08T23:28:48+00:00",
+  "sha256_html_response": "f1d38136c30bbf18af27ff81d792a8fd1b331a7001b5ee7f324593830904c7e6",
+  "sha256_source_body": "9d915541fbcd770e614d4182db1f1d57dacb52355787c237e87d6042e4b44573",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/sending-and-receiving-sms-using-sandbox.source.md",
+  "source_updated_at": "2026-04-15T08:23:23.833Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/sending-and-receiving-sms-using-sandbox.txt",
+  "title": "Sending and Receiving SMS using Sandbox",
+  "url": "https://help.webexconnect.io/docs/sending-and-receiving-sms-using-sandbox",
+  "word_count": 833,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/sending-and-receiving-sms-using-sandbox.metadata.json"
+}

@@ -1,0 +1,33 @@
+{
+  "category": "Webex Connect and Cisco Contact Center Enterprise System (CCE)",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257959",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "1ddcfa7f205853cca5b1099f28c2af98835cf42f351d82138bc347d3d3da6a76",
+    "source_path": "cd75a9f80511b964e04cefca6d12f0657a1c713416c3cc33406d4fd068427c68",
+    "text_path": "a83c58470f432f2add641999c2d447761f227c65853ba29551e53c035cb2d1f7"
+  },
+  "headings": [
+    "How to increase messaging limits"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/cce-messaging-customers-on-whatsapp-business-platform.md",
+  "resolved_url": "https://help.webexconnect.io/docs/cce-messaging-customers-on-whatsapp-business-platform",
+  "retrieved_at": "2026-09-08T23:29:21+00:00",
+  "sha256_html_response": "f40266136c9ba2ecaacf4a423b8503eaa5773800c3e12a646cc6f1f26f700072",
+  "sha256_source_body": "cd75a9f80511b964e04cefca6d12f0657a1c713416c3cc33406d4fd068427c68",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/cce-messaging-customers-on-whatsapp-business-platform.source.md",
+  "source_updated_at": "2026-04-14T07:36:14.760Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/cce-messaging-customers-on-whatsapp-business-platform.txt",
+  "title": "Messaging Customers on WhatsApp Business Platform - CCE",
+  "url": "https://help.webexconnect.io/docs/cce-messaging-customers-on-whatsapp-business-platform",
+  "word_count": 305,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/cce-messaging-customers-on-whatsapp-business-platform.metadata.json"
+}

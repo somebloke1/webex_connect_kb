@@ -1,0 +1,6 @@
+interface:
+  display_name: "Webex Connect Flows"
+  short_description: "Design AI Agent, email and SMS flows from local sources"
+  default_prompt: "Use $webex-connect-flows to document an AI Agent flow with email or SMS, including node fields, fulfillment contracts, failure paths, and verification cases."
+policy:
+  allow_implicit_invocation: true

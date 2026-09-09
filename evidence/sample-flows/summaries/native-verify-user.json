@@ -1,0 +1,513 @@
+{
+  "schema_version": 1,
+  "sample_key": "native-verify-user",
+  "title": "Verify user.workflow",
+  "observed_at": "2026-09-09T00:01:29.840Z",
+  "source_path": "evidence/sample-flows/observed/native-verify-user.json",
+  "source_sha256": "3929ef1777a758be50d3475838c3067a1909bc70ef5e6ebf5b120e589a17937c",
+  "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model",
+  "runtime_tested": false,
+  "status": "observed_canvas_relationships_summarized",
+  "format_warning": "Internal loaded-canvas model observations only; not a public import schema. Event internal names and visible labels are recorded separately. Dynamic script behavior and missing canvas pages are not inferred.",
+  "counts": {
+    "cells": 7,
+    "operative_nodes": 2,
+    "explicit_edges": 1,
+    "terminal_bindings": 3,
+    "variable_references": 15
+  },
+  "start_configuration": {
+    "channel": 501,
+    "type": "channel",
+    "subtype": "aiagent",
+    "isCheckLiveSessions": 0,
+    "extras": {},
+    "eventid": 501,
+    "v2EventId": 501
+  },
+  "nodes": [
+    {
+      "id": "2",
+      "label": "Configure AI Agent Event",
+      "type_internal": "start",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "onbegin",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "selectedChannel": {
+          "id": 501,
+          "name": "aiagent",
+          "description": "AI Agent",
+          "type": 3,
+          "extraData": {},
+          "subType": "aiagent",
+          "integrationId": "",
+          "image_url": ""
+        },
+        "selectedRuleEvent": {
+          "id": 501,
+          "name": "",
+          "v2EventId": 501
+        },
+        "isKeyWordDisabled": true,
+        "isKeyWordVerifyReq": true,
+        "isKeyWordAvailable": true,
+        "output_variables": [
+          "aiAgent.timestamp",
+          "aiAgent.transId",
+          "aiAgent.payload",
+          "service.serviceKey",
+          "aiAgent.zipcode",
+          "aiAgent.date_of_birth"
+        ],
+        "conditionData": [
+          {
+            "defaultvalue": "",
+            "mandatory": false,
+            "var_name": "zipcode",
+            "datatype": "string",
+            "channel_id": 501,
+            "event_id": 501,
+            "eventname": ""
+          },
+          {
+            "defaultvalue": "",
+            "mandatory": false,
+            "var_name": "date_of_birth",
+            "datatype": "string",
+            "channel_id": 501,
+            "event_id": 501,
+            "eventname": ""
+          }
+        ],
+        "aiAgentData": {
+          "parseOutput": [
+            {
+              "name": "zipcode",
+              "defaultvalue": "",
+              "mandatory": false,
+              "type": "string"
+            },
+            {
+              "name": "date_of_birth",
+              "defaultvalue": "",
+              "mandatory": false,
+              "type": "string"
+            }
+          ],
+          "isAuthRequired": false,
+          "name": "",
+          "url": "https://example.invalid/flows/62168/trigger/aiagent",
+          "v2EventId": 501,
+          "jsonData": {
+            "date_of_birth": "",
+            "zipcode": ""
+          },
+          "xmlData": "",
+          "isExistingAIAgent": true,
+          "selectedEvent": 501,
+          "jsonSource": 0,
+          "conditionData": [],
+          "isValidateSignature": false,
+          "validateSignatureObj": {
+            "algorithm": "",
+            "secretType": "[redacted]",
+            "secretKey": "[redacted]",
+            "headerKey": "[redacted]"
+          }
+        }
+      },
+      "transition_actions": [],
+      "declared_outputs": [
+        "aiAgent.timestamp",
+        "aiAgent.transId",
+        "aiAgent.payload",
+        "service.serviceKey",
+        "aiAgent.zipcode",
+        "aiAgent.date_of_birth"
+      ],
+      "output_mappings": []
+    },
+    {
+      "id": "3",
+      "label": "Fetch user details",
+      "type_internal": "http",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "oncomplete",
+          "declared_target_count": 1
+        },
+        {
+          "event_internal": "onerror",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "method": "post",
+        "url": "https://example.invalid/verify_user",
+        "body": {
+          "DOB": "$(n2.aiAgent.date_of_birth)",
+          "ZIP_code": "$(n2.aiAgent.zipcode)"
+        },
+        "connctiontimeout": 10000,
+        "requesttimeout": 10000,
+        "checkAll": false,
+        "dataformate": "json",
+        "type": "extract",
+        "outputvariablelist": {
+          "parameters": [
+            {
+              "id": "LUNtxdItRk",
+              "name": "user_details",
+              "path": "$",
+              "type": "body",
+              "order": 0
+            },
+            {
+              "id": "U2QAMBzGqO",
+              "name": "status",
+              "path": "$.status",
+              "type": "body",
+              "order": 1
+            }
+          ],
+          "type": "json"
+        },
+        "isNewnode": true
+      },
+      "transition_actions": [
+        {
+          "kind": "log",
+          "name": 1111,
+          "when": "onleave",
+          "value": "$(n3.fullResp)"
+        },
+        {
+          "kind": "log",
+          "name": 1234,
+          "when": "onleave",
+          "value": "$(n3.status)"
+        }
+      ],
+      "declared_outputs": [
+        "user_details",
+        "status"
+      ],
+      "output_mappings": {
+        "parameters": [
+          {
+            "id": "LUNtxdItRk",
+            "name": "user_details",
+            "path": "$",
+            "type": "body",
+            "order": 0
+          },
+          {
+            "id": "U2QAMBzGqO",
+            "name": "status",
+            "path": "$.status",
+            "type": "body",
+            "order": 1
+          }
+        ],
+        "type": "json"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "5128004",
+      "source": "2",
+      "target": "3",
+      "event_internal": "onbegin",
+      "event_label": "onBegin",
+      "representation": "explicit_edge"
+    }
+  ],
+  "terminal_bindings": [
+    {
+      "id": "34",
+      "source": "3",
+      "target": "34",
+      "event_internal": "oncomplete",
+      "event_label": "onSuccess",
+      "outcome_id": 2,
+      "outcome_name": "Success",
+      "outcome_description": "Successfully completed flow",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "35",
+      "source": "3",
+      "target": "35",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "36",
+      "source": "3",
+      "target": "36",
+      "event_internal": "ontimeout",
+      "event_label": "onTimeout",
+      "outcome_id": 4,
+      "outcome_name": "Incomplete",
+      "outcome_description": "Flow ended due to an interruption",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    }
+  ],
+  "terminal_sources_not_captured": [],
+  "duplicate_terminal_binding_groups": [],
+  "variable_handoffs": [
+    {
+      "consumer": "3",
+      "location": "configuration.body.DOB",
+      "reference": "$(n2.aiAgent.date_of_birth)",
+      "variable": "n2.aiAgent.date_of_birth",
+      "producer_node": "2",
+      "producer_field": "aiAgent.date_of_birth",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "3",
+      "location": "configuration.body.ZIP_code",
+      "reference": "$(n2.aiAgent.zipcode)",
+      "variable": "n2.aiAgent.zipcode",
+      "producer_node": "2",
+      "producer_field": "aiAgent.zipcode",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "3",
+      "location": "transition_actions[0].value",
+      "reference": "$(n3.fullResp)",
+      "variable": "n3.fullResp",
+      "producer_node": "3",
+      "producer_field": "fullResp",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "3",
+      "location": "transition_actions[1].value",
+      "reference": "$(n3.status)",
+      "variable": "n3.status",
+      "producer_node": "3",
+      "producer_field": "status",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "outcome[1].notification.payload.transactionID",
+      "reference": "$(transid)",
+      "variable": "transid",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "outcome[1].notification.payload.user_details",
+      "reference": "$(n3.user_details)",
+      "variable": "n3.user_details",
+      "producer_node": "3",
+      "producer_field": "user_details",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "outcome[1].notification.payload.status",
+      "reference": "$(n3.status)",
+      "variable": "n3.status",
+      "producer_node": "3",
+      "producer_field": "status",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "outcome[1].notification.custompayload.transactionID",
+      "reference": "$(transid)",
+      "variable": "transid",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "outcome[1].notification.custompayload.response",
+      "reference": "$(n3.user_details)",
+      "variable": "n3.user_details",
+      "producer_node": "3",
+      "producer_field": "user_details",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "3",
+      "location": "_usedVars",
+      "reference": "$(n2.aiAgent.date_of_birth)",
+      "variable": "n2.aiAgent.date_of_birth",
+      "producer_node": "2",
+      "producer_field": "aiAgent.date_of_birth",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "3",
+      "location": "_usedVars",
+      "reference": "$(n2.aiAgent.zipcode)",
+      "variable": "n2.aiAgent.zipcode",
+      "producer_node": "2",
+      "producer_field": "aiAgent.zipcode",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "3",
+      "location": "_usedTransVar",
+      "reference": "$(n3.fullResp)",
+      "variable": "n3.fullResp",
+      "producer_node": "3",
+      "producer_field": "fullResp",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "3",
+      "location": "_usedTransVar",
+      "reference": "$(n3.status)",
+      "variable": "n3.status",
+      "producer_node": "3",
+      "producer_field": "status",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "_usedVars",
+      "reference": "$(n3.user_details)",
+      "variable": "n3.user_details",
+      "producer_node": "3",
+      "producer_field": "user_details",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "_usedVars",
+      "reference": "$(n3.status)",
+      "variable": "n3.status",
+      "producer_node": "3",
+      "producer_field": "status",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    }
+  ],
+  "custom_variable_assignments": [],
+  "custom_variables": [],
+  "flow_outcomes": [
+    {
+      "id": 1,
+      "order": 0,
+      "name": 100,
+      "value": "Last executed node event",
+      "tag": 15,
+      "tagName": "Last Execution Status",
+      "type": "default",
+      "notification": {
+        "method": "get",
+        "headers": "[redacted]",
+        "payload": {
+          "transactionID": "$(transid)",
+          "user_details": "$(n3.user_details)",
+          "status": "$(n3.status)"
+        },
+        "payloadType": 1,
+        "custompayload": {
+          "transactionID": "$(transid)",
+          "response": "$(n3.user_details)"
+        },
+        "notificationType": -2
+      },
+      "isNotify": true,
+      "statusCode": "All status codes"
+    },
+    {
+      "id": 2,
+      "order": 1,
+      "name": 101,
+      "value": "Successfully completed flow",
+      "tag": 11,
+      "tagName": "Success",
+      "type": "default",
+      "notification": null,
+      "isNotify": false,
+      "statusCode": null
+    },
+    {
+      "id": 3,
+      "order": 2,
+      "name": 102,
+      "value": "Flow completed with an error",
+      "tag": 12,
+      "tagName": "Error",
+      "type": "default",
+      "notification": null,
+      "isNotify": false,
+      "statusCode": null
+    },
+    {
+      "id": 4,
+      "order": 3,
+      "name": 103,
+      "value": "Flow ended due to an interruption",
+      "tag": 13,
+      "tagName": "Incomplete",
+      "type": "default",
+      "notification": null,
+      "isNotify": false,
+      "statusCode": null
+    }
+  ],
+  "cycles": [],
+  "cross_page_or_flow_nodes": [],
+  "capture_pages": null,
+  "declared_events_without_captured_route": [],
+  "nodes_not_reached_from_captured_start": [],
+  "edge_endpoints_not_captured": [],
+  "node_variable_producers_not_captured": [],
+  "redactions": "Header credentials and URL hosts redacted. Internal model properties are evidence, not a public import API.",
+  "authored_walkthrough": {
+    "walkthrough": "AI Agent Start 2 accepts optional string `zipcode` and `date_of_birth`. Its `onbegin`/rendered `onBegin` enters HTTP 3, labeled Fetch user details, posting to `/verify_user`. End pseudo-nodes 34, 35, and 36 associate with node 3: `oncomplete`/`onSuccess` has exitResult 2, `onerror`/`onError` has 3, and `ontimeout`/`onTimeout` has 4. There is no verification-result Branch or conversational retry.",
+    "handoffs": "The request deliberately changes case and names: `DOB=$(n2.aiAgent.date_of_birth)` and `ZIP_code=$(n2.aiAgent.zipcode)`. Connection/request timeouts both contain 10000. JSONPath `$` becomes whole-response output `n3.user_details`, while `$.status` becomes `n3.status`. Last Execution Status covers all status codes and uses payloadType 1, storing transactionID, `user_details=$(n3.user_details)`, and `status=$(n3.status)`. A distinct custompayload stores transactionID and response only. HTTP on-leave log actions reference `$(n3.fullResp)` and `$(n3.status)`; fullResp is not a configured extraction output.",
+    "limitations": "The title does not establish robust authentication or a validated identity policy. No direct call to later banking actions or explicit customer_id extraction is shown; any reuse of user_details belongs to external orchestration. Existing log configuration was only observed, never changed. Hosts and headers are redacted. This internal model is not a public import schema, and `runtime_tested=false` means backend verification, logging, and return serialization were not tested."
+  },
+  "walkthrough_status": "authored"
+}

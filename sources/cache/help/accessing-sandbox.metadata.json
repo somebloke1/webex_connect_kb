@@ -1,0 +1,39 @@
+{
+  "category": "WEBEX CONNECT SANDBOX",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182578a0",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "7f565ebf70ebe4345fa282ddfad2fcd0019a76316269ce9ceb32711f84294f29",
+    "source_path": "2d89793215cf46bd909d1172bd77e403cc54c51759b951fb197b1869a5911cf0",
+    "text_path": "3f8225ceb0ef009d2d20f90c3c5b660bad8bbc35c40f5ae09844ae9a81ac1f1b"
+  },
+  "headings": [
+    "Accessing Sandbox",
+    "Sandbox Navigation",
+    "Services",
+    "Reports",
+    "Assets",
+    "Tools",
+    "Debug"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/accessing-sandbox.md",
+  "resolved_url": "https://help.webexconnect.io/docs/accessing-sandbox",
+  "retrieved_at": "2026-09-08T23:28:48+00:00",
+  "sha256_html_response": "12f39350b0319914b3a0fbbf561b50d9d05f58f3240fbe8da9530efa0086c99f",
+  "sha256_source_body": "2d89793215cf46bd909d1172bd77e403cc54c51759b951fb197b1869a5911cf0",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/accessing-sandbox.source.md",
+  "source_updated_at": "2026-04-15T08:22:10.274Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/accessing-sandbox.txt",
+  "title": "Accessing Webex Connect Sandbox",
+  "url": "https://help.webexconnect.io/docs/accessing-sandbox",
+  "word_count": 480,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/accessing-sandbox.metadata.json"
+}

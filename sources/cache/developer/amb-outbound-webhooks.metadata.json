@@ -1,0 +1,37 @@
+{
+  "api_metadata_path": "sources/cache/developer/amb-outbound-webhooks.api.json",
+  "category": "OUTBOUND WEBHOOKS",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f6554",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "251c47877d98f5209733d12b9f579a4610b8ed0fb1c9adf120598e024b35fae7",
+    "source_path": "356d644fae60e8a83f2f0e5264719b5d9583f5b09f086a25703b8c9049fc102e",
+    "text_path": "c5a51899cf1f8bc144d93fe7658256971dfbc729346b0a7aa0751cde48ae14dc"
+  },
+  "headings": [
+    "Outbound Webhook configuration for tracking message status",
+    "Invitation Message Submission Notifications",
+    "Outbound Webhook configuration for tracking incoming messages and events",
+    "Invitation Response"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/amb-outbound-webhooks.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/amb-outbound-webhooks",
+  "retrieved_at": "2026-09-08T23:31:44+00:00",
+  "sha256_api_metadata": "187de124aa8aa8acf032d1bfec486640b94ec306193dfc1e0feb2652279c3c88",
+  "sha256_html_response": "860629c55c2a213958660dd2cdc791279362f2bc72aa5a6dd2824240929ea754",
+  "sha256_source_body": "356d644fae60e8a83f2f0e5264719b5d9583f5b09f086a25703b8c9049fc102e",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/amb-outbound-webhooks.source.md",
+  "source_updated_at": "2026-08-04T14:38:41.427Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/amb-outbound-webhooks.txt",
+  "title": "Apple Messages for Business",
+  "url": "https://developers.webexconnect.io/reference/amb-outbound-webhooks",
+  "word_count": 1869,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/amb-outbound-webhooks.metadata.json"
+}

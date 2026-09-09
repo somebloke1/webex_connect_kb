@@ -1,0 +1,36 @@
+{
+  "api_metadata_path": "sources/cache/developer/sandbox-post_v1-voice-calls.api.json",
+  "category": "API Reference for Sandbox",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f65b6",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "0f527ef4580c36805d93b80c37d9a960deec19be8a5aeb99183cad8b0816d43e",
+    "source_path": "30594f63759cd3e0708442b38c184ebea34cc7078f60a0139570073e77ab53b8",
+    "text_path": "8cb6d1504209fa68684e76ed34f0887a3bd0548328b4fc221965beced5333c04"
+  },
+  "headings": [
+    "Actions"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/sandbox-post_v1-voice-calls.md",
+  "openapi_path": "sources/cache/openapi/8adee2fbe7ff47fe7d2f389605916d3f60a383a95c2ddc98c45cfcd6950e0426.json",
+  "resolved_url": "https://developers.webexconnect.io/reference/sandbox-post_v1-voice-calls",
+  "retrieved_at": "2026-09-08T23:31:40+00:00",
+  "sha256_api_metadata": "78f36513c0c21a5aa2a29fbdafcd0406d0ebccf0bb5392fdc9de127c9539dc59",
+  "sha256_html_response": "65fa03a9c3251f88fc94f6efb6bfefbefa38cfa085293c84e17c4649130ce578",
+  "sha256_openapi": "8adee2fbe7ff47fe7d2f389605916d3f60a383a95c2ddc98c45cfcd6950e0426",
+  "sha256_source_body": "30594f63759cd3e0708442b38c184ebea34cc7078f60a0139570073e77ab53b8",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/sandbox-post_v1-voice-calls.source.md",
+  "source_updated_at": "2026-04-16T05:31:42.424Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/sandbox-post_v1-voice-calls.txt",
+  "title": "Place a new call to a telephone number",
+  "url": "https://developers.webexconnect.io/reference/sandbox-post_v1-voice-calls",
+  "word_count": 2958,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/developer/sandbox-post_v1-voice-calls.metadata.json"
+}

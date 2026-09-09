@@ -1,0 +1,38 @@
+{
+  "category": "SERVICES & FLOWS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257844",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "e80b32f8d5c7db44f95c3540785d8ed90609f6caab426c24cf0ebf9867e26a97",
+    "source_path": "8b9f0b8b60f5478fe9af80e79271547078a73321ebda833b445ebed860b22ec0",
+    "text_path": "8e530948f1692287286be843057b675c47871714972219742f9395286094ebaf"
+  },
+  "headings": [
+    "📘",
+    "Node Configuration",
+    "Input Variables",
+    "Output Variables",
+    "Group Outcomes",
+    "Transition Actions"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/voice-node-group.md",
+  "resolved_url": "https://help.webexconnect.io/docs/voice-node-group",
+  "retrieved_at": "2026-09-08T23:28:51+00:00",
+  "sha256_html_response": "b7c5a037c4a16e0a2866c5908a1bdac13c371fa84da7170278add4ab944ff4a1",
+  "sha256_source_body": "8b9f0b8b60f5478fe9af80e79271547078a73321ebda833b445ebed860b22ec0",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/voice-node-group.source.md",
+  "source_updated_at": "2025-04-02T18:36:59.491Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/voice-node-group.txt",
+  "title": "Voice Node Group",
+  "url": "https://help.webexconnect.io/docs/voice-node-group",
+  "word_count": 1195,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/voice-node-group.metadata.json"
+}

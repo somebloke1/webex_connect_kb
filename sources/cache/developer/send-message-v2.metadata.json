@@ -1,0 +1,39 @@
+{
+  "api_metadata_path": "sources/cache/developer/send-message-v2.api.json",
+  "category": "MULTI CHANNEL COMMUNICATION API",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f66ad",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "273917e5d3335741bb38569018250dceb76bfe8150df251aa2bd04077b1522ac",
+    "source_path": "043ab2b3606716a943bdc07813fc7cf2bc86b312f53f64f7ddbad46d832720cd",
+    "text_path": "1d401aea7d83b30f0d05359fcaf2ffafd9b23d541c83b8e40999eeb2f8319595"
+  },
+  "headings": [
+    "Prerequisites",
+    "Messaging API v2 - Samples",
+    "Postman Collection",
+    "Body Parameters"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/send-message-v2.md",
+  "openapi_path": "sources/cache/openapi/4d624a62b43e06859370bc45c2b3ff834898dee87cf906081d37430c7941ac4b.json",
+  "resolved_url": "https://developers.webexconnect.io/reference/send-message-v2",
+  "retrieved_at": "2026-09-08T23:31:41+00:00",
+  "sha256_api_metadata": "67ae40933f1c745d817c255a7746d500726042628aa86924bbfca9b6e4b8ff7f",
+  "sha256_html_response": "cfa223bb7863a718c1c15377f30698e1addd5c87f1302200ba64abb278d23ba2",
+  "sha256_openapi": "4d624a62b43e06859370bc45c2b3ff834898dee87cf906081d37430c7941ac4b",
+  "sha256_source_body": "043ab2b3606716a943bdc07813fc7cf2bc86b312f53f64f7ddbad46d832720cd",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/send-message-v2.source.md",
+  "source_updated_at": "2026-04-16T05:36:06.106Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/send-message-v2.txt",
+  "title": "Send Message v2",
+  "url": "https://developers.webexconnect.io/reference/send-message-v2",
+  "word_count": 2994,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/developer/send-message-v2.metadata.json"
+}

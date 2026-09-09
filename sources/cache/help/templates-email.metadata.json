@@ -1,0 +1,40 @@
+{
+  "category": "TOOLS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257872",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "5be244544d764c78587bdd5febf449d68db8e99d452fe6c402f9981aa4ab731b",
+    "source_path": "d5a407193a05197de81ab78a285a9b387a92060d65445a98e2b953c6d3c92c31",
+    "text_path": "f2cbdceec262c49e72d8026524f0cfab3e07fdf552bf60fa15c0bf7bd208070a"
+  },
+  "headings": [
+    "Configure a New Template",
+    "📘Email Subject",
+    "📘Note",
+    "Building Block Options",
+    "Manage unsubscribe link in an email",
+    "Add Layout (Palette)",
+    "Style (Palette)",
+    "Source Mode"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/templates-email.md",
+  "resolved_url": "https://help.webexconnect.io/docs/templates-email",
+  "retrieved_at": "2026-09-08T23:29:32+00:00",
+  "sha256_html_response": "636247b96931fe00c2f667015740630c671bfb3e48b11015b363d74f85d34f25",
+  "sha256_source_body": "d5a407193a05197de81ab78a285a9b387a92060d65445a98e2b953c6d3c92c31",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/templates-email.source.md",
+  "source_updated_at": "2025-04-17T12:14:28.084Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/templates-email.txt",
+  "title": "Email",
+  "url": "https://help.webexconnect.io/docs/templates-email",
+  "word_count": 1990,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/templates-email.metadata.json"
+}

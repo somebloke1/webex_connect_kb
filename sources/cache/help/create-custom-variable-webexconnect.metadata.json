@@ -1,0 +1,36 @@
+{
+  "category": "TUTORIALS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257825",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "f15466161c803ba4f2325bcd739e54e0e86f0be54f0ada841b7ff271dd9124cd",
+    "source_path": "a116ad1d5f90c8d6a43d8f605b346b83165d5f100eac5d7473ad5997455ecfb3",
+    "text_path": "a2dfa69188a5b5ac33a93e556391b5ad5f681ff6494764f5252073398a71062e"
+  },
+  "headings": [
+    "📘Note",
+    "Creating a custom variable",
+    "📘Note",
+    "Externalizing a variable"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/create-custom-variable-webexconnect.md",
+  "resolved_url": "https://help.webexconnect.io/docs/create-custom-variable-webexconnect",
+  "retrieved_at": "2026-09-08T23:28:49+00:00",
+  "sha256_html_response": "85b6cacb28c2f86de09c06220cf4adfaa3c334921137597f2537649c4051337a",
+  "sha256_source_body": "a116ad1d5f90c8d6a43d8f605b346b83165d5f100eac5d7473ad5997455ecfb3",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/create-custom-variable-webexconnect.source.md",
+  "source_updated_at": "2026-01-26T13:26:30.484Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/create-custom-variable-webexconnect.txt",
+  "title": "Creating a Custom Variable on Webex Connect",
+  "url": "https://help.webexconnect.io/docs/create-custom-variable-webexconnect",
+  "word_count": 243,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/create-custom-variable-webexconnect.metadata.json"
+}

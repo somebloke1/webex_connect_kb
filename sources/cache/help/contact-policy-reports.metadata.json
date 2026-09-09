@@ -1,0 +1,40 @@
+{
+  "category": "APP TRAY",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257925",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "bbf8b4b778009844f65e5854e3dae53de21d94959696bbdb28550ae2e17c04c1",
+    "source_path": "3505334b8c3d4546fcd1c27e98b38a6e9988c2861c4d45c53db5d3c227e4851d",
+    "text_path": "269b080eda0f6f64b939515b685447e84cd6fe4185b639a28224c468081cd9a9"
+  },
+  "headings": [
+    "📘Note",
+    "Accessing Reports",
+    "📘Note",
+    "Filter and Download Group Membership Activity Reports",
+    "📘Note",
+    "Report Fields for Group Membership Activity",
+    "Report Fields for Group Activity by Method",
+    "Report Fields for Group Activity By Keyword"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/contact-policy-reports.md",
+  "resolved_url": "https://help.webexconnect.io/docs/contact-policy-reports",
+  "retrieved_at": "2026-09-08T23:29:38+00:00",
+  "sha256_html_response": "80d33ea9657edfe128f024ed125a0cad44c059e97299edb20c2a5501df7a2514",
+  "sha256_source_body": "3505334b8c3d4546fcd1c27e98b38a6e9988c2861c4d45c53db5d3c227e4851d",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/contact-policy-reports.source.md",
+  "source_updated_at": "2026-07-30T12:28:25.027Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/contact-policy-reports.txt",
+  "title": "Contact Policy Reports",
+  "url": "https://help.webexconnect.io/docs/contact-policy-reports",
+  "word_count": 1220,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/contact-policy-reports.metadata.json"
+}

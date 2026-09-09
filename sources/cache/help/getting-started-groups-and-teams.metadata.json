@@ -1,0 +1,37 @@
+{
+  "category": "GETTING STARTED",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182577f7",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "f0d3180d82c3a6a3a41720fdcd9d2c59b9a08c28797e3f7029be0bf81d1dd28b",
+    "source_path": "4bcde311ab7e4829d573220b36de4882999911ce88603348498751ed1bcf6bda",
+    "text_path": "eefe13f0ea2dd11d301abd1649cdd470d9ff8acf6486d17380986ffeb57ea05a"
+  },
+  "headings": [
+    "📘User Role and Workspace",
+    "🚧Switch View",
+    "📘Note",
+    "🚧Sharing of Assets",
+    "❗️Deletion of shared apps"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/getting-started-groups-and-teams.md",
+  "resolved_url": "https://help.webexconnect.io/docs/getting-started-groups-and-teams",
+  "retrieved_at": "2026-09-08T23:28:47+00:00",
+  "sha256_html_response": "fdbfd5b7f4e0ee8fcdf94a2a08ecc6330e2e8355209af30c72d1962a5e4b8673",
+  "sha256_source_body": "4bcde311ab7e4829d573220b36de4882999911ce88603348498751ed1bcf6bda",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/getting-started-groups-and-teams.source.md",
+  "source_updated_at": "2024-12-16T13:35:51.226Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/getting-started-groups-and-teams.txt",
+  "title": "Groups and Teams",
+  "url": "https://help.webexconnect.io/docs/getting-started-groups-and-teams",
+  "word_count": 906,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/getting-started-groups-and-teams.metadata.json"
+}

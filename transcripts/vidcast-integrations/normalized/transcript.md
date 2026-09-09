@@ -1,0 +1,491 @@
+# Reusable integrations made easy with the Integrations Studio for Webex Connect
+
+Source: https://app.vidcast.io/share/31b01641-f081-4163-886b-5f0612b37033
+Method: local-subtitle-import; language: en; kind: local-unverified
+Retrieved/processed: 2026-09-08T23:32:47.135472+00:00
+
+Unedited machine/caption evidence. Verify exact UI fields, API names and numbers against the official text documentation.
+
+- 00:00:04.859 — Hello, everyone, and welcome to our latest Webex developer webinar.
+- 00:00:09.979 — My name is Phil Bilanti. I'm from the Webex Developer evangelism team.
+- 00:00:14.859 — We're very excited about today's session.
+- 00:00:17.739 — This one is reusable integrations made easy.
+- 00:00:20.940 — With the integration studio for Webex Connect.
+- 00:00:24.379 — I'm gonna have our presenters, our presenters, Sam and Martin introduce themselves as well when we get to the main presentation.
+- 00:00:31.780 — But we will be utilizing Slido for audience Q and A you can find the Slido right inside the Webex app for this webinar.
+- 00:00:40.480 — Or you can participate from your mobile device by scanning the QR code here.
+- 00:00:44.759 — So I will need another few moments to allow people to do that if that's the way they want to join, but otherwise you can use this Slido app that's embedded inside the Webex app.
+- 00:01:00.010 — But before we get to the main presentation, I just want to call out some February news for Webex developers, and i'll try to get through this quickly cause I know we have a pretty packed presentation, but leading off is the the Webex developer beta
+- 00:01:15.890 — program that has some great early access features that you'll.
+- 00:01:19.569 — Want to start testing out.
+- 00:01:21.730 — You can use that QR code to take you right to the developer beta portal, so if you want to get started, you can use that QR code or that URL at the bottom there.
+- 00:01:31.690 — But the 1st is the, you know, inside the beta is the Webex click to call, which is a brand new feature provided through the web call.
+- 00:01:39.410 — Calling SDK. With click to call apps for Webex calling enterprises can empower their customers to do things like connect with their support desk or their sales team, you know, just by a click of a button.
+- 00:01:52.129 — So, you know, really just removes the hassle of having to manually dial important phone numbers that are shown on the website, you know, on a phone.
+- 00:01:59.370 — So it enables like instant interactions right inside the browser.
+- 00:02:02.890 — The call can be done right inside there.
+- 00:02:05.789 — But, you know, next is AI assistant for Webex developers.
+- 00:02:12.150 — And this is a chat interface powered by a large language model, LLM to assist users to find the right Webex developer tools and generate working code to aid in building integrations.
+- 00:02:26.110 — So this AI assistant has extensive knowledge of the Webex developer platform, and that's really what truly separates it from other various GPT chatbots, and, you know, coming very soon to the beta program perhaps this week, maybe, is a preview of the
+- 00:02:44.869 — new. Converge Webex developer portal.
+- 00:02:47.480 — And this combines resources for both the Webex suite and Webex Contact Center platforms.
+- 00:02:53.960 — So today. They're two separate portals for contact center and Webex suite.
+- 00:03:00.030 — So they really poses a challenge for developers who are, you know, interested in building an integration for the Webex suite and Webex contact center.
+- 00:03:08.829 — So, you know, now everything is put together inside one portal.
+- 00:03:12.830 — The converged portal has an updated layout and navigation.
+- 00:03:16.310 — It makes it real easy for developers to find all the different services inside Webex Suite and contact center, and it's a vastly improved experience all the way around.
+- 00:03:27.869 — So we're really excited about getting that started.
+- 00:03:31.180 — So we encourage everyone to join the developer beta program, get early access to these great new features, and there's also been some, interesting things recently announced for Webex contact center administrators.
+- 00:03:47.620 — And you can use that QR code next to that one.
+- 00:03:50.610 — You know, to learn a little bit more about all the things that are there, but I just want to highlight a few of them that are listed in inside that page.
+- 00:03:57.850 — You know, 1st is the new list and publish APIs, and that's for programmatic flow management.
+- 00:04:04.530 — These new APIs supplement the existing import and export APIs.
+- 00:04:09.240 — For flows and sub flows, but just it enables the full automation of flow management for both new and migrating contact center organizations.
+- 00:04:19.879 — And next is a new update for contact center users in the United States who can now request ten DLC and WhatsApp numbers and directly through web.
+- 00:04:29.320 — Webex connect, you know, as a self service feature.
+- 00:04:33.040 — So previously those were not available, and now this has been released for users in the United States.
+- 00:04:41.519 — And last but not least on this section is the Cisco AI assistant for contact center.
+- 00:04:47.919 — And this AI assistant is to enhance efficiency and elevate customer satisfaction inside a contact center.
+- 00:04:55.278 — So it has a rich set of functionality to generate insightful call.
+- 00:04:59.679 — Summaries, it does topic analytics.
+- 00:05:02.759 — It does agent well being assessments and, automatic CSAT.
+- 00:05:07.319 — So just another great AI tool that's built specifically for Webex contact center.
+- 00:05:15.679 — But before I conclude the the news here for this month, I just want to make special mention that our registrations are now open for our next.
+- 00:05:22.839 — Next developer webinar in March and that topic is on Webex Instant Connect.
+- 00:05:28.329 — It's gonna be a really, you know, interesting topic about getting instant meetings that you don't need an even an account for.
+- 00:05:37.169 — You can visit our webinars page to sign up for that one.
+- 00:05:40.009 — I think that's gonna be in 25 March.
+- 00:05:43.289 — And with that, that's the that's the news.
+- 00:05:45.288 — I'm gonna hand it over to Sam Watson to kick off our.
+- 00:05:48.169 — Our main presentation. So Sam, please take it away.
+- 00:05:52.668 — Thanks for that Phil. I all and welcome to the latest Webex customer experience developer webinar, you know, reusable integrations made easy.
+- 00:06:11.909 — With the integration studio for Webex Connect.
+- 00:06:14.909 — I'm Sam Watson, I'm a product marketing manager at Webex focusing on the customer experience portfolio.
+- 00:06:20.669 — And I've been working with, you know, CX and CPAS technologies for over ten plus years working across various products like Webex Connect, new channels such as RCS, new technologies like AI agents.
+- 00:06:31.709 — And in this webinar I'm going to be joined by Martin Hadtech.
+- 00:06:35.709 — Martin will take a minute to introduce yourself?
+- 00:06:37.869 — Yep. Hi guys, my name is Martin Hardik.
+- 00:06:40.348 — I'm a solution architect here at Cisco Webex.
+- 00:06:42.988 — I've been with the company for over three years now kind of specializing in Webex Connect and cpass.
+- 00:06:51.669 — Cheers for that Martin. So the purpose of this webinar is to introduce you to our new integration studio.
+- 00:06:58.068 — Which is a new low code, you know, oh sorry it's an upcoming low code self serve platform for managing, you know, API integrations on Webex Connect.
+- 00:07:07.989 — So the agenda, and so what we'll do for the agenda for this webinar, I'll give a high level overview of the current integration challenges that our partner face, you know, how we.
+- 00:07:18.079 — Also solving that with the integration studio, before we get to probably what you most want to see, which is a live demo of the studio, which will be delivered by Martin, and then we'll wrap up with how to join our beta program.
+- 00:07:30.389 — And some Q and A as well. So to get started and just to set the scene a little, you know, how are partners currently building customer experience solutions with Webex Connect?
+- 00:07:43.789 — You know, firstly, they're starting with their integrations ecosystem, which is made up of all the APIs into the.
+- 00:07:50.469 — Systems and applications that their customers most utilize as well as APIs that connect into their own proprietary systems.
+- 00:07:57.309 — And they're exposing these systems and applications on Webex Connect through its flexible integration framework.
+- 00:08:05.249 — And these systems, you know, are wide ranging with common examples being our CRM CDP platforms, appointment scheduling systems, workforce optimization systems, and although Webex Connect supports multiple types of integrations, you know, ultimately
+- 00:08:20.329 — if a system and application offers a rest or a SOAP API.
+- 00:08:23.739 — Webex Connect can integrate with, with it to push data to that system or pull data from that system.
+- 00:08:31.619 — So what partners are doing is they're taking these integration APIs, you know, adding them, exposing them on Webex Connect and then using the flow builder to design, design various vertical and horizontal solution.
+- 00:08:44.939 — For their customers from, you know, campaigns and purchasing to appointment management solutions, billing and debt collection solutions, AI agents and surveys.
+- 00:08:53.939 — And, you know, and by this approach by using their AP, their integration APIs and the flow builder, they're able to capitalize on the demand for CPAs and customer experience.
+- 00:09:03.899 — Solutions, you know, unlocking new revenue streams, you know, and enhancing their brand stickiness with their customers by being able to offer more value to those customers.
+- 00:09:17.039 — Now when it comes to the flow builder, integrations are used by Webex, the Webex Connect Flow Builder in a couple of ways.
+- 00:09:26.039 — And the 1st way is as events, which is events and events are configured using the customer of custom event API, and they notify webex connect of events.
+- 00:09:37.079 — In a business system, which in turn triggers a flow or a rule on the platform.
+- 00:09:42.419 — You know, these events can be really wide ranging, but a typical example could be when a customer's details have been added to it, a new customer has been added to a CRM system, you know, that can trigger a welcome journey flow that will onboard the
+- 00:09:55.018 — customer and introduce that customer to your business.
+- 00:09:58.909 — Another type of event when the flows can be triggered are by inbound customer actions on channels.
+- 00:10:05.108 — Now e.g., if a customer sends a message via SMS, that could trigger a flow which brings an AI agent into that into that into that chat to take over that interaction and allow the customer to self serve.
+- 00:10:17.999 — So that's two ways that an integration can be used as events to trigger flows.
+- 00:10:24.079 — 2nd way integrations can be used within the flow builder are as knows that perform an action.
+- 00:10:31.399 — And this is where you are making an API call to a system to pull or push data to that system to.
+- 00:10:38.079 — To feel a certain action. You know, e.g., on the screen in front of you right here.
+- 00:10:43.049 — You're seeing we're integrating with Zoho CRM to check the customer details, to pull information from that system so we can personalize the message that we send to them.
+- 00:10:52.969 — It's an example of appointment reminder flow.
+- 00:10:55.249 — So e.g., when we ask the customer, do you want to confirm reschedule or cancel your appointment if they click.
+- 00:11:03.129 — We schedule, we need to look up in calendarly when the next available dates are and communicate that back to the customer.
+- 00:11:09.928 — So here's two examples of how integrations are used within the flow, not took it but to pull data from that system, you know, manipulate that data and then use it to power the interaction and to take the next step.
+- 00:11:26.879 — Now, as a partner developer, the challenge that you have with building and managing integrations is that, you know, for one integration and one customer, you know, Webex Connect customer tenant, you have to add the integration to Webex Connect and
+- 00:11:42.558 — configure the rules of how that could be used.
+- 00:11:44.759 — You can con you need to configure how that.
+- 00:11:46.999 — Integration can be used as nodes and events setting the URL endpoints, the input fields, the output fields, the authentication level.
+- 00:11:54.959 — You then need to, you know, then you need to actually build the flow, you know, dragging the nodes onto the canvas.
+- 00:12:00.948 — Configuring the nodes, join up all the business logic between the nodes, testing it, and then publishing it.
+- 00:12:07.508 — And then once that's live, you now need to manage the integration, you know, do you need to update it?
+- 00:12:12.069 — Is it working? Is it working as it should, should how many times does the flow been executing, how many times does that integration be used?
+- 00:12:18.948 — And you have to just, you have to do that.
+- 00:12:20.829 — Process for every integration for one Webex connect tenant for a customer.
+- 00:12:27.629 — And as a partner developer, you know, when you as a partner developer, you have to repeat this process across all your customer tenants of Webex Connect.
+- 00:12:38.148 — You have to go and that puts a humongous strain on, you know, developer time, effort, and resources.
+- 00:12:45.779 — And it also slow, you know, it slow it hinders the partner as well.
+- 00:12:49.339 — It slows down the time to market for new solutions, it reduces their scalability and ultimately ultimately by managing integrations in silos it makes it more complex and you know hinders the partner.
+- 00:13:06.959 — And this this challenge is ultimately caused by the type of integration nodes that a partner can currently use, within Webex Connect to, you know, expose their integrations.
+- 00:13:19.039 — You know, the 1st type of node that they can be used is a HTTP node, which allows for the quick creation of API calls in the flow.
+- 00:13:26.959 — This node can be copied and reused within the same flow and can be exported in the flow template as well, but it cannot be easily used across, you know, web multiple Webex Connect tenants, and it offers limited functionality and authentication.
+- 00:13:42.758 — 2nd option that they have are custom nodes.
+- 00:13:45.809 — And this is great when you want to create a reusable integration that can be used on the same tenant.
+- 00:13:52.769 — So you can configure the integration once on a tenant and then reuse it across multiple flows.
+- 00:13:58.089 — And it supports authentication as well.
+- 00:14:00.989 — But the problem is that with these nodes is that they cannot be used across multiple tenants and they cannot be exported when sharing flow templates as well.
+- 00:14:16.989 — So, you know, at Webex we're, you know, ever committed to providing robust tools.
+- 00:14:21.109 — Does that enhance our partners capabilities and, you know, solve the challenge and we want to solve the challenge and challenge of building and managing, you know, integrations for multiple.
+- 00:14:31.229 — Customer tenants of Webex Connect, you know, helping them to go live, helping to go to market quickly with new solutions and ultimately capitalize on the demand for cpass and customer experience solutions.
+- 00:14:41.749 — And you know with that we're really excited to, you know, announce the beta availability of our integration studio, which is a, you know, central self serve platform for building managing.
+- 00:14:51.348 — Deploying and monitoring proprietary or 3rd party API integrations on Webex Connect.
+- 00:15:00.659 — And, you know, one of the biggest advantages for, you know, partner developers that the studio will give them is that integrations will only have to be built once and then can be easily reused across multiple Webex Connect tenants.
+- 00:15:19.138 — So, once a partner developer, you know, has added the integration to the studio, configured how it can be used as events or nodes, nodes, it can then be submitted for approval and signed off by the Webex team.
+- 00:15:32.138 — Once that's done, once that's done, that integration can be instantly switched on for.
+- 00:15:38.859 — Instantly switched on for customer tenants for them to take that integration within the NO palette and use that integration within their flows.
+- 00:15:46.769 — In addition, you know, partner developers could embed these integrations nodes into the flows that they create, creating a template for these solutions, and then exporting these flows that contain these integration nodes in to their customer tenants,
+- 00:16:02.289 — accelerating the time to market for new solutions, new solutions reduce.
+- 00:16:06.289 — And the amount of effort it requires to develop, you know, to, to build integrations and deploy solutions.
+- 00:16:11.439 — Yeah, and this approach will, you know, help partners developers to work quicker and smarter through usability and it will help our partners to scale with these and you know accelerate speed to market of getting solutions to live for their customers.
+- 00:16:32.079 — Some other key features I'd like to highlight about the studio is that, you know, when an integration is ready, developers can publish, you know, have access to one, you know, one click deployment across multiple data centers and regions.
+- 00:16:44.998 — They'll be able to track in real time, you know, how that integration is being used.
+- 00:16:49.479 — Seeing how many tenants that integration is live on, how many services that integration powers, the number of flow executions that are using that integration, the target audience, is it private or is it public, the category, and other key metrics?
+- 00:17:04.639 — And then most importantly, you know.
+- 00:17:07.359 — The studio offers change management and version controls, which will allow developers to easily update each integration and roll those updates seamlessly across multiple Webex Connect customer tenants without impacting live services.
+- 00:17:27.359 — So what we've covered there is from, you know, an, I guess an operational angle of helping, you know, helping you to work quicker and smarter.
+- 00:17:35.459 — So and you know if that would be fantastic if you are a managed service provider cause as I said before, you'll be able to go live quicker with reusable integrations and flows.
+- 00:17:44.619 — But another great opportunity that the studio provides to partners, it provides a way of showcasing and monetizing their solution expertise, their experience within.
+- 00:17:55.539 — Integrations and their proprietary functionality because as a partner, you know which systems your customers use the most and how they want to use them.
+- 00:18:04.138 — So with the studio, what you'll be able to do is you'll be able to take the 3rd party public APIs such as those offered by Salesforce, Zendesk, agile CRM, you'll be able to take, you know.
+- 00:18:15.638 — Api's that you may have limited access to or have private access to such as Epic and guidewire.
+- 00:18:20.879 — And what you'll be able to do is you'll be able to add your brand to the integration.
+- 00:18:25.359 — So what you can see in front of me is an example of a Zendesk node, which a partner can own.
+- 00:18:30.319 — So you can see that it has it says Zendesk, but you have to put your part, you might have to put your name there, your.
+- 00:18:35.239 — You'll be able to say that you own it.
+- 00:18:37.119 — You'll be able to, you know, say who's provided by them, you'll be able to provide links for customer support.
+- 00:18:42.529 — And any documentation that you have as well.
+- 00:18:44.608 — So you'll be able to own the commercial relationship with your customers that even though they are using the integration sort of 3rd party public APIs or 3rd party private limited access APIs.
+- 00:18:59.219 — So, you know, as a partner, you know, you could choose to simply say, you know, here is an integration, turned it on for your tenant of Webex Connect, go ahead and build the flow.
+- 00:19:11.738 — But the other opportunity you will provide is actually build these integrations, you can also choose to wrap a managed service around integration.
+- 00:19:19.219 — To unlock new revenue streams.
+- 00:19:21.089 — And to provide more value to that customer, to your customers.
+- 00:19:26.569 — So this is an example of 3rd party and public APIs, and then you'll be again be able to do the same with your proprietary system APIs.
+- 00:19:34.169 — Exposed them to Webex Webex customers, to brand it, add your logo.
+- 00:19:40.178 — Describe the services that can power and you'll be able to do this for all the different types of APIs that you offer because what you are able to do as a partner, you'll be able to create private integrations.
+- 00:19:59.819 — Are just for your customers.
+- 00:20:01.059 — But what you'll also be able to do is to make integrations public and list them on the Webex app hub for Webex customers and other partners to discover and use, you know, fostering collaboration and you know helping other Webex customers to say wow,
+- 00:20:15.219 — that's how this partner's powering this integration powering a new solution lets use it.
+- 00:20:20.099 — So it's a great opportunity to drive awareness of your, your integration expertise and monetize your own APIs.
+- 00:20:27.709 — And 3rd party APIs as well.
+- 00:20:33.589 — So if a good example of that is Deep Medical who is an early access partner to the integration studio, beta program and Deep medical, you know, offer a AI powered tool that analyzes.
+- 00:20:47.909 — Various data points to predict patient NO shows to health care appointments, which we know is a huge challenge for healthcare providers costing millions of dollars every year.
+- 00:20:58.739 — So what we were able to do with with deep Medical is we were able to build an integration that combines their AI tool, exposes it and add it to Webex Connect and design an appointment reminder flow that powers so that when the AI toolbridge says,
+- 00:21:14.979 — hey, that customer may not be able to attend their appointment, let's.
+- 00:21:18.819 — Trigger this flow that notifies the customer that, hey, you have an upcoming appointment, would you like to confirm, change or cancel or rearrange that appointment?
+- 00:21:26.899 — So that's the solution, that's a good example of how an integration can be combined with the flow builder to power a valuable solution for customers.
+- 00:21:38.519 — And, you know, and, you know, now deep medical now they've done that.
+- 00:21:42.319 — They are now currently, you know, they are selling that solution to their customers, they're marketing that solution on their websites on their website as a service called DM connects.
+- 00:21:52.719 — And this is just a great example of showcasing of what the integration studio allow you to do when it comes.
+- 00:21:58.519 — To showcase your expertise, monetizing your APIs and creating new services for your customers.
+- 00:22:04.709 — So that's an overview, and with that I'm gonna pass over to the bit you've probably all been waiting for, which is the live demo of the integration studio.
+- 00:22:14.629 — Thanks Sam. Let me share my screen.
+- 00:22:20.789 — So hey guys, as Sam says, this is gonna be the demo of integration.
+- 00:22:24.668 — Studio. So if you can appreciate there's quite a lot to cover in terms of the studio itself, so we're gonna keep it fairly high level.
+- 00:22:31.709 — What we're gonna do today is we're gonna build ourselves an integration, so we're gonna build ourselves as a node that's gonna integrate with our coffee bar AI bots, and from that we're gonna import that into.
+- 00:22:44.509 — With Webex Connect and be able to test that so you should see kind of the end to end journey here is that you know to be able to show you how it works.
+- 00:22:53.999 — So before we get into the studio itself, I just wanted to clarify some terminology that you're gonna hear quite a lot on this call.
+- 00:23:01.278 — So, within integration studio, we use nodes.
+- 00:23:07.798 — So hopefully anyone familiar with Webex Connect will be familiar with nodes.
+- 00:23:11.799 — So these are your kind of plug and play out.
+- 00:23:14.439 — In Webex Connect to be able to say send an SMS, do decision branches, evaluations, all those kind of things.
+- 00:23:21.559 — So what integration Studio is doing is allowing us the ability to create nodes to be able to to be used in Flow Builder.
+- 00:23:31.169 — So what are nodes? So a node is essentially a collection of API requests which are refer to as methods.
+- 00:23:38.809 — So a method is an API request, a node is a collection of methods.
+- 00:23:43.449 — So each node must have at least one method.
+- 00:23:46.409 — So if we look at how we're doing this within the Epic nodes, we have.
+- 00:23:51.209 — Have say an appointment node with your methods to be able to change and update appointments and then you have a patient node, which is for creating patients, looking up patient details, et cetera et cetera.
+- 00:24:05.549 — In both of those, we have variables which hopefully you're all familiar with, but they are pretty much what they say on the TIN, they're just dynamic or static variables that we use in in each call.
+- 00:24:16.109 — Okay, just wanted to clarify that because you're gonna hear me say node about a hundred more times yet.
+- 00:24:20.828 — Okay. So let's get into the studio itself.
+- 00:24:23.969 — So the main studio is you have kind of two options at the top.
+- 00:24:29.488 — The 1st one just being your team.
+- 00:24:31.208 — So this is just where you add add users.
+- 00:24:34.649 — Quite basic really, you say you can add a user to put their email in.
+- 00:24:38.849 — There's two roles, so your developer is you can assist.
+- 00:24:41.769 — Admin role, your collaborator is more of like a tester role or.
+- 00:24:47.669 — Kind of admini role. So if you need more details on that, this ties nicely into the link to the documentation.
+- 00:24:55.629 — So we have documentation on here which can give you the kind of details on on all of that, but fairly basic in terms of creating users.
+- 00:25:04.029 — The main meat of this is your integrations tab.
+- 00:25:07.869 — So, within here, you'll have any published integrations, so once you've published anything, you'll see it in here, you can see the versioning, all that kind of thing.
+- 00:25:16.629 — This is our staging environment, so there's NO, there's NO published integrations on here.
+- 00:25:23.228 — This is a tenant that we were using for Cisco Live recently.
+- 00:25:27.709 — And for the lab sessions there.
+- 00:25:29.148 — So we do have a lot of drafts on here, so your drafts are the integrations that you're working on, anything that's in UAT that's not been published yet.
+- 00:25:38.819 — So you can see on here you can have as many integrations as you like.
+- 00:25:43.579 — To add a new integration, it's quite straightforward.
+- 00:25:46.219 — You just click add integration, give it a name, a description, upload a logo.
+- 00:25:52.378 — The key bit on here is whether you want it as public or private.
+- 00:25:56.039 — So public would mean it's available for any Webex Connect customers.
+- 00:26:01.159 — Private is more if you're doing this for your own tenants.
+- 00:26:05.678 — I should note on that, if you make it public, it doesn't mean that anybody could just use it.
+- 00:26:09.758 — It just means it is available to be requested.
+- 00:26:12.639 — So there's still that kind of request and approval process that you'd.
+- 00:26:16.119 — Have to go through there, but that's the difference between between those.
+- 00:26:20.318 — You've got your kind of standard things, your website, your contact details, as Sam mentioned, so support contacts, business contacts, those kind of things for when you push this out if somebody needs to get in touch with you.
+- 00:26:32.238 — So once you've created an integration.
+- 00:26:35.129 — There's a few kind of basic bits on here, so I'm gonna use one that we've already built just because I say this is already kind of synced to a tenant and it's just easier for me to to demo for speed.
+- 00:26:46.969 — So we're gonna use this one that we've already built here.
+- 00:26:49.529 — So a few bits to kind of cover before we get into an actual build on this.
+- 00:26:54.369 — So the. There are some doc, there is some documentation that you'd need to add to each of your integrations.
+- 00:27:00.129 — So there's a scope document.
+- 00:27:02.619 — There's the user guide and your data security and privacy policy.
+- 00:27:05.899 — So for the scope document we have a template here that you can, you can follow and say it's just got your kind of standard standard stuff on here in terms of detail and what the integration does.
+- 00:27:17.689 — Your user guides gonna be more about, you know, how you configure this.
+- 00:27:22.888 — Again, this is gonna depend on what your integration is.
+- 00:27:26.009 — If this is an internal one, you may not need to have too much detail on there.
+- 00:27:30.368 — Depends how simple or complex your your integration is.
+- 00:27:33.769 — And your data security and privacy policy is gonna be.
+- 00:27:37.609 — Issue company one and say we just need to to link that into into there as well.
+- 00:27:43.108 — Okay, another thing that we are, I'm gonna cover a couple of things that we're not actually using in here but are quite important.
+- 00:27:49.269 — So there is a concept of system variables, so if you are using something for your integration, so an integration will have, could just be one node or it could be multiple nodes.
+- 00:28:01.789 — So if we think about that example I gave you before of epic, Epic would be the integration, then you have different nodes in there.
+- 00:28:09.949 — But you may have variables that are used across all your nodes.
+- 00:28:15.149 — So e.g., like, I don't know, a reporting URL or username and password which are consistent across.
+- 00:28:22.469 — All of your integrations, so you may wanna add that as a as a system variable.
+- 00:28:27.628 — One thing that you can do here is you can define.
+- 00:28:32.339 — The variable type, so if you have something that's gonna be the same for every, every client, you can use that as an environmental variable or as say you have something like a client key or something that you want to use as a variable, you can set it
+- 00:28:49.019 — as a tenant variable, so that could be def defined as.
+- 00:28:51.899 — Each tenant that you've distributed to.
+- 00:28:55.738 — The other thing that's gonna be, we're not gonna be using for our little demo is gonna be authentication, but obviously this is a big piece.
+- 00:29:04.178 — So I'm not gonna get too bogged down in it, but it's got your kind of standard authentication methods here, so your basic oauth, OAuth two.
+- 00:29:13.259 — I mean, anyone who's been familiar.
+- 00:29:14.699 — Really with Webex Connect, it's the kind of same.
+- 00:29:17.819 — You know, same setup here as as you'd be familiar with in, in Webex connect.
+- 00:29:21.939 — So being able to, you know, do refresh tokens, tokens, all that kind of stuff in here.
+- 00:29:28.498 — Once you've configured those off methods, you kind of can use them within your, within your nodes and reuse it across the anything in your integration.
+- 00:29:38.579 — The other bit I'm gonna skip over a little bit is events.
+- 00:29:42.138 — So Sam gave a good example of how events can work.
+- 00:29:45.059 — This is your kind of inbound triggers.
+- 00:29:49.019 — This is where you can set those up.
+- 00:29:50.378 — You can add events to be able to do inbound routing or webhooks or async calls.
+- 00:29:59.388 — If this actually loads for me.
+- 00:30:02.239 — This is always the way with live demos?
+- 00:30:13.078 — Okay, let me try that again.
+- 00:30:16.318 — So yeah, in events I say you can just do either an inbound event or an asynchronous event.
+- 00:30:21.559 — And so you can define that to be used as a start node within rules or as a receive node to restart calls.
+- 00:30:28.909 — So I say I'm not gonna go into that too much and say you can get more details on that if if need be.
+- 00:30:35.789 — It's all in the, the documentation that we touched on a moment ago.
+- 00:30:41.428 — Okay, but what we are gonna do today is we're gonna use nodes.
+- 00:30:45.269 — So as I mentioned before, the node is what you.
+- 00:30:48.829 — Would actually publish on a.
+- 00:30:51.339 — Well, you would publish events as well, but primarily nodes would be what you can publish to to a tenant.
+- 00:30:57.819 — So we're gonna create a node for our coffee bar.
+- 00:31:01.299 — So anybody who's been to one of our Cisco events will hopefully have seen our Webex coffee bar.
+- 00:31:07.779 — So this is. A coffee bar that's using an AI chat bot, so you can order a coffee by your mobile phone that will send it through to our beresters.
+- 00:31:18.438 — They will then make a coffee for you.
+- 00:31:21.319 — So for the purpose of the demo, we're gonna be using our coffee bar bot, our demo bot.
+- 00:31:26.599 — It's just a nice bot to be able to integrate with so we can send it.
+- 00:31:29.839 — A message, it'll send us a message back and we can build a, build a flow out of it.
+- 00:31:34.589 — Okay, so what we're gonna do, we're gonna create a node, and we're gonna call it Martin's coffee bar.
+- 00:31:46.828 — I'll just give it a quick description, so AI coffee bar.
+- 00:31:50.889 — For demo. This output prefix variable is what you kind of set for as a unique identifier, this is set integration level don't really need that too much.
+- 00:32:03.249 — This is what I mentioned earlier in terms of your authentication, so we've not got any auth set, but if you did have like your.
+- 00:32:10.369 — Authentication methods, you can just select those here.
+- 00:32:13.049 — So we're gonna say like that as NO auth.
+- 00:32:15.129 — And if you need to do any kind of custom node UI, you can also add that here.
+- 00:32:20.749 — Let's say this is gonna be quite a basic node.
+- 00:32:22.949 — So we're gonna add that here and you can see we now have a node.
+- 00:32:28.028 — So we've got martin's coffee bot as a node, and we have NO methods assigned to it.
+- 00:32:34.149 — So we need to add a method, so we need to add our API call in here.
+- 00:32:38.609 — So we're gonna add a method, and this method is gonna be to send a message to the bot.
+- 00:32:44.089 — So we're gonna be send, send message to bot as the method name.
+- 00:32:50.489 — Connection and timeouts just standards you know what you wanna, how long do you wanna wait before considering it a timeout.
+- 00:32:57.409 — So we're gonna do 10 s. Is for that 10000 milliseconds on each.
+- 00:33:01.569 — Your HTTP methods are just your standard REST API calls here.
+- 00:33:05.089 — So we're gonna be doing a post.
+- 00:33:08.758 — And we're gonna be hitting our coffee bar endpoint, which now I'm gonna swing in here.
+- 00:33:16.719 — You can use variables in here as well, so if you have any variables in your URL, you can add them in just using the standard dollar and brackets.
+- 00:33:29.479 — Type and let's say just do the past variable, say we're not using that on here, so we're happy with that.
+- 00:33:34.678 — It's just a static URL. So we've got our API call, we now need to define what we're actually sending in it.
+- 00:33:41.598 — So this is in the defined input variable section.
+- 00:33:45.709 — So what we're gonna do, we're gonna expand that here.
+- 00:33:49.109 — Again, you can do custom UIs and and the likes using JavaScript if you, if you like.
+- 00:33:55.509 — Let's say we're not doing anything that fancy on here, so we're just using the default.
+- 00:34:00.108 — We are gonna encode values to UTF, UTF eight just to avoid any dodgy character.
+- 00:34:05.429 — Is. URL parameters is where you can do query strings.
+- 00:34:11.678 — We're not doing that we're actually using a request body, so we don't need to add anything in there.
+- 00:34:18.038 — We do need a HTTP header though, so we're gonna add a header to our request and this is just a standard content type.
+- 00:34:26.399 — Just to advise. What we're actually sending.
+- 00:34:29.749 — So this can be static, dynamic or a system variable.
+- 00:34:33.549 — So in this case, it's just static and we're just saying we're sending application JSON.
+- 00:34:41.028 — We don't need any help text on here cause I say it's a static variable, Nobody needs to change this or do anything with it, so we keep that as null.
+- 00:34:48.469 — And then we click add variable.
+- 00:34:50.619 — So you can see now we've got our header in the list below.
+- 00:34:54.419 — Now we just need to add our request body.
+- 00:34:58.259 — So you can add this in multiple ways, so similar to most systems, you can use text JSON, XML or form.
+- 00:35:07.339 — So we're gonna be using JSON.
+- 00:35:09.779 — You can just paste in your, the body of your request here and kind of if you use this kind of format in for variables, so we've got bot message and our thread ID as variables and we've got agent ID as static, and you can click on this format and add
+- 00:35:27.419 — variables to bring that through.
+- 00:35:29.539 — There's a little bug on this unfortunately at the minute, but you guys won't ever see that, so that should be fixed by the time any of you get your hands on it, but I just need to pass that twice.
+- 00:35:39.538 — So what we've got here, you can see it's pulled through my thread ID, it's through my bot message as variables to use in this in this flow.
+- 00:35:49.099 — So we need to configure them now.
+- 00:35:51.139 — So by default they're just kind of static with nothing in there so as you can see it's prompted me to configure these.
+- 00:35:57.898 — So the thread ID that was sending to the bot, this is like the, the session ID.
+- 00:36:03.699 — So this is what we use to say, this is the same session, you know, it's not a new conversation each time.
+- 00:36:10.058 — This is how we kind of maintain the same conversation.
+- 00:36:13.138 — So this is gonna be a dynamic variable in the fact that it's gonna change on every.
+- 00:36:17.579 — Every request or potentially change on every request.
+- 00:36:20.938 — We'll need to provide it on every request.
+- 00:36:23.059 — So we're just gonna call it the same thing.
+- 00:36:25.979 — So thread ID, we're gonna need that on every request.
+- 00:36:29.579 — So we're gonna mark it as mandatory and this help text is optional, but I'm just gonna put like unique ID for.
+- 00:36:37.649 — Session. Your input types, so you can have either text box, date and time or a dropdown.
+- 00:36:46.649 — So if you set a dropdown you can just add the values that are available there.
+- 00:36:51.289 — We're just using text box.
+- 00:36:53.169 — You can also use regex to.
+- 00:36:55.979 — Make sure that it's a certain format, you know, if you wanted to, it to be a number or a date or whatever you want in there, you can use that regex validation to to enforce that.
+- 00:37:08.299 — But for us here, we just want thread ID dynamic and as a text box, so we're gonna update that.
+- 00:37:14.569 — We can see now that has been updated here, and we just need to do the same thing for our bot message.
+- 00:37:22.009 — So again, this is gonna be a dynamic variable.
+- 00:37:25.049 — This is the message that we send to the bot, so we're gonna be sending this on every request.
+- 00:37:29.909 — Again just gonna use the same key name for the name and I'm gonna mark that as mandatory, and I'll just put a help text of this is the message for the bot.
+- 00:37:45.229 — Oops. Again text box, NO regex on this quite straightforward field.
+- 00:37:53.709 — Okay, so what we got so far?
+- 00:37:55.708 — We've got our node, we've got our methods with our API requests and our body and our input variables.
+- 00:38:04.148 — We just need to set the output now, so.
+- 00:38:06.989 — Can we go down to our defined output section.
+- 00:38:10.908 — Again, you can format this doing the past variables.
+- 00:38:14.868 — Again, you've got the different formats available.
+- 00:38:18.708 — You can do synchronous or async if needs to be.
+- 00:38:22.668 — For this we're just getting into a sync synchronous API call.
+- 00:38:26.469 — I'm not gonna. Past this one, I'm just gonna add my variable.
+- 00:38:29.668 — So this is what we want to get out of our bot, so we're sending a message to the bot.
+- 00:38:34.388 — This is what we're getting back from the bot.
+- 00:38:36.349 — So I'm just gonna call it.
+- 00:38:38.920 — Bot response. We're gonna be looking in the body of the request.
+- 00:38:44.960 — So when we get a response back from the bot, we're gonna look in the body of the request and we're gonna be looking for this dollar.response.
+- 00:38:53.919 — So that's just something unique to this, this part with just the inner.
+- 00:38:58.680 — The response, we're looking for the path of dollar.response, that's where our bot is gonna respond to.
+- 00:39:05.279 — We don't really need we can set this as mandatory, we should get a response on every call, we don't really need to, but for the purpose of this we will, and we're not gonna use any debug keys on this.
+- 00:39:14.700 — So we're gonna add that output variable, so that's our output of the bot.
+- 00:39:19.700 — We now just needed to determine whether we determine how we determine a success or a failure of this call.
+- 00:39:26.580 — So when we make that API request, how do we know.
+- 00:39:30.150 — If it's a success or a failure, like this determines the outcome branches when we when we put this into connect.
+- 00:39:37.270 — So for the success response, we're just gonna add a success outcome, simply call it success.
+- 00:39:45.430 — We're gonna look at the HTTP status.
+- 00:39:47.790 — So when we make an API. Well, IPR request, we should be getting a HTTP status of 200 back.
+- 00:39:57.469 — So we're basically saying if we get a 200 response back, we're considering it a success.
+- 00:40:03.150 — So we'll add that as a node outcome.
+- 00:40:05.670 — And we just need to add an error outcome as well.
+- 00:40:08.549 — So again, just calling this error, again looking at HTTP status.
+- 00:40:13.990 — If we know that 200 is a success, then we're gonna say if it doesn't equal 200, then it must be an error.
+- 00:40:22.110 — So we'll add that in as well.
+- 00:40:25.870 — Okay, so we're not gonna add a timeout said this should be fine, but we have now defined our our method, so we've got an API request, we've got our inputs, we've got our outputs, we should be able to submit this now.
+- 00:40:41.260 — And you can see we have Martin's coffee bar as the node with send message to Bot as our, as our method.
+- 00:40:48.900 — So we should be all good, but we can see here we have not tested this yet.
+- 00:40:54.060 — So we want to be able to push this to our UAT tenant, but 1st we need to test it.
+- 00:40:59.260 — So we can click back into.
+- 00:41:00.740 — The node. Into the method, sorry.
+- 00:41:04.259 — And we go down to this test method to test the method.
+- 00:41:09.419 — So you can either use a test data profile or instant test data.
+- 00:41:14.060 — I'll show you this in a moment.
+- 00:41:16.500 — So what we're gonna do is gonna run an instant test.
+- 00:41:21.000 — And this is where you can start to play around with what you've built, so you can see here we have our method which is what we called some message to bot.
+- 00:41:28.879 — We've got our thread ID with our, with our help text and our bot message variables here.
+- 00:41:36.400 — So I'm just going to add a unique variable for thread ID.
+- 00:41:41.240 — And then for the bot message I'm just gonna say hello to our bots.
+- 00:41:46.720 — So what we can do now, we can test that.
+- 00:41:49.200 — So this is gonna send that API request.
+- 00:41:52.360 — So it'll show you your kind of raw response here.
+- 00:41:56.240 — So you can see this is the payload that we're getting back from the.
+- 00:42:00.780 — On the bot, and if you go to this output variables and load outcome, you can see this is where it got the bot response, so this is the variable that we defined, and this is looking for that dollar.response which relates to this and you can see we're
+- 00:42:17.059 — getting a 200 response back, so the node outcome is a success.
+- 00:42:21.060 — So, we're looking good. The last step we need to do here is just to save that as a test data profile, so it's just something you need to do for, to satisfy before pro promoting to UAT.
+- 00:42:35.650 — But it's also quite useful, so I'm gonna save this as an admin profile, and what that enables me to do then is if I came back in.
+- 00:42:43.250 — To this at a later date and I wanted to test that.
+- 00:42:45.770 — I can use that test data profile and it'll already have my my variables populated and I can just kind of trigger it again.
+- 00:42:54.500 — Quite easily, it may not seem very useful when you just have two basic variables, but trust me, when you have a whole heap of variables, it's it's very much a, a time saver and a lifesaver.
+- 00:43:09.540 — Okay, so we've tested our bot.
+- 00:43:12.680 — We should now be able to push this to our UAT tunnel.
+- 00:43:17.640 — So we can see it's it's now been successfully tested.
+- 00:43:21.680 — We're gonna come back out to this main screen here.
+- 00:43:24.919 — We can validate this integration.
+- 00:43:28.769 — You can see it has its documentation provided.
+- 00:43:32.210 — We've got our system variables, we're not using auth, but it satisfied it cause it's, you know, it's not in use, it's not tested.
+- 00:43:40.050 — And our node has got the green tick cause we've we've tested it.
+- 00:43:43.650 — So what we can do now, we can push this to our UAT tenant.
+- 00:43:48.169 — So when you get the integration studio, you will also be, provisioned a, a Webex Connect tenant that is connected to it, so your UAT tenant.
+- 00:43:59.769 — So this has already kind of been synced up, so I'm just gonna.
+- 00:44:03.490 — Push this to our test tenant, so I'll just republish to UAT and what it's gonna do is gonna push that node onto, onto our tenant.
+- 00:44:16.209 — So you can see that's been published.
+- 00:44:18.249 — We can now jump onto our Webex Connect tenant.
+- 00:44:22.050 — I've already got a template flow to use here just to speed this process up cause we're kind of against the clock.
+- 00:44:27.729 — So I'm gonna upload a flow, oh sorry copy that template flow, and I'm just gonna call it in test flow, so they should import that temp.
+- 00:44:42.529 — Which is a very basic flow which is gonna receive a message from, from WhatsApp.
+- 00:44:48.539 — And that message is then gonna be sent to our bots.
+- 00:44:53.060 — We can then respond to the to the bot.
+- 00:44:57.420 — I'm not sure why that's taking a moment, might have needed me to log back in.
+- 00:45:01.300 — Yep, so let me try that again.
+- 00:45:08.180 — Okay. So yeah, it's gonna be a very basic flow just to be able to send a message to our bots and that relayed to us on on WhatsApp.
+- 00:45:23.360 — So at the end of this, we're gonna be able to test this as well.
+- 00:45:25.959 — So this is the trigger for WhatsApp, so it's saying when we get an incoming message on WhatsApp, if it contains.
+- 00:45:32.280 — It's. And we're just gonna use the word testing then to trigger this flow.
+- 00:45:38.600 — What we're also doing here, we've got some variables for our thread ID and our bot message, so we just setting the thread ID to be the transaction ID of this flow.
+- 00:45:47.519 — We got our bot message that we're triggering just to say hello on the initial message because we're kind of triggering.
+- 00:45:53.040 — Get with our name. Okay, we've got a little templated flow already built here.
+- 00:45:59.549 — I'm gonna delete this node.
+- 00:46:01.589 — Now that we've synced this up, so this is your kind of nodes in the Webex Connect as I mentioned, and what we should see here is our coffee bart node.
+- 00:46:13.190 — If I can remember what I call it, that was the one.
+- 00:46:15.750 — Mark is coffee bot. So what I can do, I can just drag that in.
+- 00:46:20.910 — I can go into here, you can see similar to the test that we did a moment ago, you've got your method here, you've got your thread ID, bot message variables, which we can quickly map to the ones we have set in the flow.
+- 00:46:34.620 — And then we just need to define our output.
+- 00:46:37.380 — So this is the input of the node.
+- 00:46:38.899 — And then in the transition actions is gonna be where we set our output.
+- 00:46:43.020 — So we're gonna say when we leave this node, we want to send our bot response to be the response from.
+- 00:46:52.040 — This node. So we're configuring it to pass in the thread ID bot message and then we're getting the bot response when we come out of it.
+- 00:47:01.399 — Okay quite straightforward, just gonna hook this back up to the flow.
+- 00:47:04.880 — So we're getting a message, we're sending that to the bot.
+- 00:47:08.320 — That bot message is gonna relay to us in this node to.
+- 00:47:11.720 — To send us the bot response.
+- 00:47:13.559 — Then we're gonna listen for a response back from us on WhatsApp and we're gonna set that to be.
+- 00:47:20.520 — The, the bot message, sorry on the on the receive node, we're gonna send that to be the bot message, and then we're gonna send that back to the bot.
+- 00:47:33.159 — So really quite a straightforward flow there.
+- 00:47:35.520 — I'm gonna save this and put this live.
+- 00:47:39.510 — I'm gonna give that a moment to to trigger, and what we can do now, and I say you can test this as well if you like at home is we're gonna trigger this flow via via WhatsApp, so the keyword there was this testing.
+- 00:47:54.149 — So. If we open up this here, if you scan this QR code, say it may need a second to to sync kind of rubbing against this let me share my screen as well.
+- 00:48:09.550 — Sorry. Okay, so I've just scanned that QR code and take you to the screen, so I'm just gonna trigger this with testing, and this should if the demo gods on my side, trigger the flow and interact with our bot.
+- 00:48:36.069 — So you can see now it's hit our coffee bar bot, and I could say, I'd like.
+- 00:48:41.470 — Coffee please. And you've got that loop.
+- 00:48:45.610 — So it's saying the message I send back will then trigger the bot again.
+- 00:48:50.770 — And again, you can kind of ask, you know, what do you want to say I'll say all that day.
+- 00:48:57.009 — So that's it in a nutshell, I say it's quite a lot to cover in that time.
+- 00:49:03.170 — So you can scan that if. You'd like to to mess around with it yourself.
+- 00:49:08.730 — But hopefully that gives you a little flavor of how quickly we can kind of spin up integrations, how you can publish them to your environments, how it works in terms of the plug and play elements in, in Webex Connect.
+- 00:49:22.410 — And yeah, hopefully gives you.
+- 00:49:24.250 — A taste of what you can do with this.
+- 00:49:27.090 — And with that I will pass back to to Sam.
+- 00:49:31.810 — Thanks for that Martin. It's a really great example, like I said, how quickly you can configure an integration and then publish that integration to a Webex Connect event, whether that be your own or whether that be your customers, so that's a
+- 00:49:42.929 — fantastic example. Okay, so just to wrap up the, just to wrap up this webinar, yeah, we are looking for partners to join our integration studio, beta program.
+- 00:50:02.310 — And if if you, you know, if you're a partner who's interested in, you know, talking to us more about how you can potentially leverage the integration studio, how you can leverage Webex Connect, you know, what sort of use cases that you might be able
+- 00:50:15.230 — to power, you know, sign up to the beta program, and then you, you know, if you are accepted, you know, be able to start building.
+- 00:50:22.310 — In reasonable integration nodes that will help you to go live quicker.
+- 00:50:25.790 — You'll be able to, you know, receive a bit more personalized support, you know, to successfully publish your 1st integrations.
+- 00:50:31.830 — And you'll be, you know, some of the 1st partners to use the studio and potentially promo, you know, publish or promote your integrations on the Webex app hub.
+- 00:50:39.990 — And not only that you'll be able to, you know, provide us feedback on the studio to help us you know shape the studio as it moves forward towards GA, so I'll just leave that on the screen for a moment to give you all the chance to scan the QR code.
+- 00:50:51.100 — And, I also believe there is a link being posted in the chat as well.
+- 00:51:00.540 — So with that I think we've come to the end of our webinar.
+- 00:51:03.859 — If there's any chance for Q and A, we can do that now.
+- 00:51:07.260 — Okay, great. Thank you Sam and Martin.
+- 00:51:10.139 — That was a great presentation and demo.
+- 00:51:12.460 — Super insightful. There was only two questions that came in.
+- 00:51:17.340 — One of them was the pertinent to the material.
+- 00:51:20.700 — It was answered inside there, but I don't know if you wanted to expand a little.
+- 00:51:24.500 — And the question was, can integrations be published.
+- 00:51:27.260 — Like, like Salesforce.com which you then customize for your tenant.
+- 00:51:32.020 — Yeah, if you've if you've marked that integration as public, it will be.
+- 00:51:39.220 — So, like I said, you'll be able like I mentioned in, in earlier in the webinar, you'll be able to take that integration and figure it via the studio choose whether or not you want it to be a private or public, and then if it is public, it then.
+- 00:51:51.980 — It can be. You know, it can be accessible by any Webex Connect customer tenants.
+- 00:51:59.119 — Fantastic. And there was another question around, you know, where can they find previous you know webinar recordings, you know, when it comes to like all of these series of webinars, which includes some web.
+- 00:52:13.360 — Webex Connect topics. You can find those over at a developer portal.
+- 00:52:17.800 — Developer.webex.com/webinars.
+- 00:52:21.680 — But if you want to look, for, you know, specific content on Webex Connect, you can also go directly to their developer portal.
+- 00:52:31.720 — That's developer.cisco.com/Webex-connect.
+- 00:52:38.040 — And that's where you can find all the, you know, the developer content.
+- 00:52:41.360 — You know, specifically for Webex Connect.
+- 00:52:44.360 — And, I was gonna say, yeah, that's a great link to use because that only not that only not has links to our documentation, but you're able to find links to labs that will help you build your 1st flows and you'll also provide a link to the sandbox,
+- 00:52:58.280 — which is our, you know, a way of trying webex connect with.
+- 00:53:01.400 — Without having access to a full tenant, so it's a great link to use.
+- 00:53:05.020 — Yep, I know developers love getting hands on and getting all the tools to be able to do that.
+- 00:53:10.059 — It's fantastic. So it looks like that's, that's about it for today's session.
+- 00:53:16.780 — This session is has been recorded, so it's gonna be up on our webinars page within the next few days or so.
+- 00:53:23.540 — So just be on the lookout for the.
+- 00:53:24.740 — That if you want to pass that along to any of your colleagues or friends that want to check this one out, and you can always reach out to any of us if you ever have any questions that weren't answered here today.
+- 00:53:36.330 — And with that, this concludes our session.
+- 00:53:38.969 — Thank you again for joining.
+- 00:53:40.609 — Have a great day. Thank you.

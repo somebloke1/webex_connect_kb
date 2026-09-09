@@ -1,0 +1,40 @@
+{
+  "category": "Webex Engage Standalone Nodes",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257981",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "9af15a192ff722467ac761ef41d4e1c193c558aaca8221629fe4144dd5d93042",
+    "source_path": "d5ab4301f89f16cab1f71a27fe575502cc184778f16b9b8d97cddaec76554f10",
+    "text_path": "411a2ebc62e1748e58aa4380d6d20b9838ba77f7258880852256e49e6540b2b9"
+  },
+  "headings": [
+    "Route to a Team queue",
+    "Configuration",
+    "Output variables",
+    "Node outcomes",
+    "Route to a Skill queue",
+    "Configuration",
+    "Output variables",
+    "Node outcomes"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/transfer-conversation.md",
+  "resolved_url": "https://help.webexconnect.io/docs/transfer-conversation",
+  "retrieved_at": "2026-09-08T23:29:30+00:00",
+  "sha256_html_response": "b7b53ad12e2f1f2243ff91122dcb58b01d29dbeea1584593d2c3b2ea0927abd2",
+  "sha256_source_body": "d5ab4301f89f16cab1f71a27fe575502cc184778f16b9b8d97cddaec76554f10",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/transfer-conversation.source.md",
+  "source_updated_at": "2026-04-14T11:20:11.420Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/transfer-conversation.txt",
+  "title": "Transfer conversation - WxEngage standalone",
+  "url": "https://help.webexconnect.io/docs/transfer-conversation",
+  "word_count": 625,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/transfer-conversation.metadata.json"
+}

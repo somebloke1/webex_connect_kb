@@ -1,0 +1,308 @@
+You can configure Outbound Webhooks to receive a copy of delivery notifications for messages sent via Instagram and for a copy of incoming messages received using Instagram by navigating to 'Assets -> Integrations -> Outbound Webhooks' sections in the platform.
+
+## Outbound Webhook configuration for tracking Instagram message delivery status
+
+If you want to track message delivery status, select the Webex Connect Service you are sending the Instagram messages from under 'Entity' dropdown. Select the channel as Instagram.
+
+```json Read
+{
+    "deliveryInfoNotification": {
+        "deliveryInfo": {
+            "timeStamp": "2022-07-11T15:40:35.113+05:30",
+            "Description": "Read",
+            "code": "7502",
+            "deliveryChannel": "instagram",
+            "additionalInfo": "",
+            "destination": "5275638769194520",
+            "destinationType": "igsid",
+            "deliveryStatus": "Read"
+        },
+        "subtid": "",
+        "transid": "95d9d8fb-fe31-4409-998a-69073f93bc57",
+        "callbackData": "customerID123|1234|new_sale",
+        "correlationid": "de36bb32-3f5d-46c9-b132-15e010a80ccc"
+    }
+}
+```
+```json Submitted
+{
+    "deliveryInfoNotification": {
+        "deliveryInfo": {
+            "timeStamp": "2022-06-27T12:49:47.752+05:30",
+            "Description": "Submitted",
+            "code": "7501",
+            "deliveryChannel": "instagram",
+            "additionalInfo": "",
+            "destination": "5275638769194520",
+            "destinationType": "igsid",
+            "deliveryStatus": "Submitted"
+        },
+        "subtid": "",
+        "transid": "4da0671d-84bd-43ff-86a7-c08f3a0b5d21",
+        "callbackData": "customerID123|1234|new_sale",
+        "messageId": "aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDU0MDI4MzI3NjMzOjM0MDI4MjM2Njg0MTcxMDMwMDk0OTEyODMwNjQwMjE1NjYyMzExMDozMDU1MzYwNzYxMjU2MjI4ODgyNDgzNDczMjY4NzYyMjE0NAZDZD",
+        "correlationid": "de36bb32-3f5d-46c9-b132-15e010a80ccc"
+    }
+}
+```
+```json Failed
+{
+    "deliveryInfoNotification": {
+        "deliveryInfo": {
+            "timeStamp": "2022-06-08T06:28:57.847Z",
+            "Description": "Service provider exception.",
+            "code": "7010",
+            "deliveryChannel": "instagram",
+            "additionalInfo": "(#200) Please check if IG business connected to FB page correctly. Or check if page token has enough IG permissions granular scopes for IG send api.",
+            "destination": "5343911549005044",
+            "destinationType": "igsid",
+            "deliveryStatus": "Failed"
+        },
+        "subtid": "",
+        "transid": "2390a61e-19a8-4689-a697-518bc9380084",
+        "callbackData": "customerID123|1234|new_sale",
+        "correlationid": "de36bb32-3f5d-46c9-b132-15e010a80ccc"
+    }
+}
+```
+
+
+
+## Outbound Webhook configuration for tracking incoming Instagram messages and events
+
+If you want to track incoming messages or events, select the Instagram channel asset you are receiving the messages on under 'Entity' dropdown. 
+
+### Incoming Messages
+
+```json Text
+{
+    "userId": "",
+    "channel": "instagram",
+    "igsid": "5343911549005044",
+    "appId": "a_637892544015410000",
+    "event": "MO",
+    "ts": "2022-06-03T14:46:00.620+05:30",
+    "messageId": "aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDUyNTc5MzAzMDcwOjM0MDI4MjM2Njg0MTcxMDMwMDk0OTEyODE4MjUwOTQ0MTY4MjE2NTozMDUxNTQ4NTA1NTY5MTA4NjI3NDI0MzE1MzY1MjM1MDk3NgZDZD",
+    "tid": "1dc2cfe6-90db-4d23-ab92-61171ecb7df7_0",
+    "message": "This is Text MO to Instagram channel",
+    "attachment": "",
+    "timestamp": "1654247759591",
+    "attachmentType": "",
+    "attachmentUrl": "",
+    "storyReplyUrl": "",
+    "repliedMessageId": ""
+}
+```
+```json Media Message
+{
+    "userId": "",
+    "channel": "instagram",
+    "igsid": "5343911549005044",
+    "appId": "a_637892544015410000",
+    "event": "MO",
+    "ts": "2022-06-03T14:55:04.879+05:30",
+    "messageId": "aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDUyNTc5MzAzMDcwOjM0MDI4MjM2Njg0MTcxMDMwMDk0OTEyODE4MjUwOTQ0MTY4MjE2NTozMDUxNTQ5NTA0MzkzNzA3NDcyNjkwNDQzODkwMzAxMzM3NgZDZD",
+    "tid": "01969922-28fe-4d8f-a328-2721c1db08ad_0",
+    "message": "",
+    "attachment": "[{\"payload\":{\"url\":\"https://lookaside.fbsbx.com/ig_messaging_cdn/?asset_id=344034221172801&signature=AbwBV7WmOsbGQC30lpfcEecP3YsiJWa7fJeHFD7XxbCDyqUDjeOpPrewtAK0EyZ3rwcH6Jv_LzlbtY_ffxXdndHepdaFUtM5d46IgKwLbEs_ixBE0O8bCddl7Hw4EEt6Vc2qobBg3Xd3MlLTmYesptfQZ76h3s5npVv9zAhSS7ulTAU\"},\"type\":\"image\"}]",
+    "timestamp": "1654248301055",
+    "attachmentType": "image",
+    "attachmentUrl": "https://lookaside.fbsbx.com/ig_messaging_cdn/?asset_id=344034221172801&signature=AbwBV7WmOsbGQC30lpfcEecP3YsiJWa7fJeHFD7XxbCDyqUDjeOpPrewtAK0EyZ3rwcH6Jv_LzlbtY_ffxXdndHepdaFUtM5d46IgKwLbEs_ixBE0O8bCddl7Hw4EEt6Vc2qobBg3Xd3MlLTmYesptfQZ76h3s5npVv9zAhSS7ulTAU",
+    "storyReplyUrl": "",
+    "repliedMessageId": ""
+}
+```
+```json Audio
+{
+    "userId": "",
+    "channel": "instagram",
+    "igsid": "5343911549005044",
+    "appId": "a_637892544015410000",
+    "event": "MO",
+    "ts": "2022-06-03T14:56:00.040+05:30",
+    "messageId": "aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDUyNTc5MzAzMDcwOjM0MDI4MjM2Njg0MTcxMDMwMDk0OTEyODE4MjUwOTQ0MTY4MjE2NTozMDUxNTQ5NjExMDQyMTQxNjI0ODk3MzU1NjY0NjQxMjI4OAZDZD",
+    "tid": "af6cbc51-6435-48e4-9b1e-cfc4630420c7_0",
+    "message": "",
+    "attachment": "[{\"payload\":{\"url\":\"https://lookaside.fbsbx.com/ig_messaging_cdn/?asset_id=856049559130757&signature=AbwYIFzdjaKcDdB4v51fy-av5BpgUS7jNw5klylBWwlVQ3_dywNyWkV1F1pjOo0yOfik0aB_XVKOOwes5eNDc22u7E6uQzdojFdjPO-dPUG3O6rVaE362wq4CrUiDlefmoxcClOyLLDrtymGpOqpoMhLE6mFTbkhp7u5GvHsLonA_tI\"},\"type\":\"audio\"}]",
+    "timestamp": "1654248358869",
+    "attachmentType": "audio",
+    "attachmentUrl": "https://lookaside.fbsbx.com/ig_messaging_cdn/?asset_id=856049559130757&signature=AbwYIFzdjaKcDdB4v51fy-av5BpgUS7jNw5klylBWwlVQ3_dywNyWkV1F1pjOo0yOfik0aB_XVKOOwes5eNDc22u7E6uQzdojFdjPO-dPUG3O6rVaE362wq4CrUiDlefmoxcClOyLLDrtymGpOqpoMhLE6mFTbkhp7u5GvHsLonA_tI",
+    "storyReplyUrl": "",
+    "repliedMessageId": ""
+}
+```
+```json Video
+{
+    "userId": "",
+    "channel": "instagram",
+    "igsid": "5343911549005044",
+    "appId": "a_637892544015410000",
+    "event": "MO",
+    "ts": "2022-06-03T14:57:39.046+05:30",
+    "messageId": "aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDUyNTc5MzAzMDcwOjM0MDI4MjM2Njg0MTcxMDMwMDk0OTEyODE4MjUwOTQ0MTY4MjE2NTozMDUxNTQ5NzgyMzk2Nzc1MjExNDUxODgwMjk5OTI3OTYxNgZDZD",
+    "tid": "85c96330-8a25-46a7-8586-57b23fc75ea5_0",
+    "message": "",
+    "attachment": "[{\"payload\":{\"url\":\"https://lookaside.fbsbx.com/ig_messaging_cdn/?asset_id=18160469740222589&signature=AbykgPasu_vE0HnJ28-pqEqyBgWFRKjIW8y6_KgXw0oXkYkq5sDWr0twN0GwraHPNh9KGtaT0Iv_97JPD-_n0f5jEaXE4_ntqZs49680FzmmZmCPev_OS9_BDTpmEEr_N87ioGqOqBwHb1thuVG0BCZE8F1Ffxr1210Vq7VgjoJ8YGXPFg\"},\"type\":\"video\"}]",
+    "timestamp": "1654248451761",
+    "attachmentType": "video",
+    "attachmentUrl": "https://lookaside.fbsbx.com/ig_messaging_cdn/?asset_id=18160469740222589&signature=AbykgPasu_vE0HnJ28-pqEqyBgWFRKjIW8y6_KgXw0oXkYkq5sDWr0twN0GwraHPNh9KGtaT0Iv_97JPD-_n0f5jEaXE4_ntqZs49680FzmmZmCPev_OS9_BDTpmEEr_N87ioGqOqBwHb1thuVG0BCZE8F1Ffxr1210Vq7VgjoJ8YGXPFg",
+    "storyReplyUrl": "",
+    "repliedMessageId": ""
+}
+```
+```json GIF
+{
+    "userId": "",
+    "channel": "instagram",
+    "igsid": "5343911549005044",
+    "appId": "a_637892544015410000",
+    "event": "MO",
+    "ts": "2022-06-03T14:58:55.206+05:30",
+    "messageId": "aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDUyNTc5MzAzMDcwOjM0MDI4MjM2Njg0MTcxMDMwMDk0OTEyODE4MjUwOTQ0MTY4MjE2NTozMDUxNTQ5OTM0OTUxNDUwMTU4MTIyMjc3NTY2NzgxODQ5NgZDZD",
+    "tid": "cd352e67-3859-4242-b868-25e16f42d2f9_0",
+    "message": "",
+    "attachment": "[{\"payload\":{\"url\":\"https://media4.giphy.com/media/v1.Y2lkPTA3MTNiODVjNTM3M2FkOWRjY2I3YmI5Y2NhZGI0OWQ3M2ZkZWVmMWJkNjFiYTM5YyZjdD1z/oQzGGTeqFOjZEsgpar/200_d.gif\"},\"type\":\"image\"}]",
+    "timestamp": "1654248534461",
+    "attachmentType": "image",
+    "attachmentUrl": "https://media4.giphy.com/media/v1.Y2lkPTA3MTNiODVjNTM3M2FkOWRjY2I3YmI5Y2NhZGI0OWQ3M2ZkZWVmMWJkNjFiYTM5YyZjdD1z/oQzGGTeqFOjZEsgpar/200_d.gif",
+    "storyReplyUrl": "",
+    "repliedMessageId": ""
+}
+```
+```json Story Reply
+{
+  "userId": "",
+  "channel": "instagram",
+  "igsid": "5487763004639049",
+  "appId": "a_637985622706980000",
+  "event": "MO",
+  "ts": "2022-09-12T13:12:48.890+05:45",
+  "messageId": "aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDU1NTM5NjA0NzQ4OjM0MDI4MjM2Njg0MTcxMDMwMDk0OTEyODE4NzA2OTgxOTg2OTI4NDozMDY3NjMzODk3MTUzODY5Njk0NTM1Mzc4NDI0Mjk5NTIwMAZDZD",
+  "tid": "4676aa45-c1d4-4bba-a67e-4eccc9aeb850_0",
+  "message": "Story",
+  "attachment": "",
+  "timestamp": "1662967667842",
+  "attachmentType": "",
+  "attachmentUrl": "",
+  "storyReplyUrl": "https://lookaside.fbsbx.com/ig_messaging_cdn/?asset_id=17918079125602966&signature=AbzZpm8jZobmngjPjSlKuOCrVdHojDIfzHAR6-s97eFYiYbGIKClOlJR9CUmYoKpuJCN_EcHij6W5V1A1oXYUN8cMHNYV8y0yz1MkHMEKxh5k5Oi9sNKzYIQBTOP9C_tA1RE1htNDHa5Nl-goDUtAB2W_v5m-Tf4G-vBLg0HCJWbuoXE2LbfFDBbpA5QHHOrHW-ybELI777tMFQpTOWo05XQJxO3lLhT",
+  "repliedMessageId": "",
+  "reaction": "",
+  "messageType": "story_reply"
+}
+```
+```json Story Mention
+{
+  "userId": "",
+  "channel": "instagram",
+  "igsid": "5487763004639049",
+  "appId": "a_637985622706980000",
+  "event": "MO",
+  "ts": "2022-09-12T13:12:48.890+05:45",
+  "messageId": "aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDU1NTM5NjA0NzQ4OjM0MDI4MjM2Njg0MTcxMDMwMDk0OTEyODE4NzA2OTgxOTg2OTI4NDozMDY3NjMzODk3MTUzODY5Njk0NTM1Mzc4NDI0Mjk5NTIwMAZDZD",
+  "tid": "4676aa45-c1d4-4bba-a67e-4eccc9aeb850_0",
+  "message": "Story",
+  "attachment": "",
+  "timestamp": "1662967667842",
+  "attachmentType": "",
+  "attachmentUrl": "",
+  "storyReplyUrl": "https://lookaside.fbsbx.com/ig_messaging_cdn/?asset_id=17918079125602966&signature=AbzZpm8jZobmngjPjSlKuOCrVdHojDIfzHAR6-s97eFYiYbGIKClOlJR9CUmYoKpuJCN_EcHij6W5V1A1oXYUN8cMHNYV8y0yz1MkHMEKxh5k5Oi9sNKzYIQBTOP9C_tA1RE1htNDHa5Nl-goDUtAB2W_v5m-Tf4G-vBLg0HCJWbuoXE2LbfFDBbpA5QHHOrHW-ybELI777tMFQpTOWo05XQJxO3lLhT",
+  "repliedMessageId": "",
+  "reaction": "",
+  "messageType": "story_reply"
+}
+```
+
+
+
+### Postback
+
+```json Quick Reply
+{
+    "userId": "",
+    "channel": "instagram",
+    "igsid": "5275638769194520",
+    "appId": "a_637928770889770000",
+    "event": "OnPostback",
+    "ts": "2022-07-11T15:46:33.111+05:30",
+    "messageId": "aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDU0MDI4MzI3NjMzOjM0MDI4MjM2Njg0MTcxMDMwMDk0OTEyODMwNjQwMjE1NjYyMzExMDozMDU3NjExNjQxNzQ1OTI1MjE1MTkwOTA0NDgzNzE1NDgxNgZDZD",
+    "timestamp": "1657534592298",
+    "tid": "a32f9da8-37b0-4489-b25c-5dc649f7c800_0",
+    "quickReplyPayload": "{\"payload\":\"location\"}",
+    "payload": "location",
+    "title": ""
+}
+```
+```json Postback - Icebreaker
+{
+    "userId": "",
+    "channel": "instagram",
+    "igsid": "5275638769194520",
+    "appId": "a_637928770889770000",
+    "event": "OnPostback",
+    "ts": "2022-07-11T15:46:33.111+05:30",
+    "messageId": "aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDU0MDI4MzI3NjMzOjM0MDI4MjM2Njg0MTcxMDMwMDk0OTEyODMwNjQwMjE1NjYyMzExMDozMDU3NjExNjQxNzQ1OTI1MjE1MTkwOTA0NDgzNzE1NDgxNgZDZD",
+    "timestamp": "1657534592298",
+    "tid": "a32f9da8-37b0-4489-b25c-5dc649f7c800_0",
+    "quickReplyPayload": "{\"payload\":\"location\"}",
+    "payload": "location",
+    "title": ""
+}
+```
+
+
+
+### Message Deleted
+
+```json Message Deleted
+{
+  "userId": "",
+  "channel": "instagram",
+  "igsid": "5487763004639049",
+  "appId": "a_637985622706980000",
+  "event": "MO",
+  "ts": "2022-09-12T13:12:48.890+05:45",
+  "messageId": "aWdfZAG1faXRlbToxOklHTWVzc2FnZAUlEOjE3ODQxNDU1NTM5NjA0NzQ4OjM0MDI4MjM2Njg0MTcxMDMwMDk0OTEyODE4NzA2OTgxOTg2OTI4NDozMDY3NjMzODk3MTUzODY5Njk0NTM1Mzc4NDI0Mjk5NTIwMAZDZD",
+  "tid": "4676aa45-c1d4-4bba-a67e-4eccc9aeb850_0",
+  "message": "Story",
+  "attachment": "",
+  "timestamp": "1662967667842",
+  "attachmentType": "",
+  "attachmentUrl": "",
+  "storyReplyUrl": "https://lookaside.fbsbx.com/ig_messaging_cdn/?asset_id=17918079125602966&signature=AbzZpm8jZobmngjPjSlKuOCrVdHojDIfzHAR6-s97eFYiYbGIKClOlJR9CUmYoKpuJCN_EcHij6W5V1A1oXYUN8cMHNYV8y0yz1MkHMEKxh5k5Oi9sNKzYIQBTOP9C_tA1RE1htNDHa5Nl-goDUtAB2W_v5m-Tf4G-vBLg0HCJWbuoXE2LbfFDBbpA5QHHOrHW-ybELI777tMFQpTOWo05XQJxO3lLhT",
+  "repliedMessageId": "",
+  "reaction": "",
+  "messageType": "story_reply"
+}
+```
+
+## API reference metadata
+
+These are source metadata and examples. `api.auth` is ReadMe metadata; verify authentication in the documented headers/security scheme.
+
+```json
+{
+  "method": "get",
+  "url": "",
+  "auth": "required",
+  "results": {
+    "codes": [
+      {
+        "name": "",
+        "code": "{}",
+        "language": "json",
+        "status": 200
+      },
+      {
+        "name": "",
+        "code": "{}",
+        "language": "json",
+        "status": 400
+      }
+    ]
+  },
+  "params": [],
+  "examples": {
+    "codes": []
+  }
+}
+```

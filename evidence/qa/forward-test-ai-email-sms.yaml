@@ -1,0 +1,4295 @@
+{
+  "packet_format": "webex_connect_kb.logical_build_packet.v1",
+  "format_notice": "JSON-compatible YAML for agent planning. Not a Cisco import/export schema. All property names below belong to this KB.",
+  "status": "design_reviewable_with_unresolved_bindings",
+  "instructions": "Replace nulls with evidenced values or an explicit not_applicable decision. Duplicate contract records as needed. Preserve unresolved bindings; never invent native node IDs, field names, outcome labels, or runtime results.",
+  "request": {
+    "business_result": "Answer reviewed support-policy questions and return one authorized ticket-status lookup through SMS or email.",
+    "success_evidence": "Expected facts, exact business result, correct channel reply and separate delivery/handoff state.",
+    "primary_pattern": "autonomous_actions",
+    "pattern_choices": [
+      "autonomous_knowledge",
+      "autonomous_actions",
+      "scripted_digital",
+      "legacy_maintenance"
+    ],
+    "channels": [
+      "sms",
+      "email"
+    ],
+    "task_route_ids": [
+      "agent_design",
+      "autonomous_fulfillment",
+      "studio_knowledge_tools",
+      "email_adapter",
+      "sms_adapter",
+      "graph_and_variables",
+      "human_handoff",
+      "external_api",
+      "troubleshoot_or_review"
+    ],
+    "scope_instruction_reference": "Current user documentation-only mission and parent QA assignment; no tenant actions."
+  },
+  "authorization": {
+    "purpose": "Record actual user authorization separately from implementation readiness; this template grants none.",
+    "local_design": {
+      "state": "authorized",
+      "evidence_ref": "Current user scope; evidence/qa/forward-test-ai-email-sms.md"
+    },
+    "connect_read": {
+      "state": "not_performed_in_this_QA",
+      "evidence_ref": "Current user scope; evidence/qa/forward-test-ai-email-sms.md"
+    },
+    "connect_create_or_edit": {
+      "state": "not_performed_in_this_QA",
+      "evidence_ref": "Current user scope; evidence/qa/forward-test-ai-email-sms.md"
+    },
+    "connect_execute_or_send": {
+      "state": "not_performed_in_this_QA",
+      "evidence_ref": "Current user scope; evidence/qa/forward-test-ai-email-sms.md"
+    },
+    "connect_publish": {
+      "state": "not_performed_in_this_QA",
+      "evidence_ref": "Current user scope; evidence/qa/forward-test-ai-email-sms.md"
+    },
+    "control_hub_read": {
+      "state": "not_performed_in_this_QA",
+      "evidence_ref": "Current user scope; evidence/qa/forward-test-ai-email-sms.md"
+    },
+    "control_hub_mutation": {
+      "state": "prohibited",
+      "evidence_ref": "Current user scope; evidence/qa/forward-test-ai-email-sms.md"
+    },
+    "business_system_write": {
+      "state": "not_performed_in_this_QA",
+      "evidence_ref": "Current user scope; evidence/qa/forward-test-ai-email-sms.md"
+    },
+    "studio_mutation": {
+      "state": "prohibited",
+      "evidence_ref": "Current user AGENTS.md: Studio is strictly read-only."
+    }
+  },
+  "bindings": [
+    {
+      "key": "tenant",
+      "value": null,
+      "status": "unresolved",
+      "evidence_ref": "unresolved tenant/business binding; no placeholder credential or resource ID is asserted"
+    },
+    {
+      "key": "service_workspace",
+      "value": null,
+      "status": "unresolved",
+      "evidence_ref": "unresolved tenant/business binding; no placeholder credential or resource ID is asserted"
+    },
+    {
+      "key": "channel_assets",
+      "value": null,
+      "status": "unresolved",
+      "evidence_ref": "unresolved tenant/business binding; no placeholder credential or resource ID is asserted"
+    },
+    {
+      "key": "studio_agent_and_version",
+      "value": null,
+      "status": "unresolved",
+      "evidence_ref": "unresolved tenant/business binding; no placeholder credential or resource ID is asserted"
+    },
+    {
+      "key": "integration_auth_reference",
+      "value": null,
+      "status": "unresolved",
+      "evidence_ref": "unresolved tenant/business binding; no placeholder credential or resource ID is asserted"
+    },
+    {
+      "key": "human_queue_or_destination",
+      "value": null,
+      "status": "unresolved",
+      "evidence_ref": "unresolved tenant/business binding; no placeholder credential or resource ID is asserted"
+    }
+  ],
+  "agent_contract": {
+    "type_and_engine": "Autonomous; proposed general-purpose Webex AI Pro 2.0, actual agent/version/availability unresolved.",
+    "goal_and_instruction_reference": "evidence/qa/forward-test-ai-email-sms.md#agent-configuration-contract",
+    "knowledge_sources_and_revisions": [
+      "Unresolved: business support policies with owner/effective date/revision. Product KB is not customer policy knowledge."
+    ],
+    "action_contract_ids": [
+      "lookupTicket"
+    ],
+    "language_and_response_policy": "English if offered by configured agent; concise SMS, readable email; preserve all meaningful response items.",
+    "human_handover_policy": "Explicit request, authorization failure, unsupported attachment, unresolved response or session boundary -> existing review/handoff process.",
+    "session_identity_and_concurrent_thread_policy": "Do not invent Session ID input. Keep original channel identity. Block sensitive concurrent/unrelated email cases until supported isolation/reset behavior is established.",
+    "session_close_owner_and_conditions": "Owner must hold current SessionId and prove no pending turn/action/other case depends on it. No unconditional per-email close."
+  },
+  "flow_units": [
+    {
+      "logical_id": "sms_outer",
+      "applicability": "selected",
+      "purpose": "SMS customer turn, AI response, bounded continuation or handoff.",
+      "entry_contract_ref": "sms_entry",
+      "graph_node_ids": [
+        "S0",
+        "S1",
+        "S2",
+        "AS",
+        "S3",
+        "S4",
+        "S5",
+        "H"
+      ],
+      "graph_edge_ids": [
+        "edge1",
+        "edge2",
+        "edge3",
+        "edge4",
+        "edge5",
+        "edge6",
+        "edge7",
+        "edge8",
+        "edge9",
+        "edge10",
+        "edge11",
+        "edge12",
+        "edge13",
+        "edge14",
+        "edge15",
+        "edge16",
+        "edge17",
+        "edge18",
+        "edge19",
+        "edge39",
+        "edge41",
+        "edge42",
+        "edge43",
+        "edge44",
+        "edge45",
+        "edge46"
+      ],
+      "completion_contract": "No reply timeout is inactivity, not resolved ticket; send is not delivery; max five turns/ten minutes."
+    },
+    {
+      "logical_id": "email_outer",
+      "applicability": "selected",
+      "purpose": "One email message, case/thread gate, AI response or review, reply and end.",
+      "entry_contract_ref": "email_entry",
+      "graph_node_ids": [
+        "E0",
+        "E1",
+        "E2",
+        "AE",
+        "E3",
+        "E4",
+        "H"
+      ],
+      "graph_edge_ids": [
+        "edge20",
+        "edge21",
+        "edge22",
+        "edge23",
+        "edge24",
+        "edge25",
+        "edge26",
+        "edge27",
+        "edge28",
+        "edge29",
+        "edge30",
+        "edge31",
+        "edge32",
+        "edge33",
+        "edge34",
+        "edge35",
+        "edge36",
+        "edge37",
+        "edge38",
+        "edge40",
+        "edge44",
+        "edge45",
+        "edge46"
+      ],
+      "completion_contract": "Persist case context/end one run; later email is new run; actual session ownership separate."
+    },
+    {
+      "logical_id": "agent_to_fulfillment",
+      "applicability": "selected",
+      "purpose": "Autonomous lookupTicket request -> one authorized HTTP read -> terminal result notification.",
+      "entry_contract_ref": "action_entry",
+      "graph_node_ids": [
+        "F0",
+        "F1",
+        "F2",
+        "F3"
+      ],
+      "graph_edge_ids": [
+        "edge47",
+        "edge48",
+        "edge49",
+        "edge50",
+        "edge51",
+        "edge52",
+        "edge53",
+        "edge54",
+        "edge55",
+        "edge56",
+        "edge57",
+        "edge58"
+      ],
+      "completion_contract": "Flow Settings / Flow Outcomes / Last Execution Status / Notify AI Agent; all terminal branches set safe result; 30-second cap, no listed waiting nodes."
+    },
+    {
+      "logical_id": "scripted_digital_fulfillment",
+      "applicability": "not_applicable",
+      "purpose": "Alternative not selected; scripted response-driven fulfillment stays in its outer conversation flow.",
+      "containing_flow_unit": null,
+      "entry_contract_ref": null,
+      "graph_node_ids": [],
+      "graph_edge_ids": [],
+      "completion_contract": "Not selected; no legacy bot fields or voice callback activities borrowed."
+    }
+  ],
+  "entry_contracts": [
+    {
+      "logical_id": "sms_entry",
+      "trigger_category_and_event_exact": "SMS - Mobile Originated - MO (documented candidate; installed selection unbound)",
+      "sample_payload_reference": "No fabricated vendor envelope; capture approved current node sample.",
+      "schema_reference": "sources/cache/help/receive-node.md#output-variables",
+      "authentication_reference": "Provisioned inbound SMS asset; not customer account authentication.",
+      "duplicate_identity": "Stable original incoming event ID + business asset, after redelivery-stability verification.",
+      "correlation_and_thread_rule": "sms.senderNumber + sms.serviceNumber; bounded matching Receive; no-live-session guard is not durable deduplication.",
+      "invalid_missing_empty_payload_behavior": "Handle keyword-only commands before empty-message branch; invalid identity/review.",
+      "evidence_refs": [
+        "receive",
+        "start",
+        "design"
+      ]
+    },
+    {
+      "logical_id": "email_entry",
+      "trigger_category_and_event_exact": null,
+      "sample_payload_reference": "Unresolved actual email trigger sample.",
+      "schema_reference": "sources/cache/help/receive-node.md#output-variables",
+      "authentication_reference": "Provisioned email route; sender address alone does not verify CRM identity.",
+      "duplicate_identity": "Actual original Message-ID/event identity + business asset with owning service policy.",
+      "correlation_and_thread_rule": "Message-ID/In-Reply-To + actual case rules; sender alone is not a thread.",
+      "invalid_missing_empty_payload_behavior": "Unsupported/blocked attachment or absent readable text -> review/request usable text.",
+      "evidence_refs": [
+        "receive",
+        "email",
+        "design"
+      ]
+    },
+    {
+      "logical_id": "action_entry",
+      "trigger_category_and_event_exact": "AI Agent / Trigger from AI Agent to initiate flow",
+      "sample_payload_reference": "business_operation_contracts.lookupTicket.sample_input_ref",
+      "schema_reference": "business_operation_contracts.lookupTicket.input_schema_ref",
+      "authentication_reference": "Documented Webex CI-secured endpoint; trusted application-context transport remains unresolved.",
+      "duplicate_identity": "Owning service binds context + action intent; customer/model string is not proof.",
+      "correlation_and_thread_rule": "Match actual action payload to parsed Start fields; no assumed caller metadata envelope.",
+      "invalid_missing_empty_payload_behavior": "Return invalid/denied with no ticket content; never guess account context.",
+      "evidence_refs": [
+        "fulfillment",
+        "studio",
+        "design"
+      ]
+    }
+  ],
+  "node_contracts": [
+    {
+      "logical_id": "S0",
+      "native_node_id": null,
+      "platform_type_exact": "Start",
+      "node_version": null,
+      "method_exact": null,
+      "purpose": "Start customer SMS journey",
+      "field_bindings": [
+        {
+          "ui_label_exact": "Incoming Number",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Approved SMS business asset; unresolved",
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "start",
+            "receive"
+          ]
+        },
+        {
+          "ui_label_exact": "Keyword",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Business keyword policy; unresolved",
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "start",
+            "receive"
+          ]
+        },
+        {
+          "ui_label_exact": "Trigger only when there are no live sessions",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": true,
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "start",
+            "receive"
+          ]
+        }
+      ],
+      "outputs": [],
+      "displayed_outcomes_exact": [],
+      "outcome_coverage_complete": false,
+      "timeout_retry_and_ambiguous_result_policy": "See companion design; no tenant execution. Configured outcome inventory unresolved.",
+      "evidence_refs": [
+        "start",
+        "receive"
+      ],
+      "documented_outcome_candidates": [],
+      "evidence_scope": "Documented field labels and logical design; native IDs, configured field labels/prefixes and observed outcome inventory remain unbound."
+    },
+    {
+      "logical_id": "E0",
+      "native_node_id": null,
+      "platform_type_exact": "Start",
+      "node_version": null,
+      "method_exact": null,
+      "purpose": "Start one incoming email run",
+      "field_bindings": [
+        {
+          "ui_label_exact": "Trigger category",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Email; actual event label unresolved",
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "start",
+            "receive"
+          ]
+        }
+      ],
+      "outputs": [],
+      "displayed_outcomes_exact": [],
+      "outcome_coverage_complete": false,
+      "timeout_retry_and_ambiguous_result_policy": "See companion design; no tenant execution. Configured outcome inventory unresolved.",
+      "evidence_refs": [
+        "start",
+        "receive"
+      ],
+      "documented_outcome_candidates": [],
+      "evidence_scope": "Documented field labels and logical design; native IDs, configured field labels/prefixes and observed outcome inventory remain unbound."
+    },
+    {
+      "logical_id": "S1",
+      "native_node_id": null,
+      "platform_type_exact": "HTTP Request",
+      "node_version": null,
+      "method_exact": null,
+      "purpose": "Owned prepare/atomic claim, identity/case/owner/current-text service; real service contract unresolved.",
+      "field_bindings": [
+        {
+          "ui_label_exact": "Method",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Actual owned-operation method; unresolved",
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "http",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Endpoint URL",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Actual owned-service URL; unresolved",
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "http",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Headers",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Existing auth reference; no credentials in packet",
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "http",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Connection Timeout",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": 2000,
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "http",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Request Timeout",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": 5000,
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "http",
+            "design"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "picker_name_exact": null,
+          "documented_unqualified_name": "https.statusCode",
+          "type_or_schema_ref": "Actual sample/type binding required",
+          "availability_by_outcome": "Use only on validated corresponding producer outcome",
+          "evidence_refs": [
+            "http",
+            "design"
+          ]
+        },
+        {
+          "picker_name_exact": null,
+          "documented_unqualified_name": "https.responseBody",
+          "type_or_schema_ref": "Actual sample/type binding required",
+          "availability_by_outcome": "Use only on validated corresponding producer outcome",
+          "evidence_refs": [
+            "http",
+            "design"
+          ]
+        }
+      ],
+      "displayed_outcomes_exact": [],
+      "outcome_coverage_complete": false,
+      "timeout_retry_and_ambiguous_result_policy": "See companion design; no tenant execution. Configured outcome inventory unresolved.",
+      "evidence_refs": [
+        "http",
+        "design"
+      ],
+      "documented_outcome_candidates": [
+        "onSuccess",
+        "onError",
+        "onTimeout"
+      ],
+      "evidence_scope": "Documented field labels and logical design; native IDs, configured field labels/prefixes and observed outcome inventory remain unbound."
+    },
+    {
+      "logical_id": "S2",
+      "native_node_id": null,
+      "platform_type_exact": "Branch",
+      "node_version": null,
+      "method_exact": null,
+      "purpose": "Gate actual service response before AI invocation",
+      "field_bindings": [
+        {
+          "ui_label_exact": "Variable",
+          "binding_kind": "expression",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Validated gate disposition",
+          "producer_node_or_entry": "S1",
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "branch",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Condition",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Equals",
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "branch",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Value",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Automate / HumanOwned / Duplicate / Review (proposed)",
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "branch",
+            "design"
+          ]
+        }
+      ],
+      "outputs": [],
+      "displayed_outcomes_exact": [],
+      "outcome_coverage_complete": false,
+      "timeout_retry_and_ambiguous_result_policy": "See companion design; no tenant execution. Configured outcome inventory unresolved.",
+      "evidence_refs": [
+        "branch",
+        "design"
+      ],
+      "documented_outcome_candidates": [
+        "Automate",
+        "HumanOwned",
+        "Duplicate",
+        "Review",
+        "None of the above",
+        "onError"
+      ],
+      "evidence_scope": "Documented field labels and logical design; native IDs, configured field labels/prefixes and observed outcome inventory remain unbound."
+    },
+    {
+      "logical_id": "E1",
+      "native_node_id": null,
+      "platform_type_exact": "HTTP Request",
+      "node_version": null,
+      "method_exact": null,
+      "purpose": "Owned prepare/atomic claim, identity/case/owner/current-text service; real service contract unresolved.",
+      "field_bindings": [
+        {
+          "ui_label_exact": "Method",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Actual owned-operation method; unresolved",
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "http",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Endpoint URL",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Actual owned-service URL; unresolved",
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "http",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Headers",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Existing auth reference; no credentials in packet",
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "http",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Connection Timeout",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": 2000,
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "http",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Request Timeout",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": 5000,
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "http",
+            "design"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "picker_name_exact": null,
+          "documented_unqualified_name": "https.statusCode",
+          "type_or_schema_ref": "Actual sample/type binding required",
+          "availability_by_outcome": "Use only on validated corresponding producer outcome",
+          "evidence_refs": [
+            "http",
+            "design"
+          ]
+        },
+        {
+          "picker_name_exact": null,
+          "documented_unqualified_name": "https.responseBody",
+          "type_or_schema_ref": "Actual sample/type binding required",
+          "availability_by_outcome": "Use only on validated corresponding producer outcome",
+          "evidence_refs": [
+            "http",
+            "design"
+          ]
+        }
+      ],
+      "displayed_outcomes_exact": [],
+      "outcome_coverage_complete": false,
+      "timeout_retry_and_ambiguous_result_policy": "See companion design; no tenant execution. Configured outcome inventory unresolved.",
+      "evidence_refs": [
+        "http",
+        "design"
+      ],
+      "documented_outcome_candidates": [
+        "onSuccess",
+        "onError",
+        "onTimeout"
+      ],
+      "evidence_scope": "Documented field labels and logical design; native IDs, configured field labels/prefixes and observed outcome inventory remain unbound."
+    },
+    {
+      "logical_id": "E2",
+      "native_node_id": null,
+      "platform_type_exact": "Branch",
+      "node_version": null,
+      "method_exact": null,
+      "purpose": "Gate actual service response before AI invocation",
+      "field_bindings": [
+        {
+          "ui_label_exact": "Variable",
+          "binding_kind": "expression",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Validated gate disposition",
+          "producer_node_or_entry": "E1",
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "branch",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Condition",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Equals",
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "branch",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Value",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Automate / HumanOwned / Duplicate / Review (proposed)",
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "branch",
+            "design"
+          ]
+        }
+      ],
+      "outputs": [],
+      "displayed_outcomes_exact": [],
+      "outcome_coverage_complete": false,
+      "timeout_retry_and_ambiguous_result_policy": "See companion design; no tenant execution. Configured outcome inventory unresolved.",
+      "evidence_refs": [
+        "branch",
+        "design"
+      ],
+      "documented_outcome_candidates": [
+        "Automate",
+        "HumanOwned",
+        "Duplicate",
+        "Review",
+        "None of the above",
+        "onError"
+      ],
+      "evidence_scope": "Documented field labels and logical design; native IDs, configured field labels/prefixes and observed outcome inventory remain unbound."
+    },
+    {
+      "logical_id": "AS",
+      "native_node_id": null,
+      "platform_type_exact": "AI Agent",
+      "node_version": null,
+      "method_exact": "Process Message",
+      "purpose": "Invoke selected current autonomous agent for current customer turn",
+      "field_bindings": [
+        {
+          "ui_label_exact": "Agent type",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Autonomous",
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "ai",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Agent",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Reviewed configured agent; unresolved",
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "ai",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Message",
+          "binding_kind": "expression",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Current normalized message",
+          "producer_node_or_entry": "S1",
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "ai",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Channel",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "SMS",
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "ai",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "User identifier",
+          "binding_kind": "expression",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Captured original channel sender; exact UI field varies",
+          "producer_node_or_entry": "sms_entry",
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "ai",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Language",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Configured English option if available",
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "ai",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Message Parameters",
+          "binding_kind": "expression",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Intended verified turn context; exact action-context transport unresolved",
+          "producer_node_or_entry": "S1",
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "ai",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Custom Parameters",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "None required; no case-specific data persisted by default",
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "ai",
+            "design"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "picker_name_exact": null,
+          "documented_unqualified_name": "FullResponse",
+          "type_or_schema_ref": "Actual sample/type binding required",
+          "availability_by_outcome": "Use only on validated corresponding producer outcome",
+          "evidence_refs": [
+            "ai",
+            "design"
+          ]
+        },
+        {
+          "picker_name_exact": null,
+          "documented_unqualified_name": "TextResponse",
+          "type_or_schema_ref": "Actual sample/type binding required",
+          "availability_by_outcome": "Use only on validated corresponding producer outcome",
+          "evidence_refs": [
+            "ai",
+            "design"
+          ]
+        },
+        {
+          "picker_name_exact": null,
+          "documented_unqualified_name": "SessionId",
+          "type_or_schema_ref": "Actual sample/type binding required",
+          "availability_by_outcome": "Use only on validated corresponding producer outcome",
+          "evidence_refs": [
+            "ai",
+            "design"
+          ]
+        },
+        {
+          "picker_name_exact": null,
+          "documented_unqualified_name": "ConsumerId",
+          "type_or_schema_ref": "Actual sample/type binding required",
+          "availability_by_outcome": "Use only on validated corresponding producer outcome",
+          "evidence_refs": [
+            "ai",
+            "design"
+          ]
+        },
+        {
+          "picker_name_exact": null,
+          "documented_unqualified_name": "TransactionId",
+          "type_or_schema_ref": "Actual sample/type binding required",
+          "availability_by_outcome": "Use only on validated corresponding producer outcome",
+          "evidence_refs": [
+            "ai",
+            "design"
+          ]
+        },
+        {
+          "picker_name_exact": null,
+          "documented_unqualified_name": "ResponsePayload",
+          "type_or_schema_ref": "Actual sample/type binding required",
+          "availability_by_outcome": "Use only on validated corresponding producer outcome",
+          "evidence_refs": [
+            "ai",
+            "design"
+          ]
+        }
+      ],
+      "displayed_outcomes_exact": [],
+      "outcome_coverage_complete": false,
+      "timeout_retry_and_ambiguous_result_policy": "See companion design; no tenant execution. Configured outcome inventory unresolved.",
+      "evidence_refs": [
+        "ai",
+        "design"
+      ],
+      "documented_outcome_candidates": [
+        "onSuccess",
+        "onAgentHandover",
+        "onError",
+        "onInvalidCustomerID",
+        "onInvalidMessage",
+        "onTimeOut"
+      ],
+      "evidence_scope": "Documented field labels and logical design; native IDs, configured field labels/prefixes and observed outcome inventory remain unbound."
+    },
+    {
+      "logical_id": "AE",
+      "native_node_id": null,
+      "platform_type_exact": "AI Agent",
+      "node_version": null,
+      "method_exact": "Process Message",
+      "purpose": "Invoke selected current autonomous agent for current customer turn",
+      "field_bindings": [
+        {
+          "ui_label_exact": "Agent type",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Autonomous",
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "ai",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Agent",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Reviewed configured agent; unresolved",
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "ai",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Message",
+          "binding_kind": "expression",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Current normalized message",
+          "producer_node_or_entry": "E1",
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "ai",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Channel",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Email",
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "ai",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "User identifier",
+          "binding_kind": "expression",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Captured original channel sender; exact UI field varies",
+          "producer_node_or_entry": "email_entry",
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "ai",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Language",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Configured English option if available",
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "ai",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Message Parameters",
+          "binding_kind": "expression",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Intended verified turn context; exact action-context transport unresolved",
+          "producer_node_or_entry": "E1",
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "ai",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Custom Parameters",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "None required; no case-specific data persisted by default",
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "ai",
+            "design"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "picker_name_exact": null,
+          "documented_unqualified_name": "FullResponse",
+          "type_or_schema_ref": "Actual sample/type binding required",
+          "availability_by_outcome": "Use only on validated corresponding producer outcome",
+          "evidence_refs": [
+            "ai",
+            "design"
+          ]
+        },
+        {
+          "picker_name_exact": null,
+          "documented_unqualified_name": "TextResponse",
+          "type_or_schema_ref": "Actual sample/type binding required",
+          "availability_by_outcome": "Use only on validated corresponding producer outcome",
+          "evidence_refs": [
+            "ai",
+            "design"
+          ]
+        },
+        {
+          "picker_name_exact": null,
+          "documented_unqualified_name": "SessionId",
+          "type_or_schema_ref": "Actual sample/type binding required",
+          "availability_by_outcome": "Use only on validated corresponding producer outcome",
+          "evidence_refs": [
+            "ai",
+            "design"
+          ]
+        },
+        {
+          "picker_name_exact": null,
+          "documented_unqualified_name": "ConsumerId",
+          "type_or_schema_ref": "Actual sample/type binding required",
+          "availability_by_outcome": "Use only on validated corresponding producer outcome",
+          "evidence_refs": [
+            "ai",
+            "design"
+          ]
+        },
+        {
+          "picker_name_exact": null,
+          "documented_unqualified_name": "TransactionId",
+          "type_or_schema_ref": "Actual sample/type binding required",
+          "availability_by_outcome": "Use only on validated corresponding producer outcome",
+          "evidence_refs": [
+            "ai",
+            "design"
+          ]
+        },
+        {
+          "picker_name_exact": null,
+          "documented_unqualified_name": "ResponsePayload",
+          "type_or_schema_ref": "Actual sample/type binding required",
+          "availability_by_outcome": "Use only on validated corresponding producer outcome",
+          "evidence_refs": [
+            "ai",
+            "design"
+          ]
+        }
+      ],
+      "displayed_outcomes_exact": [],
+      "outcome_coverage_complete": false,
+      "timeout_retry_and_ambiguous_result_policy": "See companion design; no tenant execution. Configured outcome inventory unresolved.",
+      "evidence_refs": [
+        "ai",
+        "design"
+      ],
+      "documented_outcome_candidates": [
+        "onSuccess",
+        "onAgentHandover",
+        "onError",
+        "onInvalidCustomerID",
+        "onInvalidMessage",
+        "onTimeOut"
+      ],
+      "evidence_scope": "Documented field labels and logical design; native IDs, configured field labels/prefixes and observed outcome inventory remain unbound."
+    },
+    {
+      "logical_id": "S3",
+      "native_node_id": null,
+      "platform_type_exact": "HTTP Request",
+      "node_version": null,
+      "method_exact": null,
+      "purpose": "Validate actual FullResponse schema + recorded business result, produce approved channel content.",
+      "field_bindings": [
+        {
+          "ui_label_exact": "Method",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Actual owned-operation method; unresolved",
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "http",
+            "ai",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Endpoint URL",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Actual owned-service URL; unresolved",
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "http",
+            "ai",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Headers",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Existing auth reference; no credentials in packet",
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "http",
+            "ai",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Connection Timeout",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": 2000,
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "http",
+            "ai",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Request Timeout",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": 5000,
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "http",
+            "ai",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Body",
+          "binding_kind": "expression",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Actual response plus trusted owned-case state; schema unresolved",
+          "producer_node_or_entry": "AS",
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "http",
+            "ai",
+            "design"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "picker_name_exact": null,
+          "documented_unqualified_name": "https.statusCode",
+          "type_or_schema_ref": "Actual sample/type binding required",
+          "availability_by_outcome": "Use only on validated corresponding producer outcome",
+          "evidence_refs": [
+            "http",
+            "ai",
+            "design"
+          ]
+        },
+        {
+          "picker_name_exact": null,
+          "documented_unqualified_name": "https.responseBody",
+          "type_or_schema_ref": "Actual sample/type binding required",
+          "availability_by_outcome": "Use only on validated corresponding producer outcome",
+          "evidence_refs": [
+            "http",
+            "ai",
+            "design"
+          ]
+        }
+      ],
+      "displayed_outcomes_exact": [],
+      "outcome_coverage_complete": false,
+      "timeout_retry_and_ambiguous_result_policy": "See companion design; no tenant execution. Configured outcome inventory unresolved.",
+      "evidence_refs": [
+        "http",
+        "ai",
+        "design"
+      ],
+      "documented_outcome_candidates": [
+        "onSuccess",
+        "onError",
+        "onTimeout"
+      ],
+      "evidence_scope": "Documented field labels and logical design; native IDs, configured field labels/prefixes and observed outcome inventory remain unbound."
+    },
+    {
+      "logical_id": "E3",
+      "native_node_id": null,
+      "platform_type_exact": "HTTP Request",
+      "node_version": null,
+      "method_exact": null,
+      "purpose": "Validate actual FullResponse schema + recorded business result, produce approved channel content.",
+      "field_bindings": [
+        {
+          "ui_label_exact": "Method",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Actual owned-operation method; unresolved",
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "http",
+            "ai",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Endpoint URL",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Actual owned-service URL; unresolved",
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "http",
+            "ai",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Headers",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Existing auth reference; no credentials in packet",
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "http",
+            "ai",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Connection Timeout",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": 2000,
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "http",
+            "ai",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Request Timeout",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": 5000,
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "http",
+            "ai",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Body",
+          "binding_kind": "expression",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Actual response plus trusted owned-case state; schema unresolved",
+          "producer_node_or_entry": "AE",
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "http",
+            "ai",
+            "design"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "picker_name_exact": null,
+          "documented_unqualified_name": "https.statusCode",
+          "type_or_schema_ref": "Actual sample/type binding required",
+          "availability_by_outcome": "Use only on validated corresponding producer outcome",
+          "evidence_refs": [
+            "http",
+            "ai",
+            "design"
+          ]
+        },
+        {
+          "picker_name_exact": null,
+          "documented_unqualified_name": "https.responseBody",
+          "type_or_schema_ref": "Actual sample/type binding required",
+          "availability_by_outcome": "Use only on validated corresponding producer outcome",
+          "evidence_refs": [
+            "http",
+            "ai",
+            "design"
+          ]
+        }
+      ],
+      "displayed_outcomes_exact": [],
+      "outcome_coverage_complete": false,
+      "timeout_retry_and_ambiguous_result_policy": "See companion design; no tenant execution. Configured outcome inventory unresolved.",
+      "evidence_refs": [
+        "http",
+        "ai",
+        "design"
+      ],
+      "documented_outcome_candidates": [
+        "onSuccess",
+        "onError",
+        "onTimeout"
+      ],
+      "evidence_scope": "Documented field labels and logical design; native IDs, configured field labels/prefixes and observed outcome inventory remain unbound."
+    },
+    {
+      "logical_id": "S4",
+      "native_node_id": null,
+      "platform_type_exact": "SMS",
+      "node_version": null,
+      "method_exact": null,
+      "purpose": "Send approved concise reply",
+      "field_bindings": [
+        {
+          "ui_label_exact": "Destination Type",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "msisdn",
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "sms",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Destination",
+          "binding_kind": "expression",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Captured verified customer number",
+          "producer_node_or_entry": "sms_entry",
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "sms",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "From Number",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Bound approved business number",
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "sms",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Message Type",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Text/Unicode after actual content policy",
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "sms",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Message",
+          "binding_kind": "expression",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Validated formatted reply",
+          "producer_node_or_entry": "S3",
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "sms",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Correlation ID",
+          "binding_kind": "expression",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Send intent from owned service",
+          "producer_node_or_entry": "S1",
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "sms",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Wait For",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Gateway Submit",
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "sms",
+            "design"
+          ]
+        }
+      ],
+      "outputs": [],
+      "displayed_outcomes_exact": [],
+      "outcome_coverage_complete": false,
+      "timeout_retry_and_ambiguous_result_policy": "See companion design; no tenant execution. Configured outcome inventory unresolved.",
+      "evidence_refs": [
+        "sms",
+        "design"
+      ],
+      "documented_outcome_candidates": [],
+      "evidence_scope": "Documented field labels and logical design; native IDs, configured field labels/prefixes and observed outcome inventory remain unbound."
+    },
+    {
+      "logical_id": "S5",
+      "native_node_id": null,
+      "platform_type_exact": "Receive",
+      "node_version": null,
+      "method_exact": null,
+      "purpose": "Bounded next SMS turn",
+      "field_bindings": [
+        {
+          "ui_label_exact": "Channel",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "SMS",
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "receive",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Number",
+          "binding_kind": "expression",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Same business number",
+          "producer_node_or_entry": "sms_entry",
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "receive",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "From Number",
+          "binding_kind": "expression",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Same customer number",
+          "producer_node_or_entry": "sms_entry",
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "receive",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Keyword",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Any-keyword configured policy",
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "receive",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Max Timeout",
+          "binding_kind": "expression",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "min(120 seconds, remaining 10-minute journey deadline)",
+          "producer_node_or_entry": "S1",
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "receive",
+            "design"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "picker_name_exact": null,
+          "documented_unqualified_name": "sms.message",
+          "type_or_schema_ref": "Actual sample/type binding required",
+          "availability_by_outcome": "Use only on validated corresponding producer outcome",
+          "evidence_refs": [
+            "receive",
+            "design"
+          ]
+        },
+        {
+          "picker_name_exact": null,
+          "documented_unqualified_name": "sms.keyword",
+          "type_or_schema_ref": "Actual sample/type binding required",
+          "availability_by_outcome": "Use only on validated corresponding producer outcome",
+          "evidence_refs": [
+            "receive",
+            "design"
+          ]
+        },
+        {
+          "picker_name_exact": null,
+          "documented_unqualified_name": "sms.transId",
+          "type_or_schema_ref": "Actual sample/type binding required",
+          "availability_by_outcome": "Use only on validated corresponding producer outcome",
+          "evidence_refs": [
+            "receive",
+            "design"
+          ]
+        },
+        {
+          "picker_name_exact": null,
+          "documented_unqualified_name": "sms.senderNumber",
+          "type_or_schema_ref": "Actual sample/type binding required",
+          "availability_by_outcome": "Use only on validated corresponding producer outcome",
+          "evidence_refs": [
+            "receive",
+            "design"
+          ]
+        }
+      ],
+      "displayed_outcomes_exact": [],
+      "outcome_coverage_complete": false,
+      "timeout_retry_and_ambiguous_result_policy": "See companion design; no tenant execution. Configured outcome inventory unresolved.",
+      "evidence_refs": [
+        "receive",
+        "design"
+      ],
+      "documented_outcome_candidates": [
+        "sms.mo",
+        "onTimeout",
+        "onError"
+      ],
+      "evidence_scope": "Documented field labels and logical design; native IDs, configured field labels/prefixes and observed outcome inventory remain unbound."
+    },
+    {
+      "logical_id": "E4",
+      "native_node_id": null,
+      "platform_type_exact": "Email",
+      "node_version": null,
+      "method_exact": null,
+      "purpose": "Send factual reply with deterministic recipient/thread mapping",
+      "field_bindings": [
+        {
+          "ui_label_exact": "Destination type",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Email Id",
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "email",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Destination ID",
+          "binding_kind": "expression",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Verified reply recipient",
+          "producer_node_or_entry": "E1",
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "email",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "From Email",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Asset-controlled; unresolved",
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "email",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "From Name",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Approved support display name",
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "email",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "ReplyTo Email",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Approved reentry mailbox; unresolved",
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "email",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Subject",
+          "binding_kind": "expression",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Controlled case subject",
+          "producer_node_or_entry": "E1",
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "email",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Email type",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Text or approved HTML/template policy",
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "email",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Fallback Text",
+          "binding_kind": "expression",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Equivalent plain text when HTML/template is selected",
+          "producer_node_or_entry": "E3",
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "email",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "In-Reply-To",
+          "binding_kind": "expression",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Current inbound Message-ID only where SMTP field supported",
+          "producer_node_or_entry": "email_entry",
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "email",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "CC Recipients (Optional)",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Explicit policy; none by default",
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "email",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "BCC Recipients (Optional)",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Explicit policy; none by default",
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "email",
+            "design"
+          ]
+        }
+      ],
+      "outputs": [],
+      "displayed_outcomes_exact": [],
+      "outcome_coverage_complete": false,
+      "timeout_retry_and_ambiguous_result_policy": "See companion design; no tenant execution. Configured outcome inventory unresolved.",
+      "evidence_refs": [
+        "email",
+        "design"
+      ],
+      "documented_outcome_candidates": [],
+      "evidence_scope": "Documented field labels and logical design; native IDs, configured field labels/prefixes and observed outcome inventory remain unbound."
+    },
+    {
+      "logical_id": "H",
+      "native_node_id": null,
+      "platform_type_exact": "HTTP Request",
+      "node_version": null,
+      "method_exact": null,
+      "purpose": "Existing human-review/handoff adapter; actual request/task/lifecycle contract unresolved.",
+      "field_bindings": [
+        {
+          "ui_label_exact": "Method",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Actual owned-operation method; unresolved",
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "http",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Endpoint URL",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Actual owned-service URL; unresolved",
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "http",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Headers",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Existing auth reference; no credentials in packet",
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "http",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Connection Timeout",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": 2000,
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "http",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Request Timeout",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": 5000,
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "http",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Body",
+          "binding_kind": "expression",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Verified case context, nonsecret transcript, reason; no invented queue ID",
+          "producer_node_or_entry": "S1 / E1",
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "http",
+            "design"
+          ]
+        }
+      ],
+      "outputs": [],
+      "displayed_outcomes_exact": [],
+      "outcome_coverage_complete": false,
+      "timeout_retry_and_ambiguous_result_policy": "See companion design; no tenant execution. Configured outcome inventory unresolved.",
+      "evidence_refs": [
+        "http",
+        "design"
+      ],
+      "documented_outcome_candidates": [
+        "onSuccess",
+        "onError",
+        "onTimeout"
+      ],
+      "evidence_scope": "Documented field labels and logical design; native IDs, configured field labels/prefixes and observed outcome inventory remain unbound."
+    },
+    {
+      "logical_id": "F0",
+      "native_node_id": null,
+      "platform_type_exact": "Start",
+      "node_version": null,
+      "method_exact": null,
+      "purpose": "Separate AI action invocation; initialize all safe terminal result variables.",
+      "field_bindings": [
+        {
+          "ui_label_exact": "Trigger category",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "AI Agent",
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "fulfillment",
+            "studio",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Event",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Trigger from AI Agent to initiate flow",
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "fulfillment",
+            "studio",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Provide sample JSON",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Actual configured action sample matching proposed input schema; unresolved",
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "fulfillment",
+            "studio",
+            "design"
+          ]
+        }
+      ],
+      "outputs": [],
+      "displayed_outcomes_exact": [],
+      "outcome_coverage_complete": false,
+      "timeout_retry_and_ambiguous_result_policy": "See companion design; no tenant execution. Configured outcome inventory unresolved.",
+      "evidence_refs": [
+        "fulfillment",
+        "studio",
+        "design"
+      ],
+      "documented_outcome_candidates": [],
+      "evidence_scope": "Documented field labels and logical design; native IDs, configured field labels/prefixes and observed outcome inventory remain unbound."
+    },
+    {
+      "logical_id": "F1",
+      "native_node_id": null,
+      "platform_type_exact": "HTTP Request",
+      "node_version": null,
+      "method_exact": null,
+      "purpose": "One allowed authorized ticket lookup; backend validates context/ref/record ownership.",
+      "field_bindings": [
+        {
+          "ui_label_exact": "Method",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Actual owned-operation method; unresolved",
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "http",
+            "fulfillment",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Endpoint URL",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Actual owned-service URL; unresolved",
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "http",
+            "fulfillment",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Headers",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Existing auth reference; no credentials in packet",
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "http",
+            "fulfillment",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Connection Timeout",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": 2000,
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "http",
+            "fulfillment",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Request Timeout",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": 5000,
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "http",
+            "fulfillment",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Method",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "GET if actual API supports required context; otherwise owner-provided read-only method",
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "http",
+            "fulfillment",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Endpoint URL",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Actual fixed lookup endpoint; never model-selected",
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "http",
+            "fulfillment",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Query/body",
+          "binding_kind": "expression",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "ticketReference + trusted request context from parsed actual payload",
+          "producer_node_or_entry": "action_entry",
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "http",
+            "fulfillment",
+            "design"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "picker_name_exact": null,
+          "documented_unqualified_name": "https.statusCode",
+          "type_or_schema_ref": "Actual sample/type binding required",
+          "availability_by_outcome": "Use only on validated corresponding producer outcome",
+          "evidence_refs": [
+            "http",
+            "fulfillment",
+            "design"
+          ]
+        },
+        {
+          "picker_name_exact": null,
+          "documented_unqualified_name": "https.responseBody",
+          "type_or_schema_ref": "Actual sample/type binding required",
+          "availability_by_outcome": "Use only on validated corresponding producer outcome",
+          "evidence_refs": [
+            "http",
+            "fulfillment",
+            "design"
+          ]
+        }
+      ],
+      "displayed_outcomes_exact": [],
+      "outcome_coverage_complete": false,
+      "timeout_retry_and_ambiguous_result_policy": "See companion design; no tenant execution. Configured outcome inventory unresolved.",
+      "evidence_refs": [
+        "http",
+        "fulfillment",
+        "design"
+      ],
+      "documented_outcome_candidates": [
+        "onSuccess",
+        "onError",
+        "onTimeout"
+      ],
+      "evidence_scope": "Documented field labels and logical design; native IDs, configured field labels/prefixes and observed outcome inventory remain unbound."
+    },
+    {
+      "logical_id": "F2",
+      "native_node_id": null,
+      "platform_type_exact": "Branch",
+      "node_version": null,
+      "method_exact": null,
+      "purpose": "Classify transport and business result; deny malformed or unauthorized data.",
+      "field_bindings": [
+        {
+          "ui_label_exact": "Variable",
+          "binding_kind": "expression",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Validated HTTP status and result",
+          "producer_node_or_entry": "F1",
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "branch",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Condition",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Actual explicit comparisons",
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "branch",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Value",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "found / not_found / denied / invalid / unavailable (proposed)",
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "branch",
+            "design"
+          ]
+        }
+      ],
+      "outputs": [],
+      "displayed_outcomes_exact": [],
+      "outcome_coverage_complete": false,
+      "timeout_retry_and_ambiguous_result_policy": "See companion design; no tenant execution. Configured outcome inventory unresolved.",
+      "evidence_refs": [
+        "branch",
+        "design"
+      ],
+      "documented_outcome_candidates": [
+        "Found",
+        "NotFound",
+        "Denied",
+        "Invalid",
+        "Unavailable",
+        "None of the above",
+        "onError"
+      ],
+      "evidence_scope": "Documented field labels and logical design; native IDs, configured field labels/prefixes and observed outcome inventory remain unbound."
+    },
+    {
+      "logical_id": "F3",
+      "native_node_id": null,
+      "platform_type_exact": "Data Parser",
+      "node_version": null,
+      "method_exact": null,
+      "purpose": "Extract safe found result and verify returned ticket/context before setting notification fields.",
+      "field_bindings": [
+        {
+          "ui_label_exact": "Source variable",
+          "binding_kind": "expression",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Actual HTTP response body picker reference",
+          "producer_node_or_entry": "F1",
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "parser",
+            "fulfillment",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Format",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "JSON",
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "parser",
+            "fulfillment",
+            "design"
+          ]
+        },
+        {
+          "ui_label_exact": "Sample body",
+          "binding_kind": "literal",
+          "binding_kind_choices": [
+            "literal",
+            "picker_reference",
+            "expression",
+            "resource_reference"
+          ],
+          "value_or_reference": "Actual backend response matching proposed result schema",
+          "producer_node_or_entry": null,
+          "source_variable_exact": null,
+          "transform_contract_ref": "See companion design for producer/normalization contract.",
+          "requiredness_and_missing_behavior": "Resolve actual requiredness; missing identity, result or resource -> controlled review/failure, never a guessed default.",
+          "evidence_refs": [
+            "parser",
+            "fulfillment",
+            "design"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "picker_name_exact": null,
+          "documented_unqualified_name": "TicketReference",
+          "type_or_schema_ref": "Actual sample/type binding required",
+          "availability_by_outcome": "Use only on validated corresponding producer outcome",
+          "evidence_refs": [
+            "parser",
+            "fulfillment",
+            "design"
+          ]
+        },
+        {
+          "picker_name_exact": null,
+          "documented_unqualified_name": "TicketStatus",
+          "type_or_schema_ref": "Actual sample/type binding required",
+          "availability_by_outcome": "Use only on validated corresponding producer outcome",
+          "evidence_refs": [
+            "parser",
+            "fulfillment",
+            "design"
+          ]
+        },
+        {
+          "picker_name_exact": null,
+          "documented_unqualified_name": "NextStep",
+          "type_or_schema_ref": "Actual sample/type binding required",
+          "availability_by_outcome": "Use only on validated corresponding producer outcome",
+          "evidence_refs": [
+            "parser",
+            "fulfillment",
+            "design"
+          ]
+        }
+      ],
+      "displayed_outcomes_exact": [],
+      "outcome_coverage_complete": false,
+      "timeout_retry_and_ambiguous_result_policy": "See companion design; no tenant execution. Configured outcome inventory unresolved.",
+      "evidence_refs": [
+        "parser",
+        "fulfillment",
+        "design"
+      ],
+      "documented_outcome_candidates": [],
+      "evidence_scope": "Documented field labels and logical design; native IDs, configured field labels/prefixes and observed outcome inventory remain unbound."
+    }
+  ],
+  "edge_contracts": [
+    {
+      "logical_id": "edge1",
+      "from_logical_node": "S0",
+      "outcome_label_exact": null,
+      "condition_exact_or_not_applicable": "Documented/proposed event; actual configured label binding required where null.",
+      "to_logical_node": "S1",
+      "terminal_disposition_if_no_target": null,
+      "transition_assignments": [],
+      "loop_update_and_exit_rule_if_applicable": null,
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_id": "edge2",
+      "from_logical_node": "S1",
+      "outcome_label_exact": "onSuccess",
+      "condition_exact_or_not_applicable": "Documented/proposed event; actual configured label binding required where null.",
+      "to_logical_node": "S2",
+      "terminal_disposition_if_no_target": null,
+      "transition_assignments": [],
+      "loop_update_and_exit_rule_if_applicable": null,
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_id": "edge3",
+      "from_logical_node": "S1",
+      "outcome_label_exact": "onError",
+      "condition_exact_or_not_applicable": "Documented/proposed event; actual configured label binding required where null.",
+      "to_logical_node": null,
+      "terminal_disposition_if_no_target": "technical_failure",
+      "transition_assignments": [],
+      "loop_update_and_exit_rule_if_applicable": null,
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_id": "edge4",
+      "from_logical_node": "S1",
+      "outcome_label_exact": "onTimeout",
+      "condition_exact_or_not_applicable": "Documented/proposed event; actual configured label binding required where null.",
+      "to_logical_node": null,
+      "terminal_disposition_if_no_target": "unknown_prepare_result_reconcile",
+      "transition_assignments": [],
+      "loop_update_and_exit_rule_if_applicable": null,
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_id": "edge5",
+      "from_logical_node": "S2",
+      "outcome_label_exact": "Automate",
+      "condition_exact_or_not_applicable": "Documented/proposed event; actual configured label binding required where null.",
+      "to_logical_node": "AS",
+      "terminal_disposition_if_no_target": null,
+      "transition_assignments": [],
+      "loop_update_and_exit_rule_if_applicable": null,
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_id": "edge6",
+      "from_logical_node": "S2",
+      "outcome_label_exact": "HumanOwned",
+      "condition_exact_or_not_applicable": "Documented/proposed event; actual configured label binding required where null.",
+      "to_logical_node": "H",
+      "terminal_disposition_if_no_target": null,
+      "transition_assignments": [],
+      "loop_update_and_exit_rule_if_applicable": null,
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_id": "edge7",
+      "from_logical_node": "S2",
+      "outcome_label_exact": "Review",
+      "condition_exact_or_not_applicable": "Documented/proposed event; actual configured label binding required where null.",
+      "to_logical_node": "H",
+      "terminal_disposition_if_no_target": null,
+      "transition_assignments": [],
+      "loop_update_and_exit_rule_if_applicable": null,
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_id": "edge8",
+      "from_logical_node": "S2",
+      "outcome_label_exact": "Duplicate",
+      "condition_exact_or_not_applicable": "Documented/proposed event; actual configured label binding required where null.",
+      "to_logical_node": null,
+      "terminal_disposition_if_no_target": "prior_disposition_no_repeat",
+      "transition_assignments": [],
+      "loop_update_and_exit_rule_if_applicable": null,
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_id": "edge9",
+      "from_logical_node": "S2",
+      "outcome_label_exact": "None of the above",
+      "condition_exact_or_not_applicable": "Documented/proposed event; actual configured label binding required where null.",
+      "to_logical_node": "H",
+      "terminal_disposition_if_no_target": null,
+      "transition_assignments": [],
+      "loop_update_and_exit_rule_if_applicable": null,
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_id": "edge10",
+      "from_logical_node": "S2",
+      "outcome_label_exact": "onError",
+      "condition_exact_or_not_applicable": "Documented/proposed event; actual configured label binding required where null.",
+      "to_logical_node": null,
+      "terminal_disposition_if_no_target": "technical_failure",
+      "transition_assignments": [],
+      "loop_update_and_exit_rule_if_applicable": null,
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_id": "edge11",
+      "from_logical_node": "AS",
+      "outcome_label_exact": "onSuccess",
+      "condition_exact_or_not_applicable": "Documented/proposed event; actual configured label binding required where null.",
+      "to_logical_node": "S3",
+      "terminal_disposition_if_no_target": null,
+      "transition_assignments": [],
+      "loop_update_and_exit_rule_if_applicable": null,
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_id": "edge12",
+      "from_logical_node": "AS",
+      "outcome_label_exact": "onAgentHandover",
+      "condition_exact_or_not_applicable": "Documented/proposed event; actual configured label binding required where null.",
+      "to_logical_node": "H",
+      "terminal_disposition_if_no_target": null,
+      "transition_assignments": [],
+      "loop_update_and_exit_rule_if_applicable": null,
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_id": "edge13",
+      "from_logical_node": "AS",
+      "outcome_label_exact": "onError",
+      "condition_exact_or_not_applicable": "Documented/proposed event; actual configured label binding required where null.",
+      "to_logical_node": "H",
+      "terminal_disposition_if_no_target": null,
+      "transition_assignments": [],
+      "loop_update_and_exit_rule_if_applicable": null,
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_id": "edge14",
+      "from_logical_node": "AS",
+      "outcome_label_exact": "onInvalidCustomerID",
+      "condition_exact_or_not_applicable": "Documented/proposed event; actual configured label binding required where null.",
+      "to_logical_node": "H",
+      "terminal_disposition_if_no_target": null,
+      "transition_assignments": [],
+      "loop_update_and_exit_rule_if_applicable": null,
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_id": "edge15",
+      "from_logical_node": "AS",
+      "outcome_label_exact": "onInvalidMessage",
+      "condition_exact_or_not_applicable": "Documented/proposed event; actual configured label binding required where null.",
+      "to_logical_node": "H",
+      "terminal_disposition_if_no_target": null,
+      "transition_assignments": [],
+      "loop_update_and_exit_rule_if_applicable": null,
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_id": "edge16",
+      "from_logical_node": "AS",
+      "outcome_label_exact": "onTimeOut",
+      "condition_exact_or_not_applicable": "Documented/proposed event; actual configured label binding required where null.",
+      "to_logical_node": "H",
+      "terminal_disposition_if_no_target": null,
+      "transition_assignments": [],
+      "loop_update_and_exit_rule_if_applicable": null,
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_id": "edge17",
+      "from_logical_node": "S3",
+      "outcome_label_exact": "onSuccess",
+      "condition_exact_or_not_applicable": "Documented/proposed event; actual configured label binding required where null.",
+      "to_logical_node": "S4",
+      "terminal_disposition_if_no_target": null,
+      "transition_assignments": [],
+      "loop_update_and_exit_rule_if_applicable": null,
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_id": "edge18",
+      "from_logical_node": "S3",
+      "outcome_label_exact": "onError",
+      "condition_exact_or_not_applicable": "Documented/proposed event; actual configured label binding required where null.",
+      "to_logical_node": "H",
+      "terminal_disposition_if_no_target": null,
+      "transition_assignments": [],
+      "loop_update_and_exit_rule_if_applicable": null,
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_id": "edge19",
+      "from_logical_node": "S3",
+      "outcome_label_exact": "onTimeout",
+      "condition_exact_or_not_applicable": "Documented/proposed event; actual configured label binding required where null.",
+      "to_logical_node": "H",
+      "terminal_disposition_if_no_target": null,
+      "transition_assignments": [],
+      "loop_update_and_exit_rule_if_applicable": null,
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_id": "edge20",
+      "from_logical_node": "E0",
+      "outcome_label_exact": null,
+      "condition_exact_or_not_applicable": "Documented/proposed event; actual configured label binding required where null.",
+      "to_logical_node": "E1",
+      "terminal_disposition_if_no_target": null,
+      "transition_assignments": [],
+      "loop_update_and_exit_rule_if_applicable": null,
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_id": "edge21",
+      "from_logical_node": "E1",
+      "outcome_label_exact": "onSuccess",
+      "condition_exact_or_not_applicable": "Documented/proposed event; actual configured label binding required where null.",
+      "to_logical_node": "E2",
+      "terminal_disposition_if_no_target": null,
+      "transition_assignments": [],
+      "loop_update_and_exit_rule_if_applicable": null,
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_id": "edge22",
+      "from_logical_node": "E1",
+      "outcome_label_exact": "onError",
+      "condition_exact_or_not_applicable": "Documented/proposed event; actual configured label binding required where null.",
+      "to_logical_node": null,
+      "terminal_disposition_if_no_target": "technical_failure",
+      "transition_assignments": [],
+      "loop_update_and_exit_rule_if_applicable": null,
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_id": "edge23",
+      "from_logical_node": "E1",
+      "outcome_label_exact": "onTimeout",
+      "condition_exact_or_not_applicable": "Documented/proposed event; actual configured label binding required where null.",
+      "to_logical_node": null,
+      "terminal_disposition_if_no_target": "unknown_prepare_result_reconcile",
+      "transition_assignments": [],
+      "loop_update_and_exit_rule_if_applicable": null,
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_id": "edge24",
+      "from_logical_node": "E2",
+      "outcome_label_exact": "Automate",
+      "condition_exact_or_not_applicable": "Documented/proposed event; actual configured label binding required where null.",
+      "to_logical_node": "AE",
+      "terminal_disposition_if_no_target": null,
+      "transition_assignments": [],
+      "loop_update_and_exit_rule_if_applicable": null,
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_id": "edge25",
+      "from_logical_node": "E2",
+      "outcome_label_exact": "HumanOwned",
+      "condition_exact_or_not_applicable": "Documented/proposed event; actual configured label binding required where null.",
+      "to_logical_node": "H",
+      "terminal_disposition_if_no_target": null,
+      "transition_assignments": [],
+      "loop_update_and_exit_rule_if_applicable": null,
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_id": "edge26",
+      "from_logical_node": "E2",
+      "outcome_label_exact": "Review",
+      "condition_exact_or_not_applicable": "Documented/proposed event; actual configured label binding required where null.",
+      "to_logical_node": "H",
+      "terminal_disposition_if_no_target": null,
+      "transition_assignments": [],
+      "loop_update_and_exit_rule_if_applicable": null,
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_id": "edge27",
+      "from_logical_node": "E2",
+      "outcome_label_exact": "Duplicate",
+      "condition_exact_or_not_applicable": "Documented/proposed event; actual configured label binding required where null.",
+      "to_logical_node": null,
+      "terminal_disposition_if_no_target": "prior_disposition_no_repeat",
+      "transition_assignments": [],
+      "loop_update_and_exit_rule_if_applicable": null,
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_id": "edge28",
+      "from_logical_node": "E2",
+      "outcome_label_exact": "None of the above",
+      "condition_exact_or_not_applicable": "Documented/proposed event; actual configured label binding required where null.",
+      "to_logical_node": "H",
+      "terminal_disposition_if_no_target": null,
+      "transition_assignments": [],
+      "loop_update_and_exit_rule_if_applicable": null,
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_id": "edge29",
+      "from_logical_node": "E2",
+      "outcome_label_exact": "onError",
+      "condition_exact_or_not_applicable": "Documented/proposed event; actual configured label binding required where null.",
+      "to_logical_node": null,
+      "terminal_disposition_if_no_target": "technical_failure",
+      "transition_assignments": [],
+      "loop_update_and_exit_rule_if_applicable": null,
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_id": "edge30",
+      "from_logical_node": "AE",
+      "outcome_label_exact": "onSuccess",
+      "condition_exact_or_not_applicable": "Documented/proposed event; actual configured label binding required where null.",
+      "to_logical_node": "E3",
+      "terminal_disposition_if_no_target": null,
+      "transition_assignments": [],
+      "loop_update_and_exit_rule_if_applicable": null,
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_id": "edge31",
+      "from_logical_node": "AE",
+      "outcome_label_exact": "onAgentHandover",
+      "condition_exact_or_not_applicable": "Documented/proposed event; actual configured label binding required where null.",
+      "to_logical_node": "H",
+      "terminal_disposition_if_no_target": null,
+      "transition_assignments": [],
+      "loop_update_and_exit_rule_if_applicable": null,
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_id": "edge32",
+      "from_logical_node": "AE",
+      "outcome_label_exact": "onError",
+      "condition_exact_or_not_applicable": "Documented/proposed event; actual configured label binding required where null.",
+      "to_logical_node": "H",
+      "terminal_disposition_if_no_target": null,
+      "transition_assignments": [],
+      "loop_update_and_exit_rule_if_applicable": null,
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_id": "edge33",
+      "from_logical_node": "AE",
+      "outcome_label_exact": "onInvalidCustomerID",
+      "condition_exact_or_not_applicable": "Documented/proposed event; actual configured label binding required where null.",
+      "to_logical_node": "H",
+      "terminal_disposition_if_no_target": null,
+      "transition_assignments": [],
+      "loop_update_and_exit_rule_if_applicable": null,
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_id": "edge34",
+      "from_logical_node": "AE",
+      "outcome_label_exact": "onInvalidMessage",
+      "condition_exact_or_not_applicable": "Documented/proposed event; actual configured label binding required where null.",
+      "to_logical_node": "H",
+      "terminal_disposition_if_no_target": null,
+      "transition_assignments": [],
+      "loop_update_and_exit_rule_if_applicable": null,
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_id": "edge35",
+      "from_logical_node": "AE",
+      "outcome_label_exact": "onTimeOut",
+      "condition_exact_or_not_applicable": "Documented/proposed event; actual configured label binding required where null.",
+      "to_logical_node": "H",
+      "terminal_disposition_if_no_target": null,
+      "transition_assignments": [],
+      "loop_update_and_exit_rule_if_applicable": null,
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_id": "edge36",
+      "from_logical_node": "E3",
+      "outcome_label_exact": "onSuccess",
+      "condition_exact_or_not_applicable": "Documented/proposed event; actual configured label binding required where null.",
+      "to_logical_node": "E4",
+      "terminal_disposition_if_no_target": null,
+      "transition_assignments": [],
+      "loop_update_and_exit_rule_if_applicable": null,
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_id": "edge37",
+      "from_logical_node": "E3",
+      "outcome_label_exact": "onError",
+      "condition_exact_or_not_applicable": "Documented/proposed event; actual configured label binding required where null.",
+      "to_logical_node": "H",
+      "terminal_disposition_if_no_target": null,
+      "transition_assignments": [],
+      "loop_update_and_exit_rule_if_applicable": null,
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_id": "edge38",
+      "from_logical_node": "E3",
+      "outcome_label_exact": "onTimeout",
+      "condition_exact_or_not_applicable": "Documented/proposed event; actual configured label binding required where null.",
+      "to_logical_node": "H",
+      "terminal_disposition_if_no_target": null,
+      "transition_assignments": [],
+      "loop_update_and_exit_rule_if_applicable": null,
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_id": "edge39",
+      "from_logical_node": "S4",
+      "outcome_label_exact": null,
+      "condition_exact_or_not_applicable": "Documented/proposed event; actual configured label binding required where null.",
+      "to_logical_node": "S5",
+      "terminal_disposition_if_no_target": null,
+      "transition_assignments": [],
+      "loop_update_and_exit_rule_if_applicable": null,
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_id": "edge40",
+      "from_logical_node": "E4",
+      "outcome_label_exact": null,
+      "condition_exact_or_not_applicable": "Documented/proposed event; actual configured label binding required where null.",
+      "to_logical_node": null,
+      "terminal_disposition_if_no_target": "email_submission_or_failure_per_actual_event; persist receipt state separately",
+      "transition_assignments": [],
+      "loop_update_and_exit_rule_if_applicable": null,
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_id": "edge41",
+      "from_logical_node": "S5",
+      "outcome_label_exact": "sms.mo",
+      "condition_exact_or_not_applicable": "Documented/proposed event; actual configured label binding required where null.",
+      "to_logical_node": "S1",
+      "terminal_disposition_if_no_target": null,
+      "transition_assignments": [
+        {
+          "target_variable": "LatestText",
+          "expression_exact": "actual current sms.message output",
+          "availability_reason": "Proposed transition; bind exact value from actual producer."
+        },
+        {
+          "target_variable": "LatestKeyword",
+          "expression_exact": "actual current sms.keyword output",
+          "availability_reason": "Proposed transition; bind exact value from actual producer."
+        },
+        {
+          "target_variable": "InboundEventId",
+          "expression_exact": "actual current stable incoming event reference",
+          "availability_reason": "Proposed transition; bind exact value from actual producer."
+        }
+      ],
+      "loop_update_and_exit_rule_if_applicable": "For S5 -> S1: replace new reply/event first, increment only nonduplicate processed turns; <=5 turns and <=10 minutes.",
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_id": "edge42",
+      "from_logical_node": "S5",
+      "outcome_label_exact": "onTimeout",
+      "condition_exact_or_not_applicable": "Documented/proposed event; actual configured label binding required where null.",
+      "to_logical_node": null,
+      "terminal_disposition_if_no_target": "inactivity_not_business_resolution",
+      "transition_assignments": [],
+      "loop_update_and_exit_rule_if_applicable": null,
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_id": "edge43",
+      "from_logical_node": "S5",
+      "outcome_label_exact": "onError",
+      "condition_exact_or_not_applicable": "Documented/proposed event; actual configured label binding required where null.",
+      "to_logical_node": null,
+      "terminal_disposition_if_no_target": "receive_failure",
+      "transition_assignments": [],
+      "loop_update_and_exit_rule_if_applicable": null,
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_id": "edge44",
+      "from_logical_node": "H",
+      "outcome_label_exact": "onSuccess",
+      "condition_exact_or_not_applicable": "Documented/proposed event; actual configured label binding required where null.",
+      "to_logical_node": null,
+      "terminal_disposition_if_no_target": "inspect body: accepted_review is not queued_or_connected",
+      "transition_assignments": [],
+      "loop_update_and_exit_rule_if_applicable": null,
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_id": "edge45",
+      "from_logical_node": "H",
+      "outcome_label_exact": "onError",
+      "condition_exact_or_not_applicable": "Documented/proposed event; actual configured label binding required where null.",
+      "to_logical_node": null,
+      "terminal_disposition_if_no_target": "handoff_failed",
+      "transition_assignments": [],
+      "loop_update_and_exit_rule_if_applicable": null,
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_id": "edge46",
+      "from_logical_node": "H",
+      "outcome_label_exact": "onTimeout",
+      "condition_exact_or_not_applicable": "Documented/proposed event; actual configured label binding required where null.",
+      "to_logical_node": null,
+      "terminal_disposition_if_no_target": "handoff_unknown_reconcile_existing_task",
+      "transition_assignments": [],
+      "loop_update_and_exit_rule_if_applicable": null,
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_id": "edge47",
+      "from_logical_node": "F0",
+      "outcome_label_exact": null,
+      "condition_exact_or_not_applicable": "Documented/proposed event; actual configured label binding required where null.",
+      "to_logical_node": "F1",
+      "terminal_disposition_if_no_target": null,
+      "transition_assignments": [
+        {
+          "target_variable": "Result",
+          "expression_exact": "unavailable",
+          "availability_reason": "Proposed transition; bind exact value from actual producer."
+        },
+        {
+          "target_variable": "TicketStatus",
+          "expression_exact": "",
+          "availability_reason": "Proposed transition; bind exact value from actual producer."
+        },
+        {
+          "target_variable": "NextStep",
+          "expression_exact": "",
+          "availability_reason": "Proposed transition; bind exact value from actual producer."
+        }
+      ],
+      "loop_update_and_exit_rule_if_applicable": null,
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_id": "edge48",
+      "from_logical_node": "F1",
+      "outcome_label_exact": "onSuccess",
+      "condition_exact_or_not_applicable": "Documented/proposed event; actual configured label binding required where null.",
+      "to_logical_node": "F2",
+      "terminal_disposition_if_no_target": null,
+      "transition_assignments": [],
+      "loop_update_and_exit_rule_if_applicable": null,
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_id": "edge49",
+      "from_logical_node": "F1",
+      "outcome_label_exact": "onError",
+      "condition_exact_or_not_applicable": "Documented/proposed event; actual configured label binding required where null.",
+      "to_logical_node": null,
+      "terminal_disposition_if_no_target": "notify_unavailable",
+      "transition_assignments": [
+        {
+          "target_variable": "Result",
+          "expression_exact": "unavailable",
+          "availability_reason": "Proposed transition; bind exact value from actual producer."
+        }
+      ],
+      "loop_update_and_exit_rule_if_applicable": null,
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_id": "edge50",
+      "from_logical_node": "F1",
+      "outcome_label_exact": "onTimeout",
+      "condition_exact_or_not_applicable": "Documented/proposed event; actual configured label binding required where null.",
+      "to_logical_node": null,
+      "terminal_disposition_if_no_target": "notify_unavailable_if_completed_else_unknown",
+      "transition_assignments": [
+        {
+          "target_variable": "Result",
+          "expression_exact": "unavailable",
+          "availability_reason": "Proposed transition; bind exact value from actual producer."
+        }
+      ],
+      "loop_update_and_exit_rule_if_applicable": null,
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_id": "edge51",
+      "from_logical_node": "F2",
+      "outcome_label_exact": "Found",
+      "condition_exact_or_not_applicable": "Documented/proposed event; actual configured label binding required where null.",
+      "to_logical_node": "F3",
+      "terminal_disposition_if_no_target": null,
+      "transition_assignments": [],
+      "loop_update_and_exit_rule_if_applicable": null,
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_id": "edge52",
+      "from_logical_node": "F2",
+      "outcome_label_exact": "NotFound",
+      "condition_exact_or_not_applicable": "Documented/proposed event; actual configured label binding required where null.",
+      "to_logical_node": null,
+      "terminal_disposition_if_no_target": "notify_not_found",
+      "transition_assignments": [
+        {
+          "target_variable": "Result",
+          "expression_exact": "not_found",
+          "availability_reason": "Proposed transition; bind exact value from actual producer."
+        },
+        {
+          "target_variable": "TicketStatus",
+          "expression_exact": "",
+          "availability_reason": "Proposed transition; bind exact value from actual producer."
+        },
+        {
+          "target_variable": "NextStep",
+          "expression_exact": "",
+          "availability_reason": "Proposed transition; bind exact value from actual producer."
+        }
+      ],
+      "loop_update_and_exit_rule_if_applicable": null,
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_id": "edge53",
+      "from_logical_node": "F2",
+      "outcome_label_exact": "Denied",
+      "condition_exact_or_not_applicable": "Documented/proposed event; actual configured label binding required where null.",
+      "to_logical_node": null,
+      "terminal_disposition_if_no_target": "notify_denied",
+      "transition_assignments": [
+        {
+          "target_variable": "Result",
+          "expression_exact": "denied",
+          "availability_reason": "Proposed transition; bind exact value from actual producer."
+        },
+        {
+          "target_variable": "TicketStatus",
+          "expression_exact": "",
+          "availability_reason": "Proposed transition; bind exact value from actual producer."
+        },
+        {
+          "target_variable": "NextStep",
+          "expression_exact": "",
+          "availability_reason": "Proposed transition; bind exact value from actual producer."
+        }
+      ],
+      "loop_update_and_exit_rule_if_applicable": null,
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_id": "edge54",
+      "from_logical_node": "F2",
+      "outcome_label_exact": "Invalid",
+      "condition_exact_or_not_applicable": "Documented/proposed event; actual configured label binding required where null.",
+      "to_logical_node": null,
+      "terminal_disposition_if_no_target": "notify_invalid",
+      "transition_assignments": [
+        {
+          "target_variable": "Result",
+          "expression_exact": "invalid",
+          "availability_reason": "Proposed transition; bind exact value from actual producer."
+        },
+        {
+          "target_variable": "TicketStatus",
+          "expression_exact": "",
+          "availability_reason": "Proposed transition; bind exact value from actual producer."
+        },
+        {
+          "target_variable": "NextStep",
+          "expression_exact": "",
+          "availability_reason": "Proposed transition; bind exact value from actual producer."
+        }
+      ],
+      "loop_update_and_exit_rule_if_applicable": null,
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_id": "edge55",
+      "from_logical_node": "F2",
+      "outcome_label_exact": "Unavailable",
+      "condition_exact_or_not_applicable": "Documented/proposed event; actual configured label binding required where null.",
+      "to_logical_node": null,
+      "terminal_disposition_if_no_target": "notify_unavailable",
+      "transition_assignments": [
+        {
+          "target_variable": "Result",
+          "expression_exact": "unavailable",
+          "availability_reason": "Proposed transition; bind exact value from actual producer."
+        },
+        {
+          "target_variable": "TicketStatus",
+          "expression_exact": "",
+          "availability_reason": "Proposed transition; bind exact value from actual producer."
+        },
+        {
+          "target_variable": "NextStep",
+          "expression_exact": "",
+          "availability_reason": "Proposed transition; bind exact value from actual producer."
+        }
+      ],
+      "loop_update_and_exit_rule_if_applicable": null,
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_id": "edge56",
+      "from_logical_node": "F2",
+      "outcome_label_exact": "None of the above",
+      "condition_exact_or_not_applicable": "Documented/proposed event; actual configured label binding required where null.",
+      "to_logical_node": null,
+      "terminal_disposition_if_no_target": "notify_unavailable",
+      "transition_assignments": [
+        {
+          "target_variable": "Result",
+          "expression_exact": "unavailable",
+          "availability_reason": "Proposed transition; bind exact value from actual producer."
+        },
+        {
+          "target_variable": "TicketStatus",
+          "expression_exact": "",
+          "availability_reason": "Proposed transition; bind exact value from actual producer."
+        },
+        {
+          "target_variable": "NextStep",
+          "expression_exact": "",
+          "availability_reason": "Proposed transition; bind exact value from actual producer."
+        }
+      ],
+      "loop_update_and_exit_rule_if_applicable": null,
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_id": "edge57",
+      "from_logical_node": "F2",
+      "outcome_label_exact": "onError",
+      "condition_exact_or_not_applicable": "Documented/proposed event; actual configured label binding required where null.",
+      "to_logical_node": null,
+      "terminal_disposition_if_no_target": "notify_unavailable",
+      "transition_assignments": [
+        {
+          "target_variable": "Result",
+          "expression_exact": "unavailable",
+          "availability_reason": "Proposed transition; bind exact value from actual producer."
+        },
+        {
+          "target_variable": "TicketStatus",
+          "expression_exact": "",
+          "availability_reason": "Proposed transition; bind exact value from actual producer."
+        },
+        {
+          "target_variable": "NextStep",
+          "expression_exact": "",
+          "availability_reason": "Proposed transition; bind exact value from actual producer."
+        }
+      ],
+      "loop_update_and_exit_rule_if_applicable": null,
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_id": "edge58",
+      "from_logical_node": "F3",
+      "outcome_label_exact": null,
+      "condition_exact_or_not_applicable": "Documented/proposed event; actual configured label binding required where null.",
+      "to_logical_node": null,
+      "terminal_disposition_if_no_target": "validate matching context/ticket, set found fields and notify; parser/schema failure sets unavailable",
+      "transition_assignments": [],
+      "loop_update_and_exit_rule_if_applicable": null,
+      "evidence_refs": [
+        "design"
+      ]
+    }
+  ],
+  "variable_contracts": [
+    {
+      "logical_name": "CustomerNumber",
+      "native_reference_exact": null,
+      "documented_unqualified_origin": "sms.senderNumber",
+      "origin_kind": "documented_output",
+      "producer": "sms_entry",
+      "type_required_default": "String or actual schema; required for corresponding consumer; safe explicit initialization where applicable.",
+      "scope_lifetime_owner": "Producer snapshot/custom mapping; durable state only in actual owning service.",
+      "consumers": [
+        "S1",
+        "AS",
+        "S4",
+        "S5"
+      ],
+      "available_on_all_consuming_paths": "unresolved until actual bindings and outcome inventory exist",
+      "sensitivity_and_log_policy": "sensitive address",
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_name": "BusinessNumber",
+      "native_reference_exact": null,
+      "documented_unqualified_origin": "sms.serviceNumber",
+      "origin_kind": "documented_output",
+      "producer": "sms_entry",
+      "type_required_default": "String or actual schema; required for corresponding consumer; safe explicit initialization where applicable.",
+      "scope_lifetime_owner": "Producer snapshot/custom mapping; durable state only in actual owning service.",
+      "consumers": [
+        "S1",
+        "S4",
+        "S5"
+      ],
+      "available_on_all_consuming_paths": "unresolved until actual bindings and outcome inventory exist",
+      "sensitivity_and_log_policy": "asset identifier",
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_name": "EmailSender",
+      "native_reference_exact": null,
+      "documented_unqualified_origin": "email.emailId",
+      "origin_kind": "documented_output",
+      "producer": "email_entry",
+      "type_required_default": "String or actual schema; required for corresponding consumer; safe explicit initialization where applicable.",
+      "scope_lifetime_owner": "Producer snapshot/custom mapping; durable state only in actual owning service.",
+      "consumers": [
+        "E1",
+        "AE"
+      ],
+      "available_on_all_consuming_paths": "unresolved until actual bindings and outcome inventory exist",
+      "sensitivity_and_log_policy": "sensitive address",
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_name": "InboundMessageId",
+      "native_reference_exact": null,
+      "documented_unqualified_origin": "email.messageId",
+      "origin_kind": "documented_output",
+      "producer": "email_entry",
+      "type_required_default": "String or actual schema; required for corresponding consumer; safe explicit initialization where applicable.",
+      "scope_lifetime_owner": "Producer snapshot/custom mapping; durable state only in actual owning service.",
+      "consumers": [
+        "E1",
+        "E4"
+      ],
+      "available_on_all_consuming_paths": "unresolved until actual bindings and outcome inventory exist",
+      "sensitivity_and_log_policy": "thread metadata",
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_name": "InboundReplyTo",
+      "native_reference_exact": null,
+      "documented_unqualified_origin": "email.inReplyTo",
+      "origin_kind": "documented_output",
+      "producer": "email_entry",
+      "type_required_default": "String or actual schema; required for corresponding consumer; safe explicit initialization where applicable.",
+      "scope_lifetime_owner": "Producer snapshot/custom mapping; durable state only in actual owning service.",
+      "consumers": [
+        "E1"
+      ],
+      "available_on_all_consuming_paths": "unresolved until actual bindings and outcome inventory exist",
+      "sensitivity_and_log_policy": "thread metadata",
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_name": "LatestText",
+      "native_reference_exact": null,
+      "documented_unqualified_origin": "sms.message / email.strippedText or explicit extraction",
+      "origin_kind": "documented_output",
+      "producer": "sms_entry / email_entry / S5",
+      "type_required_default": "String or actual schema; required for corresponding consumer; safe explicit initialization where applicable.",
+      "scope_lifetime_owner": "Producer snapshot/custom mapping; durable state only in actual owning service.",
+      "consumers": [
+        "AS",
+        "AE"
+      ],
+      "available_on_all_consuming_paths": "unresolved until actual bindings and outcome inventory exist",
+      "sensitivity_and_log_policy": "customer text; no blanket debug",
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_name": "RequestContextRef",
+      "native_reference_exact": null,
+      "documented_unqualified_origin": null,
+      "origin_kind": "proposed_custom_variable",
+      "producer": "owned verified identity/case service",
+      "type_required_default": "String or actual schema; required for corresponding consumer; safe explicit initialization where applicable.",
+      "scope_lifetime_owner": "Producer snapshot/custom mapping; durable state only in actual owning service.",
+      "consumers": [
+        "AS",
+        "AE",
+        "F1"
+      ],
+      "available_on_all_consuming_paths": "unresolved until actual bindings and outcome inventory exist",
+      "sensitivity_and_log_policy": "restricted opaque context; never user-created authorization",
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_name": "AgentSessionId",
+      "native_reference_exact": null,
+      "documented_unqualified_origin": "SessionId",
+      "origin_kind": "documented_output",
+      "producer": "AS / AE",
+      "type_required_default": "String or actual schema; required for corresponding consumer; safe explicit initialization where applicable.",
+      "scope_lifetime_owner": "Producer snapshot/custom mapping; durable state only in actual owning service.",
+      "consumers": [
+        "external session owner"
+      ],
+      "available_on_all_consuming_paths": "unresolved until actual bindings and outcome inventory exist",
+      "sensitivity_and_log_policy": "restricted conversation identifier",
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_name": "AllAgentMessages",
+      "native_reference_exact": null,
+      "documented_unqualified_origin": "FullResponse",
+      "origin_kind": "documented_output",
+      "producer": "AS / AE",
+      "type_required_default": "String or actual schema; required for corresponding consumer; safe explicit initialization where applicable.",
+      "scope_lifetime_owner": "Producer snapshot/custom mapping; durable state only in actual owning service.",
+      "consumers": [
+        "S3",
+        "E3"
+      ],
+      "available_on_all_consuming_paths": "unresolved until actual bindings and outcome inventory exist",
+      "sensitivity_and_log_policy": "potential customer context",
+      "evidence_refs": [
+        "design"
+      ]
+    },
+    {
+      "logical_name": "Result",
+      "native_reference_exact": null,
+      "documented_unqualified_origin": null,
+      "origin_kind": "proposed_custom_variable",
+      "producer": "F0 / F2 / F3",
+      "type_required_default": "String or actual schema; required for corresponding consumer; safe explicit initialization where applicable.",
+      "scope_lifetime_owner": "Producer snapshot/custom mapping; durable state only in actual owning service.",
+      "consumers": [
+        "Notify AI Agent"
+      ],
+      "available_on_all_consuming_paths": "unresolved until actual bindings and outcome inventory exist",
+      "sensitivity_and_log_policy": "safe business classification",
+      "evidence_refs": [
+        "design"
+      ]
+    }
+  ],
+  "business_operation_contracts": [
+    {
+      "logical_id": "lookupTicket",
+      "action_selection_and_slot_contract": "Fulfillment action; two string entities; backend enforces trust/requiredness/format. Context transport is unresolved.",
+      "input_schema_ref": {
+        "type": "object",
+        "properties": {
+          "ticketReference": {
+            "type": "string",
+            "description": "Customer ticket reference."
+          },
+          "requestContextRef": {
+            "type": "string",
+            "description": "Approved application context reference; backend independently validates."
+          }
+        },
+        "required": [
+          "ticketReference",
+          "requestContextRef"
+        ]
+      },
+      "sample_input_ref": {
+        "ticketReference": "T-204",
+        "requestContextRef": "opaque-verified-context-example"
+      },
+      "validation_and_record_authorization": "Backend validates actor/context expiry and ownership for exact ticket; model/slot values do not authorize.",
+      "api_method_endpoint_auth_reference": "Actual owned lookup API and configured auth are unresolved.",
+      "request_mapping_ref": "Actual action Start sample -> parsed fields -> approved backend fields; no universal Cisco envelope assumed.",
+      "response_schema_and_mapping_ref": {
+        "result": "found|not_found|denied|invalid|unavailable",
+        "ticketReference": "string or empty",
+        "status": "string or empty",
+        "nextStep": "string or empty",
+        "actionPerformed": false
+      },
+      "business_success_condition": "Authorized record returned with exact requested reference and validated safe status.",
+      "return_payload_and_terminal_branch_mapping": "Last Execution Status / Notify AI Agent; defaults unavailable; every terminal path assigns meaningful result; below16000 chars.",
+      "duplicate_prevention_and_uncertain_write_policy": "Read operation only; actual owning service keys repeated requests; any human-review write has separate reconciliation.",
+      "deadline_and_retry_budget": "One HTTP attempt (2000ms connection,5000ms request), no waiting nodes/retry in this example;30sec fulfillment limit not guarantee of outer15sec inference behavior.",
+      "evidence_refs": [
+        "ai",
+        "fulfillment",
+        "studio",
+        "http",
+        "design"
+      ]
+    }
+  ],
+  "channel_and_ownership_contract": {
+    "inbound_message_receipt_attachment_classification": "Deterministic gate; no auto-read of URL/attachment; approved parser required.",
+    "customer_business_asset_thread_event_id_mapping": "Distinct channel/asset/customer/thread/event/AI IDs; see companion.",
+    "full_response_to_channel_rendering": "Actual array element schema unresolved. Preserve all meaningful items; unsupported shape -> review.",
+    "recipient_and_reply_thread_bindings": "Original verified recipient and static asset; Email In-Reply-To references current incoming Message-ID where route supports field.",
+    "send_acceptance_delivery_and_transcript_states": "Separate submitted/delivered/unknown/transcript-stored. SMTP source conflict retained.",
+    "receive_matching_late_reply_and_timeout": "SMS matched asset/customer,120sec clipped,5turn/10min budget. Email later message starts new run.",
+    "human_owner_detection_handoff_and_failure": "Existing process; accepted review/task queued/human joined distinct. Suppress AI replies when human/pending owns."
+  },
+  "evidence": [
+    {
+      "id": "ai",
+      "kind": "official_document",
+      "path_or_url": "sources/cache/help/ai-agent-node.md",
+      "section_line_or_timestamp": "Relevant named section/field table, read during independent forward test.",
+      "observed_or_retrieved_at": "2026-09-08 source capture; forward design2026-09-09UTC",
+      "product_tenant_node_version_scope": "Help docs6.20.0; Studio unversioned publisher article; no runtime proof.",
+      "establishes": "Documented contract or explicitly proposed design.",
+      "does_not_establish": "Actual tenant bindings, outcomes after configuration, execution, authorization or delivery."
+    },
+    {
+      "id": "fulfillment",
+      "kind": "official_document",
+      "path_or_url": "sources/cache/help/configure-fulfilment-flows-for-ai-agent-actions.md",
+      "section_line_or_timestamp": "Relevant named section/field table, read during independent forward test.",
+      "observed_or_retrieved_at": "2026-09-08 source capture; forward design2026-09-09UTC",
+      "product_tenant_node_version_scope": "Help docs6.20.0; Studio unversioned publisher article; no runtime proof.",
+      "establishes": "Documented contract or explicitly proposed design.",
+      "does_not_establish": "Actual tenant bindings, outcomes after configuration, execution, authorization or delivery."
+    },
+    {
+      "id": "studio",
+      "kind": "official_document",
+      "path_or_url": "sources/cache/studio/article--ncs9r37.md",
+      "section_line_or_timestamp": "Relevant named section/field table, read during independent forward test.",
+      "observed_or_retrieved_at": "2026-09-08 source capture; forward design2026-09-09UTC",
+      "product_tenant_node_version_scope": "Help docs6.20.0; Studio unversioned publisher article; no runtime proof.",
+      "establishes": "Documented contract or explicitly proposed design.",
+      "does_not_establish": "Actual tenant bindings, outcomes after configuration, execution, authorization or delivery."
+    },
+    {
+      "id": "receive",
+      "kind": "official_document",
+      "path_or_url": "sources/cache/help/receive-node.md",
+      "section_line_or_timestamp": "Relevant named section/field table, read during independent forward test.",
+      "observed_or_retrieved_at": "2026-09-08 source capture; forward design2026-09-09UTC",
+      "product_tenant_node_version_scope": "Help docs6.20.0; Studio unversioned publisher article; no runtime proof.",
+      "establishes": "Documented contract or explicitly proposed design.",
+      "does_not_establish": "Actual tenant bindings, outcomes after configuration, execution, authorization or delivery."
+    },
+    {
+      "id": "sms",
+      "kind": "official_document",
+      "path_or_url": "sources/cache/help/sms-node.md",
+      "section_line_or_timestamp": "Relevant named section/field table, read during independent forward test.",
+      "observed_or_retrieved_at": "2026-09-08 source capture; forward design2026-09-09UTC",
+      "product_tenant_node_version_scope": "Help docs6.20.0; Studio unversioned publisher article; no runtime proof.",
+      "establishes": "Documented contract or explicitly proposed design.",
+      "does_not_establish": "Actual tenant bindings, outcomes after configuration, execution, authorization or delivery."
+    },
+    {
+      "id": "email",
+      "kind": "official_document",
+      "path_or_url": "sources/cache/help/email-node.md",
+      "section_line_or_timestamp": "Relevant named section/field table, read during independent forward test.",
+      "observed_or_retrieved_at": "2026-09-08 source capture; forward design2026-09-09UTC",
+      "product_tenant_node_version_scope": "Help docs6.20.0; Studio unversioned publisher article; no runtime proof.",
+      "establishes": "Documented contract or explicitly proposed design.",
+      "does_not_establish": "Actual tenant bindings, outcomes after configuration, execution, authorization or delivery."
+    },
+    {
+      "id": "http",
+      "kind": "official_document",
+      "path_or_url": "sources/cache/help/http-request-node.md",
+      "section_line_or_timestamp": "Relevant named section/field table, read during independent forward test.",
+      "observed_or_retrieved_at": "2026-09-08 source capture; forward design2026-09-09UTC",
+      "product_tenant_node_version_scope": "Help docs6.20.0; Studio unversioned publisher article; no runtime proof.",
+      "establishes": "Documented contract or explicitly proposed design.",
+      "does_not_establish": "Actual tenant bindings, outcomes after configuration, execution, authorization or delivery."
+    },
+    {
+      "id": "branch",
+      "kind": "official_document",
+      "path_or_url": "sources/cache/help/branch-node.md",
+      "section_line_or_timestamp": "Relevant named section/field table, read during independent forward test.",
+      "observed_or_retrieved_at": "2026-09-08 source capture; forward design2026-09-09UTC",
+      "product_tenant_node_version_scope": "Help docs6.20.0; Studio unversioned publisher article; no runtime proof.",
+      "establishes": "Documented contract or explicitly proposed design.",
+      "does_not_establish": "Actual tenant bindings, outcomes after configuration, execution, authorization or delivery."
+    },
+    {
+      "id": "parser",
+      "kind": "official_document",
+      "path_or_url": "sources/cache/help/data-parser-node.md",
+      "section_line_or_timestamp": "Relevant named section/field table, read during independent forward test.",
+      "observed_or_retrieved_at": "2026-09-08 source capture; forward design2026-09-09UTC",
+      "product_tenant_node_version_scope": "Help docs6.20.0; Studio unversioned publisher article; no runtime proof.",
+      "establishes": "Documented contract or explicitly proposed design.",
+      "does_not_establish": "Actual tenant bindings, outcomes after configuration, execution, authorization or delivery."
+    },
+    {
+      "id": "start",
+      "kind": "official_document",
+      "path_or_url": "sources/cache/help/start-node.md",
+      "section_line_or_timestamp": "Relevant named section/field table, read during independent forward test.",
+      "observed_or_retrieved_at": "2026-09-08 source capture; forward design2026-09-09UTC",
+      "product_tenant_node_version_scope": "Help docs6.20.0; Studio unversioned publisher article; no runtime proof.",
+      "establishes": "Documented contract or explicitly proposed design.",
+      "does_not_establish": "Actual tenant bindings, outcomes after configuration, execution, authorization or delivery."
+    },
+    {
+      "id": "design",
+      "kind": "engineering_recommendation",
+      "path_or_url": "evidence/qa/forward-test-ai-email-sms.md",
+      "section_line_or_timestamp": "Relevant named section/field table, read during independent forward test.",
+      "observed_or_retrieved_at": "2026-09-08 source capture; forward design2026-09-09UTC",
+      "product_tenant_node_version_scope": "Help docs6.20.0; Studio unversioned publisher article; no runtime proof.",
+      "establishes": "Documented contract or explicitly proposed design.",
+      "does_not_establish": "Actual tenant bindings, outcomes after configuration, execution, authorization or delivery."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "G1",
+      "binding_or_claim": "Actual tenant/service/agent/version/resources",
+      "impact": "Blocks native config",
+      "next_evidence_needed": "Read-only approved bindings",
+      "blocks": [
+        "implementation"
+      ],
+      "status": "open"
+    },
+    {
+      "id": "G2",
+      "binding_or_claim": "Business policies/identity/lookup/handoff endpoints and authentication references",
+      "impact": "Blocks factual answers/private lookup/handoff",
+      "next_evidence_needed": "Business-owner contracts; no guessed APIs",
+      "blocks": [
+        "implementation"
+      ],
+      "status": "open"
+    },
+    {
+      "id": "G3",
+      "binding_or_claim": "Trusted context propagation from outer channel into autonomous action",
+      "impact": "Blocks private lookup",
+      "next_evidence_needed": "Representative actual action payload plus independently validated application identity binding",
+      "blocks": [
+        "implementation"
+      ],
+      "status": "open"
+    },
+    {
+      "id": "G4",
+      "binding_or_claim": "Current node IDs/fields/output prefixes/all outcomes",
+      "impact": "Blocks native wiring",
+      "next_evidence_needed": "Configured read-only sample or sanctioned later test evidence",
+      "blocks": [
+        "implementation"
+      ],
+      "status": "open"
+    },
+    {
+      "id": "G5",
+      "binding_or_claim": "FullResponse element schema",
+      "impact": "Blocks response extraction/formatter",
+      "next_evidence_needed": "Representative selected agent/node version response samples",
+      "blocks": [
+        "implementation"
+      ],
+      "status": "open"
+    },
+    {
+      "id": "G6",
+      "binding_or_claim": "Concurrent/unrelated email thread AI session isolation/closure",
+      "impact": "Blocks sensitive multi-case automation",
+      "next_evidence_needed": "Scoped actual session contract; controlled later execution when authorized",
+      "blocks": [
+        "implementation"
+      ],
+      "status": "open"
+    },
+    {
+      "id": "G7",
+      "binding_or_claim": "SMTP receipt source contradiction",
+      "impact": "Blocks promises of delivery tracking",
+      "next_evidence_needed": "Actual route capabilities/receipts when authorized",
+      "blocks": [
+        "implementation"
+      ],
+      "status": "open"
+    },
+    {
+      "id": "G8",
+      "binding_or_claim": "Final graph variables/termination events and return escaping",
+      "impact": "Blocks deployability",
+      "next_evidence_needed": "Actual field readback + permitted synthetic node/flow tests later",
+      "blocks": [
+        "implementation"
+      ],
+      "status": "open"
+    }
+  ],
+  "verification_cases": [
+    {
+      "id": "policy",
+      "input_fixture_ref": "Policy Q&A without ticket",
+      "expected_path_and_result": "Supported knowledge answer, no lookup",
+      "expected_external_effect": "None during this design-only exercise. Future allowed test checks only specified behavior.",
+      "execution_status": "not_run",
+      "actual_evidence_refs": []
+    },
+    {
+      "id": "missing",
+      "input_fixture_ref": "Missing ticketReference",
+      "expected_path_and_result": "Clarification outside fulfillment",
+      "expected_external_effect": "None during this design-only exercise. Future allowed test checks only specified behavior.",
+      "execution_status": "not_run",
+      "actual_evidence_refs": []
+    },
+    {
+      "id": "found",
+      "input_fixture_ref": "Verified T-204",
+      "expected_path_and_result": "F0->F1->F2->F3->Notify; safe channel result",
+      "expected_external_effect": "None during this design-only exercise. Future allowed test checks only specified behavior.",
+      "execution_status": "not_run",
+      "actual_evidence_refs": []
+    },
+    {
+      "id": "denied",
+      "input_fixture_ref": "Expired/wrong context",
+      "expected_path_and_result": "No ticket data; denied/review",
+      "expected_external_effect": "None during this design-only exercise. Future allowed test checks only specified behavior.",
+      "execution_status": "not_run",
+      "actual_evidence_refs": []
+    },
+    {
+      "id": "schema",
+      "input_fixture_ref": "HTTP200 malformed/null result",
+      "expected_path_and_result": "Unavailable, no stale found",
+      "expected_external_effect": "None during this design-only exercise. Future allowed test checks only specified behavior.",
+      "execution_status": "not_run",
+      "actual_evidence_refs": []
+    },
+    {
+      "id": "timeout",
+      "input_fixture_ref": "Fulfillment/inference timeout",
+      "expected_path_and_result": "Unavailable/unknown; no false completion",
+      "expected_external_effect": "None during this design-only exercise. Future allowed test checks only specified behavior.",
+      "execution_status": "not_run",
+      "actual_evidence_refs": []
+    },
+    {
+      "id": "multi",
+      "input_fixture_ref": "Two FullResponse items and rich item",
+      "expected_path_and_result": "Preserve meanings or review",
+      "expected_external_effect": "None during this design-only exercise. Future allowed test checks only specified behavior.",
+      "execution_status": "not_run",
+      "actual_evidence_refs": []
+    },
+    {
+      "id": "sms_loop",
+      "input_fixture_ref": "HELP-only, corrected second reply, sixth turn",
+      "expected_path_and_result": "Fresh input; bounded exit",
+      "expected_external_effect": "None during this design-only exercise. Future allowed test checks only specified behavior.",
+      "execution_status": "not_run",
+      "actual_evidence_refs": []
+    },
+    {
+      "id": "duplicate",
+      "input_fixture_ref": "Repeated source event/concurrent start",
+      "expected_path_and_result": "One progression/owner",
+      "expected_external_effect": "None during this design-only exercise. Future allowed test checks only specified behavior.",
+      "execution_status": "not_run",
+      "actual_evidence_refs": []
+    },
+    {
+      "id": "threads",
+      "input_fixture_ref": "Two unrelated emails from same sender",
+      "expected_path_and_result": "No unknown session reuse; review until verified",
+      "expected_external_effect": "None during this design-only exercise. Future allowed test checks only specified behavior.",
+      "execution_status": "not_run",
+      "actual_evidence_refs": []
+    },
+    {
+      "id": "attachment",
+      "input_fixture_ref": "Blocked/only attachment",
+      "expected_path_and_result": "No invented content interpretation",
+      "expected_external_effect": "None during this design-only exercise. Future allowed test checks only specified behavior.",
+      "execution_status": "not_run",
+      "actual_evidence_refs": []
+    },
+    {
+      "id": "smtp",
+      "input_fixture_ref": "Submission no receipt",
+      "expected_path_and_result": "delivery_unknown",
+      "expected_external_effect": "None during this design-only exercise. Future allowed test checks only specified behavior.",
+      "execution_status": "not_run",
+      "actual_evidence_refs": []
+    },
+    {
+      "id": "human",
+      "input_fixture_ref": "Handoff then duplicate/timeout",
+      "expected_path_and_result": "Reuse lifecycle/reconcile; no false joined",
+      "expected_external_effect": "None during this design-only exercise. Future allowed test checks only specified behavior.",
+      "execution_status": "not_run",
+      "actual_evidence_refs": []
+    }
+  ],
+  "readiness": {
+    "design_reviewable": true,
+    "all_required_bindings_resolved": false,
+    "all_node_outcomes_accounted_for": false,
+    "producer_consumer_paths_checked": false,
+    "business_and_transport_completion_separated": true,
+    "material_cases_defined": true,
+    "implementation_status": "not_started",
+    "execution_status": "not_run",
+    "publication_status": "not_published"
+  },
+  "design_companion": "evidence/qa/forward-test-ai-email-sms.md"
+}

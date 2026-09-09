@@ -1,0 +1,31 @@
+{
+  "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd81825799e",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "c433cee6a5d3e764f1caa2a9cd3bcb55c93d00c4ab99a15881fdb9a0ecb26273",
+    "source_path": "34b671c53b7c063b189673519d3d9c30e34b5f05c1296e7a6c35bf8334e47c53",
+    "text_path": "d7f729ab60d657641b958c1204dd311e0dd6c3d10ec41bf8666df0fcabae8bbf"
+  },
+  "headings": [],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/wxcc-display-name-guidelines.md",
+  "resolved_url": "https://help.webexconnect.io/docs/wxcc-display-name-guidelines",
+  "retrieved_at": "2026-09-08T23:29:13+00:00",
+  "sha256_html_response": "da17546a75b6e757860e5513487509cd2e5b0e4a63e1c17ffa20afecb7f7c208",
+  "sha256_source_body": "34b671c53b7c063b189673519d3d9c30e34b5f05c1296e7a6c35bf8334e47c53",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/wxcc-display-name-guidelines.source.md",
+  "source_updated_at": "2026-04-14T07:23:56.665Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/wxcc-display-name-guidelines.txt",
+  "title": "Display Name Guidelines - WXCC",
+  "url": "https://help.webexconnect.io/docs/wxcc-display-name-guidelines",
+  "word_count": 496,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/wxcc-display-name-guidelines.metadata.json"
+}

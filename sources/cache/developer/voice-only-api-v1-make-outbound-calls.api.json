@@ -1,0 +1,142 @@
+{
+  "api": {
+    "method": "post",
+    "url": "/messages",
+    "auth": "required",
+    "results": {
+      "codes": [
+        {
+          "name": "",
+          "code": "{}",
+          "language": "json",
+          "status": 200
+        },
+        {
+          "name": "",
+          "code": "{}",
+          "language": "json",
+          "status": 400
+        }
+      ]
+    },
+    "params": [
+      {
+        "name": "Content-type",
+        "type": "string",
+        "enumValues": "",
+        "default": "application/json",
+        "desc": "",
+        "required": false,
+        "in": "header",
+        "ref": "",
+        "_id": "69ae7748ca43e70ea956b9f9",
+        "id": "69ae7748ca43e70ea956b9f9"
+      },
+      {
+        "name": "Authorization",
+        "type": "string",
+        "enumValues": "",
+        "default": "Service key or Bearer <Token>",
+        "desc": "If you are using service key, enter the service key as the value. If you are using JWT authentication then enter Bearer Token. You can get the JWT token or Service key from within a service in your Webex connect tenant.",
+        "required": false,
+        "in": "header",
+        "ref": "",
+        "_id": "69ae7748ca43e70ea956b9fa",
+        "id": "69ae7748ca43e70ea956b9fa"
+      }
+    ],
+    "examples": {
+      "codes": []
+    },
+    "apiSetting": "6a675233ec1c893d8a7f6845"
+  },
+  "swagger": {
+    "path": "/messages"
+  },
+  "oas_public_id": "@imiconnect-apis/v6.20.0#3bkipd3mmiv4a3c",
+  "selected_openapi": {
+    "openapi": "3.1.0",
+    "info": {
+      "title": "Make Outbound Calls Using Voice API v1",
+      "version": "6.20.0"
+    },
+    "servers": [
+      {
+        "url": "https://api.{YourRegion}.webexconnect.io/v1/voice",
+        "variables": {
+          "YourRegion": {
+            "default": "YourRegion"
+          }
+        }
+      }
+    ],
+    "security": [
+      {}
+    ],
+    "path": "/messages",
+    "method": "post",
+    "path_parameters": [],
+    "operation": {
+      "summary": "Make Outbound Calls Using Voice API v1",
+      "description": "Place an outbound call to a phone number and play a message using Voice API v1.",
+      "operationId": "voice-only-api-v1-make-outbound-calls",
+      "parameters": [
+        {
+          "name": "Content-type",
+          "in": "header",
+          "schema": {
+            "type": "string",
+            "default": "application/json"
+          }
+        },
+        {
+          "name": "Authorization",
+          "in": "header",
+          "description": "If you are using service key, enter the service key as the value. If you are using JWT authentication then enter Bearer Token. You can get the JWT token or Service key from within a service in your Webex connect tenant.",
+          "schema": {
+            "type": "string",
+            "default": "Service key or Bearer <Token>"
+          }
+        }
+      ],
+      "responses": {
+        "200": {
+          "description": "200",
+          "content": {
+            "application/json": {
+              "examples": {
+                "Result": {
+                  "value": "{}"
+                }
+              },
+              "schema": {
+                "type": "object",
+                "properties": {}
+              }
+            }
+          }
+        },
+        "400": {
+          "description": "400",
+          "content": {
+            "application/json": {
+              "examples": {
+                "Result": {
+                  "value": "{}"
+                }
+              },
+              "schema": {
+                "type": "object",
+                "properties": {}
+              }
+            }
+          }
+        }
+      },
+      "deprecated": false
+    },
+    "components": {
+      "securitySchemes": {}
+    }
+  }
+}

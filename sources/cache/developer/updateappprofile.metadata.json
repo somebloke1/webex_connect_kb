@@ -1,0 +1,36 @@
+{
+  "api_metadata_path": "sources/cache/developer/updateappprofile.api.json",
+  "category": "Profile API v2",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f64e7",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "34e59c01c08ac2e62ec936ec863bd85fdbf6ee6b4b626edb9893c309dfb5c99f",
+    "source_path": "7f92de54f12bf7ac8287938a77dc1e742c3c996cab468c251cabafc3cac00d2d",
+    "text_path": "f149efff0c7aa42fc311e216e5a2e6cb59d5cbd6de22e0828fbc0adaa224c391"
+  },
+  "headings": [
+    "**Status Codes**"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/updateappprofile.md",
+  "openapi_path": "sources/cache/openapi/cb53123888a5d0e8682f2f957c79eaa8c9dabeabd0c4ed5a28a76c0c271196ed.json",
+  "resolved_url": "https://developers.webexconnect.io/reference/updateappprofile",
+  "retrieved_at": "2026-09-08T23:31:50+00:00",
+  "sha256_api_metadata": "e69f7575ab73c3cf7734c330c33b349ed96af262435038dc797afcb164195a93",
+  "sha256_html_response": "8f29331aa3a16ba5cb0db5dc475ec4dc7984baa10f75f3b4189241f29394482c",
+  "sha256_openapi": "cb53123888a5d0e8682f2f957c79eaa8c9dabeabd0c4ed5a28a76c0c271196ed",
+  "sha256_source_body": "7f92de54f12bf7ac8287938a77dc1e742c3c996cab468c251cabafc3cac00d2d",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/updateappprofile.source.md",
+  "source_updated_at": "2026-04-16T06:02:11.161Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/updateappprofile.txt",
+  "title": "Update App Profile",
+  "url": "https://developers.webexconnect.io/reference/updateappprofile",
+  "word_count": 1393,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/developer/updateappprofile.metadata.json"
+}

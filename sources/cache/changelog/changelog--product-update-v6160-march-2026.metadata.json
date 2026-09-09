@@ -1,0 +1,40 @@
+{
+  "category": "2026 product and policy updates",
+  "deprecated": false,
+  "doc_id": "69b2cabec6d69b49ed30b779",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "7f2c57240d787f96e0262ba9bcbbb409e7e08a9d53bbaf539cf8b9b40a29e776",
+    "source_path": "fbbaec6b365cef89111796a2df26054ce1c512e93820fddf0dfb61b028f0fdd0",
+    "text_path": "018577ef7fa3dfbc6e4b8c2c9182e27c26c6b01ff41ed04b6e14fe6894cd8db7"
+  },
+  "headings": [
+    "Summary",
+    "📘Release Date",
+    "Details",
+    "API for fetching Webex Connect Audit Logs",
+    "Important Additional Notes:",
+    "Depcrecated Items",
+    "Changelog"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/changelog/changelog--product-update-v6160-march-2026.md",
+  "release_version": "6.16.0",
+  "resolved_url": "https://help.webexconnect.io/changelog/product-update-v6160-march-2026",
+  "retrieved_at": "2026-09-08T23:31:53+00:00",
+  "sha256_html_response": "4ca17624134bffd9118b25ff650620355c2ca25e12ffd4ac51acf5e79f8cceb3",
+  "sha256_source_body": "fbbaec6b365cef89111796a2df26054ce1c512e93820fddf0dfb61b028f0fdd0",
+  "source_family": "changelog",
+  "source_kind": "official_changelog",
+  "source_path": "sources/cache/changelog/changelog--product-update-v6160-march-2026.source.md",
+  "source_published_at": "2026-03-12T14:16:30.655Z",
+  "source_updated_at": null,
+  "status": "ok",
+  "text_path": "sources/cache/changelog/changelog--product-update-v6160-march-2026.txt",
+  "title": "Product Update - v6.16.0, March 2026",
+  "url": "https://help.webexconnect.io/changelog/product-update-v6160-march-2026",
+  "word_count": 557,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/changelog/changelog--product-update-v6160-march-2026.metadata.json"
+}

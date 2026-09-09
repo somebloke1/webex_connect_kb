@@ -1,0 +1,36 @@
+{
+  "api_metadata_path": "sources/cache/developer/createappprofile.api.json",
+  "category": "Profile API v2",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f64e3",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "510e45e9b45215e3b70a4e212838c2648945b3dbf9f5d8aba48fa129edd6732b",
+    "source_path": "638a60456394fd851a2ddfd39400fd9bbddab82d4853bbb25898e91457bb72ae",
+    "text_path": "b549dc4e5b86f0b0120cb616e9155b1867688b38681271bc8290d91634dfe484"
+  },
+  "headings": [
+    "**Status Codes**"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/createappprofile.md",
+  "openapi_path": "sources/cache/openapi/969adcd714e6153b27c555565a0e59dca078302d1dae388c183ecb9ae9c7e5e6.json",
+  "resolved_url": "https://developers.webexconnect.io/reference/createappprofile",
+  "retrieved_at": "2026-09-08T23:31:49+00:00",
+  "sha256_api_metadata": "6f6037c41220ee1a33c8fdb8a81bffc0a7bab12857caa7dcfa468bd24c6de877",
+  "sha256_html_response": "7a67543f7db27c3986cb5e5cdee9981ac789fdfa2bee706b7bc93e2e9ca7ceee",
+  "sha256_openapi": "969adcd714e6153b27c555565a0e59dca078302d1dae388c183ecb9ae9c7e5e6",
+  "sha256_source_body": "638a60456394fd851a2ddfd39400fd9bbddab82d4853bbb25898e91457bb72ae",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/createappprofile.source.md",
+  "source_updated_at": "2026-04-16T06:00:38.388Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/createappprofile.txt",
+  "title": "Create App Profile",
+  "url": "https://developers.webexconnect.io/reference/createappprofile",
+  "word_count": 2200,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/createappprofile.metadata.json"
+}

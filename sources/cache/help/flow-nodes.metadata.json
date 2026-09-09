@@ -1,0 +1,34 @@
+{
+  "category": "SERVICES & FLOWS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182577cb",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "652a32262a377682fbe9b602915d86df11e075eeb9e05a9983a202c2e4401767",
+    "source_path": "4ddbcd2d074cdd8d4b135ee00cd603bce12b5e2638ab6861119761c7abf70baf",
+    "text_path": "ba9e373acd91bc3822099db0c597100d7daecbafbeb7b959d326b95b0da6ac0c"
+  },
+  "headings": [
+    "📘",
+    "📘Note:"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/flow-nodes.md",
+  "resolved_url": "https://help.webexconnect.io/docs/flow-nodes",
+  "retrieved_at": "2026-09-08T23:28:42+00:00",
+  "sha256_html_response": "1b91b5fabcbb4a6db76223085a2b2d1842f3d544796b8a5d466db1cd60c554d8",
+  "sha256_source_body": "4ddbcd2d074cdd8d4b135ee00cd603bce12b5e2638ab6861119761c7abf70baf",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/flow-nodes.source.md",
+  "source_updated_at": "2024-07-25T18:24:01.462Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/flow-nodes.txt",
+  "title": "Node Palette",
+  "url": "https://help.webexconnect.io/docs/flow-nodes",
+  "word_count": 470,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/flow-nodes.metadata.json"
+}

@@ -1,0 +1,35 @@
+{
+  "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257887",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "de4dff2506a39872bfe2ec55abc85c3ac5d32a6b22b7e50a921999792b2d0254",
+    "source_path": "564d2c220957ea9acdff29b92ba49618c2328f7c2697fcf3274d35083e6925ef",
+    "text_path": "40434ef9ebe64aaecbf1844686cf4a0902fa81c83d09d16ec11067e731481359"
+  },
+  "headings": [
+    "Authorization",
+    "Methods and Outcomes",
+    "📘Note"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/wxcc-engage-close-conversation.md",
+  "resolved_url": "https://help.webexconnect.io/docs/wxcc-engage-close-conversation",
+  "retrieved_at": "2026-09-08T23:29:17+00:00",
+  "sha256_html_response": "da433bdcfa8c35f7bf7f2303e1a034413c95d915d3d4559e0242093db134a183",
+  "sha256_source_body": "564d2c220957ea9acdff29b92ba49618c2328f7c2697fcf3274d35083e6925ef",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/wxcc-engage-close-conversation.source.md",
+  "source_updated_at": "2026-04-14T07:26:49.021Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/wxcc-engage-close-conversation.txt",
+  "title": "Close Conversation - WXCC",
+  "url": "https://help.webexconnect.io/docs/wxcc-engage-close-conversation",
+  "word_count": 191,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/wxcc-engage-close-conversation.metadata.json"
+}

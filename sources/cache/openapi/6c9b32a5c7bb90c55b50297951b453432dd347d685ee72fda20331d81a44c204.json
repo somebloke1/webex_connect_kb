@@ -1,0 +1,480 @@
+{
+  "_id": "6a675233ec1c893d8a7f67e4:6a675233ec1c893d8a7f660a",
+  "components": {
+    "securitySchemes": {}
+  },
+  "info": {
+    "title": "Apple Message for Business_Time Picker",
+    "version": "6.20.0"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/": {
+      "post": {
+        "deprecated": false,
+        "description": "\"Allows the customer to schedule an appointment. The customer can also get directions to the location or add the event to their calendar by tapping Get Directions or Add to Calendar.\" _Note : Modify YourRegion in the URL to the right to reflect your tenant’s region. See [Know your endpoint page](https://developers.imiconnect.io/reference/endpoints)._",
+        "operationId": "apple-message-for-business-time-picker",
+        "parameters": [
+          {
+            "description": "Applicable when you want to use service key for API authentication. Available under API tab within a service in your webexconnect tenant.",
+            "in": "header",
+            "name": "key",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "JSON Web Token (JWT) for authentication (e.g. bearer [token]) used alternatively to Service Key",
+            "in": "header",
+            "name": "authorization",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "examples": {
+                "Request Example": {
+                  "value": {
+                    "appid": "<ambAppid>",
+                    "callbackData": "",
+                    "channels": {
+                      "AppleBusinessChat": {
+                        "interactiveData": {
+                          "bid": "com.apple.messages.MSMessageExtensionBalloonPlugin:0000000000:com.apple.icloud.apps.messages.business.extension",
+                          "data": {
+                            "event": {
+                              "identifier": "fd296699-6ad1-4c96-af78-ae10dee1f19c",
+                              "location": {
+                                "latitude": 51.5209041,
+                                "longitude": -0.1025591,
+                                "radius": 16,
+                                "title": "5 St Johns Street"
+                              },
+                              "timeslots": [
+                                {
+                                  "duration": 1800,
+                                  "identifier": "0",
+                                  "startTime": "2022-09-23T15:30+0000"
+                                },
+                                {
+                                  "duration": 1800,
+                                  "identifier": "1",
+                                  "startTime": "2022-09-24T16:30+0000"
+                                },
+                                {
+                                  "duration": 1800,
+                                  "identifier": "2",
+                                  "startTime": "2022-09-24T16:30+0000"
+                                },
+                                {
+                                  "duration": 1800,
+                                  "identifier": "3",
+                                  "startTime": "2022-09-24T12:30+0000"
+                                },
+                                {
+                                  "duration": 1800,
+                                  "identifier": "4",
+                                  "startTime": "2022-09-24T13:30+0000"
+                                },
+                                {
+                                  "duration": 1800,
+                                  "identifier": "5",
+                                  "startTime": "2022-09-24T17:30+0000"
+                                },
+                                {
+                                  "duration": 1800,
+                                  "identifier": "6",
+                                  "startTime": "2022-09-28T15:30+0000"
+                                },
+                                {
+                                  "duration": 1800,
+                                  "identifier": "7",
+                                  "startTime": "2022-09-27T15:30+0000"
+                                },
+                                {
+                                  "duration": 1800,
+                                  "identifier": "8",
+                                  "startTime": "2022-09-24T15:30+0000"
+                                },
+                                {
+                                  "duration": 1800,
+                                  "identifier": "9",
+                                  "startTime": "2022-09-25T15:30+0000"
+                                },
+                                {
+                                  "duration": 1800,
+                                  "identifier": "10",
+                                  "startTime": "2022-09-26T15:30+0000"
+                                }
+                              ],
+                              "timezoneOffset": -100,
+                              "title": "NHS Appointments"
+                            },
+                            "images": [
+                              {
+                                "data": "url1",
+                                "identifier": "a9b37a98-92a2-4f65-b74a-6a0cabf51b93"
+                              }
+                            ],
+                            "requestIdentifier": "b0291fd1-d2ac-4109-bd53-9258d6748619",
+                            "version": "1.0"
+                          },
+                          "receivedMessage": {
+                            "imageIdentifier": "a9b37a98-92a2-4f65-b74a-6a0cabf51b93",
+                            "style": "small",
+                            "subtitle": "Available appointments at your locall GP",
+                            "title": "NHS Appointment"
+                          },
+                          "replyMessage": {
+                            "alternateTitle": "06-Aug-2018 at 10:00 AM",
+                            "style": "small",
+                            "title": "Selected time"
+                          },
+                          "requestIdentifier": "b0291fd1-d2ac-4109-bd53-9258d6748619",
+                          "useLiveLayout": true
+                        },
+                        "type": "interactive"
+                      }
+                    },
+                    "correlationid": "",
+                    "deliverychannel": "AppleBusinessChat",
+                    "destination": [
+                      {
+                        "abcUserId": [
+                          "{{abcUserId}}"
+                        ]
+                      }
+                    ],
+                    "notifyurl": "",
+                    "notifyurlAuthId": "TNPBXKT09U"
+                  }
+                }
+              },
+              "schema": {
+                "properties": {
+                  "appid": {
+                    "description": "The ID of the app asset that you can obtain from the Connect platform.",
+                    "type": "string"
+                  },
+                  "callbackData": {
+                    "description": "Data that you have configured to receive on the notify Url. This is configured as a part of the request.",
+                    "type": "string"
+                  },
+                  "channels": {
+                    "description": "Channels object used for messaging.",
+                    "properties": {
+                      "AppleBusinessChat": {
+                        "description": "JSON object for Apple Business Chat configuration.",
+                        "properties": {
+                          "interactiveData": {
+                            "description": "Contains the list/Time Picker (Date Picker) and Quick Reply data",
+                            "properties": {
+                              "data": {
+                                "description": "JSON object for data configuration.",
+                                "properties": {
+                                  "event": {
+                                    "description": "JSON object for event configuration",
+                                    "properties": {
+                                      "identifier": {
+                                        "description": "A string field identifying the event that must be unique within the payload, if more than one exists.",
+                                        "type": "string"
+                                      },
+                                      "timeslots": {
+                                        "description": "JSON object for timeslots configuration. The time slots past the time of message delivery will not be displayed in the time picker delivered to the customer.",
+                                        "items": {
+                                          "properties": {
+                                            "duration": {
+                                              "description": "An integer representing the duration of the time slot, in seconds.",
+                                              "format": "int32",
+                                              "type": "integer"
+                                            },
+                                            "identifier": {
+                                              "description": "A string field identifying the time item that must be unique within the payload, if more than one exists.",
+                                              "type": "string"
+                                            },
+                                            "location": {
+                                              "description": "An object describing a location.",
+                                              "properties": {
+                                                "latitude": {
+                                                  "description": "Representing the latitude of the location.",
+                                                  "format": "float",
+                                                  "type": "number"
+                                                },
+                                                "longitude": {
+                                                  "description": "Representing the longitude of the location.",
+                                                  "format": "float",
+                                                  "type": "number"
+                                                },
+                                                "radius": {
+                                                  "description": "Representing the location radius, in meters. Messages for Business ignores this field when latitude and longitude are missing or empty.",
+                                                  "format": "float",
+                                                  "type": "number"
+                                                },
+                                                "title": {
+                                                  "description": "A string field of the location title.",
+                                                  "type": "string"
+                                                }
+                                              },
+                                              "type": "object"
+                                            },
+                                            "startTime": {
+                                              "description": "A UTC date string, represented by a valid date in ISO-8601 format and specified as absolute GMT +0000 date; for example, 2017-05-26T08:27:55+00:00, 2017-05-26T08:27:55+0000, or 2017-05-26T08:27:55Z. The timezoneOffset, from the event object, determines whether the startTime is in a specific time zone or in the customer's current time zone.",
+                                              "type": "string"
+                                            }
+                                          },
+                                          "type": "object"
+                                        },
+                                        "type": "array"
+                                      },
+                                      "timezoneOffset": {
+                                        "description": "An integer representing the number of minutes from GMT, specifying the timezone of the event’s location. If not set, times are shown according to the customer’s current time zone. If set, the times are shown according to the event’s time zone, regardless of the customer’s location.",
+                                        "type": "string"
+                                      },
+                                      "title": {
+                                        "description": "A string field of the event title.",
+                                        "type": "string"
+                                      }
+                                    },
+                                    "type": "object"
+                                  },
+                                  "images": {
+                                    "description": "An array of images object",
+                                    "items": {
+                                      "properties": {
+                                        "data": {
+                                          "description": "Direct link to the image",
+                                          "type": "string"
+                                        },
+                                        "identifier": {
+                                          "description": "A string containing the image identifier, which must be unique within the list of images.",
+                                          "type": "string"
+                                        }
+                                      },
+                                      "required": [
+                                        "identifier",
+                                        "data"
+                                      ],
+                                      "type": "object"
+                                    },
+                                    "type": "array"
+                                  },
+                                  "receivedMessage": {
+                                    "description": "JSON object for received message configuration",
+                                    "properties": {
+                                      "imageIdentifier": {
+                                        "description": "The identifier for one of the images specified in data.images.",
+                                        "type": "string"
+                                      },
+                                      "style": {
+                                        "description": "A style that controls the size of the view rendered by Live Layout. The default is icon. The list of possible values: icon, small, large.",
+                                        "type": "string"
+                                      },
+                                      "subtitle": {
+                                        "description": "The subtitle that appears under the main title in the received message bubble. Limited to 512 characters.",
+                                        "type": "string"
+                                      },
+                                      "title": {
+                                        "description": "The main title that the Messages app shows in the header of the received message bubble. Limited to 512 characters.",
+                                        "type": "string"
+                                      }
+                                    },
+                                    "type": "object"
+                                  },
+                                  "replyMessage": {
+                                    "description": "JSON object for reply message configuration",
+                                    "properties": {
+                                      "alternateTitle": {
+                                        "description": "Alternate Title of the reply message",
+                                        "type": "string"
+                                      },
+                                      "style": {
+                                        "description": "A style that controls the size of the view rendered by Live Layout. The default is icon. The list of possible values: icon, small, large",
+                                        "type": "string"
+                                      },
+                                      "title": {
+                                        "description": "The main title that the Messages app shows in the header of the reply message bubble. When the user taps the reply message bubble, the Messages app replaces the title with the user’s selection. Limited to 512 characters.",
+                                        "type": "string"
+                                      }
+                                    },
+                                    "type": "object"
+                                  },
+                                  "requestIdentifier": {
+                                    "description": "A string that representing a unique identifier for the request. imiconnect returns the ID in the response it sends back to the client application",
+                                    "type": "string"
+                                  },
+                                  "requestindentifier": {
+                                    "description": "An identifier for the authenticate request. Recommended value: uuid.",
+                                    "type": "string"
+                                  },
+                                  "useLiveLayout": {
+                                    "description": "A Boolean that determines whether the Messages app should use Live Layout. The default is true. Default: true",
+                                    "type": "boolean"
+                                  },
+                                  "version": {
+                                    "description": "A string representing the version number of the message extension schema. Should be 1.0.",
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "version",
+                                  "requestIdentifier"
+                                ],
+                                "type": "object"
+                              }
+                            },
+                            "type": "object"
+                          },
+                          "type": {
+                            "description": "Options: text, richlink, interactive",
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "type"
+                        ],
+                        "type": "object"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  "correlationid": {
+                    "description": "The correlationid is a unique identifier that you can attach to every request as a reference a particular transaction or event. This is configured as a part of the request.",
+                    "type": "string"
+                  },
+                  "deliverychannel": {
+                    "default": "AppleBusinessChat",
+                    "description": "Channel used to send the message i.e., AppleBusinessChat in this case.",
+                    "type": "string"
+                  },
+                  "destination": {
+                    "description": "User's Opaque ID that uniquely identifies a user and is specific to the business.",
+                    "items": {
+                      "properties": {
+                        "abcUserId": {
+                          "default": [],
+                          "description": "User's Opaque ID. _Note: For more information [refer](https://register.apple.com/resources/messages/messaging-documentation/faq)_",
+                          "items": {
+                            "type": "string"
+                          },
+                          "type": "array"
+                        }
+                      },
+                      "type": "object"
+                    },
+                    "type": "array"
+                  },
+                  "notifyurl": {
+                    "description": "Configure a URL to get notifications on delivery reports for a Apple message. This field accepts only a valid URL or a variable. If an invalid URL is passed in API request or via a variable, then such request will not be considered eligible for retries.",
+                    "type": "string"
+                  },
+                  "notifyurlAuthId": {
+                    "default": "No",
+                    "description": "Unique Authentication ID",
+                    "type": "string"
+                  }
+                },
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{\n    \"response\": [\n        {\n            \"code\": \"1001\",\n            \"transid\": \"3f09295d-9eb3-4c9e-8ee8-a3272e5f00c1\",\n            \"description\": \"Queued\"\n        }\n    ]\n}"
+                  }
+                },
+                "schema": {
+                  "properties": {
+                    "response": {
+                      "items": {
+                        "properties": {
+                          "code": {
+                            "example": "1001",
+                            "type": "string"
+                          },
+                          "description": {
+                            "example": "Queued",
+                            "type": "string"
+                          },
+                          "transid": {
+                            "example": "3f09295d-9eb3-4c9e-8ee8-a3272e5f00c1",
+                            "type": "string"
+                          }
+                        },
+                        "type": "object"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "200"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{\n  \"response\": {\n    \"code\": \"7001\",\n    \"description\": \"Authentication failed.\",\n    \"transid\": \"7670c9a8-131f-4166-ac30-17f6109340d6\"\n  }\n}"
+                  }
+                },
+                "schema": {
+                  "properties": {
+                    "response": {
+                      "properties": {
+                        "code": {
+                          "example": "7001",
+                          "type": "string"
+                        },
+                        "description": {
+                          "example": "Authentication failed.",
+                          "type": "string"
+                        },
+                        "transid": {
+                          "example": "7670c9a8-131f-4166-ac30-17f6109340d6",
+                          "type": "string"
+                        }
+                      },
+                      "type": "object"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "400"
+          }
+        },
+        "summary": "Apple Message for Business: Time Picker"
+      }
+    }
+  },
+  "security": [
+    {}
+  ],
+  "servers": [
+    {
+      "url": "https://api.{YourRegion}.webexconnect.io/resources/v1/messaging",
+      "variables": {
+        "YourRegion": {
+          "default": "YourRegion"
+        }
+      }
+    }
+  ],
+  "x-readme": {
+    "explorer-enabled": true,
+    "headers": [],
+    "proxy-enabled": true
+  },
+  "x-readme-fauxas": true
+}

@@ -1,0 +1,78 @@
+# Types of Campaigns and Terms
+
+Source: https://help.webexconnect.io/docs/types-of-campaigns-and-terms
+Documentation version: 6.20.0
+Retrieved: 2026-09-08T23:29:02+00:00
+
+## Types of Campaigns
+
+While creating campaigns, you can choose the type based on the use case to be supported.
+
+
+
+
+| Use Case | Purpose |
+| --- | --- |
+| 2FA | Any authentication, verification, or one-time passcode. |
+| Account Notifications | Standard notifications for account holders, relating to and being about an account. |
+| Customer Care | All customer care interactions, including but not limited to account management and customer support. |
+| Delivery Notifications | Notification about the status of the delivery of a product or service. |
+| Fraud Alert Messaging | Notifications regarding potential fraudulent activity on a user's account. |
+| Higher Education | Messaging created on behalf of Colleges or Universities, including School Districts and education institutions. This use case is NOT for the "free to the consumer" messaging model |
+| Low Volume Mixed | For Brands that have multiple use cases and only need very low messaging throughput. Examples include: test or demo accounts, small businesses (single Doctor's office, single Pizza shop etc). |
+| Marketing | Any communication that includes marketing and/or promotional content. |
+| Mixed | Any messaging campaign containing 2 to 5 standard uses cases. |
+| Polling and voting | The sending of surveys and polling/voting campaigns for non political arenas. |
+| Public Service Announcement | Informational messaging to raise an audience's awareness about important issues. |
+| Security Alert | A notification that the security of a system, either software or hardware, has been compromised in some way and there is an action you need to take. |
+| Carrier Exemptions | Exemption by Carrier<br>! Post-registration approval by MNO in the United States is required for this use case. |
+| Charity | Communications from a registered charity aimed at providing help and raising money for those in need. 501c3 Tax-Exempt Organizations only. |
+| Proxy | Peer-to-peer, app-based group messaging with proxy/pooled numbers. Supporting personalized services and non-exposure of personal numbers for enterprise or A2P communications.<br>! Post-registration approval by MNO is required for this use case. |
+| Emergency | Notification services designed to support public safety or health during natural disasters, armed conflicts, pandemics, and other national or regional emergencies.<br>! Post-registration approval by MNO is required for this use case. |
+| K-12 Education | Campaigns created for messaging platforms that support schools from grades K - 12, and distance learning centers. This is not for Post-Secondary schools. <br>! Post-registration approval by MNO is required for this use case. |
+| Sweepstakes | All sweepstakes messaging<br>! Post-registration approval by MNO is required for this use case. |
+| Political<br><br>(Election Campaigns) | Part of organized effort to influence decision making of specific group. Available only to registered 501(c)(4/5/6) and organizations with a Campaign Verify token. |
+| Social | Communication between public figures or influencers and their communities. Examples include: YouTube Influencers' alerts or Celebrity alerts<br>! Only MNO pre-approved brands are eligible for this use case. |
+| Sole Proprietor | Limited to entities without a EIN / Tax ID, requires separate contract. |
+| Platform Free Trial | Platform Free Trial offers with strict controls and MNO audit rights (MO opt in). <br>! Only pre-approved brands are eligible for this use case. |
+| UCaaS Low Volume | UCaaS companies provide cloud-delivered communication services for businesses. Each number assigned to a UCaaS campaign is typically assigned to a different employee of that business and the use cases are varied. This use case is not for any API or automated driven communication. This use case is only available to approved UCaaS businesses. This use case has the same volume restrictions as the Low Volume Mixed campaign type.<br>! Only pre-approved brands are eligible for this use case. |
+| UCaaS High Volume | UCaaS companies provide cloud delivered communication services for businesses. Each number assigned to a UCaaS campaign is typically assigned to a different employee of that business and the use cases are varied. This use case is not for any API/automated driven communication.  This is for UCaaS campaigns that require higher volume. This use case is only available to approved UCaaS businesses.<br>! Only pre-approved brands are eligible for this use case. |
+| Agents and Franchises | Brands that have multiple agents, franchises or offices in the same brand vertical, but require individual localized numbers per agent, location, or office.<br><br>! Post-registration approval by MNO is required for this use case. |
+
+
+
+
+
+
+
+
+> **Use Case Verification**
+> 
+> Reach out to your Account Manager for more information on verifying your use cases.
+
+
+
+
+
+
+## Carrier Terms Preview
+
+Each MNO has its own 10DLC messaging policies and commercial terms. The Carrier Terms Preview page allows you to see the terms of a Campaign for each MNO based on the selected use case and brand before you complete registration. It is strongly suggested that you review this page to ensure you are happy with the terms. If not, you can abandon the registration process. The preview will provide you with the following information:
+
+* Qualify: Whether your campaign can be run on each MNO.
+
+* MNO Review: Indicates whether or not the MNO will have to review the Campaign before allowing it to run on their network.
+
+* Throughput Per Minute (TPM , AT&T ONLY): The number of messages that can be sent per minute on the carrier’s network.
+
+* Message Class (AT&T ONLY): AT&T’s message classification that correlates to the surcharge and TPM for a Campaign.
+
+* Brand Tier (T-MOBILE ONLY): T-Mobile's message classification that correlates to the daily messaging volume for a Brand.
+
+
+
+
+> **info**
+> 
+> If a Brand does not qualify for a Campaign, you will not be able to continue the registration process past this point.
+

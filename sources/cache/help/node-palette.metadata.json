@@ -1,0 +1,31 @@
+{
+  "category": "Webex Engage Standalone Nodes",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd81825797b",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "211d9b00d8eda81839e4215bf6f9909376993fe4c03b024ca89c39d8904e32c3",
+    "source_path": "cb3303e430dfa18d53f6c01b5816e251a61df3230e7c3d6db7ee928fc33f2bdf",
+    "text_path": "670d3f0cf74c92b4a5a6c0e7f86a474fea2c6ff16e784e5a76ff04fe4b618823"
+  },
+  "headings": [],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/node-palette.md",
+  "resolved_url": "https://help.webexconnect.io/docs/node-palette",
+  "retrieved_at": "2026-09-08T23:29:29+00:00",
+  "sha256_html_response": "f677e6066245f70b10ae93ad45a6d722c1c01ebfdd81bd55f6156de757a859ab",
+  "sha256_source_body": "cb3303e430dfa18d53f6c01b5816e251a61df3230e7c3d6db7ee928fc33f2bdf",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/node-palette.source.md",
+  "source_updated_at": "2026-04-14T07:47:12.293Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/node-palette.txt",
+  "title": "Node Palette - WxEngage standalone",
+  "url": "https://help.webexconnect.io/docs/node-palette",
+  "word_count": 310,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/node-palette.metadata.json"
+}

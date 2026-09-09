@@ -1,0 +1,497 @@
+> 🚧 API Endpoint and Authentication
+> 
+> - Your API endpoint varies based on where your <<prodname>> account is hosted. Visit [Know Your API Endpoint](https://developers.imiconnect.io/reference/endpoints) section to know more. 
+> 
+> - You can use either Service Key or JSON Web Tokens (JWT) for authentication. If you use both JWT authentication and Service Key in an API request, JWT authentication takes priority, and the Service Key is ignored.
+
+> ❗️ API Access
+> 
+> This API is currently available only for clients in the US and Canadian regions.  MMS capability must be requested as part of the tenant on-boarding process.  A default MMS tps throughput is provided, but higher throughput requirements can be provided after discussion with your account manager.
+> 
+> \*\*TFN MMS messaging may not be supported on all Canadian carriers.  For more details please ask the account team on specific MMS reach in the US and Canada.
+> 
+> Please reach out to you account manager to enable MMS in other regions.
+
+## **MMS API**
+
+Try our MMS APIs using the [Postman](https://www.getpostman.com/) collection here:
+
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://god.gw.postman.com/run-collection/26634274-03661a66-48a6-43a4-9a6f-77d6dc84654f?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D26634274-03661a66-48a6-43a4-9a6f-77d6dc84654f%26entityType%3Dcollection%26workspaceId%3Df1877095-ba03-4836-ab42-3ad067e66c0d)
+
+### MMS Sample
+
+```json MMS Sample
+{
+    "channel": "mms", //Mandatory. 
+    "from": "{{from}}", //Mandatory. E.164 format required/recommended.
+    "to": [
+        {
+            "msisdn": [
+                "{{msisdn1}}", //Mandatory. E.164 format required/recommended.
+                "{{msisdn2}}" //E.164 format required/recommended.
+            ],
+            "substitutions": { //Optional.
+                "{{mms_parameter1}}": "{{mms_value1}}"
+            }
+        }
+    ],
+    "substitutions": { //Optional.
+        "{{mms_parameter1}}": "{{mms_value1}}"
+    },
+    "requestedReceipts": [ //Optional.
+        "DELIVERED",
+        "SUBMITTED",
+        "FAILED"
+    ],
+    "options": {},
+    "content": {
+        "subject": "MMS check", //Mandatory. 
+        "fallbacktext": "fallback $(mms_parameter1)text as SMS",
+        "name": "Internal $(mms_parameter1)Name",
+        "attachments": [
+            {
+                "type": "image",
+                "messageText": "Sample image file",
+                "mediaUrl": "http://res.cloudinary.com/demo/image/upload/sample.jpg",
+                "duration": 5
+            },
+            {
+                "type": "ical",
+                "messageText": "Sample calender",
+                "duration": 5,
+                "mediaUrl": "https://s3.amazonaws.com/qa-appleattachment/9c49a035-17a6-4287-b97c-a3ed40c895dd_c3ccc83b-eb5d-443c-9313-49ceb004021a.ics"
+            },
+            {
+                "type": "pdf",
+                "messageText": "Sample pdf file",
+                "duration": 5,
+                "mediaUrl": "http://www.pdf995.com/samples/pdf.pdf"
+            },
+            {
+                "type": "video",
+                "messageText": "Sample video file",
+                "duration": 5,
+                "mediaUrl": "http://mirrors.standaloneinstaller.com/video-sample/small.m4v"
+            },
+            {
+                "type": "audio",
+                "messageText": "Sample audio file",
+                "duration": 5,
+                "mediaUrl": "https://www.easygifanimator.net/images/samples/eglite.mp3"
+            },
+            {
+                "type": "vcard",
+                "messageText": "Sample contact",
+                "duration": 5,
+                "mediaUrl": "https://s3.amazonaws.com/appleattachment/34343/86078a53-4530-4811-9b47-a406a2b8bb5b/OO2ZtXTj.vcf"
+            }
+        ]
+    },
+    "callbackData": "", //Optional. Data that you have configured to receive on the notify Url. This is configured as a part of the request.
+    "correlationId": "", //Optional. The CorrelationID is a unique identifier that you can attach to every request as a reference a particular transaction or event. This is configured as a part of the request.
+    "notifyUrl": "", //Optional.
+    "notifyUrlAuthId": "TNPXXXT09U", //Optional.
+    "contactPolicy": { //Optional.
+        "contactPolicyGroup": "", //the GroupID to be applied. Required if any of the following options are included and set to true
+        "channelCheckConsent": true, //optional, assumed false, set to true to require opt-in before sending the message,“channelCheckConsent” or “channelApplyFrequencyCap” either of the parameter should be “true” 
+        "channelApplyFrequencyCap": true //optional, assumed false, set to true to enforce group frequency cap for that channel,“channelCheckConsent” or “channelApplyFrequencyCap” either of the parameter should be “true” 
+    }
+}
+```
+```json MMS Single Slide
+{
+    "channel": "mms", //Mandatory. 
+    "from": "{{from}}", //Mandatory. E.164 format required/recommended.
+    "to": [
+        {
+            "msisdn": [
+                "{{msisdn}}" //Mandatory. E.164 format required/recommended.
+            ],
+            "substitutions": { //Optional.
+                "{{mms_parameter1}}": "{{mms_value1}}"
+            }
+        }
+    ],
+    "substitutions": { //Optional.
+        "{{mms_parameter1}}": "{{mms_value1}}"
+    },
+    "requestedReceipts": [ //Optional.
+        "DELIVERED",
+        "SUBMITTED",
+        "FAILED"
+    ],
+    "options": {},
+    "content": {
+        "subject": "MMS \"Hello \"check", //Mandatory. 
+        "fallbacktext": "fallback $(mms_parameter1)text as SMS",
+        "name": "Internal $(mms_parameter1)Name",
+        "attachments": [
+            {
+                "type": "image",
+                "messageText": "Sample image file",
+                "mediaUrl": "http://res.cloudinary.com/demo/image/upload/sample.jpg",
+                "duration": 5
+            }
+        ]
+    },
+    "callbackData": "", //Optional. Data that you have configured to receive on the notify Url. This is configured as a part of the request.
+    "correlationId": "", //Optional. The CorrelationID is a unique identifier that you can attach to every request as a reference a particular transaction or event. This is configured as a part of the request.
+    "notifyUrl": "", //Optional.
+    "notifyUrlAuthId": "TNPXXXT09U", //Optional.
+    "contactPolicy": { //Optional.
+        "contactPolicyGroup": "", //the GroupID to be applied. Required if any of the following options are included and set to true
+        "channelCheckConsent": true, //optional, assumed false, set to true to require opt-in before sending the message,“channelCheckConsent” or “channelApplyFrequencyCap” either of the parameter should be “true” 
+        "channelApplyFrequencyCap": true //optional, assumed false, set to true to enforce group frequency cap for that channel,“channelCheckConsent” or “channelApplyFrequencyCap” either of the parameter should be “true” 
+    }
+}
+```
+```json MMS ContactPolicy
+{
+    "channel": "mms", //Mandatory. 
+    "from": "{{from}}", //Mandatory. E.164 format required/recommended.
+    "to": [
+        {
+            "msisdn": [
+                "{{msisdn}}" //Mandatory. E.164 format required/recommended.
+            ],
+            "correlationId": "",
+            "substitutions": { //Optional.
+                "{{mms_parameter1}}": "{{mms_value1}}"
+            }
+        }
+    ],
+    "substitutions": { //Optional.
+        "{{mms_parameter1}}": "{{mms_value1}}"
+    },
+    "requestedReceipts": [
+        "DELIVERED",
+        "SUBMITTED",
+        "FAILED"
+    ],
+    "options": {},
+    "content": {
+        "subject": "MMS check",
+        "fallbacktext": "fallback $(mms_parameter1)text as SMS",
+        "name": "Internal $(mms_parameter1)Name",
+        "attachments": [
+            {
+                "type": "image",
+                "messageText": "flower $(mms_parameter1) image",
+                "mediaUrl": "http://res.cloudinary.com/demo/image/upload/sample.jpg",
+                "duration": 5
+            }
+        ]
+    },
+    "callbackData": "", //Optional. Data that you have configured to receive on the notify Url. This is configured as a part of the request.
+    "correlationId": "", //Optional. The CorrelationID is a unique identifier that you can attach to every request as a reference a particular transaction or event. This is configured as a part of the request.
+    "notifyUrl": "", //Optional.
+    "notifyUrlAuthId": "TNPXXXT09U", //Optional.
+    "contactPolicy": { //Optional.
+        "contactPolicyGroup": "", //the GroupID to be applied. Required if any of the following options are included and set to true
+        "channelCheckConsent": true, //optional, assumed false, set to true to require opt-in before sending the message,“channelCheckConsent” or “channelApplyFrequencyCap” either of the parameter should be “true” 
+        "channelApplyFrequencyCap": true //optional, assumed false, set to true to enforce group frequency cap for that channel,“channelCheckConsent” or “channelApplyFrequencyCap” either of the parameter should be “true” 
+    }
+}
+```
+
+When an MMS message is received via the Messaging API v2: 
+
+- If the from senderID is not MMS enabled for the tenant in Admin Console, then the message is rejected.
+- If the senderID doesn't match the preset list, the API request fails with “Invalid senderID” response.
+
+## **Request Body Parameters**
+
+[block:parameters]
+{
+  "data": {
+    "h-0": "Parameter",
+    "h-1": "Description",
+    "0-0": "channel",
+    "0-1": "MMS",
+    "1-0": "from",
+    "1-1": "The number from which the MMS is sent  \n  \nThe from number can only be one of the MMS enabled numbers provisioned for the account",
+    "2-0": "to",
+    "2-1": "The number to which MMS is sent  \n  \nThe to number must follow E.164 format",
+    "3-0": "notifyUrlAuthId",
+    "3-1": "Unique Authentication ID."
+  },
+  "cols": 2,
+  "rows": 4,
+  "align": [
+    "left",
+    "left"
+  ]
+}
+[/block]
+
+
+> 📘 Note
+> 
+> If +E.164 format is enabled for your tenant - all the numbers in the **To** field should follow the "+E.164" format.
+> 
+> This format displays the number with a "+" followed by the country code and the phone number.
+> 
+> \+E.164 format is not applicable to the numbers in the **From** field.
+
+> 📘 Note
+> 
+> It is recommended to use a valid authorization ID; the failure of notification won’t be logged in Debug Logs.
+> 
+> The notify URL should be filled with the proper URL format; otherwise, it would be considered an invalid URL.
+> 
+> The notify URL should be provided with proper spacing of the URL; when space is provided in front of the URL or at the end of the URL, it would be considered an invalid URL.
+
+## **Supported File Types and Sizes**
+
+The overall MMS size must not exceed 750 KB.
+
+[block:parameters]
+{
+  "data": {
+    "h-0": "Media Type",
+    "h-1": "File Extension",
+    "h-2": "Maximum File Size",
+    "0-0": "Overall MMS payload size",
+    "0-1": "",
+    "0-2": "750 KB",
+    "1-0": "Image",
+    "1-1": "The URL must be publicly accessible and end with one of the following file types:  \n.jpg = image/jpg, image/jpeg  \n.png = image/png  \n.gif = image/gif  \n.avif = image/avif  \n.heic = image/heic, image/heic-sequence",
+    "1-2": "750 KB",
+    "2-0": "Audio",
+    "2-1": "The URL must be publicly accessible and end with one of the following file types:  \n.mp3 = audio/mp3, audio/mpeg  \n.amr = audio/amr  \n.m4a = audio/mp4",
+    "2-2": "750 KB",
+    "3-0": "Video",
+    "3-1": "The URL must be publicly accessible and end with one of the following file types:  \n.mp4 = video/mp4  \n.3gp = video/3gpp",
+    "3-2": "750 KB",
+    "4-0": "Excel",
+    "4-1": ".xlsx, xls = application/excel",
+    "4-2": "750 KB",
+    "5-0": "Calendar",
+    "5-1": ".ics, .ical, .ifb, .icalendar = text/calendar  ",
+    "5-2": "750 KB",
+    "6-0": "Contact",
+    "6-1": " .vcf,  \n.vcard = text/vcard, text/v-card, text/x-vcard",
+    "6-2": "750 KB",
+    "7-0": "PDF",
+    "7-1": ".pdf = application/pdf, application/x-pdf",
+    "7-2": "750 KB",
+    "8-0": "Text",
+    "8-1": "text/plain",
+    "8-2": "750 KB",
+    "9-0": "Synchronized Multimedia Integration Language (SMIL)",
+    "9-1": ".smil = application/smil",
+    "9-2": "750 KB"
+  },
+  "cols": 3,
+  "rows": 10,
+  "align": [
+    "left",
+    "left",
+    "left"
+  ]
+}
+[/block]
+
+
+**Content validation rules**:
+
+- Supported MIME TYPE and Supported Extension SHALL pass at validation.
+- Supported MIME TYPE and Invalid Extension SHALL pass at validation.
+- Supported MIME TYPE and No Extension SHALL pass at validation.
+
+### Special Considerations
+
+- Video will be reduced in quality to fit delivery limitations and if it still does not fit it will be delivered as a Fallback SMS.
+- Each request must contain at least one slide which may contain text and may contain an image, video, audio, or other supported object.
+- The API supports up to 80 characters in the MMS subject.
+- Message Subject is not supported in incoming MO messages and the subject will be added to the general message content received.
+- The API supports up to 9 slides for each MMS submission.
+- The API does not support multiple files of the same MIME type in the same slide.
+- Slides with images does not support video but supports audio.
+- Slides with audio does not support video. Slides with video only supports text.
+- Slides with text supports up to 4096 characters in any slide.
+- Slides with vCard/iCal/PDF objects do not support media type audio/video/image and vice-versa.
+- URLs provided must contain the full path to the content files.
+- If the Transcoding is ON for the account, MMS containing audio or video can be used only when the audio or video encoding is completed.
+
+## HTTP Response Codes
+
+| HTTP Response Codes       | Descriptions                                                                                                 |
+| :------------------------ | :----------------------------------------------------------------------------------------------------------- |
+| 200 OK                    | Successful                                                                                                   |
+| 201 Created               | Created                                                                                                      |
+| 400 Bad Request           | Bad input parameter. Error description should indicate which one and why                                     |
+| 401 Unauthorized          | The client passed in the invalid key/token                                                                   |
+| 403 Forbidden             | The customer doesn’t exist. \* Customer account over quota.                                                  |
+| 404 Not Found             | Resource not found                                                                                           |
+| 405 Method Not Allowed    | The resource doesn't support the specified HTTP verb                                                         |
+| 409 Conflict              | Conflict                                                                                                     |
+| 429 Too Many Requests     | Too many requests for rate limiting                                                                          |
+| 500 Internal Server Error | The servers are not working as expected. The request is probably valid but needs to be requested again later |
+| 503 Service Unavailable   | Service Unavailable                                                                                          |
+
+## **Delivery Receipts**
+
+```json Submitted
+{
+    "deliveryInfoNotification": {
+        "deliveryInfo": {
+            "deliveryChannel": "mms",
+            "Description": "Submitted",
+            "destinationType": "msisdn",
+            "timeStamp": "2016-07-21T12:44:23.644",
+            "code": "7501",
+            "deliveryStatus": "Submitted",
+            "destination": "447500661610"
+        },
+        "correlationid": "3bd8edf31c81-XXXXXXXX-290d-49e2-993e",
+        "callbackData": "return callbackdata",
+        "transid": "4b72d8a2-290d-XXXX-XXXX-3bd8edf31c81"
+    }
+}
+```
+```json Delivered
+{
+    "deliveryInfoNotification": {
+        "deliveryInfo": {
+            "deliveryChannel": "mms",
+            "Description": "Delivered",
+            "destinationType": "msisdn",
+            "timeStamp": "2016-07-21T12:44:23.644",
+            "code": "7500",
+            "deliveryStatus": "Submitted",
+            "destination": "4475XXXX1610"
+        },
+        "correlationid": "3bd8edf31c81-4b72d8a2-XXXX-49e2-993e",
+        "callbackData": "return callbackdata",
+        "transid": "4b72d8a2-290d-XXXX-993e-3bd8edf31c81"
+    }
+}
+```
+```json Read
+{
+    "deliveryInfoNotification": {
+        "deliveryInfo": {
+            "deliveryChannel": "mms",
+            "Description": "Read",
+            "destinationType": "msisdn",
+            "timeStamp": "2016-07-21T12:44:23.644",
+            "code": "7524",
+            "deliveryStatus": "Read",
+            "destination": "4475XXXX1610"
+        },
+        "correlationid": "3bd8edf31c81-4b72d8a2-XXXX-49e2-993e",
+        "callbackData": "return callbackdata",
+        "transid": "4b72d8a2-290d-XXXX-993e-3bd8edf31c81"
+    }
+}
+```
+```json Clicked
+{
+    "deliveryInfoNotification": {
+        "deliveryInfo": {
+            "deliveryChannel": "mms",
+            "Description": "https://clientname.uk/offer|192.0.2.1",
+            "destinationType": "msisdn",
+            "timeStamp": "2016-07-21T12:44:23.644",
+            "additionalInfo":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36",
+            "code": "7525",
+            "deliveryStatus": "Clicked",
+            "destination": "447500661610"
+        },
+        "correlationid": "3bd8edf31c81-4b72d8a2-XXXX-49e2-993e",
+        "callbackData": "return callbackdata",
+        "transid": "4b72d8a2-290d-XXXX-993e-3bd8edf31c81"
+    }
+}
+```
+```json Expired
+{
+  "deliveryInfoNotification": {
+    "deliveryInfo": {
+      "deliveryChannel": "mms",
+      "Description": "Message expired",
+      "destinationType": "msisdn",
+      "timeStamp": "2016-07-28T11:47:56.459Z",
+      "code": "7208",
+      "deliveryStatus": "Un-Delivered",
+      "destination": "910000000001"
+    },
+    "correlationid": "",
+    "callbackData": "",
+    "transid": "8f0fd088-2a80-XXXX-9da1-e82e52b17390"
+  }
+}
+```
+
+## **Status Codes**
+
+| Code | Message                                     | Delivery Status |
+| :--- | :------------------------------------------ | :-------------- |
+| 7500 | Delivered                                   | Delivered       |
+| 7501 | Submitted                                   | Submitted       |
+| 7208 | Un-delivered                                | Message expired |
+| 7524 | Opened                                      | Opened          |
+| 7525 | Link\|IP                                    | Clicked         |
+| 7552 | Address error                               | Failed          |
+| 7553 | Address not found                           | Failed          |
+| 7554 | Multimedia content refused                  | Failed          |
+| 7555 | Message format corrupt                      | Failed          |
+| 7556 | Message rejected                            | Failed          |
+| 7010 | Service provider exception                  | Failed          |
+| 7212 | Invalid request                             | Failed          |
+| 7213 | User authentication failed                  | Failed          |
+| 7219 | Invalid receiver number                     | Failed          |
+| 7220 | Invalid short code                          | Failed          |
+| 7224 | Account has reached the API request limit   | Failed          |
+| 7231 | Content not allowed                         | Failed          |
+| 7255 | Internal error                              | Failed          |
+| 7261 | Service unavailable                         | Failed          |
+| 7268 | Message rejected or not supported at vendor | Failed          |
+| 7270 | Message delivery expired by operator        | Failed          |
+| 7272 | Invalid VAS ID or VASP ID                   | Failed          |
+
+## **API Error Codes - HTTP 400 Bad Request**
+
+[block:parameters]
+{
+  "data": {
+    "h-0": "Code",
+    "h-1": "Message",
+    "0-0": "7000",
+    "0-1": "Invalid JSON",
+    "1-0": "7003",
+    "1-1": "Dynamic Format  \n  \n“Mandatory parameter missing: {{parameter}}”",
+    "2-0": "7004",
+    "2-1": "Dynamic Format  \n  \n“Invalid parameter: {{parameter}}”",
+    "3-0": "7127",
+    "3-1": "Source IP is not in the allowed listed",
+    "4-0": "7016",
+    "4-1": "Unknown exception",
+    "5-0": "7020",
+    "5-1": "You have reached the maximum transaction limit",
+    "6-0": "7101",
+    "6-1": "Invalid sender ID",
+    "7-0": "7102",
+    "7-1": "Invalid destination address",
+    "8-0": "7104",
+    "8-1": "Invalid app ID",
+    "9-0": "7107",
+    "9-1": "Message length exceeded",
+    "10-0": "7108",
+    "10-1": "Invalid template ID",
+    "11-0": "7126",
+    "11-1": "Invalid content type",
+    "12-0": "7009",
+    "12-1": "Maximum number of destinations reached",
+    "13-0": "7022",
+    "13-1": "JSON size exceeded"
+  },
+  "cols": 2,
+  "rows": 14,
+  "align": [
+    "left",
+    "left"
+  ]
+}
+[/block]

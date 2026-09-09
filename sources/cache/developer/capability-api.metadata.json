@@ -1,0 +1,35 @@
+{
+  "api_metadata_path": "sources/cache/developer/capability-api.api.json",
+  "category": "MULTI CHANNEL COMMUNICATION API",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f6700",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "04bb70bfaa20bace1760a1327ab48cdc6d4a041d2bc90ed6ea2c2312dcccc4c4",
+    "source_path": "86750dac2ad13ef02b46d375df420e6276a764e8561e9b7fc01d35f6f144c844",
+    "text_path": "a2277a3c2eb0af545625dce7c00f1786892e8e92fd089742109a06bcba9d7d27"
+  },
+  "headings": [
+    "Request Body to Verify RCS device capability Using RCS Capability Lookup API",
+    "Sample Response Body"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/capability-api.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/capability-api",
+  "retrieved_at": "2026-09-08T23:31:41+00:00",
+  "sha256_api_metadata": "575f65b7d8dc3ea0b617314bc47e22705dc85fc80ee114e6faa20ada4e8aafe2",
+  "sha256_html_response": "ddb14cb5e55949ac60acb1dee6d3d06befaa2c0b265544f48bf618926138ee42",
+  "sha256_source_body": "86750dac2ad13ef02b46d375df420e6276a764e8561e9b7fc01d35f6f144c844",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/capability-api.source.md",
+  "source_updated_at": "2026-04-16T05:36:51.654Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/capability-api.txt",
+  "title": "RCS Capability Lookup API",
+  "url": "https://developers.webexconnect.io/reference/capability-api",
+  "word_count": 620,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/capability-api.metadata.json"
+}

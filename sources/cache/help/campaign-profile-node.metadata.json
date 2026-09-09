@@ -1,0 +1,40 @@
+{
+  "category": "SERVICES & FLOWS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257838",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "7fe224a3a8d258343525911bc5e934c2622e4836ba991403a1d0542927558cda",
+    "source_path": "9d0d4e6f5396fc9fa526a5ee4ab07d74b54ae951d3e44adc1ee6c2557f636012",
+    "text_path": "f4197290b5e63f34f6614e339e755844cd758d74072d2178dc0727536ea675cd"
+  },
+  "headings": [
+    "📘Note:",
+    "Manage Customer Profiles",
+    "Fetch a Profile##",
+    "Update a Profile##",
+    "Create a Profile##",
+    "Delete a Profile##",
+    "Node Outcomes",
+    "Transition Actions"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/campaign-profile-node.md",
+  "resolved_url": "https://help.webexconnect.io/docs/campaign-profile-node",
+  "retrieved_at": "2026-09-08T23:28:57+00:00",
+  "sha256_html_response": "b2f2555fa778fd1c190ded51ea9b8f524232f30d66c7320875820cbc5ef5a39d",
+  "sha256_source_body": "9d0d4e6f5396fc9fa526a5ee4ab07d74b54ae951d3e44adc1ee6c2557f636012",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/campaign-profile-node.source.md",
+  "source_updated_at": "2025-04-02T17:03:25.592Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/campaign-profile-node.txt",
+  "title": "Webex Campaign Profile Node",
+  "url": "https://help.webexconnect.io/docs/campaign-profile-node",
+  "word_count": 579,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/campaign-profile-node.metadata.json"
+}

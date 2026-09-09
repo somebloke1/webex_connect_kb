@@ -1,0 +1,34 @@
+{
+  "category": "SERVICES & FLOWS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182578c2",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "cdceefda74395166afb9b83c89f69e70bf05875a09ef35eaed3d143df3d8612b",
+    "source_path": "71cd798224760a86968d8754f00d393ed3efad5857223ab9e538e1486034bbfc",
+    "text_path": "3ceccfce3c8393254d661a44689321af3a314efb5272e579831a21ed94fddaba"
+  },
+  "headings": [
+    "Is there an upper limit on the number of nodes within a flow?",
+    "Can I export and import flows with Custom Integration Nodes across tenants?"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/faqs-visual-flow-builder.md",
+  "resolved_url": "https://help.webexconnect.io/docs/faqs-visual-flow-builder",
+  "retrieved_at": "2026-09-08T23:28:42+00:00",
+  "sha256_html_response": "4b333bd2139574a6e0059512596f17e4b83c2a01c03944727b9eec5e0992abd0",
+  "sha256_source_body": "71cd798224760a86968d8754f00d393ed3efad5857223ab9e538e1486034bbfc",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/faqs-visual-flow-builder.source.md",
+  "source_updated_at": "2026-01-26T13:35:05.059Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/faqs-visual-flow-builder.txt",
+  "title": "FAQs",
+  "url": "https://help.webexconnect.io/docs/faqs-visual-flow-builder",
+  "word_count": 131,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/faqs-visual-flow-builder.metadata.json"
+}

@@ -1,0 +1,1737 @@
+|  Carrier Id | Name                                                             | Country Code |
+| :---------- | :--------------------------------------------------------------- | :----------- |
+| ABAMOB      | JV A-Mobile Ltd. ((A-Mobile)) - AB                               | AB           |
+| ABAQUA      | Aquafon-GSM (Aquafon) - AB                                       | AB           |
+| ACAIRT      | Airtel Seychelles                                                | AC           |
+| ACCANW      | Cable & Wireless                                                 | AC           |
+| ACMDIA      | MediaTech                                                        | AC           |
+| ACSURE      | Sure South Atlantic                                              | AC           |
+| ADMOBI      | Mobiland                                                         | AD           |
+| AEDU        | Du                                                               | AE           |
+| AEETIS      | Etisalat                                                         | AE           |
+| AFAWCC      | AWCC - AF                                                        | AF           |
+| AFETIS      | Etisalat - AF                                                    | AF           |
+| AFMTNA      | MTN Afghanistan - AF                                             | AF           |
+| AFROSH      | Roshan - AF                                                      | AF           |
+| AFSALA      | Salaam (Afghan Telecom) - AF                                     | AF           |
+| AGAPUA      | APUA PCS                                                         | AG           |
+| AGDIGI      | Digicel                                                          | AG           |
+| AGLIME      | Lime (CW-Antigua)                                                | AG           |
+| AILIME      | Lime (CW-Anguilla)                                               | AI           |
+| AIWEBL      | Weblinks                                                         | AI           |
+| ALALBT      | ALBtelecom Sh.a.(M) (Eagle Mobile)                               | AL           |
+| ALAMCO      | Albania Mobile Communications (AMC)                              | AL           |
+| ALPLUS      | Plus Communication - AL                                          | AL           |
+| ALVODA      | Vodafone Albania                                                 | AL           |
+| AMARTL      | ArmenTel                                                         | AM           |
+| AMKRBG      | Karabagh Telecom                                                 | AM           |
+| AMKTELE     | K-Telecom (Vivacell)                                             | AM           |
+| AMUCOM      | Ucom (Orange Armenia)                                            | AM           |
+| ANANTE      | Antelecom (Setel Curacao) (UTS) (WICC)                           | AN           |
+| ANDIGI      | Digicel                                                          | AN           |
+| ANTELB      | Telbo                                                            | AN           |
+| AOAFRI      | Africell Angola - AO                                             | AO           |
+| AOMOVI      | Movicel                                                          | AO           |
+| AOUNIT      | Unitel                                                           | AO           |
+| ARCLRO      | Claro                                                            | AR           |
+| ARHTCH      | HUTCHISON TELECOMMUNICATIONS ARGENTINA                           | AR           |
+| ARMVST      | Movistar                                                         | AR           |
+| ARTELE      | Telecom Argentina Personal                                       | AR           |
+| ARTESA      | TESAM ARGENTINA SOCIEDAD ANONIMA (CUIT 30-68732541-5)            | AR           |
+| ASASTC      | American Samoa Telecommunications Authority Astca                | AS           |
+| ASBLUE      | American Samoa License DBA Blue Sky Comm                         | AS           |
+| ATAONE      | A1 Telekom Austria AG (Mobilkom)                                 | AT           |
+| ATARGO      | ArgoNET                                                          | AT           |
+| ATDPHT      | Digital Privacy (Sub Range to (Hutchison))                       | AT           |
+| ATEETY      | eety-Telecommunications GmbH                                     | AT           |
+| ATHGKD      | Holding Graz Kommunale Dienstleistungen GmbH                     | AT           |
+| ATHTCH      | Hutchison 3G (Orange) Austria                                    | AT           |
+| ATKABL      | Kabelplus GmbH                                                   | AT           |
+| ATLIWS      | LIWEST Kabelmedien GmbH                                          | AT           |
+| ATLYCA      | Lycamobile                                                       | AT           |
+| ATMASS      | MASS Respones Service Gmbh                                       | AT           |
+| ATMTEL      | MTEL Austrija GmbH                                               | AT           |
+| ATOBBI      | OBB Infrastruktur Aktiengesellschaft                             | AT           |
+| ATPLIN      | Plintron Austria Limited                                         | AT           |
+| ATSALZ      | Salzburg AG fur Energie Verkehr und Telekommunikation            | AT           |
+| ATSMRS      | smartspace GmbH                                                  | AT           |
+| ATSMRT      | Smartel Services GmbH                                            | AT           |
+| ATTELE      | Tele2 Telecommunication GmbH                                     | AT           |
+| ATTMO       | T-Mobile                                                         | AT           |
+| ATVECT      | Vectone Mobile (Mundio)                                          | AT           |
+| ATYESS      | YESSS! Telekommunikation                                         | AT           |
+| AUAAPT      | AAPT Ltd - AU                                                    | AU           |
+| AUCOMP      | Compatel Limited - AU                                            | AU           |
+| AUDLOG      | Dialogue Communications Pty Ltd - AU                             | AU           |
+| AUMSGB      | Messagebird Pty Ltd - AU                                         | AU           |
+| AUNORF      | Norfolk Telecom                                                  | AU           |
+| AUOPTS      | Optus                                                            | AU           |
+| AUPIVO      | Pivotel                                                          | AU           |
+| AURAIL      | Railcorp - AU                                                    | AU           |
+| AUTELS      | Telstra                                                          | AU           |
+| AUVICT      | Victorian Rail Track - AU                                        | AU           |
+| AUVODA      | Vodafone                                                         | AU           |
+| AWNMIL      | New Millennium Telecom (Digicel)                                 | AW           |
+| AWSETR      | SETAR                                                            | AW           |
+| AZAZFN      | Azerfon LLC (Nar Mobile) - AZ                                    | AZ           |
+| AZAZRC      | Azercell LLC - AZ                                                | AZ           |
+| AZBAKC      | Bakcell - AZ                                                     | AZ           |
+| AZCATL      | Catel LLC - AZ                                                   | AZ           |
+| BAGSMB      | GSM BIH (BH Telecom)                                             | BA           |
+| BAHPTM      | HPT Mostar (HT d.d. Mostar)                                      | BA           |
+| BATLKM      | Telekom Srpske  (Mtel)                                           | BA           |
+| BBDIGI      | Digicel Caribbean                                                | BB           |
+| BBLIME      | Lime (CW-Barbados)                                               | BB           |
+| BBOZNE      | Ozone Wireless                                                   | BB           |
+| BBSUNB      | Sunbeach Communications                                          | BB           |
+| BDBGLN      | Banglalink Digital Communications Ltd (Orascom)                  | BD           |
+| BDCTYB      | City Cell - BD                                                   | BD           |
+| BDGRAM      | Grameen Phone                                                    | BD           |
+| BDROBI      | Robi (Airtel) - BD                                               | BD           |
+| BDTLTK      | Teletalk Bangladesh Ltd - BD                                     | BD           |
+| BEBASE      | Base Company/KPN - BE                                            | BE           |
+| BEBELV      | BELVOO (Nethys)                                                  | BE           |
+| BEDNSA      | Dense Air Belgium (Voyacom) - BE                                 | BE           |
+| BEELEP      | Elephant Talk Communications                                     | BE           |
+| BEERIC      | Ericsson NV - BE                                                 | BE           |
+| BEIDEN      | Identicar                                                        | BE           |
+| BEJOIN      | Join Experience                                                  | BE           |
+| BELYCA      | Lycamobile                                                       | BE           |
+| BENMBS      | N.M.B.S.                                                         | BE           |
+| BEORNG      | ORANGE Belgium (MOBISTAR)                                        | BE           |
+| BEPROX      | Proximus                                                         | BE           |
+| BESCRL      | SCARLET Business/ EXTENDED nv                                    | BE           |
+| BETISM      | Tismi                                                            | BE           |
+| BETLNT      | TELENET n.v.                                                     | BE           |
+| BEUNLS      | Unleashing Mobile Vikings Co                                     | BE           |
+| BEVECT      | Vectone Mobile (Mundio Group)                                    | BE           |
+| BEVOXB      | VOXBONE S.A.                                                     | BE           |
+| BEVOYA      | Voyacom SPRL                                                     | BE           |
+| BFORNA      | Onatel (Telmob)                                                  | BF           |
+| BFORNG      | Orange Burkina Faso                                              | BF           |
+| BFTELE      | Telecel Faso S.A.                                                | BF           |
+| BGAONE      | A1 Bulgaria                                                      | BG           |
+| BGBLSA      | Bulsatcom                                                        | BG           |
+| BGGLBL      | Globul (Cosmo Bulgaria Mobile) (TELENOR)                         | BG           |
+| BGMAXT      | MAX Telecom                                                      | BG           |
+| BGVIVC      | Vivacom - Bulgarian Telecom Company (BTC)                        | BG           |
+| BHBATL      | Batelco                                                          | BH           |
+| BHSTCB      | STC Bahrain - BH                                                 | BH           |
+| BHZAIN      | Zain Bahrain                                                     | BH           |
+| BIECON      | Econet Wireless Leo                                              | BI           |
+| BILUMI      | Lumitel (Viettel)                                                | BI           |
+| BIONAT      | Onatel                                                           | BI           |
+| BISMRT      | Smart Burundi                                                    | BI           |
+| BJBBCM      | BBCom                                                            | BJ           |
+| BJGLOB      | GloBenin                                                         | BJ           |
+| BJLBRC      | Libercom                                                         | BJ           |
+| BJMOOV      | Moov Benin (Telecel/Etisalat)                                    | BJ           |
+| BJMTNB      | MTN Benin (BeninCell)(Spacetel)                                  | BJ           |
+| BMCELO      | CellularOne (Bermuda Digital)                                    | BM           |
+| BMDIGI      | Digicel Bermuda                                                  | BM           |
+| BNBMOB      | B-Mobile (PCSB) - BN                                             | BN           |
+| BNDSTC      | DST Communications - BN                                          | BN           |
+| BNJBTN      | Jabatan Telekom - BN                                             | BN           |
+| BOENTL      | Entel                                                            | BO           |
+| BOTIGO      | Tigo                                                             | BO           |
+| BOVIVA      | Viva                                                             | BO           |
+| BRAMER      | AMERICA NET LTDA                                                 | BR           |
+| BRBBSO      | BBS Options                                                      | BR           |
+| BRBRIS      | Brisanet Servicos De Telecomunicacoes - BR                       | BR           |
+| BRCLRO      | Claro                                                            | BR           |
+| BRCTBC      | CTBC Cellular                                                    | BR           |
+| BRDTRA      | Datora Telecommunications                                        | BR           |
+| BRFALK      | Falkland Tecnologia EM Telecom (IPCorp)                          | BR           |
+| BRJSAF      | J. SAFRA TELECOMUNICACOES (Cinco)                                | BR           |
+| BRNXTL      | Nextel                                                           | BR           |
+| BROI        | Oi                                                               | BR           |
+| BRPRTS      | Porto Seguro Telecomunicacoes                                    | BR           |
+| BRSERC      | Sercomtel Celular                                                | BR           |
+| BRSURF      | SURF TELECOM (EUTV)                                              | BR           |
+| BRTELC      | Telcom Telecomunicacoes Do Brasil                                | BR           |
+| BRTELE      | TELEXPERTS TELECOMUNICACOES LTDA - BR                            | BR           |
+| BRTIM       | TIM                                                              | BR           |
+| BRUNIC      | Unicel Do Brasil Telecomunicacoes                                | BR           |
+| BRUNIF      | UNIFIQUE TELECOMUNICACOES - BR                                   | BR           |
+| BRVIVO      | Vivo                                                             | BR           |
+| BSALIV      | Aliv                                                             | BS           |
+| BSBTC       | Bahamas Telecommunications(BTC)                                  | BS           |
+| BSCBAH      | Cable Bahamas                                                    | BS           |
+| BTBMBL      | B-Mobile of Bhutan Telecom - BT                                  | BT           |
+| BTTASH      | Tashi InfoComm Ltd (TICL) - BT                                   | BT           |
+| BWBTCM      | BTC Mobile                                                       | BW           |
+| BWMASC      | Mascom Wireless                                                  | BW           |
+| BWORNG      | Orange Botswana                                                  | BW           |
+| BZBLZT      | DigiCell                                                         | BZ           |
+| BZSMRT      | Smart                                                            | BZ           |
+| CABELL      | Bell Mobility                                                    | CA           |
+| CACGCO      | Cogeco                                                           | CA           |
+| CAEAST      | Eastlink                                                         | CA           |
+| CAEXEC      | Execulink Telecom                                                | CA           |
+| CAFBRN      | Fibernetics                                                      | CA           |
+| CAFIDO      | Fido Solutions (Microcell)                                       | CA           |
+| CAFREE      | Freedom Mobile (fka Globalive Wireless Management                | Wind Mobile) |
+| CAGLBL      | Globalstar Canada                                                | CA           |
+| CAICE       | ICE Wireless                                                     | CA           |
+| CAIRIS      | Iristel                                                          | CA           |
+| CAMTS       | Bell MTS                                                         | CA           |
+| CANSWT      | NSW Telecom                                                      | CA           |
+| CAQUAD      | Quadro Communications                                            | CA           |
+| CAROGR      | Rogers Wireless                                                  | CA           |
+| CASASK      | SaskTel Wireless                                                 | CA           |
+| CASSIM      | SSI Micro                                                        | CA           |
+| CATBAY      | Tbaytel Mobility                                                 | CA           |
+| CATLS       | Telus Mobility                                                   | CA           |
+| CAVIDT      | Videotron                                                        | CA           |
+| CAWIGT      | Wightman                                                         | CA           |
+| CAXPLR      | Xplornet Mobile                                                  | CA           |
+| CDAFRI      | Africell DRC                                                     | CD           |
+| CDAIRT      | Airtel                                                           | CD           |
+| CDORNG      | Orange (Chine Telecom)                                           | CD           |
+| CDSAIT      | Sait-Telecom (Oasis)                                             | CD           |
+| CDSPRC      | Supercell                                                        | CD           |
+| CDVODA      | Vodacom                                                          | CD           |
+| CDYOZM      | Yozma Timeturns                                                  | CD           |
+| CFMOOV      | MOOV (Atlantique Telecom Centrafrique)                           | CF           |
+| CFNATL      | NationLink Telecom                                               | CF           |
+| CFORNG      | Orange                                                           | CF           |
+| CFTLCL      | Telecel                                                          | CF           |
+| CGAIRT      | Airtel                                                           | CG           |
+| CGCYRU      | CYRUS                                                            | CG           |
+| CGEQUA      | Equateur Telecom Congo (Azur)                                    | CG           |
+| CGMTNC      | MTN Congo S.A.                                                   | CG           |
+| CHBARA      | Barablu Mobile                                                   | CH           |
+| CHBEEO      | BeeOne Communications                                            | CH           |
+| CHCOMF      | Comfone AG                                                       | CH           |
+| CHCOMP      | Compatel Ltd                                                     | CH           |
+| CHEFON      | e-fon AG                                                         | CH           |
+| CHINAP      | In&Phone                                                         | CH           |
+| CHLYCA      | Lycamobile                                                       | CH           |
+| CHMITT      | Mitto AG                                                         | CH           |
+| CHRLRI      | Relario AG (Bebbicell)                                           | CH           |
+| CHSALT      | Salt Mobile SA (Orange Communications)                           | CH           |
+| CHSUNR      | Sunrise Communications                                           | CH           |
+| CHSWSS      | Swisscom                                                         | CH           |
+| CHTELC      | TelCommunication Services                                        | CH           |
+| CHTGMO      | 3G MOBILE AG                                                     | CH           |
+| CHUPCS      | UPC Switzerland                                                  | CH           |
+| CHVECT      | Vectone Mobile Limited (Mundio)                                  | CH           |
+| CHWEMO      | WeMobile SA                                                      | CH           |
+| CIATLA      | Atlantique Cellulaire (MOOV)                                     | CI           |
+| CICOMI      | Comium Cote divoire - CI                                         | CI           |
+| CIMTNC      | MTN Cote d'Ivoire (Loteny)                                       | CI           |
+| CINIAM      | NiamoutieTelecom                                                 | CI           |
+| CIORIC      | Oricel Cote d'Ivoire                                             | CI           |
+| CIORNG      | Orange Cote d'Ivoire                                             | CI           |
+| CKCOOK      | Telecom Cook Islands - CK                                        | CK           |
+| CLBLUE      | BLUE TWO CHILE                                                   | CL           |
+| CLBUNK      | EMPRESAS BUNKER S.A.                                             | CL           |
+| CLCELU      | Celupago                                                         | CL           |
+| CLCIBE      | CIBELES TELECOM                                                  | CL           |
+| CLCLRO      | CLARO CHILE                                                      | CL           |
+| CLCOMPA     | Compatel Chile Limitada - CL                                     | CL           |
+| CLENTL      | ENTEL PCS TELECOMUNICACIONES                                     | CL           |
+| CLENTP      | Entel PCS S A                                                    | CL           |
+| CLFALA      | SOCIEDAD FALABELLA MOVIL SPA                                     | CL           |
+| CLINST      | INSTABE                                                          | CL           |
+| CLINVE      | INVERSIONES SANTA FE LIMITADA                                    | CL           |
+| CLMLTK      | MULTIKOM                                                         | CL           |
+| CLMOVI      | Telefonica Movistar Chile                                        | CL           |
+| CLNETL      | NETLINE TELEFONICA                                               | CL           |
+| CLNMDE      | Nomade Telecomunicaciones S.A. - CL                              | CL           |
+| CLSSPA      | Simple Spa                                                       | CL           |
+| CLTELS      | Telestar Movil                                                   | CL           |
+| CLTESA      | TESAM CHILE                                                      | CL           |
+| CLTRIB      | TRIBE MOBILE SPA                                                 | CL           |
+| CLVIVA      | TELEFONICA VIVA                                                  | CL           |
+| CLVTR       | VTR (chile)                                                      | CL           |
+| CLWILL      | WILL                                                             | CL           |
+| CLWOM       | WOM (Novator Partners)                                           | CL           |
+| CMCAMT      | Camtel                                                           | CM           |
+| CMMTNC      | MTN Cameroon                                                     | CM           |
+| CMNEXT      | Nexttel Cameroon (Viettel SA)                                    | CM           |
+| CMORNG      | Orange Cameroon                                                  | CM           |
+| CNCNMO      | China Mobile                                                     | CN           |
+| CNCNTE      | China Telecom                                                    | CN           |
+| CNCNUN      | China Unicom (CDMA)                                              | CN           |
+| CNSPCE      | China Spacecom - CN                                              | CN           |
+| COAVNT      | Avantel S.A.                                                     | CO           |
+| COCOLO      | Colombia Movil (Tigo)                                            | CO           |
+| COCOMC      | Comcel S.A. (Claro)                                              | CO           |
+| COCOMP      | Compatel Colombia SAS                                            | CO           |
+| CODRTV      | Directv Colombia                                                 | CO           |
+| COEDTL      | Edatel S.A. - CO                                                 | CO           |
+| COEMCL      | Emcali - CO                                                      | CO           |
+| COEMTL      | Emtelsa - CO                                                     | CO           |
+| COETLB      | EMPRESA DE TELECOMUNICACIONES DE BOGOTA                          | CO           |
+| COFLSH      | Flash Mobile - CO                                                | CO           |
+| COLLEI      | Lleida - CO                                                      | CO           |
+| COMVST      | Movistar                                                         | CO           |
+| COSUMA      | Suma Movil - CO                                                  | CO           |
+| COVIRG      | Virgin Mobile Colombia                                           | CO           |
+| CRCLRO      | Claro Costa Rica Telecomunicaciones                              | CR           |
+| CRKOLB      | Kolbi (ICE)                                                      | CR           |
+| CRTELE      | Telefonica Moviles                                               | CR           |
+| CVCABV      | Cabo Verde Movel                                                 | CV           |
+| CVTPLS      | TPlus Telecom                                                    | CV           |
+| CYCYTA      | CYTAmobile-Vodafone                                              | CY           |
+| CYEPIC      | EPIC (MTN/Areeba Ltd)                                            | CY           |
+| CYLEMN      | Lemontel Ltd                                                     | CY           |
+| CYMUND      | MUNDIO MOBILE CYPRUS LTD                                         | CY           |
+| CYPRIME     | PrimeTel PLC                                                     | CY           |
+| CZCOMP      | Compatel                                                         | CZ           |
+| CZNRDC      | Nordic Telecom s.r.o.(Air Telecom - MobilKom)                    | CZ           |
+| CZSPRV      | Sprava zeleznicni dopravni cesty                                 | CZ           |
+| CZTELE      | Telefonica Czech Republic                                        | CZ           |
+| CZTMO       | T-Mobile Czech Republic (T-Systems)                              | CZ           |
+| CZVODA      | Vodafone Czech Republic                                          | CZ           |
+| DEDBNZ      | DB Netz AG                                                       | DE           |
+| DEDRIL      | Drillisch Netz AG                                                | DE           |
+| DEDTAG      | DTAG (T-Mobile)                                                  | DE           |
+| DEGR3G      | Group 3G UMTS - DE                                               | DE           |
+| DEMBLC      | MobilCom                                                         | DE           |
+| DEMULT      | Multiconnect GmbH                                                | DE           |
+| DESIPG      | Sipgate Wireless                                                 | DE           |
+| DETELO      | Telefonica O2 Germany                                            | DE           |
+| DETLCO      | TelcoVillage GmbH                                                | DE           |
+| DEVODA      | Vodafone Germany                                                 | DE           |
+| DJEVAT      | Evatis                                                           | DJ           |
+| DKACNE      | ACN-Europe (TDC Network)                                         | DK           |
+| DKACTI      | Actimizer_LSO (TDC)                                              | DK           |
+| DKAPLS      | Aplus-TelecomA (TDC Network)                                     | DK           |
+| DKARTO      | Arto.dk (Telenor)                                                | DK           |
+| DKATEA      | Atea                                                             | DK           |
+| DKATZT      | ATZtel LSO                                                       | DK           |
+| DKBANE      | Banedanmark                                                      | DK           |
+| DKBEEP      | Beepsend AB                                                      | DK           |
+| DKBELE      | Belle Balance (Telenor)                                          | DK           |
+| DKBENE      | Benemen_LSO (TDC)                                                | DK           |
+| DKBIBO      | BiBoB                                                            | DK           |
+| DKBILL      | BillingCom (Telia Network)                                       | DK           |
+| DKBOLI      | Bolignet-Aarhus LSO                                              | DK           |
+| DKBRND      | Brandtel ApS                                                     | DK           |
+| DKCALL      | Callme (TDC Network)                                             | DK           |
+| DKCARE      | Care Solutions aka PHONE-IT A/S                                  | DK           |
+| DKCBBM      | CBB Mobil                                                        | DK           |
+| DKCHNG      | Change Networks (Telenor Network)                                | DK           |
+| DKCIRQ      | Cirque (TDC Network)                                             | DK           |
+| DKCMND      | Comendo Telecom (TDC Network)                                    | DK           |
+| DKCMPA      | Compatel Limited                                                 | DK           |
+| DKCOLT      | Colt Telecom (Telia Network)                                     | DK           |
+| DKCOMT      | Comtalk (Telenor Network)                                        | DK           |
+| DKCOMX      | ComX Networks                                                    | DK           |
+| DKCOOL      | CoolTel                                                          | DK           |
+| DKCPNY      | Companymobile (TDC Network)                                      | DK           |
+| DKDANO      | Danovation (Telenor)                                             | DK           |
+| DKDKBR      | Dansk BredbAynd (TDC Network)                                    | DK           |
+| DKDKKA      | DanskKabelTV                                                     | DK           |
+| DKDKMO      | Danske-Monttelefoner                                             | DK           |
+| DKDKNT      | Dansk-Net (TDC Network)                                          | DK           |
+| DKDLGT      | DLG (TDC Network)                                                | DK           |
+| DKELRO      | ELROErhverv                                                      | DK           |
+| DKEVER      | Everlove (Telenor Network)                                       | DK           |
+| DKFACL      | Facilicom (TDC Network)                                          | DK           |
+| DKFIRM      | Firmafon (Telenor Network)                                       | DK           |
+| DKFLEX      | Flexfone A/S                                                     | DK           |
+| DKFONE      | Fonet Telecom (Telenor N                                         | DK           |
+| DKFREE      | Free2talk                                                        | DK           |
+| DKFRST      | Firstcom                                                         | DK           |
+| DKFULL      | Fullrate                                                         | DK           |
+| DKFZIO      | Fuzion-A/S_LSO (TDC)                                             | DK           |
+| DKHITG      | Hi3G                                                             | DK           |
+| DKHOME      | HomeMobile                                                       | DK           |
+| DKICED      | Ice Danmark ApS                                                  | DK           |
+| DKICENT     | iCentrex_LSO(TDC)                                                | DK           |
+| DKICOM      | ICOM                                                             | DK           |
+| DKINTR      | InterPhone_LSO                                                   | DK           |
+| DKIPCO      | IPConnect (Telia Networ)                                         | DK           |
+| DKIPNI      | Ipinion                                                          | DK           |
+| DKIPNO      | Ipnordic                                                         | DK           |
+| DKIPVI      | IpVision (TDC Network)                                           | DK           |
+| DKJAYN      | JayNet                                                           | DK           |
+| DKJUST      | Justfone   A/S                                                   | DK           |
+| DKLEBA      | Lebara Mobile                                                    | DK           |
+| DKLICT      | LIC (Telia)                                                      | DK           |
+| DKLYCA      | Lycamobile (TDC)                                                 | DK           |
+| DKMAXT      | Maxtel (Telenor Network)                                         | DK           |
+| DKMICS      | MI   Carrier Services                                            | DK           |
+| DKMINM      | Min-Mobil.dk                                                     | DK           |
+| DKMMOB      | M-Mobility1_LSO(Hi3G)                                            | DK           |
+| DKMNTY      | Monty UK Global Limited                                          | DK           |
+| DKMOBD      | Mobil Data (Telenor)                                             | DK           |
+| DKMOBL      | Mobilic/Telia_LSO                                                | DK           |
+| DKMOBV      | Mobilevalue                                                      | DK           |
+| DKMOBW      | MobiWeb Limited                                                  | DK           |
+| DKMOJI      | Moji_LSO(Hi3G)                                                   | DK           |
+| DKMONE      | M1 - DK                                                          | DK           |
+| DKMUND      | Mundio Mobile                                                    | DK           |
+| DKMVNO      | MVNO                                                             | DK           |
+| DKNAKA      | Naka AG                                                          | DK           |
+| DKNETT      | NetTel                                                           | DK           |
+| DKNEXT      | NextGen Mobile Ltd T/A CardBoardFish                             | DK           |
+| DKNEZT      | NEZT ApS                                                         | DK           |
+| DKNRDT      | Nordit (Telenor)                                                 | DK           |
+| DKNRGI      | EnergiMidt LSO                                                   | DK           |
+| DKOIST      | Oister                                                           | DK           |
+| DKONFO      | OnFone                                                           | DK           |
+| DKONOM      | Onomondo                                                         | DK           |
+| DKORNG      | Orange A/S (TDC)                                                 | DK           |
+| DKPARK      | ParkNet (Telia Network)                                          | DK           |
+| DKPLNT      | Plenti1_LSO (TDC)                                                | DK           |
+| DKPLUS      | Plus-Tel                                                         | DK           |
+| DKPQZ       | PQZ - DK                                                         | DK           |
+| DKPRME      | Prime-Networks                                                   | DK           |
+| DKREDS      | Redspot                                                          | DK           |
+| DKSEGT      | Segtel (Telia Network)                                           | DK           |
+| DKSIMI      | Siminn Danmark                                                   | DK           |
+| DKSIMS      | SimService                                                       | DK           |
+| DKSKYL      | SkyLine                                                          | DK           |
+| DKSMPL      | Simpl Telecom ApS                                                | DK           |
+| DKSONO      | Sonomio                                                          | DK           |
+| DKSTFA      | Stofa                                                            | DK           |
+| DKSUPR      | SuperTEL Danmark (Telia)                                         | DK           |
+| DKSVRT      | SVR Technologies (Mach Connectivity)                             | DK           |
+| DKSWIT      | Switt Mobile                                                     | DK           |
+| DKSYDF      | Sydfyn Intranet                                                  | DK           |
+| DKTDC       | TDC - DK                                                         | DK           |
+| DKTELA      | Telavox_LSO (Telia)                                              | DK           |
+| DKTELC      | Telcogate Mobil                                                  | DK           |
+| DKTELF      | TelFonSelskabet_LSO (Telia)                                      | DK           |
+| DKTELI      | Telia                                                            | DK           |
+| DKTELL      | Tellio                                                           | DK           |
+| DKTELM      | TELMORE LSO                                                      | DK           |
+| DKTELO      | Telogic                                                          | DK           |
+| DKTELT      | Telogic (Telia Network)                                          | DK           |
+| DKTFOR      | Tel42                                                            | DK           |
+| DKTHEV      | THEVOICEmobil                                                    | DK           |
+| DKTHYF      | Thyfon A/S (TDC)                                                 | DK           |
+| DKTISM      | Tismi BV                                                         | DK           |
+| DKTLCT      | Teleconnect                                                      | DK           |
+| DKTLCX      | Telecom X                                                        | DK           |
+| DKTLIP      | TulipM (Telia Network)                                           | DK           |
+| DKTLNR      | Telenor                                                          | DK           |
+| DKTLNT      | Telenet                                                          | DK           |
+| DKTMTO      | Time2Call                                                        | DK           |
+| DKTRIP      | Tripplephone (TDC Network)                                       | DK           |
+| DKTWOF      | 2fast_LSO (Telia)                                                | DK           |
+| DKTWOT      | 2Tell                                                            | DK           |
+| DKUNIT      | Uni-Tel (SuperTEL Network)                                       | DK           |
+| DKVIAH      | Viahub                                                           | DK           |
+| DKVIPT      | Viptel                                                           | DK           |
+| DKVOXB      | Voxbone                                                          | DK           |
+| DKWELC      | Welcom                                                           | DK           |
+| DKWEMO      | WE-Mobile (TDC Network)                                          | DK           |
+| DKYOUS      | Yousee                                                           | DK           |
+| DKZAPC      | ZapCell_LSO (TDC Network)                                        | DK           |
+| DMDIGI      | Digicel (Dominica)                                               | DM           |
+| DMFLOW      | FLOW Dominica                                                    | DM           |
+| DOALTI      | Altice                                                           | DO           |
+| DOCLRO      | Claro                                                            | DO           |
+| DOSATL      | Satel                                                            | DO           |
+| DOTRIL      | Trilogy Dominicana (Viva)                                        | DO           |
+| DZALGE      | Algerie Telecom                                                  | DZ           |
+| DZOORE      | Ooredoo Algerie (Nedjma) (Wataniya Telecom)                      | DZ           |
+| DZORAS      | Orascom Telecom                                                  | DZ           |
+| ECCLRO      | Claro (Conecel S.A.)                                             | EC           |
+| ECCNTM      | CNT Mobile - Alegro PCS (Telecsa)                                | EC           |
+| ECMVST      | Movistar (Otecel)                                                | EC           |
+| EEELIS      | Elisa Eesti                                                      | EE           |
+| EEOYTO      | Oy Top Connect                                                   | EE           |
+| EETELI      | Telia Eesti                                                      | EE           |
+| EETELT      | Tele 2 Eesti                                                     | EE           |
+| EETISM      | Tismi BV                                                         | EE           |
+| EGETIS      | Etisalat                                                         | EG           |
+| EGORNG      | Orange (Mobilnil)                                                | EG           |
+| EGTELE      | Telecom Egypt                                                    | EG           |
+| EGVODA      | Vodafone                                                         | EG           |
+| ERERIT      | Eritel                                                           | ER           |
+| ESAIRE      | Aire Networks Del Mediterraneo                                   | ES           |
+| ESALAI      | Alai Operador de Telecomunicaciones - ES                         | ES           |
+| ESALTA      | Alta Tecnologia En Comunicaciones                                | ES           |
+| ESALTE      | Altecom/Fibracat - ES                                            | ES           |
+| ESBRBL      | Barablu Spain - ES                                               | ES           |
+| ESBTES      | BT Espana                                                        | ES           |
+| ESBTMV      | BT MOVIL                                                         | ES           |
+| ESCECO      | CECOSA INSTITUCIONAL -  S.L. (EROSKI)                            | ES           |
+| ESCOMP      | COMPATEL LIMITED                                                 | ES           |
+| ESCONA      | Contacta Servicios Avanzados                                     | ES           |
+| ESCONT      | CONTACTA SERVEIS AVANCATS                                        | ES           |
+| ESCRFR      | Carrefour                                                        | ES           |
+| ESCTAS      | Consorcio De Telecomunicaciones Avanzadas S.A.                   | ES           |
+| ESDEIO      | DEION                                                            | ES           |
+| ESDIAE      | DIA ESPANA                                                       | ES           |
+| ESDIGI      | Digi (Best Spain Telecom)                                        | ES           |
+| ESEPCA      | EPCATEM MALAGA 2000                                              | ES           |
+| ESERSK      | EROSKIMOVIL                                                      | ES           |
+| ESEUSK      | Euskaltel                                                        | ES           |
+| ESFLEX      | FLEXIMOVIL                                                       | ES           |
+| ESHITS      | HITS                                                             | ES           |
+| ESINCA      | Incotel Servicios Avanzados                                      | ES           |
+| ESINCO      | Incotel Ingenieria Y Consultoria                                 | ES           |
+| ESIOSE      | Ingenium Outsourcing Serivces (IOS)                              | ES           |
+| ESJAZZ      | Jazz Telecom Unipersonal                                         | ES           |
+| ESLCRT      | Least Cost Routing Telecom                                       | ES           |
+| ESLEBA      | Lebara Espana                                                    | ES           |
+| ESLEMO      | Lemonvil                                                         | ES           |
+| ESLLAM      | LLAMAYA                                                          | ES           |
+| ESLLDA      | Lleida Networks Serveis Telematics                               | ES           |
+| ESLOBS      | Lobster                                                          | ES           |
+| ESLYCA      | Lycamobile                                                       | ES           |
+| ESMASM      | MASMOVIL (World Wide Web Ibercom)                                | ES           |
+| ESMVST      | Movistar                                                         | ES           |
+| ESNEOS      | Neo-Sky 2002                                                     | ES           |
+| ESOCEA      | OCEANS NETWORK -  S.L.                                           | ES           |
+| ESOPNC      | OPEN CABLE TELECOMUNICACIONES                                    | ES           |
+| ESORBI      | Orbitel Comunicaciones LatinoAmericans                           | ES           |
+| ESORNG      | Orange Spain                                                     | ES           |
+| ESORNP      | Orange Spain Unipersonal (09)                                    | ES           |
+| ESORNU      | Orange Spain Unipersonal                                         | ES           |
+| ESORTE      | ORTEL MOBILE ESPANA -  S.L.UNIPERSONAL                           | ES           |
+| ESPEPE      | PEPEPHONE                                                        | ES           |
+| ESPEPM      | Pepemobile                                                       | ES           |
+| ESPHNE      | THE PHONE HOUSE SPAIN                                            | ES           |
+| ESPRLM      | PARLEM TELECOM COMPANYIA DE TELECOMUNICACIONS (Fonyou Telecom)   | ES           |
+| ESPTVT      | PTV TELECOM                                                      | ES           |
+| ESQTTR      | Quattre Internet                                                 | ES           |
+| ESRACC      | RACC MOVIL -  S.L.                                               | ES           |
+| ESRCGA      | R Cable Y Telecomunicaciones Galicia                             | ES           |
+| ESRDTB      | Red Digital De Telecomunicaciones De Las Islas Baleares S.L.     | ES           |
+| ESREPM      | Republica Movil                                                  | ES           |
+| ESSACC      | SAC Convergent Aggregation Services - ES                         | ES           |
+| ESSARE      | Sarenet                                                          | ES           |
+| ESSCNT      | SCN TRUPHONE                                                     | ES           |
+| ESSIMY      | Simyo                                                            | ES           |
+| ESTCAS      | Telecable De Asturias                                            | ES           |
+| ESTELU      | Telefonica Moviles Unipersonal                                   | ES           |
+| ESTNTI      | TUENTI TECHNOLOGIES -  S.L.                                      | ES           |
+| ESTTCB      | The Telecom Boutique                                             | ES           |
+| ESVECT      | Vectone - ES                                                     | ES           |
+| ESVIZZ      | VIZZAVI ESPANA S.L.                                              | ES           |
+| ESVODA      | Vodafone Espana                                                  | ES           |
+| ESVODE      | VODAFONE ENABLER ESPANA -  S.L.                                  | ES           |
+| ESVODO      | Vodafone (Ono) Unipersonal                                       | ES           |
+| ESVODR      | Vodafone (Resellers)                                             | ES           |
+| ESVONO      | Vodafone (Ono)                                                   | ES           |
+| ESVOZT      | Voztelecom Sistemas                                              | ES           |
+| ESXFRA      | Xfera (Yoigo)                                                    | ES           |
+| ESYOUM      | YOU MOBILE TELECOM SPAIN -  S.L. UNIPERSONAL                     | ES           |
+| ESZINN      | Operadora De Telecomunicaciones Opera(ZINNIA TELECOMUNICACIONES) | ES           |
+| ETETHI      | Ethio Telecom                                                    | ET           |
+| FIALND      | Alands Mobiltelefon (Alcom)                                      | FI           |
+| FICOMP      | Compatel Limited                                                 | FI           |
+| FIDNA       | DNA Finland                                                      | FI           |
+| FIELIS      | Elisa Oyj                                                        | FI           |
+| FIKUIR      | Kuiri Mobile Oy                                                  | FI           |
+| FINOKI      | Nokia                                                            | FI           |
+| FIOYFN      | Oy Finland Tele2 AB - FI                                         | FI           |
+| FISCNL      | SCNL TRUPHONE                                                    | FI           |
+| FISMSP      | SMS Provider Corp.                                               | FI           |
+| FISUOM      | Suomen Virveverkko Oy                                            | FI           |
+| FITLIT      | Telit Wireless Solutions                                         | FI           |
+| FITLSN      | TeliaSonera Finland                                              | FI           |
+| FITLVX      | Telavox AB                                                       | FI           |
+| FITSMI      | Tismi BV                                                         | FI           |
+| FIUKKO      | Ukkoverkot Oy                                                    | FI           |
+| FIVOXB      | Voxbone                                                          | FI           |
+| FJDIGI      | Digicel (Fiji) Ltd - FJ                                          | FJ           |
+| FJTLCM      | Telecom Fiji Ltd (CDMA) - FJ                                     | FJ           |
+| FJVODA      | Vodafone (Fiji) Ltd - FJ                                         | FJ           |
+| FKSURE      | Sure South Atlantic Ltd                                          | FK           |
+| FMFSMT      | FSM Telecom - FM                                                 | FM           |
+| FOFARO      | Faroese Telecom (ForoyaTele)                                     | FO           |
+| FOTOSA      | Tosa Sp/F (Edge Mobile) - FO                                     | FO           |
+| FOVODA      | Vodafone Kall                                                    | FO           |
+| FRALTI      | Altitude Infrastructure                                          | FR           |
+| FRASTR      | Astrium SAS (Airbus Defense and Space)                           | FR           |
+| FRBOUY      | Bouygues Telecom                                                 | FR           |
+| FRCBIC      | Cubic telecom France                                             | FR           |
+| FRCLHR      | Cellhire (France) - FR                                           | FR           |
+| FRCORI      | Coriolis Telecom                                                 | FR           |
+| FRFREE      | Free Mobile                                                      | FR           |
+| FRGLBS      | Globalstar Europe                                                | FR           |
+| FRHLYS      | HALYS                                                            | FR           |
+| FRHUBO      | Hub One Telecom                                                  | FR           |
+| FRIPDR      | IP DIRECTIONS                                                    | FR           |
+| FRLEGO      | Legos                                                            | FR           |
+| FRLYCA      | Lycamobile France                                                | FR           |
+| FRMOBI      | MobiquiThings France                                             | FR           |
+| FRNRJM      | NRJ Mobile                                                       | FR           |
+| FRORNG      | Orange France                                                    | FR           |
+| FRPLTF      | Association Plate-Forme Telecom - FR                             | FR           |
+| FRPROS      | PROSODIE                                                         | FR           |
+| FRSFR       | SFR                                                              | FR           |
+| FRSYMA      | Syma Mobile - FR                                                 | FR           |
+| FRTDFF      | TDF France                                                       | FR           |
+| FRTISM      | Tismi B.V.                                                       | FR           |
+| FRTRNS      | Transatel Mobile                                                 | FR           |
+| FRTRUP      | Truphone France                                                  | FR           |
+| FRVECT      | Vectone mobile (Mundio)                                          | FR           |
+| FRVOXB      | VOXBONE                                                          | FR           |
+| FRWEAC      | WEACCESS GROUP                                                   | FR           |
+| GAAIRT      | Airtel Gabon(ZAIN) (Celtel)                                      | GA           |
+| GALBRT      | Libertis (Gabon Telecom)                                         | GA           |
+| GAMOOV      | Moov (Gabon Telecom)                                             | GA           |
+| GAUSAN      | USAN GABON (AZUR)                                                | GA           |
+| GBBLUE      | Bluewave Communications Limited - GB                             | GB           |
+| GBFMSS      | FMS Solutions Ltd - GB                                           | GB           |
+| GBMASS      | MASS Response Service Gmbh - GB                                  | GB           |
+| GDDIGI      | Digicel Grenada                                                  | GD           |
+| GDLIME      | Lime (CW-Grenada)                                                | GD           |
+| GEGLBL      | GlobalCell  LTD - GE                                             | GE           |
+| GEGMOB      | GMobile - GE                                                     | GE           |
+| GEMGTI      | MagtiCom - GE                                                    | GE           |
+| GEMOBI      | Mobitel Ltd (Beeline/Veon) - GE                                  | GE           |
+| GESILK      | Silknet CDMA - GE                                                | GE           |
+| GFDAUT      | Dauphin Telecom(Guadeloupe Telecom)                              | GF           |
+| GFGUYN      | Guyane Telephone Mobile - GF                                     | GF           |
+| GFMART      | Martinique Telephone Mobile                                      | GF           |
+| GFOUTR      | Outremer Telecom - GF                                            | GF           |
+| GFSTEL      | Saint Martin Et Saint Barthelemy Telcell Sarl                    | GF           |
+| GHAIRT      | AirtelTigo Ghana                                                 | GH           |
+| GHGHNA      | Ghana Telecom / Vodafone (Ghana)                                 | GH           |
+| GHGIOG      | Glo Ghana (Globalcom)                                            | GH           |
+| GHKSPA      | Kasapa Telecom Ltd (CDMA)(expresso)                              | GH           |
+| GHNETA      | Netafriques Dot Com Ltd                                          | GH           |
+| GHSCNC      | ScanCom Ltd (MTN)                                                | GH           |
+| GHSURF      | Surfline Communications - GH                                     | GH           |
+| GICTSG      | CTS Gibraltar                                                    | GI           |
+| GIEAZI      | EAZI TELECOM (Limba) (Shine)                                     | GI           |
+| GIGIBT      | Gibtelecom                                                       | GI           |
+| GLTELE      | TELE Greenland                                                   | GL           |
+| GMAFRI      | Africell                                                         | GM           |
+| GMCMIU      | Comium                                                           | GM           |
+| GMGMCL      | Gamcel                                                           | GM           |
+| GMQCEL      | Qcell                                                            | GM           |
+| GNAREE      | Areeba (MTN)                                                     | GN           |
+| GNCELC      | Cellcom                                                          | GN           |
+| GNINTR      | Intercel                                                         | GN           |
+| GNORNG      | Orange                                                           | GN           |
+| GNSOTL      | Sotelgui                                                         | GN           |
+| GQGETE      | GETESA (Orange)                                                  | GQ           |
+| GQHITS      | HiTs G.E. S.A.                                                   | GQ           |
+| GRAMDT      | AMD Telecom                                                      | GR           |
+| GRCOMPA     | Compatel Limited - GR                                            | GR           |
+| GRCSMO      | Cosmoline                                                        | GR           |
+| GRCSMT      | COSMOTE                                                          | GR           |
+| GRFORT      | Forthnet                                                         | GR           |
+| GRINTR      | Interconnect Ltd - GR                                            | GR           |
+| GRINTT      | INTER TELECOM                                                    | GR           |
+| GRMOBI      | MOBIWEB GREECE                                                   | GR           |
+| GROTEG      | OTE Greece                                                       | GR           |
+| GRVODA      | Vodafone Greece                                                  | GR           |
+| GRWIND      | WIND                                                             | GR           |
+| GRYUBT      | YUBOTO LTD                                                       | GR           |
+| GTCOMC      | Comunicaciones Celulares (COMCEL) (Tigo)                         | GT           |
+| GTMVST      | Movistar                                                         | GT           |
+| GTTELE      | Telecomunicaciones de Guatemala (Claro) (Sercom)                 | GT           |
+| GTUNIT      | Universal de Telecomunicaciones (Unitel)                         | GT           |
+| GWGUIN      | Guineatel                                                        | GW           |
+| GWORNG      | Orange Bissau                                                    | GW           |
+| GWSPAC      | Spacetel Guinea-Bissau                                           | GW           |
+| GYDIGI      | Digicel - GY                                                     | GY           |
+| GYGTTC      | GT&T Cellink Plus - GY                                           | GY           |
+| HKCNMO      | China Mobile                                                     | HK           |
+| HKCNMT      | China Motion                                                     | HK           |
+| HKCNUN      | China Unicom                                                     | HK           |
+| HKCSL       | CSL                                                              | HK           |
+| HKCTIC      | CITIC Telecom International Ltd                                  | HK           |
+| HKEASC      | Easco Telecommunications Limited - HK                            | HK           |
+| HKHKBN      | Hkbn                                                             | HK           |
+| HKHUTC      | Hutchison                                                        | HK           |
+| HKMULT      | Multibyte Info Technology Ltd                                    | HK           |
+| HKPCWW      | PCWW                                                             | HK           |
+| HKSMRT      | SmarTone                                                         | HK           |
+| HKTAIT      | Tai Tung Mobile Phone Company Limited - HK                       | HK           |
+| HKTELE      | Hong Kong Telecommunications (HKT)                               | HK           |
+| HKTINK      | Tink Labs Limited - HK                                           | HK           |
+| HKTRUP      | Truphone - HK                                                    | HK           |
+| HKWEBB      | Webbing Hong Kong Limited                                        | HK           |
+| HNCLRO      | Claro                                                            | HN           |
+| HNHOND      | Hondutel                                                         | HN           |
+| HNTELE      | Telefonica Celular S.A (Tigo)                                    | HN           |
+| HRAONE      | A1 Croatia                                                       | HR           |
+| HRHRVA      | Hrvatski Telekom (HT)                                            | HR           |
+| HRNTHM      | NTH Media                                                        | HR           |
+| HRTELF      | TELE FOCUS                                                       | HR           |
+| HRTTWO      | T-2 Croatia                                                      | HR           |
+| HTCTXL      | CTExcel - HK                                                     | HK           |
+| HTDIGC      | Digicel Haiti                                                    | HT           |
+| HTNATC      | Natcom S.A.                                                      | HT           |
+| HUDIGI      | DIGI                                                             | HU           |
+| HUINVI      | Invitech Megoldasok                                              | HU           |
+| HUMAGY      | Magyar Telekom                                                   | HU           |
+| HUMVMN      | MVM NET                                                          | HU           |
+| HUTELE      | Telenor Magyarorszag                                             | HU           |
+| HUVODA      | Vodafone Magyarorszag                                            | HU           |
+| IDBAKR      | PT Bakrie Telecom (ESIA) - ID                                    | ID           |
+| IDHTCH      | PT Hutchison 3 (Tri)                                             | ID           |
+| IDIMOO      | im3 Ooredoo                                                      | ID           |
+| IDINTR      | PT Internux                                                      | ID           |
+| IDPASF      | PT Pasifik Satelit Nusantara (PSN)                               | ID           |
+| IDSAMP      | PT Sampoerna Telekomunikasi (Net1)                               | ID           |
+| IDSATL      | Satelindo - ID                                                   | ID           |
+| IDSMRT      | PT Smartfren Telecom (Smart)                                     | ID           |
+| IDTELK      | PT. Telkomsel Selular (Telkom)                                   | ID           |
+| IDXLAX      | PT XL Axiata-AXIS (IDNEX)                                        | ID           |
+| IECARP      | Carphone Warehouse                                               | IE           |
+| IECLVR      | Clever Communications Ltd                                        | IE           |
+| IEEIRM      | eir Mobile                                                       | IE           |
+| IELYCA      | Lycamobile                                                       | IE           |
+| IESKY       | Sky Ireland - IE                                                 | IL           |
+| IETESC      | Tesco Mobile                                                     | IE           |
+| IETHRE      | Three Ireland                                                    | IE           |
+| IEVIRG      | Virgin Mobile                                                    | IE           |
+| IEVODA      | Vodafone                                                         | IE           |
+| IL365T      | 365 Telecom (MVNO) - IL                                          | IL           |
+| ILALON      | Alon Cellular Ltd (Youphone)                                     | IL           |
+| ILANNA      | Annatel Mobile                                                   | IL           |
+| ILAZIC      | Azi Communications (AKA Telzar Brand)                            | IL           |
+| ILBEEZ      | Beezz Communications                                             | IL           |
+| ILBEZE      | Bezeq                                                            | IL           |
+| ILBIPC      | B.I.P Communications Ltd.                                        | IL           |
+| ILCELLA     | Cellact Communication                                            | IL           |
+| ILCELLC     | Cellcom Telecommunications                                       | IL           |
+| ILFREE      | Free Telecom                                                     | IL           |
+| ILGLAN      | Golan Telecom                                                    | IL           |
+| ILGOLD      | Golden Lines                                                     | IL           |
+| ILHOME      | Home Cellular                                                    | IL           |
+| ILHOTT      | HOT Telecom                                                      | IL           |
+| ILITRN      | Ituran Cellular                                                  | IL           |
+| ILJAWW      | Jawwal                                                           | IL           |
+| ILNETV      | Netvision                                                        | IL           |
+| ILPELE      | Pelephone                                                        | IL           |
+| ILPRTN      | Partner Communications Co. Ltd (Orange)                          | IL           |
+| ILRAMI      | Rami Levi                                                        | IL           |
+| ILWATA      | Wataniya Palestine                                               | IL           |
+| ILXFNE      | Xfone  (We4G)                                                    | IL           |
+| INAIRC      | Aircel Limited                                                   | IN           |
+| INBAIR      | Bharti Airtel Ltd                                                | IN           |
+| INBSNL      | Bharat Sanchar Nigam Ltd (BSNL)                                  | IN           |
+| INDISH      | Dishnet Wireless                                                 | IN           |
+| INHFCL      | HFCL Connect (Ping)                                              | IN           |
+| INIDEA      | IDEA Cellular                                                    | IN           |
+| INMTNL      | Mahanagar Telephone Nigam Ltd (MTNL)                             | IN           |
+| INRELI      | Reliance Telecom Pvt Ltd                                         | IN           |
+| INRJIO      | Reliance (JIO)                                                   | IN           |
+| INSPCE      | Spice Communications                                             | IN           |
+| INSSTM      | Sistema Shyam TeleServices (MTS)                                 | IN           |
+| INSTEL      | S. Tel Ltd.                                                      | IN           |
+| INSWAN      | SWAN Etisalat Ltd                                                | IN           |
+| INTATA      | TATA Indicom  / DOCOMO (Virgin Mobile)                           | IN           |
+| INUNIN      | Telenor Unitech Ltd (Uninor)                                     | IN           |
+| INVIDC      | Videocon Telecom                                                 | IN           |
+| INVODA      | Vodafone Essar South Ltd                                         | IN           |
+| IOSURE      | Sure (Diego Garcia) Ltd                                          | IO           |
+| ISAMIT      | Amitelo AG                                                       | IS           |
+| ISIMCI      | IMC Islande (Viking)                                             | IS           |
+| ISNOVA      | Nova                                                             | IS           |
+| ISSIMI      | Siminn                                                           | IS           |
+| ISSIMO      | Siminn (OnWaves)                                                 | IS           |
+| ISSIMT      | Siminn (TAL)                                                     | IS           |
+| ISTISM      | Tismi BV                                                         | IS           |
+| ISVODA      | Vodafone (Syn)                                                   | IS           |
+| ITACOT      | Acotel S.p.A.                                                    | IT           |
+| ITAGIL      | Agile Telecom                                                    | IT           |
+| ITARIA      | Aria                                                             | IT           |
+| ITATON      | A-Tono                                                           | IT           |
+| ITDIGI      | Digi Italy                                                       | IT           |
+| ITDIGT      | Digitel Mobile Srl                                               | IT           |
+| ITELSA      | Elsacom                                                          | IT           |
+| ITENEL      | ENEL S.p.A.                                                      | IT           |
+| ITFAST      | FASTWEB                                                          | IT           |
+| ITGOIN      | GO Internet S.p.A.                                               | IT           |
+| ITILIA      | Iliad Italia S.p.A.                                              | IT           |
+| ITINTR      | Intermatica                                                      | IT           |
+| ITLINK      | LINKEM S.p.A.                                                    | IT           |
+| ITLYCA      | Lycamobile Italia - IT                                           | IT           |
+| ITMNDI      | Mundio S.r.l.                                                    | IT           |
+| ITNOVR      | Noverca Italia (Kena Mobile)                                     | IT           |
+| ITPLIN      | Plintron Europe Limited                                          | IT           |
+| ITRETE      | Rete Ferroviaria Italiana                                        | IT           |
+| ITSMSI      | SMS Italia                                                       | IT           |
+| ITTELE      | Telecom Italia (TIM)                                             | IT           |
+| ITTLSP      | Telespazio                                                       | IT           |
+| ITVEIS      | VEI s.r.l.                                                       | IT           |
+| ITVODA      | Vodafone Italy                                                   | IT           |
+| ITWIND      | Wind Telecomunicazioni                                           | IT           |
+| ITWLCM      | Welcome Italia                                                   | IT           |
+| JMCLRO      | Claro                                                            | JM           |
+| JMDIGI      | Digicel Jamaica                                                  | JM           |
+| JMLIME      | Lime (CW-Jamaica)                                                | JM           |
+| JOORNG      | Orange Jordan - JO                                               | JO           |
+| JOUMNI      | Umniah - JO                                                      | JO           |
+| JOXPRS      | Xpress - JO                                                      | JO           |
+| JOZAIN      | Zain                                                             | JO           |
+| JPEMOB      | eMobile                                                          | JP           |
+| JPKDDI      | au (KDDI)                                                        | JP           |
+| JPNTTD      | NTT DoCoMo                                                       | JP           |
+| JPOKNW      | Okinawa Cellular                                                 | JP           |
+| JPRKTN      | Rakuten                                                          | JP           |
+| JPSOFT      | Softbank Mobile                                                  | JP           |
+| KEAIRT      | Airtel                                                           | KE           |
+| KEEQUI      | Equitel (Finserve)                                               | KE           |
+| KEFAIB      | Faiba Mobile (Jamii Telecom)                                     | KE           |
+| KEHOME      | Homelands Media Ltd                                              | KE           |
+| KEINFR      | Infura Ltd.                                                      | KE           |
+| KEIWAY      | iWayAfrica Kenya Limited                                         | KE           |
+| KEMOBI      | Mobile Pay Kenya Limited                                         | KE           |
+| KESEMA      | Sema Mobile Services Ltd                                         | KE           |
+| KESFRI      | Safaricom                                                        | KE           |
+| KETELK      | Telkom Kenya Ltd (Orange)                                        | KE           |
+| KGAKTL      | AkTel LLC - KG                                                   | KG           |
+| KGBEEL      | Beeline/Veon (Bitel) - KG                                        | KG           |
+| KGMEGA      | MegaCom/Alfa Telecom - KG                                        | KG           |
+| KGNURT      | NurTelecom LLC - KG                                              | KG           |
+| KGSOTL      | Sotel CDMA/Mobile - KG                                           | KG           |
+| KHBEEL      | Beeline Cambodia - KH                                            | KH           |
+| KHCAMG      | CamGSM / The Royal Group - KH                                    | KH           |
+| KHCELC      | Cellcard/Mobitel                                                 | KH           |
+| KHCMTL      | Camtel AMPS (Camtel) - KH                                        | KH           |
+| KHMETF      | Metfone                                                          | KH           |
+| KHQBCC      | QB Cad Com                                                       | KH           |
+| KHSMRT      | Smart Axiata                                                     | KH           |
+| KHXINW      | Xinwei - KH                                                      | KH           |
+| KHYESS      | Yes Seatel                                                       | KH           |
+| KIATHK      | Athkl                                                            | KI           |
+| KITSKL      | Telecom Services Kiribati Ltd (TSKL) - KI                        | KI           |
+| KMCOMO      | Comores Telecom                                                  | KM           |
+| KMTLCO      | TELCO (TELMA)                                                    | KM           |
+| KNDIGI      | Digicel Saint Kitts and Nevis                                    | KN           |
+| KNLIME      | Lime (CW-St Kitts and Nevis)                                     | KN           |
+| KNUTSC      | UTS CariGlobe                                                    | KN           |
+| KPKPTC      | Korea Posts and Telecommunications Corp. (KPTC) - KP             | KP           |
+| KRKTFR      | KT Freetel                                                       | KR           |
+| KRLGUP      | LG U+                                                            | KR           |
+| KRSKTL      | SK telecom                                                       | KR           |
+| KVIPKO      | IPKO Telecommunications LLC                                      | KV           |
+| KVTELE      | Telecom Kosovo (Vala)                                            | KV           |
+| KWOORE      | Ooredoo                                                          | KW           |
+| KWVIVA      | Viva (STC) - KW                                                  | KW           |
+| KWZAIN      | Zain / Mobile Telecommunication Company (MTC)                    | KW           |
+| KYDIGI      | Digicel Cayman Islands                                           | KY           |
+| KYLIME      | Lime (CW-Cayman Island)                                          | KY           |
+| LABEEL      | Beeline Laos (Millicom) - LA                                     | LA           |
+| LAETLM      | ETL Mobile - LA                                                  | LA           |
+| LALAOT      | Lao Telecommunications - LA                                      | LA           |
+| LASTAR      | Star Telecom (Unitel) - LA                                       | LA           |
+| LBALFA      | Alfa                                                             | LB           |
+| LBMTCT      | MTC Touch                                                        | LB           |
+| LBOGER      | Ogero                                                            | LB           |
+| LCDIGI      | Digicel Limited                                                  | LC           |
+| LCLIME      | Lime (CW-St. Lucia)                                              | LC           |
+| LIALPC      | Alpcom AG                                                        | LI           |
+| LICBIC      | Cubic Corporation                                                | LI           |
+| LIFRST      | First Mobile                                                     | LI           |
+| LISALT      | Salt (Orange Liechtenstein)                                      | LI           |
+| LISORA      | Soracom LI LTD                                                   | LI           |
+| LISWIS      | Swisscom (Schweiz)                                               | LI           |
+| LITELE      | Telecom Liechtenstein (Mobilkom Liechtenstein)                   | LI           |
+| LKBHAR      | Bharti Airtel Lanka (Pvt) Ltd - LK                               | LK           |
+| LKDIAL      | Dialog - LK                                                      | LK           |
+| LKETIS      | Etisalat Lanka (Tigo / Celltel) - LK                             | LK           |
+| LKHTCH      | Hutch (Sri Lanka) - LK                                           | LK           |
+| LKMOBI      | Mobitel (Msat) - LK                                              | LK           |
+| LRCELLC     | Cellcom                                                          | LR           |
+| LRLIBR      | Libercell                                                        | LR           |
+| LRLONE      | Lonestar Cell MTN                                                | LR           |
+| LRNOVA      | Novafone (Comium Liberia)                                        | LR           |
+| LSECON      | Econet Telecom                                                   | LS           |
+| LSVODA      | Vodacom                                                          | LS           |
+| LTABLI      | AB Lietuvos gelezinkeliai                                        | LT           |
+| LTTELE      | AB Lietuvos radijo ir televizijos centras (Telecentras)          | LT           |
+| LTTELI      | Telia AB                                                         | LT           |
+| LTUABB      | UAB Bite Lietuva                                                 | LT           |
+| LTUABT      | UAB Tele2                                                        | LT           |
+| LUELUX      | E-LUX MOBILE                                                     | LU           |
+| LUMOBI      | MOBIWEB LUXEMBOURG                                               | LU           |
+| LUMTXC      | MTX CONNECT                                                      | LU           |
+| LUORNG      | Orange Business Luxembourg                                       | LU           |
+| LUPANT      | P & T Luxembourg (LuxGSM)                                        | LU           |
+| LUTNGO      | TANGO                                                            | LU           |
+| LVBITE      | BITE Latvija                                                     | LV           |
+| LVLATT      | Lattelecom                                                       | LV           |
+| LVLMTE      | Latvijas Mobilais Telefons (LMT)                                 | LV           |
+| LVMEGA      | MEGATEL                                                          | LV           |
+| LVRIGT      | Rigatta                                                          | LV           |
+| LVTELE      | Tele2                                                            | LV           |
+| LVTRIA      | Telekom Baltija (Triatel)                                        | LV           |
+| LYALMA      | Al-Madar (Orbit)                                                 | LY           |
+| LYLBYA      | Libya Telecom & Technology (LTT)                                 | LY           |
+| LYLIBY      | Libyana                                                          | LY           |
+| MAALHO      | Al Hourria Telecom - MA                                          | MA           |
+| MAITIS      | Itissalat Al-Maghrib (Maroc Telecom)                             | MA           |
+| MAORNG      | Orange Maroc (Medi Telecom)                                      | MA           |
+| MAWANA      | Wana (Maroc Connect)                                             | MA           |
+| MCMNCO      | Monaco Telecom                                                   | MC           |
+| MDEVNT      | Eventis Mobile GSM - MD                                          | MD           |
+| MDINTR      | InterDnestrCom                                                   | MD           |
+| MDMLDC      | MoldCell                                                         | MD           |
+| MDMLDT      | Moldtelecom                                                      | MD           |
+| MDORNG      | Orange Moldova                                                   | MD           |
+| MEMTEL      | MTEL                                                             | ME           |
+| MEPROM      | ProMonte                                                         | ME           |
+| METMO       | T-Mobile (Crnogorski Telekom)                                    | ME           |
+| MGORNG      | Orange Madagascar                                                | MG           |
+| MGSACL      | Sacel                                                            | MG           |
+| MGTELE      | Telecom Malagasy                                                 | MG           |
+| MGZAIN      | ZAIN Madagascar                                                  | MG           |
+| MHMINT      | Marshall Islands National Telco Authority (MINTA) - MH           | MH           |
+| MKMOBI      | MOBIK TELEKOMUNIKACII                                            | MK           |
+| MKTMO       | T-Mobile                                                         | MK           |
+| MKVIPO      | VIP Operator                                                     | MK           |
+| MLMALI      | Malitel (Sotelma)                                                | ML           |
+| MLORNG      | Orange Mali                                                      | ML           |
+| MLTELE      | Telecel Mali (Atel-SA)(Alpha)                                    | ML           |
+| MMMECO      | Myanmar Economic Corporation                                     | MM           |
+| MMMMPT      | Myanmar Posts and Telecommunications (MPT)                       | MM           |
+| MMOORE      | Ooredoo Myanmar Limited                                          | MM           |
+| MMTELE      | Telecom Intl Myanmar Co.- Ltd (MyTel)                            | MM           |
+| MMTLNR      | Telenor Myanmar Company Limited                                  | MM           |
+| MNGMOB      | G mobile net Co. Ltd                                             | MN           |
+| MNMOBI      | MobiCom                                                          | MN           |
+| MNSKYT      | Skytel                                                           | MN           |
+| MNUNIT      | Unitel                                                           | MN           |
+| MOCNTE      | China Telecom Macau                                              | MO           |
+| MOCTM       | CTM - MO                                                         | MO           |
+| MOSMRT      | SmarTone Macau                                                   | MO           |
+| MOTMAC      | 3 Macau (Hutchison)                                              | MO           |
+| MRCHNG      | Chinguitel                                                       | MR           |
+| MRMATT      | Mattel                                                           | MR           |
+| MRMAUR      | Mauritel                                                         | MR           |
+| MSLIME      | Lime (CW-Montserrat)                                             | MS           |
+| MTGO        | Go                                                               | MT           |
+| MTMLTA      | Melita                                                           | MT           |
+| MTPING      | PING                                                             | MT           |
+| MTREDT      | Redtouch Fone                                                    | MT           |
+| MTVODA      | Vodafone Malta                                                   | MT           |
+| MTYOM       | YOM                                                              | MT           |
+| MUEMTL      | Emtel                                                            | MU           |
+| MUMAHA      | Mahanagar Telephone Mauritius Ltd. (MTML)                        | MU           |
+| MUMAUT      | Mauritius Telecom (My.T)                                         | MU           |
+| MVDHIR      | Dhiraagu - MV                                                    | MV           |
+| MVWATA      | Wataniya Telecom Maldives Pvt Ltd - MV                           | MV           |
+| MWACCE      | Access Communications Limited                                    | MW           |
+| MWAIRT      | Airtel Malawi Limited (CelTel)                                   | MW           |
+| MWTELE      | Telekom Networks Malawi Ltd.                                     | MW           |
+| MXALTA      | ALTAN REDES-S.A.P.I. DE C.V.                                     | MX           |
+| MXAXTL      | Axtel                                                            | MX           |
+| MXCABL      | Cablevision - MX                                                 | MX           |
+| MXCDDN      | Comunicaciones Digitales Del Norte                               | MX           |
+| MXFPOP      | FreedomPop - MX                                                  | MX           |
+| MXIUSA      | Iusacell                                                         | MX           |
+| MXMAXC      | Maxcom Telecomunicaciones - MX                                   | MX           |
+| MXMVST      | Movistar                                                         | MX           |
+| MXNXTL      | Nextel                                                           | MX           |
+| MXOXIO      | Oxio Mobile - MX                                                 | MX           |
+| MXQKLY      | Quickly Phone - MX                                               | MX           |
+| MXSDAL      | Servicios de Acceso Inalambricos - MX                            | MX           |
+| MXTCMX      | Telecomunicaciones de Mexico - MX                                | MX           |
+| MXTLCL      | Telcel                                                           | MX           |
+| MXTLFN      | Telefonos de Mexico - MX                                         | MX           |
+| MXVSAT      | Viasat - MX                                                      | MX           |
+| MYALTL      | Altel Communications Sdn Bhd  (Puncak Semangat)                  | MY           |
+| MYBARA      | Baraka Telecom Sdn Bhd                                           | MY           |
+| MYCELC      | Celcom                                                           | MY           |
+| MYCERE      | Ceres Telecom (FRiENDi)                                          | MY           |
+| MYDIGI      | DiGi Telecom                                                     | MY           |
+| MYELEC      | Electcoms Wireless Sdn Bhd                                       | MY           |
+| MYMAXI      | Maxis Broadband Sdn Bhd                                          | MY           |
+| MYREDO      | Red One Network Sdn. Bhd                                         | MY           |
+| MYSAMA      | Samata Communications                                            | MY           |
+| MYTELEK     | Telekom Malaysia Berhad                                          | MY           |
+| MYTRON      | Talk Focus (TRON)                                                | MY           |
+| MYTTSB      | Tune Talk Sdn Bhd                                                | MY           |
+| MYUMOB      | U Mobile Sdn Bhd                                                 | MY           |
+| MYWEBE      | Webe Digital sdn bhd (Packet One Network)                        | MY           |
+| MYXOXC      | XOX Com Sdn Bhd                                                  | MY           |
+| MYYTL       | YTL Communications Sdn Bhd                                       | MY           |
+| MZMCEL      | Mcel (Mocambique Celular)                                        | MZ           |
+| MZMOVI      | Movitel S.A.                                                     | MZ           |
+| MZVODA      | Vodacom                                                          | MZ           |
+| NADEMS      | Demshi Investment Holdings Pty Ltd                               | NA           |
+| NAMOBI      | Mobile Telecommunications (MTC)                                  | NA           |
+| NAMTNB      | MTN Business Solutions Namibia (Pty) LTD                         | NA           |
+| NAPARA      | Paratus Telecommunications Pty Ltd (Orascom)                     | NA           |
+| NATELE      | Telecom Namibia                                                  | NA           |
+| NCOPTM      | OPT Mobilis - NC                                                 | NC           |
+| NEAIRT      | Airtel Niger                                                     | NE           |
+| NEMOOV      | Moov (Telecel)                                                   | NE           |
+| NEORNG      | Orange                                                           | NE           |
+| NESAHE      | Sahelcom                                                         | NE           |
+| NESONI      | Sonitel                                                          | NE           |
+| NGAIRT      | Airtel Nigeria                                                   | NG           |
+| NGGLOB      | Globacom (GLO)                                                   | NG           |
+| NGMTNN      | MTN Nigeria                                                      | NG           |
+| NGMULT      | Multi-links Telecommunications Ltd                               | NG           |
+| NGNATC      | NATCOM(nTel)                                                     | NG           |
+| NGNINE      | 9Mobile Nigeria (Etisalat)                                       | NG           |
+| NGSMIL      | Smile Telecom                                                    | NG           |
+| NGSPCT      | Spectranet                                                       | NG           |
+| NGSWFT      | Swift Networks                                                   | NG           |
+| NICLRO      | Claro                                                            | NI           |
+| NICOOT      | Cootel Nicaragua                                                 | NI           |
+| NIMVST      | Movistar                                                         | NI           |
+| NLASPI      | Aspider Nederland                                                | NL           |
+| NLATTG      | AT&T Global Network Services Nederland (AGMS Netherlands B.V.)   | NL           |
+| NLBENP      | BEN Prepaid                                                      | NL           |
+| NLBLYK      | Blyk                                                             | NL           |
+| NLBODY      | BodyTrace Netherlands B.V.                                       | NL           |
+| NLBREE      | Breezz Nederland                                                 | NL           |
+| NLCLVR      | CleverEnable B.V.                                                | NL           |
+| NLDEAN      | Dean Connect                                                     | NL           |
+| NLDEAO      | Dean One B.V.(OneXS)                                             | NL           |
+| NLDFNS      | Ministerie van Defensie                                          | NL           |
+| NLEAZI      | Eazit                                                            | NL           |
+| NLEIGH      | 888. BV                                                          | NL           |
+| NLELEP      | Elephant Talk                                                    | NL           |
+| NLGLOB      | GLOBETOUCH Netherlands (Roamware)                                | NL           |
+| NLGLOT      | GloTell BV (V-Tell NL)                                           | NL           |
+| NLINMO      | INMO                                                             | NL           |
+| NLKEEN      | Keen Mobile B.V.                                                 | NL           |
+| NLKPN       | KPN - NL                                                         | NL           |
+| NLLANC      | Lancelot                                                         | NL           |
+| NLLYCA      | Lycamobile Netherlands                                           | NL           |
+| NLMIXE      | Mixe Communication Solutions                                     | NL           |
+| NLMOTT      | Motto Voip                                                       | NL           |
+| NLMSGB      | Messagebird BV                                                   | NL           |
+| NLNEXT      | Nextgen Mobile Ltd                                               | NL           |
+| NLPRIV      | Private Mobility Nederland                                       | NL           |
+| NLPROR      | ProRail                                                          | NL           |
+| NLRDIO      | RadioAccess                                                      | NL           |
+| NLSCRL      | Scarlet Telecom                                                  | NL           |
+| NLSIXG      | 6GMOBILE                                                         | NL           |
+| NLSPKP      | SpeakUp                                                          | NL           |
+| NLTISM      | Tismi                                                            | NL           |
+| NLTLNA      | Teleena Holding                                                  | NL           |
+| NLTLTW      | Tele2  Nederland                                                 | NL           |
+| NLTMO       | T-Mobile Netherlands                                             | NL           |
+| NLTRUP      | Truphone                                                         | NL           |
+| NLUNIC      | Unica Installatietechniek                                        | NL           |
+| NLVANL      | Van Leyden Multimedia B.V.                                       | NL           |
+| NLVECT      | Vectone Mobile (Mundio)                                          | NL           |
+| NLVODL      | Vodafone Libertel                                                | NL           |
+| NLVOIC      | Voiceworks                                                       | NL           |
+| NLVOXB      | Voxbone                                                          | NL           |
+| NLWYLS      | Wyless Nederland B.V. (Kore)                                     | NL           |
+| NLZETA      | Zetacom B.V.                                                     | NL           |
+| NLZIGG      | Ziggo (UPC Nederland)                                            | NL           |
+| NOALTI      | Altibox                                                          | NO           |
+| NOBANE      | Bane NOR                                                         | NO           |
+| NOCOMF      | Com4 AS                                                          | NO           |
+| NOERAT      | Erate Norway AS                                                  | NO           |
+| NOICEN      | ICE Norge AS                                                     | NO           |
+| NOSYST      | Systemnet AS                                                     | NO           |
+| NOTELE      | Telenor Norge AS                                                 | NO           |
+| NOTELF      | Telefactory                                                      | NO           |
+| NOTELI      | Telia                                                            | NO           |
+| NOVENT      | Ventelo - NO                                                     | NO           |
+| NPNPLT      | Nepal Telecom                                                    | NP           |
+| NPSMRT      | Smart Telecom Pvt. Ltd (STPL) - NP                               | NP           |
+| NPSPCE      | Spice Digital (Ncell) - NP                                       | NP           |
+| NRDIGI      | Digicel (Nauru) Corporation - NR                                 | NR           |
+| NUNIUE      | Telecom Niue - NU                                                | NU           |
+| NZSPRK      | Spark New Zealand Trading Ltd.                                   | NZ           |
+| NZTELE      | Telecom                                                          | NZ           |
+| NZTWOD      | Two Degrees Mobile                                               | NZ           |
+| NZVODA      | Vodafone                                                         | NZ           |
+| OMOMNT      | Oman Mobile (Omantel)                                            | OM           |
+| OMOORE      | Ooredoo Oman (Nawras) - OM                                       | OM           |
+| OMVODA      | Vodafone Oman - OM                                               | OM           |
+| PACANW      | Cable & Wireless                                                 | PA           |
+| PACLRO      | Claro                                                            | PA           |
+| PADIGI      | Digicel                                                          | PA           |
+| PAMVST      | Movistar                                                         | PA           |
+| PECLRO      | Claro                                                            | PE           |
+| PEENTL      | Entel del Peru (Nextel)                                          | PE           |
+| PEMVST      | Movistar                                                         | PE           |
+| PETESA      | TE.SA.M                                                          | PE           |
+| PFPCFC      | Pacific Mobile Telecom - PF                                      | PF           |
+| PFTIKI      | Tikiphone - PF                                                   | PF           |
+| PGBMOB      | Bmobile - PG                                                     | PG           |
+| PGDIGI      | Digicel Papua New Guinea - PG                                    | PG           |
+| PGTELI      | Telikom PNG Ltd - PG                                             | PG           |
+| PHBELL      | Belltel Philippines - PH                                         | PH           |
+| PHDITO      | Dito Telecommunity                                               | PH           |
+| PHGLOB      | Globe Telecom                                                    | PH           |
+| PHNXTL      | Nextel                                                           | PH           |
+| PHSMRT      | Smart Communications                                             | PH           |
+| PHSUNC      | Sun Cellular (Digitel)                                           | PH           |
+| PKMOBI      | Mobilink (Pakistan Mobile) - PK                                  | PK           |
+| PKSCOM      | SCO Mobile Pakistan - PK                                         | PK           |
+| PKTLNR      | Telenor Pakistan - PK                                            | PK           |
+| PKWARD      | Warid Telecommunications                                         | PK           |
+| PKZONG      | CMPAK (Zong)                                                     | PK           |
+| PLAERO      | Aero 2 / Aero 2 Sp. Z O.O.                                       | PL           |
+| PLAGIL      | AGILE TELECOM POLAND                                             | PL           |
+| PLAMDT      | AMD Telecom S.A.                                                 | PL           |
+| PLARCM      | Arcomm / Arcomm Sp. z o.o. - PL                                  | PL           |
+| PLATEA      | ATE / ATE-Advanced Technology & Experience Sp. z o.o. - PL       | PL           |
+| PLBSTS      | BS&T / Best Solutions & Technology Sp. z o.o. - PL               | PL           |
+| PLCLFR      | CallFreedom Sp. z o.o.                                           | PL           |
+| PLCOMP      | Compatel Limited                                                 | PL           |
+| PLGRND      | GrandTel / GrandTel Sp. z o.o. - PL                              | PL           |
+| PLINFC      | Interfonica / Interfonica Sp. Z O.O.                             | PL           |
+| PLINTC      | Intertelcom / Intertelcom Sp. Z O.O.                             | PL           |
+| PLINTR      | Interactive Digital Media GmbH                                   | PL           |
+| PLMOBI      | MobiWeb Telecom Limited                                          | PL           |
+| PLMOBN      | Mobile.Net / Mobile.Net Sp. z o.o. - PL                          | PL           |
+| PLMOVE      | Move Telecom S.A.                                                | PL           |
+| PLMSGB      | Messagebird B.V.                                                 | PL           |
+| PLNETI      | POLKOMTEL(Netia)                                                 | PL           |
+| PLNEXT      | Nextgen Mobile Ltd                                               | PL           |
+| PLORNG      | Orange Polska - PTK Centertel (NMT450)                           | PL           |
+| PLPCSS      | POLSKIE SIECI CYFROWE Sp. z o.o.                                 | PL           |
+| PLPEUC      | Politechnika Eodzka Uczelniane Centrum Informatyczne             | PL           |
+| PLPGEE      | PGE Energia(PGE Systemy S.A.)                                    | PL           |
+| PLPKPP      | PKP Polskie Linie Kolejowe S.A.                                  | PL           |
+| PLPLAY      | Play(P4)                                                         | PL           |
+| PLPTCT      | Polska Telefonia Cyfrowa Sp. z o.o. (PTC) (T-mobile)             | PL           |
+| PLSIAN      | SIA NetBalt(Teleena Holding BV)                                  | PL           |
+| PLSMRT      | Smart Idea International Sp. z o.o.                              | PL           |
+| PLSMSH      | SMSHIGHWAY LIMITED                                               | PL           |
+| PLTELC      | TELCO LEADERS LTD                                                | PL           |
+| PLTELE      | Tele 2 Polska (MVNO)                                             | PL           |
+| PLTRUP      | Truphone                                                         | PL           |
+| PLUFON      | Ufone (PTML) - PK                                                | PK           |
+| PLVOXB      | VOXBONE SA                                                       | PL           |
+| PMGLOB      | Globaltel Saint Pierre et Miquelon                               | PM           |
+| PMSPMT      | SPM Telecom                                                      | PM           |
+| PRIDEN      | LLA Pto Rico (Identidad)                                         | US           |
+| PTCOMP      | Compatel- Limited                                                | PT           |
+| PTCTTC      | CTT CORREIOS DE PORTUGAL                                         | PT           |
+| PTGNIN      | G9SA - TELECOMUNICACOES                                          | PT           |
+| PTIPTE      | IP Telecom - Servicos de Telecomunicacoes- S.A. (REFER TELECOM)  | PT           |
+| PTLYCA      | LYCAMOBILE PORTUGAL- LDA.                                        | PT           |
+| PTMEOS      | MEO-Servicos de Comunicacoes e Multimedia (TMN)                  | PT           |
+| PTMOBZ      | MobiZAPP - Comunicacoes Electronicas                             | PT           |
+| PTNOSO      | NOS (OPTIMUS - COMUNICACOES)                                     | PT           |
+| PTNOWO      | NOWO Communications (Cabovisao)                                  | PT           |
+| PTONIT      | ONITELECOM - INFOCOMUNICACOES                                    | PT           |
+| PTVCTN      | Vectone Mobile (Portugal) Limited                                | PT           |
+| PTVODA      | VODAFONE PORTUGAL - COMUNICACOES PESSOAIS                        | PT           |
+| PTZONT      | ZON TV CABO PORTUGAL                                             | PT           |
+| PWPMC       | Palau Mobile Corp. (PMC)                                         | PW           |
+| PWPNCC      | Palau National Communications Corp. (a.k.a. PNCC) - PW           | PW           |
+| PYCLRO      | Claro                                                            | PY           |
+| PYCOPA      | Copaco                                                           | PY           |
+| PYHOLA      | Hola Paraguay                                                    | PY           |
+| PYPERS      | Personal                                                         | PY           |
+| PYTIGO      | Telecel / Tigo                                                   | PY           |
+| PYVOX       | VOX - PY                                                         | PY           |
+| QAOORE      | Ooredoo                                                          | QA           |
+| QAVODA      | Vodafone                                                         | QA           |
+| REBJTP      | BJT PARTNERS                                                     | RE           |
+| REORNG      | Orange Reunion                                                   | RE           |
+| RESRDR      | Societe Reunionnaise du Radiotelephone                           | RE           |
+| RETELC      | TELCO OI (Outremer Telecom)                                      | RE           |
+| REZEOP      | ZEOP                                                             | RE           |
+| RO2KTL      | 2K Telecom S.R.L. - RO                                           | RO           |
+| ROCMPT      | COMPATEL COMMUNICATIONS RO S.R.L.                                | RO           |
+| RODIGI      | RCS & RDS (Digi)                                                 | RO           |
+| ROENIG      | Enigma System Mobile Network                                     | RO           |
+| ROORNG      | Orange Romania                                                   | RO           |
+| ROTELE      | Telekom Romania (Cosmote)                                        | RO           |
+| ROVODA      | Vodafone Romania                                                 | RO           |
+| RSORIO      | Orion Telekom                                                    | RS           |
+| RSTELE      | Telekom Srbija a.d.                                              | RS           |
+| RSTELN      | Telenor d.o.o.                                                   | RS           |
+| RSVIPM      | Vip mobile d.o.o.                                                | RS           |
+| RWAIRT      | Airtel Rwanda                                                    | RW           |
+| RWMTNR      | MTN Rwanda                                                       | RW           |
+| RWOLLE      | Olleh Rwanda Networks (ORN) - RW                                 | RW           |
+| RWRWAN      | Rwandatel                                                        | RW           |
+| RWTIGO      | TIGO Rwanda                                                      | RW           |
+| SAETIS      | Etihad Etisalat Company (Mobily)                                 | SA           |
+| SAMTCS      | MTC Saudi Arabia (ZAIN) - SA                                     | SA           |
+| SASAUT      | Saudi Telecom Company (STC)                                      | SA           |
+| SAVIRG      | Virgin Mobile Saudi Arabia - SA                                  | SA           |
+| SBBEEM      | Bemobile (BMobile (SI) Ltd) - SB                                 | SB           |
+| SBBRZS      | Breeze (Solomon Telekom) - SB                                    | SB           |
+| SCAREE      | Areeba (Bashair Telecom Co. Ltd) MTN Sudan                       | SC           |
+| SCINTL      | Intelvision                                                      | SC           |
+| SCMOBI      | Mobitel                                                          | SC           |
+| SCPRIV      | Privet Network (NEC)                                             | SC           |
+| SCSUDA      | Sudatel (Sudani One)                                             | SC           |
+| SCVIVA      | Vivacell                                                         | SC           |
+| SEACNC      | ACN Communications Sweden                                        | SE           |
+| SEADVC      | Advoco Communication                                             | SE           |
+| SEALLT      | Alltele Sverige                                                  | SE           |
+| SEBAHN      | Bahnhof AB                                                       | SE           |
+| SEBANV      | Banverket ICT                                                    | SE           |
+| SEBEEP      | Beepsend                                                         | SE           |
+| SEBMSV      | BM Sverige AB                                                    | SE           |
+| SEBORD      | Borderlight                                                      | SE           |
+| SECELL      | Cell Mobile                                                      | SE           |
+| SECELP      | CELLIP AB                                                        | SE           |
+| SECLXN      | CLX Networks AB                                                  | SE           |
+| SECMPA      | Compatel Limited                                                 | SE           |
+| SECMPZ      | Campuz Mobile                                                    | SE           |
+| SECOMM      | Communication for Devices in Sweden                              | SE           |
+| SECOMT      | Comtelo Sverige                                                  | SE           |
+| SECOOL      | COOLTEL APS                                                      | SE           |
+| SEDEVI      | Devicom                                                          | SE           |
+| SEDGC       | DGC Communications                                               | SE           |
+| SEDJUI      | Djuice Mobile Sweden                                             | SE           |
+| SEEASY      | Easy Telecom AB (BILDNINGSAGENTEN 559)                           | SE           |
+| SEERIC      | Ericsson                                                         | SE           |
+| SEEUTL      | EU Tel AB                                                        | SE           |
+| SEFINK      | FINK TELECOM SERVIC                                              | SE           |
+| SEFRSW      | 4 SWEDEN AB                                                      | SE           |
+| SEFRTT      | 42 Telecom AB                                                    | SE           |
+| SEGLOB      | GLOBETOUCH AB                                                    | SE           |
+| SEGLOC      | Glocalnet Scandinavia                                            | SE           |
+| SEGNRC      | Generic Mobil Systems                                            | SE           |
+| SEGOTA      | Gotalandsnatet                                                   | SE           |
+| SEHITG      | HI3G Access                                                      | SE           |
+| SEINFB      | InfoBip LTD                                                      | SE           |
+| SEINTJ      | Intjoors Sverige                                                 | SE           |
+| SEINTR      | Interactive Digital Media GmbH - SE                              | SE           |
+| SELIMT      | LIMITLESS MOBILE AB                                              | SE           |
+| SELIND      | Lindholmen Science Park                                          | SE           |
+| SELUDO      | LUDO MOBIL AB                                                    | SE           |
+| SELUNA      | LunarMobil                                                       | SE           |
+| SELYCA      | Lycamobile Sweden                                                | SE           |
+| SEMAIN      | Maingate (Sierra Wireless)                                       | SE           |
+| SEMEGA      | Megaphone                                                        | SE           |
+| SEMERC      | MERCURY INTERNATIONA                                             | SE           |
+| SEMOBI      | Mobile Arts AB                                                   | SE           |
+| SEMOBT      | MOBIL2 SVERIGE AB                                                | SE           |
+| SEMOBW      | MOBIWEB LTD                                                      | SE           |
+| SEMONT      | MONTY UK GLOBAL LIM                                              | SE           |
+| SENETA      | Net At Once Sweden                                               | SE           |
+| SENETE      | NETETT SVERIGE AB (AINMT Sverige)                                | SE           |
+| SENETF      | Net4Mobility                                                     | SE           |
+| SENETM      | NETMORE GROUP AB                                                 | SE           |
+| SENETN      | NETnet                                                           | SE           |
+| SENEXT      | NextGen Mobile                                                   | SE           |
+| SEOPTI      | Optimal Telecom                                                  | SE           |
+| SEPHON      | Phonera Foretag                                                  | SE           |
+| SEPRON      | PRO NET TELECOMMUNIC (Tigo Ltd)                                  | SE           |
+| SEQALL      | Qall Telecom AB                                                  | SE           |
+| SEREBT      | Rebtel Networks                                                  | SE           |
+| SEREDP      | Redphone                                                         | SE           |
+| SESHYA      | Shyam Telecom UK Ltd                                             | SE           |
+| SESIER      | Sierra Wireless Sweden AB(iMEZ)                                  | SE           |
+| SESOFT      | SOFT TELECOM SWEDEN                                              | SE           |
+| SESOLU      | SOLUNO BC AB                                                     | SE           |
+| SESPIR      | SPIRIUS AB                                                       | SE           |
+| SESSTN      | SST Net Sverige AB                                               | SE           |
+| SESVEA      | Svea Billing System                                              | SE           |
+| SESVNS      | SVENSK KONSUMENTMOBI                                             | SE           |
+| SESWED      | SWEDFONENET AB                                                   | SE           |
+| SESWEF      | Swefour (Spring Mobil)                                           | SE           |
+| SETELA      | Telavox AB                                                       | SE           |
+| SETELD      | Teledigit Scand                                                  | SE           |
+| SETELE      | Telenor Sverige                                                  | SE           |
+| SETELI      | TeliaSonera                                                      | SE           |
+| SETELN      | Telenor Connexion                                                | SE           |
+| SETELO      | Telogic                                                          | SE           |
+| SETELS      | Tele2 Sverige                                                    | SE           |
+| SETELT      | TELE2 BUSINESS AB                                                | SE           |
+| SETIME      | Timepiece LDA                                                    | SE           |
+| SETISM      | TISMI BV                                                         | SE           |
+| SEVATT      | Vattenfall                                                       | SE           |
+| SEVENT      | Ventelo Sverige                                                  | SE           |
+| SEVIAH      | Viahub - SE                                                      | SE           |
+| SEVIAT      | Viatel Sweden AB - SE                                            | SE           |
+| SEVOXB      | Voxbone                                                          | SE           |
+| SEWARS      | WARSIN HOLDING AB                                                | SE           |
+| SEWEBL      | Weblink IP Phone                                                 | SE           |
+| SEWIFO      | WIFOG AB                                                         | SE           |
+| SGBIRD      | MessageBird Pte Ltd                                              | SG           |
+| SGCCSO      | Connecting Communication & Solutions Pte Ltd                     | SG           |
+| SGCIRCL     | Circles.Life (Liberty Wireless)                                  | SG           |
+| SGCOMN      | Comnet Telecom (Singapore) Pte                                   | SG           |
+| SGGRID      | DNA Engineering Pte (GRID)                                       | SG           |
+| SGHOII      | Hoiio PL                                                         | SG           |
+| SGHYBR      | HYBRID NETWORKS                                                  | SG           |
+| SGITBB      | iTalkBB Singapore Pte. Ltd.                                      | SG           |
+| SGMONE      | M1 Singapore                                                     | SG           |
+| SGMRNG      | MediaRing Communications Pte Ltd                                 | SG           |
+| SGMYRE      | MyRepublic Pte Ltd                                               | SG           |
+| SGNEXW      | Nexwave Telecom                                                  | SG           |
+| SGORNG      | Orange Carriers Singapore                                        | SG           |
+| SGPLDT      | PLDT Pte (SG)                                                    | SG           |
+| SGPNNY      | Pennytel Pte                                                     | SG           |
+| SGREDO      | Red One                                                          | SG           |
+| SGSHUB      | StarHub                                                          | SG           |
+| SGSKYV      | Sky Voice Pte                                                    | SG           |
+| SGSNGN      | SingNet Pte Ltd                                                  | SG           |
+| SGSNGT      | SingTel                                                          | SG           |
+| SGSSTP      | Singapore Smart Telecommunications Pte                           | SG           |
+| SGSUPR      | SuperInternet Access Pte                                         | SG           |
+| SGTPGT      | TPG Telecom                                                      | SG           |
+| SGVIVO      | Vivohub                                                          | SG           |
+| SGVOXB      | Voxbone Singapore                                                | SG           |
+| SGVQST      | Viewqwest Pte                                                    | SG           |
+| SGVZW       | Verizon                                                          | SG           |
+| SGWHIZ      | Whiz Communications Pte Ltd                                      | SG           |
+| SGZERO      | Zero1                                                            | SG           |
+| SIAONE      | A1 Slovenija (Si.Mobil-Vodafone)                                 | SI           |
+| SICOMP      | Compatel Ltd                                                     | SI           |
+| SIELEK      | ELEKTRO GORENJSKA- d.d                                           | SI           |
+| SISZDO      | Slovenske Zeleznice D.O.O - (SZ - Infrastruktura)                | SI           |
+| SITELE      | Telekom Slovenia (Mobitel)                                       | SI           |
+| SITELM      | TELEMACH d.o.o. (TUS Telekom)                                    | SI           |
+| SITTWO      | T-2 Slovenia                                                     | SI           |
+| SKORNG      | Orange                                                           | SK           |
+| SKSLRR      | Slovak Republic Railways (GSM-R)                                 | SK           |
+| SKSWAN      | SWAN-a.s.(BENESTRA-s.r.o.)                                       | SK           |
+| SKTELE      | Telefonica O2                                                    | SK           |
+| SKTMO       | T-Mobile (Slovak Telekom)                                        | SK           |
+| SLAFRI      | AFRICELL LINTEL SIERRA LEONE   10:35 AM                          | SL           |
+| SLCOMI      | Comium                                                           | SL           |
+| SLDATA      | Datatel                                                          | SL           |
+| SLMOBI      | Mobitel                                                          | SL           |
+| SLORNG      | Orange (SL) Limited (Airtel)                                     | SL           |
+| SLQCEL      | Qcell                                                            | SL           |
+| SLSRTL      | Sierratel - SL                                                   | SL           |
+| SLTIGO      | Tigo                                                             | SL           |
+| SMTELE      | Telecom Italia San Marino                                        | SM           |
+| SNCSUH      | CSU - SN                                                         | SN           |
+| SNEXPR      | Expresso Senegal (Sudatel)                                       | SN           |
+| SNORNG      | Orange Senegal (Sonatel)                                         | SN           |
+| SNTIGO      | Tigo (Free)                                                      | SN           |
+| SOGOLI      | Golis Telecom Somalia                                            | SO           |
+| SOHORT      | Hortel                                                           | SO           |
+| SOMONT      | Montysom                                                         | SO           |
+| SONATL      | NationLink                                                       | SO           |
+| SOSOLT      | SolTelco                                                         | SO           |
+| SOSOMA      | Somafone                                                         | SO           |
+| SOSOMN      | Somnet                                                           | SO           |
+| SOSOMT      | SomTel                                                           | SO           |
+| SOSOTG      | Somali Telecom Group (STG)                                       | SO           |
+| SOTELE      | Telesom                                                          | SO           |
+| SRDIGI      | Digicel - SR                                                     | SR           |
+| SRINTL      | Intelsur - SR                                                    | SR           |
+| SRTLSR      | Telesur (CDMA) - SR                                              | SR           |
+| SSGEMT      | Gemtel                                                           | SS           |
+| SSMTNS      | MTN South Sudan                                                  | SS           |
+| SSNOTW      | Network of the World (NOW)                                       | SS           |
+| SSSUDA      | Sudani One                                                       | SS           |
+| SSZAIN      | Zain South Sudan                                                 | SS           |
+| STCOST      | Companhia Santomese de Telecomunicacoes (CST)                    | ST           |
+| STUNIT      | Unitel STP                                                       | ST           |
+| SVCLRO      | Claro                                                            | SV           |
+| SVDIGI      | Digicel                                                          | SV           |
+| SVINTL      | Intelfon (Red)                                                   | SV           |
+| SVMVST      | Movistar                                                         | SV           |
+| SVTIGO      | Tigo                                                             | SV           |
+| SXRADC      | Radcomm                                                          | SX           |
+| SXTELC      | Telcell                                                          | SX           |
+| SYMTNS      | MTN (Spacetel Syria) - SY                                        | SY           |
+| SYSYRI      | Syrian Telecom                                                   | SY           |
+| SYSYRT      | Syriatel                                                         | SY           |
+| SZSPTC      | Swaziland Posts and Telecommunications Corporation (SPTC)        | SZ           |
+| SZSWAM      | Swazi MTN                                                        | SZ           |
+| SZSWAZ      | Swazi Mobile Limited                                             | SZ           |
+| TCLIME      | Flow (Lime/CW-Turks & Caicos)                                    | TC           |
+| TDBHAR      | Bharti Airtel                                                    | TD           |
+| TDMILI      | Millicom Tchad                                                   | TD           |
+| TDSOTL      | Sotel Tchad                                                      | TD           |
+| TGMOOV      | Moov Togo                                                        | TG           |
+| TGTOGO      | Togocel                                                          | TG           |
+| THACES      | ACes - TH                                                        | TH           |
+| THAIS       | AIS                                                              | TH           |
+| THCATT      | CAT Telecom                                                      | TH           |
+| THDTAC      | DTAC                                                             | TH           |
+| THTOT       | TOT                                                              | TH           |
+| THTRUE      | True Move                                                        | TH           |
+| TJCJSC      | CJSC TK-Mobile (TK-Mobile) - TJ                                  | TJ           |
+| TJJOSA      | Josa Babilon-T - TJ                                              | TJ           |
+| TJTCEL      | Tcell - TJ                                                       | TJ           |
+| TJTTMO      | TT mobile - TJ                                                   | TJ           |
+| TJZETM      | ZET-Mobile (Beeline) - TJ                                        | TJ           |
+| TKTLTK      | TeleTok - TK                                                     | TK           |
+| TLTELK      | Telkomsel - TL                                                   | TL           |
+| TLTIMR      | Timor Telecom (TT) - TL                                          | TL           |
+| TLVIET      | Viettel Timor-Leste - TL                                         | TL           |
+| TMBRSH      | Barash Communication Technologies (BCTI) - TM                    | TM           |
+| TMTMCL      | TM-Cell - TM                                                     | TM           |
+| TNOORE      | Ooredo Tunisia                                                   | TN           |
+| TNORNG      | Orange Tunisie                                                   | TN           |
+| TNTUNI      | Tunisie Telecom                                                  | TN           |
+| TODIGI      | Digicel (Tonga) Ltd - TO                                         | TO           |
+| TOTONC      | Tonga Communications Corporation - TO                            | TO           |
+| TRAVEA      | Avea - TR                                                        | TR           |
+| TRTRKC      | Turkcell                                                         | TR           |
+| TRVODA      | Vodafone Turkey                                                  | TR           |
+| TTDIGI      | Digicel (Trinidad & Tobago)                                      | TT           |
+| TTTELE      | Telecom Services of Trinidad and Tobago                          | TT           |
+| TVTVLU      | Tuvalu Telecommunications Corporation - TV                       | TV           |
+| TWAPBT      | Asia Pacific Broadband Telecom                                   | TW           |
+| TWCHUN      | Chunghwa Telecom                                                 | TW           |
+| TWFARE      | Far EastOne                                                      | TW           |
+| TWFITL      | FITEL - TW                                                       | TW           |
+| TWTAIW      | Taiwan Mobile                                                    | TW           |
+| TWTSTR      | T Star - TW                                                      | TW           |
+| TWVIBO      | VIBO Telecom                                                     | TW           |
+| TZAIRT      | Airtel Tanzania Ltd                                              | TZ           |
+| TZBENS      | Benson Informatics Ltd - TZ                                      | TZ           |
+| TZCOOT      | CooTel Tanzania - TZ                                             | TZ           |
+| TZDOVE      | Dovetel Tanzania Ltd (Sasatel)                                   | TZ           |
+| TZMYCL      | MyCell                                                           | TZ           |
+| TZRURL      | RURAL NETCO LIMITED                                              | TZ           |
+| TZSMIL      | SMILE COMMUNICATIONS (T) LTD                                     | TZ           |
+| TZTIGO      | MIC Ltd (Tigo)                                                   | TZ           |
+| TZTTCL      | Tanzania Communications Commission Ltd. (TTCL)                   | TZ           |
+| TZVIET      | Viettel Tanzania Limited (Halotel)                               | TZ           |
+| TZVODA      | Vodacom (T) Ltd.                                                 | TZ           |
+| TZZANZ      | Zanzibar Telecom Ltd (Zantel)                                    | TZ           |
+| UAATLN      | Atlantis Telecom                                                 | UA           |
+| UAFARL      | Farlep-Invest                                                    | UA           |
+| UAINTER     | International Telecommunication (CDMA800)                        | UA           |
+| UAKYIV      | Kyivstar                                                         | UA           |
+| UALIFE      | life:) - Astelit                                                 | UA           |
+| UAPEPL      | PEOPLEnet                                                        | UA           |
+| UAPHNX      | Phoenix Ukraine - UA                                             | UA           |
+| UATRIM      | 3MOB TriMob                                                      | UA           |
+| UAUKRR      | Ukrainian Radio Systems (Beeline)                                | UA           |
+| UAUKRT      | Ukrtelecom                                                       | UA           |
+| UAVODA      | Vodafone (MTS Ukraine (Jeans (UMC)                               | UA           |
+| UGAFRI      | Africell Uganda - UG                                             | UG           |
+| UGAIRT      | Airtel Uganda LTD (Warid Telecom)                                | UG           |
+| UGMTNL      | MTN (Uganda) Ltd                                                 | UG           |
+| UGORNG      | Orange Uganda                                                    | UG           |
+| UGSMIL      | Smile Communications Uganda Ltd                                  | UG           |
+| UGSURE      | Sure Telecom Uganda Ltd                                          | UG           |
+| UGUGTL      | Uganda Telecom Ltd                                               | UG           |
+| UGVODA      | Afrimax Uganda (Vodafone Uganda)                                 | UG           |
+| UKAIRW      | Airwave Solutions                                                | GB           |
+| UKAMSK      | AMSUK LTD                                                        | GB           |
+| UKBT        | British Telecom                                                  | GB           |
+| UKCARD      | CardBoardFish                                                    | GB           |
+| UKCAW       | Cable & Wireless                                                 | GB           |
+| UKCAWG      | Cable and Wireless Guernsey                                      | GB           |
+| UKCESG      | CESG                                                             | GB           |
+| UKCIRC      | Circles                                                          | GB           |
+| UKCLOU      | Cloud9 Communications                                            | GB           |
+| UKCOLT      | COLT Technology Services                                         | GB           |
+| UKFLEX      | FleXtel                                                          | GB           |
+| UKGAMA      | Gamma Telecom Holdings Ltd (SSE Energy Supply)                   | GB           |
+| UKHANH      | Hanhaa Limited                                                   | GB           |
+| UKHAYS      | HAY SYSTEMS                                                      | GB           |
+| UKINQM      | Inquam Telecom (Holdings) Ltd.                                   | GB           |
+| UKJERS      | Jersey Telecom                                                   | GB           |
+| UKJRSY      | Jersey Airtel                                                    | GB           |
+| UKJSCI      | JSC Ingenium (UK)                                                | GB           |
+| UKLBRA      | Lebara                                                           | GB           |
+| UKLIMI      | Limitless Mobile                                                 | GB           |
+| UKLLEI      | Lleida.net Serveis Telematics                                    | GB           |
+| UKLYCA      | Lycamobile                                                       | GB           |
+| UKMANX      | Manx Telecom                                                     | GB           |
+| UKMAPE      | Mapesbury Communications                                         | GB           |
+| UKMARA      | Marathon Telecom                                                 | GB           |
+| UKNETR      | Network Rail Infrastructure                                      | GB           |
+| UKORNG      | Orange                                                           | GB           |
+| UKOTWO      | O2 (Telefonica UK)                                               | GB           |
+| UKRSLN      | Resilient Plc                                                    | GB           |
+| UKSKY       | SKY UK (British Sky Broadcasting Ltd)                            | GB           |
+| UKSTOU      | Stour Marine                                                     | GB           |
+| UKSTRA      | University Of Strathclyde                                        | GB           |
+| UKSURE      | Sure                                                             | GB           |
+| UKSYNE      | Synectiv                                                         | GB           |
+| UKTELE      | Telecom26                                                        | GB           |
+| UKTELS      | Telesign Mobile (Routo Telecom)                                  | GB           |
+| UKTELW      | TeleWare                                                         | GB           |
+| UKTHRE      | Three (Hutchison 3G)                                             | GB           |
+| UKTMO       | EE - UK                                                          | GB           |
+| UKTNGO      | Tango Networks UK Ltd (M)                                        | GB           |
+| UKUKBB      | UK Broadband Limited                                             | GB           |
+| UKVECT      | Vectone Mobile (Mundio Mobile)                                   | GB           |
+| UKVIRG      | Virgin Mobile                                                    | GB           |
+| UKVODA      | Vodafone UK                                                      | GB           |
+| USACSW      | ACS Wireless                                                     | US           |
+| USADMS      | Adams TelSystems                                                 | US           |
+| USADVG      | Advantage Communications                                         | US           |
+| USAERI      | Aeris Communications                                             | US           |
+| USAIRV      | Airvoice Wireless                                                | US           |
+| USALAS      | Alaska Wireless Communications                                   | US           |
+| USALLA      | Alltel (Allied Wireless)                                         | US           |
+| USALLW      | All West Wireless                                                | US           |
+| USALOW      | Aio Wireless                                                     | US           |
+| USALTI      | Altice Mobile                                                    | US           |
+| USAPPA      | Appalachian Wireless (East Kentucky Network)                     | US           |
+| USARCH      | Arch Paging                                                      | US           |
+| USARLN      | Aerialink                                                        | US           |
+| USARTL      | Airtel Wireless                                                  | US           |
+| USASPE      | ASPENTA-LLC                                                      | US           |
+| USASTC      | (ASTAC) Arctic Slope Telephone Cooperative Association           | US           |
+| USATNI      | Atlantic Tele-Network International/Choice Wireless (ATNI)       | US           |
+| USATT       | AT&T Mobility                                                    | US           |
+| USAWSG      | AWS Grenada                                                      | US           |
+| USBARC      | Barry County Telephone Company                                   | US           |
+| USBBCP      | Bristol Bay Cellular Partnership (BBCP)/Bristol Bay Telephone Co | US           |
+| USBEEP      | Rcc Of Pennsylvania dba Beeper                                   | US           |
+| USBLNC      | Blanca Telephone Company                                         | US           |
+| USBLUC      | Bluegrass Cellular                                               | US           |
+| USBLUW      | Blue Wireless                                                    | US           |
+| USBLZE      | Blaze WIreless                                                   | US           |
+| USBRTL      | Brightlink                                                       | US           |
+| USBUGT      | Bug Tussel Wireless                                              | US           |
+| USCACC      | Cable & Cellular Communications LLC (d/b/a Mid-Rivers Communic)  | US           |
+| USCAPR      | Caprock Cellular                                                 | US           |
+| USCELC      | Cellcom                                                          | US           |
+| USCELO      | Cellular One                                                     | US           |
+| USCENP      | Centennial - Puerto Rico                                         | US           |
+| USCGAT      | Chat Mobility                                                    | US           |
+| USCHOI      | Choice Phone                                                     | US           |
+| USCHRV      | Chariton Valley Cellular                                         | US           |
+| USCINB      | Cingular Blue (AT&T)                                             | US           |
+| USCINC      | Cincinnati Bell                                                  | US           |
+| USCLRO      | Claro - Puerto Rico                                              | US           |
+| USCLRT      | ClearTalk Wireless (Flat Wireless)                               | US           |
+| USCNST      | Conestoga Wireless                                               | US           |
+| USCOIL      | ECIT - Cellular One of East Central Illinois                     | US           |
+| USCOMM      | Commio                                                           | US           |
+| USCONA      | Cellular One of NE Arizona                                       | US           |
+| USCONE      | C1 East Texas Wireless                                           | US           |
+| USCONS      | CONSOLIDATED TELCOM                                              | US           |
+| USCOOK      | Cook Paging                                                      | US           |
+| USCOOP      | Copper Valley Cellular                                           | US           |
+| USCORR      | Corr Wireless Communications                                     | US           |
+| USCRDV      | Cordova Telephone Cooperative Inc dba Cordova Wireless           | US           |
+| USCRKT      | Cricket (AIO)                                                    | US           |
+| USCROSS     | Crossroads Wireless                                              | US           |
+| USCRSS      | Cross Wireless d/b/a Sprocket Wireless                           | US           |
+| USCSPR      | C Spire Wireless (Cellular South)                                | US           |
+| USCSTR      | Custer Telephone Coop.                                           | US           |
+| USCTC       | CTC - Cambridge Telephone Company                                | US           |
+| USCWST      | Carolina West Wireless                                           | US           |
+| USDCC       | DCC (Digital Communications Consulting)                          | US           |
+| USDCCO      | DCC / Otz Telecommunications                                     | US           |
+| USDCMO      | Docomo Pacific (Guam Wireless)                                   | US           |
+| USDISH      | DISH Wireless                                                    | US           |
+| USDTCW      | DTC Wireless                                                     | US           |
+| USDUET      | Duet IP                                                          | US           |
+| USEDGE      | Edge Wireless                                                    | US           |
+| USEMRY      | Emery Telcom Wireless - US                                       | US           |
+| USENFL      | Enflick Inc.                                                     | US           |
+| USEPIC      | Epic Touch                                                       | US           |
+| USETEX      | Etex Communications dba Etex W                                   | US           |
+| USFAKE      | 3C Fake carrier                                                  | US           |
+| USFIRS      | First Networks Operations                                        | US           |
+| USFISH      | Fisher Wireless                                                  | US           |
+| USFRMR      | Farmers Wireless                                                 | US           |
+| USFRST      | 1stpoint                                                         | US           |
+| USGCI       | GCI - General Communications Inc                                 | US           |
+| USGLBS      | Globalstar USA                                                   | US           |
+| USGOOG      | Google Voice                                                     | US           |
+| USGOTX      | Go-TextMe (Sybase)                                               | US           |
+| USGTAT      | GTA Teleguam                                                     | GU           |
+| USHICK      | Hickory Tech                                                     | US           |
+| USILLI      | Illinois Valley Cellular                                         | US           |
+| USIMMI      | Immix Wireless (Keystone Wireless)                               | US           |
+| USINDI      | Indigo Wireless                                                  | US           |
+| USINLN      | Inland Cellular                                                  | US           |
+| USINTL      | Inteliquent                                                      | US           |
+| USISLA      | Digicel (Turks & Caicos)                                         | TC           |
+| USISPT      | ISP Telecom                                                      | US           |
+| USJAMS      | James Valley Cellular                                            | US           |
+| USJOLT      | Jolt Mobile                                                      | US           |
+| USKPLN      | Kaplan Telephone Company                                         | US           |
+| USLAQT      | LaqTel Ltd                                                       | US           |
+| USLEAR      | Leaco Rural Telephone Company                                    | US           |
+| USLMTL      | Limitless                                                        | US           |
+| USLNGL      | Long Lines Wireless                                              | US           |
+| USMAST      | Mast mobile                                                      | US           |
+| USMBOW      | MBO Wireless                                                     | US           |
+| USMCIP      | MCI Paging                                                       | US           |
+| USMETC      | Metrocall Paging                                                 | US           |
+| USMETR      | Metro PCS                                                        | US           |
+| USMIDT      | Mid-Tex Cellular                                                 | US           |
+| USMIDW      | Midwest Wireless                                                 | US           |
+| USMNSH      | MIDWEST NETWORK SOLUTIONS HUB LLC                                | US           |
+| USMNTI      | Manti Tele Communications Company Inc. dba Breakaway Wireless    | US           |
+| USMOBI      | Mobi PCS                                                         | US           |
+| USMOHA      | Mohave Wireless                                                  | US           |
+| USMOSC      | Mosaic Telecom                                                   | US           |
+| USMRTC      | Mid-Rivers Telephone Cooperative                                 | US           |
+| USMTAW      | MTA Wireless/Matanuska Kenai                                     | US           |
+| USMTPC      | MTPCS Cellular One                                               | US           |
+| USMWMC      | NW Missouri Cellular                                             | US           |
+| USNEMO      | Nemont US UMTS                                                   | US           |
+| USNEPC      | NEP Cellcorp                                                     | US           |
+| USNETG      | NETGENUITY INC                                                   | US           |
+| USNEWC      | NEWCORE WIRELESS-LLC                                             | US           |
+| USNEWD      | New Dimensions Wireless                                          | US           |
+| USNEWN      | NORTHEAST WIRELESS NETWORKS                                      | US           |
+| USNEXT      | Nex-Tech Wireless                                                | US           |
+| USNMBA      | NumberAccess                                                     | US           |
+| USNNTC      | Nucla-Naturita Telephone Company dba NNTC Wireless               | US           |
+| USNORS      | North Sight Communications                                       | US           |
+| USNPIW      | NPI Wireless                                                     | US           |
+| USNRTV      | Northern Valley Communications                                   | US           |
+| USNTEL      | nTelos                                                           | US           |
+| USOKLA      | Oklahoma Western Telephone Company                               | US           |
+| USOPEN      | Open Mobile - Puerto Rico                                        | US           |
+| USPAGE      | Pagenet Paging                                                   | US           |
+| USPANH      | Panhandle Wireless                                               | US           |
+| USPBLT      | Pine Belt Telephone                                              | US           |
+| USPEER      | Peerless Network                                                 | US           |
+| USPETR      | PetroCom                                                         | US           |
+| USPINE      | Pine Cellular                                                    | US           |
+| USPING      | Pinger                                                           | US           |
+| USPION      | Pioneer Cellular                                                 | US           |
+| USPLAT      | Plateau Wireless                                                 | US           |
+| USPLIV      | Plivo                                                            | US           |
+| USPNSC      | Penasco Valley Telephone Coop                                    | US           |
+| USPOKA      | Poka Lambro PCS                                                  | US           |
+| USPPLS      | Peoples Wireless                                                 | US           |
+| USPROX      | Proximiti                                                        | US           |
+| USPSVW      | Public Service Wireless Services, Inc.                           | US           |
+| USPTIP      | PTI Pacifica dba IT&E                                            | US           |
+| USQWES      | Qwest                                                            | US           |
+| USREPB      | Republic Wireless/Bandwidth.com                                  | US           |
+| USREVL      | Revol Wireless                                                   | US           |
+| USRINA      | Rural Independent Network Alliance (RINA)                        | US           |
+| USRING      | RingCentral                                                      | US           |
+| USSAGC      | Sagebrush Cellular (Nemont) CDMA                                 | US           |
+| USSAGE      | Sagebrush Cellular                                               | US           |
+| USSBCP      | SBC Paging                                                       | US           |
+| USSCCI      | South Central Communications Inc. dba South Central Wireless     | US           |
+| USSHEL      | Shelcomm Inc.                                                    | US           |
+| USSIMM      | Simmetry Wireless                                                | US           |
+| USSIWI      | SI Wireless (MobileNation)                                       | US           |
+| USSKYT      | Skytel Paging                                                    | US           |
+| USSLVR      | Silver Star Communications                                       | US           |
+| USSNAK      | Snake River PCS                                                  | US           |
+| USSOUT      | SouthernLINC Wireless                                            | US           |
+| USSPRI      | Sprint                                                           | US           |
+| USSRTC      | SRT Communications                                               | US           |
+| USSTDR      | Standing Rock                                                    | US           |
+| USSTLR      | Stelera Wireless                                                 | US           |
+| USSTRT      | Strata Networks dba UBET Wireless                                | US           |
+| USSYRN      | Syringa Wireless                                                 | US           |
+| USTELA      | Telalaska Cellular                                               | US           |
+| USTELE      | TELECOM NORTH AMERICA MOBILE                                     | US           |
+| USTELN      | Telnyx                                                           | US           |
+| USTFAT      | Tracfone (AT&T)                                                  | US           |
+| USTFBG      | Tracfone (Bluegrass Cellular)                                    | US           |
+| USTFCC      | Tracfone (Cellcom)                                               | US           |
+| USTFCL      | Tracfone (Claro - Puerto Rico)                                   | US           |
+| USTFIC      | Tracfone (Inland Cellular)                                       | US           |
+| USTFSP      | Tracfone (Sprint)                                                | US           |
+| USTFTC      | Tracfone (Thumb Cellular)                                        | US           |
+| USTFTM      | Tracfone (T-Mobile)                                              | US           |
+| USTFUS      | Tracfone (U.S. Cellular)                                         | US           |
+| USTFVZ      | Tracfone (Verizon Wireless)                                      | US           |
+| USTHMB      | Thumb Cellular                                                   | US           |
+| USTLBE      | Telebeeper Of New Mexico                                         | US           |
+| USTMO       | T-Mobile                                                         | US           |
+| USTRIA      | Triangle Mobile                                                  | US           |
+| USTRIC      | Tricom                                                           | US           |
+| USTRUP      | Truphone                                                         | US           |
+| USTSFW      | 365 WIRELESS LLC                                                 | US           |
+| USTSGG      | TSG Global (Flextalk)                                            | US           |
+| USTWIL      | Twilio                                                           | US           |
+| USTXME      | TextMe                                                           | US           |
+| USTXTP      | textPlus                                                         | US           |
+| USTYCH      | Tychron                                                          | US           |
+| USUNIO      | Union Telephone                                                  | US           |
+| USUNIT      | United Wireless                                                  | US           |
+| USUSCC      | United States Cellular Corp                                      | US           |
+| USUZMB      | Uzbektelecom Mobile (UzMobile) - UZ                              | UZ           |
+| USVIAE      | Viaero Wireless                                                  | US           |
+| USVIYA      | Viya                                                             | US           |
+| USVNGE      | Vonage                                                           | US           |
+| USVTEL      | VTEL Wireless Inc.                                               | US           |
+| USVZW       | Verizon Wireless                                                 | US           |
+| USVZWP      | Verizon Paging                                                   | US           |
+| USWAVE      | Wave Runner                                                      | US           |
+| USWCW       | West Central Wireless                                            | US           |
+| USWEBL      | Weblink Wireless Paging                                          | US           |
+| USWEST      | Westlink Communications                                          | US           |
+| USWILK      | Wilkes Cellular                                                  | US           |
+| USWIND      | Windy City Cellular                                              | US           |
+| USWRLD      | Evolve                                                           | US           |
+| USWRLS      | Wireless Ventures (Anguilla) L                                   | US           |
+| USWYLS      | Wyless                                                           | US           |
+| USXITC      | XIT Cellular                                                     | US           |
+| USZIPW      | ZipWhip                                                          | US           |
+| UYANCL      | Ancel                                                            | UY           |
+| UYCLRO      | Claro                                                            | UY           |
+| UYMVST      | Movistar                                                         | UY           |
+| UZBEEL      | Beeline Uzbekistan - UZ                                          | UZ           |
+| UZCOSC      | Coscom/Ucell - UZ                                                | UZ           |
+| UZPFTM      | Perfectum Mobile (RWS) - UZ                                      | UZ           |
+| UZUZDN      | Uzdunrobita (UMS) - UZ                                           | UZ           |
+| VCDIGI      | Digicel                                                          | VC           |
+| VCLIME      | Lime (CW-St. Vincent)                                            | VC           |
+| VECANT      | Movilnet (CANTV) - VE                                            | VE           |
+| VEDIGI      | Digitel                                                          | VE           |
+| VEMVST      | Movistar                                                         | VE           |
+| VGCCTL      | Caribbean Cellular Telephone Ltd (CCT)                           | VG           |
+| VGDIGI      | Digicel (BVI)                                                    | VG           |
+| VGLIME      | Lime (CW-British Virgin Island)                                  | VG           |
+| VILIBM      | Liberty Mobile                                                   | VI           |
+| VNGTEL      | Gtel - VN                                                        | VN           |
+| VNMOBI      | MobiFone                                                         | VN           |
+| VNSTEL      | S Telecom (CDMA) - VN                                            | VN           |
+| VNVH3G      | Vietnamobile (H3G) - VN                                          | VN           |
+| VNVIET      | Viettel                                                          | VN           |
+| VNVINA      | vinaphone                                                        | VN           |
+| VUDIGI      | Digicel                                                          | VU           |
+| VUTELE      | Telecom Vanuatu                                                  | VU           |
+| WFMANU      | Manuia - WF                                                      | WF           |
+| WSDIGI      | Digicel (Telecom Samoa) - WS                                     | WS           |
+| WSVODA      | Vodafone Samoa (SamoaTel/Bluesky) - WS                           | WS           |
+| XKD3MO      | D3 Mobile - XK                                                   | XK           |
+| YEHITS      | Y/HiTS-Unitel - YE                                               | YE           |
+| YESABA      | Sabafon - YE                                                     | YE           |
+| YESPCE      | Spacetel Yemen/MTN - YE                                          | YE           |
+| YEYMNB      | Yemen Mobile (CDMA) - YE                                         | YE           |
+| ZACELC      | CELL C                                                           | ZA           |
+| ZAICTL      | Ictel South Africa                                               | ZA           |
+| ZAMTNS      | MTN South Africa                                                 | ZA           |
+| ZANEOT      | Neotel (Pty) LTD                                                 | ZA           |
+| ZATELA      | TelAfrica                                                        | ZA           |
+| ZATELK      | Telkom SA Ltd                                                    | ZA           |
+| ZAVODA      | Vodacom South Africa                                             | ZA           |
+| ZAWRLS      | Wireless Business Solutions (Rain)                               | ZA           |
+| ZMAIRT      | Airtel Zambia                                                    | ZM           |
+| ZMMTNZ      | MTN Zambia                                                       | ZM           |
+| ZMZAMT      | Zamtel                                                           | ZM           |
+| ZWAFRI      | Africom                                                          | ZW           |
+| ZWECON      | Econet Wireless                                                  | ZW           |
+| ZWNONE      | NetOne                                                           | ZW           |
+| ZWTELE      | Telecel                                                          | ZW           |
+| ZXINMA      | Inmarsat Global                                                  | ZX           |
+| ZXMCP       | Maritime Communications Partner AS (MCP)                         | ZX           |
+| ZXOAIR      | ONAIR NV                                                         | ZX           |
+| ZXSEAN      | Seanet Maritime Communications Ab                                | ZX           |
+| ZXTASA      | Telenor Asa                                                      | ZX           |
+| ZXTELN      | Telenor Connexion Ab                                             | ZX           |
+| ZXTHUR      | Thuraya Satellite                                                | ZX           |
+
+## API reference metadata
+
+These are source metadata and examples. `api.auth` is ReadMe metadata; verify authentication in the documented headers/security scheme.
+
+```json
+{
+  "method": "get",
+  "url": "",
+  "params": [],
+  "examples": {
+    "codes": []
+  },
+  "results": {
+    "codes": [
+      {
+        "status": 200,
+        "language": "json",
+        "code": "{}",
+        "name": ""
+      },
+      {
+        "status": 400,
+        "language": "json",
+        "code": "{}",
+        "name": ""
+      }
+    ]
+  },
+  "auth": "required"
+}
+```

@@ -1,0 +1,40 @@
+{
+  "category": "Webex Connect and Webex Campaign Integration",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd81825790a",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "2f4218668f40709650acce487277f0d16944dfb144cc92bbe92d55eed6905ee6",
+    "source_path": "12b7343bf01fb3b46dd0d7ab76786e241088df6c507917d11dccaa6b96ea0682",
+    "text_path": "4193e80167db5bfd83614a3642fd6491921d4858a6f77bbf4dc26338ae57a22e"
+  },
+  "headings": [
+    "Prerequisites",
+    "Viewing Webex Campaign tenant information in Webex Connect",
+    "📘Note",
+    "Integrating Webex Campaign in Webex Connect Flows",
+    "📘Note",
+    "📘Note",
+    "Making a Flow Live",
+    "📘Note"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/webex-campaign-integration-with-webex-connect.md",
+  "resolved_url": "https://help.webexconnect.io/docs/webex-campaign-integration-with-webex-connect",
+  "retrieved_at": "2026-09-08T23:29:31+00:00",
+  "sha256_html_response": "6e6be6fa9ca536f88d756d005b5548d1f2c9e4722011e550e4af0755fe63ae43",
+  "sha256_source_body": "12b7343bf01fb3b46dd0d7ab76786e241088df6c507917d11dccaa6b96ea0682",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/webex-campaign-integration-with-webex-connect.source.md",
+  "source_updated_at": "2026-04-15T12:11:42.187Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/webex-campaign-integration-with-webex-connect.txt",
+  "title": "Webex Campaign Integration with Webex Connect",
+  "url": "https://help.webexconnect.io/docs/webex-campaign-integration-with-webex-connect",
+  "word_count": 505,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/webex-campaign-integration-with-webex-connect.metadata.json"
+}

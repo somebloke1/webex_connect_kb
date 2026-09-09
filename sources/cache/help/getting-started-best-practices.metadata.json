@@ -1,0 +1,31 @@
+{
+  "category": "GETTING STARTED",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257873",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "d1520415548c030aa6339db9129e3fd2076aa2e20f6c6b84c0c2eb474204553a",
+    "source_path": "5ce4db17287e91ff1a327316b68786810e0fd9260ce7dfe66047d47f5fc158e0",
+    "text_path": "be8c5ec2963b1bcb0b16b1251842b003e01741a6ac9ceb199e345fae594a5a86"
+  },
+  "headings": [],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/getting-started-best-practices.md",
+  "resolved_url": "https://help.webexconnect.io/docs/getting-started-best-practices",
+  "retrieved_at": "2026-09-08T23:28:47+00:00",
+  "sha256_html_response": "eabfa59c80890a4a4b78d00355803ac2a9ed9c5fa52bb6de28b6dce9c85e206e",
+  "sha256_source_body": "5ce4db17287e91ff1a327316b68786810e0fd9260ce7dfe66047d47f5fc158e0",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/getting-started-best-practices.source.md",
+  "source_updated_at": "2026-07-27T14:46:38.223Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/getting-started-best-practices.txt",
+  "title": "Tenant Configuration Best Practices",
+  "url": "https://help.webexconnect.io/docs/getting-started-best-practices",
+  "word_count": 271,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/getting-started-best-practices.metadata.json"
+}

@@ -1,0 +1,69 @@
+Custom Events on <<prodname>> are used to notify <<prodname>> of events on business systems which in turn can trigger a rule or flow on the platform.
+
+They can be triggered using the [Custom Event API](https://developers.imiconnect.io/reference#external-event).
+
+More than one event can be raised in a single request. Each event can be attached to a set of parameters representing event-specific information. These parameters will be passed along as context parameters to the actions defined in the rules on these events.
+
+> 📘 Authentication
+> 
+> A Service Key must be passed with every API request.
+
+Custom events can also be created in-line during flow creation and will be saved under integrations for editing later.
+
+## Configure a Custom Event
+
+To configure a custom event:
+
+1. Go to **Assets** > **Integrations**.
+2. Click **Add Integration** and select **Custom Event**.
+3. Enter a suitable name and configure the required variables.
+
+You can start using the custom events in the flows. When you use the custom event node in a flow, the event URL is auto-populated and authentication is mandated.
+
+While configuring custom events within the Start Node or from Integrations section:
+
+- A pre-selected read-only checkbox is visible on the screen to highlight that it is mandatory to pass service authentication credentials when using Custom Event v1
+
+[block:image]
+{
+  "images": [
+    {
+      "image": [
+        "https://files.readme.io/7c821be-1.png",
+        "Custom Events Custom Event Configuration.png",
+        "Screenshot of Custom Event Configuration Page"
+      ],
+      "align": "center",
+      "border": true,
+      "caption": "Custom Event Configuration"
+    }
+  ]
+}
+[/block]
+
+
+- The sample payload is dynamically generated for API request body based on the configured parameters. The event id i.e., `evtid` for the configured custom event is generated once you save the configuration.
+
+[block:image]
+{
+  "images": [
+    {
+      "image": [
+        "https://files.readme.io/5dd8d41-Custom1.png",
+        "Custom Events Dynamically Generated Sample Payload.png",
+        "Screenshot of Dynamically Generated Sample Payload."
+      ],
+      "align": "center",
+      "border": true,
+      "caption": "Dynamically Generated Sample Payload"
+    }
+  ]
+}
+[/block]
+
+
+> 📘 Note
+> 
+> A custom event that belongs to a group must use only the JWT Token or Service Key of that group’s service. If it uses another group’s JWT auth or Service key, the request will be accepted but the relevant flow will not be triggered.
+> 
+> For example, a custom event belonging to group A must use only the JWT auth or Service key related to the group A service. If it uses the jwt auth or service key of group B, the request will be accepted but the flow in the group A service will not be triggered.

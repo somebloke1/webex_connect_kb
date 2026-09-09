@@ -1,0 +1,36 @@
+{
+  "category": "Assets",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182578a2",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "01c54504ff60c0773e00b56ac04104fe98cf8dcdf5baa8e76d59f40f899fccf1",
+    "source_path": "8a159460950bf1fdf951d6143080e49e17ed962e41958a1cdd89139da83fce69",
+    "text_path": "dcc5f42df8a5951a738003c0ff4cc27cc759c453c940bacda061187eadfc5023"
+  },
+  "headings": [
+    "Assigning Brand ID and Campaign ID to 10DLC Number",
+    "📘",
+    "Removing a 10DLC number from Campaign ID",
+    "Introduction of Number Status"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/assigning-a-number-to-a-campaign-id.md",
+  "resolved_url": "https://help.webexconnect.io/docs/assigning-a-number-to-a-campaign-id",
+  "retrieved_at": "2026-09-08T23:29:02+00:00",
+  "sha256_html_response": "281178d157da5e5b91c6691c1328462cf67710abcb9bcd37dc900f28a43c18f0",
+  "sha256_source_body": "8a159460950bf1fdf951d6143080e49e17ed962e41958a1cdd89139da83fce69",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/assigning-a-number-to-a-campaign-id.source.md",
+  "source_updated_at": "2026-01-26T14:27:46.531Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/assigning-a-number-to-a-campaign-id.txt",
+  "title": "Assigning a number to a Campaign ID",
+  "url": "https://help.webexconnect.io/docs/assigning-a-number-to-a-campaign-id",
+  "word_count": 412,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/assigning-a-number-to-a-campaign-id.metadata.json"
+}

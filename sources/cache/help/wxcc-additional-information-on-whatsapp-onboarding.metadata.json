@@ -1,0 +1,31 @@
+{
+  "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd81825799b",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "b87d8a3486fc124b21d152e983979280500733a4c5ca28424cd1172ae0ba12ad",
+    "source_path": "7920fbb13da809aff31eed33f1bef264185dfc5441bc4e4ebe9db5980604ac3f",
+    "text_path": "0f0cef653bcb031fbafb28714a48f235bfb7739a79c2bb1b2e8d41a5e9e1aadf"
+  },
+  "headings": [],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/wxcc-additional-information-on-whatsapp-onboarding.md",
+  "resolved_url": "https://help.webexconnect.io/docs/wxcc-additional-information-on-whatsapp-onboarding",
+  "retrieved_at": "2026-09-08T23:29:13+00:00",
+  "sha256_html_response": "c65e19c2c259d92fd4fec3f0fd71098808cc61a9807a92ac7135f97c5d0a5e03",
+  "sha256_source_body": "7920fbb13da809aff31eed33f1bef264185dfc5441bc4e4ebe9db5980604ac3f",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/wxcc-additional-information-on-whatsapp-onboarding.source.md",
+  "source_updated_at": "2026-04-14T07:23:43.324Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/wxcc-additional-information-on-whatsapp-onboarding.txt",
+  "title": "Additional Information on WhatsApp Onboarding - WXCC",
+  "url": "https://help.webexconnect.io/docs/wxcc-additional-information-on-whatsapp-onboarding",
+  "word_count": 118,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/wxcc-additional-information-on-whatsapp-onboarding.metadata.json"
+}

@@ -1,0 +1,43 @@
+{
+  "api_metadata_path": "sources/cache/developer/send-message-api-v1.api.json",
+  "category": "MULTI CHANNEL COMMUNICATION API",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f6661",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "0bd7b154f771f0134d7f73709cdc94fab2fa63a10bdda58d0441639a59650fe9",
+    "source_path": "9a4513c8cdab5e4f930402d487c0b201464c200b0a148bf065378dc504a60266",
+    "text_path": "b68cf4a750fbd419e237434f604b98bdf0b37c52609f0263017e32ccb282b296"
+  },
+  "headings": [
+    "Request Body to Send SMS Using Send Message API v1",
+    "Send Message API v1 Parameters",
+    "Sample Response Body",
+    "Example",
+    "Sending SMS with Smartlink"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/send-message-api-v1.md",
+  "metadata_path": "sources/cache/developer/send-message-api-v1.metadata.json",
+  "openapi_path": "sources/cache/openapi/dc4573e1ed68a0c9d6016768b965e698458e4f9132fd203b19d180b3d3790de9.json",
+  "previous_retrieved_at": "2026-09-08T23:31:40+00:00",
+  "previous_sha256_source_body": "9a4513c8cdab5e4f930402d487c0b201464c200b0a148bf065378dc504a60266",
+  "resolved_url": "https://developers.webexconnect.io/reference/send-message-api-v1",
+  "retrieved_at": "2026-09-08T23:35:06+00:00",
+  "sha256_api_metadata": "292963b858ee6d757eba1ffef12ca5df59ba989c7ce00b36e2e5be152fff972c",
+  "sha256_html_response": "491056b7915e90727de01c9c1d4a11947d53d7b83ba20cfac6072461022cc8aa",
+  "sha256_openapi": "dc4573e1ed68a0c9d6016768b965e698458e4f9132fd203b19d180b3d3790de9",
+  "sha256_source_body": "9a4513c8cdab5e4f930402d487c0b201464c200b0a148bf065378dc504a60266",
+  "source_body_changed": false,
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/send-message-api-v1.source.md",
+  "source_updated_at": "2026-04-16T05:34:02.328Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/send-message-api-v1.txt",
+  "title": "Send Message API v1",
+  "url": "https://developers.webexconnect.io/reference/send-message-api-v1",
+  "word_count": 2231,
+  "normalized_at": "2026-09-08T23:37:55+00:00"
+}

@@ -1,0 +1,35 @@
+After you provision your WhatsApp longcode on Webex Connect, you must register it with WxEngage to use it for your business’s contact center use case. In addition, Webex Engage requires a Connect service to deliver outbound messages from your contact center, so kindly ensure you have created a service to register WhatsApp Business Longcode with Engage. Refer to the procedure for creating a WxConnect service.
+
+To register your WhatsApp Business Longcode with WxEngage, follow the below steps:
+
+- Navigate to Assets > Numbers.
+
+- Click the WhatsApp channel asset you’d like to register from the Apps column.
+
+The following screen appears.
+
+ [Image: Screenshot of Managing the WhatsApp Page.] 
+Screenshot of Managing the WhatsApp Page
+
+- Click Register to Webex Engage on the top-right corner of the screen.
+
+The following pop-up window appears.
+
+ [Image: Screenshot of Register to Webex Engage] 
+Screenshot of Register to Webex Engage
+
+- Choose the Service that you created in the pre-requisite step from the Select Service drop-down and click Register.
+
+- Your channel asset will be linked to the Default Team on WxEngage by default. Suppose you want to change this setting or share the asset with multiple teams to facilitate transfers or enable agent-initiated outbound communications from different teams. In that case, you can manage these configurations in your Engage tenant's Admin console. 
+
+- Once the number is mapped with the Webex Contact Center, you will view a Webex Contact Center (TBC) icon and a PCI check enabled flag next to the number.
+
+ [Image: Screenshot displaying the Webex Contact Center icon and PCI check enabled flag next to a mapped number.] 
+Screenshot displaying the Webex Contact Center icon and PCI check enabled flag next to a mapped number.
+
+## 📘
+Warning
+
+- You cannot change the service mapping after successfully establishing it. Therefore, asset registration on Webex Engage should happen only after deciding on the service to be used.
+
+- Do not release a number you are using to provide customer support over WhatsApp as a channel, as it will cause disruptions to live services. Released numbers are delinked from your Webex Connect and cannot be restored.

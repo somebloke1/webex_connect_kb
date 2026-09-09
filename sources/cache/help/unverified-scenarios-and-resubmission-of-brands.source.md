@@ -1,0 +1,35 @@
+## Reason for Unverified Status
+
+Following are the common use cases for failure of brand creation or unverified status of brands:
+
+- The values entered for the Tax ID and NonProfit fields are incorrect.
+
+- The value entered for the Stock Symbol field is incorrect.
+
+- The value entered for the Tax ID field is incorrect.
+
+- The value entered for the NonProfit field is incorrect.
+
+The reason for the Unverified status can be found after you click the Manage button when you hover over an Unverified brand in the Brands & Campaigns page.
+
+[block:image]
+{
+  "images": [
+    {
+      "image": [
+        "https://files.readme.io/fc6b67e-3.jpg",
+        "Resubmit button with tooltip 2.png",
+        "Screenshot displaying the Reason for Unverified Status."
+      ],
+      "align": "center",
+      "border": true,
+      "caption": "Screenshot displaying the Reason for Unverified Status."
+    }
+  ]
+}
+[/block]
+
+
+## Resubmitting the Details
+
+After you have identified the reason for the Unverified status, you can correct it by entering the right details for the fields suggested in the tool tip and clicking on the Save button. When you click the Resubmit button, the Webex Connect Platform resubmits the details to the to the campaign registry for the verification.

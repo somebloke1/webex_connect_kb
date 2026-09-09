@@ -1,0 +1,52 @@
+The functionality supporting deactivated phone numbers are applicable only for the US region. A deactivated phone number is the one that a carrier has taken out of service for an end user, because of one of the two reasons:
+
+- A user has switched his carrier
+
+- They have closed their account
+
+The numbers eventually get recycled and are reassigned to new users. Carriers frequently publish deactivation reports that contain a list of phone numbers that are deactivated within their networks. The reports help maintain compliance with regulatory laws. The deact reports should be processed on a daily basis so as to stay up to date with the compliance and avoid risk of sending messages to a new user who never opted for receiving messages in the first place.
+
+Various carriers publish the reports with the following 4 states:
+
+ | State | Consent for Messages
+
+ | DEACT | Changes to opt out
+
+ | TRANSFER | Changes to opt out
+
+ | SUSPEND | No change
+
+ | RESUME | No change
+
+## 
+
+DEACT State
+
+When a user’s phone number is deactivated, the number is put in the DEACT state, and the consent immediately changes to opt-out. That means the user will be removed from all the groups.
+
+## 
+
+TRANSFER State
+
+When a user continues with the same mobile carrier but changes their phone number from an old one to a new one, it is considered as a Transfer state. In this case, the original number will be marked to be in the Deact state and their consent immediately changes to opt out and they will be removed from all the groups.
+
+## 
+
+PORTING State
+
+When a user ports to a new mobile carrier without changing their phone number, their original number is published as a DEACT record in the old carrier deact file. For example, a user moves from the AT&T network to Vodafone network by retaining their existing phone number. When a user changes their carrier, a carrier lookup request is performed to determine if the user has ported out to a new carrier. The system performs a discreet check to avoid any incorrect event mapping. If the system returns a “true” value when this check is performed, the user’s phone number remains active and they will be part of all the groups. If the carrier lookup returns a “false” value, it is treated as a DEACT record and their consent changes to opt out.
+
+## 
+
+Carrier Lookup Service
+
+If the Carrier Lookup service is unavailable, Contact Policy retries the lookup for the number up to three times within 24 hours.
+
+If the service does not return a response after 24 hours, or returns BadData, Error, null, or Unknown, Contact Policy marks the number as Deact Failed and logs the record in Contact Policy Export Logs.
+
+Because the lookup process does not complete successfully, these records do not include a mapped Contact Policy Consent Group ID or Contact Policy Consent Group Name. You must opt out the number manually.
+
+## 📘
+Note
+
+Carrier Deactivation failure details are now included in Contact Policy Export Logs. This feature is currently available exclusively for the Oregon region and requires the Contact Policy feature to be enabled. Please contact support to enable this logging functionality.

@@ -1,0 +1,38 @@
+{
+  "category": "Webex Engage Standalone Nodes",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257980",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "af6fe433cefa2072b6986e9149b67b0ad2f32d3e89ea92b6408f5540a343575d",
+    "source_path": "7e8a407eaec92aacd5cff589916a6faf76c33600b8f206a9125ce46ed0598d37",
+    "text_path": "b162a8e1ac7eabe8f5b344e6c9a695f004e0d1aae02c83ef3f6a3384978e21e6"
+  },
+  "headings": [
+    "Configure Update Alias ID",
+    "Output variables",
+    "Node outcomes",
+    "Update Custom Fields",
+    "Output variables",
+    "Node outcomes"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/update-conversation-1.md",
+  "resolved_url": "https://help.webexconnect.io/docs/update-conversation-1",
+  "retrieved_at": "2026-09-08T23:29:30+00:00",
+  "sha256_html_response": "a4e7882b8835bf85c353a8caf814176afc0c2b2d5c0b6fec419dbfc054b9e1a0",
+  "sha256_source_body": "7e8a407eaec92aacd5cff589916a6faf76c33600b8f206a9125ce46ed0598d37",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/update-conversation-1.source.md",
+  "source_updated_at": "2026-04-14T11:20:05.501Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/update-conversation-1.txt",
+  "title": "Update conversation  - WxEngage standalone",
+  "url": "https://help.webexconnect.io/docs/update-conversation-1",
+  "word_count": 580,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/update-conversation-1.metadata.json"
+}

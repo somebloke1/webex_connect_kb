@@ -1,0 +1,36 @@
+{
+  "category": "Webex Engage Standalone Nodes",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257976",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "1f20441473d998b228b82fad86f351dc6f3aa80984d21dd6a16293a3a62d2104",
+    "source_path": "1836a1af9de0125ec12c79f159dfb8da70154613ad809e74f507225aad5ab3b2",
+    "text_path": "8636a97d07f559574e1257b9a93de13c9ef72f58367be069f0e478f8a3c6f7b1"
+  },
+  "headings": [
+    "➡️ Inbound Messages",
+    "⬅️ Outbound Messages",
+    "↩️ Announcement",
+    "Markdown Cheat Sheet"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/email-2.md",
+  "resolved_url": "https://help.webexconnect.io/docs/email-2",
+  "retrieved_at": "2026-09-08T23:29:28+00:00",
+  "sha256_html_response": "f6e4a16f19182629eb1aa8ce3d9e3e876628ef80c32688fcb437d9a259eb3a46",
+  "sha256_source_body": "1836a1af9de0125ec12c79f159dfb8da70154613ad809e74f507225aad5ab3b2",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/email-2.source.md",
+  "source_updated_at": "2026-04-14T07:46:34.280Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/email-2.txt",
+  "title": "Message Schema - Email - WxEngage standalone",
+  "url": "https://help.webexconnect.io/docs/email-2",
+  "word_count": 865,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/email-2.metadata.json"
+}

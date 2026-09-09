@@ -1,0 +1,36 @@
+{
+  "api_metadata_path": "sources/cache/developer/rate-limits-for-messaging-apis-event-api-and-inbound-webhook.api.json",
+  "category": "RATE LIMITS",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f6586",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "416a729819f1258f3f50f3d5f057d456d421151beba1865bbf32825fd2a07b5c",
+    "source_path": "8d642f380f9d3979b4044e723cccfc2e0ccbd0bd41d73e491c70d82ccd8540d9",
+    "text_path": "eee944937a7a2180697c543e302303a140e809d94c4d43a57f07f785375b9c25"
+  },
+  "headings": [
+    "How can I increase the Rate Limits for my account",
+    "Rate Limit for Thread APIs",
+    "Segment Messaging APIs"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/rate-limits-for-messaging-apis-event-api-and-inbound-webhook.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/rate-limits-for-messaging-apis-event-api-and-inbound-webhook",
+  "retrieved_at": "2026-09-08T23:31:39+00:00",
+  "sha256_api_metadata": "575f65b7d8dc3ea0b617314bc47e22705dc85fc80ee114e6faa20ada4e8aafe2",
+  "sha256_html_response": "0c7721da29c565f1670980fb00c0940f1e603ddcf4c23cf018001b99dc332307",
+  "sha256_source_body": "8d642f380f9d3979b4044e723cccfc2e0ccbd0bd41d73e491c70d82ccd8540d9",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/rate-limits-for-messaging-apis-event-api-and-inbound-webhook.source.md",
+  "source_updated_at": "2025-03-25T08:10:52.038Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/rate-limits-for-messaging-apis-event-api-and-inbound-webhook.txt",
+  "title": "Rate Limits for Messaging APIs, Event API, and Inbound Webhook",
+  "url": "https://developers.webexconnect.io/reference/rate-limits-for-messaging-apis-event-api-and-inbound-webhook",
+  "word_count": 875,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/rate-limits-for-messaging-apis-event-api-and-inbound-webhook.metadata.json"
+}

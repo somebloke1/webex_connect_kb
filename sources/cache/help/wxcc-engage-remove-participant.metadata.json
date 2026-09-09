@@ -1,0 +1,35 @@
+{
+  "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257886",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "6eb75ec7566605ecae7ab70d568cea35b6a0f3a0e683daf4fc9efc170777c329",
+    "source_path": "f54da22a7fa929a814d4ab0a58fd9b8de1885b1d0212aaeda3eaf17cac4e07a1",
+    "text_path": "c403283231a8c4c08f75e4f2d38b109154553c02487a4d91ac94a730671fd1e1"
+  },
+  "headings": [
+    "Authorization",
+    "Methods and Outcomes",
+    "📘Note"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/wxcc-engage-remove-participant.md",
+  "resolved_url": "https://help.webexconnect.io/docs/wxcc-engage-remove-participant",
+  "retrieved_at": "2026-09-08T23:29:17+00:00",
+  "sha256_html_response": "a6bc3ecbfad46f974433c36af4f82e133407c423d1042bbaf6d2118707c131c3",
+  "sha256_source_body": "f54da22a7fa929a814d4ab0a58fd9b8de1885b1d0212aaeda3eaf17cac4e07a1",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/wxcc-engage-remove-participant.source.md",
+  "source_updated_at": "2026-04-14T07:26:43.220Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/wxcc-engage-remove-participant.txt",
+  "title": "Remove Participant - WXCC",
+  "url": "https://help.webexconnect.io/docs/wxcc-engage-remove-participant",
+  "word_count": 229,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/wxcc-engage-remove-participant.metadata.json"
+}

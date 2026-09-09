@@ -1,0 +1,39 @@
+{
+  "category": "SERVICES & FLOWS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182577cd",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "efdcf6bd3661301b70d0dbe8d02805195e4317701f5ce6baad7681d280241af8",
+    "source_path": "51c39f919a21afd4462324c01af4e342183821f5bfab383ef45d852bc3857663",
+    "text_path": "deb01bedd660cd693eb7fe694909bf80b11b9c3710a147fcf039cccccdf68d2d"
+  },
+  "headings": [
+    "Node Configuration",
+    "📘",
+    "Input Variables",
+    "Output Variables",
+    "Node Outcomes",
+    "Transition Actions",
+    "Example"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/delay-node.md",
+  "resolved_url": "https://help.webexconnect.io/docs/delay-node",
+  "retrieved_at": "2026-09-08T23:28:54+00:00",
+  "sha256_html_response": "342e84fe114bf84e50249e08e44ca94fafafa1e1992a2a4106242edb73cf54db",
+  "sha256_source_body": "51c39f919a21afd4462324c01af4e342183821f5bfab383ef45d852bc3857663",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/delay-node.source.md",
+  "source_updated_at": "2026-04-15T09:30:24.715Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/delay-node.txt",
+  "title": "Delay Node",
+  "url": "https://help.webexconnect.io/docs/delay-node",
+  "word_count": 516,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/delay-node.metadata.json"
+}

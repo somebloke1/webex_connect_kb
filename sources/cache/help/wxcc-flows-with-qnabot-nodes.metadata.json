@@ -1,0 +1,38 @@
+{
+  "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257895",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "0a48b89a04d78691f9d662f260563f5b73716a62ff26df37f750524bff01762f",
+    "source_path": "1f30e2826805edf5e7d32ed89accabdc338b531407f0850fb97300970acd092e",
+    "text_path": "d646cf28e530ae4b8cc05e9d814425177058a02c9eb9172a21fc650fa6b69fc9"
+  },
+  "headings": [
+    "FBM Inbound Message Flow with bot nodes",
+    "Use case description",
+    "Understanding Flow Logic",
+    "Conversation closed",
+    "Processing bot response",
+    "Livechat Inbound Message Flow with bot nodes"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/wxcc-flows-with-qnabot-nodes.md",
+  "resolved_url": "https://help.webexconnect.io/docs/wxcc-flows-with-qnabot-nodes",
+  "retrieved_at": "2026-09-08T23:28:44+00:00",
+  "sha256_html_response": "3c3862cd8eaa9f836afedb67382eeb21dff5beff0be785b8b3679c38de6d8967",
+  "sha256_source_body": "1f30e2826805edf5e7d32ed89accabdc338b531407f0850fb97300970acd092e",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/wxcc-flows-with-qnabot-nodes.source.md",
+  "source_updated_at": "2026-04-15T12:00:13.321Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/wxcc-flows-with-qnabot-nodes.txt",
+  "title": "Configuring flows with Q&A and Task Bot Nodes - WXCC",
+  "url": "https://help.webexconnect.io/docs/wxcc-flows-with-qnabot-nodes",
+  "word_count": 1516,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/wxcc-flows-with-qnabot-nodes.metadata.json"
+}

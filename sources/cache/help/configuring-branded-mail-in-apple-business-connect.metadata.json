@@ -1,0 +1,38 @@
+{
+  "category": "Assets",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257988",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "a08df78f64e9c0b7ccc725fb6988bbb1009ee383c7afc063e1578ad8c31ebb3f",
+    "source_path": "ee4c0280fea8d79bf780e81031782621ced1738122da3b6f5b6d34cd1fca9995",
+    "text_path": "7cd763fd67fd40971afe098d6a2eb9a8b7c48491aaefc4632598202aae32adaa"
+  },
+  "headings": [
+    "Overview",
+    "Prerequisites",
+    "Domain Structure",
+    "📘",
+    "Set up Branded Mail in Apple Business Connect",
+    "Verify Domain for Branded Mail in Apple Business Connect"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/configuring-branded-mail-in-apple-business-connect.md",
+  "resolved_url": "https://help.webexconnect.io/docs/configuring-branded-mail-in-apple-business-connect",
+  "retrieved_at": "2026-09-08T23:29:02+00:00",
+  "sha256_html_response": "43c067baace2e1f1e0e0923f1f456f9d782d855db2bcb8c300ecd0912c6f89ad",
+  "sha256_source_body": "ee4c0280fea8d79bf780e81031782621ced1738122da3b6f5b6d34cd1fca9995",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/configuring-branded-mail-in-apple-business-connect.source.md",
+  "source_updated_at": "2026-04-15T10:10:06.540Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/configuring-branded-mail-in-apple-business-connect.txt",
+  "title": "Configuring Branded Mail in Apple Business Connect",
+  "url": "https://help.webexconnect.io/docs/configuring-branded-mail-in-apple-business-connect",
+  "word_count": 288,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/configuring-branded-mail-in-apple-business-connect.metadata.json"
+}

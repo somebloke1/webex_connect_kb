@@ -1,0 +1,39 @@
+{
+  "category": "SERVICES & FLOWS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182577de",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "cd8262867ebc652364b952b3ca098e9ec6feffc84078d38854f29f59719b332a",
+    "source_path": "a2cdcb8b2164b1d8238ebc54b1cbe8494f009214e94016dde361080929bb5fa1",
+    "text_path": "48fbdba6e1d4cf2e3bd439445f39f55d61e3886ac96099b0fbc602b8a5577bca"
+  },
+  "headings": [
+    "❗️Deprecation Alert",
+    "Node Configuration",
+    "Configuring Voice Calls",
+    "Triggering Voice Flow",
+    "Playing Media File",
+    "Configuring Transitions Actions",
+    "📘Tip"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/send-voice-node.md",
+  "resolved_url": "https://help.webexconnect.io/docs/send-voice-node",
+  "retrieved_at": "2026-09-08T23:28:56+00:00",
+  "sha256_html_response": "9e5e8defe717fd9f78102e53bcf4abb1dfcfab0369fd61b537011e3531a48789",
+  "sha256_source_body": "a2cdcb8b2164b1d8238ebc54b1cbe8494f009214e94016dde361080929bb5fa1",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/send-voice-node.source.md",
+  "source_updated_at": "2026-01-26T13:44:02.196Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/send-voice-node.txt",
+  "title": "Send Voice Node [Deprecated]",
+  "url": "https://help.webexconnect.io/docs/send-voice-node",
+  "word_count": 1164,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/send-voice-node.metadata.json"
+}

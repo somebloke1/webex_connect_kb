@@ -1,0 +1,22 @@
+## Introduction
+
+EPIC Systems is one of the largest players in healthcare information technology. Large hospitals use it to organize patient health records, personal data, and appointments. This integration gives patients the ability to manage their appointments on their own. They need not contact their provider directly and avoid long waiting times. This also reduces the administrative time spent by the provider having to manage incoming calls and patient queries. The Webex Connect EPIC integration makes use of EPIC’s APIs to read, insert or update data from the client’s EPIC EHR system in real-time or batches, and automate patient interactions across 16+ channels. This means any cancellations and reschedules are processed proactively and help free up appointment slots for other patients. 
+
+## Pre-requisites
+
+- Client needs to have the required license from EPIC and customers need to download the WxConnect app from EPIC store.  
+- This integration is available as an add-on for Premium pricing tier clients only.
+
+> 📘 Note
+> 
+> Contact your account manager or write to our support team for more details on enabling the integration and implementation of the integration.
+
+## Use Cases
+
+### Appointment Management
+
+This solution enables the provider to empower their patients to manage appointments effortlessly. Using the solution the providers can send appointment reminders to their patients and get confirmation from them if the patient chooses to reschedule the appointment. Providers can share the available slots of a given clinician with the patient for rescheduling.
+
+### Patient Management
+
+This solution enables providers to create, update, or fetch details related to patient records and patient’s communication preferences.

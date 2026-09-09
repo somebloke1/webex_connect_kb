@@ -1,0 +1,36 @@
+{
+  "api_metadata_path": "sources/cache/developer/sms-apis.api.json",
+  "category": "MULTI CHANNEL COMMUNICATION API",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f6635",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "4d10887c67024f7757ccbac3589be04c8e40970fc4a144ad530be4a2f08b0033",
+    "source_path": "00532807fd43fb9862187dfea5819e6090e1c6d137d5cfcfbc820f3f45b0566a",
+    "text_path": "7af735fb5d085953455f616c441a2eae9df5f872f78761edd1836d61111ab9da"
+  },
+  "headings": [
+    "APIs for Sending SMS Messages",
+    "APIs to Retrieve the Delivery Status of a Send SMS API Request",
+    "Outbound Webhooks for Tracking SMS Delivery Status"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/sms-apis.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/sms-apis",
+  "retrieved_at": "2026-09-08T23:31:40+00:00",
+  "sha256_api_metadata": "d9f2571d8585f4b26bb9bd5327f81b800330d74dd769e509d1cbb0d1f7c27b40",
+  "sha256_html_response": "d009344a625755b0e939b0f93fb766dcd061c7efc5cecf28f321e568fdb2a5fb",
+  "sha256_source_body": "00532807fd43fb9862187dfea5819e6090e1c6d137d5cfcfbc820f3f45b0566a",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/sms-apis.source.md",
+  "source_updated_at": "2026-06-23T15:47:47.189Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/sms-apis.txt",
+  "title": "SMS APIs",
+  "url": "https://developers.webexconnect.io/reference/sms-apis",
+  "word_count": 620,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/developer/sms-apis.metadata.json"
+}

@@ -1,0 +1,177 @@
+The SMS node enables you to send messages to customers through the channels that are configured within a service. You can send short messages up to 4000 characters. We recommend that you keep SMS messages below 450 characters for better deliverability and user experience.
+
+[block:image]
+{
+  "images": [
+    {
+      "image": [
+        "https://files.readme.io/57185d4-SMS.jpg",
+        "SMS.jpg",
+        "Screenshot of SMS Node"
+      ],
+      "align": "center",
+      "sizing": "smart",
+      "caption": "SMS Node"
+    }
+  ]
+}
+[/block]
+
+
+## Node Configuration
+
+### **Destination Type**
+
+The types of destination identifiers supported by <<prodname>> are:
+
+1. ** Customer Id** - is a master ID that is linked to all different channel-specific user IDs of a user. It is useful in cross channel communication. For example, you want to send an exclusive promo code to a user’s app because of previous positive feedback that they have given via Messenger. In that case, you can use the CustomerID of the user since it remains constant across the channels.
+
+2. **msisdn** - Mobile Station International Subscriber Directory Number (MSISDN) is a number used to identify a mobile phone number internationally.
+
+### **Destination**
+
+This field contains the destination value corresponding to the selected Destination Type. The value can be static or dynamic. For example, if the destination type is CustomerID, the destination can be dynamic by declaring it as $(customerID). Likewise, if the destination type is msisdn, the destination can be dynamic by declaring it as $(msisdn).
+
+> 📘 Note
+> 
+> If +E.164 format is enabled for your tenant - all the numbers in the **To** field should follow the "+E.164" format.
+> 
+> This format displays the number with a "+" followed by the country code and the phone number.
+> 
+> \+E.164 format is not applicable to the numbers in the **From** field.
+
+[block:image]
+{
+  "images": [
+    {
+      "image": [
+        "https://files.readme.io/4ced0f303f68ad85e58101b9385400b28190ce864139bf23fae4145c0cd869cc-Send_Node_SMS.PNG",
+        "SMS Node SMS Node.png",
+        "Screenshot of SMS Node Configuration Window"
+      ],
+      "align": "center",
+      "border": true,
+      "caption": "Screenshot of SMS Node Configuration Window"
+    }
+  ]
+}
+[/block]
+
+
+> 📘 Phone number format when using MSISDN destination type
+> 
+> If you have configured destination type as MSISDN, the phone number should contain the country code of the SMS recipient. Not passing/specifying country code in the destination field can lead to SMS delivery failures and other issues.
+
+### **From Number**
+
+The number or sender ID that is used to send the SMS needs to be selected here.
+
+### **Message Type**
+
+The types of message supported in the SMS node are:
+
+- Text
+- Flash
+- Binary
+- Unicode
+- Template
+
+When the message type is a template, all the variables used in the message body of the template need to be configured with appropriate values.
+
+[block:image]
+{
+  "images": [
+    {
+      "image": [
+        "https://files.readme.io/a58d90e-2.jpg",
+        "SMS Node Configure Variables.png",
+        "Screenshot of Configuring Variables in SMS Node"
+      ],
+      "align": "center",
+      "border": true,
+      "caption": "Screenshot of Configuring Variables in SMS Node."
+    }
+  ]
+}
+[/block]
+
+
+### **Message **
+
+This field contains the body of the message. The message should not be longer than 4000 characters. We recommend that you keep SMS messages below 450 characters for better deliverability and user experience.
+
+The character counter shows the number of characters entered in this field only. It does not represent the final SMS message length or segment count.
+
+To include a new line within the content of an SMS message, insert the characters `\n` at the desired location in your message text. The `\n` sequence represents a line break and will cause the text following it to appear on a new line when the message is displayed.
+
+**Example**:
+
+If you want your message to appear as following,
+
+_“Hello,_
+
+_This is your appointment reminder.”_
+
+You should write it in the format below:
+
+_"Hello,\\nThis is your appointment reminder.”_
+
+### **Add SmartLink**
+
+SmartLink is a single URL, which contains multiple offers in it. For example, you can create a single URL for multiple network marketing channels including email, SMS, company website, and social networking. You can also specify the **Link Validity (in mins)** if required.
+
+### **Shortened Links**
+
+When **Shorten Links** is selected, any HTTPS links found in the message will be shortened, excluding Smart Links. The domain configuration for shortening the links has to be selected from a pre-configured list or entered as a dynamic value. To receive ‘Clicked’ notifications for shortened links on your SMS webhook, select **Track Clicks**. To receive these notifications, the ‘Clicked’ option on your webhook has to be selected.
+
+| Feature                      | Domain                                                                  | Reporting Tags | Tracking                                                                              |
+| :--------------------------- | :---------------------------------------------------------------------- | :------------- | :------------------------------------------------------------------------------------ |
+| Shorten Links in SMS Node    | The drop-down shows the domain registered with <<prodname>>.            | Not Supported  | Click delivery notification only.                                                     |
+| Prebuilt Node Link Shortener | The drop-down shows the domain for Link shortener under Tenant Settings | Supported      | Reports the links created and clicked based on the Tag under Reports > Link Shortener |
+
+### **Correlation ID**
+
+You can assign a unique ID of your choice to each SMS. This ID is returned to the platform with the delivery report and can be used to identify the message.
+
+### **Notify URL**
+
+You can choose to notify a URL with the delivery report for the SMS. This field accepts only a valid URL or a variable. If an invalid URL is passed in an API request or via a variable, then such a request will not be considered eligible for retries.
+
+**Validations for Notify URL field:**
+
+- It is an optional field for all the channels. Send node can be executed without including these values.
+- The notify URL should be updated with the proper URL format. The system returns the error message when the Notify URL field is not updated correctly as ‘Invalid URL: field accepts only valid URL or variable.’
+- When you provide a space in front of the URL, the system displays the 'Invalid URL: field accepts only valid URLs or variables' error message.
+- When you provide space at the end of the URL, the system trims and ignores the space, and the URL receives delivery receipts (DRs).
+- Select the "**Enable Notify URL Auth**" checkbox to activate the authentication of the notify URL.
+- There is no maximum length validation defined for this field.
+- Variables can be added to this field.
+
+> 📘 Note:
+> 
+> Notify URLs track the status of delivery receipts (DRs) for sent messages.
+> 
+> If Enable Notify URL Auth is enabled for your node and an Auth ID that is random, invalid, or deleted is used, the payload will be parked in <<prodname>> and not forwarded to the receiver's server. However, this does not impact the delivery of the message.
+> 
+> If Enable Notify URL Auth is not enabled, the payload is forwarded to the receiver's server regardless of any invalid Auth ID used.
+
+### **Callback Data**
+
+In case there is additional data to be sent along with the delivery reports to the URL, you must specify that here.
+
+### **Extra Parameters**
+
+If there are any additional attributes attached to a message other than the payload like message type or message importance, you can specify them as **Extra Parameters**.
+
+### **Advanced options**
+
+### **Wait For**
+
+Before the flow proceeds to the next node, you can choose to wait for one of the following events to occur:
+
+- Gateway Submit - once the sending node is executed, the message is submitted to the gateway which adds the message in the queue of all the messages that need to be sent and sends them sequentially.
+- Delivery Report
+
+### **Expiry**
+
+You can define the maximum time allocated for the execution of this node. If the node is not executed within the specified period, the node exits the _on-timeout_ edge.

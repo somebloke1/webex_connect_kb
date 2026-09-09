@@ -1,0 +1,170 @@
+## 📘
+Important Update on 10DLC Campaign Creation
+
+To accommodate system updates and enhancements, the 10DLC Campaign creation functionality has been temporarily disabled until further notice.
+
+We are working diligently to restore this functionality as soon as possible. In the meantime, if you require assistance with Campaign creation or have any related inquiries, please contact our support team for guidance.
+
+## 📘
+
+Refer to Types of Campaigns and Terms and Campaign and Content Attributes for information on the types of campaigns and the Carrier Terms Preview to be able to make an appropriate selection.
+
+To register a campaign on the Webex Connect platform:
+
+- In the Brands & Campaigns (10DLC) page, click Register New Campaign.
+
+ [Image: Screenshot displaying the Register New Campaign Button.] 
+Screenshot displaying the Register New Campaign Button
+
+- In the Use Case Selection tab, select a use case from the list of options for:
+
+- Standard Campaign Type
+
+- Special Campaign Type 
+
+ [Image: Screenshot of Selecting the Standard Campaign Type] 
+Screenshot of Selecting the Standard Campaign Type
+
+- 
+
+Click Continue.
+
+- 
+
+In the Campaign Details tab, add or select details for:
+
+ [Image: Screenshot of Register New Campaign-Use Case Sekection] 
+Register New Campaign - Use Case Selection
+
+ [Image: Screenshot of Register New Campaign - Campaign Details] 
+Register New Campaign - Campaign Details
+
+- 
+
+Vertical Type
+
+- 
+
+Campaign Description
+
+- 
+
+Call-To-Action/Message Flow
+
+- 
+
+Terms and Conditions Link (Link to the campaign's terms and conditions. Maximum Length 255.)- URLs and text are allowed.
+
+- 
+
+Privacy Policy Link (Link to the campaign's privacy policy. Maximum length 255.)
+
+- 
+
+Sample Message 1 (Minimum of 2 messages required) 
+
+## 📘
+Note:
+
+In the 10DLC registering a campaign page, for the 'Mixed Use Cases' category accepts two sample messages by default, with the option to add up to five in total.
+
+For the ‘Other Use Cases’ category, only one sample message is required by default, but users can still add up to five if needed.
+
+- 
+
+Optional Add New Message
+
+- 
+
+Campaign and Content Attributes
+
+- 
+
+Sample Multimedia
+
+- 
+
+CTA (Call-To-Action), Privacy Policy, and/or Terms and Conditions Multimedia Upload
+
+## 📘
+Note
+
+You can upload multimedia files to Sample Multimedia or CTA Privacy Policy only after creating a campaign.
+
+- 
+
+Click Register.
+
+## 📘
+Reseller Information
+
+Beginning January 23, 2025, The Campaign Registry (TCR) is making it mandatory to pass the reseller information when registering new Campaigns or updating the existing ones. We are actively working on updating our internal systems to comply with mandates from The Campaign Registry (TCR), ensuring you can create campaigns seamlessly. In the interim period, Webex Connect users are encouraged to contact their account manager if they experience any errors related to missing reseller information when adding new campaigns. Your account manager will assist in resolving the issue by raising a support request. Alternatively, you can write to Webex Connect Customer Support Team for a resolution.
+
+## 📘
+Campaign Status Notifications
+
+After the Campaign creation form is successfully submitted, the status of the campaign can be seen on the Campaign Manage page. In addition, the tenant owner, the tenant user, and the Support contact provided in the Brand Creation Form will receive Campaign status email notifications.
+
+## 
+
+Uploading a Multimedia File via Campaign
+
+Steps to upload a multimedia file via campaign: 
+
+- 
+
+Click Edit Actions icon next to the preferred campaign.
+
+- 
+
+In the Brands & Campaigns (10DLC) page, expand the drop-down menu button for a brand record.
+
+ [Image: Screenshot Displaying Manage Button Under Action.] 
+Manage Button Under Action
+
+- 
+
+In the Action column, click the drop-down button for a campaign record. Click Manage.
+
+ [Image: Click here to browse Button] 
+Click here to Browse Button
+
+- 
+
+Click Click here to browse  to upload a multimedia file.
+
+You can upload a file with a maximum size of 10 MB.
+
+- 
+
+Click Add Sample Multimedia  to view the uploaded file under Sample Multimedia.
+
+- 
+
+Click Click here to browse to upload a multimedia file.
+
+You can upload a file with a maximum size of 10 MB.
+
+- 
+
+Click Add Sample Multimedia  to view the uploaded file under Call-To-Action, Privacy Policy, and Terms and Conditions Multimedia Files.
+
+- 
+
+Click Save  to save the changes.
+
+## 
+
+Validating Unsupported Use Cases for Standard and Special Campaign Type
+
+The following use cases are no longer directly supported by Webex Connect but can be used with special approvals outside of Webex Connect. When the user tries to select the following use cases in the main category as well as in the subcategory, a warning message is displayed: “To proceed with this special use case, please get in touch with your account manager for further assistance.”
+
+- Machine to Machine
+
+- Agents and Franchises
+
+- Proxy
+
+- UCaaS High Volume
+
+- UCaaS Low Volume

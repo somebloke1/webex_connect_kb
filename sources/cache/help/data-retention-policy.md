@@ -1,0 +1,18 @@
+# Data Retention Policy
+
+Source: https://help.webexconnect.io/docs/data-retention-policy
+Documentation version: 6.20.0
+Retrieved: 2026-09-08T23:29:39+00:00
+
+Here's a brief summary of Webex Connect standard data retention policy. 
+
+- The transactional data is set for 30 days.
+- The data for Reports and Watchtower on selection of Custom Date Range is retained for upto 13 months. Any data older than 13 months from a given date cannot be retrieved.
+- The Monthly data for Usage Reports is retained for upto 13 months. Any data older than 13 months from a given month cannot be retrieved.
+- Aggregated traffic summary reports data for the entire tenure that the tenant stays active on the platform.
+- Detailed debug and transaction trace (Descriptive Logs when enabled) for 7 days.
+- Host and Usage Information, Registration Data, and User Generated Data are retained for the entire tenure that the tenant stays active on the platform.
+- Platform and Service configuration, Templates, and other configuration data for the lifetime.
+- Profile data, and content uploaded to Media Manager for the lifetime.
+
+Please refer to [Webex Connect Privacy Data Sheet](https://trustportal.cisco.com/c/r/ctp/trust-portal.html#/1641931654489699) for more information.

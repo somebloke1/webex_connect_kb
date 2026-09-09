@@ -1,0 +1,38 @@
+{
+  "category": "Assets",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257926",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "d5dd66a5a6114e21f82cfe5fbc361b18d54e53ab2b7ba8c4889b75a26afe0b8f",
+    "source_path": "c8b38b3be1df587ab5db2aff098465ebc5fd066f7c0a7b638db827316e8e3c03",
+    "text_path": "53fcdac4c84da6e6fd5d0a95f806b6b56caa27d4981024b8da24e58d9e58dadf"
+  },
+  "headings": [
+    "Adding a New Authorization",
+    "📘Note",
+    "Basic Auth",
+    "Digest Auth",
+    "AWS Signature",
+    "OAuth 2.0."
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/authorization-for-outbound-webhook-and-contact-policy.md",
+  "resolved_url": "https://help.webexconnect.io/docs/authorization-for-outbound-webhook-and-contact-policy",
+  "retrieved_at": "2026-09-08T23:29:07+00:00",
+  "sha256_html_response": "3e4f704c1b745b79bd7adc4227284602bfe30c987d51d1a2f9eec4a3179841c4",
+  "sha256_source_body": "c8b38b3be1df587ab5db2aff098465ebc5fd066f7c0a7b638db827316e8e3c03",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/authorization-for-outbound-webhook-and-contact-policy.source.md",
+  "source_updated_at": "2026-04-15T11:26:49.563Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/authorization-for-outbound-webhook-and-contact-policy.txt",
+  "title": "Authorization for Outbound Webhook and Contact Policy",
+  "url": "https://help.webexconnect.io/docs/authorization-for-outbound-webhook-and-contact-policy",
+  "word_count": 1118,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/authorization-for-outbound-webhook-and-contact-policy.metadata.json"
+}

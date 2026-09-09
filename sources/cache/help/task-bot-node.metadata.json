@@ -1,0 +1,38 @@
+{
+  "category": "SERVICES & FLOWS",
+  "deprecated": true,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182578f8",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "32dcd3291db9335642e659527d4f8d4c1ba90b6432779450aa30ce8e22d986f0",
+    "source_path": "1a91f0eda05b325fd199ee5f114cd79ecb84ed38227129c58c523d13854f876c",
+    "text_path": "79cf716c5ede176eadda336a93995749fe64b2ec1ecd843c4d831b0e48231cbd"
+  },
+  "headings": [
+    "📘Node version",
+    "Methods and Outcomes",
+    "Method Name - Process Message",
+    "Method name - Close Session",
+    "Node Outcomes",
+    "Node versions"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/task-bot-node.md",
+  "resolved_url": "https://help.webexconnect.io/docs/task-bot-node",
+  "retrieved_at": "2026-09-08T23:28:57+00:00",
+  "sha256_html_response": "522b1732da62e769f6fd5bede5a9548e21fe6d284f95d1adfc16dd9dbcb931f1",
+  "sha256_source_body": "1a91f0eda05b325fd199ee5f114cd79ecb84ed38227129c58c523d13854f876c",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/task-bot-node.source.md",
+  "source_updated_at": "2025-12-19T05:22:08.135Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/task-bot-node.txt",
+  "title": "Task Bot Node",
+  "url": "https://help.webexconnect.io/docs/task-bot-node",
+  "word_count": 1026,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/task-bot-node.metadata.json"
+}

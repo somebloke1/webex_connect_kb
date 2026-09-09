@@ -1,0 +1,35 @@
+{
+  "category": "SERVICES & FLOWS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182577ca",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "aec6ca8f7d849f33b7bfabef406dfe78b151360ee87fc61121c36408f762f1de",
+    "source_path": "f4d18f1342614acbcb3b5118639679f393af9e0a2817c3f00f5837909b912008",
+    "text_path": "8274305f4754ba590b0951c234552f92170c31cf7cc2b6da5d705f0373a7eb69"
+  },
+  "headings": [
+    "📘SMS Routes",
+    "📘Note",
+    "❗️Service Deletion"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/service-settings.md",
+  "resolved_url": "https://help.webexconnect.io/docs/service-settings",
+  "retrieved_at": "2026-09-08T23:28:51+00:00",
+  "sha256_html_response": "1fde43d67d8730e550522e562e814421a28b6ec6a9f5178d524d262575c5f5b5",
+  "sha256_source_body": "f4d18f1342614acbcb3b5118639679f393af9e0a2817c3f00f5837909b912008",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/service-settings.source.md",
+  "source_updated_at": "2025-09-10T16:03:24.715Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/service-settings.txt",
+  "title": "Locking, Deleting, and Other Settings",
+  "url": "https://help.webexconnect.io/docs/service-settings",
+  "word_count": 447,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/service-settings.metadata.json"
+}

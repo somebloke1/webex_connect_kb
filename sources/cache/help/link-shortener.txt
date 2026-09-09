@@ -1,0 +1,258 @@
+## 
+
+Introduction
+
+The Link Shortener Prebuilt Node allows you to pass a long URL and convert it into a short URL. The short URL can then be embedded in the message content when sending messages to customers through channels supported by Webex Connect Flow Builder.
+
+This node can be utilized alongside all Send Nodes. The domain you want to use for creating shortened links should be mapped to your Webex Connect tenant by following certain configurations, which will be added to our documentation alongside this release. 
+
+These configurations can be done by a 'Tenant Owner' or 'Full Access User' with requisite permissions. In addition to the creation of short links, you will be able to add up to two reporting tags along with your link shortening requests. This configuration will allow you to view the counts of links created and clicked at the individual reporting tag level. These will be accessible under the 'Reports' section.
+
+Further, you will have the ability to configure details such as Callback Data, Correlation ID, and Notify URLs to get notified each time this link is clicked by a recipient.
+
+In the Access version, the capability can be utilized through Messaging APIs. In the Early Access phase, the prebuilt node must be activated via the Admin Console for the selected tenants and synchronized with the designated regions.
+
+This node is currently in Early Access mode and will not be available by default. Please get in touch with your account manager to enable the Link Shortener nodes on your tenant.
+
+ [Image: Screenshot for Link Shortener] 
+Link Shortener
+
+## 
+
+Version Supported
+
+## 📘
+
+This integration is based on Link Shortener Node API  is v1.0.0.
+
+## 
+
+Pre-requisites
+
+- 
+
+Activate the Link Shortener Prebuilt Node. Note that this feature isn't enabled by default and requires activation for your account. Please get in touch with your account manager in case you wish to enable it for your account.
+
+- 
+
+Additionally, a CNAME record must be added at the domain level with the appropriate redirection. Please get in touch with Webex Customer Support for guidance.
+
+- Client Custom Domains: Add a Record Name with relevant redirection based on your Webex Connect tenant location (table below). Reach out to the Webex Connect customer support team and provide the domain certificate to add to the Certificate Manager (ACM) for this purpose. This typically requires some lead time; hence, we recommend you plan ahead of time for getting this setup done and leave some time for end-to-end testing.
+
+- Default Webex Connect Branded Domain: The region-specific Record Names can also be used directly as the default domain of the tenant.
+
+ | Webex Connect Region | Record Name
+
+ | AWS Canada | ca.wbxc.io
+
+ | AWS Ireland | eu.wbxc.io
+
+ | AWS London | uk.wbxc.io
+
+ | AWS Mumbai | in.wbxc.io
+
+ | AWS Oregon | us.wbxc.io
+
+ | AWS Singapore | sg.wbxc.io
+
+ | AWS Sydney | au.wbxc.io
+
+- 
+
+Generate client credentials for your tenant. Enter up to 50 branded subdomains owned by the customer that they wish to use for Link Shortening via Webex Connect Messaging APIs and/or Flow Builder. 
+
+- 
+
+Once the credentials are generated, ensure they are securely saved, as they will be required to add prebuilt authorization under Assets → Integrations → Prebuilt Integration → Link Shortener → Authorization. 
+
+- 
+
+Add a valid prebuilt authorization. For more information, refer to the Add a Valid Authorization section.
+
+## 
+
+Generate Client Credentials
+
+- 
+
+Navigate to Tenant Settings. (Only users with the Tenant Owner or Full Access User roles have the ability to modify this setting.)
+
+- 
+
+Within the ‘Custom Domain Setup for Link Shortening’ section, complete the following actions:
+
+- In the input field, enter the custom domain you want to use for the Link shortener.
+
+## 📘
+Note
+
+The domain registered on the Tenant Settings page will be shown in the Link Shortener Prebuilt Node under the Short Domain drop-down. (link to the Prebuilt node.)
+
+- Click Generate Credentials.
+
+- 
+
+Copy the Client ID  and Client Secret  generated.
+
+These credentials will be used for authorizing the prebuilt node and are configured at the tenant level and can be shared across all groups and teams within the tenant.
+
+ [Image: Screenshot for Tenant Settings—Custom Domain Setup for Link Shortening] 
+Tenant Settings—Custom Domain Setup for Link Shortening
+
+## 
+
+Add a Valid Authorization
+
+- Navigate to Assets > Integrations.
+
+- Choose "Prebuilt Integrations" from the drop-down menu.
+
+- Select the Link Shortener node that has been created, then proceed to add the necessary authorization.
+
+- Enter a name along with the Client Credentials  and Client Secret  obtained from the Tenant Settings page.
+
+To create a new Authorization, navigate to the Authorization section and generate a new entry. Ensure that you securely save the ID, as it will be needed in the flow builder.
+
+## 
+
+Node Configuration
+
+This Link Shortener node can be used with all the send nodes except (Instagram, AMB).
+
+Drag-and-drop the node onto the visual flow builder and double-click the node to configure it.
+
+- 
+
+Choose Method Name “Create Shortlink“ from the drop-down.
+
+- 
+
+Select the Authorization Name you created for this prebuilt node, located under Assets>Integrations.
+
+- 
+
+Provide the Long URL that you want to shorten.
+
+- 
+
+Select the Short domain that is configured for Link Shortening on the Tenant Settings page.
+
+- 
+
+Provide the Reporting Tags which are alphanumeric character set used for collating link-shortening statistics e.g., name used for a messaging program. Each reporting tag can be up to 50 characters long and may include special characters such as underscores (_) and hyphens (-). Tags are optional; however, if provided, they will enable reporting on link clicks and creation based on the selected reporting tag. For more information, refer to the Reports > URL Shortener section. 
+
+- 
+
+Provide the Notify URL to receive click notification for the respective shortened link at this URL.
+
+- 
+
+Select Notify Authorization ID from the drop-down.
+
+- 
+
+Enter Callback Data to include any additional data that needs to be sent to the notify URL as a part of click notification.
+
+- 
+
+Enter a unique Correlation ID to identify link click events. These will be sent to the Notify URL as part of click notifications.
+
+ [Image: Screenshot for Link Shortener] 
+Link Shortener
+
+## 
+
+Methods and Outcomes
+
+Here’s a brief description of various methods and corresponding output variables and node outcomes associated with each of the methods.
+
+### 
+
+Method Name - Create Shortlink
+
+The following are the UI parameters that are required to call this method.
+
+ [Image: Screenshot for Link Shortener] 
+Link Shortener
+
+ | Input Variables | Output Variables | Node Outcomes
+
+ | Long URL
+
+• Please provide the long URL that you would like to shorten.
+
+Short domain
+
+• Review the custom domain(s) configured for Link Shortening on the Tenant Settings page and select one.
+
+Reporting Tags
+
+• Tags are keywords or combinations of words and numbers used to classify or describe your link.
+
+Webhook URL
+
+•Notify URL
+
+Webhook URL Authorization ID
+
+•Notify URL Authorization ID
+
+Callback data
+
+•Include any additional data that needs to be sent to the notify URL.
+
+Correlation ID
+
+•Enter your unique reference ID that will be passed back to you in click notification via notify URL. | Shortlink
+
+• This is the shortened link that has been created.
+
+ID
+
+• This is the unique identifier created for the shortened link.
+
+Response Code
+
+Response Message | onInvalidData
+
+•Invalid data
+
+onError
+
+• Error while invoking the method
+
+onInvalidChoice
+
+• Invalid choice
+
+onAuthorizationfail
+
+Error
+
+• Indicates one of the following:
+
+onInvalidData : Invalid data
+
+onError: Error while invoking the method
+
+onInvalidChoice: Invalid choice
+
+onAuthorizationfail: When an authorization fails
+
+Success
+
+• indicates:
+
+onSuccess - The shortened link is generated successfully.
+
+onTimeout
+
+• When the method could not be invoked before the timeout (10 seconds) duration
+
+## 
+
+Limitation
+
+- The Link Shortener feature is not compatible with Email and WhatsApp templates in this release.
+
+- Reporting Tag fields lack validation when dynamic data is provided.

@@ -1,0 +1,155 @@
+# 
+
+Digital channel templates
+
+This doc covers templates published on Webex Connect for using AI Agents on digital channels.
+
+## 
+
+AI Agent Livechat generic
+
+Developers can create a new flow by importing this template to deploy their scripted or autonomous agents to Livechat channel.
+
+### 
+
+Pre-requisites
+
+- A scripted AI Agent with the relevant intents or an autonomous AI agent with relevant actions (along with fulfilment flows) and knowledge base for the conversation.
+
+- A Webex Connect tenant with AI agents, WxCC Task and WxCC Engage pre-built integrations. These are list under Assets > Integrations in Webex Connect. Auth should be added to the WxCC Task and WxCC Engage integrations and theeir status should display ‘Active’. Mark one of they added auths as ‘default’ to avoid selecting the auth manually in each node after creating the flow.
+
+- A livechat channel asset in the Webex Connect tenant. More information on how to set up a digital channel asset in Webex connect  
+
+### 
+
+Importing and using the template
+
+After creating a new flow using the template, the users will need to make the following changes in their flow:
+
+- Select the relevant pre-chat form in the ‘Pre-chat form’ in-app messaging node (Node ID: 36) and the subsequent receive node (Node ID 38).
+
+- Alternatively, if the use-case doesn’t require a pre-chat form, these nodes can be removed and the subsequent Append Conversation node (Node ID: 1254) can be updated.
+
+- Update the Flow Id in Resolve Conversation node (Node ID: 1590). The flow ID can be copied from the flow URL or the service dashboard where flows are listed.
+
+- Select the relevant AI agent in the AI Agent nodes (Node ID: 1695 and 1711).
+
+- Update the ‘liveChatDomain’ custom variable from flow settings on the top right of the canvas. This should be set to the domain where the Livechat widget is to be deployed.
+
+- Select the appropriate agent queue in the Queue task node (Node ID: 1388).
+
+### 
+
+Flow breakdown
+
+- Customer initiates contact: User initiates the conversation via the livechat widget on the domain it’s deployed. The chat is received by Webex connect.
+
+- Pre-chat form is displayed: The flow sends a pre-chat form to the user to collect relevant details. Pre-chat forms can be created under Tools > Templates.
+
+- Contact center resolves the conversation: Contact center creates a new conversation or appends the user message to an existing conversation based on customer details.
+
+- Data is passed to AI Agent: AI agent (via the AI Agent node) receives the first message configured in the livechat widget configuration (under Web chat assets on Control Hub). The default message is ‘Hi there’, which solicits a greeting response from the agent.
+
+- Interaction with the AI agent: AI Agent processes the input and responds based on the configuration. The flow exits the AI Agent node after each response, the message is sent to the user by the in-app messaging node and appended to the conversation using the Append conversation node.
+
+- The flow then waits for a user response via the receive node. This node has a timeout duration, which is set to 120 seconds in the flow template. On receiving a message, the flow appends it to the conversation and loops back to the AI Agent node. If the receive node times out, the conversation is closed in contact center as well as in the AI Agent (via the Close session method).
+
+- If agent handover is triggered by the AI agent based on the configuration, the user is handed over to a human agent and the conversation is queued via the Queue task node.
+
+## 
+
+AI Agent Scripted Doctor Appointment
+
+Developers can create a new flow by importing this template to deploy a scripted agent built for booking or cancelling a doctor appointment. This flow contains fulfilment via a scripted agent and can be used as a guide to building flows that require fulfilment for scripted agents.
+
+### 
+
+Pre-requisites
+
+- A scripted AI Agent for booking and cancelling doctor appointments, this is available as a template agent that can be used at the time of creating a new agent.
+
+- A Webex Connect tenant with AI agents, WxCC Task and WxCC Engage pre-built integrations. These are list under Assets > Integrations in Webex Connect. Auth should be added to the WxCC Task and WxCC Engage integrations and theeir status should display ‘Active’. Mark one of they added auths as ‘default’ to avoid selecting the auth manually in each node after creating the flow.
+
+- A livechat channel asset in the Webex Connect tenant. More information on how to set up a digital channel asset in Webex connect
+
+### 
+
+Importing and using the template
+
+After creating a new flow using the template, the users will need to make the following changes in their flow:
+
+- Select the relevant pre-chat form in the ‘Pre-chat form’ in-app messaging node (Node ID: 36) and the subsequent receive node (Node ID 38).
+
+- Alternatively, if the use-case doesn’t require a pre-chat form, these nodes can be removed and the subsequent Append Conversation node (Node ID: 1254) can be updated.
+
+- Update the Flow Id in Resolve Conversation node (Node ID: 1590). The flow ID can be copied from the flow URL or the service dashboard where flows are listed.
+
+- Select the relevant AI agent in the AI Agent nodes (Node ID: 1695 and 1711).
+
+- Update the ‘liveChatDomain’ custom variable from flow settings on the top right of the canvas. This should be set to the domain where the Livechat widget is to be deployed.
+
+- Select the appropriate agent queue in the Queue task node (Node ID: 1388).
+
+### 
+
+Flow breakdown
+
+- Customer initiates contact: User initiates the conversation via the livechat widget on the domain it’s deployed. The chat is received by Webex connect.
+
+- Pre-chat form is displayed: The flow sends a pre-chat form to the user to collect relevant details. Pre-chat forms can be created under Tools > Templates.
+
+- Contact center resolves the conversation: Contact center creates a new conversation or appends the user message to an existing conversation based on customer details.
+
+- Data is passed to AI Agent: AI agent (via the AI Agent node) receives the first message configured in the livechat widget configuration (under Web chat assets on Control Hub). The default message is ‘Hi there’, which solicits a greeting response from the agent.
+
+- Interaction with the AI Agent: AI Agent processes the input and responds based on the configuration. The flow exits the AI Agent node after each response, the message is sent to the user by the in-app messaging node and appended to the conversation using the Append conversation node.
+
+- The flow then waits for a user response via the receive node. This node has a timeout duration, which is set to 120 seconds in the flow template. On receiving a message, the flow appends it to the conversation and loops back to the AI Agent node. If the receive node times out, the conversation is closed in contact center as well as in the AI Agent (via the Close session method).
+
+- If agent handover is triggered by the AI agent based on the configuration, the user is handed over to a human agent and the conversation is queued via the Queue task node.
+
+- Fulfilment in the AI Agent: The following steps are followed for fulfilment:
+
+- After each agent response is appended to the conversation, the template extracts the response name from the agent’s session metadata via a data parser node.
+
+- A branch node looks for different response names that require fulfilment. If none of these conditions are matched, the flow returns to the receive node and waits for the user to respond.
+
+- Relevant entities are obtained from the agent’s session metadata using another data parser node.
+
+- User’s intent is fulfilled via http nodes, depending on the response name. Various scenarios that are fulfilled in this template are appointment lookup, booking, fetching and cancelling. The template comes with APIs that the developers can use for testing and replace with they own APIs as needed.
+
+- The fulfilment response is evaluated in each scenario using an evaluate node and the same variable is used to store the response.
+
+- Once response is sent to the user and appended to the conversation, the flow returns to the receive node.
+
+## 
+
+AI Agent Fulfilment Track Package
+
+Developers can create a new flow by importing this template to create an autonomous fulfilment flow that tracks customers’ packages. This flow can be used as a guide for building fulfilment flows for autonomous AI agents.
+
+### 
+
+Pre-requisites
+
+- An autonomous AI Agent for tracking packages, this is available as a template agent that can be used at the time of creating a new agent.
+
+- A Webex Connect tenant with AI agents, WxCC Task and WxCC Engage pre-built integrations. These are list under Assets > Integrations in Webex Connect. Auth should be added to the WxCC Task and WxCC Engage integrations and theeir status should display ‘Active’. Mark one of they added auths as ‘default’ to avoid selecting the auth manually in each node after creating the flow.
+
+- A livechat channel asset in the Webex Connect tenant. More information on how to set up a digital channel asset in Webex connect
+
+### 
+
+Importing and using the template
+
+Developers simply need to create a new flow using this template and make it live. This fulfilment flow should be selected in the relevant action in their AI Agent.
+
+### 
+
+Flow breakdown
+
+- AI Agent requests for fulfilment: The fulfilment receives a request from the AI agent for fulfilment. This request contains the package number provided by the customer. Order number ABC123456 can be used for testing.
+
+- Package status is fetched via HTTP node: The HTTP node fetched the package status. The template comes with an APIs that the developers can use for testing and replace with they own APIs as needed.
+
+- Package status is returned to the AI Agent: The flow returns the status of the package back to the AI Agent. Developers can control what information they want to send back to the AI agent under flow settings > flow outcomes > last execution status. Under the ‘Notify AI Agent’ selection, developers can define the keys that should be returned to the agent or provide the data in JSON format.

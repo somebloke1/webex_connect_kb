@@ -1,0 +1,31 @@
+{
+  "category": "Webex Engage Standalone Nodes",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257969",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "f68aeae5ce1be983afc05614f0a49a114100359ea96c361119ce3335b3308c97",
+    "source_path": "f2f4c009254340fc51859ffe1f0ecffc7ce16c84c4624cde74f988e4f3a6c696",
+    "text_path": "115ecd5fffad4e88ba81a7f45ee1167d8fb5dba78ca437f81868704611422993"
+  },
+  "headings": [],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/setup-org-hierarchy.md",
+  "resolved_url": "https://help.webexconnect.io/docs/setup-org-hierarchy",
+  "retrieved_at": "2026-09-08T23:29:25+00:00",
+  "sha256_html_response": "dba1c84756ba5b77af7118f53b06982ace6644caf4ee01ab4e6a69bb2298d439",
+  "sha256_source_body": "f2f4c009254340fc51859ffe1f0ecffc7ce16c84c4624cde74f988e4f3a6c696",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/setup-org-hierarchy.source.md",
+  "source_updated_at": "2026-04-14T07:44:51.420Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/setup-org-hierarchy.txt",
+  "title": "Setup Org Hierarchy - WxEngage standalone",
+  "url": "https://help.webexconnect.io/docs/setup-org-hierarchy",
+  "word_count": 101,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/setup-org-hierarchy.metadata.json"
+}

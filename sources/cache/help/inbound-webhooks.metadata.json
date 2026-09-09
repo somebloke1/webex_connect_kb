@@ -1,0 +1,35 @@
+{
+  "category": "Assets",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182577eb",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "6d4079db3cfab873b442c7f9536bcb74dd2684985a9099b6833576852d75195a",
+    "source_path": "87c0a068831a6c75688a82bbe09e80d9ffc6752b81bce6add857f40a4b7388f1",
+    "text_path": "d78da39186339a3a85df537bfa7c4dfd4a3831fa303d06caf13807d252a29d26"
+  },
+  "headings": [
+    "📘Authentication",
+    "Trigger Conditions for Inbound Webhook",
+    "📘Note"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/inbound-webhooks.md",
+  "resolved_url": "https://help.webexconnect.io/docs/inbound-webhooks",
+  "retrieved_at": "2026-09-08T23:29:06+00:00",
+  "sha256_html_response": "87953898c5777f31e590d38941a11a818caaf12ddb1028e987799e81807c290c",
+  "sha256_source_body": "87c0a068831a6c75688a82bbe09e80d9ffc6752b81bce6add857f40a4b7388f1",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/inbound-webhooks.source.md",
+  "source_updated_at": "2025-08-01T05:12:55.053Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/inbound-webhooks.txt",
+  "title": "Inbound Webhooks",
+  "url": "https://help.webexconnect.io/docs/inbound-webhooks",
+  "word_count": 391,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/inbound-webhooks.metadata.json"
+}

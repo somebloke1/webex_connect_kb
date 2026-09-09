@@ -1,0 +1,36 @@
+{
+  "api_metadata_path": "sources/cache/developer/whatsapp-contacts-messages.api.json",
+  "category": "MULTI CHANNEL COMMUNICATION API",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f662b",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "8ff5556f59005aef9a886075d0f89ec7918058926b48a3339148bd689e4f2ac6",
+    "source_path": "953acbd4ed990585268e52328763e38266634bfb64604a008823f667938ace0f",
+    "text_path": "b144e47997624aaaa62a543199c0ca0dce8cbba02ae1bc52afc3d0697e56637d"
+  },
+  "headings": [
+    "Error Codes"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/whatsapp-contacts-messages.md",
+  "openapi_path": "sources/cache/openapi/57fe90cadb7c78bd52051df26e355d0ab9a794fb37e25f8f2a68f9c9e60097a8.json",
+  "resolved_url": "https://developers.webexconnect.io/reference/whatsapp-contacts-messages",
+  "retrieved_at": "2026-09-08T23:31:43+00:00",
+  "sha256_api_metadata": "69a77d8f58bcf1c8c2481df08b118b275b70908fd6793129c68be5f26992c3fd",
+  "sha256_html_response": "e9383a5d2f9ac11522882710e5e314264c2abb3f97730bb70f4e7fb64b8c3fc7",
+  "sha256_openapi": "57fe90cadb7c78bd52051df26e355d0ab9a794fb37e25f8f2a68f9c9e60097a8",
+  "sha256_source_body": "953acbd4ed990585268e52328763e38266634bfb64604a008823f667938ace0f",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/whatsapp-contacts-messages.source.md",
+  "source_updated_at": "2026-05-12T12:33:31.491Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/whatsapp-contacts-messages.txt",
+  "title": "WhatsApp Contacts Messages",
+  "url": "https://developers.webexconnect.io/reference/whatsapp-contacts-messages",
+  "word_count": 1878,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/developer/whatsapp-contacts-messages.metadata.json"
+}

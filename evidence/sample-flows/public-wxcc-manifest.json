@@ -1,0 +1,1425 @@
+[
+  {
+    "repository_path": "Webex Connect Flows/README.md",
+    "source_url": "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/README.md",
+    "download_url": "https://raw.githubusercontent.com/CiscoDevNet/webexcc-digital-channels/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/README.md",
+    "local_path": "evidence/sample-flows/raw/wxcc-v3.5/9884cd07-README.md",
+    "sha256": "96f770bfe92aa4f6a959911c1429449711df86e0090570e7b0f235975a68e492",
+    "bytes": 10180,
+    "retrieved_at": "2026-09-08T23:54:12.295482+00:00"
+  },
+  {
+    "repository_path": "Webex Connect Flows/v3.5/Sample/Attachment Drop Notification to Customer/EmailAttachmentDropNotification.workflow.zip",
+    "source_url": "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Attachment%20Drop%20Notification%20to%20Customer/EmailAttachmentDropNotification.workflow.zip",
+    "download_url": "https://raw.githubusercontent.com/CiscoDevNet/webexcc-digital-channels/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Attachment%20Drop%20Notification%20to%20Customer/EmailAttachmentDropNotification.workflow.zip",
+    "local_path": "evidence/sample-flows/raw/wxcc-v3.5/644a6fb2-EmailAttachmentDropNotification.workflow.zip",
+    "sha256": "928b3a004fb6e7e530b3823ce9dffee4e16cf6f6299bcefa375403ab6abd6c36",
+    "bytes": 246475,
+    "retrieved_at": "2026-09-08T23:54:12.568671+00:00",
+    "zip_members": [
+      {
+        "name": "EmailAttachmentDropNotification.workflow",
+        "bytes": 431104
+      },
+      {
+        "name": "__MACOSX/._EmailAttachmentDropNotification.workflow",
+        "bytes": 319
+      }
+    ],
+    "inspection": {
+      "workflow_member": "EmailAttachmentDropNotification.workflow",
+      "format": "opaque",
+      "native_graph_extracted": false
+    },
+    "inspection_scope": "Original acquisition/static parse checks, before later supported UI inspection",
+    "supported_ui_inspection": {
+      "status": "imported_for_read_only_static_graph_inspection",
+      "observations": [
+        {
+          "path": "evidence/sample-flows/observed/wxcc-emailattachmentdropnotification.json",
+          "observed_at": "2026-09-09T00:02:36.379Z",
+          "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model"
+        }
+      ],
+      "runtime_tested": false,
+      "note": "Temporary sample inspection is separate from executing or validating a live integration"
+    }
+  },
+  {
+    "repository_path": "Webex Connect Flows/v3.5/Sample/Attachment Drop Notification to Customer/README.md",
+    "source_url": "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Attachment%20Drop%20Notification%20to%20Customer/README.md",
+    "download_url": "https://raw.githubusercontent.com/CiscoDevNet/webexcc-digital-channels/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Attachment%20Drop%20Notification%20to%20Customer/README.md",
+    "local_path": "evidence/sample-flows/raw/wxcc-v3.5/f0a1d9c7-README.md",
+    "sha256": "3e598ecc65c6768527de8ac7200e011934a64925fea6d619c1b7eeedcc695e91",
+    "bytes": 6901,
+    "retrieved_at": "2026-09-08T23:54:12.780395+00:00"
+  },
+  {
+    "repository_path": "Webex Connect Flows/v3.5/Sample/Bot Flows/FacebookTaskBotInboundFlow.workflow.zip",
+    "source_url": "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Bot%20Flows/FacebookTaskBotInboundFlow.workflow.zip",
+    "download_url": "https://raw.githubusercontent.com/CiscoDevNet/webexcc-digital-channels/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Bot%20Flows/FacebookTaskBotInboundFlow.workflow.zip",
+    "local_path": "evidence/sample-flows/raw/wxcc-v3.5/3d441181-FacebookTaskBotInboundFlow.workflow.zip",
+    "sha256": "4240c5776477b82124afa40103b4728931c583da552a2365963277f21761e3e6",
+    "bytes": 578958,
+    "retrieved_at": "2026-09-08T23:54:13.194037+00:00",
+    "zip_members": [
+      {
+        "name": "FacebookTaskBotInboundFlow.workflow",
+        "bytes": 1014272
+      },
+      {
+        "name": "__MACOSX/._FacebookTaskBotInboundFlow.workflow",
+        "bytes": 319
+      }
+    ],
+    "inspection": {
+      "workflow_member": "FacebookTaskBotInboundFlow.workflow",
+      "format": "opaque",
+      "native_graph_extracted": false
+    },
+    "inspection_scope": "Original acquisition/static parse checks, before later supported UI inspection",
+    "supported_ui_inspection": {
+      "status": "imported_for_read_only_static_graph_inspection",
+      "observations": [
+        {
+          "path": "evidence/sample-flows/observed/wxcc-facebooktaskbotinboundflow.json",
+          "observed_at": "2026-09-09T00:03:05.707Z",
+          "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model"
+        }
+      ],
+      "runtime_tested": false,
+      "note": "Temporary sample inspection is separate from executing or validating a live integration"
+    }
+  },
+  {
+    "repository_path": "Webex Connect Flows/v3.5/Sample/Bot Flows/LiveChatQABotInboundFlow.workflow.zip",
+    "source_url": "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Bot%20Flows/LiveChatQABotInboundFlow.workflow.zip",
+    "download_url": "https://raw.githubusercontent.com/CiscoDevNet/webexcc-digital-channels/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Bot%20Flows/LiveChatQABotInboundFlow.workflow.zip",
+    "local_path": "evidence/sample-flows/raw/wxcc-v3.5/c6601bcf-LiveChatQABotInboundFlow.workflow.zip",
+    "sha256": "497d7a9a3cd082793fcfb3e08d70dc9cd808db1f0c946c09b9be0432c01a9a87",
+    "bytes": 650680,
+    "retrieved_at": "2026-09-08T23:54:13.539389+00:00",
+    "zip_members": [
+      {
+        "name": "LiveChatQABotInboundFlow.workflow",
+        "bytes": 1140224
+      },
+      {
+        "name": "__MACOSX/._LiveChatQABotInboundFlow.workflow",
+        "bytes": 319
+      }
+    ],
+    "inspection": {
+      "workflow_member": "LiveChatQABotInboundFlow.workflow",
+      "format": "opaque",
+      "native_graph_extracted": false
+    },
+    "inspection_scope": "Original acquisition/static parse checks, before later supported UI inspection",
+    "supported_ui_inspection": {
+      "status": "imported_for_read_only_static_graph_inspection",
+      "observations": [
+        {
+          "path": "evidence/sample-flows/observed/wxcc-livechatqabotinboundflow.json",
+          "observed_at": "2026-09-09T00:03:14.397Z",
+          "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model"
+        }
+      ],
+      "runtime_tested": false,
+      "note": "Temporary sample inspection is separate from executing or validating a live integration"
+    }
+  },
+  {
+    "repository_path": "Webex Connect Flows/v3.5/Sample/Bot Flows/README.md",
+    "source_url": "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Bot%20Flows/README.md",
+    "download_url": "https://raw.githubusercontent.com/CiscoDevNet/webexcc-digital-channels/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Bot%20Flows/README.md",
+    "local_path": "evidence/sample-flows/raw/wxcc-v3.5/86896002-README.md",
+    "sha256": "b9af53a9db374df031730d6cb265667258eb6cdb52424e7912eb2bff775366e6",
+    "bytes": 4297,
+    "retrieved_at": "2026-09-08T23:54:13.720698+00:00"
+  },
+  {
+    "repository_path": "Webex Connect Flows/v3.5/Sample/Bot Flows/SmsQABotInboundFlow.workflow.zip",
+    "source_url": "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Bot%20Flows/SmsQABotInboundFlow.workflow.zip",
+    "download_url": "https://raw.githubusercontent.com/CiscoDevNet/webexcc-digital-channels/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Bot%20Flows/SmsQABotInboundFlow.workflow.zip",
+    "local_path": "evidence/sample-flows/raw/wxcc-v3.5/687f5bc0-SmsQABotInboundFlow.workflow.zip",
+    "sha256": "cce518cfafecb6925e162e6c9583b31adda2babc7070f25fb064293de82695e2",
+    "bytes": 488836,
+    "retrieved_at": "2026-09-08T23:54:14.112965+00:00",
+    "zip_members": [
+      {
+        "name": "SmsQABotInboundFlow.workflow",
+        "bytes": 856576
+      },
+      {
+        "name": "__MACOSX/._SmsQABotInboundFlow.workflow",
+        "bytes": 319
+      }
+    ],
+    "inspection": {
+      "workflow_member": "SmsQABotInboundFlow.workflow",
+      "format": "opaque",
+      "native_graph_extracted": false
+    },
+    "inspection_scope": "Original acquisition/static parse checks, before later supported UI inspection",
+    "supported_ui_inspection": {
+      "status": "imported_for_read_only_static_graph_inspection",
+      "observations": [
+        {
+          "path": "evidence/sample-flows/observed/wxcc-smsqabotinboundflow.json",
+          "observed_at": "2026-09-09T00:03:21.623Z",
+          "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model"
+        }
+      ],
+      "runtime_tested": false,
+      "note": "Temporary sample inspection is separate from executing or validating a live integration"
+    }
+  },
+  {
+    "repository_path": "Webex Connect Flows/v3.5/Sample/Usage of Contact Priority In Flows/EmailInboundSampleFlowWithContactPriority.workflow.zip",
+    "source_url": "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Usage%20of%20Contact%20Priority%20In%20Flows/EmailInboundSampleFlowWithContactPriority.workflow.zip",
+    "download_url": "https://raw.githubusercontent.com/CiscoDevNet/webexcc-digital-channels/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Usage%20of%20Contact%20Priority%20In%20Flows/EmailInboundSampleFlowWithContactPriority.workflow.zip",
+    "local_path": "evidence/sample-flows/raw/wxcc-v3.5/731dcb7e-EmailInboundSampleFlowWithContactPriority.workflow.zip",
+    "sha256": "e725a669e496807a9827eee53951e057fefe2d59b250f549b48edca3978075a9",
+    "bytes": 240452,
+    "retrieved_at": "2026-09-08T23:54:14.400960+00:00",
+    "zip_members": [
+      {
+        "name": "EmailInboundSampleFlowWithContactPriority.workflow",
+        "bytes": 419840
+      },
+      {
+        "name": "__MACOSX/._EmailInboundSampleFlowWithContactPriority.workflow",
+        "bytes": 277
+      }
+    ],
+    "inspection": {
+      "workflow_member": "EmailInboundSampleFlowWithContactPriority.workflow",
+      "format": "opaque",
+      "native_graph_extracted": false
+    },
+    "inspection_scope": "Original acquisition/static parse checks, before later supported UI inspection",
+    "supported_ui_inspection": {
+      "status": "imported_for_read_only_static_graph_inspection",
+      "observations": [
+        {
+          "path": "evidence/sample-flows/observed/wxcc-emailinboundsampleflowwithcontactpriority.json",
+          "observed_at": "2026-09-09T00:03:49.819Z",
+          "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model"
+        }
+      ],
+      "runtime_tested": false,
+      "note": "Temporary sample inspection is separate from executing or validating a live integration"
+    }
+  },
+  {
+    "repository_path": "Webex Connect Flows/v3.5/Sample/Usage of Contact Priority In Flows/README.md",
+    "source_url": "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Usage%20of%20Contact%20Priority%20In%20Flows/README.md",
+    "download_url": "https://raw.githubusercontent.com/CiscoDevNet/webexcc-digital-channels/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Usage%20of%20Contact%20Priority%20In%20Flows/README.md",
+    "local_path": "evidence/sample-flows/raw/wxcc-v3.5/5b19d396-README.md",
+    "sha256": "12fd934399265ba91f7f2b39f192cf078449754066facf18ca3e1b3b3c43a407",
+    "bytes": 3591,
+    "retrieved_at": "2026-09-08T23:54:14.583567+00:00"
+  },
+  {
+    "repository_path": "Webex Connect Flows/v3.5/Sample/Usage of Screen Pop in Flows/README.md",
+    "source_url": "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Usage%20of%20Screen%20Pop%20in%20Flows/README.md",
+    "download_url": "https://raw.githubusercontent.com/CiscoDevNet/webexcc-digital-channels/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Usage%20of%20Screen%20Pop%20in%20Flows/README.md",
+    "local_path": "evidence/sample-flows/raw/wxcc-v3.5/58968742-README.md",
+    "sha256": "dd8c67158c29349c801a65717a26b3bb622e6fe6f7d3ca65a114bec0c6a0013e",
+    "bytes": 3032,
+    "retrieved_at": "2026-09-08T23:54:14.749698+00:00"
+  },
+  {
+    "repository_path": "Webex Connect Flows/v3.5/Sample/Usage of Screen Pop in Flows/Task Close Flow With Screen Pop.workflow.zip",
+    "source_url": "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Usage%20of%20Screen%20Pop%20in%20Flows/Task%20Close%20Flow%20With%20Screen%20Pop.workflow.zip",
+    "download_url": "https://raw.githubusercontent.com/CiscoDevNet/webexcc-digital-channels/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Usage%20of%20Screen%20Pop%20in%20Flows/Task%20Close%20Flow%20With%20Screen%20Pop.workflow.zip",
+    "local_path": "evidence/sample-flows/raw/wxcc-v3.5/714f54bd-Task Close Flow With Screen Pop.workflow.zip",
+    "sha256": "973b65c000a8f1a029443d0b8c2fa9ecd3de83407167248d1f1b5ae79cdd9b79",
+    "bytes": 59812,
+    "retrieved_at": "2026-09-08T23:54:14.965539+00:00",
+    "zip_members": [
+      {
+        "name": "Task Close Flow With Screen Pop.workflow",
+        "bytes": 102912
+      },
+      {
+        "name": "__MACOSX/._Task Close Flow With Screen Pop.workflow",
+        "bytes": 277
+      }
+    ],
+    "inspection": {
+      "workflow_member": "Task Close Flow With Screen Pop.workflow",
+      "format": "opaque",
+      "native_graph_extracted": false
+    },
+    "inspection_scope": "Original acquisition/static parse checks, before later supported UI inspection",
+    "supported_ui_inspection": {
+      "status": "imported_for_read_only_static_graph_inspection",
+      "observations": [
+        {
+          "path": "evidence/sample-flows/observed/wxcc-task-close-flow-with-screen-pop.json",
+          "observed_at": "2026-09-09T00:03:53.840Z",
+          "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model"
+        }
+      ],
+      "runtime_tested": false,
+      "note": "Temporary sample inspection is separate from executing or validating a live integration"
+    }
+  },
+  {
+    "repository_path": "Webex Connect Flows/v3.5/Sample/Usage of Set Variable In Flows/LiveChatInboundSampleFlowWithSetVariable.workflow.zip",
+    "source_url": "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Usage%20of%20Set%20Variable%20In%20Flows/LiveChatInboundSampleFlowWithSetVariable.workflow.zip",
+    "download_url": "https://raw.githubusercontent.com/CiscoDevNet/webexcc-digital-channels/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Usage%20of%20Set%20Variable%20In%20Flows/LiveChatInboundSampleFlowWithSetVariable.workflow.zip",
+    "local_path": "evidence/sample-flows/raw/wxcc-v3.5/e9c81b91-LiveChatInboundSampleFlowWithSetVariable.workflow.zip",
+    "sha256": "62ced6f940eefaccf7ee623efa447f6bb5498ada2117541496b05abca122ceef",
+    "bytes": 458145,
+    "retrieved_at": "2026-09-08T23:54:15.300071+00:00",
+    "zip_members": [
+      {
+        "name": "LiveChatInboundSampleFlowWithSetVariable.workflow",
+        "bytes": 802304
+      },
+      {
+        "name": "__MACOSX/._LiveChatInboundSampleFlowWithSetVariable.workflow",
+        "bytes": 319
+      }
+    ],
+    "inspection": {
+      "workflow_member": "LiveChatInboundSampleFlowWithSetVariable.workflow",
+      "format": "opaque",
+      "native_graph_extracted": false
+    },
+    "inspection_scope": "Original acquisition/static parse checks, before later supported UI inspection",
+    "supported_ui_inspection": {
+      "status": "imported_for_read_only_static_graph_inspection",
+      "observations": [
+        {
+          "path": "evidence/sample-flows/observed/wxcc-livechatinboundsampleflowwithsetvariable.json",
+          "observed_at": "2026-09-09T00:04:00.804Z",
+          "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model"
+        }
+      ],
+      "runtime_tested": false,
+      "note": "Temporary sample inspection is separate from executing or validating a live integration"
+    }
+  },
+  {
+    "repository_path": "Webex Connect Flows/v3.5/Sample/Usage of Set Variable In Flows/README.md",
+    "source_url": "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Usage%20of%20Set%20Variable%20In%20Flows/README.md",
+    "download_url": "https://raw.githubusercontent.com/CiscoDevNet/webexcc-digital-channels/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Usage%20of%20Set%20Variable%20In%20Flows/README.md",
+    "local_path": "evidence/sample-flows/raw/wxcc-v3.5/08d0825f-README.md",
+    "sha256": "0586a477b3e11e687c0145a3f5cd8aedad2608be3c05685e966395533061aec6",
+    "bytes": 3583,
+    "retrieved_at": "2026-09-08T23:54:15.556156+00:00"
+  },
+  {
+    "repository_path": "Webex Connect Flows/v3.5/Sample/Usage of Set Variable In Flows/Task Routed Sample Flow For Extracting Variables.workflow.zip",
+    "source_url": "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Usage%20of%20Set%20Variable%20In%20Flows/Task%20Routed%20Sample%20Flow%20For%20Extracting%20Variables.workflow.zip",
+    "download_url": "https://raw.githubusercontent.com/CiscoDevNet/webexcc-digital-channels/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Usage%20of%20Set%20Variable%20In%20Flows/Task%20Routed%20Sample%20Flow%20For%20Extracting%20Variables.workflow.zip",
+    "local_path": "evidence/sample-flows/raw/wxcc-v3.5/740751f0-Task Routed Sample Flow For Extracting Variables.workflow.zip",
+    "sha256": "bba70039da07a43279522ed72200ae1f0d968b04a7626f2d5cdef3c8212240cb",
+    "bytes": 60690,
+    "retrieved_at": "2026-09-08T23:54:15.926562+00:00",
+    "zip_members": [
+      {
+        "name": "Task Routed Sample Flow For Extracting Variables.workflow",
+        "bytes": 104448
+      },
+      {
+        "name": "__MACOSX/._Task Routed Sample Flow For Extracting Variables.workflow",
+        "bytes": 277
+      }
+    ],
+    "inspection": {
+      "workflow_member": "Task Routed Sample Flow For Extracting Variables.workflow",
+      "format": "opaque",
+      "native_graph_extracted": false
+    },
+    "inspection_scope": "Original acquisition/static parse checks, before later supported UI inspection",
+    "supported_ui_inspection": {
+      "status": "imported_for_read_only_static_graph_inspection",
+      "observations": [
+        {
+          "path": "evidence/sample-flows/observed/wxcc-task-routed-sample-flow-for-extracting-variables.json",
+          "observed_at": "2026-09-09T00:04:25.187Z",
+          "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model"
+        }
+      ],
+      "runtime_tested": false,
+      "note": "Temporary sample inspection is separate from executing or validating a live integration"
+    }
+  },
+  {
+    "repository_path": "Webex Connect Flows/v3.5/Template/Event Handling Workflows/README.md",
+    "source_url": "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Event%20Handling%20Workflows/README.md",
+    "download_url": "https://raw.githubusercontent.com/CiscoDevNet/webexcc-digital-channels/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Event%20Handling%20Workflows/README.md",
+    "local_path": "evidence/sample-flows/raw/wxcc-v3.5/e50a35da-README.md",
+    "sha256": "eb97c096bde8607953fa0d715f32981325b7f3546ef12e2c02eec683e9270862",
+    "bytes": 9556,
+    "retrieved_at": "2026-09-08T23:54:16.109203+00:00"
+  },
+  {
+    "repository_path": "Webex Connect Flows/v3.5/Template/Event Handling Workflows/Task Close Flow.workflow.zip",
+    "source_url": "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Event%20Handling%20Workflows/Task%20Close%20Flow.workflow.zip",
+    "download_url": "https://raw.githubusercontent.com/CiscoDevNet/webexcc-digital-channels/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Event%20Handling%20Workflows/Task%20Close%20Flow.workflow.zip",
+    "local_path": "evidence/sample-flows/raw/wxcc-v3.5/24e4ad85-Task Close Flow.workflow.zip",
+    "sha256": "2ac3bf80c77bd112601d2c0c74bc3292fa39e6bbc0823c2eef7848c1346b326e",
+    "bytes": 59408,
+    "retrieved_at": "2026-09-08T23:54:16.447262+00:00",
+    "zip_members": [
+      {
+        "name": "Task Close Flow.workflow",
+        "bytes": 102400
+      },
+      {
+        "name": "__MACOSX/._Task Close Flow.workflow",
+        "bytes": 319
+      }
+    ],
+    "inspection": {
+      "workflow_member": "Task Close Flow.workflow",
+      "format": "opaque",
+      "native_graph_extracted": false
+    },
+    "inspection_scope": "Original acquisition/static parse checks, before later supported UI inspection",
+    "supported_ui_inspection": {
+      "status": "imported_for_read_only_static_graph_inspection",
+      "observations": [
+        {
+          "path": "evidence/sample-flows/observed/wxcc-task-close-flow.json",
+          "observed_at": "2026-09-09T00:04:28.883Z",
+          "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model"
+        }
+      ],
+      "runtime_tested": false,
+      "note": "Temporary sample inspection is separate from executing or validating a live integration"
+    }
+  },
+  {
+    "repository_path": "Webex Connect Flows/v3.5/Template/Event Handling Workflows/Task Modified Flow.workflow.zip",
+    "source_url": "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Event%20Handling%20Workflows/Task%20Modified%20Flow.workflow.zip",
+    "download_url": "https://raw.githubusercontent.com/CiscoDevNet/webexcc-digital-channels/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Event%20Handling%20Workflows/Task%20Modified%20Flow.workflow.zip",
+    "local_path": "evidence/sample-flows/raw/wxcc-v3.5/0b2de247-Task Modified Flow.workflow.zip",
+    "sha256": "bea316cbb55bca5b51cac9a58dd129fe5817991cd419df69d70a460de188610c",
+    "bytes": 69988,
+    "retrieved_at": "2026-09-08T23:54:16.655681+00:00",
+    "zip_members": [
+      {
+        "name": "Task Modified Flow.workflow",
+        "bytes": 120832
+      },
+      {
+        "name": "__MACOSX/._Task Modified Flow.workflow",
+        "bytes": 319
+      }
+    ],
+    "inspection": {
+      "workflow_member": "Task Modified Flow.workflow",
+      "format": "opaque",
+      "native_graph_extracted": false
+    },
+    "inspection_scope": "Original acquisition/static parse checks, before later supported UI inspection",
+    "supported_ui_inspection": {
+      "status": "imported_for_read_only_static_graph_inspection",
+      "observations": [
+        {
+          "path": "evidence/sample-flows/observed/wxcc-task-modified-flow.json",
+          "observed_at": "2026-09-09T00:04:32.908Z",
+          "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model"
+        }
+      ],
+      "runtime_tested": false,
+      "note": "Temporary sample inspection is separate from executing or validating a live integration"
+    }
+  },
+  {
+    "repository_path": "Webex Connect Flows/v3.5/Template/Event Handling Workflows/Task Routed Flow.workflow.zip",
+    "source_url": "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Event%20Handling%20Workflows/Task%20Routed%20Flow.workflow.zip",
+    "download_url": "https://raw.githubusercontent.com/CiscoDevNet/webexcc-digital-channels/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Event%20Handling%20Workflows/Task%20Routed%20Flow.workflow.zip",
+    "local_path": "evidence/sample-flows/raw/wxcc-v3.5/3668a17a-Task Routed Flow.workflow.zip",
+    "sha256": "5b7ba98c505211d325acc63c8b25115635e8cf291bc834cb84d62ab542c7a04c",
+    "bytes": 60889,
+    "retrieved_at": "2026-09-08T23:54:16.885528+00:00",
+    "zip_members": [
+      {
+        "name": "Task Routed Flow.workflow",
+        "bytes": 104960
+      },
+      {
+        "name": "__MACOSX/._Task Routed Flow.workflow",
+        "bytes": 319
+      }
+    ],
+    "inspection": {
+      "workflow_member": "Task Routed Flow.workflow",
+      "format": "opaque",
+      "native_graph_extracted": false
+    },
+    "inspection_scope": "Original acquisition/static parse checks, before later supported UI inspection",
+    "supported_ui_inspection": {
+      "status": "imported_for_read_only_static_graph_inspection",
+      "observations": [
+        {
+          "path": "evidence/sample-flows/observed/wxcc-task-routed-flow.json",
+          "observed_at": "2026-09-09T00:04:46.978Z",
+          "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model"
+        }
+      ],
+      "runtime_tested": false,
+      "note": "Temporary sample inspection is separate from executing or validating a live integration"
+    }
+  },
+  {
+    "repository_path": "Webex Connect Flows/v3.5/Template/Media Specific Workflows/EmailInboundFlow.workflow.zip",
+    "source_url": "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Media%20Specific%20Workflows/EmailInboundFlow.workflow.zip",
+    "download_url": "https://raw.githubusercontent.com/CiscoDevNet/webexcc-digital-channels/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Media%20Specific%20Workflows/EmailInboundFlow.workflow.zip",
+    "local_path": "evidence/sample-flows/raw/wxcc-v3.5/db7d78f2-EmailInboundFlow.workflow.zip",
+    "sha256": "592be48953b8162c32bcb49d9d4bab9cfcb0f682b89561408a8485028afa7073",
+    "bytes": 256745,
+    "retrieved_at": "2026-09-08T23:54:17.170907+00:00",
+    "zip_members": [
+      {
+        "name": "EmailInboundFlow.workflow",
+        "bytes": 448512
+      },
+      {
+        "name": "__MACOSX/._EmailInboundFlow.workflow",
+        "bytes": 355
+      }
+    ],
+    "inspection": {
+      "workflow_member": "EmailInboundFlow.workflow",
+      "format": "opaque",
+      "native_graph_extracted": false
+    },
+    "inspection_scope": "Original acquisition/static parse checks, before later supported UI inspection",
+    "supported_ui_inspection": {
+      "status": "imported_for_read_only_static_graph_inspection",
+      "observations": [
+        {
+          "path": "evidence/sample-flows/observed/wxcc-emailinboundflow.json",
+          "observed_at": "2026-09-09T00:04:52.983Z",
+          "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model"
+        }
+      ],
+      "runtime_tested": false,
+      "note": "Temporary sample inspection is separate from executing or validating a live integration"
+    }
+  },
+  {
+    "repository_path": "Webex Connect Flows/v3.5/Template/Media Specific Workflows/README.md",
+    "source_url": "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Media%20Specific%20Workflows/README.md",
+    "download_url": "https://raw.githubusercontent.com/CiscoDevNet/webexcc-digital-channels/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Media%20Specific%20Workflows/README.md",
+    "local_path": "evidence/sample-flows/raw/wxcc-v3.5/b81c5578-README.md",
+    "sha256": "3d9ab936bb667ccbae7dccd7904aaea4ba7fd67ab28819f492365a9d51f8af71",
+    "bytes": 6149,
+    "retrieved_at": "2026-09-08T23:54:17.355195+00:00"
+  },
+  {
+    "repository_path": "Webex Connect Flows/v3.5/Template/Media Specific Workflows/SMS inbound.workflow.zip",
+    "source_url": "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Media%20Specific%20Workflows/SMS%20inbound.workflow.zip",
+    "download_url": "https://raw.githubusercontent.com/CiscoDevNet/webexcc-digital-channels/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Media%20Specific%20Workflows/SMS%20inbound.workflow.zip",
+    "local_path": "evidence/sample-flows/raw/wxcc-v3.5/c53cf22b-SMS inbound.workflow.zip",
+    "sha256": "4507dfc9a06e971252075195de4efe5cbc0cd8043a3714a9b15d0be020b403de",
+    "bytes": 197617,
+    "retrieved_at": "2026-09-08T23:54:17.621772+00:00",
+    "zip_members": [
+      {
+        "name": "SMS inbound.workflow",
+        "bytes": 345088
+      },
+      {
+        "name": "__MACOSX/._SMS inbound.workflow",
+        "bytes": 355
+      }
+    ],
+    "inspection": {
+      "workflow_member": "SMS inbound.workflow",
+      "format": "opaque",
+      "native_graph_extracted": false
+    },
+    "inspection_scope": "Original acquisition/static parse checks, before later supported UI inspection",
+    "supported_ui_inspection": {
+      "status": "imported_for_read_only_static_graph_inspection",
+      "observations": [
+        {
+          "path": "evidence/sample-flows/observed/wxcc-sms-inbound.json",
+          "observed_at": "2026-09-09T00:04:57.868Z",
+          "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model"
+        }
+      ],
+      "runtime_tested": false,
+      "note": "Temporary sample inspection is separate from executing or validating a live integration"
+    }
+  },
+  {
+    "repository_path": "Webex Connect Flows/v3.5/Sample/Apple Business Messages/Other sample flows /Apple Inbound Flow with IntentId GroupId based Routing.workflow.zip",
+    "source_url": "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Apple%20Business%20Messages/Other%20sample%20flows%20/Apple%20Inbound%20Flow%20with%20IntentId%20GroupId%20based%20Routing.workflow.zip",
+    "download_url": "https://raw.githubusercontent.com/CiscoDevNet/webexcc-digital-channels/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Apple%20Business%20Messages/Other%20sample%20flows%20/Apple%20Inbound%20Flow%20with%20IntentId%20GroupId%20based%20Routing.workflow.zip",
+    "local_path": "evidence/sample-flows/raw/wxcc-v3.5/2dd09164-Apple Inbound Flow with IntentId GroupId based Routing.workflow.zip",
+    "sha256": "0a4807e52fd59fafbaf9f054f44a7feaddf8eced032f40e594cd46d8574b1e57",
+    "bytes": 434313,
+    "retrieved_at": "2026-09-09T00:04:17.442648+00:00",
+    "zip_members": [
+      {
+        "name": "Apple Inbound Flow with IntentId GroupId based Routing.workflow",
+        "bytes": 760320
+      },
+      {
+        "name": "__MACOSX/._Apple Inbound Flow with IntentId GroupId based Routing.workflow",
+        "bytes": 319
+      }
+    ],
+    "inspection": {
+      "workflow_members": [
+        "Apple Inbound Flow with IntentId GroupId based Routing.workflow"
+      ],
+      "format": "opaque",
+      "native_graph_extracted": false
+    },
+    "prepared_import_paths": [
+      "evidence/sample-flows/raw/wxcc-additional-imports/2dd09164-Apple Inbound Flow with IntentId GroupId based Routing.workflow"
+    ],
+    "inspection_scope": "Original acquisition/static parse checks, before later supported UI inspection",
+    "supported_ui_inspection": {
+      "status": "imported_for_read_only_static_graph_inspection",
+      "observations": [
+        {
+          "path": "evidence/sample-flows/observed/wxcc-apple-inbound-flow-with-intentid-groupid-based-routing.json",
+          "observed_at": "2026-09-09T00:05:17.004Z",
+          "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model"
+        }
+      ],
+      "runtime_tested": false,
+      "note": "Temporary sample inspection is separate from executing or validating a live integration"
+    }
+  },
+  {
+    "repository_path": "Webex Connect Flows/v3.5/Sample/Apple Business Messages/Rich message flows/Apple List Picker Flow.workflow.zip",
+    "source_url": "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Apple%20Business%20Messages/Rich%20message%20flows/Apple%20List%20Picker%20Flow.workflow.zip",
+    "download_url": "https://raw.githubusercontent.com/CiscoDevNet/webexcc-digital-channels/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Apple%20Business%20Messages/Rich%20message%20flows/Apple%20List%20Picker%20Flow.workflow.zip",
+    "local_path": "evidence/sample-flows/raw/wxcc-v3.5/9f8cf4b2-Apple List Picker Flow.workflow.zip",
+    "sha256": "5f4c3c46c815b1877d548f6f8a3a3f788ec410af0bf8cf1407a9c51cebeaee5c",
+    "bytes": 629871,
+    "retrieved_at": "2026-09-09T00:04:17.613607+00:00",
+    "zip_members": [
+      {
+        "name": "Apple List Picker Flow.workflow",
+        "bytes": 1103872
+      },
+      {
+        "name": "__MACOSX/._Apple List Picker Flow.workflow",
+        "bytes": 275
+      }
+    ],
+    "inspection": {
+      "workflow_members": [
+        "Apple List Picker Flow.workflow"
+      ],
+      "format": "opaque",
+      "native_graph_extracted": false
+    },
+    "prepared_import_paths": [
+      "evidence/sample-flows/raw/wxcc-additional-imports/9f8cf4b2-Apple List Picker Flow.workflow"
+    ],
+    "inspection_scope": "Original acquisition/static parse checks, before later supported UI inspection",
+    "supported_ui_inspection": {
+      "status": "imported_for_read_only_static_graph_inspection",
+      "observations": [
+        {
+          "path": "evidence/sample-flows/observed/wxcc-apple-list-picker-flow.json",
+          "observed_at": "2026-09-09T00:05:25.341Z",
+          "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model"
+        }
+      ],
+      "runtime_tested": false,
+      "note": "Temporary sample inspection is separate from executing or validating a live integration"
+    }
+  },
+  {
+    "repository_path": "Webex Connect Flows/v3.5/Sample/Apple Business Messages/Rich message flows/Apple Time Picker Flow.workflow.zip",
+    "source_url": "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Apple%20Business%20Messages/Rich%20message%20flows/Apple%20Time%20Picker%20Flow.workflow.zip",
+    "download_url": "https://raw.githubusercontent.com/CiscoDevNet/webexcc-digital-channels/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Apple%20Business%20Messages/Rich%20message%20flows/Apple%20Time%20Picker%20Flow.workflow.zip",
+    "local_path": "evidence/sample-flows/raw/wxcc-v3.5/29d1301f-Apple Time Picker Flow.workflow.zip",
+    "sha256": "a794f678907c1d4f09aefa012ab5992d3d48c9cbe1e7fa892479174c93c4c4b4",
+    "bytes": 409611,
+    "retrieved_at": "2026-09-09T00:04:17.485615+00:00",
+    "zip_members": [
+      {
+        "name": "Apple Time Picker Flow.workflow",
+        "bytes": 717312
+      },
+      {
+        "name": "__MACOSX/._Apple Time Picker Flow.workflow",
+        "bytes": 319
+      }
+    ],
+    "inspection": {
+      "workflow_members": [
+        "Apple Time Picker Flow.workflow"
+      ],
+      "format": "opaque",
+      "native_graph_extracted": false
+    },
+    "prepared_import_paths": [
+      "evidence/sample-flows/raw/wxcc-additional-imports/29d1301f-Apple Time Picker Flow.workflow"
+    ],
+    "inspection_scope": "Original acquisition/static parse checks, before later supported UI inspection",
+    "supported_ui_inspection": {
+      "status": "imported_for_read_only_static_graph_inspection",
+      "observations": [
+        {
+          "path": "evidence/sample-flows/observed/wxcc-apple-time-picker-flow.json",
+          "observed_at": "2026-09-09T00:05:32.254Z",
+          "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model"
+        }
+      ],
+      "runtime_tested": false,
+      "note": "Temporary sample inspection is separate from executing or validating a live integration"
+    }
+  },
+  {
+    "repository_path": "Webex Connect Flows/v3.5/Sample/Apple Business Messages/Rich message response flows/Apple Form Response Flow.workflow.zip",
+    "source_url": "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Apple%20Business%20Messages/Rich%20message%20response%20flows/Apple%20Form%20Response%20Flow.workflow.zip",
+    "download_url": "https://raw.githubusercontent.com/CiscoDevNet/webexcc-digital-channels/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Apple%20Business%20Messages/Rich%20message%20response%20flows/Apple%20Form%20Response%20Flow.workflow.zip",
+    "local_path": "evidence/sample-flows/raw/wxcc-v3.5/d04ca908-Apple Form Response Flow.workflow.zip",
+    "sha256": "2f39abc7ef557918d8babf4b4769fdf5e510293f7d7df32f060d2f886a276993",
+    "bytes": 127364,
+    "retrieved_at": "2026-09-09T00:04:17.379693+00:00",
+    "zip_members": [
+      {
+        "name": "Apple Form Response Flow.workflow",
+        "bytes": 221696
+      },
+      {
+        "name": "__MACOSX/._Apple Form Response Flow.workflow",
+        "bytes": 319
+      }
+    ],
+    "inspection": {
+      "workflow_members": [
+        "Apple Form Response Flow.workflow"
+      ],
+      "format": "opaque",
+      "native_graph_extracted": false
+    },
+    "prepared_import_paths": [
+      "evidence/sample-flows/raw/wxcc-additional-imports/d04ca908-Apple Form Response Flow.workflow"
+    ],
+    "inspection_scope": "Original acquisition/static parse checks, before later supported UI inspection",
+    "supported_ui_inspection": {
+      "status": "imported_for_read_only_static_graph_inspection",
+      "observations": [
+        {
+          "path": "evidence/sample-flows/observed/wxcc-apple-form-response-flow.json",
+          "observed_at": "2026-09-09T00:06:00.411Z",
+          "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model"
+        }
+      ],
+      "runtime_tested": false,
+      "note": "Temporary sample inspection is separate from executing or validating a live integration"
+    }
+  },
+  {
+    "repository_path": "Webex Connect Flows/v3.5/Sample/Apple Business Messages/Rich message response flows/Apple Time Picker and List Picker Response Flow.workflow.zip",
+    "source_url": "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Apple%20Business%20Messages/Rich%20message%20response%20flows/Apple%20Time%20Picker%20and%20List%20Picker%20Response%20Flow.workflow.zip",
+    "download_url": "https://raw.githubusercontent.com/CiscoDevNet/webexcc-digital-channels/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Apple%20Business%20Messages/Rich%20message%20response%20flows/Apple%20Time%20Picker%20and%20List%20Picker%20Response%20Flow.workflow.zip",
+    "local_path": "evidence/sample-flows/raw/wxcc-v3.5/e1695515-Apple Time Picker and List Picker Response Flow.workflow.zip",
+    "sha256": "360cc78b534527cf58968831258b959e68a2fe1094f81b6e9281ce1705175c18",
+    "bytes": 192813,
+    "retrieved_at": "2026-09-09T00:04:17.638255+00:00",
+    "zip_members": [
+      {
+        "name": "Apple Time Picker and List Picker Response Flow.workflow",
+        "bytes": 336384
+      },
+      {
+        "name": "__MACOSX/._Apple Time Picker and List Picker Response Flow.workflow",
+        "bytes": 319
+      }
+    ],
+    "inspection": {
+      "workflow_members": [
+        "Apple Time Picker and List Picker Response Flow.workflow"
+      ],
+      "format": "opaque",
+      "native_graph_extracted": false
+    },
+    "prepared_import_paths": [
+      "evidence/sample-flows/raw/wxcc-additional-imports/e1695515-Apple Time Picker and List Picker Response Flow.workflow"
+    ],
+    "inspection_scope": "Original acquisition/static parse checks, before later supported UI inspection",
+    "supported_ui_inspection": {
+      "status": "imported_for_read_only_static_graph_inspection",
+      "observations": [
+        {
+          "path": "evidence/sample-flows/observed/wxcc-apple-time-picker-and-list-picker-response-flow.json",
+          "observed_at": "2026-09-09T00:06:05.466Z",
+          "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model"
+        }
+      ],
+      "runtime_tested": false,
+      "note": "Temporary sample inspection is separate from executing or validating a live integration"
+    }
+  },
+  {
+    "repository_path": "Webex Connect Flows/v3.5/Sample/Apple Business Messages/Rich message response flows/Apple iMessage App Flow.workflow.zip",
+    "source_url": "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Apple%20Business%20Messages/Rich%20message%20response%20flows/Apple%20iMessage%20App%20Flow.workflow.zip",
+    "download_url": "https://raw.githubusercontent.com/CiscoDevNet/webexcc-digital-channels/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Apple%20Business%20Messages/Rich%20message%20response%20flows/Apple%20iMessage%20App%20Flow.workflow.zip",
+    "local_path": "evidence/sample-flows/raw/wxcc-v3.5/22d12fb7-Apple iMessage App Flow.workflow.zip",
+    "sha256": "2436e6f84cb23de4a0477a3cf0f75c9c1ceef85596d8242217fd5f7355d2831b",
+    "bytes": 137742,
+    "retrieved_at": "2026-09-09T00:04:17.674847+00:00",
+    "zip_members": [
+      {
+        "name": "Apple iMessage App Flow.workflow",
+        "bytes": 239616
+      },
+      {
+        "name": "__MACOSX/._Apple iMessage App Flow.workflow",
+        "bytes": 319
+      }
+    ],
+    "inspection": {
+      "workflow_members": [
+        "Apple iMessage App Flow.workflow"
+      ],
+      "format": "opaque",
+      "native_graph_extracted": false
+    },
+    "prepared_import_paths": [
+      "evidence/sample-flows/raw/wxcc-additional-imports/22d12fb7-Apple iMessage App Flow.workflow"
+    ],
+    "inspection_scope": "Original acquisition/static parse checks, before later supported UI inspection",
+    "supported_ui_inspection": {
+      "status": "imported_for_read_only_static_graph_inspection",
+      "observations": [
+        {
+          "path": "evidence/sample-flows/observed/wxcc-apple-imessage-app-flow.json",
+          "observed_at": "2026-09-09T00:06:09.966Z",
+          "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model"
+        }
+      ],
+      "runtime_tested": false,
+      "note": "Temporary sample inspection is separate from executing or validating a live integration"
+    }
+  },
+  {
+    "repository_path": "Webex Connect Flows/v3.5/Sample/Attachment Drop Notification to Customer/FacebookAttachmentDropNotification.workflow.zip",
+    "source_url": "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Attachment%20Drop%20Notification%20to%20Customer/FacebookAttachmentDropNotification.workflow.zip",
+    "download_url": "https://raw.githubusercontent.com/CiscoDevNet/webexcc-digital-channels/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Attachment%20Drop%20Notification%20to%20Customer/FacebookAttachmentDropNotification.workflow.zip",
+    "local_path": "evidence/sample-flows/raw/wxcc-v3.5/10d617bd-FacebookAttachmentDropNotification.workflow.zip",
+    "sha256": "a8f07721a665e5f54ed26e8f92145d3c8a31145695e1f0880ab5d8e98bd780c8",
+    "bytes": 228878,
+    "retrieved_at": "2026-09-09T00:04:17.732311+00:00",
+    "zip_members": [
+      {
+        "name": "FacebookAttachmentDropNotification.workflow",
+        "bytes": 399872
+      },
+      {
+        "name": "__MACOSX/._FacebookAttachmentDropNotification.workflow",
+        "bytes": 277
+      }
+    ],
+    "inspection": {
+      "workflow_members": [
+        "FacebookAttachmentDropNotification.workflow"
+      ],
+      "format": "opaque",
+      "native_graph_extracted": false
+    },
+    "prepared_import_paths": [
+      "evidence/sample-flows/raw/wxcc-additional-imports/10d617bd-FacebookAttachmentDropNotification.workflow"
+    ],
+    "inspection_scope": "Original acquisition/static parse checks, before later supported UI inspection",
+    "supported_ui_inspection": {
+      "status": "imported_for_read_only_static_graph_inspection",
+      "observations": [
+        {
+          "path": "evidence/sample-flows/observed/wxcc-facebookattachmentdropnotification.json",
+          "observed_at": "2026-09-09T00:06:28.189Z",
+          "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model"
+        }
+      ],
+      "runtime_tested": false,
+      "note": "Temporary sample inspection is separate from executing or validating a live integration"
+    }
+  },
+  {
+    "repository_path": "Webex Connect Flows/v3.5/Sample/Usage Of Surveys in Flows/FacebookCloseWithWxmFlow.workflow.zip",
+    "source_url": "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Usage%20Of%20Surveys%20in%20Flows/FacebookCloseWithWxmFlow.workflow.zip",
+    "download_url": "https://raw.githubusercontent.com/CiscoDevNet/webexcc-digital-channels/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Usage%20Of%20Surveys%20in%20Flows/FacebookCloseWithWxmFlow.workflow.zip",
+    "local_path": "evidence/sample-flows/raw/wxcc-v3.5/cae3968b-FacebookCloseWithWxmFlow.workflow.zip",
+    "sha256": "ea972dcd0cdbe547b6447492e94ac94db7aa2a8b0f867048d4b66daa61d26fd4",
+    "bytes": 334487,
+    "retrieved_at": "2026-09-09T00:04:17.926752+00:00",
+    "zip_members": [
+      {
+        "name": "FacebookCloseWithWxmFlow.workflow",
+        "bytes": 585728
+      },
+      {
+        "name": "__MACOSX/._FacebookCloseWithWxmFlow.workflow",
+        "bytes": 319
+      }
+    ],
+    "inspection": {
+      "workflow_members": [
+        "FacebookCloseWithWxmFlow.workflow"
+      ],
+      "format": "opaque",
+      "native_graph_extracted": false
+    },
+    "prepared_import_paths": [
+      "evidence/sample-flows/raw/wxcc-additional-imports/cae3968b-FacebookCloseWithWxmFlow.workflow"
+    ],
+    "inspection_scope": "Original acquisition/static parse checks, before later supported UI inspection",
+    "supported_ui_inspection": {
+      "status": "imported_for_read_only_static_graph_inspection",
+      "observations": [
+        {
+          "path": "evidence/sample-flows/observed/wxcc-facebookclosewithwxmflow.json",
+          "observed_at": "2026-09-09T00:06:34.924Z",
+          "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model"
+        }
+      ],
+      "runtime_tested": false,
+      "note": "Temporary sample inspection is separate from executing or validating a live integration"
+    }
+  },
+  {
+    "repository_path": "Webex Connect Flows/v3.5/Sample/Usage Of Surveys in Flows/LiveChatCloseWithWxmFlow.workflow.zip",
+    "source_url": "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Usage%20Of%20Surveys%20in%20Flows/LiveChatCloseWithWxmFlow.workflow.zip",
+    "download_url": "https://raw.githubusercontent.com/CiscoDevNet/webexcc-digital-channels/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Usage%20Of%20Surveys%20in%20Flows/LiveChatCloseWithWxmFlow.workflow.zip",
+    "local_path": "evidence/sample-flows/raw/wxcc-v3.5/effcf4ce-LiveChatCloseWithWxmFlow.workflow.zip",
+    "sha256": "5fc9fc1fc80caa7f67e74b56032784d0cf0505fdb681d2077b7f999a0da92e64",
+    "bytes": 351444,
+    "retrieved_at": "2026-09-09T00:04:17.941147+00:00",
+    "zip_members": [
+      {
+        "name": "LiveChatCloseWithWxmFlow.workflow",
+        "bytes": 614912
+      },
+      {
+        "name": "__MACOSX/._LiveChatCloseWithWxmFlow.workflow",
+        "bytes": 319
+      }
+    ],
+    "inspection": {
+      "workflow_members": [
+        "LiveChatCloseWithWxmFlow.workflow"
+      ],
+      "format": "opaque",
+      "native_graph_extracted": false
+    },
+    "prepared_import_paths": [
+      "evidence/sample-flows/raw/wxcc-additional-imports/effcf4ce-LiveChatCloseWithWxmFlow.workflow"
+    ],
+    "inspection_scope": "Original acquisition/static parse checks, before later supported UI inspection",
+    "supported_ui_inspection": {
+      "status": "imported_for_read_only_static_graph_inspection",
+      "observations": [
+        {
+          "path": "evidence/sample-flows/observed/wxcc-livechatclosewithwxmflow.json",
+          "observed_at": "2026-09-09T00:06:41.662Z",
+          "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model"
+        }
+      ],
+      "runtime_tested": false,
+      "note": "Temporary sample inspection is separate from executing or validating a live integration"
+    }
+  },
+  {
+    "repository_path": "Webex Connect Flows/v3.5/Sample/Usage of PIQ And EWT In Flows/LiveChatInboundSampleFlowWithSetVariablePIQAndEWT.workflow.zip",
+    "source_url": "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Usage%20of%20PIQ%20And%20EWT%20In%20Flows/LiveChatInboundSampleFlowWithSetVariablePIQAndEWT.workflow.zip",
+    "download_url": "https://raw.githubusercontent.com/CiscoDevNet/webexcc-digital-channels/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Usage%20of%20PIQ%20And%20EWT%20In%20Flows/LiveChatInboundSampleFlowWithSetVariablePIQAndEWT.workflow.zip",
+    "local_path": "evidence/sample-flows/raw/wxcc-v3.5/552f2736-LiveChatInboundSampleFlowWithSetVariablePIQAndEWT.workflow.zip",
+    "sha256": "4f2a196012eeee68da58909c17819813aa469645a32c73138b3c7827816a1a9f",
+    "bytes": 509550,
+    "retrieved_at": "2026-09-09T00:04:18.002171+00:00",
+    "zip_members": [
+      {
+        "name": "LiveChatInboundSampleFlowWithSetVariablePIQAndEWT.workflow",
+        "bytes": 892928
+      },
+      {
+        "name": "__MACOSX/._LiveChatInboundSampleFlowWithSetVariablePIQAndEWT.workflow",
+        "bytes": 319
+      }
+    ],
+    "inspection": {
+      "workflow_members": [
+        "LiveChatInboundSampleFlowWithSetVariablePIQAndEWT.workflow"
+      ],
+      "format": "opaque",
+      "native_graph_extracted": false
+    },
+    "prepared_import_paths": [
+      "evidence/sample-flows/raw/wxcc-additional-imports/552f2736-LiveChatInboundSampleFlowWithSetVariablePIQAndEWT.workflow"
+    ],
+    "inspection_scope": "Original acquisition/static parse checks, before later supported UI inspection",
+    "supported_ui_inspection": {
+      "status": "imported_for_read_only_static_graph_inspection",
+      "observations": [
+        {
+          "path": "evidence/sample-flows/observed/wxcc-livechatinboundsampleflowwithsetvariablepiqandewt.json",
+          "observed_at": "2026-09-09T00:07:00.851Z",
+          "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model"
+        }
+      ],
+      "runtime_tested": false,
+      "note": "Temporary sample inspection is separate from executing or validating a live integration"
+    }
+  },
+  {
+    "repository_path": "Webex Connect Flows/v3.5/Template/Media Specific Workflows/Apple Messages for Business/AMB Simplified Flow.zip",
+    "source_url": "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Media%20Specific%20Workflows/Apple%20Messages%20for%20Business/AMB%20Simplified%20Flow.zip",
+    "download_url": "https://raw.githubusercontent.com/CiscoDevNet/webexcc-digital-channels/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Media%20Specific%20Workflows/Apple%20Messages%20for%20Business/AMB%20Simplified%20Flow.zip",
+    "local_path": "evidence/sample-flows/raw/wxcc-v3.5/2ae1c626-AMB Simplified Flow.zip",
+    "sha256": "6888b271b3659e81711ea2e60990d8d86796780632f8cda10f4d6a8139f3a496",
+    "bytes": 267158,
+    "retrieved_at": "2026-09-09T00:04:18.106702+00:00",
+    "zip_members": [
+      {
+        "name": "AMB Simplified Flow/",
+        "bytes": 0
+      },
+      {
+        "name": "AMB Simplified Flow/AMB Simplified Flow.workflow",
+        "bytes": 467456
+      },
+      {
+        "name": "__MACOSX/AMB Simplified Flow/._AMB Simplified Flow.workflow",
+        "bytes": 255
+      }
+    ],
+    "inspection": {
+      "workflow_members": [
+        "AMB Simplified Flow/AMB Simplified Flow.workflow"
+      ],
+      "format": "opaque",
+      "native_graph_extracted": false
+    },
+    "prepared_import_paths": [
+      "evidence/sample-flows/raw/wxcc-additional-imports/2ae1c626-AMB Simplified Flow.workflow"
+    ],
+    "inspection_scope": "Original acquisition/static parse checks, before later supported UI inspection",
+    "supported_ui_inspection": {
+      "status": "imported_for_read_only_static_graph_inspection",
+      "observations": [
+        {
+          "path": "evidence/sample-flows/observed/wxcc-amb-simplified-flow.json",
+          "observed_at": "2026-09-09T00:07:06.551Z",
+          "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model"
+        }
+      ],
+      "runtime_tested": false,
+      "note": "Temporary sample inspection is separate from executing or validating a live integration"
+    }
+  },
+  {
+    "repository_path": "Webex Connect Flows/v3.5/Template/Media Specific Workflows/Apple Messages for Business/Apple Basic Inbound Flow.workflow.zip",
+    "source_url": "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Media%20Specific%20Workflows/Apple%20Messages%20for%20Business/Apple%20Basic%20Inbound%20Flow.workflow.zip",
+    "download_url": "https://raw.githubusercontent.com/CiscoDevNet/webexcc-digital-channels/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Media%20Specific%20Workflows/Apple%20Messages%20for%20Business/Apple%20Basic%20Inbound%20Flow.workflow.zip",
+    "local_path": "evidence/sample-flows/raw/wxcc-v3.5/31ac8e9d-Apple Basic Inbound Flow.workflow.zip",
+    "sha256": "2873a8c63adf861c4ad5d04705b671ac6e6305b51225facdc49c3a66c598077c",
+    "bytes": 348533,
+    "retrieved_at": "2026-09-09T00:04:18.257072+00:00",
+    "zip_members": [
+      {
+        "name": "Apple Basic Inbound Flow.workflow",
+        "bytes": 611840
+      },
+      {
+        "name": "__MACOSX/._Apple Basic Inbound Flow.workflow",
+        "bytes": 319
+      }
+    ],
+    "inspection": {
+      "workflow_members": [
+        "Apple Basic Inbound Flow.workflow"
+      ],
+      "format": "opaque",
+      "native_graph_extracted": false
+    },
+    "prepared_import_paths": [
+      "evidence/sample-flows/raw/wxcc-additional-imports/31ac8e9d-Apple Basic Inbound Flow.workflow"
+    ],
+    "inspection_scope": "Original acquisition/static parse checks, before later supported UI inspection",
+    "supported_ui_inspection": {
+      "status": "imported_for_read_only_static_graph_inspection",
+      "observations": [
+        {
+          "path": "evidence/sample-flows/observed/wxcc-apple-basic-inbound-flow.json",
+          "observed_at": "2026-09-09T00:07:13.174Z",
+          "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model"
+        }
+      ],
+      "runtime_tested": false,
+      "note": "Temporary sample inspection is separate from executing or validating a live integration"
+    }
+  },
+  {
+    "repository_path": "Webex Connect Flows/v3.5/Template/Media Specific Workflows/Apple Messages for Business/Apple Inbound Flow with Form.workflow.zip",
+    "source_url": "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Media%20Specific%20Workflows/Apple%20Messages%20for%20Business/Apple%20Inbound%20Flow%20with%20Form.workflow.zip",
+    "download_url": "https://raw.githubusercontent.com/CiscoDevNet/webexcc-digital-channels/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Media%20Specific%20Workflows/Apple%20Messages%20for%20Business/Apple%20Inbound%20Flow%20with%20Form.workflow.zip",
+    "local_path": "evidence/sample-flows/raw/wxcc-v3.5/92922a1f-Apple Inbound Flow with Form.workflow.zip",
+    "sha256": "98492f8fc5999b5d2be37ab45b5866cde3e9dca04b3da47c35ef3dcb845df4b5",
+    "bytes": 589013,
+    "retrieved_at": "2026-09-09T00:04:18.340233+00:00",
+    "zip_members": [
+      {
+        "name": "Apple Inbound Flow with Form.workflow",
+        "bytes": 1032192
+      },
+      {
+        "name": "__MACOSX/._Apple Inbound Flow with Form.workflow",
+        "bytes": 319
+      }
+    ],
+    "inspection": {
+      "workflow_members": [
+        "Apple Inbound Flow with Form.workflow"
+      ],
+      "format": "opaque",
+      "native_graph_extracted": false
+    },
+    "prepared_import_paths": [
+      "evidence/sample-flows/raw/wxcc-additional-imports/92922a1f-Apple Inbound Flow with Form.workflow"
+    ],
+    "inspection_scope": "Original acquisition/static parse checks, before later supported UI inspection",
+    "supported_ui_inspection": {
+      "status": "imported_for_read_only_static_graph_inspection",
+      "observations": [
+        {
+          "path": "evidence/sample-flows/observed/wxcc-apple-inbound-flow-with-form.json",
+          "observed_at": "2026-09-09T00:07:37.231Z",
+          "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model"
+        }
+      ],
+      "runtime_tested": false,
+      "note": "Temporary sample inspection is separate from executing or validating a live integration"
+    }
+  },
+  {
+    "repository_path": "Webex Connect Flows/v3.5/Template/Media Specific Workflows/Apple Messages for Business/Apple Unsubscribe Flow.workflow.zip",
+    "source_url": "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Media%20Specific%20Workflows/Apple%20Messages%20for%20Business/Apple%20Unsubscribe%20Flow.workflow.zip",
+    "download_url": "https://raw.githubusercontent.com/CiscoDevNet/webexcc-digital-channels/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Media%20Specific%20Workflows/Apple%20Messages%20for%20Business/Apple%20Unsubscribe%20Flow.workflow.zip",
+    "local_path": "evidence/sample-flows/raw/wxcc-v3.5/09d5ade3-Apple Unsubscribe Flow.workflow.zip",
+    "sha256": "98d4a6e3ce4281b07133b0197a606cf9abe5741ece764120113f47d37685462a",
+    "bytes": 69181,
+    "retrieved_at": "2026-09-09T00:04:18.212039+00:00",
+    "zip_members": [
+      {
+        "name": "Apple Unsubscribe Flow.workflow",
+        "bytes": 119296
+      },
+      {
+        "name": "__MACOSX/._Apple Unsubscribe Flow.workflow",
+        "bytes": 319
+      }
+    ],
+    "inspection": {
+      "workflow_members": [
+        "Apple Unsubscribe Flow.workflow"
+      ],
+      "format": "opaque",
+      "native_graph_extracted": false
+    },
+    "prepared_import_paths": [
+      "evidence/sample-flows/raw/wxcc-additional-imports/09d5ade3-Apple Unsubscribe Flow.workflow"
+    ],
+    "inspection_scope": "Original acquisition/static parse checks, before later supported UI inspection",
+    "supported_ui_inspection": {
+      "status": "imported_for_read_only_static_graph_inspection",
+      "observations": [
+        {
+          "path": "evidence/sample-flows/observed/wxcc-apple-unsubscribe-flow.json",
+          "observed_at": "2026-09-09T00:07:41.477Z",
+          "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model"
+        }
+      ],
+      "runtime_tested": false,
+      "note": "Temporary sample inspection is separate from executing or validating a live integration"
+    }
+  },
+  {
+    "repository_path": "Webex Connect Flows/v3.5/Template/Media Specific Workflows/FacebookInboundFlow.workflow.zip",
+    "source_url": "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Media%20Specific%20Workflows/FacebookInboundFlow.workflow.zip",
+    "download_url": "https://raw.githubusercontent.com/CiscoDevNet/webexcc-digital-channels/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Media%20Specific%20Workflows/FacebookInboundFlow.workflow.zip",
+    "local_path": "evidence/sample-flows/raw/wxcc-v3.5/ba8c03ab-FacebookInboundFlow.workflow.zip",
+    "sha256": "6799ba2d89924702d2bc5912751b47e6b0aeb957c4e15778c0890549a27be6f7",
+    "bytes": 233730,
+    "retrieved_at": "2026-09-09T00:04:18.378471+00:00",
+    "zip_members": [
+      {
+        "name": "FacebookInboundFlow.workflow",
+        "bytes": 408576
+      },
+      {
+        "name": "__MACOSX/._FacebookInboundFlow.workflow",
+        "bytes": 355
+      }
+    ],
+    "inspection": {
+      "workflow_members": [
+        "FacebookInboundFlow.workflow"
+      ],
+      "format": "opaque",
+      "native_graph_extracted": false
+    },
+    "prepared_import_paths": [
+      "evidence/sample-flows/raw/wxcc-additional-imports/ba8c03ab-FacebookInboundFlow.workflow"
+    ],
+    "inspection_scope": "Original acquisition/static parse checks, before later supported UI inspection",
+    "supported_ui_inspection": {
+      "status": "imported_for_read_only_static_graph_inspection",
+      "observations": [
+        {
+          "path": "evidence/sample-flows/observed/wxcc-facebookinboundflow.json",
+          "observed_at": "2026-09-09T00:07:46.595Z",
+          "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model"
+        }
+      ],
+      "runtime_tested": false,
+      "note": "Temporary sample inspection is separate from executing or validating a live integration"
+    }
+  },
+  {
+    "repository_path": "Webex Connect Flows/v3.5/Template/Media Specific Workflows/Live Chat Close Flow.workflow.zip",
+    "source_url": "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Media%20Specific%20Workflows/Live%20Chat%20Close%20Flow.workflow.zip",
+    "download_url": "https://raw.githubusercontent.com/CiscoDevNet/webexcc-digital-channels/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Media%20Specific%20Workflows/Live%20Chat%20Close%20Flow.workflow.zip",
+    "local_path": "evidence/sample-flows/raw/wxcc-v3.5/e1d9c8ab-Live Chat Close Flow.workflow.zip",
+    "sha256": "b329d3413ee5ef6e2fe304b2892959e1623dfeef7995188b5c5eebbafdd5ce75",
+    "bytes": 113443,
+    "retrieved_at": "2026-09-09T00:04:18.541505+00:00",
+    "zip_members": [
+      {
+        "name": "Live Chat Close Flow.workflow",
+        "bytes": 197120
+      },
+      {
+        "name": "__MACOSX/._Live Chat Close Flow.workflow",
+        "bytes": 319
+      }
+    ],
+    "inspection": {
+      "workflow_members": [
+        "Live Chat Close Flow.workflow"
+      ],
+      "format": "opaque",
+      "native_graph_extracted": false
+    },
+    "prepared_import_paths": [
+      "evidence/sample-flows/raw/wxcc-additional-imports/e1d9c8ab-Live Chat Close Flow.workflow"
+    ],
+    "inspection_scope": "Original acquisition/static parse checks, before later supported UI inspection",
+    "supported_ui_inspection": {
+      "status": "imported_for_read_only_static_graph_inspection",
+      "observations": [
+        {
+          "path": "evidence/sample-flows/observed/wxcc-live-chat-close-flow.json",
+          "observed_at": "2026-09-09T00:08:02.557Z",
+          "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model"
+        }
+      ],
+      "runtime_tested": false,
+      "note": "Temporary sample inspection is separate from executing or validating a live integration"
+    }
+  },
+  {
+    "repository_path": "Webex Connect Flows/v3.5/Template/Media Specific Workflows/Livechat Inbound flow with proactive chat changes.zip",
+    "source_url": "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Media%20Specific%20Workflows/Livechat%20Inbound%20flow%20with%20proactive%20chat%20changes.zip",
+    "download_url": "https://raw.githubusercontent.com/CiscoDevNet/webexcc-digital-channels/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Media%20Specific%20Workflows/Livechat%20Inbound%20flow%20with%20proactive%20chat%20changes.zip",
+    "local_path": "evidence/sample-flows/raw/wxcc-v3.5/942ec430-Livechat Inbound flow with proactive chat changes.zip",
+    "sha256": "bf247c4ab7196057d2510f940b6fb8769f089b5b4d167cd0830f7a8a703fbe7e",
+    "bytes": 436011,
+    "retrieved_at": "2026-09-09T00:04:18.683135+00:00",
+    "zip_members": [
+      {
+        "name": "Livechat Inbound flow with proactive chat changes/",
+        "bytes": 0
+      },
+      {
+        "name": "__MACOSX/._Livechat Inbound flow with proactive chat changes",
+        "bytes": 220
+      },
+      {
+        "name": "Livechat Inbound flow with proactive chat changes/Livechat Inbound flow with proactive chat changes.workflow",
+        "bytes": 761856
+      },
+      {
+        "name": "__MACOSX/Livechat Inbound flow with proactive chat changes/._Livechat Inbound flow with proactive chat changes.workflow",
+        "bytes": 355
+      }
+    ],
+    "inspection": {
+      "workflow_members": [
+        "Livechat Inbound flow with proactive chat changes/Livechat Inbound flow with proactive chat changes.workflow"
+      ],
+      "format": "opaque",
+      "native_graph_extracted": false
+    },
+    "prepared_import_paths": [
+      "evidence/sample-flows/raw/wxcc-additional-imports/942ec430-Livechat Inbound flow with proactive chat changes.workflow"
+    ],
+    "inspection_scope": "Original acquisition/static parse checks, before later supported UI inspection",
+    "supported_ui_inspection": {
+      "status": "imported_for_read_only_static_graph_inspection",
+      "observations": [
+        {
+          "path": "evidence/sample-flows/observed/wxcc-livechat-inbound-flow-with-proactive-chat-changes.json",
+          "observed_at": "2026-09-09T00:08:09.451Z",
+          "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model"
+        }
+      ],
+      "runtime_tested": false,
+      "note": "Temporary sample inspection is separate from executing or validating a live integration"
+    }
+  },
+  {
+    "repository_path": "Webex Connect Flows/v3.5/Template/Media Specific Workflows/LivechatInbound flow.workflow.zip",
+    "source_url": "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Media%20Specific%20Workflows/LivechatInbound%20flow.workflow.zip",
+    "download_url": "https://raw.githubusercontent.com/CiscoDevNet/webexcc-digital-channels/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Media%20Specific%20Workflows/LivechatInbound%20flow.workflow.zip",
+    "local_path": "evidence/sample-flows/raw/wxcc-v3.5/52c176fe-LivechatInbound flow.workflow.zip",
+    "sha256": "bfe83f2209c5e0db03c2a2046ba68c31e79385a379a0739455a7a7fbcf7333cd",
+    "bytes": 374389,
+    "retrieved_at": "2026-09-09T00:04:19.129354+00:00",
+    "zip_members": [
+      {
+        "name": "LivechatInbound flow.workflow",
+        "bytes": 655360
+      },
+      {
+        "name": "__MACOSX/._LivechatInbound flow.workflow",
+        "bytes": 355
+      }
+    ],
+    "inspection": {
+      "workflow_members": [
+        "LivechatInbound flow.workflow"
+      ],
+      "format": "opaque",
+      "native_graph_extracted": false
+    },
+    "prepared_import_paths": [
+      "evidence/sample-flows/raw/wxcc-additional-imports/52c176fe-LivechatInbound flow.workflow"
+    ],
+    "inspection_scope": "Original acquisition/static parse checks, before later supported UI inspection",
+    "supported_ui_inspection": {
+      "status": "imported_for_read_only_static_graph_inspection",
+      "observations": [
+        {
+          "path": "evidence/sample-flows/observed/wxcc-livechatinbound-flow.json",
+          "observed_at": "2026-09-09T00:08:15.873Z",
+          "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model"
+        }
+      ],
+      "runtime_tested": false,
+      "note": "Temporary sample inspection is separate from executing or validating a live integration"
+    }
+  },
+  {
+    "repository_path": "Webex Connect Flows/v3.5/Template/Media Specific Workflows/LivechatInboundFlowWithoutForm.workflow.zip",
+    "source_url": "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Media%20Specific%20Workflows/LivechatInboundFlowWithoutForm.workflow.zip",
+    "download_url": "https://raw.githubusercontent.com/CiscoDevNet/webexcc-digital-channels/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Media%20Specific%20Workflows/LivechatInboundFlowWithoutForm.workflow.zip",
+    "local_path": "evidence/sample-flows/raw/wxcc-v3.5/244c8300-LivechatInboundFlowWithoutForm.workflow.zip",
+    "sha256": "6a56e7af5b9c4fe1ef35c43b38871b4381ac760850efcc94eb6cf71a9887714a",
+    "bytes": 258081,
+    "retrieved_at": "2026-09-09T00:04:18.631909+00:00",
+    "zip_members": [
+      {
+        "name": "LivechatInboundFlowWithoutForm.workflow",
+        "bytes": 451072
+      },
+      {
+        "name": "__MACOSX/._LivechatInboundFlowWithoutForm.workflow",
+        "bytes": 355
+      }
+    ],
+    "inspection": {
+      "workflow_members": [
+        "LivechatInboundFlowWithoutForm.workflow"
+      ],
+      "format": "opaque",
+      "native_graph_extracted": false
+    },
+    "prepared_import_paths": [
+      "evidence/sample-flows/raw/wxcc-additional-imports/244c8300-LivechatInboundFlowWithoutForm.workflow"
+    ],
+    "inspection_scope": "Original acquisition/static parse checks, before later supported UI inspection",
+    "supported_ui_inspection": {
+      "status": "imported_for_read_only_static_graph_inspection",
+      "observations": [
+        {
+          "path": "evidence/sample-flows/observed/wxcc-livechatinboundflowwithoutform.json",
+          "observed_at": "2026-09-09T00:08:44.986Z",
+          "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model"
+        }
+      ],
+      "runtime_tested": false,
+      "note": "Temporary sample inspection is separate from executing or validating a live integration"
+    }
+  },
+  {
+    "repository_path": "Webex Connect Flows/v3.5/Template/Media Specific Workflows/Whatsapp inbound.workflow.zip",
+    "source_url": "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Media%20Specific%20Workflows/Whatsapp%20inbound.workflow.zip",
+    "download_url": "https://raw.githubusercontent.com/CiscoDevNet/webexcc-digital-channels/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Template/Media%20Specific%20Workflows/Whatsapp%20inbound.workflow.zip",
+    "local_path": "evidence/sample-flows/raw/wxcc-v3.5/6ea09b22-Whatsapp inbound.workflow.zip",
+    "sha256": "c90394e89231b7a8d2ce9064b47a747bd111a0ec2f242e40cb6d9c6c260835cf",
+    "bytes": 229574,
+    "retrieved_at": "2026-09-09T00:04:18.809005+00:00",
+    "zip_members": [
+      {
+        "name": "Whatsapp inbound.workflow",
+        "bytes": 400896
+      },
+      {
+        "name": "__MACOSX/._Whatsapp inbound.workflow",
+        "bytes": 355
+      }
+    ],
+    "inspection": {
+      "workflow_members": [
+        "Whatsapp inbound.workflow"
+      ],
+      "format": "opaque",
+      "native_graph_extracted": false
+    },
+    "prepared_import_paths": [
+      "evidence/sample-flows/raw/wxcc-additional-imports/6ea09b22-Whatsapp inbound.workflow"
+    ],
+    "inspection_scope": "Original acquisition/static parse checks, before later supported UI inspection",
+    "supported_ui_inspection": {
+      "status": "imported_for_read_only_static_graph_inspection",
+      "observations": [
+        {
+          "path": "evidence/sample-flows/observed/wxcc-whatsapp-inbound.json",
+          "observed_at": "2026-09-09T00:08:50.405Z",
+          "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model"
+        }
+      ],
+      "runtime_tested": false,
+      "note": "Temporary sample inspection is separate from executing or validating a live integration"
+    }
+  },
+  {
+    "repository_path": "Webex Connect Flows/v3.5/Sample/Usage Of Surveys in Flows/README.md",
+    "source_url": "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Usage%20Of%20Surveys%20in%20Flows/README.md",
+    "download_url": "https://raw.githubusercontent.com/CiscoDevNet/webexcc-digital-channels/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Usage%20Of%20Surveys%20in%20Flows/README.md",
+    "local_path": "evidence/sample-flows/raw/wxcc-v3.5/2592e765-README.md",
+    "sha256": "70570aa503407d67e835dc2cfffea5a2d3da3b21a201bc37e0e935d8eee0a18e",
+    "bytes": 4066,
+    "retrieved_at": "2026-09-09T00:05:09.696665+00:00"
+  },
+  {
+    "repository_path": "Webex Connect Flows/v3.5/Sample/Usage of PIQ And EWT In Flows/README.md",
+    "source_url": "https://github.com/CiscoDevNet/webexcc-digital-channels/blob/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Usage%20of%20PIQ%20And%20EWT%20In%20Flows/README.md",
+    "download_url": "https://raw.githubusercontent.com/CiscoDevNet/webexcc-digital-channels/ef668084a137c251f81ae3aa38d1f4e06b4e5573/Webex%20Connect%20Flows/v3.5/Sample/Usage%20of%20PIQ%20And%20EWT%20In%20Flows/README.md",
+    "local_path": "evidence/sample-flows/raw/wxcc-v3.5/0c1ed8ec-README.md",
+    "sha256": "c5cdd6e4f4e2c8ad01287fc3d5c31fa14d85c170ffc1bb388b7edce7dfe7bc0c",
+    "bytes": 2693,
+    "retrieved_at": "2026-09-09T00:05:09.941992+00:00"
+  }
+]

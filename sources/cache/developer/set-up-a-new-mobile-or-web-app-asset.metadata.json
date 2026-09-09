@@ -1,0 +1,39 @@
+{
+  "category": "TUTORIALS",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f6531",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "394b5a8589ab4ae890ef71810c98951916c945a8ef8852a06230418db585297c",
+    "source_path": "08a2669920b77e2e94b6557d3f1187393b9ed1c334baa70e401d21ef9f6bc4e5",
+    "text_path": "39a14d729ad4a3054e69bd4c4a66337d65e75b5258bfb59b7f44cf30848534b2"
+  },
+  "headings": [
+    "🚧Important!",
+    "📘Note",
+    "Create a Mobile App Asset in Webex Connect",
+    "📘Note",
+    "📘Note",
+    "JWT Authorization",
+    "📘Note",
+    "Public Key Upload Format"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/set-up-a-new-mobile-or-web-app-asset.md",
+  "resolved_url": "https://developers.webexconnect.io/docs/set-up-a-new-mobile-or-web-app-asset",
+  "retrieved_at": "2026-09-08T23:31:39+00:00",
+  "sha256_html_response": "ed49d7fe7240f802d6874322c31d299b053ea04548f729180b363f81869e0c00",
+  "sha256_source_body": "08a2669920b77e2e94b6557d3f1187393b9ed1c334baa70e401d21ef9f6bc4e5",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/set-up-a-new-mobile-or-web-app-asset.source.md",
+  "source_updated_at": "2026-09-01T17:26:56.325Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/set-up-a-new-mobile-or-web-app-asset.txt",
+  "title": "Set-up a new Mobile / Web App Asset",
+  "url": "https://developers.webexconnect.io/docs/set-up-a-new-mobile-or-web-app-asset",
+  "word_count": 1172,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/set-up-a-new-mobile-or-web-app-asset.metadata.json"
+}

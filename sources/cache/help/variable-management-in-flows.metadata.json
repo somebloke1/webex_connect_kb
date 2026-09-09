@@ -1,0 +1,41 @@
+{
+  "category": "SERVICES & FLOWS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd81825782e",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "4a27c3677cd2ae9081d81af6041b9f440f5841959affdea29180e4715911a213",
+    "source_path": "c14041b23e282faacada53fcc5c1a8d8b49e4609ee67df23c9c1cfe7e9bfa073",
+    "text_path": "d07cd00ef0927d3f149a841b178cf4b5c342320bf59fadc39c5125da743d1a33"
+  },
+  "headings": [
+    "Categories of Variables",
+    "📘",
+    "Input Variables",
+    "Custom Variables",
+    "Creating Custom Variables at Node-level",
+    "Creating Custom Variables at Flow-level",
+    "External Variables",
+    "Output Variables",
+    "Session Variables"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/variable-management-in-flows.md",
+  "resolved_url": "https://help.webexconnect.io/docs/variable-management-in-flows",
+  "retrieved_at": "2026-09-08T23:28:41+00:00",
+  "sha256_html_response": "6fd9fb01a4c5c76199c4d516f1d10a3ec5c20bb8982a47a036889b25d67938e1",
+  "sha256_source_body": "c14041b23e282faacada53fcc5c1a8d8b49e4609ee67df23c9c1cfe7e9bfa073",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/variable-management-in-flows.source.md",
+  "source_updated_at": "2026-04-15T08:38:48.940Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/variable-management-in-flows.txt",
+  "title": "Variable Management in Flows",
+  "url": "https://help.webexconnect.io/docs/variable-management-in-flows",
+  "word_count": 1187,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/variable-management-in-flows.metadata.json"
+}

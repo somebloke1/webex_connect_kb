@@ -1,0 +1,39 @@
+{
+  "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257884",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "df4419a92fd54b041afb7ef8c715413e38772a6ce26cf7f9d844d61f738da106",
+    "source_path": "0ddf15c6e719cc054091ddda75b17517259953a4d8b3f209f8ecde7bd76aa1ed",
+    "text_path": "b31026129dc613a58e0af40ef784936503aab223d3c446b88e4dd94171637feb"
+  },
+  "headings": [
+    "Authorization",
+    "Methods and Outcomes",
+    "📘Note",
+    "📘Note",
+    "📘Note",
+    "📘Note",
+    "📘Note:"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/wxcc-engage-create-conversation.md",
+  "resolved_url": "https://help.webexconnect.io/docs/wxcc-engage-create-conversation",
+  "retrieved_at": "2026-09-08T23:29:16+00:00",
+  "sha256_html_response": "5f2540aa7f5acd9e2eec10ff4b9385ffa200b089b0070ff1e26a7932d530a38b",
+  "sha256_source_body": "0ddf15c6e719cc054091ddda75b17517259953a4d8b3f209f8ecde7bd76aa1ed",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/wxcc-engage-create-conversation.source.md",
+  "source_updated_at": "2026-04-14T07:26:22.563Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/wxcc-engage-create-conversation.txt",
+  "title": "Create Conversation - WXCC",
+  "url": "https://help.webexconnect.io/docs/wxcc-engage-create-conversation",
+  "word_count": 1676,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/wxcc-engage-create-conversation.metadata.json"
+}

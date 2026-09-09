@@ -1,0 +1,36 @@
+{
+  "category": "SERVICES & FLOWS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257811",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "4b2a1c179b060b96a6f98a9f8e3d6abe342101fa8d875efe58a2e0964c61c43e",
+    "source_path": "d7c8b9137d19ad1bcf79d62a5305d95bbff3055c53c8821cde866b6b3621831b",
+    "text_path": "c76d6136317e8094439f6b9637a29e0bb0d6ea87e31e1c92759d3e0bd16770af"
+  },
+  "headings": [
+    "Creating a Page to modularize reusable parts",
+    "Using Page Connector Node",
+    "📘",
+    "📘Variable Management when using Page Connector Node"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/page-connector-node.md",
+  "resolved_url": "https://help.webexconnect.io/docs/page-connector-node",
+  "retrieved_at": "2026-09-08T23:28:54+00:00",
+  "sha256_html_response": "8e4c88ba344cf28ea60d14db01146ce6c5b3bb7ba4aa068986cafe777c19e8b8",
+  "sha256_source_body": "d7c8b9137d19ad1bcf79d62a5305d95bbff3055c53c8821cde866b6b3621831b",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/page-connector-node.source.md",
+  "source_updated_at": "2026-04-15T09:31:06.156Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/page-connector-node.txt",
+  "title": "Page Connector Node",
+  "url": "https://help.webexconnect.io/docs/page-connector-node",
+  "word_count": 459,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/page-connector-node.metadata.json"
+}

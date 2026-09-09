@@ -1,0 +1,40 @@
+{
+  "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd81825787d",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "21614b4c7766a27453acd255df4d9dc332f9cfaea63ca76907dc73896a852db5",
+    "source_path": "25b5eabdc00b0bb67b34c9384a51dbb022ddd4130e93265499f5b194bfb7a2a9",
+    "text_path": "e643f8e48fcafdcc9b5186e5bf81d14387e41ecb87c20c8254014a847bcd6173"
+  },
+  "headings": [
+    "Authorization",
+    "Methods and Outcomes",
+    "📘Note",
+    "📘Note:",
+    "📘Version Upgrade",
+    "Sample configurations for various channels",
+    "📘Note:",
+    "📘Note"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/wxcc-create-task.md",
+  "resolved_url": "https://help.webexconnect.io/docs/wxcc-create-task",
+  "retrieved_at": "2026-09-08T23:29:15+00:00",
+  "sha256_html_response": "bed68fa33889bf9e6c36ba48400addc3710fead0a101225a02530d76764b0bea",
+  "sha256_source_body": "25b5eabdc00b0bb67b34c9384a51dbb022ddd4130e93265499f5b194bfb7a2a9",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/wxcc-create-task.source.md",
+  "source_updated_at": "2026-04-14T07:24:41.193Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/wxcc-create-task.txt",
+  "title": "Create Task - WXCC",
+  "url": "https://help.webexconnect.io/docs/wxcc-create-task",
+  "word_count": 933,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/wxcc-create-task.metadata.json"
+}

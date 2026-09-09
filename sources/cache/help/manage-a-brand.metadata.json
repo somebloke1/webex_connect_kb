@@ -1,0 +1,34 @@
+{
+  "category": "Assets",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182578a8",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "1b7183a8af152f8e6e93dd0b8181a57450ea7d87f965795e382c69d49a30f041",
+    "source_path": "71e40bedbb9a1f7ca3ea00eb759a0737dd9492e7ef56f037bad19e6ce6ed12ac",
+    "text_path": "c701f792bf1132b9e92f77f0f40f8cca6bca0a0ed6a224a8baa3d4c7afb76ce8"
+  },
+  "headings": [
+    "📘Reusing Brand IDs",
+    "📘Note"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/manage-a-brand.md",
+  "resolved_url": "https://help.webexconnect.io/docs/manage-a-brand",
+  "retrieved_at": "2026-09-08T23:29:01+00:00",
+  "sha256_html_response": "4279fa159b3e3b48717509aa816eaa3bc036c8cae5c289b2c45f9a067ac5fe26",
+  "sha256_source_body": "71e40bedbb9a1f7ca3ea00eb759a0737dd9492e7ef56f037bad19e6ce6ed12ac",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/manage-a-brand.source.md",
+  "source_updated_at": "2026-01-26T14:25:23.104Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/manage-a-brand.txt",
+  "title": "Managing a Brand",
+  "url": "https://help.webexconnect.io/docs/manage-a-brand",
+  "word_count": 138,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/manage-a-brand.metadata.json"
+}

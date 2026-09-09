@@ -1,0 +1,38 @@
+{
+  "category": "SERVICES & FLOWS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182577da",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "8971cbec57dc305779ab7d8fbfb4d912a7d5f332072fb026f84fbedddedebff5",
+    "source_path": "08ba771dc7d469bc6314eeecd6ad8195126ea1145de22d1254f47cfcf78ff555",
+    "text_path": "605336b53d8b06db0ab09296f3c85dd5c2ccdd9ed819c5ee0973f36fcbd4b62c"
+  },
+  "headings": [
+    "📘Deprecation Alert",
+    "Interface Elements",
+    "Passing Values to a Live Chat",
+    "Configuring Variables",
+    "Configuring Transitions",
+    "📘Tip"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/validate-chat-node.md",
+  "resolved_url": "https://help.webexconnect.io/docs/validate-chat-node",
+  "retrieved_at": "2026-09-08T23:28:57+00:00",
+  "sha256_html_response": "2620d1700024870bcf8acf057196c6a526d59d0a34bbfa054ece828ccffc8860",
+  "sha256_source_body": "08ba771dc7d469bc6314eeecd6ad8195126ea1145de22d1254f47cfcf78ff555",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/validate-chat-node.source.md",
+  "source_updated_at": "2026-01-26T14:21:42.010Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/validate-chat-node.txt",
+  "title": "Validate Chat Node",
+  "url": "https://help.webexconnect.io/docs/validate-chat-node",
+  "word_count": 607,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/validate-chat-node.metadata.json"
+}

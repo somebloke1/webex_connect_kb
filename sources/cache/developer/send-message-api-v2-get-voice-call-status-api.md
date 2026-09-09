@@ -1,0 +1,149 @@
+# Get Voice Call Status Using Send Message API v2
+
+Source: https://developers.webexconnect.io/reference/send-message-api-v2-get-voice-call-status-api
+Documentation version: 6.20.0
+Retrieved: 2026-09-08T23:31:44+00:00
+
+> 📘 API Endpoint & Postman Collection
+> 
+> Voice channel is supported via Voice API and Send Message API v2. 
+> 
+> API endpoint for it is: [https://{YourRegion}.webexconnect.io/v2/messages/{messageId}].
+> 
+> Please modify YourRegion in the URL to reflect your tenant’s region. See [Know Your Endpoint Page](https://developers.imiconnect.io/reference/endpoints).
+> 
+> Refer to [Postman Collection](https://www.postman.com/cisco/webex-connect/collection/pyjw227/webex-connect-apis) for trying Get Voice Call Status Using Send Message API v2.
+
+> 📘 API Response and Error Codes
+> 
+> Send Message API v2 is asynchronous. You receive an HTTP response confirming acceptance of your request, while additional processing details are sent to your notify URL. For more information, see [Channel Specific Status Codes](https://developers.imiconnect.io/reference/channel-specific-status-codes-1).
+
+## Request Body for Get Voice Call Status API
+
+```curl Get Voice Call Status
+curl --location 'https://baseURL/v2/messages/{MessageId}' \
+--header 'Content-Type: application/json' \
+--header 'Accept: application/json' \
+--header 'key: ServiceKey'
+```
+
+## Get Voice Call Status Path Parameters
+
+| Parameter | Type   | Mandatory | Description                                                                                          |
+| :-------- | :----- | :-------- | :--------------------------------------------------------------------------------------------------- |
+| MessageId | string | yes       | Unique identifier for the message transaction. Returned in the response body of Send Message API v2. |
+
+## Get Voice Call Status Header Parameters
+
+| Parameter | Type   | Mandatory | Description                                                                               |
+| :-------- | :----- | :-------- | :---------------------------------------------------------------------------------------- |
+| key       | string | yes       | Authorization token for the request. Use a JWT signed with a secret key or a service key. |
+
+## Sample Response Body
+
+```json 200
+{
+    "callDuration": 4,
+    "clientId": 3678,
+    "toType": "msisdn",
+    "requestTimestamp": "2024-12-03T17:44:33.151+05:30",
+    "groupId": 4123,
+    "answeredAt": "2024-12-03T17:44:50.842+05:30",
+    "channel": "voice",
+    "messageId": "c6f14a41-3358-XXXX-XXXX-1141ecfXXXXX",
+    "requestedReceipts": [],
+    "priority": "1",
+    "version": "2.0",
+    "content": {
+        "ttsProcessor": "Azure",
+        "voice": "Apollo",
+        "gender": "Male",
+        "fileSize": 0,
+        "language": "en-IN",
+        "text": "/logdata/apps/dvp/callflows/Play_media.txt",
+        "type": "TTS",
+        "region": "English (India)",
+        "voiceType": "NEURAL"
+    },
+    "endedAt": "2024-12-03T17:44:54.512+05:30",
+    "teamId": 4321,
+    "callbackData": "test_callback_data",
+    "notifyUrl": "https://01j7x8v422z889w32gkbt8vg5x00-097f245de45d94eaa1b9.requestinspector.com",
+    "from": "+16403xxxxxx",
+    "correlationId": "na1b2b1i1",
+    "to": "+12985XXXXXX",
+    "direction": "outbound",
+    "status": "ANSWERED"
+}
+```
+
+## Response Parameters
+
+
+
+| Parameter | Description |
+| --- | --- |
+| callDuration | Duration of the call in seconds. |
+| clientId | Unique identifier for the client (tenant backend ID). |
+| toType | msisdn: Outbound call to a mobile number.  <br>customerId: Outbound call to the mobile number associated with the customer ID. |
+| requestTimestamp | Timestamp when the request was submitted, in ISO8601 format. |
+| groupId | Identifier for the group associated with the user. |
+| answeredAt | Timestamp when the call was answered, in UTC. |
+| channel | Set to Voice for all voice APIs. |
+| messageId | Unique identifier for the message transaction being queried. |
+| requestedReceipts | Events for which you will receive notifications. Possible values:  <br> _ **Offered**: Call is offered to the network.  <br>   **Accepted**:  Call is accepted by the network and placed to the end customer.  <br>   **Answered**: Call is answered by the end customer.  <br>   **Dropped**: Call is dropped due to an internal technical error.  <br>   **Rejected**: Call is rejected (e.g., network failure, busy, or declined by the customer).  <br>   **Released**: Call is ended by the platform.  <br>   **Disconnected**: Call is disconnected by the end customer.  <br>   **Trombone Connected**: Outbound call is connected to an agent; both the end customer and agent are on the call.  <br>   **Trombone Released**: Agent exits the call.  <br>   **Message Expired**: Call request expired after the configured expiry time. _ |
+| priority | Call priority.  <br>Possible values:  <br>1: Low  <br>2: Medium  <br>3: High |
+| version | Messaging API version used for the request. Example: '2.0'. |
+| content | Media details for the call, including TTS messages or other media. |
+| ttsProcessor | Text-to-speech engine used. Only 'Azure' is supported. |
+| voice | Voice selected for audio synthesis. |
+| gender | Gender of the selected voice (e.g., 'Male', 'Female'). |
+| fileSize | Size of the generated audio file. |
+| language | Language of the selected voice (e.g., 'en-US', 'hi-IN'). |
+| text | Input text sent for speech conversion. |
+| type | Input text format. Use 'plain text' or 'SSML'. |
+| region | Region of the TTS engine. |
+| voiceType | Type of voice used. Only 'Neural' is supported. |
+| endedAt | Timestamp when the call ended, in UTC. |
+| teamId | Team identifier associated with the call. Present based on authorization. |
+| callbackData | Data included in the 'callbackData' field of the request. |
+| notifyUrl | URL to receive callback data and receipts. |
+| from | Number initiating the outbound call. |
+| correlationId | Correlation ID used in the call request, returned in the response. |
+| to | Numbers to which the call is initiated. |
+| direction | Indicates if the call is outbound or inbound. |
+| status | Status of the call. Possible values:  <br>   _**Initiated**: Call has been initiated.  <br>   **Ringing**: Call is ringing and not yet answered.  <br>   **In-progress**: Call is in progress.  <br>   **Completed**: Call completed successfully.  <br>   **Busy**: User's phone is busy.  <br>   **No-answer**: Call was not answered by the user.  <br>   **Canceled**: Call was rejected by the user.  <br>   **Failed**: Call failed abruptly. _ |
+
+
+
+## API reference metadata
+
+These are source metadata and examples. `api.auth` is ReadMe metadata; verify authentication in the documented headers/security scheme.
+
+```json
+{
+  "method": "get",
+  "url": "",
+  "auth": "required",
+  "results": {
+    "codes": [
+      {
+        "name": "",
+        "code": "{}",
+        "language": "json",
+        "status": 200
+      },
+      {
+        "name": "",
+        "code": "{}",
+        "language": "json",
+        "status": 400
+      }
+    ]
+  },
+  "params": [],
+  "examples": {
+    "codes": []
+  }
+}
+```

@@ -1,0 +1,36 @@
+{
+  "api_metadata_path": "sources/cache/developer/outbound-webhooks-api-ref.api.json",
+  "category": "OUTBOUND WEBHOOKS",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f650a",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "59ce30da229d36f46a4cb59df15e85f66e3749df0b8a5cd2c36cedba3c47e82e",
+    "source_path": "1f410de6020a68900354f9f81e1d475011f630f94db32aabda9305a18a8c0526",
+    "text_path": "ded8b2816bbd378077a4658e8ec90cdf10d945573be804009f36fb94829ad225"
+  },
+  "headings": [
+    "Enable Hub Secret (Optional)",
+    "Delivery Receipts",
+    "Incoming Messages & Events"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/outbound-webhooks-api-ref.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/outbound-webhooks-api-ref",
+  "retrieved_at": "2026-09-08T23:31:44+00:00",
+  "sha256_api_metadata": "187de124aa8aa8acf032d1bfec486640b94ec306193dfc1e0feb2652279c3c88",
+  "sha256_html_response": "7a89a7c0f4ae2d321f0dc8e8d0fc7585a0589ac285dd893cc68266683887402d",
+  "sha256_source_body": "1f410de6020a68900354f9f81e1d475011f630f94db32aabda9305a18a8c0526",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/outbound-webhooks-api-ref.source.md",
+  "source_updated_at": "2026-01-22T16:04:12.380Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/outbound-webhooks-api-ref.txt",
+  "title": "Outbound Webhooks",
+  "url": "https://developers.webexconnect.io/reference/outbound-webhooks-api-ref",
+  "word_count": 519,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/outbound-webhooks-api-ref.metadata.json"
+}

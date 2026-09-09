@@ -1,0 +1,33 @@
+{
+  "category": "Assets",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182577e1",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "35fede18f0041dec4ef847ec3a6436debd7891345adc1804553e2806116f38cf",
+    "source_path": "ccbe47321da74ac5ea39b235c28e7f23fcac74343b665a3e26c8f0b72c07c334",
+    "text_path": "3a89f01b812f4db779934241c9b285b51fc6f5282afb3c095ad42f0b48018017"
+  },
+  "headings": [
+    "Get a Keyword"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/keyword.md",
+  "resolved_url": "https://help.webexconnect.io/docs/keyword",
+  "retrieved_at": "2026-09-08T23:28:59+00:00",
+  "sha256_html_response": "fea5f309c56c2f4e8db14a1d1661654cba230da7b9e95a1d8d72622a5ac36cd8",
+  "sha256_source_body": "ccbe47321da74ac5ea39b235c28e7f23fcac74343b665a3e26c8f0b72c07c334",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/keyword.source.md",
+  "source_updated_at": "2025-04-02T20:03:31.100Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/keyword.txt",
+  "title": "Keyword",
+  "url": "https://help.webexconnect.io/docs/keyword",
+  "word_count": 207,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/keyword.metadata.json"
+}

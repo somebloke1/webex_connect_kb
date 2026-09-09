@@ -1,0 +1,386 @@
+This node calls Webex Engage Create Conversation API to create conversation on Webex Engage. While configuring flows in Webex Connect, you’d need to use this node for creating a conversation with the customer and channel details
+
+## 
+
+Authorization
+
+Refer to section Node Authorizations for more information.  
+
+## 
+
+Methods and Outcomes
+
+Here’s a brief description of various methods, and corresponding output variables and node outcomes associated with each of the methods.
+
+Method Name - Create Conversation 
+
+ [Image: Interface section displaying the method name "Create Conversation".] 
+Interface section displaying the method name "Create Conversation".
+
+ | Method Name | Output Variables | Node Outcomes
+
+ | Create Conversation | TransId |    onInvalidData
+
+ onError
+ onInvalidChoice
+
+ onTimeout
+ onauthorizationfail
+
+ Failure
+ onConversationCreated
+
+ onConversationFailed 
+
+ | Channel | Field Value
+
+ | Facebook Messenger | FACEBOOK PAGE ID - $(FBpageid)
+
+FACEBOOK PS ID - $(n2.messenger.psId)
+
+CUSTOMER NAME - $(n2.messenger.name)
+
+DIRECTION - Inbound
+
+MESSAGE TYPE - Text/text with attachments
+
+TEXT - $(n2.messenger.message)
+
+TIMESTAMP (IN UTC) - $(n2.messenger.ts)
+
+ | SMS | BUSINESS LONGCODE/SHORTCODE - $(n2.sms.serviceNumber)
+
+CUSTOMER MOBILE NUMBER - $(n2.sms.senderNumber)
+
+CUSTOMER NAME - $(n2.sms.name)
+
+DIRECTION - Inbound
+
+TEXT - $(n2.sms.message)
+
+TIMESTAMP (IN UTC) - $(n2.sms.ts)
+
+ | Email | BUSINESS EMAIL ID - $(bizemailid)
+
+FROM EMAIL ID - $(n2.email.emailId)
+
+DIRECTION – Inbound
+
+TIMESTAMP (IN UTC) - $(n2.email.timestamp)
+
+FROM ADDRESS - $(n2.email.emailId)
+
+TO RECEPIENTS - $(n2.email.toAddresses)
+
+CC RECEPIENTS - $(n2.email.ccRecipients)
+
+SUBJECT - $(n2.email.subject)
+
+EMAIL HEADERS - $(n2.email.headers)
+
+PLAIN BODY - $(messageStrippedText)
+
+HTML BODY - $(messageHTML)
+
+STRIPPED HTML - $(messageStrippedHTML)
+
+ATTACHMENTS - $(parsedattachments)
+
+ | LiveChat | CUSTOMER NAME - Customer
+
+THREAD ID - $(n2.inappmessaging.threadId)
+
+LIVECHAT USER ID - $(n2.inappmessaging.userId)
+
+LIVECHAT APP ID - $(n2.inappmessaging.appId)
+
+LIVECHAT WEBSITE DOMAIN - Need to be configured in custom variables
+
+DIRECTION - Inbound, Outbound, Announcement
+
+MESSAGE TYPE - Text With Attachments
+
+TEXT - $(message)
+
+TIMESTAMP (IN UTC) - $(n2.inappmessaging.timestamp)
+
+ATTACHMENTS - $(parseDataAttachment)
+
+LIVE CHAT WITH QUICK REPLIES
+
+LIVE CHAT WITH CAROUSALS
+
+ | WhatsApp | WA BUSINESS ID - $(n2.whatsapp.waId)
+
+CUSTOMER NAME - $(n2.whatsapp.username)
+
+DIRECTION - Inbound
+
+MESSAGE TYPE - Text With Attachments
+
+TEXT - $(messageFromCustomer)
+
+TIMESTAMP (IN UTC) - $(n2.whatsapp.ts)
+
+ATTACHMENTS - $(parseDataAttachment)
+
+ | Input Variables | Output Variables
+
+ | CHANNEL – Facebook
+
+DIRECTION – Inbound
+
+MESSAGE TYPE - Text With Attachments
+
+TEXT - $(messageFromCustomer)
+
+_ This is one of the Evaluate node variables which contains the processed incoming message from the  customer.
+
+TIMESTAMP (IN UTC) - $(n2.messenger.ts)
+
+_ Timestamp in the output variables of the start node which contains the Messenger Timestamp
+
+FACEBOOK PAGE ID - $(FBpageid)
+
+_ Messenger page Id is available in the Facebook section in the Assets section. When the flow is imported, the user must copy the Facebook page id from the assets section to the FBpageid custom variable
+
+FACEBOOK PS ID - $(n2.messenger.psId)
+
+_ psId from the output variables of the start node is the Facebook PS ID
+
+CUSTOMER NAME - $(n2.messenger.name)
+
+_ name from the output variables of the start node is the Customer Name
+
+Attachments – $(parseDataAttachment)
+
+_ This is one of the Evaluate node variables which contains the processed incoming attachment array object from customer respectively | TransId
+
+## 📘
+Note
+
+When the variable is selected from the previous node output variables, the nodeid will be the prefix for the variable. Eg., sms.serviceNumber is an output variable of start node (node id 2), then the variable becomes $(n2.sms.serviceNumber)
+
+ | Input Variables | Output Variables
+
+ | CHANNEL – SMS
+
+DIRECTION – Inbound
+
+TEXT - $(n2.sms.message)
+
+_ Message from the output variables of the start node which contains the message.
+
+TIMESTAMP (IN UTC) - $(n2.sms.ts)
+
+_ Timestamp in the output variables of the start node which contains the SMS Timestamp
+
+BUSINESS LONGCODE/SHORTCODE
+
+- $(n2.sms.serviceNumber)  _ ServiceNumber from the output variables of the start node is the Business longcode/shortcode
+
+CUSTOMER MOBILE NUMBER
+
+- $(n2.sms.msisdn)  _ Msisdn from the output variables of the start node is the customer mobile number
+
+CUSTOMER NAME
+
+- $(n2.sms.msisdn)  * Msisdn from the output variables of the start node is the customer name | TransId
+
+## 📘
+Note
+
+When the variable is selected from the previous node output variables, the nodeid will be the prefix for the variable. Eg., sms.serviceNumber is an output variable of start node (node id 2), then the variable becomes $(n2.sms.serviceNumber)
+
+ | Input Variables | Output Variables
+
+ | CHANNEL – EMAIL
+
+BUSINESS EMAIL ID - $(bizemailid)
+
+_ email id is available in the email section in the Assets section. When the flow is imported, the user must copy the email id from the assets section to the bizemailid custom variable
+
+DIRECTION – Inbound
+
+FROM EMAIL ID - $(n2.email.emailId)
+
+_ emailId in the output variables of the start node is from email id
+
+EMAIL SUBJECT - $(n2.email.subject)
+
+_ Subject in the output variables of the start node is the subject
+
+TO RECEPIENTS - $(n2.email.toAddresses)
+
+_ ToAddresses in the output variables of the start node is the To Recepients
+
+CC RECEPIENTS - $(n2.email.ccRecipients)
+
+_ ccRecepients in the output variables of the start node is the CC Recepients
+
+TIMESTAMP (IN UTC) - $(n2.email.timestamp)
+
+_ ccRecepients in the output variables of the start node is the CC Recepients
+
+EMAIL HEADERS - $(n2.email.headers)
+
+_ ccRecepients in the output variables of the start node is the CC Recepients
+
+PLAIN BODY - $(messageStrippedText)
+
+_ messageStrippedText in the custom variables is the Plain body
+
+HTML BODY - $(messageHTML)
+
+_ MessageHTML in the custom variables is the HTML body
+
+STRIPPED HTML - $(messageStrippedHTML)
+
+_ messageStrippedHTML in the custom variables is the Stripped HTML
+
+ATTACHMENTS - $(parsedattachments)
+
+* This is one of the Evaluate node variables which contains the processed incoming attachment array object from customer respectively | TransId
+
+## 📘
+Note
+
+When the variable is selected from the previous node output variables, the nodeid will be the prefix for the variable. Eg., sms.serviceNumber is an output variable of start node (node id 2), then the variable becomes $(n2.sms.serviceNumber)
+
+## 📘
+Note
+
+Live Chat Create Conversation has two versions 1.0 and 1.2
+
+ | Input Variables | Output Variables | Versions
+
+ | CHANNEL – LIVE CHAT
+
+CUSTOMER NAME - Customer
+
+_ message in the custom variables is the message
+
+THREAD ID - $(n2.inappmessaging.threadId)
+
+_ ThreadId in the start node output variables is the Thread Id
+
+LIVE CHAT USER ID - $(n2.inappmessaging.userId)
+
+_ User Id in the output variables of the start node is the Livechat user Id
+
+LIVE CHAT APP ID - $(n2.inappmessaging.appId)
+
+_ AppId in the output variables of the start node is the Live Chat App Id
+
+LIVE CHAT WEBSITE DOMAIN
+
+_ Website domain in which the Live Chat widget is embedded. The website domain is available in the app settings page.
+
+DIRECTION – Inbound
+
+MESSAGE TYPE -
+Text With Attachments
+
+ Live Chat Form Response
+
+_ Live Chat with Carousel Response - If ‘Live Chat Carousel Response’ is selected it displays two fields: Live Chat Carousel Response object (JSON or flow variable) and Timestamp
+
+_ Live Chat with Quick Replies Response - If ‘Live Chat Quick Replies Response’ is selected it displays two fields: Live Chat Quick Replies Response object (JSON or flow variable) and Timestamp
+
+Live Chat Quick Replies Response Object/Live Chat Carousels Response Object: $(Inappmessaging.postback)
+
+DIRECTION – Outbound
+
+MESSAGE TYPE -
+
+_ Text With Attachments
+
+_ Live Chat Text with Carousel
+
+- If ‘Text with carousel’ is selected it displays three fields: Text (String or flow variable), Carousel object (expected value: JSON or flow variable) and Timestamp_ Live Chat Text with Quick Replies - If ‘Text with quick replies' selected it displays three fields: Text (String or flow variable), Quick replies object (expected value: JSON or flow variable) and Timestamp
+
+DIRECTION - Announcement
+ Text
+
+ TimeStamp
+
+Live Chat Quick Replies Object/Live Chat Carousels Object: $(send.template) or $(send.quickreplies)
+
+TEXT - $(message)
+
+ message in the custom variables is the message
+
+ $(send.text) (Quick Replies or Carousal)
+
+TIMESTAMP (IN UTC) -
+
+_ Timestamp in the output variables of the start node which contains the Live Chat Timestamp
+
+ATTACHMENTS - $(parseDataAttachment)
+
+_ This is one of the Evaluate node variables which contains the processed incoming attachment array object from customer respectively
+
+CONVERSATION ID - $(n6.conversationId) (Here, n6 is the respective node ID)
+
+_ Conversation from the output variables of the Search Conversation is the Conversation ID
+
+DIRECTION – Inbound
+
+MESSAGE TYPE - Text With Attachments
+
+TEXT - $(message)
+
+ message in the custom variables is the message
+
+ $(send.text) (Quick Replies or Carousal)
+
+TIMESTAMP (IN UTC) - $(n2.inappmessaging.timestamp)
+
+_ $(n2.inappmessaging.timestamp) in the custom variables is the Timestamp
+
+ATTACHMENTS - $(parseDataAttachment)
+
+_ This is one of the Evaluate node variables which contains the processed incoming attachment array object from customer respectively
+
+DIRECTION – Announcement
+
+TEXT - $(message)
+
+_ message in the custom variables is the message
+
+_ TIMESTAMP (IN UTC) - $(n2.inappmessaging.timestamp)
+
+\_ Timestamp in the output variables of the start node which contains the Live Chat Timestamp | TransId | Text With Attachments, Live Chat Form Response, Live Chat Carousel Response,
+
+Live Chat Quick Replies Response are available in v1.2 for Inbound Direction
+
+Text With Attachments, Live Chat Text With Carousel, Live Chat Text With Quick Replies are available in v1.2 for Outbound Direction
+
+Announcement is available in v1.2
+
+## 📘
+Note:
+
+When the variable is selected from the previous node output variables, the nodeid will be the prefix for the variable. Eg., sms.serviceNumber is an output variable of start node (node id 2), then the variable becomes $(n2.sms.serviceNumber)
+
+ | Input Variables | Output Variables
+
+ | CHANNEL - WhatsApp
+
+_ WA Business ID - $(WANumber)
+
+_ CUSTOMER ID - $(n2.whatsapp.waId)
+
+_ CUSTOMER NAME - $(n2.whatsapp.username)
+
+_ Direction – Inbound/Outbound
+
+_ Message type – Text with Attachments
+
+_ Text – $(messageFromCustomer)
+
+\_ This is one of the Evaluate node variables which contains the processed incoming message from the  customer.  _ Timestamp - $(n2.whatsapp.ts)
+
+\_ Timestamp in the output variables of the start node which contains the WhatsApp Timestamp  _ Attachments – $(parseDataAttachment)
+
+\* This is one of the Evaluate node variables which contains the processed incoming attachment array object from customer respectively | TransId

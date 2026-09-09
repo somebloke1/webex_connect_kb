@@ -1,0 +1,36 @@
+{
+  "api_metadata_path": "sources/cache/developer/updateprofile.api.json",
+  "category": "Profile API v2",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f64e6",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "a6f966b4f7397df65133e9ff87aee93a0865e6ac9f15d74ac7c7ac6ab48d5e60",
+    "source_path": "530603bfa5596c71dbccb138a6ef55830ec99c83f233104e49889071c29a680e",
+    "text_path": "b5e86af9e294ba9da38a1701736b1742af9e304fbdda84a521c823e2ddf1e04a"
+  },
+  "headings": [
+    "**Status Codes**"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/updateprofile.md",
+  "openapi_path": "sources/cache/openapi/8e527c81f0c554fec7de28cb7305391884f5e83c2a9c53a9caaa0ca283da30c8.json",
+  "resolved_url": "https://developers.webexconnect.io/reference/updateprofile",
+  "retrieved_at": "2026-09-08T23:31:49+00:00",
+  "sha256_api_metadata": "da154c0a8a99bd033522a99514b92f3ebd6730ef413f9af58825be67f718b8c0",
+  "sha256_html_response": "0551729744d8a8e3fe1602ca4d395ef984f3b03ae31475cd99494feecd40372f",
+  "sha256_openapi": "8e527c81f0c554fec7de28cb7305391884f5e83c2a9c53a9caaa0ca283da30c8",
+  "sha256_source_body": "530603bfa5596c71dbccb138a6ef55830ec99c83f233104e49889071c29a680e",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/updateprofile.source.md",
+  "source_updated_at": "2026-04-16T06:01:52.023Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/updateprofile.txt",
+  "title": "Update Customer Profile",
+  "url": "https://developers.webexconnect.io/reference/updateprofile",
+  "word_count": 1360,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/developer/updateprofile.metadata.json"
+}

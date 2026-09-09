@@ -1,0 +1,272 @@
+# Voice
+
+Source: https://developers.webexconnect.io/reference/voice-outbound-webhooks
+Documentation version: 6.20.0
+Retrieved: 2026-09-08T23:31:45+00:00
+
+Navigate to Integrations -> Outbound Webhooks
+
+## Voice Delivery Receipts
+
+- Select the service you are sending the voice call from.
+- Select the channel as Voice.
+
+```json Offered
+{
+  "deliveryTransInfo": "<voice release event xml data>",
+  "deliveryInfoNotification": {
+    "deliveryInfo": {
+      "timeStamp": "2020-02-05T07:34:23.596Z",
+      "Description": "Call offered",
+      "code": "7407",
+      "deliveryChannel": "voice",
+      "additionalInfo": "",
+      "destination": "+91970XXXX010",
+      "destinationType": "msisdn",
+      "deliveryStatus": "OFFERED"
+    },
+    "subtid": "",
+    "transid": "62cfd7cf-ea2b-XXXX-aaa7-f3aca6c9888d",
+    "callbackData": "",
+    "correlationid": ""
+  }
+```
+```json Accepted
+{
+  "deliveryTransInfo": "<voice release event xml data>",
+  "deliveryInfoNotification": {
+    "deliveryInfo": {
+      "timeStamp": "2020-02-05T07:34:24.845Z",
+      "Description": "Call accepted",
+      "code": "7408",
+      "deliveryChannel": "voice",
+      "additionalInfo": "",
+      "destination": "+91970XXXX010",
+      "destinationType": "msisdn",
+      "deliveryStatus": "ACCEPTED"
+    },
+    "subtid": "",
+    "transid": "62cfd7cf-ea2b-XXXX-aaa7-f3aca6c9888d",
+    "callbackData": "",
+    "correlationid": ""
+  }
+```
+```json Answered
+{
+    "deliveryTransInfo": "<voice release event xml data>",
+    "deliveryInfoNotification": {
+        "deliveryInfo": {
+            "deliveryChannel": "voice",
+            "Description": "Answered",
+            "destinationType": "msisdn",
+            "timeStamp": "2016-07-28T08:07:38.481",
+            "code": "7519",
+            "deliveryStatus": "ANSWERED",
+            "destination": "+91970XXXX010"
+        },
+        "correlationid": "",
+        "callbackData": "return callbackdata",
+        "transid": "038ce810-132e-XXXX-a1de-e8aaeed9fdca"
+    }
+}
+```
+```json Dropped
+{
+  "deliveryTransInfo": "<voice release event xml data>",
+  "deliveryInfoNotification": {
+    "deliveryInfo": {
+      "timeStamp": "2020-02-05T07:35:30.469Z",
+      "Description": "Call dropped",
+      "code": "7409",
+      "deliveryChannel": "voice",
+      "additionalInfo": "",
+      "destination": "+91970XXXX010",
+      "destinationType": "msisdn",
+      "deliveryStatus": "DROPPED"
+    },
+    "subtid": "",
+    "transid": "62cfd7cf-ea2b-XXXX-aaa7-f3aca6c9888d",
+    "callbackData": "",
+    "correlationid": ""
+  }
+```
+```json Rejected
+{
+  "deliveryInfoNotification": {
+    "deliveryInfo": {
+      "timeStamp": "2020-06-18T11:18:46.584Z",
+      "Description": "Customer busy",
+      "code": "7402",
+      "deliveryChannel": "voice",
+      "destination": "+91XXXXXXXXX",
+      "destinationType": "msisdn",
+      "deliveryStatus": "REJECTED"
+    },
+    "subtid": "",
+    "transid": "9cb04028-5338-XXXX-ac18-67215d364404",
+    "callbackData": "",
+    "correlationid": "cid"
+  }
+```
+```json Released
+{
+  "deliveryTransInfo": "<voice release event xml data>",
+  "deliveryInfoNotification": {
+    "deliveryInfo": {
+      "timeStamp": "2020-02-05T07:35:30.470Z",
+      "Description": "Release",
+      "code": "7405",
+      "deliveryChannel": "voice",
+      "additionalInfo": "",
+      "destination": "+91970XXXX010",
+      "destinationType": "msisdn",
+      "deliveryStatus": "Released"
+    },
+    "subtid": "",
+    "transid": "62cfd7cf-ea2b-XXXX-aaa7-f3aca6c9888d",
+    "callbackData": "",
+    "correlationid": ""
+  }
+```
+```json Disconnected
+{
+  "deliveryTransInfo": "<voice release event xml data>",
+  "deliveryInfoNotification": {
+    "deliveryInfo": {
+      "timeStamp": "2020-02-05T07:35:30.298Z",
+      "Description": "Call disconnected",
+      "code": "7410",
+      "deliveryChannel": "voice",
+      "additionalInfo": "",
+      "destination": "+91970XXXX010",
+      "destinationType": "msisdn",
+      "deliveryStatus": "DISCONNECTED"
+    },
+    "subtid": "",
+    "transid": "62cfd7cf-ea2b-XXXX-aaa7-f3aca6c9888d",
+    "callbackData": "",
+    "correlationid": ""
+  }
+```
+```json Trombone Connected
+{
+  "deliveryInfoNotification": {
+    "deliveryInfo": {
+      "timeStamp": "2020-07-13T12:23:30.072Z",
+      "Description": "Trombone connected",
+      "code": "7411",
+      "deliveryChannel": "voice",
+      "additionalInfo": "",
+      "destination": "+91XXXXXXXXX",
+      "destinationType": "msisdn",
+      "deliveryStatus": "TROMBONE_CONNECTED"
+    },
+    "subtid": "1d21a420-b2bc-XXXX-9c87-1a4e20e38f58",
+    "transid": "44b7e012-1001-XXXX-82b8-38be8fe04fd6",
+    "callbackData": "",
+    "correlationid": ""
+  }
+```
+```json Trombone Released
+{
+  "deliveryInfoNotification": {
+    "deliveryInfo": {
+      "timeStamp": "2020-07-13T12:24:08.439Z",
+      "Description": "Trombone released",
+      "code": "7412",
+      "deliveryChannel": "voice",
+      "additionalInfo": "",
+      "destination": "+91XXXXXXXXX",
+      "destinationType": "msisdn",
+      "deliveryStatus": "TROMBONE_RELEASED"
+    },
+    "subtid": "1d21a420-b2bc-XXXX-9c87-1a4e20e38f58",
+    "transid": "44b7e012-1001-XXXX-82b8-38be8fe04fd6",
+    "callbackData": "",
+    "correlationid": ""
+  }
+```
+```json Request Expired
+{
+    "deliveryInfoNotification": {
+        "deliveryInfo": {
+            "timeStamp": "2020-08-05T13:17:39.539+01:00",
+            "Description": "Request expired",
+            "code": "7005",
+            "deliveryChannel": "voice",
+            "additionalInfo": "",
+            "destination": "9191xxxxxxxx",
+            "destinationType": "msisdn",
+            "deliveryStatus": "Failed"
+        },
+        "subtid": "9b2af275-eb55-XXXX-a442-78cfac5a9e91",
+        "transid": "21ad3d0e-875d-XXXX-bed0-b13e62d812e3",
+        "callbackData": "",
+        "correlationid": ""
+    }
+}
+```
+
+Here is a list of milestone events and when they occur while making a call: 
+
+- **Offered**: when Webex Connect platform offers a call to the network to place a call.
+- **Accepted**: when the network accepts the call offered by Webex Connect and placed to end-user.
+- **Answered**: when the end-user answers the call is answered.
+- **Dropped**: when the call is dropped because of an internal error.
+- **Rejected**: when the call gets rejected due to multiple reasons like network failure, the user is busy, rejected by the user etc.
+- **Released**: when the call is ended.
+- **Disconnected**: when the end-user disconnects the call.
+- **Trombone Connected**: when the Webex Connect platform is sending a notification to the user and the user asks to talk to an agent. The Trombone Connect event occurs when both parties A (end-user) and B (agent) are connected.
+- **Trombone Released**: when the party B (agent) exits the call.
+
+> ❗️ 
+> 
+> Please note that callbackData and correlationid fields are not getting passed at the moment for Trombone Connected, Trombone Released, and Disconnected notifications due to a bug.
+
+### **Usecases for Outbound Calls from Webex Connect**
+
+When an outbound call is placed from the Webex Connect platform, see the progression of events in the following use cases. The call event/delivery status is denoted in square brackets and the description of the event is denoted in parentheses.
+
+
+
+| Scenario | Sequence of Events |
+| --- | --- |
+| Full message heard by the user and the call ended after running through the full flow. | OFFERED - ACCEPTED - ANSWERED - [DROPPED - RELEASED]  <br>  <br>The events DROPPED and RELEASED are fired simultaneously with the same timestamp. |
+| The user cuts the call while playing. | OFFERED - ACCEPTED - ASNWERED - [RELEASED - DISCONNECTED (call disconnected) -DROPPED]  <br>  <br>The events RELEASED, DISCONNECTED, and  DROPPED are fired simultaneously with the same timestamp. |
+| User is busy on another call. | OFFERED - ACCEPTED - [DROPPED - REJECTED (no answer)]  <br>  <br>The events DROPPED and REJECTED are fired simultaneously with the same timestamp. |
+| Number not answered by the user but rang full-cycle. | OFFERED - ACCEPTED - [DROPPED - REJECTED (no answer)]  <br>  <br>The events DROPPED and REJECTED are fired simultaneously with the same timestamp. |
+| No answer on the number; call disconnected while ringing. | OFFERED - ACCEPTED - [DISCONNECTED- DROPPED - REJECTED (customer busy)]  <br>  <br>The events DISCONNECTED, DROPPED and REJECTED are fired simultaneously with the same timestamp. |
+
+
+
+## API reference metadata
+
+These are source metadata and examples. `api.auth` is ReadMe metadata; verify authentication in the documented headers/security scheme.
+
+```json
+{
+  "results": {
+    "codes": [
+      {
+        "status": 200,
+        "language": "json",
+        "code": "{}",
+        "name": ""
+      },
+      {
+        "status": 400,
+        "language": "json",
+        "code": "{}",
+        "name": ""
+      }
+    ]
+  },
+  "auth": "required",
+  "params": [],
+  "url": "",
+  "method": "get",
+  "examples": {
+    "codes": []
+  }
+}
+```

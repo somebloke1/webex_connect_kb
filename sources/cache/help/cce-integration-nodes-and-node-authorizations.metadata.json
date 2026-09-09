@@ -1,0 +1,37 @@
+{
+  "category": "Webex Connect and Cisco Contact Center Enterprise System (CCE)",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182578c7",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "90ffab0e176ac9fe3b3a6c28ae8e687cc4d5605480dded9a05d573e9e507b13b",
+    "source_path": "d5e9cbb361f1fb3881879dd61812c4c0c6c2582483730028909f096514ed1bc9",
+    "text_path": "ef96bdeb4763416fd215d8dd58b656e83d462fe6da4dbdaebae468f20d69af37"
+  },
+  "headings": [
+    "Node and Methods",
+    "Node Authorization",
+    "Node Authorization for Cisco Contact Center Enterprise Task nodes",
+    "📘Note",
+    "📘Note"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/cce-integration-nodes-and-node-authorizations.md",
+  "resolved_url": "https://help.webexconnect.io/docs/cce-integration-nodes-and-node-authorizations",
+  "retrieved_at": "2026-09-08T23:29:22+00:00",
+  "sha256_html_response": "ee03576006964dcc08610feb8af59dcbf1ec42e296e2d8523fc0cc9cbafe2e36",
+  "sha256_source_body": "d5e9cbb361f1fb3881879dd61812c4c0c6c2582483730028909f096514ed1bc9",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/cce-integration-nodes-and-node-authorizations.source.md",
+  "source_updated_at": "2026-02-04T13:03:33.184Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/cce-integration-nodes-and-node-authorizations.txt",
+  "title": "CCE Integration Nodes and Node Authorizations",
+  "url": "https://help.webexconnect.io/docs/cce-integration-nodes-and-node-authorizations",
+  "word_count": 575,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/cce-integration-nodes-and-node-authorizations.metadata.json"
+}

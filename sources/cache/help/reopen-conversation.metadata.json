@@ -1,0 +1,35 @@
+{
+  "category": "Webex Engage Standalone Nodes",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257985",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "5f0c52d1d4001ef2cc504293120daf8f40235eb933a12559eab0e9a4d55875ca",
+    "source_path": "c62bd96bbd8f18bb71760b1c7f6f9f37a8fc9bbe567ad5979eff2ff9e2098b75",
+    "text_path": "ba75c63e4a98a6fc7c9d0d5469793d2a6ff0119d9b50b1aa94863aac9c802b34"
+  },
+  "headings": [
+    "Configure",
+    "Output variables",
+    "Node outcomes"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/reopen-conversation.md",
+  "resolved_url": "https://help.webexconnect.io/docs/reopen-conversation",
+  "retrieved_at": "2026-09-08T23:29:31+00:00",
+  "sha256_html_response": "f9e5356ee2769a3f0fea620a3da5bef9d6c3f4849b34318673b689322b20aabe",
+  "sha256_source_body": "c62bd96bbd8f18bb71760b1c7f6f9f37a8fc9bbe567ad5979eff2ff9e2098b75",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/reopen-conversation.source.md",
+  "source_updated_at": "2026-04-14T11:20:34.809Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/reopen-conversation.txt",
+  "title": "Reopen conversation - WxEngage standalone",
+  "url": "https://help.webexconnect.io/docs/reopen-conversation",
+  "word_count": 273,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/reopen-conversation.metadata.json"
+}

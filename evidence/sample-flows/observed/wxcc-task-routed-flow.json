@@ -1,0 +1,2238 @@
+{
+  "flowId": "96870",
+  "temporary_name": "KBSampleWxcc11",
+  "cells": [
+    {
+      "id": "1",
+      "parent": "0",
+      "vertex": false,
+      "edge": false,
+      "value": {
+        "tag": "workflowdata",
+        "attributes": {
+          "copy_used_vars": {
+            "2": {
+              "_usedVars": [],
+              "_usedTransVar": [
+                {
+                  "id": "n2",
+                  "nodeId": 2,
+                  "param": "webex.variables",
+                  "fullPath": "n2.webex.variables",
+                  "source": 2
+                },
+                {
+                  "id": "n2",
+                  "nodeId": 2,
+                  "param": "webex.RequestBody",
+                  "fullPath": "n2.webex.RequestBody",
+                  "source": 2
+                },
+                {
+                  "id": "n2",
+                  "nodeId": 2,
+                  "param": "webex.variables",
+                  "fullPath": "n2.webex.variables",
+                  "source": 2
+                }
+              ],
+              "_dynamicVar": [
+                "webex.ID",
+                "webex.Type",
+                "webex.agentId",
+                "webex.RequestBody",
+                "webex.origin",
+                "webex.destination",
+                "webex.mediaChannel",
+                "webex.mediaType",
+                "webex.direction",
+                "webex.variables",
+                "webex.queue",
+                "service.serviceKey"
+              ],
+              "_dynamicTransVar": [],
+              "_usedStreamVar": []
+            },
+            "1326": {
+              "_usedVars": [
+                {
+                  "id": "n2",
+                  "nodeId": 2,
+                  "param": "webex.ID",
+                  "fullPath": "n2.webex.ID",
+                  "source": 1326
+                },
+                {
+                  "id": "n2",
+                  "nodeId": 2,
+                  "param": "webex.agentId",
+                  "fullPath": "n2.webex.agentId",
+                  "source": 1326
+                }
+              ],
+              "_usedTransVar": [],
+              "_dynamicVar": [],
+              "_dynamicTransVar": [],
+              "_usedStreamVar": []
+            },
+            "1520": {
+              "_usedVars": [],
+              "_usedTransVar": [],
+              "_dynamicVar": [],
+              "_dynamicTransVar": [],
+              "_usedStreamVar": []
+            }
+          },
+          "dynamic_output_vars": {
+            "2": [
+              "webex.ID",
+              "webex.Type",
+              "webex.agentId",
+              "webex.RequestBody",
+              "webex.origin",
+              "webex.destination",
+              "webex.mediaChannel",
+              "webex.mediaType",
+              "webex.direction",
+              "webex.variables",
+              "webex.queue",
+              "service.serviceKey"
+            ],
+            "164": [],
+            "165": [],
+            "484": [
+              "TransId"
+            ],
+            "517": [],
+            "533": [],
+            "534": [],
+            "538": [],
+            "539": [],
+            "540": [],
+            "541": [],
+            "542": [],
+            "543": [],
+            "544": [],
+            "545": [],
+            "546": [],
+            "547": [],
+            "549": [],
+            "550": [],
+            "555": [],
+            "560": [],
+            "563": [],
+            "565": [],
+            "568": [],
+            "572": [],
+            "577": [],
+            "583": [],
+            "584": [],
+            "586": [],
+            "589": [],
+            "593": [],
+            "598": [],
+            "604": [],
+            "611": [],
+            "615": [],
+            "617": [],
+            "620": [],
+            "623": [],
+            "627": [],
+            "632": [],
+            "638": [],
+            "645": [],
+            "646": [],
+            "649": [],
+            "653": [],
+            "658": [],
+            "664": [],
+            "668": [],
+            "673": [],
+            "679": [],
+            "686": [],
+            "784": [],
+            "785": [],
+            "786": [],
+            "787": [],
+            "788": [],
+            "796": [],
+            "818": [],
+            "835": [],
+            "844": [],
+            "878": [],
+            "975": [],
+            "1011": [],
+            "1057": [
+              "TransId"
+            ],
+            "1058": [],
+            "1059": [],
+            "1060": [],
+            "1061": [],
+            "1062": [],
+            "1065": [],
+            "1067": [],
+            "1070": [],
+            "1074": [],
+            "1079": [],
+            "1085": [],
+            "1086": [],
+            "1088": [],
+            "1091": [],
+            "1095": [],
+            "1100": [],
+            "1106": [],
+            "1113": [],
+            "1114": [],
+            "1115": [],
+            "1117": [],
+            "1120": [],
+            "1124": [],
+            "1129": [],
+            "1130": [],
+            "1132": [],
+            "1135": [],
+            "1139": [],
+            "1144": [],
+            "1145": [],
+            "1147": [],
+            "1150": [],
+            "1154": [],
+            "1159": [],
+            "1165": [],
+            "1171": [],
+            "1177": [],
+            "1184": [],
+            "1191": [],
+            "1198": [],
+            "1200": [],
+            "1202": [],
+            "1203": [],
+            "1212": [],
+            "1234": [],
+            "1260": [
+              "TransId"
+            ],
+            "1261": [],
+            "1262": [],
+            "1265": [],
+            "1268": [],
+            "1272": [],
+            "1277": [],
+            "1283": [],
+            "1290": [],
+            "1291": [],
+            "1292": [],
+            "1311": [],
+            "1313": [],
+            "1316": [],
+            "1320": [],
+            "1325": [],
+            "1326": [],
+            "1327": [],
+            "1329": [],
+            "1332": [],
+            "1336": [],
+            "1345": [],
+            "1449": [],
+            "1520": [],
+            "1527": [],
+            "1529": [],
+            "1560": []
+          },
+          "logbooks": [],
+          "node_group_info": {},
+          "notes": {
+            "nodes": {},
+            "workflow": {}
+          },
+          "start_node_info": {
+            "channel": 28,
+            "type": "integration",
+            "subtype": "",
+            "isCheckLiveSessions": 0,
+            "extras": {},
+            "eventid": 50026,
+            "eventname": "Task Routed",
+            "v2EventId": 50020,
+            "conditions": [
+              {
+                "startag": "((",
+                "varname": "webex.destination",
+                "opr": "equals",
+                "value": "OR06143228",
+                "datatype": "string",
+                "endtag": "))"
+              }
+            ]
+          }
+        },
+        "text": ""
+      }
+    },
+    {
+      "id": "2",
+      "parent": "1",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "tag": "start",
+        "attributes": {
+          "hidecell": true,
+          "image": "start.svg",
+          "key": "start",
+          "keytype": "fullscreen",
+          "label": "WxCC Task v2",
+          "name": "Start",
+          "nodetype": "start",
+          "type": "start",
+          "updatedImage": "https://example.invalid/Cisco Webex Logo637513806888123311.svg",
+          "updatedimage": "webhook.svg",
+          "updatedon": "2023-05-02T09:45:40.773",
+          "view_restrict": true
+        },
+        "children": [
+          {
+            "tag": "event",
+            "attributes": {
+              "name": "onbegin",
+              "targetcount": 1
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "selectedChannel",
+              "type": "",
+              "view": ""
+            },
+            "text": {
+              "id": 28,
+              "name": "WxCC Task v2",
+              "description": "Make CRUD operations on WxCC task APIs",
+              "type": 2,
+              "extraData": {},
+              "subType": "",
+              "integrationId": 50020,
+              "image_url": "https://example.invalid/Cisco Webex Logo637513806888123311.svg",
+              "prefix": "webex"
+            }
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "selectedRuleEvent",
+              "type": "",
+              "view": ""
+            },
+            "text": {
+              "resume_keys": [],
+              "name": "Task Routed",
+              "output_variables": [
+                {
+                  "name": "ID",
+                  "type": 2,
+                  "path": "$.data.id",
+                  "order": 0,
+                  "id": "e8045263-9987-6d42-1369-7eb6e69fbd49",
+                  "$$hashKey": "object:34256"
+                },
+                {
+                  "name": "Type",
+                  "type": 2,
+                  "path": "$.type",
+                  "order": 1,
+                  "id": "1235360b-fb5d-85d2-5354-de3448e6372a",
+                  "$$hashKey": "object:34262"
+                },
+                {
+                  "name": "agentId",
+                  "type": 2,
+                  "path": "$.data.owner",
+                  "order": 2,
+                  "id": "065b7754-0b78-82de-5edd-6aa1e0f473ec",
+                  "$$hashKey": "object:34268"
+                },
+                {
+                  "name": "RequestBody",
+                  "type": 2,
+                  "path": "$",
+                  "order": 3,
+                  "id": "e2846d98-0613-cca7-7b12-0852018add53",
+                  "$$hashKey": "object:34274"
+                },
+                {
+                  "name": "origin",
+                  "type": 2,
+                  "path": "$.data.origin",
+                  "order": 4,
+                  "id": "aeb60564-8b69-39e7-7c29-f12b2533da77",
+                  "$$hashKey": "object:51827"
+                },
+                {
+                  "name": "destination",
+                  "type": 2,
+                  "path": "$.data.destination",
+                  "order": 5,
+                  "id": "a59d0090-a13e-3779-ec34-847cd2c087dd",
+                  "$$hashKey": "object:51833"
+                },
+                {
+                  "name": "mediaChannel",
+                  "type": 2,
+                  "path": "$.data.mediaChannel",
+                  "order": 6,
+                  "id": "9a0583ea-8daa-0b11-5b1e-24a92b789f78",
+                  "$$hashKey": "object:51839"
+                },
+                {
+                  "name": "mediaType",
+                  "type": 2,
+                  "path": "$.data.mediaType",
+                  "order": 7,
+                  "id": "25409973-efc0-2d23-76c6-e5c7efe6884d",
+                  "$$hashKey": "object:51845"
+                },
+                {
+                  "name": "direction",
+                  "type": 2,
+                  "path": "$.data.direction",
+                  "order": 8,
+                  "id": "1b6a2fcd-b1f7-ac45-2054-9b5650e8803f",
+                  "$$hashKey": "object:51851"
+                },
+                {
+                  "name": "variables",
+                  "type": 2,
+                  "path": "$.data.variables",
+                  "order": 9,
+                  "id": "b36b95b3-6bf8-525e-adfb-ea0daee3e2f8",
+                  "$$hashKey": "object:51857"
+                },
+                {
+                  "name": "queue",
+                  "type": 2,
+                  "path": "$.data.queue",
+                  "order": 10,
+                  "id": "fc15be4a-7a4a-b808-0818-c8be9c7632f2",
+                  "$$hashKey": "object:51863"
+                }
+              ],
+              "id": 50026,
+              "eventname": "Task Routed",
+              "desc": "Triggers when the agent on WxCC has accepted a contact"
+            }
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "ruleEvent",
+              "type": "",
+              "view": ""
+            },
+            "text": "Task Routed"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "ruleConditionStatus",
+              "type": "",
+              "view": ""
+            },
+            "text": true
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "conditions",
+              "type": "",
+              "view": ""
+            },
+            "text": [
+              {
+                "conditions": [
+                  {
+                    "variableConOption": {
+                      "inputType": "select",
+                      "selectOption": {
+                        "selectName": "name",
+                        "selectValue": "value",
+                        "selectFlag": false,
+                        "defaultList": [],
+                        "placeholderFlag": false,
+                        "uploadStatus": false
+                      }
+                    },
+                    "operatorConOption": {
+                      "inputType": "select",
+                      "selectOption": {
+                        "selectName": "name",
+                        "selectValue": "value",
+                        "selectFlag": false,
+                        "defaultList": [
+                          {
+                            "opr_name": "equals"
+                          },
+                          {
+                            "opr_name": "notequals"
+                          },
+                          {
+                            "opr_name": "in"
+                          },
+                          {
+                            "opr_name": "contains"
+                          },
+                          {
+                            "opr_name": "notin"
+                          },
+                          {
+                            "opr_name": "equalsignorecase"
+                          },
+                          {
+                            "opr_name": "startswith"
+                          },
+                          {
+                            "opr_name": "endswith"
+                          },
+                          {
+                            "opr_name": "regex"
+                          },
+                          {
+                            "opr_name": "containsignorecase"
+                          }
+                        ],
+                        "placeholderFlag": false,
+                        "uploadStatus": false
+                      }
+                    },
+                    "valueConOption": {
+                      "inputType": "text",
+                      "selectOption": {
+                        "selectName": "name",
+                        "selectValue": "value",
+                        "selectFlag": false,
+                        "defaultList": [],
+                        "placeholderFlag": false,
+                        "uploadStatus": false
+                      }
+                    },
+                    "pills": [],
+                    "index": "my3w5uzc",
+                    "variable": "webex.destination",
+                    "variableObject": {
+                      "var_name": "webex.destination"
+                    },
+                    "operator": "equals",
+                    "value": "OR06143228"
+                  }
+                ],
+                "index": "v4xvh6i9"
+              }
+            ]
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "apiReqConditions",
+              "type": "",
+              "view": ""
+            },
+            "text": [
+              {
+                "startag": "((",
+                "varname": "webex.destination",
+                "opr": "equals",
+                "value": "OR06143228",
+                "datatype": "string",
+                "endtag": "))"
+              }
+            ]
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "webHookData",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "customEvents",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "isKeyWordDisabled",
+              "type": "",
+              "view": ""
+            },
+            "text": true
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "isKeyWordVerifyReq",
+              "type": "",
+              "view": ""
+            },
+            "text": true
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "isKeyWordAvailable",
+              "type": "",
+              "view": ""
+            },
+            "text": true
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "output_variables",
+              "type": "",
+              "view": ""
+            },
+            "text": [
+              "webex.ID",
+              "webex.Type",
+              "webex.agentId",
+              "webex.RequestBody",
+              "webex.origin",
+              "webex.destination",
+              "webex.mediaChannel",
+              "webex.mediaType",
+              "webex.direction",
+              "webex.variables",
+              "webex.queue",
+              "service.serviceKey"
+            ]
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "voiceServiceProvider",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "conditionData",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "syncWebHookData",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "isCheckLiveSessions",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "session",
+            "attributes": {
+              "action_order": 0,
+              "index": "0ikc4dsk",
+              "name": "response",
+              "order": 0,
+              "tag": "session",
+              "type": "onleave"
+            },
+            "text": "$(n2.webex.variables)"
+          },
+          {
+            "tag": "session",
+            "attributes": {
+              "action_order": 0,
+              "index": "yu5pb8c8",
+              "name": "requestBody",
+              "order": 1,
+              "tag": "session",
+              "type": "onleave"
+            },
+            "text": "$(n2.webex.RequestBody)"
+          },
+          {
+            "tag": "log",
+            "attributes": {
+              "action_order": 1,
+              "index": "zmaif314",
+              "name": 12313,
+              "order": 0,
+              "tag": "log",
+              "type": "onleave"
+            },
+            "text": "$(n2.webex.variables)"
+          },
+          {
+            "tag": "nodevariablestore",
+            "attributes": {
+              "name": "n2.webex.variables",
+              "source": 2
+            },
+            "text": "$(webex.variables)"
+          },
+          {
+            "tag": "nodevariablestore",
+            "attributes": {
+              "name": "n2.webex.RequestBody",
+              "source": 2
+            },
+            "text": "$(webex.RequestBody)"
+          },
+          {
+            "tag": "nodevariablestore",
+            "attributes": {
+              "name": "n2.webex.ID",
+              "source": 1326
+            },
+            "text": "$(webex.ID)"
+          },
+          {
+            "tag": "nodevariablestore",
+            "attributes": {
+              "name": "n2.webex.agentId",
+              "source": 1326
+            },
+            "text": "$(webex.agentId)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "1326",
+      "parent": "1",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "tag": "prebuiltnode",
+        "attributes": {
+          "defaulttemplate": "deftemplate",
+          "image": "https://example.invalid/CiscoWebex637559582339433485.svg",
+          "infolabel": "w4nbaayr43",
+          "label": "Screen Pop",
+          "name": "Screen Pop",
+          "paramhide": true,
+          "templatedialog": [
+            {
+              "name": "deftemplate",
+              "label": "test",
+              "key": "prebuiltnode",
+              "size": {
+                "width": "$(width-integration)",
+                "height": "$(height-integration)"
+              }
+            }
+          ],
+          "type": "PrebuiltNode",
+          "updatedImage": "https://example.invalid/CiscoWebex637559582339433485.svg",
+          "updatedimage": "https://example.invalid/CiscoWebex637559582339433485.svg",
+          "updatedon": "2023-05-04T12:04:48.963",
+          "versionidsstr": [
+            {
+              "id": 50033,
+              "versionName": "v1.2",
+              "integrationId": 50023,
+              "status": 1,
+              "description": "",
+              "liveFromDate": "2021-07-13 16:29:07.0",
+              "discardedFromDate": null
+            },
+            {
+              "id": 50065,
+              "versionName": 1.3,
+              "integrationId": 50023,
+              "status": 1,
+              "description": "",
+              "liveFromDate": "2021-11-02 16:34:32.0",
+              "discardedFromDate": null
+            }
+          ],
+          "view_restrict": true
+        },
+        "children": [
+          {
+            "tag": "param",
+            "attributes": {
+              "name": "referencekey",
+              "type": "",
+              "view": ""
+            },
+            "text": 50023
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "name": "versionsList",
+              "type": "",
+              "view": ""
+            },
+            "text": [
+              {
+                "id": 50033,
+                "versionName": "v1.2",
+                "integrationId": 50023,
+                "status": 1,
+                "description": "",
+                "liveFromDate": "2021-07-13 16:29:07.0",
+                "discardedFromDate": null
+              },
+              {
+                "id": 50065,
+                "versionName": 1.3,
+                "integrationId": 50023,
+                "status": 1,
+                "description": "",
+                "liveFromDate": "2021-11-02 16:34:32.0",
+                "discardedFromDate": null
+              }
+            ]
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "name": "versionIds",
+              "type": "versiondata"
+            },
+            "text": "undefined"
+          },
+          {
+            "tag": "event",
+            "attributes": {
+              "name": "oninvaliddata",
+              "type": "BP"
+            },
+            "text": ""
+          },
+          {
+            "tag": "event",
+            "attributes": {
+              "name": "onerror",
+              "type": "BP"
+            },
+            "text": ""
+          },
+          {
+            "tag": "event",
+            "attributes": {
+              "name": "oninvalidchoice",
+              "type": "BP"
+            },
+            "text": ""
+          },
+          {
+            "tag": "event",
+            "attributes": {
+              "name": "ontimeout",
+              "type": "TP"
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "integration_id",
+              "type": "",
+              "view": ""
+            },
+            "text": 50023
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "client_uuid",
+              "type": "",
+              "view": ""
+            },
+            "text": "59c3244b-34c2-46f2-a99e-86d4eb813c37"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "node_uuid",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "method_id",
+              "type": "",
+              "view": ""
+            },
+            "text": 50349
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "version_id",
+              "type": "",
+              "view": ""
+            },
+            "text": 50164
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "auth_id",
+              "type": "",
+              "view": ""
+            },
+            "text": -1
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "methodRequestParameters",
+              "type": "",
+              "view": ""
+            },
+            "text": [
+              {
+                "order": 0,
+                "id": "9203f9a2-71fe-280a-dd6b-335b3ecf561c",
+                "name": "tenant_identifier",
+                "path": null,
+                "type": "header",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": true,
+                  "format_validator": null
+                },
+                "key": "X-ORGANIZATION-ID",
+                "debugKey": false,
+                "node_ui_type": "admin",
+                "node_ui_group_name": "hide",
+                "ui_field_configuration": {
+                  "type": "text",
+                  "options": []
+                }
+              },
+              {
+                "order": 0,
+                "id": "800d41bb-73c1-bd74-d715-e2c659ea3661",
+                "name": "domain",
+                "path": null,
+                "type": "path",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": true,
+                  "format_validator": null
+                },
+                "key": "domain",
+                "debugKey": false,
+                "node_ui_type": "admin",
+                "node_ui_group_name": "hide",
+                "ui_field_configuration": {
+                  "type": "text",
+                  "options": []
+                }
+              },
+              {
+                "order": 0,
+                "id": "97762099-35e2-e706-9f07-ad15f4d6a6dd",
+                "name": "tenant_identifier",
+                "path": null,
+                "type": "path",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": true,
+                  "format_validator": null
+                },
+                "key": "orgId",
+                "debugKey": false,
+                "node_ui_type": "admin",
+                "node_ui_group_name": "hide",
+                "ui_field_configuration": {
+                  "type": "text",
+                  "options": []
+                }
+              },
+              {
+                "order": 0,
+                "id": "486b059a-c366-9588-5999-862a1d29955d",
+                "name": "Trans ID",
+                "path": "transid",
+                "value": "$(n2.webex.ID)",
+                "desc": "$(n2.webex.ID)",
+                "type": "body",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": true,
+                  "format_validator": null
+                },
+                "key": "transid",
+                "debugKey": false,
+                "node_ui_type": "default",
+                "node_ui_group_name": "default",
+                "ui_field_configuration": {
+                  "type": "text",
+                  "options": []
+                }
+              },
+              {
+                "order": 1,
+                "id": "227f0340-25e7-6ca4-d23a-f176187e858a",
+                "name": "Agent ID",
+                "path": "agentId",
+                "value": "$(n2.webex.agentId)",
+                "desc": "$(n2.webex.agentId)",
+                "type": "body",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": true,
+                  "format_validator": null
+                },
+                "key": "agentId",
+                "debugKey": false,
+                "node_ui_type": "default",
+                "node_ui_group_name": "default",
+                "ui_field_configuration": {
+                  "type": "text",
+                  "options": []
+                }
+              },
+              {
+                "order": 2,
+                "id": "eb4fcdd2-e302-68e7-92dc-c8b354cf0faf",
+                "name": "ScreenPop URL",
+                "path": "screenPopUrl",
+                "value": "www.google.com",
+                "desc": "www.google.com",
+                "type": "body",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": true,
+                  "format_validator": null
+                },
+                "key": "screenPopUrl",
+                "debugKey": false,
+                "node_ui_type": "default",
+                "node_ui_group_name": "default",
+                "ui_field_configuration": {
+                  "type": "text",
+                  "options": []
+                }
+              },
+              {
+                "order": 3,
+                "id": "5da7bba4-edb5-d201-0a43-454d3a473061",
+                "name": "Target",
+                "path": "target",
+                "value": "sameBrowserTab",
+                "desc": "sameBrowserTab",
+                "type": "body",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": true,
+                  "format_validator": null
+                },
+                "key": "target",
+                "debugKey": false,
+                "node_ui_type": "default",
+                "node_ui_group_name": "default",
+                "ui_field_configuration": {
+                  "type": "text",
+                  "options": []
+                }
+              },
+              {
+                "order": 4,
+                "id": "6324c253-b6c6-0745-aaae-ee08125bef80",
+                "name": "Query Parameters",
+                "path": "queryParameters",
+                "value": {
+                  "CustomerId": "$(customerId)",
+                  "operation": "routed"
+                },
+                "desc": {
+                  "CustomerId": "$(customerId)",
+                  "operation": "routed"
+                },
+                "type": "body",
+                "validation": {
+                  "type": "",
+                  "condition": null,
+                  "regex": "",
+                  "mandatory": true,
+                  "format_validator": null
+                },
+                "key": "queryParameters",
+                "debugKey": false,
+                "node_ui_type": "default",
+                "node_ui_group_name": "default",
+                "ui_field_configuration": {
+                  "type": "text",
+                  "options": []
+                }
+              }
+            ]
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "methodRequestGroups",
+              "type": "",
+              "view": ""
+            },
+            "text": {}
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "methodGroupsOrder",
+              "type": "",
+              "view": ""
+            },
+            "text": []
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "methodResponseParameters",
+              "type": "",
+              "view": ""
+            },
+            "text": []
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "authorization",
+              "type": "",
+              "view": ""
+            },
+            "text": "[redacted]"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "headers",
+              "type": "",
+              "view": ""
+            },
+            "text": "[redacted]"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "request_body",
+              "type": "",
+              "view": ""
+            },
+            "text": [
+              {
+                "name": "Trans ID",
+                "value": "$(n2.webex.ID)",
+                "id": "486b059a-c366-9588-5999-862a1d29955d"
+              },
+              {
+                "name": "Agent ID",
+                "value": "$(n2.webex.agentId)",
+                "id": "227f0340-25e7-6ca4-d23a-f176187e858a"
+              },
+              {
+                "name": "ScreenPop URL",
+                "value": "www.google.com",
+                "id": "eb4fcdd2-e302-68e7-92dc-c8b354cf0faf"
+              },
+              {
+                "name": "Target",
+                "value": "sameBrowserTab",
+                "id": "5da7bba4-edb5-d201-0a43-454d3a473061"
+              },
+              {
+                "name": "Query Parameters",
+                "value": {
+                  "CustomerId": "$(customerId)",
+                  "operation": "routed"
+                },
+                "id": "6324c253-b6c6-0745-aaae-ee08125bef80"
+              }
+            ]
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "url_parameters",
+              "type": "",
+              "view": ""
+            },
+            "text": []
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "path_parameters",
+              "type": "",
+              "view": ""
+            },
+            "text": [
+              {
+                "name": "domain",
+                "id": "800d41bb-73c1-bd74-d715-e2c659ea3661"
+              },
+              {
+                "name": "tenant_identifier",
+                "id": "97762099-35e2-e706-9f07-ad15f4d6a6dd"
+              }
+            ]
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "newEvents",
+              "type": "",
+              "view": ""
+            },
+            "text": [
+              {
+                "name": "serviceUnavailable",
+                "type": "error"
+              },
+              {
+                "name": "onScreenPopFailure",
+                "type": "error"
+              },
+              {
+                "name": "onScreenPopSuccess",
+                "type": "success"
+              }
+            ]
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "prevEvents",
+              "type": "",
+              "view": ""
+            },
+            "text": [
+              {
+                "name": "serviceUnavailable",
+                "type": "error"
+              },
+              {
+                "name": "onScreenPopFailure",
+                "type": "error"
+              },
+              {
+                "name": "onScreenPopSuccess",
+                "type": "success"
+              }
+            ]
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "custom_output_vars",
+              "type": "",
+              "view": ""
+            },
+            "text": []
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "node_heading",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "resourceinfo",
+              "type": "",
+              "view": ""
+            },
+            "text": {
+              "node_id": 1326,
+              "node_name": "Screen Pop",
+              "resource_list": [
+                {
+                  "integration_id": 50023,
+                  "method_id": 50349,
+                  "auth_id": -1,
+                  "group_id": 50020,
+                  "prebuilt_group_auth_id": "bb2a06b7-3bf8-11ec-bd9a-1220bef2a7c1"
+                }
+              ]
+            }
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "oauthRequest",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "viewmodeData",
+              "type": "",
+              "view": ""
+            },
+            "text": [
+              {
+                "name": "auth_id",
+                "value": "WxCC Task Node Auth",
+                "isNgSelectBox": true
+              },
+              {
+                "name": "version_id",
+                "value": ""
+              },
+              {
+                "name": "method_id",
+                "value": "Screen Pop"
+              }
+            ]
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "isAuthPresent",
+              "type": "",
+              "view": ""
+            },
+            "text": true
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "isComponentNode",
+              "type": "",
+              "view": ""
+            },
+            "text": 1
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "container_name",
+              "type": "",
+              "view": ""
+            },
+            "text": "https://example.invalid/prebuiltnodescreen-pop637581232922029104_1391320976826686.js"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "nodeType",
+              "type": "",
+              "view": ""
+            },
+            "text": "https://example.invalid/prebuiltnodescreen-pop637581232922029104_1391320976826686.js"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "nodeInput",
+              "type": "",
+              "view": ""
+            },
+            "text": {
+              "transid": "$(n2.webex.ID)",
+              "agentId": "$(n2.webex.agentId)",
+              "screenPopUrl": "www.google.com",
+              "target": "sameBrowserTab",
+              "queryParameters": {
+                "CustomerName": "$(customerName)",
+                "operation": "routed"
+              }
+            }
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "group_id",
+              "type": "",
+              "view": ""
+            },
+            "text": 50020
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "customUiAuthStatus",
+              "type": "",
+              "view": ""
+            },
+            "text": 0
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "customUiAuthId",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "adminParameters",
+              "type": "",
+              "view": ""
+            },
+            "text": {
+              "oauth_callbackurl_type": 1,
+              "tenant_identifier": "b333ee78-8263-4370-a60a-967182fc91e4",
+              "domain": "produs1",
+              "integration_identifier": "https://example.invalid/v1/integration/cntwct"
+            }
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "customuiWebcomponentElementName",
+              "type": "",
+              "view": ""
+            },
+            "text": "node-ui-template637581232922029104"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "extraParamsData",
+              "type": "",
+              "view": ""
+            },
+            "text": {
+              "transid": "$(n2.webex.ID)",
+              "agentId": "$(n2.webex.agentId)",
+              "screenPopUrl": "www.google.com",
+              "target": "sameBrowserTab",
+              "queryParameters": {
+                "CustomerId": "$(customerId)",
+                "operation": "routed"
+              }
+            }
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "isCustomUiAuthPresent",
+              "type": "",
+              "view": ""
+            },
+            "text": true
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "integration_version",
+              "type": "",
+              "view": ""
+            },
+            "text": 3
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "runTimeAuthorizationId",
+              "type": "",
+              "view": ""
+            },
+            "text": "[redacted]"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "nodeUiAuthorizationId",
+              "type": "",
+              "view": ""
+            },
+            "text": "[redacted]"
+          }
+        ]
+      }
+    },
+    {
+      "id": "1520",
+      "parent": "1",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "tag": "evaluate",
+        "attributes": {
+          "defaultparam": "expression",
+          "image": "evaluate.svg",
+          "key": "evaluate",
+          "label": "Evaluate",
+          "name": "Evaluate",
+          "type": "evaluate",
+          "updatedImage": "evaluate.svg",
+          "updatedimage": "evaluate.svg",
+          "updatedon": "2023-05-04T12:48:58.508",
+          "view_restrict": true
+        },
+        "children": [
+          {
+            "tag": "param",
+            "attributes": {
+              "hidden": true,
+              "name": "evaluteIsOptimization",
+              "type": "",
+              "view": ""
+            },
+            "text": true
+          },
+          {
+            "tag": "event",
+            "attributes": {
+              "name": "oninvalidchoice",
+              "targetcount": 1
+            },
+            "text": ""
+          },
+          {
+            "tag": "event",
+            "attributes": {
+              "name": "onerror",
+              "targetcount": 1
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "expression",
+              "type": "",
+              "view": ""
+            },
+            "text": "var responseObj = response; //create one custom variable with name response and store the webex.variables  \nvar responseArray = JSON.parse(responseObj);\nvar requestObj = JSON.parse(requestBody);\n\n//Initializing all the custom variables\nvar contactId = \"\";\nvar customerId = \"\";\nvar mediaResourceId = \"\";\nvar orgId = \"\";\nvar mediaType = \"\";\nvar mediaChannel = \"\";\nvar callAssociatedDetails = \"\";\nvar queueId = \"\";\nvar queueName = \"\";\nvar ani = \"\";\nvar dn = \"\";\n\nvar customerName = \"\";\nvar contactDirection = \"\";\n\nvar agentId = \"\";\nvar agentName = \"\";\nvar agentSessionId = \"\";\nvar agentDn = \"\";\n\nvar teamId = \"\";\nvar teamName = \"\";\nvar siteId = \"\";\n\n// function to extract fields into flow usable variables\nfunction extractVariable(varname) {\n    for (var i = 0; i < responseArray.length; i++) {\n        var object = responseArray[i];\n        if (object.name == varname) {\n            return object.value;\n        }\n    }\n}\n\n//invoking extractVariable function to extract values which are set in the main flow set variable node.\nvar IssueDescription = extractVariable(\"IssueDescription\");\nvar IssueType = extractVariable(\"IssueType\");\n\n\n//Setting customerId so that it can be used in the screen pop node or for any other custom logic.\ncustomerId = requestObj.data.customerId;\n\n//Assigning the custom variables \nfor (var i = 0; i < responseArray.length; i++) {\n    var object = responseArray[i];\n    if (object.name == \"mediaResourceId\") {\n        mediaResourceId = object.value;\n    }\n    if (object.name == \"orgId\") {\n        orgId = object.value;\n    }\n    if (object.name == \"mediaChannel\") {\n        mediaChannel = object.value;\n    }\n    if (object.name == \"contactId\") {\n        contactId = object.value;\n    }\n    if (object.name == \"mediaType\") {\n        mediaType = object.value;\n    }\n    if (object.name == \"queueId\") {\n        queueId = object.value;\n    }\n    if (object.name == \"queueName\") {\n        queueName = object.value;\n    }\n    if (object.name == \"ani\") {\n        ani = object.value;\n    }\n    if (object.name == \"dn\") {\n        dn = object.value;\n    }\n    if (object.name == \"contactDirection\") {\n        contactDirection = object.value;\n    }\n    if (object.name == \"agentId\") {\n        agentId = object.value;\n    }\n    if (object.name == \"agentName\") {\n        agentName = object.value;\n    }\n    if (object.name == \"agentSessionId\") {\n        agentSessionId = object.value;\n    }\n    if (object.name == \"agentDn\") {\n        agentDn = object.value;\n    }\n    if (object.name == \"teamId\") {\n        teamId = object.value;\n    }\n    if (object.name == \"teamName\") {\n        teamName = object.value;\n    }\n    if (object.name == \"siteId\") {\n        siteId = object.value;\n    }\n    if (object.name == \"callAssociatedDetails\") {\n        callAssociatedDetails = JSON.parse(object.value);\n        customerName = callAssociatedDetails.customerName;\n    }\n}\n1;"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "exp",
+              "type": "",
+              "view": ""
+            },
+            "text": "var responseObj = response; //create one custom variable with name response and store the webex.variables  \nvar responseArray = JSON.parse(responseObj);\nvar requestObj = JSON.parse(requestBody);\n\n//Initializing all the custom variables\nvar contactId = \"\";\nvar customerId = \"\";\nvar mediaResourceId = \"\";\nvar orgId = \"\";\nvar mediaType = \"\";\nvar mediaChannel = \"\";\nvar callAssociatedDetails = \"\";\nvar queueId = \"\";\nvar queueName = \"\";\nvar ani = \"\";\nvar dn = \"\";\n\nvar customerName = \"\";\nvar contactDirection = \"\";\n\nvar agentId = \"\";\nvar agentName = \"\";\nvar agentSessionId = \"\";\nvar agentDn = \"\";\n\nvar teamId = \"\";\nvar teamName = \"\";\nvar siteId = \"\";\n\n// function to extract fields into flow usable variables\nfunction extractVariable(varname) {\n    for (var i = 0; i < responseArray.length; i++) {\n        var object = responseArray[i];\n        if (object.name == varname) {\n            return object.value;\n        }\n    }\n}\n\n//invoking extractVariable function to extract values which are set in the main flow set variable node.\nvar IssueDescription = extractVariable(\"IssueDescription\");\nvar IssueType = extractVariable(\"IssueType\");\n\n\n//Setting customerId so that it can be used in the screen pop node or for any other custom logic.\ncustomerId = requestObj.data.customerId;\n\n//Assigning the custom variables \nfor (var i = 0; i < responseArray.length; i++) {\n    var object = responseArray[i];\n    if (object.name == \"mediaResourceId\") {\n        mediaResourceId = object.value;\n    }\n    if (object.name == \"orgId\") {\n        orgId = object.value;\n    }\n    if (object.name == \"mediaChannel\") {\n        mediaChannel = object.value;\n    }\n    if (object.name == \"contactId\") {\n        contactId = object.value;\n    }\n    if (object.name == \"mediaType\") {\n        mediaType = object.value;\n    }\n    if (object.name == \"queueId\") {\n        queueId = object.value;\n    }\n    if (object.name == \"queueName\") {\n        queueName = object.value;\n    }\n    if (object.name == \"ani\") {\n        ani = object.value;\n    }\n    if (object.name == \"dn\") {\n        dn = object.value;\n    }\n    if (object.name == \"contactDirection\") {\n        contactDirection = object.value;\n    }\n    if (object.name == \"agentId\") {\n        agentId = object.value;\n    }\n    if (object.name == \"agentName\") {\n        agentName = object.value;\n    }\n    if (object.name == \"agentSessionId\") {\n        agentSessionId = object.value;\n    }\n    if (object.name == \"agentDn\") {\n        agentDn = object.value;\n    }\n    if (object.name == \"teamId\") {\n        teamId = object.value;\n    }\n    if (object.name == \"teamName\") {\n        teamName = object.value;\n    }\n    if (object.name == \"siteId\") {\n        siteId = object.value;\n    }\n    if (object.name == \"callAssociatedDetails\") {\n        callAssociatedDetails = JSON.parse(object.value);\n        customerName = callAssociatedDetails.customerName;\n    }\n}\n1;"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "isTestExecuted",
+              "type": "",
+              "view": ""
+            },
+            "text": true
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "nodeVersion",
+              "type": "",
+              "view": ""
+            },
+            "text": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "1602",
+      "parent": "5132137",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "eventtype": "default",
+        "label": "onInvalidData",
+        "name": "oninvaliddata",
+        "nodeLabel": "End",
+        "nodeType": "end",
+        "portType": "BP",
+        "sessionRetryFlag": 0,
+        "type": "EN",
+        "value": "oninvaliddata",
+        "data": {
+          "parentNode": 1326,
+          "type": "end"
+        },
+        "params": [
+          {
+            "name": "nodeEvent",
+            "value": "oninvaliddata"
+          },
+          {
+            "name": "sessionRetry",
+            "value": ""
+          },
+          {
+            "name": "exitResult",
+            "value": 3
+          },
+          {
+            "name": "asyncCheck",
+            "value": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "1603",
+      "parent": "5132137",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "eventtype": "default",
+        "label": "onError",
+        "name": "onerror",
+        "nodeLabel": "End",
+        "nodeType": "end",
+        "portType": "BP",
+        "sessionRetryFlag": 0,
+        "type": "EN",
+        "value": "onerror",
+        "data": {
+          "parentNode": 1326,
+          "type": "end"
+        },
+        "params": [
+          {
+            "name": "nodeEvent",
+            "value": "onerror"
+          },
+          {
+            "name": "sessionRetry",
+            "value": ""
+          },
+          {
+            "name": "exitResult",
+            "value": 3
+          },
+          {
+            "name": "asyncCheck",
+            "value": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "1604",
+      "parent": "5132137",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "eventtype": "default",
+        "label": "onInvalidChoice",
+        "name": "oninvalidchoice",
+        "nodeLabel": "End",
+        "nodeType": "end",
+        "portType": "BP",
+        "sessionRetryFlag": 0,
+        "type": "EN",
+        "value": "oninvalidchoice",
+        "data": {
+          "parentNode": 1326,
+          "type": "end"
+        },
+        "params": [
+          {
+            "name": "nodeEvent",
+            "value": "oninvalidchoice"
+          },
+          {
+            "name": "sessionRetry",
+            "value": ""
+          },
+          {
+            "name": "exitResult",
+            "value": 3
+          },
+          {
+            "name": "asyncCheck",
+            "value": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "1605",
+      "parent": "5132137",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "eventtype": "default",
+        "label": "onScreenPopFailure",
+        "name": "onScreenPopFailure",
+        "nodeLabel": "End",
+        "nodeType": "end",
+        "parentInfo": {
+          "name": "onScreenPopFailure"
+        },
+        "portType": "BP",
+        "sessionRetryFlag": 0,
+        "type": "EN",
+        "value": "onScreenPopFailure",
+        "data": {
+          "parentNode": 1326,
+          "type": "end"
+        },
+        "params": [
+          {
+            "name": "exitResult",
+            "value": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "1606",
+      "parent": "5132137",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "eventtype": "default",
+        "label": "serviceUnavailable",
+        "name": "serviceUnavailable",
+        "nodeLabel": "End",
+        "nodeType": "end",
+        "parentInfo": {
+          "name": "serviceUnavailable"
+        },
+        "portType": "BP",
+        "sessionRetryFlag": 0,
+        "type": "EN",
+        "value": "serviceUnavailable",
+        "data": {
+          "parentNode": 1326,
+          "type": "end"
+        },
+        "params": [
+          {
+            "name": "nodeEvent",
+            "value": "serviceUnavailable"
+          },
+          {
+            "name": "sessionRetry",
+            "value": ""
+          },
+          {
+            "name": "exitResult",
+            "value": 3
+          },
+          {
+            "name": "asyncCheck",
+            "value": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "1607",
+      "parent": "5132139",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "eventtype": "default",
+        "label": "onTimeout",
+        "name": "ontimeout",
+        "nodeLabel": "End",
+        "nodeType": "end",
+        "portType": "TP",
+        "sessionRetryFlag": 0,
+        "type": "EN",
+        "value": "ontimeout",
+        "data": {
+          "parentNode": 1326,
+          "type": "end"
+        },
+        "params": [
+          {
+            "name": "nodeEvent",
+            "value": "ontimeout"
+          },
+          {
+            "name": "sessionRetry",
+            "value": ""
+          },
+          {
+            "name": "exitResult",
+            "value": 3
+          },
+          {
+            "name": "asyncCheck",
+            "value": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "1608",
+      "parent": "5132140",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "eventtype": "default",
+        "label": "onScreenPopSuccess",
+        "name": "onScreenPopSuccess",
+        "nodeLabel": "End",
+        "nodeType": "end",
+        "parentInfo": {
+          "name": "onScreenPopSuccess"
+        },
+        "portType": "MP",
+        "sessionRetryFlag": 0,
+        "type": "EN",
+        "value": "onScreenPopSuccess",
+        "data": {
+          "parentNode": 1326,
+          "type": "end"
+        },
+        "params": [
+          {
+            "name": "nodeEvent",
+            "value": "onScreenPopSuccess"
+          },
+          {
+            "name": "sessionRetry",
+            "value": ""
+          },
+          {
+            "name": "exitResult",
+            "value": 2
+          },
+          {
+            "name": "asyncCheck",
+            "value": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "1611",
+      "parent": "5132149",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "eventtype": "default",
+        "label": "onInvalidChoice",
+        "name": "oninvalidchoice",
+        "nodeLabel": "End",
+        "nodeType": "end",
+        "portType": "BP",
+        "sessionRetryFlag": 0,
+        "type": "EN",
+        "value": "oninvalidchoice",
+        "data": {
+          "parentNode": 1520,
+          "type": "end"
+        },
+        "params": [
+          {
+            "name": "nodeEvent",
+            "value": "oninvalidchoice"
+          },
+          {
+            "name": "sessionRetry",
+            "value": ""
+          },
+          {
+            "name": "exitResult",
+            "value": 3
+          },
+          {
+            "name": "asyncCheck",
+            "value": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "1612",
+      "parent": "5132149",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "eventtype": "default",
+        "label": "onError",
+        "name": "onerror",
+        "nodeLabel": "End",
+        "nodeType": "end",
+        "portType": "BP",
+        "sessionRetryFlag": 0,
+        "type": "EN",
+        "updatedon": "2023-02-13T09:45:45.331",
+        "value": "onerror",
+        "data": {
+          "parentNode": 1520,
+          "type": "end"
+        },
+        "params": [
+          {
+            "name": "nodeEvent",
+            "value": "onerror"
+          },
+          {
+            "name": "sessionRetry",
+            "value": ""
+          },
+          {
+            "name": "exitResult",
+            "value": 3
+          },
+          {
+            "name": "asyncCheck",
+            "value": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "5132047",
+      "parent": "1",
+      "vertex": false,
+      "edge": true,
+      "source": "2",
+      "target": "1520",
+      "value": {
+        "duplicatetarget": false,
+        "label": "onBegin",
+        "name": "onbegin",
+        "optionNodeType": "default",
+        "porttype": "MP",
+        "type": "EDGE",
+        "value": "onbegin"
+      }
+    },
+    {
+      "id": "5132051",
+      "parent": "1",
+      "vertex": false,
+      "edge": true,
+      "source": "1520",
+      "target": "1326",
+      "value": {
+        "label": "Success",
+        "name": 1,
+        "optionNodeType": "option",
+        "porttype": "MP",
+        "type": "EDGE",
+        "value": "Success"
+      }
+    }
+  ],
+  "customVariables": [
+    {
+      "name": "response",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "MediaResourceId",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "AgentId",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "AgentName",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "ContactId",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "OrgId",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "MediaType",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "MediaChannel",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "QueueId",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "QueueName",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "Ani",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "Dn",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "CustomerName",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "ContactDirection",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "AgentSessionId",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "AgentDn",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "TeamId",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "TeamName",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "SiteId",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "CustomerId",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "requestBody",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "IssueDescription",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "IssueType",
+      "value": "",
+      "desc": "",
+      "type": "default",
+      "dec": ""
+    },
+    {
+      "name": "flowVersion",
+      "value": 3.3,
+      "desc": "",
+      "type": "default"
+    }
+  ],
+  "outcomes": [
+    {
+      "id": 2,
+      "order": 0,
+      "name": 101,
+      "value": "Successfully completed flow",
+      "tag": 11,
+      "tagName": "Success",
+      "type": "default",
+      "notification": null
+    },
+    {
+      "id": 3,
+      "order": 1,
+      "name": 102,
+      "value": "Flow completed with an error",
+      "tag": 12,
+      "tagName": "Error",
+      "type": "default",
+      "notification": null
+    },
+    {
+      "id": 4,
+      "order": 2,
+      "name": 103,
+      "value": "Flow ended due to an interruption",
+      "tag": 13,
+      "tagName": "Incomplete",
+      "type": "default",
+      "notification": null
+    },
+    {
+      "id": 1,
+      "name": 100,
+      "value": "Last executed node event",
+      "statusCode": "All status codes",
+      "tag": 15,
+      "tagName": "Last Execution Status",
+      "type": "default",
+      "notification": null
+    }
+  ],
+  "label": "Task Routed Flow.workflow",
+  "observed_at": "2026-09-09T00:04:46.978Z",
+  "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model",
+  "runtime_tested": false,
+  "redactions": "Header credentials and URL hosts redacted. Internal model properties are evidence, not a public import API."
+}

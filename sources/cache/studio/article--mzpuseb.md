@@ -1,0 +1,182 @@
+# Configure fulfillment for scripted AI agents
+
+Source: https://help.webex.com/article/mzpuseb
+Documentation version: not specified by publisher
+Source last modified: 2025-06-04T06:25:55.485Z
+Retrieved: 2026-09-08T23:48:50+00:00
+
+<a id="content"></a>
+
+<a id="fulfillment-for-scripted-agents"></a>
+
+In the context of AI agents, fulfillment refers to the execution of tasks that involve interacting with external systems to retrieve, manipulate, or store data through APIs. This article outlines the example agent created for tracking packages. You can use this agent template while creating a new AI agent for digital and voice interactions.
+
+- [Digital](https://help.webex.com/article/mzpuseb#digital-channels)
+
+- [Voice](https://help.webex.com/article/mzpuseb#voice-channels)
+
+<a id="digital-channels"></a>
+
+<a id="digital-channels"></a>
+
+For digital channels, fulfillment must be orchestrated through the connect flow used to deploy the AI agent. Taking the example of a package tracking agent, which you can import from a template while creating a new Scripted agent, the flow is also available to import while creating a new Webex Connect flow. In addition to fulfillment, this connect flow also routes the user to different agent queues based on their last intent.
+
+- Once you finish setting up your scripted agent, identify the responses that require fulfillment.
+
+  In the example agent, fulfillment is required for 'trackPackageResponse'.
+ 
+- In these templates, configure a 'holding response' that will be displayed to the user while the fulfillment takes place.
+
+  In this example, a holding response is configured for 'trackPackageResponse'.
+ 
+- In the flow, use a **Data Parser**node to parse the agent session metadata (output variable) from the AI agent's response to obtain the response name.
+
+  You can obtain the sample input for the data parser node by downloading transaction info from sessions by selecting the appropriate transaction and picking the value of the 'generatedDf' key from the downloaded file.
+ 
+- If you wish to do intent-based routing at the time of agent handover, you can obtain the value of the previous active intent in the same step.
+ 
+- If you don’t wish to download and parse the sample JSON, you can use `\$.model_state.template_key` for the response name and `\$.previous_intent_model_state.intent.name` for the previous intent name.
+
+  In our example, we use flow variables 'responseKey' and 'previousIntent' for these values.
+ 
+- Use a **Branch** node to check if a response needs fulfillment.
+
+  - The branch node exits through the 'None of the above' node outcome for responses that don’t require fulfillment.
+   
+  - In our example, since there’s a need for fulfillment for 'trackPackageResponse', check for the value of 'responseKey' in our branch node.
+ 
+- For responses that require fulfillment, use an **HTTP**node for making external API calls.
+
+  - You can parse useful information from the HTTP node response in the same node by importing a sample and obtaining output variables.
+   
+  - In this example, we obtain 'estimatedDelivery' and 'status' of the package.
+ 
+- Process the fulfillment response using an **Evaluate**node to formulate the agent response.
+
+  In our example, we initialize the 'fulfilmentResp' variable and set its value based on the package status and estimated delivery.
+ 
+- Send the fulfillment response to the user and append it to the conversation.
+ 
+- Loop back to the **Receive** node to keep the conversation going between the user and the AI agent.
+
+<a id="intent-based-agent-handover"></a>
+
+## Intent-based agent handover
+
+At the time of agent handover, check for the last active intent through a **Branch** node before the **Queue task** node.
+
+Check the value of 'previousIntent' and branch to different queues based on your requirements. In this example, if the customer asks for an agent handover after the 'Track Package' intent, route them to the 'Specialist' queue. All other values lead to a handoff to the 'Chat' queue.
+
+<a id="voice-channels"></a>
+
+<a id="voice-channels"></a>
+
+For voice channels, fulfillment must be orchestrated by handing the control of the conversation back to the voice flow through custom events and later resuming the AI agent conversation with the fulfillment data. For this purpose, the example scripted agent for tracking packages is reused. The flow is available in 'Import from templates' in the Webex Contact Center Flow Designer. In addition to fulfillment, this flow also routes the user to different agent queues based on their last intent.
+
+<a id="section_gt5_l3z_z2c"></a>
+
+## Step-by-step guide: Fulfillment
+
+- Add 'Custom Event' Response Type.
+
+  - Locate the template key for which you want to add the custom event. In this case, use the 'trackPackageResponse' template key.
+   
+  - Add the 'custom event' response type to the template key.
+ 
+- Configure the Custom Event response.
+
+  - Add Event Name and Event Payload:
+
+    - For the custom event response, provide an event name. In this case, ‘TrackPack_Exit’.
+     
+    - Add the event payload, which contains data that will be passed to the flow. This must be in JSON format. In this example, `{"PackageNumber":"${entity.PackageNum}"}`.
+ 
+- Use the Event Payload in the flow.
+
+  - Access **Virtual Agent V2** Activity Metadata:
+    
+    - In your voice flow configuration, the event payload you added is available as part of the **Virtual Agent V2** activity metadata.
+    
+    - Create the flow variable PackageNum.
+    
+    - Use a **Parse** activity to select your **Virtual Agent V2** activity metadata as the input variable.
+    
+    - Set the output variable to ‘PackageNum’ and its Path Expression to ‘$.PackageNum’ (based on the structure of the event payload configured in agent response).
+   
+  - Use the Metadata in **HTTP** activity:
+    
+    - Use the ‘PackageNum’ variable from the processed metadata in your flow to track the package.
+    
+    - Import the attached flow to find the details of the **HTTP**activity.
+    
+    - Define flow variables ‘estimatedDelivery’ and set it to ‘$.estimated_delivery’ and another flow variable ‘packStatus’ and set it to $.status.
+   
+  - Add conditions based on **HTTP** activity:
+    
+    - Add a new **Condition** activity to the flow. This activity is used to check the response of the **HTTP** activity (whether the package exists and its status).
+
+      In this example, the expression `{{ HTTPRequest_8l3.httpStatusCode == 404 }}` is used to check if no package was found.
+ 
+- Add **Set Variable**activity based on conditions:
+  
+  - For the condition for which the package doesn’t exist:
+
+    - Under the branch where no package is found, add a **Set Variable** activity.
+    
+    - Set the packageResp (another flow variable) to:
+      
+      No package found with these details.
+  
+  - For the condition for which the package exists:
+
+    - Under the branch where a package is found (that is, HTTP status code not equals 404), add another**Set Variable** activity.
+    
+    - Set the packageResp (another flow variable) to:
+
+      Your package has been picked up. It will be delivered by {{estimatedDelivery}}.
+  
+  - Add two more Set variable activities to configure event name and event data. This data will be passed to the Virtual Agent V2 activity.
+
+    - Create flow variables event_name and event_data.
+    
+    - Set event_name to TrackPack_Entry and event_data to {‘packageResp’: ‘{{packageResp}}’ | json}.
+ 
+- Loop back to the **Virtual Agent V2** activity:
+
+  - Configure the Virtual Agent V2 activity:
+    
+    - Connect the final **Set Variable**activity to the Virtual Agent V2 activity.
+    
+    - Set the Event Name to {{event_name}}.
+    
+    - Set the Event Data to {{event_data}}.
+ 
+- Handle incoming event in your virtual agent:
+
+  - Add a New Template Key:
+
+    - Go to the Responses tab on the left-hand panel.
+     
+    - Add a new template key named packageStatus.
+   
+  - Configure Incoming Event:
+
+    - Under the voice channel, set the incoming event to TrackPack_Entry (or whatever was sent to the Virtual Agent V2 activity in the flow).
+   
+  - Configure the Response:
+
+    - Set the response to: <speak> <say-as interpret-as="date"> ${eventStore.packageResp} </say-as>. Can I help you with anything else?</speak>
+
+      This response uses the variables sent in the payload from the flow. Any variables sent as a part of event data are available for developers to access as ${eventStore.<variable_name>}.
+
+      This also uses SSML tags. In particular, the SSML tag allows you to control how text is interpreted and spoken by a text-to-speech engine. This tag can be used to specify how numbers, dates, times, addresses, and other text should be pronounced. Here we use it for date.
+
+<a id="agent-routing-based-on-previous-intent"></a>
+
+## Agent routing based on previous intent
+
+- If the **Virtual Agent V2** activity exits through the 'Escalated' output, use a **Parse** activity to get the previous intent from agent metadata.
+ 
+- Use a **Case** activity to check for different values of the previous intent that determine the queueing logic. In this example, we check if the previous intent was 'Track package'.
+ 
+- Attach the **Case**activity outputs to the appropriate Queue contact edges.

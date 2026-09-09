@@ -1,0 +1,5531 @@
+{
+  "schema_version": 1,
+  "sample_key": "wxcc-livechatclosewithwxmflow",
+  "title": "LiveChatCloseWithWxmFlow.workflow",
+  "observed_at": "2026-09-09T00:06:41.662Z",
+  "source_path": "evidence/sample-flows/observed/wxcc-livechatclosewithwxmflow.json",
+  "source_sha256": "27a6cd73d4676dd100356ee94d317415da0f5acaeabb127dbc27d813ae66bfa7",
+  "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model",
+  "runtime_tested": false,
+  "status": "observed_canvas_relationships_summarized",
+  "format_warning": "Internal loaded-canvas model observations only; not a public import schema. Event internal names and visible labels are recorded separately. Dynamic script behavior and missing canvas pages are not inferred.",
+  "counts": {
+    "cells": 76,
+    "operative_nodes": 12,
+    "explicit_edges": 36,
+    "terminal_bindings": 27,
+    "variable_references": 91
+  },
+  "start_configuration": {
+    "channel": 28,
+    "type": "integration",
+    "subtype": "",
+    "isCheckLiveSessions": 0,
+    "extras": {},
+    "eventid": 50025,
+    "eventname": "Task Closed",
+    "v2EventId": 50020
+  },
+  "nodes": [
+    {
+      "id": "2",
+      "label": "Webex CC Task",
+      "type_internal": "start",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "onbegin",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "selectedChannel": {
+          "id": 28,
+          "name": "Webex CC Task",
+          "description": "Make CRUD operations on WxCC task APIss",
+          "type": 2,
+          "extraData": {},
+          "subType": "",
+          "integrationId": 50020,
+          "image_url": "https://example.invalid/CiscoWebexLogo637513806888123311_152820853165114_11755000375820132.svg",
+          "prefix": "webex"
+        },
+        "selectedRuleEvent": {
+          "resume_keys": [],
+          "name": "Task Closed",
+          "output_variables": [
+            {
+              "name": "type",
+              "type": 2,
+              "path": "$.type",
+              "order": 0,
+              "id": "456cf2ea-c35c-8506-05ab-454a49c3f6ea",
+              "$$hashKey": "object:70967"
+            },
+            {
+              "name": "taskId",
+              "type": 2,
+              "path": "$.data.id",
+              "order": 1,
+              "id": "35dbcf05-a43a-44a7-4a21-94470d8a5631",
+              "$$hashKey": "object:70968",
+              "isDebugKey": true
+            },
+            {
+              "name": "variables",
+              "type": 2,
+              "path": "$.data.variables",
+              "order": 2,
+              "id": "096b9a84-d86c-216d-7628-da5926e546d6",
+              "$$hashKey": "object:23201"
+            },
+            {
+              "name": "origin",
+              "type": 2,
+              "path": "$.data.origin",
+              "order": 3,
+              "id": "c8e5c8d0-68c8-de78-3b7d-b0e4dff8f80e",
+              "$$hashKey": "object:40275"
+            },
+            {
+              "name": "destination",
+              "type": 2,
+              "path": "$.data.destination",
+              "order": 4,
+              "id": "51882ad7-b1d3-effa-ade1-ceb185855631",
+              "$$hashKey": "object:40281"
+            },
+            {
+              "name": "mediaChannel",
+              "type": 2,
+              "path": "$.data.mediaChannel",
+              "order": 5,
+              "id": "5f59af71-c5e6-29f7-2778-83d26b83c702",
+              "$$hashKey": "object:40287"
+            },
+            {
+              "name": "mediaType",
+              "type": 2,
+              "path": "$.data.mediaType",
+              "order": 6,
+              "id": "cf5af729-3999-f32e-a578-53a881111432",
+              "$$hashKey": "object:40293"
+            },
+            {
+              "name": "direction",
+              "type": 2,
+              "path": "$.data.direction",
+              "order": 7,
+              "id": "bbd1682d-ef39-50af-48ce-1be37f8274a1",
+              "$$hashKey": "object:40299"
+            },
+            {
+              "name": "owner",
+              "type": 2,
+              "path": "$.data.owner",
+              "order": 8,
+              "id": "af455718-fac9-b76a-a4e1-56c1e9627000",
+              "$$hashKey": "object:40305"
+            },
+            {
+              "name": "queue",
+              "type": 2,
+              "path": "$.data.queue",
+              "order": 9,
+              "id": "c04693da-4077-c48b-4f1e-1d6eea99b324",
+              "$$hashKey": "object:40311"
+            },
+            {
+              "name": "RequestBody",
+              "type": 2,
+              "path": "$",
+              "order": 10,
+              "id": "1d6d76d3-99aa-d8cf-8217-08c7d6f83c5e",
+              "$$hashKey": "object:25128"
+            }
+          ],
+          "id": 50025,
+          "eventname": "Task Closed",
+          "desc": "This event is triggered when an  agent on WxCC desktop clicks on Chat Close"
+        },
+        "ruleEvent": "Task Closed",
+        "isKeyWordDisabled": true,
+        "isKeyWordVerifyReq": true,
+        "isKeyWordAvailable": true,
+        "output_variables": [
+          "webex.type",
+          "webex.taskId",
+          "webex.variables",
+          "webex.origin",
+          "webex.destination",
+          "webex.mediaChannel",
+          "webex.mediaType",
+          "webex.direction",
+          "webex.owner",
+          "webex.queue",
+          "webex.RequestBody",
+          "service.serviceKey"
+        ]
+      },
+      "transition_actions": [
+        {
+          "kind": "session",
+          "name": "response",
+          "when": "onleave",
+          "value": "$(n2.webex.variables)"
+        },
+        {
+          "kind": "session",
+          "name": "requestBody",
+          "when": "onleave",
+          "value": "$(n2.webex.RequestBody)"
+        }
+      ],
+      "declared_outputs": [
+        "webex.type",
+        "webex.taskId",
+        "webex.variables",
+        "webex.origin",
+        "webex.destination",
+        "webex.mediaChannel",
+        "webex.mediaType",
+        "webex.direction",
+        "webex.owner",
+        "webex.queue",
+        "webex.RequestBody",
+        "service.serviceKey"
+      ],
+      "output_mappings": []
+    },
+    {
+      "id": "57",
+      "label": "Evaluate",
+      "type_internal": "evaluate",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "oninvalidchoice",
+          "declared_target_count": 1
+        },
+        {
+          "event_internal": "onerror",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "evaluteIsOptimization": true,
+        "expression": "var responseObj = response; //create one custom variable with name response and store the webex.variables\n\nvar responseArray = JSON.parse(responseObj);\nvar requestObj = JSON.parse(requestBody);\nvar customerId = \"\";\nvar contactId = \"\";\nvar mediaResourceId = \"\";\nvar orgId = \"\";\nvar mediaType = \"\";\nvar mediaChannel = \"\";\nvar callAssociatedDetails = \"\";\nvar queueId = \"\";\nvar queueName = \"\";\nvar ani = \"\";\nvar dn = \"\";\n\nvar customerName = \"\";\nvar contactDirection = \"\";\n\nvar agentId = \"\";\nvar agentName = \"\";\nvar agentSessionId = \"\";\nvar agentDn = \"\";\n\nvar teamId = \"\";\nvar teamName = \"\";\nvar siteId = \"\";\nvar utctime = new Date().toISOString();\n\n// function to extract fields into flow usable variables\nfunction extractVariable(varname) {\n    for (var i = 0; i < responseArray.length; i++) {\n        var object = responseArray[i];\n        if (object.name == varname) {\n            return object.value;\n        }\n    }\n}\n\nvar thread = extractVariable(\"threadID\");\nvar user = extractVariable(\"userID\");\n\ncustomerId = requestObj.data.customerId;\n\nfor (var i = 0; i < responseArray.length; i++) {\n    var object = responseArray[i];\n    if (object.name == \"mediaResourceId\") {\n        mediaResourceId = object.value;\n    }\n    if (object.name == \"orgId\") {\n        orgId = object.value;\n    }\n    if (object.name == \"mediaChannel\") {\n        mediaChannel = object.value;\n    }\n    if (object.name == \"contactId\") {\n        contactId = object.value;\n    }\n    if (object.name == \"mediaType\") {\n        mediaType = object.value;\n    }\n    if (object.name == \"queueId\") {\n        queueId = object.value;\n    }\n    if (object.name == \"queueName\") {\n        queueName = object.value;\n    }\n    if (object.name == \"ani\") {\n        ani = object.value;\n    }\n    if (object.name == \"dn\") {\n        dn = object.value;\n    }\n    if (object.name == \"contactDirection\") {\n        contactDirection = object.value;\n    }\n    if (object.name == \"agentId\") {\n        agentId = object.value;\n    }\n    if (object.name == \"agentName\") {\n        agentName = object.value;\n    }\n    if (object.name == \"agentSessionId\") {\n        agentSessionId = object.value;\n    }\n    if (object.name == \"agentDn\") {\n        agentDn = object.value;\n    }\n    if (object.name == \"teamId\") {\n        teamId = object.value;\n    }\n    if (object.name == \"teamName\") {\n        teamName = object.value;\n    }\n    if (object.name == \"siteId\") {\n        siteId = object.value;\n    }\n    if (object.name == \"callAssociatedDetails\") {\n        callAssociatedDetails = JSON.parse(object.value);\n        customerName = callAssociatedDetails.customerName;\n    }\n}\n1;",
+        "exp": "var responseObj = response; //create one custom variable with name response and store the webex.variables\n\nvar responseArray = JSON.parse(responseObj);\nvar requestObj = JSON.parse(requestBody);\nvar customerId = \"\";\nvar contactId = \"\";\nvar mediaResourceId = \"\";\nvar orgId = \"\";\nvar mediaType = \"\";\nvar mediaChannel = \"\";\nvar callAssociatedDetails = \"\";\nvar queueId = \"\";\nvar queueName = \"\";\nvar ani = \"\";\nvar dn = \"\";\n\nvar customerName = \"\";\nvar contactDirection = \"\";\n\nvar agentId = \"\";\nvar agentName = \"\";\nvar agentSessionId = \"\";\nvar agentDn = \"\";\n\nvar teamId = \"\";\nvar teamName = \"\";\nvar siteId = \"\";\nvar utctime = new Date().toISOString();\n\n// function to extract fields into flow usable variables\nfunction extractVariable(varname) {\n    for (var i = 0; i < responseArray.length; i++) {\n        var object = responseArray[i];\n        if (object.name == varname) {\n            return object.value;\n        }\n    }\n}\n\nvar thread = extractVariable(\"threadID\");\nvar user = extractVariable(\"userID\");\n\ncustomerId = requestObj.data.customerId;\n\nfor (var i = 0; i < responseArray.length; i++) {\n    var object = responseArray[i];\n    if (object.name == \"mediaResourceId\") {\n        mediaResourceId = object.value;\n    }\n    if (object.name == \"orgId\") {\n        orgId = object.value;\n    }\n    if (object.name == \"mediaChannel\") {\n        mediaChannel = object.value;\n    }\n    if (object.name == \"contactId\") {\n        contactId = object.value;\n    }\n    if (object.name == \"mediaType\") {\n        mediaType = object.value;\n    }\n    if (object.name == \"queueId\") {\n        queueId = object.value;\n    }\n    if (object.name == \"queueName\") {\n        queueName = object.value;\n    }\n    if (object.name == \"ani\") {\n        ani = object.value;\n    }\n    if (object.name == \"dn\") {\n        dn = object.value;\n    }\n    if (object.name == \"contactDirection\") {\n        contactDirection = object.value;\n    }\n    if (object.name == \"agentId\") {\n        agentId = object.value;\n    }\n    if (object.name == \"agentName\") {\n        agentName = object.value;\n    }\n    if (object.name == \"agentSessionId\") {\n        agentSessionId = object.value;\n    }\n    if (object.name == \"agentDn\") {\n        agentDn = object.value;\n    }\n    if (object.name == \"teamId\") {\n        teamId = object.value;\n    }\n    if (object.name == \"teamName\") {\n        teamName = object.value;\n    }\n    if (object.name == \"siteId\") {\n        siteId = object.value;\n    }\n    if (object.name == \"callAssociatedDetails\") {\n        callAssociatedDetails = JSON.parse(object.value);\n        customerName = callAssociatedDetails.customerName;\n    }\n}\n1;",
+        "isTestExecuted": true,
+        "nodeVersion": 1
+      },
+      "transition_actions": [
+        {
+          "kind": "session",
+          "name": "mediaResourceId",
+          "when": "onleave",
+          "value": "$(mediaResourceId)"
+        },
+        {
+          "kind": "session",
+          "name": "AgentName",
+          "when": "onleave",
+          "value": "$(agentName)"
+        },
+        {
+          "kind": "session",
+          "name": "AgentDn",
+          "when": "onleave",
+          "value": "$(agentDn)"
+        },
+        {
+          "kind": "session",
+          "name": "AgentId",
+          "when": "onleave",
+          "value": "$(agentId)"
+        },
+        {
+          "kind": "session",
+          "name": "AgentSessionId",
+          "when": "onleave",
+          "value": "$(agentSessionId)"
+        },
+        {
+          "kind": "session",
+          "name": "TeamName",
+          "when": "onleave",
+          "value": "$(teamName)"
+        },
+        {
+          "kind": "session",
+          "name": "TeamId",
+          "when": "onleave",
+          "value": "$(teamId)"
+        },
+        {
+          "kind": "session",
+          "name": "ContactId",
+          "when": "onleave",
+          "value": "$(contactId)"
+        },
+        {
+          "kind": "session",
+          "name": "Dn",
+          "when": "onleave",
+          "value": "$(dn)"
+        },
+        {
+          "kind": "session",
+          "name": "OrgId",
+          "when": "onleave",
+          "value": "$(orgId)"
+        },
+        {
+          "kind": "session",
+          "name": "QueueId",
+          "when": "onleave",
+          "value": "$(queueId)"
+        },
+        {
+          "kind": "session",
+          "name": "QueueName",
+          "when": "onleave",
+          "value": "$(queueName)"
+        },
+        {
+          "kind": "session",
+          "name": "SiteId",
+          "when": "onleave",
+          "value": "$(siteId)"
+        },
+        {
+          "kind": "session",
+          "name": "CustomerName",
+          "when": "onleave",
+          "value": "$(customerName)"
+        },
+        {
+          "kind": "session",
+          "name": "ContactDirection",
+          "when": "onleave",
+          "value": "$(contactDirection)"
+        },
+        {
+          "kind": "session",
+          "name": "MediaType",
+          "when": "onleave",
+          "value": "$(mediaType)"
+        },
+        {
+          "kind": "session",
+          "name": "MediaChannel",
+          "when": "onleave",
+          "value": "$(mediaChannel)"
+        },
+        {
+          "kind": "session",
+          "name": "CustomerId",
+          "when": "onleave",
+          "value": "$(customerId)"
+        },
+        {
+          "kind": "log",
+          "name": 1001,
+          "when": "onleave",
+          "value": "$(thread)"
+        }
+      ],
+      "declared_outputs": [],
+      "output_mappings": []
+    },
+    {
+      "id": "114",
+      "label": "Branch",
+      "type_internal": "evaluate",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "onerror",
+          "declared_target_count": null
+        }
+      ],
+      "configuration": {
+        "evaluteIsOptimization": true,
+        "outcomes": [
+          {
+            "outcome": "Conversation already closed",
+            "order": "",
+            "open": true,
+            "isEditOn": false,
+            "tempVal": "Conversation already closed",
+            "conditions": [
+              {
+                "pills": [],
+                "varaible": "$(code)",
+                "condition": "==",
+                "value": 4547,
+                "operation": "",
+                "index": "3vmvpyht"
+              }
+            ],
+            "index": "5me4l5tb"
+          }
+        ],
+        "allConditionsFail": "None of the above",
+        "expression": "if(\"$(code)\"  == 4547){'Conversation already closed';}else{'None of the above';}",
+        "counter": 2,
+        "successEvents": [
+          "Conversation already closed",
+          "None of the above"
+        ],
+        "nodeVersion": 1
+      },
+      "transition_actions": [],
+      "declared_outputs": [],
+      "output_mappings": []
+    },
+    {
+      "id": "246",
+      "label": "Branch",
+      "type_internal": "evaluate",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "onerror",
+          "declared_target_count": null
+        }
+      ],
+      "configuration": {
+        "evaluteIsOptimization": true,
+        "outcomes": [
+          {
+            "outcome": "Owner present",
+            "order": "",
+            "open": true,
+            "isEditOn": false,
+            "tempVal": "Owner present",
+            "conditions": [
+              {
+                "pills": [],
+                "varaible": "$(n2.webex.owner)",
+                "condition": "!=",
+                "value": "$(emptystring)",
+                "operation": "",
+                "index": "905dx49i"
+              }
+            ],
+            "index": "7uh0dqa3"
+          }
+        ],
+        "allConditionsFail": "None of the above",
+        "expression": "if(\"$(n2.webex.owner)\"  != \"$(emptystring)\"){\"Owner present\";}else{'None of the above';}",
+        "counter": 3,
+        "successEvents": [
+          "Owner present",
+          "None of the above"
+        ],
+        "nodeVersion": 1
+      },
+      "transition_actions": [],
+      "declared_outputs": [],
+      "output_mappings": []
+    },
+    {
+      "id": "629",
+      "label": "Close Conversation",
+      "type_internal": "prebuiltnode",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "oninvaliddata",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "onerror",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "oninvalidchoice",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "ontimeout",
+          "declared_target_count": null
+        }
+      ],
+      "configuration": {
+        "referencekey": 50035,
+        "versionIds": "undefined",
+        "integration_id": 50035,
+        "client_uuid": "cf6913c2-95c0-4e3a-a12b-77a12bb0fcd1",
+        "method_id": 50159,
+        "version_id": 50104,
+        "auth_id": -1,
+        "methodResponseParameters": [
+          {
+            "order": 0,
+            "id": "91c44671-99b4-1fd2-8cf0-a66c7d9b51b9",
+            "name": "Transid",
+            "path": "tid",
+            "value": "",
+            "desc": "",
+            "type": "body",
+            "validation": {
+              "type": "",
+              "condition": null,
+              "regex": "",
+              "mandatory": true,
+              "format_validator": null
+            },
+            "key": null,
+            "debugKey": false,
+            "node_ui_type": null,
+            "node_ui_group_name": null,
+            "ui_field_configuration": null
+          }
+        ],
+        "request_body": [
+          {
+            "name": "webhookurl",
+            "value": "",
+            "id": "a05004e1-b6e9-0440-5e0c-e39a4f6c2398"
+          }
+        ],
+        "path_parameters": [
+          {
+            "name": "domain",
+            "value": "",
+            "id": "3c2ef6c7-16c9-fc6f-231d-41fc094c0a8f"
+          },
+          {
+            "name": "conversation id",
+            "value": "$(mediaResourceId)",
+            "id": "a0564646-f07a-95d4-76f2-d600dc152f4c"
+          }
+        ],
+        "custom_output_vars": [
+          "Transid"
+        ],
+        "viewmodeData": [
+          {
+            "name": "auth_id",
+            "value": "Wxcc New Node Authorization",
+            "isNgSelectBox": true
+          },
+          {
+            "name": "version_id",
+            "value": ""
+          },
+          {
+            "name": "method_id",
+            "value": "Close Conversation"
+          }
+        ],
+        "isAuthPresent": true,
+        "isComponentNode": 3,
+        "nodeInput": {
+          "domain": "",
+          "conversation id": "$(mediaResourceId)",
+          "webhookurl": ""
+        },
+        "group_id": 50021,
+        "customUiAuthStatus": 0,
+        "adminParameters": {
+          "oauth_callbackurl_type": 0,
+          "clientId": "5498cc25-407b-457b-90a5-60f8fe852cd5",
+          "tenant_identifier": "5498cc25-407b-457b-90a5-60f8fe852cd5",
+          "domain": "ciscostagingenagageapi",
+          "integration_identifier": "https://example.invalid/v1/integration/cnteng",
+          "clientSecret": "[redacted]"
+        },
+        "isCustomUiAuthPresent": true,
+        "integration_version": 3,
+        "runTimeAuthorizationId": "[redacted]",
+        "nodeUiAuthorizationId": "[redacted]"
+      },
+      "transition_actions": [],
+      "declared_outputs": [
+        "Transid"
+      ],
+      "output_mappings": [
+        {
+          "order": 0,
+          "id": "91c44671-99b4-1fd2-8cf0-a66c7d9b51b9",
+          "name": "Transid",
+          "path": "tid",
+          "value": "",
+          "desc": "",
+          "type": "body",
+          "validation": {
+            "type": "",
+            "condition": null,
+            "regex": "",
+            "mandatory": true,
+            "format_validator": null
+          },
+          "key": null,
+          "debugKey": false,
+          "node_ui_type": null,
+          "node_ui_group_name": null,
+          "ui_field_configuration": null
+        }
+      ]
+    },
+    {
+      "id": "653",
+      "label": "Close Task",
+      "type_internal": "prebuiltnode",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "oninvaliddata",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "onerror",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "oninvalidchoice",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "ontimeout",
+          "declared_target_count": null
+        }
+      ],
+      "configuration": {
+        "referencekey": 50022,
+        "versionIds": "undefined",
+        "integration_id": 50022,
+        "client_uuid": "cf6913c2-95c0-4e3a-a12b-77a12bb0fcd1",
+        "method_id": 50346,
+        "version_id": 50163,
+        "auth_id": -1,
+        "request_body": [
+          {
+            "name": "Task Id",
+            "value": "$(n2.webex.taskId)",
+            "id": "95228aeb-2c9d-5cab-1f3c-c933f5fdafcf"
+          },
+          {
+            "name": "tenant_identifier",
+            "value": "",
+            "id": "ac382946-d990-04b6-fab7-cc7b8b9dd633"
+          },
+          {
+            "name": "webhookurl",
+            "value": "",
+            "id": "2ea13a19-1652-1c9b-e9ad-8f1c84812cb9"
+          },
+          {
+            "name": "Queue Id",
+            "value": "$(n2.webex.queue)",
+            "id": "b953abaf-5f9d-73ed-3fda-80ac2a8cf9ab"
+          },
+          {
+            "name": "Conversation Id",
+            "value": "$(mediaResourceId)",
+            "id": "0a15b511-71b8-e525-9955-f9d3267722cc"
+          },
+          {
+            "name": "Media Type",
+            "value": "$(n2.webex.mediaType)",
+            "id": "0115c05b-02a2-b089-4553-8b7120865c62"
+          }
+        ],
+        "path_parameters": [
+          {
+            "name": "domain",
+            "value": "",
+            "id": "bb0f83d0-d2ae-bbc7-8623-45176446a1dc"
+          },
+          {
+            "name": "ID",
+            "value": "$(n2.webex.taskId)",
+            "id": "2553cf34-06e3-e0bc-90e5-08a145e4512a"
+          }
+        ],
+        "viewmodeData": [
+          {
+            "name": "auth_id",
+            "value": "WxCC Auth April",
+            "isNgSelectBox": true
+          },
+          {
+            "name": "version_id",
+            "value": ""
+          },
+          {
+            "name": "method_id",
+            "value": "Close Task Accept"
+          }
+        ],
+        "isAuthPresent": true,
+        "isComponentNode": 3,
+        "nodeInput": {
+          "tenant_identifier": "",
+          "domain": "",
+          "Task Id": "$(n2.webex.taskId)",
+          "webhookurl": "",
+          "ID": "$(n2.webex.taskId)",
+          "Queue Id": "$(n2.webex.queue)",
+          "Conversation Id": "$(mediaResourceId)",
+          "Media Type": "$(n2.webex.mediaType)"
+        },
+        "group_id": 50020,
+        "customUiAuthStatus": 0,
+        "adminParameters": {
+          "oauth_callbackurl_type": 1,
+          "clientId": "Cb7a68aa951dadeef4e6b6d771b9ff4d4e65198653e7c63382c096e55c9425f34",
+          "tenant_identifier": "61e56b59-92c3-4a0f-ae3e-d8271e4c159d",
+          "Auth URL": "https://example.invalid/v1/authorize",
+          "domain": "intgus1",
+          "integration_identifier": "https://example.invalid/v1/integration/cntwct",
+          "clientSecret": "[redacted]",
+          "AccessTokenUrl": "[redacted]"
+        },
+        "isCustomUiAuthPresent": true,
+        "integration_version": 3,
+        "runTimeAuthorizationId": "[redacted]",
+        "nodeUiAuthorizationId": "[redacted]"
+      },
+      "transition_actions": [],
+      "declared_outputs": [],
+      "output_mappings": []
+    },
+    {
+      "id": "671",
+      "label": "Close Task",
+      "type_internal": "prebuiltnode",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "oninvaliddata",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "onerror",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "oninvalidchoice",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "ontimeout",
+          "declared_target_count": null
+        }
+      ],
+      "configuration": {
+        "referencekey": 50022,
+        "versionIds": "undefined",
+        "integration_id": 50022,
+        "client_uuid": "cf6913c2-95c0-4e3a-a12b-77a12bb0fcd1",
+        "method_id": 50347,
+        "version_id": 50163,
+        "auth_id": -1,
+        "request_body": [
+          {
+            "name": "Task ID",
+            "value": "$(n2.webex.taskId)",
+            "id": "e08c9f91-2336-4167-ffe6-65dcfe4db27b"
+          },
+          {
+            "name": "tenant_identifier",
+            "value": "",
+            "id": "c82fefb0-84ef-ab19-b402-961c47af1483"
+          },
+          {
+            "name": "agent ID",
+            "value": "$(n2.webex.owner)",
+            "id": "c77299fb-941a-96b7-1742-3017849d1bc0"
+          },
+          {
+            "name": "media resource id",
+            "value": "$(mediaResourceId)",
+            "id": "07b4fc3d-19af-0338-e2eb-0a581e357f83"
+          },
+          {
+            "name": "Media type",
+            "value": "$(n2.webex.mediaType)",
+            "id": "15e017dc-931d-3913-6986-00c8de726853"
+          },
+          {
+            "name": "reason",
+            "value": "$(description)",
+            "id": "d0eee310-5cb1-0562-e99e-c8ff2446c2b4"
+          },
+          {
+            "name": "reason code",
+            "value": "$(code)",
+            "id": "44361e7f-f59c-63c7-db4f-0a454ab07f94"
+          },
+          {
+            "name": "webhookurl",
+            "value": "",
+            "id": "7ab16060-3da8-2ee5-9e1e-034ac290b76c"
+          }
+        ],
+        "path_parameters": [
+          {
+            "name": "domain",
+            "value": "",
+            "id": "7009a544-f73b-fb1d-ad34-3706c7de83ba"
+          },
+          {
+            "name": "ID",
+            "value": "$(n2.webex.taskId)",
+            "id": "aa23f1d4-bb8a-181b-b56f-a4d47b776512"
+          }
+        ],
+        "viewmodeData": [
+          {
+            "name": "auth_id",
+            "value": "WxCC Auth April",
+            "isNgSelectBox": true
+          },
+          {
+            "name": "version_id",
+            "value": ""
+          },
+          {
+            "name": "method_id",
+            "value": "Close Task Reject"
+          }
+        ],
+        "isAuthPresent": true,
+        "isComponentNode": 3,
+        "nodeInput": {
+          "tenant_identifier": "",
+          "domain": "",
+          "ID": "$(n2.webex.taskId)",
+          "Task ID": "$(n2.webex.taskId)",
+          "agent ID": "$(n2.webex.owner)",
+          "media resource id": "$(mediaResourceId)",
+          "Media type": "$(n2.webex.mediaType)",
+          "reason": "$(description)",
+          "reason code": "$(code)",
+          "webhookurl": ""
+        },
+        "group_id": 50020,
+        "customUiAuthStatus": 0,
+        "adminParameters": {
+          "oauth_callbackurl_type": 1,
+          "clientId": "Cb7a68aa951dadeef4e6b6d771b9ff4d4e65198653e7c63382c096e55c9425f34",
+          "tenant_identifier": "61e56b59-92c3-4a0f-ae3e-d8271e4c159d",
+          "Auth URL": "https://example.invalid/v1/authorize",
+          "domain": "intgus1",
+          "integration_identifier": "https://example.invalid/v1/integration/cntwct",
+          "clientSecret": "[redacted]",
+          "AccessTokenUrl": "[redacted]"
+        },
+        "isCustomUiAuthPresent": true,
+        "integration_version": 3,
+        "runTimeAuthorizationId": "[redacted]",
+        "nodeUiAuthorizationId": "[redacted]"
+      },
+      "transition_actions": [],
+      "declared_outputs": [],
+      "output_mappings": []
+    },
+    {
+      "id": "720",
+      "label": "Screen Pop",
+      "type_internal": "prebuiltnode",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "oninvaliddata",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "onerror",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "oninvalidchoice",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "ontimeout",
+          "declared_target_count": null
+        }
+      ],
+      "configuration": {
+        "referencekey": 50023,
+        "versionIds": "undefined",
+        "integration_id": 50023,
+        "client_uuid": "cf6913c2-95c0-4e3a-a12b-77a12bb0fcd1",
+        "method_id": 50349,
+        "version_id": 50164,
+        "auth_id": -1,
+        "request_body": [
+          {
+            "name": "Trans ID",
+            "value": "$(n2.webex.taskId)",
+            "id": "486b059a-c366-9588-5999-862a1d29955d"
+          },
+          {
+            "name": "Agent ID",
+            "value": "$(n2.webex.owner)",
+            "id": "227f0340-25e7-6ca4-d23a-f176187e858a"
+          },
+          {
+            "name": "ScreenPop URL",
+            "value": "www.google.com",
+            "id": "eb4fcdd2-e302-68e7-92dc-c8b354cf0faf"
+          },
+          {
+            "name": "Target",
+            "value": "insideDesktop",
+            "id": "5da7bba4-edb5-d201-0a43-454d3a473061"
+          },
+          {
+            "name": "Query Parameters",
+            "value": {
+              "customerId": "$(CustomerId)",
+              "": ""
+            },
+            "id": "6324c253-b6c6-0745-aaae-ee08125bef80"
+          }
+        ],
+        "path_parameters": [
+          {
+            "name": "domain",
+            "id": "800d41bb-73c1-bd74-d715-e2c659ea3661"
+          },
+          {
+            "name": "tenant_identifier",
+            "id": "97762099-35e2-e706-9f07-ad15f4d6a6dd"
+          }
+        ],
+        "viewmodeData": [
+          {
+            "name": "auth_id",
+            "value": "WxCC Auth April",
+            "isNgSelectBox": true
+          },
+          {
+            "name": "version_id",
+            "value": ""
+          },
+          {
+            "name": "method_id",
+            "value": "Screen Pop"
+          }
+        ],
+        "isAuthPresent": true,
+        "isComponentNode": 1,
+        "container_name": "https://example.invalid/prebuiltnodescreen-pop637581232922029104.js",
+        "nodeType": "https://example.invalid/prebuiltnodescreen-pop637581232922029104.js",
+        "nodeInput": {
+          "transid": "$(n2.webex.taskId)",
+          "agentId": "$(n2.webex.owner)",
+          "screenPopUrl": "www.google.com",
+          "target": "insideDesktop",
+          "queryParameters": {
+            "customerId": "$(CustomerId)",
+            "": ""
+          }
+        },
+        "group_id": 50020,
+        "customUiAuthStatus": 0,
+        "adminParameters": {
+          "oauth_callbackurl_type": 1,
+          "clientId": "Cb7a68aa951dadeef4e6b6d771b9ff4d4e65198653e7c63382c096e55c9425f34",
+          "tenant_identifier": "61e56b59-92c3-4a0f-ae3e-d8271e4c159d",
+          "Auth URL": "https://example.invalid/v1/authorize",
+          "domain": "intgus1",
+          "integration_identifier": "https://example.invalid/v1/integration/cntwct",
+          "clientSecret": "[redacted]",
+          "AccessTokenUrl": "[redacted]"
+        },
+        "customuiWebcomponentElementName": "node-ui-template637581232922029104",
+        "extraParamsData": {
+          "transid": "$(n2.webex.taskId)",
+          "agentId": "$(n2.webex.owner)",
+          "screenPopUrl": "www.google.com",
+          "target": "insideDesktop",
+          "queryParameters": {
+            "customerId": "$(CustomerId)",
+            "": ""
+          }
+        },
+        "isCustomUiAuthPresent": true,
+        "integration_version": 3,
+        "runTimeAuthorizationId": "[redacted]",
+        "nodeUiAuthorizationId": "[redacted]"
+      },
+      "transition_actions": [],
+      "declared_outputs": [],
+      "output_mappings": []
+    },
+    {
+      "id": "993",
+      "label": "Live Chat / In-App Messaging",
+      "type_internal": "umppublic",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "onerror",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "hideWaitFor": false,
+        "channelId": 7,
+        "deliverychannel": "rtm",
+        "destinationType": "userid",
+        "destination": "$(user)",
+        "msgcreationtype": "createnew",
+        "successoutcome": 1,
+        "message": "Kindly fill the survey\n$(n1510.surveyURL)",
+        "linkValidityCheck": false,
+        "thread_id": "$(thread)",
+        "interactionsEnabled": false,
+        "push_table_extras": [
+          {
+            "index": "6eqvcvxm"
+          }
+        ],
+        "rtm_os_status": {
+          "android": true,
+          "ios": true,
+          "windows": false,
+          "chrome": true,
+          "firefox": true,
+          "safari": false,
+          "rtm": true,
+          "push": true
+        },
+        "msgType": "msg",
+        "templateInfo": {
+          "name": ""
+        },
+        "contentType": "static",
+        "quickReplies": {
+          "options": [
+            {
+              "title": "",
+              "identifier": "",
+              "imageUrl": "",
+              "payload": "",
+              "type": "quickReplyPostback"
+            }
+          ]
+        },
+        "generic_template": {
+          "elements": [
+            {
+              "buttons": [
+                {
+                  "type": "templatePostback",
+                  "title": "",
+                  "url": "",
+                  "identifier": "",
+                  "payload": ""
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "transition_actions": [],
+      "declared_outputs": [],
+      "output_mappings": []
+    },
+    {
+      "id": "1406",
+      "label": "Branch",
+      "type_internal": "evaluate",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "onerror",
+          "declared_target_count": null
+        }
+      ],
+      "configuration": {
+        "evaluteIsOptimization": true,
+        "outcomes": [
+          {
+            "outcome": "OverrideDefaultCloseChecked",
+            "order": "",
+            "open": true,
+            "isEditOn": false,
+            "tempVal": "OverrideDefaultCloseChecked",
+            "isOutcomeChangedOnce": false,
+            "conditions": [
+              {
+                "pills": [],
+                "varaible": "$(n2.webex.RequestBody)",
+                "condition": "regex",
+                "value": ".*(overrideDefaultClose\":\"true)+",
+                "operation": "AND",
+                "index": "e0fs6n95"
+              },
+              {
+                "pills": [],
+                "varaible": "$(n2.webex.mediaChannel)",
+                "condition": "==",
+                "value": "web",
+                "operation": "",
+                "index": "8xsihptp"
+              }
+            ],
+            "index": "rbhkvgtb"
+          }
+        ],
+        "allConditionsFail": "None of the above",
+        "expression": "if(/.*(overrideDefaultClose\\\":\\\"true)+/.test( \"$(n2.webex.RequestBody)\" )&& \"$(n2.webex.mediaChannel)\"  == \"web\"){\"OverrideDefaultCloseChecked\";}else{'None of the above';}",
+        "counter": 2,
+        "successEvents": [
+          "OverrideDefaultCloseChecked",
+          "None of the above"
+        ],
+        "nodeVersion": 1
+      },
+      "transition_actions": [
+        {
+          "kind": "all",
+          "name": "all",
+          "when": "onenter",
+          "value": ""
+        }
+      ],
+      "declared_outputs": [],
+      "output_mappings": []
+    },
+    {
+      "id": "1510",
+      "label": "WXM",
+      "type_internal": "prebuiltnode",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "oninvaliddata",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "onerror",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "oninvalidchoice",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "ontimeout",
+          "declared_target_count": null
+        }
+      ],
+      "configuration": {
+        "referencekey": 50135,
+        "versionIds": "undefined",
+        "integration_id": 50135,
+        "client_uuid": "50d97e6a-ad14-4a77-898a-7f6f104bfb14",
+        "method_id": 57257,
+        "version_id": 51969,
+        "auth_id": -1,
+        "methodResponseParameters": [
+          {
+            "order": 0,
+            "id": "240fce47-93c8-4e9f-a152-d293980e8040",
+            "name": "id",
+            "path": "$.id",
+            "value": "",
+            "desc": "",
+            "type": "body",
+            "validation": {
+              "type": "",
+              "condition": null,
+              "regex": "",
+              "mandatory": true,
+              "format_validator": null
+            },
+            "key": null,
+            "debugKey": false,
+            "node_ui_type": null,
+            "node_ui_group_name": null,
+            "ui_field_configuration": null
+          },
+          {
+            "order": 1,
+            "id": "0997e0c8-bc2e-49be-b1d4-e648d57e84fe",
+            "name": "orgId",
+            "path": "$.orgId",
+            "value": "",
+            "desc": "",
+            "type": "body",
+            "validation": {
+              "type": "",
+              "condition": null,
+              "regex": "",
+              "mandatory": true,
+              "format_validator": null
+            },
+            "key": null,
+            "debugKey": false,
+            "node_ui_type": null,
+            "node_ui_group_name": null,
+            "ui_field_configuration": null
+          },
+          {
+            "order": 2,
+            "id": "b9aba364-623c-4f13-96b1-c080619ba770",
+            "name": "name",
+            "path": "$.name",
+            "value": "",
+            "desc": "",
+            "type": "body",
+            "validation": {
+              "type": "",
+              "condition": null,
+              "regex": "",
+              "mandatory": true,
+              "format_validator": null
+            },
+            "key": null,
+            "debugKey": false,
+            "node_ui_type": null,
+            "node_ui_group_name": null,
+            "ui_field_configuration": null
+          },
+          {
+            "order": 3,
+            "id": "0e3e3dbe-316b-4d8e-bced-3ede6a8013d8",
+            "name": "validAfter",
+            "path": "$.validAfter",
+            "value": "",
+            "desc": "",
+            "type": "body",
+            "validation": {
+              "type": "",
+              "condition": null,
+              "regex": "",
+              "mandatory": true,
+              "format_validator": null
+            },
+            "key": null,
+            "debugKey": false,
+            "node_ui_type": null,
+            "node_ui_group_name": null,
+            "ui_field_configuration": null
+          },
+          {
+            "order": 4,
+            "id": "a00e06ff-f63f-42c2-8392-0fe0feeada43",
+            "name": "validTill",
+            "path": "$.validTill",
+            "value": "",
+            "desc": "",
+            "type": "body",
+            "validation": {
+              "type": "",
+              "condition": null,
+              "regex": "",
+              "mandatory": true,
+              "format_validator": null
+            },
+            "key": null,
+            "debugKey": false,
+            "node_ui_type": null,
+            "node_ui_group_name": null,
+            "ui_field_configuration": null
+          },
+          {
+            "order": 5,
+            "id": "42cb98cc-c2e3-4fc5-b645-feac71cd1ef8",
+            "name": "questionnaireId",
+            "path": "$.questionnaireId",
+            "value": "",
+            "desc": "",
+            "type": "body",
+            "validation": {
+              "type": "",
+              "condition": null,
+              "regex": "",
+              "mandatory": true,
+              "format_validator": null
+            },
+            "key": null,
+            "debugKey": false,
+            "node_ui_type": null,
+            "node_ui_group_name": null,
+            "ui_field_configuration": null
+          },
+          {
+            "order": 6,
+            "id": "b9cb576d-9cdc-4591-b770-8a5ce11600ac",
+            "name": "preFill",
+            "path": "$.preFill",
+            "value": "",
+            "desc": "",
+            "type": "body",
+            "validation": {
+              "type": "",
+              "condition": null,
+              "regex": "",
+              "mandatory": true,
+              "format_validator": null
+            },
+            "key": null,
+            "debugKey": false,
+            "node_ui_type": null,
+            "node_ui_group_name": null,
+            "ui_field_configuration": null
+          },
+          {
+            "order": 7,
+            "id": "5abc8ac3-15f1-41af-a6d7-5d3c5ed358ef",
+            "name": "onlyForPreviewSurvey",
+            "path": "$.onlyForPreviewSurvey",
+            "value": "",
+            "desc": "",
+            "type": "body",
+            "validation": {
+              "type": "",
+              "condition": null,
+              "regex": "",
+              "mandatory": true,
+              "format_validator": null
+            },
+            "key": null,
+            "debugKey": false,
+            "node_ui_type": null,
+            "node_ui_group_name": null,
+            "ui_field_configuration": null
+          },
+          {
+            "order": 8,
+            "id": "3c6bbdd5-191a-41fb-96aa-efada8ee14ad",
+            "name": "preferredLanguage",
+            "path": "$.preferredLanguage",
+            "value": "",
+            "desc": "",
+            "type": "body",
+            "validation": {
+              "type": "",
+              "condition": null,
+              "regex": "",
+              "mandatory": true,
+              "format_validator": null
+            },
+            "key": null,
+            "debugKey": false,
+            "node_ui_type": null,
+            "node_ui_group_name": null,
+            "ui_field_configuration": null
+          },
+          {
+            "order": 9,
+            "id": "3632b5fb-d848-4aaa-a23f-bf6818cf4863",
+            "name": "skipWelcome",
+            "path": "$.skipWelcome",
+            "value": "",
+            "desc": "",
+            "type": "body",
+            "validation": {
+              "type": "",
+              "condition": null,
+              "regex": "",
+              "mandatory": true,
+              "format_validator": null
+            },
+            "key": null,
+            "debugKey": false,
+            "node_ui_type": null,
+            "node_ui_group_name": null,
+            "ui_field_configuration": null
+          },
+          {
+            "order": 10,
+            "id": "fe85b7f5-1d4f-4f17-a7dc-169189f0e051",
+            "name": "restrictOnWebDomain",
+            "path": "$.restrictOnWebDomain",
+            "value": "",
+            "desc": "",
+            "type": "body",
+            "validation": {
+              "type": "",
+              "condition": null,
+              "regex": "",
+              "mandatory": true,
+              "format_validator": null
+            },
+            "key": null,
+            "debugKey": false,
+            "node_ui_type": null,
+            "node_ui_group_name": null,
+            "ui_field_configuration": null
+          },
+          {
+            "order": 11,
+            "id": "fec97075-1813-43c9-8f42-0f1e0dd0ff07",
+            "name": "restrictFromIPSpace",
+            "path": "$.restrictFromIPSpace",
+            "value": "",
+            "desc": "",
+            "type": "body",
+            "validation": {
+              "type": "",
+              "condition": null,
+              "regex": "",
+              "mandatory": true,
+              "format_validator": null
+            },
+            "key": null,
+            "debugKey": false,
+            "node_ui_type": null,
+            "node_ui_group_name": null,
+            "ui_field_configuration": null
+          },
+          {
+            "order": 12,
+            "id": "c814aa26-dee9-41fe-916c-29a5a5d111d6",
+            "name": "validUses",
+            "path": "$.validUses",
+            "value": "",
+            "desc": "",
+            "type": "body",
+            "validation": {
+              "type": "",
+              "condition": null,
+              "regex": "",
+              "mandatory": true,
+              "format_validator": null
+            },
+            "key": null,
+            "debugKey": false,
+            "node_ui_type": null,
+            "node_ui_group_name": null,
+            "ui_field_configuration": null
+          },
+          {
+            "order": 13,
+            "id": "02db145d-f110-4c8f-9cd4-f983774e0e50",
+            "name": "surveyURL",
+            "path": "$.surveyURL",
+            "value": "",
+            "desc": "",
+            "type": "body",
+            "validation": {
+              "type": "",
+              "condition": null,
+              "regex": "",
+              "mandatory": true,
+              "format_validator": null
+            },
+            "key": null,
+            "debugKey": false,
+            "node_ui_type": null,
+            "node_ui_group_name": null,
+            "ui_field_configuration": null
+          },
+          {
+            "order": 14,
+            "id": "b5136f7c-0533-44b2-9659-9fc3bf227376",
+            "name": "responsePayload",
+            "path": "$",
+            "value": "",
+            "desc": "",
+            "type": "body",
+            "validation": {
+              "type": "",
+              "condition": null,
+              "regex": "",
+              "mandatory": true,
+              "format_validator": null
+            },
+            "key": null,
+            "debugKey": false,
+            "node_ui_type": null,
+            "node_ui_group_name": null,
+            "ui_field_configuration": null
+          }
+        ],
+        "request_body": [
+          {
+            "name": "Payload",
+            "value": {
+              "validUses": 1,
+              "onlyForPreviewSurvey": false,
+              "skipWelcome": false,
+              "preFill": [
+                {
+                  "questionId": "6499f8718b513b6a604e9086",
+                  "questionText": "Channel",
+                  "textInput": "Chat",
+                  "numberInput": 0
+                }
+              ],
+              "questionnaireId": "64a3f57b2d43f91aa990b25e",
+              "name": "Testing",
+              "validFor": 1
+            },
+            "id": "98d10ebc-93a9-408a-b222-69c02212a951"
+          }
+        ],
+        "path_parameters": [
+          {
+            "name": "domainToUseAfterV1",
+            "id": "a9aeb3b3-1642-4464-b246-68e9e0ce428b"
+          },
+          {
+            "name": "tenant_identifier",
+            "id": "cd3dcd63-259c-46dd-9d48-802a26fbf237"
+          }
+        ],
+        "custom_output_vars": [
+          "id",
+          "orgId",
+          "name",
+          "validAfter",
+          "validTill",
+          "questionnaireId",
+          "preFill",
+          "onlyForPreviewSurvey",
+          "preferredLanguage",
+          "skipWelcome",
+          "restrictOnWebDomain",
+          "restrictFromIPSpace",
+          "validUses",
+          "surveyURL",
+          "responsePayload"
+        ],
+        "viewmodeData": [
+          {
+            "name": "auth_id",
+            "value": "WXM Authorization for java api",
+            "isNgSelectBox": true
+          },
+          {
+            "name": "version_id",
+            "value": "v1.1"
+          },
+          {
+            "name": "method_id",
+            "value": "Create a New Survey Token for a Questionnaire"
+          }
+        ],
+        "isAuthPresent": true,
+        "isComponentNode": 1,
+        "container_name": "https://example.invalid/integration_node_file_webex-wxm-questionnaire_1690600181538_7972384835445855.js",
+        "nodeType": "https://example.invalid/integration_node_file_webex-wxm-questionnaire_1690600181538_7972384835445855.js",
+        "group_id": 50083,
+        "customUiAuthStatus": 1,
+        "adminParameters": {
+          "oauth_callbackurl_type": 1,
+          "tenant_identifier": "174431e5-e4ba-4504-b353-ee98ec6f3619",
+          "domain": "https://example.invalid",
+          "integration_identifier": "https://example.invalid/v1/integration/wxmgmt",
+          "domainToUseAfterV1": "wxm-next.int-first-cc1.ciscospark.com"
+        },
+        "customuiWebcomponentElementName": "node-ui-template1690600181538",
+        "extraParamsData": {
+          "isQuestionnairesAvailable": true,
+          "questionnaireDropDownArray": [
+            {
+              "key": "6462d3ebbe8ae91b9a3ff355",
+              "value": "testSurveyAppearance"
+            },
+            {
+              "key": "647d6e7d8cd9370e34960917",
+              "value": "Test-Digital-Sadat"
+            },
+            {
+              "key": "64803ac7e4cd3a16faef31a2",
+              "value": "Test-Sadat-Digital1"
+            },
+            {
+              "key": "649a00ff8b021545e6e7eb43",
+              "value": "shafiTestBrandEdits43433"
+            },
+            {
+              "key": "649c675c400849632b2abb1a",
+              "value": "Shorttext-jasjayar"
+            },
+            {
+              "key": "649ecd35b6d25809d1e33717",
+              "value": "survey-hf-1"
+            },
+            {
+              "key": "64a3f57b2d43f91aa990b25e",
+              "value": "Test-Digital"
+            },
+            {
+              "key": "64ad8f9b42988f50a307ecb7",
+              "value": "DigitalScaleQuestion"
+            },
+            {
+              "key": "64aecb0030b30415ac6ab30e",
+              "value": "phat1"
+            },
+            {
+              "key": "64aed28a05d4210d44a7a4a4",
+              "value": "short9988"
+            },
+            {
+              "key": "64aed37205d4210d44a7a4a5",
+              "value": "shortooll"
+            },
+            {
+              "key": "64aedbfe19f11843b3177393",
+              "value": "Longtext"
+            },
+            {
+              "key": "64aedc0e1d8ca47285a635d7",
+              "value": "shafiTestBrandEdits2232"
+            },
+            {
+              "key": "64aeeb9e081ddc44084e6183",
+              "value": "shorttex"
+            },
+            {
+              "key": "64aef61630b30415ac6ab310",
+              "value": "shafiTest0602202301599-3"
+            },
+            {
+              "key": "64aef95b19f11843b3177395",
+              "value": "shorttex889"
+            },
+            {
+              "key": "64af1101f8d2f444ab554183",
+              "value": "RovTestJuly12-23"
+            },
+            {
+              "key": "64af3a9505d4210d44a7a4b5",
+              "value": "DigitalSurveyTest"
+            },
+            {
+              "key": "64af3c09081ddc44084e619a",
+              "value": "NewSurveysdfsdffdsdf"
+            },
+            {
+              "key": "64af3e3b19f11843b317739e",
+              "value": "FastfaST"
+            },
+            {
+              "key": "64af415f1d8ca47285a635e7",
+              "value": "Speed"
+            },
+            {
+              "key": "64af9251f8d2f444ab55419b",
+              "value": "Selectmultilang"
+            },
+            {
+              "key": "64b00018b7491945749f0def",
+              "value": "Digital Surveys Information Icons"
+            },
+            {
+              "key": "64b0012ddf10004807f219c1",
+              "value": "Raghutest01"
+            },
+            {
+              "key": "64b0c8eadf10004807f2c929",
+              "value": "FastSurvey"
+            },
+            {
+              "key": "64b5156057b7dc043d92d437",
+              "value": "Raghu0061"
+            },
+            {
+              "key": "64b596cde1848f7182c9191c",
+              "value": "star8899"
+            },
+            {
+              "key": "64b6c3025ca6da6982a6d7bb",
+              "value": "Testing11"
+            },
+            {
+              "key": "64b6c594c364bb41502d50f1",
+              "value": "Testing12"
+            },
+            {
+              "key": "64b6c5eebcfb36204c402a34",
+              "value": "testing134222"
+            },
+            {
+              "key": "64b6c61ebcfb36204c402a84",
+              "value": "testing88"
+            },
+            {
+              "key": "64b6c6524c75165b0b2549e0",
+              "value": "testing12345"
+            },
+            {
+              "key": "64b6c8815ca6da6982a6ddf9",
+              "value": "Testing8899"
+            },
+            {
+              "key": "64b6caa985bb070f4af7c173",
+              "value": "Testing77"
+            },
+            {
+              "key": "64b6cb6f85bb070f4af7c28e",
+              "value": "resfff"
+            },
+            {
+              "key": "64b95db27806cf40d398036a",
+              "value": "TwoQuestions"
+            },
+            {
+              "key": "64bb05bed84d653fcf10ee13",
+              "value": "test3"
+            },
+            {
+              "key": "64bff831ad9e101f6b64c86c",
+              "value": "hanfan-d-2"
+            },
+            {
+              "key": "64c03306591cf6254c430774",
+              "value": "hanfan-digital-2"
+            },
+            {
+              "key": "64c811834300480304c18ce5",
+              "value": "hanfan-digital-3"
+            },
+            {
+              "key": "64c812e29b6ca247f7b575e9",
+              "value": "hanfan-d-3"
+            },
+            {
+              "key": "64dcfc048226163a0cd25f90",
+              "value": "kesh"
+            },
+            {
+              "key": "64dcff098226163a0cd2601f",
+              "value": "hh"
+            }
+          ],
+          "questions": [
+            {
+              "id": "6499f8718b513b6a604e9078",
+              "text": "Agent Answers",
+              "multiSelect": [
+                "Yes",
+                "No"
+              ],
+              "displayType": "Select"
+            },
+            {
+              "id": "6499f8718b513b6a604e907b",
+              "text": "Agent Name",
+              "multiSelect": [
+                "Agent A",
+                "Agent B",
+                "Agent C"
+              ],
+              "displayType": "Select"
+            },
+            {
+              "id": "6499f8718b513b6a604e907d",
+              "text": "Agent Skill Group Target ID",
+              "multiSelect": null,
+              "displayType": "Text"
+            },
+            {
+              "id": "6499f8718b513b6a604e9081",
+              "text": "Call Direction",
+              "multiSelect": null,
+              "displayType": "Text"
+            },
+            {
+              "id": "6499f8718b513b6a604e9086",
+              "text": "Channel",
+              "multiSelect": [
+                "Email",
+                "SMS",
+                "IVR",
+                "Chat",
+                "Micro Survey",
+                "Email Signature",
+                "Feedback App",
+                "Nano Survey",
+                "QR Code",
+                "CEM Inbox"
+              ],
+              "displayType": "Select"
+            },
+            {
+              "id": "6499f8718b513b6a604e9087",
+              "text": "Channels Managed by Agent",
+              "multiSelect": [
+                "Voice",
+                "Email",
+                "Chat"
+              ],
+              "displayType": "Select"
+            },
+            {
+              "id": "6499f8718b513b6a604e908c",
+              "text": "Contact ID",
+              "multiSelect": null,
+              "displayType": "Text"
+            },
+            {
+              "id": "6499f8718b513b6a604e908f",
+              "text": "Customer ID",
+              "multiSelect": null,
+              "displayType": "Text"
+            },
+            {
+              "id": "6499f8718b513b6a604e9092",
+              "text": "Email Client",
+              "multiSelect": null,
+              "displayType": "Text"
+            },
+            {
+              "id": "6499f8718b513b6a604e9098",
+              "text": "IP Address",
+              "multiSelect": null,
+              "displayType": "Text"
+            },
+            {
+              "id": "6499f8718b513b6a604e909b",
+              "text": "Last Seen",
+              "multiSelect": null,
+              "displayType": "Text"
+            },
+            {
+              "id": "6499f8718b513b6a604e90a5",
+              "text": "Region",
+              "multiSelect": null,
+              "displayType": "Text"
+            },
+            {
+              "id": "6499f8718b513b6a604e90a6",
+              "text": "Router Key",
+              "multiSelect": null,
+              "displayType": "Text"
+            },
+            {
+              "id": "6499f8718b513b6a604e90aa",
+              "text": "State",
+              "multiSelect": null,
+              "displayType": "Text"
+            },
+            {
+              "id": "6499f8718b513b6a604e90ae",
+              "text": "Theme",
+              "multiSelect": null,
+              "displayType": "Text"
+            },
+            {
+              "id": "6499f8718b513b6a604e90af",
+              "text": "Time Spent by the customer waiting to be attended (in queue & on hold)",
+              "multiSelect": null,
+              "displayType": "Text"
+            },
+            {
+              "id": "6499f8718b513b6a604e90b3",
+              "text": "UserAgent Email",
+              "multiSelect": null,
+              "displayType": "Text"
+            },
+            {
+              "id": "6499f8718b513b6a604e9079",
+              "text": "Agent Email",
+              "multiSelect": null,
+              "displayType": "Text"
+            },
+            {
+              "id": "6499f8718b513b6a604e907a",
+              "text": "Agent ID",
+              "multiSelect": [
+                "Agent ID A",
+                "Agent ID B",
+                "Agent ID C"
+              ],
+              "displayType": "Select"
+            },
+            {
+              "id": "6499f8718b513b6a604e9082",
+              "text": "Call Duration",
+              "multiSelect": null,
+              "displayType": "Text"
+            },
+            {
+              "id": "6499f8718b513b6a604e908d",
+              "text": "Country",
+              "multiSelect": [
+                "AD",
+                "AE",
+                "AF",
+                "AG",
+                "AI",
+                "AL",
+                "AM",
+                "AO",
+                "AQ",
+                "AR",
+                "AS",
+                "AT",
+                "AU",
+                "AW",
+                "AX",
+                "AZ",
+                "BA",
+                "BB",
+                "BD",
+                "BE",
+                "BF",
+                "BG",
+                "BH",
+                "BI",
+                "BJ",
+                "BL",
+                "BM",
+                "BN",
+                "BO",
+                "BQ",
+                "BR",
+                "BS",
+                "BT",
+                "BV",
+                "BW",
+                "BY",
+                "BZ",
+                "CA",
+                "CC",
+                "CD",
+                "CF",
+                "CG",
+                "CH",
+                "CI",
+                "CK",
+                "CL",
+                "CM",
+                "CN",
+                "CO",
+                "CR",
+                "CU",
+                "CV",
+                "CW",
+                "CX",
+                "CY",
+                "CZ",
+                "DE",
+                "DJ",
+                "DK",
+                "DM",
+                "DO",
+                "DZ",
+                "EC",
+                "EE",
+                "EG",
+                "EH",
+                "ER",
+                "ES",
+                "ET",
+                "FI",
+                "FJ",
+                "FK",
+                "FM",
+                "FO",
+                "FR",
+                "GA",
+                "GB",
+                "GD",
+                "GE",
+                "GF",
+                "GG",
+                "GH",
+                "GI",
+                "GL",
+                "GM",
+                "GN",
+                "GP",
+                "GQ",
+                "GR",
+                "GS",
+                "GT",
+                "GU",
+                "GW",
+                "GY",
+                "HK",
+                "HM",
+                "HN",
+                "HR",
+                "HT",
+                "HU",
+                "ID",
+                "IE",
+                "IL",
+                "IM",
+                "IN",
+                "IO",
+                "IQ",
+                "IR",
+                "IS",
+                "IT",
+                "JE",
+                "JM",
+                "JO",
+                "JP",
+                "KE",
+                "KG",
+                "KH",
+                "KI",
+                "KM",
+                "KN",
+                "KP",
+                "KR",
+                "KW",
+                "KY",
+                "KZ",
+                "LA",
+                "LB",
+                "LC",
+                "LI",
+                "LK",
+                "LR",
+                "LS",
+                "LT",
+                "LU",
+                "LV",
+                "LY",
+                "MA",
+                "MC",
+                "MD",
+                "ME",
+                "MF",
+                "MG",
+                "MH",
+                "MK",
+                "ML",
+                "MM",
+                "MN",
+                "MO",
+                "MP",
+                "MQ",
+                "MR",
+                "MS",
+                "MT",
+                "MU",
+                "MV",
+                "MW",
+                "MX",
+                "MY",
+                "MZ",
+                "NA",
+                "NC",
+                "NE",
+                "NF",
+                "NG",
+                "NI",
+                "NL",
+                "NO",
+                "NP",
+                "NR",
+                "NU",
+                "NZ",
+                "OM",
+                "PA",
+                "PE",
+                "PF",
+                "PG",
+                "PH",
+                "PK",
+                "PL",
+                "PM",
+                "PN",
+                "PR",
+                "PS",
+                "PT",
+                "PW",
+                "PY",
+                "QA",
+                "RE",
+                "RO",
+                "RS",
+                "RU",
+                "RW",
+                "SA",
+                "SB",
+                "SC",
+                "SD",
+                "SE",
+                "SG",
+                "SH",
+                "SI",
+                "SJ",
+                "SK",
+                "SL",
+                "SM",
+                "SN",
+                "SO",
+                "SR",
+                "SS",
+                "ST",
+                "SV",
+                "SX",
+                "SY",
+                "SZ",
+                "TC",
+                "TD",
+                "TF",
+                "TG",
+                "TH",
+                "TJ",
+                "TK",
+                "TL",
+                "TM",
+                "TN",
+                "TO",
+                "TR",
+                "TT",
+                "TV",
+                "TW",
+                "TZ",
+                "UA",
+                "UG",
+                "UM",
+                "US",
+                "UY",
+                "UZ",
+                "VA",
+                "VC",
+                "VE",
+                "VG",
+                "VI",
+                "VN",
+                "VU",
+                "WF",
+                "WS",
+                "YE",
+                "YT",
+                "ZA",
+                "ZM",
+                "ZW"
+              ],
+              "displayType": "Select"
+            },
+            {
+              "id": "6499f8718b513b6a604e908e",
+              "text": "Current URL",
+              "multiSelect": null,
+              "displayType": "Text"
+            },
+            {
+              "id": "6499f8718b513b6a604e9094",
+              "text": "Feedback comment",
+              "multiSelect": null,
+              "displayType": "Text"
+            },
+            {
+              "id": "6499f8718b513b6a604e9097",
+              "text": "Interaction_ID",
+              "multiSelect": null,
+              "displayType": "Text"
+            },
+            {
+              "id": "6499f8718b513b6a604e9099",
+              "text": "IVR ID",
+              "multiSelect": null,
+              "displayType": "Text"
+            },
+            {
+              "id": "6499f8718b513b6a604e909e",
+              "text": "No. of times call put on hold",
+              "multiSelect": null,
+              "displayType": "Text"
+            },
+            {
+              "id": "6499f8718b513b6a604e909f",
+              "text": "No. of times call transferred",
+              "multiSelect": null,
+              "displayType": "Text"
+            },
+            {
+              "id": "6499f8718b513b6a604e90a0",
+              "text": "OS",
+              "multiSelect": null,
+              "displayType": "Text"
+            },
+            {
+              "id": "6499f8718b513b6a604e90a3",
+              "text": "Queue ID",
+              "multiSelect": null,
+              "displayType": "Text"
+            },
+            {
+              "id": "6499f8718b513b6a604e90a7",
+              "text": "Router Key Day",
+              "multiSelect": null,
+              "displayType": "Text"
+            },
+            {
+              "id": "6499f8718b513b6a604e90ab",
+              "text": "Survey client version",
+              "multiSelect": null,
+              "displayType": "Text"
+            },
+            {
+              "id": "6499f8718b513b6a604e90ac",
+              "text": "Survey Type",
+              "multiSelect": [
+                "Agent Pulse",
+                "Customer Survey",
+                "COVID Offer"
+              ],
+              "displayType": "Select"
+            },
+            {
+              "id": "6499f8718b513b6a604e90b2",
+              "text": "UserAgent",
+              "multiSelect": null,
+              "displayType": "Text"
+            },
+            {
+              "id": "6499f8718b513b6a604e907c",
+              "text": "Agent Sentiment",
+              "multiSelect": null,
+              "displayType": "Text"
+            },
+            {
+              "id": "6499f8718b513b6a604e9080",
+              "text": "Call Conferenced",
+              "multiSelect": null,
+              "displayType": "Text"
+            },
+            {
+              "id": "6499f8718b513b6a604e907e",
+              "text": "Browser",
+              "multiSelect": null,
+              "displayType": "Text"
+            },
+            {
+              "id": "6499f8718b513b6a604e907f",
+              "text": "Browser Version",
+              "multiSelect": null,
+              "displayType": "Text"
+            },
+            {
+              "id": "6499f8718b513b6a604e9083",
+              "text": "Call GUID",
+              "multiSelect": null,
+              "displayType": "Text"
+            },
+            {
+              "id": "6499f8718b513b6a604e9088",
+              "text": "Channel Sub Type",
+              "multiSelect": null,
+              "displayType": "Text"
+            },
+            {
+              "id": "6499f8718b513b6a604e908b",
+              "text": "City",
+              "multiSelect": null,
+              "displayType": "Text"
+            },
+            {
+              "id": "6499f8718b513b6a604e9091",
+              "text": "Device",
+              "multiSelect": null,
+              "displayType": "Text"
+            },
+            {
+              "id": "6499f8718b513b6a604e9095",
+              "text": "Hold Duration",
+              "multiSelect": null,
+              "displayType": "Text"
+            },
+            {
+              "id": "6499f8718b513b6a604e909d",
+              "text": "Number of Escalations for Agent",
+              "multiSelect": null,
+              "displayType": "Text"
+            },
+            {
+              "id": "6499f8718b513b6a604e90a1",
+              "text": "Partial Response ID",
+              "multiSelect": null,
+              "displayType": "Text"
+            },
+            {
+              "id": "6499f8718b513b6a604e90a2",
+              "text": "Queue Duration",
+              "multiSelect": null,
+              "displayType": "Text"
+            },
+            {
+              "id": "6499f8718b513b6a604e90a4",
+              "text": "Reason for Contact",
+              "multiSelect": null,
+              "displayType": "Text"
+            },
+            {
+              "id": "6499f8718b513b6a604e90a8",
+              "text": "Screen Size",
+              "multiSelect": null,
+              "displayType": "Text"
+            },
+            {
+              "id": "6499f8718b513b6a604e90a9",
+              "text": "Sentiment",
+              "multiSelect": [
+                "Strong Negative",
+                "Moderate Negative",
+                "Neutral",
+                "Moderate Positive",
+                "Strong Positive"
+              ],
+              "displayType": "MultiSelect"
+            },
+            {
+              "id": "6499f8718b513b6a604e90b0",
+              "text": "Token Id",
+              "multiSelect": null,
+              "displayType": "Text"
+            },
+            {
+              "id": "6499f8718b513b6a604e90b1",
+              "text": "Total time spent with the agent",
+              "multiSelect": null,
+              "displayType": "Text"
+            },
+            {
+              "id": "6499f8718b513b6a604e90b4",
+              "text": "Virtual Agent",
+              "multiSelect": [
+                "Yes",
+                "No"
+              ],
+              "displayType": "Select"
+            },
+            {
+              "id": "6499f8718b513b6a604e9084",
+              "text": "Call Transcription",
+              "multiSelect": [
+                "Yes",
+                "No"
+              ],
+              "displayType": "Select"
+            },
+            {
+              "id": "6499f8718b513b6a604e9085",
+              "text": "Call Type",
+              "multiSelect": null,
+              "displayType": "Text"
+            },
+            {
+              "id": "6499f8718b513b6a604e9089",
+              "text": "Channel Type",
+              "multiSelect": null,
+              "displayType": "Text"
+            },
+            {
+              "id": "6499f8718b513b6a604e908a",
+              "text": "Chat Reason",
+              "multiSelect": null,
+              "displayType": "Text"
+            },
+            {
+              "id": "6499f8718b513b6a604e9090",
+              "text": "Customer Sentiment",
+              "multiSelect": null,
+              "displayType": "Text"
+            },
+            {
+              "id": "6499f8718b513b6a604e9093",
+              "text": "FCR",
+              "multiSelect": null,
+              "displayType": "Text"
+            },
+            {
+              "id": "6499f8718b513b6a604e9096",
+              "text": "In-Bound Channel",
+              "multiSelect": [
+                "Voice",
+                "Email",
+                "Chat"
+              ],
+              "displayType": "Select"
+            },
+            {
+              "id": "6499f8718b513b6a604e909a",
+              "text": "Language",
+              "multiSelect": null,
+              "displayType": "Text"
+            },
+            {
+              "id": "6499f8718b513b6a604e909c",
+              "text": "Number of Calls Handled by Agent",
+              "multiSelect": null,
+              "displayType": "Text"
+            },
+            {
+              "id": "6499f8718b513b6a604e90ad",
+              "text": "Team ID",
+              "multiSelect": [
+                "Team ID A",
+                "Team ID B",
+                "Team ID C"
+              ],
+              "displayType": "Select"
+            }
+          ],
+          "preFill": [],
+          "preFillDropDownArray": [
+            {
+              "key": "6499f8718b513b6a604e9078",
+              "value": "Agent Answers"
+            },
+            {
+              "key": "6499f8718b513b6a604e907b",
+              "value": "Agent Name"
+            },
+            {
+              "key": "6499f8718b513b6a604e907d",
+              "value": "Agent Skill Group Target ID"
+            },
+            {
+              "key": "6499f8718b513b6a604e9081",
+              "value": "Call Direction"
+            },
+            {
+              "key": "6499f8718b513b6a604e9086",
+              "value": "Channel"
+            },
+            {
+              "key": "6499f8718b513b6a604e9087",
+              "value": "Channels Managed by Agent"
+            },
+            {
+              "key": "6499f8718b513b6a604e908c",
+              "value": "Contact ID"
+            },
+            {
+              "key": "6499f8718b513b6a604e908f",
+              "value": "Customer ID"
+            },
+            {
+              "key": "6499f8718b513b6a604e9092",
+              "value": "Email Client"
+            },
+            {
+              "key": "6499f8718b513b6a604e9098",
+              "value": "IP Address"
+            },
+            {
+              "key": "6499f8718b513b6a604e909b",
+              "value": "Last Seen"
+            },
+            {
+              "key": "6499f8718b513b6a604e90a5",
+              "value": "Region"
+            },
+            {
+              "key": "6499f8718b513b6a604e90a6",
+              "value": "Router Key"
+            },
+            {
+              "key": "6499f8718b513b6a604e90aa",
+              "value": "State"
+            },
+            {
+              "key": "6499f8718b513b6a604e90ae",
+              "value": "Theme"
+            },
+            {
+              "key": "6499f8718b513b6a604e90af",
+              "value": "Time Spent by the customer waiting to be attended (in queue & on hold)"
+            },
+            {
+              "key": "6499f8718b513b6a604e90b3",
+              "value": "UserAgent Email"
+            },
+            {
+              "key": "6499f8718b513b6a604e9079",
+              "value": "Agent Email"
+            },
+            {
+              "key": "6499f8718b513b6a604e907a",
+              "value": "Agent ID"
+            },
+            {
+              "key": "6499f8718b513b6a604e9082",
+              "value": "Call Duration"
+            },
+            {
+              "key": "6499f8718b513b6a604e908d",
+              "value": "Country"
+            },
+            {
+              "key": "6499f8718b513b6a604e908e",
+              "value": "Current URL"
+            },
+            {
+              "key": "6499f8718b513b6a604e9094",
+              "value": "Feedback comment"
+            },
+            {
+              "key": "6499f8718b513b6a604e9097",
+              "value": "Interaction_ID"
+            },
+            {
+              "key": "6499f8718b513b6a604e9099",
+              "value": "IVR ID"
+            },
+            {
+              "key": "6499f8718b513b6a604e909e",
+              "value": "No. of times call put on hold"
+            },
+            {
+              "key": "6499f8718b513b6a604e909f",
+              "value": "No. of times call transferred"
+            },
+            {
+              "key": "6499f8718b513b6a604e90a0",
+              "value": "OS"
+            },
+            {
+              "key": "6499f8718b513b6a604e90a3",
+              "value": "Queue ID"
+            },
+            {
+              "key": "6499f8718b513b6a604e90a7",
+              "value": "Router Key Day"
+            },
+            {
+              "key": "6499f8718b513b6a604e90ab",
+              "value": "Survey client version"
+            },
+            {
+              "key": "6499f8718b513b6a604e90ac",
+              "value": "Survey Type"
+            },
+            {
+              "key": "6499f8718b513b6a604e90b2",
+              "value": "UserAgent"
+            },
+            {
+              "key": "6499f8718b513b6a604e907c",
+              "value": "Agent Sentiment"
+            },
+            {
+              "key": "6499f8718b513b6a604e9080",
+              "value": "Call Conferenced"
+            },
+            {
+              "key": "6499f8718b513b6a604e907e",
+              "value": "Browser"
+            },
+            {
+              "key": "6499f8718b513b6a604e907f",
+              "value": "Browser Version"
+            },
+            {
+              "key": "6499f8718b513b6a604e9083",
+              "value": "Call GUID"
+            },
+            {
+              "key": "6499f8718b513b6a604e9088",
+              "value": "Channel Sub Type"
+            },
+            {
+              "key": "6499f8718b513b6a604e908b",
+              "value": "City"
+            },
+            {
+              "key": "6499f8718b513b6a604e9091",
+              "value": "Device"
+            },
+            {
+              "key": "6499f8718b513b6a604e9095",
+              "value": "Hold Duration"
+            },
+            {
+              "key": "6499f8718b513b6a604e909d",
+              "value": "Number of Escalations for Agent"
+            },
+            {
+              "key": "6499f8718b513b6a604e90a1",
+              "value": "Partial Response ID"
+            },
+            {
+              "key": "6499f8718b513b6a604e90a2",
+              "value": "Queue Duration"
+            },
+            {
+              "key": "6499f8718b513b6a604e90a4",
+              "value": "Reason for Contact"
+            },
+            {
+              "key": "6499f8718b513b6a604e90a8",
+              "value": "Screen Size"
+            },
+            {
+              "key": "6499f8718b513b6a604e90a9",
+              "value": "Sentiment"
+            },
+            {
+              "key": "6499f8718b513b6a604e90b0",
+              "value": "Token Id"
+            },
+            {
+              "key": "6499f8718b513b6a604e90b1",
+              "value": "Total time spent with the agent"
+            },
+            {
+              "key": "6499f8718b513b6a604e90b4",
+              "value": "Virtual Agent"
+            },
+            {
+              "key": "6499f8718b513b6a604e9084",
+              "value": "Call Transcription"
+            },
+            {
+              "key": "6499f8718b513b6a604e9085",
+              "value": "Call Type"
+            },
+            {
+              "key": "6499f8718b513b6a604e9089",
+              "value": "Channel Type"
+            },
+            {
+              "key": "6499f8718b513b6a604e908a",
+              "value": "Chat Reason"
+            },
+            {
+              "key": "6499f8718b513b6a604e9090",
+              "value": "Customer Sentiment"
+            },
+            {
+              "key": "6499f8718b513b6a604e9093",
+              "value": "FCR"
+            },
+            {
+              "key": "6499f8718b513b6a604e9096",
+              "value": "In-Bound Channel"
+            },
+            {
+              "key": "6499f8718b513b6a604e909a",
+              "value": "Language"
+            },
+            {
+              "key": "6499f8718b513b6a604e909c",
+              "value": "Number of Calls Handled by Agent"
+            },
+            {
+              "key": "6499f8718b513b6a604e90ad",
+              "value": "Team ID"
+            }
+          ],
+          "questionnaireId": "64a3f57b2d43f91aa990b25e",
+          "selectedPreFills": [
+            {
+              "questionId": "6499f8718b513b6a604e9086",
+              "questionText": "Channel",
+              "textInput": "Chat",
+              "numberInput": 0,
+              "id": 4,
+              "type": "select",
+              "pattern": false,
+              "select": [
+                {
+                  "key": "Email",
+                  "value": "Email"
+                },
+                {
+                  "key": "SMS",
+                  "value": "SMS"
+                },
+                {
+                  "key": "IVR",
+                  "value": "IVR"
+                },
+                {
+                  "key": "Chat",
+                  "value": "Chat"
+                },
+                {
+                  "key": "Micro Survey",
+                  "value": "Micro Survey"
+                },
+                {
+                  "key": "Email Signature",
+                  "value": "Email Signature"
+                },
+                {
+                  "key": "Feedback App",
+                  "value": "Feedback App"
+                },
+                {
+                  "key": "Nano Survey",
+                  "value": "Nano Survey"
+                },
+                {
+                  "key": "QR Code",
+                  "value": "QR Code"
+                },
+                {
+                  "key": "CEM Inbox",
+                  "value": "CEM Inbox"
+                }
+              ],
+              "selectedValues": []
+            }
+          ],
+          "selectedPreFillsArray": [],
+          "textInputFormats": [],
+          "numberInputFormats": [],
+          "questionnaireLoader": false,
+          "preFillLoader": false,
+          "internalData": [],
+          "data": [],
+          "nms": "Testing",
+          "validAfter": "",
+          "validTill": "",
+          "validFor": 1,
+          "preferredLanguage": "en-GB",
+          "islanguagedynamic": false,
+          "payload": {
+            "validUses": 1,
+            "onlyForPreviewSurvey": false,
+            "skipWelcome": false,
+            "preFill": [
+              {
+                "questionId": "6499f8718b513b6a604e9086",
+                "questionText": "Channel",
+                "textInput": "Chat",
+                "numberInput": 0
+              }
+            ],
+            "questionnaireId": "64a3f57b2d43f91aa990b25e",
+            "name": "Testing",
+            "validFor": 1
+          },
+          "validTillPattern": true,
+          "validAfterPattern": true,
+          "validForPattern": true,
+          "validTillOrValidFor": "validFor_1",
+          "isResponseReceived": true,
+          "errorMessage": "",
+          "tarckingId": "",
+          "questionnaire": [],
+          "flowVariables": [],
+          "checkbox_arr": [],
+          "questionnaireid": "64a3f57b2d43f91aa990b25e",
+          "64a3f57b2d43f91aa990b25e": {
+            "availablePreFillsSelectedOptions": [
+              {
+                "key": "6499f8718b513b6a604e9086",
+                "value": "Channel"
+              }
+            ],
+            "preFill": [
+              {
+                "questionId": "6499f8718b513b6a604e9086",
+                "questionText": "Channel",
+                "textInput": "Chat",
+                "numberInput": 0
+              }
+            ],
+            "selectedPreFills": [
+              {
+                "questionId": "6499f8718b513b6a604e9086",
+                "questionText": "Channel",
+                "textInput": "Chat",
+                "numberInput": 0,
+                "id": 4,
+                "type": "select",
+                "pattern": false,
+                "select": [
+                  {
+                    "key": "Email",
+                    "value": "Email"
+                  },
+                  {
+                    "key": "SMS",
+                    "value": "SMS"
+                  },
+                  {
+                    "key": "IVR",
+                    "value": "IVR"
+                  },
+                  {
+                    "key": "Chat",
+                    "value": "Chat"
+                  },
+                  {
+                    "key": "Micro Survey",
+                    "value": "Micro Survey"
+                  },
+                  {
+                    "key": "Email Signature",
+                    "value": "Email Signature"
+                  },
+                  {
+                    "key": "Feedback App",
+                    "value": "Feedback App"
+                  },
+                  {
+                    "key": "Nano Survey",
+                    "value": "Nano Survey"
+                  },
+                  {
+                    "key": "QR Code",
+                    "value": "QR Code"
+                  },
+                  {
+                    "key": "CEM Inbox",
+                    "value": "CEM Inbox"
+                  }
+                ],
+                "selectedValues": []
+              }
+            ]
+          }
+        },
+        "isCustomUiAuthPresent": true,
+        "integration_version": 3,
+        "runTimeAuthorizationId": "[redacted]",
+        "nodeUiAuthorizationId": "[redacted]"
+      },
+      "transition_actions": [],
+      "declared_outputs": [
+        "id",
+        "orgId",
+        "name",
+        "validAfter",
+        "validTill",
+        "questionnaireId",
+        "preFill",
+        "onlyForPreviewSurvey",
+        "preferredLanguage",
+        "skipWelcome",
+        "restrictOnWebDomain",
+        "restrictFromIPSpace",
+        "validUses",
+        "surveyURL",
+        "responsePayload"
+      ],
+      "output_mappings": [
+        {
+          "order": 0,
+          "id": "240fce47-93c8-4e9f-a152-d293980e8040",
+          "name": "id",
+          "path": "$.id",
+          "value": "",
+          "desc": "",
+          "type": "body",
+          "validation": {
+            "type": "",
+            "condition": null,
+            "regex": "",
+            "mandatory": true,
+            "format_validator": null
+          },
+          "key": null,
+          "debugKey": false,
+          "node_ui_type": null,
+          "node_ui_group_name": null,
+          "ui_field_configuration": null
+        },
+        {
+          "order": 1,
+          "id": "0997e0c8-bc2e-49be-b1d4-e648d57e84fe",
+          "name": "orgId",
+          "path": "$.orgId",
+          "value": "",
+          "desc": "",
+          "type": "body",
+          "validation": {
+            "type": "",
+            "condition": null,
+            "regex": "",
+            "mandatory": true,
+            "format_validator": null
+          },
+          "key": null,
+          "debugKey": false,
+          "node_ui_type": null,
+          "node_ui_group_name": null,
+          "ui_field_configuration": null
+        },
+        {
+          "order": 2,
+          "id": "b9aba364-623c-4f13-96b1-c080619ba770",
+          "name": "name",
+          "path": "$.name",
+          "value": "",
+          "desc": "",
+          "type": "body",
+          "validation": {
+            "type": "",
+            "condition": null,
+            "regex": "",
+            "mandatory": true,
+            "format_validator": null
+          },
+          "key": null,
+          "debugKey": false,
+          "node_ui_type": null,
+          "node_ui_group_name": null,
+          "ui_field_configuration": null
+        },
+        {
+          "order": 3,
+          "id": "0e3e3dbe-316b-4d8e-bced-3ede6a8013d8",
+          "name": "validAfter",
+          "path": "$.validAfter",
+          "value": "",
+          "desc": "",
+          "type": "body",
+          "validation": {
+            "type": "",
+            "condition": null,
+            "regex": "",
+            "mandatory": true,
+            "format_validator": null
+          },
+          "key": null,
+          "debugKey": false,
+          "node_ui_type": null,
+          "node_ui_group_name": null,
+          "ui_field_configuration": null
+        },
+        {
+          "order": 4,
+          "id": "a00e06ff-f63f-42c2-8392-0fe0feeada43",
+          "name": "validTill",
+          "path": "$.validTill",
+          "value": "",
+          "desc": "",
+          "type": "body",
+          "validation": {
+            "type": "",
+            "condition": null,
+            "regex": "",
+            "mandatory": true,
+            "format_validator": null
+          },
+          "key": null,
+          "debugKey": false,
+          "node_ui_type": null,
+          "node_ui_group_name": null,
+          "ui_field_configuration": null
+        },
+        {
+          "order": 5,
+          "id": "42cb98cc-c2e3-4fc5-b645-feac71cd1ef8",
+          "name": "questionnaireId",
+          "path": "$.questionnaireId",
+          "value": "",
+          "desc": "",
+          "type": "body",
+          "validation": {
+            "type": "",
+            "condition": null,
+            "regex": "",
+            "mandatory": true,
+            "format_validator": null
+          },
+          "key": null,
+          "debugKey": false,
+          "node_ui_type": null,
+          "node_ui_group_name": null,
+          "ui_field_configuration": null
+        },
+        {
+          "order": 6,
+          "id": "b9cb576d-9cdc-4591-b770-8a5ce11600ac",
+          "name": "preFill",
+          "path": "$.preFill",
+          "value": "",
+          "desc": "",
+          "type": "body",
+          "validation": {
+            "type": "",
+            "condition": null,
+            "regex": "",
+            "mandatory": true,
+            "format_validator": null
+          },
+          "key": null,
+          "debugKey": false,
+          "node_ui_type": null,
+          "node_ui_group_name": null,
+          "ui_field_configuration": null
+        },
+        {
+          "order": 7,
+          "id": "5abc8ac3-15f1-41af-a6d7-5d3c5ed358ef",
+          "name": "onlyForPreviewSurvey",
+          "path": "$.onlyForPreviewSurvey",
+          "value": "",
+          "desc": "",
+          "type": "body",
+          "validation": {
+            "type": "",
+            "condition": null,
+            "regex": "",
+            "mandatory": true,
+            "format_validator": null
+          },
+          "key": null,
+          "debugKey": false,
+          "node_ui_type": null,
+          "node_ui_group_name": null,
+          "ui_field_configuration": null
+        },
+        {
+          "order": 8,
+          "id": "3c6bbdd5-191a-41fb-96aa-efada8ee14ad",
+          "name": "preferredLanguage",
+          "path": "$.preferredLanguage",
+          "value": "",
+          "desc": "",
+          "type": "body",
+          "validation": {
+            "type": "",
+            "condition": null,
+            "regex": "",
+            "mandatory": true,
+            "format_validator": null
+          },
+          "key": null,
+          "debugKey": false,
+          "node_ui_type": null,
+          "node_ui_group_name": null,
+          "ui_field_configuration": null
+        },
+        {
+          "order": 9,
+          "id": "3632b5fb-d848-4aaa-a23f-bf6818cf4863",
+          "name": "skipWelcome",
+          "path": "$.skipWelcome",
+          "value": "",
+          "desc": "",
+          "type": "body",
+          "validation": {
+            "type": "",
+            "condition": null,
+            "regex": "",
+            "mandatory": true,
+            "format_validator": null
+          },
+          "key": null,
+          "debugKey": false,
+          "node_ui_type": null,
+          "node_ui_group_name": null,
+          "ui_field_configuration": null
+        },
+        {
+          "order": 10,
+          "id": "fe85b7f5-1d4f-4f17-a7dc-169189f0e051",
+          "name": "restrictOnWebDomain",
+          "path": "$.restrictOnWebDomain",
+          "value": "",
+          "desc": "",
+          "type": "body",
+          "validation": {
+            "type": "",
+            "condition": null,
+            "regex": "",
+            "mandatory": true,
+            "format_validator": null
+          },
+          "key": null,
+          "debugKey": false,
+          "node_ui_type": null,
+          "node_ui_group_name": null,
+          "ui_field_configuration": null
+        },
+        {
+          "order": 11,
+          "id": "fec97075-1813-43c9-8f42-0f1e0dd0ff07",
+          "name": "restrictFromIPSpace",
+          "path": "$.restrictFromIPSpace",
+          "value": "",
+          "desc": "",
+          "type": "body",
+          "validation": {
+            "type": "",
+            "condition": null,
+            "regex": "",
+            "mandatory": true,
+            "format_validator": null
+          },
+          "key": null,
+          "debugKey": false,
+          "node_ui_type": null,
+          "node_ui_group_name": null,
+          "ui_field_configuration": null
+        },
+        {
+          "order": 12,
+          "id": "c814aa26-dee9-41fe-916c-29a5a5d111d6",
+          "name": "validUses",
+          "path": "$.validUses",
+          "value": "",
+          "desc": "",
+          "type": "body",
+          "validation": {
+            "type": "",
+            "condition": null,
+            "regex": "",
+            "mandatory": true,
+            "format_validator": null
+          },
+          "key": null,
+          "debugKey": false,
+          "node_ui_type": null,
+          "node_ui_group_name": null,
+          "ui_field_configuration": null
+        },
+        {
+          "order": 13,
+          "id": "02db145d-f110-4c8f-9cd4-f983774e0e50",
+          "name": "surveyURL",
+          "path": "$.surveyURL",
+          "value": "",
+          "desc": "",
+          "type": "body",
+          "validation": {
+            "type": "",
+            "condition": null,
+            "regex": "",
+            "mandatory": true,
+            "format_validator": null
+          },
+          "key": null,
+          "debugKey": false,
+          "node_ui_type": null,
+          "node_ui_group_name": null,
+          "ui_field_configuration": null
+        },
+        {
+          "order": 14,
+          "id": "b5136f7c-0533-44b2-9659-9fc3bf227376",
+          "name": "responsePayload",
+          "path": "$",
+          "value": "",
+          "desc": "",
+          "type": "body",
+          "validation": {
+            "type": "",
+            "condition": null,
+            "regex": "",
+            "mandatory": true,
+            "format_validator": null
+          },
+          "key": null,
+          "debugKey": false,
+          "node_ui_type": null,
+          "node_ui_group_name": null,
+          "ui_field_configuration": null
+        }
+      ]
+    },
+    {
+      "id": "1511",
+      "label": "Append Conversation",
+      "type_internal": "prebuiltnode",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "oninvaliddata",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "onerror",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "oninvalidchoice",
+          "declared_target_count": null
+        },
+        {
+          "event_internal": "ontimeout",
+          "declared_target_count": null
+        }
+      ],
+      "configuration": {
+        "referencekey": 50031,
+        "versionIds": "undefined",
+        "integration_id": 50031,
+        "client_uuid": "50d97e6a-ad14-4a77-898a-7f6f104bfb14",
+        "method_id": 58050,
+        "version_id": 52406,
+        "auth_id": -1,
+        "methodResponseParameters": [
+          {
+            "order": 0,
+            "id": "36aea71a-f412-4033-90c0-91f69a2e9dfd",
+            "name": "TransId",
+            "path": "tid",
+            "value": "",
+            "desc": "",
+            "type": "body",
+            "validation": {
+              "type": "",
+              "condition": null,
+              "regex": "",
+              "mandatory": true,
+              "format_validator": null
+            },
+            "key": null,
+            "debugKey": false,
+            "node_ui_type": null,
+            "node_ui_group_name": null,
+            "ui_field_configuration": null
+          }
+        ],
+        "request_body": [
+          {
+            "name": "channel",
+            "value": "livechat",
+            "id": "f322b506-c3f8-ddb4-4648-86a772380562"
+          },
+          {
+            "name": "subject",
+            "value": null,
+            "id": "3e22ceff-4d06-dacc-505a-ccddb88016a4"
+          },
+          {
+            "name": "direction",
+            "value": "outbound",
+            "id": "fedbc70f-5cf4-ef16-73c1-4460a97fdfe7"
+          },
+          {
+            "name": "messagetype",
+            "value": "text-with-attachments",
+            "id": "87afb582-ebbd-9ff5-41ae-a472a601394c"
+          },
+          {
+            "name": "livechatformresponse",
+            "value": null,
+            "id": "1e96df51-89b0-2c9c-661e-de688f8ce3c3"
+          },
+          {
+            "name": "text",
+            "value": "Kindly fill the survey  $(n1477.surveyURL)",
+            "id": "53a32535-fd66-0b2d-4d5d-8c831bb9f0b6"
+          },
+          {
+            "name": "timestamp",
+            "value": "$(utctime)",
+            "id": "187f10e7-03d1-5418-77c8-42039c7f9cef"
+          },
+          {
+            "name": "attachments",
+            "value": null,
+            "id": "a8c08533-3ac7-137a-95d7-07005acf999a"
+          },
+          {
+            "name": "frmAddress",
+            "value": null,
+            "id": "62722b09-23a0-97ad-1c35-84ba4e9b3b4a"
+          },
+          {
+            "name": "toRecipients",
+            "value": null,
+            "id": "cb0a1f8b-fc43-bbe9-6124-9620a86644ae"
+          },
+          {
+            "name": "ccRecipients",
+            "value": null,
+            "id": "3e6f60b3-f145-1f2d-4ff4-2af92f3eb662"
+          },
+          {
+            "name": "plainBody",
+            "value": null,
+            "id": "ba19a86e-c087-0d12-58de-c09eb918661b"
+          },
+          {
+            "name": "strippedHtml",
+            "value": null,
+            "id": "8c8e17c9-4922-cf22-7952-78bb59491507"
+          },
+          {
+            "name": "htmlBody",
+            "value": null,
+            "id": "e6266dbd-0b11-d757-84c7-16a6403d77d5"
+          },
+          {
+            "name": "emailHeaders",
+            "value": null,
+            "id": "449e2874-a662-c5a8-1815-15a311647418"
+          },
+          {
+            "name": "webhookurl",
+            "id": "0cffbc14-355f-e9aa-cb57-228896feca6a"
+          },
+          {
+            "name": "lcCarousel",
+            "value": null,
+            "id": "b9c9966b-aa92-1cc7-659d-8b4d83eba2e7"
+          },
+          {
+            "name": "lcQuickReplies",
+            "value": null,
+            "id": "e07028b3-3135-32b4-bbad-e64d608a97bb"
+          },
+          {
+            "name": "lcQuickRepliesResponse",
+            "value": null,
+            "id": "bd4a0546-7628-cd73-e515-edd47e938a48"
+          },
+          {
+            "name": "lcCarouselResponse",
+            "value": null,
+            "id": "d730f104-5629-bc07-1dc4-6ab660c1a089"
+          },
+          {
+            "name": "ambForm",
+            "value": null,
+            "id": "2e31d592-35f6-45fe-931b-e0c94271b6a2"
+          },
+          {
+            "name": "ambFormResponse",
+            "value": null,
+            "id": "bda9cf2e-fff3-4f5a-9cb4-520e551fdd31"
+          },
+          {
+            "name": "ambListPicker",
+            "value": null,
+            "id": "7ecfe613-d393-4b14-bbb0-7e8fe1f0cef2"
+          },
+          {
+            "name": "ambListPickerResponse",
+            "value": null,
+            "id": "0ca71761-4205-4807-9572-f31f3306b4ac"
+          },
+          {
+            "name": "ambQuickReplies",
+            "value": null,
+            "id": "36ee261f-18f6-4436-b727-dadb9a091b51"
+          },
+          {
+            "name": "ambQuickRepliesResponse",
+            "value": null,
+            "id": "8f77dcec-b3c5-4591-a509-dfedf34ecde8"
+          },
+          {
+            "name": "ambTimePicker",
+            "value": null,
+            "id": "06c9ad06-70b2-46fa-a76a-80e436715b0a"
+          },
+          {
+            "name": "ambTimePickerResponse",
+            "value": null,
+            "id": "1124d1eb-35e1-4b0f-b732-29cfca141ec4"
+          },
+          {
+            "name": "gbmCarousel",
+            "value": null,
+            "id": "61e3f532-8564-4e05-9646-65ac0ebc7d40"
+          },
+          {
+            "name": "gbmRichCard",
+            "value": null,
+            "id": "ccea238f-cca2-412d-92e0-2d35c392ecf0"
+          },
+          {
+            "name": "gbmSuggestions",
+            "value": null,
+            "id": "2a084a0a-6d8d-479e-898e-094916e1bbbf"
+          },
+          {
+            "name": "gbmSuggestionResponse",
+            "value": null,
+            "id": "ec193872-c351-4879-a73d-b7bfea5f4473"
+          },
+          {
+            "name": "extras",
+            "value": null,
+            "id": "803d928a-8804-49c9-8e06-05b02bda923e"
+          }
+        ],
+        "path_parameters": [
+          {
+            "name": "domain",
+            "id": "9a5bd517-93db-51a9-1f35-3edccf4152d0"
+          },
+          {
+            "name": "Conversation ID",
+            "value": "$(mediaResourceId)",
+            "id": "276e9680-96eb-2a1d-7511-9c2699d2acc4"
+          }
+        ],
+        "custom_output_vars": [
+          "TransId"
+        ],
+        "viewmodeData": [
+          {
+            "name": "auth_id",
+            "value": "Engage",
+            "isNgSelectBox": true
+          },
+          {
+            "name": "version_id",
+            "value": ""
+          },
+          {
+            "name": "method_id",
+            "value": "Append Chat"
+          }
+        ],
+        "isAuthPresent": true,
+        "isComponentNode": 1,
+        "container_name": "https://example.invalid/integration_node_file_append-message_1713818631468_5354679624588877.js",
+        "nodeType": "https://example.invalid/integration_node_file_append-message_1713818631468_5354679624588877.js",
+        "group_id": 50021,
+        "customUiAuthStatus": 0,
+        "adminParameters": {
+          "oauth_callbackurl_type": 0,
+          "clientId": "1ec92647-d32e-4555-ad01-f72d0d02cd37",
+          "tenant_identifier": "1ec92647-d32e-4555-ad01-f72d0d02cd37",
+          "domain": "Preprodengageapi.imiengage.net",
+          "integration_identifier": "https://example.invalid/v1/integration/cnteng",
+          "clientSecret": "[redacted]"
+        },
+        "customuiWebcomponentElementName": "node-ui-template1713818631468",
+        "extraParamsData": {
+          "conversationid": "$(mediaResourceId)",
+          "singleOrDynamic": "single",
+          "channel": "livechat",
+          "frmAddress": null,
+          "toRecipients": null,
+          "ccRecipients": null,
+          "emailHeaders": "[redacted]",
+          "htmlBody": null,
+          "plainBody": null,
+          "strippedHtml": null,
+          "strippedText": "",
+          "direction": "outbound",
+          "messageType": "text-with-attachments",
+          "messagetype": "text-with-attachments",
+          "textOrResponse": "Kindly fill the survey  $(n1477.surveyURL)",
+          "dynamicLabel": "Text",
+          "timestamp": "$(utctime)",
+          "dynamicJSON": "",
+          "attachments": null,
+          "lcCarousel": null,
+          "lcQuickReplies": null,
+          "gbmSuggestionResponse": null,
+          "gbmSuggestions": null,
+          "gbmRichCard": null,
+          "gbmCarousel": null,
+          "extras": null,
+          "lcCarouselObject": null,
+          "lcQRObject": null,
+          "livechatformresponse": null,
+          "lcQuickRepliesResponse": null,
+          "lcCarouselResponse": null,
+          "subject": null,
+          "ambListPickerResponse": null,
+          "ambTimePickerResponse": null,
+          "ambFormResponse": null,
+          "ambQuickReplies": null,
+          "ambQuickRepliesResponse": null,
+          "ambListPicker": null,
+          "ambTimePicker": null,
+          "ambForm": null,
+          "text": "Kindly fill the survey  $(n1477.surveyURL)"
+        },
+        "isCustomUiAuthPresent": false,
+        "integration_version": 3,
+        "runTimeAuthorizationId": "[redacted]",
+        "nodeUiAuthorizationId": "[redacted]"
+      },
+      "transition_actions": [],
+      "declared_outputs": [
+        "TransId"
+      ],
+      "output_mappings": [
+        {
+          "order": 0,
+          "id": "36aea71a-f412-4033-90c0-91f69a2e9dfd",
+          "name": "TransId",
+          "path": "tid",
+          "value": "",
+          "desc": "",
+          "type": "body",
+          "validation": {
+            "type": "",
+            "condition": null,
+            "regex": "",
+            "mandatory": true,
+            "format_validator": null
+          },
+          "key": null,
+          "debugKey": false,
+          "node_ui_type": null,
+          "node_ui_group_name": null,
+          "ui_field_configuration": null
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "5129114",
+      "source": "114",
+      "target": "653",
+      "event_internal": "Conversation already closed",
+      "event_label": "Conversation already closed",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5129116",
+      "source": "653",
+      "target": "246",
+      "event_internal": "Success",
+      "event_label": "",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5129118",
+      "source": "629",
+      "target": "653",
+      "event_internal": "onConversationClosed",
+      "event_label": "",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5129120",
+      "source": "629",
+      "target": "114",
+      "event_internal": "onCloseConversationFailure",
+      "event_label": "",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5129122",
+      "source": "629",
+      "target": "114",
+      "event_internal": "onFailure",
+      "event_label": "",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5129140",
+      "source": "114",
+      "target": "671",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5129144",
+      "source": "629",
+      "target": "671",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5129146",
+      "source": "114",
+      "target": "671",
+      "event_internal": "None of the above",
+      "event_label": "None of the above",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5129191",
+      "source": "246",
+      "target": "720",
+      "event_internal": "Owner present",
+      "event_label": "Owner present",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5129289",
+      "source": "629",
+      "target": "671",
+      "event_internal": "oninvaliddata",
+      "event_label": "onInvalidData",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5129373",
+      "source": "629",
+      "target": "671",
+      "event_internal": "onauthorizationfail",
+      "event_label": "",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5129438",
+      "source": "629",
+      "target": "671",
+      "event_internal": "ontimeout",
+      "event_label": "onTimeout",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5129440",
+      "source": "629",
+      "target": "671",
+      "event_internal": "oninvalidchoice",
+      "event_label": "onInvalidChoice",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5130432",
+      "source": "2",
+      "target": "1406",
+      "event_internal": "onbegin",
+      "event_label": "onBegin",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5130438",
+      "source": "1406",
+      "target": "57",
+      "event_internal": "OverrideDefaultCloseChecked",
+      "event_label": "OverrideDefaultCloseChecked",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5130605",
+      "source": "993",
+      "target": "629",
+      "event_internal": "onpolicyfail",
+      "event_label": "onPolicyFail",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5130607",
+      "source": "993",
+      "target": "629",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5130634",
+      "source": "57",
+      "target": "1510",
+      "event_internal": 1,
+      "event_label": "Success",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5130639",
+      "source": "1510",
+      "target": "993",
+      "event_internal": "createTokenForTheQuestionnaireOnSuccess",
+      "event_label": "",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5130641",
+      "source": "1510",
+      "target": "629",
+      "event_internal": "oninvaliddata",
+      "event_label": "onInvalidData",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5130643",
+      "source": "1510",
+      "target": "629",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5130645",
+      "source": "1510",
+      "target": "629",
+      "event_internal": "oninvalidchoice",
+      "event_label": "onInvalidChoice",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5130647",
+      "source": "1510",
+      "target": "629",
+      "event_internal": "onauthorizationfail",
+      "event_label": "",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5130649",
+      "source": "1510",
+      "target": "629",
+      "event_internal": "failedToAddSurveyToken",
+      "event_label": "",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5130651",
+      "source": "1510",
+      "target": "629",
+      "event_internal": "UserRoleNotAllowedAccessThisResource",
+      "event_label": "",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5130653",
+      "source": "1510",
+      "target": "629",
+      "event_internal": "APIRequestLimitExceeded",
+      "event_label": "",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5130655",
+      "source": "1510",
+      "target": "629",
+      "event_internal": "ontimeout",
+      "event_label": "onTimeout",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5130667",
+      "source": "993",
+      "target": "1511",
+      "event_internal": "onsuccess",
+      "event_label": "onSuccess",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5130672",
+      "source": "1511",
+      "target": "629",
+      "event_internal": "onAppendMessageSuccess",
+      "event_label": "",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5130674",
+      "source": "1511",
+      "target": "629",
+      "event_internal": "oninvaliddata",
+      "event_label": "onInvalidData",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5130676",
+      "source": "1511",
+      "target": "629",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5130678",
+      "source": "1511",
+      "target": "629",
+      "event_internal": "ontimeout",
+      "event_label": "onTimeout",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5130680",
+      "source": "1511",
+      "target": "629",
+      "event_internal": "oninvalidchoice",
+      "event_label": "onInvalidChoice",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5130682",
+      "source": "1511",
+      "target": "629",
+      "event_internal": "onauthorizationfail",
+      "event_label": "",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5130684",
+      "source": "1511",
+      "target": "629",
+      "event_internal": "Failure",
+      "event_label": "",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5130686",
+      "source": "1511",
+      "target": "629",
+      "event_internal": "onAppendMessageFailure",
+      "event_label": "",
+      "representation": "explicit_edge"
+    }
+  ],
+  "terminal_bindings": [
+    {
+      "id": "413",
+      "source": "246",
+      "target": "413",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "414",
+      "source": "246",
+      "target": "414",
+      "event_internal": "None of the above",
+      "event_label": "None of the above",
+      "outcome_id": 2,
+      "outcome_name": "Success",
+      "outcome_description": "Successfully completed flow",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "835",
+      "source": "683",
+      "target": "835",
+      "event_internal": "oninvaliddata",
+      "event_label": "onInvalidData",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": false,
+      "same_binding_record_count": 2
+    },
+    {
+      "id": "836",
+      "source": "683",
+      "target": "836",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": false,
+      "same_binding_record_count": 2
+    },
+    {
+      "id": "837",
+      "source": "683",
+      "target": "837",
+      "event_internal": "oninvalidchoice",
+      "event_label": "onInvalidChoice",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": false,
+      "same_binding_record_count": 2
+    },
+    {
+      "id": "838",
+      "source": "683",
+      "target": "838",
+      "event_internal": "Error",
+      "event_label": "Error",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": false,
+      "same_binding_record_count": 2
+    },
+    {
+      "id": "839",
+      "source": "683",
+      "target": "839",
+      "event_internal": "ontimeout",
+      "event_label": "onTimeout",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": false,
+      "same_binding_record_count": 2
+    },
+    {
+      "id": "840",
+      "source": "683",
+      "target": "840",
+      "event_internal": "oninvaliddata",
+      "event_label": "onInvalidData",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": false,
+      "same_binding_record_count": 2
+    },
+    {
+      "id": "841",
+      "source": "683",
+      "target": "841",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": false,
+      "same_binding_record_count": 2
+    },
+    {
+      "id": "842",
+      "source": "683",
+      "target": "842",
+      "event_internal": "oninvalidchoice",
+      "event_label": "onInvalidChoice",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": false,
+      "same_binding_record_count": 2
+    },
+    {
+      "id": "843",
+      "source": "683",
+      "target": "843",
+      "event_internal": "Error",
+      "event_label": "Error",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": false,
+      "same_binding_record_count": 2
+    },
+    {
+      "id": "844",
+      "source": "683",
+      "target": "844",
+      "event_internal": "ontimeout",
+      "event_label": "onTimeout",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": false,
+      "same_binding_record_count": 2
+    },
+    {
+      "id": "845",
+      "source": "683",
+      "target": "845",
+      "event_internal": "Success",
+      "event_label": "Success",
+      "outcome_id": 2,
+      "outcome_name": "Success",
+      "outcome_description": "Successfully completed flow",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": false,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "852",
+      "source": "720",
+      "target": "852",
+      "event_internal": "oninvaliddata",
+      "event_label": "onInvalidData",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "853",
+      "source": "720",
+      "target": "853",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "854",
+      "source": "720",
+      "target": "854",
+      "event_internal": "oninvalidchoice",
+      "event_label": "onInvalidChoice",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "855",
+      "source": "720",
+      "target": "855",
+      "event_internal": "onScreenPopFailure",
+      "event_label": "onScreenPopFailure",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "856",
+      "source": "720",
+      "target": "856",
+      "event_internal": "serviceUnavailable",
+      "event_label": "serviceUnavailable",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "857",
+      "source": "720",
+      "target": "857",
+      "event_internal": "ontimeout",
+      "event_label": "onTimeout",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "858",
+      "source": "720",
+      "target": "858",
+      "event_internal": "onScreenPopSuccess",
+      "event_label": "onScreenPopSuccess",
+      "outcome_id": 2,
+      "outcome_name": "Success",
+      "outcome_description": "Successfully completed flow",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "871",
+      "source": "653",
+      "target": "871",
+      "event_internal": "onauthorizationfail",
+      "event_label": "onauthorizationfail",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "878",
+      "source": "671",
+      "target": "878",
+      "event_internal": "onauthorizationfail",
+      "event_label": "onauthorizationfail",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "893",
+      "source": "720",
+      "target": "893",
+      "event_internal": "onauthorizationfail",
+      "event_label": "onauthorizationfail",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "1473",
+      "source": "305",
+      "target": "1473",
+      "event_internal": "oninvalidchoice",
+      "event_label": "onInvalidChoice",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": false,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "1474",
+      "source": "305",
+      "target": "1474",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": false,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "1475",
+      "source": "1406",
+      "target": "1475",
+      "event_internal": "onerror",
+      "event_label": "onError",
+      "outcome_id": 3,
+      "outcome_name": "Error",
+      "outcome_description": "Flow completed with an error",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    },
+    {
+      "id": "1476",
+      "source": "1406",
+      "target": "1476",
+      "event_internal": "None of the above",
+      "event_label": "None of the above",
+      "outcome_id": 2,
+      "outcome_name": "Success",
+      "outcome_description": "Successfully completed flow",
+      "session_retry": "",
+      "async_check": false,
+      "representation": "terminal_parent_node_and_nodeEvent",
+      "producer_captured": true,
+      "same_binding_record_count": 1
+    }
+  ],
+  "terminal_sources_not_captured": [
+    "305",
+    "683"
+  ],
+  "duplicate_terminal_binding_groups": [
+    {
+      "source": "683",
+      "event_internal": "oninvaliddata",
+      "outcome_id": "3",
+      "record_count": 2
+    },
+    {
+      "source": "683",
+      "event_internal": "onerror",
+      "outcome_id": "3",
+      "record_count": 2
+    },
+    {
+      "source": "683",
+      "event_internal": "oninvalidchoice",
+      "outcome_id": "3",
+      "record_count": 2
+    },
+    {
+      "source": "683",
+      "event_internal": "Error",
+      "outcome_id": "3",
+      "record_count": 2
+    },
+    {
+      "source": "683",
+      "event_internal": "ontimeout",
+      "outcome_id": "3",
+      "record_count": 2
+    }
+  ],
+  "variable_handoffs": [
+    {
+      "consumer": "2",
+      "location": "transition_actions[0].value",
+      "reference": "$(n2.webex.variables)",
+      "variable": "n2.webex.variables",
+      "producer_node": "2",
+      "producer_field": "webex.variables",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "transition_actions[1].value",
+      "reference": "$(n2.webex.RequestBody)",
+      "variable": "n2.webex.RequestBody",
+      "producer_node": "2",
+      "producer_field": "webex.RequestBody",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "57",
+      "location": "transition_actions[0].value",
+      "reference": "$(mediaResourceId)",
+      "variable": "mediaResourceId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": [
+        "57"
+      ]
+    },
+    {
+      "consumer": "57",
+      "location": "transition_actions[1].value",
+      "reference": "$(agentName)",
+      "variable": "agentName",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "57",
+      "location": "transition_actions[2].value",
+      "reference": "$(agentDn)",
+      "variable": "agentDn",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "57",
+      "location": "transition_actions[3].value",
+      "reference": "$(agentId)",
+      "variable": "agentId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "57",
+      "location": "transition_actions[4].value",
+      "reference": "$(agentSessionId)",
+      "variable": "agentSessionId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "57",
+      "location": "transition_actions[5].value",
+      "reference": "$(teamName)",
+      "variable": "teamName",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "57",
+      "location": "transition_actions[6].value",
+      "reference": "$(teamId)",
+      "variable": "teamId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "57",
+      "location": "transition_actions[7].value",
+      "reference": "$(contactId)",
+      "variable": "contactId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "57",
+      "location": "transition_actions[8].value",
+      "reference": "$(dn)",
+      "variable": "dn",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "57",
+      "location": "transition_actions[9].value",
+      "reference": "$(orgId)",
+      "variable": "orgId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "57",
+      "location": "transition_actions[10].value",
+      "reference": "$(queueId)",
+      "variable": "queueId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "57",
+      "location": "transition_actions[11].value",
+      "reference": "$(queueName)",
+      "variable": "queueName",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "57",
+      "location": "transition_actions[12].value",
+      "reference": "$(siteId)",
+      "variable": "siteId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "57",
+      "location": "transition_actions[13].value",
+      "reference": "$(customerName)",
+      "variable": "customerName",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "57",
+      "location": "transition_actions[14].value",
+      "reference": "$(contactDirection)",
+      "variable": "contactDirection",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "57",
+      "location": "transition_actions[15].value",
+      "reference": "$(mediaType)",
+      "variable": "mediaType",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "57",
+      "location": "transition_actions[16].value",
+      "reference": "$(mediaChannel)",
+      "variable": "mediaChannel",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "57",
+      "location": "transition_actions[17].value",
+      "reference": "$(customerId)",
+      "variable": "customerId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "57",
+      "location": "transition_actions[18].value",
+      "reference": "$(thread)",
+      "variable": "thread",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "114",
+      "location": "configuration.outcomes[0].conditions[0].varaible",
+      "reference": "$(code)",
+      "variable": "code",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "114",
+      "location": "configuration.expression",
+      "reference": "$(code)",
+      "variable": "code",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "246",
+      "location": "configuration.outcomes[0].conditions[0].varaible",
+      "reference": "$(n2.webex.owner)",
+      "variable": "n2.webex.owner",
+      "producer_node": "2",
+      "producer_field": "webex.owner",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "246",
+      "location": "configuration.outcomes[0].conditions[0].value",
+      "reference": "$(emptystring)",
+      "variable": "emptystring",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "246",
+      "location": "configuration.expression",
+      "reference": "$(n2.webex.owner)",
+      "variable": "n2.webex.owner",
+      "producer_node": "2",
+      "producer_field": "webex.owner",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "246",
+      "location": "configuration.expression",
+      "reference": "$(emptystring)",
+      "variable": "emptystring",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "629",
+      "location": "configuration.path_parameters[1].value",
+      "reference": "$(mediaResourceId)",
+      "variable": "mediaResourceId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": [
+        "57"
+      ]
+    },
+    {
+      "consumer": "629",
+      "location": "configuration.nodeInput.conversation id",
+      "reference": "$(mediaResourceId)",
+      "variable": "mediaResourceId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": [
+        "57"
+      ]
+    },
+    {
+      "consumer": "653",
+      "location": "configuration.request_body[0].value",
+      "reference": "$(n2.webex.taskId)",
+      "variable": "n2.webex.taskId",
+      "producer_node": "2",
+      "producer_field": "webex.taskId",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "653",
+      "location": "configuration.request_body[3].value",
+      "reference": "$(n2.webex.queue)",
+      "variable": "n2.webex.queue",
+      "producer_node": "2",
+      "producer_field": "webex.queue",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "653",
+      "location": "configuration.request_body[4].value",
+      "reference": "$(mediaResourceId)",
+      "variable": "mediaResourceId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": [
+        "57"
+      ]
+    },
+    {
+      "consumer": "653",
+      "location": "configuration.request_body[5].value",
+      "reference": "$(n2.webex.mediaType)",
+      "variable": "n2.webex.mediaType",
+      "producer_node": "2",
+      "producer_field": "webex.mediaType",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "653",
+      "location": "configuration.path_parameters[1].value",
+      "reference": "$(n2.webex.taskId)",
+      "variable": "n2.webex.taskId",
+      "producer_node": "2",
+      "producer_field": "webex.taskId",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "653",
+      "location": "configuration.nodeInput.Task Id",
+      "reference": "$(n2.webex.taskId)",
+      "variable": "n2.webex.taskId",
+      "producer_node": "2",
+      "producer_field": "webex.taskId",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "653",
+      "location": "configuration.nodeInput.ID",
+      "reference": "$(n2.webex.taskId)",
+      "variable": "n2.webex.taskId",
+      "producer_node": "2",
+      "producer_field": "webex.taskId",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "653",
+      "location": "configuration.nodeInput.Queue Id",
+      "reference": "$(n2.webex.queue)",
+      "variable": "n2.webex.queue",
+      "producer_node": "2",
+      "producer_field": "webex.queue",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "653",
+      "location": "configuration.nodeInput.Conversation Id",
+      "reference": "$(mediaResourceId)",
+      "variable": "mediaResourceId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": [
+        "57"
+      ]
+    },
+    {
+      "consumer": "653",
+      "location": "configuration.nodeInput.Media Type",
+      "reference": "$(n2.webex.mediaType)",
+      "variable": "n2.webex.mediaType",
+      "producer_node": "2",
+      "producer_field": "webex.mediaType",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "671",
+      "location": "configuration.request_body[0].value",
+      "reference": "$(n2.webex.taskId)",
+      "variable": "n2.webex.taskId",
+      "producer_node": "2",
+      "producer_field": "webex.taskId",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "671",
+      "location": "configuration.request_body[2].value",
+      "reference": "$(n2.webex.owner)",
+      "variable": "n2.webex.owner",
+      "producer_node": "2",
+      "producer_field": "webex.owner",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "671",
+      "location": "configuration.request_body[3].value",
+      "reference": "$(mediaResourceId)",
+      "variable": "mediaResourceId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": [
+        "57"
+      ]
+    },
+    {
+      "consumer": "671",
+      "location": "configuration.request_body[4].value",
+      "reference": "$(n2.webex.mediaType)",
+      "variable": "n2.webex.mediaType",
+      "producer_node": "2",
+      "producer_field": "webex.mediaType",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "671",
+      "location": "configuration.request_body[5].value",
+      "reference": "$(description)",
+      "variable": "description",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "671",
+      "location": "configuration.request_body[6].value",
+      "reference": "$(code)",
+      "variable": "code",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "671",
+      "location": "configuration.path_parameters[1].value",
+      "reference": "$(n2.webex.taskId)",
+      "variable": "n2.webex.taskId",
+      "producer_node": "2",
+      "producer_field": "webex.taskId",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "671",
+      "location": "configuration.nodeInput.ID",
+      "reference": "$(n2.webex.taskId)",
+      "variable": "n2.webex.taskId",
+      "producer_node": "2",
+      "producer_field": "webex.taskId",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "671",
+      "location": "configuration.nodeInput.Task ID",
+      "reference": "$(n2.webex.taskId)",
+      "variable": "n2.webex.taskId",
+      "producer_node": "2",
+      "producer_field": "webex.taskId",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "671",
+      "location": "configuration.nodeInput.agent ID",
+      "reference": "$(n2.webex.owner)",
+      "variable": "n2.webex.owner",
+      "producer_node": "2",
+      "producer_field": "webex.owner",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "671",
+      "location": "configuration.nodeInput.media resource id",
+      "reference": "$(mediaResourceId)",
+      "variable": "mediaResourceId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": [
+        "57"
+      ]
+    },
+    {
+      "consumer": "671",
+      "location": "configuration.nodeInput.Media type",
+      "reference": "$(n2.webex.mediaType)",
+      "variable": "n2.webex.mediaType",
+      "producer_node": "2",
+      "producer_field": "webex.mediaType",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "671",
+      "location": "configuration.nodeInput.reason",
+      "reference": "$(description)",
+      "variable": "description",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "671",
+      "location": "configuration.nodeInput.reason code",
+      "reference": "$(code)",
+      "variable": "code",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "720",
+      "location": "configuration.request_body[0].value",
+      "reference": "$(n2.webex.taskId)",
+      "variable": "n2.webex.taskId",
+      "producer_node": "2",
+      "producer_field": "webex.taskId",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "720",
+      "location": "configuration.request_body[1].value",
+      "reference": "$(n2.webex.owner)",
+      "variable": "n2.webex.owner",
+      "producer_node": "2",
+      "producer_field": "webex.owner",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "720",
+      "location": "configuration.request_body[4].value.customerId",
+      "reference": "$(CustomerId)",
+      "variable": "CustomerId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": [
+        "57"
+      ]
+    },
+    {
+      "consumer": "720",
+      "location": "configuration.nodeInput.transid",
+      "reference": "$(n2.webex.taskId)",
+      "variable": "n2.webex.taskId",
+      "producer_node": "2",
+      "producer_field": "webex.taskId",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "720",
+      "location": "configuration.nodeInput.agentId",
+      "reference": "$(n2.webex.owner)",
+      "variable": "n2.webex.owner",
+      "producer_node": "2",
+      "producer_field": "webex.owner",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "720",
+      "location": "configuration.nodeInput.queryParameters.customerId",
+      "reference": "$(CustomerId)",
+      "variable": "CustomerId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": [
+        "57"
+      ]
+    },
+    {
+      "consumer": "720",
+      "location": "configuration.extraParamsData.transid",
+      "reference": "$(n2.webex.taskId)",
+      "variable": "n2.webex.taskId",
+      "producer_node": "2",
+      "producer_field": "webex.taskId",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "720",
+      "location": "configuration.extraParamsData.agentId",
+      "reference": "$(n2.webex.owner)",
+      "variable": "n2.webex.owner",
+      "producer_node": "2",
+      "producer_field": "webex.owner",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "720",
+      "location": "configuration.extraParamsData.queryParameters.customerId",
+      "reference": "$(CustomerId)",
+      "variable": "CustomerId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": [
+        "57"
+      ]
+    },
+    {
+      "consumer": "993",
+      "location": "configuration.destination",
+      "reference": "$(user)",
+      "variable": "user",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "993",
+      "location": "configuration.message",
+      "reference": "$(n1510.surveyURL)",
+      "variable": "n1510.surveyURL",
+      "producer_node": "1510",
+      "producer_field": "surveyURL",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "993",
+      "location": "configuration.thread_id",
+      "reference": "$(thread)",
+      "variable": "thread",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1406",
+      "location": "configuration.outcomes[0].conditions[0].varaible",
+      "reference": "$(n2.webex.RequestBody)",
+      "variable": "n2.webex.RequestBody",
+      "producer_node": "2",
+      "producer_field": "webex.RequestBody",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1406",
+      "location": "configuration.outcomes[0].conditions[1].varaible",
+      "reference": "$(n2.webex.mediaChannel)",
+      "variable": "n2.webex.mediaChannel",
+      "producer_node": "2",
+      "producer_field": "webex.mediaChannel",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1406",
+      "location": "configuration.expression",
+      "reference": "$(n2.webex.RequestBody)",
+      "variable": "n2.webex.RequestBody",
+      "producer_node": "2",
+      "producer_field": "webex.RequestBody",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1406",
+      "location": "configuration.expression",
+      "reference": "$(n2.webex.mediaChannel)",
+      "variable": "n2.webex.mediaChannel",
+      "producer_node": "2",
+      "producer_field": "webex.mediaChannel",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1511",
+      "location": "configuration.request_body[5].value",
+      "reference": "$(n1477.surveyURL)",
+      "variable": "n1477.surveyURL",
+      "producer_node": "1477",
+      "producer_field": "surveyURL",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1511",
+      "location": "configuration.request_body[6].value",
+      "reference": "$(utctime)",
+      "variable": "utctime",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1511",
+      "location": "configuration.path_parameters[1].value",
+      "reference": "$(mediaResourceId)",
+      "variable": "mediaResourceId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": [
+        "57"
+      ]
+    },
+    {
+      "consumer": "1511",
+      "location": "configuration.extraParamsData.conversationid",
+      "reference": "$(mediaResourceId)",
+      "variable": "mediaResourceId",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": [
+        "57"
+      ]
+    },
+    {
+      "consumer": "1511",
+      "location": "configuration.extraParamsData.textOrResponse",
+      "reference": "$(n1477.surveyURL)",
+      "variable": "n1477.surveyURL",
+      "producer_node": "1477",
+      "producer_field": "surveyURL",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1511",
+      "location": "configuration.extraParamsData.timestamp",
+      "reference": "$(utctime)",
+      "variable": "utctime",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1511",
+      "location": "configuration.extraParamsData.text",
+      "reference": "$(n1477.surveyURL)",
+      "variable": "n1477.surveyURL",
+      "producer_node": "1477",
+      "producer_field": "surveyURL",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.webex.variables)",
+      "variable": "n2.webex.variables",
+      "producer_node": "2",
+      "producer_field": "webex.variables",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "2",
+      "location": "_usedTransVar",
+      "reference": "$(n2.webex.RequestBody)",
+      "variable": "n2.webex.RequestBody",
+      "producer_node": "2",
+      "producer_field": "webex.RequestBody",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "246",
+      "location": "_usedVars",
+      "reference": "$(n2.webex.owner)",
+      "variable": "n2.webex.owner",
+      "producer_node": "2",
+      "producer_field": "webex.owner",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "653",
+      "location": "_usedVars",
+      "reference": "$(n2.webex.taskId)",
+      "variable": "n2.webex.taskId",
+      "producer_node": "2",
+      "producer_field": "webex.taskId",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "653",
+      "location": "_usedVars",
+      "reference": "$(n2.webex.queue)",
+      "variable": "n2.webex.queue",
+      "producer_node": "2",
+      "producer_field": "webex.queue",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "653",
+      "location": "_usedVars",
+      "reference": "$(n2.webex.mediaType)",
+      "variable": "n2.webex.mediaType",
+      "producer_node": "2",
+      "producer_field": "webex.mediaType",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "671",
+      "location": "_usedVars",
+      "reference": "$(n2.webex.taskId)",
+      "variable": "n2.webex.taskId",
+      "producer_node": "2",
+      "producer_field": "webex.taskId",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "671",
+      "location": "_usedVars",
+      "reference": "$(n2.webex.owner)",
+      "variable": "n2.webex.owner",
+      "producer_node": "2",
+      "producer_field": "webex.owner",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "671",
+      "location": "_usedVars",
+      "reference": "$(n2.webex.mediaType)",
+      "variable": "n2.webex.mediaType",
+      "producer_node": "2",
+      "producer_field": "webex.mediaType",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "720",
+      "location": "_usedVars",
+      "reference": "$(n2.webex.taskId)",
+      "variable": "n2.webex.taskId",
+      "producer_node": "2",
+      "producer_field": "webex.taskId",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "720",
+      "location": "_usedVars",
+      "reference": "$(n2.webex.owner)",
+      "variable": "n2.webex.owner",
+      "producer_node": "2",
+      "producer_field": "webex.owner",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "993",
+      "location": "_usedVars",
+      "reference": "$(n1510.surveyURL)",
+      "variable": "n1510.surveyURL",
+      "producer_node": "1510",
+      "producer_field": "surveyURL",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1406",
+      "location": "_usedVars",
+      "reference": "$(n2.webex.RequestBody)",
+      "variable": "n2.webex.RequestBody",
+      "producer_node": "2",
+      "producer_field": "webex.RequestBody",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1406",
+      "location": "_usedVars",
+      "reference": "$(n2.webex.mediaChannel)",
+      "variable": "n2.webex.mediaChannel",
+      "producer_node": "2",
+      "producer_field": "webex.mediaChannel",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "1511",
+      "location": "_usedVars",
+      "reference": "$(n1477.surveyURL)",
+      "variable": "n1477.surveyURL",
+      "producer_node": "1477",
+      "producer_field": "surveyURL",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    }
+  ],
+  "custom_variable_assignments": [
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "response",
+      "when": "onleave",
+      "value": "$(n2.webex.variables)"
+    },
+    {
+      "writer_node": "2",
+      "kind": "session",
+      "name": "requestBody",
+      "when": "onleave",
+      "value": "$(n2.webex.RequestBody)"
+    },
+    {
+      "writer_node": "57",
+      "kind": "session",
+      "name": "mediaResourceId",
+      "when": "onleave",
+      "value": "$(mediaResourceId)"
+    },
+    {
+      "writer_node": "57",
+      "kind": "session",
+      "name": "AgentName",
+      "when": "onleave",
+      "value": "$(agentName)"
+    },
+    {
+      "writer_node": "57",
+      "kind": "session",
+      "name": "AgentDn",
+      "when": "onleave",
+      "value": "$(agentDn)"
+    },
+    {
+      "writer_node": "57",
+      "kind": "session",
+      "name": "AgentId",
+      "when": "onleave",
+      "value": "$(agentId)"
+    },
+    {
+      "writer_node": "57",
+      "kind": "session",
+      "name": "AgentSessionId",
+      "when": "onleave",
+      "value": "$(agentSessionId)"
+    },
+    {
+      "writer_node": "57",
+      "kind": "session",
+      "name": "TeamName",
+      "when": "onleave",
+      "value": "$(teamName)"
+    },
+    {
+      "writer_node": "57",
+      "kind": "session",
+      "name": "TeamId",
+      "when": "onleave",
+      "value": "$(teamId)"
+    },
+    {
+      "writer_node": "57",
+      "kind": "session",
+      "name": "ContactId",
+      "when": "onleave",
+      "value": "$(contactId)"
+    },
+    {
+      "writer_node": "57",
+      "kind": "session",
+      "name": "Dn",
+      "when": "onleave",
+      "value": "$(dn)"
+    },
+    {
+      "writer_node": "57",
+      "kind": "session",
+      "name": "OrgId",
+      "when": "onleave",
+      "value": "$(orgId)"
+    },
+    {
+      "writer_node": "57",
+      "kind": "session",
+      "name": "QueueId",
+      "when": "onleave",
+      "value": "$(queueId)"
+    },
+    {
+      "writer_node": "57",
+      "kind": "session",
+      "name": "QueueName",
+      "when": "onleave",
+      "value": "$(queueName)"
+    },
+    {
+      "writer_node": "57",
+      "kind": "session",
+      "name": "SiteId",
+      "when": "onleave",
+      "value": "$(siteId)"
+    },
+    {
+      "writer_node": "57",
+      "kind": "session",
+      "name": "CustomerName",
+      "when": "onleave",
+      "value": "$(customerName)"
+    },
+    {
+      "writer_node": "57",
+      "kind": "session",
+      "name": "ContactDirection",
+      "when": "onleave",
+      "value": "$(contactDirection)"
+    },
+    {
+      "writer_node": "57",
+      "kind": "session",
+      "name": "MediaType",
+      "when": "onleave",
+      "value": "$(mediaType)"
+    },
+    {
+      "writer_node": "57",
+      "kind": "session",
+      "name": "MediaChannel",
+      "when": "onleave",
+      "value": "$(mediaChannel)"
+    },
+    {
+      "writer_node": "57",
+      "kind": "session",
+      "name": "CustomerId",
+      "when": "onleave",
+      "value": "$(customerId)"
+    }
+  ],
+  "custom_variables": [
+    {
+      "name": "mediaResourceId",
+      "value": "",
+      "desc": "",
+      "type": "default"
+    },
+    {
+      "name": "AgentName",
+      "value": "",
+      "desc": "",
+      "type": "default"
+    },
+    {
+      "name": "AgentDn",
+      "value": "",
+      "desc": "",
+      "type": "default"
+    },
+    {
+      "name": "AgentId",
+      "value": "",
+      "desc": "",
+      "type": "default"
+    },
+    {
+      "name": "AgentSessionId",
+      "value": "",
+      "desc": "",
+      "type": "default"
+    },
+    {
+      "name": "TeamName",
+      "value": "",
+      "desc": "",
+      "type": "default"
+    },
+    {
+      "name": "TeamId",
+      "value": "",
+      "desc": "",
+      "type": "default"
+    },
+    {
+      "name": "ContactId",
+      "value": "",
+      "desc": "",
+      "type": "default"
+    },
+    {
+      "name": "ani",
+      "value": "",
+      "desc": "",
+      "type": "default"
+    },
+    {
+      "name": "Dn",
+      "value": "",
+      "desc": "",
+      "type": "default"
+    },
+    {
+      "name": "OrgId",
+      "value": "",
+      "desc": "",
+      "type": "default"
+    },
+    {
+      "name": "QueueId",
+      "value": "",
+      "desc": "",
+      "type": "default"
+    },
+    {
+      "name": "QueueName",
+      "value": "",
+      "desc": "",
+      "type": "default"
+    },
+    {
+      "name": "SiteId",
+      "value": "",
+      "desc": "",
+      "type": "default"
+    },
+    {
+      "name": "CustomerName",
+      "value": "",
+      "desc": "",
+      "type": "default"
+    },
+    {
+      "name": "ContactDirection",
+      "value": "",
+      "desc": "",
+      "type": "default"
+    },
+    {
+      "name": "MediaType",
+      "value": "",
+      "desc": "",
+      "type": "default"
+    },
+    {
+      "name": "MediaChannel",
+      "value": "",
+      "desc": "",
+      "type": "default"
+    },
+    {
+      "name": "emptystring",
+      "value": "",
+      "desc": "",
+      "type": "default"
+    },
+    {
+      "name": "CustomerId",
+      "value": "",
+      "desc": "",
+      "type": "default"
+    },
+    {
+      "name": "requestBody",
+      "value": "",
+      "desc": "",
+      "type": "default"
+    },
+    {
+      "name": "response",
+      "value": "",
+      "desc": "",
+      "type": "default"
+    },
+    {
+      "name": "thread",
+      "value": "",
+      "desc": "",
+      "type": "default"
+    },
+    {
+      "name": "flowVersion",
+      "value": 3.3,
+      "desc": "",
+      "type": "default"
+    }
+  ],
+  "flow_outcomes": [
+    {
+      "id": 2,
+      "order": 0,
+      "name": 101,
+      "value": "Successfully completed flow",
+      "tag": 11,
+      "tagName": "Success",
+      "type": "default",
+      "notification": null
+    },
+    {
+      "id": 3,
+      "order": 1,
+      "name": 102,
+      "value": "Flow completed with an error",
+      "tag": 12,
+      "tagName": "Error",
+      "type": "default",
+      "notification": null
+    },
+    {
+      "id": 4,
+      "order": 2,
+      "name": 103,
+      "value": "Flow ended due to an interruption",
+      "tag": 13,
+      "tagName": "Incomplete",
+      "type": "default",
+      "notification": null
+    },
+    {
+      "id": 1,
+      "name": 100,
+      "value": "Last executed node event",
+      "statusCode": "All status codes",
+      "tag": 15,
+      "tagName": "Last Execution Status",
+      "type": "default",
+      "notification": null
+    }
+  ],
+  "cycles": [],
+  "cross_page_or_flow_nodes": [],
+  "capture_pages": null,
+  "declared_events_without_captured_route": [
+    {
+      "node": "57",
+      "event_internal": "oninvalidchoice",
+      "declared_target_count": 1
+    },
+    {
+      "node": "57",
+      "event_internal": "onerror",
+      "declared_target_count": 1
+    },
+    {
+      "node": "653",
+      "event_internal": "oninvaliddata",
+      "declared_target_count": null
+    },
+    {
+      "node": "653",
+      "event_internal": "onerror",
+      "declared_target_count": null
+    },
+    {
+      "node": "653",
+      "event_internal": "oninvalidchoice",
+      "declared_target_count": null
+    },
+    {
+      "node": "653",
+      "event_internal": "ontimeout",
+      "declared_target_count": null
+    },
+    {
+      "node": "671",
+      "event_internal": "oninvaliddata",
+      "declared_target_count": null
+    },
+    {
+      "node": "671",
+      "event_internal": "onerror",
+      "declared_target_count": null
+    },
+    {
+      "node": "671",
+      "event_internal": "oninvalidchoice",
+      "declared_target_count": null
+    },
+    {
+      "node": "671",
+      "event_internal": "ontimeout",
+      "declared_target_count": null
+    }
+  ],
+  "nodes_not_reached_from_captured_start": [],
+  "edge_endpoints_not_captured": [],
+  "node_variable_producers_not_captured": [
+    "1477"
+  ],
+  "redactions": "Header credentials and URL hosts redacted. Internal model properties are evidence, not a public import API.",
+  "authored_walkthrough": {
+    "walkthrough": "Task Closed Start 2 enters Branch 1406, which requires the serialized override-default-close string and media channel `web`; no match ends Success. Evaluate 57 parses task variables and customer data, then WXM 1510 creates a survey link. Success sends Live Chat 993, whose successful send appends the survey message at 1511. Survey-generation failures, send failures and all captured append results proceed to Close Conversation 629. Closure success leads to Close Task 653; close failure first checks code 4547 at Branch 114 and otherwise uses failure-context Close Task 671. Successful task closure checks owner at Branch 246, invoking Screen Pop 720 when present or terminating Success without an owner.",
+    "handoffs": "Evaluate reads the arrays saved from `$(n2.webex.variables)` and `$(n2.webex.RequestBody)`, extracts variable names `threadID` and `userID` into `thread` and `user`, and persists `mediaResourceId` plus customer fields. Sender 993 uses `$(user)`, `$(thread)` and `$(n1510.surveyURL)`. Append 1511 targets `$(mediaResourceId)` but its text references `$(n1477.surveyURL)`: no node 1477 is captured. This differs from the correctly linked send and must be repaired when adapting.",
+    "limitations": "The regex gate expects a string representation of true. Survey/questionnaire and screen-pop settings require replacement. No survey-response wait or retry loop exists. Several Evaluate/Close Task failure routes are absent, while detached terminal bindings refer to uncaptured 683/305. Screen Pop has Success/Error terminals; configuration visibility does not prove survey delivery, conversation closure or runtime variable scope."
+  },
+  "walkthrough_status": "authored"
+}

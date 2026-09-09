@@ -1,0 +1,80 @@
+{
+  "source": "https://help.webexconnect.io/docs/sending-automated-sms",
+  "image": "https://files.readme.io/a1a1d11-Appointment_Reminder_Flow_1.png",
+  "evidence_type": "visually inspected public diagram",
+  "node_ids": "not visible; analytical identifiers below are not native Connect IDs",
+  "nodes": [
+    {
+      "id": "event",
+      "label": "SMS appointment reminder"
+    },
+    {
+      "id": "send",
+      "label": "Send Reminder"
+    },
+    {
+      "id": "receive",
+      "label": "Receive Customer Response"
+    },
+    {
+      "id": "branch",
+      "label": "Check Customer Response"
+    },
+    {
+      "id": "confirm",
+      "label": "SMS Confirm Appointment"
+    },
+    {
+      "id": "cancel",
+      "label": "SMS Confirm Appointment Cancellation"
+    },
+    {
+      "id": "invalid",
+      "label": "SMS Invalid Response"
+    }
+  ],
+  "edges": [
+    {
+      "source": "event",
+      "target": "send",
+      "label": "onBegin"
+    },
+    {
+      "source": "send",
+      "target": "receive",
+      "label": "onSuccess"
+    },
+    {
+      "source": "receive",
+      "target": "branch",
+      "label": null
+    },
+    {
+      "source": "branch",
+      "target": "confirm",
+      "label": "Confirm"
+    },
+    {
+      "source": "branch",
+      "target": "cancel",
+      "label": "Cancel"
+    },
+    {
+      "source": "branch",
+      "target": "invalid",
+      "label": "Invalid Resp.."
+    },
+    {
+      "source": "invalid",
+      "target": "receive",
+      "label": "onSuccess"
+    }
+  ],
+  "limitations": [
+    "The receive-to-branch green edge has no readable label in the screenshot.",
+    "Invalid Resp.. is visibly truncated and has not been expanded.",
+    "End flags exist on other outcomes; full truncated labels are not inferred.",
+    "No appointment-system update appears in this diagram.",
+    "The screenshot is a different sample configuration from the six-node setup-appointment-reminder diagram."
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "category": "Webex Connect and Cisco Contact Center Enterprise System (CCE)",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182578d4",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "9473e46300a650515bde302af238529ad9a463cbc5a01c687d578189f18ba5bf",
+    "source_path": "ae69d61e6e2148e219b0d9716b751f65c8e3fbf10351285ae9a4423721f3d2e1",
+    "text_path": "1cc918a8ef43016c720c66bd1c86577e8220827bbf584355545aa7e8d3954a3a"
+  },
+  "headings": [
+    "Authorization",
+    "Methods and Outcomes",
+    "📘Note"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/cce-close-conversation-engage-node.md",
+  "resolved_url": "https://help.webexconnect.io/docs/cce-close-conversation-engage-node",
+  "retrieved_at": "2026-09-08T23:29:24+00:00",
+  "sha256_html_response": "97197af71b9d815f4bbde53723352065680df76fcad04785d8f9690264b2c50e",
+  "sha256_source_body": "ae69d61e6e2148e219b0d9716b751f65c8e3fbf10351285ae9a4423721f3d2e1",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/cce-close-conversation-engage-node.source.md",
+  "source_updated_at": "2026-04-14T07:37:51.214Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/cce-close-conversation-engage-node.txt",
+  "title": "Close Conversation - CCE",
+  "url": "https://help.webexconnect.io/docs/cce-close-conversation-engage-node",
+  "word_count": 192,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/cce-close-conversation-engage-node.metadata.json"
+}

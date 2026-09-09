@@ -1,0 +1,35 @@
+{
+  "api_metadata_path": "sources/cache/developer/mms-outbound-webhooks.api.json",
+  "category": "OUTBOUND WEBHOOKS",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f65a0",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "e277deb7ec41381168f7ab5daeab4b59b47a9f5303c28b5ee1f69d53866635e6",
+    "source_path": "213516af16e083d28259ff3eb4dcd5191de587baebe91a792e43eb665c51656a",
+    "text_path": "1c81ce67d645cfd1a6630b27cccd5742c34abf7e39b11f7056b53fa3d3e23656"
+  },
+  "headings": [
+    "Outbound Webhook configuration for tracking message delivery status",
+    "Outbound Webhook configuration for tracking incoming MMS messages"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/mms-outbound-webhooks.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/mms-outbound-webhooks",
+  "retrieved_at": "2026-09-08T23:31:44+00:00",
+  "sha256_api_metadata": "575f65b7d8dc3ea0b617314bc47e22705dc85fc80ee114e6faa20ada4e8aafe2",
+  "sha256_html_response": "406432c224618b9d50cff08c62441bfc8e02f9cc3696c2abaee68f6f1d083bfb",
+  "sha256_source_body": "213516af16e083d28259ff3eb4dcd5191de587baebe91a792e43eb665c51656a",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/mms-outbound-webhooks.source.md",
+  "source_updated_at": "2026-02-26T06:53:55.951Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/mms-outbound-webhooks.txt",
+  "title": "MMS",
+  "url": "https://developers.webexconnect.io/reference/mms-outbound-webhooks",
+  "word_count": 297,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/mms-outbound-webhooks.metadata.json"
+}

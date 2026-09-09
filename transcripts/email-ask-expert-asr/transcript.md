@@ -1,0 +1,250 @@
+# Webex Connect Email — Ask the Expert
+
+Source: https://www.youtube.com/watch?v=5TzxFpDzIPs
+Method: faster-whisper; language: en; kind: local-asr
+Retrieved/processed: 2026-09-08T23:43:29.801670+00:00
+
+Unedited machine/caption evidence. Verify exact UI fields, API names and numbers against the official text documentation.
+
+- [00:00:00.460](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=0s) — I got that now I have to be careful with what I say, but generally good. Good morning. Good afternoon, everyone. I'm really happy to be able to announce the launch of the sales enablement learning plan that we've made available for all partners on on WebEx Academy.
+- [00:00:20.780](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=20s) — I know that this audience is very much focused on the technical capabilities of WebEx connect building services, logging into the platform and being able to deliver value for your customers in that way.
+- [00:00:36.780](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=36s) — However, there may be some folks on this call that have almost like a pre sales type of role and actually go across all areas of working with customers and I so I think some of the content here that I made, you know, just go through in the next five, 10 minutes.
+- [00:00:53.780](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=53s) — I think may even be relevant for yourself as well.
+- [00:00:57.780](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=57s) — Let me just see I can drive to the next screen so when I guess as we talk through partner enablement and making sure that our partners are supported with taking our CPAS platform WebEx connect to your customers.
+- [00:01:14.090](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=74s) — We think about it in roughly these two kind of broad categories of sales enablement and technical enablement.
+- [00:01:22.090](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=82s) — Sales enablement around how do I identify and qualify new opportunities, key use cases, verticals, etc.
+- [00:01:30.090](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=90s) — And then on the technical side of things, how do you deliver professional services on the platform? How do you build a CPAS practice? How do you deliver managed services?
+- [00:01:41.090](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=101s) — And so we have, we are, I think it's I'm going to kind of address the elephant in the room here. The technical enablement is still being finalized.
+- [00:01:53.090](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=113s) — We are just hopefully where we'll be only a few weeks away now.
+- [00:01:58.090](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=118s) — So that is coming.
+- [00:02:01.090](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=121s) — But today, in fact, actually the other week, you know, today I'm happy to announce that the sales enablement is available for all partners on on WebEx Academy at the order of some of these slides is a bit wrong.
+- [00:02:16.000](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=136s) — But so the sales enablement learning plan covers these four broad courses from sales fundamentals to TSA sales enablement.
+- [00:02:26.000](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=146s) — So again, as I mentioned, a bit more of a technical focus for pre sales consultants and TSAs that may want to really showcase the value of the platform, how you demo it to your customers.
+- [00:02:39.000](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=159s) — How do you lead discovery workshops? The right questions to ask and what you're looking for or listening when it comes to identifying pain points and coming up with a solution for your customers.
+- [00:02:52.000](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=172s) — There's definitely some content we wanted to share with you around the process and making sure that when it comes to actually going from a qualified opportunity to actually a closed one opportunity and an order being signed.
+- [00:03:08.000](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=188s) — We can talk you through what that looks like to get that quote approved and the order released.
+- [00:03:16.000](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=196s) — So we have a few slides there that cover that as well as the telco asset provisioning process. Some of you that may or may not be aware as part of our platform sending digital communications.
+- [00:03:30.000](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=210s) — You need to order phone numbers for your customers, depending on the different country that they're based in.
+- [00:03:36.000](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=216s) — And so there is likewise a separate process to explain how to do that, you know, the form to fill the information we require and how you how you move forward with that.
+- [00:03:48.000](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=228s) — Finally, on the offer and ordering process, WebEx Connect is sold in different license editions with different entitlements and different amounts of capabilities.
+- [00:04:00.000](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=240s) — Our team, or in fact, Jason, who actually runs that team has done a great job in really breaking that down and simple, easy to understand language, explaining the different SKUs, the different discount structures and how you actually order WebEx Connect on CCW.
+- [00:04:18.540](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=258s) — Accessing the learning plan is really easy.
+- [00:04:30.400](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=270s) — It's on WebEx Academy right now. So after this call, you can click on the link and we'll share these slides after this as well. So you'll be able to see that.
+- [00:04:41.400](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=281s) — But click on the link to WebEx Academy. You will need to sync your CCOID with your partner organization. So if you haven't done that yet, there is an additional step.
+- [00:04:53.400](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=293s) — But it should be very quick and easy to navigate into WebEx Academy to find where the sales enablement content is and then to complete that learning plan.
+- [00:05:04.400](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=304s) — One of the things that I think we've done differently this time around from other sales enablement or other content that we've put out for partners is we've really tried to make it as comprehensive as we possibly can.
+- [00:05:22.760](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=322s) — And so no stone has gone unturned when it comes to talking about our value proposition, who we compete with, why we sell the platform, the way we do, the key use cases, verticals and so on and across those different topics.
+- [00:05:39.760](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=339s) — So really we've got four over four hours of content created by the team. We have over 200 slides that we've gone through, all of which are made available after every course.
+- [00:05:50.760](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=350s) — You can download the PDFs. We will be making those slides available as PowerPoint. So if you want to use them for your own sales activities and your own customer presentations, you will be able to do that.
+- [00:06:06.760](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=366s) — So that will be made available later in the month.
+- [00:06:10.760](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=370s) — And then in order to complete the course, like all other credentialed courses and learning programs, you will need to complete the test and 75% success rate is what you need to achieve in order to complete it and to pass the program.
+- [00:06:34.970](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=394s) — Coming soon. So while this is launched on WebEx Academy and is available for everyone to go through, there's a couple of additional activities that we are just closing off and will be complete by the end of the month as well.
+- [00:06:49.970](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=409s) — So one of them is the Credly badge to demonstrate, you know, for everyone who goes through the learning program to show that you are, you've completed it, that you are successful and that we have verified and approved and certified you as being,
+- [00:07:11.970](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=431s) — has gone through the program and being successful in answering the questions and going through the content.
+- [00:07:18.970](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=438s) — So we are working on that and that will be pushed out. Anyone who goes through it already, even though the Credly badge is not available, it will be automatically pushed out later in the month once it's been finalized.
+- [00:07:32.970](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=452s) — And you'll also be able to have the WebEx Connect partner designation available on your partner profile. So for customers going on partner locator to be able to differentiate partners who have been trained versus partners who haven't,
+- [00:07:50.970](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=470s) — you'll be able to have a designation that identifies and shows you to be the case.
+- [00:07:56.970](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=476s) — And yes, we are already working with a lot of partners or a lot of everyone who's on the call, just as a snapshot of some of the partners we're already working with who are enabled.
+- [00:08:12.820](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=492s) — But I do encourage everyone here, if you are customer facing, if you do have a customer facing role, if you do need to understand our key use cases, the verticals we target, if you are supporting your sales or account managers,
+- [00:08:29.820](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=509s) — I do think it's still very valuable content to go through. I think I can see Terry, am I right? Terry Ford, I think you've recently gone through it, which is great.
+- [00:08:44.820](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=524s) — And yes, as I say, strongly encourage everyone here to go through the sales content. Share with us your feedback, let us know what you think is missing, what you enjoyed and maybe a bit confusing.
+- [00:08:57.820](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=537s) — We'll continue to iterate it across the next couple of quarters and make sure it can be as effective as it can be.
+- [00:09:05.820](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=545s) — Thank you so much, Tom. Are there any questions from anyone? It's quiet. It's Friday, but I do want to just make a small comment before we move on to Doug's talk and that is, I've already received some feedback from technical engineers saying this is sales enablement.
+- [00:09:29.010](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=569s) — And yes, it is sales enablement. However, when the customer asks you about the different offers or different additions of WebEx Connect that we have, you'll be able to answer those questions as well as getting outside of the contact center.
+- [00:09:47.010](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=587s) — And that's really where we want to be because there's other silos or verticals within the customer that we want to target like marketing and operations and logistics and all of that is untapped.
+- [00:09:59.010](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=599s) — So yeah, and they're 10 minute videos, 10, maybe 7 to 11 minutes max. So if you need to refer back to one, you could just quickly go through, you know, when you're sitting there at 11 o'clock at night and you're trying to remember, oh, I need to fill out this assurance to quote form to get the number provisioned on the tenant.
+- [00:10:17.010](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=617s) — How do I do that? You can go back and look at it. So it's very helpful.
+- [00:10:21.010](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=621s) — Yeah, that's a really good point Donna. While there are, while there's four hours of, over four hours of content in its entirety, each of the videos is no more than about 10 minutes.
+- [00:10:34.010](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=634s) — So each course has about, I think 12 to 14 videos and you can go through each video individually and then take a break, pause, come back to it at a later date.
+- [00:10:46.010](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=646s) — And yeah, very much as a self serve, take it at your own pace.
+- [00:10:51.010](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=651s) — Though I do, as I said, I would encourage everyone to see how they could make some time to go through it because I think it's very, very valuable to do so.
+- [00:10:59.010](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=659s) — Yeah, it really is. It's easy to blast through like on a Friday afternoon when you have a few hours so you can just block off some time.
+- [00:11:07.010](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=667s) — Okay, thanks Tom. All right. So next up is Doug Thurber and Doug is going to talk to us about the WebEx connect email channel. So I am maximizing my screen now.
+- [00:11:22.010](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=682s) — So take it away Doug.
+- [00:11:24.010](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=684s) — Okay, great. Hi, good morning. Good afternoon. Just wanted to spend some time going through the email channel today.
+- [00:11:33.010](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=693s) — As you know, WebEx connect supports at least a dozen different digital channels. But in the, I lead solution engineering for the US and more responsible for design and implementation of solutions, which you as partners will also be doing for clients.
+- [00:11:51.010](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=711s) — And at least in the US between SMS email voice, those are some of the more popular channels. So I thought we'd just spend a little time and give you an overview of the channel.
+- [00:12:01.010](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=721s) — I'll go through some slides and then I'll also go into WebEx connect and show you show you some things in there.
+- [00:12:09.010](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=729s) — But first, let me just give you an overview of what email is basically in the in connect. It's what you think it is. It gives you the ability to go to the next slide please.
+- [00:12:22.010](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=742s) — It will give you the ability to send and receive email. We can send plain text HTML can include tables links attachments and that type of thing.
+- [00:12:36.010](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=756s) — But connect will give you the ability to do that through either an email node in a workflow, which I'll show you later as well as the API.
+- [00:12:49.010](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=769s) — A couple of things on the next slide, a couple of things to know about the support so we support to protocols SMTP, or we do it through AWS is SCS the simple email service.
+- [00:13:04.010](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=784s) — Depending on which version of connect you're integrating with the the context center versions, the WXCC there there's the, the regular one that's the cloud based and then the enterprise it's more on premise those right now only support SMTP.
+- [00:13:22.010](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=802s) — So if you're using WebEx connect standalone, it'll support SMTP or SCS. And when your tenant is provisioned, you would specify which you intend to use and then it's one or the other.
+- [00:13:36.010](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=816s) — So you don't mix them on there but it'll it'll either be one or the other depending how the WebEx connect tenant is provisioned.
+- [00:13:45.010](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=825s) — So SMTP is fairly straightforward. SCS is a little more involved in it just just some notes down there that we often get asked is, you know, which SCS account do we use to well Cisco will be under their account or does the client need to provide it.
+- [00:14:01.010](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=841s) — And the answer is either one, we're actually fine using Cisco account or maybe even if you as a partner have an account that will be fine, or the client can can bring in their own SCS account.
+- [00:14:15.010](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=855s) — The message sizes for inbound and outbound the defaults now 40 megabytes it used to be 10 and it's increased on the SCS side.
+- [00:14:25.010](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=865s) — So that's good news and then there's there's some other things I'll discuss later like a daily quota on emails.
+- [00:14:32.010](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=872s) — A lot of that's all configured in the SCS account but it gets pulled into WebEx connect so you see it there. So these are just some things to be aware of when you're talking to clients, you know, and questions we get asked is, you know, how large an email can I send what's the rate.
+- [00:14:48.010](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=888s) — And just know that the size when we're talking about 40 meg, it includes everything in the email the text the images the attachments, and also my encoding which can actually add about another 37%. So, so just take all that into account when you're you're looking at
+- [00:15:05.010](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=905s) — at email size.
+- [00:15:10.180](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=910s) — So essentially these are just a high level steps to give you an idea of how you would use email and connect that you configure the app within connect there's some configuration there. If you're using contact center contact center enterprise there's a step just to register that
+- [00:15:27.180](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=927s) — with the app with engage. We support email templates, which I'll show you in a bit. So if you want to use templates, where you kind of pre define the email, you would create the templates, and then and then sending the email and as I mentioned there's a there's a
+- [00:15:45.180](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=945s) — code within the workflow for sending it as well as our send message API will support email. Just again quick not going to go into details on SMTP or the SES configuration there's quite a bit of documentation but just to give you a feel for it again as you're
+- [00:16:08.500](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=968s) — going to go into details on your clients SMTP, we support either username and password or OAuth to for as far as authorization goes, and then the inbound email is accomplished via forwarding so when you we configure SMTP in connect, there'll be a forwarding
+- [00:16:28.500](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=988s) — and you would then go into your SMTP server and specify that forwarding address so any inbound emails to your SMTP would be would be forwarded.
+- [00:16:40.500](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1000s) — So the clients to leverage that outbound OAuth connection to pull the email box so that the customer doesn't have to forward them. I'm working with a client right now that struggled with some forwarding rules, as well as their external
+- [00:16:57.500](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1017s) — system proof point was blocking external senders from forwarding to the IMI address.
+- [00:17:02.500](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1022s) — Guy, I don't know of any I don't know. I got a couple other people on the line to them I know on a Ash mesh. Do you know of any plans there for changing that.
+- [00:17:14.980](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1034s) — Not aware of this. So maybe we take it away and get back on this point.
+- [00:17:20.980](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1040s) — Yep.
+- [00:17:21.980](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1041s) — Thank you.
+- [00:17:22.980](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1042s) — Okay, yeah, we'll see what else we can find a few.
+- [00:17:27.290](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1047s) — In the online documentation there there's details for Gmail and Microsoft 365, but the, but again any SMTP server would be supported.
+- [00:17:40.290](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1060s) — On the SCS side, it's a little bit more involved and again we've got pretty extensive documentation on this but I just wanted to give you an idea for for what's involved, you know, kind of technically to be able to configure that access.
+- [00:17:58.820](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1078s) — The big point is that we have to give AWS access to WebEx connect for both SCS and their SNS, which is their notification service.
+- [00:18:09.820](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1089s) — That's what provides the delivery status information such as the email was delivered or or read or those type of things.
+- [00:18:21.820](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1101s) — So steps to do that you need to create. The first thing is the identity and access management policies in AWS, which will control access and authorization to this AWS resources.
+- [00:18:36.820](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1116s) — Then in connect, you can start configuring the app, which is basically identifying what's the sub domain. So something about you're always going to have your domain, you know, company dot com, you're going to have some sub domain, you know, your, your mail or whatever it is mail dot company dot com.
+- [00:18:52.820](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1132s) — So you configure your sub domain and then an access key and an access key ID and secret which you would get from AWS.
+- [00:19:01.820](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1141s) — Then that'll give you some TXT and DKIM records that you'll you'll need to update add to the DNS. So there's definitely some DNS updates.
+- [00:19:12.820](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1152s) — And then you can configure those domain keys settings under the email security.
+- [00:19:19.820](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1159s) — Do any inbound email configuration, which consists of adding MX records to the DNS settings.
+- [00:19:26.820](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1166s) — And then there's unsubscribe links that you can that's that's really just a matter of enabling because connect can automatically put in an unsubscribe link and automatically handle if if the user clicks on that link, just add them, you know, to a blacklist so that they're so that they're unsubscribe.
+- [00:19:45.820](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1185s) — So there's not much for you to actually do that's kind of automatic.
+- [00:19:50.820](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1190s) — And then any other configurations I kind of mentioned before such as quotas, send rate, those are all in the SCS account dashboard. So just keep in mind that all those types of settings are really managed on the SCS side.
+- [00:20:08.740](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1208s) — All right, so once you've got the got it all set up and ready to go.
+- [00:20:13.740](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1213s) — We've got an email template and composer that I'll show you in just a bit. It's essentially a graphical, you know, drag and drop composer. It's got previews to preview the email and desktop or mobile.
+- [00:20:26.740](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1226s) — There's some different building blocks they're showing here, just, you know, for images buttons text, etc tables.
+- [00:20:34.740](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1234s) — And then there's a style palette as well. Again, I'll show you that in just a bit.
+- [00:20:39.740](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1239s) — I always just put in HTML direct directly. So there's a source mode for that. And then when you create these templates, you could create a full template that would be the entire email, or you could create multiple partial templates.
+- [00:20:54.740](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1254s) — So you may have, say a header or a footer that's going to go on every type of email, but the content in the middle is different. So you can create that header, and then combine it with different bodies as far as parts.
+- [00:21:08.740](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1268s) — So basically putting together multiple partial templates to create one email.
+- [00:21:17.240](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1277s) — And then for sending email. On the next slide, I already mentioned two options API or email node. And again, the basic capabilities for these are, you know, text based email, HTML based.
+- [00:21:31.240](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1291s) — Next fallback some email apps, you know, don't support HTML so you can have an automatic fallback in case someone receives that in an email client that doesn't support HTML.
+- [00:21:43.240](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1303s) — The templates I mentioned, and then attachments, they can be either you need to have static attachments that you upload into connects media manager, or if you specify a URL it could be more dynamic.
+- [00:21:57.240](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1317s) — Just need to make sure that URL is accessible by connect. And then there's last slide here there's a little bit of tracking and reporting. So if you put links and email you can track those things like email opens.
+- [00:22:15.380](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1335s) — There's some other fields you can enter like call back data and correlation ID that can, if you if you put data in there that'll show up in the delivery status so you can correlate things back or in our export logs.
+- [00:22:30.380](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1350s) — Unsubscribe, I mentioned, and then you can specify to receive those delivery status you can you can specify notification URL.
+- [00:22:40.380](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1360s) — And note that on SMTP, you essentially get sent or failed as far as the status goes on SES. You get a few more, you know, sent delivered read bounced. If someone put in their spam folder.
+- [00:22:54.380](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1374s) — Rejected and clicked.
+- [00:22:57.380](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1377s) — Etc. So I will that's into the slides. Let me any I'll just pause there for a moment. Any other questions before I'll launch into connect and then show you show you around connect a bit a few things.
+- [00:23:13.340](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1393s) — There's a bug where WebEx contacts and our agents can't receive an email if it's plain text. Is that specific to WebEx?
+- [00:23:24.400](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1404s) — I don't know.
+- [00:23:26.400](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1406s) — I think that's one we'll have to check on so they can't if it.
+- [00:23:31.400](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1411s) — Can you can you explain that issue. Are you trying to send an inbound email just text only.
+- [00:23:37.400](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1417s) — Correct.
+- [00:23:42.250](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1422s) — Okay.
+- [00:23:43.250](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1423s) — We might have to take it back marks. Have you opened a service ticket on that issue that you have observed. There's the bug idea.
+- [00:23:52.250](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1432s) — Okay, cool.
+- [00:23:53.250](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1433s) — Perfect. Okay. Let us try that.
+- [00:24:02.580](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1442s) — Any other questions.
+- [00:24:04.580](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1444s) — This time.
+- [00:24:05.580](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1445s) — Mine is more related to the finesse desktop.
+- [00:24:10.900](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1450s) — We have a customer and there is a CC option when we're applying.
+- [00:24:15.900](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1455s) — I apologize if this was coming up. Maybe I asked too early, but is there a way to enable it to be CC as well.
+- [00:24:22.900](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1462s) — Say that an agent every time they reply, they need to copy their supervisor.
+- [00:24:28.900](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1468s) — Could they do that from finesse.
+- [00:24:30.900](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1470s) — I don't know about finesse, but the I know the CC and the VCC options are are available.
+- [00:24:41.750](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1481s) — The only drawback this really is not really your question. If you're doing an unsubscribe, I believe it only unsubscribes, you know, anyone in the to not not the copy or VCC.
+- [00:24:54.750](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1494s) — But I'm not familiar with that issue in the finesse desktop.
+- [00:24:59.750](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1499s) — Okay.
+- [00:25:02.260](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1502s) — Yeah. So, sorry. So that the question was on unsubscribe when you are doing a CC and PCC or it was just simply.
+- [00:25:09.260](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1509s) — CC VCC is not working out. It would be a good feature to have CC.
+- [00:25:14.260](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1514s) — Just an everyday feature. We have some agents who are instructed to copy their immediate supervisor when they reply, but they would like that to be BC seed.
+- [00:25:25.260](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1525s) — So the customer does not see that.
+- [00:25:28.260](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1528s) — I say, I think it's more of the finesse application the way it has been implemented.
+- [00:25:34.260](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1534s) — I would attribute it to that implementation.
+- [00:25:38.260](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1538s) — Rather than a limitation on what is supported by connect. So I think it's good.
+- [00:25:45.260](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1545s) — It's a great question.
+- [00:25:47.260](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1547s) — I think we need to get the CC team to address this because it's finesse.
+- [00:25:52.260](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1552s) — It's the on-prem edition. So I think it's all related to how the finesse application has been implemented to enable this feature.
+- [00:26:01.260](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1561s) — Okay.
+- [00:26:02.260](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1562s) — Great. Thank you. I appreciate the response.
+- [00:26:11.910](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1571s) — I'm over here. One of our connect tenants here.
+- [00:26:15.910](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1575s) — So just show you around a little bit under right here under assets apps is where you you configure email apps.
+- [00:26:24.910](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1584s) — So I've got one configured already. So you normally go into configure new app email.
+- [00:26:33.910](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1593s) — And it would start from there. This tenant is configured for SCS. So again, I mentioned you put in your domain access credentials, etc.
+- [00:26:43.910](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1603s) — You generate some verification records, but just to show you an existing one.
+- [00:26:52.910](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1612s) — Once you go through the process, it'll look something like this.
+- [00:26:57.910](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1617s) — And again, this is the various records, DNS settings. And again, this is all SCS.
+- [00:27:02.910](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1622s) — Here's where you can enable, subscribe or unsubscribe. And then these limits.
+- [00:27:08.910](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1628s) — We used to be 10 meg I mentioned, these are pulled in from the SCS account.
+- [00:27:14.910](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1634s) — They're not really connect limits as far as SCS goes.
+- [00:27:19.910](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1639s) — But that's what I'm talking about the app. That's where you set that up.
+- [00:27:23.910](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1643s) — Then the next thing under the tools is maybe like this, the media manager. So if you do have icons or other media, or maybe you've got some static attachments, you can upload those here under this media manager.
+- [00:27:44.910](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1664s) — You can directly upload the file or import via URL. And then those can be used later in the email.
+- [00:27:54.910](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1674s) — And then let me go to the email to templates here. And this is what brings up the email composer. So I had, I created a partial template here.
+- [00:28:10.910](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1690s) — Like simulating, say a notification from your bank. So this is the header. So this is why saying this might be a header that you include in all your templates.
+- [00:28:21.910](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1701s) — So that are in all your emails. So that would be a partial template. And then you could create the specific, the specific body of the email that you want.
+- [00:28:35.910](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1715s) — Sorry about that.
+- [00:28:37.910](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1717s) — I go to the body. So I've created the body of my email here.
+- [00:28:46.340](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1726s) — And one thing to notice is I've included variables here. So these can be passed in either via API or I'll show you in the email node. So these can be, you know, truly dynamic, dynamic emails.
+- [00:29:01.340](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1741s) — Just to give you a little view of what's here. So on the left here are the different building blocks that you can, you could drag in.
+- [00:29:10.340](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1750s) — So say you want a certain structure with two columns, you drag it here and then the other blocks such as image text buttons are right here.
+- [00:29:25.340](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1765s) — And then even I mentioned, if you want to put direct HTML code in there, you can drag that as well.
+- [00:29:32.340](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1772s) — At any time as well, you can, you can view the HTML code. So if you really want to, you know, tweak something, you can do that here.
+- [00:29:41.340](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1781s) — If I drag in, you know, just say some text here.
+- [00:29:49.340](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1789s) — You just drag it in. There's all the usual controls right here. But then if you look on any of these on the right side is the style palette. So you can do everything from background colors to borders padding, etc.
+- [00:30:04.340](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1804s) — And that's on any of these blocks. If you click in any of these blocks, even the buttons, it'll give you all the styling that you can do.
+- [00:30:11.340](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1811s) — So I think kind of the message is it's a very flexible composer. It gives you a lot of control to create an email as you like.
+- [00:30:24.340](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1824s) — And again, with these building blocks on the left and then the, the style palette for each, each of them on the right here.
+- [00:30:35.340](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1835s) — And if you wanted to do a little mobile preview or what it'll look like on desktop, you can do that.
+- [00:30:46.220](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1846s) — Any general questions on the, on the email composer? Great. And then I can let me bring you into, so let me show you, I'll show you first in Connect and just a really simple flow I created.
+- [00:31:15.150](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1875s) — You might use that template and the flow. So I created a very simple flow here that starts with a web hook.
+- [00:31:28.150](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1888s) — And then sends the email. So, so in the web hook, which is just the entry point into here, I'm passing in the email I wanted to go to the person's name, the transaction date, the merchant, which are those same variables that you
+- [00:31:45.150](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1905s) — these are the same variables that you saw within the template.
+- [00:31:49.150](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1909s) — And then the email note itself.
+- [00:31:54.150](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1914s) — You essentially can specify, you know, who the emails to which is a variable I passed in. You can specify a from email. So this is the, this would be the help desk at the domain that I have configured.
+- [00:32:09.150](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1929s) — You can specify any name you want reply to email CCBCC. And then here's where I picked template. So I could have just done text and put in plain text, I could select HTML, and just put in some HTML code, or I can specify template.
+- [00:32:27.150](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1947s) — And then I add in one or more templates here so I did to, I put two partial templates so I did that that header I showed you and then the body.
+- [00:32:36.150](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1956s) — And I didn't put any fallback text, but I could. And again, that would be if the email client didn't support HTML, different options for link tracking. If I want to send the different delivery status to an endpoint, I can put that URL here and then choose
+- [00:32:55.150](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1975s) — which, you know, which delivery statuses I want to be notified about.
+- [00:33:00.150](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1980s) — And then I could add in attachments as well.
+- [00:33:05.150](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1985s) — So that's a very simple so, so if I want to execute this.
+- [00:33:10.150](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1990s) — So say I wanted to send out one other, there's suspicious.
+- [00:33:14.150](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=1994s) — We will just have conversation on two three and four and I think the folks who will be joining from he can either they would answer or maybe they will just take those action item and they can come back.
+- [00:33:26.150](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=2006s) — We just ask everyone for if you're not speaking just put yourself on mute.
+- [00:33:35.150](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=2015s) — Thanks so much.
+- [00:33:37.150](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=2017s) — So, so our web hooks in connect are done with a post. So, if we look, I'll just back here, you get, you get an endpoint for this web hook URL, which is right here.
+- [00:33:56.150](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=2036s) — So I can do a post to that endpoint.
+- [00:34:01.150](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=2041s) — Our payloads into the web hooks are flexible and it was as I defined it. And I could.
+- [00:34:09.150](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=2049s) — I can just to put something else I can simply put in all the variables here. There's a key that I set for security as well.
+- [00:34:19.150](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=2059s) — And I can really execute that web hook, which will, which will call that web hook and then send the email and then anytime you call web hook, you get a response that it's queued.
+- [00:34:32.150](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=2072s) — That's basically means WebEx connect has has received the notification and it gives you a transaction ID.
+- [00:34:39.150](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=2079s) — And then depending on my outlook that that email will will come across in just a minute.
+- [00:34:48.150](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=2088s) — So, from a connect perspective, do we have the ability to send.
+- [00:34:53.150](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=2093s) — I guess an email similar using a template to a distribution list or to a pool of email addresses rather than having to go through postman or submit an API request.
+- [00:35:08.150](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=2108s) — Good question in the, in the API.
+- [00:35:14.150](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=2114s) — Which this is an example here.
+- [00:35:17.150](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=2117s) — You can, you can do a you can.
+- [00:35:22.150](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=2122s) — Why that's not pulling up, you can do send multiple emails.
+- [00:35:27.150](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=2127s) — In the email node itself, you would do a, I mean you could have a distribution list, but the destination is a single email.
+- [00:35:42.150](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=2142s) — So, so in a flow, it would be probably more a case where you're sending out, you know, different transactional alerts to different people.
+- [00:35:52.150](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=2152s) — So you're sending out a single at a time.
+- [00:35:56.150](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=2156s) — So, for example, let's say I give you a random example. Let's say I'm a bank.
+- [00:36:01.150](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=2161s) — Like every morning I get a list that's generated for customers who are late on a payment. So I can get, for example, their name, I can get the overdue account due date and, you know, things like that.
+- [00:36:15.150](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=2175s) — So you would probably have a printing pertaining to a customer and that would be populated in, let's just say a CSV file, or it would be somewhere in a database. So, would we have the ability to then send each of those respective customers an email.
+- [00:36:33.150](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=2193s) — So you would, you probably have a flow like this, probably a little bit more involved than just two nodes, but you could drop that file into our event scheduler and tell it to essentially call this flow for every, every row in that file.
+- [00:36:50.150](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=2210s) — And then it would execute this workflow, pass in all the columns, you know, just like, just like I kind of had here with the, you know, say name, date, transaction amount and execute this workflow for each of them. So that that's one way.
+- [00:37:05.150](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=2225s) — Right. Fairly typical way that we would do something like that.
+- [00:37:10.150](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=2230s) — Thank you.
+- [00:37:13.040](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=2233s) — Yep. And actually here the just to show you that email just drag over here really quick and did come through and right so everyone would get each one personalized with the with the information that they put there.
+- [00:37:37.900](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=2257s) — Just a few minutes so then, as far as API's go just just to give you an idea, I've got a few different to show you if you just wanted to so not use the email node use a flow.
+- [00:37:50.900](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=2270s) — This is a similar way where I'm using the API and specifying the template so it's similar information I'm saying what channel it is where the emails from who it's going to.
+- [00:38:04.900](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=2284s) — These substitutions are essentially the same variables that I passed into the flow.
+- [00:38:12.900](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=2292s) — And then I can, you know, subject any delivery receipts I want. And the right here I specified the template.
+- [00:38:22.900](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=2302s) — In this case, I probably would have to do the full template, but I specify the template I want to use and send it out.
+- [00:38:32.900](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=2312s) — Or if you just want to do plain text email.
+- [00:38:37.900](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=2317s) — Pretty similar.
+- [00:38:42.850](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=2322s) — Whereas this this content block is really what would be different and then specify the type of text and what text I wanted to send.
+- [00:38:55.290](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=2335s) — And as well say I wanted to do attachments.
+- [00:39:03.360](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=2343s) — Again, these are all via API.
+- [00:39:08.360](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=2348s) — And the protocol and the big the difference here is actually this why kind of combine HTML and attachments so if you want to send an HTML email instead of text it'll be HTML.
+- [00:39:21.360](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=2361s) — It would be an HTML value here where you could put in your raw HTML.
+- [00:39:27.360](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=2367s) — And then here there's an attachments block where you specify the mime type.
+- [00:39:33.360](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=2373s) — And then here's the binding so for PDF it's application PDF and we have a list of the mind types in the documentation and then the the URL the media URL that it can access it from and the delivery receipts.
+- [00:39:52.780](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=2392s) — So that's a quick tour I was just trying to keep it to our time but certainly happy to go over more answer other questions.
+- [00:40:03.780](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=2403s) — And then we'll do a good, at least a good basic view of what the capabilities are how to set up email.
+- [00:40:11.780](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=2411s) — How do you how you can use templates and the composer and then how you can actually send them either via workflow using the node or via API.
+- [00:40:26.170](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=2426s) — Thank you Doug and right on time.
+- [00:40:30.170](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=2430s) — Okay, so I am going to follow up on the questions that were asked today.
+- [00:40:35.170](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=2435s) — I'm going to look out for a response mark and Lindsay.
+- [00:40:39.170](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=2439s) — And I will post the slides in your respective web, web X space.
+- [00:40:46.170](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=2446s) — Please look out for the survey to still and let us know keep keep coming with the suggestions for what you want to see on this call because this is your call we want to make sure that that you guys are interested in that we're covering the topics that you want to hear about.
+- [00:41:01.170](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=2461s) — Any last minute requests or questions. Alright, thank you Doug and Tom for presenting today and thank you everyone for joining have a great rest of your week.
+- [00:41:15.860](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=2475s) — Thank you bye bye.
+- [00:41:17.860](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=2477s) — Thank you.
+- [00:41:20.520](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=2480s) — Thanks.
+- [00:41:21.520](https://www.youtube.com/watch?v=5TzxFpDzIPs&t=2481s) — See you later.

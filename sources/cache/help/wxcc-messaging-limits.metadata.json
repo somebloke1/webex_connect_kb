@@ -1,0 +1,38 @@
+{
+  "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182579a1",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "6b52f6d747a6bb84580f25c86cb0b948c2f9e428873e1575e6683dc04876bc4d",
+    "source_path": "77d86a53878d0c2e2121da9fea198e2b1a6e2fe17d667dd31e02ba26ace9c8ee",
+    "text_path": "08c3cc1122020f0257c560dbf30d8da8c12824c8ea128ca53745caf061a14182"
+  },
+  "headings": [
+    "❗️Accessing Messaging Limit",
+    "How to increase the Messaging limit",
+    "Open 1K Conversations in 30 Days",
+    "📘Note",
+    "Automatic Scaling",
+    "🚧Quality Rating and Messaging Limit"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/wxcc-messaging-limits.md",
+  "resolved_url": "https://help.webexconnect.io/docs/wxcc-messaging-limits",
+  "retrieved_at": "2026-09-08T23:29:14+00:00",
+  "sha256_html_response": "068edce1b46cc46218be6d49ae842ecda41250cfe415172ce566b1342847bc0c",
+  "sha256_source_body": "77d86a53878d0c2e2121da9fea198e2b1a6e2fe17d667dd31e02ba26ace9c8ee",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/wxcc-messaging-limits.source.md",
+  "source_updated_at": "2026-04-15T11:53:22.018Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/wxcc-messaging-limits.txt",
+  "title": "Messaging Limits - WXCC",
+  "url": "https://help.webexconnect.io/docs/wxcc-messaging-limits",
+  "word_count": 589,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/wxcc-messaging-limits.metadata.json"
+}

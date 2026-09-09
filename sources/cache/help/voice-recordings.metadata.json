@@ -1,0 +1,34 @@
+{
+  "category": "TOOLS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257849",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "fe6568c3df10cc975ad733cd09bec38dd72ff249ce39687ed906d9b952be8851",
+    "source_path": "1a2c024c8662bb8b85a06aa5c65b5c840067cca7aac8452e9540884378dd2b8b",
+    "text_path": "d882af1210b082b30f0c994b2b5b4331fa2124a0943e288536d95c4e10a7b299"
+  },
+  "headings": [
+    "📘Note",
+    "📘Note"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/voice-recordings.md",
+  "resolved_url": "https://help.webexconnect.io/docs/voice-recordings",
+  "retrieved_at": "2026-09-08T23:29:32+00:00",
+  "sha256_html_response": "7a4ca2e6356af801cf11f69cfd8614829628a4ea315f12e9ee46d013c13d8de8",
+  "sha256_source_body": "1a2c024c8662bb8b85a06aa5c65b5c840067cca7aac8452e9540884378dd2b8b",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/voice-recordings.source.md",
+  "source_updated_at": "2025-07-25T10:11:25.959Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/voice-recordings.txt",
+  "title": "Voice Recordings",
+  "url": "https://help.webexconnect.io/docs/voice-recordings",
+  "word_count": 650,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/voice-recordings.metadata.json"
+}

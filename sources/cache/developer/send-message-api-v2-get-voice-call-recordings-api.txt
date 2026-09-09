@@ -1,0 +1,97 @@
+> 📘 API Endpoint & Postman Collection
+> 
+> Voice channel is supported via Voice API and Send Message API v2. 
+> 
+> API endpoint for it is: [https://{YourRegion}.webexconnect.io/v2/recordings/flow/{transactionId}].
+> 
+> Please modify YourRegion in the URL to reflect your tenant’s region. See [Know Your Endpoint Page](https://developers.imiconnect.io/reference/endpoints).
+> 
+> Refer to [our Postman Collection](https://www.postman.com/cisco/webex-connect/collection/pyjw227/webex-connect-apis) for trying Get Voice Call Recording Using Send Message API v2.
+
+> 📘 API Response and Error Codes
+> 
+> Send Message API v2 is asynchronous. You receive a HTTP response when your request is accepted. Further processing details are sent to your notify URL. See [Channel Specific Status Codes](https://developers.imiconnect.io/reference/channel-specific-status-codes-1) for more information.
+
+## Request Body for Get Voice Call Recordings API
+
+```curl Get Voice Call Recordings
+curl --location 'https://{baseURL}/v2/recordings/flow/{TransactionId}' \
+--header 'Content-Type: application/json' \
+--header 'Accept: application/json' \
+--header 'key: ServiceKey'
+```
+
+## Get Voice Call Recordings Path Parameters
+
+| Parameter     | Type   | Mandatory | Description                                                                          |
+| :------------ | :----- | :-------- | :----------------------------------------------------------------------------------- |
+| TransactionId | string | yes       | Unique identifier for the call transaction. Returned in the response body of events. |
+
+## Get Voice Call Recordings Header Parameters
+
+| Parameter | Type   | Mandatory | Description                                                                               |
+| :-------- | :----- | :-------- | :---------------------------------------------------------------------------------------- |
+| key       | string | yes       | Authorization token (this can be either a JWT signed by a secret key or the service key). |
+
+## Sample Response Body
+
+```json
+{
+    "clientId": 3678,
+    "recordings": [
+        {
+            "recordingDuration": "7",
+            "recordingName": "timestamp_c7751df7-d324-XXXX-XXXX-df1cd52d5194_9.wav",
+            "recordingFilePath": "https://anydomain.imiconnect.co/voice-recordings/timestamp_c7751df7-d324-XXXX-9fe7-df1cd52d5194_9.wav"
+        }
+    ],
+    "groupId": 4123,
+    "teamId": 4321,
+    "messageId": "80875ee5-2567-XXXX-XXXX-48cf96ce96e3_20758_12XXXX"
+}
+```
+
+## Response Parameters
+
+| Parameter         | Description                                                      |
+| :---------------- | :--------------------------------------------------------------- |
+| clientId          | Unique ID of the client (tenant backend ID).                     |
+| recordings        | JSON object with details about the recordings.                   |
+| recordingDuration | Duration of the recording in seconds.                            |
+| recordingName     | Name of the recording file.                                      |
+| recordingFilePath | Storage path of the recording file.                              |
+| groupId           | Identifier for the group the team belongs to.                    |
+| teamId            | Identifier for the team associated with the service key.         |
+| messageId         | Unique message ID for the transaction, returned in the response. |
+
+## API reference metadata
+
+These are source metadata and examples. `api.auth` is ReadMe metadata; verify authentication in the documented headers/security scheme.
+
+```json
+{
+  "method": "get",
+  "url": "",
+  "auth": "required",
+  "results": {
+    "codes": [
+      {
+        "name": "",
+        "code": "{}",
+        "language": "json",
+        "status": 200
+      },
+      {
+        "name": "",
+        "code": "{}",
+        "language": "json",
+        "status": 400
+      }
+    ]
+  },
+  "params": [],
+  "examples": {
+    "codes": []
+  }
+}
+```

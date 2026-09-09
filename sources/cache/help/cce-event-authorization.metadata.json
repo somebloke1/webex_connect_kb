@@ -1,0 +1,34 @@
+{
+  "category": "Webex Connect and Cisco Contact Center Enterprise System (CCE)",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182578df",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "c651cba93fbabcdb0f789e93b030e2a1df3d7c7229e530e278ab2700fdb207c6",
+    "source_path": "4a81bbe4f9fe33cc251e9740b5e3a36205c47a9d3c08af0c125ab6f24918c659",
+    "text_path": "9c4428b183cb401f60440fb7ee057fdab4f6d66b45b58cdcb82951bdb57c8de5"
+  },
+  "headings": [
+    "Prerequisites",
+    "Activating Authorizations at the Webex Connect Tenant"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/cce-event-authorization.md",
+  "resolved_url": "https://help.webexconnect.io/docs/cce-event-authorization",
+  "retrieved_at": "2026-09-08T23:29:22+00:00",
+  "sha256_html_response": "58beee0612f72eb7297289fcac3afccd4948ade294a6b58cae4db2b3c4024ed3",
+  "sha256_source_body": "4a81bbe4f9fe33cc251e9740b5e3a36205c47a9d3c08af0c125ab6f24918c659",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/cce-event-authorization.source.md",
+  "source_updated_at": "2026-04-14T07:36:47.551Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/cce-event-authorization.txt",
+  "title": "Event Authorization - CCE",
+  "url": "https://help.webexconnect.io/docs/cce-event-authorization",
+  "word_count": 373,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/cce-event-authorization.metadata.json"
+}

@@ -1,0 +1,151 @@
+## 
+
+➡️ Inbound Messages
+
+email
+
+{
+    "aliasId": "1d5e87a4-7c7f-484f-92e8-8c1c74ae0f1b",
+    "direction": "inbound",
+    "type": "email",
+    "email": {
+        "from": "john@gmail.com",
+        "to": [
+            "support@acme.com",
+            "pam@gmail.com"
+        ],
+        "cc": [
+            "jane@gmail.com",
+            "mike@gmail.com"
+        ],
+        "strippedText": "Dear Customer, \n\nYour email has been delivered successfully. \n\nHowever, the attachment(s) were not delivered because you are not authorized to send attachment(s) to the recipients or distribution list. \n\nNote: This is an auto-generated email. Please do not reply to this email",
+        "strippedHtml": "Dear Customer,<br><br>Your email has been delivered successfully.<br><br>However, the attachment(s) were not delivered because you are not authorized to send attachment(s) to the recipients or distribution list. <br><br><br> Note: This is an auto-generated email. Please do not reply to this email",
+        "bodyPlain": "Dear Customer, \n\nYour email has been delivered successfully. \n\nHowever, the attachment(s) were not delivered because you are not authorized to send attachment(s) to the recipients or distribution list. \n\nNote: This is an auto-generated email. Please do not reply to this email",
+        "bodyHtml": "Dear Customer,<br><br>Your email has been delivered successfully.<br><br>However, the attachment(s) were not delivered because you are not authorized to send attachment(s) to the recipients or distribution list. <br><br><br> Note: This is an auto-generated email. Please do not reply to this email",
+        "headers": {
+            "Return-Path": "<shhetun227@gmail.com>",
+            "Arc-Authentication-Results": "i=1; mx.google.com;       dkim=pass header.i=@gmail.com header.s=20161025 header.b=CD2a7v7Y;       spf=pass (google.com: domain of shhetun227@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=shhetun227@gmail.com;       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com",
+            "X-Mailgun-Incoming": "Yes",
+            "Received": "from emm-5647b5b88-mzrqw (ec2-35-172-172-213.compute-1.amazonaws.com. [35.172.172.213])        by smtp.gmail.com with ESMTPSA id u11sm2134751qkk.72.2021.07.14.23.33.28        for <imiemailgt@gmail.com>        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);        Wed, 14 Jul 2021 23:33:28 -0700 (PDT)",
+            "X-Google-Smtp-Source": "ABdhPJyOfOyvd1aiYr1iBUplHpNtZu5I/Kc1KssCKM9t++GdBZ8fIqCngsX9zo+uye/7sdKAplq3Sg==",
+            "From": "shhetun227@gmail.com",
+            "Message-Id": "<1236812620.923.1626330808843@emm-5647b5b88-mzrqw>",
+            "Arc-Message-Signature": "i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;        h=mime-version:subject:message-id:to:from:date:dkim-signature;        bh=iLQu8tynkPghC5dc9oL4fX6JstCn3ys9J+EYbyrHLt0=;        b=ouOgfvhahrkY/Zw3RHGBPYZn+AgE5+If9z3MUEYSIAIv0sqLxtclnL5yKKwznKeKjs         SIWjSuX2pGWlYvW7OTqs5wZy2nx5DjGKQ5OUZXbzEq4UeXbqQURjH8exwY6qCnWfKbeQ         WsoBigAalJ3Ht9a1jo/wOYbM2fPss2ZhQ3PFW4g5uhFtnxVBuvlnvE+fw0sgP/9x9AcH         GZKThUoaqJQ3swR10yBA8vt2tZ9kE4YIRJYFfrc8FYVvQPvEazmbIh6f0bSRin/IJa8N         PdeTwPtZaIvtRdui/U0bhSr848UiwE1RHPsWiJ8nGcWbrpKIyIhX/EZq4DGk8xwCjLWb         FGkA==",
+            "Received-Spf": "pass (google.com: domain of shhetun227@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;",
+            "Date": "Thu, 15 Jul 2021 06:33:28 +0000 (GMT)",
+            "Subject": "[Do Not Reply]car jpeg",
+            "X-Envelope-From": "<imiemailgt+caf_=d7387223de17029beb65bafc2a222f4b=emailgwstgsmtp.ga@gmail.com>",
+            "Dkim-Signature": "v=1; a=rsa-sha256; c=relaxed/relaxed;        d=gmail.com; s=20161025;        h=date:from:to:message-id:subject:mime-version;        bh=iLQu8tynkPghC5dc9oL4fX6JstCn3ys9J+EYbyrHLt0=;        b=CD2a7v7Y22V0KlGkKMcLJOjF52PY+JwCdRQeISUjNvo14VyDhpNOOe7jxzV7T/yyj3         BzZwU1K1JYY2E3afnWHEiCVI8e4rstqeDcFFG2tjFln+RgRfme8idJiLC1teTMPJRoMc         59AT2E/+ZxmJiaGumGkQn/wGdpFA5CYzdjaBhCYN0CWSTjADZsK7zzoGn/T8xmrQ2TVn         C3GJiyffTreUw9eJezXDAKyYlgHuUbVkyY4ATVCyEmkt9iXmMULj2tuh5Ms4SY0Wa4Hu         xqNREtIOh3XWr54MLQEWFj8nniprqE/l6Cu68N/6bh8+2QFvQjj7IveQG5Z/FkXDYke9         lmUA==",
+            "X-Google-Dkim-Signature": "v=1; a=rsa-sha256; c=relaxed/relaxed;        d=1e100.net; s=20161025;        h=x-gm-message-state:delivered-to:dkim-signature:date:from:to         :message-id:subject:mime-version;        bh=iLQu8tynkPghC5dc9oL4fX6JstCn3ys9J+EYbyrHLt0=;        b=ThRBUCiIG8pW12QhyVSDfPz/q1Md59Xy/AbO6efRx9Op4/jMcEoQvcGhvG8kwiGesG         wjMoYo3PWM6WHz66rppt8kX9uEsSenfhSVa+WeNUXLJx7f8NiAjVeVPnUJexWU7HX/+b         CzcoAzH8HgVxL3sRcB96me3Pp8YqkuzrYpxYinmnRYT4FWhAHKSTfOe5LMtkeeanld1Z         +knEjgIDY7Qq06qaKlDCrsm4Nck5J37fYzazb441YrvcAljZnYtxAnW346OVDtsQixet         cvQ2KPZjhqCyX3PjWe7L7H5oDP4ym7ipWLQMyh4y4Rz03LwirWQxZxR1LFJCUMI6ADw7         COkA==",
+            "X-Forwarded-To": "d7387223de17029beb65bafc2a222f4b@emailgwstgsmtp.ga",
+            "X-Forwarded-For": "imiemailgt@gmail.com d7387223de17029beb65bafc2a222f4b@emailgwstgsmtp.ga",
+            "Delivered-To": "imiemailgt@gmail.com",
+            "X-Received": "by 2002:ac8:6ec1:: with SMTP id f1mr2497189qtv.104.1626330809072;        Wed, 14 Jul 2021 23:33:29 -0700 (PDT)",
+            "Authentication-Results": "mx.google.com;       dkim=pass header.i=@gmail.com header.s=20161025 header.b=CD2a7v7Y;       spf=pass (google.com: domain of shhetun227@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=shhetun227@gmail.com;       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com",
+            "Arc-Seal": "i=1; a=rsa-sha256; t=1626330809; cv=none;        d=google.com; s=arc-20160816;        b=gnUY2h6yvSaQ7T3R/IW/SMaBwIWys2Z+8ChMWneQQy6llR5gmpO2l8KnLeg9jDESXh         cgm5K2GCWbJPlGcNbES91leHI0VuikydQd7s60QcUJa/6zDfo/gpXGfhcAu1HjQ9Xfz+         +1fxrlB7cqayQjMTvrTS0Pf1u8B1cM2b/7ES/zrOWF3PQc3f5COIQFISYPjUIm+QoQNN         2OZVTf+ZsfHuin4kg8gBYOLmjCEIKI24TvfhO2qWO748JDzWBBQrDkx63QPacSIYw3xi         35i+Fj91XGwNeDOBc+j+A6kV1fII4X1yLkTW83KdrdTsOcVmU5c1iEASm3PDs6I1DWxl         nkRA==",
+            "To": "imiemailgt@gmail.com",
+            "Mime-Version": "1.0",
+            "X-Gm-Message-State": "AOAM531L2wMadomBALVrxYQsd17KZ6BhpD80WILXVEtJm7Qob7kHfgy8\t0yIdBikJge4CupAtbMsSatyP1H4VKnLlHLQNFexQwALFUftyyMLbtXOd",
+            "Content-Type": "multipart/mixed; boundary=\"----=_Part_922_291774444.1626330808492\""
+        }
+    },
+    "attachments": [
+        {
+            "fileName": "Sample Image.png",
+            "mimeType": "image/png",
+            "url": "https://example.com/sample_image.png",
+            "dropped": true
+        }
+    ],
+    "timestamp": "2019-08-24T14:15:22Z",
+    "redacted": false
+}
+
+## 
+
+⬅️ Outbound Messages
+
+email
+
+{
+    "aliasId": "1d5e87a4-7c7f-484f-92e8-8c1c74ae0f1b",
+    "direction": "outbound",
+    "type": "email",
+    "email": {
+        "from": "support@acme.com",
+        "to": [
+            "john@gmail.com",
+            "pam@gmail.com"
+        ],
+        "cc": [
+            "jane@gmail.com",
+            "mike@gmail.com"
+        ],
+        "strippedText": "Dear Customer, \n\nYour email has been delivered successfully. \n\nHowever, the attachment(s) were not delivered because you are not authorized to send attachment(s) to the recipients or distribution list. \n\nNote: This is an auto-generated email. Please do not reply to this email",
+        "strippedHtml": "Dear Customer,<br><br>Your email has been delivered successfully.<br><br>However, the attachment(s) were not delivered because you are not authorized to send attachment(s) to the recipients or distribution list. <br><br><br> Note: This is an auto-generated email. Please do not reply to this email",
+        "bodyPlain": "Dear Customer, \n\nYour email has been delivered successfully. \n\nHowever, the attachment(s) were not delivered because you are not authorized to send attachment(s) to the recipients or distribution list. \n\nNote: This is an auto-generated email. Please do not reply to this email",
+        "bodyHtml": "Dear Customer,<br><br>Your email has been delivered successfully.<br><br>However, the attachment(s) were not delivered because you are not authorized to send attachment(s) to the recipients or distribution list. <br><br><br> Note: This is an auto-generated email. Please do not reply to this email",
+        "headers": {
+            "Return-Path": "<shhetun227@gmail.com>",
+            "Arc-Authentication-Results": "i=1; mx.google.com;       dkim=pass header.i=@gmail.com header.s=20161025 header.b=CD2a7v7Y;       spf=pass (google.com: domain of shhetun227@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=shhetun227@gmail.com;       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com",
+            "X-Mailgun-Incoming": "Yes",
+            "Received": "from emm-5647b5b88-mzrqw (ec2-35-172-172-213.compute-1.amazonaws.com. [35.172.172.213])        by smtp.gmail.com with ESMTPSA id u11sm2134751qkk.72.2021.07.14.23.33.28        for <imiemailgt@gmail.com>        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);        Wed, 14 Jul 2021 23:33:28 -0700 (PDT)",
+            "X-Google-Smtp-Source": "ABdhPJyOfOyvd1aiYr1iBUplHpNtZu5I/Kc1KssCKM9t++GdBZ8fIqCngsX9zo+uye/7sdKAplq3Sg==",
+            "From": "shhetun227@gmail.com",
+            "Message-Id": "<1236812620.923.1626330808843@emm-5647b5b88-mzrqw>",
+            "Arc-Message-Signature": "i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;        h=mime-version:subject:message-id:to:from:date:dkim-signature;        bh=iLQu8tynkPghC5dc9oL4fX6JstCn3ys9J+EYbyrHLt0=;        b=ouOgfvhahrkY/Zw3RHGBPYZn+AgE5+If9z3MUEYSIAIv0sqLxtclnL5yKKwznKeKjs         SIWjSuX2pGWlYvW7OTqs5wZy2nx5DjGKQ5OUZXbzEq4UeXbqQURjH8exwY6qCnWfKbeQ         WsoBigAalJ3Ht9a1jo/wOYbM2fPss2ZhQ3PFW4g5uhFtnxVBuvlnvE+fw0sgP/9x9AcH         GZKThUoaqJQ3swR10yBA8vt2tZ9kE4YIRJYFfrc8FYVvQPvEazmbIh6f0bSRin/IJa8N         PdeTwPtZaIvtRdui/U0bhSr848UiwE1RHPsWiJ8nGcWbrpKIyIhX/EZq4DGk8xwCjLWb         FGkA==",
+            "Received-Spf": "pass (google.com: domain of shhetun227@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;",
+            "Date": "Thu, 15 Jul 2021 06:33:28 +0000 (GMT)",
+            "Subject": "[Do Not Reply]car jpeg",
+            "X-Envelope-From": "<imiemailgt+caf_=d7387223de17029beb65bafc2a222f4b=emailgwstgsmtp.ga@gmail.com>",
+            "Dkim-Signature": "v=1; a=rsa-sha256; c=relaxed/relaxed;        d=gmail.com; s=20161025;        h=date:from:to:message-id:subject:mime-version;        bh=iLQu8tynkPghC5dc9oL4fX6JstCn3ys9J+EYbyrHLt0=;        b=CD2a7v7Y22V0KlGkKMcLJOjF52PY+JwCdRQeISUjNvo14VyDhpNOOe7jxzV7T/yyj3         BzZwU1K1JYY2E3afnWHEiCVI8e4rstqeDcFFG2tjFln+RgRfme8idJiLC1teTMPJRoMc         59AT2E/+ZxmJiaGumGkQn/wGdpFA5CYzdjaBhCYN0CWSTjADZsK7zzoGn/T8xmrQ2TVn         C3GJiyffTreUw9eJezXDAKyYlgHuUbVkyY4ATVCyEmkt9iXmMULj2tuh5Ms4SY0Wa4Hu         xqNREtIOh3XWr54MLQEWFj8nniprqE/l6Cu68N/6bh8+2QFvQjj7IveQG5Z/FkXDYke9         lmUA==",
+            "X-Google-Dkim-Signature": "v=1; a=rsa-sha256; c=relaxed/relaxed;        d=1e100.net; s=20161025;        h=x-gm-message-state:delivered-to:dkim-signature:date:from:to         :message-id:subject:mime-version;        bh=iLQu8tynkPghC5dc9oL4fX6JstCn3ys9J+EYbyrHLt0=;        b=ThRBUCiIG8pW12QhyVSDfPz/q1Md59Xy/AbO6efRx9Op4/jMcEoQvcGhvG8kwiGesG         wjMoYo3PWM6WHz66rppt8kX9uEsSenfhSVa+WeNUXLJx7f8NiAjVeVPnUJexWU7HX/+b         CzcoAzH8HgVxL3sRcB96me3Pp8YqkuzrYpxYinmnRYT4FWhAHKSTfOe5LMtkeeanld1Z         +knEjgIDY7Qq06qaKlDCrsm4Nck5J37fYzazb441YrvcAljZnYtxAnW346OVDtsQixet         cvQ2KPZjhqCyX3PjWe7L7H5oDP4ym7ipWLQMyh4y4Rz03LwirWQxZxR1LFJCUMI6ADw7         COkA==",
+            "X-Forwarded-To": "d7387223de17029beb65bafc2a222f4b@emailgwstgsmtp.ga",
+            "X-Forwarded-For": "imiemailgt@gmail.com d7387223de17029beb65bafc2a222f4b@emailgwstgsmtp.ga",
+            "Delivered-To": "imiemailgt@gmail.com",
+            "X-Received": "by 2002:ac8:6ec1:: with SMTP id f1mr2497189qtv.104.1626330809072;        Wed, 14 Jul 2021 23:33:29 -0700 (PDT)",
+            "Authentication-Results": "mx.google.com;       dkim=pass header.i=@gmail.com header.s=20161025 header.b=CD2a7v7Y;       spf=pass (google.com: domain of shhetun227@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=shhetun227@gmail.com;       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com",
+            "Arc-Seal": "i=1; a=rsa-sha256; t=1626330809; cv=none;        d=google.com; s=arc-20160816;        b=gnUY2h6yvSaQ7T3R/IW/SMaBwIWys2Z+8ChMWneQQy6llR5gmpO2l8KnLeg9jDESXh         cgm5K2GCWbJPlGcNbES91leHI0VuikydQd7s60QcUJa/6zDfo/gpXGfhcAu1HjQ9Xfz+         +1fxrlB7cqayQjMTvrTS0Pf1u8B1cM2b/7ES/zrOWF3PQc3f5COIQFISYPjUIm+QoQNN         2OZVTf+ZsfHuin4kg8gBYOLmjCEIKI24TvfhO2qWO748JDzWBBQrDkx63QPacSIYw3xi         35i+Fj91XGwNeDOBc+j+A6kV1fII4X1yLkTW83KdrdTsOcVmU5c1iEASm3PDs6I1DWxl         nkRA==",
+            "To": "john@gmail.com",
+            "Mime-Version": "1.0",
+            "X-Gm-Message-State": "AOAM531L2wMadomBALVrxYQsd17KZ6BhpD80WILXVEtJm7Qob7kHfgy8\t0yIdBikJge4CupAtbMsSatyP1H4VKnLlHLQNFexQwALFUftyyMLbtXOd",
+            "Content-Type": "multipart/mixed; boundary=\"----=_Part_922_291774444.1626330808492\""
+        }
+    },
+    "attachments": [
+        {
+            "fileName": "Sample Image.png",
+            "mimeType": "image/png",
+            "url": "https://example.com/sample_image.png",
+            "dropped": true
+        }
+    ],
+    "timestamp": "2019-08-24T14:15:22Z",
+    "attemptGwDelivery": true
+}
+
+## 
+
+↩️ Announcement
+
+Announcements support markdown content. Refer to the cheat sheet below:
+
+announcement
+
+{
+    "aliasId": "1d5e87a4-7c7f-484f-92e8-8c1c74ae0f1b",
+    "direction": "announcement",
+    "type": "text",
+    "text": "Sample **Announcement**",
+    "timestamp": "2019-08-24T14:15:22Z"
+}
+
+## 
+
+Markdown Cheat Sheet
+
+ | Formatting | Synax
+
+ | Bold | Embed within double star symbols (**)
+
+ | Italics | Embed within single underscore symbols (_)

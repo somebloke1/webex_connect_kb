@@ -1,0 +1,43 @@
+{
+  "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257879",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "c970fd354653183f55f1462297c87586c1d6479a9b7f584506ca03231ab004a8",
+    "source_path": "55a345dc891c1a648a505494b1402d53cc3614cf893ab2c9f33c0d02e6a736a5",
+    "text_path": "0e208e18ca88f820df3507d0b1ff5a26fb044e7ba2d59f2fac99ff64b4d9e9d7"
+  },
+  "headings": [
+    "📘Note",
+    "📘Note",
+    "Configure Flows",
+    "📘Note",
+    "Understanding Representative Flows",
+    "FBM Inbound Message Flow",
+    "Routed Flow",
+    "Task Modified",
+    "Close Task",
+    "Livechat Inbound Message Flow",
+    "📘Note"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/wxcc-flow-configuration-using-sample-templates.md",
+  "resolved_url": "https://help.webexconnect.io/docs/wxcc-flow-configuration-using-sample-templates",
+  "retrieved_at": "2026-09-08T23:28:44+00:00",
+  "sha256_html_response": "6c607760d745126107c4322eac86245c37074744608e29fa65a0980a3074b528",
+  "sha256_source_body": "55a345dc891c1a648a505494b1402d53cc3614cf893ab2c9f33c0d02e6a736a5",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/wxcc-flow-configuration-using-sample-templates.source.md",
+  "source_updated_at": "2026-04-15T11:58:33.812Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/wxcc-flow-configuration-using-sample-templates.txt",
+  "title": "Flow Configuration using Sample Templates - WXCC",
+  "url": "https://help.webexconnect.io/docs/wxcc-flow-configuration-using-sample-templates",
+  "word_count": 1790,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/wxcc-flow-configuration-using-sample-templates.metadata.json"
+}

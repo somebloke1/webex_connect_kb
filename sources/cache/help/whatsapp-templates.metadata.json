@@ -1,0 +1,31 @@
+{
+  "category": "TOOLS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257961",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "ecb54396769864c7794b4fe8ee69a06d2332c880f49b557a494be3f3a004a2d2",
+    "source_path": "52ef135301ab5b96042daf2eb8d45dd85189e3dc30f775a42cb1e4c8d72c0133",
+    "text_path": "6478f6664d86498ebe03c14261ad1151f84f94f232e5c9b6e4e22b2086c9d054"
+  },
+  "headings": [],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/whatsapp-templates.md",
+  "resolved_url": "https://help.webexconnect.io/docs/whatsapp-templates",
+  "retrieved_at": "2026-09-08T23:29:34+00:00",
+  "sha256_html_response": "df842f078302370ae141b320b4ca5cf9d973a17fb35534e6480cf5a93c6b3fee",
+  "sha256_source_body": "52ef135301ab5b96042daf2eb8d45dd85189e3dc30f775a42cb1e4c8d72c0133",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/whatsapp-templates.source.md",
+  "source_updated_at": "2024-09-18T13:34:23.220Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/whatsapp-templates.txt",
+  "title": "WhatsApp Template Rejection Reasons",
+  "url": "https://help.webexconnect.io/docs/whatsapp-templates",
+  "word_count": 243,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/whatsapp-templates.metadata.json"
+}

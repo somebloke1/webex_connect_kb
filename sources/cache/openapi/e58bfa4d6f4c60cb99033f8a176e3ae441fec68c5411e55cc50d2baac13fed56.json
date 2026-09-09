@@ -1,0 +1,166 @@
+{
+  "_id": "6a675233ec1c893d8a7f67bc:6a675233ec1c893d8a7f6500",
+  "components": {
+    "securitySchemes": {
+      "sec0": {
+        "in": "header",
+        "name": "key",
+        "type": "apiKey"
+      }
+    }
+  },
+  "info": {
+    "title": "Topic APIs",
+    "version": "6.20.0"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/apps/$(appid)/topics/$(topicid)/users?start=0": {
+      "get": {
+        "deprecated": false,
+        "description": "This API will get all the subscribers of a topic.",
+        "operationId": "get-all-subscribers",
+        "parameters": [
+          {
+            "description": "Application/JSON",
+            "in": "header",
+            "name": "Content-Type",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Client key that can be accessed from your app asset configuration page on imiconnect platform",
+            "in": "header",
+            "name": "secretKey",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "The ID of the app asset that you can obtain from imiconnect platform",
+            "in": "path",
+            "name": "appid",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Specifies the ID of the topic",
+            "in": "path",
+            "name": "topicid",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "The record pointer that defines where to start in the subscriber list. A maximum of 50 subscribers can be returned (if available).",
+            "in": "query",
+            "name": "start",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{\n    \"total\": \"1\",\n    \"code\": 0,\n    \"count\": \"50\",\n    \"description\": \"success\",\n    \"trans_id\": \"a1c40090-8fc0-45f9-bb4b-dbf3d5413d63\",\n    \"users\": [\n        \"1420966801\"\n    ]\n}\n"
+                  }
+                },
+                "schema": {
+                  "properties": {
+                    "code": {
+                      "default": 0,
+                      "example": 0,
+                      "type": "integer"
+                    },
+                    "count": {
+                      "example": "50",
+                      "type": "string"
+                    },
+                    "description": {
+                      "example": "success",
+                      "type": "string"
+                    },
+                    "total": {
+                      "example": "1",
+                      "type": "string"
+                    },
+                    "trans_id": {
+                      "example": "a1c40090-8fc0-45f9-bb4b-dbf3d5413d63",
+                      "type": "string"
+                    },
+                    "users": {
+                      "items": {
+                        "example": "1420966801",
+                        "type": "string"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "200"
+          }
+        },
+        "summary": "Get All Subscribers of a Topic",
+        "x-readme": {
+          "code-samples": [
+            {
+              "code": "-X GET \nhttps://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{{inappid}}/topics/{{topicid}}/users\n-H \"secretKey: {secretKey}\"",
+              "language": "curl"
+            },
+            {
+              "code": "require 'httparty'\n# Create the HTTP objects and post request\nhttp = HTTParty.get(\"\nhttps://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/topics/{topicid}/users\",\n    :headers => {\n                          'secretKey ' => '{secretKey}’\n            }\n)\n# Print on console\nputs http\n",
+              "language": "ruby"
+            },
+            {
+              "code": "var data = null;\n\nvar xhr = new XMLHttpRequest();\n\nxhr.addEventListener(\"readystatechange\", function () {\n  if (this.readyState === this.DONE) {\n    console.log(this.responseText);\n  }\n});\n\nxhr.open(\"GET\", \" \nhttps://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/topics/{topicid}/users\");\nxhr.setRequestHeader(\"secretKey\", \"{secretKey}\");\nxhr.send(data);\n",
+              "language": "javascript"
+            },
+            {
+              "code": "import requests\n\nurl = \" \nhttps://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/topics/{topicid}/users\"\n\nheaders = {'secretKey': '{secretKey}’}\n\nresponse = requests.request(\"GET\", url, headers=headers)\n\nprint(response.text)\n",
+              "language": "python"
+            }
+          ],
+          "samples-languages": [
+            "curl",
+            "ruby",
+            "javascript",
+            "python"
+          ]
+        }
+      }
+    }
+  },
+  "security": [
+    {
+      "sec0": []
+    }
+  ],
+  "servers": [
+    {
+      "url": "https://rtm.imiconnect.io/"
+    }
+  ],
+  "x-readme": {
+    "explorer-enabled": false,
+    "headers": [
+      {
+        "key": "content-type",
+        "value": "application/json"
+      }
+    ],
+    "proxy-enabled": false
+  },
+  "x-readme-fauxas": true
+}

@@ -1,0 +1,35 @@
+{
+  "category": "TOOLS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd81825786f",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "a16b5980bcfe3b7b3a49c1abfb7e25ba505b5c9112e9acbda914d54d7ebbf5b1",
+    "source_path": "bbd2ad2fbde36cb75aa9bf6a01eab89202915856cd23d0c515ae4354ae87605e",
+    "text_path": "31d73fdb0a6cada1153097dcb67c357b16e1076523c45df5fcf4f4c0d57c7082"
+  },
+  "headings": [
+    "Configuring SMS Templates",
+    "📘Note",
+    "Sample Payload for SMS"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/templates-sms.md",
+  "resolved_url": "https://help.webexconnect.io/docs/templates-sms",
+  "retrieved_at": "2026-09-08T23:29:32+00:00",
+  "sha256_html_response": "9ec83b40628e108640683402f18fa59665037f0570b9272fc4f803dd1c6c4608",
+  "sha256_source_body": "bbd2ad2fbde36cb75aa9bf6a01eab89202915856cd23d0c515ae4354ae87605e",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/templates-sms.source.md",
+  "source_updated_at": "2026-06-23T15:40:46.513Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/templates-sms.txt",
+  "title": "SMS",
+  "url": "https://help.webexconnect.io/docs/templates-sms",
+  "word_count": 356,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/templates-sms.metadata.json"
+}

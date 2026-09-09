@@ -1,0 +1,267 @@
+**For Segment**: 
+
+The following is the error code displayed when the Segment messaging is disabled for your tenant.
+
+
+```json
+{
+
+  "code": 70,
+
+  "description": "Segment based messaging feature is not available for your tenant"
+
+}
+```
+
+
+
+
+
+> **Note**
+> 
+> To enable the Segment messaging for your tenant, contact your account manager.
+
+
+
+
+> **Know Your Endpoint**
+> 
+> Based on the domain you use to log in to imiconnect, the endpoint for your API varies. See the [endpoint](https://developers.imiconnect.io/reference/endpoints) section to understand which endpoint to use for your domain.
+
+
+
+
+
+> **Note**
+> 
+> If the segment is without criteria and there are existing users in that segment, then the segment cannot be deleted.
+
+
+
+## API reference metadata
+
+These are source metadata and examples. `api.auth` is ReadMe metadata; verify authentication in the documented headers/security scheme.
+
+```json
+{
+  "results": {
+    "codes": [
+      {
+        "language": "json",
+        "code": "{\n    \"code\": 0,\n    \"description\": \"Success\",\n    \"trans_id\": \"2d6d7632-106f-49d5-b4ad-e334380769ed\"\n}",
+        "status": 200
+      }
+    ]
+  },
+  "settings": "",
+  "examples": {
+    "codes": [
+      {
+        "language": "json",
+        "code": "{\n  //This API doesn't require any body params\n}"
+      },
+      {
+        "code": "-X DELETE https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/segments/{segmentid}\n-H \"secretKey: {secretKey}\"",
+        "language": "curl"
+      },
+      {
+        "code": "var request=require(\"request\");\n var options = {\n          method: 'DELETE',\n          uri: ' https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/segments/{segmentid}',\n          headers: {\n\t'secretKey': '{secretKey}'\n            }\n        };\n  request(options, function(error, response, body) {\n               if(error){\n                  console.log(error);\n             }else{\n                  console.log(response);\n            }\n        });",
+        "language": "json",
+        "name": "Node"
+      },
+      {
+        "code": "require 'httparty'\n# Create the HTTP objects and post request\nhttp = HTTParty.delete(\"https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/segments/{segmentid}\",\n    :headers => {\n                          'secretKey ' => '{secretKey}’\n            }\n)\n# Print on console\nputs http",
+        "language": "ruby"
+      },
+      {
+        "code": "var data = null;\n\nvar xhr = new XMLHttpRequest();\n\nxhr.addEventListener(\"readystatechange\", function () {\n  if (this.readyState === this.DONE) {\n    console.log(this.responseText);\n  }\n});\n\nxhr.open(\"DELETE\", \" https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/segments/{segmentid}\");\nxhr.setRequestHeader(\"secretKey\", \"{secretKey}\");\nxhr.send(data);",
+        "language": "javascript"
+      },
+      {
+        "code": "import requests\n\nurl = \" https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/segments/{segmentid}\"\n\nheaders = {'secretKey': '{secretKey}’}\n\nresponse = requests.request(\"DELETE\", url, headers=headers)\n\nprint(response.text)",
+        "language": "python"
+      }
+    ]
+  },
+  "auth": "required",
+  "params": [
+    {
+      "name": "secretKey",
+      "type": "string",
+      "enumValues": "",
+      "default": "",
+      "desc": "Client key that can be accessed from your app asset configuration page on IMIconnect platform",
+      "required": false,
+      "in": "header",
+      "ref": "",
+      "_id": "5f413b9b56b734026732e376",
+      "id": "5f413b9b56b734026732e376"
+    },
+    {
+      "name": "inappid",
+      "type": "string",
+      "enumValues": "",
+      "default": "",
+      "desc": "The unique identifier corresponding to the app asset",
+      "required": false,
+      "in": "path",
+      "ref": "",
+      "_id": "60194a75f3615d007609cbc5",
+      "id": "60194a75f3615d007609cbc5"
+    },
+    {
+      "name": "segmentid",
+      "type": "string",
+      "enumValues": "",
+      "default": "",
+      "desc": "The unique identifier corresponding to your segment",
+      "required": false,
+      "in": "path",
+      "ref": "",
+      "_id": "60194a75f3615d007609cbc4",
+      "id": "60194a75f3615d007609cbc4"
+    }
+  ],
+  "url": "/apps/{inappid}/segments/{segmentid}",
+  "method": "delete",
+  "apiSetting": "6a675233ec1c893d8a7f67bb"
+}
+```
+
+## OpenAPI operation and component schemas
+
+```json
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Segment APIs",
+    "version": "6.20.0"
+  },
+  "servers": [
+    {
+      "url": "https://rtm.imiconnect.io/rtmsAPI/api/v1"
+    }
+  ],
+  "security": [
+    {
+      "sec0": []
+    }
+  ],
+  "path": "/apps/{inappid}/segments/{segmentid}",
+  "method": "delete",
+  "path_parameters": [],
+  "operation": {
+    "summary": "Delete Segment",
+    "description": "This API is used to delete a segment.",
+    "operationId": "segment-apis-delete",
+    "parameters": [
+      {
+        "name": "secretKey",
+        "in": "header",
+        "description": "Client key that can be accessed from your app asset configuration page on IMIconnect platform",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "inappid",
+        "in": "path",
+        "description": "The unique identifier corresponding to the app asset",
+        "schema": {
+          "type": "string"
+        },
+        "required": true
+      },
+      {
+        "name": "segmentid",
+        "in": "path",
+        "description": "The unique identifier corresponding to your segment",
+        "schema": {
+          "type": "string"
+        },
+        "required": true
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "200",
+        "content": {
+          "application/json": {
+            "examples": {
+              "Result": {
+                "value": "{\n    \"code\": 0,\n    \"description\": \"Success\",\n    \"trans_id\": \"2d6d7632-106f-49d5-b4ad-e334380769ed\"\n}"
+              }
+            },
+            "schema": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "integer",
+                  "example": 0,
+                  "default": 0
+                },
+                "description": {
+                  "type": "string",
+                  "example": "Success"
+                },
+                "trans_id": {
+                  "type": "string",
+                  "example": "2d6d7632-106f-49d5-b4ad-e334380769ed"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "deprecated": false,
+    "x-readme": {
+      "code-samples": [
+        {
+          "language": "curl",
+          "code": "-X DELETE https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/segments/{segmentid}\n-H \"secretKey: {secretKey}\""
+        },
+        {
+          "language": "ruby",
+          "code": "require 'httparty'\n# Create the HTTP objects and post request\nhttp = HTTParty.delete(\"https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/segments/{segmentid}\",\n    :headers => {\n                          'secretKey ' => '{secretKey}’\n            }\n)\n# Print on console\nputs http"
+        },
+        {
+          "language": "javascript",
+          "code": "var data = null;\n\nvar xhr = new XMLHttpRequest();\n\nxhr.addEventListener(\"readystatechange\", function () {\n  if (this.readyState === this.DONE) {\n    console.log(this.responseText);\n  }\n});\n\nxhr.open(\"DELETE\", \" https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/segments/{segmentid}\");\nxhr.setRequestHeader(\"secretKey\", \"{secretKey}\");\nxhr.send(data);"
+        },
+        {
+          "language": "python",
+          "code": "import requests\n\nurl = \" https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/segments/{segmentid}\"\n\nheaders = {'secretKey': '{secretKey}’}\n\nresponse = requests.request(\"DELETE\", url, headers=headers)\n\nprint(response.text)"
+        }
+      ],
+      "samples-languages": [
+        "curl",
+        "ruby",
+        "javascript",
+        "python"
+      ]
+    },
+    "requestBody": {
+      "content": {
+        "application/json": {
+          "schema": {},
+          "examples": {
+            "Request Example": {
+              "value": {}
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "sec0": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "key"
+      }
+    }
+  }
+}
+```

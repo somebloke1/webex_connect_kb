@@ -1,0 +1,35 @@
+{
+  "api_metadata_path": "sources/cache/developer/messenger-outbound-webhooks.api.json",
+  "category": "OUTBOUND WEBHOOKS",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f6552",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "2cf95ddd02f51a3aca34d81c1cf3c4756ae1a9fee1786d43eb9ad9592b192862",
+    "source_path": "2c97671e94555ff6be051d21545012d5c0f8e4b28755bbcd5ead90e39dbe965c",
+    "text_path": "fd67ddd38a46258a537e84472e417e06e1a7b7140928bdba8ca0e15f1184ca64"
+  },
+  "headings": [
+    "Outbound Webhook configuration for tracking message delivery status",
+    "Outbound Webhook configuration for tracking incoming Messenger messages and events"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/messenger-outbound-webhooks.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/messenger-outbound-webhooks",
+  "retrieved_at": "2026-09-08T23:31:44+00:00",
+  "sha256_api_metadata": "187de124aa8aa8acf032d1bfec486640b94ec306193dfc1e0feb2652279c3c88",
+  "sha256_html_response": "754b16476ffe8bec0f9b8373dbae98c0673d907d68938c269ef38d8642c023b5",
+  "sha256_source_body": "2c97671e94555ff6be051d21545012d5c0f8e4b28755bbcd5ead90e39dbe965c",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/messenger-outbound-webhooks.source.md",
+  "source_updated_at": "2026-02-26T06:59:07.087Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/messenger-outbound-webhooks.txt",
+  "title": "Messenger",
+  "url": "https://developers.webexconnect.io/reference/messenger-outbound-webhooks",
+  "word_count": 806,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/messenger-outbound-webhooks.metadata.json"
+}

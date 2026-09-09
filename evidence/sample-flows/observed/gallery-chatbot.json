@@ -1,0 +1,2831 @@
+{
+  "flowId": "96840",
+  "temporary_name": "KBSampleChatbot20260908",
+  "cells": [
+    {
+      "id": "1",
+      "parent": "0",
+      "vertex": false,
+      "edge": false,
+      "value": {
+        "tag": "workflowdata",
+        "attributes": {
+          "copy_used_vars": {
+            "2": {
+              "_usedVars": [],
+              "_usedTransVar": [],
+              "_dynamicVar": [
+                "sms.timestamp",
+                "sms.transid",
+                "sms.message",
+                "sms.sender_number"
+              ],
+              "_dynamicTransVar": []
+            },
+            "11": {
+              "_usedVars": [],
+              "_usedTransVar": [],
+              "_dynamicVar": [],
+              "_dynamicTransVar": []
+            },
+            "19": {
+              "_usedVars": [
+                {
+                  "id": "n11",
+                  "nodeId": 11,
+                  "param": "receive.message",
+                  "fullPath": "n11.receive.message",
+                  "source": 19
+                },
+                {
+                  "id": "n11",
+                  "nodeId": 11,
+                  "param": "receive.message",
+                  "fullPath": "n11.receive.message",
+                  "source": 19
+                },
+                {
+                  "id": "n11",
+                  "nodeId": 11,
+                  "param": "receive.message",
+                  "fullPath": "n11.receive.message",
+                  "source": 19
+                },
+                {
+                  "id": "n11",
+                  "nodeId": 11,
+                  "param": "receive.message",
+                  "fullPath": "n11.receive.message",
+                  "source": 19
+                }
+              ],
+              "_usedTransVar": [],
+              "_dynamicVar": [],
+              "_dynamicTransVar": []
+            },
+            "33": {
+              "_usedVars": [],
+              "_usedTransVar": [],
+              "_dynamicVar": [],
+              "_dynamicTransVar": []
+            },
+            "157": {
+              "_usedVars": [
+                {
+                  "id": "n2",
+                  "nodeId": 2,
+                  "param": "sms.sender_number",
+                  "fullPath": "n2.sms.sender_number",
+                  "source": 157
+                }
+              ],
+              "_usedTransVar": [],
+              "_dynamicVar": [],
+              "_dynamicTransVar": []
+            },
+            "178": {
+              "_usedVars": [
+                {
+                  "id": "n2",
+                  "nodeId": 2,
+                  "param": "sms.sender_number",
+                  "fullPath": "n2.sms.sender_number",
+                  "source": 178
+                }
+              ],
+              "_usedTransVar": [],
+              "_dynamicVar": [],
+              "_dynamicTransVar": []
+            },
+            "185": {
+              "_usedVars": [
+                {
+                  "id": "n2",
+                  "nodeId": 2,
+                  "param": "sms.sender_number",
+                  "fullPath": "n2.sms.sender_number",
+                  "source": 185
+                }
+              ],
+              "_usedTransVar": [],
+              "_dynamicVar": [],
+              "_dynamicTransVar": []
+            },
+            "192": {
+              "_usedVars": [
+                {
+                  "id": "n2",
+                  "nodeId": 2,
+                  "param": "sms.sender_number",
+                  "fullPath": "n2.sms.sender_number",
+                  "source": 192
+                }
+              ],
+              "_usedTransVar": [],
+              "_dynamicVar": [],
+              "_dynamicTransVar": []
+            }
+          },
+          "dynamic_output_vars": {
+            "2": [
+              "sms.timestamp",
+              "sms.transid",
+              "sms.message",
+              "sms.sender_number"
+            ],
+            "5": [],
+            "11": [],
+            "19": [],
+            "29": [],
+            "33": [],
+            "157": [],
+            "178": [],
+            "185": [],
+            "192": []
+          },
+          "logbooks": [],
+          "notes": {
+            "nodes": {},
+            "workflow": {}
+          },
+          "start_node_info": {
+            "channel": 1,
+            "type": "channel",
+            "extras": {
+              "number": 9269,
+              "numberObject": {
+                "unid": 1886,
+                "key_id": "",
+                "reportnumber": 9269,
+                "resource_id": 9269,
+                "sub_channel_id": "",
+                "keyword": "",
+                "TYPE": "Shortcode",
+                "channel_id": 0,
+                "channelsupport": "SMS"
+              },
+              "keyword": "*"
+            },
+            "eventid": 33,
+            "eventname": "MO"
+          }
+        },
+        "text": ""
+      }
+    },
+    {
+      "id": "2",
+      "parent": "1",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "tag": "start",
+        "attributes": {
+          "hidecell": true,
+          "image": "start.svg",
+          "key": "start",
+          "keytype": "fullscreen",
+          "label": "Configure SMS Event",
+          "name": "Start",
+          "nodetype": "start",
+          "type": "start",
+          "updatedImage": "sms.svg",
+          "updatedimage": "sms.svg",
+          "updatedon": "2019-01-29T17:20:57.210",
+          "view_restrict": true
+        },
+        "children": [
+          {
+            "tag": "event",
+            "attributes": {
+              "name": "onbegin",
+              "targetcount": 1
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "selectedChannel",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "selectedRuleEvent",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "ruleEvent",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "ruleConditionStatus",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "conditions",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "apiReqConditions",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "webHookData",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "customEvents",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "isKeyWordDisabled",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "isKeyWordVerifyReq",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "isKeyWordAvailable",
+              "type": "",
+              "view": ""
+            },
+            "text": true
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "ouput_variables",
+              "type": "",
+              "view": ""
+            },
+            "text": [
+              "sms.timestamp",
+              "sms.transid",
+              "sms.message",
+              "sms.sender_number"
+            ]
+          },
+          {
+            "tag": "nodevariablestore",
+            "attributes": {
+              "name": "n2.sms.sender_number",
+              "source": 157
+            },
+            "text": "$(sms.sender_number)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "11",
+      "parent": "1",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "tag": "receive",
+        "attributes": {
+          "image": "recieve-sms.svg",
+          "key": "receive",
+          "label": "Receive",
+          "name": "Receive",
+          "paramhide": true,
+          "type": "Receive",
+          "updatedimage": "recieve-sms.svg",
+          "updatedon": "2018-12-31T12:26:19.881",
+          "view_restrict": true
+        },
+        "children": [
+          {
+            "tag": "event",
+            "attributes": {
+              "name": "ontimeout",
+              "targetcount": 1
+            },
+            "text": ""
+          },
+          {
+            "tag": "event",
+            "attributes": {
+              "name": "onerror",
+              "targetcount": 1
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "timeout",
+              "type": "",
+              "view": ""
+            },
+            "text": 600
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "senderidViewFlag",
+              "type": "",
+              "view": ""
+            },
+            "text": false
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "data",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "resourceinfo",
+              "type": "",
+              "view": ""
+            },
+            "text": {
+              "node_id": 11,
+              "node_name": "Receive",
+              "resource_list": [
+                {
+                  "resource_name": "senderid",
+                  "channel_id": 1,
+                  "resource_values": [
+                    441348800017
+                  ],
+                  "keyword": "*"
+                }
+              ]
+            }
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "viewData",
+              "type": "",
+              "view": ""
+            },
+            "text": [
+              {
+                "isopen": true,
+                "name": "SMS",
+                "icon": "sms",
+                "index": "9a38",
+                "id": 1,
+                "title": "Receive SMS",
+                "params": {
+                  "service_code": 441348800017,
+                  "from": "$(msisdn)",
+                  "keyword": "*"
+                },
+                "desc": "event is triggered when a new message is received from the user on this channel"
+              }
+            ]
+          },
+          {
+            "tag": "nodevariablestore",
+            "attributes": {
+              "name": "n11.receive.message",
+              "source": 19
+            },
+            "text": "$(receive.message)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "19",
+      "parent": "1",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "tag": "evaluate",
+        "attributes": {
+          "image": "branch.svg",
+          "key": "branch",
+          "label": "Branch",
+          "name": "Branch",
+          "paramhide": true,
+          "type": "evaluate",
+          "updatedimage": "branch.svg",
+          "updatedon": "2018-12-31T12:29:33.083",
+          "view_restrict": true
+        },
+        "children": [
+          {
+            "tag": "event",
+            "attributes": {
+              "name": "onerror",
+              "type": "BP"
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hidden": true,
+              "name": "evaluteIsOptimization"
+            },
+            "text": true
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "outcomes",
+              "type": "",
+              "view": ""
+            },
+            "text": [
+              {
+                "outcome": "Cajun",
+                "order": "",
+                "open": false,
+                "isEditOn": false,
+                "tempVal": "Cajun",
+                "conditions": [
+                  {
+                    "varaible": "$(n11.receive.message)",
+                    "condition": "==",
+                    "value": "A",
+                    "operation": "",
+                    "index": "ete84l6b"
+                  }
+                ],
+                "index": "b7tbt4nx"
+              },
+              {
+                "outcome": "Beef",
+                "order": "",
+                "open": false,
+                "isEditOn": false,
+                "tempVal": "Beef",
+                "conditions": [
+                  {
+                    "varaible": "$(n11.receive.message)",
+                    "condition": "==",
+                    "value": "B$(n11.receive.message)",
+                    "operation": "",
+                    "index": "pjq5s53f"
+                  }
+                ],
+                "index": "64prxvou"
+              },
+              {
+                "outcome": "Branch3",
+                "order": "",
+                "open": true,
+                "isEditOn": true,
+                "tempVal": "Veg",
+                "conditions": [
+                  {
+                    "varaible": "$(n11.receive.message)",
+                    "condition": "==",
+                    "value": "C",
+                    "operation": "",
+                    "index": "f5rcirve"
+                  }
+                ],
+                "index": "dv1ejteu"
+              }
+            ]
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "allConditionsFail",
+              "type": "",
+              "view": ""
+            },
+            "text": "None of the above"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "expression",
+              "type": "",
+              "view": ""
+            },
+            "text": "if(\"$(n11.receive.message)\"  == \"A\"){'Cajun';}else if(\"$(n11.receive.message)\"  == \"B$(n11.receive.message)\"){'Beef';}else if(\"$(n11.receive.message)\"  == \"C\"){'Branch3';}else{'None of the above';}"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "counter",
+              "type": "",
+              "view": ""
+            },
+            "text": 4
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "successEvents",
+              "type": "",
+              "view": ""
+            },
+            "text": [
+              "Cajun",
+              "Beef",
+              "Branch3",
+              "None of the above"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "22",
+      "parent": "1",
+      "vertex": false,
+      "edge": true,
+      "source": "11",
+      "target": "19",
+      "value": {
+        "duplicatetarget": false,
+        "label": "",
+        "name": "sms.mo",
+        "optionNodeType": "default",
+        "porttype": "MP",
+        "type": "EDGE",
+        "value": "sms.mo"
+      }
+    },
+    {
+      "id": "33",
+      "parent": "1",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "tag": "http",
+        "attributes": {
+          "image": "http.svg",
+          "key": "http",
+          "label": "HTTP request",
+          "name": "HTTP request",
+          "paramhide": true,
+          "type": "http",
+          "updatedimage": "http.svg",
+          "updatedon": "2018-12-31T12:28:01.630",
+          "view_restrict": true
+        },
+        "children": [
+          {
+            "tag": "event",
+            "attributes": {
+              "name": "oncomplete",
+              "targetcount": 1,
+              "type": "MP"
+            },
+            "text": ""
+          },
+          {
+            "tag": "event",
+            "attributes": {
+              "name": "onerror",
+              "targetcount": 1,
+              "type": "BP"
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "method",
+              "type": "",
+              "view": ""
+            },
+            "text": "get"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "url",
+              "type": "",
+              "view": ""
+            },
+            "text": "https://example.invalid/api/cajunpziza"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "body",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "connctiontimeout",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "requesttimeout",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "proxyaddress",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "42",
+      "parent": "35",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "eventtype": "default",
+        "label": "onerror",
+        "name": "onerror",
+        "nodeLabel": "End",
+        "nodeType": "end",
+        "portType": "BP",
+        "sessionRetryFlag": 0,
+        "type": "EN",
+        "value": "onerror",
+        "data": {
+          "parentNode": 33,
+          "type": "end"
+        },
+        "params": [
+          {
+            "hidden": 1,
+            "name": "sessionRetry",
+            "remove": 1,
+            "value": ""
+          },
+          {
+            "hidden": 1,
+            "name": "exitResult",
+            "value": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "70",
+      "parent": "1",
+      "vertex": false,
+      "edge": true,
+      "source": "19",
+      "target": "33",
+      "value": {
+        "duplicatetarget": false,
+        "edgeConfig": "$(name)",
+        "label": "Cajun",
+        "name": "Cajun",
+        "optionNodeType": "option",
+        "porttype": "MP",
+        "type": "EDGE",
+        "value": "Cajun"
+      }
+    },
+    {
+      "id": "71",
+      "parent": "1",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "tag": "http",
+        "attributes": {
+          "image": "http.svg",
+          "key": "http",
+          "label": "HTTP request",
+          "name": "HTTP request",
+          "paramhide": true,
+          "type": "http",
+          "updatedimage": "http.svg",
+          "updatedon": "2018-12-31T12:28:01.630",
+          "view_restrict": true
+        },
+        "children": [
+          {
+            "tag": "event",
+            "attributes": {
+              "name": "oncomplete",
+              "targetcount": 1,
+              "type": "MP"
+            },
+            "text": ""
+          },
+          {
+            "tag": "event",
+            "attributes": {
+              "name": "onerror",
+              "targetcount": 1,
+              "type": "BP"
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "method",
+              "type": "",
+              "view": ""
+            },
+            "text": "get"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "url",
+              "type": "",
+              "view": ""
+            },
+            "text": "https://example.invalid/api/cajunpziza"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "body",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "connctiontimeout",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "requesttimeout",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "proxyaddress",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "74",
+      "parent": "73",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "eventtype": "default",
+        "label": "onerror",
+        "name": "onerror",
+        "nodeLabel": "End",
+        "nodeType": "end",
+        "portType": "BP",
+        "sessionRetryFlag": 0,
+        "type": "EN",
+        "value": "onerror",
+        "data": {
+          "parentNode": 33,
+          "type": "end"
+        },
+        "params": [
+          {
+            "hidden": 1,
+            "name": "sessionRetry",
+            "remove": 1,
+            "value": ""
+          },
+          {
+            "hidden": 1,
+            "name": "exitResult",
+            "value": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "84",
+      "parent": "1",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "tag": "http",
+        "attributes": {
+          "image": "http.svg",
+          "key": "http",
+          "label": "HTTP request",
+          "name": "HTTP request",
+          "paramhide": true,
+          "type": "http",
+          "updatedimage": "http.svg",
+          "updatedon": "2018-12-31T12:28:01.630",
+          "view_restrict": true
+        },
+        "children": [
+          {
+            "tag": "event",
+            "attributes": {
+              "name": "oncomplete",
+              "targetcount": 1,
+              "type": "MP"
+            },
+            "text": ""
+          },
+          {
+            "tag": "event",
+            "attributes": {
+              "name": "onerror",
+              "targetcount": 1,
+              "type": "BP"
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "method",
+              "type": "",
+              "view": ""
+            },
+            "text": "get"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "url",
+              "type": "",
+              "view": ""
+            },
+            "text": "https://example.invalid/api/cajunpziza"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "body",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "connctiontimeout",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "requesttimeout",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "proxyaddress",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "87",
+      "parent": "86",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "eventtype": "default",
+        "label": "onerror",
+        "name": "onerror",
+        "nodeLabel": "End",
+        "nodeType": "end",
+        "portType": "BP",
+        "sessionRetryFlag": 0,
+        "type": "EN",
+        "value": "onerror",
+        "data": {
+          "parentNode": 33,
+          "type": "end"
+        },
+        "params": [
+          {
+            "hidden": 1,
+            "name": "sessionRetry",
+            "remove": 1,
+            "value": ""
+          },
+          {
+            "hidden": 1,
+            "name": "exitResult",
+            "value": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "108",
+      "parent": "1",
+      "vertex": false,
+      "edge": true,
+      "source": "19",
+      "target": "84",
+      "value": {
+        "duplicatetarget": false,
+        "edgeConfig": "$(name)",
+        "label": "Beef",
+        "name": "Beef",
+        "optionNodeType": "option",
+        "porttype": "MP",
+        "type": "EDGE",
+        "value": "Beef"
+      }
+    },
+    {
+      "id": "119",
+      "parent": "1",
+      "vertex": false,
+      "edge": true,
+      "source": "19",
+      "target": "71",
+      "value": {
+        "duplicatetarget": false,
+        "edgeConfig": "$(name)",
+        "label": "Branch3",
+        "name": "Branch3",
+        "optionNodeType": "option",
+        "porttype": "MP",
+        "type": "EDGE",
+        "value": "Branch3"
+      }
+    },
+    {
+      "id": "127",
+      "parent": "120",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "eventtype": "default",
+        "label": "onerror",
+        "name": "onerror",
+        "nodeLabel": "End",
+        "nodeType": "end",
+        "portType": "BP",
+        "sessionRetryFlag": 0,
+        "type": "EN",
+        "value": "onerror",
+        "data": {
+          "parentNode": 19,
+          "type": "end"
+        },
+        "params": [
+          {
+            "hidden": 1,
+            "name": "sessionRetry",
+            "remove": 1,
+            "value": ""
+          },
+          {
+            "hidden": 1,
+            "name": "exitResult",
+            "value": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "134",
+      "parent": "16",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "eventtype": "default",
+        "label": "onerror",
+        "name": "onerror",
+        "nodeLabel": "End",
+        "nodeType": "end",
+        "portType": "BP",
+        "sessionRetryFlag": 0,
+        "type": "EN",
+        "value": "onerror",
+        "data": {
+          "parentNode": 11,
+          "type": "end"
+        },
+        "params": [
+          {
+            "hidden": 1,
+            "name": "sessionRetry",
+            "remove": 1,
+            "value": ""
+          },
+          {
+            "hidden": 1,
+            "name": "exitResult",
+            "value": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "142",
+      "parent": "15",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "eventtype": "default",
+        "label": "ontimeout",
+        "name": "ontimeout",
+        "nodeLabel": "End",
+        "nodeType": "end",
+        "portType": "TP",
+        "sessionRetryFlag": 0,
+        "type": "EN",
+        "value": "ontimeout",
+        "data": {
+          "parentNode": 11,
+          "type": "end"
+        },
+        "params": [
+          {
+            "hidden": 1,
+            "name": "sessionRetry",
+            "remove": 1,
+            "value": ""
+          },
+          {
+            "hidden": 1,
+            "name": "exitResult",
+            "value": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "157",
+      "parent": "1",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "tag": "umppublic",
+        "attributes": {
+          "image": "sms.svg",
+          "infolabel": "sendsms",
+          "key": "sendsms",
+          "label": "Send SMS",
+          "name": "Send SMS",
+          "paramhide": true,
+          "type": "UmpPublic",
+          "updatedimage": "sms.svg",
+          "updatedon": "2019-01-29T17:21:23.887",
+          "view_restrict": true
+        },
+        "children": [
+          {
+            "tag": "param",
+            "attributes": {
+              "label": "Remove Wait For",
+              "name": "hideWaitFor"
+            },
+            "text": false
+          },
+          {
+            "tag": "event",
+            "attributes": {
+              "name": "onerror",
+              "targetcount": 1
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "messagetype",
+              "type": "",
+              "view": ""
+            },
+            "text": 1
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "message",
+              "type": "",
+              "view": ""
+            },
+            "text": "Welcome to our Pizza ordering bot. Here are your options\nA - Cajun Chicken Pizza\nB - Beef Sizzler\nC - Vegetarian Extravaganza"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "senderid",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "expiry",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "timeout",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "expiryType",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "channelId",
+              "type": "",
+              "view": ""
+            },
+            "text": 1
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "senderidViewFlag",
+              "type": "",
+              "view": ""
+            },
+            "text": false
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "deliverychannel",
+              "type": "",
+              "view": ""
+            },
+            "text": "SMS"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "callbackdata",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "correlationid",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "destination",
+              "type": "",
+              "view": ""
+            },
+            "text": "$(n2.sms.sender_number)"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "destinationType",
+              "type": "",
+              "view": ""
+            },
+            "text": "msisdn"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "successoutcome",
+              "type": "",
+              "view": ""
+            },
+            "text": 1
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "notifyurl",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "linkValidityCheck",
+              "type": "",
+              "view": ""
+            },
+            "text": false
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "shortLinkId",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "linkValidityTime",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "extraParameters",
+              "type": "",
+              "view": ""
+            },
+            "text": {}
+          }
+        ]
+      }
+    },
+    {
+      "id": "160",
+      "parent": "1",
+      "vertex": false,
+      "edge": true,
+      "source": "2",
+      "target": "157",
+      "value": {
+        "duplicatetarget": false,
+        "label": "",
+        "name": "onbegin",
+        "optionNodeType": "default",
+        "porttype": "MP",
+        "type": "EDGE",
+        "value": "onbegin"
+      }
+    },
+    {
+      "id": "163",
+      "parent": "1",
+      "vertex": false,
+      "edge": true,
+      "source": "157",
+      "target": "11",
+      "value": {
+        "duplicatetarget": false,
+        "label": "",
+        "name": "onsuccess",
+        "optionNodeType": "default",
+        "porttype": "MP",
+        "type": "EDGE",
+        "value": "onsuccess"
+      }
+    },
+    {
+      "id": "169",
+      "parent": "161",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "eventtype": "default",
+        "label": "onerror",
+        "name": "onerror",
+        "nodeLabel": "End",
+        "nodeType": "end",
+        "parentInfo": {
+          "name": "onerror"
+        },
+        "portType": "BP",
+        "sessionRetryFlag": 0,
+        "type": "EN",
+        "value": "onerror",
+        "data": {
+          "parentNode": 157,
+          "type": "end"
+        },
+        "params": [
+          {
+            "hidden": 1,
+            "name": "sessionRetry",
+            "remove": 1,
+            "value": ""
+          },
+          {
+            "hidden": 1,
+            "name": "exitResult",
+            "value": 3
+          }
+        ]
+      }
+    },
+    {
+      "id": "176",
+      "parent": "161",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "eventtype": "default",
+        "label": "onpolicyfail",
+        "name": "onpolicyfail",
+        "nodeLabel": "End",
+        "nodeType": "end",
+        "parentInfo": {
+          "name": "onpolicyfail"
+        },
+        "portType": "BP",
+        "sessionRetryFlag": 0,
+        "type": "EN",
+        "value": "onpolicyfail",
+        "data": {
+          "parentNode": 157,
+          "type": "end"
+        },
+        "params": [
+          {
+            "hidden": 1,
+            "name": "sessionRetry",
+            "remove": 1,
+            "value": ""
+          },
+          {
+            "hidden": 1,
+            "name": "exitResult",
+            "value": 4
+          }
+        ]
+      }
+    },
+    {
+      "id": "178",
+      "parent": "1",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "tag": "umppublic",
+        "attributes": {
+          "image": "sms.svg",
+          "infolabel": "sendsms",
+          "key": "sendsms",
+          "label": "Send SMS",
+          "name": "Send SMS",
+          "paramhide": true,
+          "type": "UmpPublic",
+          "updatedimage": "sms.svg",
+          "updatedon": "2019-01-29T17:22:03.221",
+          "view_restrict": true
+        },
+        "children": [
+          {
+            "tag": "param",
+            "attributes": {
+              "label": "Remove Wait For",
+              "name": "hideWaitFor"
+            },
+            "text": false
+          },
+          {
+            "tag": "event",
+            "attributes": {
+              "name": "onerror",
+              "targetcount": 1
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "messagetype",
+              "type": "",
+              "view": ""
+            },
+            "text": 1
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "message",
+              "type": "",
+              "view": ""
+            },
+            "text": "Thanks, your order is confirmed"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "senderid",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "expiry",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "timeout",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "expiryType",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "channelId",
+              "type": "",
+              "view": ""
+            },
+            "text": 1
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "senderidViewFlag",
+              "type": "",
+              "view": ""
+            },
+            "text": false
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "deliverychannel",
+              "type": "",
+              "view": ""
+            },
+            "text": "SMS"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "callbackdata",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "correlationid",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "destination",
+              "type": "",
+              "view": ""
+            },
+            "text": "$(n2.sms.sender_number)"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "destinationType",
+              "type": "",
+              "view": ""
+            },
+            "text": "msisdn"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "successoutcome",
+              "type": "",
+              "view": ""
+            },
+            "text": 1
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "notifyurl",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "linkValidityCheck",
+              "type": "",
+              "view": ""
+            },
+            "text": false
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "shortLinkId",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "linkValidityTime",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "extraParameters",
+              "type": "",
+              "view": ""
+            },
+            "text": {}
+          }
+        ]
+      }
+    },
+    {
+      "id": "185",
+      "parent": "1",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "tag": "umppublic",
+        "attributes": {
+          "image": "sms.svg",
+          "infolabel": "sendsms",
+          "key": "sendsms",
+          "label": "Send SMS",
+          "name": "Send SMS",
+          "paramhide": true,
+          "type": "UmpPublic",
+          "updatedimage": "sms.svg",
+          "updatedon": "2019-01-29T17:22:10.997",
+          "view_restrict": true
+        },
+        "children": [
+          {
+            "tag": "param",
+            "attributes": {
+              "label": "Remove Wait For",
+              "name": "hideWaitFor"
+            },
+            "text": false
+          },
+          {
+            "tag": "event",
+            "attributes": {
+              "name": "onerror",
+              "targetcount": 1
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "messagetype",
+              "type": "",
+              "view": ""
+            },
+            "text": 1
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "message",
+              "type": "",
+              "view": ""
+            },
+            "text": "Thanks, your order is confirmed"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "senderid",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "expiry",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "timeout",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "expiryType",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "channelId",
+              "type": "",
+              "view": ""
+            },
+            "text": 1
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "senderidViewFlag",
+              "type": "",
+              "view": ""
+            },
+            "text": false
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "deliverychannel",
+              "type": "",
+              "view": ""
+            },
+            "text": "SMS"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "callbackdata",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "correlationid",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "destination",
+              "type": "",
+              "view": ""
+            },
+            "text": "$(n2.sms.sender_number)"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "destinationType",
+              "type": "",
+              "view": ""
+            },
+            "text": "msisdn"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "successoutcome",
+              "type": "",
+              "view": ""
+            },
+            "text": 1
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "notifyurl",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "linkValidityCheck",
+              "type": "",
+              "view": ""
+            },
+            "text": false
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "shortLinkId",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "linkValidityTime",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "extraParameters",
+              "type": "",
+              "view": ""
+            },
+            "text": {}
+          }
+        ]
+      }
+    },
+    {
+      "id": "192",
+      "parent": "1",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "tag": "umppublic",
+        "attributes": {
+          "image": "sms.svg",
+          "infolabel": "sendsms",
+          "key": "sendsms",
+          "label": "Send SMS",
+          "name": "Send SMS",
+          "paramhide": true,
+          "type": "UmpPublic",
+          "updatedimage": "sms.svg",
+          "updatedon": "2019-01-29T17:21:56.338",
+          "view_restrict": true
+        },
+        "children": [
+          {
+            "tag": "param",
+            "attributes": {
+              "label": "Remove Wait For",
+              "name": "hideWaitFor"
+            },
+            "text": false
+          },
+          {
+            "tag": "event",
+            "attributes": {
+              "name": "onerror",
+              "targetcount": 1
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "messagetype",
+              "type": "",
+              "view": ""
+            },
+            "text": 1
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "message",
+              "type": "",
+              "view": ""
+            },
+            "text": "Thanks, your order is confirmed"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "senderid",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "expiry",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "timeout",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "expiryType",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "channelId",
+              "type": "",
+              "view": ""
+            },
+            "text": 1
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "senderidViewFlag",
+              "type": "",
+              "view": ""
+            },
+            "text": false
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "deliverychannel",
+              "type": "",
+              "view": ""
+            },
+            "text": "SMS"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "callbackdata",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "correlationid",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "destination",
+              "type": "",
+              "view": ""
+            },
+            "text": "$(n2.sms.sender_number)"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "destinationType",
+              "type": "",
+              "view": ""
+            },
+            "text": "msisdn"
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "successoutcome",
+              "type": "",
+              "view": ""
+            },
+            "text": 1
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "notifyurl",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "linkValidityCheck",
+              "type": "",
+              "view": ""
+            },
+            "text": false
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "shortLinkId",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "linkValidityTime",
+              "type": "",
+              "view": ""
+            },
+            "text": ""
+          },
+          {
+            "tag": "param",
+            "attributes": {
+              "hiddenstate": false,
+              "name": "extraParameters",
+              "type": "",
+              "view": ""
+            },
+            "text": {}
+          }
+        ]
+      }
+    },
+    {
+      "id": "200",
+      "parent": "199",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "eventtype": "default",
+        "label": "onerror",
+        "name": "onerror",
+        "nodeLabel": "End",
+        "nodeType": "end",
+        "parentInfo": {
+          "name": "onerror"
+        },
+        "portType": "BP",
+        "sessionRetryFlag": 0,
+        "type": "EN",
+        "value": "onerror",
+        "data": {
+          "parentNode": 157,
+          "type": "end"
+        },
+        "params": [
+          {
+            "hidden": 1,
+            "name": "sessionRetry",
+            "remove": 1,
+            "value": ""
+          },
+          {
+            "hidden": 1,
+            "name": "exitResult",
+            "value": 3
+          }
+        ]
+      }
+    },
+    {
+      "id": "201",
+      "parent": "199",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "eventtype": "default",
+        "label": "onpolicyfail",
+        "name": "onpolicyfail",
+        "nodeLabel": "End",
+        "nodeType": "end",
+        "parentInfo": {
+          "name": "onpolicyfail"
+        },
+        "portType": "BP",
+        "sessionRetryFlag": 0,
+        "type": "EN",
+        "value": "onpolicyfail",
+        "data": {
+          "parentNode": 157,
+          "type": "end"
+        },
+        "params": [
+          {
+            "hidden": 1,
+            "name": "sessionRetry",
+            "remove": 1,
+            "value": ""
+          },
+          {
+            "hidden": 1,
+            "name": "exitResult",
+            "value": 4
+          }
+        ]
+      }
+    },
+    {
+      "id": "205",
+      "parent": "204",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "eventtype": "default",
+        "label": "onerror",
+        "name": "onerror",
+        "nodeLabel": "End",
+        "nodeType": "end",
+        "parentInfo": {
+          "name": "onerror"
+        },
+        "portType": "BP",
+        "sessionRetryFlag": 0,
+        "type": "EN",
+        "value": "onerror",
+        "data": {
+          "parentNode": 157,
+          "type": "end"
+        },
+        "params": [
+          {
+            "hidden": 1,
+            "name": "sessionRetry",
+            "remove": 1,
+            "value": ""
+          },
+          {
+            "hidden": 1,
+            "name": "exitResult",
+            "value": 3
+          }
+        ]
+      }
+    },
+    {
+      "id": "206",
+      "parent": "204",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "eventtype": "default",
+        "label": "onpolicyfail",
+        "name": "onpolicyfail",
+        "nodeLabel": "End",
+        "nodeType": "end",
+        "parentInfo": {
+          "name": "onpolicyfail"
+        },
+        "portType": "BP",
+        "sessionRetryFlag": 0,
+        "type": "EN",
+        "value": "onpolicyfail",
+        "data": {
+          "parentNode": 157,
+          "type": "end"
+        },
+        "params": [
+          {
+            "hidden": 1,
+            "name": "sessionRetry",
+            "remove": 1,
+            "value": ""
+          },
+          {
+            "hidden": 1,
+            "name": "exitResult",
+            "value": 4
+          }
+        ]
+      }
+    },
+    {
+      "id": "210",
+      "parent": "209",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "eventtype": "default",
+        "label": "onerror",
+        "name": "onerror",
+        "nodeLabel": "End",
+        "nodeType": "end",
+        "parentInfo": {
+          "name": "onerror"
+        },
+        "portType": "BP",
+        "sessionRetryFlag": 0,
+        "type": "EN",
+        "value": "onerror",
+        "data": {
+          "parentNode": 157,
+          "type": "end"
+        },
+        "params": [
+          {
+            "hidden": 1,
+            "name": "sessionRetry",
+            "remove": 1,
+            "value": ""
+          },
+          {
+            "hidden": 1,
+            "name": "exitResult",
+            "value": 3
+          }
+        ]
+      }
+    },
+    {
+      "id": "211",
+      "parent": "209",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "eventtype": "default",
+        "label": "onpolicyfail",
+        "name": "onpolicyfail",
+        "nodeLabel": "End",
+        "nodeType": "end",
+        "parentInfo": {
+          "name": "onpolicyfail"
+        },
+        "portType": "BP",
+        "sessionRetryFlag": 0,
+        "type": "EN",
+        "value": "onpolicyfail",
+        "data": {
+          "parentNode": 157,
+          "type": "end"
+        },
+        "params": [
+          {
+            "hidden": 1,
+            "name": "sessionRetry",
+            "remove": 1,
+            "value": ""
+          },
+          {
+            "hidden": 1,
+            "name": "exitResult",
+            "value": 4
+          }
+        ]
+      }
+    },
+    {
+      "id": "222",
+      "parent": "213",
+      "vertex": true,
+      "edge": false,
+      "value": {
+        "eventtype": "default",
+        "label": "onsuccess",
+        "name": "onsuccess",
+        "nodeLabel": "End",
+        "nodeType": "end",
+        "parentInfo": {
+          "name": "onsuccess"
+        },
+        "portType": "MP",
+        "sessionRetryFlag": 0,
+        "type": "EN",
+        "value": "onsuccess",
+        "data": {
+          "parentNode": 185,
+          "type": "end"
+        },
+        "params": [
+          {
+            "hidden": 1,
+            "name": "sessionRetry",
+            "remove": 1,
+            "value": ""
+          },
+          {
+            "hidden": 1,
+            "name": "exitResult",
+            "value": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": "223",
+      "parent": "1",
+      "vertex": false,
+      "edge": true,
+      "source": "71",
+      "target": "192",
+      "value": {
+        "duplicatetarget": false,
+        "label": "",
+        "name": "oncomplete",
+        "optionNodeType": "default",
+        "porttype": "MP",
+        "type": "EDGE",
+        "value": "oncomplete"
+      }
+    },
+    {
+      "id": "224",
+      "parent": "1",
+      "vertex": false,
+      "edge": true,
+      "source": "84",
+      "target": "178",
+      "value": {
+        "duplicatetarget": false,
+        "label": "",
+        "name": "oncomplete",
+        "optionNodeType": "default",
+        "porttype": "MP",
+        "type": "EDGE",
+        "value": "oncomplete"
+      }
+    },
+    {
+      "id": "225",
+      "parent": "1",
+      "vertex": false,
+      "edge": true,
+      "source": "33",
+      "target": "185",
+      "value": {
+        "duplicatetarget": false,
+        "label": "",
+        "name": "oncomplete",
+        "optionNodeType": "default",
+        "porttype": "MP",
+        "type": "EDGE",
+        "value": "oncomplete"
+      }
+    }
+  ],
+  "customVariables": [
+    {
+      "name": "facebook.psid",
+      "value": "$(facebook.psid)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "wechat.wechat_user_id",
+      "value": "$(wechat.wechat_user_id)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "app.deviceId",
+      "value": "$(app.deviceId)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "app.pushId",
+      "value": "$(app.pushId)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "twitter.twitterid",
+      "value": "$(twitter.twitterid)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "msisdn",
+      "value": "$(msisdn)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "email",
+      "value": "$(email)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "customerId",
+      "value": "$(customerId)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "app.imei",
+      "value": "$(app.imei)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "app.os",
+      "value": "$(app.os)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "app.model",
+      "value": "$(app.model)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "app.telecom",
+      "value": "$(app.telecom)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "app.imsi",
+      "value": "$(app.imsi)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "app.location",
+      "value": "$(app.location)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "app.language",
+      "value": "$(app.language)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "facebook.birthday",
+      "value": "$(facebook.birthday)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "facebook.email",
+      "value": "$(facebook.email)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "facebook.first_name",
+      "value": "$(facebook.first_name)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "facebook.gender",
+      "value": "$(facebook.gender)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "facebook.last_name",
+      "value": "$(facebook.last_name)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "facebook.location",
+      "value": "$(facebook.location)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "facebook.middle_name",
+      "value": "$(facebook.middle_name)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "facebook.name",
+      "value": "$(facebook.name)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "facebook.timezone",
+      "value": "$(facebook.timezone)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "twitter.username",
+      "value": "$(twitter.username)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "app.rtmId",
+      "value": "$(app.rtmId)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "name",
+      "value": "$(name)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "app.oldlocation",
+      "value": "$(app.oldlocation)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "app.mcc",
+      "value": "$(app.mcc)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "app.mnc",
+      "value": "$(app.mnc)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "message",
+      "value": "$(message)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "time",
+      "value": "$(time)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "app.message",
+      "value": "$(app.message)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "sms.message",
+      "value": "$(sms.message)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "twitter.message",
+      "value": "$(twitter.message)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "facebook.message",
+      "value": "$(facebook.message)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "wechat.message",
+      "value": "$(wechat.message)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "app.thread_id",
+      "value": "$(app.thread_id)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "abc.attachmentCount",
+      "value": "$(abc.attachmentCount)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "abc.message",
+      "value": "$(abc.message)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "abc.requestIdentifier",
+      "value": "$(abc.requestIdentifier)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "abc.interactive_type",
+      "value": "$(abc.interactive_type)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "abc.hasattachment",
+      "value": "$(abc.hasattachment)",
+      "dec": "",
+      "type": ""
+    },
+    {
+      "name": "abc.abcUserId",
+      "value": "$(abc.abcUserId)",
+      "dec": "",
+      "type": ""
+    }
+  ],
+  "outcomes": [
+    {
+      "id": 2,
+      "name": 101,
+      "value": "Successfully completed flow",
+      "tag": 11,
+      "tagName": "Success",
+      "type": "default",
+      "notification": null
+    },
+    {
+      "id": 3,
+      "name": 102,
+      "value": "Flow completed with an error",
+      "tag": 12,
+      "tagName": "Error",
+      "type": "default",
+      "notification": null
+    },
+    {
+      "id": 4,
+      "name": 103,
+      "value": "Flow ended due to an interruption",
+      "tag": 13,
+      "tagName": "Incomplete",
+      "type": "default",
+      "notification": null
+    },
+    {
+      "id": 1,
+      "name": 100,
+      "value": "Last executed node event",
+      "statusCode": "All status codes",
+      "tag": 15,
+      "tagName": "Last Execution Status",
+      "type": "default",
+      "notification": null
+    }
+  ],
+  "label": "Chatbot",
+  "observed_at": "2026-09-08T23:58:00.130Z",
+  "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model",
+  "runtime_tested": false,
+  "redactions": "Header credentials and URL hosts redacted. Internal model properties are evidence, not a public import API."
+}

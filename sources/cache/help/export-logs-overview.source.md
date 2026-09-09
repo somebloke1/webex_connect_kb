@@ -1,0 +1,6 @@
+The Export Logs feature allows you to export transaction logs for inbound and outbound messages sent using various channels.
+
+The Export Logs are categorised into two types based on the tenant configuration settings by your account manager.
+
+- [New Export Logs](https://help.imiconnect.io/docs/new-export-logs)
+- [Legacy Export Logs ](https://help.imiconnect.io/docs/legacy-export-logs)

@@ -1,0 +1,765 @@
+# Message Schema - Apple Messages for Business - WxEngage standalone
+
+Source: https://help.webexconnect.io/docs/apple-messages-for-business-3
+Documentation version: 6.20.0
+Retrieved: 2026-09-08T23:29:28+00:00
+
+## ➡️ Inbound Messages
+
+```json text
+{
+    "aliasId": "6ee6ce94-9940-44a6-a017-d99ed4d97dd7",
+    "direction": "inbound",
+    "type": "text",
+    "text": "Hi there, this is a sample inbound text containing credit card info: XXXX XXXX XXXX XXXX",
+    "timestamp": "2019-08-24T14:15:22Z",
+    "redacted": false
+}
+```
+```json text-with-attachments
+{
+    "aliasId": "6ee6ce94-9940-44a6-a017-d99ed4d97dd7",
+    "direction": "inbound",
+    "type": "text-with-attachments",
+    "text": "Hi there, this is a sample inbound message",
+    "attachments": [
+        {
+            "mimeType": "image/png",
+            "fileName": "SampleImage.png",
+            "fileUrl": "https://example.com/sample-image.png",
+            "dropped": false
+        },
+        {
+            "mimeType": "application/pdf",
+            "fileName": "SampleFile.pdf",
+            "fileUrl": "",
+            "dropped": true
+        }
+    ],
+    "timestamp": "2019-08-24T14:15:22Z",
+    "redacted": false,
+    "attemptGwDelivery": true
+}
+```
+```json attachments
+{
+    "aliasId": "6ee6ce94-9940-44a6-a017-d99ed4d97dd7",
+    "direction": "inbound",
+    "type": "attachments",
+    "attachments": [
+        {
+            "mimeType": "image/png",
+            "fileName": "SampleImage.png",
+            "fileUrl": "https://example.com/sample-image.png",
+            "dropped": false
+        },
+        {
+            "mimeType": "application/pdf",
+            "fileName": "SampleFile.pdf",
+            "fileUrl": "",
+            "dropped": true
+        }
+    ],
+    "timestamp": "2019-08-24T14:15:22Z"
+}
+```
+```json amb-list-picker-response
+{
+    "aliasId": "84784d45-765a-4cd8-98e0-f29172fc5c70",
+    "direction": "inbound",
+    "type": "amb-list-picker-response",
+    "ambListPickerResponse": {
+        "replyMessage": {
+            "imageIdentifier": "9190df46-3054-20e0-f227-1f8f4dd4a2b2",
+            "style": "large",
+            "alternateTitle": "I2 and I6",
+            "title": "I2 and I6"
+        },
+        "listPicker": {
+            "otherItemCount": 14,
+            "selectedItemCount": 2,
+            "otherItems": [
+                {
+                    "identifier": "a232323",
+                    "style": "default",
+                    "title": "I1",
+                    "url": "https://s3.amazonaws.com/stagingappleattachment/36e9cb72-15df-486b-8dff-b860fb9fa39d.jpeg",
+                    "order": "0"
+                },
+                {
+                    "identifier": "231231",
+                    "style": "default",
+                    "title": "I3",
+                    "url": "https://s3.amazonaws.com/stagingappleattachment/f6da952f-b346-4e82-a6cc-5020df300f87.jpeg",
+                    "order": "1"
+                },
+                {
+                    "identifier": "21312",
+                    "style": "default",
+                    "title": "I4",
+                    "order": "2"
+                },
+                {
+                    "identifier": "4234232",
+                    "style": "default",
+                    "title": "I5",
+                    "order": "3"
+                },
+                {
+                    "identifier": "234zxczxcx",
+                    "style": "default",
+                    "title": "I7",
+                    "order": "4"
+                },
+                {
+                    "identifier": "2342342",
+                    "style": "default",
+                    "title": "I8",
+                    "order": "5"
+                },
+                {
+                    "identifier": "424123",
+                    "style": "default",
+                    "title": "I9",
+                    "order": "6"
+                },
+                {
+                    "identifier": "45352",
+                    "style": "default",
+                    "title": "I10",
+                    "order": "7"
+                },
+                {
+                    "identifier": "12312312",
+                    "style": "default",
+                    "title": "I11",
+                    "order": "8"
+                },
+                {
+                    "identifier": "312312zxczxc",
+                    "style": "default",
+                    "title": "I12",
+                    "order": "9"
+                },
+                {
+                    "identifier": "123zZX",
+                    "style": "default",
+                    "title": "I13",
+                    "order": "10"
+                },
+                {
+                    "identifier": "3123saa",
+                    "style": "default",
+                    "title": "I14",
+                    "order": "11"
+                },
+                {
+                    "identifier": "2342342",
+                    "style": "default",
+                    "title": "I15",
+                    "order": "12"
+                },
+                {
+                    "identifier": "abcd23211sdf",
+                    "style": "default",
+                    "title": "I16",
+                    "order": "13"
+                }
+            ],
+            "selectedItems": [
+                {
+                    "identifier": "b121312312",
+                    "style": "default",
+                    "title": "I2",
+                    "url": "https://s3.amazonaws.com/stagingappleattachment/6046aba5-13ee-4bc2-95a4-92fc02d0027c.jpeg",
+                    "order": "0"
+                },
+                {
+                    "identifier": "32423423423",
+                    "style": "default",
+                    "title": "I6",
+                    "order": "1"
+                }
+            ]
+        }
+    },
+    "timestamp": "2019-08-24T14:15:22Z",
+    "attemptGwDelivery": true
+}
+```
+```json amb-time-picker-response
+{
+    "aliasId": "84784d45-765a-4cd8-98e0-f29172fc5c70",
+    "direction": "inbound",
+    "type": "amb-time-picker-response",
+    "ambTimePickerResponse": {
+        "replyMessage": {
+            "style": "small",
+            "alternateTitle": "Dec 28, 2023 at 12:00 PM",
+            "title": "Dec 28, 2023 at 12:00 PM"
+        },
+        "datePicker": {
+            "identifier": "Date",
+            "timezoneOffset": "330",
+            "location": {
+                "latitude": 51.123,
+                "longitude": 123.23823,
+                "radius": 10,
+                "title": "St. John's Lane"
+            },
+            "title": "BookAppointment",
+            "timeslots": [
+                {
+                    "duration": "1800",
+                    "identifier": "653",
+                    "startTime": "2023-12-28T06:30+0000"
+                }
+            ]
+        }
+    },
+    "timestamp": "2019-08-24T14:15:22Z",
+    "redacted": false
+}
+```
+```json amb-quick-replies-response
+{
+    "aliasId": "84784d45-765a-4cd8-98e0-f29172fc5c70",
+    "direction": "inbound",
+    "type": "amb-quick-replies-response",
+    "ambQuickRepliesResponse": {
+        "selectedIdentifier": "OptionA",
+        "items": [
+            {
+                "identifier": "OptionA",
+                "title": "Confirm"
+            },
+            {
+                "identifier": "OptionB",
+                "title": "Cancel"
+            }
+        ],
+        "selectedIndex": 0
+    },
+    "timestamp": "2019-08-24T14:15:22Z",
+    "redacted": false
+}
+```
+```json amb-form-response
+{
+    "aliasId": "84784d45-765a-4cd8-98e0-f29172fc5c70",
+    "direction": "inbound",
+    "type": "amb-form-response",
+    "ambFormResponse": {
+        "replyMessage": {
+            "imageIdentifier": "551a9527-e8c1-4395-9431-885c7e8615f2",
+            "subtitle": "This is Subtitle",
+            "style": "small",
+            "alternateTitle": "Tap to view your response.",
+            "title": "Tap to view your response."
+        },
+        "formMessage": {
+            "template": "messageForms",
+            "private": false,
+            "selections": [
+                {
+                    "pageIdentifier": "1",
+                    "subtitle": "Was the merchandise you received defective or not as the merchant described?",
+                    "title": "Item Condition",
+                    "items": [
+                        {
+                            "identifier": "101",
+                            "type": "select",
+                            "title": "Defective",
+                            "value": "defective"
+                        }
+                    ]
+                },
+                {
+                    "pageIdentifier": "2",
+                    "subtitle": "Do you have any supporting documents that demonstrate that the product quality was not sufficient?",
+                    "title": "Supporting Documents",
+                    "items": [
+                        {
+                            "identifier": "202",
+                            "type": "select",
+                            "title": "No",
+                            "value": "no"
+                        }
+                    ]
+                },
+                {
+                    "pageIdentifier": "3",
+                    "subtitle": "Select Your Region",
+                    "title": "",
+                    "items": [
+                        {
+                            "identifier": "303",
+                            "type": "picker",
+                            "title": "LATAM",
+                            "value": "latam"
+                        }
+                    ]
+                },
+                {
+                    "pageIdentifier": "4",
+                    "subtitle": "What date did you receive, or expect to receive the product?",
+                    "title": "Delivery Date",
+                    "items": [
+                        {
+                            "identifier": "4",
+                            "type": "datePicker",
+                            "title": "01/12/2020",
+                            "value": "2020-01-11T18:30:00Z"
+                        }
+                    ]
+                },
+                {
+                    "pageIdentifier": "5",
+                    "subtitle": "Please provide details about remaining issue",
+                    "title": "Remaining Issues",
+                    "items": [
+                        {
+                            "identifier": "5",
+                            "type": "input",
+                            "title": "Ho@thisbss",
+                            "value": "Ho@thisbss"
+                        }
+                    ]
+                },
+                {
+                    "pageIdentifier": "6",
+                    "subtitle": "Please provide name of the product",
+                    "title": "Product name",
+                    "items": [
+                        {
+                            "identifier": "6",
+                            "type": "input",
+                            "title": "$",
+                            "value": ""
+                        }
+                    ]
+                }
+            ],
+            "version": "1.1"
+        }
+    },
+    "timestamp": "2019-08-24T14:15:22Z",
+    "redacted": false
+}
+```
+
+## ⬅️ Outbound Messages
+
+```json text
+{
+    "aliasId": "6ee6ce94-9940-44a6-a017-d99ed4d97dd7",
+    "direction": "outbound",
+    "type": "text",
+    "text": "Hi there, this is a sample outbound text containing credit card info: XXXX XXXX XXXX XXXX",
+    "timestamp": "2019-08-24T14:15:22Z",
+    "redacted": false,
+    "attemptGwDelivery": true
+}
+```
+```json text-with-attachments
+{
+    "aliasId": "6ee6ce94-9940-44a6-a017-d99ed4d97dd7",
+    "direction": "outbound",
+    "type": "text-with-attachments",
+    "text": "Hi there, this is a sample outbound text containing credit card info: XXXX XXXX XXXX XXXX",
+    "attachments": [
+        {
+            "mimeType": "image/png",
+            "fileName": "SampleImage.png",
+            "fileUrl": "https://example.com/sample-image.png",
+            "dropped": false
+        },
+        {
+            "mimeType": "application/pdf",
+            "fileName": "SampleFile.pdf",
+            "fileUrl": "",
+            "dropped": true
+        }
+    ],
+    "timestamp": "2019-08-24T14:15:22Z",
+
+    "attemptGwDelivery": true
+}
+```
+```json attachments
+{
+    "aliasId": "6ee6ce94-9940-44a6-a017-d99ed4d97dd7",
+    "direction": "outbound",
+    "type": "attachments",
+    "attachments": [
+        {
+            "mimeType": "image/png",
+            "fileName": "SampleImage.png",
+            "fileUrl": "https://example.com/sample-image.png",
+            "dropped": false
+        },
+        {
+            "mimeType": "application/pdf",
+            "fileName": "SampleFile.pdf",
+            "fileUrl": "",
+            "dropped": true
+        }
+    ],
+    "timestamp": "2019-08-24T14:15:22Z",
+    "attemptGwDelivery": true
+}
+```
+```json amb-list-picker
+{
+    "aliasId": "6ee6ce94-9940-44a6-a017-d99ed4d97dd7",
+    "direction": "outbound",
+    "type": "wab-buttons",
+    "wabButtons": {
+        "header": {
+            "type": "text",
+            "text": "your text",
+            "document": {
+                "url": "your-media-url",
+                "filename": "some-file-name"
+            },
+            "video": {
+                "url": "your-media-url"
+            },
+            "image": {
+                "url": "your-media-url"
+            }
+        },
+        "body": {
+            "text": "your-text-body-content"
+        },
+        "footer": {
+            "text": "your-text-footer-content"
+        },
+        "action": {
+            "buttons": [
+                {
+                    "type": "reply",
+                    "reply": {
+                        "id": "unique-postback-id",
+                        "title": "First Button’s Title"
+                    }
+                },
+                {
+                    "type": "reply",
+                    "reply": {
+                        "id": "unique-postback-id",
+                        "title": "Second Button’s Title"
+                    }
+                }
+            ]
+        }
+    },
+    "timestamp": "2019-08-24T14:15:22Z",
+    "redacted": false,
+    "attemptGwDelivery": true
+}
+```
+```json amb-time-picker
+{
+    "aliasId": "6ee6ce94-9940-44a6-a017-d99ed4d97dd7",
+    "direction": "outbound",
+    "type": "wab-list",
+    "wabList": {
+        "header": {
+            "type": "text",
+            "text": "your text"
+        },
+        "body": {
+            "text": "your-text-body-content"
+        },
+        "footer": {
+            "text": "your-text-footer-content"
+        },
+        "action": {
+            "button": "cta-button-content",
+            "sections": [
+                {
+                    "title": "section-title-content",
+                    "rows": [
+                        {
+                            "id": "unique-row-identifier",
+                            "title": "row-title-content",
+                            "description": "row-description-content"
+                        }
+                    ]
+                },
+                {
+                    "title": "section-title-content",
+                    "rows": [
+                        {
+                            "id": "unique-row-identifier",
+                            "title": "row-title-content",
+                            "description": "row-description-content"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "timestamp": "2019-08-24T14:15:22Z",
+    "redacted": true,
+    "attemptGwDelivery": true
+}
+```
+```json amb-quick-replies
+{
+    "aliasId": "84784d45-765a-4cd8-98e0-f29172fc5c70",
+    "direction": "outbound",
+    "type": "amb-quick-replies",
+    "ambQuickReplies": {
+        "bid": null,
+        "data": {
+            "version": "1.0",
+            "requestIdentifier": "62d09053dce84463bdbe3e966fcf75b7",
+            "quick-reply": {
+                "summaryText": "select any 1 option from below",
+                "items": [
+                    {
+                        "identifier": "txtOption1",
+                        "title": "option1"
+                    },
+                    {
+                        "identifier": "txtOption2",
+                        "title": "option2"
+                    },
+                    {
+                        "identifier": "txtOption3",
+                        "title": "option3"
+                    },
+                    {
+                        "identifier": "txtOption4",
+                        "title": "option4"
+                    },
+                    {
+                        "identifier": "txtOption5",
+                        "title": "option5"
+                    }
+                ]
+            }
+        }
+    },
+    "timestamp": "2019-08-24T14:15:22Z",
+    "attemptGwDelivery": true
+}
+```
+```json amb-form
+{
+    "aliasId": "84784d45-765a-4cd8-98e0-f29172fc5c70",
+    "direction": "outbound",
+    "type": "amb-form",
+    "ambForm": {
+        "bid": "com.apple.messages.MSMessageExtensionBalloonPlugin:0000000000:com.apple.icloud.apps.messages.business.extension",
+        "data": {
+            "version": "1.0",
+            "requestIdentifier": "c2692c03df80418b8c29dd1b505ec35b",
+            "images": [
+                {
+                    "identifier": "img1a",
+                    "url": "https://i.ytimg.com/vi/PCwL3-hkKrg/maxresdefault.jpg"
+                },
+                {
+                    "identifier": "img1b",
+                    "url": "https://images.pexels.com/photos/70850/butterflies-insect-bezkregowiec-macro-70850.jpeg"
+                },
+                {
+                    "identifier": "img1c",
+                    "url": "http://is-static-content.s3.amazonaws.com/testimgs/monarch.png"
+                }
+            ],
+            "dynamic": {
+                "version": "1.1",
+                "template": "messageForms",
+                "private": true,
+                "data": {
+                    "startPageIdentifier": "0",
+                    "showSummary": true,
+                    "splash": {
+                        "header": "Hello! Thanks for opting for customer survey with edited json",
+                        "splashtext": "Kindly answer the following questions to help us dispute this transaction 123",
+                        "buttonTitle": "next",
+                        "imageIdentifier": "img1a"
+                    },
+                    "pages": [
+                        {
+                            "pageIdentifier": "1",
+                            "type": "input",
+                            "title": "Product name",
+                            "subtitle": "Please provide name of the product",
+                            "nextPageIdentifier": "2",
+                            "options": {
+                                "required": true,
+                                "inputType": "multiline",
+                                "maximumCharacterCount": 20,
+                                "labelText": "Name"
+                            }
+                        },
+                        {
+                            "pageIdentifier": "0",
+                            "type": "select",
+                            "title": "Item Conditions edit",
+                            "subtitle": "Hi user was the merchandise you received defective or not as the merchant described?",
+                            "multipleSelection": false,
+                            "nextPageIdentifier": "1",
+                            "items": [
+                                {
+                                    "title": "Defective one",
+                                    "value": "defective",
+                                    "identifier": "101",
+                                    "nextPageIdentifier": "2",
+                                    "imageIdentifier": "img1b"
+                                },
+                                {
+                                    "title": "Not as described two",
+                                    "value": "notAsDescribed",
+                                    "identifier": "102",
+                                    "nextPageIdentifier": "1",
+                                    "imageIdentifier": "img1c"
+                                }
+                            ]
+                        },
+                        {
+                            "pageIdentifier": "2",
+                            "type": "select",
+                            "title": "Supporting Documents",
+                            "subtitle": "Do you have any supporting documents that demonstrate that the product quality was not sufficient?",
+                            "multipleSelection": true,
+                            "nextPageIdentifier": "3",
+                            "items": [
+                                {
+                                    "title": "Yes",
+                                    "value": "yes",
+                                    "identifier": "201",
+                                    "imageIdentifier": "1"
+                                },
+                                {
+                                    "title": "No",
+                                    "value": "no",
+                                    "identifier": "202",
+                                    "imageIdentifier": "2"
+                                }
+                            ]
+                        },
+                        {
+                            "pageIdentifier": "3",
+                            "type": "picker",
+                            "pickerTitle": "Select Your Region",
+                            "nextPageIdentifier": "4",
+                            "selectedItemIndex": 2,
+                            "subtitle": "Select Your Region",
+                            "items": [
+                                {
+                                    "title": "APAC",
+                                    "value": "apac",
+                                    "identifier": "301"
+                                },
+                                {
+                                    "title": "EMEA",
+                                    "value": "emea",
+                                    "identifier": "302"
+                                },
+                                {
+                                    "title": "LATAM",
+                                    "value": "latam",
+                                    "identifier": "303"
+                                },
+                                {
+                                    "title": "NAM",
+                                    "value": "nam",
+                                    "identifier": "304"
+                                }
+                            ]
+                        },
+                        {
+                            "pageIdentifier": "4",
+                            "type": "datePicker",
+                            "title": "Delivery Date",
+                            "subtitle": "What date did you receive, or expect to receive the product?",
+                            "nextPageIdentifier": "5",
+                            "hintText": "this is Hint Text",
+                            "options": {
+                                "startDate": "01/22/2022",
+                                "maximumDate": "09/21/2022",
+                                "minimumDate": "01/01/2020",
+                                "dateFormat": "",
+                                "labelText": ""
+                            }
+                        },
+                        {
+                            "pageIdentifier": "5",
+                            "type": "input",
+                            "title": "Remaining Issues",
+                            "subtitle": "Please provide details about remaining issue",
+                            "nextPageIdentifier": "6",
+                            "options": {
+                                "required": true,
+                                "inputType": "multiline",
+                                "maximumCharacterCount": 500,
+                                "keyboardType": "UIKeyboardTypeEmailAddress",
+                                "placeholder": ""
+                            }
+                        },
+                        {
+                            "pageIdentifier": "6",
+                            "type": "input",
+                            "title": "Product name",
+                            "subtitle": "Please provide SKU ID of the product",
+                            "options": {
+                                "required": false,
+                                "inputType": "singleline",
+                                "maximumCharacterCount": "100",
+                                "keyboardType": "numbersAndPunctuation",
+                                "placeholder": "Please enter product SKU ID",
+                                "labelText": "SKU ID",
+                                "prefixText": "$"
+                            },
+                            "submitForm": true
+                        }
+                    ]
+                }
+            }
+        },
+        "useLiveLayout": true,
+        "replyMessage": {
+            "style": "",
+            "title": "This is Reply Message",
+            "alternateTitle": null,
+            "imageIdentifier": "551a9527-e8c1-4395-9431-885c7e8615f3"
+        },
+        "requestIdentifier": "c2692c03df80418b8c29dd1b505ec35b",
+        "receivedMessage": {
+            "style": "",
+            "title": "New form template tittle",
+            "subtitle": "New form template subtittle",
+            "imageIdentifier": "551a9527-e8c1-4395-9431-885c7e8615f2"
+        }
+    },
+    "timestamp": "2019-08-24T14:15:22Z",
+    "attemptGwDelivery": true
+}
+```
+
+## ↩️ Announcement
+
+Announcements support markdown content. Refer to the cheat sheet below:
+
+```json announcement
+{
+    "aliasId": "6ee6ce94-9940-44a6-a017-d99ed4d97dd7",
+    "direction": "announcement",
+    "type": "text",
+    "text": "Sample **Announcement**",
+    "timestamp": "2019-08-24T14:15:22Z"
+}
+```
+
+## Markdown Cheat Sheet
+
+| Formatting | Synax                                       |
+| :--------- | :------------------------------------------ |
+| Bold       | Embed within double star symbols (\*\*)     |
+| Italics    | Embed within single underscore symbols (\_) |

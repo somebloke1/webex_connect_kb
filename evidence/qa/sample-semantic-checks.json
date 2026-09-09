@@ -1,0 +1,121 @@
+{
+  "scope": "Critical AI/email/SMS and bounded other-pattern parameter comparisons; not a runtime test",
+  "sample_count": 13,
+  "parameter_comparisons": 26,
+  "records": [
+    {
+      "sample": "gallery-ai-livechat",
+      "fields_compared_directly_to_observed_model": [
+        "1695.method_id",
+        "1695.version_id",
+        "1695.methodResponseParameters",
+        "1695.request_body",
+        "756.timeout",
+        "756.data"
+      ],
+      "result": "pass"
+    },
+    {
+      "sample": "gallery-ai-doctor",
+      "fields_compared_directly_to_observed_model": [
+        "1731.expression",
+        "768.message"
+      ],
+      "result": "pass"
+    },
+    {
+      "sample": "gallery-track-package",
+      "fields_compared_directly_to_observed_model": [
+        "3.outputvariablelist"
+      ],
+      "result": "pass"
+    },
+    {
+      "sample": "native-lookup-appointment",
+      "fields_compared_directly_to_observed_model": [
+        "3.body"
+      ],
+      "result": "pass"
+    },
+    {
+      "sample": "native-sendsms",
+      "fields_compared_directly_to_observed_model": [
+        "3.destination",
+        "3.message"
+      ],
+      "result": "pass"
+    },
+    {
+      "sample": "wxcc-emailinboundflow",
+      "fields_compared_directly_to_observed_model": [
+        "1898.body"
+      ],
+      "result": "pass"
+    },
+    {
+      "sample": "wxcc-sms-inbound",
+      "fields_compared_directly_to_observed_model": [
+        "1186.message"
+      ],
+      "result": "pass"
+    },
+    {
+      "sample": "wxcc-emailattachmentdropnotification",
+      "fields_compared_directly_to_observed_model": [
+        "1980.body"
+      ],
+      "result": "pass"
+    },
+    {
+      "sample": "wxcc-emailinboundsampleflowwithcontactpriority",
+      "fields_compared_directly_to_observed_model": [
+        "1980.expression",
+        "1851.request_body"
+      ],
+      "result": "pass"
+    },
+    {
+      "sample": "wxcc-task-routed-sample-flow-for-extracting-variables",
+      "fields_compared_directly_to_observed_model": [
+        "1520.expression",
+        "1326.request_body"
+      ],
+      "result": "pass"
+    },
+    {
+      "sample": "wxcc-livechatinboundsampleflowwithsetvariablepiqandewt",
+      "fields_compared_directly_to_observed_model": [
+        "2475.nodeInput",
+        "2634.request_body"
+      ],
+      "result": "pass"
+    },
+    {
+      "sample": "wxcc-apple-time-picker-and-list-picker-response-flow",
+      "fields_compared_directly_to_observed_model": [
+        "336.expression",
+        "242.request_body",
+        "348.request_body"
+      ],
+      "result": "pass"
+    },
+    {
+      "sample": "native-checkin",
+      "fields_compared_directly_to_observed_model": [
+        "3.body",
+        "3.outputvariablelist"
+      ],
+      "result": "pass"
+    }
+  ],
+  "doctor_handoff_witness": {
+    "evaluate_node": "1731",
+    "error_js_assignment": "agentTextResponse",
+    "onleave_name": "agentTextResp",
+    "onleave_value": "$(agentTextResp)",
+    "error_edge_internal": 1,
+    "send_node": "768",
+    "send_message": "$(agentTextResp)",
+    "status": "documentation limitation reported to parent"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "category": "DATA MANAGEMENT",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd81825783c",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "2036b8afd8486e87891fa81fb0b80fb3b0473e5f4af40493f663195e5600dcdb",
+    "source_path": "c2ce0ade8ef81f6f4f3b8e50dae3e84517d5e04eec888ab506c3b12f3292b3ca",
+    "text_path": "68cb501a84136a2e6c1be25165ffa9600254b2704e8473953054441ffa73cc60"
+  },
+  "headings": [],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/data-hosting.md",
+  "resolved_url": "https://help.webexconnect.io/docs/data-hosting",
+  "retrieved_at": "2026-09-08T23:29:39+00:00",
+  "sha256_html_response": "e5c11f5b973d0f4c197638effd0606becc790e72311e41691be29d7775ed8d66",
+  "sha256_source_body": "c2ce0ade8ef81f6f4f3b8e50dae3e84517d5e04eec888ab506c3b12f3292b3ca",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/data-hosting.source.md",
+  "source_updated_at": "2024-07-03T09:08:19.992Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/data-hosting.txt",
+  "title": "Data Storage",
+  "url": "https://help.webexconnect.io/docs/data-hosting",
+  "word_count": 125,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/data-hosting.metadata.json"
+}

@@ -1,0 +1,405 @@
+# Getting started with Webex Connect
+
+Source: https://www.youtube.com/watch?v=I041FVBzU_s
+Method: faster-whisper; language: en; kind: local-asr
+Retrieved/processed: 2026-09-08T23:31:32.397808+00:00
+
+Unedited machine/caption evidence. Verify exact UI fields, API names and numbers against the official text documentation.
+
+- [00:00:02.610](https://www.youtube.com/watch?v=I041FVBzU_s&t=2s) — Hello, I am David James. I lead our global sales engineering team here in the Webex see-pass solutions team
+- [00:00:09.770](https://www.youtube.com/watch?v=I041FVBzU_s&t=9s) — Webex connect is a product that I'll be taking you through
+- [00:00:12.970](https://www.youtube.com/watch?v=I041FVBzU_s&t=12s) — In this video series as a slightly deeper dive into the platform getting a little bit more technical
+- [00:00:19.410](https://www.youtube.com/watch?v=I041FVBzU_s&t=19s) — But hopefully not too technical
+- [00:00:21.930](https://www.youtube.com/watch?v=I041FVBzU_s&t=21s) — And yeah, let's get into it
+- [00:00:24.210](https://www.youtube.com/watch?v=I041FVBzU_s&t=24s) — Before I jump in you would have heard Brian ready talk about in video one the disconnect
+- [00:00:30.690](https://www.youtube.com/watch?v=I041FVBzU_s&t=30s) — And I cover the platform product story, so I'm not going to try and repeat his words too much
+- [00:00:35.690](https://www.youtube.com/watch?v=I041FVBzU_s&t=35s) — But maybe a little recap about why we built the platform that we built
+- [00:00:40.330](https://www.youtube.com/watch?v=I041FVBzU_s&t=40s) — So digital natives Ubers, Tetzlers, Netflix of the world other disruptors
+- [00:00:44.330](https://www.youtube.com/watch?v=I041FVBzU_s&t=44s) — They made it look very easy to
+- [00:00:46.650](https://www.youtube.com/watch?v=I041FVBzU_s&t=46s) — Manage this increasing complexity of all these emerging channels because they don't have all this legacy core business systems on the left hand side
+- [00:00:53.490](https://www.youtube.com/watch?v=I041FVBzU_s&t=53s) — So challenges around complex communication integration scale managing protocols
+- [00:00:59.210](https://www.youtube.com/watch?v=I041FVBzU_s&t=59s) — Single points of orchestration
+- [00:01:01.250](https://www.youtube.com/watch?v=I041FVBzU_s&t=61s) — They're not challenges that they face they didn't come with that tech debt
+- [00:01:04.570](https://www.youtube.com/watch?v=I041FVBzU_s&t=64s) — So the fragmentation of channels and consumer journey is an ultimately delivering poor personal experience
+- [00:01:09.770](https://www.youtube.com/watch?v=I041FVBzU_s&t=69s) — Is a lesser faced challenge for those guys
+- [00:01:12.970](https://www.youtube.com/watch?v=I041FVBzU_s&t=72s) — The problem for a lot of large enterprises
+- [00:01:15.170](https://www.youtube.com/watch?v=I041FVBzU_s&t=75s) — We pull millions of dollars into apps that promise great digital presence
+- [00:01:18.970](https://www.youtube.com/watch?v=I041FVBzU_s&t=78s) — But yet digital leaders digital natives still gain ground on us. They still grand gap gain ground on these companies, right?
+- [00:01:28.570](https://www.youtube.com/watch?v=I041FVBzU_s&t=88s) — They're building great platforms as well. They're building their own IP
+- [00:01:32.330](https://www.youtube.com/watch?v=I041FVBzU_s&t=92s) — And so how do we also start to look at it from a
+- [00:01:36.210](https://www.youtube.com/watch?v=I041FVBzU_s&t=96s) — big tech debt large legacy kind of financial services or healthcare or
+- [00:01:41.970](https://www.youtube.com/watch?v=I041FVBzU_s&t=101s) — enterprise type companies, how do we look at it from your perspective and
+- [00:01:47.330](https://www.youtube.com/watch?v=I041FVBzU_s&t=107s) — See how we can help you overcome this challenge
+- [00:01:50.490](https://www.youtube.com/watch?v=I041FVBzU_s&t=110s) — You know, we totally appreciate the modern enterprise for a lot of many systems applications to power their day-to-day
+- [00:01:57.330](https://www.youtube.com/watch?v=I041FVBzU_s&t=117s) — Operations and so this is not about moving away from those systems
+- [00:02:01.650](https://www.youtube.com/watch?v=I041FVBzU_s&t=121s) — This is not about one-stop shop potentially wasting years of cumulative investment
+- [00:02:06.210](https://www.youtube.com/watch?v=I041FVBzU_s&t=126s) — Whenever there isn't one-stop shop, we think the market is covered by an ever-growing list of best-in-breed vendors
+- [00:02:13.610](https://www.youtube.com/watch?v=I041FVBzU_s&t=133s) — Many different parts of our own business will probably want to bring their own technology
+- [00:02:17.050](https://www.youtube.com/watch?v=I041FVBzU_s&t=137s) — You've got e-commerce platforms payment solutions CRMs or the management systems fraud management systems
+- [00:02:23.690](https://www.youtube.com/watch?v=I041FVBzU_s&t=143s) — CRM and case management different transactional platforms
+- [00:02:27.850](https://www.youtube.com/watch?v=I041FVBzU_s&t=147s) — It's impossible to just buy a single data source or data lake and just process this all in one place the promise of a
+- [00:02:34.410](https://www.youtube.com/watch?v=I041FVBzU_s&t=154s) — Just one CDP even still isn't going to get you everything in one single place
+- [00:02:39.210](https://www.youtube.com/watch?v=I041FVBzU_s&t=159s) — So there's a compelling need to connect these about back-end systems essentially with these communication channels and create consistent customer experiences
+- [00:02:48.010](https://www.youtube.com/watch?v=I041FVBzU_s&t=168s) — So that's the bit that we focus on and we do this
+- [00:02:51.490](https://www.youtube.com/watch?v=I041FVBzU_s&t=171s) — Which we're going to talk about today and we've been talking through the series with WebEx connect this brings it together
+- [00:02:56.290](https://www.youtube.com/watch?v=I041FVBzU_s&t=176s) — It's a cloud communications platform. It doesn't rip or replace access glue connective tissue
+- [00:03:02.130](https://www.youtube.com/watch?v=I041FVBzU_s&t=182s) — It augments it plays well alongside these existing investments
+- [00:03:05.810](https://www.youtube.com/watch?v=I041FVBzU_s&t=185s) — So let's dive a little bit deeper into what this platform actually is and does and what's inside this box
+- [00:03:11.850](https://www.youtube.com/watch?v=I041FVBzU_s&t=191s) — So they help navigate through some of the different elements
+- [00:03:14.290](https://www.youtube.com/watch?v=I041FVBzU_s&t=194s) — We've broken the platform down into six key areas and they're the areas I'm going to talk to one by one
+- [00:03:19.410](https://www.youtube.com/watch?v=I041FVBzU_s&t=199s) — The central four pillars they essentially allow you to build and deliver great experiences right for your developers or your line of business working together or
+- [00:03:27.690](https://www.youtube.com/watch?v=I041FVBzU_s&t=207s) — individually
+- [00:03:28.650](https://www.youtube.com/watch?v=I041FVBzU_s&t=208s) — You've got your integrations into your own and systems. We're going to talk more about that
+- [00:03:32.210](https://www.youtube.com/watch?v=I041FVBzU_s&t=212s) — You've got your business logic and flow builder drag-and-drop if this then that logic
+- [00:03:36.290](https://www.youtube.com/watch?v=I041FVBzU_s&t=216s) — You've got AI conversational capabilities of course AI conversational automation is key in this day and age
+- [00:03:42.490](https://www.youtube.com/watch?v=I041FVBzU_s&t=222s) — especially with all the advancements in LLM and of course we wouldn't be a
+- [00:03:46.810](https://www.youtube.com/watch?v=I041FVBzU_s&t=226s) — Communication platform if we weren't going to talk to you about the communication channels and our rich
+- [00:03:51.370](https://www.youtube.com/watch?v=I041FVBzU_s&t=231s) — heritage and the future of messaging that we see there
+- [00:03:55.210](https://www.youtube.com/watch?v=I041FVBzU_s&t=235s) — Around this we have an enterprise grave wrapper. So think about control center service assurance layers reporting
+- [00:04:03.370](https://www.youtube.com/watch?v=I041FVBzU_s&t=243s) — Infrastructure management those types of things. So we'll also talk about that as well
+- [00:04:07.530](https://www.youtube.com/watch?v=I041FVBzU_s&t=247s) — So I'm going to bring them all to life a little bit more detail as we go through
+- [00:04:17.740](https://www.youtube.com/watch?v=I041FVBzU_s&t=257s) — Starting off with communication channel management. We think it's the key pillar really
+- [00:04:22.420](https://www.youtube.com/watch?v=I041FVBzU_s&t=262s) — We of course can expose these my rapi's and we can just be a simple API and
+- [00:04:28.660](https://www.youtube.com/watch?v=I041FVBzU_s&t=268s) — Partner for for you guys to just send payloads to us and we push to the messaging channel
+- [00:04:33.420](https://www.youtube.com/watch?v=I041FVBzU_s&t=273s) — We have 16 of these channels out box
+- [00:04:35.900](https://www.youtube.com/watch?v=I041FVBzU_s&t=275s) — We can even develop custom channels into your own
+- [00:04:39.860](https://www.youtube.com/watch?v=I041FVBzU_s&t=279s) — own channel of choice to bring your own channel we can almost call it and so a
+- [00:04:44.340](https://www.youtube.com/watch?v=I041FVBzU_s&t=284s) — Quick overview here would be that we are not just a tier one SMS aggregator in many markets as we're known in many markets
+- [00:04:50.620](https://www.youtube.com/watch?v=I041FVBzU_s&t=290s) — Which gives us the best price points the best deliverability and lowest latency and there's only a few of those tier one SMS aggregators in the world
+- [00:04:58.980](https://www.youtube.com/watch?v=I041FVBzU_s&t=298s) — But we also have a wider range of traditional channels like email voice our own app in that push SDK
+- [00:05:05.780](https://www.youtube.com/watch?v=I041FVBzU_s&t=305s) — Live chat SDK and I think more importantly as well as in terms of future proofing
+- [00:05:12.380](https://www.youtube.com/watch?v=I041FVBzU_s&t=312s) — We we have deep relationships with the likes of meta apple and Google
+- [00:05:16.100](https://www.youtube.com/watch?v=I041FVBzU_s&t=316s) — But what that actually means is we've launched first in market solutions on some of these
+- [00:05:21.060](https://www.youtube.com/watch?v=I041FVBzU_s&t=321s) — We have a future proof platform
+- [00:05:24.500](https://www.youtube.com/watch?v=I041FVBzU_s&t=324s) — So all of your communication channels under one proof the advantage for you working on a single platform
+- [00:05:30.020](https://www.youtube.com/watch?v=I041FVBzU_s&t=330s) — Your future proof you consolidate
+- [00:05:32.100](https://www.youtube.com/watch?v=I041FVBzU_s&t=332s) — And we insulate all the complexity of multi-channel of what's next of all of the different
+- [00:05:36.980](https://www.youtube.com/watch?v=I041FVBzU_s&t=336s) — Channel rich channel aware capabilities that you that you see across these emerging channels
+- [00:05:42.220](https://www.youtube.com/watch?v=I041FVBzU_s&t=342s) — And I'm talking about carousels and list pickers and rich buttons and all of the ways in which these channels become
+- [00:05:48.940](https://www.youtube.com/watch?v=I041FVBzU_s&t=348s) — Interactive and we give you those tools and capabilities in a very easy and intuitive manner within our platform
+- [00:05:55.260](https://www.youtube.com/watch?v=I041FVBzU_s&t=355s) — And I'll show you a little bit about that now
+- [00:05:57.340](https://www.youtube.com/watch?v=I041FVBzU_s&t=357s) — So first up from an API perspective simple send receive message when you log into the platform
+- [00:06:02.940](https://www.youtube.com/watch?v=I041FVBzU_s&t=362s) — You're going to see some of these services each services a name workspace that addresses a customer interaction use case for some context here
+- [00:06:10.460](https://www.youtube.com/watch?v=I041FVBzU_s&t=370s) — And we're not going to go deep into an overview of the platform
+- [00:06:13.980](https://www.youtube.com/watch?v=I041FVBzU_s&t=373s) — We have API documentation available on our developer portal
+- [00:06:17.900](https://www.youtube.com/watch?v=I041FVBzU_s&t=377s) — Helps developers navigate all of this has helpful code snippets and samples that aid that configuration
+- [00:06:25.100](https://www.youtube.com/watch?v=I041FVBzU_s&t=385s) — And so that when we do come back into the services you can use
+- [00:06:28.700](https://www.youtube.com/watch?v=I041FVBzU_s&t=388s) — apis for outbound communication
+- [00:06:31.020](https://www.youtube.com/watch?v=I041FVBzU_s&t=391s) — You can configure these outbound webhooks we call them very easily for incoming events
+- [00:06:35.420](https://www.youtube.com/watch?v=I041FVBzU_s&t=395s) — So an appointment reminder or something like that that might be coming in
+- [00:06:38.380](https://www.youtube.com/watch?v=I041FVBzU_s&t=398s) — And we have a set of authentication tokens for enterprise grade security as well. That's really important businesses need those
+- [00:06:44.860](https://www.youtube.com/watch?v=I041FVBzU_s&t=404s) — So typically an enterprise developers are responsible for the API integration
+- [00:06:48.060](https://www.youtube.com/watch?v=I041FVBzU_s&t=408s) — But messaging and content is often handled by functional teams in the line of business
+- [00:06:51.980](https://www.youtube.com/watch?v=I041FVBzU_s&t=411s) — So we have rich template management capabilities. We have things like
+- [00:06:55.900](https://www.youtube.com/watch?v=I041FVBzU_s&t=415s) — WhatsApp template management apis
+- [00:06:58.380](https://www.youtube.com/watch?v=I041FVBzU_s&t=418s) — That can all be managed from within the platform
+- [00:07:01.500](https://www.youtube.com/watch?v=I041FVBzU_s&t=421s) — SMS templates and other things here and I'm going to show you some of our email template capability as well
+- [00:07:07.900](https://www.youtube.com/watch?v=I041FVBzU_s&t=427s) — So we have an email our email composer just one of the channels and one of the
+- [00:07:12.300](https://www.youtube.com/watch?v=I041FVBzU_s&t=432s) — richer channel elements that we can show you here
+- [00:07:15.980](https://www.youtube.com/watch?v=I041FVBzU_s&t=435s) — While I'm showing this is because it allows you to do a couple of things
+- [00:07:19.660](https://www.youtube.com/watch?v=I041FVBzU_s&t=439s) — So you can import your own HTML and edit it from within the platform
+- [00:07:23.420](https://www.youtube.com/watch?v=I041FVBzU_s&t=443s) — This gives you rich previews on different devices, which is really cool
+- [00:07:26.940](https://www.youtube.com/watch?v=I041FVBzU_s&t=446s) — So you can see how that comes to life
+- [00:07:29.100](https://www.youtube.com/watch?v=I041FVBzU_s&t=449s) — But what a number of our customers really like doing our clients really like doing
+- [00:07:33.260](https://www.youtube.com/watch?v=I041FVBzU_s&t=453s) — Is using these configurable set of building blocks
+- [00:07:35.740](https://www.youtube.com/watch?v=I041FVBzU_s&t=455s) — We call them conditional logic and we things like partials
+- [00:07:39.340](https://www.youtube.com/watch?v=I041FVBzU_s&t=459s) — So blocks of code that can be consistent across multiple templates that you only edit once in one place
+- [00:07:44.700](https://www.youtube.com/watch?v=I041FVBzU_s&t=464s) — And this reduces the number of templates needed
+- [00:07:48.300](https://www.youtube.com/watch?v=I041FVBzU_s&t=468s) — An organization needs to manage essentially by using if this then that logic and really drives
+- [00:07:54.140](https://www.youtube.com/watch?v=I041FVBzU_s&t=474s) — Personalization based off your data. So highly targeted highly rich
+- [00:07:58.940](https://www.youtube.com/watch?v=I041FVBzU_s&t=478s) — And data driven campaigning messaging
+- [00:08:03.660](https://www.youtube.com/watch?v=I041FVBzU_s&t=483s) — Which is at the core of what I guess one of our value promises is
+- [00:08:14.090](https://www.youtube.com/watch?v=I041FVBzU_s&t=494s) — Okay, moving on to AI. We talked a little bit about this already
+- [00:08:18.810](https://www.youtube.com/watch?v=I041FVBzU_s&t=498s) — Let's go a step deeper. So what do we mean when we talk about conversation automation? So
+- [00:08:24.970](https://www.youtube.com/watch?v=I041FVBzU_s&t=504s) — This layer provides multiple options for conversation automation ranging from what we would call basic structured
+- [00:08:30.730](https://www.youtube.com/watch?v=I041FVBzU_s&t=510s) — scripted kind of menu driven bots to query based in FAQ bots
+- [00:08:34.970](https://www.youtube.com/watch?v=I041FVBzU_s&t=514s) — And even all the way through to fully unstructured, of course, the advancements in llm are slightly better for this but unstructured
+- [00:08:43.370](https://www.youtube.com/watch?v=I041FVBzU_s&t=523s) — natural language smart bots
+- [00:08:45.610](https://www.youtube.com/watch?v=I041FVBzU_s&t=525s) — And we we even have powerful integrations into bring your own bots
+- [00:08:50.250](https://www.youtube.com/watch?v=I041FVBzU_s&t=530s) — So if you wanted to bring a dialogue flow bot, we are not suggesting that you can only use our own IP when building these experiences
+- [00:08:57.130](https://www.youtube.com/watch?v=I041FVBzU_s&t=537s) — We we play nicely as I mentioned before and we can integrate into any bot platform
+- [00:09:02.010](https://www.youtube.com/watch?v=I041FVBzU_s&t=542s) — And you can propagate that into your your messaging
+- [00:09:05.530](https://www.youtube.com/watch?v=I041FVBzU_s&t=545s) — But if you want to use our own bot builder
+- [00:09:07.850](https://www.youtube.com/watch?v=I041FVBzU_s&t=547s) — We have a rich set of low code functions in here as well
+- [00:09:11.450](https://www.youtube.com/watch?v=I041FVBzU_s&t=551s) — Utilize invest in breed libraries in the market our own toolkit
+- [00:09:16.330](https://www.youtube.com/watch?v=I041FVBzU_s&t=556s) — and essentially we have some
+- [00:09:19.450](https://www.youtube.com/watch?v=I041FVBzU_s&t=559s) — Routine nlp functions that are very specific to messaging as well like date time recognition spell check
+- [00:09:26.010](https://www.youtube.com/watch?v=I041FVBzU_s&t=566s) — OCR things like that
+- [00:09:30.420](https://www.youtube.com/watch?v=I041FVBzU_s&t=570s) — A quick demo of our bot capabilities. So as mentioned key aspects of conversational experiences are chatbots
+- [00:09:37.540](https://www.youtube.com/watch?v=I041FVBzU_s&t=577s) — And this is our bot builder as part of WebEx connect
+- [00:09:42.180](https://www.youtube.com/watch?v=I041FVBzU_s&t=582s) — Here we can define our bot as you see here. We click into our bots. We see things like
+- [00:09:47.460](https://www.youtube.com/watch?v=I041FVBzU_s&t=587s) — status the languages supported
+- [00:09:50.020](https://www.youtube.com/watch?v=I041FVBzU_s&t=590s) — handover instructions
+- [00:09:51.540](https://www.youtube.com/watch?v=I041FVBzU_s&t=591s) — We can configure things like live agent fallback because of course if a bot fails what then happens as a very common use case
+- [00:09:59.460](https://www.youtube.com/watch?v=I041FVBzU_s&t=599s) — And we define as well in here things like articles and variants of those and then start to define responses to that input
+- [00:10:06.820](https://www.youtube.com/watch?v=I041FVBzU_s&t=606s) — So without getting too deep here. I think one thing that's really cool is we can define these on a channel by channel basis
+- [00:10:13.140](https://www.youtube.com/watch?v=I041FVBzU_s&t=613s) — What do we mean by that? So apple message for business, for example, might have rich list pickers
+- [00:10:18.740](https://www.youtube.com/watch?v=I041FVBzU_s&t=618s) — What's out has a click buttons and rich cards that you can pull through that are different
+- [00:10:23.220](https://www.youtube.com/watch?v=I041FVBzU_s&t=623s) — Whereas sms is just plain text only and what this means is
+- [00:10:26.980](https://www.youtube.com/watch?v=I041FVBzU_s&t=626s) — Because we have the channel where capabilities it prevents sms and plain text from being the lowest common denominator
+- [00:10:32.500](https://www.youtube.com/watch?v=I041FVBzU_s&t=632s) — Across these channel experiences allows us to focus on delivering the best experience across any channel
+- [00:10:39.540](https://www.youtube.com/watch?v=I041FVBzU_s&t=639s) — Again, one of our key themes, you know deliver the best experience across any channel broad, but also deep
+- [00:10:45.140](https://www.youtube.com/watch?v=I041FVBzU_s&t=645s) — Uh, we want to democratize the experience of building these to allow non-technical folks to participate as well
+- [00:10:51.380](https://www.youtube.com/watch?v=I041FVBzU_s&t=651s) — Again a step further
+- [00:10:52.660](https://www.youtube.com/watch?v=I041FVBzU_s&t=652s) — We also do things within our bot environment, of course around testing and previewing the bots
+- [00:10:57.300](https://www.youtube.com/watch?v=I041FVBzU_s&t=657s) — I said, I'm not going to go too deep
+- [00:10:59.380](https://www.youtube.com/watch?v=I041FVBzU_s&t=659s) — In this session today, but this allows us to create optimize the bot based on actionable data
+- [00:11:04.420](https://www.youtube.com/watch?v=I041FVBzU_s&t=664s) — Like sessions in the history of all the interactions. Of course, we are introducing
+- [00:11:08.900](https://www.youtube.com/watch?v=I041FVBzU_s&t=668s) — LLM driven bot development
+- [00:11:11.460](https://www.youtube.com/watch?v=I041FVBzU_s&t=671s) — What does that mean? It essentially means reducing training time for developers
+- [00:11:15.540](https://www.youtube.com/watch?v=I041FVBzU_s&t=675s) — Or to make the learning and efficiency of your chat bot. So again an ever-evolving toolkit here
+- [00:11:21.300](https://www.youtube.com/watch?v=I041FVBzU_s&t=681s) — With a constantly innovative roadmap
+- [00:11:32.170](https://www.youtube.com/watch?v=I041FVBzU_s&t=692s) — integrations and set up
+- [00:11:34.410](https://www.youtube.com/watch?v=I041FVBzU_s&t=694s) — Set up and management. So just going to talk a little bit about what does this mean?
+- [00:11:38.810](https://www.youtube.com/watch?v=I041FVBzU_s&t=698s) — So we think this is a usp for us in the cpass space as well
+- [00:11:42.730](https://www.youtube.com/watch?v=I041FVBzU_s&t=702s) — Many many companies have what you call a marketplace
+- [00:11:46.490](https://www.youtube.com/watch?v=I041FVBzU_s&t=706s) — So they might have some his ones we've done earlier
+- [00:11:48.890](https://www.youtube.com/watch?v=I041FVBzU_s&t=708s) — But we'll talk a little bit about how we can also integrate into basically any system of record on your side
+- [00:11:55.290](https://www.youtube.com/watch?v=I041FVBzU_s&t=715s) — So a quick context set that existing systems are designed
+- [00:11:59.610](https://www.youtube.com/watch?v=I041FVBzU_s&t=719s) — Usually for specific purposes like processing a payment
+- [00:12:03.050](https://www.youtube.com/watch?v=I041FVBzU_s&t=723s) — They're not designed for custom experience and many of these were designed a while ago as well
+- [00:12:07.290](https://www.youtube.com/watch?v=I041FVBzU_s&t=727s) — Before the kind of digital age that we're currently in and they were designed designed to augment
+- [00:12:11.850](https://www.youtube.com/watch?v=I041FVBzU_s&t=731s) — So you don't have to rip and replace. That's why we integrate into any system
+- [00:12:15.770](https://www.youtube.com/watch?v=I041FVBzU_s&t=735s) — We have a set of upcoming integrations that we do build out of the box that you can use
+- [00:12:20.330](https://www.youtube.com/watch?v=I041FVBzU_s&t=740s) — So you can see those on your screen here
+- [00:12:22.970](https://www.youtube.com/watch?v=I041FVBzU_s&t=742s) — Adding things like epic and server to those as we know that they are very common platforms with an organization
+- [00:12:28.010](https://www.youtube.com/watch?v=I041FVBzU_s&t=748s) — And we can make your lives a lot easier by building a custom node and I'll show you what I mean by that in a second
+- [00:12:34.410](https://www.youtube.com/watch?v=I041FVBzU_s&t=754s) — But unlike vendors who just provide out of the box integrations or marketplaces
+- [00:12:38.890](https://www.youtube.com/watch?v=I041FVBzU_s&t=758s) — We've rather flexibility and integrate with
+- [00:12:41.530](https://www.youtube.com/watch?v=I041FVBzU_s&t=761s) — Any existing business system and applications that are part of a vendor's tech stack as well as third party providers partner systems
+- [00:12:49.690](https://www.youtube.com/watch?v=I041FVBzU_s&t=769s) — And I think this is essentially where you can tailor the products to you the enterprise by building a custom palette of integrations
+- [00:12:57.450](https://www.youtube.com/watch?v=I041FVBzU_s&t=777s) — essentially build it once single configuration
+- [00:13:00.570](https://www.youtube.com/watch?v=I041FVBzU_s&t=780s) — multi-use and reuse them across multiple departments and workflows and control any downstream or changes to those and you only have to edit it once and it will
+- [00:13:09.610](https://www.youtube.com/watch?v=I041FVBzU_s&t=789s) — Especially propagate or and take effect across all customer journeys, which is really cool. Really powerful
+- [00:13:16.730](https://www.youtube.com/watch?v=I041FVBzU_s&t=796s) — So diving into custom integrations a layer deeper
+- [00:13:21.130](https://www.youtube.com/watch?v=I041FVBzU_s&t=801s) — So here you see our our integration palette
+- [00:13:24.170](https://www.youtube.com/watch?v=I041FVBzU_s&t=804s) — You can see how we go to create a custom node. You can see all the other integrations that are within this section
+- [00:13:30.170](https://www.youtube.com/watch?v=I041FVBzU_s&t=810s) — We're going to have a little bit of a deeper look here. You'll see us navigate through some quite technical components
+- [00:13:36.250](https://www.youtube.com/watch?v=I041FVBzU_s&t=816s) — Um, we'll see us look at things in the in the platform UI itself and how these are configured
+- [00:13:42.090](https://www.youtube.com/watch?v=I041FVBzU_s&t=822s) — Here's one we did earlier a dialogue flow one
+- [00:13:44.090](https://www.youtube.com/watch?v=I041FVBzU_s&t=824s) — We did earlier along with all the other customer integrations
+- [00:13:46.650](https://www.youtube.com/watch?v=I041FVBzU_s&t=826s) — We have configured in the tenant as we dive into it. You're going to see here
+- [00:13:50.090](https://www.youtube.com/watch?v=I041FVBzU_s&t=830s) — So we've built a post method custom node for intent detection
+- [00:13:54.730](https://www.youtube.com/watch?v=I041FVBzU_s&t=834s) — You can see the other methods available
+- [00:13:56.890](https://www.youtube.com/watch?v=I041FVBzU_s&t=836s) — The level of authorization we can configure and how we can pass parameters through in a dynamic or a static fashion
+- [00:14:04.890](https://www.youtube.com/watch?v=I041FVBzU_s&t=844s) — Sample response code we have we've got that from the other tab the google the google dialogue flow api docs
+- [00:14:11.530](https://www.youtube.com/watch?v=I041FVBzU_s&t=851s) — You can see the parameters that we've configured against those session id and the developers map those responses to node edges or outcomes
+- [00:14:18.650](https://www.youtube.com/watch?v=I041FVBzU_s&t=858s) — Success error timeout, etc. And then we can test and save this
+- [00:14:23.930](https://www.youtube.com/watch?v=I041FVBzU_s&t=863s) — And whilst this is perhaps a more technical configuration
+- [00:14:26.250](https://www.youtube.com/watch?v=I041FVBzU_s&t=866s) — As I said the brilliance of this these custom nodes is it's won't stay unconfigured as you see here
+- [00:14:31.370](https://www.youtube.com/watch?v=I041FVBzU_s&t=871s) — They can easily be used by anyone on the flow builder and you see us here simply dragging
+- [00:14:37.290](https://www.youtube.com/watch?v=I041FVBzU_s&t=877s) — Our dialogue flow node onto the palette from our list of integrations
+- [00:14:40.810](https://www.youtube.com/watch?v=I041FVBzU_s&t=880s) — Quickly configuring some basic details to add intent detection to an existing flow
+- [00:14:45.770](https://www.youtube.com/watch?v=I041FVBzU_s&t=885s) — And this will then essentially in this case evaluate an inbound message input from the customer and simply add
+- [00:14:51.530](https://www.youtube.com/watch?v=I041FVBzU_s&t=891s) — The past input variable into the node just like that
+- [00:14:54.650](https://www.youtube.com/watch?v=I041FVBzU_s&t=894s) — You've seen how easy it is to configure one and reuse it across any
+- [00:14:58.410](https://www.youtube.com/watch?v=I041FVBzU_s&t=898s) — so like
+- [00:15:00.890](https://www.youtube.com/watch?v=I041FVBzU_s&t=900s) — Okay, so you have a little introduction into our
+- [00:15:04.410](https://www.youtube.com/watch?v=I041FVBzU_s&t=904s) — Flow builder there on the previous on the previous example
+- [00:15:08.250](https://www.youtube.com/watch?v=I041FVBzU_s&t=908s) — I'm going to bring this to life a little bit more. What is our flow builder? Why does it matter?
+- [00:15:12.250](https://www.youtube.com/watch?v=I041FVBzU_s&t=912s) — so traditionally c pass caters to the last mile of
+- [00:15:16.730](https://www.youtube.com/watch?v=I041FVBzU_s&t=916s) — Essentially procuring numbers and apis for sending and receiving messages
+- [00:15:21.290](https://www.youtube.com/watch?v=I041FVBzU_s&t=921s) — apis and SDKs
+- [00:15:22.410](https://www.youtube.com/watch?v=I041FVBzU_s&t=922s) — So we showed you some of our api documentation up front and whilst that's great
+- [00:15:26.570](https://www.youtube.com/watch?v=I041FVBzU_s&t=926s) — And and it does abstract a lot of complexity in itself
+- [00:15:30.730](https://www.youtube.com/watch?v=I041FVBzU_s&t=930s) — It's very developer first and developer only you know
+- [00:15:33.690](https://www.youtube.com/watch?v=I041FVBzU_s&t=933s) — It still leaves a heavy lifting of writing application logic for automating customer journeys and interacting with business systems as we saw on the previous slide
+- [00:15:40.890](https://www.youtube.com/watch?v=I041FVBzU_s&t=940s) — Two developers, you know, you're not really getting economies of scale. You're redoing everything over and over
+- [00:15:46.250](https://www.youtube.com/watch?v=I041FVBzU_s&t=946s) — You can't quickly respond to changing business customer requirements
+- [00:15:49.210](https://www.youtube.com/watch?v=I041FVBzU_s&t=949s) — You can't quickly configure business logic through pre pre-built modules and nodes
+- [00:15:53.930](https://www.youtube.com/watch?v=I041FVBzU_s&t=953s) — You want to launch run in a serverless environment and you want interactive reports to analyze and optimize customer journeys
+- [00:16:00.570](https://www.youtube.com/watch?v=I041FVBzU_s&t=960s) — and so
+- [00:16:01.530](https://www.youtube.com/watch?v=I041FVBzU_s&t=961s) — We provide what we would say is more of a configure not code approach here helping it expand its talent pool a collaboration between
+- [00:16:08.810](https://www.youtube.com/watch?v=I041FVBzU_s&t=968s) — technical and non-technical users
+- [00:16:11.450](https://www.youtube.com/watch?v=I041FVBzU_s&t=971s) — Easiest pressure on it and speeds up go to market
+- [00:16:14.650](https://www.youtube.com/watch?v=I041FVBzU_s&t=974s) — And you can imagine a white boarding session a story boarding easily being reimagined with this physio like builder and mapping it onto
+- [00:16:23.050](https://www.youtube.com/watch?v=I041FVBzU_s&t=983s) — Onto this canvas step by step
+- [00:16:25.770](https://www.youtube.com/watch?v=I041FVBzU_s&t=985s) — And and our platform really does give IT the control over the tools integrations and automation capabilities
+- [00:16:32.010](https://www.youtube.com/watch?v=I041FVBzU_s&t=992s) — while inviting
+- [00:16:34.090](https://www.youtube.com/watch?v=I041FVBzU_s&t=994s) — analysts cx professionals and other live business users to collaborate across building great customer journeys
+- [00:16:40.650](https://www.youtube.com/watch?v=I041FVBzU_s&t=1000s) — One way it doesn't alienate the developer one way it helps the developer and makes the developer more efficient
+- [00:16:47.770](https://www.youtube.com/watch?v=I041FVBzU_s&t=1007s) — Is by these drag-and-drop building blocks and if we take a quick step in one one level deeper into what are these
+- [00:16:54.970](https://www.youtube.com/watch?v=I041FVBzU_s&t=1014s) — So we basically created a set of
+- [00:16:58.170](https://www.youtube.com/watch?v=I041FVBzU_s&t=1018s) — Nodes or functions
+- [00:16:59.450](https://www.youtube.com/watch?v=I041FVBzU_s&t=1019s) — They could be known as the package up a bit of code and they perform a task that you don't have the code and build yourself
+- [00:17:05.770](https://www.youtube.com/watch?v=I041FVBzU_s&t=1025s) — Tailor towards building great communications, right?
+- [00:17:08.810](https://www.youtube.com/watch?v=I041FVBzU_s&t=1028s) — So think of them as like lego blocks or a set of building blocks
+- [00:17:12.650](https://www.youtube.com/watch?v=I041FVBzU_s&t=1032s) — And we have everything from social hour nodes
+- [00:17:14.650](https://www.youtube.com/watch?v=I041FVBzU_s&t=1034s) — So you can just open up a social hours node and say I don't want to send an sms between 9 am and 9 p.m
+- [00:17:20.170](https://www.youtube.com/watch?v=I041FVBzU_s&t=1040s) — And then you can configure that
+- [00:17:23.290](https://www.youtube.com/watch?v=I041FVBzU_s&t=1043s) — Out of ours response to do something different
+- [00:17:26.410](https://www.youtube.com/watch?v=I041FVBzU_s&t=1046s) — We have packaged up otp multifactor authentication capabilities
+- [00:17:32.010](https://www.youtube.com/watch?v=I041FVBzU_s&t=1052s) — We have packaged up the ability to take variables and to take and store and share variables between flows
+- [00:17:39.210](https://www.youtube.com/watch?v=I041FVBzU_s&t=1059s) — And and include the interaction details store and track them and keep context and information across flows and across the customer journey
+- [00:17:47.210](https://www.youtube.com/watch?v=I041FVBzU_s&t=1067s) — We also have
+- [00:17:49.290](https://www.youtube.com/watch?v=I041FVBzU_s&t=1069s) — A custom business logic so you can write your own code bring your own code
+- [00:17:52.970](https://www.youtube.com/watch?v=I041FVBzU_s&t=1072s) — We have an evaluate node where you can write json
+- [00:17:55.850](https://www.youtube.com/watch?v=I041FVBzU_s&t=1075s) — Um, and and we of course have external connections as well
+- [00:17:59.930](https://www.youtube.com/watch?v=I041FVBzU_s&t=1079s) — So you don't always want to build these integration rich integration nodes
+- [00:18:03.370](https://www.youtube.com/watch?v=I041FVBzU_s&t=1083s) — You might just want to make an htp request to an external api service. You can do all of that from within these drag and drop nodes
+- [00:18:11.370](https://www.youtube.com/watch?v=I041FVBzU_s&t=1091s) — And I talked about bring your own code and and us trying to make the developers more efficient
+- [00:18:16.810](https://www.youtube.com/watch?v=I041FVBzU_s&t=1096s) — Definitely not alienate them
+- [00:18:18.170](https://www.youtube.com/watch?v=I041FVBzU_s&t=1098s) — So one of the advancements and developments that we have on our roadmap at the minute that we are we are launching is
+- [00:18:23.530](https://www.youtube.com/watch?v=I041FVBzU_s&t=1103s) — The ability to apply a large language model driven developer acceleration
+- [00:18:28.490](https://www.youtube.com/watch?v=I041FVBzU_s&t=1108s) — Essentially we're integrating it into that driver script node where you can bring your own code
+- [00:18:32.650](https://www.youtube.com/watch?v=I041FVBzU_s&t=1112s) — Provide prompts and queries that use generative ai to produce
+- [00:18:36.730](https://www.youtube.com/watch?v=I041FVBzU_s&t=1116s) — The code snippet the developer needs
+- [00:18:40.090](https://www.youtube.com/watch?v=I041FVBzU_s&t=1120s) — On their behalf to be using the customer journey just by typing in that prompt
+- [00:18:43.930](https://www.youtube.com/watch?v=I041FVBzU_s&t=1123s) — Yeah, making life easy for them and of course if you are not a developer
+- [00:18:47.930](https://www.youtube.com/watch?v=I041FVBzU_s&t=1127s) — This is an even more powerful feature for you essentially turning a platform from low code to almost no code at some point in the future
+- [00:19:03.020](https://www.youtube.com/watch?v=I041FVBzU_s&t=1143s) — Okay, so i'm going to bring this to life now in a in a demo
+- [00:19:07.500](https://www.youtube.com/watch?v=I041FVBzU_s&t=1147s) — There's a lot of capability here the channel you're going to see is apple messages for business
+- [00:19:11.660](https://www.youtube.com/watch?v=I041FVBzU_s&t=1151s) — We're going to show a combination channels. Actually sms will be brought in as well
+- [00:19:15.820](https://www.youtube.com/watch?v=I041FVBzU_s&t=1155s) — You'll see some conversational
+- [00:19:17.740](https://www.youtube.com/watch?v=I041FVBzU_s&t=1157s) — Capabilities in here. You'll see some nlp
+- [00:19:20.220](https://www.youtube.com/watch?v=I041FVBzU_s&t=1160s) — You'll see some of the otp thing. I just mentioned some payment features and some integrations
+- [00:19:24.380](https://www.youtube.com/watch?v=I041FVBzU_s&t=1164s) — So, uh, hopefully this starts to make sense if it hasn't already at this juncture
+- [00:19:29.820](https://www.youtube.com/watch?v=I041FVBzU_s&t=1169s) — So this flow kicks off
+- [00:19:31.500](https://www.youtube.com/watch?v=I041FVBzU_s&t=1171s) — Customer messages in over apple messages for business and we automate the response
+- [00:19:35.260](https://www.youtube.com/watch?v=I041FVBzU_s&t=1175s) — You can see us moving through the flow in the background and the customer handset shows what's happening on the customer experience side
+- [00:19:42.300](https://www.youtube.com/watch?v=I041FVBzU_s&t=1182s) — We want to identify who this customer is. We don't know who they are
+- [00:19:44.940](https://www.youtube.com/watch?v=I041FVBzU_s&t=1184s) — So they provide a mobile number which we do have in our crm and this allows us to do a one-time pin
+- [00:19:50.700](https://www.youtube.com/watch?v=I041FVBzU_s&t=1190s) — Lookup so we can send them with authentication
+- [00:19:53.820](https://www.youtube.com/watch?v=I041FVBzU_s&t=1193s) — Six digits seven digit code they put that in we immediately can look them up in sales for crm and say
+- [00:19:59.020](https://www.youtube.com/watch?v=I041FVBzU_s&t=1199s) — Jordan, it's you
+- [00:20:00.540](https://www.youtube.com/watch?v=I041FVBzU_s&t=1200s) — We verified you. We know who you are. We even know what you're talking about because we're an apple message for business
+- [00:20:05.660](https://www.youtube.com/watch?v=I041FVBzU_s&t=1205s) — We can show them a rich image. We can show them a nest doorbell. We can show them what they've actually purchased
+- [00:20:11.900](https://www.youtube.com/watch?v=I041FVBzU_s&t=1211s) — We can use some nlp in response when someone replies. Yes and open text
+- [00:20:16.140](https://www.youtube.com/watch?v=I041FVBzU_s&t=1216s) — But we can also use some of apple's richer capabilities with the list picker as you see here to select that option
+- [00:20:22.940](https://www.youtube.com/watch?v=I041FVBzU_s&t=1222s) — As we continue to triage through
+- [00:20:25.900](https://www.youtube.com/watch?v=I041FVBzU_s&t=1225s) — We're able to then confirm an appointment. So we're integrating now
+- [00:20:29.900](https://www.youtube.com/watch?v=I041FVBzU_s&t=1229s) — I'll be using a little bit of nlp date time day after tomorrow
+- [00:20:33.020](https://www.youtube.com/watch?v=I041FVBzU_s&t=1233s) — We know day after tomorrow is you know, the 24th of august or in this case, it's the 4th of april
+- [00:20:39.820](https://www.youtube.com/watch?v=I041FVBzU_s&t=1239s) — And so we can then structure that into a format that the back end system the appointment scheduling system
+- [00:20:44.300](https://www.youtube.com/watch?v=I041FVBzU_s&t=1244s) — Understands and retrieve the available slots for jordan
+- [00:20:48.460](https://www.youtube.com/watch?v=I041FVBzU_s&t=1248s) — Once we tell the system yet
+- [00:20:50.700](https://www.youtube.com/watch?v=I041FVBzU_s&t=1250s) — Jordan has confirmed this appointment. Please put that on hold. We received the information back to say
+- [00:20:55.260](https://www.youtube.com/watch?v=I041FVBzU_s&t=1255s) — Yep, that has been confirmed all good
+- [00:20:57.260](https://www.youtube.com/watch?v=I041FVBzU_s&t=1257s) — We can confirm that with jordan and we can even offer the ability to pay by integrating with a rich apple capability of apple pay
+- [00:21:04.540](https://www.youtube.com/watch?v=I041FVBzU_s&t=1264s) — a quick double tap and a look at the face and jordan has not only completed his
+- [00:21:10.700](https://www.youtube.com/watch?v=I041FVBzU_s&t=1270s) — Appointment scheduling, but he's also paid for it too. And of course the brand has saved a significant amount of money on
+- [00:21:18.140](https://www.youtube.com/watch?v=I041FVBzU_s&t=1278s) — Very lightweight customer service experience
+- [00:21:28.870](https://www.youtube.com/watch?v=I041FVBzU_s&t=1288s) — So we've talked about the middle four pillars
+- [00:21:30.870](https://www.youtube.com/watch?v=I041FVBzU_s&t=1290s) — I said there was
+- [00:21:32.790](https://www.youtube.com/watch?v=I041FVBzU_s&t=1292s) — I guess this wrapper
+- [00:21:33.990](https://www.youtube.com/watch?v=I041FVBzU_s&t=1293s) — Let's call it around the outside that makes this truly truly enterprise grade and to be truly enterprise grade
+- [00:21:40.470](https://www.youtube.com/watch?v=I041FVBzU_s&t=1300s) — Um, you need all of this you need to be able to enforce it and security policies actual insights
+- [00:21:46.390](https://www.youtube.com/watch?v=I041FVBzU_s&t=1306s) — You need these controls
+- [00:21:47.990](https://www.youtube.com/watch?v=I041FVBzU_s&t=1307s) — role-based access controls for different users and different teams to only give access to certain people who need certain access
+- [00:21:53.750](https://www.youtube.com/watch?v=I041FVBzU_s&t=1313s) — Read write capabilities
+- [00:21:55.830](https://www.youtube.com/watch?v=I041FVBzU_s&t=1315s) — You need to be able to deliver communications with the latest brand and legal guidelines and opt-in and opt-out policy and consent
+- [00:22:02.950](https://www.youtube.com/watch?v=I041FVBzU_s&t=1322s) — Etc that we all manage
+- [00:22:05.590](https://www.youtube.com/watch?v=I041FVBzU_s&t=1325s) — um
+- [00:22:06.950](https://www.youtube.com/watch?v=I041FVBzU_s&t=1326s) — We have rich dashboards to evaluate journey data
+- [00:22:09.750](https://www.youtube.com/watch?v=I041FVBzU_s&t=1329s) — Optimization manage renew and enforce these customer preference and contact frequency policies as well
+- [00:22:15.030](https://www.youtube.com/watch?v=I041FVBzU_s&t=1335s) — And this can all be done from a single platform
+- [00:22:17.110](https://www.youtube.com/watch?v=I041FVBzU_s&t=1337s) — And it really all should be done from a single platform because it's the only way to really guarantee
+- [00:22:21.910](https://www.youtube.com/watch?v=I041FVBzU_s&t=1341s) — You are effectively managing this across the entire enterprise without one customer told us
+- [00:22:27.030](https://www.youtube.com/watch?v=I041FVBzU_s&t=1347s) — But they don't know where 20 of their messages originated from so even just looking into an issue with a short code or or a bot
+- [00:22:33.590](https://www.youtube.com/watch?v=I041FVBzU_s&t=1353s) — Or a whatsapp id or um any or an email id or or voice number
+- [00:22:38.710](https://www.youtube.com/watch?v=I041FVBzU_s&t=1358s) — Um, you don't have to scrap around looking in multiple different systems
+- [00:22:41.750](https://www.youtube.com/watch?v=I041FVBzU_s&t=1361s) — You can manage it all under one umbrella and I actually have access to everything very very quickly to resolve customer issues
+- [00:22:48.070](https://www.youtube.com/watch?v=I041FVBzU_s&t=1368s) — Or make changes to services within the organization
+- [00:22:53.700](https://www.youtube.com/watch?v=I041FVBzU_s&t=1373s) — And the other uh part to that was the service assurance and infrastructure management and essentially
+- [00:22:59.140](https://www.youtube.com/watch?v=I041FVBzU_s&t=1379s) — None of this would mean anything without um being able to monitor the heartbeat are your systems responding
+- [00:23:06.020](https://www.youtube.com/watch?v=I041FVBzU_s&t=1386s) — Solving problems before they happen
+- [00:23:08.260](https://www.youtube.com/watch?v=I041FVBzU_s&t=1388s) — Knowing that things are working um and ensuring you have the uptime the zero downtime up to updates
+- [00:23:15.620](https://www.youtube.com/watch?v=I041FVBzU_s&t=1395s) — the availability disaster recovery all required um
+- [00:23:20.420](https://www.youtube.com/watch?v=I041FVBzU_s&t=1400s) — Um handling peaks, you know highest customer volume
+- [00:23:23.460](https://www.youtube.com/watch?v=I041FVBzU_s&t=1403s) — We deploy some of the largest messaging programs in the world
+- [00:23:26.660](https://www.youtube.com/watch?v=I041FVBzU_s&t=1406s) — Um, and so this world class support account management professional services that come with it
+- [00:23:31.300](https://www.youtube.com/watch?v=I041FVBzU_s&t=1411s) — Uh, we are a very trusted partner to help you deliver your communication programs
+- [00:23:37.300](https://www.youtube.com/watch?v=I041FVBzU_s&t=1417s) — Here's a quick look at some of those enterprise grade features
+- [00:23:40.660](https://www.youtube.com/watch?v=I041FVBzU_s&t=1420s) — So we wanted to show you some of the enterprise rich features
+- [00:23:43.540](https://www.youtube.com/watch?v=I041FVBzU_s&t=1423s) — We can configure tenant iraqi here. You'll see in the drop down as we put it up
+- [00:23:48.740](https://www.youtube.com/watch?v=I041FVBzU_s&t=1428s) — Groups teams roles and access permissions can all be configured for this
+- [00:23:54.180](https://www.youtube.com/watch?v=I041FVBzU_s&t=1434s) — We can allow multiple teams
+- [00:23:56.020](https://www.youtube.com/watch?v=I041FVBzU_s&t=1436s) — This means to benefit from our platform in a managed and controlled
+- [00:24:00.980](https://www.youtube.com/watch?v=I041FVBzU_s&t=1440s) — Environment
+- [00:24:01.780](https://www.youtube.com/watch?v=I041FVBzU_s&t=1441s) — I'll explain what that means in a second
+- [00:24:03.780](https://www.youtube.com/watch?v=I041FVBzU_s&t=1443s) — Each of these teams has the access to procure their own numbers assets relevant to that team in that region
+- [00:24:09.940](https://www.youtube.com/watch?v=I041FVBzU_s&t=1449s) — in self-service manner
+- [00:24:11.940](https://www.youtube.com/watch?v=I041FVBzU_s&t=1451s) — Certainly to go to it every time they want to do something or buy something however
+- [00:24:16.020](https://www.youtube.com/watch?v=I041FVBzU_s&t=1456s) — Um all the while we have the ability for an overall admin or it team to have full visibility control over all the programs
+- [00:24:24.180](https://www.youtube.com/watch?v=I041FVBzU_s&t=1464s) — And they can manage all of the reports for the specific services either across the entire enterprise
+- [00:24:28.740](https://www.youtube.com/watch?v=I041FVBzU_s&t=1468s) — Or as I said, each team can manage their own reports
+- [00:24:37.420](https://www.youtube.com/watch?v=I041FVBzU_s&t=1477s) — So we've talked a little bit about
+- [00:24:39.820](https://www.youtube.com/watch?v=I041FVBzU_s&t=1479s) — the platform and just to finish off
+- [00:24:43.180](https://www.youtube.com/watch?v=I041FVBzU_s&t=1483s) — Some of you guys must be wondering a little bit about webx and the rest of webx and where we fit in
+- [00:24:49.500](https://www.youtube.com/watch?v=I041FVBzU_s&t=1489s) — So I guess finally from a from a demo perspective as well. I do want to touch on that. Um, you know, we mentioned, um
+- [00:24:56.060](https://www.youtube.com/watch?v=I041FVBzU_s&t=1496s) — I guess some differentiators from us and others in the marketplace and certainly the webx advantage is one of them
+- [00:25:01.900](https://www.youtube.com/watch?v=I041FVBzU_s&t=1501s) — Um, I'm going to show you a little bit around how we fit in to webx in general
+- [00:25:07.420](https://www.youtube.com/watch?v=I041FVBzU_s&t=1507s) — Um, I think our aim is to power great custom experiences as webx for businesses to support their transformation
+- [00:25:14.380](https://www.youtube.com/watch?v=I041FVBzU_s&t=1514s) — So we are one element of that and we are just one solution within the webx cx portfolio
+- [00:25:19.820](https://www.youtube.com/watch?v=I041FVBzU_s&t=1519s) — We are fully webx branded products alongside the contact center solution
+- [00:25:24.300](https://www.youtube.com/watch?v=I041FVBzU_s&t=1524s) — Which we've heavily integrated with and I'll show you an example of that in a minute
+- [00:25:28.060](https://www.youtube.com/watch?v=I041FVBzU_s&t=1528s) — And of course our our ucast platform or the webx app, which includes calling messages and meetings
+- [00:25:35.820](https://www.youtube.com/watch?v=I041FVBzU_s&t=1535s) — And so we are able to leverage our webx technology and capabilities to enhance
+- [00:25:40.700](https://www.youtube.com/watch?v=I041FVBzU_s&t=1540s) — our cx products essentially, which I'll now show you now with two
+- [00:25:45.020](https://www.youtube.com/watch?v=I041FVBzU_s&t=1545s) — examples, so I'm going to show you um
+- [00:25:48.220](https://www.youtube.com/watch?v=I041FVBzU_s&t=1548s) — A c path digital channel capability in the contact center, which I mentioned
+- [00:25:52.460](https://www.youtube.com/watch?v=I041FVBzU_s&t=1552s) — But also how c pass can integrate with the webx platform as well for a really powerful use case
+- [00:25:59.100](https://www.youtube.com/watch?v=I041FVBzU_s&t=1559s) — So first up in this demo, we have a chat bot journey essentially over sms
+- [00:26:05.020](https://www.youtube.com/watch?v=I041FVBzU_s&t=1565s) — So we've jumped in halfway through
+- [00:26:07.100](https://www.youtube.com/watch?v=I041FVBzU_s&t=1567s) — The customer has now requested escalation to an agent
+- [00:26:10.300](https://www.youtube.com/watch?v=I041FVBzU_s&t=1570s) — We've tried to triage them and automate them as much as possible as we showed in a previous example
+- [00:26:14.540](https://www.youtube.com/watch?v=I041FVBzU_s&t=1574s) — But at this point we can package up
+- [00:26:16.940](https://www.youtube.com/watch?v=I041FVBzU_s&t=1576s) — All of the previous conversation all of the history of this
+- [00:26:20.540](https://www.youtube.com/watch?v=I041FVBzU_s&t=1580s) — Automated conversation we have when the customer responds chat within our flow builder
+- [00:26:25.420](https://www.youtube.com/watch?v=I041FVBzU_s&t=1585s) — We package this up and we hand it off into webx contact center
+- [00:26:29.900](https://www.youtube.com/watch?v=I041FVBzU_s&t=1589s) — And you can see these these nodes out of the box here that are performing those tasks
+- [00:26:34.300](https://www.youtube.com/watch?v=I041FVBzU_s&t=1594s) — And so when the agent logs into webx contact center, they can easily pick up this chat in their queue
+- [00:26:40.060](https://www.youtube.com/watch?v=I041FVBzU_s&t=1600s) — They ensure that we ensure that they have the full context across the entire conversation
+- [00:26:45.260](https://www.youtube.com/watch?v=I041FVBzU_s&t=1605s) — So the customer doesn't have to repeat themselves
+- [00:26:47.340](https://www.youtube.com/watch?v=I041FVBzU_s&t=1607s) — The agent doesn't have to ask them questions
+- [00:26:49.340](https://www.youtube.com/watch?v=I041FVBzU_s&t=1609s) — The agent can be productive as all the information available to them
+- [00:26:52.860](https://www.youtube.com/watch?v=I041FVBzU_s&t=1612s) — And once they pick up the chat, there's no bouncing the customer around into live chat through links, etc
+- [00:26:57.580](https://www.youtube.com/watch?v=I041FVBzU_s&t=1617s) — They stay in the sms channel that they entered in their channel of choice
+- [00:27:01.260](https://www.youtube.com/watch?v=I041FVBzU_s&t=1621s) — Or whatever channel they came in via
+- [00:27:03.820](https://www.youtube.com/watch?v=I041FVBzU_s&t=1623s) — It's seamless. It's easy and it's a happy agent and happy customer
+- [00:27:08.740](https://www.youtube.com/watch?v=I041FVBzU_s&t=1628s) — And secondarily, I I'm just going to show you how we do this in a slightly different environment with the webx app
+- [00:27:14.740](https://www.youtube.com/watch?v=I041FVBzU_s&t=1634s) — So here you see again
+- [00:27:16.500](https://www.youtube.com/watch?v=I041FVBzU_s&t=1636s) — It's a customer conversation
+- [00:27:18.500](https://www.youtube.com/watch?v=I041FVBzU_s&t=1638s) — The customer's trying to self serve that they're in an automotive situation
+- [00:27:22.580](https://www.youtube.com/watch?v=I041FVBzU_s&t=1642s) — But they're not talking to a customer service agent here
+- [00:27:24.820](https://www.youtube.com/watch?v=I041FVBzU_s&t=1644s) — They're they're they're automating with a dealership a car dealership and the employees on the ground are remote
+- [00:27:31.140](https://www.youtube.com/watch?v=I041FVBzU_s&t=1651s) — So at this point when we want to package this up and hand it over we have to do something a little different
+- [00:27:35.380](https://www.youtube.com/watch?v=I041FVBzU_s&t=1655s) — We're actually going to pass it into the webx app because the agent can be or the the agent inverted commons can be
+- [00:27:42.260](https://www.youtube.com/watch?v=I041FVBzU_s&t=1662s) — Deskless and can be walking around using the app. So in this instance, we package everything up as you see here
+- [00:27:48.420](https://www.youtube.com/watch?v=I041FVBzU_s&t=1668s) — We're ensuring all of the context is handed across again
+- [00:27:51.700](https://www.youtube.com/watch?v=I041FVBzU_s&t=1671s) — The agent can pick up the conversation moving to a one-to-one chat with the customer whilst letting the team know
+- [00:27:57.380](https://www.youtube.com/watch?v=I041FVBzU_s&t=1677s) — It's been assigned and they can pick it up like
+- [00:28:00.660](https://www.youtube.com/watch?v=I041FVBzU_s&t=1680s) — Nothing had happened before again
+- [00:28:02.660](https://www.youtube.com/watch?v=I041FVBzU_s&t=1682s) — The customer has a seamless experience on their channel of choice. They could be on sms. What's app insert channel
+- [00:28:08.500](https://www.youtube.com/watch?v=I041FVBzU_s&t=1688s) — The dealership staff in this case are empowered and the business have a fully auditable conversation for their records
+- [00:28:14.340](https://www.youtube.com/watch?v=I041FVBzU_s&t=1694s) — Avoid personal devices being used and I think in the financial services space right now. That's a really top
+- [00:28:20.100](https://www.youtube.com/watch?v=I041FVBzU_s&t=1700s) — hot topic for
+- [00:28:22.260](https://www.youtube.com/watch?v=I041FVBzU_s&t=1702s) — Avoiding huge industry fines. It's got a lot pr at the minute
+- [00:28:25.780](https://www.youtube.com/watch?v=I041FVBzU_s&t=1705s) — um
+- [00:28:26.580](https://www.youtube.com/watch?v=I041FVBzU_s&t=1706s) — It's a really powerful solution
+- [00:28:29.300](https://www.youtube.com/watch?v=I041FVBzU_s&t=1709s) — to demonstrate
+- [00:28:30.580](https://www.youtube.com/watch?v=I041FVBzU_s&t=1710s) — I guess a solution that integrates with the webx app across a deskless workforce
+- [00:28:37.060](https://www.youtube.com/watch?v=I041FVBzU_s&t=1717s) — So to summarize and and to finish
+- [00:28:39.700](https://www.youtube.com/watch?v=I041FVBzU_s&t=1719s) — um
+- [00:28:40.740](https://www.youtube.com/watch?v=I041FVBzU_s&t=1720s) — We have a proven
+- [00:28:42.660](https://www.youtube.com/watch?v=I041FVBzU_s&t=1722s) — centralized communications platform. This means providing tools to invite
+- [00:28:47.540](https://www.youtube.com/watch?v=I041FVBzU_s&t=1727s) — The entire enterprise to collaborate to building great cx as we mentioned make developers more efficient
+- [00:28:53.700](https://www.youtube.com/watch?v=I041FVBzU_s&t=1733s) — low code tools
+- [00:28:55.460](https://www.youtube.com/watch?v=I041FVBzU_s&t=1735s) — economies of scale reuse of integrations all that great stuff
+- [00:29:00.980](https://www.youtube.com/watch?v=I041FVBzU_s&t=1740s) — In the second column, we've got enterprise grade. I mentioned the word enterprise grade over and over again
+- [00:29:05.940](https://www.youtube.com/watch?v=I041FVBzU_s&t=1745s) — Hopefully resonated so greater controls slas regional instances dc security
+- [00:29:11.460](https://www.youtube.com/watch?v=I041FVBzU_s&t=1751s) — A platform benefits from being part of sysfo implement the highest standards that they maintain across security
+- [00:29:16.740](https://www.youtube.com/watch?v=I041FVBzU_s&t=1756s) — And we recognize that that is a critical need in the large enterprise
+- [00:29:21.140](https://www.youtube.com/watch?v=I041FVBzU_s&t=1761s) — high touch arena
+- [00:29:23.620](https://www.youtube.com/watch?v=I041FVBzU_s&t=1763s) — And finally the webx advantage as I showcase the integrations we have with contact center and the app
+- [00:29:28.580](https://www.youtube.com/watch?v=I041FVBzU_s&t=1768s) — We live with customers in market with those today. These aren't in beta. These are things we're doing with other customers
+- [00:29:33.700](https://www.youtube.com/watch?v=I041FVBzU_s&t=1773s) — We'd love to tell you more about some of those in your
+- [00:29:36.580](https://www.youtube.com/watch?v=I041FVBzU_s&t=1776s) — Sector or space or even outside of your sector
+- [00:29:39.940](https://www.youtube.com/watch?v=I041FVBzU_s&t=1779s) — And this actually goes beyond just webx, you know, we've we've explored broader sysco integrations into
+- [00:29:46.180](https://www.youtube.com/watch?v=I041FVBzU_s&t=1786s) — maraki's network d.a spaces location-based technology
+- [00:29:50.500](https://www.youtube.com/watch?v=I041FVBzU_s&t=1790s) — thousand eyes at d
+- [00:29:52.180](https://www.youtube.com/watch?v=I041FVBzU_s&t=1792s) — Monitoring software. So again, we would love to help
+- [00:29:55.780](https://www.youtube.com/watch?v=I041FVBzU_s&t=1795s) — Explore how cpass can help you take advantage of your other investments in sysco as well
+- [00:30:01.540](https://www.youtube.com/watch?v=I041FVBzU_s&t=1801s) — Thanks for staying with me and listening to this
+- [00:30:03.140](https://www.youtube.com/watch?v=I041FVBzU_s&t=1803s) — I hope you understood a little bit more about the platform and enjoyed some of these videos we provided for you
+- [00:30:07.780](https://www.youtube.com/watch?v=I041FVBzU_s&t=1807s) — I'm David Jennings and have a good day

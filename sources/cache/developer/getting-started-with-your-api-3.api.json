@@ -1,0 +1,10 @@
+{
+  "api": {
+    "method": "get",
+    "url": "",
+    "auth": "required",
+    "params": []
+  },
+  "swagger": null,
+  "oas_public_id": null
+}

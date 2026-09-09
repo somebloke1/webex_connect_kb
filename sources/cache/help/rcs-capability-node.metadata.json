@@ -1,0 +1,38 @@
+{
+  "category": "SERVICES & FLOWS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257835",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "9e8fd81e0113ab656efddb8d39291c3286dd4531871b108851431b7aa2545c3d",
+    "source_path": "427def97d938567ebdc369ad09862b90afa0ed6fdefb4d1136d2c5b6a5c4d069",
+    "text_path": "6d0728ee763c793cc0aabba2cb202a08b4b12e9fd8acdea8f22864121fc5b307"
+  },
+  "headings": [
+    "Node Configuration",
+    "Input Variables",
+    "Output Variables",
+    "📘Using the node",
+    "Node Outcomes",
+    "Transition Actions"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/rcs-capability-node.md",
+  "resolved_url": "https://help.webexconnect.io/docs/rcs-capability-node",
+  "retrieved_at": "2026-09-08T23:28:56+00:00",
+  "sha256_html_response": "5f90a1cc908325f52e65b0cabbae896efd19c498f615239c52dad1b658e9b910",
+  "sha256_source_body": "427def97d938567ebdc369ad09862b90afa0ed6fdefb4d1136d2c5b6a5c4d069",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/rcs-capability-node.source.md",
+  "source_updated_at": "2025-04-02T17:20:17.189Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/rcs-capability-node.txt",
+  "title": "RCS Capability Node",
+  "url": "https://help.webexconnect.io/docs/rcs-capability-node",
+  "word_count": 856,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/rcs-capability-node.metadata.json"
+}

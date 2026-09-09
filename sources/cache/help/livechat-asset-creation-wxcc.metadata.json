@@ -1,0 +1,37 @@
+{
+  "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd81825788d",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "55eb9a5c791937a19d240a51a446eaf14780b3c17e09f67da25437068a26ad75",
+    "source_path": "189e95a7646944c4d1b7121bf1d89ef80c5c9b423b6899766ca41b205ac7bcd7",
+    "text_path": "24018ff43dff7540f045152b5cf527e968daf168819ef62e64c8f8751c68a2e3"
+  },
+  "headings": [
+    "Configuring Live Chat channel asset on Webex Connect",
+    "📘",
+    "Registering your Live Chat App Asset with Webex Contact Center",
+    "🚧",
+    "📘"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/livechat-asset-creation-wxcc.md",
+  "resolved_url": "https://help.webexconnect.io/docs/livechat-asset-creation-wxcc",
+  "retrieved_at": "2026-09-08T23:29:12+00:00",
+  "sha256_html_response": "96fbde276077d356cacb6548a427dd132bcb48fbf02782dc0bc506a122e87ce2",
+  "sha256_source_body": "189e95a7646944c4d1b7121bf1d89ef80c5c9b423b6899766ca41b205ac7bcd7",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/livechat-asset-creation-wxcc.source.md",
+  "source_updated_at": "2026-04-14T07:23:19.390Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/livechat-asset-creation-wxcc.txt",
+  "title": "Live Chat - WXCC",
+  "url": "https://help.webexconnect.io/docs/livechat-asset-creation-wxcc",
+  "word_count": 680,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/livechat-asset-creation-wxcc.metadata.json"
+}

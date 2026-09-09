@@ -1,0 +1,263 @@
+{
+  "api": {
+    "results": {
+      "codes": [
+        {
+          "name": "",
+          "status": 200,
+          "language": "json",
+          "code": "{\n    \"code\": 0,\n    \"success_users\": [\n        \"1420966801\"\n    ],\n    \"fail_users\": [],\n    \"description\": \"Success\",\n    \"trans_id\": \"0b751484-bc97-44cc-828f-733abae9c1e9\"\n}\n"
+        }
+      ]
+    },
+    "settings": "",
+    "examples": {
+      "codes": [
+        {
+          "code": "[\"2315\",\"2365\",\"2335\",\"5894\"]",
+          "language": "json"
+        },
+        {
+          "code": "-X POST https://rtm.imiconnect.io/rtmsAPI/api/v1//apps/$(appid)/topics/$(topicid)/users\n-H \"Content-Type : application/json\"\n-H \"secretKey: {secretKey}\"\n",
+          "language": "curl",
+          "name": ""
+        },
+        {
+          "code": "var request=require(\"request\");\n var options = {\n          method: 'POST',\n          uri: ' https://{{rtmsapi}}/rtmsAPI/api/v1/apps/{inappid}/topics/{topicid}/users',\n          headers: {\n            'Content-Type': 'application/json',\n\t'secretKey': '{secretKey}'\n            }\n        };\n  request(options, function(error, response, body) {\n               if(error){\n                  console.log(error);\n             }else{\n                  console.log(response);\n            }\n        });\n",
+          "language": "json",
+          "name": "Node"
+        },
+        {
+          "code": "require 'httparty'\n# Create the HTTP objects and post request\nhttp = HTTParty.post(\"https://{{rtmsapi}}/rtmsAPI/api/v1/apps/{inappid}/topics/{topicid}/users\",\n    :headers => {'Content-Type' => 'application/json',\n                          'secretKey ' => '{secretKey}’\n            }\n)\n# Print on console\nputs http\n",
+          "language": "ruby"
+        },
+        {
+          "code": "var data = null;\n\nvar xhr = new XMLHttpRequest();\n\nxhr.addEventListener(\"readystatechange\", function () {\n  if (this.readyState === this.DONE) {\n    console.log(this.responseText);\n  }\n});\n\nxhr.open(\"POST\", \"https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{{inappid}}/topics/{{topicid}}/users\");\nxhr.setRequestHeader(\"Content-Type\", \"application/json\");\nxhr.setRequestHeader(\"secretKey\", \"{secretKey}\");\nxhr.send(data);\n",
+          "language": "javascript"
+        },
+        {
+          "code": "import requests\n\nurl = \" https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/topics/{topicid}/users\"\n\nheaders = {'Content-Type': 'application/json', 'secretKey': '{secretKey}’}\n\nresponse = requests.request(\"POST\", url, headers=headers)\n\nprint(response.text)\n",
+          "language": "python"
+        }
+      ]
+    },
+    "auth": "required",
+    "params": [
+      {
+        "name": "Content-Type",
+        "type": "string",
+        "enumValues": "",
+        "default": "",
+        "desc": "Application/JSON",
+        "required": false,
+        "in": "header",
+        "ref": "",
+        "_id": "5f521d59ab869101dab5ef20",
+        "id": "5f521d59ab869101dab5ef20"
+      },
+      {
+        "name": "secretKey",
+        "type": "string",
+        "enumValues": "",
+        "default": "",
+        "desc": "Client key that can be accessed from your app asset configuration page on imiconnect platform",
+        "required": false,
+        "in": "header",
+        "ref": "",
+        "_id": "5f521d59ab869101dab5ef1f",
+        "id": "5f521d59ab869101dab5ef1f"
+      },
+      {
+        "name": "appid",
+        "type": "string",
+        "enumValues": "",
+        "default": "",
+        "desc": "The ID of the app asset that you can obtain from imiconnect platform",
+        "required": false,
+        "in": "path",
+        "ref": "",
+        "_id": "5f6d886a8a085c0012f5426f",
+        "id": "5f6d886a8a085c0012f5426f"
+      },
+      {
+        "name": "topicid",
+        "type": "string",
+        "enumValues": "",
+        "default": "",
+        "desc": "Specifies the unique ID of the topic",
+        "required": false,
+        "in": "path",
+        "ref": "",
+        "_id": "5f6d886a8a085c0012f5426e",
+        "id": "5f6d886a8a085c0012f5426e"
+      }
+    ],
+    "url": "/apps/$(appid)/topics/$(topicid)/users",
+    "method": "post",
+    "apiSetting": "6a675233ec1c893d8a7f67bc"
+  },
+  "swagger": {
+    "path": "/apps/$(appid)/topics/$(topicid)/users"
+  },
+  "oas_public_id": "@imiconnect-apis/v6.20.0#wk2xm71r8mur",
+  "selected_openapi": {
+    "openapi": "3.1.0",
+    "info": {
+      "title": "Topic APIs",
+      "version": "6.20.0"
+    },
+    "servers": [
+      {
+        "url": "https://rtm.imiconnect.io/"
+      }
+    ],
+    "security": [
+      {
+        "sec0": []
+      }
+    ],
+    "path": "/apps/$(appid)/topics/$(topicid)/users",
+    "method": "post",
+    "path_parameters": [],
+    "operation": {
+      "summary": "Subscribe Users to a Topic",
+      "description": "This API is used to subscribe users to a topic.",
+      "operationId": "subscribe",
+      "parameters": [
+        {
+          "name": "Content-Type",
+          "in": "header",
+          "description": "Application/JSON",
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "secretKey",
+          "in": "header",
+          "description": "Client key that can be accessed from your app asset configuration page on imiconnect platform",
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "appid",
+          "in": "path",
+          "description": "The ID of the app asset that you can obtain from imiconnect platform",
+          "schema": {
+            "type": "string"
+          },
+          "required": true
+        },
+        {
+          "name": "topicid",
+          "in": "path",
+          "description": "Specifies the unique ID of the topic",
+          "schema": {
+            "type": "string"
+          },
+          "required": true
+        }
+      ],
+      "responses": {
+        "200": {
+          "description": "200",
+          "content": {
+            "application/json": {
+              "examples": {
+                "Result": {
+                  "value": "{\n    \"code\": 0,\n    \"success_users\": [\n        \"1420966801\"\n    ],\n    \"fail_users\": [],\n    \"description\": \"Success\",\n    \"trans_id\": \"0b751484-bc97-44cc-828f-733abae9c1e9\"\n}\n"
+                }
+              },
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "code": {
+                    "type": "integer",
+                    "example": 0,
+                    "default": 0
+                  },
+                  "success_users": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "example": "1420966801"
+                    }
+                  },
+                  "fail_users": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {}
+                    }
+                  },
+                  "description": {
+                    "type": "string",
+                    "example": "Success"
+                  },
+                  "trans_id": {
+                    "type": "string",
+                    "example": "0b751484-bc97-44cc-828f-733abae9c1e9"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "deprecated": false,
+      "x-readme": {
+        "code-samples": [
+          {
+            "language": "curl",
+            "code": "-X POST https://rtm.imiconnect.io/rtmsAPI/api/v1//apps/$(appid)/topics/$(topicid)/users\n-H \"Content-Type : application/json\"\n-H \"secretKey: {secretKey}\"\n"
+          },
+          {
+            "language": "ruby",
+            "code": "require 'httparty'\n# Create the HTTP objects and post request\nhttp = HTTParty.post(\"https://{{rtmsapi}}/rtmsAPI/api/v1/apps/{inappid}/topics/{topicid}/users\",\n    :headers => {'Content-Type' => 'application/json',\n                          'secretKey ' => '{secretKey}’\n            }\n)\n# Print on console\nputs http\n"
+          },
+          {
+            "language": "javascript",
+            "code": "var data = null;\n\nvar xhr = new XMLHttpRequest();\n\nxhr.addEventListener(\"readystatechange\", function () {\n  if (this.readyState === this.DONE) {\n    console.log(this.responseText);\n  }\n});\n\nxhr.open(\"POST\", \"https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{{inappid}}/topics/{{topicid}}/users\");\nxhr.setRequestHeader(\"Content-Type\", \"application/json\");\nxhr.setRequestHeader(\"secretKey\", \"{secretKey}\");\nxhr.send(data);\n"
+          },
+          {
+            "language": "python",
+            "code": "import requests\n\nurl = \" https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/topics/{topicid}/users\"\n\nheaders = {'Content-Type': 'application/json', 'secretKey': '{secretKey}’}\n\nresponse = requests.request(\"POST\", url, headers=headers)\n\nprint(response.text)\n"
+          }
+        ],
+        "samples-languages": [
+          "curl",
+          "ruby",
+          "javascript",
+          "python"
+        ]
+      },
+      "requestBody": {
+        "content": {
+          "application/json": {
+            "schema": {},
+            "examples": {
+              "Request Example": {
+                "value": [
+                  "2315",
+                  "2365",
+                  "2335",
+                  "5894"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "securitySchemes": {
+        "sec0": {
+          "type": "apiKey",
+          "in": "header",
+          "name": "key"
+        }
+      }
+    }
+  }
+}

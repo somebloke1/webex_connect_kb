@@ -1,0 +1,37 @@
+{
+  "api_metadata_path": "sources/cache/developer/apple-message-for-business_text-with-attachments.api.json",
+  "category": "MULTI CHANNEL COMMUNICATION API",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f6607",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "74bb5fd08f3839d56444f0888fbfa6dba41bfcb4aae38e39c93921248c4dff88",
+    "source_path": "0574113f61df7739e2d411dd090a4ec1268519c7616b0d7eb97d9983de958f7f",
+    "text_path": "cd88ed0c1877bb0b4a59b4eae3c2e7fd9344ef2e4518f067c167e03b97b3d313"
+  },
+  "headings": [
+    "Other Text Attachments",
+    "Error Codes"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/apple-message-for-business_text-with-attachments.md",
+  "openapi_path": "sources/cache/openapi/cc628fe628613fa135c77997dd2812bd46f854c75ed8dd5635a360adbc93e547.json",
+  "resolved_url": "https://developers.webexconnect.io/reference/apple-message-for-business_text-with-attachments",
+  "retrieved_at": "2026-09-08T23:31:42+00:00",
+  "sha256_api_metadata": "734ccfe14068b162b728cb207db088b1394ea838507ade17016e8db55b3ec9cf",
+  "sha256_html_response": "845f8d98c31a3df5a0adf817450360fb07b6bb68a06abe7838efe2712376ce24",
+  "sha256_openapi": "cc628fe628613fa135c77997dd2812bd46f854c75ed8dd5635a360adbc93e547",
+  "sha256_source_body": "0574113f61df7739e2d411dd090a4ec1268519c7616b0d7eb97d9983de958f7f",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/apple-message-for-business_text-with-attachments.source.md",
+  "source_updated_at": "2025-10-21T09:32:04.961Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/apple-message-for-business_text-with-attachments.txt",
+  "title": "Apple Message for Business: Text with Attachments",
+  "url": "https://developers.webexconnect.io/reference/apple-message-for-business_text-with-attachments",
+  "word_count": 2246,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/apple-message-for-business_text-with-attachments.metadata.json"
+}

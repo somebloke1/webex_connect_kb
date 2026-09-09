@@ -1,0 +1,35 @@
+{
+  "category": "Webex Engage Standalone Nodes",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257982",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "1fc3c13c8e8cb5901ad99820e586366a51bbf4d7d59217e933bba9c21eb70f21",
+    "source_path": "3e951fd8d40a775751fed081e7108ce6911be5aca90add7c03de0ad682aaf1d7",
+    "text_path": "38b615729c3dcf4a795780b24547e53a34166656e37738131b0e5f77173a7e75"
+  },
+  "headings": [
+    "Configure",
+    "Output variables",
+    "Node outcomes"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/fetch-conversation-transcript.md",
+  "resolved_url": "https://help.webexconnect.io/docs/fetch-conversation-transcript",
+  "retrieved_at": "2026-09-08T23:29:30+00:00",
+  "sha256_html_response": "6b56292dd9f7a6313932530a2dee90b2f201e3ba018e9be06e99d3344f55c1e3",
+  "sha256_source_body": "3e951fd8d40a775751fed081e7108ce6911be5aca90add7c03de0ad682aaf1d7",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/fetch-conversation-transcript.source.md",
+  "source_updated_at": "2026-04-15T12:10:47.455Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/fetch-conversation-transcript.txt",
+  "title": "Fetch conversation transcript - WxEngage standalone",
+  "url": "https://help.webexconnect.io/docs/fetch-conversation-transcript",
+  "word_count": 437,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/fetch-conversation-transcript.metadata.json"
+}

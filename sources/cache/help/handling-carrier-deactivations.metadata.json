@@ -1,0 +1,37 @@
+{
+  "category": "APP TRAY",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182578bb",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "a34ca06158a9ad04aa399a62d501d8ea33dd218f60feac2ff240bab2be77feeb",
+    "source_path": "3e8703145b7304cf6c75733e1c7d3b5278b2faaea3118be76d1d3840902fcaac",
+    "text_path": "f3f13005a0420bb3551719df437875600672770142a4861bf04450bfb259d6ee"
+  },
+  "headings": [
+    "DEACT State",
+    "TRANSFER State",
+    "PORTING State",
+    "Carrier Lookup Service",
+    "📘Note"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/handling-carrier-deactivations.md",
+  "resolved_url": "https://help.webexconnect.io/docs/handling-carrier-deactivations",
+  "retrieved_at": "2026-09-08T23:29:38+00:00",
+  "sha256_html_response": "fb9dbfab554ab418347a06c4f83b17eeb169ab26b09be6e3d762169269c70a5e",
+  "sha256_source_body": "3e8703145b7304cf6c75733e1c7d3b5278b2faaea3118be76d1d3840902fcaac",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/handling-carrier-deactivations.source.md",
+  "source_updated_at": "2026-06-23T09:39:54.021Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/handling-carrier-deactivations.txt",
+  "title": "Handling Carrier Deactivations",
+  "url": "https://help.webexconnect.io/docs/handling-carrier-deactivations",
+  "word_count": 540,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/handling-carrier-deactivations.metadata.json"
+}

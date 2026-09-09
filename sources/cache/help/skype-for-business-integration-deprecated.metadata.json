@@ -1,0 +1,34 @@
+{
+  "category": "PreBUILT Integrations",
+  "deprecated": true,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182578f4",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "26a7896fb81bb11b674fdf706bfb9160f5c7073ffc2bc91cd2f5dc28a4e0119d",
+    "source_path": "38dd1e47e4411fdf6d64e46d4290c370f6c4bfe6a31d7e6d0bd9c7ca71241307",
+    "text_path": "0c1150a14f37c8852f5e0897ff6eb5d3c22e5b23507e95360e45f0a4810e72d3"
+  },
+  "headings": [
+    "Prerequisites",
+    "Create and Configure Skype for Business Integration"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/skype-for-business-integration-deprecated.md",
+  "resolved_url": "https://help.webexconnect.io/docs/skype-for-business-integration-deprecated",
+  "retrieved_at": "2026-09-08T23:29:11+00:00",
+  "sha256_html_response": "8abef4fb8b7d6193c83e26de66db587a7123e72aea638bf25a79374dc4766623",
+  "sha256_source_body": "38dd1e47e4411fdf6d64e46d4290c370f6c4bfe6a31d7e6d0bd9c7ca71241307",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/skype-for-business-integration-deprecated.source.md",
+  "source_updated_at": "2026-02-04T13:09:44.464Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/skype-for-business-integration-deprecated.txt",
+  "title": "Skype for Business Integration - Deprecated",
+  "url": "https://help.webexconnect.io/docs/skype-for-business-integration-deprecated",
+  "word_count": 744,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/skype-for-business-integration-deprecated.metadata.json"
+}

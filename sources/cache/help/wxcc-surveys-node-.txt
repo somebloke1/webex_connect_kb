@@ -1,0 +1,218 @@
+The Surveys node is an out-of-the-box integration and uses Survey API endpoints for integration. This integration helps you understand your customer's needs and improve your products or services to meet expectations. By integrating Surveys with Webex Connect, the platform capabilities can be utilized in various use cases related to customer survey management. By using the Surveys pre-built node, you can generate questionnaire URLs that can be sent through different channels.
+
+## 📘
+Versions in the node
+
+Version 1.0 of the Surveys node will be deprecated. Do not configure any new flows using this version.
+
+In the Japan region, using v1.5 is mandatory. For other regions, we recommend using v1.2 or v1.3 or v1.4 or v1.5. The additional configurations - Name, Valid After, Valid For, and Preferred Languages - are supported only in  v1.2, v1.3, v1.4, and v1.5. These versions also eliminate the need to generate an expiry timestamp, saving you extra work.
+
+Questionnaires configured on the Surveys platform after the release of v1.2 (August 2023) are only accessible through v1.2 or v1.3 or v1.4 or v1.5.
+
+## 📘
+Note
+
+While configuring the Surveys Node, if you switch the questionnaire, it is mandatory to manually select the preferred language to ensure it is correctly applied. This cache issue is part of the known backlog and is scheduled for resolution.
+
+## 
+
+Accessing the Product
+
+To access Webex Connect, use the directions below:
+
+- Enter your tenant URL in the browser address bar (e.g., https://..webexconnect.io.).
+
+- Type your username and password to log in.
+
+- After you successfully log in, the dashboard appears with the Services tab in view.
+
+## 
+
+Prerequisites
+
+The Surveys node is available by default for all WxCC-linked tenants. If your tenant is WxCC linked tenant and you are not able to find Surveys node in the flow builder, then please reach out to the support Id mentioned in the Webex Connect tenant under Contact Support.
+
+## 
+
+Methods and Outcomes
+
+Here’s a brief description of the methods, and corresponding output variables and node outcomes associated with the method.
+
+## 
+
+Authorization
+
+Refer to section Node Authorizations for more information.
+
+## 📘
+Note
+
+For the Surveys node, you will have to add the authorization again by following the steps provided in the Node Authorization. If a user is using the latest version of the Surveys node, it is mandatory for a user to re-authorize the pre-built integration.
+
+## 
+
+Webex Connect Setup
+
+- Login to the Webex Connect platform.
+
+- Create a new service if required.
+
+- From the toolbar on the left, navigate to Assets > Apps.
+
+- Click on Configure New App and then select the type of Digital Channel to configure the new app.
+
+- Click Save.
+
+- Click Register To Webex Engage.
+
+After the app is configured, it will act as the entry point for calling into the Webex Connect platform.
+
+## 
+
+Chat Setup in the Webex Connect Portal
+
+- Login to the Webex Connect platform.
+
+- Navigate to Templates.
+
+- Click Add New Template.
+
+- In the Configure New Template page, under Channel, select Live Chat / In App Messaging.
+
+- Add all the configuration details and click Save.
+
+- Navigate to Services and select the associated service.
+
+- In the selected service page, click Flows to the top-left section of the page.
+
+- Following are the flows that you may mandatorily or optionally require to set-up.
+
+- Task_Routed/Task modified node - This is an optional node for setting up flows once the customer is connected.
+
+- LiveChat node - This is the main flow. This handles how Webex Connect is integrated with the queues setup in Contact Center Management Portal.
+
+In the Pre-chat and Receive Node, make sure to select the template configured in a step above.
+
+In the Queue Task node, match with the queue created in Contact Center Management Portal
+
+from the Settings page, and add the Live Chat domain and App ID. The App ID is displayed on the Apps page .
+
+- Task Close node - The node handles any logic that occurs after the customer disconnects the call. For example, we can configure to send a XM survey at this step.
+
+## 
+
+Method Name - Create a New Survey Token for a Questionnaire
+
+Click here for more information on questionnaire.
+
+### 
+
+How to Fetch All Questionnaires
+
+To fetch questionnaires:
+
+- Select the Method Name.
+
+- Select the required Node Runtime Authorization from the list.
+
+- Click Fetch All Questionnaires to fetch the questionnaires.
+
+All the fetched questionnaires are pre-populated.
+
+- Select the required questionnaire from Available Questionnaires.
+
+- Click Save.
+
+## 📘
+Note
+
+The Interaction ID and Tracking ID are recommended pre-fills for setting up the Surveys node and generating a survey URL, although they are not mandatory and are primarily used for debugging purposes. These two parameters must be unique for each survey URL. You can utilize the flow transaction ID variable or create your own ID using the Evaluate node. Please note that this information is applicable only to v1.1.
+
+From v1.2, the Interaction ID (Task ID) is automatically configured as one of the pre-fills at the node level, and the Pre-Fills section is removed from the node UI. The pre-fill is automatically set up in the backend with the Interaction ID (Task ID).
+
+ [Image: Screenshot of configuring Surveys node.] 
+Screenshot of configuring Surveys node.
+
+ | Input Variables | Output Variables | Node Outcomes | Versions
+
+ | Name: Enter a valid name for the survey to be used.
+
+Valid After: Enter the Date and Time in UTC format after which the SurveyToken will be active. Eg: MM-DD-YYYY HH:MM:SS
+
+For Eg: If you enter a date as 27th July and the URL is sent to the customer on 26th July, the URL will not be available and is shown as “Invalid URL”.
+
+Valid Till - Enter the date and time Enter the date in ISO format. Eg: yyyy-MM-ddTHH:mm:ssZ
+
+Valid For: Enter an Integer value for the date.
+
+For Eg: If you pass 5 in the Valid For column, the system automatically captures current date (UTC format) and will add 5 more days to the current date.
+
+Note: You can either use Valid Till or Valid For to enter the date and time.
+
+Preferred Language: Select the required language. This can be configured from the Surveys platform. | id - contains the questionnaire token
+
+orgId - contains the org id of the Surveys platform
+
+name - contains the tenant name
+
+validAfter - contains the range from when the url is valid
+
+validTill - contains the range until when the url is valid
+
+questionnaireId - contains the questionnaire id which is selected
+
+preFill - contains the prefill values if provided
+
+onlyForPreviewSurvey - Survey preview mode. The default is false.
+
+preferredLanguage - contains the set of languages for the survey
+
+skipWelcome - Whether to showcase welcome page before stating of survey. This is default to false always.
+
+restrictOnWebDomain - contains the list of web domains on which  the url is restricted
+
+restrictFromIPSpace - contains the list of ip addresses on which the url is restricted
+
+validUses - No of times survey URL can be used. The default value is 1.
+
+surveyURL - contains the survey url
+
+responsePayload - contains the entire response payload | onInvalidData
+
+onError
+
+onInvalidChoice
+
+onTimeout
+
+onauthorizationfail
+
+createTokenForTheQuestionnaireOnSuccess
+
+failedToAddSurveyToken
+
+UserRoleNotAllowedAccessThisResource
+
+APIRequestLimitExceeded | v1.0,v1.1,v1.2,v1.3, v1.4 and v1.5
+
+Name, Valid After, Valid For, and Preferred Language are in available in v1.1,v1.2, v1.3, v1.4, and v1.5
+
+Note: v1.0 uses .NET API endpoint.
+
+v1.1,v1.2,v1.3,v1.4, and v1.5 uses Java based API endpoints.
+
+## 
+
+FAQ's
+
+### 
+
+Where can I call the survey node in the Webex Connect flow?
+
+The survey node should be configured in the WxCC Task Close event flow to send the survey URL to the end user for feedback.
+
+### 
+
+How can I access authentication for the Survey Node configuration?
+
+You can use the admin account credentials you use to log in to the Contact Center and Control Hub.

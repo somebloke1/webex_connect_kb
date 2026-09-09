@@ -1,0 +1,298 @@
+# Voice APIs & SDKs
+
+Source: https://developers.webexconnect.io/reference/sandbox-voice-api-sdk
+Documentation version: 6.20.0
+Retrieved: 2026-09-08T23:31:40+00:00
+
+> 📘 Note
+> 
+> Please check [Countries supported in Sandbox](https://developers.imiconnect.io/reference/sms-and-voice-support-in-sandbox)  for the complete list of supported countries.
+
+With Webex Connect’s Voice API, you can build a custom voice calling application that accesses our voice network using a HTTPS-based interface. Embed inbound and outbound voice capabilities via a set of well defined APIs
+
+Develop voice-enabled applications by simply sending and receiving HTTPS requests. When an incoming call comes into a phone number associated with our Voice API platform, we will notify your application via a webhook event. Your application can then respond to our platform using the actions to launch any of our features.
+
+Actions - Answer, Play, Collect Input(includes DTMF and speech), Record and Call Patch.
+
+> 📘 Automatic fallback to an alternate TTS Provider
+> 
+> The ability for automatic fallback to an alternate TTS Provider is supported for Voice TTS, when the primary TTS service provider is experiencing a higher failure rate.  
+> This feature is not enabled by default for all the tenants. Please reach out to your account manager to get this feature enabled for your tenant. The Fallback feature is enabled only for a specific set of languages.  
+> Example: If English US is supposed on Azure, and you’re experiencing failures, we will fallback to the same language on the alternate TTS Provider. If the same language is not available on the alternate TTS Provider, we will fallback to English. We do not recommend getting this feature enabled if SSML is being used as part of nodes or APIs. This is because the SSML tags are different for the primary service provider and the secondary service provider.
+
+## Creating a Phone Call
+
+To create an outbound call from a Webex Connect number, you must make a POST request to our [API v1 Make call endpoint](https://imiconnect-apis-group.readme.io/reference/post_v1-voice-calls-3). After this call is answered by the user, Webex Connect will send an event to the Callback URL (part of the Make call request), expecting an action (Play, Record, Call patch and Hangup) in response to continue the call.
+
+## Receiving a Phone Call
+
+To handle incoming calls via APIs,  configure the callback URL as part of the numbers section(hyperlink) in the Webex Connect. Upon receiving call, Webex Connect will notify callback URL with information of the caller and Dailed number, expecting an Action(hyperlink)(Answer, Play, Record and Call patch and hangup) in response to continue the call. Answer event will be applicable only for inbound usecases and it needs to be used as a response to Accept event only.
+
+### Events
+
+| Event Name       | Description                                                                                                                                                                             |
+| :--------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Accepted         | Accepted Event is sent from Webex Connect to Developer applications when incoming call received on the configured TFN number. For this request, Developer can send Answer/Handup action. |
+| Answered         | Answered Event is send from Webex Connect to Developer application when the calls are answered. For answered event developer application can send any media action or hangup action.     |
+| Dropped          | Drop event send from Webex Connect to Developer application when the calls are disconnected/dropped.                                                                                     |
+| Played           | Played event is sent from Webex Connect to Developer application , when ongoing play completed for a call.                                                                               |
+| Streamed         | Streamed event sent from Webex Connect to Developer application when ASR completed and got streamtotext response.                                                                        |
+| Recorded         | Recorded event sent from Webex Connect to developer application when ongoing menu record completed.                                                                                      |
+| Failure          | For any action failed at Webex Connect it will send EVNET name, Status as failure and Failure reason.                                                                                    |
+| Patched          | Patched event is sent from Webex Connect to developer application when trombone call is connected.                                                                                       |
+| Collected Digits | Patched event is sent from Webex Connect to developer application when multiple DTMF digits are received from the user.                                                                  |
+
+```Text ACCEPTED EVENT
+{
+  "event": "ACCEPTED",
+  "callerId": "+4475XXXXXXXX",
+  "dialedNumber": "+4474XXXXXXXX",
+  "offeredTime": "2023-04-25T05:14:50.178Z",
+  "eventTime": "2023-04-25T05:14:52.031Z",
+  "sessionId": "c51e56af-0c71-4917-98dd-53d299012e46"
+}
+```
+```Text ANSWERED EVENT
+
+]{
+"event": "ANSWERED",
+  		"callerId": "+1315XXXXXXXX",
+  "dialedNumber": "+9185XXXXXXXX",
+ 		 "offeredTime": "2022-11-17T09:22:55.624Z",
+  "answeredTime": "2022-11-17T09:23:06.139Z",  
+  "eventTime": "2022-11-17T09:23:06.161Z",
+  "sessionId": "a12c95ad-1999-4669-ba72-25ed04d2d7c2"
+}
+
+```
+```Text DROPPED EVENT
+{
+  			"event": "DROPPED",
+ 			 "status": "SUCCESS",
+  			 "droppedBy": "CALLEE",
+  			 "error": {
+    				"code": "2008",
+    				"message": "Call Dropped by Network/End user"
+ 				 },
+  "eventTime": "2023-02-21T10:08:52.562Z",
+  			"sessionId": "a4a45c38-0a4d-48e0-85a6-f1f96796b258"
+}
+
+```
+```Text PLAYED EVENT
+{
+  			"status": "SUCCESS",
+ 			 "playedDuration": 1,
+ 			 "event": "PLAYED",
+  			"eventTime": "2023-04-26T13:12:47.233Z",
+  			"sessionId": "64277de6-29fd-48e6-b48b-54392465376d",
+  			"transactionId": "c63cab3c-622a-4fed-8529-2960395e811d"
+}
+
+```
+```Text STREAMED EVENT
+{
+  	"event": "STREAMED",
+  "callerId": "+131XXXXXXXX",
+ 	 "dialedNumber": "+9189XXXXXXXX",
+  	"status": "SUCCESS",
+ 	 "text": "credit card",
+  	"eventTime": "2022-12-07T16:46:06.343Z",
+ 	 "sessionId": "a12c95ad-1999-4669-ba72-25ed04d2d7c2",
+ 	 "transactionId": "3afd709e-3bb8-4f19-b797-ba6bf2a4b366"
+}
+
+```
+```Text RECORDED EVENT
+{
+  		"event": "RECORDED",
+ 		 "status": "SUCCESS",
+ 		 "recordingFileName": "https://anydomain.imiconnect.ca/voice-recordings/menu_1681891700_909100209630299_5.wav",
+  		"recordingLength": 6,
+  		"eventTime": "2023-04-19T08:08:32.132Z",
+  		"sessionId": "133941b7-c052-450a-aa2c-026b790c2644",
+  		"transactionId": "2bde1a0d-5f54-4afd-8ece-136893348466"
+}
+
+```
+```Text FAILURE EVENT
+{
+"event": "STREAMED",
+  "callerId": "+13153055521",
+  "dialedNumber": "+918919147207",
+  "status": "FAILURE",
+  "error": {
+    "message": "HttpStream failed, error code 500"
+  },
+  "eventTime": "2022-12-07T16:48:12.891Z",
+  "sessionId": "a12c95ad-1999-4669-ba72-25ed04d2d7c2",
+  "transactionId": "1427e243-d3ed-453b-b5ab-7108f88a5084"
+}
+
+```
+```Text PATCHED EVENT
+{
+"event": "PATCHED",
+  "eventTime": "2022-12-07T16:48:12.891Z",
+  "sessionId": "a12c95ad-1999-4669-ba72-25ed04d2d7c2",
+  "transactionId": "1427e243-d3ed-453b-b5ab-7108f88a5084",
+  "status": "SUCCESS",
+    "ConnectedOn":	"2022-12-07T16:48:15.891Z"
+    "recordingFileName": [
+    "1.wav","2.wav"
+     ]
+    "droppedBy":"CALLER"
+            }
+
+```
+```Text COLLECTED DIGITS EVENT
+
+{
+"event": "COLLECTED_DIGITS",
+  "eventTime": "2022-12-07T16:48:12.891Z",
+  "sessionId": "a12c95ad-1999-4669-ba72-25ed04d2d7c2",
+  "transactionId": "1427e243-d3ed-453b-b5ab-7108f88a5084",
+  "status": "SUCCESS",
+    "numOfDigits":8
+    "digitsReceived":"23458976",
+    "terminationDigit":"1",
+    "playedDuration":300,
+            }
+
+```
+
+### Actions
+
+
+
+| Action Name | Description |
+| --- | --- |
+| Answered | Answered action is sent from developer application to Webex Connect, to inform Webex Connect to answer the call.  <br>The Header response for Accept event must be '200 **OK**.' |
+| Hangup | Hangup action is sent from developer application to Webex Connect, to inform Webex Connect to hangup or reject  the call. |
+| Play | Play action is sent from developer application to Webex Connect, to play the provided content file or to use TTS to play the audio corresponding to the TTS text which was specified. |
+| Patch | Patch action is sent from developer application to Webex Connect, to inform Webex Connect to perform call patch operation. |
+| Record | Record action is sent from developer application to Webex Connect, to inform Webex Connect to perform record operation. |
+
+
+
+
+```Text ANSWERED ACTION
+{
+  "action": "ANSWER"
+}
+
+```
+```Text HANGUP ACTION
+
+{
+  "action": "REJECT",
+  "reason": "Calltest Failed due to configured menu in reject state"
+}
+
+```
+```Text PLAY ACTION
+{
+  "action": "PLAY",
+  "audio": [
+    {
+      "type": "URL",
+      "location": "https://www2.cs.uic.edu/~i101/SoundFiles/CantinaBand3.wav"
+    },
+    {
+      "type": "TTS",
+      "style": "NEURAL",
+      "language": "en-US",
+      "voice": "GuyNeural;Male",
+      "gender": "MALE",
+      "engine": "AZURE",
+      "text": "greetings from cisco please enter 3 digits pin followed by # to patch "
+    }
+  ],
+"collectInput":{
+  "terminationDigit": "#",
+  "maxDigits": 0,
+  "digitTimeout": 5
+},
+"streamInput":{
+  "timeout": 20,
+  "maxsilence": 5,
+  "model": "DEFAULT",
+  "language": "en-US",
+  "asrEngine": "GOOGLE",
+    "recordStream": true,
+	"singleUtterence":false,
+"alternateLanguages":["fr-CA", "en-CA"]
+}
+          }
+
+```
+```Text PATCH ACTION
+{
+  "action": "PATCH",
+  "recordCall": true,
+  "holdAudio": {
+    "type": "URL",
+    "location": "https://www2.cs.uic.edu/~i101/SoundFiles/CantinaBand3.wav"
+  },
+  "greetingAudio": {
+    "type": "TTS",
+    "text": "thank you for waiting call is connected now"
+  },
+  "greetingRepeatCount": 0,
+  "patchCallerId": "+15306544584",
+  "dialedNumber": "+919985167784",
+  "passDtmf": false
+}
+
+```
+```Text RECORD ACTION
+{
+  "action": "RECORD",
+  "audio": [
+    {
+      "type": "TTS",
+      "style": "NEURAL",
+      "language": "en-US",
+      "voice": "GuyNeural;Male",
+      "gender": "MALE",
+      "engine": "AZURE",
+      "text": " Hello buddy start recording now April 3rd 2023 "
+    }
+  ],
+  "timeoutSeconds": 20,
+  "terminationDigit": "5"
+}
+
+```
+
+## API reference metadata
+
+These are source metadata and examples. `api.auth` is ReadMe metadata; verify authentication in the documented headers/security scheme.
+
+```json
+{
+  "method": "get",
+  "url": "",
+  "auth": "required",
+  "results": {
+    "codes": [
+      {
+        "name": "",
+        "code": "{}",
+        "language": "json",
+        "status": 200
+      },
+      {
+        "name": "",
+        "code": "{}",
+        "language": "json",
+        "status": 400
+      }
+    ]
+  },
+  "params": [],
+  "examples": {
+    "codes": []
+  }
+}
+```

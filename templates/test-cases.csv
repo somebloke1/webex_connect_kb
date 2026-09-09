@@ -1,0 +1,18 @@
+id,scenario,input_variant,expected_route,expected_side_effect,observed_result,evidence,status
+T01,happy path,valid authenticated event,business success,exactly one intended update,,,not_run
+T02,missing field,missing required identifier,validation rejection,no send or business write,,,not_run
+T03,wrong type,identifier represented as unexpected object,validation rejection,no send or business write,,,not_run
+T04,duplicate event,same eventId while flow active,duplicate policy,no duplicate side effect,,,not_run
+T05,replay after completion,same eventId after session ends,business deduplication,no duplicate side effect,,,not_run
+T06,invalid reply,unrecognized input,bounded clarification then exit,no incorrect business update,,,not_run
+T07,no reply,receive deadline expires,no-response path,no false success,,,not_run
+T08,upstream rejection,downstream 400 or 401 or 403,non-retry failure path,no blind retry,,,not_run
+T09,throttled dependency,downstream 429,bounded retry or defer path,attempt budget enforced,,,not_run
+T10,ambiguous write timeout,write may have committed,reconciliation path,no duplicate write,,,not_run
+T11,delivery failure,message accepted then final delivery fails,delivery-failure policy,no false delivered outcome,,,not_run
+T12,parallel conversations,same user with two business transactions,documented correlation policy,reply affects correct transaction,,,not_run
+T13,handoff unavailable,no agents or queue failure,fallback path,no orphaned task or endless wait,,,not_run
+T14,late reply,reply after terminal state,late-event policy,no stale transaction reopened accidentally,,,not_run
+T15,quiet-hours boundary,time zone or DST transition,agreed hours policy,no unintended out-of-hours send,,,not_run
+T16,rollback,previous version restored,known working path,asset references valid,,,not_run
+

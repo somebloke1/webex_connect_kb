@@ -1,0 +1,61 @@
+You are required to have access to a long code or a short code for receiving incoming messages from customers and sending responses to their messages. Number provisioning requests need to be sent to your Partner Success Manager(PSM) or Customer Success Manager(CSM). For Gold/Partner tenants, requests should be sent to the PSM team and, for Customer tenants, requests should be sent to CSM. Contact information is available on the Contact Support page within your Webex Connecttenant.
+
+Once a number has been provisioned to your tenant, it is visible under 'Assets -> Numbers' screen.
+
+ [Image: Screenshot of Number Page.] 
+Screenshot of Number Page.
+
+Once a number has been provisioned to your Webex Connect tenant for supporting SMS as a channel for customer service, you would need to register it on Cisco Webex Contact Center to complete the asset configuration process.
+
+## 
+
+Registering your Webex Connect Phone Number with Webex Contact Center
+
+- Navigate to Assets -> Numbers.
+
+- Select Phone Number from the Number Type.
+
+- Select the required Phone Number which you want to register with Cisco Webex Contact Center.
+
+- Click Manage.
+
+The Manage Phone Number page displays.
+
+ [Image: Screenshot of Manage Phone Number Page.] 
+Screenshot of Manage Phone Number Page.
+
+- 
+
+Click Register to Webex Engage.
+
+ [Image: Screenshot of Register to Webex Engage.] 
+Screenshot of Register to Webex Engage.
+
+- 
+
+Select the required service (Note: This should be the Webex Connect service that would be used for configuring SMS flows for Webex Contact Center) and click Register. 
+
+ [Image: Screenshot of registering the asset successfully with Webex Engage.] 
+Screenshot of registering the asset successfully with Webex Engage.
+
+A message displays “Asset registered successfully”. This completes the asset registration for Webex Contact Center.
+
+ [Image: Screenshot displaying the Webex Contact Center icon and PCI check enabled flag next to a mapped number] 
+Screenshot displaying the Webex Contact Center icon and PCI check enabled flag next to a mapped number
+
+As shown above, you will see a Cisco Webex Contact Center icon and a PCI check enabled flag next to the number once it's been successfully mapped with Webex Contact Center.
+
+## ❗️
+
+- 
+
+Please note, the service mapping cannot be changed once done. Hence, the asset registration on Webex Contact Center should be done after the service to be used has been decided.
+
+- 
+
+Do not release a number that you are using for providing customer support over SMS as a channel as it will cause disruptions to live services. Released numbers are delinked from your Webex Connect and cannot be restored.
+
+## 📘
+Entrypoint Configuration
+
+Once the asset is registered on Webex Connect, the entry point mapping should be done on the Cisco Webex Contact Center portal as well.

@@ -1,0 +1,40 @@
+{
+  "category": "2026 product and policy updates",
+  "deprecated": false,
+  "doc_id": "69fca4ea3a42392fcae0448a",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "5b41eb1b8c9ea1e3b55e762c4501867c8bf66f024b5192152d136483a07e2825",
+    "source_path": "0facb62bd6e409ea029b90ca9bc8cec4ed27a0e875a60a2bf1529f66c7eaeb00",
+    "text_path": "80f7ffbfd5459fb3712a1795106f1d760ad5aad5e674ca88127c83b0631fab91"
+  },
+  "headings": [
+    "Summary",
+    "📘Release Date",
+    "Details",
+    "Added – WhatsApp Business-Scoped User ID (BSUID) Support in Messaging APIs, Visual Flow Builder and more",
+    "Added – New API for Number Intelligence/Number Lookup (Beta Release)",
+    "Added – mTLS support for OAuth 2.0 based integrations in Custom Node",
+    "Changelog"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/changelog/changelog--product-update-v6180-may-2026.md",
+  "release_version": "6.18.0",
+  "resolved_url": "https://help.webexconnect.io/changelog/product-update-v6180-may-2026",
+  "retrieved_at": "2026-09-08T23:31:53+00:00",
+  "sha256_html_response": "bcd45f4126a786abe5bc474348d021f33bde75d3d7904f381ddd8562d6f4e832",
+  "sha256_source_body": "0facb62bd6e409ea029b90ca9bc8cec4ed27a0e875a60a2bf1529f66c7eaeb00",
+  "source_family": "changelog",
+  "source_kind": "official_changelog",
+  "source_path": "sources/cache/changelog/changelog--product-update-v6180-may-2026.source.md",
+  "source_published_at": "2026-05-07T14:42:50.361Z",
+  "source_updated_at": null,
+  "status": "ok",
+  "text_path": "sources/cache/changelog/changelog--product-update-v6180-may-2026.txt",
+  "title": "Product Update - v6.18.0, May 2026",
+  "url": "https://help.webexconnect.io/changelog/product-update-v6180-may-2026",
+  "word_count": 1042,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/changelog/changelog--product-update-v6180-may-2026.metadata.json"
+}

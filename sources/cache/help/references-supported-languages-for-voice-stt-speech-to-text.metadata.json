@@ -1,0 +1,31 @@
+{
+  "category": "REFERENCES",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257928",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "675f9154295a06aa13c76fc31eb53365773e4480a336caeb701b24fcafe392ef",
+    "source_path": "76458b1f3e1d19076e3700ccaaa4869302274a13e548ce02f2addf5a565cc99a",
+    "text_path": "b54ef8660c7509d162e1373417b88065292ea122d130039c063bfe516a58fa8a"
+  },
+  "headings": [],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/references-supported-languages-for-voice-stt-speech-to-text.md",
+  "resolved_url": "https://help.webexconnect.io/docs/references-supported-languages-for-voice-stt-speech-to-text",
+  "retrieved_at": "2026-09-08T23:29:40+00:00",
+  "sha256_html_response": "c0a82336a4db9a7ce0bc2d1be2e6f3d667db2734466e28116b495825941446ca",
+  "sha256_source_body": "76458b1f3e1d19076e3700ccaaa4869302274a13e548ce02f2addf5a565cc99a",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/references-supported-languages-for-voice-stt-speech-to-text.source.md",
+  "source_updated_at": "2026-02-03T15:19:48.208Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/references-supported-languages-for-voice-stt-speech-to-text.txt",
+  "title": "Supported Languages for Voice STT (Speech-to-Text)",
+  "url": "https://help.webexconnect.io/docs/references-supported-languages-for-voice-stt-speech-to-text",
+  "word_count": 781,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/references-supported-languages-for-voice-stt-speech-to-text.metadata.json"
+}

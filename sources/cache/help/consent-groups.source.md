@@ -1,0 +1,132 @@
+You need to create groups to send specific types of messages. For example, you may have a group to whom you send messages showing all your sale items for the week and you may have another group who use the store pharmacy and you want to send messages about refilling their prescriptions.
+
+The consent group type must be specified when creating a new group.
+
+## Consent Group Types
+
+When you create a consent group, you must specify if it is a Allow List group or Deny List group. The group type defines rules for those consumers who are part of the group. If the Group Type is a Allow List, a consumer who is part of the group list, will receive messages. If the Group Type is a Deny List, a consumer who is part of the group list, will not be able to receive messages.
+
+## Add a New Group
+
+To add a new group, use the directions below:
+
+1. On the Consent Group page, click the **ADD NEW GROUP** button . The Add New Consent Group page appears.
+
+[block:image]
+{
+  "images": [
+    {
+      "image": [
+        "https://files.readme.io/4ca2365-Add_New_Consent_Group.png",
+        null,
+        "Screenshot of the Add New Consent Group page."
+      ],
+      "align": "center",
+      "border": true,
+      "caption": "Screenshot of the Add New Consent Group page"
+    }
+  ]
+}
+[/block]
+
+
+2. **Consent Group Type** – select Allow List or Deny List.
+   - Allow List - Contains the list of users who don't receive messages unless they opt in.
+   - Deny List - Contains the list of the users who always receive messages unless they opt out.
+3. Provide the information listed below.
+   - **Group Name** – Type the name of the group.
+   - **Description** – Type a description for the group. This description may include such things as how customer consent, communication channel preferences, and marketing interests are captured for this group.
+   - **Channels** – Select the channel to receive the message. More than one channel can be selected.
+     - **voice** – Select this option to send messages to telephones. In the Sender ID field, type the identification associated with the sender. 
+     - **text** – Select the text option to send messages in SMS, MMS, or RCS format (the three formats are clubbed into one - text). In the Sender ID field, type the identification associated with the sender. 
+     - **email** – Select this option to send messages to email addresses. In the Sender ID field, type the identification associated with the sender. 
+     - **whatsapp** – Select this option to send messages to whatsapp. In the Sender ID field, type the identification associated with the sender. For WhatsApp consent groups, consumer records can include the customer's WhatsApp address or WAID and, where available, the customer's BSUID as an alternate address.
+4. Under Frequency Type, select None, All Channels or Per Channel.
+
+   - If you select **None**, there’s no need to select frequency for the channels. The frequency will be unlimited.
+
+   [block:image]{"images":[{"image":["https://files.readme.io/b09245f-CG_Channel_Add.jpg","","Screenshot of the interface with frequency type selected as None."],"align":"center","caption":"Screenshot of the interface with frequency type selected as None"}]}[/block]
+
+   - If you select **All Channels**, the Daily, Weekly, and Monthly frequency will be applicable for all the channels selected. The number of messages sent cannot exceed 5000. The daily limit should always be lesser than the weekly limit and the weekly limit should always be lesser than the monthly limit.
+
+   [block:image]{"images":[{"image":["https://files.readme.io/e86e07c-CG_All_Channels.jpg","","Screenshot of the interface with frequency type selected as All Channels."],"align":"center","caption":"Screenshot of the interface with frequency type selected as All Channels"}]}[/block]
+
+   - If you selected **Per Channel**, the Daily, Weekly, and Monthly frequency can be configured for each channel.The number of messages sent cannot exceed 5000. The daily limit should always be lesser than the weekly limit and the weekly limit should always be lesser than the monthly limit.
+
+[block:image]
+{
+  "images": [
+    {
+      "image": [
+        "https://files.readme.io/72c3998-CG_Per_Channel.jpg",
+        null,
+        "Screenshot of the interface with frequency type selected as Per Channel."
+      ],
+      "align": "center",
+      "border": true,
+      "caption": "Screenshot of the interface with frequency type selected as Per Channel."
+    }
+  ]
+}
+[/block]
+
+
+5. Click **+ Add Channel** to individually set the frequencies for the selected channels.
+
+[block:image]
+{
+  "images": [
+    {
+      "image": [
+        "https://files.readme.io/89251d9-CG_Frequency.jpg",
+        null,
+        "Screenshot instructing to click + Add Channel to individually set frequencies for selected channels"
+      ],
+      "align": "center",
+      "border": true,
+      "caption": "Screenshot instructing to click + Add Channel to individually set frequencies for selected channels"
+    }
+  ]
+}
+[/block]
+
+
+- Channel – Select the required channel from the list.
+- Sender Ids – (This field is optional for all channels). Type the ID for the sender. This can be a short code, phone number, chatbot name, or email address based on the channel selected. You can enter up to 5 addresses.
+- Enter the value for the messages to be sent on Daily, Weekly, and Monthly basis. The number of messages sent cannot exceed 5000.
+
+> 🚧 
+> 
+> The daily limit should always be lesser than the weekly limit and the weekly limit should always be lesser than the monthly limit.
+> 
+> The intervals and number of messages must be consistent. The daily, weekly, and monthly limit defined refers to the maximum limit of messages that can be sent for each frequency type. It is not mandatory to utilize the full capacity of the limit for each frequency type.
+> 
+> - For example, if you set a daily limit of 2 messages, a weekly limit of 5 messages, and a monthly limit of 15 messages, it means that a logical combination can be defined such that distribution of limit does not exceed the limit for each frequency type. 
+> - In this case, 2 messages each can be sent on Monday and Tuesday, and one message can be sent on Friday, which matches the weekly limit of 5 messages. A contact frequency check will be performed, and if the frequency limit exceeds, the message is not sent. 
+> 
+> The Frequency can only be set for channels selected in the displayed list.
+
+6. Click **Save**. The new group is listed on the Consent Group page.
+
+[block:image]
+{
+  "images": [
+    {
+      "image": [
+        "https://files.readme.io/ae883645a4afb083ad796b5728dd7729cb3de93e049ca5cd7d3ecd6f6e3d9c3f-image-20250812-132350.png",
+        null,
+        "Screenshot of Image showing the Consent Group page with the newly added group appearing in the list of groups."
+      ],
+      "align": "center",
+      "border": true,
+      "caption": "Image showing the list of groups in the Consent Groups page"
+    }
+  ]
+}
+[/block]
+
+
+After creating a group, consumer records can be added and updated using:
+
+- API call through <<prodname>>
+- The **Upload ** option

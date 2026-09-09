@@ -1,0 +1,162 @@
+[
+  {
+    "name": "Apple Inbound Flow with IntentId GroupId based Routing.workflow.zip",
+    "repository_path": "Webex Connect Flows/v3.5/Sample/Apple Business Messages/Other sample flows /Apple Inbound Flow with IntentId GroupId based Routing.workflow.zip",
+    "archive_path": "evidence/sample-flows/raw/wxcc-v3.5/2dd09164-Apple Inbound Flow with IntentId GroupId based Routing.workflow.zip",
+    "import_paths": [
+      "evidence/sample-flows/raw/wxcc-additional-imports/2dd09164-Apple Inbound Flow with IntentId GroupId based Routing.workflow"
+    ]
+  },
+  {
+    "name": "Apple List Picker Flow.workflow.zip",
+    "repository_path": "Webex Connect Flows/v3.5/Sample/Apple Business Messages/Rich message flows/Apple List Picker Flow.workflow.zip",
+    "archive_path": "evidence/sample-flows/raw/wxcc-v3.5/9f8cf4b2-Apple List Picker Flow.workflow.zip",
+    "import_paths": [
+      "evidence/sample-flows/raw/wxcc-additional-imports/9f8cf4b2-Apple List Picker Flow.workflow"
+    ]
+  },
+  {
+    "name": "Apple Time Picker Flow.workflow.zip",
+    "repository_path": "Webex Connect Flows/v3.5/Sample/Apple Business Messages/Rich message flows/Apple Time Picker Flow.workflow.zip",
+    "archive_path": "evidence/sample-flows/raw/wxcc-v3.5/29d1301f-Apple Time Picker Flow.workflow.zip",
+    "import_paths": [
+      "evidence/sample-flows/raw/wxcc-additional-imports/29d1301f-Apple Time Picker Flow.workflow"
+    ]
+  },
+  {
+    "name": "Apple Form Response Flow.workflow.zip",
+    "repository_path": "Webex Connect Flows/v3.5/Sample/Apple Business Messages/Rich message response flows/Apple Form Response Flow.workflow.zip",
+    "archive_path": "evidence/sample-flows/raw/wxcc-v3.5/d04ca908-Apple Form Response Flow.workflow.zip",
+    "import_paths": [
+      "evidence/sample-flows/raw/wxcc-additional-imports/d04ca908-Apple Form Response Flow.workflow"
+    ]
+  },
+  {
+    "name": "Apple Time Picker and List Picker Response Flow.workflow.zip",
+    "repository_path": "Webex Connect Flows/v3.5/Sample/Apple Business Messages/Rich message response flows/Apple Time Picker and List Picker Response Flow.workflow.zip",
+    "archive_path": "evidence/sample-flows/raw/wxcc-v3.5/e1695515-Apple Time Picker and List Picker Response Flow.workflow.zip",
+    "import_paths": [
+      "evidence/sample-flows/raw/wxcc-additional-imports/e1695515-Apple Time Picker and List Picker Response Flow.workflow"
+    ]
+  },
+  {
+    "name": "Apple iMessage App Flow.workflow.zip",
+    "repository_path": "Webex Connect Flows/v3.5/Sample/Apple Business Messages/Rich message response flows/Apple iMessage App Flow.workflow.zip",
+    "archive_path": "evidence/sample-flows/raw/wxcc-v3.5/22d12fb7-Apple iMessage App Flow.workflow.zip",
+    "import_paths": [
+      "evidence/sample-flows/raw/wxcc-additional-imports/22d12fb7-Apple iMessage App Flow.workflow"
+    ]
+  },
+  {
+    "name": "FacebookAttachmentDropNotification.workflow.zip",
+    "repository_path": "Webex Connect Flows/v3.5/Sample/Attachment Drop Notification to Customer/FacebookAttachmentDropNotification.workflow.zip",
+    "archive_path": "evidence/sample-flows/raw/wxcc-v3.5/10d617bd-FacebookAttachmentDropNotification.workflow.zip",
+    "import_paths": [
+      "evidence/sample-flows/raw/wxcc-additional-imports/10d617bd-FacebookAttachmentDropNotification.workflow"
+    ]
+  },
+  {
+    "name": "FacebookCloseWithWxmFlow.workflow.zip",
+    "repository_path": "Webex Connect Flows/v3.5/Sample/Usage Of Surveys in Flows/FacebookCloseWithWxmFlow.workflow.zip",
+    "archive_path": "evidence/sample-flows/raw/wxcc-v3.5/cae3968b-FacebookCloseWithWxmFlow.workflow.zip",
+    "import_paths": [
+      "evidence/sample-flows/raw/wxcc-additional-imports/cae3968b-FacebookCloseWithWxmFlow.workflow"
+    ]
+  },
+  {
+    "name": "LiveChatCloseWithWxmFlow.workflow.zip",
+    "repository_path": "Webex Connect Flows/v3.5/Sample/Usage Of Surveys in Flows/LiveChatCloseWithWxmFlow.workflow.zip",
+    "archive_path": "evidence/sample-flows/raw/wxcc-v3.5/effcf4ce-LiveChatCloseWithWxmFlow.workflow.zip",
+    "import_paths": [
+      "evidence/sample-flows/raw/wxcc-additional-imports/effcf4ce-LiveChatCloseWithWxmFlow.workflow"
+    ]
+  },
+  {
+    "name": "LiveChatInboundSampleFlowWithSetVariablePIQAndEWT.workflow.zip",
+    "repository_path": "Webex Connect Flows/v3.5/Sample/Usage of PIQ And EWT In Flows/LiveChatInboundSampleFlowWithSetVariablePIQAndEWT.workflow.zip",
+    "archive_path": "evidence/sample-flows/raw/wxcc-v3.5/552f2736-LiveChatInboundSampleFlowWithSetVariablePIQAndEWT.workflow.zip",
+    "import_paths": [
+      "evidence/sample-flows/raw/wxcc-additional-imports/552f2736-LiveChatInboundSampleFlowWithSetVariablePIQAndEWT.workflow"
+    ]
+  },
+  {
+    "name": "AMB Simplified Flow.zip",
+    "repository_path": "Webex Connect Flows/v3.5/Template/Media Specific Workflows/Apple Messages for Business/AMB Simplified Flow.zip",
+    "archive_path": "evidence/sample-flows/raw/wxcc-v3.5/2ae1c626-AMB Simplified Flow.zip",
+    "import_paths": [
+      "evidence/sample-flows/raw/wxcc-additional-imports/2ae1c626-AMB Simplified Flow.workflow"
+    ]
+  },
+  {
+    "name": "Apple Basic Inbound Flow.workflow.zip",
+    "repository_path": "Webex Connect Flows/v3.5/Template/Media Specific Workflows/Apple Messages for Business/Apple Basic Inbound Flow.workflow.zip",
+    "archive_path": "evidence/sample-flows/raw/wxcc-v3.5/31ac8e9d-Apple Basic Inbound Flow.workflow.zip",
+    "import_paths": [
+      "evidence/sample-flows/raw/wxcc-additional-imports/31ac8e9d-Apple Basic Inbound Flow.workflow"
+    ]
+  },
+  {
+    "name": "Apple Inbound Flow with Form.workflow.zip",
+    "repository_path": "Webex Connect Flows/v3.5/Template/Media Specific Workflows/Apple Messages for Business/Apple Inbound Flow with Form.workflow.zip",
+    "archive_path": "evidence/sample-flows/raw/wxcc-v3.5/92922a1f-Apple Inbound Flow with Form.workflow.zip",
+    "import_paths": [
+      "evidence/sample-flows/raw/wxcc-additional-imports/92922a1f-Apple Inbound Flow with Form.workflow"
+    ]
+  },
+  {
+    "name": "Apple Unsubscribe Flow.workflow.zip",
+    "repository_path": "Webex Connect Flows/v3.5/Template/Media Specific Workflows/Apple Messages for Business/Apple Unsubscribe Flow.workflow.zip",
+    "archive_path": "evidence/sample-flows/raw/wxcc-v3.5/09d5ade3-Apple Unsubscribe Flow.workflow.zip",
+    "import_paths": [
+      "evidence/sample-flows/raw/wxcc-additional-imports/09d5ade3-Apple Unsubscribe Flow.workflow"
+    ]
+  },
+  {
+    "name": "FacebookInboundFlow.workflow.zip",
+    "repository_path": "Webex Connect Flows/v3.5/Template/Media Specific Workflows/FacebookInboundFlow.workflow.zip",
+    "archive_path": "evidence/sample-flows/raw/wxcc-v3.5/ba8c03ab-FacebookInboundFlow.workflow.zip",
+    "import_paths": [
+      "evidence/sample-flows/raw/wxcc-additional-imports/ba8c03ab-FacebookInboundFlow.workflow"
+    ]
+  },
+  {
+    "name": "Live Chat Close Flow.workflow.zip",
+    "repository_path": "Webex Connect Flows/v3.5/Template/Media Specific Workflows/Live Chat Close Flow.workflow.zip",
+    "archive_path": "evidence/sample-flows/raw/wxcc-v3.5/e1d9c8ab-Live Chat Close Flow.workflow.zip",
+    "import_paths": [
+      "evidence/sample-flows/raw/wxcc-additional-imports/e1d9c8ab-Live Chat Close Flow.workflow"
+    ]
+  },
+  {
+    "name": "Livechat Inbound flow with proactive chat changes.zip",
+    "repository_path": "Webex Connect Flows/v3.5/Template/Media Specific Workflows/Livechat Inbound flow with proactive chat changes.zip",
+    "archive_path": "evidence/sample-flows/raw/wxcc-v3.5/942ec430-Livechat Inbound flow with proactive chat changes.zip",
+    "import_paths": [
+      "evidence/sample-flows/raw/wxcc-additional-imports/942ec430-Livechat Inbound flow with proactive chat changes.workflow"
+    ]
+  },
+  {
+    "name": "LivechatInbound flow.workflow.zip",
+    "repository_path": "Webex Connect Flows/v3.5/Template/Media Specific Workflows/LivechatInbound flow.workflow.zip",
+    "archive_path": "evidence/sample-flows/raw/wxcc-v3.5/52c176fe-LivechatInbound flow.workflow.zip",
+    "import_paths": [
+      "evidence/sample-flows/raw/wxcc-additional-imports/52c176fe-LivechatInbound flow.workflow"
+    ]
+  },
+  {
+    "name": "LivechatInboundFlowWithoutForm.workflow.zip",
+    "repository_path": "Webex Connect Flows/v3.5/Template/Media Specific Workflows/LivechatInboundFlowWithoutForm.workflow.zip",
+    "archive_path": "evidence/sample-flows/raw/wxcc-v3.5/244c8300-LivechatInboundFlowWithoutForm.workflow.zip",
+    "import_paths": [
+      "evidence/sample-flows/raw/wxcc-additional-imports/244c8300-LivechatInboundFlowWithoutForm.workflow"
+    ]
+  },
+  {
+    "name": "Whatsapp inbound.workflow.zip",
+    "repository_path": "Webex Connect Flows/v3.5/Template/Media Specific Workflows/Whatsapp inbound.workflow.zip",
+    "archive_path": "evidence/sample-flows/raw/wxcc-v3.5/6ea09b22-Whatsapp inbound.workflow.zip",
+    "import_paths": [
+      "evidence/sample-flows/raw/wxcc-additional-imports/6ea09b22-Whatsapp inbound.workflow"
+    ]
+  }
+]

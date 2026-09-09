@@ -1,0 +1,98 @@
+A node is a building block for constructing flows. Node is a discrete function that executes within a flow. Nodes encapsulate an action or a decision to form the basis of a flow. Each node performs a specific function, in some cases depending on the outcome, and can decide between two or more possible paths to continue the execution.
+
+You can drag-and-drop the nodes to place them on the flow canvas. When you drag-and-drop a node, the node snaps to the canvas-grid. You can move the node to any empty space on the canvas grid, however, you cannot superimpose one node on another.
+
+You must connect all the nodes, in a logical sequence, using the connectors to form a meaningful flow. Each node has a set of configurable properties and events. Double-click any node to open the configuration window where you can configure the properties and events. Every node accepts input and provides output. Based on your requirements, you also need to configure the events that the node needs to execute.
+
+## 📘
+
+Please note that all flow variables are case-sensitive.
+
+Except for the Start node, all nodes have pre-defined edges. You can configure the End Flow settings and use a node edge to end the flow.
+
+The nodes are classified into the following categories based on their configurable properties:
+
+ | Utilities | Channels | Pre-built Integrations
+
+ | Evaluate | Send SMS | IMIcampaign Profile Node
+
+Note: You can see this node only if it has been enabled by the Admin.
+
+ | Branch | RCS
+
+>  RCS Capability Node
+
+>  RCS Message Node | Create Chat
+
+ | HTTP Request | Push | Cisco Webex Contact Center Nodes
+
+ Create Task
+
+ Queue Task
+ Screen Pop
+
+ Routed Notification
+ Modify Notification
+
+ Close Task
+ Search Conversation
+
+ Append Conversation
+ Create Conversation
+
+ Add Participant
+ Remove Participant
+
+ Close Conversation
+
+* Update Conversation
+
+ | Delay | Live Chat / In-app Messaging | Cisco Contact Center Nodes
+
+ ECE Login
+
+ Search Customer
+ Edit Customer
+
+ Entrypoint Configuration
+ Agent Availability
+
+ Start Conversation
+ Send Message
+
+ Process ECE Events
+
+* Get File Info 
+
+ | Data Parser | Email | 
+
+ | Data Transform | Apple Messages for Business | 
+
+ | Call Workflow | Messenger | 
+
+ | Page Connector | WhatsApp | 
+
+ | Profile |  | 
+
+ | Generate OTP | Receive | 
+
+ | Validate OTP | Send Voice | 
+
+ | Social Hour | Voice Node Group | 
+
+ | Cryptographic Hash | Play Node | 
+
+ | Decryption | Call User Node | 
+
+ | Encryption | Record Node | 
+
+ |  | Collect Input Node | 
+
+ |  | IVR Menu Node | 
+
+ |  | Call Patch Node | 
+
+## 📘
+Note:
+
+You can now delete authorizations of a pre-built integration from integration as well as from the integration node configuration window. In case, any live flow uses the authorization, you will be alerted about the flows which will get affected.

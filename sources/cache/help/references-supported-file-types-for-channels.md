@@ -1,0 +1,166 @@
+# Supported File Types for Channels
+
+Source: https://help.webexconnect.io/docs/references-supported-file-types-for-channels
+Documentation version: 6.20.0
+Retrieved: 2026-09-08T23:29:40+00:00
+
+## Apple Messages for Business
+
+| Media       | Supported Content Types - Outbound                                            | Supported Content Types - Inbound                                             |
+| :---------- | :---------------------------------------------------------------------------- | :---------------------------------------------------------------------------- |
+| audio       | mp4, amr, wav                                                                 | amr                                                                           |
+| application | pdf, msword, xls, xlsx, vnd.ms-powerpoint, text/plain, ics, usdz, caf, pkpass | pdf, msword, xls, xlsx, vnd.ms-powerpoint, text/plain, ics, usdz, caf, pkpass |
+| image       | jpeg, jpg, png, heic                                                          | jpeg, jpg, png, heic                                                          |
+| video       | mp4                                                                           | quicktime                                                                     |
+
+## Email
+
+| Media       | Supported Content Types - Outbound | Supported Content Types - Inbound |
+| :---------- | :--------------------------------- | :-------------------------------- |
+| image       | jpg, png, svg, bmp, gif, heic      | jpg, png, svg, bmp, gif, heic     |
+| audio       | mp3, amr                           | mp3, amr                          |
+| video       | 3gp, avi, mp4                      | 3gp, avi, mp4                     |
+| application | doc, docx, ppt, pptx, pdf, txt     | doc, docx, ppt, pptx, pdf, txt    |
+| mail        |                                    | msg, eml                          |
+
+## Instagram (Deprecated)
+
+| Media | Supported Content Types - Outbound           | Supported Content Types - Inbound |
+| :---- | :------------------------------------------- | :-------------------------------- |
+| Image | .jpg, .png, .ico, .bmp, sticker (Like heart) | .jpg, .png, .ico, .bmp, .gif      |
+
+## Facebook Messenger
+
+| Media       | Supported Content Types - Outbound   | Supported Content Types - Inbound    |
+| :---------- | :----------------------------------- | :----------------------------------- |
+| image       | jpg, gif, webp, png, bmp             | jpg, gif, webp, png, bmp             |
+| audio       | mp3, amr, m4a                        | mp3, amr                             |
+| video       | mp4, mov, m4v, 3gp, flv              | mp4, mov, m4v, 3gp, flv              |
+| application | pdf, doc, docx, ppt, pptx, xls, xlsx | pdf, doc, docx, ppt, pptx, xls, xlsx |
+
+## In-App Messaging / Live Chat
+
+
+
+| Media | Supported Types - Outbound | Supported Types - Inbound |
+| --- | --- | --- |
+| image | jpeg, png, gif  <br>svg | jpeg, png, gif |
+| audio | mp3, wav, ogg, opus, aac, 3gp, mkv | mp3, wav |
+| video | mp4, mkv, avi, mov, mpeg, 3gp | mp4 |
+| application | pdf,  doc, ppt, pptx, xlsx, xls,  <br>txt, csv | pdf, doc, ppt, pptx, xlsx, xls,  <br>csv |
+
+
+
+
+## MMS
+
+
+
+| Media Type | File Extension | Maximum File Size |
+| --- | --- | --- |
+| Overall MMS payload size |  | 750 KB |
+| Image | The URL must be publicly accessible and end with one of the following file types:  <br>.jpg = image/jpg, image/jpeg  <br>.png = image/png  <br>.gif = image/gif | 750 KB |
+| Audio | The URL must be publicly accessible and end with one of the following file types:  <br>.mp3 = audio/mp3, audio/mpeg | 750 KB |
+| Video | The URL must be publicly accessible and end with one of the following file types:  <br>.mp4 = video/mp4 | 750 KB |
+| Excel | .xlsx, xls = application/excel | 750 KB |
+| Calendar | .ics, .ical, .ifb, .icalendar = text/calendar   | 750 KB |
+| Contact |  .vcf,  <br>.vcard = text/vcard, text/v-card, text/x-vcard | 750 KB |
+| Pdf | .pdf = application/pdf, application/x-pdf | 750 KB |
+| Text | text/plain | 750 KB |
+
+
+
+
+## Push Notifications
+
+| Media | Supported Content Types |
+| :---- | :---------------------- |
+| image | jpg, png                |
+
+## RCS
+
+| Media    | Supported Content Types                 |
+| :------- | :-------------------------------------- |
+| image    | apng,gif, x-icon, jpeg, jpg, png        |
+| document | pdf                                     |
+| audio    | mpeg, mp4, ogg, oga, webm,mp3,mpg,mpeg4 |
+| video    | 3gpp, mpeg, ogg, webm, x-m4v, ms-asf    |
+
+## SMS
+
+| Media | Supported Content Type |
+| :---- | :--------------------- |
+| NA    | NA                     |
+
+## Voice
+
+| Media | Supported Content Types | Supported Format                                                                    |
+| :---- | :---------------------- | :---------------------------------------------------------------------------------- |
+| audio | .wav                    | RIFF (little-endian) data, WAVE audio, Microsoft PCM, 16 bit, stereo 8000 Hz        |
+| audio | .Mp3                    | Audio file with ID3 version 2.3.0MPEG ADTS, layer III, v1, 224 kbps, 32 kHz, Stereo |
+
+In case of URL, we support.wav
+
+| Feature             | Supported Content Types | Supported Format                                                                |
+| :------------------ | :---------------------- | :------------------------------------------------------------------------------ |
+| Pre-uploaded prompt | .mp3                    | RIFF (little-endian) data, WAVE  audio, Microsoft PCM, 16 bit, stereo 8000 Hz   |
+|                     | .wav                    | Audio file with ID3 version 2.3.0MPEG ADTS, layer III, 224 kbps, 32 kHz, Stereo |
+|                     | .wav                    | Linear PCM, sampling rate: 8000/16000 Hz, bits/sample: 16                       |
+|                     |                         | 128/256 kbps                                                                    |
+|                     |                         | G711 A-law, sampling rate 8000/16000 Hz, bits/sample: 8                         |
+|                     |                         | 64/128 kbps                                                                     |
+|                     |                         | G711 U-law, sampling rate 8000/16000 Hz, bits/sample: 8                         |
+|                     |                         | 64/128 kbps                                                                     |
+
+| Codecs                                                    | Bit Rate     |
+| :-------------------------------------------------------- | :----------- |
+| Linear PCM, sampling rate: 8000/16000 Hz, bits/sample: 16 | 128/256 kbps |
+| G711 A-Law, sampling rate 8000/16000 Hz, bits/sample: 8   | 64/128 kbps  |
+| G711 U-Law, sampling rate 8000/16000 Hz, bits/sample: 8   | 64/128 kbps  |
+
+## WhatsApp
+
+
+
+| Media Type | Supported via Send node (in Media Message Type) | Supported via Messaging API v1 (in Media Message Type) | Supported via Send Node and Messaging API v1 for Template Message Type | Maximum Size |
+| --- | --- | --- | --- | --- |
+| audio | AAC, AMR, MPEG, OGG  <br>  <br>Note: For OGG MIME Type, only media codec supported by WhatsApp is OPUS. Also, OPUS MIME Type is no longer supported by WhatsApp. | audio/aac, audio/mp4, audio/mpeg, audio/amr, audio/ogg (only opus codecs, base audio/ogg is not supported) | Audio is not supported via Templates. | 16 MB |
+| Document | TXT, PDF, PPT, DOC, DOC(X), PPT(X), XLS(X) | text/plain, application/pdf, application/vnd.ms-powerpoint, application/msword, application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.wordprocessingml.document, application/vnd.openxmlformats-officedocument.presentationml.presentation, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet | TXT, PDF, PPT, DOC, DOC(X), PPT(X), XLS(X) | 100 MB |
+| image | JPEG, PNG | image/jpeg, image/png  <br>  <br>Images must be 8-bit, RGB or RGBA | JPEG, PNG | 5 MB |
+| video | 3GPP, MP4  <br>  <br>Note:  <br>Only H.264 video codec and AAC audio codec is supported.  <br>WhatsApp support videos with a single audio stream or no audio stream. | video/mp4, video/3gp  <br>  <br>Note:  <br>Only H.264 video codec and AAC audio codec is supported.  <br>We support videos with a single or no audio stream. | 3GPP, MP4  <br>  <br>Note:  <br>Only H.264 video codec and AAC audio codec is supported.  <br>WhatsApp support videos with a single or no audio stream. | 16 MB |
+| Sticker | WEBP | image/webp | NA | Static stickers: 100KB  <br>  <br>Animated stickers: 500KB |
+
+
+
+
+<br />
+
+> 👍 WhatsApp Media Best Practices
+> 
+> - While uploading the media and setting the mime-type make sure you are following the [guidelines](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Configuring_server_MIME_types#how_to_set_up_your_server_to_send_the_correct_mime_types) mentioned in the documentation.
+> - The publicly accessible URL used while configuring the message must end in the same file format set under the 'File MIME type'. It should not have any geo-restriction and should be accessible from a server located within USA premises.
+> - Supported incoming media message mime-types are identical to outbound message media mime-types in Send node and Messaging API. The mime-type of the incoming media message can be captured as part of the following: 
+>   - Start node and Receive node output variable i.e., "**whatsApp.mimetype**", 
+>   - Outbound webhooks, Debug logs and Export logs with JSON path "**attachments.mime_type**"
+> - WebP is a modern image format that provides superior lossless compression and creates smaller and richer images that makes web faster. The source libraries to use for converting an image to WebP file-format are available at [An image format for the Web](https://developers.google.com/speed/webp). You can also use various third-party converters publicly available to convert images to WebP file-format.
+
+## Custom Node Integration
+
+| Feature     | File type                      |
+| :---------- | :----------------------------- |
+| Custom Node | Only SVG image files supported |
+
+## Event Scheduler
+
+| Media                 | Supported Content Types |
+| :-------------------- | :---------------------- |
+| Text                  | .txt                    |
+| Excel                 | .xlsx                   |
+| Comma Separated Value | .csv                    |
+
+## Channel Asset Set-Up
+
+| Channel                  | Media | Supported Content Types |
+| :----------------------- | :---- | :---------------------- |
+| RCS asset creation       | image | jpg,png                 |
+| WhatsAppp asset creation | image | jpg, png                |

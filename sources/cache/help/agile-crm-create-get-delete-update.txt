@@ -1,0 +1,611 @@
+## 
+
+Introduction
+
+Agile CRM (Customer Relationship Management) is an All-in-One CRM with Sales, Service automation, and Marketing in a single platform.
+
+Webex Connect offers a pre-built integration node for Agile CRM to make it easier for you to create, view, delete, and/or update tickets and contacts in your Agile CRM account. 
+
+This node needs to be enabled for your account and is not available by default. Please contact your account manager in case you wish to enable it for your account. 
+
+ [Image: Screenshot of Agile CRMs Node.] 
+Screenshot of Agile CRMs Node
+
+## 
+
+Version Supported
+
+Please note that the latest version of the Agile CRM integration node that you should use is v1.7.
+
+## 
+
+Pre-requisites
+
+To enable Agile CRM node: 
+
+- 
+
+Agile CRM node needs to be enabled for your Webex Connect tenant and is not available by default. Please contact your account manager in case you wish to enable it for your account.
+
+- 
+
+Tenant needs an account with Agile CRM.
+
+- 
+
+This integration is available only in the cloud version of Webex Connect.
+
+## 
+
+Node Configuration
+
+Drag-and-drop the node on to the visual flow builder and double-click the node to configure it.
+
+- 
+
+Select the required Method Name from the drop-down list box. The following methods are supported currently: 
+
+- Create a ticket- Allows to create a ticket using the requester email ID .
+
+- Get all tickets- Allows to retrieve all the tickets with the unique identification number of the ticket.
+
+- Delete a ticket- Allows to delete a ticket with specific identification number of the ticket.
+
+- Creating a contact- Allows to create a contact with customer’s personal details such as first name, last name, email, address, zipcode etc. 
+
+- Get contact by ID- Allows to search the contact by contact ID.
+
+- Update properties of a contact by ID- Allows to update the properties of a contact by unique ID of the contact.
+
+- Delete single contact- Allows to delete a single contact by specifying the  unique identification number of the contact.
+
+- 
+
+Select add new authorization if you're using this node for the first time. You can select an existing authorization in case you've used this node in the past and have saved authorization credentials.
+
+- 
+
+If you select the option to add new authorization, you will be asked to provide a name for this authorization to be able to reuse it later on. In addition, you need to provide the username and password of your Agile CRM account to complete the authorization.
+
+- 
+
+Once the authorization has been completed, add the request parameters such as 'REQUESTER NAME', 'REQUESTER NAME', 'SUBJECT', 'PRIORITY', etc. for the 'Create a ticket' method and click save.
+
+ [Image: Screenshot of Agile CRM Configuration Page.] 
+Screenshot of Agile CRM Configuration Page
+
+- You can see the data that this node generates under the Output Variables section. These variables are available for use in subsequent nodes. (Ref: right panel in the below image).
+
+ [Image: Screenshot of Create a ticket method configuration page.] 
+Screenshot of Create a ticket method configuration page.
+
+- You can see the list of possible node outcomes for various methods supported by this node under the 'Node Outcomes' section. Examples include, 'Success', 'Error', 'OnTimeout', etc.
+
+## 
+
+Methods and Outcomes
+
+Here’s a brief description of various methods, and corresponding output variables and node outcomes associated with each of the methods.
+
+### 
+
+Method Name - Create a Ticket
+
+ [Image: Screenshot of Create a ticket method configuration page.] 
+Screenshot of Create a ticket method configuration page.
+
+ | 
+Input Variables
+ | 
+Output Variables
+ | 
+Node Outcomes
+ | 
+Version
+
+ | 
+Requester Name
+
+- Specifies the name of the requester
+
+Requester Email
+  * Specifies the email address of the requester
+
+Subject
+
+- Specifies the subject of a ticket
+
+Priority
+
+- Specifies the nature of the ticket based on the content
+
+Status
+
+- Specifies the status of the ticket
+
+Group ID
+
+- Specifies the group unique identification number
+
+HTML Text
+
+CC
+
+- Specifies the status of the ticket
+
+Labels
+ | 
+id
+
+- Contains the unique identification number of the ticket
+
+groupID
+
+- Contains the group unique identification number
+
+assigned_to_group
+
+requester_name
+
+- Contains the name of the requester
+
+requester_email
+
+- Contains  the email address of the requester
+
+contactID
+
+- Contains the unique identification number of the contact
+
+subject
+
+- Contains the subject of a ticket
+
+cc_emails
+
+- Contains the cc email address
+
+created_time
+
+- Contains the time at which of ticket is created 
+
+last_updated_time
+
+- Contains the time at which of ticket was last updated
+
+last_updated_by
+
+- Contains the name of the user who has updated the ticket 
+
+last_customer_replied_time
+
+first_notes_text
+last_reply_text
+is_compressed
+
+status
+
+- Contains the status for the ticket
+
+priority
+
+- Contains the nature of the ticket based on the content
+source
+
+created_by
+
+- Contains the name of the user who has created the ticket
+
+user_replies_count
+no_of_reopens
+attachements_exists
+is_favourite
+is_spam
+requester_ip_address
+html_text
+entity_type
+isPrivate
+
+contact_id
+
+- Contains the unique identification number of the contact
+
+contact_type
+
+contact_properties_type
+contact_properties_name
+dueOn
+
+createdOn
+
+- Contains the date on which of ticket is created 
+
+lastUpdatedOn
+Contains the date on which of ticket is last updated
+
+attachements_existsString
+is_favouriteString
+stringTicketID
+
+closedOn
+
+- Contains the date on which of ticket was closed
+
+statusName
+priorityName
+soruceFrom
+
+responsePayload 
+
+- Contains all the response JSON payload
+ | onCreateticketFailure
+
+onCreateticketSuccess | 
+
+### 
+
+Method Name - Get all Ticket
+
+ [Image: Screenshot of Get all tickets method configuration page] 
+Screenshot of Get all tickets method configuration page.
+
+ | 
+Input Variables
+ | 
+Output Variables
+ | 
+Node Outcomes
+ | 
+Version
+
+ | 
+Filter ID 
+
+- Specifies the unique identification number of the filter
+ | 
+id
+
+- Contains the unique identification number of the ticket
+
+groupID
+
+- Contains the group unique identification number
+
+group_group_name
+
+- Contains the name of the group
+
+group_group_email
+
+- Contains the email address of the group
+
+assigned_to_group
+
+- Contains the details of the assignee group
+
+assigneeID
+
+- Contains the unique identification number of the assignee
+
+assignee_time
+
+assignee_id
+
+- Contains the unique identification number of the assignee
+
+assignee_domain
+
+assignee_email
+
+- Contains the email address of the assignee
+
+assignee_phone
+
+- Contains the phone number of the assignee
+
+assignee_name
+
+- Contains the name of the assignee
+
+assignee_pic
+
+- Contains the picture of the assignee
+
+assignee_schedule_id
+
+requester_name
+
+- Contains the name of the requester
+
+requester_email
+
+- Contains  the email address of the requester
+
+contactID
+
+- Contains the unique identification number of the contact
+
+subject
+
+- Contains the subject of a ticket
+
+status
+
+- Contains the status for the ticket
+
+priority
+
+- Contains the nature of the ticket based on the content
+source
+
+type
+
+source
+
+created_by
+
+- Contains the name of the user who has created the ticket
+
+no_of_reopens
+html_text
+
+contact_id
+
+- Contains the unique identification number of the contact
+
+contact_type
+
+responsePayload 
+
+- Contains all the response JSON payload
+ | onGetAllTicketsFailure
+
+onGetAllTicketsSuccess | 
+
+### 
+
+Method Name - Delete a Ticket
+
+ [Image: Screenshot of Delete a ticket method configuration page.] 
+Screenshot of Delete a ticket method configuration page.
+
+ | 
+Input Variables
+ | 
+Output Variables
+ | 
+Node Outcomes
+ | 
+Version
+
+ | 
+Ticket ID 
+
+- Specifies the unique identification number of the ticket
+ | 
+status 
+
+- Contains the status for the ticket
+ | onDeleteTicketFailure
+
+onDeleteTicketSuccess | 
+
+### 
+
+Method Name - Creating a Contact
+
+ [Image: Screenshot of Creating a contact method configuration page.] 
+Screenshot of Creating a contact method configuration page.
+
+ | 
+Input Variables
+ | 
+Output Variables
+ | 
+Node Outcomes
+ | 
+Version
+
+ | 
+Start Value
+Lead Score
+Tags
+
+First Name
+
+- Specifies the customer’s First Name
+
+Last Name
+
+- Specifies the customer’s last name
+
+Email
+
+- Specifies the email address of the user
+
+Address
+
+- Specifies the address of the user
+
+City
+
+- Specifies the city of the user
+
+State
+
+- Specifies the name of state in which the user currently in
+
+Zip Code
+  * Specifies the zip code of the user
+
+Country 
+
+- Specifies the name of country in which the user currently in
+ | 
+id
+
+- Contains the unique identification number of the contact
+
+type
+
+created_time
+
+- Contains the time on which the record is created. This is in the UTC format
+
+responsePayload 
+
+- Contains all the response JSON payload
+ | onCreateContactFailure
+
+onCreateContactSuccess | 
+
+### 
+
+Method Name - Get Contact by ID
+
+ [Image: Screenshot of Get contact by ID method configuration page.] 
+Screenshot of Get contact by ID method configuration page.
+
+ | 
+Input Variables
+ | 
+Output Variables
+ | 
+Node Outcomes
+ | 
+Version
+
+ | 
+Contact ID 
+
+- Specifies the unique identification number of the contact
+ | 
+id
+
+- Contains the unique identification number of the contact
+
+type
+
+created_time
+
+- Contains the time on which the record is created. This is in the UTC format
+
+updated_time
+
+- Contains the time on which the record is updated. This is in the UTC format
+
+star_value
+lead_score
+contact_company_id
+
+owner_id
+
+- Contains the unique identification number of the owner
+
+owner_email
+
+- Contains the email address  of the owner
+
+owner_phone
+
+- Contains the phone number of the owner
+
+owner_name
+
+- Contains the name of the owner
+
+responsePayload 
+
+- Contains all the response JSON payload
+ | onGetContactByIDSuccess
+
+onGetContactByIDFailure | 
+
+### 
+
+Method Name - Update Properties of a Contact by ID
+
+ [Image: Screenshot of Update Properties of a Contact by ID method configuration page.] 
+Screenshot of Update Properties of a Contact by ID method configuration page.
+
+ | 
+Input Variables
+ | 
+Output Variables
+ | 
+Node Outcomes
+ | 
+Version
+
+ | 
+ID
+
+First Name
+ | 
+id
+
+- Contains the unique identification number of the contact
+
+created_time
+
+- Contains the time on which the record is created. This is in the UTC format
+
+updated_time
+
+- Contains the time on which the record is updated. This is in the UTC format
+entity_type
+
+responsePayload 
+
+- Contains all the response JSON payload
+ | onUpdatePropertiesOfContactByIDSuccess
+
+onUpdatePropertiesOfContactByIDFailure | 
+
+### 
+
+Method Name - Delete Single Contact
+
+ [Image: Screenshot of Delete Single Contact method configuration page.] 
+Screenshot of Delete Single Contact method configuration page.
+
+ | 
+Input Variables
+ | 
+Output Variables
+ | 
+Node Outcomes
+ | 
+Version
+
+ | 
+Contact ID 
+
+- Specifies the unique identification number of the contact
+ | none | onDeleteSingleContactSuccess
+
+onDeleteSingleContactFailure | 
+
+### 
+
+Method Name - Get all Filter IDs
+
+ [Image: Screenshot of Get all Filter IDs method configuration page.] 
+Screenshot of Get all Filter IDs method configuration page.
+
+ | 
+Input Variables
+ | 
+Output Variables
+ | 
+Node Outcomes
+ | 
+Version
+
+ |  | 
+responsePayload 
+
+- Contains all the response JSON payload
+ | onGetAllFilterIDsSuccess
+
+onGetAllFilterIDsError |

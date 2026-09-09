@@ -1,0 +1,2215 @@
+1
+00:00:01,675 --> 00:00:06,265
+My name is Carmen Lamson with the Webex developer evangelism team for today's webinar.
+
+2
+00:00:06,265 --> 00:00:12,955
+We will be using the slideshow embedded app for Q, and a look for it to pop up on the right side of your screen.
+
+3
+00:00:12,955 --> 00:00:16,825
+You can also participate on your mobile device by scanning that QR code.
+
+4
+00:00:17,545 --> 00:00:19,705
+Joining us for today's webinar are.
+
+5
+00:00:20,865 --> 00:00:32,325
+And Stephanie with the Webex connect team, giving us an introduction to the platform developer tools and building blocks you can use to integrate communications capabilities into your apps.
+
+6
+00:00:33,145 --> 00:00:37,615
+But before we jump into all of that fun, Phil, we'll share some exciting things to look out for.
+
+7
+00:00:38,125 --> 00:00:41,185
+Take it away from. Okay. Hi.
+
+8
+00:00:41,185 --> 00:00:43,405
+Everybody thanks a lot for joining this session.
+
+9
+00:00:43,435 --> 00:00:47,185
+I just want to quickly highlight some of the latest news for Webex developers.
+
+10
+00:00:47,430 --> 00:00:55,645
+Before we start our main presentation majority of these things you can find and read more about on developer dot Webex dot com slash blogs.
+
+11
+00:00:56,125 --> 00:01:03,085
+So, 1st, uh, we just released our new, uh, Webex web, calling SDK uh, that's a tool kit for developers.
+
+12
+00:01:03,325 --> 00:01:06,955
+We're looking to integrate the Webex calling features into web applications.
+
+13
+00:01:07,170 --> 00:01:15,655
+So, it leverages our JavaScript web RTC and that powers, bespoke web apps, or even really complex enterprise solutions.
+
+14
+00:01:15,955 --> 00:01:25,315
+Uh, you read all about the, uh, highlights on the key features benefits a potential integration use cases, uh, right on the blogs page.
+
+15
+00:01:26,425 --> 00:01:40,075
+But next, uh, the leader of the Webex developer relations team, lose Delgado author to really helpful white paper showing us how to optimize an incident management with custom built command bots in Webex messaging.
+
+16
+00:01:40,225 --> 00:01:44,395
+So there's a lot of great info there on the benefits of automation.
+
+17
+00:01:44,395 --> 00:01:49,605
+The power of customers. Patient in a variety of ways that we can integrate with the Webex platform.
+
+18
+00:01:49,634 --> 00:01:51,505
+So. Be sure to check that 1.
+
+19
+00:01:51,505 --> 00:02:00,055
+now, uh, 3rd, uh, we've revamped 2 of our developer guides, uh, for Webex for wholesale APIs.
+
+20
+00:02:00,300 --> 00:02:02,905
+Uh, and Webex for broad works APIs.
+
+21
+00:02:02,965 --> 00:02:08,575
+Um, and so this brings together the most current and comprehensive information for these product platforms.
+
+22
+00:02:08,970 --> 00:02:14,395
+Uh, you could find these new guys, right in the documentation section on the dev portal, um, and forth.
+
+23
+00:02:14,425 --> 00:02:25,045
+We have a really nice. Post event round up by comic analysis on the activities of our Webex app hub integration partners at Cisco live and Amsterdam that just happened at the beginning of the month.
+
+24
+00:02:26,065 --> 00:02:28,495
+This is a particular focus and the power of AI.
+
+25
+00:02:28,705 --> 00:02:31,585
+So it's a great way to learn about what our partners are building.
+
+26
+00:02:31,615 --> 00:02:33,775
+So I encourage everybody to go check that 1 out.
+
+27
+00:02:35,485 --> 00:02:44,005
+Um, next week recently published some new, how 2 blogs, and that shows us how to work with 3 different application types in Webex.
+
+28
+00:02:44,520 --> 00:02:49,375
+Uh, so the 1st, 1, the leader of Webex developer evangelism Adam weeks.
+
+29
+00:02:49,560 --> 00:02:58,645
+He takes us through a step by step lab to create an RSS feed reader and that's inside Webex contact center in the agent desktop.
+
+30
+00:02:59,185 --> 00:03:00,565
+What's called a header widget?
+
+31
+00:03:00,895 --> 00:03:06,985
+So, he kind of takes us through the entire of building and deploying it inside of like, a self contained lab.
+
+32
+00:03:07,645 --> 00:03:16,305
+Very, very cool. And the. 2nd, 1, uh, the Webex developer evangelist Joseph authored a guide to create and manage Webex service apps.
+
+33
+00:03:17,035 --> 00:03:28,285
+And that's for streamlining the authorization of org level integrations for administrators and it also enables efficient token consumption for high scale API calls.
+
+34
+00:03:29,035 --> 00:03:37,555
+So, I know we've been getting a lot of questions around new service apps and with this 1, they should answer pretty much all the questions for getting started.
+
+35
+00:03:38,155 --> 00:03:45,745
+And 3rd, Webex engineer, cassava, Christian, and he shows us how we can streamline the development process.
+
+36
+00:03:45,960 --> 00:03:56,605
+And the Webex calling SDK with yarn workspaces he also explain how these yarn workspace strategies can be deployed to various other web integration types.
+
+37
+00:03:57,355 --> 00:03:59,125
+So that's a really cool blog, too.
+
+38
+00:04:00,445 --> 00:04:04,105
+But really, that's it for the Webex developer news for this month.
+
+39
+00:04:04,255 --> 00:04:08,725
+Um, we also have a newsletter that they actually puts all these together too.
+
+40
+00:04:08,725 --> 00:04:11,335
+So, um, you know, you should be receiving that.
+
+41
+00:04:11,335 --> 00:04:13,375
+If you signed in for the developer portal.
+
+42
+00:04:13,620 --> 00:04:19,045
+Uh, if you are not getting those newsletters, please let us know and we'll get you added to the list.
+
+43
+00:04:19,320 --> 00:04:21,775
+Uh, but with that, that's it for the news this month.
+
+44
+00:04:21,805 --> 00:04:26,095
+So let's get started with the main presentation so, take it away.
+
+45
+00:04:28,884 --> 00:04:30,654
+Thank you for, uh, hi, everyone.
+
+46
+00:04:30,654 --> 00:04:32,994
+Welcome to the Webex connect masterclass webinar.
+
+47
+00:04:33,354 --> 00:04:38,904
+My name is, I am the product manager and leader for Webex Connect, which is our enterprise cloud communications platform.
+
+48
+00:04:39,179 --> 00:04:45,414
+In today's session, uh, I will be giving you an introduction to Webex connect and its capabilities before handing over to my colleagues.
+
+49
+00:04:45,414 --> 00:04:51,804
+Stephan, who will walk you through a live demo of how you can use Webex Connect for automating your customer interactions.
+
+50
+00:04:51,989 --> 00:04:59,214
+With that, let's dive in, uh, to start with the, you know, I quickly wanted to touch upon, you know, what is because.
+
+51
+00:04:59,489 --> 00:05:02,754
+Some of you may not necessarily be familiar with this terminology.
+
+52
+00:05:03,294 --> 00:05:08,604
+To keep things simple cloud, communications platform as a service, or is a cloud based platform.
+
+53
+00:05:08,879 --> 00:05:12,654
+Uh, that offers you developers as well as business users.
+
+54
+00:05:12,929 --> 00:05:26,844
+Uh, the ability to embed customer communication capabilities into your existing apps and business processes, uh, what you see below is a little more expensive, uh, a view of what, you know, uh, entails a comprehensive enterprise cloud communications
+
+55
+00:05:26,844 --> 00:05:32,904
+platform, right? From APIs, for being able to do, uh, you know, communications with your customers to a business capability.
+
+56
+00:05:33,404 --> 00:05:46,184
+Which allows you to handle all the orchestration and automation of interactive customer journey is, uh, you know, when we touch upon some of the other capabilities, like NLP and so with that high level introduction, uh, let me, you know, quickly jump
+
+57
+00:05:46,184 --> 00:05:49,484
+onto. Why do we, as developers need.
+
+58
+00:05:49,799 --> 00:06:01,794
+See past platform, so the crux of it really is the evolving customer experience expectations, you know, as we all know, uh, nowadays, consumers, including ourselves want to do things digitally.
+
+59
+00:06:01,884 --> 00:06:04,524
+Everything is getting everything is going digital.
+
+60
+00:06:04,859 --> 00:06:16,584
+We, as consumers want to do more and more self service, so, you know, instead of walking into a store, we want to place our orders online and, you know, just go and pick up, pick it up from the store or simply get it delivered to our home steps, uh,
+
+61
+00:06:16,614 --> 00:06:23,874
+doctor appointments are moving from, you know, in person, physical appointments to virtual appointments, wherever possible, uh, you know, more and more banking related.
+
+62
+00:06:23,874 --> 00:06:34,094
+Things are becoming. And, you know, small things, 2, big things, everything is essentially going digital and in this word, consumers want the ability to do things on their own.
+
+63
+00:06:34,274 --> 00:06:37,874
+They expect to be informed about what to expect from the brands.
+
+64
+00:06:37,904 --> 00:06:44,774
+They really love and engage with and they want to do so on the channels that they're using today to interact and engage with their friends and families.
+
+65
+00:06:45,694 --> 00:06:52,894
+What this means what this has led to is enterprises wanting realizing that there is a need for.
+
+66
+00:06:53,219 --> 00:07:09,174
+Uh, doing CX transformation from meeting all these customer expectations, uh, which essentially has led to increase demand on enterprise ID to be able to support the CX transformation initiative across various lines of business, any large end within
+
+67
+00:07:09,174 --> 00:07:13,044
+any large enterprise. Uh, but what is also happening is many.
+
+68
+00:07:13,219 --> 00:07:23,774
+So, initiatives that are being initiated are taking too long to complete, uh, you know, oftentimes reports suggest they take too much time to realize value.
+
+69
+00:07:24,044 --> 00:07:26,474
+Uh, and and the question comes, you know, why is that?
+
+70
+00:07:26,474 --> 00:07:41,334
+So. So, at the heart of it really, you know, is the, the, the challenges which are related to, you know, how do you support such seamless customer experiences without replacing your existing technology stack that you have built over years right uh,
+
+71
+00:07:41,334 --> 00:07:46,524
+or, you know, how do you overcome some of the challenges that you have in terms of being able to.
+
+72
+00:07:47,024 --> 00:07:54,944
+Average data that sits across various siloed systems in the context of a customer interaction to make it contextual and seamless for your end customers.
+
+73
+00:07:55,244 --> 00:07:58,214
+And that is, you know, clearly not a simple challenge.
+
+74
+00:07:58,974 --> 00:08:07,854
+More so, you know, when we, uh, look at today's word of various channels, so to put things into perspective, you know, we'll quickly look at 1 use case.
+
+75
+00:08:08,094 --> 00:08:11,034
+The example that we see here is from banking industry.
+
+76
+00:08:11,184 --> 00:08:16,644
+There's a proactive notification being sent out to the customer about an upcoming credit card payment.
+
+77
+00:08:16,914 --> 00:08:18,474
+Uh, the customer is being given.
+
+78
+00:08:18,499 --> 00:08:27,404
+An option to say, you know, whether the customer would like to defer the payment, the customer is able to seamlessly respond to the message that she or he has received.
+
+79
+00:08:28,604 --> 00:08:34,124
+And then, therefore, the payment by a week by which they are expecting to get some extra funds in their account.
+
+80
+00:08:34,409 --> 00:08:40,644
+And on top of that, they are being given the ability to schedule a conversation with a financial advisor to you, you know.
+
+81
+00:08:41,394 --> 00:08:43,734
+Get into a conversation about how to better manage.
+
+82
+00:08:44,664 --> 00:08:48,444
+The finances overall, so this is a simple example.
+
+83
+00:08:48,749 --> 00:08:55,764
+Uh, you know, of the kind of things, uh, customers expect today, you know, being informed, proactively about.
+
+84
+00:08:56,069 --> 00:09:01,674
+Uh, things that are going to happen, uh, you know, in the sense of all the service and products that they're using.
+
+85
+00:09:01,979 --> 00:09:13,254
+And then also having the ability to be able to make changes, et cetera seamlessly without having to, you know, uh, as an example, call somebody or, you know, walk into a bank branch to be able to do simple things like that.
+
+86
+00:09:14,514 --> 00:09:16,644
+Now, why, why is this, you know, a.
+
+87
+00:09:16,974 --> 00:09:20,934
+Challenging problem, and how CPS platforms make it easy to handle it.
+
+88
+00:09:20,934 --> 00:09:31,644
+Right. So if you look at any large, big enterprise, the technologies stack that enterprises, uh, have today has been built over decades and many of these systems that any large enterprise used.
+
+89
+00:09:31,854 --> 00:09:40,674
+Uh, they were, you know. Design a PC error, and they were not designed to be able to facilitate customer interactions, over the channels that we use nowadays.
+
+90
+00:09:40,674 --> 00:09:46,074
+Right from SMS to things like, you know, um, RCS, or, uh, Apple messages.
+
+91
+00:09:46,074 --> 00:09:48,804
+So, business or what'sapp and all the other new channels.
+
+92
+00:09:48,804 --> 00:09:50,904
+That we, as consumers are using increasingly.
+
+93
+00:09:51,204 --> 00:10:01,034
+So how do you go about. Uh, delivering these seamless experiences on all those channels without ripping or replacing your existing technologies systems.
+
+94
+00:10:01,214 --> 00:10:03,344
+Now, a lot of, uh, you know.
+
+95
+00:10:04,104 --> 00:10:16,344
+Developers are enterprises what what they end up doing for solving the challenges is, uh, you know, get developers involved, you know, get various APIs for various channels, uh, get.
+
+96
+00:10:16,704 --> 00:10:22,224
+Getting too long and complex application development projects to essentially automate various journeys.
+
+97
+00:10:22,224 --> 00:10:25,404
+Right? So, as you see in this screen, uh, you know.
+
+98
+00:10:26,274 --> 00:10:30,114
+In in any large organization, there are multiple sub journeys to be automated.
+
+99
+00:10:30,444 --> 00:10:35,844
+So what you are essentially looking at is, uh, the need for being able to.
+
+100
+00:10:37,014 --> 00:10:47,544
+Uh, do multiple such application development projects for each of the journeys so, in a banking context, you know, on 1 hand, you have credit card business and all the journeys that we may have in the product card context.
+
+101
+00:10:47,724 --> 00:10:56,064
+Uh, you know, then you may have savings or retail banking, um, you may have, you know, mortgage and all such divisions and imagine, you know, various.
+
+102
+00:10:56,264 --> 00:11:04,424
+Ideally teams, uh, solving the same challenge by integrating these APIs into existing business systems in their own silos.
+
+103
+00:11:04,454 --> 00:11:16,124
+What this essentially leads to overtime is various siloed applications many of, which are in part solving the same challenge by doing redundant development and, you know, creating this whole.
+
+104
+00:11:16,594 --> 00:11:20,794
+A mesh of various applications, which are not only complex.
+
+105
+00:11:21,029 --> 00:11:24,594
+To build, but they are increasingly complex to maintain over time.
+
+106
+00:11:25,254 --> 00:11:30,864
+Right. So again, just to reiterate this point, you know, as a large business, we'll have multiple core business systems.
+
+107
+00:11:30,864 --> 00:11:34,344
+It may be a systems. If you are a bank, it may be a fraud banking system.
+
+108
+00:11:34,344 --> 00:11:36,894
+It may be a, uh, you know, retail banking system.
+
+109
+00:11:37,104 --> 00:11:44,694
+Uh, just trying to integrate each of those business systems with each of those, uh, you know, each of the channels that you want to support.
+
+110
+00:11:44,929 --> 00:11:58,004
+Introduction, and then doing application development in between, uh, you know, writing layers of code to be able to handle all of this, uh, is not, uh, you know, the right approach for CX transformation because 1, it is complex and effort heavy.
+
+111
+00:11:58,004 --> 00:12:00,524
+And, secondly, it is very, very difficult to maintain overtime.
+
+112
+00:12:00,764 --> 00:12:04,574
+So, how does the platform, like, help solve this problem?
+
+113
+00:12:05,254 --> 00:12:08,434
+The, uh, you know, Webex connect like CBS platforms.
+
+114
+00:12:08,674 --> 00:12:21,064
+Uh, they sit at the center of, you know, all the existing enterprise business systems that any large enterprise has as well as all the consumer touch points where we are looking at delivering seamless customer experiences.
+
+115
+00:12:21,273 --> 00:12:24,394
+And it provides out of box ability to facilitate.
+
+116
+00:12:24,929 --> 00:12:38,784
+Customer. Interactions on all these channels, the consumers preferred to have conversations on in today's world and then also the ability to, uh, you know, leverage out of box integrations to a large number of 3rd party applications as well as the
+
+117
+00:12:38,784 --> 00:12:45,804
+ability to seamlessly configure usable integrations with your existing proprietary enterprise systems and then reuse them across.
+
+118
+00:12:45,919 --> 00:12:51,164
+We use customer journeys what we mean, by that it will become a little more clear as we, uh, go from here on.
+
+119
+00:12:51,194 --> 00:13:02,504
+But essentially, you know, this platform really takes the complexity out by providing many of the capabilities that you would have to otherwise build your own development capacity, uh, in building applications to solve these challenges.
+
+120
+00:13:02,504 --> 00:13:05,504
+Right 1 of the examples would be all these communication channels.
+
+121
+00:13:05,504 --> 00:13:13,474
+They are. Constantly evolving there are new things that are happening, you know, the API payloads are changing over time how the, you know, various web payloads them all that is changing.
+
+122
+00:13:13,654 --> 00:13:25,834
+So, you, as a business want to really are you, as a developer really want to focus on delivering seamless customer experience, rather than having to constantly deal with changing APIs and then also on top of that trying to do.
+
+123
+00:13:25,919 --> 00:13:36,234
+In various applications, so instead of that, you get a centralized cloud communications platform that helps you manage, build and manage such interactive customer journeys across various.
+
+124
+00:13:36,894 --> 00:13:40,464
+Systems now, Webex Connect is an enterprise CPS platform.
+
+125
+00:13:40,523 --> 00:13:53,844
+What that means is. Not only do we provide the functional capabilities that you need in the context of automating a customer interaction, but we also provide a large number of relevant enterprise controls, uh, and the right kind of, uh, you know,
+
+126
+00:13:53,844 --> 00:14:00,684
+service assurance so that you as an enterprise can confidently run your mission critical customer interactions on a platform like this.
+
+127
+00:14:01,584 --> 00:14:08,934
+To make things, you know, understandable and simple take any simple example of let's say you want to automate, uh, the, you know, uh.
+
+128
+00:14:09,294 --> 00:14:19,254
+Journey of receiving order notifications or parcel delivery notifications on a channel like what'sapp and, you know, provide seamless options to customers to reschedule those deliveries.
+
+129
+00:14:19,254 --> 00:14:29,004
+If there is the need, what you would need is 1st of all the ability to integrate, uh, you know, with your existing business systems, where such parcel, delivery related events get.
+
+130
+00:14:29,849 --> 00:14:36,114
+Uh, you know, on top of that you will need the ability to handle, you know, BI, directional communications over channel like what'sapp.
+
+131
+00:14:36,324 --> 00:14:48,444
+So that's where communication channel management module comes in now, you know, when you want to automate such experiences, you need the ability to interpret, you know, what the customer is trying to convey when you receive an incoming message from
+
+132
+00:14:48,444 --> 00:14:49,824
+the customer. So, for that.
+
+133
+00:14:49,849 --> 00:15:00,194
+You know, the natural language processing, understanding, and chat bot and of capabilities, come in to be able to automatically identify the intent and handle the conversation automatically and on top of that.
+
+134
+00:15:00,194 --> 00:15:02,504
+You need to be able to handle all the business logic.
+
+135
+00:15:02,534 --> 00:15:05,894
+That goes on in terms of delivering such seamless conversations.
+
+136
+00:15:06,774 --> 00:15:10,614
+Uh, and then on top of that, there are enterprise intelligent controls and touch upon it.
+
+137
+00:15:10,854 --> 00:15:12,594
+Uh, as as we proceed further.
+
+138
+00:15:14,099 --> 00:15:17,064
+So, starting, you know, going a bit deeper into each of those areas.
+
+139
+00:15:17,339 --> 00:15:23,424
+Uh, you know, how developers can leverage Webex Connect for being able to, uh, deliver seamless customer experiences.
+
+140
+00:15:23,604 --> 00:15:35,004
+Uh, you can use our communication APIs, and we offer a set of a rich set of APIs and web hooks for being able to both stand as well as receive customer communications over 13+channels.
+
+141
+00:15:35,004 --> 00:15:44,694
+plus channels You know, spanning from, uh, uh, things like SMS, voice and email to all the advanced newish channels, like copying messages for business or what'sapp this apart.
+
+142
+00:15:44,694 --> 00:15:52,854
+We also offer and Android and iOS and JavaScript for being able to send push notifications and facilitate 2 way customer conversations.
+
+143
+00:15:52,974 --> 00:15:55,824
+Over mobile apps as well as our websites using live chat.
+
+144
+00:15:56,054 --> 00:16:00,464
+Channel, uh, this apart, we offer a very robust, uh, integrations module.
+
+145
+00:16:00,464 --> 00:16:03,914
+We offer out of box integration with a number of, uh, you know.
+
+146
+00:16:04,374 --> 00:16:18,354
+3rd party systems, like Salesforce, then there's, uh, you know, vertical systems, like, Epic, uh, in the healthcare domain, uh, as well, as the ability to configure usable integration using best or so based APIs, or, you know, integrating with your
+
+147
+00:16:18,444 --> 00:16:24,144
+data related systems with capabilities such as a file based integrations or data streams, which are.
+
+148
+00:16:24,229 --> 00:16:30,674
+You to stream a copy of, uh, you know, all the customer conversations that you're having with your customers using technology is like.
+
+149
+00:16:31,824 --> 00:16:44,844
+On top of that, we provide a very comprehensive tools that that both developers and business users need in an organization to be able to handle customer interactions in an automated fashion examples include, uh, you know, modules like template
+
+150
+00:16:44,844 --> 00:16:47,693
+management which allow people who are responsible for content.
+
+151
+00:16:47,724 --> 00:16:51,204
+To configure, uh, you know, rich and interactive.
+
+152
+00:16:51,439 --> 00:17:03,764
+Uh, customer interaction, messages and templates, uh, you know, what you see what you get kind of an interface on top of that, you know, we offer something that we refer to as a visual flow builder, which is essentially a low port visual flow builder
+
+153
+00:17:04,064 --> 00:17:11,354
+to accelerate your CX transformation initiatives, uh, you know, by giving a rich set of existing.
+
+154
+00:17:11,884 --> 00:17:17,674
+Capabilities that you can simply drag and drop on a canvas, uh, you know, do various, uh, uh, configurations.
+
+155
+00:17:17,969 --> 00:17:29,214
+And, uh, using a 1 click, kind of an approach, uh, launch those applications in a highly secure and scalable cloud environment, which, you know, automatically scales to support, uh.
+
+156
+00:17:29,964 --> 00:17:32,394
+Increasing volumes of customer interactions as you go.
+
+157
+00:17:32,699 --> 00:17:38,184
+Uh, the application development, uh, you know, capability, uh, is really very, very rich.
+
+158
+00:17:38,214 --> 00:17:43,314
+It offers you everything that you need from a full life cycle perspective of application development.
+
+159
+00:17:43,314 --> 00:17:52,674
+You have, uh, you know, in built compilation capabilities when you configure a flow and you try to publish it, it compiles and tells you if there are any errors, uh, you know, there are things like version control.
+
+160
+00:17:52,699 --> 00:17:56,654
+Debugging and troubleshooting, and then very rich reporting, you know, flow analytics.
+
+161
+00:17:56,894 --> 00:18:00,044
+We refer to it as flow analytics that allows you to understand how you are.
+
+162
+00:18:00,329 --> 00:18:09,864
+You know, journeys are performing, you know, at what steps customers are dropping off or finding it difficult to, you know, have interactions with you and you can constantly, uh, optimize those journeys.
+
+163
+00:18:10,044 --> 00:18:13,374
+Uh, Stephan would be covering more of it as we go for the webinar.
+
+164
+00:18:13,974 --> 00:18:19,614
+We already touched upon the, you know, NLP capabilities, which are also available as part of the platform.
+
+165
+00:18:19,614 --> 00:18:27,564
+We also offer a very rich bot builder module, which allows you to configure both as well as, you know.
+
+166
+00:18:27,869 --> 00:18:35,604
+The and task related bots, which can automate various operations, uh, while using natural language, to make it easy for your customers.
+
+167
+00:18:35,814 --> 00:18:42,354
+Uh, we also have various atomic capabilities, which you may want to use selectively in the, you know, context of various use cases.
+
+168
+00:18:42,354 --> 00:18:47,814
+Simple example, would be, let's say a customer comes, you know, and starts having interaction with you on a channel like Apple business chat.
+
+169
+00:18:47,869 --> 00:18:50,234
+And says, can you book an appointment for next Friday?
+
+170
+00:18:50,234 --> 00:18:57,284
+You know, converting that next Friday into a specific date, to be able to do a look up in a system to find out what slots are available on the day.
+
+171
+00:18:57,284 --> 00:19:05,684
+The customer is interested in scheduling an appointment on, right uh, we also have some generative capabilities such as text summarization.
+
+172
+00:19:05,684 --> 00:19:07,574
+So, let's say, you know, a conversation.
+
+173
+00:19:07,869 --> 00:19:15,933
+Uh, it starts, you send out a reminder to a customer, the customer starts interacting with you and then there arises a need to escalate that conversation to a human agent.
+
+174
+00:19:15,933 --> 00:19:25,144
+So, before you do that, you can use text summarization node to create a summarized version of the interaction that happened between the customer and the bot so that the agent is able to understand the context quickly.
+
+175
+00:19:25,944 --> 00:19:33,804
+Uh, finally, uh, you know, we also apart from these functional capabilities, which are very, very critical to be able to, uh, do end to end customer journey introduction.
+
+176
+00:19:33,804 --> 00:19:44,784
+We offer a lot of relevant enterprise control, uh, because going back to the point where we were saying, you have multiple businesses within any large enterprise, and all those, you know, teams have they need to do the such customer journey
+
+177
+00:19:44,784 --> 00:19:48,974
+orchestration. In an automation, which today is happening in silos, uh.
+
+178
+00:19:49,674 --> 00:19:58,674
+Functional silos, so we are essentially providing a centralized platform for everybody to be able to do such application development collaboratively on a single platform.
+
+179
+00:19:58,884 --> 00:20:03,024
+So, in that context, we offer very rich capabilities in terms of enterprise controls things.
+
+180
+00:20:03,024 --> 00:20:09,174
+Like, let's say, you know, I imagine there is a team that works on credit card related journeys and there's a team that works on, uh, retail banking related.
+
+181
+00:20:09,289 --> 00:20:12,884
+You know, journeys, you have the ability to provide dedicated workspaces to them.
+
+182
+00:20:12,884 --> 00:20:16,724
+You have things like, you know, locking your existing use case or service workspace.
+
+183
+00:20:16,724 --> 00:20:26,324
+So that, uh, you know, another developer who is for developing on the same platform, doesn't accidentally make changes to something that you have configured in, uh, you know, end up disrupting your life services.
+
+184
+00:20:26,534 --> 00:20:29,204
+Uh, you know, are the ability to selectively give.
+
+185
+00:20:29,314 --> 00:20:42,634
+Access to look at sensitive customer data on the platform, even though multiple people are using the platform to automate a journey so that you are able to, uh, ensure compliance with, you know, various regulations, such as GDPR or HIPPA, et cetera.
+
+186
+00:20:42,754 --> 00:20:49,234
+So, uh, you know, to summarize it, the Webex Connect platform, provides you all the key capabilities that you need.
+
+187
+00:20:49,289 --> 00:21:01,944
+For automating customer interactions, there's a lot of relevant, uh, enterprise controls that any, you know, enterprise ity, department and large enterprise would need for being able to collaboratively do such customer journey, automation, across
+
+188
+00:21:01,944 --> 00:21:06,414
+channels, uh, you know, very quickly, touching upon the, uh, you know, at 1 of the.
+
+189
+00:21:06,719 --> 00:21:14,514
+Key capabilities that we offer really in the platform is this drag and drop builder as you can see there are various, you know, notes available for various channels.
+
+190
+00:21:14,514 --> 00:21:22,733
+Uh, you know, so that, uh, you don't really have to, as a developer, start your journey from going through, uh, detailed API documentation for each of these channels.
+
+191
+00:21:22,733 --> 00:21:26,604
+You, you know, have a lot of capability available in you, what you see what you get kind of.
+
+192
+00:21:27,014 --> 00:21:37,184
+So that you can really focus on, uh, you know, optimizing customer interactions without having to deal with, you know, changing the underlying complexities of these messaging ecosystems.
+
+193
+00:21:37,364 --> 00:21:39,104
+So, it's a drag and drop environment.
+
+194
+00:21:39,134 --> 00:21:42,344
+You know, you can drag and drop, uh, the nodes in the logical order.
+
+195
+00:21:42,344 --> 00:21:46,574
+Do a little bit of a configuration click on a make live button in your journey is life and you can.
+
+196
+00:21:46,744 --> 00:21:49,774
+Are testing it and then I creating it with your teams with that.
+
+197
+00:21:49,774 --> 00:21:54,454
+I'll hand over to my colleagues, Stephanie, to give us a live walk through of some of these capabilities.
+
+198
+00:21:55,194 --> 00:22:00,054
+Great thanks to and I'm going to share my screen here.
+
+199
+00:22:00,779 --> 00:22:07,014
+And there's 2 things I want to show you guys 1, is I want to walk you through the platform just a little bit to highlight.
+
+200
+00:22:07,014 --> 00:22:09,594
+Some of the enterprise controls that 2 new reference.
+
+201
+00:22:09,894 --> 00:22:13,044
+And then we'll get into the meat of the conversation here or the demo.
+
+202
+00:22:13,044 --> 00:22:24,594
+Rather, which is. Me literally building a workflow from scratch and hoping it works for you guys to understand the efficiencies that were that we're talking about.
+
+203
+00:22:25,794 --> 00:22:35,814
+So, um, as my screen loads, I believe we can see it now, it is a so this is a container of services that we refer to.
+
+204
+00:22:35,814 --> 00:22:38,544
+And what I've done is just in a demo environment, of course.
+
+205
+00:22:38,874 --> 00:22:44,184
+I've created a few services that are representative of some of our large verticals right?
+
+206
+00:22:44,184 --> 00:22:47,484
+That that we sell into quite a bit and that utilize our platform.
+
+207
+00:22:48,024 --> 00:22:51,834
+Um, in these, you can come in and you'll get a glance.
+
+208
+00:22:52,049 --> 00:22:59,754
+Of traffic, um, you'll obviously have access to your workflows, any rules that you have associated with those workflows and event APIs.
+
+209
+00:23:00,029 --> 00:23:06,804
+Then your API credentials themselves, whether they're tokens or service keys that you're leveraging um.
+
+210
+00:23:08,034 --> 00:23:13,914
+This all becomes important, whether you're leveraging us for the workflow, automation, the orchestration canvas that.
+
+211
+00:23:14,669 --> 00:23:27,594
+Highlighted that is going to represent 95% of the demo today, but there is also the, um, the conversational as, as we refer to them as that allow you to just simply send and receive messages.
+
+212
+00:23:27,594 --> 00:23:32,004
+receive messages On any given, um, channel that we support.
+
+213
+00:23:32,124 --> 00:23:39,864
+All right so so these are the more traditional base layer APIs that you might be familiar with when the term C pass is floated out there.
+
+214
+00:23:40,674 --> 00:23:47,754
+Um. Beyond the services themselves, there's obviously groups and teams hierarchy.
+
+215
+00:23:47,784 --> 00:23:49,854
+I'm in a demo team right now.
+
+216
+00:23:50,154 --> 00:24:01,464
+Um, but to point if you had an HR organization and a marketing organization and a development organization, all within the same company, they would all roll up to the same tenant.
+
+217
+00:24:02,204 --> 00:24:15,884
+Webex connect, and then within those groups and or teams, you'd be able to assign different roles and, uh, capabilities for your teammates as it referred to as I just invited my personal Gmail account in here.
+
+218
+00:24:16,124 --> 00:24:18,044
+And then you can see the different types of roles.
+
+219
+00:24:18,299 --> 00:24:24,894
+That you'd have access to and then a rules guide here to help you understand how role based access controls would be governed.
+
+220
+00:24:26,844 --> 00:24:29,303
+From an asset management standpoint.
+
+221
+00:24:29,579 --> 00:24:33,624
+Um, you have the ability to come in here and manage integrations.
+
+222
+00:24:33,653 --> 00:24:36,924
+So, this is where you can build custom integrations into the solution.
+
+223
+00:24:36,924 --> 00:24:44,484
+So if you have a proprietary system or a, uh, vendor that you leverage quite extensively across.
+
+224
+00:24:44,669 --> 00:24:51,684
+Uh, use cases, this is where you would come in and build, um, a integration with that with that system or systems.
+
+225
+00:24:51,929 --> 00:24:57,204
+So, you could quickly access it in your canvas and this will make more sense.
+
+226
+00:24:57,204 --> 00:25:02,244
+Once I pull up the actual orchestration workflow in a minute on the app side.
+
+227
+00:25:02,394 --> 00:25:11,274
+I have some, um. Richard channels with the exception of email that I've included in here where you can come in and you can literally configure your own.
+
+228
+00:25:11,579 --> 00:25:22,074
+Um, uh, rich messaging channel, whatever it might be, uh, in order to facilitate communications and meet your customers where they want to be met their moments of need.
+
+229
+00:25:23,274 --> 00:25:27,564
+And then, of course, you have the ability to manage your phone numbers as well.
+
+230
+00:25:27,564 --> 00:25:31,704
+These can be short codes. They can be what were formerly known as long codes.
+
+231
+00:25:31,704 --> 00:25:36,834
+And now, because they're all being regulated, at least in the United States is starting to be the case in Canada.
+
+232
+00:25:37,614 --> 00:25:42,174
+They're referred to as 10 so, 10 digit, long codes it's just a different naming.
+
+233
+00:25:42,349 --> 00:25:48,374
+That the carriers use, and then, of course, these could be 1, 800 numbers as well or toll free numbers.
+
+234
+00:25:48,374 --> 00:25:51,044
+However, however you want to turn those.
+
+235
+00:25:51,044 --> 00:25:53,714
+You'll notice here that we have SMS.
+
+236
+00:25:53,714 --> 00:25:59,274
+sms And then the little phone number for void, or the phone handle for voice.
+
+237
+00:26:00,384 --> 00:26:05,244
+Indicating that those are all capabilities that are associated with this number specifically.
+
+238
+00:26:06,504 --> 00:26:10,614
+And again that's all going to be subject to how you decide to deploy the platform and and use it.
+
+239
+00:26:12,564 --> 00:26:23,694
+So, with that, um, the documentation page, this will become relevant towards the end of the presentation where we're will advertise our sandbox environment that's free to use as well.
+
+240
+00:26:24,024 --> 00:26:31,944
+But this is where a lot of the information about the platform itself is available from a full feature kind of scenario where.
+
+241
+00:26:32,054 --> 00:26:41,084
+Leveraging the flow builder and all the bells and whistles or more specifically to where I am in the in the, um, documentation page.
+
+242
+00:26:41,114 --> 00:26:43,454
+Now, this is where the API reference lives.
+
+243
+00:26:43,634 --> 00:26:51,914
+So, if you're just using this from a true kind of base layer, communication, API standpoint, and you're building.
+
+244
+00:26:52,029 --> 00:27:01,594
+Colleges and integration logic on your side this is where you would come to benefit from our APIs to send message is probably our most predominantly used 1.
+
+245
+00:27:02,524 --> 00:27:05,734
+and in fact, just to kick us off here.
+
+246
+00:27:05,944 --> 00:27:12,924
+Um, I'm gonna. Leverage that I'm using postman is I'm sure a lot of you are familiar with.
+
+247
+00:27:13,169 --> 00:27:17,754
+To generate a voice call I have my.
+
+248
+00:27:18,354 --> 00:27:23,544
+Andy, uh, phone over here I'm working off of 1 screen, so.
+
+249
+00:27:24,084 --> 00:27:27,474
+Apologies, I'm going to send myself a phone, a phone call.
+
+250
+00:27:27,534 --> 00:27:36,114
+I'm going to edit this. To make it long enough to where I can I have time to hit the, uh, speaker phone button on my phone.
+
+251
+00:27:36,114 --> 00:27:42,564
+So, this is a very long message for the, uh, webinar.
+
+252
+00:27:44,394 --> 00:27:53,634
+Okay, thank you. Okay, so I'm going to send this through.
+
+253
+00:27:54,474 --> 00:27:56,334
+Hey, well, hopefully pick up in time.
+
+254
+00:28:04,524 --> 00:28:07,554
+Maybe I did pray enough to the demo gods.
+
+255
+00:28:09,024 --> 00:28:11,184
+Oh, I have do not disturb on hold on 3rd.
+
+256
+00:28:11,184 --> 00:28:16,344
+second Let's try that again.
+
+257
+00:28:25,224 --> 00:28:34,644
+There we go. They show and I was not ready for that.
+
+258
+00:28:34,644 --> 00:28:38,034
+So, let me do it 1 more time just so you can understand what it said.
+
+259
+00:28:38,574 --> 00:28:48,564
+Uh, test 3. Send this through now, receive the call at the volume up now.
+
+260
+00:28:49,104 --> 00:28:53,424
+And you'll see, hopefully.
+
+261
+00:28:54,264 --> 00:28:59,004
+Corporate through again, today, thank you.
+
+262
+00:28:59,814 --> 00:29:02,034
+Enjoy the show test 3. okay.
+
+263
+00:29:02,424 --> 00:29:09,894
+Generally. Let me get the screen up here for Webex.
+
+264
+00:29:11,334 --> 00:29:20,514
+And there we go. So now, let me translate, let me navigate over to.
+
+265
+00:29:20,789 --> 00:29:23,064
+Uh, the PowerPoint presentation.
+
+266
+00:29:24,684 --> 00:29:29,124
+And this is really going to kick off the work flow.
+
+267
+00:29:29,634 --> 00:29:31,974
+That we're going to be supporting for.
+
+268
+00:29:33,384 --> 00:29:37,254
+The demo here, so essentially, what I'm going to do is.
+
+269
+00:29:37,439 --> 00:29:45,384
+I'm going to walk through the, the build out from scratch of a integration where there's an external system.
+
+270
+00:29:45,564 --> 00:29:47,274
+Let's call it. A point of sale.
+
+271
+00:29:47,274 --> 00:29:49,614
+Doesn't matter that's going to trigger a.
+
+272
+00:29:49,889 --> 00:30:02,634
+Uh, workflow and connect, and then the workflow and connect is gonna be responsible for, uh, generating an integration, uh, or benefiting from an integration to interrogate database and understand.
+
+273
+00:30:02,969 --> 00:30:09,624
+Uh, information metadata, in this case, on a location for an end user, where we're then going to determine time zone.
+
+274
+00:30:09,929 --> 00:30:19,284
+Uh, for this end user, and then we're going to make sure that that time zone is within the social hours the acceptable timeframe.
+
+275
+00:30:19,589 --> 00:30:29,454
+To send somebody a message, this is predominantly used in marketing scenarios or proactive communications, where you don't want to send somebody a message in the middle of the night.
+
+276
+00:30:29,454 --> 00:30:40,764
+For example. Any additional logic and decisioning that needs to be done with, with that message determining channel making sure this person is opted in to receive messages in the 1st place.
+
+277
+00:30:41,124 --> 00:30:44,514
+Um, and then we're actually going to send the person to message myself in this case.
+
+278
+00:30:45,474 --> 00:31:02,274
+And we're going to, um. Open up a, um, response opportunity so that effectively creating a 2 way conversation in a structured workflow that you'll see here in Webex Connect, um, allowing the person to respond.
+
+279
+00:31:02,579 --> 00:31:06,444
+In this case, we're just going to integrate with a 3rd party API that I use.
+
+280
+00:31:06,444 --> 00:31:22,044
+It's a, it's a stock. Api, that allows you to check the current price on a given stock ticker symbol and then we're going to reopen that conversation back to the end user, uh, allowing him or her to respond again.
+
+281
+00:31:22,074 --> 00:31:26,694
+So very simple use case very, very high level.
+
+282
+00:31:26,694 --> 00:31:27,924
+To a degree. We're gonna focus on.
+
+283
+00:31:27,949 --> 00:31:36,164
+A happy path, but I do want to also take time to go through where the error path, and can be included into these workflows as we all know.
+
+284
+00:31:36,164 --> 00:31:37,604
+That's incredibly important.
+
+285
+00:31:37,634 --> 00:31:39,464
+In real life production scenarios.
+
+286
+00:31:41,069 --> 00:31:46,434
+So, navigating back over to Webex Connect now.
+
+287
+00:31:47,304 --> 00:31:50,574
+We're going to focus on the.
+
+288
+00:31:50,849 --> 00:31:54,834
+So, going back to the services, I'm going to start from scratch and going to create our own service.
+
+289
+00:31:55,049 --> 00:31:58,254
+For this, we're going to call it a webinar.
+
+290
+00:31:59,334 --> 00:32:05,184
+Demo and again, I got my service keys here.
+
+291
+00:32:05,184 --> 00:32:12,054
+If I need them, I'm not going to use them for the sake of this demonstration, but I am going to navigate over to workflows.
+
+292
+00:32:12,294 --> 00:32:15,084
+And then once I'm in workflows, I'm going to click on create.
+
+293
+00:32:15,329 --> 00:32:19,974
+I'm gonna call this demo 1 we'll go ahead and start from scratch.
+
+294
+00:32:20,004 --> 00:32:28,014
+If you had any template, any desire to use the templates as a, as a kind of shortcut to get started by all means these are.
+
+295
+00:32:28,289 --> 00:32:38,724
+Available here as well and the 1st thing, the, the system asks for is a web hook or a.
+
+296
+00:32:39,234 --> 00:32:42,024
+Initiation, how is this workflow going to be triggered?
+
+297
+00:32:42,054 --> 00:32:43,524
+We're going to start with web hooks.
+
+298
+00:32:43,739 --> 00:32:47,574
+But this could be a custom event stemming from a file that gets dropped.
+
+299
+00:32:47,813 --> 00:32:53,304
+Um, it could be a series of integrations that are, uh, predefined in accordance with.
+
+300
+00:32:53,609 --> 00:33:03,534
+Your, um, your tenant, how it's being leveraged, if it's in concert with contact center, for example, or if it's a standalone application of the tool or if you're actually leveraging.
+
+301
+00:33:03,809 --> 00:33:19,224
+Um, end users, a call to action somewhere where you're asking them to scan, uh, QR code, send in a text message, or whatever, have whatever they might be doing to initiate a conversation with your brand, or your workflow.
+
+302
+00:33:19,224 --> 00:33:30,114
+In this case. Just to keep things on the more technical side, we're going to go ahead and assume that this is going to be triggered via a external system.
+
+303
+00:33:30,294 --> 00:33:34,584
+So we're going to go ahead here and select web hook as we just did.
+
+304
+00:33:34,734 --> 00:33:35,874
+I'm going to create a new event.
+
+305
+00:33:35,904 --> 00:33:42,384
+I'm going to call it. Um, webinar demo, 1, just to match my service name.
+
+306
+00:33:42,689 --> 00:33:57,444
+And then this is where the efficiency really starts pouring in, um, the sample input allows you to suggest what that Jason or XML might be that is gonna be adjusted into the workflow to then start.
+
+307
+00:33:57,779 --> 00:34:00,894
+Having the work flow do something for you in this case.
+
+308
+00:34:01,199 --> 00:34:05,034
+Um, I'm just gonna use the customer ID, uh, parameter.
+
+309
+00:34:06,234 --> 00:34:11,424
+When I click on Parse here, you'll now see that customer ID presents it so it presents itself.
+
+310
+00:34:11,724 --> 00:34:17,184
+As an output variable so you'll see, I have my standard metadata that comes with the.
+
+311
+00:34:17,544 --> 00:34:26,724
+Just kind of standard, uh, variables and parameters that come with the platform and then I'm gonna use, uh, customer ID as 1 here as well.
+
+312
+00:34:29,009 --> 00:34:35,124
+To integrate with an external database, I'm going to be using Google sheets here.
+
+313
+00:34:35,154 --> 00:34:41,154
+So this is just. Google sheets these are my 2 records that I have in this hypothetical database.
+
+314
+00:34:41,574 --> 00:34:44,754
+And when I connect these 2.
+
+315
+00:34:45,239 --> 00:34:48,174
+This then allows me to perform a get against.
+
+316
+00:34:48,504 --> 00:34:53,904
+My, um, end point here, let me pull up my.
+
+317
+00:34:55,224 --> 00:35:05,304
+Candy sheet there we go. And then what's really cool about this is that it allows me to.
+
+318
+00:35:05,754 --> 00:35:14,364
+Test over here. And you'll see that it gives me the full response of the values.
+
+319
+00:35:14,579 --> 00:35:18,204
+Um, associated with the database, so again, if.
+
+320
+00:35:18,479 --> 00:35:23,814
+I were to come over here and change this to just add a bunch of ease there.
+
+321
+00:35:24,119 --> 00:35:29,394
+Um, you know, and I hit test again, let me get rid of the documentation when I.
+
+322
+00:35:29,669 --> 00:35:35,424
+Quick test here, you'll see that it's updated dynamically in real time.
+
+323
+00:35:35,454 --> 00:35:37,823
+Now what I can do is I can copy this.
+
+324
+00:35:38,544 --> 00:35:49,434
+I don't have access to postman for whatever reason, or something like that and I can import my sample output or response that I'm going to parse against.
+
+325
+00:35:49,619 --> 00:35:52,584
+In here and the system will parse for me.
+
+326
+00:35:52,859 --> 00:35:55,854
+It's going to give me a bunch of values that I got back.
+
+327
+00:35:55,974 --> 00:36:02,514
+Obviously, Google sheets doesn't do a good job of leveraging the headers field to give these friendly names.
+
+328
+00:36:02,664 --> 00:36:04,104
+So I'm just going to by memory.
+
+329
+00:36:04,104 --> 00:36:06,654
+I suppose say this is my customer ID.
+
+330
+00:36:06,774 --> 00:36:09,384
+My 1st name last name, my location, my phone number.
+
+331
+00:36:09,684 --> 00:36:21,174
+And my channel preference, my fallback channel and my status right especially when we start talking about SMS, we're gonna keep this what'sapp focused just because it's easier to demo.
+
+332
+00:36:21,564 --> 00:36:23,694
+Um, and it's Richard channel.
+
+333
+00:36:24,474 --> 00:36:28,584
+But if this were SMS, for example, you would definitely want to be able to check against.
+
+334
+00:36:28,769 --> 00:36:31,494
+Whether this person is opted in to receive messages or not.
+
+335
+00:36:32,514 --> 00:36:37,224
+Um, so go ahead and import there with me as I go through here.
+
+336
+00:36:37,224 --> 00:36:41,094
+So we'll call this 1 customer ID and these can be completely friendly names.
+
+337
+00:36:41,094 --> 00:36:46,764
+They don't really need to respect any sort of traditional syntax or naming convention.
+
+338
+00:36:47,004 --> 00:36:57,444
+So we'll go. 1st. We'll do last, uh, what was next with the location phone channel so location.
+
+339
+00:37:01,734 --> 00:37:12,654
+Channel. And we'll do fall back and status so fall back.
+
+340
+00:37:13,734 --> 00:37:17,604
+And status, so this sets us up pretty well.
+
+341
+00:37:17,879 --> 00:37:26,634
+To now apply a ton of conditional logic as well as dynamic attribution to the bodies of messages, or subsequent API calls that we're going to make.
+
+342
+00:37:27,354 --> 00:37:35,124
+Um, so at this point. We want to hit the social hours check.
+
+343
+00:37:35,994 --> 00:37:40,044
+To make sure that this person is being messaged within.
+
+344
+00:37:40,319 --> 00:37:44,604
+Um, a acceptable time time frame, right?
+
+345
+00:37:44,604 --> 00:37:50,874
+So we're going to leverage the location API to determine um.
+
+346
+00:37:53,874 --> 00:37:57,804
+Timezone right so we're going to go ahead and actually we're going to use.
+
+347
+00:37:58,049 --> 00:38:05,394
+Uh, this guy here. There's 1 called location.
+
+348
+00:38:06,264 --> 00:38:21,745
+Zip code here we go. Actually, well, I think there was a better 1.
+
+349
+00:38:26,880 --> 00:38:29,965
+Yeah, this gives us time zone here, so perfect.
+
+350
+00:38:29,965 --> 00:38:33,805
+So we're going to go ahead and call this request.
+
+351
+00:38:46,470 --> 00:38:51,115
+And we're going to leverage the.
+
+352
+00:38:53,190 --> 00:38:58,465
+City, which is going to be the location here.
+
+353
+00:38:59,185 --> 00:39:02,875
+Well, let's just go ahead and assume for a 2nd, it's Boston.
+
+354
+00:39:02,875 --> 00:39:05,095
+We'll go ahead and get the.
+
+355
+00:39:06,505 --> 00:39:13,225
+Test it, Ah, API key. Of course.
+
+356
+00:39:19,980 --> 00:39:25,585
+And for those of you wondering, if you'll be able to use my API key, that is just going to get changed right?
+
+357
+00:39:25,585 --> 00:39:30,805
+After this call. So. I've had it until then API.
+
+358
+00:39:30,835 --> 00:39:32,815
+Ninjas is great by the way.
+
+359
+00:39:33,505 --> 00:39:38,845
+Highly recommend their 3rd party api's if you need them for demos or whatever the case might be.
+
+360
+00:39:41,245 --> 00:39:47,095
+So, here we go test. Uh, doesn't like that either what am I doing?
+
+361
+00:39:47,095 --> 00:39:59,695
+Wrong? Well, I guess we need a state and we'll do Massachusetts.
+
+362
+00:40:03,355 --> 00:40:09,685
+Okay, so we want to get. All right, well, this was working.
+
+363
+00:40:09,715 --> 00:40:13,075
+Let's see, Boston. Okay, that's right.
+
+364
+00:40:18,895 --> 00:40:22,615
+All right, well, we'll skip this step so let's assume here that we can.
+
+365
+00:40:22,920 --> 00:40:28,105
+In for time zone as a dynamic parameter, um.
+
+366
+00:40:28,765 --> 00:40:32,035
+And we'll just move on to the social hours check node here.
+
+367
+00:40:32,280 --> 00:40:36,025
+Which is now going to go ahead and tell us all right?
+
+368
+00:40:36,055 --> 00:40:40,525
+What. Time of day is it acceptable to send this person a message?
+
+369
+00:40:40,770 --> 00:40:44,575
+We'll go ahead and do it by day just to show you the full range of features here.
+
+370
+00:40:44,850 --> 00:40:49,975
+Um, this allows you to go down day of the week, whatever the case might be.
+
+371
+00:40:49,975 --> 00:40:51,985
+You can make these dynamic if you want.
+
+372
+00:40:51,985 --> 00:40:54,805
+In fact, I was trying to get down to the path where.
+
+373
+00:40:55,405 --> 00:40:56,845
+We would make this dynamic.
+
+374
+00:40:57,115 --> 00:41:02,995
+Whoops. Um. Or we would have dynamic time zone, but we'll just go ahead.
+
+375
+00:41:02,995 --> 00:41:09,115
+And do. America's New York that's -4.
+
+376
+00:41:09,144 --> 00:41:18,955
+four We'll do East Coast and.
+
+377
+00:41:20,340 --> 00:41:23,275
+Whatever that is, we'll just go ahead and we'll do.
+
+378
+00:41:24,145 --> 00:41:27,055
+We'll do some follow up because I know that is within.
+
+379
+00:41:28,345 --> 00:41:43,045
+the time range right now within the nine to six zero pm range so it's going to let us through what we could do here also is we could branch requests not in a social hour but we could send them down a separate path so for example If it's not in social
+
+380
+00:41:43,045 --> 00:41:47,635
+ours, we could send somebody an email instead, which is a less intrusive.
+
+381
+00:41:49,585 --> 00:41:57,145
+Channel, and if it is within social hours, which is obviously going to be the case for this demo, at least we'll go ahead and send them.
+
+382
+00:41:57,925 --> 00:41:59,215
+What's that? Communication.
+
+383
+00:41:59,520 --> 00:42:07,075
+And we'll do this by the what'sapp ID, which is going to be represented by the phone number in this case, right?
+
+384
+00:42:07,105 --> 00:42:09,085
+If this was Apple, it would be a.
+
+385
+00:42:09,420 --> 00:42:16,225
+Uh, okay ID, if it was Google, Google ID, so on and so forth and then in this message here we're gonna go ahead and say.
+
+386
+00:42:18,085 --> 00:42:26,665
+What company. Companies doc to up.
+
+387
+00:42:28,135 --> 00:42:31,915
+And 1 of the cool things here that you can do, also, I'm going to be leveraging.
+
+388
+00:42:31,975 --> 00:42:36,205
+Um. Web hook got set another 3rd party application, just to showcase.
+
+389
+00:42:36,835 --> 00:42:42,865
+How correlation IDs and notification URLs and callback URLs, depending on how you refer to these as.
+
+390
+00:42:43,645 --> 00:42:46,735
+Can be referenced we'll go ahead and call this.
+
+391
+00:42:47,065 --> 00:42:56,005
+What's that? Message? 1. And then you can add extra metadata in here if you wanted to, like a like a timestamp for example.
+
+392
+00:42:56,280 --> 00:42:58,075
+That can all be applied there?
+
+393
+00:42:58,675 --> 00:43:03,295
+Um. And then, of course, we're going to give the person the option to respond.
+
+394
+00:43:03,630 --> 00:43:08,155
+For this message, these are common received notes by the way.
+
+395
+00:43:08,155 --> 00:43:15,055
+So it could be. You could be managing multiple channels all in a single workflow.
+
+396
+00:43:15,055 --> 00:43:17,125
+So, in this case, I'm going to give myself 120 seconds to respond.
+
+397
+00:43:17,125 --> 00:43:23,755
+This could be 28,000 or however, many seconds or in a day or a week, I think, is the limit.
+
+398
+00:43:23,755 --> 00:43:32,725
+And then you can have. and then you can have They can get into a design principles conversation where you could have a catch all workflow.
+
+399
+00:43:33,000 --> 00:43:49,465
+That basically place traffic cop and anybody who responds outside of the specific window hits that catch all and then based on the conditional logic applied in that workflow, we'll then get farmed out to the appropriate subsequent workflow that you
+
+400
+00:43:49,465 --> 00:43:52,315
+would want to manage that that end user's request.
+
+401
+00:43:54,265 --> 00:43:57,205
+And then over here, we're going to go ahead and use phone again.
+
+402
+00:43:57,415 --> 00:44:02,605
+So. Say, it's going to be an incoming message.
+
+403
+00:44:03,805 --> 00:44:06,535
+They were going to mind that message and.
+
+404
+00:44:07,435 --> 00:44:11,695
+Provide a response, so, in this case again, we're going to make another API call.
+
+405
+00:44:12,565 --> 00:44:18,235
+To a 3rd party system this is the stocks API that I was talking about originally.
+
+406
+00:44:18,480 --> 00:44:21,205
+Uh, let's do stock market here.
+
+407
+00:44:21,205 --> 00:44:28,525
+Stock price. These guys copy this 1 is.
+
+408
+00:44:30,390 --> 00:44:32,935
+The standard gap will do the.
+
+409
+00:44:34,285 --> 00:44:48,985
+Api. This thing again, we go.
+
+410
+00:44:49,675 --> 00:44:53,725
+And then these, these are examples of where you could actually be leveraging.
+
+411
+00:44:54,060 --> 00:45:00,475
+Um, a custom node, I decided not to go that route for the demo, because we would then spend the majority of the demo building.
+
+412
+00:45:00,475 --> 00:45:09,085
+The actual custom node. Uh, which essentially is what you're looking at here, except with a variety of methods prepopulated against it, that you would then just leveraged dynamic.
+
+413
+00:45:09,330 --> 00:45:15,235
+Parameters to populate it as needed, like the specific ticker symbol in this case.
+
+414
+00:45:15,390 --> 00:45:20,575
+Um, let's go ahead and just do, uh, well, we're here with Cisco.
+
+415
+00:45:20,575 --> 00:45:28,585
+Let's do Cisco. And if we test this, do we get a response in this case?
+
+416
+00:45:29,605 --> 00:45:32,515
+We're going to go ahead and put this in here.
+
+417
+00:45:32,545 --> 00:45:41,845
+We're going to parse it. It's going to give us the values that we're looking for along with the naming convention, which is helpful and then you can determine which ones are relevant, which ones aren't.
+
+418
+00:45:41,875 --> 00:45:43,555
+Right? So, we're going to want to.
+
+419
+00:45:43,860 --> 00:45:49,135
+We'll just do all of them for now, but if, for example, the timestamp wasn't necessary you could, um.
+
+420
+00:45:49,735 --> 00:45:53,035
+Leave that off I think that's everything we need.
+
+421
+00:45:53,155 --> 00:45:57,865
+So import. Great. We'll just give them a ticker.
+
+422
+00:45:58,975 --> 00:46:08,035
+Place a company. And we'll call this 1, the exchange.
+
+423
+00:46:08,575 --> 00:46:10,495
+And this will be timestamp.
+
+424
+00:46:12,115 --> 00:46:19,465
+Great say so now I can leverage anything that was collected in here and send that down.
+
+425
+00:46:19,975 --> 00:46:23,035
+A, subsequent message to the end user.
+
+426
+00:46:23,905 --> 00:46:28,315
+Sending him or her, the response that they're that they're looking for.
+
+427
+00:46:28,345 --> 00:46:32,875
+So again we go back through here and benefit from our parsed parameters.
+
+428
+00:46:33,415 --> 00:46:42,595
+Um, the, uh. Whatever the following information was provided.
+
+429
+00:46:42,900 --> 00:46:48,445
+And then you can start providing the information that you would like here.
+
+430
+00:46:48,445 --> 00:46:54,805
+So you just say ticker. Is this, uh, price.
+
+431
+00:46:55,050 --> 00:47:03,595
+Is this, um. Company name is this.
+
+432
+00:47:04,195 --> 00:47:11,335
+And then if you wanted to get real fancy, we'll go ahead and do the notification URL again just so you can see.
+
+433
+00:47:13,080 --> 00:47:17,275
+How this gets all populated once I run it and call this what's up?
+
+434
+00:47:17,665 --> 00:47:24,565
+Message to, um. Let's do a timestamp there say.
+
+435
+00:47:25,855 --> 00:47:35,245
+And now now we're essentially done, I'll wrap it up because I know we want to leave time for questions and answers but, um.
+
+436
+00:47:36,025 --> 00:47:41,185
+At this point you could basically include in the body of your message.
+
+437
+00:47:41,430 --> 00:47:45,385
+Whatever you want at the end of the day, but in here, you can say, uh, reply.
+
+438
+00:47:45,810 --> 00:47:51,295
+Um, or I guess we could just do, do you want to.
+
+439
+00:47:53,095 --> 00:48:04,945
+Um, do this again. And then you would essentially, I'm just copying and pasting notes at this point.
+
+440
+00:48:05,635 --> 00:48:13,315
+Let's go ahead down here message.
+
+441
+00:48:13,315 --> 00:48:17,485
+Everything's the same. And then if the person replies yes or no.
+
+442
+00:48:17,790 --> 00:48:20,245
+You can just use a standard condition.
+
+443
+00:48:20,485 --> 00:48:25,075
+You could use what I was starting to say earlier as you could use the evaluate condition.
+
+444
+00:48:25,350 --> 00:48:29,695
+Which is, uh, allows you to inject JavaScript into the workflow itself.
+
+445
+00:48:29,815 --> 00:48:39,745
+So, if you wanted to take that that time stamp that was provided in seconds and turn that into something that a normal person would read, um, you could use JavaScript for that.
+
+446
+00:48:39,775 --> 00:48:45,295
+You could also use it for this conditional logic, but a standard branch will suffice for now.
+
+447
+00:48:46,785 --> 00:48:48,645
+Uh, go down the yes. Path.
+
+448
+00:48:49,215 --> 00:48:53,655
+Um, and this will be the person's, uh, response.
+
+449
+00:48:57,715 --> 00:49:19,285
+I think I need to select. Here yes.
+
+450
+00:49:19,555 --> 00:49:23,065
+Give that branch a name the variable itself.
+
+451
+00:49:23,340 --> 00:49:26,845
+There we go will be the, what's that message?
+
+452
+00:49:28,105 --> 00:49:30,085
+And then we could just make it, um.
+
+453
+00:49:30,715 --> 00:49:40,555
+Contains yes. Then you can have your standard and or conditions as well you could add another branch for no, in this case.
+
+454
+00:49:40,740 --> 00:49:44,905
+It's a binary decision, so none of the above is the else condition.
+
+455
+00:49:45,175 --> 00:49:47,095
+I'll just go ahead and say, save.
+
+456
+00:49:47,430 --> 00:49:51,145
+And then if they go down the yes path, we will basically.
+
+457
+00:49:52,465 --> 00:49:57,865
+Loop them back to. The beginning of the experience, if they say no.
+
+458
+00:49:59,275 --> 00:50:01,735
+Or something else will say, okay, goodbye.
+
+459
+00:50:02,785 --> 00:50:15,805
+Um. Okay, thank you. And then this will be, uh.
+
+460
+00:50:17,965 --> 00:50:23,935
+Message all right so now we have.
+
+461
+00:50:24,295 --> 00:50:31,135
+A BI, directional workflow that integrates with at least 2 or 3 different systems and you can save it.
+
+462
+00:50:31,440 --> 00:50:41,335
+And then edit it if you'd like, you see that we get a bunch of errors and warnings these are in the, uh, yellow or amber color, meaning that you can still go live with this.
+
+463
+00:50:41,430 --> 00:50:48,925
+There is nothing critical that's missing, but you may want to check these out and what it's referring to basically are these.
+
+464
+00:50:49,110 --> 00:50:55,375
+Uh, yellow and red nodules that you see, this is where all the error passing and time out conditions can be applied.
+
+465
+00:50:55,645 --> 00:51:00,505
+Obviously, in a production workflow, those would exist and you would, you would want to include those.
+
+466
+00:51:00,775 --> 00:51:06,175
+But as I make this live. You can add version so version.
+
+467
+00:51:07,495 --> 00:51:14,425
+1 stock price. Everything is version controlled as well.
+
+468
+00:51:15,025 --> 00:51:21,835
+Um. And once you're in a go live status, you lose the ability to edit, but you can see here that it's publishing.
+
+469
+00:51:22,015 --> 00:51:29,635
+If I had multiple versions in here, you would see those and then you can fall back or forward into whatever version makes sense.
+
+470
+00:51:30,955 --> 00:51:41,095
+While that's publishing, it only takes a minute or so you have your access to the channels here integrations is another 1.
+
+471
+00:51:41,095 --> 00:51:57,535
+this is where all the. Uh, prebuilt, integrations can come with your work flow or if you were to build custom integrations like we did with Google search, for example, they would live here and you would have access to these freely within your, your,
+
+472
+00:51:57,565 --> 00:52:01,465
+your workflow as, as a person who's building and deploying these.
+
+473
+00:52:02,515 --> 00:52:05,185
+All right, so let's see if this works, um.
+
+474
+00:52:06,475 --> 00:52:11,395
+Let me go ahead and. And that back on.
+
+475
+00:52:12,745 --> 00:52:19,465
+Great. So. Now, essentially what I'm going to do is I'm just going to copy this.
+
+476
+00:52:20,995 --> 00:52:23,694
+At some point, we're going to come over here.
+
+477
+00:52:23,725 --> 00:52:26,155
+I already have this kind of Pre populated.
+
+478
+00:52:26,155 --> 00:52:27,625
+I'm updating the end point.
+
+479
+00:52:27,870 --> 00:52:29,965
+Customer ID is gonna be 1:2:3 4.
+
+480
+00:52:29,965 --> 00:52:34,225
+three four Uh, customer ID, that's the same parameter there.
+
+481
+00:52:34,500 --> 00:52:37,075
+So, let's go ahead and hit send.
+
+482
+00:52:39,060 --> 00:52:42,775
+There is that it? Okay what company stock would you like to look up?
+
+483
+00:52:43,465 --> 00:52:45,265
+I'm sure. And video is on.
+
+484
+00:52:45,265 --> 00:52:50,755
+Everybody's mind. Lately, let's do Nvidia and there it is.
+
+485
+00:52:50,784 --> 00:52:52,885
+Oh, I hard coded it to Cisco.
+
+486
+00:52:52,885 --> 00:52:58,585
+That's why. And what's really cool about this before we run out of time.
+
+487
+00:52:58,920 --> 00:53:05,125
+Is you have live debugging so you have the ability to see everything that happened in accordance with that transaction?
+
+488
+00:53:07,015 --> 00:53:08,395
+As it's as it's happening.
+
+489
+00:53:08,395 --> 00:53:11,305
+So if I come in here and I couldn't figure out what it was.
+
+490
+00:53:11,640 --> 00:53:17,755
+Um, I would. Be able to come in here and.
+
+491
+00:53:20,070 --> 00:53:23,155
+Interrogate essentially all the different steps.
+
+492
+00:53:23,370 --> 00:53:26,155
+That the work flow went through, it's all encrypted.
+
+493
+00:53:26,430 --> 00:53:30,865
+Um, so you, you would need special access to be able to do that.
+
+494
+00:53:31,140 --> 00:53:34,015
+But let's see here real quick.
+
+495
+00:53:34,795 --> 00:53:38,395
+That is something that a platform user would have the ability to view.
+
+496
+00:53:38,995 --> 00:53:40,435
+So I'm going to make this.
+
+497
+00:53:40,680 --> 00:53:48,925
+The 1st received message. Here save live again.
+
+498
+00:53:49,200 --> 00:53:51,385
+So, now we'll have 2 versions.
+
+499
+00:53:53,155 --> 00:54:12,115
+Fixed. All right. So, now I'm going to go ahead.
+
+500
+00:54:12,390 --> 00:54:18,085
+And fire away, let me just close this out.
+
+501
+00:54:18,205 --> 00:54:22,615
+No. Then we'll send this again.
+
+502
+00:54:29,425 --> 00:54:32,125
+Okay, what company start? Let's try that again in video.
+
+503
+00:54:37,645 --> 00:54:41,965
+There we go a little down compared to where they were their all time high yesterday.
+
+504
+00:54:41,995 --> 00:54:50,965
+So. With that, um, that conclude the live build, um, thank you for your patients as I walked through that.
+
+505
+00:54:51,055 --> 00:54:54,775
+Um, but as you can hopefully see that for an enterprise.
+
+506
+00:54:54,960 --> 00:54:59,125
+This might be a more efficient path forward than handling code.
+
+507
+00:54:59,365 --> 00:55:01,375
+Um, depending on the scenario.
+
+508
+00:55:01,375 --> 00:55:05,545
+Of course. Um, before I, um.
+
+509
+00:55:06,175 --> 00:55:08,905
+Stop sharing my screen or give up the share.
+
+510
+00:55:09,150 --> 00:55:12,595
+Um, I do want to advertise our.
+
+511
+00:55:13,375 --> 00:55:16,885
+Sandbox it's free to use. There's the link.
+
+512
+00:55:16,885 --> 00:55:20,875
+I think it will be shared in the space as well and please sign up.
+
+513
+00:55:21,175 --> 00:55:23,965
+Test it out. There's user guides in our documentation That'll help.
+
+514
+00:55:23,965 --> 00:55:26,005
+You get started. Thank you.
+
+515
+00:55:26,005 --> 00:55:27,355
+I hope you found this insightful.
+
+516
+00:55:31,315 --> 00:55:32,455
+Awesome. Thank you Stefan.
+
+517
+00:55:32,455 --> 00:55:44,005
+And thank you. Okay. We've got a few minutes before our session ends and we have some questions for those asking about the webinar recording.
+
+518
+00:55:44,005 --> 00:55:51,145
+Yes, this session is recorded and you can find this and all other previous webinar recordings at a developer.
+
+519
+00:55:51,200 --> 00:55:54,225
+Dot Webex dot com forward slash webinars.
+
+520
+00:55:55,560 --> 00:55:58,915
+And we'll touch on some of your questions that you had today.
+
+521
+00:56:07,585 --> 00:56:11,095
+Uh, so, 1 of the questions that came up was I would love it.
+
+522
+00:56:11,095 --> 00:56:17,695
+If you had evaluate nodes, that supported more language, more languages, other than Java script.
+
+523
+00:56:18,085 --> 00:56:19,105
+Thank you for that feedback.
+
+524
+00:56:19,105 --> 00:56:20,575
+That's actually really great feedback.
+
+525
+00:56:20,605 --> 00:56:23,935
+Um, please do share what languages you are interested in, and we.
+
+526
+00:56:24,020 --> 00:56:27,555
+Pass that feedback over to our product team for evaluation.
+
+527
+00:56:28,135 --> 00:56:31,705
+So, if you want to just drop it in, um, I know it's not a question, but you can drop it in there.
+
+528
+00:56:31,705 --> 00:56:33,895
+And we'll share that feedback with the product team.
+
+529
+00:56:39,205 --> 00:56:42,025
+Next question is, is there a Webex contact center?
+
+530
+00:56:42,565 --> 00:56:45,595
+Or Webex rooms, utilities for messaging channel.
+
+531
+00:56:46,885 --> 00:56:59,395
+And we do integration with Webex app can be done using custom integration, nodes, http node and Webex connect event API and inbound web.
+
+532
+00:57:01,620 --> 00:57:06,475
+We'll answer all these questions in this space as well team.
+
+533
+00:57:06,475 --> 00:57:09,715
+Is there anything that stood out that you want to touch on?
+
+534
+00:57:14,875 --> 00:57:24,235
+Right. Let me call out when I saw I have had issues with http.
+
+535
+00:57:24,235 --> 00:57:30,295
+No utilizing post. Can you demo this with the body of the post populated with an attribute.
+
+536
+00:57:30,570 --> 00:57:33,535
+See, the message and quote that attribute appropriately.
+
+537
+00:57:34,885 --> 00:57:40,075
+So, we can't do that in today's session for the sake of time, but we would be happy to cover that in a future session.
+
+538
+00:57:41,035 --> 00:57:46,225
+But in the meantime, we recommend you post your issues on Webex, connect community forum.
+
+539
+00:57:46,225 --> 00:57:50,455
+If you haven't done that already and our experts will be able to help you out with that.
+
+540
+00:57:50,815 --> 00:57:53,095
+That link was also shared.
+
+541
+00:57:53,430 --> 00:57:58,465
+Um, in the chat, the long 1, so I won't read it out, but I'll share it again.
+
+542
+00:57:59,035 --> 00:58:01,825
+For any questions and additional questions.
+
+543
+00:58:04,675 --> 00:58:08,185
+We have time for 1 more. Where can I find all the demos related to Webex?
+
+544
+00:58:08,185 --> 00:58:12,655
+Connect flows? Domain base like health care, et cetera.
+
+545
+00:58:12,655 --> 00:58:16,495
+We found that it is in a D cloud so I'll share that.
+
+546
+00:58:17,725 --> 00:58:20,785
+Link as well in the space.
+
+547
+00:58:23,605 --> 00:58:34,645
+And with that we are at the top of the hour, so thank you for joining us today, and be sure to pop over to the Webex developer community forum, uh, where you can connect with the Webex developers and the support team in case, you run into any
+
+548
+00:58:34,645 --> 00:58:36,625
+challenges what building running your apps on?
+
+549
+00:58:36,625 --> 00:58:40,645
+Webex. We love your feedback, so please do fill out the survey.
+
+550
+00:58:41,515 --> 00:58:44,815
+And let us know what you wanna, what you want to see next.
+
+551
+00:58:45,805 --> 00:58:49,585
+And with that, thank you to the Webex connect team.
+
+552
+00:58:49,615 --> 00:58:52,615
+Thank you developer evangelism team and thank you to.
+
+553
+00:58:52,615 --> 00:58:55,975
+Our attendees have a great rest of your day at night.
+
+554
+00:58:57,900 --> 00:58:58,230
+And.

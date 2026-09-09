@@ -1,0 +1,43 @@
+{
+  "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257878",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "1ef20223438cc57f465d26b8d1ee67c2b536079f37873ba718c58a51e1282261",
+    "source_path": "2b274f763d5a305ebde9e9b0406d643633aebb036144a633665b374420d9d6c9",
+    "text_path": "00105b5ef76a56072b76f88f73866704ee514d7ec3545b4e76ecbcf3da5a03ae"
+  },
+  "headings": [
+    "Node and Methods",
+    "Node Authorization",
+    "📘Note",
+    "Node Authorization for Cisco Webex Contact Center Engage nodes",
+    "📘",
+    "Node Outcomes",
+    "Webex Engage Streaming",
+    "Prerequisites",
+    "📘Note",
+    "Viewing and Editing Webex Engage Streaming Data Stream on Webex Connect Tenant",
+    "📘Note"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/wxcc-engage-node-palette.md",
+  "resolved_url": "https://help.webexconnect.io/docs/wxcc-engage-node-palette",
+  "retrieved_at": "2026-09-08T23:29:16+00:00",
+  "sha256_html_response": "f2f9a582065abf5f2e2a79e68bf68a3b5be38df121313e09ae3486abd205eb91",
+  "sha256_source_body": "2b274f763d5a305ebde9e9b0406d643633aebb036144a633665b374420d9d6c9",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/wxcc-engage-node-palette.source.md",
+  "source_updated_at": "2026-04-15T11:56:18.542Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/wxcc-engage-node-palette.txt",
+  "title": "Webex CC Engage Integration Nodes, Data Streams, and Node Authorizations",
+  "url": "https://help.webexconnect.io/docs/wxcc-engage-node-palette",
+  "word_count": 1127,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/wxcc-engage-node-palette.metadata.json"
+}

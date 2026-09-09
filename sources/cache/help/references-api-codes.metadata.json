@@ -1,0 +1,36 @@
+{
+  "category": "REFERENCES",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182577c2",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "98c188aee2d2823f542e2ab90607b57daddf16e292a1dbe9fc34f69c871e30c8",
+    "source_path": "e842d5c5a27fe7d8e5f66aff220ab58a01a60af3b863b88df7ba6b8eba773852",
+    "text_path": "a15586e47377d4de31ce542e86facc7fe912baa68f144d3124f7c4b377d80496"
+  },
+  "headings": [
+    "Messaging",
+    "Transaction Status",
+    "Event",
+    "Profile"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/references-api-codes.md",
+  "resolved_url": "https://help.webexconnect.io/docs/references-api-codes",
+  "retrieved_at": "2026-09-08T23:29:40+00:00",
+  "sha256_html_response": "a822c53f7b89ee852fbe00f4fd553edc906b02b5d6e20bc70350d72c1d5eb71f",
+  "sha256_source_body": "e842d5c5a27fe7d8e5f66aff220ab58a01a60af3b863b88df7ba6b8eba773852",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/references-api-codes.source.md",
+  "source_updated_at": "2026-04-03T10:46:04.480Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/references-api-codes.txt",
+  "title": "API Status Codes",
+  "url": "https://help.webexconnect.io/docs/references-api-codes",
+  "word_count": 5505,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/references-api-codes.metadata.json"
+}

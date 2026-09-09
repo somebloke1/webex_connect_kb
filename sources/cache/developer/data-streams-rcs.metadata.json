@@ -1,0 +1,32 @@
+{
+  "api_metadata_path": "sources/cache/developer/data-streams-rcs.api.json",
+  "category": "Data Streams",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f664b",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "f8392af4a96332fbd88d214f9dc1a98233fa7e49e4764dca5d45d65cbc3ca29b",
+    "source_path": "b0e474680c4be187eb72d4584c6c23bf5cddcc0a55037360228896292ace04dd",
+    "text_path": "922edf30e279adff2f6cb3a6304057783a1ac9209c9a4705a69c3e58950a31ee"
+  },
+  "headings": [],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/data-streams-rcs.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/data-streams-rcs",
+  "retrieved_at": "2026-09-08T23:31:48+00:00",
+  "sha256_api_metadata": "575f65b7d8dc3ea0b617314bc47e22705dc85fc80ee114e6faa20ada4e8aafe2",
+  "sha256_html_response": "82ce912f1b680c471604f17cf470b4dfff77c2c8756dbb3af88130c42661c068",
+  "sha256_source_body": "b0e474680c4be187eb72d4584c6c23bf5cddcc0a55037360228896292ace04dd",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/data-streams-rcs.source.md",
+  "source_updated_at": "2026-02-26T11:31:27.089Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/data-streams-rcs.txt",
+  "title": "Data Streams - RCS",
+  "url": "https://developers.webexconnect.io/reference/data-streams-rcs",
+  "word_count": 1143,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/data-streams-rcs.metadata.json"
+}

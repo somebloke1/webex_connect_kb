@@ -1,0 +1,292 @@
+# Messenger
+
+Source: https://developers.webexconnect.io/reference/messenger-outbound-webhooks
+Documentation version: 6.20.0
+Retrieved: 2026-09-08T23:31:44+00:00
+
+You can configure Outbound Webhooks to receive a copy of delivery notifications for messages sent via Facebook Messenger and for a copy of incoming messages received using Facebook Messenger by navigating to 'Assets -> Integrations -> Outbound Webhooks' sections in the platform.
+
+## Outbound Webhook configuration for tracking message delivery status
+
+If you want to track message delivery status, select the Webex Connect Service you are sending the Facebook Messenger messages from under 'Entity' dropdown. Select the channel as Messenger.
+
+```json Submitted
+{
+    "deliveryInfoNotification": {
+        "deliveryInfo": {
+            "deliveryChannel": "fb",
+            "Description": "Submited",
+            "destinationType": "psid",
+            "timeStamp": "2016-07-21T12:44:23.644",
+            "code": "7501",
+            "deliveryStatus": "Submited",
+            "destination": "1368028456544331"
+        },
+        "correlationid": "3bd8edf31c81-4b72d8a2-XXXX-49e2-993e",
+        "callbackData": "return callbackdata",
+        "transid": "4b72d8a2-290d-XXXX-993e-3bd8edf31c81"
+    }
+}
+```
+```json Delivered
+{
+    "deliveryInfoNotification": {
+        "deliveryInfo": {
+            "deliveryChannel": "fb",
+            "Description": "Delivered",
+            "destinationType": "psid",
+            "timeStamp": "2016-08-12T07:00:15.537",
+            "code": "7500",
+            "deliveryStatus": "Delivered",
+            "destination": "11071XXXX19374928"
+        },
+        "correlationid": "cid",
+        "callbackData": "",
+        "transid": "e389acdf-f751-XXXX-90da-2262bd252ee6"
+    }
+}
+```
+```json Failed
+{
+   "deliveryInfoNotification": 
+      {
+         "deliveryInfo": 
+            {
+                "timeStamp": "2020-02-24T14:23:34.633Z",
+                "Description": "Service provider exception.",
+                "code": "7010",
+                "deliveryChannel": "fb",
+                "additionalInfo": "Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.",
+                "destination": "XXXXXXXXXXX",
+                "destinationType": "psid",
+                "deliveryStatus": "Failed"
+            },
+            "subtid": "",
+            "transid": "6686890e-885a-XXXX-85be-63174b16205b",
+            "callbackData": "",
+            "correlationid": "657f6b2b-0343-XXXX-bb17-2d48c86afc83_0"
+        }
+}
+```
+```json Read
+{
+    "deliveryInfoNotification": {
+        "deliveryInfo": {
+            "deliveryChannel": "fb",
+            "Description": "Read",
+            "destinationType": "psid",
+            "timeStamp": "2016-10-25T06:20:59.753",
+            "code": "7502",
+            "deliveryStatus": "Read",
+            "destination": "12770XXXX8990108"
+        },
+        "correlationid": "",
+        "callbackData": "",
+        "transid": "df7d2dc8-e3dd-XXXX-a593-6679b59dc6ab"
+    }
+}
+```
+
+| Field Name      | Description                                                                                                                                                                                                                  |
+| :-------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| deliveryChannel | Channel used to send the message i.e., Facebook Messenger (fb) in this case.                                                                                                                                                 |
+| destinationType | This is always psid i.e. Page-scoped ID when using Facebook Messenger. Users who interact with Facebook Messenger Pages are identified by Page-Scoped User IDs (PSID). PSIDs are IDs that are unique to each User-Page pair. |
+| destination     | Value of the PSID.                                                                                                                                                                                                           |
+| Description     | Detailed description of the delivery status                                                                                                                                                                                  |
+| timeStamp       | Timestamp of the event.                                                                                                                                                                                                      |
+| code            | Status code as mentioned in the documentation                                                                                                                                                                                |
+| deliveryStatus  | Status of messages once sent                                                                                                                                                                                                 |
+| correlationid   | CorrelationID is a unique identifier that you can attach to every request as a reference a particular transaction or event. This is configured as a part of the request.                                                     |
+| callbackData    | Data that you have configured to receive on the notify Url. This is configured as a part of the request.                                                                                                                     |
+| transid         | Unique transaction reference id of the request.                                                                                                                                                                              |
+
+## Outbound Webhook configuration for tracking incoming Messenger messages and events
+
+If you want to track incoming messages or events, select the Messenger channel asset you are receiving the messages on under 'Entity' dropdown. 
+
+```json Incoming Message
+{
+  "userId": "8953",
+  "channel": "Facebook Messenger",
+  "psid": "91638xxx36967736",
+  "appId": "a_638604xxxxx99980000",
+  "event": "MO",
+  "ts": "2024-09-xxxxx:10:40.658Z",
+  "tid": "f91d5a54-cca8-xxxx-97de-b7cxxxxe273b_0",
+  "message": "hi",
+  "attachments": "",
+  "locale": "",
+  "gender": "",
+  "timezone": "",
+  "name": "John",
+  "profile_pic": "https://platform-lookaside.fbsbx.com/platform/profilepic/?eai=AXHnvZaT6Tzw4ffnh8db_CINX2PsBZ_orUgY4uXjybVtTsj3P70hEjsd4Rwg63fXYwntrJwlZVR-&psid=9163826236967736&width=1024&ext=1728022240&hash=AbbgFL6jbpBdlYJNjB0chk13"
+}
+```
+```json Image
+{
+  "userId": "6457",
+  "channel": "Facebook Messenger",
+  "psid": "916382xsxx967736",
+  "appId": "a_638604XXXX99980000",
+  "event": "MO",
+  "ts": "2024-09-xxxxx:17:13.137Z",
+  "tid": "024d1398-9110-xxxx-929e-41546c13e64b_0",
+  "message": "",
+  "attachments": "[{\"payload\":{\"url\":\"https://attachments.abc.link/v1/download-media?exp=1725445034412&path=3%2F2024-09-04%2F5%2Fa_638604326499980000%2F3bda9425-a86e-4d8e-910d-85204abae84d.jpeg&sid=JHtWq%2BAUiSMtFd2%2FI95Bla%2BkTqy%2FV08ukAgqQW%2BBdrvy2HCn7RiP6fvlBOE%2BwLBhdT%2BIGYrYTFPJLJ%2BrTjt2Ow%3D%3D\"},\"type\":\"image\"}]",
+  "locale": "",
+  "gender": "",
+  "timezone": "",
+  "name": "John",
+  "profile_pic": "https://platform-lookaside.abc.com/platform/profilepic/?eai=AXHnvZaT6Tzw4ffnh8db_CINX2PsBZ_orUgY4uXjybVtTsj3P70hEjsd4Rwg63fXYwntrJwlZVR-&psid=9163826236967736&width=1024&ext=1728022240&hash=AbbgFL6jbpBdlYJNjB0chk13"
+}
+```
+```json Video
+{
+  "userId": "8953",
+  "channel": "Facebook",
+  "appId": "a_636035XXXX28953782",
+  "event": "MO",
+  "psid": "103787XXXX267914",
+  "ts": "2015-04-12T13:00:19.456Z",
+  "timeStamp" : "2015-04-12T13:00:19.456Z",
+  "tid": "cd5c3fea-0169-XXXX-a50c-ddfd731d73eb_0",
+  "message": "",
+  "attachments": "[{\"payload\":{\"url\":\"https:\/\/video.xx.fbcdn.net\/v\/t42.3356-2\/13862946_539025056303434_1490024390_n.mp4\/video-1469713591.mp4?vabr=261485&oh=9046f1a7f78711f8c929df57620c6515&oe=579BBDDF\"},\"type\":\"video\"}]",
+  "locale": "en_US",
+  "gender": "male",
+  "timezone": "5.5"
+}
+```
+```json Audio
+{
+  "userId": "8953",
+  "channel": "Facebook",
+  "appId": "a_636035XXXX28953782",
+  "event": "MO",
+  "psid": "103787XXXX267914",
+  "ts": "2015-04-12T13:00:19.456Z",
+  "timeStamp" : "2015-04-12T13:00:19.456Z",
+  "tid": "f4feefdc-f16c-XXXX-887a-9b22bcbc4b9d_0",
+  "message": "",
+  "attachments": "[{\"payload\":{\"url\":\"https:\/\/cdn.fbsbx.com\/v\/t59.3654-21\/13691952_539021966303743_1334694100_n.aac\/audioclip-1471699879041-4420.aac?oh=b5c676bbf78b620559bcaeec790b2573&oe=579D2E33\"},\"type\":\"audio\"}]",
+  "locale": "en_US",
+  "gender": "male",
+  "timezone": "5.5"
+}
+```
+```json Postback
+{
+  "userId": "8953",
+  "channel": "Facebook",
+  "psid": "103787XXXX267914",
+  "appId": "a_636035XXXX28953782",
+  "event": "OnPostback",
+  "ts": "2015-04-12T13:00:19.456Z",
+  "timeStamp" : "2015-04-12T13:00:19.456Z",
+  "tid": "20cbc7d1-be4e-XXXX-8250-d8bd4f303d0f_0",
+  "name": "Joe James",
+  "profile_pic": "https://scontent.xx.fbcdn.net/v/t1.0-1/s200x200/10354686_10150004552801856_220367501106153455_n.jpg?oh=afdc2c35d5b7230522ee0353a8aff5e8&oe=5824CE50",
+  "postback": "{\"payload\":\"1232\"}"
+}
+```
+```json Sticker
+{
+  "userId": "8953",
+  "channel": "Facebook",
+  "appId": "a_636035XXXX28953782",
+  "event": "MO",
+  "psid": "103787XXXX267914",
+  "ts": "2015-04-12T13:00:19.456Z",
+  "timeStamp" : "2015-04-12T13:00:19.456Z",
+  "tid": "3c131e54-1a3e-XXXX-9a84-e9985a8e2f33_0",
+  "message": "",
+  "attachments": "[{\"payload\":{\"url\":\"https:\/\/scontent.xx.fbcdn.net\/t39.1997-6\/p100x100\/10333099_298592936987572_2124775027_n.png?_nc_ad=z-m\"},\"sticker_id\":\"298592933654239\",\"type\":\"sticker\"}]",
+  "locale": "en_US",
+  "gender": "male",
+  "timezone": "5.5"
+}
+```
+```json Location
+{
+  "userId": "8953",
+  "channel": "Facebook",
+  "appId": "a_636035XXXX28953782",
+  "event": "MO",
+  "psid": "103787XXXX267914",
+  "ts": "2015-04-12T13:00:19.456Z",
+  "timeStamp" : "2015-04-12T13:00:19.456Z",
+  "tid": "6488520b-2f43-XXXX-98b2-65f7f9f087d8_0",
+  "message": "",
+  "attachments": "[{\"title\":\"Joe's Location\",\"payload\":{\"coordinates\":{\"long\":78.398511094914,\"lat\":17.434871564442}},\"type\":\"location\",\"url\":\"https:\/\/www.facebook.com\/l.php?u=https%3A%2F%2Fwww.bing.com%2Fmaps%2Fdefault.aspx%3Fv%3D2%26pc%3DFACEBK%26mid%3D8100%26where1%3D17.434871564442%252C%2B78.398511094914%26FORM%3DFBKPL1%26mkt%3Den-US&h=oAQGHo3bQ&s=1&enc=AZOWktitnAQChz53RmIFyV-Y-wNJKMktlhVDAeDSAA8fVi0nwdSIoAhQIxfYk8CbRft6rYKn5Ppp95-TFlIWzh-TPFRQBRRfx9jpLyjhjGqo2g\"}]",
+  "locale": "en_US",
+  "gender": "male",
+  "timezone": "5.5"
+}
+```
+```json File
+{
+  "userId": "6476",
+  "channel": "Facebook Messenger",
+  "psid": "9163826xxxx67736",
+  "appId": "a_638604xxxx99980000",
+  "event": "MO",
+  "ts": "2024-09-xxxx6:16:45.591Z",
+  "tid": "dbd2a4de-32e3-xxxx-94af-5a0ffa972568_0",
+  "message": "",
+  "attachments": "[{\"payload\":{\"url\":\"https://attachments.abc.link/v1/download-media?exp=1725445007163&path=3%2F2024-09-04%2F5%2Fa_6xxxx4326499980000%2Fc761e4cd-f56d-4e1a-9e5b-d6e532c452b1.pdf&sid=FaMS4SPgyOZ3Bh6tFfz24nCszDHp7eHvm%2FVTp87cwZrvGPL%2F9wjebZFlif%2BBD675ajywpqm3iiTExto7M8ChJg%3D%3D\"},\"type\":\"file\"}]",
+  "locale": "",
+  "gender": "",
+  "timezone": "",
+  "name": "John",
+  "profile_pic": "https://platform-lookaside.fbsbx.com/platform/profilepic/?eai=AXHnvZaT6Tzw4ffnh8db_CINX2PsBZ_orUgY4uXjybVtTsj3P70hEjsd4Rwg63fXYwntrJwlZVR-&psid=9163826236967736&width=1024&ext=1728022240&hash=AbbgFL6jbpBdlYJNjB0chk13"
+}
+```
+```json Link
+{
+  "userId": "8953",
+  "channel": "Facebook",
+  "appId": "a_636035XXXX28953782",
+  "event": "MO",
+  "psid": "1037878796267914",
+  "ts": "2015-04-12T13:00:19.456Z",
+  "timeStamp" : "2015-04-12T13:00:19.456Z",
+  "tid": "9aef3e3c-6fa0-431d-XXXX-17dd57cde2c5_0",
+  "message": "https://www.goal.com",
+  "attachments": "[{\"title\":\"Goal.com\",\"payload\":null,\"type\":\"link\",\"url\":\"https%3A%2F%2Fwww.goal.com%2F\"}]",
+  "locale": "en_US",
+  "gender": "male",
+  "timezone": "5.5"
+}
+```
+
+## API reference metadata
+
+These are source metadata and examples. `api.auth` is ReadMe metadata; verify authentication in the documented headers/security scheme.
+
+```json
+{
+  "results": {
+    "codes": [
+      {
+        "status": 200,
+        "language": "json",
+        "code": "{}",
+        "name": ""
+      },
+      {
+        "status": 400,
+        "language": "json",
+        "code": "{}",
+        "name": ""
+      }
+    ]
+  },
+  "auth": "required",
+  "params": [],
+  "url": "",
+  "method": "get",
+  "examples": {
+    "codes": []
+  }
+}
+```

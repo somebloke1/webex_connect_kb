@@ -1,0 +1,36 @@
+{
+  "api_metadata_path": "sources/cache/developer/apple-message-for-business_-quick-reply.api.json",
+  "category": "MULTI CHANNEL COMMUNICATION API",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f660c",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "04adcd1c73f5735122a9101fd4243a6222473e92093319f7e511d3fcb6ad43e7",
+    "source_path": "137c0b496693d75c9b6c602b5163b9892664add5a06e2cef64ac54f575c51438",
+    "text_path": "016d90dac8a48903d9b1092898d9b07c511f446a1dae4fffb35437a253cffb27"
+  },
+  "headings": [
+    "Error Codes"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/apple-message-for-business_-quick-reply.md",
+  "openapi_path": "sources/cache/openapi/45072e9a504aae0bd7a51ce1a7aad6573a1b0423e4fc3c8248b3d24b55834547.json",
+  "resolved_url": "https://developers.webexconnect.io/reference/apple-message-for-business_-quick-reply",
+  "retrieved_at": "2026-09-08T23:31:42+00:00",
+  "sha256_api_metadata": "e91673021318dc8c77dd90a7ebb0a8e071b05601c885c8687b0c1858ed9dfac8",
+  "sha256_html_response": "19a619af58726bc7b271958669cae2ae539e4cbe0e3c985d1ef417d78a7a7049",
+  "sha256_openapi": "45072e9a504aae0bd7a51ce1a7aad6573a1b0423e4fc3c8248b3d24b55834547",
+  "sha256_source_body": "137c0b496693d75c9b6c602b5163b9892664add5a06e2cef64ac54f575c51438",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/apple-message-for-business_-quick-reply.source.md",
+  "source_updated_at": "2025-10-14T08:38:42.826Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/apple-message-for-business_-quick-reply.txt",
+  "title": "Apple Message for Business: Quick Reply",
+  "url": "https://developers.webexconnect.io/reference/apple-message-for-business_-quick-reply",
+  "word_count": 1538,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/apple-message-for-business_-quick-reply.metadata.json"
+}

@@ -1,0 +1,36 @@
+{
+  "api_metadata_path": "sources/cache/developer/get-app-profile-by-user-id.api.json",
+  "category": "Profile API v2",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f657a",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "ff4d49784e2b9c337ab62fcc44fb7e4c646861735dccaf861be00295812e9dff",
+    "source_path": "ba067c60e345a226cef60fdc7c2c3ee1fcfbf31f2592c26fc472604b9cd260e4",
+    "text_path": "75f3842fc2d17382c234673ca2d4675f5211de6989e8c830871dc2c5172d1788"
+  },
+  "headings": [
+    "**Status Codes**"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/get-app-profile-by-user-id.md",
+  "openapi_path": "sources/cache/openapi/bbbe5ee8ae8c32cc7a7e57f740af4ec2b25393b3ba37950c598ddc9d8eb3d36b.json",
+  "resolved_url": "https://developers.webexconnect.io/reference/get-app-profile-by-user-id",
+  "retrieved_at": "2026-09-08T23:31:49+00:00",
+  "sha256_api_metadata": "1f35ef67b54e140bcaeb08116daf25919e884e7cc4d7e78f329758e5aed5174c",
+  "sha256_html_response": "7a096e488f6c105c968ddf3b29fcb6f39471fcb686ed34925ab7084c1c203c81",
+  "sha256_openapi": "bbbe5ee8ae8c32cc7a7e57f740af4ec2b25393b3ba37950c598ddc9d8eb3d36b",
+  "sha256_source_body": "ba067c60e345a226cef60fdc7c2c3ee1fcfbf31f2592c26fc472604b9cd260e4",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/get-app-profile-by-user-id.source.md",
+  "source_updated_at": "2026-04-16T06:01:09.151Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/get-app-profile-by-user-id.txt",
+  "title": "Get App Profile by User ID",
+  "url": "https://developers.webexconnect.io/reference/get-app-profile-by-user-id",
+  "word_count": 5756,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/get-app-profile-by-user-id.metadata.json"
+}

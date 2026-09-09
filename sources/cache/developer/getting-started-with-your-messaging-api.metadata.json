@@ -1,0 +1,35 @@
+{
+  "api_metadata_path": "sources/cache/developer/getting-started-with-your-messaging-api.api.json",
+  "category": "MULTI CHANNEL COMMUNICATION API",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f656a",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "06e15f12315f2da5c4ca23c52af1b11cd71e5adebbb01c48567bf2e54712e1cf",
+    "source_path": "4673737752ba8ec5f6e94af459e21846cc08800a9a1f99dc054e18f1d008d45c",
+    "text_path": "223d37ce2663bd7e42e093441f4ea1faae9094823d0ec143ea3d46cb1532cf5d"
+  },
+  "headings": [
+    "Getting Started",
+    "Batching Requests"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/getting-started-with-your-messaging-api.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/getting-started-with-your-messaging-api",
+  "retrieved_at": "2026-09-08T23:31:40+00:00",
+  "sha256_api_metadata": "187de124aa8aa8acf032d1bfec486640b94ec306193dfc1e0feb2652279c3c88",
+  "sha256_html_response": "38e92f70e650af7d928d3b120532fec1cbdbb4978770243d9b644342411bb88d",
+  "sha256_source_body": "4673737752ba8ec5f6e94af459e21846cc08800a9a1f99dc054e18f1d008d45c",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/getting-started-with-your-messaging-api.source.md",
+  "source_updated_at": "2026-07-31T12:21:05.202Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/getting-started-with-your-messaging-api.txt",
+  "title": "Introduction",
+  "url": "https://developers.webexconnect.io/reference/getting-started-with-your-messaging-api",
+  "word_count": 378,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/getting-started-with-your-messaging-api.metadata.json"
+}

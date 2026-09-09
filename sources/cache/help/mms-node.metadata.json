@@ -1,0 +1,36 @@
+{
+  "category": "SERVICES & FLOWS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd81825791a",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "5d81d03ef2e54167a4a959e6c75df916970bc9de3ef13925d6ed346879cfbbf0",
+    "source_path": "ff20b206319a35e9e6b8e333342c0d15ce8792e5382862940dfc752732bf57ed",
+    "text_path": "c2944425efc5e9450f25afb7aaa999bf647de28708ac391eac00f42c61151e58"
+  },
+  "headings": [
+    "Node Configuration",
+    "Node Configuration - Common fields for all message types",
+    "Notify URL",
+    "📘Note:"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/mms-node.md",
+  "resolved_url": "https://help.webexconnect.io/docs/mms-node",
+  "retrieved_at": "2026-09-08T23:28:52+00:00",
+  "sha256_html_response": "34d7f35bfbddd541a48db8bae91756d27be91fa7beb3fb9c1ec29b5f74819d23",
+  "sha256_source_body": "ff20b206319a35e9e6b8e333342c0d15ce8792e5382862940dfc752732bf57ed",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/mms-node.source.md",
+  "source_updated_at": "2026-04-15T09:18:21.748Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/mms-node.txt",
+  "title": "MMS Node",
+  "url": "https://help.webexconnect.io/docs/mms-node",
+  "word_count": 937,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/mms-node.metadata.json"
+}

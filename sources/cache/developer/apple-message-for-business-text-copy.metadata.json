@@ -1,0 +1,40 @@
+{
+  "api_metadata_path": "sources/cache/developer/apple-message-for-business-text-copy.api.json",
+  "category": "MULTI CHANNEL COMMUNICATION API",
+  "deprecated": false,
+  "doc_id": "6a68d081a02f599c67f52178",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "9b505e9972ef201d950085ba49ec76737065a1c69c66f3e1e85c61b106a80cd4",
+    "source_path": "c2e9485529e49385f9792457d312247f4c5d4fb5decc662e3e7bba26cc4f9b04",
+    "text_path": "94d28d213202602e3b663cc4ea3f913a0f5f8c3a1c2f5cdb4f4746980114a59a"
+  },
+  "headings": [
+    "Responses",
+    "200",
+    "400",
+    "Error Codes",
+    "Important Considerations"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/apple-message-for-business-text-copy.md",
+  "openapi_path": "sources/cache/openapi/3a88a899610fcc41a7a5912c11c7e67867a9b6721729d100f384be7a3a7e7fcd.json",
+  "resolved_url": "https://developers.webexconnect.io/reference/apple-message-for-business-text-copy",
+  "retrieved_at": "2026-09-08T23:31:41+00:00",
+  "sha256_api_metadata": "ff6cf49a1e50b6cb47c256ef596e3ed0e9e356eb6c370ae52dd2f7f19f0ffd78",
+  "sha256_html_response": "6b1ad1fa063b5594c6d2c54ddbd383aff33786ca3fbbd3e2eab59847781a6b7f",
+  "sha256_openapi": "3a88a899610fcc41a7a5912c11c7e67867a9b6721729d100f384be7a3a7e7fcd",
+  "sha256_source_body": "c2e9485529e49385f9792457d312247f4c5d4fb5decc662e3e7bba26cc4f9b04",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/apple-message-for-business-text-copy.source.md",
+  "source_updated_at": "2026-08-04T15:18:28.413Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/apple-message-for-business-text-copy.txt",
+  "title": "Apple Messages for Business: Invitation Message",
+  "url": "https://developers.webexconnect.io/reference/apple-message-for-business-text-copy",
+  "word_count": 1604,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/apple-message-for-business-text-copy.metadata.json"
+}

@@ -1,0 +1,38 @@
+{
+  "category": "SERVICES & FLOWS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182577d3",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "eaa49307c3179b2db1b37eee8a823dda7c8ef6d4150961ffe40129cb6713083f",
+    "source_path": "01134d48a8c25330ee4764811a46d755c675cfb2ac9a4369f6b984477d0d8c85",
+    "text_path": "bee3af28f7824ceef28a0aee111b4c2820acb1fde437189cb03ae91a8cdaf51d"
+  },
+  "headings": [
+    "Node Configuration",
+    "🚧Validate OTP",
+    "Input Variables",
+    "Output Variables",
+    "Node Outcomes",
+    "Transition Actions"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/validate-otp-node.md",
+  "resolved_url": "https://help.webexconnect.io/docs/validate-otp-node",
+  "retrieved_at": "2026-09-08T23:28:54+00:00",
+  "sha256_html_response": "25a932404028aaa290a41989ace4c8ea5635672128954257082be0e3776c2eb0",
+  "sha256_source_body": "01134d48a8c25330ee4764811a46d755c675cfb2ac9a4369f6b984477d0d8c85",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/validate-otp-node.source.md",
+  "source_updated_at": "2026-01-26T13:40:24.358Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/validate-otp-node.txt",
+  "title": "Validate OTP Node",
+  "url": "https://help.webexconnect.io/docs/validate-otp-node",
+  "word_count": 527,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/validate-otp-node.metadata.json"
+}

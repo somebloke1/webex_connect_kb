@@ -1,0 +1,33 @@
+{
+  "category": "Assets",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182579a2",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "9e7171c455cbf628fa75986a051b0d5ea8e4f0c172f895bebed9945e56b4fc6d",
+    "source_path": "754a15c4fcb1831b41d89fbf91b3f4ff60b4a6e619652d1177676354202f2025",
+    "text_path": "b05ffd390f268dd325d46755954139764b21d67d549ebb06124795e9b26116e6"
+  },
+  "headings": [
+    "📘Note"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/mtls-configuration-for-outbound-webhooks.md",
+  "resolved_url": "https://help.webexconnect.io/docs/mtls-configuration-for-outbound-webhooks",
+  "retrieved_at": "2026-09-08T23:29:06+00:00",
+  "sha256_html_response": "3676de12b0d21041ebfb884dda940f214bdc0d533664fdd2460b922ce0a1922c",
+  "sha256_source_body": "754a15c4fcb1831b41d89fbf91b3f4ff60b4a6e619652d1177676354202f2025",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/mtls-configuration-for-outbound-webhooks.source.md",
+  "source_updated_at": "2026-01-29T11:55:41.904Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/mtls-configuration-for-outbound-webhooks.txt",
+  "title": "mTLS Configuration for Outbound Webhooks",
+  "url": "https://help.webexconnect.io/docs/mtls-configuration-for-outbound-webhooks",
+  "word_count": 334,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/mtls-configuration-for-outbound-webhooks.metadata.json"
+}

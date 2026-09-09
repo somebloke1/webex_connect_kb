@@ -1,0 +1,36 @@
+{
+  "api_metadata_path": "sources/cache/developer/inbound-webhooks.api.json",
+  "category": "INBOUND WEBHOOKS",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f6578",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "ff70344067041b71ab5a1bdaf130ec81294bfbb80dc9ee0aef8e5778cdf83c09",
+    "source_path": "6cc0526d83524abfa3058e12ec3517b46023905530b95a103e70ebba10e49ec6",
+    "text_path": "de08351c79cbc4406665b2da15a8fe397ff46e7eb05ec33db2c0d7f96cc3c67c"
+  },
+  "headings": [
+    "Authentication",
+    "Signature Validation",
+    "Response Codes"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/inbound-webhooks.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/inbound-webhooks",
+  "retrieved_at": "2026-09-08T23:31:49+00:00",
+  "sha256_api_metadata": "575f65b7d8dc3ea0b617314bc47e22705dc85fc80ee114e6faa20ada4e8aafe2",
+  "sha256_html_response": "b022b2063a87c02b8f8f1d2a013e78bbfcb4c6fd6e97e11f8e08c4d571077f23",
+  "sha256_source_body": "6cc0526d83524abfa3058e12ec3517b46023905530b95a103e70ebba10e49ec6",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/inbound-webhooks.source.md",
+  "source_updated_at": "2026-01-27T10:18:46.274Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/inbound-webhooks.txt",
+  "title": "Inbound Webhooks",
+  "url": "https://developers.webexconnect.io/reference/inbound-webhooks",
+  "word_count": 998,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/inbound-webhooks.metadata.json"
+}

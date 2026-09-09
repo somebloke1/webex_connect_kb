@@ -1,0 +1,15 @@
+# Data Storage
+
+Source: https://help.webexconnect.io/docs/data-hosting
+Documentation version: 6.20.0
+Retrieved: 2026-09-08T23:29:39+00:00
+
+Webex Connect stores the customer data on the same cloud as that of the platform. The platform supports two-way syncing of customer data to a remote site. The process of synchronization is set up on a case-by-case basis. Some of the common requests supported on Webex Connect include:
+
+  * Setting up FTP / SFTP for scheduled file processing for ingesting data into Webex Connect
+  * Setting up private customer and app profile stores for storing private customer data
+  * Setting up private customer consent store
+  * Private transaction data stores with separate data retention policies for hosting client-specific transaction data
+  * Custom log data capturing and transport using logbooks. 
+
+Please reach out to your account manager for any additional information on the data storage policy.

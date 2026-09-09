@@ -1,0 +1,32 @@
+{
+  "api_metadata_path": "sources/cache/developer/data-streams-email.api.json",
+  "category": "Data Streams",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f664c",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "d36110c4bc4b5dd72112fd29945d1b590cb8ad71bbf70b3800753980a5765188",
+    "source_path": "8f81a8c302781228006282aab313fce516717d32e0e39ff488c303bf8f84d9e1",
+    "text_path": "ce2e4e351d1e874417f95ad7d552ab5240b02d637bf4430952ca879b395c1c27"
+  },
+  "headings": [],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/data-streams-email.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/data-streams-email",
+  "retrieved_at": "2026-09-08T23:31:48+00:00",
+  "sha256_api_metadata": "575f65b7d8dc3ea0b617314bc47e22705dc85fc80ee114e6faa20ada4e8aafe2",
+  "sha256_html_response": "3dca395b3d04e6c26d0a333d756bdee11eb04fecb685aba60636f1b336979195",
+  "sha256_source_body": "8f81a8c302781228006282aab313fce516717d32e0e39ff488c303bf8f84d9e1",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/data-streams-email.source.md",
+  "source_updated_at": "2026-02-26T12:17:47.979Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/data-streams-email.txt",
+  "title": "Data Streams - Email",
+  "url": "https://developers.webexconnect.io/reference/data-streams-email",
+  "word_count": 2423,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/data-streams-email.metadata.json"
+}

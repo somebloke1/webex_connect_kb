@@ -1,0 +1,1 @@
+You can find detailed information about the organizational hierarchy and the setup of digital channels under the Pre-requisites section.

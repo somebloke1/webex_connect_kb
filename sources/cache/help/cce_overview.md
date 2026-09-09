@@ -1,0 +1,25 @@
+# Overview - CCE
+
+Source: https://help.webexconnect.io/docs/cce_overview
+Documentation version: 6.20.0
+Retrieved: 2026-09-08T23:29:19+00:00
+
+Webex Connect and Cisco Contact Center Enterprise (CCE) integration allows Cisco Contact Center Enterprise customers to leverage Webex Connect's customer interaction automation capabilities for enabling customer self-service and support across digital messaging channels.
+
+Webex Connect brings in the ability to receive customer inquiries from a range of digital messaging channels (SMS, Live Chat, and Email) and facilitate automated handling of these inquiries by leveraging AI-powered bots with contextual and seamless escalation to a live chat agent on Cisco Contact Center Enterprise when manual intervention is needed.
+
+Webex Connect's visual flow builder plays a key role in this solution by enabling clients to configure frictionless customer engagement and self-service experiences by leveraging various rich messaging capabilities (such as carousels, templates, etc. on Facebook Messenger) while seamlessly integrating with backend systems and applications to automate the handling of customer requests. 
+
+Here's a quick list of various nodes and events offered by Webex Connect visual flow builder for programmatic handling of incoming customer inquiries with seamless escalation to Cisco Contact Center Enterprise customer service agents when needed. Start Node, Custom Event, or Custom Webhook can be used to capture incoming events to trigger a flow. For more details, refer to [Start Node](https://help.webexconnect.io/docs/start-node), [Custom Event](https://help.webexconnect.io/docs/custom-events), and [Custom Webhook](https://help.webexconnect.io/docs/inbound-webhooks) documentation.
+
+Before we dive deeper into the details, here are the links to some key sections: 
+
+| Topic and Documentation Link                                                                                                                      | Description                                                                                                                                                           |
+| :------------------------------------------------------------------------------------------------------------------------------------------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Channel Asset Configuration for Webex Connect and CCE Integration](https://help.imiconnect.io/docs/cce-channel-asset-configuration)               | Understanding how you can associate your Asset page with Webex Connect, or get an SMS number and use them to provide customer service over these channels.             |
+| [Event Authorization](https://help.imiconnect.io/docs/event-authorization)                                                                        | Contains information about how to activate an authorization.                                                                                                          |
+| [CCE Integration Nodes and Node Authorizations](https://help.webexconnect.io/docs/cisco-ece-integration-deprecated#use-the-cisco-ece-integration) | High-level description of various CCE Task nodes that you can use for configuring routing flow for Cisco Contact Centre Enterprise (CCE) across digital channels.     |
+| [Webex Engage nodes and Node Authorizations](https://help.imiconnect.io/docs/webex-engage-nodes-and-node-authorizations)                          | High-level description of various Webex Engage nodes that you can use for configuring routing flow for Cisco Contact Center Enterprise (CCE) across digital channels. |
+| [Flow Configurations](https://help.webexconnect.io/docs/flow-configurations-cce)                                                                  | Understand how to configure sample templates using flow configuration                                                                                                 |
+| [Best Practices and Guidelines](https://help.imiconnect.io/docs/best-practices)                                                                   | Contains a set of guidelines and efficient ways to integrate Webex Connect and Cisco Contact Centre Enterprise.                                                        |
+| [FAQs](https://help.imiconnect.io/docs/faqs-2)                                                                                                    | Contains a series of steps that allows a user to find the root cause and resolve the issue.                                                                           |

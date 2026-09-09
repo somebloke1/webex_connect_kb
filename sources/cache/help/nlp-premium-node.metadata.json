@@ -1,0 +1,39 @@
+{
+  "category": "SERVICES & FLOWS",
+  "deprecated": true,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257846",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "72c0891e334836dea16280ac5bf058adb5083623ccdcfcf0df980d8540c8fdf5",
+    "source_path": "b832ac47bd5ee611c45a9431685dc34e028e9bc593a0d08a1df4d66fd0051765",
+    "text_path": "3338f56be9d738b2e6b19eadb617a6faa6bf3a7b59daeb22d55276d2045c3720"
+  },
+  "headings": [
+    "❗️Note",
+    "📘",
+    "Node Configuration",
+    "Input Variables",
+    "Output Variables",
+    "Node Outcomes",
+    "Transition Actions"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/nlp-premium-node.md",
+  "resolved_url": "https://help.webexconnect.io/docs/nlp-premium-node",
+  "retrieved_at": "2026-09-08T23:28:56+00:00",
+  "sha256_html_response": "90723738283fe3ff13fa2feea57303ed4f96fdac714af457d31fc44e6d523c78",
+  "sha256_source_body": "b832ac47bd5ee611c45a9431685dc34e028e9bc593a0d08a1df4d66fd0051765",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/nlp-premium-node.source.md",
+  "source_updated_at": "2025-07-01T07:59:09.400Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/nlp-premium-node.txt",
+  "title": "NLP Premium Node",
+  "url": "https://help.webexconnect.io/docs/nlp-premium-node",
+  "word_count": 648,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/nlp-premium-node.metadata.json"
+}

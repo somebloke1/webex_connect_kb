@@ -1,0 +1,33 @@
+{
+  "category": "Assets",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257921",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "6837fe6d4924debb4b49678bc6e2ba395e063ca40351863b3c264f58a62dc3d1",
+    "source_path": "0798b62d654ba876b74d4f47975368c8bd18f690e9d0e5618ba876aa9cf3b812",
+    "text_path": "ec3ea0c068b9218fd158a79c60e95e761b5c22366c29ecef78700c8c5fc85bd9"
+  },
+  "headings": [
+    "How to increase messaging limits"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/messaging-customers-on-whatsapp-business-platform.md",
+  "resolved_url": "https://help.webexconnect.io/docs/messaging-customers-on-whatsapp-business-platform",
+  "retrieved_at": "2026-09-08T23:29:06+00:00",
+  "sha256_html_response": "b526b27ff041569a03bbf7fed6d6016a372cf757844ed1cf4d65112eeb257542",
+  "sha256_source_body": "0798b62d654ba876b74d4f47975368c8bd18f690e9d0e5618ba876aa9cf3b812",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/messaging-customers-on-whatsapp-business-platform.source.md",
+  "source_updated_at": "2026-01-26T14:31:02.184Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/messaging-customers-on-whatsapp-business-platform.txt",
+  "title": "Messaging Customers on WhatsApp Business Platform",
+  "url": "https://help.webexconnect.io/docs/messaging-customers-on-whatsapp-business-platform",
+  "word_count": 313,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/messaging-customers-on-whatsapp-business-platform.metadata.json"
+}

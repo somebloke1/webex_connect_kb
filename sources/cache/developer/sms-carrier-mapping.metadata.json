@@ -1,0 +1,32 @@
+{
+  "api_metadata_path": "sources/cache/developer/sms-carrier-mapping.api.json",
+  "category": "MULTI CHANNEL COMMUNICATION API",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f6794",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "4e5e7fa6eed02ebf0bfa33cc3754fc99725ecadb8e9b6e6d511ab49f392a6206",
+    "source_path": "c57afc087cfc2fd74d294b862d0779596e6fd03f690a47c9c342b15a9cfeaf4e",
+    "text_path": "f688fe3d9399a67672c687fb50aa96bf6c10c1d9466d1643daedde13b94a335f"
+  },
+  "headings": [],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/sms-carrier-mapping.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/sms-carrier-mapping",
+  "retrieved_at": "2026-09-08T23:31:41+00:00",
+  "sha256_api_metadata": "10950497d558b175b7d8481239856fb42486f9b5ad7d2de5d05ccfe831d0deeb",
+  "sha256_html_response": "5f8a9fcbac995bda91ffae66983ed25b1199ae6e8e30eec8424ac869f40286be",
+  "sha256_source_body": "c57afc087cfc2fd74d294b862d0779596e6fd03f690a47c9c342b15a9cfeaf4e",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/sms-carrier-mapping.source.md",
+  "source_updated_at": "2026-05-05T09:21:21.645Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/sms-carrier-mapping.txt",
+  "title": "SMS Carrier Mapping",
+  "url": "https://developers.webexconnect.io/reference/sms-carrier-mapping",
+  "word_count": 14897,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/developer/sms-carrier-mapping.metadata.json"
+}

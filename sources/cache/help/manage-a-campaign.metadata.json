@@ -1,0 +1,34 @@
+{
+  "category": "Assets",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182578aa",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "8d08e3680686bb6e0dd6a99222e8c0608dade1c3a9f593392d5e1065b95c6a86",
+    "source_path": "fc13ffb4fbb7c8d87bd378a7f6c23f02c71ac0ea006400c3b32155d305ad55f6",
+    "text_path": "c33ce9030316ff66cc97731f37ff9b708979393bb4a7a4c1df103899dc6c6b94"
+  },
+  "headings": [
+    "📘Important update to Campaign creation and management process",
+    "📘"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/manage-a-campaign.md",
+  "resolved_url": "https://help.webexconnect.io/docs/manage-a-campaign",
+  "retrieved_at": "2026-09-08T23:29:02+00:00",
+  "sha256_html_response": "64b06c1dc79d5d10a0ad6321a58e51b8356ae445111670648ef253947e8a1813",
+  "sha256_source_body": "fc13ffb4fbb7c8d87bd378a7f6c23f02c71ac0ea006400c3b32155d305ad55f6",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/manage-a-campaign.source.md",
+  "source_updated_at": "2026-01-26T14:26:26.192Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/manage-a-campaign.txt",
+  "title": "Managing a Campaign",
+  "url": "https://help.webexconnect.io/docs/manage-a-campaign",
+  "word_count": 198,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/manage-a-campaign.metadata.json"
+}

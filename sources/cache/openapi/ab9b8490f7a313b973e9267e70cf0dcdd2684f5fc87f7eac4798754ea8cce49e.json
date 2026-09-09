@@ -1,0 +1,254 @@
+{
+  "_id": "6a675233ec1c893d8a7f67b8:6a675233ec1c893d8a7f64eb",
+  "components": {
+    "securitySchemes": {
+      "sec0": {
+        "in": "header",
+        "name": "key",
+        "type": "apiKey"
+      }
+    }
+  },
+  "info": {
+    "title": "Profile API v2",
+    "version": "6.20.0"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/customerappprofile/<appid>/<userid>/<deviceid>": {
+      "delete": {
+        "deprecated": false,
+        "description": "This API is used to delete the device profile from the customer's application profile (there may be more than one device for a customer that is using the application).",
+        "operationId": "delete-device-app-profile",
+        "parameters": [
+          {
+            "description": "The ID of the app asset that you can obtain from imiconnect platform",
+            "in": "path",
+            "name": "appid",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Unique id of the user",
+            "in": "path",
+            "name": "userid",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Specifies the device id to be deleted",
+            "in": "path",
+            "name": "deviceid",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Application/JSON",
+            "in": "header",
+            "name": "Content-Type",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Client key that can be accessed from your app asset configuration page on imiconnect platform",
+            "in": "header",
+            "name": "secretKey",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{\n    \"TotalCount\": 1,\n    \"code\": \"1000\",\n    \"FailureCount\": 0,\n    \"Results\": [\n        {\n            \"code\": \"1000\",\n            \"customerId\": \"323536\",\n            \"description\": \"SUCCESS\",\n            \"userId\": \"323536\"\n        }\n    ],\n    \"transid\": \"dd4d0e83-529d-47f5-b36d-141915426989\",\n    \"description\": \"SUCCESS\",\n    \"SuccessCount\": 1\n}"
+                  }
+                },
+                "schema": {
+                  "properties": {
+                    "FailureCount": {
+                      "default": 0,
+                      "example": 0,
+                      "type": "integer"
+                    },
+                    "Results": {
+                      "items": {
+                        "properties": {
+                          "code": {
+                            "example": "1000",
+                            "type": "string"
+                          },
+                          "customerId": {
+                            "example": "323536",
+                            "type": "string"
+                          },
+                          "description": {
+                            "example": "SUCCESS",
+                            "type": "string"
+                          },
+                          "userId": {
+                            "example": "323536",
+                            "type": "string"
+                          }
+                        },
+                        "type": "object"
+                      },
+                      "type": "array"
+                    },
+                    "SuccessCount": {
+                      "default": 0,
+                      "example": 1,
+                      "type": "integer"
+                    },
+                    "TotalCount": {
+                      "default": 0,
+                      "example": 1,
+                      "type": "integer"
+                    },
+                    "code": {
+                      "example": "1000",
+                      "type": "string"
+                    },
+                    "description": {
+                      "example": "SUCCESS",
+                      "type": "string"
+                    },
+                    "transid": {
+                      "example": "dd4d0e83-529d-47f5-b36d-141915426989",
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "200"
+          },
+          "202": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Delete Device App Profile": {
+                    "value": "{\n    \"FailureCount\": 0,\n    \"TotalCount\": 1,\n    \"description\": \"QUEUED\",\n    \"SuccessCount\": 1,\n    \"code\": \"1000\",\n    \"Results\": [{\n        \"customerId\": \"9876\",\n        \"description\": \"QUEUED\",\n        \"code\": \"1000\"\n    }],\n    \"transid\": \"e0de0ab3-9f99-4602-bf03-09916f8d6bcc\"\n}\n"
+                  }
+                },
+                "schema": {
+                  "properties": {
+                    "FailureCount": {
+                      "default": 0,
+                      "example": 0,
+                      "type": "integer"
+                    },
+                    "Results": {
+                      "items": {
+                        "properties": {
+                          "code": {
+                            "example": "1000",
+                            "type": "string"
+                          },
+                          "customerId": {
+                            "example": "9876",
+                            "type": "string"
+                          },
+                          "description": {
+                            "example": "QUEUED",
+                            "type": "string"
+                          }
+                        },
+                        "type": "object"
+                      },
+                      "type": "array"
+                    },
+                    "SuccessCount": {
+                      "default": 0,
+                      "example": 1,
+                      "type": "integer"
+                    },
+                    "TotalCount": {
+                      "default": 0,
+                      "example": 1,
+                      "type": "integer"
+                    },
+                    "code": {
+                      "example": "1000",
+                      "type": "string"
+                    },
+                    "description": {
+                      "example": "QUEUED",
+                      "type": "string"
+                    },
+                    "transid": {
+                      "example": "e0de0ab3-9f99-4602-bf03-09916f8d6bcc",
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "202"
+          }
+        },
+        "summary": "Delete Device App Profile",
+        "x-readme": {
+          "code-samples": [
+            {
+              "code": "-X DELETE \\\n  http://api.imiconnect.io/resources/v2/customerappprofile/MU20051001/323536/user123 \\\n  -H 'cache-control: no-cache' \\\n  -H 'content-type: application/json' \\\n  -H 'key: 75afc0a8-204c-44f9-8913-220bc8532dd5' \\\n  -H 'postman-token: f0bf8cb8-ed56-c502-7c26-c1bd6facff36'",
+              "language": "curl"
+            },
+            {
+              "code": "require 'httparty'\n# Create the HTTP objects and post request\nhttp = HTTParty.post(\"http://api.imiconnect.io/resources/v2/customerappprofile/{{inappid}}/{userId}\",\n    :headers => {'Content-Type' => 'application/json',\n\t'key' => ' Profile key present in tenant setting’})\n# Print on console\nputs http\n",
+              "language": "ruby",
+              "name": "Ruby"
+            },
+            {
+              "code": "var data = null;\n\nvar xhr = new XMLHttpRequest();\n\nxhr.addEventListener(\"readystatechange\", function () {\n  if (this.readyState === this.DONE) {\n    console.log(this.responseText);\n  }\n});\n\nxhr.open(\"DELETE\", \" http://api.imiconnect.io/resources/v2/customerappprofile/{{inappid}}/{userId}\");\nxhr.setRequestHeader(\"Content-Type\", \"application/json\");\nxhr.setRequestHeader(\"key\", \"Profile key present in tenant setting\");\nxhr.send(data);\n",
+              "language": "javascript"
+            },
+            {
+              "code": "import requests\n\nurl = \" http://api.imiconnect.io/resources/v2/customerappprofile/{{inappid}}/{userId}\");\"\n\nheaders = {'Content-Type': 'application/json', 'key': ' Profile key present in tenant setting '}\n\nresponse = requests.request(\"DELETE\", url, headers=headers)\n\nprint(response.text)\n",
+              "language": "python"
+            }
+          ],
+          "samples-languages": [
+            "curl",
+            "ruby",
+            "javascript",
+            "python"
+          ]
+        }
+      }
+    }
+  },
+  "security": [
+    {
+      "sec0": []
+    }
+  ],
+  "servers": [
+    {
+      "url": "https://api.imiconnect.io/resources/v2"
+    }
+  ],
+  "x-readme": {
+    "explorer-enabled": false,
+    "headers": [
+      {
+        "key": "Content-Type",
+        "value": "application/json"
+      }
+    ],
+    "proxy-enabled": false
+  },
+  "x-readme-fauxas": true
+}

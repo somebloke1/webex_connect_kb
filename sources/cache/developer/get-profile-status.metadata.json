@@ -1,0 +1,36 @@
+{
+  "api_metadata_path": "sources/cache/developer/get-profile-status.api.json",
+  "category": "Profile API v2",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f6504",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "1dfa620e69ab50ad7242f1ffd98272098b15b05dd919a8329523d6590a672238",
+    "source_path": "2fa0c846360cab0a957ca6f5f89b2ba86dab15e82b9b92b87b3857a9a6c3104a",
+    "text_path": "66adcbeb9dcc028988bcf48483ee3c215888c2c8e69ecf587f0bd8a4db9b6937"
+  },
+  "headings": [
+    "**Status Codes**"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/get-profile-status.md",
+  "openapi_path": "sources/cache/openapi/3094a04af3bc694944c6d6bf1d6855932dd7ce7bbf475e9176a594c8b6744fbd.json",
+  "resolved_url": "https://developers.webexconnect.io/reference/get-profile-status",
+  "retrieved_at": "2026-09-08T23:31:49+00:00",
+  "sha256_api_metadata": "34900aef91bc0c022b12c055a9496ad220c72513954fd4880a6308cec5a325e9",
+  "sha256_html_response": "aa8d68e28c0752ea269a1b388284575bdd148321a82c3222b301c6b13032b519",
+  "sha256_openapi": "3094a04af3bc694944c6d6bf1d6855932dd7ce7bbf475e9176a594c8b6744fbd",
+  "sha256_source_body": "2fa0c846360cab0a957ca6f5f89b2ba86dab15e82b9b92b87b3857a9a6c3104a",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/get-profile-status.source.md",
+  "source_updated_at": "2026-04-16T06:01:37.675Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/get-profile-status.txt",
+  "title": "Get Profile Status",
+  "url": "https://developers.webexconnect.io/reference/get-profile-status",
+  "word_count": 1392,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/get-profile-status.metadata.json"
+}

@@ -1,0 +1,34 @@
+{
+  "category": "SERVICES & FLOWS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182577c4",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "509b2fbe48a8621ac2119520d306aae5c12ed66a81ca3843f375e559440c499a",
+    "source_path": "7e15d958c49378d149db67fa44cf18b7fe656f5ef874a4f1c143f50637593f20",
+    "text_path": "5463de68350d2e28cf3c8ec3924c2b5988487c70970a336038b73681fc1611e4"
+  },
+  "headings": [
+    "NGMP Services",
+    "📘NGMP Service"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/service-introduction.md",
+  "resolved_url": "https://help.webexconnect.io/docs/service-introduction",
+  "retrieved_at": "2026-09-08T23:28:50+00:00",
+  "sha256_html_response": "f6827ad856a3667869d5e4b8dde7d5f837b97ad5533957fc428f52a7bee83549",
+  "sha256_source_body": "7e15d958c49378d149db67fa44cf18b7fe656f5ef874a4f1c143f50637593f20",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/service-introduction.source.md",
+  "source_updated_at": "2026-01-26T13:30:29.626Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/service-introduction.txt",
+  "title": "What's a Service",
+  "url": "https://help.webexconnect.io/docs/service-introduction",
+  "word_count": 216,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/service-introduction.metadata.json"
+}

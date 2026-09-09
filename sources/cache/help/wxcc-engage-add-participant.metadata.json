@@ -1,0 +1,35 @@
+{
+  "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257885",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "c2a49f1b3a5cdd339c552b99cfd4910b4c57621ce32236b9c558bd82ecd5b3f7",
+    "source_path": "6fd91a3d10ad0c6f1e7abf7e30cd5912173b4d8a7ab6efe243f9ba73c8d085a0",
+    "text_path": "523fe5889e1c2cfd5ada859088e290a91a9c264ebec7a1b9c798bef11b0bcf44"
+  },
+  "headings": [
+    "Authorization",
+    "Methods and Outcomes",
+    "📘Note"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/wxcc-engage-add-participant.md",
+  "resolved_url": "https://help.webexconnect.io/docs/wxcc-engage-add-participant",
+  "retrieved_at": "2026-09-08T23:29:17+00:00",
+  "sha256_html_response": "cb6785760281bcd39b8e7acac6535e34332d756ab92e18b9584e0f188e9af8de",
+  "sha256_source_body": "6fd91a3d10ad0c6f1e7abf7e30cd5912173b4d8a7ab6efe243f9ba73c8d085a0",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/wxcc-engage-add-participant.source.md",
+  "source_updated_at": "2026-04-14T07:26:36.259Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/wxcc-engage-add-participant.txt",
+  "title": "Add Participant - WXCC",
+  "url": "https://help.webexconnect.io/docs/wxcc-engage-add-participant",
+  "word_count": 230,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/wxcc-engage-add-participant.metadata.json"
+}

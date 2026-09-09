@@ -1,0 +1,43 @@
+{
+  "api_metadata_path": "sources/cache/developer/voice-only-api-v1-make-outbound-calls.api.json",
+  "category": "MULTI CHANNEL COMMUNICATION API",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f6717",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "c030eea46979010035e2fb5268337c8cca04c8d7967672b45866fdb115579960",
+    "source_path": "64b61dedd6ac715546e3b459070bb6db0d3330cc5917a605507db7950f17060b",
+    "text_path": "c518ce3af3b5ab84bc50442d70bd18711002a7f803613662def15479c799e08b"
+  },
+  "headings": [
+    "Request Body to Play a Text-to-Speech (TTS) message using Voice API v1",
+    "Play a TTS message using Voice API v1 Body Parameters",
+    "Sample Response Body",
+    "Response Parameters",
+    "Examples",
+    "Play pre-recorded media",
+    "Play message by passing the media URL",
+    "Play Speech Synthesis Markup Language (SSML)-based Text-to Speech message"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/voice-only-api-v1-make-outbound-calls.md",
+  "openapi_path": "sources/cache/openapi/a775ce5f0945f5e0944d1035f087e26f280eef4bc055f9714f667447d3f483b6.json",
+  "resolved_url": "https://developers.webexconnect.io/reference/voice-only-api-v1-make-outbound-calls",
+  "retrieved_at": "2026-09-08T23:31:43+00:00",
+  "sha256_api_metadata": "327c03b636385ccf83b847e46346ab7e06c19f450bf4cdab415fb1186f1e78a7",
+  "sha256_html_response": "a02a4bc960955e70f0ce9b0630105a98b762362eae034814e944dfae20fa94ea",
+  "sha256_openapi": "a775ce5f0945f5e0944d1035f087e26f280eef4bc055f9714f667447d3f483b6",
+  "sha256_source_body": "64b61dedd6ac715546e3b459070bb6db0d3330cc5917a605507db7950f17060b",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/voice-only-api-v1-make-outbound-calls.source.md",
+  "source_updated_at": "2026-04-16T05:50:31.099Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/voice-only-api-v1-make-outbound-calls.txt",
+  "title": "Make Outbound Calls Using Voice API v1",
+  "url": "https://developers.webexconnect.io/reference/voice-only-api-v1-make-outbound-calls",
+  "word_count": 1915,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/developer/voice-only-api-v1-make-outbound-calls.metadata.json"
+}

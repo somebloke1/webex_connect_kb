@@ -1,0 +1,40 @@
+{
+  "category": "SERVICES & FLOWS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd81825783f",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "99a29b0b021fd4d3339e69b55fac7d677d7476f97915116a2a2edc9e43404de4",
+    "source_path": "dbb2a35b91c37494cee7d963fc26d2515f0fbf166b006f101c4688cb44366dc5",
+    "text_path": "9c1dc7dffa8340cf12ec4b84c1d5adf5d0e9ce0c62af0623563cd0eef2abc79b"
+  },
+  "headings": [
+    "Node Configuration",
+    "📘Number Format",
+    "📘Note",
+    "Input Variables",
+    "Output Variables",
+    "Node Outcomes",
+    "📘Note",
+    "Transition Actions"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/call-user-node.md",
+  "resolved_url": "https://help.webexconnect.io/docs/call-user-node",
+  "retrieved_at": "2026-09-08T23:28:54+00:00",
+  "sha256_html_response": "7ab2ac3a46584564e64ddf8cc60ef8be481a64e47ad579df952e14808571e52f",
+  "sha256_source_body": "dbb2a35b91c37494cee7d963fc26d2515f0fbf166b006f101c4688cb44366dc5",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/call-user-node.source.md",
+  "source_updated_at": "2026-01-26T13:42:00.075Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/call-user-node.txt",
+  "title": "Call User Node",
+  "url": "https://help.webexconnect.io/docs/call-user-node",
+  "word_count": 1123,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/call-user-node.metadata.json"
+}

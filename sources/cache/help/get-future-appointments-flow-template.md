@@ -1,0 +1,62 @@
+# Get Future Appointments Flow Template
+
+Source: https://help.webexconnect.io/docs/get-future-appointments-flow-template
+Documentation version: 6.20.0
+Retrieved: 2026-09-08T23:28:44+00:00
+
+## Overview
+
+This flow acts as a prerequisite for downstream workflows such as appointment confirmation, cancellation, or rescheduling.
+
+## Pre-requisites
+
+- Webex AI Agent Studio
+- EPIC Prebuilt Integration
+
+## User Roles
+
+- **Flow Developer: **Configures the Webex Connect flow, EPIC authentication, and JavaScript logic for result trimming.
+- **End User: **The patient requesting information about their upcoming schedule.
+- **AI Agent: **Triggers the flow when a patient asks, "What are my upcoming appointments?"
+- **EPIC EHR System:** Processes the request and returns the list of future appointment records.
+
+## Node Breakdown
+
+
+
+| Node Type | Purpose | Outcome |
+| --- | --- | --- |
+| Configure AI Agent Event |  Receives the inbound request from the AI Agent and initializes the flow.  <br>  <br>**Input Variable: **`patientId` |  |
+| Authenticate | Establishes a secure connection with the EPIC EHR. | Authentication token required for subsequent API calls. |
+| Get Future Appointments | Executes a subscription-based API call to EPIC to fetch future records. | Raw JSON list of appointments.  <br>  <br>**Behavior:** On success, proceeds to Trim Result Set; on error/timeout, triggers the Evaluate nodes for retry handling. |
+| Trim Result Set | Uses JavaScript to filter and format the raw JSON response. | A clean, simplified appointment list (Date, Time, Provider) ready for the AI Agent to present to the user. |
+| Evaluate (Error Handler) | Manages scenarios where no future appointments exist or where transient API timeouts occur.  <br>  <br>**Logic:** Implements retry loops for temporary failures and handles empty result sets gracefully. |  |
+
+
+
+
+## Input & Output Variables
+
+### Input Variables (Configure AI Agent Event)
+
+`patientId:` The unique identifier for the patient whose appointments are being retrieved.
+
+### Output Variables
+
+The flow processes the raw data into a structured format (e.g., appointmentList) that contains the date, time, and provider details for each upcoming visit.
+
+## Error Handling
+
+- **API Timeout: **If the request to EPIC fails due to a network or service issue, the flow routes to the Evaluate node to attempt a retry.
+- **No Appointments Found: **If the API returns a successful response but the list is empty, the flow exits through the failure path to inform the AI Agent that no upcoming appointments were found.
+
+## Script Analysis
+
+### Trim Result Set Script
+
+- **Processing:** The JavaScript logic iterates through the raw JSON response from EPIC. It extracts specific fields—Date, Time, and Provider—and maps them into a simplified array structure.
+- **Result:** A clean, human-readable list that the AI Agent can easily relay to the patient.
+
+### Evaluate Script
+
+- **Processing:** Checks the status of the API call. If a retry is required, it increments the retry counter and loops back to the "Get Future Appointments" node. If the maximum number of retries is reached, it terminates the flow.

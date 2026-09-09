@@ -1,0 +1,212 @@
+{
+  "_id": "6a68ce229f6f58ce2053883b:6a68d081a02f599c67f52178",
+  "components": {
+    "securitySchemes": {}
+  },
+  "info": {
+    "title": "Apple Messages for Business: Invitation Message",
+    "version": "6.20.0"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/": {
+      "post": {
+        "deprecated": false,
+        "description": "Use this API to send an Apple Messages for Business invitation message to an opted-in customer mobile number. Invitation messages allow a business to start an Apple Messages for Business conversation before an AMB opaque user ID is available. When the customer responds to the invitation, Webex Connect resolves the conversation to the AMB user ID for subsequent messages. **Note**: Modify YourRegion in the URL to the right to reflect your tenant’s region. See [Know your endpoint page](https://developers.imiconnect.io/reference/endpoints). Apple Messages for Business Invitation Messages require Apple invitation entitlement for the business account. Customers must explicitly opt in before you send an invitation message. Invitation messages are Apple-managed template messages and do not support free-form text. Webex Connect derives the Apple invitation template based on the `withImage` value.",
+        "operationId": "apple-message-for-business-text-copy",
+        "parameters": [
+          {
+            "description": "Applicable when you want to use the service key for API authentication. The service key is available under the **API** tab within a service in your Webex Connect tenant.",
+            "in": "header",
+            "name": "key",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "JSON Web Token (JWT) for authentication. For example, `bearer <token>`.",
+            "in": "header",
+            "name": "authorization",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "examples": {
+                "Request Example": {
+                  "value": {
+                    "appid": "a_637818908588360000",
+                    "callbackData": "customer-context",
+                    "channels": {
+                      "AppleBusinessChat": {
+                        "brandName": "Delta",
+                        "requestIdentifier": "fcb5e9ca-0ddc-4a07-bf9b-7fcbd044aeeb",
+                        "type": "invitation",
+                        "withImage": true
+                      }
+                    },
+                    "correlationid": "corr-12345",
+                    "deliverychannel": "AppleBusinessChat",
+                    "destination": [
+                      {
+                        "msisdn": [
+                          "+4477362XXXX"
+                        ]
+                      }
+                    ],
+                    "notifyurl": "https://www.example.com/notify",
+                    "notifyurlAuthId": "TNPBXKT09U"
+                  }
+                }
+              },
+              "schema": {
+                "properties": {
+                  "appid": {
+                    "description": "The ID of the app asset that you can obtain from the Connect platform.",
+                    "type": "string"
+                  },
+                  "callbackData": {
+                    "description": "Data that you have configured to receive on the Notify URL.",
+                    "type": "string"
+                  },
+                  "channels": {
+                    "description": "Channels object used for messaging.",
+                    "properties": {},
+                    "type": "object"
+                  },
+                  "correlationid": {
+                    "description": "Unique identifier that you can attach to every request as a reference to a particular transaction or event.",
+                    "type": "string"
+                  },
+                  "deliverychannel": {
+                    "default": "AppleBusinessChat",
+                    "description": "Channel used to send the message. For this API, the value is `AppleBusinessChat`.",
+                    "type": "string"
+                  },
+                  "destination": {
+                    "description": "Destination details for the invitation message. For `Invitation Message`, use the customer's mobile number.",
+                    "items": {
+                      "properties": {
+                        "msisdn": {
+                          "default": [],
+                          "description": "Customer mobile number in E.164 format. Invitation messages are sent to mobile numbers, not AMB opaque user IDs.",
+                          "items": {
+                            "type": "string"
+                          },
+                          "type": "array"
+                        }
+                      },
+                      "required": [
+                        "msisdn"
+                      ],
+                      "type": "object"
+                    },
+                    "type": "array"
+                  },
+                  "notifyurl": {
+                    "description": "Configure a URL to receive submission status notifications for an Apple Messages for Business invitation message. This field accepts only a valid URL or a variable. If an invalid URL is passed in the API request or through a variable, the request is not eligible for retries.",
+                    "type": "string"
+                  },
+                  "notifyurlAuthId": {
+                    "description": "Unique authentication ID.",
+                    "type": "string"
+                  }
+                },
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{\n  \"response\": {\n    \"code\": \"1001\",\n    \"description\": \"Queued\",\n    \"transid\": \"fcb5e9ca-0ddc-4a07-bf9b-7fcbd044aeeb\"\n  }\n}"
+                  }
+                },
+                "schema": {
+                  "properties": {
+                    "response": {
+                      "properties": {
+                        "code": {
+                          "example": "1001",
+                          "type": "string"
+                        },
+                        "description": {
+                          "example": "Queued",
+                          "type": "string"
+                        },
+                        "transid": {
+                          "example": "fcb5e9ca-0ddc-4a07-bf9b-7fcbd044aeeb",
+                          "type": "string"
+                        }
+                      },
+                      "type": "object"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "200"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{\n  \"response\": {\n    \"code\": \"7000\",\n    \"description\": \"Invalid request\"\n  }\n}"
+                  }
+                },
+                "schema": {
+                  "properties": {
+                    "response": {
+                      "properties": {
+                        "code": {
+                          "example": "7000",
+                          "type": "string"
+                        },
+                        "description": {
+                          "example": "Invalid request",
+                          "type": "string"
+                        }
+                      },
+                      "type": "object"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "400"
+          }
+        },
+        "summary": "Apple Messages for Business: Invitation Message"
+      }
+    }
+  },
+  "security": [
+    {}
+  ],
+  "servers": [
+    {
+      "url": "https://api.{YourRegion}.webexconnect.io/resources/v1/messaging/",
+      "variables": {
+        "YourRegion": {
+          "default": "YourRegion"
+        }
+      }
+    }
+  ],
+  "x-readme": {
+    "explorer-enabled": true,
+    "headers": [],
+    "proxy-enabled": true
+  },
+  "x-readme-fauxas": true
+}

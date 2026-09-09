@@ -1,0 +1,40 @@
+{
+  "category": "SERVICES & FLOWS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257812",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "0132570064535befb0055c18227aee29e142ff0d60c39e3f1b17bdcf027b5d4d",
+    "source_path": "c51b54b9a67e3d912c815952e9457dfbd9b87927bc94cdb08fabd7ea88d35aba",
+    "text_path": "3a6ff179b702a6791956b425e625056fa958066ad416535beea0b00ca8acdf2f"
+  },
+  "headings": [
+    "Set Variable",
+    "[DEBUG] Log all Flow Variables to Transaction Log",
+    "[DEBUG] Log a Value to Transaction Log",
+    "🚧",
+    "Log a Value to Logbook",
+    "📘Note",
+    "📘Note",
+    "📘"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/transition-actions.md",
+  "resolved_url": "https://help.webexconnect.io/docs/transition-actions",
+  "retrieved_at": "2026-09-08T23:28:51+00:00",
+  "sha256_html_response": "30fcafd7463cf069a737ec5404bd216dd60a0368363cca2d0c0e71d1772364d5",
+  "sha256_source_body": "c51b54b9a67e3d912c815952e9457dfbd9b87927bc94cdb08fabd7ea88d35aba",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/transition-actions.source.md",
+  "source_updated_at": "2026-04-15T08:39:12.266Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/transition-actions.txt",
+  "title": "Transition Actions",
+  "url": "https://help.webexconnect.io/docs/transition-actions",
+  "word_count": 660,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/transition-actions.metadata.json"
+}

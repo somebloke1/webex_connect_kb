@@ -1,0 +1,737 @@
+{
+  "schema_version": 1,
+  "sample_key": "native-fetch-recent-transactions",
+  "title": "Fetch Recent Transactions.workflow",
+  "observed_at": "2026-09-09T00:00:57.584Z",
+  "source_path": "evidence/sample-flows/observed/native-fetch-recent-transactions.json",
+  "source_sha256": "10b53f7476aa4526a0eba1f907427faa27e8e5fbddd4d1a1cdb8623908d892cd",
+  "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model",
+  "runtime_tested": false,
+  "status": "observed_canvas_relationships_summarized",
+  "format_warning": "Internal loaded-canvas model observations only; not a public import schema. Event internal names and visible labels are recorded separately. Dynamic script behavior and missing canvas pages are not inferred.",
+  "counts": {
+    "cells": 10,
+    "operative_nodes": 5,
+    "explicit_edges": 4,
+    "terminal_bindings": 0,
+    "variable_references": 19
+  },
+  "start_configuration": {
+    "channel": 501,
+    "type": "channel",
+    "subtype": "aiagent",
+    "isCheckLiveSessions": 0,
+    "extras": {},
+    "eventid": 501,
+    "v2EventId": 501
+  },
+  "nodes": [
+    {
+      "id": "2",
+      "label": "Configure AI Agent Event",
+      "type_internal": "start",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "onbegin",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "selectedChannel": {
+          "id": 501,
+          "name": "aiagent",
+          "description": "AI Agent",
+          "type": 3,
+          "extraData": {},
+          "subType": "aiagent",
+          "integrationId": "",
+          "image_url": ""
+        },
+        "selectedRuleEvent": {
+          "id": 501,
+          "name": "",
+          "v2EventId": 501
+        },
+        "isKeyWordDisabled": true,
+        "isKeyWordVerifyReq": true,
+        "isKeyWordAvailable": true,
+        "output_variables": [
+          "aiAgent.timestamp",
+          "aiAgent.transId",
+          "aiAgent.payload",
+          "service.serviceKey",
+          "aiAgent.transaction_count",
+          "aiAgent.customer_id"
+        ],
+        "conditionData": [
+          {
+            "defaultvalue": 5,
+            "mandatory": false,
+            "var_name": "transaction_count",
+            "datatype": "string",
+            "channel_id": 501,
+            "event_id": 501,
+            "eventname": ""
+          },
+          {
+            "defaultvalue": "",
+            "mandatory": false,
+            "var_name": "customer_id",
+            "datatype": "string",
+            "channel_id": 501,
+            "event_id": 501,
+            "eventname": ""
+          }
+        ],
+        "aiAgentData": {
+          "parseOutput": [
+            {
+              "name": "transaction_count",
+              "defaultvalue": 5,
+              "mandatory": false,
+              "type": "string"
+            },
+            {
+              "name": "customer_id",
+              "defaultvalue": "",
+              "mandatory": false,
+              "type": "string"
+            }
+          ],
+          "isAuthRequired": false,
+          "name": "",
+          "url": "https://example.invalid/flows/62170/trigger/aiagent",
+          "v2EventId": 501,
+          "jsonData": {
+            "customer_id": "",
+            "transaction_count": 5
+          },
+          "xmlData": "",
+          "isExistingAIAgent": true,
+          "selectedEvent": 501,
+          "jsonSource": 0,
+          "conditionData": [],
+          "isValidateSignature": false,
+          "validateSignatureObj": {
+            "algorithm": "",
+            "secretType": "[redacted]",
+            "secretKey": "[redacted]",
+            "headerKey": "[redacted]"
+          }
+        }
+      },
+      "transition_actions": [],
+      "declared_outputs": [
+        "aiAgent.timestamp",
+        "aiAgent.transId",
+        "aiAgent.payload",
+        "service.serviceKey",
+        "aiAgent.transaction_count",
+        "aiAgent.customer_id"
+      ],
+      "output_mappings": []
+    },
+    {
+      "id": "3",
+      "label": "HTTP Request",
+      "type_internal": "http",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "oncomplete",
+          "declared_target_count": 1
+        },
+        {
+          "event_internal": "onerror",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "method": "get",
+        "url": "https://example.invalid/get_transactions/$(n2.aiAgent.customer_id)",
+        "connctiontimeout": 10000,
+        "requesttimeout": 10000,
+        "checkAll": false,
+        "dataformate": "json",
+        "type": "extract",
+        "outputvariablelist": {
+          "parameters": [
+            {
+              "id": "B6OYqFkGM6",
+              "name": "last_transactions",
+              "path": "$",
+              "type": "body",
+              "order": 0
+            },
+            {
+              "id": "iAimaJEnPN",
+              "name": "status",
+              "path": "$.status",
+              "type": "body",
+              "order": 1
+            }
+          ],
+          "type": "json"
+        },
+        "isNewnode": true
+      },
+      "transition_actions": [],
+      "declared_outputs": [
+        "last_transactions",
+        "status"
+      ],
+      "output_mappings": {
+        "parameters": [
+          {
+            "id": "B6OYqFkGM6",
+            "name": "last_transactions",
+            "path": "$",
+            "type": "body",
+            "order": 0
+          },
+          {
+            "id": "iAimaJEnPN",
+            "name": "status",
+            "path": "$.status",
+            "type": "body",
+            "order": 1
+          }
+        ],
+        "type": "json"
+      }
+    },
+    {
+      "id": "5",
+      "label": "Branch",
+      "type_internal": "evaluate",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "onerror",
+          "declared_target_count": null
+        }
+      ],
+      "configuration": {
+        "evaluteIsOptimization": true,
+        "outcomes": [
+          {
+            "outcome": "user found",
+            "order": "",
+            "open": true,
+            "isEditOn": false,
+            "tempVal": "user found",
+            "isOutcomeChangedOnce": false,
+            "conditions": [
+              {
+                "pills": [],
+                "varaible": "$(n3.http.statusCode)",
+                "condition": "==",
+                "value": 200,
+                "operation": "",
+                "index": "r5bwh645"
+              }
+            ],
+            "index": "27i3e4ba"
+          }
+        ],
+        "allConditionsFail": "user not found",
+        "expression": "if(\"$(n3.http.statusCode)\"  == 200){\"user found\";}else{'user not found';}",
+        "counter": 2,
+        "successEvents": [
+          "user found",
+          "user not found"
+        ],
+        "nodeVersion": 1
+      },
+      "transition_actions": [],
+      "declared_outputs": [],
+      "output_mappings": []
+    },
+    {
+      "id": "7",
+      "label": "Evaluate",
+      "type_internal": "evaluate",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "oninvalidchoice",
+          "declared_target_count": 1
+        },
+        {
+          "event_internal": "onerror",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "evaluteIsOptimization": true,
+        "expression": 1,
+        "exp": 1,
+        "isTestExecuted": true,
+        "nodeVersion": 1
+      },
+      "transition_actions": [
+        {
+          "kind": "session",
+          "name": "status",
+          "when": "onenter",
+          "value": "success"
+        },
+        {
+          "kind": "session",
+          "name": "transactions",
+          "when": "onenter",
+          "value": "$(n3.last_transactions)"
+        },
+        {
+          "kind": "session",
+          "name": "message",
+          "when": "onenter",
+          "value": "transactions fetched successfully"
+        }
+      ],
+      "declared_outputs": [],
+      "output_mappings": []
+    },
+    {
+      "id": "8",
+      "label": "Evaluate",
+      "type_internal": "evaluate",
+      "parent_cell": "1",
+      "events_declared": [
+        {
+          "event_internal": "oninvalidchoice",
+          "declared_target_count": 1
+        },
+        {
+          "event_internal": "onerror",
+          "declared_target_count": 1
+        }
+      ],
+      "configuration": {
+        "evaluteIsOptimization": true,
+        "expression": 1,
+        "exp": 1,
+        "isTestExecuted": true,
+        "nodeVersion": 1
+      },
+      "transition_actions": [
+        {
+          "kind": "session",
+          "name": "status",
+          "when": "onenter",
+          "value": "failure"
+        },
+        {
+          "kind": "session",
+          "name": "message",
+          "when": "onenter",
+          "value": "user not found"
+        }
+      ],
+      "declared_outputs": [],
+      "output_mappings": []
+    }
+  ],
+  "edges": [
+    {
+      "id": "5128009",
+      "source": "2",
+      "target": "3",
+      "event_internal": "onbegin",
+      "event_label": "onBegin",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128023",
+      "source": "3",
+      "target": "5",
+      "event_internal": "oncomplete",
+      "event_label": "onSuccess",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128030",
+      "source": "5",
+      "target": "7",
+      "event_internal": "user found",
+      "event_label": "user found",
+      "representation": "explicit_edge"
+    },
+    {
+      "id": "5128035",
+      "source": "5",
+      "target": "8",
+      "event_internal": "user not found",
+      "event_label": "user not found",
+      "representation": "explicit_edge"
+    }
+  ],
+  "terminal_bindings": [],
+  "terminal_sources_not_captured": [],
+  "duplicate_terminal_binding_groups": [],
+  "variable_handoffs": [
+    {
+      "consumer": "3",
+      "location": "configuration.url",
+      "reference": "$(n2.aiAgent.customer_id)",
+      "variable": "n2.aiAgent.customer_id",
+      "producer_node": "2",
+      "producer_field": "aiAgent.customer_id",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "5",
+      "location": "configuration.outcomes[0].conditions[0].varaible",
+      "reference": "$(n3.http.statusCode)",
+      "variable": "n3.http.statusCode",
+      "producer_node": "3",
+      "producer_field": "http.statusCode",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "5",
+      "location": "configuration.expression",
+      "reference": "$(n3.http.statusCode)",
+      "variable": "n3.http.statusCode",
+      "producer_node": "3",
+      "producer_field": "http.statusCode",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "7",
+      "location": "transition_actions[1].value",
+      "reference": "$(n3.last_transactions)",
+      "variable": "n3.last_transactions",
+      "producer_node": "3",
+      "producer_field": "last_transactions",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "outcome[1].notification.payload.transactionID",
+      "reference": "$(transid)",
+      "variable": "transid",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "outcome[1].notification.payload.status",
+      "reference": "$(n3.status)",
+      "variable": "n3.status",
+      "producer_node": "3",
+      "producer_field": "status",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "outcome[1].notification.payload.message",
+      "reference": "$(message)",
+      "variable": "message",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": [
+        "7",
+        "8"
+      ]
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "outcome[1].notification.payload.transactions",
+      "reference": "$(n3.last_transactions)",
+      "variable": "n3.last_transactions",
+      "producer_node": "3",
+      "producer_field": "last_transactions",
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "outcome[1].notification.custompayload",
+      "reference": "$(transid)",
+      "variable": "transid",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "outcome[1].notification.custompayload",
+      "reference": "$(flowname)",
+      "variable": "flowname",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "outcome[1].notification.custompayload",
+      "reference": "$(serviceName)",
+      "variable": "serviceName",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "outcome[1].notification.custompayload",
+      "reference": "$(status)",
+      "variable": "status",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": [
+        "7",
+        "8"
+      ]
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "outcome[1].notification.custompayload",
+      "reference": "$(message)",
+      "variable": "message",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": [
+        "7",
+        "8"
+      ]
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "outcome[1].notification.custompayload",
+      "reference": "$(transactions)",
+      "variable": "transactions",
+      "producer_node": null,
+      "producer_field": null,
+      "evidence": "literal_variable_reference",
+      "observed_custom_writers": [
+        "7"
+      ]
+    },
+    {
+      "consumer": "3",
+      "location": "_usedVars",
+      "reference": "$(n2.aiAgent.customer_id)",
+      "variable": "n2.aiAgent.customer_id",
+      "producer_node": "2",
+      "producer_field": "aiAgent.customer_id",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "5",
+      "location": "_usedVars",
+      "reference": "$(n3.http.statusCode)",
+      "variable": "n3.http.statusCode",
+      "producer_node": "3",
+      "producer_field": "http.statusCode",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "7",
+      "location": "_usedTransVar",
+      "reference": "$(n3.last_transactions)",
+      "variable": "n3.last_transactions",
+      "producer_node": "3",
+      "producer_field": "last_transactions",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "_usedVars",
+      "reference": "$(n3.status)",
+      "variable": "n3.status",
+      "producer_node": "3",
+      "producer_field": "status",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    },
+    {
+      "consumer": "flow-settings",
+      "location": "_usedVars",
+      "reference": "$(n3.last_transactions)",
+      "variable": "n3.last_transactions",
+      "producer_node": "3",
+      "producer_field": "last_transactions",
+      "evidence": "captured_variable_use_metadata",
+      "observed_custom_writers": []
+    }
+  ],
+  "custom_variable_assignments": [
+    {
+      "writer_node": "7",
+      "kind": "session",
+      "name": "status",
+      "when": "onenter",
+      "value": "success"
+    },
+    {
+      "writer_node": "7",
+      "kind": "session",
+      "name": "transactions",
+      "when": "onenter",
+      "value": "$(n3.last_transactions)"
+    },
+    {
+      "writer_node": "7",
+      "kind": "session",
+      "name": "message",
+      "when": "onenter",
+      "value": "transactions fetched successfully"
+    },
+    {
+      "writer_node": "8",
+      "kind": "session",
+      "name": "status",
+      "when": "onenter",
+      "value": "failure"
+    },
+    {
+      "writer_node": "8",
+      "kind": "session",
+      "name": "message",
+      "when": "onenter",
+      "value": "user not found"
+    }
+  ],
+  "custom_variables": [
+    {
+      "name": "status",
+      "value": "",
+      "type": "default"
+    },
+    {
+      "name": "transactions",
+      "value": "",
+      "type": "default"
+    },
+    {
+      "name": "message",
+      "value": "",
+      "type": "default"
+    }
+  ],
+  "flow_outcomes": [
+    {
+      "id": 1,
+      "order": 0,
+      "name": 100,
+      "value": "Last executed node event",
+      "tag": 15,
+      "tagName": "Last Execution Status",
+      "type": "default",
+      "notification": {
+        "method": "get",
+        "headers": "[redacted]",
+        "payload": {
+          "transactionID": "$(transid)",
+          "status": "$(n3.status)",
+          "message": "$(message)",
+          "transactions": "$(n3.last_transactions)"
+        },
+        "payloadType": 1,
+        "custompayload": "{\n    \"transactionID\": \"$(transid)\",\n    \"flowname\": \"$(flowname)\",\n    \"serviceName\": \"$(serviceName)\",\n    \"statuscode\": \"1000\",\n    \"status\" : \"$(status)\",\n    \"message\" : \"$(message)\",\n    \"transactions\" : $(transactions)\n}",
+        "notificationType": -2
+      },
+      "isNotify": true,
+      "statusCode": "All status codes"
+    },
+    {
+      "id": 2,
+      "order": 1,
+      "name": 101,
+      "value": "Successfully completed flow",
+      "tag": 11,
+      "tagName": "Success",
+      "type": "default",
+      "notification": null,
+      "isNotify": false,
+      "statusCode": null
+    },
+    {
+      "id": 3,
+      "order": 2,
+      "name": 102,
+      "value": "Flow completed with an error",
+      "tag": 12,
+      "tagName": "Error",
+      "type": "default",
+      "notification": null,
+      "isNotify": false,
+      "statusCode": null
+    },
+    {
+      "id": 4,
+      "order": 3,
+      "name": 103,
+      "value": "Flow ended due to an interruption",
+      "tag": 13,
+      "tagName": "Incomplete",
+      "type": "default",
+      "notification": null,
+      "isNotify": false,
+      "statusCode": null
+    }
+  ],
+  "cycles": [],
+  "cross_page_or_flow_nodes": [],
+  "capture_pages": null,
+  "declared_events_without_captured_route": [
+    {
+      "node": "3",
+      "event_internal": "onerror",
+      "declared_target_count": 1
+    },
+    {
+      "node": "5",
+      "event_internal": "onerror",
+      "declared_target_count": null
+    },
+    {
+      "node": "7",
+      "event_internal": "oninvalidchoice",
+      "declared_target_count": 1
+    },
+    {
+      "node": "7",
+      "event_internal": "onerror",
+      "declared_target_count": 1
+    },
+    {
+      "node": "8",
+      "event_internal": "oninvalidchoice",
+      "declared_target_count": 1
+    },
+    {
+      "node": "8",
+      "event_internal": "onerror",
+      "declared_target_count": 1
+    }
+  ],
+  "nodes_not_reached_from_captured_start": [],
+  "edge_endpoints_not_captured": [],
+  "node_variable_producers_not_captured": [],
+  "redactions": "Header credentials and URL hosts redacted. Internal model properties are evidence, not a public import API.",
+  "authored_walkthrough": {
+    "walkthrough": "AI Agent Start 2 supplies `customer_id` to HTTP 3 GET `/get_transactions/$(n2.aiAgent.customer_id)`. Start `onbegin` renders as `onBegin`; HTTP `oncomplete` renders as `onSuccess` and connects to Branch 5. HTTP status 200 selects `user found` → Evaluate 7; every other completed status selects `user not found` → Evaluate 8. No pagination or per-transaction loop is present.",
+    "handoffs": "HTTP extraction names `last_transactions` from JSONPath `$`, the whole response, rather than `$.last_transactions`; it also extracts `$.status`. Evaluate 7 on-enter actions assign `status=success`, `transactions=$(n3.last_transactions)`, and a success message. Evaluate 8 assigns failure status/message. The outcome has `payloadType=1`: its payload returns `status=$(n3.status)` and `transactions=$(n3.last_transactions)` directly, plus transactionID and `$(message)`. A distinct custompayload references session `$(status)` and unquoted `$(transactions)`. Thus the stored payload bypasses two session assignments and preserves the response wrapper.",
+    "limitations": "HTTP errors have no explicit recovery edge; the non-200 branch is not a general transport-failure handler. No retry, dispute-registration call, or customer message is configured. Embedded transaction examples and Evaluate test flags are historical template data, not observed account activity or a current test. Hosts and headers are redacted. This internal model is not an import schema; `runtime_tested=false` leaves response serialization and agent interpretation unverified."
+  },
+  "walkthrough_status": "authored"
+}

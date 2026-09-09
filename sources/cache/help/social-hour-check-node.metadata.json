@@ -1,0 +1,39 @@
+{
+  "category": "SERVICES & FLOWS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182577d4",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "d94437d0a3763b21e8eb90dcfbbdd6c5e53f832cbb660c05730eebb27cdc7132",
+    "source_path": "1f91a6022b4c80b5d68eb50cdcda189297dc48d4b8d94f09e7d1f66790972a2f",
+    "text_path": "fdaed46337acee4fde358b86499e19a25b5304bcf80702e941332aa70813be27"
+  },
+  "headings": [
+    "Node Configuration",
+    "📘Note:",
+    "Input Variables",
+    "Output Variables",
+    "Node Outcomes",
+    "Transition Actions",
+    "Example"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/social-hour-check-node.md",
+  "resolved_url": "https://help.webexconnect.io/docs/social-hour-check-node",
+  "retrieved_at": "2026-09-08T23:28:53+00:00",
+  "sha256_html_response": "1322c4f89a11e86ae043e9715825ba5ae11222f0c1b0825868d4921515860492",
+  "sha256_source_body": "1f91a6022b4c80b5d68eb50cdcda189297dc48d4b8d94f09e7d1f66790972a2f",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/social-hour-check-node.source.md",
+  "source_updated_at": "2026-04-15T09:22:06.920Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/social-hour-check-node.txt",
+  "title": "Social Hour Check Node",
+  "url": "https://help.webexconnect.io/docs/social-hour-check-node",
+  "word_count": 1693,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/social-hour-check-node.metadata.json"
+}

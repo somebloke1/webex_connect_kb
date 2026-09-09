@@ -1,0 +1,36 @@
+{
+  "category": "SERVICES & FLOWS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182577fd",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "b00a27a9d8ccea7ddb8058be7370734518e90dc4554e3ad35c77f0152025cb03",
+    "source_path": "07b65171415289e94d4f7e50f49bd7ad65e5f9bd5d309c0fc0cf410c8301c58c",
+    "text_path": "efa4e413487c3d6631a7518b46fa48c456e91a9874f442fac5c8846aeffcdd68"
+  },
+  "headings": [
+    "📘",
+    "🚧",
+    "Switching between Versions",
+    "Rollback"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/flow-version-history.md",
+  "resolved_url": "https://help.webexconnect.io/docs/flow-version-history",
+  "retrieved_at": "2026-09-08T23:28:42+00:00",
+  "sha256_html_response": "288b648a99c8f550d8eab5219a6db1ff649935b3f12bc9d659c321b0ed943313",
+  "sha256_source_body": "07b65171415289e94d4f7e50f49bd7ad65e5f9bd5d309c0fc0cf410c8301c58c",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/flow-version-history.source.md",
+  "source_updated_at": "2026-01-26T13:34:28.129Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/flow-version-history.txt",
+  "title": "Flow Version History",
+  "url": "https://help.webexconnect.io/docs/flow-version-history",
+  "word_count": 317,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/flow-version-history.metadata.json"
+}

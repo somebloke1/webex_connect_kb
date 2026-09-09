@@ -1,0 +1,118 @@
+# Understand AI engines for AI agents
+
+Source: https://help.webex.com/article/ne6s80cb
+Documentation version: not specified by publisher
+Source last modified: 2026-09-08T17:41:18.933Z
+Retrieved: 2026-09-08T23:48:48+00:00
+
+<a id="content"></a>
+
+<a id="concept-template_d9eb2478-54b8-45c4-8f25-6617c3533efb"></a>
+
+An AI engine is the essential component that drives an AI agent. It handles user input—text and voice, understands the user intent, and generates the appropriate responses.
+
+- [Scripted AI agent](https://help.webex.com/article/ne6s80cb#concept-template_108ff606-5316-4c56-880e-4930c823d334)
+
+- [Autonomous AI agent](https://help.webex.com/article/ne6s80cb#concept-template_3b6776fa-9bb5-4691-b944-c939d3d4e8ff)
+
+<a id="concept-template_108ff606-5316-4c56-880e-4930c823d334"></a>
+
+<a id="concept-template_108ff606-5316-4c56-880e-4930c823d334"></a>
+
+Administrators can choose the AI engine that best aligns with how they want their scripted AI agents to behave.
+
+<a id="section_vxz_hrx_r2c"></a>
+
+## Components of an AI engine
+
+The core components are relevant for scripted AI agents, but their function is slightly different:
+
+- **Natural Language Understanding (NLU)**: The NLU component maps customer input to the intents defined in their script. It recognizes the customer's input within the framework.
+
+- **Dialogue Management**: This component manages the flow of the conversation according to the script. It ensures the agent follows the defined paths and provides the correct responses based on the recognized intent and context.
+
+- **Response Retrieval:** This component delivers the responses configured in the script.
+
+For voice-based interactions, in addition to the components mentioned above, the AI engine also includes ASR (Automatic Speech Recognition) and TTS (Text-to-Speech).
+
+<a id="section_lmx_fsx_r2c"></a>
+
+## How to choose the right engine
+
+- **Webex AI Pro 2.0 (with Swiftmatch)**
+  
+  This is our latest generative AI-powered Natural Language Understanding (NLU) engine for scripted AI agents. It leverages advanced machine learning algorithms to interpret user inputs and accurately classify intents. By learning from diverse LLM generated linguistic patterns, the engine delivers high precision in understanding what the user wants to achieve, even when phrasing or word choice varies.
+
+  **Key Benefits**
+
+  - **Improved intent recognition**: Capable of understanding a wide range of user queries, including unseen samples or input variations, enabling more accurate intent classification.
+  
+  - **Adaptive learning**: The model generalizes effectively across similar utterances, reducing the need for exhaustive manual examples.
+
+  **Configuration requirements & limitations**
+
+  - Each intent must include at least 10 representative utterances to provide the model with enough linguistic diversity for accurate learning.
+  
+  - A clear and meaningful intent description is essential, as it helps the system differentiate closely related intents and maintain consistent classification performance.
+  
+  - Insufficient or ambiguous training data may reduce classification accuracy, especially for intents with overlapping language patterns.
+
+- **Webex AI Pro 1.0 (with Swiftmatch)**
+  
+  This AI engine is ideal for developing AI agents that manage diverse user expressions while accurately mapping inputs to predefined intents, ensuring consistent and reliable interactions across various scenarios. It's useful for:
+
+  - **Handling smaller training data set**: If the training data set has fewer than 10 utterances per intent, this engine is more suitable.
+  
+  - **Multilingual scripted agents:** This is a good choice for creating agents that handle conversations in multiple languages.
+  
+  - **Scripted agents with some level of "smart matching":** While the responses are scripted, this AI engine offers a natural feel by matching user input to the closest intent, even if the phrasing isn't exact.
+
+  **Benefits:** Helps with input variations, better with smaller training data sets, has multilingual support, supports smart matching.
+
+  **Limitations:** Swiftmatch excels in its strong natural language understanding abilities. However, if your script requires flexibility in matching user input to intents—allowing for variations in phrasing—Swiftmatch might need extra data configuration with diverse training data. It's designed for precise and rigid matching, which can make handling variations more challenging.
+
+<a id="concept-template_3b6776fa-9bb5-4691-b944-c939d3d4e8ff"></a>
+
+<a id="concept-template_3b6776fa-9bb5-4691-b944-c939d3d4e8ff"></a>
+
+AI engine brings together speech technology (ASR/TTS), Large Language Models (LLMs), intelligent guardrails, and expertly crafted system prompts together into one single selection choice on AI Agent Studio.
+
+When creating a new AI agent, you can choose from multiple AI engines tailored to meet their unique needs.
+
+Autonomous AI agent currently offers the following AI engine selection options:
+
+- **Webex AI Pro 1.0 (to be deprecated soon)/Webex AI Pro 2.0:** General purpose engine ideal for most contact center use cases with global language support and human-like interactions. To view the list of supported languages and voices, see the [Supported languages and voices](https://help.webex.com/en-us/article/pdef2d/Supported-languages-for-Scripted-AI-Agents) article.
+
+- **Webex AI Pro-US 1.0 (to be deprecated soon)/Webex AI Pro-US 2.0**: Localized and fine-tuned for regional accents offering enhanced experience, and regulatory compliance for US customers. Available in English only.
+
+- **Webex AI Pro-Europe 1.0 (to be deprecated soon)/Webex AI Pro-Europe 2.0**: Localized and fine-tuned for regional accents offering enhanced experience, and regulatory compliance for European customers. Available in English only.
+
+Webex AI Pro 1.0, Webex AI Pro-US. 1.0, and Webex AI Pro-Europe 1.0 will be deprecated in the near future.
+
+<a id="section_hqt_jrf_cgc"></a>
+
+## Components of AI engine
+
+- **Large Language Model**: Powers the AI Agent with it’s advanced intelligence, enabling it to understand complex queries, generate coherent responses, perform actions or answer from a knowledge base.
+
+- **Guardrails**: Enables responsible AI interactions by setting clear boundaries, preventing inappropriate content, and maintaining brand safety.
+
+- **Speech-to-Text (ASR/STT):** Converts spoken language into text, enabling AI agents to understand human speech.
+
+- **Text-to-Speech (TTS)**: Converts text into natural, human-like speech, so AI agent communicates clearly and engagingly.
+
+- **Interim Response Model**: Provides instant, real-time responses for user queries, creating a highly responsive and fluid user experience.
+
+- **Turn Prediction Model**: Intelligently anticipates when a user has finished speaking, facilitating natural conversational flow.
+
+- **Standalone Query Generator Model**: Transforms non-contextual, incomplete or colloquial inputs (e.g., “interest rate”) into complete, self-contained queries (e.g., “What is the interest rate for home loans?”), enabling more accurate retrieval and response generation.
+
+<a id="section_ux2_hky_dfc"></a>
+
+## How to choose the right engine
+
+- **Language support**: Webex AI Pro-US 1.0/Webex AI Pro-US 2.0 and Webex AI Pro-Europe 1.0/Webex AI Pro-Europe 2.0 support English only, while Webex AI Pro 1.0/Webex AI Pro 2.0 supports English + various other languages in Beta.
+
+- **Geo restrictions**: Webex AI Pro-US 1.0/Webex AI Pro-US 2.0 is available only for US customers. Webex AI Pro-Europe 1.0/Webex AI Pro-Europe 2.0 is available only for EU customers. Webex AI Pro 1.0/Webex AI Pro 2.0 is globally available.
+
+- **Voice Experience**: Webex AI Pro-US 1.0/Webex AI Pro-US 2.0 and Webex AI Pro-Europe 1.0/Webex AI Pro-Europe 2.0 offer an enhanced human-like conversational experience but are limited to fewer voices, while Webex AI Pro 1.0/Webex AI Pro 2.0 offers a wide range of voices for human-like interactions in various accents.

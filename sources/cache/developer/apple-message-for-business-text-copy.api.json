@@ -1,0 +1,362 @@
+{
+  "api": {
+    "apiSetting": "6a68ce229f6f58ce2053883b",
+    "method": "post",
+    "url": "/",
+    "params": [
+      {
+        "name": "deliverychannel",
+        "type": "string",
+        "enumValues": "",
+        "default": "AppleBusinessChat",
+        "desc": "Channel used to send the message. For this API, the value is `AppleBusinessChat`.",
+        "required": false,
+        "in": "body",
+        "ref": "",
+        "_id": "6a68d4fd974d3c37dc6d6682",
+        "id": "6a68d4fd974d3c37dc6d6682"
+      },
+      {
+        "name": "appid",
+        "type": "string",
+        "enumValues": "",
+        "default": "",
+        "desc": "The ID of the app asset that you can obtain from the Connect platform.",
+        "required": false,
+        "in": "body",
+        "ref": "",
+        "_id": "6a68d86308daef6b5069d60d",
+        "id": "6a68d86308daef6b5069d60d"
+      },
+      {
+        "name": "destination",
+        "type": "array_object",
+        "enumValues": "",
+        "default": "",
+        "desc": "Destination details for the invitation message. For `Invitation Message`, use the customer's mobile number.",
+        "required": false,
+        "in": "body",
+        "ref": "destination",
+        "_id": "6a68d86308daef6b5069d60e",
+        "id": "6a68d86308daef6b5069d60e"
+      },
+      {
+        "name": "channels",
+        "type": "object",
+        "enumValues": "",
+        "default": "",
+        "desc": "Channels object used for messaging.",
+        "required": false,
+        "in": "body",
+        "ref": "",
+        "_id": "6a68dda868ea40e0d178fa15",
+        "id": "6a68dda868ea40e0d178fa15"
+      },
+      {
+        "name": "correlationid",
+        "type": "string",
+        "enumValues": "",
+        "default": "",
+        "desc": "Unique identifier that you can attach to every request as a reference to a particular transaction or event.",
+        "required": false,
+        "in": "body",
+        "ref": "",
+        "_id": "6a68dda868ea40e0d178fa16",
+        "id": "6a68dda868ea40e0d178fa16"
+      },
+      {
+        "name": "callbackData",
+        "type": "string",
+        "enumValues": "",
+        "default": "",
+        "desc": "Data that you have configured to receive on the Notify URL.",
+        "required": false,
+        "in": "body",
+        "ref": "",
+        "_id": "6a68dda868ea40e0d178fa17",
+        "id": "6a68dda868ea40e0d178fa17"
+      },
+      {
+        "name": "notifyurl",
+        "type": "string",
+        "enumValues": "",
+        "default": "",
+        "desc": "Configure a URL to receive submission status notifications for an Apple Messages for Business invitation message. This field accepts only a valid URL or a variable. If an invalid URL is passed in the API request or through a variable, the request is not eligible for retries.",
+        "required": false,
+        "in": "body",
+        "ref": "",
+        "_id": "6a68dda868ea40e0d178fa18",
+        "id": "6a68dda868ea40e0d178fa18"
+      },
+      {
+        "name": "notifyurlAuthId",
+        "type": "string",
+        "enumValues": "",
+        "default": "",
+        "desc": "Unique authentication ID.",
+        "required": false,
+        "in": "body",
+        "ref": "",
+        "_id": "6a68dda868ea40e0d178fa19",
+        "id": "6a68dda868ea40e0d178fa19"
+      },
+      {
+        "name": "key",
+        "type": "string",
+        "enumValues": "",
+        "default": "",
+        "desc": "Applicable when you want to use the service key for API authentication. The service key is available under the **API** tab within a service in your Webex Connect tenant.",
+        "required": false,
+        "in": "header",
+        "ref": "",
+        "_id": "6a68dda868ea40e0d178fa1a",
+        "id": "6a68dda868ea40e0d178fa1a"
+      },
+      {
+        "name": "authorization",
+        "type": "string",
+        "enumValues": "",
+        "default": "",
+        "desc": "JSON Web Token (JWT) for authentication. For example, `bearer <token>`.",
+        "required": false,
+        "in": "header",
+        "ref": "",
+        "_id": "6a68dda868ea40e0d178fa1b",
+        "id": "6a68dda868ea40e0d178fa1b"
+      }
+    ],
+    "examples": {
+      "codes": [
+        {
+          "code": "{\n  \"deliverychannel\": \"AppleBusinessChat\",\n  \"appid\": \"a_637818908588360000\",\n  \"destination\": [\n    {\n      \"msisdn\": [\n        \"+4477362XXXX\"\n      ]\n    }\n  ],\n  \"channels\": {\n    \"AppleBusinessChat\": {\n      \"type\": \"invitation\",\n      \"withImage\": true,\n      \"brandName\": \"Delta\",\n      \"requestIdentifier\": \"fcb5e9ca-0ddc-4a07-bf9b-7fcbd044aeeb\"\n    }\n  },\n  \"correlationid\": \"corr-12345\",\n  \"callbackData\": \"customer-context\",\n  \"notifyurl\": \"https://www.example.com/notify\",\n  \"notifyurlAuthId\": \"TNPBXKT09U\"\n}",
+          "language": "json"
+        }
+      ]
+    },
+    "results": {
+      "codes": [
+        {
+          "name": null,
+          "code": "{\n  \"response\": {\n    \"code\": \"1001\",\n    \"description\": \"Queued\",\n    \"transid\": \"fcb5e9ca-0ddc-4a07-bf9b-7fcbd044aeeb\"\n  }\n}",
+          "language": "json",
+          "status": 200
+        },
+        {
+          "name": "",
+          "code": "{\n  \"response\": {\n    \"code\": \"7000\",\n    \"description\": \"Invalid request\"\n  }\n}",
+          "language": "json",
+          "status": 400
+        }
+      ]
+    },
+    "auth": "required"
+  },
+  "swagger": {
+    "path": "/"
+  },
+  "oas_public_id": "@imiconnect-apis/v6.20.0#ozkk10msesywu2",
+  "selected_openapi": {
+    "openapi": "3.1.0",
+    "info": {
+      "title": "Apple Messages for Business: Invitation Message",
+      "version": "6.20.0"
+    },
+    "servers": [
+      {
+        "url": "https://api.{YourRegion}.webexconnect.io/resources/v1/messaging/",
+        "variables": {
+          "YourRegion": {
+            "default": "YourRegion"
+          }
+        }
+      }
+    ],
+    "security": [
+      {}
+    ],
+    "path": "/",
+    "method": "post",
+    "path_parameters": [],
+    "operation": {
+      "summary": "Apple Messages for Business: Invitation Message",
+      "description": "Use this API to send an Apple Messages for Business invitation message to an opted-in customer mobile number. Invitation messages allow a business to start an Apple Messages for Business conversation before an AMB opaque user ID is available. When the customer responds to the invitation, Webex Connect resolves the conversation to the AMB user ID for subsequent messages. **Note**: Modify YourRegion in the URL to the right to reflect your tenant’s region. See [Know your endpoint page](https://developers.imiconnect.io/reference/endpoints). Apple Messages for Business Invitation Messages require Apple invitation entitlement for the business account. Customers must explicitly opt in before you send an invitation message. Invitation messages are Apple-managed template messages and do not support free-form text. Webex Connect derives the Apple invitation template based on the `withImage` value.",
+      "operationId": "apple-message-for-business-text-copy",
+      "parameters": [
+        {
+          "name": "key",
+          "in": "header",
+          "description": "Applicable when you want to use the service key for API authentication. The service key is available under the **API** tab within a service in your Webex Connect tenant.",
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "authorization",
+          "in": "header",
+          "description": "JSON Web Token (JWT) for authentication. For example, `bearer <token>`.",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "requestBody": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "deliverychannel": {
+                  "type": "string",
+                  "description": "Channel used to send the message. For this API, the value is `AppleBusinessChat`.",
+                  "default": "AppleBusinessChat"
+                },
+                "appid": {
+                  "type": "string",
+                  "description": "The ID of the app asset that you can obtain from the Connect platform."
+                },
+                "destination": {
+                  "type": "array",
+                  "description": "Destination details for the invitation message. For `Invitation Message`, use the customer's mobile number.",
+                  "items": {
+                    "properties": {
+                      "msisdn": {
+                        "type": "array",
+                        "description": "Customer mobile number in E.164 format. Invitation messages are sent to mobile numbers, not AMB opaque user IDs.",
+                        "default": [],
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "required": [
+                      "msisdn"
+                    ],
+                    "type": "object"
+                  }
+                },
+                "channels": {
+                  "type": "object",
+                  "description": "Channels object used for messaging.",
+                  "properties": {}
+                },
+                "correlationid": {
+                  "type": "string",
+                  "description": "Unique identifier that you can attach to every request as a reference to a particular transaction or event."
+                },
+                "callbackData": {
+                  "type": "string",
+                  "description": "Data that you have configured to receive on the Notify URL."
+                },
+                "notifyurl": {
+                  "type": "string",
+                  "description": "Configure a URL to receive submission status notifications for an Apple Messages for Business invitation message. This field accepts only a valid URL or a variable. If an invalid URL is passed in the API request or through a variable, the request is not eligible for retries."
+                },
+                "notifyurlAuthId": {
+                  "type": "string",
+                  "description": "Unique authentication ID."
+                }
+              }
+            },
+            "examples": {
+              "Request Example": {
+                "value": {
+                  "deliverychannel": "AppleBusinessChat",
+                  "appid": "a_637818908588360000",
+                  "destination": [
+                    {
+                      "msisdn": [
+                        "+4477362XXXX"
+                      ]
+                    }
+                  ],
+                  "channels": {
+                    "AppleBusinessChat": {
+                      "type": "invitation",
+                      "withImage": true,
+                      "brandName": "Delta",
+                      "requestIdentifier": "fcb5e9ca-0ddc-4a07-bf9b-7fcbd044aeeb"
+                    }
+                  },
+                  "correlationid": "corr-12345",
+                  "callbackData": "customer-context",
+                  "notifyurl": "https://www.example.com/notify",
+                  "notifyurlAuthId": "TNPBXKT09U"
+                }
+              }
+            }
+          }
+        }
+      },
+      "responses": {
+        "200": {
+          "description": "200",
+          "content": {
+            "application/json": {
+              "examples": {
+                "Result": {
+                  "value": "{\n  \"response\": {\n    \"code\": \"1001\",\n    \"description\": \"Queued\",\n    \"transid\": \"fcb5e9ca-0ddc-4a07-bf9b-7fcbd044aeeb\"\n  }\n}"
+                }
+              },
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "response": {
+                    "type": "object",
+                    "properties": {
+                      "code": {
+                        "type": "string",
+                        "example": "1001"
+                      },
+                      "description": {
+                        "type": "string",
+                        "example": "Queued"
+                      },
+                      "transid": {
+                        "type": "string",
+                        "example": "fcb5e9ca-0ddc-4a07-bf9b-7fcbd044aeeb"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "400": {
+          "description": "400",
+          "content": {
+            "application/json": {
+              "examples": {
+                "Result": {
+                  "value": "{\n  \"response\": {\n    \"code\": \"7000\",\n    \"description\": \"Invalid request\"\n  }\n}"
+                }
+              },
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "response": {
+                    "type": "object",
+                    "properties": {
+                      "code": {
+                        "type": "string",
+                        "example": "7000"
+                      },
+                      "description": {
+                        "type": "string",
+                        "example": "Invalid request"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "deprecated": false
+    },
+    "components": {
+      "securitySchemes": {}
+    }
+  }
+}

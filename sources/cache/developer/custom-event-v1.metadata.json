@@ -1,0 +1,39 @@
+{
+  "api_metadata_path": "sources/cache/developer/custom-event-v1.api.json",
+  "category": "EVENT API",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f64ea",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "5b4a89054b895a1e491f414e2d65e3c5002e671ccc7ab0b1211e5d390217b2db",
+    "source_path": "ff75d2f3c52fe41b24c01b5e380de776d7b306d1760b9af7469018ea0fd47e0e",
+    "text_path": "226528c77f00f4d057ce39569a9e463d8d7285292350e7f18e4cc33337887262"
+  },
+  "headings": [
+    "Prerequisites",
+    "Body Parameters",
+    "Sample Response Body",
+    "Response Codes"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/custom-event-v1.md",
+  "openapi_path": "sources/cache/openapi/035623aeb330ad49ef17a03193607738ec3850138070e20f850018744b0ab96d.json",
+  "resolved_url": "https://developers.webexconnect.io/reference/custom-event-v1",
+  "retrieved_at": "2026-09-08T23:31:49+00:00",
+  "sha256_api_metadata": "dae58bce0d9d0f9a5e5e0df902f59f2c424cb700880712f8ca753a6f5fa34b3e",
+  "sha256_html_response": "010d4ead62dad26a44594712a6e68e3e3ac0138b936eb2a4feb894e50072bb4c",
+  "sha256_openapi": "035623aeb330ad49ef17a03193607738ec3850138070e20f850018744b0ab96d",
+  "sha256_source_body": "ff75d2f3c52fe41b24c01b5e380de776d7b306d1760b9af7469018ea0fd47e0e",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/custom-event-v1.source.md",
+  "source_updated_at": "2026-01-22T16:14:30.808Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/custom-event-v1.txt",
+  "title": "Custom Event v1",
+  "url": "https://developers.webexconnect.io/reference/custom-event-v1",
+  "word_count": 2901,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/custom-event-v1.metadata.json"
+}

@@ -1,0 +1,42 @@
+{
+  "category": "CISCO WEBEX CONTACT CENTER & WEBEX CONNECT INTEGRATION",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182578bf",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "e02795bf6f4bc10a3a255116d6cdce4e9f73fe6910a667506a28e42b210b4826",
+    "source_path": "60b0ee0696a52f743159b300cdf089afdf7cb4c13a3f0df97f1a0625481b7628",
+    "text_path": "25136cde049979b2a01cca34458279469b6390bee26e5197a1d9ed2c2656e617"
+  },
+  "headings": [
+    "👍Important",
+    "Authorization",
+    "Methods and Outcomes",
+    "How to Fetch variables",
+    "📘Note",
+    "📘Note",
+    "How to Add variables",
+    "📘Note",
+    "📘Note",
+    "🚧"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/wxcc-set-variable.md",
+  "resolved_url": "https://help.webexconnect.io/docs/wxcc-set-variable",
+  "retrieved_at": "2026-09-08T23:29:15+00:00",
+  "sha256_html_response": "d560d8c6c76a556e8192516b9af634bc9c06d681aaac1348027008daf0b51720",
+  "sha256_source_body": "60b0ee0696a52f743159b300cdf089afdf7cb4c13a3f0df97f1a0625481b7628",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/wxcc-set-variable.source.md",
+  "source_updated_at": "2026-04-14T07:24:48.362Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/wxcc-set-variable.txt",
+  "title": "Set Variable - WXCC",
+  "url": "https://help.webexconnect.io/docs/wxcc-set-variable",
+  "word_count": 893,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/wxcc-set-variable.metadata.json"
+}

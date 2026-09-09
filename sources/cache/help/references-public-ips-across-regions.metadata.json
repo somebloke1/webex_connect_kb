@@ -1,0 +1,34 @@
+{
+  "category": "REFERENCES",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257990",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "4a93a41dfdd59ac89305ac053b436d2191769f08e42f808575d8aaf9061ef295",
+    "source_path": "c1eb95ba7b5a53797596cd3856f91593ad6d29fb225b26b9938ed71a9f9c7941",
+    "text_path": "4e3cffb68e7a01fdd144eb3918e488f941d9215a23616f28bebd52fee62f3a4a"
+  },
+  "headings": [
+    "Public IPs and Domain Details",
+    "Public IPs"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/references-public-ips-across-regions.md",
+  "resolved_url": "https://help.webexconnect.io/docs/references-public-ips-across-regions",
+  "retrieved_at": "2026-09-08T23:29:40+00:00",
+  "sha256_html_response": "5b4833653a049d8a01b31e2c0b8cfd60ffccfb0ac8a8cdec1538c837921da64b",
+  "sha256_source_body": "c1eb95ba7b5a53797596cd3856f91593ad6d29fb225b26b9938ed71a9f9c7941",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/references-public-ips-across-regions.source.md",
+  "source_updated_at": "2026-04-15T12:33:27.967Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/references-public-ips-across-regions.txt",
+  "title": "Public IPs Across Regions",
+  "url": "https://help.webexconnect.io/docs/references-public-ips-across-regions",
+  "word_count": 109,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/references-public-ips-across-regions.metadata.json"
+}

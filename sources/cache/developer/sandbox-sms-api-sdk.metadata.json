@@ -1,0 +1,35 @@
+{
+  "api_metadata_path": "sources/cache/developer/sandbox-sms-api-sdk.api.json",
+  "category": "API Reference for Sandbox",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f65bb",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "77887b6b2e211057377cea2b7470865003671de5cc7fd66e1cfe3308e36ad53e",
+    "source_path": "55fe3e9c1a80c1df73d65b37095fc23d9211baf16c6646c109c0d59a3ab933e5",
+    "text_path": "beb7ec7acf82cf9f6d79df39909027a034e56a39506f0d4fa1324608e7810b85"
+  },
+  "headings": [
+    "Overview",
+    "Authentication"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/sandbox-sms-api-sdk.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/sandbox-sms-api-sdk",
+  "retrieved_at": "2026-09-08T23:31:39+00:00",
+  "sha256_api_metadata": "575f65b7d8dc3ea0b617314bc47e22705dc85fc80ee114e6faa20ada4e8aafe2",
+  "sha256_html_response": "1231f83e366f255e1440c0fbcd6cd544a59a03351c48f04a918d0b7c125072a4",
+  "sha256_source_body": "55fe3e9c1a80c1df73d65b37095fc23d9211baf16c6646c109c0d59a3ab933e5",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/sandbox-sms-api-sdk.source.md",
+  "source_updated_at": "2026-01-22T15:15:03.692Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/sandbox-sms-api-sdk.txt",
+  "title": "SMS APIs & SDKs",
+  "url": "https://developers.webexconnect.io/reference/sandbox-sms-api-sdk",
+  "word_count": 172,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/developer/sandbox-sms-api-sdk.metadata.json"
+}

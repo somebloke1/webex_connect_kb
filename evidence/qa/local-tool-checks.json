@@ -1,0 +1,10 @@
+{
+  "local_caption_import": "pass",
+  "timestamp_and_technical_text": "pass",
+  "supplied_title_and_local_unverified_provenance": "pass",
+  "input_and_artifact_hashes": "pass",
+  "existing_artifact_refusal": "pass",
+  "failed_overwrite_preserves_prior_artifacts": "pass",
+  "first_stdout": "{\"status\": \"success\", \"output_dir\": \"/home/dgk/workspace/webex_connect_kb/evidence/qa/subtitle-import\", \"method\": \"local-subtitle-import\", \"segment_count\": 2}",
+  "failed_overwrite_error": "TranscriptionError: Transcript has invalid, negative, or reversed timestamps.\nFailure evidence: /home/dgk/workspace/webex_connect_kb/evidence/qa/subtitle-import/failure.json"
+}

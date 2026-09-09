@@ -1,0 +1,38 @@
+{
+  "category": "Webex Connect and Cisco Contact Center Enterprise System (CCE)",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182578c8",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "d29169d216141bf2c0a082ac059e1750d0489a2f895353e90e1a79424d4a11e8",
+    "source_path": "02eac8f25c46a8e402ea8e6cdb5cd1ff17bb5b7f42cc694b6b9fd2c95c624f20",
+    "text_path": "64b94db3c4bc106baac40e045dd53acb45b2958836d2c2e25f7fa50d939a6fbd"
+  },
+  "headings": [
+    "Authorization",
+    "Methods and Outcomes",
+    "📘Note",
+    "📘",
+    "Sample configurations for various channels",
+    "📘Note:"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/cce-create-task.md",
+  "resolved_url": "https://help.webexconnect.io/docs/cce-create-task",
+  "retrieved_at": "2026-09-08T23:29:22+00:00",
+  "sha256_html_response": "3f31610a0b08285188ebcc7f8f802f6692bceca23941bad7e7e0ba4991b4a122",
+  "sha256_source_body": "02eac8f25c46a8e402ea8e6cdb5cd1ff17bb5b7f42cc694b6b9fd2c95c624f20",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/cce-create-task.source.md",
+  "source_updated_at": "2026-04-14T07:36:54.130Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/cce-create-task.txt",
+  "title": "Create Task - CCE",
+  "url": "https://help.webexconnect.io/docs/cce-create-task",
+  "word_count": 1152,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/cce-create-task.metadata.json"
+}

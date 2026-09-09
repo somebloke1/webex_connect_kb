@@ -1,0 +1,38 @@
+{
+  "category": "PreBUILT Integrations",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257913",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "7e8fc464ca1c8d18dbf693e958b2de1fa2dbf794583cb8ddddd64329efb2586c",
+    "source_path": "979a8c2ebe73cb9b2201b11c8bbfe4a4219de82814f682c63312e6881069a756",
+    "text_path": "609f26c4491c12fb52fae4b12e2fde1377f5c7528abff14154027fd457f491c9"
+  },
+  "headings": [
+    "Introduction",
+    "Pre-requisites",
+    "📘Note",
+    "Use Cases",
+    "Appointment Management",
+    "Patient Management"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/epic.md",
+  "resolved_url": "https://help.webexconnect.io/docs/epic",
+  "retrieved_at": "2026-09-08T23:29:10+00:00",
+  "sha256_html_response": "503d4bb6af66e74d9a1e4031f2cfa0a517b57b154095f81786a7f4ce9646892b",
+  "sha256_source_body": "979a8c2ebe73cb9b2201b11c8bbfe4a4219de82814f682c63312e6881069a756",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/epic.source.md",
+  "source_updated_at": "2026-07-23T07:44:54.744Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/epic.txt",
+  "title": "EPIC",
+  "url": "https://help.webexconnect.io/docs/epic",
+  "word_count": 263,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/epic.metadata.json"
+}

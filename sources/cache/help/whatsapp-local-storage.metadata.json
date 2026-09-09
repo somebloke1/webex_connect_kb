@@ -1,0 +1,39 @@
+{
+  "category": "Assets",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257962",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "5359e925791cad99303bceae0fcd8974394dbe37be75b0eab3547b466579a615",
+    "source_path": "30beb10c5f43649ac343f0e01c0891da60744ad3a08adc4777ae5d73a9a26151",
+    "text_path": "7bc2ef1eada21390067f699f2fa1b81a31cc3e9e045be0370cc194004243196b"
+  },
+  "headings": [
+    "WhatsApp Data Localization",
+    "Localized Data",
+    "Updating Local Storage",
+    "Updating Local Storage for New Asset",
+    "Updating local storage of an Existing Asset",
+    "🚧Alert",
+    "📘Note"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/whatsapp-local-storage.md",
+  "resolved_url": "https://help.webexconnect.io/docs/whatsapp-local-storage",
+  "retrieved_at": "2026-09-08T23:29:05+00:00",
+  "sha256_html_response": "f26be3296a94c6b25b862782cb086c1a79e7091292b08f80e97e6e7733c6de5e",
+  "sha256_source_body": "30beb10c5f43649ac343f0e01c0891da60744ad3a08adc4777ae5d73a9a26151",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/whatsapp-local-storage.source.md",
+  "source_updated_at": "2025-08-22T11:58:46.639Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/whatsapp-local-storage.txt",
+  "title": "Local Storage",
+  "url": "https://help.webexconnect.io/docs/whatsapp-local-storage",
+  "word_count": 718,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/whatsapp-local-storage.metadata.json"
+}

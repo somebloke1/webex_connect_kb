@@ -1,0 +1,35 @@
+{
+  "api_metadata_path": "sources/cache/developer/rcs-apis.api.json",
+  "category": "MULTI CHANNEL COMMUNICATION API",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f66ff",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "0151b8de7072494bbec35266be0439e0917bde2afe7a93ec1c21d674b5008991",
+    "source_path": "38cd84be0d6643186f6d2474d503ea7488b342c20046367ca700ab67803cfebd",
+    "text_path": "94c30c6e1e0dddd5633e0bcf269f74ed175f7f627e9d8bb665927f4502d5758e"
+  },
+  "headings": [
+    "Pre-requisite",
+    "APIs for Sending RCS Messages:"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/rcs-apis.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/rcs-apis",
+  "retrieved_at": "2026-09-08T23:31:41+00:00",
+  "sha256_api_metadata": "575f65b7d8dc3ea0b617314bc47e22705dc85fc80ee114e6faa20ada4e8aafe2",
+  "sha256_html_response": "cb1c1857c1222fd940c1705127e0dcbb86de881bc417fa37139b751722017317",
+  "sha256_source_body": "38cd84be0d6643186f6d2474d503ea7488b342c20046367ca700ab67803cfebd",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/rcs-apis.source.md",
+  "source_updated_at": "2026-04-16T05:36:23.979Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/rcs-apis.txt",
+  "title": "RCS APIs",
+  "url": "https://developers.webexconnect.io/reference/rcs-apis",
+  "word_count": 240,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/rcs-apis.metadata.json"
+}

@@ -1,0 +1,25 @@
+<<prodname>> makes it easy to send and receive voice calls programmatically by offering a rich set of RESTful APIs and webhooks.
+
+## APIs for Sending Voice Messages
+
+The following APIs are available for sending voice messages using <<prodname>>:
+
+- **[Voice API v1](https://developers.webexconnect.io/reference/voice-only-api-v1-make-outbound-calls)** - Allows developers to build voice applications, enabling features like Making and receiving calls, Interactive voice response, Call recording, Text-to-speech, Speech-to-text, Answering machine detection, and more.  
+  Voice API v1 can be used for both simple outbound notifications and [Programmable Voice](https://developers.webexconnect.io/reference/voice-only-api-v1-programmable-voice-api), which is an interactive two-way voice experience.
+- **[Send Message API v2](https://developers.webexconnect.io/reference/send-message-api-v2-make-voice-call) ** - Makes outbound calls with an option to schedule and expire. 
+
+| API                                         | Recommended For                                                               | API-Specific Features                                                                                  |
+| :------------------------------------------ | :---------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------- |
+| Voice API v1                                | Programmable voice, Interactive voice response, Inbound and Outbound calling. | Pre-recorded messages, Speech-to-text, Text-to-speech, Interactive voice response, and Call recording. |
+| Make a voice call using Send Message API v2 | Outbound notifications                                                        | Pre-recorded messages, Text-to-speech, Contact policy, Scheduling, and Expiry time.                    |
+
+## APIs to Retrieve the Status and Recording of a Voice Call Request
+
+The following APIs are available for making voice calls using <<prodname>>:
+
+- **Get Call Status** - Retrieve the status of an individual call. 
+  - [Get Call Status Using Voice API v1](https://developers.webexconnect.io/reference/voice-only-api-v1-get-call-status-api)
+  - [Get Voice Call Status Using Send Message API v2 ](https://developers.webexconnect.io/reference/send-message-api-v2-get-voice-call-status-api) 
+- **Get Call Recording** - Retrieve call recordings of a specific call.
+  - [Get Call Recordings Using Voice API v1](https://developers.webexconnect.io/reference/voice-only-api-v1-get-call-recordings-api)
+  - [Get Voice Call Recordings Using Send Message API v2](https://developers.webexconnect.io/reference/send-message-api-v2-get-voice-call-recordings-api)

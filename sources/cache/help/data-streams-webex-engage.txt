@@ -1,0 +1,63 @@
+## 📘
+Note:
+
+Data stream support in Webex Engage is exclusively available for the Apple Messages for Business (AMB) channel, specifically for the Typing Indicator event.
+
+## 
+
+Enabling Data Streams for Apple Business for Messages (AMB) assets
+
+To enable Data streams for AMB assets, follow these steps:
+
+- Provision your Apple Messages for Business asset.
+
+- Login to Webex Connect and navigate to Assets > Integrations.
+
+- Search for the Integration: Webex Engage Streaming.
+
+- Choose Manage from the Actions drop-down list.
+
+This integration is enabled by default for all channels on the Webex Engage Streaming screen.
+
+ [Image: Interface showing options to enable Data Streams for Apple Business for Messages (AMB) assets] 
+Screenshot displaying the enabling of Data Streams for Apple Business for Messages (AMB) assets.
+
+- Uncheck all channels except the AMB channel from the Channels drop-down list, as we only support that one.
+
+- Click Save.
+
+## 📘
+Note:
+
+Even though the Integration lists events as Incoming Events and Messages, Webex Engage does not process incoming messages on channels through this method. You can only stream customer Typing Indicator events alone to the Live Agent.
+
+## 
+
+Enabling Data Streams for select assets
+
+To turn ON the Webex Engage Stream for select AMB assets, follow these steps:
+
+- Login to Webex Connect and navigate to Assets > Integrations.
+
+- Search for the Integration: Webex Engage Streaming.
+
+- Choose Manage from the Actions drop-down list.
+
+This integration is enabled by default for all channels on the Webex Engage Streaming screen.
+
+- Change the setting to Choose to enable at an asset level.
+
+- Click Save.
+
+- Navigate to Assets > Apps.
+
+ [Image: Screenshot displaying the enabling of Data Streams for Apple Business for Messages (AMB) assets] 
+Screenshot displaying the enabling of Data Streams for Apple Business for Messages (AMB) assets
+
+- Find your Apple Messages Asset that you would like to turn ON the data streams and Choose Manage from the Actions drop-down list.
+
+- Tun ON the Data Stream toggle.
+
+- Choose Webex Engage Streaming from the Integration drop-down list.
+
+- Click Save.

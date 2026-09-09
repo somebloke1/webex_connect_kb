@@ -1,0 +1,37 @@
+{
+  "api_metadata_path": "sources/cache/developer/using-jwt-for-api-authentication.api.json",
+  "category": "GETTING STARTED",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f6595",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "73175e662337f10fc21361e43c502d3255e00657a151d2eac147db8274a8a12c",
+    "source_path": "3ae951151ea67e529af44da359ecee16167a62d262c1065b9779167c0ae21128",
+    "text_path": "3120c5dca96df57796d80f1f8fb8ef5e5dc598c5059b68765f0a3a3fa9ed62d5"
+  },
+  "headings": [
+    "Header",
+    "Payload",
+    "Verify Signature",
+    "Steps for Setting Up JWT Bearer Authentication in Postman:"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/using-jwt-for-api-authentication.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/using-jwt-for-api-authentication",
+  "retrieved_at": "2026-09-08T23:31:39+00:00",
+  "sha256_api_metadata": "575f65b7d8dc3ea0b617314bc47e22705dc85fc80ee114e6faa20ada4e8aafe2",
+  "sha256_html_response": "290147356a0995fd4ac667f66b58163b305f722a71d75925a846a829e0d0bb8f",
+  "sha256_source_body": "3ae951151ea67e529af44da359ecee16167a62d262c1065b9779167c0ae21128",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/using-jwt-for-api-authentication.source.md",
+  "source_updated_at": "2026-04-16T05:30:17.271Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/using-jwt-for-api-authentication.txt",
+  "title": "Using JWT for API Authentication",
+  "url": "https://developers.webexconnect.io/reference/using-jwt-for-api-authentication",
+  "word_count": 678,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/developer/using-jwt-for-api-authentication.metadata.json"
+}

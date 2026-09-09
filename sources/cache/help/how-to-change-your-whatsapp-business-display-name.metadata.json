@@ -1,0 +1,35 @@
+{
+  "category": "Assets",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd81825791f",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "27e74bcab26e978eb8ba608f67f42851816d41ce5e3ace802d46d790132cd4a4",
+    "source_path": "20632fecc14c70aa93e6c3d26f7253d1b0e10a898ea336bea6fa3664c449d880",
+    "text_path": "171a6ba4b4186d642144c1413d706302c0b93d686191e9959c2fbe24aee6665b"
+  },
+  "headings": [
+    "Change your display name",
+    "🚧",
+    "📘Display Name review required for increasing Messaging Limit."
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/how-to-change-your-whatsapp-business-display-name.md",
+  "resolved_url": "https://help.webexconnect.io/docs/how-to-change-your-whatsapp-business-display-name",
+  "retrieved_at": "2026-09-08T23:29:05+00:00",
+  "sha256_html_response": "5073646b665f67630465f499303f4912fecd0489b5e8c25cddac821019dfeb61",
+  "sha256_source_body": "20632fecc14c70aa93e6c3d26f7253d1b0e10a898ea336bea6fa3664c449d880",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/how-to-change-your-whatsapp-business-display-name.source.md",
+  "source_updated_at": "2026-04-15T10:22:23.222Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/how-to-change-your-whatsapp-business-display-name.txt",
+  "title": "How to Change Your WhatsApp Business Display Name",
+  "url": "https://help.webexconnect.io/docs/how-to-change-your-whatsapp-business-display-name",
+  "word_count": 345,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/how-to-change-your-whatsapp-business-display-name.metadata.json"
+}

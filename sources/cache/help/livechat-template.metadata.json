@@ -1,0 +1,37 @@
+{
+  "category": "TOOLS",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd81825788f",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "a47e85c2f7724a16864884cc51f72c5643a28a82549a45d888e82fc522dfb102",
+    "source_path": "88ef79237e923d2eb6cb8b03ae4c008baa8e52eda0459d017ef65ec31b852c68",
+    "text_path": "76538f7d5d62d4eda15066a1f560adcdf41fa4a8e6bb5582345f2683ee0de834"
+  },
+  "headings": [
+    "📘Sending Messages",
+    "Configure RichText Message",
+    "Configure Form Message",
+    "📘Character Limits and Validations",
+    "📘Character Limits and Validations for Webex Engage/ Cisco Webex Contact Center"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/livechat-template.md",
+  "resolved_url": "https://help.webexconnect.io/docs/livechat-template",
+  "retrieved_at": "2026-09-08T23:29:33+00:00",
+  "sha256_html_response": "a8a1a8dd07c799128725f4dcea2a052f94cda103e887f64b40b8b8587f88a2ab",
+  "sha256_source_body": "88ef79237e923d2eb6cb8b03ae4c008baa8e52eda0459d017ef65ec31b852c68",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/livechat-template.source.md",
+  "source_updated_at": "2025-03-01T17:40:50.486Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/livechat-template.txt",
+  "title": "Live Chat/In-App Messaging",
+  "url": "https://help.webexconnect.io/docs/livechat-template",
+  "word_count": 820,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/livechat-template.metadata.json"
+}

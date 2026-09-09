@@ -1,0 +1,325 @@
+{
+  "_id": "6a675233ec1c893d8a7f67f9:6a675233ec1c893d8a7f662f",
+  "components": {
+    "securitySchemes": {}
+  },
+  "info": {
+    "title": "WhatsApp Template Messages",
+    "version": "6.20.0"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/": {
+      "post": {
+        "deprecated": false,
+        "description": "Send business initiated messages using message templates beyond the 24 hour window to your customers. A message template can be text-based, media-based, or interactive.  _Note: Modify YourRegion in the URL to the right to reflect your tenant’s region. See [Know your endpoint page](https://developers.imiconnect.io/reference/endpoints)._",
+        "operationId": "whatsapp-template-messages",
+        "parameters": [
+          {
+            "description": "Applicable when you want to use service key for API authentication. Available under API tab within a service in your WebexConnect tenant.",
+            "in": "header",
+            "name": "key",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "JSON Web Token (JWT) for authentication (e.g. bearer <token>) used alternatively to Service Key.",
+            "in": "header",
+            "name": "authorization",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "examples": {
+                "Template with Text Header": {
+                  "value": {
+                    "appid": "WhatsApp App Id",
+                    "callbackData": "",
+                    "channels": {
+                      "OTT-Messaging": {
+                        "wa": {
+                          "identity_key_hash": "njbYlYcxxxxx"
+                        }
+                      }
+                    },
+                    "correlationid": "",
+                    "deliverychannel": "whatsapp",
+                    "destination": [
+                      {
+                        "waid": [
+                          "waid"
+                        ]
+                      }
+                    ],
+                    "message": {
+                      "parameters": {
+                        "{{headerTextVariable}}": "Your Header text",
+                        "{{variable1}}": "",
+                        "{{variable2}}": ""
+                      },
+                      "template": "<Template-ID>"
+                    },
+                    "notifyurl": "",
+                    "notifyurlAuthId": "TNPBXKT09U"
+                  }
+                }
+              },
+              "schema": {
+                "properties": {
+                  "appid": {
+                    "description": "Contains the applicationid",
+                    "type": "string"
+                  },
+                  "callbackData": {
+                    "description": "Data that you have configured to receive on the notify Url. This is configured as a part of the request.",
+                    "type": "string"
+                  },
+                  "channels": {
+                    "description": "JSON object for configuring Channels",
+                    "properties": {
+                      "wa": {
+                        "description": "JSON Object",
+                        "properties": {
+                          "identity_key_hash": {
+                            "description": "Pass this value to validate the identity of your customer. More details on Identity Key Hash feature are documented [here](https://help.webexconnect.io/docs/whatsapp-node#identity-hash-field).",
+                            "type": "string"
+                          }
+                        },
+                        "type": "object"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  "correlationid": {
+                    "description": "The correlationid is a unique identifier that you can attach to every request as a reference a particular transaction or event. This is configured as a part of the request.",
+                    "type": "string"
+                  },
+                  "deliverychannel": {
+                    "default": "whatsapp",
+                    "description": "Channel used to send the message i.e., WhatsApp in this case.",
+                    "type": "string"
+                  },
+                  "destination": {
+                    "description": "Configure message recipient details as part of destination JSON object.",
+                    "items": {
+                      "properties": {}
+                    },
+                    "type": "array"
+                  },
+                  "message": {
+                    "description": "Template message configuration",
+                    "properties": {
+                      "image": {
+                        "description": "JSON object for image configuration",
+                        "properties": {
+                          "link": {
+                            "description": "The media URL of the image ending with the file format. This is a mandatory parameter. Refer to [this](https://help.webexconnect.io/docs/supported-file-types-for-channels#whatsapp) page for more details about mime-type and media size",
+                            "type": "string"
+                          }
+                        },
+                        "type": "object"
+                      },
+                      "parameters": {
+                        "description": "JSON object for template parameters configuration. Construct your JSON payload by referring to the Send Message V1 documentation on WhatsApp Templates._Refer to [this](https://developers.webexconnect.io/reference/whatsapp-api-docs#template-messages-text-based-proactive-notification-message) page for more infromation_",
+                        "properties": {
+                          "document": {
+                            "description": "Configure Media header variable. Configure parameter key as document for a document type header.",
+                            "properties": {
+                              "link": {
+                                "description": "The media URL of the document ending with the file format. This is a mandatory parameter. Refer to [this](https://help.webexconnect.io/docs/supported-file-types-for-channels#whatsapp) page for more details about mime-type and media size.",
+                                "type": "string"
+                              }
+                            },
+                            "type": "object"
+                          },
+                          "image": {
+                            "description": "Configure Media header variable. Configure parameter key as image for a image type header",
+                            "properties": {
+                              "link": {
+                                "description": "The media URL of the image ending with the file format. This is a mandatory parameter. Refer to [this](https://help.webexconnect.io/docs/supported-file-types-for-channels#whatsapp) page for more details about mime-type and media size",
+                                "type": "string"
+                              }
+                            },
+                            "type": "object"
+                          },
+                          "otp": {
+                            "description": "Configure value of the OTP. This is applicable only in case of Authentication template. Specify parameter key as 'otp'.",
+                            "properties": {
+                              "type": {
+                                "description": "Specify type as ‘otp' under the otp object to pass the code value within the 'value field’.",
+                                "type": "string"
+                              },
+                              "value": {
+                                "description": "Configure the OTP value without spaces with maximum character supported upto 15 characters.",
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type",
+                              "value"
+                            ],
+                            "type": "object"
+                          },
+                          "quickReply": {
+                            "description": "Configure upto three quick reply buttons. Specify parameter key as 'quickReply'.",
+                            "items": {
+                              "properties": {
+                                "button_text": {
+                                  "description": "Configure the value of the <buttontext> as the name of the button specified during template creation here.",
+                                  "type": "string"
+                                },
+                                "payload": {
+                                  "description": "Configure unique button payload. This will be returned back as part of Postback event in Webex Connect incoming components.",
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "button_text",
+                                "payload"
+                              ],
+                              "type": "object"
+                            },
+                            "type": "array"
+                          },
+                          "video": {
+                            "description": "Configure Media header variable. Configure parameter key as video for a video type header.",
+                            "properties": {
+                              "link": {
+                                "description": "The media URL of the video ending with the file format. This is a mandatory parameter. Refer to [this](https://help.webexconnect.io/docs/supported-file-types-for-channels#whatsapp) page for more details about mime-type and media size.",
+                                "type": "string"
+                              }
+                            },
+                            "type": "object"
+                          }
+                        },
+                        "type": "object"
+                      },
+                      "template": {
+                        "description": "Specifies template ID. Copy the Template Id form Tools>Template page.",
+                        "type": "string"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  "notifyurl": {
+                    "description": "Configure a URL to get notifications on delivery reports for a WhatsApp message. This field accepts only a valid URL or a variable. If an invalid URL is passed in API request or via a variable, then such request will not be considered eligible for retries.",
+                    "type": "string"
+                  },
+                  "notifyurlAuthId": {
+                    "description": "Unique Authentication ID.",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "deliverychannel",
+                  "appid",
+                  "destination",
+                  "message"
+                ],
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{\n    \"response\": [\n        {\n            \"code\": \"1001\",\n            \"transid\": \"3f09295d-9eb3-4c9e-8ee8-a3272e5f00c1\",\n            \"description\": \"Queued\"\n        }\n    ]\n}"
+                  }
+                },
+                "schema": {
+                  "properties": {
+                    "response": {
+                      "items": {
+                        "properties": {
+                          "code": {
+                            "example": "1001",
+                            "type": "string"
+                          },
+                          "description": {
+                            "example": "Queued",
+                            "type": "string"
+                          },
+                          "transid": {
+                            "example": "3f09295d-9eb3-4c9e-8ee8-a3272e5f00c1",
+                            "type": "string"
+                          }
+                        },
+                        "type": "object"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "200"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{\n  \"response\": {\n    \"code\": \"7001\",\n    \"description\": \"Authentication failed.\",\n    \"transid\": \"7670c9a8-131f-4166-ac30-17f6109340d6\"\n  }\n}"
+                  }
+                },
+                "schema": {
+                  "properties": {
+                    "response": {
+                      "properties": {
+                        "code": {
+                          "example": "7001",
+                          "type": "string"
+                        },
+                        "description": {
+                          "example": "Authentication failed.",
+                          "type": "string"
+                        },
+                        "transid": {
+                          "example": "7670c9a8-131f-4166-ac30-17f6109340d6",
+                          "type": "string"
+                        }
+                      },
+                      "type": "object"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "400"
+          }
+        },
+        "summary": "WhatsApp Template Messages"
+      }
+    }
+  },
+  "security": [
+    {}
+  ],
+  "servers": [
+    {
+      "url": "https://{YourRegion}.webexconnect.io/resources/v1/messaging",
+      "variables": {
+        "YourRegion": {
+          "default": "YourRegion"
+        }
+      }
+    }
+  ],
+  "x-readme": {
+    "explorer-enabled": true,
+    "headers": [],
+    "proxy-enabled": true
+  },
+  "x-readme-fauxas": true
+}

@@ -1,0 +1,37 @@
+{
+  "api_metadata_path": "sources/cache/developer/whatsapp-template-messages.api.json",
+  "category": "MULTI CHANNEL COMMUNICATION API",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f662f",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "108e7fa23ce49cbbe0f9f1983e6be2aec0ce369e38fdd69aa378a6997b196c18",
+    "source_path": "c4e1041f9db6426f513a78ce712c054f04161695b76ef3a3a0781e5dbe831fa8",
+    "text_path": "e0bba699f615a2f806bbe967e2ba048c7240637f31ba7ae38ae12fdd9e4495fd"
+  },
+  "headings": [
+    "Other Template Types",
+    "Error Codes"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/whatsapp-template-messages.md",
+  "openapi_path": "sources/cache/openapi/7b7e378c386ee3186e71f8acf0ee920bc953436df8bce8bcea065ae277e2c75d.json",
+  "resolved_url": "https://developers.webexconnect.io/reference/whatsapp-template-messages",
+  "retrieved_at": "2026-09-08T23:31:43+00:00",
+  "sha256_api_metadata": "7e8a416bd0a6403ced98d8e0447706bb748e2536e1ca0abb67eb777c4f7f532a",
+  "sha256_html_response": "98f62e1b87f3da8ffce384c3d21faeec770b32b596e3c2cf4b23236f01215fc7",
+  "sha256_openapi": "7b7e378c386ee3186e71f8acf0ee920bc953436df8bce8bcea065ae277e2c75d",
+  "sha256_source_body": "c4e1041f9db6426f513a78ce712c054f04161695b76ef3a3a0781e5dbe831fa8",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/whatsapp-template-messages.source.md",
+  "source_updated_at": "2026-05-12T12:35:00.602Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/whatsapp-template-messages.txt",
+  "title": "WhatsApp Template Messages",
+  "url": "https://developers.webexconnect.io/reference/whatsapp-template-messages",
+  "word_count": 3832,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/developer/whatsapp-template-messages.metadata.json"
+}

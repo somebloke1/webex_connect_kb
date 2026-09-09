@@ -1,0 +1,41 @@
+{
+  "category": "Assets",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182578b2",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "a659c9078b96c834664085564e1802c78ce896e444fccad4b5c1ce14ad415c9a",
+    "source_path": "383764ea7bfda5928ce1b184a3170b6b4572ec782aedd3e0dbaffd4462af27c8",
+    "text_path": "caa4ab0c34a30dad80bf35482d90090b2cf6d01df5d64653753a517a4df63845"
+  },
+  "headings": [
+    "Brand/Company Details",
+    "Tax Details",
+    "Business Details / Stocks and Business Details",
+    "Company Contact & Address",
+    "Reseller Information",
+    "Organization-Type Specific Requirements",
+    "Best Practices for Completing the Form",
+    "Information for Different Organization Types",
+    "How to enter the correct Tax ID"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/details-for-creating-brands.md",
+  "resolved_url": "https://help.webexconnect.io/docs/details-for-creating-brands",
+  "retrieved_at": "2026-09-08T23:29:00+00:00",
+  "sha256_html_response": "7d632eeb1e63669986fc523164def7df9c4bac640a97b6c62ead5daa875e1994",
+  "sha256_source_body": "383764ea7bfda5928ce1b184a3170b6b4572ec782aedd3e0dbaffd4462af27c8",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/details-for-creating-brands.source.md",
+  "source_updated_at": "2025-09-10T10:52:02.565Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/details-for-creating-brands.txt",
+  "title": "Details for Creating Brands",
+  "url": "https://help.webexconnect.io/docs/details-for-creating-brands",
+  "word_count": 1333,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/details-for-creating-brands.metadata.json"
+}

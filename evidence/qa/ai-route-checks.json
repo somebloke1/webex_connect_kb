@@ -1,0 +1,9 @@
+{
+  "manifest_json": "pass",
+  "template_json_compatible_yaml": "pass",
+  "route_count": 12,
+  "route_ids_unique": true,
+  "missing_manifest_paths": [],
+  "required_sections_missing_from_template": [],
+  "missing_local_links_or_Studio_anchors": []
+}

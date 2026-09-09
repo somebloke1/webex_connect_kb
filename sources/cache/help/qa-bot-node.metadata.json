@@ -1,0 +1,38 @@
+{
+  "category": "SERVICES & FLOWS",
+  "deprecated": true,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182578f7",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "f65e7bc64d30283b9bd587ae265ece25235355af15ab8492cf64f458ff08625f",
+    "source_path": "93c4b6ee8133ca76014eeeb1a03619eca3e21b8724a5fd123f66933337942d3f",
+    "text_path": "99f91e088379afcf29280486695a50be39f80ab9f02b5cb528241c5cd85ab50c"
+  },
+  "headings": [
+    "📘Node version",
+    "Methods and Outcomes",
+    "Method Name - Process Message",
+    "Method name - Close Session",
+    "Node outcomes",
+    "Node versions"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/qa-bot-node.md",
+  "resolved_url": "https://help.webexconnect.io/docs/qa-bot-node",
+  "retrieved_at": "2026-09-08T23:28:57+00:00",
+  "sha256_html_response": "a3b2cdf5534cb0be85d6c91ec6a7415f4cadb5196ecc17863269b497189917ec",
+  "sha256_source_body": "93c4b6ee8133ca76014eeeb1a03619eca3e21b8724a5fd123f66933337942d3f",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/qa-bot-node.source.md",
+  "source_updated_at": "2025-12-19T05:21:07.810Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/qa-bot-node.txt",
+  "title": "QnA Bot Node",
+  "url": "https://help.webexconnect.io/docs/qa-bot-node",
+  "word_count": 1070,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/qa-bot-node.metadata.json"
+}

@@ -1,0 +1,25 @@
+After you provision your Apple Messages for Business (AMB) account as a channel asset on Webex Connect, you need to register it with WxEngage to use it for your business’s contact center use case. In addition, Webex Engage requires a Connect service to deliver outbound messages from your contact center, so kindly ensure you have created a service to register your Business account with Engage. Refer to the procedure for creating a WxConnect service.
+
+To register your AMB account with WxEngage, follow the below steps:
+
+- Navigate to Assets > Apps.
+
+- Click the AMB channel asset you’d like to register from the Apps column.
+
+The following screen appears.
+
+ [Image: Screenshot of Managing the Apple Messages for Business App Page.] 
+Screenshot of Managing the Apple Messages for Business App Page
+
+- Click Register to Webex Engage.
+
+The following pop-up window appears.
+
+ [Image: Screenshot of Register to Webex Engage] 
+Screenshot of Register to Webex Engage
+
+- Choose a Service that you created in the pre-requisite step from the Select Service drop-down and click Register.
+
+- Your channel asset will be linked to the Default Team on WxEngage by default. Suppose you want to change this setting or share the asset with multiple teams to facilitate transfers or enable agent-initiated outbound communications from different teams. In that case, you can manage these configurations in your Engage tenant's Admin console. For more information on managing your assets in Engage, please refer to the provided link.
+
+- After seeing the success toast message on WxConnect, you can log in to your WxEngage tenant to confirm that your Facebook Messenger channel asset has been synced. Then, you can continue with further contact center configurations from the WxEngage Admin console.

@@ -1,0 +1,1 @@
+This API is used to delete an app profile for a given device ID and customer ID combination.

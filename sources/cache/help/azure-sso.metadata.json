@@ -1,0 +1,42 @@
+{
+  "category": "ADMINISTRATION",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257906",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "9b6f0bf8e785ead9690e404c8586c59ebbaf8528015eb82a2a6cc091434196bf",
+    "source_path": "c037e06d00f268b567b580636a0a750542aab2ca1c456a63f56e6212c8b499ba",
+    "text_path": "b81d42b2bcf6f67eab4de825cdfba2a3b64aa8ffc5cf9a75a9622828a72066c8"
+  },
+  "headings": [
+    "Configure an Azure AD Identity Provider",
+    "Configure SSO on Azure",
+    "📘Note",
+    "Setting up  SAML Configuration",
+    "📘Note",
+    "📘Attributes in assertion data",
+    "Configuring SSO on Webex Connect",
+    "📘Note:",
+    "Testing the SSO Connection",
+    "📘NOTE"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/azure-sso.md",
+  "resolved_url": "https://help.webexconnect.io/docs/azure-sso",
+  "retrieved_at": "2026-09-08T23:29:36+00:00",
+  "sha256_html_response": "dc8368ef6922192048f516ce50a8aaaa72f379ffdb02164a29355517acc21465",
+  "sha256_source_body": "c037e06d00f268b567b580636a0a750542aab2ca1c456a63f56e6212c8b499ba",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/azure-sso.source.md",
+  "source_updated_at": "2025-03-01T16:18:59.307Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/azure-sso.txt",
+  "title": "Azure SSO",
+  "url": "https://help.webexconnect.io/docs/azure-sso",
+  "word_count": 909,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/azure-sso.metadata.json"
+}

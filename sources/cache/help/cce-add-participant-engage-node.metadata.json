@@ -1,0 +1,35 @@
+{
+  "category": "Webex Connect and Cisco Contact Center Enterprise System (CCE)",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182578d2",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "56480e8fb37732c33cdcb6cfb54baefbec69ad17fc097964ea3cf98527a0f900",
+    "source_path": "148cc55103e7043e3d2b320944e9a3827527cd3339625f52d54d350f48fe4284",
+    "text_path": "9751097239fada1311d7de139799736ec293a266c8074e4612d2aba6b1dc2715"
+  },
+  "headings": [
+    "Authorization",
+    "Methods and Outcomes",
+    "📘Note"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/cce-add-participant-engage-node.md",
+  "resolved_url": "https://help.webexconnect.io/docs/cce-add-participant-engage-node",
+  "retrieved_at": "2026-09-08T23:29:24+00:00",
+  "sha256_html_response": "a794755c12ffc313b131adbca77577c7b2e9e8cf1623a04897f6b07109ce2916",
+  "sha256_source_body": "148cc55103e7043e3d2b320944e9a3827527cd3339625f52d54d350f48fe4284",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/cce-add-participant-engage-node.source.md",
+  "source_updated_at": "2026-04-14T07:37:40.267Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/cce-add-participant-engage-node.txt",
+  "title": "Add Participant - CCE",
+  "url": "https://help.webexconnect.io/docs/cce-add-participant-engage-node",
+  "word_count": 226,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/cce-add-participant-engage-node.metadata.json"
+}

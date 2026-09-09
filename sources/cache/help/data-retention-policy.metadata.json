@@ -1,0 +1,31 @@
+{
+  "category": "DATA MANAGEMENT",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd81825783b",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "c4c3886e217f3878d2507364bf829edc9faa94f3f903e559a5f8c53d8edc0fea",
+    "source_path": "9207e51d3a55baa6a912f6d5ae737aa0e7afdd535ec78c67ce867ba93158e864",
+    "text_path": "24b67aadf1e60d070226d30f312985b421c500d9cfdaa41e45116e513d3a4a72"
+  },
+  "headings": [],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/data-retention-policy.md",
+  "resolved_url": "https://help.webexconnect.io/docs/data-retention-policy",
+  "retrieved_at": "2026-09-08T23:29:39+00:00",
+  "sha256_html_response": "ea8054c12b402854a26074239072f8a4d6fc19cb9003141aa7592959da31ddf7",
+  "sha256_source_body": "9207e51d3a55baa6a912f6d5ae737aa0e7afdd535ec78c67ce867ba93158e864",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/data-retention-policy.source.md",
+  "source_updated_at": "2025-10-08T14:08:53.534Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/data-retention-policy.txt",
+  "title": "Data Retention Policy",
+  "url": "https://help.webexconnect.io/docs/data-retention-policy",
+  "word_count": 170,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/data-retention-policy.metadata.json"
+}

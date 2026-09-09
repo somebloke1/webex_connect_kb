@@ -1,0 +1,233 @@
+{
+  "api": {
+    "examples": {
+      "codes": [
+        {
+          "code": "-X GET https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/segments\n-H \"Content-Type : application/json\"\n-H \"secretKey: {secretKey}\"",
+          "language": "curl"
+        },
+        {
+          "code": "var request=require(\"request\");\n var options = {\n          method: 'GET',\n          uri: ' https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/segments',\n          headers: {\n            'Content-Type': 'application/json',\n\t'secretKey': '{secretKey}'\n            }\n        };\n  request(options, function(error, response, body) {\n               if(error){\n                  console.log(error);\n             }else{\n                  console.log(response);\n            }\n        });",
+          "language": "json",
+          "name": "Node"
+        },
+        {
+          "code": "require 'httparty'\n# Create the HTTP objects and post request\nhttp = HTTParty.get(\"https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/segments\",\n    :headers => {'Content-Type' => 'application/json',\n                          'secretKey ' => '{secretKey}’\n            }\n)\n# Print on console\nputs http",
+          "language": "ruby"
+        },
+        {
+          "code": "var data = null;\n\nvar xhr = new XMLHttpRequest();\n\nxhr.addEventListener(\"readystatechange\", function () {\n  if (this.readyState === this.DONE) {\n    console.log(this.responseText);\n  }\n});\n\nxhr.open(\"GET\", \" https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/segments\");\nxhr.setRequestHeader(\"Content-Type\", \"application/json\");\nxhr.setRequestHeader(\"secretKey\", \"{secretKey}\");\nxhr.send(data);",
+          "language": "javascript"
+        },
+        {
+          "code": "import requests\n\nurl = \" https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/segments\"\n\nheaders = {'Content-Type': 'application/json', 'secretKey': '{secretKey}’}\n\nresponse = requests.request(\"GET\", url, headers=headers)\n\nprint(response.text)",
+          "language": "python"
+        }
+      ]
+    },
+    "settings": "",
+    "results": {
+      "codes": [
+        {
+          "status": 200,
+          "language": "json",
+          "code": "{\n\t\"code\" : \"0\",\n  \"description\" : \"success\",\n  \"trans_id\" : \"0c19ad72-179c-4d89-bf6d-2e104e3d62f5\",\n  \"segments\" : [{\n\t\t\t\"id\" : \"59424c2ce4b0649ee1ef90ba\",\n\t\t\t\"criteria\" : \"News\",\n\t\t\t\"created_on\" : \"2017-06-15T14:28:20.263Z\",\n\t\t\t\"name\" : \"RTTopicCriteria\",\n\t\t\t\"updated_on\" : \"2020-06-15T15:19:44.102Z\"\n\t\t}, {\n\t\t\t\"id\" : \"59425adde4b0649ee1ef90bc\",\n\t\t\t\"criteria\" : \"Channels\",\n\t\t\t\"created_on\" : \"2020-06-15T15:19:44.102Z\",\n\t\t\t\"name\" : \"channel\",\n\t\t\t\"updated_on\" : \"2020-06-15T18:19:44.102Z\"\n\t\t}\n\t]\n}",
+          "name": "OK"
+        }
+      ]
+    },
+    "auth": "required",
+    "params": [
+      {
+        "name": "Content-Type",
+        "type": "string",
+        "enumValues": "",
+        "default": "",
+        "desc": "Application/JSON",
+        "required": false,
+        "in": "header",
+        "ref": "",
+        "_id": "5f4132d0477f8e02b4cca0d6",
+        "id": "5f4132d0477f8e02b4cca0d6"
+      },
+      {
+        "name": "secretKey",
+        "type": "string",
+        "enumValues": "",
+        "default": "",
+        "desc": "Client key that can be accessed from your app asset configuration page on imiconnect platform",
+        "required": false,
+        "in": "header",
+        "ref": "",
+        "_id": "5f4132d0477f8e02b4cca0d5",
+        "id": "5f4132d0477f8e02b4cca0d5"
+      },
+      {
+        "name": "inappid",
+        "type": "string",
+        "enumValues": "",
+        "default": "",
+        "desc": "The unique identifier corresponding to the app asset",
+        "required": false,
+        "in": "path",
+        "ref": "",
+        "_id": "601950e462e9e00073e67500",
+        "id": "601950e462e9e00073e67500"
+      }
+    ],
+    "url": "/apps/{inappid}/segments",
+    "method": "get",
+    "apiSetting": "6a675233ec1c893d8a7f67bb"
+  },
+  "swagger": {
+    "path": "/apps/{inappid}/segments"
+  },
+  "oas_public_id": "@imiconnect-apis/v6.20.0#iy3h4gl45vtxu1",
+  "selected_openapi": {
+    "openapi": "3.1.0",
+    "info": {
+      "title": "Segment APIs",
+      "version": "6.20.0"
+    },
+    "servers": [
+      {
+        "url": "https://rtm.imiconnect.io/rtmsAPI/api/v1"
+      }
+    ],
+    "security": [
+      {
+        "sec0": []
+      }
+    ],
+    "path": "/apps/{inappid}/segments",
+    "method": "get",
+    "path_parameters": [],
+    "operation": {
+      "summary": "List Segments in an App",
+      "description": "This API is used to list the segments for a given appId.",
+      "operationId": "segment-apis-list",
+      "parameters": [
+        {
+          "name": "Content-Type",
+          "in": "header",
+          "description": "Application/JSON",
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "secretKey",
+          "in": "header",
+          "description": "Client key that can be accessed from your app asset configuration page on imiconnect platform",
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "inappid",
+          "in": "path",
+          "description": "The unique identifier corresponding to the app asset",
+          "schema": {
+            "type": "string"
+          },
+          "required": true
+        }
+      ],
+      "responses": {
+        "200": {
+          "description": "200",
+          "content": {
+            "application/json": {
+              "examples": {
+                "OK": {
+                  "value": "{\n\t\"code\" : \"0\",\n  \"description\" : \"success\",\n  \"trans_id\" : \"0c19ad72-179c-4d89-bf6d-2e104e3d62f5\",\n  \"segments\" : [{\n\t\t\t\"id\" : \"59424c2ce4b0649ee1ef90ba\",\n\t\t\t\"criteria\" : \"News\",\n\t\t\t\"created_on\" : \"2017-06-15T14:28:20.263Z\",\n\t\t\t\"name\" : \"RTTopicCriteria\",\n\t\t\t\"updated_on\" : \"2020-06-15T15:19:44.102Z\"\n\t\t}, {\n\t\t\t\"id\" : \"59425adde4b0649ee1ef90bc\",\n\t\t\t\"criteria\" : \"Channels\",\n\t\t\t\"created_on\" : \"2020-06-15T15:19:44.102Z\",\n\t\t\t\"name\" : \"channel\",\n\t\t\t\"updated_on\" : \"2020-06-15T18:19:44.102Z\"\n\t\t}\n\t]\n}"
+                }
+              },
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "code": {
+                    "type": "string",
+                    "example": "0"
+                  },
+                  "description": {
+                    "type": "string",
+                    "example": "success"
+                  },
+                  "trans_id": {
+                    "type": "string",
+                    "example": "0c19ad72-179c-4d89-bf6d-2e104e3d62f5"
+                  },
+                  "segments": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "example": "59424c2ce4b0649ee1ef90ba"
+                        },
+                        "criteria": {
+                          "type": "string",
+                          "example": "News"
+                        },
+                        "created_on": {
+                          "type": "string",
+                          "example": "2017-06-15T14:28:20.263Z"
+                        },
+                        "name": {
+                          "type": "string",
+                          "example": "RTTopicCriteria"
+                        },
+                        "updated_on": {
+                          "type": "string",
+                          "example": "2020-06-15T15:19:44.102Z"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "deprecated": false,
+      "x-readme": {
+        "code-samples": [
+          {
+            "language": "curl",
+            "code": "-X GET https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/segments\n-H \"Content-Type : application/json\"\n-H \"secretKey: {secretKey}\""
+          },
+          {
+            "language": "ruby",
+            "code": "require 'httparty'\n# Create the HTTP objects and post request\nhttp = HTTParty.get(\"https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/segments\",\n    :headers => {'Content-Type' => 'application/json',\n                          'secretKey ' => '{secretKey}’\n            }\n)\n# Print on console\nputs http"
+          },
+          {
+            "language": "javascript",
+            "code": "var data = null;\n\nvar xhr = new XMLHttpRequest();\n\nxhr.addEventListener(\"readystatechange\", function () {\n  if (this.readyState === this.DONE) {\n    console.log(this.responseText);\n  }\n});\n\nxhr.open(\"GET\", \" https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/segments\");\nxhr.setRequestHeader(\"Content-Type\", \"application/json\");\nxhr.setRequestHeader(\"secretKey\", \"{secretKey}\");\nxhr.send(data);"
+          },
+          {
+            "language": "python",
+            "code": "import requests\n\nurl = \" https://rtm.imiconnect.io/rtmsAPI/api/v1/apps/{inappid}/segments\"\n\nheaders = {'Content-Type': 'application/json', 'secretKey': '{secretKey}’}\n\nresponse = requests.request(\"GET\", url, headers=headers)\n\nprint(response.text)"
+          }
+        ],
+        "samples-languages": [
+          "curl",
+          "ruby",
+          "javascript",
+          "python"
+        ]
+      }
+    },
+    "components": {
+      "securitySchemes": {
+        "sec0": {
+          "type": "apiKey",
+          "in": "header",
+          "name": "key"
+        }
+      }
+    }
+  }
+}

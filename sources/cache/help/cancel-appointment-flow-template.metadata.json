@@ -1,0 +1,42 @@
+{
+  "category": "PreBUILT Integrations",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd8182579a9",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "b5c87df39cb9e08d67a6bb7297443062e05418e362472e1ca4347f444ac925b4",
+    "source_path": "64c04b1e27fc3c17335f15992bdba995df7d4df0b57e18a8bf0d8dd4bda08e46",
+    "text_path": "3b1c8c880d98ab346e1fcfe9eac990db990b2d7ccf23c5275adc991fd717de90"
+  },
+  "headings": [
+    "Overview",
+    "Pre-requisites",
+    "User Roles",
+    "Node Breakdown",
+    "Input & Output Variables",
+    "Input Variables (Configure AI Agent Event)",
+    "Output Variables",
+    "Error Handling",
+    "Script Analysis",
+    "Evaluate Script"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/cancel-appointment-flow-template.md",
+  "resolved_url": "https://help.webexconnect.io/docs/cancel-appointment-flow-template",
+  "retrieved_at": "2026-09-08T23:28:44+00:00",
+  "sha256_html_response": "c0742ec19c5eb74a1e5e4b5c6b0214ac14ad35f17132ef5617d484937690d672",
+  "sha256_source_body": "64c04b1e27fc3c17335f15992bdba995df7d4df0b57e18a8bf0d8dd4bda08e46",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/cancel-appointment-flow-template.source.md",
+  "source_updated_at": "2026-07-23T07:50:34.321Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/cancel-appointment-flow-template.txt",
+  "title": "Cancel Appointment Flow Template",
+  "url": "https://help.webexconnect.io/docs/cancel-appointment-flow-template",
+  "word_count": 451,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/cancel-appointment-flow-template.metadata.json"
+}

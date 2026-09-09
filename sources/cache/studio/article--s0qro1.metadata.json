@@ -1,0 +1,61 @@
+{
+  "url": "https://help.webex.com/article/s0qro1",
+  "title": "Use AI agents for customer interactions",
+  "source_family": "studio",
+  "category": "AI Agent Studio design and configuration",
+  "extractor": "webex_help_article",
+  "discovered_from": "https://help.webex.com/article/ncs9r37",
+  "selection_reason": "Administration guide or directly linked essential for scripted/autonomous agent behavior, tools, knowledge, language, and digital interaction configuration.",
+  "retrieved_at": "2026-09-08T23:48:49+00:00",
+  "status": "ok",
+  "source_kind": "official_documentation",
+  "http_status": 200,
+  "resolved_url": "https://help.webex.com/article/s0qro1",
+  "doc_version": null,
+  "source_updated_at": "2026-08-25T09:08:30.936Z",
+  "doc_id": "s0qro1",
+  "headings": [
+    "Prerequisites",
+    "Configure AI agents in flow",
+    "Configure custom events",
+    "Prerequisites",
+    "Configure AI agents in flow",
+    "Configure input and output variables in AI agent node",
+    "Node Outcomes"
+  ],
+  "word_count": 2284,
+  "sha256_source_body": "d2366a64bc0ea7dbfb1dbc9b0a875bcaa32d5a4c84d4cc0a9f875d66c31e440a",
+  "sha256_html_response": "4d43e56f00e3c7dff4161fdabcc3cc953265940d0e256ea3c2e31aead7d08876",
+  "extraction": "Webex Help public Next.js pageProps.chapters[*].divHtml for books or UIData for articles; navigation excluded; headings, table cells and original links preserved",
+  "deprecated": false,
+  "source_body_format": "html",
+  "publisher_metadata": {
+    "id": 233617,
+    "externalId": "s0qro1",
+    "language": "en-US",
+    "status": "COMPLETED",
+    "isBook": null,
+    "creationTime": "2024-10-10T05:00:48.520Z",
+    "lastModifiedTime": "2026-08-25T09:08:30.936Z",
+    "lastSyncTime": "2026-08-25T09:08:30.936Z",
+    "chapter_titles": [],
+    "table_count": 0,
+    "products": [
+      "Webex Contact Center"
+    ],
+    "version_note": "No product documentation version supplied; use publisher lastModifiedTime and retrieval date.",
+    "title_raw": "Use AI agents for customer interactions"
+  },
+  "source_path": "sources/cache/studio/article--s0qro1.source.md",
+  "markdown_path": "sources/cache/studio/article--s0qro1.md",
+  "text_path": "sources/cache/studio/article--s0qro1.txt",
+  "file_sha256": {
+    "source_path": "d2366a64bc0ea7dbfb1dbc9b0a875bcaa32d5a4c84d4cc0a9f875d66c31e440a",
+    "markdown_path": "c53042df405963045a8d7d4065981a44a6264d700acac5f150c87a64d0d1df07",
+    "text_path": "ba4d73f060f715223a2d3c6063046b675e04eb84920847b2fea3a8ac66afdc9b"
+  },
+  "metadata_path": "sources/cache/studio/article--s0qro1.metadata.json",
+  "previous_retrieved_at": "2026-09-08T23:45:54+00:00",
+  "previous_sha256_source_body": "d2366a64bc0ea7dbfb1dbc9b0a875bcaa32d5a4c84d4cc0a9f875d66c31e440a",
+  "source_body_changed": false
+}

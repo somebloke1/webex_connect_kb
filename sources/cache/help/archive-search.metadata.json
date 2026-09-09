@@ -1,0 +1,31 @@
+{
+  "category": "DEBUG",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd81825785c",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "c09cad4d3dd434a21eb627ea7ab66a7ce0faac9d06aa0cb720ea32acbf373dad",
+    "source_path": "4d7ff2fb4c9fc3d753ac4fcb0f8e5b997077683349644ac9f09ae0f0077b30c3",
+    "text_path": "0c2ebaa1e97ac37b0b27d3473c07fb51a87e8aa7f23f2582cd04f4a3c70573be"
+  },
+  "headings": [],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/archive-search.md",
+  "resolved_url": "https://help.webexconnect.io/docs/archive-search",
+  "retrieved_at": "2026-09-08T23:29:35+00:00",
+  "sha256_html_response": "2c4beabb0130fc33d2f5ea53d4bed18fa9933bb15082a32fa58600373b9eca99",
+  "sha256_source_body": "4d7ff2fb4c9fc3d753ac4fcb0f8e5b997077683349644ac9f09ae0f0077b30c3",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/archive-search.source.md",
+  "source_updated_at": "2025-03-01T16:34:58.046Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/archive-search.txt",
+  "title": "Archive Search",
+  "url": "https://help.webexconnect.io/docs/archive-search",
+  "word_count": 85,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/archive-search.metadata.json"
+}

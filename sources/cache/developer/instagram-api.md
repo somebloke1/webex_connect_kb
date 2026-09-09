@@ -1,0 +1,387 @@
+# Instagram API (Deprecated)
+
+Source: https://developers.webexconnect.io/reference/instagram-api
+Documentation version: 6.20.0
+Retrieved: 2026-09-08T23:35:06+00:00
+
+> 🚧 API Endpoint and Authentication
+> 
+> - Your API endpoint varies based on where your imiconnect account is hosted. Visit [Know Your API Endpoint](https://developers.imiconnect.io/reference/endpoints) section to know more. 
+> 
+> - You can use either Service Key or JSON Web Tokens (JWT) for authentication. If you use both JWT authentication and Service Key in an API request, JWT authentication takes priority, and the Service Key is ignored.
+
+> ❗️ API Access
+> 
+> This API is only available on an on-request basis. Please reach out to your support contact for enabling Instagram APIs.
+
+## **Instagram**
+
+```json Text
+{
+    "content": "A while back I needed to count the amount of letters that a piece of text in an email template had (to avoid passing any character limits). Unfortunately",
+    "contentType": "TEXT",
+    "from": "a_637921640978680000",
+    "to": "7947908538583264",
+    "callbackUrl": "https://requestinspector.com/inspect/01g1mv0mvndfpy19bc009tqvh6",
+    "callbackData": "customerID123|1234|new_sale",
+    "correlationId": "de36bb32-3f5d-46c9-b132-15e010a80ccc",
+    "notificationType": "REGULAR",
+    "messagingType": "RESPONSE"
+}
+```
+```json Generic Template
+{
+    "content": "hello",
+    "contentType": "TEMPLATE",
+    "from": "a_637921640978680000",
+    "to": "7947908538583264",
+    "callbackUrl": "https://my.website.com/callback",
+    "callbackData": "customerID123|1234|new_sale",
+    "correlationId": "de36bb32-3f5d-46c9-b132-15e010a80ccc",
+    "notificationType": "REGULAR",
+    "messagingType": "RESPONSE",
+    "template": [
+        {
+            "title": "Welcome!",
+            "subtitle": "We have the right hat for everyone.",
+            "imageUrl": "https://sample-videos.com/img/Sample-jpg-image-2mb.jpg",
+            "defaultAction": {
+                "type": "WEB_URL",
+                "url": "https://www.originalcoastclothing.com"
+            },
+            "buttons": [
+                {
+                    "type": "web_url",
+                    "url": "www.google.com",
+                    "title": "View Website"
+                },
+                {
+                    "type": "postback",
+                    "title": "Start Chatting",
+                    "payload": "DEVELOPER_DEFINED_PAYLOAD"
+                },
+                {
+                    "type": "postback",
+                    "title": "Start Chatting",
+                    "payload": "DEVELOPER_DEFINED_PAYLOAD"
+                }
+            ]
+        }
+    ]
+}
+```
+```json Media-Image
+{
+    "url": "https://www.learningcontainer.com/wp-content/uploads/2020/08/Sample-Image-file-Download.png",
+    "contentType": "MEDIA",
+    "from": "a_637921640978680000",
+    "to": "7947908538583264",
+    "callbackUrl": "https://requestinspector.com/inspect/01g6t5dkqvhr2fy7nwp60y17hn",
+    "callbackData": "customerID123|1234|new_sale",
+    "correlationId": "de36bb32-3f5d-46c9-b132-15e010a80ccc",
+    "notificationType": "REGULAR",
+    "messagingType": "RESPONSE"
+}
+```
+```json Sticker
+{
+    "type": "like_heart",
+    "contentType": "STICKER",
+    "from": "a_637921640978680000",
+    "to": "7947908538583264",
+    "callbackUrl": "https://my.website.com/callback",
+    "callbackData": "customerID123|1234|new_sale",
+    "correlationId": "de36bb32-3f5d-46c9-b132-15e010a80ccc",
+    "notificationType": "REGULAR",
+    "messagingType": "RESPONSE"
+}'
+```
+```json Quick Reply
+{
+    "content": "Please confirm to proceed.",
+    "contentType": "TEXT",
+    "from": "app-id",
+    "to": "igsid",
+    "callbackUrl": "https://my.website.com/callback",
+    "callbackData": "customerID123|1234|new_sale",
+    "correlationId": "de36bb32-3f5d-46c9-b132-15e010a80ccc",
+    "notificationType": "REGULAR",
+    "messagingType": "RESPONSE",
+    "quickReplies": [
+        {
+            "type": "TEXT",
+            "title": "Confirm",
+            "payload": "confirm"
+      
+        },
+        {
+            "type": "TEXT",
+            "title": "Cancel",
+            "payload": "cancel"
+        
+        }
+    ]
+}
+```
+
+### Instagram Text Message
+
+
+
+| Parameter | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| content | String | Yes | Specifies the message text. Note: Either text or attachment or sender_action is mandatory. |
+| contentType | String | Yes | Specifies message type. Specify from the following:  <br>_ TEXT  <br>_ TEMPLATE  <br>_ MEDIA  <br>_ STICKER |
+| quickReplies | JSONArray | No | Specifies an option in the text message to reply back to the sender. When the quick reply is tapped, the message is sent with the option tapped. Once the message is sent, the options disappear. |
+| from | String | Yes | Your Instagram app Id |
+| to | String | Yes | Instagram recipient Id i.e. igsid |
+
+
+
+
+### Instagram Generic Template
+
+Generic template allows you to send horizontal scrollable set of images with an option to configure short description and buttons to request input from the users. You can add up to 10 images per message.
+
+
+
+| Parameter | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | String | Yes | Specifies the type of the attachment. The options are:  <br>_ image  <br>_ audio  <br>_ video  <br>_ file  <br>\* template |
+| template | JSONObject | Yes | Specifies the payload of attachment. The parameters of payload are:  <br>_ template_type: There are two types of templates:  <br>   _ generic  <br>   _ button  <br>_ elements: Specifies the parameters of the selected template type in an array. |
+| quickReplies | JSONArray | No | Specifies an option in the text message to reply back to the sender. When the quick reply is tapped, the message is sent with the option tapped. Once the message is sent, the options disappear. |
+
+
+
+
+## Buttons object
+
+
+
+| Parameter | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| title | String | Yes | Specifies the bubble title. It has a limit of 80 characters. |
+| defaultAction.type | String | Yes | Specify as WEB_URL |
+| defaultAction.url | String | Yes | Specifies the URL that is opened when bubble is tapped. |
+| image_url | String | No | Specifies the bubble image. |
+| subtitle | String | No | Specifies the bubble subtitle. It has a limit of 80 characters. |
+| buttons | JSONArray | No | Specifies a set of buttons that appears as call-to-actions. You can add up to 3 buttons only. The parameters are:  <br>_ type  <br>_ title  <br>_ url  <br>_ payload |
+
+
+
+
+## quickReplies
+
+Quick Replies are buttons with some text that appears above the text composer. Users can tap on the button to respond to the message. Once the message is tapped, the options disappear. You can add up to 10 buttons. These buttons are useful to get a specific response from the users. You can configure buttons to have a plain text or a combination of text and image. You can also configure a button with location so that users can send geographic locations in the conversation. You can configure the button with a payload that can have custom data that will be sent back to the enterprises through a webhook.
+
+| Parameter    | Type   | Mandatory | Description                                                                                                             |
+| :----------- | :----- | :-------- | :---------------------------------------------------------------------------------------------------------------------- |
+| content_type | String | Yes       | Specifies the type of content. Supported value: TEXT                                                                    |
+| title        | String | Yes.      | Specifies the caption for button. You can add up to 20 characters as title.                                             |
+| payload      | String | Yes.      | Specifies the custom data that will be sent back to you through web hook. The limit of this payload is 1000 characters. |
+
+## Media
+
+| Parameter    | Type      | Mandatory | Description                                                                                                                                                                                       |
+| :----------- | :-------- | :-------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| content_type | String    | Yes       | Specify as MEDIA                                                                                                                                                                                  |
+| url          | String    | Yes       | URL of the image media file. The channel only supports image at the moment                                                                                                                        |
+| quickReplies | JSONArray | No        | Specifies an option in the text message to reply back to the sender. When the quick reply is tapped, the message is sent with the option tapped. Once the message is sent, the options disappear. |
+
+## Sticker
+
+| Parameter    | Type      | Mandatory | Description                                                                                                                                                                                       |
+| :----------- | :-------- | :-------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| content_type | String    | Yes       | Specify as STICKER                                                                                                                                                                                |
+| type         | String    | Yes       | Specify as 'like_heart'. The channel only supports like_heart sticker at the moment                                                                                                               |
+| quickReplies | JSONArray | No        | Specifies an option in the text message to reply back to the sender. When the quick reply is tapped, the message is sent with the option tapped. Once the message is sent, the options disappear. |
+
+## API reference metadata
+
+These are source metadata and examples. `api.auth` is ReadMe metadata; verify authentication in the documented headers/security scheme.
+
+```json
+{
+  "method": "post",
+  "url": "/",
+  "auth": "required",
+  "results": {
+    "codes": [
+      {
+        "name": "",
+        "code": "{\n   \"messageId\":\"0a129aee-e1cd-480d-b08d-4f48548ff48d\",\n   \"correlationId\":\"k1l2\",\n   \"status\":\"queued\",\n   \"requestTimestamp\":\"2014-02-17T07:25:01.4178645-05:00\"\n}",
+        "language": "json",
+        "status": 201
+      },
+      {
+        "name": "",
+        "code": "{\n  \"code\": 8000,\n  \"message\": \"Invalid parameter: 'asdf'\"\n}",
+        "language": "json",
+        "status": 400
+      }
+    ]
+  },
+  "params": [
+    {
+      "name": "Content-Type",
+      "type": "string",
+      "enumValues": "",
+      "default": "Application/JSON",
+      "desc": "",
+      "required": false,
+      "in": "header",
+      "ref": "",
+      "_id": "60ed14971f0b29007be6198a",
+      "id": "60ed14971f0b29007be6198a"
+    },
+    {
+      "name": "Authorization",
+      "type": "string",
+      "enumValues": "",
+      "default": "Bearer <JWT Token>",
+      "desc": "Bearer {{token}}. Applicable if you want to use JWT tokens for API authentication. Use either of 'key' or 'Authorization' header param.",
+      "required": false,
+      "in": "header",
+      "ref": "",
+      "_id": "60ed35e99b398000106b4182",
+      "id": "60ed35e99b398000106b4182"
+    }
+  ],
+  "examples": {
+    "codes": []
+  },
+  "apiSetting": "6a675233ec1c893d8a7f67cd"
+}
+```
+
+## OpenAPI operation and component schemas
+
+Operation extraction: selected. Missing operation definitions must not be inferred from this cache.
+
+```json
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Instagram APIs",
+    "version": "6.20.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.us.webexconnect.io/v1/instagram/messages"
+    }
+  ],
+  "security": [
+    {
+      "sec0": [],
+      "sec1": []
+    }
+  ],
+  "path": "/",
+  "method": "post",
+  "path_parameters": [],
+  "operation": {
+    "summary": "Instagram API (Deprecated)",
+    "description": "",
+    "operationId": "instagram-api",
+    "parameters": [
+      {
+        "name": "Content-Type",
+        "in": "header",
+        "schema": {
+          "type": "string",
+          "default": "Application/JSON"
+        }
+      },
+      {
+        "name": "Authorization",
+        "in": "header",
+        "description": "Bearer {{token}}. Applicable if you want to use JWT tokens for API authentication. Use either of 'key' or 'Authorization' header param.",
+        "schema": {
+          "type": "string",
+          "default": "Bearer <JWT Token>"
+        }
+      }
+    ],
+    "responses": {
+      "201": {
+        "description": "201",
+        "content": {
+          "application/json": {
+            "examples": {
+              "Result": {
+                "value": "{\n   \"messageId\":\"0a129aee-e1cd-480d-b08d-4f48548ff48d\",\n   \"correlationId\":\"k1l2\",\n   \"status\":\"queued\",\n   \"requestTimestamp\":\"2014-02-17T07:25:01.4178645-05:00\"\n}"
+              }
+            },
+            "schema": {
+              "type": "object",
+              "properties": {
+                "messageId": {
+                  "type": "string",
+                  "example": "0a129aee-e1cd-480d-b08d-4f48548ff48d"
+                },
+                "correlationId": {
+                  "type": "string",
+                  "example": "k1l2"
+                },
+                "status": {
+                  "type": "string",
+                  "example": "queued"
+                },
+                "requestTimestamp": {
+                  "type": "string",
+                  "example": "2014-02-17T07:25:01.4178645-05:00"
+                }
+              }
+            }
+          }
+        }
+      },
+      "400": {
+        "description": "400",
+        "content": {
+          "application/json": {
+            "examples": {
+              "Result": {
+                "value": "{\n  \"code\": 8000,\n  \"message\": \"Invalid parameter: 'asdf'\"\n}"
+              }
+            },
+            "schema": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "integer",
+                  "example": 8000,
+                  "default": 0
+                },
+                "message": {
+                  "type": "string",
+                  "example": "Invalid parameter: 'asdf'"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "deprecated": false
+  },
+  "components": {
+    "securitySchemes": {
+      "sec0": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "Content-Type",
+        "x-default": "application/json"
+      },
+      "sec1": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "Authorization",
+        "x-bearer-format": "bearer",
+        "x-default": "{{jwt-token}}"
+      }
+    }
+  },
+  "operation_status": "selected"
+}
+```

@@ -1,0 +1,39 @@
+{
+  "api_metadata_path": "sources/cache/developer/faqs-miscellaneous.api.json",
+  "category": "FAQs",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f65a7",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "dbae336ce828af6bcb5ea4662ae4d620b888ee60b244fc5dbb3cfa7398c65840",
+    "source_path": "001692bf095a285b6eb2fcc42e0eaa50b821fcfa9391e78317113e73c3ef81dc",
+    "text_path": "eeab73ce02c9d0903f19e84e4132146d7e1a01f31544ac235dca4b974c8f0e1f"
+  },
+  "headings": [
+    "If a flow containing a send node fails due to an issue with a preceding non-messaging node, will I see the failed transaction in Export Logs?",
+    "Can I use same email ID to login into multiple Webex Connect tenants?",
+    "Which browsers can I use to access my Webex Connect account?",
+    "What is the difference between Dialogflow ES and Dialogflow CX pre-built nodes?",
+    "How is my File Rotation affected by DST (Daylight Savings Time) in Logbooks?",
+    "I want to use an Integration (Prebuilt/Custom/HTTP) node immediately after a Social Hour node. However, I'm experiencing failures such as HTTP 429 Status Code (\"Too Many Requests\") and my flow execution stops. What should I do?"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/faqs-miscellaneous.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/faqs-miscellaneous",
+  "retrieved_at": "2026-09-08T23:31:52+00:00",
+  "sha256_api_metadata": "575f65b7d8dc3ea0b617314bc47e22705dc85fc80ee114e6faa20ada4e8aafe2",
+  "sha256_html_response": "f7bddf244363de33a9219cc85ddb146dc21e93337f803125b164c175789b41c2",
+  "sha256_source_body": "001692bf095a285b6eb2fcc42e0eaa50b821fcfa9391e78317113e73c3ef81dc",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/faqs-miscellaneous.source.md",
+  "source_updated_at": "2026-02-12T09:21:34.058Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/faqs-miscellaneous.txt",
+  "title": "Miscellaneous FAQs",
+  "url": "https://developers.webexconnect.io/reference/faqs-miscellaneous",
+  "word_count": 716,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/faqs-miscellaneous.metadata.json"
+}

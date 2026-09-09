@@ -1,0 +1,32 @@
+# Messaging Customers on WhatsApp Business Platform - CCE
+
+Source: https://help.webexconnect.io/docs/cce-messaging-customers-on-whatsapp-business-platform
+Documentation version: 6.20.0
+Retrieved: 2026-09-08T23:29:21+00:00
+
+Businesses can start messaging customers after you complete the Embedded sign-up or on behalf of (OBO) onboarding processes. Business verification and display name review are not needed to get started on the WhatsApp Business platform. The WhatsApp account checks will be triggered automatically and conducted asynchronously. After sign-up, your business can:
+
+- Respond to unlimited customer-initiated conversations in 24-hour messaging windows.
+- Send business-initiated conversations to 250 unique customers in a rolling 24-hour period per phone number.
+- Register up to 2 phone numbers.
+
+Once the sign-up flow is complete and all the business profile information has been captured, your business can immediately respond to customers' questions, such as recent orders or new products. 
+
+## How to increase messaging limits
+
+If you look to increase the messaging and phone number limits, you'll have to complete business verification and display name review. The display name review for all phone numbers associated with your account will be initiated after the business verification is complete. You have to follow the display name best practices when you add a new phone number.
+
+If you have full control of the business portfolio, you can start verifying your business by following these steps:
+
+1. Go to the Security Centre section.
+2. In the Business verification section, click Start verification.  
+   Note: For the on-behalf-of onboarding process, Start verification is disabled until you approve the messaging on behalf of the request from a BSP.
+3. Complete the business verification request as instructed.
+
+After you've completed the business verification and display name review, your businesses can:
+
+- Scale business-initiated conversations to more customers:
+  - Start with 1,000 unique customers in a rolling 24 hours and increase to 10,000, 100,000, or unlimited per phone number.
+- Respond to unlimited customer-initiated conversations.
+- Request to become an Official Business Account (OBA).
+- Register additional phone numbers.

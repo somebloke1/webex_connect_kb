@@ -1,0 +1,301 @@
+{
+  "_id": "6a675233ec1c893d8a7f67b8:6a675233ec1c893d8a7f64e6",
+  "components": {
+    "securitySchemes": {
+      "sec0": {
+        "in": "header",
+        "name": "key",
+        "type": "apiKey"
+      }
+    }
+  },
+  "info": {
+    "title": "Profile API v2",
+    "version": "6.20.0"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/customerprofile": {
+      "put": {
+        "deprecated": false,
+        "description": "This API is used to update one or more customer profiles. You can update up to 1000 customers in a single request.",
+        "operationId": "updateprofile",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "examples": {
+                "Update Multiple Profiles": {
+                  "value": {
+                    "Records": [
+                      {
+                        "Attributes": {
+                          "email": "bulksmstest1@imimobile.com",
+                          "msisdn": "911278994640",
+                          "name": "umtest"
+                        },
+                        "customerId": "1234568"
+                      },
+                      {
+                        "Attributes": {
+                          "email": "bulksmstest2@imimobile.com",
+                          "msisdn": "911278994642",
+                          "name": "umtest"
+                        },
+                        "customerId": "1234569"
+                      }
+                    ]
+                  }
+                },
+                "Update Single Profile": {
+                  "value": {
+                    "Records": [
+                      {
+                        "Attributes": {
+                          "email": "bulksmstest1@imimobile.com",
+                          "msisdn": "911278994640",
+                          "name": "umtest"
+                        },
+                        "customerId": "1234568"
+                      }
+                    ]
+                  }
+                }
+              },
+              "schema": {}
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Result": {
+                    "value": "{\n    \"TotalCount\": 1,\n    \"code\": \"1000\",\n    \"FailureCount\": 0,\n    \"Results\": [\n        {\n            \"code\": \"1000\",\n            \"customerId\": \"10\",\n            \"description\": \"SUCCESS\"\n        }\n    ],\n    \"transid\": \"37dc3964-ae26-47d9-b0f0-d72cf7d2dcc7\",\n    \"description\": \"SUCCESS\",\n    \"SuccessCount\": 1\n}\n"
+                  },
+                  "Update Multiple Profiles": {
+                    "value": "{\n    \"FailureCount\": 0,\n    \"TotalCount\": 2,\n    \"description\": \"QUEUED\",\n    \"SuccessCount\": 2,\n    \"code\": \"1000\",\n    \"Results\": [\n        {\n            \"customerId\": \"1234568\",\n            \"description\": \"QUEUED\",\n            \"code\": \"1000\"\n        },\n        {\n            \"customerId\": \"1234569\",\n            \"description\": \"QUEUED\",\n            \"code\": \"1000\"\n        }\n    ],\n    \"transid\": \"435ce176-d0f4-450b-a32e-1bbf4f15a033\"\n}"
+                  },
+                  "Update Single Profile": {
+                    "value": "{\n    \"FailureCount\": 0,\n    \"TotalCount\": 1,\n    \"description\": \"QUEUED\",\n    \"SuccessCount\": 1,\n    \"code\": \"1000\",\n    \"Results\": [\n        {\n            \"customerId\": \"1234568\",\n            \"description\": \"QUEUED\",\n            \"code\": \"1000\"\n        }\n    ],\n    \"transid\": \"435ce176-d0f4-450b-a32e-1bbf4f15a033\"\n}"
+                  }
+                },
+                "schema": {
+                  "oneOf": [
+                    {
+                      "properties": {
+                        "FailureCount": {
+                          "default": 0,
+                          "example": 0,
+                          "type": "integer"
+                        },
+                        "Results": {
+                          "items": {
+                            "properties": {
+                              "code": {
+                                "example": "1000",
+                                "type": "string"
+                              },
+                              "customerId": {
+                                "example": "10",
+                                "type": "string"
+                              },
+                              "description": {
+                                "example": "SUCCESS",
+                                "type": "string"
+                              }
+                            },
+                            "type": "object"
+                          },
+                          "type": "array"
+                        },
+                        "SuccessCount": {
+                          "default": 0,
+                          "example": 1,
+                          "type": "integer"
+                        },
+                        "TotalCount": {
+                          "default": 0,
+                          "example": 1,
+                          "type": "integer"
+                        },
+                        "code": {
+                          "example": "1000",
+                          "type": "string"
+                        },
+                        "description": {
+                          "example": "SUCCESS",
+                          "type": "string"
+                        },
+                        "transid": {
+                          "example": "37dc3964-ae26-47d9-b0f0-d72cf7d2dcc7",
+                          "type": "string"
+                        }
+                      },
+                      "type": "object"
+                    },
+                    {
+                      "properties": {
+                        "FailureCount": {
+                          "default": 0,
+                          "example": 0,
+                          "type": "integer"
+                        },
+                        "Results": {
+                          "items": {
+                            "properties": {
+                              "code": {
+                                "example": "1000",
+                                "type": "string"
+                              },
+                              "customerId": {
+                                "example": "1234568",
+                                "type": "string"
+                              },
+                              "description": {
+                                "example": "QUEUED",
+                                "type": "string"
+                              }
+                            },
+                            "type": "object"
+                          },
+                          "type": "array"
+                        },
+                        "SuccessCount": {
+                          "default": 0,
+                          "example": 1,
+                          "type": "integer"
+                        },
+                        "TotalCount": {
+                          "default": 0,
+                          "example": 1,
+                          "type": "integer"
+                        },
+                        "code": {
+                          "example": "1000",
+                          "type": "string"
+                        },
+                        "description": {
+                          "example": "QUEUED",
+                          "type": "string"
+                        },
+                        "transid": {
+                          "example": "435ce176-d0f4-450b-a32e-1bbf4f15a033",
+                          "type": "string"
+                        }
+                      },
+                      "title": "Update Single Profile",
+                      "type": "object"
+                    },
+                    {
+                      "properties": {
+                        "FailureCount": {
+                          "default": 0,
+                          "example": 0,
+                          "type": "integer"
+                        },
+                        "Results": {
+                          "items": {
+                            "properties": {
+                              "code": {
+                                "example": "1000",
+                                "type": "string"
+                              },
+                              "customerId": {
+                                "example": "1234568",
+                                "type": "string"
+                              },
+                              "description": {
+                                "example": "QUEUED",
+                                "type": "string"
+                              }
+                            },
+                            "type": "object"
+                          },
+                          "type": "array"
+                        },
+                        "SuccessCount": {
+                          "default": 0,
+                          "example": 2,
+                          "type": "integer"
+                        },
+                        "TotalCount": {
+                          "default": 0,
+                          "example": 2,
+                          "type": "integer"
+                        },
+                        "code": {
+                          "example": "1000",
+                          "type": "string"
+                        },
+                        "description": {
+                          "example": "QUEUED",
+                          "type": "string"
+                        },
+                        "transid": {
+                          "example": "435ce176-d0f4-450b-a32e-1bbf4f15a033",
+                          "type": "string"
+                        }
+                      },
+                      "title": "Update Multiple Profiles",
+                      "type": "object"
+                    }
+                  ]
+                }
+              }
+            },
+            "description": "200"
+          }
+        },
+        "summary": "Update Customer Profile",
+        "x-readme": {
+          "code-samples": [
+            {
+              "code": "-X PUT https://api.imiconnect.io/resources/v2/customerprofile\n-H \"Content-Type : application/json\"\n-H \"key : {profilekey}\"\n",
+              "language": "curl"
+            },
+            {
+              "code": "require 'httparty'\n# Create the HTTP objects and post request\nhttp = HTTParty.put(\"https://api.imiconnect.io/resources/v2/customerprofile\",\n    :headers => {'Content-Type' => 'application/json',\n\t'key' => ' Profile key present in tenant setting’})\n# Print on console\nputs http\n",
+              "language": "ruby"
+            },
+            {
+              "code": "var data = null;\n\nvar xhr = new XMLHttpRequest();\n\nxhr.addEventListener(\"readystatechange\", function () {\n  if (this.readyState === this.DONE) {\n    console.log(this.responseText);\n  }\n});\n\nxhr.open(\"PUT\", \"https://api.imiconnect.io/resources/v2/customerprofile \");\nxhr.setRequestHeader(\"Content-Type\", \"application/json\");\nxhr.setRequestHeader(\"key\", \"Profile key present in tenant setting\");\nxhr.send(data);\n",
+              "language": "javascript"
+            },
+            {
+              "code": "import requests\n\nurl = \"https://api.imiconnect.io/resources/v2/customerprofile\"\n\nheaders = {'Content-Type': 'application/json', 'key': ' Profile key present in tenant setting '}\n\nresponse = requests.request(\"PUT\", url, headers=headers)\n\nprint(response.text)\n",
+              "language": "python"
+            }
+          ],
+          "samples-languages": [
+            "curl",
+            "ruby",
+            "javascript",
+            "python"
+          ]
+        }
+      }
+    }
+  },
+  "security": [
+    {
+      "sec0": []
+    }
+  ],
+  "servers": [
+    {
+      "url": "https://api.imiconnect.io/resources/v2"
+    }
+  ],
+  "x-readme": {
+    "explorer-enabled": false,
+    "headers": [
+      {
+        "key": "Content-Type",
+        "value": "application/json"
+      }
+    ],
+    "proxy-enabled": false
+  },
+  "x-readme-fauxas": true
+}

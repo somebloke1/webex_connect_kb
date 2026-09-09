@@ -1,0 +1,36 @@
+{
+  "category": "Webex Engage Standalone Nodes",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd81825797e",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "2933baf54798d3583440c6e7f70a9a59d5d390f92404c93a68dc3c8952ce0a40",
+    "source_path": "6a380f5903e466da38c62d0faf6c32a76332c55706a48cf3cd746a2daf75b7be",
+    "text_path": "3033db400e33e08605565e098e6e1493e7d39e03d19e736a41cf3831c558be40"
+  },
+  "headings": [
+    "Configuration",
+    "📘$(n30.send.response_interactive) variable for WhatsApp Rich Messages",
+    "Output variables",
+    "Node outcomes"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/append-message.md",
+  "resolved_url": "https://help.webexconnect.io/docs/append-message",
+  "retrieved_at": "2026-09-08T23:29:29+00:00",
+  "sha256_html_response": "bcb9cd1432137daa9a8bdb03d3edf7497752663193096f0b6367a5f4bd752039",
+  "sha256_source_body": "6a380f5903e466da38c62d0faf6c32a76332c55706a48cf3cd746a2daf75b7be",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/append-message.source.md",
+  "source_updated_at": "2026-06-04T18:22:44.411Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/append-message.txt",
+  "title": "Append message - WxEngage standalone",
+  "url": "https://help.webexconnect.io/docs/append-message",
+  "word_count": 2453,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/append-message.metadata.json"
+}

@@ -1,0 +1,967 @@
+1
+00:00:00,460 --> 00:00:20,780
+I got that now I have to be careful with what I say, but generally good. Good morning. Good afternoon, everyone. I'm really happy to be able to announce the launch of the sales enablement learning plan that we've made available for all partners on on WebEx Academy.
+
+2
+00:00:20,780 --> 00:00:35,780
+I know that this audience is very much focused on the technical capabilities of WebEx connect building services, logging into the platform and being able to deliver value for your customers in that way.
+
+3
+00:00:36,780 --> 00:00:52,780
+However, there may be some folks on this call that have almost like a pre sales type of role and actually go across all areas of working with customers and I so I think some of the content here that I made, you know, just go through in the next five, 10 minutes.
+
+4
+00:00:53,780 --> 00:00:56,780
+I think may even be relevant for yourself as well.
+
+5
+00:00:57,780 --> 00:01:14,090
+Let me just see I can drive to the next screen so when I guess as we talk through partner enablement and making sure that our partners are supported with taking our CPAS platform WebEx connect to your customers.
+
+6
+00:01:14,090 --> 00:01:21,090
+We think about it in roughly these two kind of broad categories of sales enablement and technical enablement.
+
+7
+00:01:22,090 --> 00:01:30,090
+Sales enablement around how do I identify and qualify new opportunities, key use cases, verticals, etc.
+
+8
+00:01:30,090 --> 00:01:41,090
+And then on the technical side of things, how do you deliver professional services on the platform? How do you build a CPAS practice? How do you deliver managed services?
+
+9
+00:01:41,090 --> 00:01:53,090
+And so we have, we are, I think it's I'm going to kind of address the elephant in the room here. The technical enablement is still being finalized.
+
+10
+00:01:53,090 --> 00:01:58,090
+We are just hopefully where we'll be only a few weeks away now.
+
+11
+00:01:58,090 --> 00:02:00,090
+So that is coming.
+
+12
+00:02:01,090 --> 00:02:16,000
+But today, in fact, actually the other week, you know, today I'm happy to announce that the sales enablement is available for all partners on on WebEx Academy at the order of some of these slides is a bit wrong.
+
+13
+00:02:16,000 --> 00:02:26,000
+But so the sales enablement learning plan covers these four broad courses from sales fundamentals to TSA sales enablement.
+
+14
+00:02:26,000 --> 00:02:39,000
+So again, as I mentioned, a bit more of a technical focus for pre sales consultants and TSAs that may want to really showcase the value of the platform, how you demo it to your customers.
+
+15
+00:02:39,000 --> 00:02:52,000
+How do you lead discovery workshops? The right questions to ask and what you're looking for or listening when it comes to identifying pain points and coming up with a solution for your customers.
+
+16
+00:02:52,000 --> 00:03:08,000
+There's definitely some content we wanted to share with you around the process and making sure that when it comes to actually going from a qualified opportunity to actually a closed one opportunity and an order being signed.
+
+17
+00:03:08,000 --> 00:03:16,000
+We can talk you through what that looks like to get that quote approved and the order released.
+
+18
+00:03:16,000 --> 00:03:30,000
+So we have a few slides there that cover that as well as the telco asset provisioning process. Some of you that may or may not be aware as part of our platform sending digital communications.
+
+19
+00:03:30,000 --> 00:03:36,000
+You need to order phone numbers for your customers, depending on the different country that they're based in.
+
+20
+00:03:36,000 --> 00:03:48,000
+And so there is likewise a separate process to explain how to do that, you know, the form to fill the information we require and how you how you move forward with that.
+
+21
+00:03:48,000 --> 00:04:00,000
+Finally, on the offer and ordering process, WebEx Connect is sold in different license editions with different entitlements and different amounts of capabilities.
+
+22
+00:04:00,000 --> 00:04:18,540
+Our team, or in fact, Jason, who actually runs that team has done a great job in really breaking that down and simple, easy to understand language, explaining the different SKUs, the different discount structures and how you actually order WebEx Connect on CCW.
+
+23
+00:04:18,540 --> 00:04:30,400
+Accessing the learning plan is really easy.
+
+24
+00:04:30,400 --> 00:04:41,400
+It's on WebEx Academy right now. So after this call, you can click on the link and we'll share these slides after this as well. So you'll be able to see that.
+
+25
+00:04:41,400 --> 00:04:53,400
+But click on the link to WebEx Academy. You will need to sync your CCOID with your partner organization. So if you haven't done that yet, there is an additional step.
+
+26
+00:04:53,400 --> 00:05:04,400
+But it should be very quick and easy to navigate into WebEx Academy to find where the sales enablement content is and then to complete that learning plan.
+
+27
+00:05:04,400 --> 00:05:22,760
+One of the things that I think we've done differently this time around from other sales enablement or other content that we've put out for partners is we've really tried to make it as comprehensive as we possibly can.
+
+28
+00:05:22,760 --> 00:05:39,760
+And so no stone has gone unturned when it comes to talking about our value proposition, who we compete with, why we sell the platform, the way we do, the key use cases, verticals and so on and across those different topics.
+
+29
+00:05:39,760 --> 00:05:50,760
+So really we've got four over four hours of content created by the team. We have over 200 slides that we've gone through, all of which are made available after every course.
+
+30
+00:05:50,760 --> 00:06:06,760
+You can download the PDFs. We will be making those slides available as PowerPoint. So if you want to use them for your own sales activities and your own customer presentations, you will be able to do that.
+
+31
+00:06:06,760 --> 00:06:10,760
+So that will be made available later in the month.
+
+32
+00:06:10,760 --> 00:06:34,970
+And then in order to complete the course, like all other credentialed courses and learning programs, you will need to complete the test and 75% success rate is what you need to achieve in order to complete it and to pass the program.
+
+33
+00:06:34,970 --> 00:06:49,970
+Coming soon. So while this is launched on WebEx Academy and is available for everyone to go through, there's a couple of additional activities that we are just closing off and will be complete by the end of the month as well.
+
+34
+00:06:49,970 --> 00:07:10,970
+So one of them is the Credly badge to demonstrate, you know, for everyone who goes through the learning program to show that you are, you've completed it, that you are successful and that we have verified and approved and certified you as being,
+
+35
+00:07:11,970 --> 00:07:17,970
+has gone through the program and being successful in answering the questions and going through the content.
+
+36
+00:07:18,970 --> 00:07:31,970
+So we are working on that and that will be pushed out. Anyone who goes through it already, even though the Credly badge is not available, it will be automatically pushed out later in the month once it's been finalized.
+
+37
+00:07:32,970 --> 00:07:49,970
+And you'll also be able to have the WebEx Connect partner designation available on your partner profile. So for customers going on partner locator to be able to differentiate partners who have been trained versus partners who haven't,
+
+38
+00:07:50,970 --> 00:07:56,970
+you'll be able to have a designation that identifies and shows you to be the case.
+
+39
+00:07:56,970 --> 00:08:11,820
+And yes, we are already working with a lot of partners or a lot of everyone who's on the call, just as a snapshot of some of the partners we're already working with who are enabled.
+
+40
+00:08:12,820 --> 00:08:29,820
+But I do encourage everyone here, if you are customer facing, if you do have a customer facing role, if you do need to understand our key use cases, the verticals we target, if you are supporting your sales or account managers,
+
+41
+00:08:29,820 --> 00:08:43,820
+I do think it's still very valuable content to go through. I think I can see Terry, am I right? Terry Ford, I think you've recently gone through it, which is great.
+
+42
+00:08:44,820 --> 00:08:57,820
+And yes, as I say, strongly encourage everyone here to go through the sales content. Share with us your feedback, let us know what you think is missing, what you enjoyed and maybe a bit confusing.
+
+43
+00:08:57,820 --> 00:09:04,820
+We'll continue to iterate it across the next couple of quarters and make sure it can be as effective as it can be.
+
+44
+00:09:05,820 --> 00:09:29,010
+Thank you so much, Tom. Are there any questions from anyone? It's quiet. It's Friday, but I do want to just make a small comment before we move on to Doug's talk and that is, I've already received some feedback from technical engineers saying this is sales enablement.
+
+45
+00:09:29,010 --> 00:09:46,010
+And yes, it is sales enablement. However, when the customer asks you about the different offers or different additions of WebEx Connect that we have, you'll be able to answer those questions as well as getting outside of the contact center.
+
+46
+00:09:47,010 --> 00:09:58,010
+And that's really where we want to be because there's other silos or verticals within the customer that we want to target like marketing and operations and logistics and all of that is untapped.
+
+47
+00:09:59,010 --> 00:10:17,010
+So yeah, and they're 10 minute videos, 10, maybe 7 to 11 minutes max. So if you need to refer back to one, you could just quickly go through, you know, when you're sitting there at 11 o'clock at night and you're trying to remember, oh, I need to fill out this assurance to quote form to get the number provisioned on the tenant.
+
+48
+00:10:17,010 --> 00:10:21,010
+How do I do that? You can go back and look at it. So it's very helpful.
+
+49
+00:10:21,010 --> 00:10:33,010
+Yeah, that's a really good point Donna. While there are, while there's four hours of, over four hours of content in its entirety, each of the videos is no more than about 10 minutes.
+
+50
+00:10:34,010 --> 00:10:46,010
+So each course has about, I think 12 to 14 videos and you can go through each video individually and then take a break, pause, come back to it at a later date.
+
+51
+00:10:46,010 --> 00:10:51,010
+And yeah, very much as a self serve, take it at your own pace.
+
+52
+00:10:51,010 --> 00:10:59,010
+Though I do, as I said, I would encourage everyone to see how they could make some time to go through it because I think it's very, very valuable to do so.
+
+53
+00:10:59,010 --> 00:11:06,010
+Yeah, it really is. It's easy to blast through like on a Friday afternoon when you have a few hours so you can just block off some time.
+
+54
+00:11:07,010 --> 00:11:22,010
+Okay, thanks Tom. All right. So next up is Doug Thurber and Doug is going to talk to us about the WebEx connect email channel. So I am maximizing my screen now.
+
+55
+00:11:22,010 --> 00:11:24,010
+So take it away Doug.
+
+56
+00:11:24,010 --> 00:11:33,010
+Okay, great. Hi, good morning. Good afternoon. Just wanted to spend some time going through the email channel today.
+
+57
+00:11:33,010 --> 00:11:51,010
+As you know, WebEx connect supports at least a dozen different digital channels. But in the, I lead solution engineering for the US and more responsible for design and implementation of solutions, which you as partners will also be doing for clients.
+
+58
+00:11:51,010 --> 00:12:01,010
+And at least in the US between SMS email voice, those are some of the more popular channels. So I thought we'd just spend a little time and give you an overview of the channel.
+
+59
+00:12:01,010 --> 00:12:09,010
+I'll go through some slides and then I'll also go into WebEx connect and show you show you some things in there.
+
+60
+00:12:09,010 --> 00:12:22,010
+But first, let me just give you an overview of what email is basically in the in connect. It's what you think it is. It gives you the ability to go to the next slide please.
+
+61
+00:12:22,010 --> 00:12:36,010
+It will give you the ability to send and receive email. We can send plain text HTML can include tables links attachments and that type of thing.
+
+62
+00:12:36,010 --> 00:12:49,010
+But connect will give you the ability to do that through either an email node in a workflow, which I'll show you later as well as the API.
+
+63
+00:12:49,010 --> 00:13:04,010
+A couple of things on the next slide, a couple of things to know about the support so we support to protocols SMTP, or we do it through AWS is SCS the simple email service.
+
+64
+00:13:04,010 --> 00:13:22,010
+Depending on which version of connect you're integrating with the the context center versions, the WXCC there there's the, the regular one that's the cloud based and then the enterprise it's more on premise those right now only support SMTP.
+
+65
+00:13:22,010 --> 00:13:36,010
+So if you're using WebEx connect standalone, it'll support SMTP or SCS. And when your tenant is provisioned, you would specify which you intend to use and then it's one or the other.
+
+66
+00:13:36,010 --> 00:13:45,010
+So you don't mix them on there but it'll it'll either be one or the other depending how the WebEx connect tenant is provisioned.
+
+67
+00:13:45,010 --> 00:14:01,010
+So SMTP is fairly straightforward. SCS is a little more involved in it just just some notes down there that we often get asked is, you know, which SCS account do we use to well Cisco will be under their account or does the client need to provide it.
+
+68
+00:14:01,010 --> 00:14:14,010
+And the answer is either one, we're actually fine using Cisco account or maybe even if you as a partner have an account that will be fine, or the client can can bring in their own SCS account.
+
+69
+00:14:15,010 --> 00:14:25,010
+The message sizes for inbound and outbound the defaults now 40 megabytes it used to be 10 and it's increased on the SCS side.
+
+70
+00:14:25,010 --> 00:14:32,010
+So that's good news and then there's there's some other things I'll discuss later like a daily quota on emails.
+
+71
+00:14:32,010 --> 00:14:48,010
+A lot of that's all configured in the SCS account but it gets pulled into WebEx connect so you see it there. So these are just some things to be aware of when you're talking to clients, you know, and questions we get asked is, you know, how large an email can I send what's the rate.
+
+72
+00:14:48,010 --> 00:15:05,010
+And just know that the size when we're talking about 40 meg, it includes everything in the email the text the images the attachments, and also my encoding which can actually add about another 37%. So, so just take all that into account when you're you're looking at
+
+73
+00:15:05,010 --> 00:15:10,180
+at email size.
+
+74
+00:15:10,180 --> 00:15:27,180
+So essentially these are just a high level steps to give you an idea of how you would use email and connect that you configure the app within connect there's some configuration there. If you're using contact center contact center enterprise there's a step just to register that
+
+75
+00:15:27,180 --> 00:15:45,180
+with the app with engage. We support email templates, which I'll show you in a bit. So if you want to use templates, where you kind of pre define the email, you would create the templates, and then and then sending the email and as I mentioned there's a there's a
+
+76
+00:15:45,180 --> 00:16:08,500
+code within the workflow for sending it as well as our send message API will support email. Just again quick not going to go into details on SMTP or the SES configuration there's quite a bit of documentation but just to give you a feel for it again as you're
+
+77
+00:16:08,500 --> 00:16:28,500
+going to go into details on your clients SMTP, we support either username and password or OAuth to for as far as authorization goes, and then the inbound email is accomplished via forwarding so when you we configure SMTP in connect, there'll be a forwarding
+
+78
+00:16:28,500 --> 00:16:40,500
+and you would then go into your SMTP server and specify that forwarding address so any inbound emails to your SMTP would be would be forwarded.
+
+79
+00:16:40,500 --> 00:16:57,500
+So the clients to leverage that outbound OAuth connection to pull the email box so that the customer doesn't have to forward them. I'm working with a client right now that struggled with some forwarding rules, as well as their external
+
+80
+00:16:57,500 --> 00:17:02,500
+system proof point was blocking external senders from forwarding to the IMI address.
+
+81
+00:17:02,500 --> 00:17:14,980
+Guy, I don't know of any I don't know. I got a couple other people on the line to them I know on a Ash mesh. Do you know of any plans there for changing that.
+
+82
+00:17:14,980 --> 00:17:20,980
+Not aware of this. So maybe we take it away and get back on this point.
+
+83
+00:17:20,980 --> 00:17:21,980
+Yep.
+
+84
+00:17:21,980 --> 00:17:22,980
+Thank you.
+
+85
+00:17:22,980 --> 00:17:27,290
+Okay, yeah, we'll see what else we can find a few.
+
+86
+00:17:27,290 --> 00:17:40,290
+In the online documentation there there's details for Gmail and Microsoft 365, but the, but again any SMTP server would be supported.
+
+87
+00:17:40,290 --> 00:17:57,820
+On the SCS side, it's a little bit more involved and again we've got pretty extensive documentation on this but I just wanted to give you an idea for for what's involved, you know, kind of technically to be able to configure that access.
+
+88
+00:17:58,820 --> 00:18:09,820
+The big point is that we have to give AWS access to WebEx connect for both SCS and their SNS, which is their notification service.
+
+89
+00:18:09,820 --> 00:18:21,820
+That's what provides the delivery status information such as the email was delivered or or read or those type of things.
+
+90
+00:18:21,820 --> 00:18:36,820
+So steps to do that you need to create. The first thing is the identity and access management policies in AWS, which will control access and authorization to this AWS resources.
+
+91
+00:18:36,820 --> 00:18:52,820
+Then in connect, you can start configuring the app, which is basically identifying what's the sub domain. So something about you're always going to have your domain, you know, company dot com, you're going to have some sub domain, you know, your, your mail or whatever it is mail dot company dot com.
+
+92
+00:18:52,820 --> 00:19:01,820
+So you configure your sub domain and then an access key and an access key ID and secret which you would get from AWS.
+
+93
+00:19:01,820 --> 00:19:12,820
+Then that'll give you some TXT and DKIM records that you'll you'll need to update add to the DNS. So there's definitely some DNS updates.
+
+94
+00:19:12,820 --> 00:19:19,820
+And then you can configure those domain keys settings under the email security.
+
+95
+00:19:19,820 --> 00:19:26,820
+Do any inbound email configuration, which consists of adding MX records to the DNS settings.
+
+96
+00:19:26,820 --> 00:19:45,820
+And then there's unsubscribe links that you can that's that's really just a matter of enabling because connect can automatically put in an unsubscribe link and automatically handle if if the user clicks on that link, just add them, you know, to a blacklist so that they're so that they're unsubscribe.
+
+97
+00:19:45,820 --> 00:19:50,820
+So there's not much for you to actually do that's kind of automatic.
+
+98
+00:19:50,820 --> 00:20:08,740
+And then any other configurations I kind of mentioned before such as quotas, send rate, those are all in the SCS account dashboard. So just keep in mind that all those types of settings are really managed on the SCS side.
+
+99
+00:20:08,740 --> 00:20:13,740
+All right, so once you've got the got it all set up and ready to go.
+
+100
+00:20:13,740 --> 00:20:26,740
+We've got an email template and composer that I'll show you in just a bit. It's essentially a graphical, you know, drag and drop composer. It's got previews to preview the email and desktop or mobile.
+
+101
+00:20:26,740 --> 00:20:34,740
+There's some different building blocks they're showing here, just, you know, for images buttons text, etc tables.
+
+102
+00:20:34,740 --> 00:20:39,740
+And then there's a style palette as well. Again, I'll show you that in just a bit.
+
+103
+00:20:39,740 --> 00:20:54,740
+I always just put in HTML direct directly. So there's a source mode for that. And then when you create these templates, you could create a full template that would be the entire email, or you could create multiple partial templates.
+
+104
+00:20:54,740 --> 00:21:08,740
+So you may have, say a header or a footer that's going to go on every type of email, but the content in the middle is different. So you can create that header, and then combine it with different bodies as far as parts.
+
+105
+00:21:08,740 --> 00:21:17,240
+So basically putting together multiple partial templates to create one email.
+
+106
+00:21:17,240 --> 00:21:31,240
+And then for sending email. On the next slide, I already mentioned two options API or email node. And again, the basic capabilities for these are, you know, text based email, HTML based.
+
+107
+00:21:31,240 --> 00:21:43,240
+Next fallback some email apps, you know, don't support HTML so you can have an automatic fallback in case someone receives that in an email client that doesn't support HTML.
+
+108
+00:21:43,240 --> 00:21:57,240
+The templates I mentioned, and then attachments, they can be either you need to have static attachments that you upload into connects media manager, or if you specify a URL it could be more dynamic.
+
+109
+00:21:57,240 --> 00:22:15,380
+Just need to make sure that URL is accessible by connect. And then there's last slide here there's a little bit of tracking and reporting. So if you put links and email you can track those things like email opens.
+
+110
+00:22:15,380 --> 00:22:30,380
+There's some other fields you can enter like call back data and correlation ID that can, if you if you put data in there that'll show up in the delivery status so you can correlate things back or in our export logs.
+
+111
+00:22:30,380 --> 00:22:40,380
+Unsubscribe, I mentioned, and then you can specify to receive those delivery status you can you can specify notification URL.
+
+112
+00:22:40,380 --> 00:22:54,380
+And note that on SMTP, you essentially get sent or failed as far as the status goes on SES. You get a few more, you know, sent delivered read bounced. If someone put in their spam folder.
+
+113
+00:22:54,380 --> 00:22:57,380
+Rejected and clicked.
+
+114
+00:22:57,380 --> 00:23:13,340
+Etc. So I will that's into the slides. Let me any I'll just pause there for a moment. Any other questions before I'll launch into connect and then show you show you around connect a bit a few things.
+
+115
+00:23:13,340 --> 00:23:24,400
+There's a bug where WebEx contacts and our agents can't receive an email if it's plain text. Is that specific to WebEx?
+
+116
+00:23:24,400 --> 00:23:26,400
+I don't know.
+
+117
+00:23:26,400 --> 00:23:31,400
+I think that's one we'll have to check on so they can't if it.
+
+118
+00:23:31,400 --> 00:23:37,400
+Can you can you explain that issue. Are you trying to send an inbound email just text only.
+
+119
+00:23:37,400 --> 00:23:42,250
+Correct.
+
+120
+00:23:42,250 --> 00:23:43,250
+Okay.
+
+121
+00:23:43,250 --> 00:23:52,250
+We might have to take it back marks. Have you opened a service ticket on that issue that you have observed. There's the bug idea.
+
+122
+00:23:52,250 --> 00:23:53,250
+Okay, cool.
+
+123
+00:23:53,250 --> 00:24:02,580
+Perfect. Okay. Let us try that.
+
+124
+00:24:02,580 --> 00:24:04,580
+Any other questions.
+
+125
+00:24:04,580 --> 00:24:05,580
+This time.
+
+126
+00:24:05,580 --> 00:24:10,900
+Mine is more related to the finesse desktop.
+
+127
+00:24:10,900 --> 00:24:15,900
+We have a customer and there is a CC option when we're applying.
+
+128
+00:24:15,900 --> 00:24:22,900
+I apologize if this was coming up. Maybe I asked too early, but is there a way to enable it to be CC as well.
+
+129
+00:24:22,900 --> 00:24:27,900
+Say that an agent every time they reply, they need to copy their supervisor.
+
+130
+00:24:28,900 --> 00:24:30,900
+Could they do that from finesse.
+
+131
+00:24:30,900 --> 00:24:41,750
+I don't know about finesse, but the I know the CC and the VCC options are are available.
+
+132
+00:24:41,750 --> 00:24:54,750
+The only drawback this really is not really your question. If you're doing an unsubscribe, I believe it only unsubscribes, you know, anyone in the to not not the copy or VCC.
+
+133
+00:24:54,750 --> 00:24:59,750
+But I'm not familiar with that issue in the finesse desktop.
+
+134
+00:24:59,750 --> 00:25:02,260
+Okay.
+
+135
+00:25:02,260 --> 00:25:09,260
+Yeah. So, sorry. So that the question was on unsubscribe when you are doing a CC and PCC or it was just simply.
+
+136
+00:25:09,260 --> 00:25:14,260
+CC VCC is not working out. It would be a good feature to have CC.
+
+137
+00:25:14,260 --> 00:25:25,260
+Just an everyday feature. We have some agents who are instructed to copy their immediate supervisor when they reply, but they would like that to be BC seed.
+
+138
+00:25:25,260 --> 00:25:28,260
+So the customer does not see that.
+
+139
+00:25:28,260 --> 00:25:34,260
+I say, I think it's more of the finesse application the way it has been implemented.
+
+140
+00:25:34,260 --> 00:25:38,260
+I would attribute it to that implementation.
+
+141
+00:25:38,260 --> 00:25:45,260
+Rather than a limitation on what is supported by connect. So I think it's good.
+
+142
+00:25:45,260 --> 00:25:47,260
+It's a great question.
+
+143
+00:25:47,260 --> 00:25:52,260
+I think we need to get the CC team to address this because it's finesse.
+
+144
+00:25:52,260 --> 00:26:01,260
+It's the on-prem edition. So I think it's all related to how the finesse application has been implemented to enable this feature.
+
+145
+00:26:01,260 --> 00:26:02,260
+Okay.
+
+146
+00:26:02,260 --> 00:26:11,910
+Great. Thank you. I appreciate the response.
+
+147
+00:26:11,910 --> 00:26:15,910
+I'm over here. One of our connect tenants here.
+
+148
+00:26:15,910 --> 00:26:24,910
+So just show you around a little bit under right here under assets apps is where you you configure email apps.
+
+149
+00:26:24,910 --> 00:26:33,910
+So I've got one configured already. So you normally go into configure new app email.
+
+150
+00:26:33,910 --> 00:26:43,910
+And it would start from there. This tenant is configured for SCS. So again, I mentioned you put in your domain access credentials, etc.
+
+151
+00:26:43,910 --> 00:26:52,910
+You generate some verification records, but just to show you an existing one.
+
+152
+00:26:52,910 --> 00:26:57,910
+Once you go through the process, it'll look something like this.
+
+153
+00:26:57,910 --> 00:27:02,910
+And again, this is the various records, DNS settings. And again, this is all SCS.
+
+154
+00:27:02,910 --> 00:27:08,910
+Here's where you can enable, subscribe or unsubscribe. And then these limits.
+
+155
+00:27:08,910 --> 00:27:14,910
+We used to be 10 meg I mentioned, these are pulled in from the SCS account.
+
+156
+00:27:14,910 --> 00:27:19,910
+They're not really connect limits as far as SCS goes.
+
+157
+00:27:19,910 --> 00:27:23,910
+But that's what I'm talking about the app. That's where you set that up.
+
+158
+00:27:23,910 --> 00:27:44,910
+Then the next thing under the tools is maybe like this, the media manager. So if you do have icons or other media, or maybe you've got some static attachments, you can upload those here under this media manager.
+
+159
+00:27:44,910 --> 00:27:54,910
+You can directly upload the file or import via URL. And then those can be used later in the email.
+
+160
+00:27:54,910 --> 00:28:10,910
+And then let me go to the email to templates here. And this is what brings up the email composer. So I had, I created a partial template here.
+
+161
+00:28:10,910 --> 00:28:21,910
+Like simulating, say a notification from your bank. So this is the header. So this is why saying this might be a header that you include in all your templates.
+
+162
+00:28:21,910 --> 00:28:35,910
+So that are in all your emails. So that would be a partial template. And then you could create the specific, the specific body of the email that you want.
+
+163
+00:28:35,910 --> 00:28:37,910
+Sorry about that.
+
+164
+00:28:37,910 --> 00:28:46,340
+I go to the body. So I've created the body of my email here.
+
+165
+00:28:46,340 --> 00:29:01,340
+And one thing to notice is I've included variables here. So these can be passed in either via API or I'll show you in the email node. So these can be, you know, truly dynamic, dynamic emails.
+
+166
+00:29:01,340 --> 00:29:10,340
+Just to give you a little view of what's here. So on the left here are the different building blocks that you can, you could drag in.
+
+167
+00:29:10,340 --> 00:29:25,340
+So say you want a certain structure with two columns, you drag it here and then the other blocks such as image text buttons are right here.
+
+168
+00:29:25,340 --> 00:29:32,340
+And then even I mentioned, if you want to put direct HTML code in there, you can drag that as well.
+
+169
+00:29:32,340 --> 00:29:41,340
+At any time as well, you can, you can view the HTML code. So if you really want to, you know, tweak something, you can do that here.
+
+170
+00:29:41,340 --> 00:29:49,340
+If I drag in, you know, just say some text here.
+
+171
+00:29:49,340 --> 00:30:04,340
+You just drag it in. There's all the usual controls right here. But then if you look on any of these on the right side is the style palette. So you can do everything from background colors to borders padding, etc.
+
+172
+00:30:04,340 --> 00:30:11,340
+And that's on any of these blocks. If you click in any of these blocks, even the buttons, it'll give you all the styling that you can do.
+
+173
+00:30:11,340 --> 00:30:24,340
+So I think kind of the message is it's a very flexible composer. It gives you a lot of control to create an email as you like.
+
+174
+00:30:24,340 --> 00:30:35,340
+And again, with these building blocks on the left and then the, the style palette for each, each of them on the right here.
+
+175
+00:30:35,340 --> 00:30:46,220
+And if you wanted to do a little mobile preview or what it'll look like on desktop, you can do that.
+
+176
+00:30:46,220 --> 00:31:15,150
+Any general questions on the, on the email composer? Great. And then I can let me bring you into, so let me show you, I'll show you first in Connect and just a really simple flow I created.
+
+177
+00:31:15,150 --> 00:31:28,150
+You might use that template and the flow. So I created a very simple flow here that starts with a web hook.
+
+178
+00:31:28,150 --> 00:31:44,150
+And then sends the email. So, so in the web hook, which is just the entry point into here, I'm passing in the email I wanted to go to the person's name, the transaction date, the merchant, which are those same variables that you
+
+179
+00:31:45,150 --> 00:31:49,150
+these are the same variables that you saw within the template.
+
+180
+00:31:49,150 --> 00:31:54,150
+And then the email note itself.
+
+181
+00:31:54,150 --> 00:32:09,150
+You essentially can specify, you know, who the emails to which is a variable I passed in. You can specify a from email. So this is the, this would be the help desk at the domain that I have configured.
+
+182
+00:32:09,150 --> 00:32:27,150
+You can specify any name you want reply to email CCBCC. And then here's where I picked template. So I could have just done text and put in plain text, I could select HTML, and just put in some HTML code, or I can specify template.
+
+183
+00:32:27,150 --> 00:32:36,150
+And then I add in one or more templates here so I did to, I put two partial templates so I did that that header I showed you and then the body.
+
+184
+00:32:36,150 --> 00:32:55,150
+And I didn't put any fallback text, but I could. And again, that would be if the email client didn't support HTML, different options for link tracking. If I want to send the different delivery status to an endpoint, I can put that URL here and then choose
+
+185
+00:32:55,150 --> 00:33:00,150
+which, you know, which delivery statuses I want to be notified about.
+
+186
+00:33:00,150 --> 00:33:05,150
+And then I could add in attachments as well.
+
+187
+00:33:05,150 --> 00:33:10,150
+So that's a very simple so, so if I want to execute this.
+
+188
+00:33:10,150 --> 00:33:14,150
+So say I wanted to send out one other, there's suspicious.
+
+189
+00:33:14,150 --> 00:33:26,150
+We will just have conversation on two three and four and I think the folks who will be joining from he can either they would answer or maybe they will just take those action item and they can come back.
+
+190
+00:33:26,150 --> 00:33:35,150
+We just ask everyone for if you're not speaking just put yourself on mute.
+
+191
+00:33:35,150 --> 00:33:37,150
+Thanks so much.
+
+192
+00:33:37,150 --> 00:33:55,150
+So, so our web hooks in connect are done with a post. So, if we look, I'll just back here, you get, you get an endpoint for this web hook URL, which is right here.
+
+193
+00:33:56,150 --> 00:34:01,150
+So I can do a post to that endpoint.
+
+194
+00:34:01,150 --> 00:34:09,150
+Our payloads into the web hooks are flexible and it was as I defined it. And I could.
+
+195
+00:34:09,150 --> 00:34:19,150
+I can just to put something else I can simply put in all the variables here. There's a key that I set for security as well.
+
+196
+00:34:19,150 --> 00:34:32,150
+And I can really execute that web hook, which will, which will call that web hook and then send the email and then anytime you call web hook, you get a response that it's queued.
+
+197
+00:34:32,150 --> 00:34:39,150
+That's basically means WebEx connect has has received the notification and it gives you a transaction ID.
+
+198
+00:34:39,150 --> 00:34:48,150
+And then depending on my outlook that that email will will come across in just a minute.
+
+199
+00:34:48,150 --> 00:34:53,150
+So, from a connect perspective, do we have the ability to send.
+
+200
+00:34:53,150 --> 00:35:08,150
+I guess an email similar using a template to a distribution list or to a pool of email addresses rather than having to go through postman or submit an API request.
+
+201
+00:35:08,150 --> 00:35:13,150
+Good question in the, in the API.
+
+202
+00:35:14,150 --> 00:35:17,150
+Which this is an example here.
+
+203
+00:35:17,150 --> 00:35:22,150
+You can, you can do a you can.
+
+204
+00:35:22,150 --> 00:35:27,150
+Why that's not pulling up, you can do send multiple emails.
+
+205
+00:35:27,150 --> 00:35:42,150
+In the email node itself, you would do a, I mean you could have a distribution list, but the destination is a single email.
+
+206
+00:35:42,150 --> 00:35:52,150
+So, so in a flow, it would be probably more a case where you're sending out, you know, different transactional alerts to different people.
+
+207
+00:35:52,150 --> 00:35:56,150
+So you're sending out a single at a time.
+
+208
+00:35:56,150 --> 00:36:01,150
+So, for example, let's say I give you a random example. Let's say I'm a bank.
+
+209
+00:36:01,150 --> 00:36:15,150
+Like every morning I get a list that's generated for customers who are late on a payment. So I can get, for example, their name, I can get the overdue account due date and, you know, things like that.
+
+210
+00:36:15,150 --> 00:36:32,150
+So you would probably have a printing pertaining to a customer and that would be populated in, let's just say a CSV file, or it would be somewhere in a database. So, would we have the ability to then send each of those respective customers an email.
+
+211
+00:36:33,150 --> 00:36:50,150
+So you would, you probably have a flow like this, probably a little bit more involved than just two nodes, but you could drop that file into our event scheduler and tell it to essentially call this flow for every, every row in that file.
+
+212
+00:36:50,150 --> 00:37:05,150
+And then it would execute this workflow, pass in all the columns, you know, just like, just like I kind of had here with the, you know, say name, date, transaction amount and execute this workflow for each of them. So that that's one way.
+
+213
+00:37:05,150 --> 00:37:10,150
+Right. Fairly typical way that we would do something like that.
+
+214
+00:37:10,150 --> 00:37:13,040
+Thank you.
+
+215
+00:37:13,040 --> 00:37:32,770
+Yep. And actually here the just to show you that email just drag over here really quick and did come through and right so everyone would get each one personalized with the with the information that they put there.
+
+216
+00:37:37,900 --> 00:37:49,900
+Just a few minutes so then, as far as API's go just just to give you an idea, I've got a few different to show you if you just wanted to so not use the email node use a flow.
+
+217
+00:37:50,900 --> 00:38:04,900
+This is a similar way where I'm using the API and specifying the template so it's similar information I'm saying what channel it is where the emails from who it's going to.
+
+218
+00:38:04,900 --> 00:38:12,900
+These substitutions are essentially the same variables that I passed into the flow.
+
+219
+00:38:12,900 --> 00:38:22,900
+And then I can, you know, subject any delivery receipts I want. And the right here I specified the template.
+
+220
+00:38:22,900 --> 00:38:32,900
+In this case, I probably would have to do the full template, but I specify the template I want to use and send it out.
+
+221
+00:38:32,900 --> 00:38:37,900
+Or if you just want to do plain text email.
+
+222
+00:38:37,900 --> 00:38:42,850
+Pretty similar.
+
+223
+00:38:42,850 --> 00:38:55,290
+Whereas this this content block is really what would be different and then specify the type of text and what text I wanted to send.
+
+224
+00:38:55,290 --> 00:39:03,360
+And as well say I wanted to do attachments.
+
+225
+00:39:03,360 --> 00:39:08,360
+Again, these are all via API.
+
+226
+00:39:08,360 --> 00:39:21,360
+And the protocol and the big the difference here is actually this why kind of combine HTML and attachments so if you want to send an HTML email instead of text it'll be HTML.
+
+227
+00:39:21,360 --> 00:39:27,360
+It would be an HTML value here where you could put in your raw HTML.
+
+228
+00:39:27,360 --> 00:39:33,360
+And then here there's an attachments block where you specify the mime type.
+
+229
+00:39:33,360 --> 00:39:52,780
+And then here's the binding so for PDF it's application PDF and we have a list of the mind types in the documentation and then the the URL the media URL that it can access it from and the delivery receipts.
+
+230
+00:39:52,780 --> 00:40:03,780
+So that's a quick tour I was just trying to keep it to our time but certainly happy to go over more answer other questions.
+
+231
+00:40:03,780 --> 00:40:11,780
+And then we'll do a good, at least a good basic view of what the capabilities are how to set up email.
+
+232
+00:40:11,780 --> 00:40:26,170
+How do you how you can use templates and the composer and then how you can actually send them either via workflow using the node or via API.
+
+233
+00:40:26,170 --> 00:40:30,170
+Thank you Doug and right on time.
+
+234
+00:40:30,170 --> 00:40:35,170
+Okay, so I am going to follow up on the questions that were asked today.
+
+235
+00:40:35,170 --> 00:40:39,170
+I'm going to look out for a response mark and Lindsay.
+
+236
+00:40:39,170 --> 00:40:46,170
+And I will post the slides in your respective web, web X space.
+
+237
+00:40:46,170 --> 00:41:01,170
+Please look out for the survey to still and let us know keep keep coming with the suggestions for what you want to see on this call because this is your call we want to make sure that that you guys are interested in that we're covering the topics that you want to hear about.
+
+238
+00:41:01,170 --> 00:41:15,860
+Any last minute requests or questions. Alright, thank you Doug and Tom for presenting today and thank you everyone for joining have a great rest of your week.
+
+239
+00:41:15,860 --> 00:41:17,860
+Thank you bye bye.
+
+240
+00:41:17,860 --> 00:41:20,520
+Thank you.
+
+241
+00:41:20,520 --> 00:41:21,520
+Thanks.
+
+242
+00:41:21,520 --> 00:41:22,520
+See you later.

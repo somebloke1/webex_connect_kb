@@ -1,0 +1,551 @@
+[
+  {
+    "file": "cancel_appointment.workflow",
+    "source_url": "https://github.com/WebexSamples/webex-contact-center-api-samples/blob/main/ai-agent-fulfilment-flows/doctor-clinic-fulfilment-flows/cancel_appointment.workflow",
+    "download_url": "https://raw.githubusercontent.com/WebexSamples/webex-contact-center-api-samples/main/ai-agent-fulfilment-flows/doctor-clinic-fulfilment-flows/cancel_appointment.workflow",
+    "repository_blob_sha": "ca78b3b311a692b3edab3b47caf962702a47755e",
+    "sha256": "2b0c583aa7cb3f41171ffb7ce278358844a94cd1f1013f71895470c8dafaae1a",
+    "retrieved_at": "2026-09-08T23:47:59.052903+00:00",
+    "bytes": 28160,
+    "inspection": {
+      "representation": "hexadecimal text",
+      "decoded_bytes": 14080,
+      "utf8_json_parseable": false,
+      "node_edge_extraction": "unavailable: opaque binary, no supported local native workflow reader identified",
+      "runtime_validation": "not imported or executed",
+      "parse_checks": [
+        "raw_json:JSONDecodeError",
+        "hex_decoded_json:UnicodeDecodeError"
+      ]
+    },
+    "inspection_scope": "Original acquisition/static parse checks, before later supported UI inspection",
+    "supported_ui_inspection": {
+      "status": "imported_for_read_only_static_graph_inspection",
+      "observations": [
+        {
+          "path": "evidence/sample-flows/observed/native-cancel-appointment.json",
+          "observed_at": "2026-09-08T23:59:56.277Z",
+          "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model"
+        }
+      ],
+      "runtime_tested": false,
+      "note": "Temporary sample inspection is separate from executing or validating a live integration"
+    }
+  },
+  {
+    "file": "check_availability.workflow",
+    "source_url": "https://github.com/WebexSamples/webex-contact-center-api-samples/blob/main/ai-agent-fulfilment-flows/doctor-clinic-fulfilment-flows/check_availability.workflow",
+    "download_url": "https://raw.githubusercontent.com/WebexSamples/webex-contact-center-api-samples/main/ai-agent-fulfilment-flows/doctor-clinic-fulfilment-flows/check_availability.workflow",
+    "repository_blob_sha": "173ab36b29191da2cd749ac372ac4e790bdcf234",
+    "sha256": "87447599a4b1c6cb711c74d6d33190443696f490ac0d409af05b0b3230399a72",
+    "retrieved_at": "2026-09-08T23:47:59.345438+00:00",
+    "bytes": 28160,
+    "inspection": {
+      "representation": "hexadecimal text",
+      "decoded_bytes": 14080,
+      "utf8_json_parseable": false,
+      "node_edge_extraction": "unavailable: opaque binary, no supported local native workflow reader identified",
+      "runtime_validation": "not imported or executed",
+      "parse_checks": [
+        "raw_json:JSONDecodeError",
+        "hex_decoded_json:UnicodeDecodeError"
+      ]
+    },
+    "inspection_scope": "Original acquisition/static parse checks, before later supported UI inspection",
+    "supported_ui_inspection": {
+      "status": "imported_for_read_only_static_graph_inspection",
+      "observations": [
+        {
+          "path": "evidence/sample-flows/observed/native-check-availability.json",
+          "observed_at": "2026-09-08T23:59:30.439Z",
+          "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model"
+        }
+      ],
+      "runtime_tested": false,
+      "note": "Temporary sample inspection is separate from executing or validating a live integration"
+    }
+  },
+  {
+    "file": "create_appointment.workflow",
+    "source_url": "https://github.com/WebexSamples/webex-contact-center-api-samples/blob/main/ai-agent-fulfilment-flows/doctor-clinic-fulfilment-flows/create_appointment.workflow",
+    "download_url": "https://raw.githubusercontent.com/WebexSamples/webex-contact-center-api-samples/main/ai-agent-fulfilment-flows/doctor-clinic-fulfilment-flows/create_appointment.workflow",
+    "repository_blob_sha": "f036d4b1a5113289f17a8b0bb839312938821905",
+    "sha256": "0d0a5a8604b041cc28ae791c6316c5b9b87475d66119136e6ecac2405164c26e",
+    "retrieved_at": "2026-09-08T23:47:59.530017+00:00",
+    "bytes": 29696,
+    "inspection": {
+      "representation": "hexadecimal text",
+      "decoded_bytes": 14848,
+      "utf8_json_parseable": false,
+      "node_edge_extraction": "unavailable: opaque binary, no supported local native workflow reader identified",
+      "runtime_validation": "not imported or executed",
+      "parse_checks": [
+        "raw_json:JSONDecodeError",
+        "hex_decoded_json:UnicodeDecodeError"
+      ]
+    },
+    "inspection_scope": "Original acquisition/static parse checks, before later supported UI inspection",
+    "supported_ui_inspection": {
+      "status": "imported_for_read_only_static_graph_inspection",
+      "observations": [
+        {
+          "path": "evidence/sample-flows/observed/native-create-appointment.json",
+          "observed_at": "2026-09-09T00:00:34.955Z",
+          "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model"
+        }
+      ],
+      "runtime_tested": false,
+      "note": "Temporary sample inspection is separate from executing or validating a live integration"
+    }
+  },
+  {
+    "file": "lookup_appointment.workflow",
+    "source_url": "https://github.com/WebexSamples/webex-contact-center-api-samples/blob/main/ai-agent-fulfilment-flows/doctor-clinic-fulfilment-flows/lookup_appointment.workflow",
+    "download_url": "https://raw.githubusercontent.com/WebexSamples/webex-contact-center-api-samples/main/ai-agent-fulfilment-flows/doctor-clinic-fulfilment-flows/lookup_appointment.workflow",
+    "repository_blob_sha": "8ed754b26826d3ab70198ad30f46bdea3dde8fe2",
+    "sha256": "16b3f4722241c56555bbb63d6007f400ce429722ca42dd9dae54a7a6f2bd0fae",
+    "retrieved_at": "2026-09-08T23:47:59.742123+00:00",
+    "bytes": 27648,
+    "inspection": {
+      "representation": "hexadecimal text",
+      "decoded_bytes": 13824,
+      "utf8_json_parseable": false,
+      "node_edge_extraction": "unavailable: opaque binary, no supported local native workflow reader identified",
+      "runtime_validation": "not imported or executed",
+      "parse_checks": [
+        "raw_json:JSONDecodeError",
+        "hex_decoded_json:UnicodeDecodeError"
+      ]
+    },
+    "inspection_scope": "Original acquisition/static parse checks, before later supported UI inspection",
+    "supported_ui_inspection": {
+      "status": "imported_for_read_only_static_graph_inspection",
+      "observations": [
+        {
+          "path": "evidence/sample-flows/observed/native-lookup-appointment.json",
+          "observed_at": "2026-09-09T00:00:38.393Z",
+          "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model"
+        }
+      ],
+      "runtime_tested": false,
+      "note": "Temporary sample inspection is separate from executing or validating a live integration"
+    }
+  },
+  {
+    "file": "sendSMS.workflow",
+    "source_url": "https://github.com/WebexSamples/webex-contact-center-api-samples/blob/main/ai-agent-fulfilment-flows/doctor-clinic-fulfilment-flows/sendSMS.workflow",
+    "download_url": "https://raw.githubusercontent.com/WebexSamples/webex-contact-center-api-samples/main/ai-agent-fulfilment-flows/doctor-clinic-fulfilment-flows/sendSMS.workflow",
+    "repository_blob_sha": "5a94d57a7092192d41cf54f92df5ea4dff329d85",
+    "sha256": "479b85fbf038e70bd4aa8db68a05c2967e761a1872b0aba67483f2e0e524c160",
+    "retrieved_at": "2026-09-08T23:47:59.959674+00:00",
+    "bytes": 29184,
+    "inspection": {
+      "representation": "hexadecimal text",
+      "decoded_bytes": 14592,
+      "utf8_json_parseable": false,
+      "node_edge_extraction": "unavailable: opaque binary, no supported local native workflow reader identified",
+      "runtime_validation": "not imported or executed",
+      "parse_checks": [
+        "raw_json:JSONDecodeError",
+        "hex_decoded_json:UnicodeDecodeError"
+      ]
+    },
+    "inspection_scope": "Original acquisition/static parse checks, before later supported UI inspection",
+    "supported_ui_inspection": {
+      "status": "imported_for_read_only_static_graph_inspection",
+      "observations": [
+        {
+          "path": "evidence/sample-flows/observed/native-sendsms.json",
+          "observed_at": "2026-09-09T00:00:41.982Z",
+          "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model"
+        }
+      ],
+      "runtime_tested": false,
+      "note": "Temporary sample inspection is separate from executing or validating a live integration"
+    }
+  },
+  {
+    "file": "Block card and order replacement.workflow",
+    "source_url": "https://github.com/WebexSamples/webex-contact-center-api-samples/blob/main/ai-agent-fulfilment-flows/banking%20template%20fulfilment%20flows/Block%20card%20and%20order%20replacement.workflow",
+    "download_url": "https://raw.githubusercontent.com/WebexSamples/webex-contact-center-api-samples/main/ai-agent-fulfilment-flows/banking%20template%20fulfilment%20flows/Block%20card%20and%20order%20replacement.workflow",
+    "repository_blob_sha": "1df9e72efeabd1a9f0a161e310fab6a620c54b18",
+    "sha256": "1ad6d8e8df417dca4c886d31cfc913f387041bd192770b79ad563f222dd92016",
+    "retrieved_at": "2026-09-08T23:53:34.459730+00:00",
+    "bytes": 32256,
+    "inspection": {
+      "representation": "hexadecimal text",
+      "decoded_bytes": 16128,
+      "node_edge_extraction": "unavailable: opaque binary, no supported local native workflow reader identified",
+      "runtime_validation": "not imported or executed",
+      "parse_checks": [
+        "raw_json:JSONDecodeError",
+        "hex_decoded_json:UnicodeDecodeError"
+      ]
+    },
+    "inspection_scope": "Original acquisition/static parse checks, before later supported UI inspection",
+    "supported_ui_inspection": {
+      "status": "imported_for_read_only_static_graph_inspection",
+      "observations": [
+        {
+          "path": "evidence/sample-flows/observed/native-block-card-and-order-replacement.json",
+          "observed_at": "2026-09-09T00:00:54.162Z",
+          "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model"
+        }
+      ],
+      "runtime_tested": false,
+      "note": "Temporary sample inspection is separate from executing or validating a live integration"
+    }
+  },
+  {
+    "file": "Fetch Recent Transactions.workflow",
+    "source_url": "https://github.com/WebexSamples/webex-contact-center-api-samples/blob/main/ai-agent-fulfilment-flows/banking%20template%20fulfilment%20flows/Fetch%20Recent%20Transactions.workflow",
+    "download_url": "https://raw.githubusercontent.com/WebexSamples/webex-contact-center-api-samples/main/ai-agent-fulfilment-flows/banking%20template%20fulfilment%20flows/Fetch%20Recent%20Transactions.workflow",
+    "repository_blob_sha": "a5627fd9ac51b7af2cdde882e63b9479902fee78",
+    "sha256": "dc735d636d38c8463830a53ce4c455dc68860f3e80cfc2fe0887755844cb5057",
+    "retrieved_at": "2026-09-08T23:53:34.668237+00:00",
+    "bytes": 59904,
+    "inspection": {
+      "representation": "hexadecimal text",
+      "decoded_bytes": 29952,
+      "node_edge_extraction": "unavailable: opaque binary, no supported local native workflow reader identified",
+      "runtime_validation": "not imported or executed",
+      "parse_checks": [
+        "raw_json:JSONDecodeError",
+        "hex_decoded_json:UnicodeDecodeError"
+      ]
+    },
+    "inspection_scope": "Original acquisition/static parse checks, before later supported UI inspection",
+    "supported_ui_inspection": {
+      "status": "imported_for_read_only_static_graph_inspection",
+      "observations": [
+        {
+          "path": "evidence/sample-flows/observed/native-fetch-recent-transactions.json",
+          "observed_at": "2026-09-09T00:00:57.584Z",
+          "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model"
+        }
+      ],
+      "runtime_tested": false,
+      "note": "Temporary sample inspection is separate from executing or validating a live integration"
+    }
+  },
+  {
+    "file": "Fetch account balance.workflow",
+    "source_url": "https://github.com/WebexSamples/webex-contact-center-api-samples/blob/main/ai-agent-fulfilment-flows/banking%20template%20fulfilment%20flows/Fetch%20account%20balance.workflow",
+    "download_url": "https://raw.githubusercontent.com/WebexSamples/webex-contact-center-api-samples/main/ai-agent-fulfilment-flows/banking%20template%20fulfilment%20flows/Fetch%20account%20balance.workflow",
+    "repository_blob_sha": "4b9b5c97ebc568f07d27bd031b16899d0df8a7bf",
+    "sha256": "34613ffbbed82d6dfed9a3044699fcace18285931e9be1028dbcb48892feb686",
+    "retrieved_at": "2026-09-08T23:53:34.894377+00:00",
+    "bytes": 54272,
+    "inspection": {
+      "representation": "hexadecimal text",
+      "decoded_bytes": 27136,
+      "node_edge_extraction": "unavailable: opaque binary, no supported local native workflow reader identified",
+      "runtime_validation": "not imported or executed",
+      "parse_checks": [
+        "raw_json:JSONDecodeError",
+        "hex_decoded_json:UnicodeDecodeError"
+      ]
+    },
+    "inspection_scope": "Original acquisition/static parse checks, before later supported UI inspection",
+    "supported_ui_inspection": {
+      "status": "imported_for_read_only_static_graph_inspection",
+      "observations": [
+        {
+          "path": "evidence/sample-flows/observed/native-fetch-account-balance.json",
+          "observed_at": "2026-09-09T00:01:01.220Z",
+          "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model"
+        }
+      ],
+      "runtime_tested": false,
+      "note": "Temporary sample inspection is separate from executing or validating a live integration"
+    }
+  },
+  {
+    "file": "Register Transaction Dispute.workflow",
+    "source_url": "https://github.com/WebexSamples/webex-contact-center-api-samples/blob/main/ai-agent-fulfilment-flows/banking%20template%20fulfilment%20flows/Register%20Transaction%20Dispute.workflow",
+    "download_url": "https://raw.githubusercontent.com/WebexSamples/webex-contact-center-api-samples/main/ai-agent-fulfilment-flows/banking%20template%20fulfilment%20flows/Register%20Transaction%20Dispute.workflow",
+    "repository_blob_sha": "62b83d837d5645dfc51bc6f959ab5107b0d535df",
+    "sha256": "ea127c66c81de5f7c13caf53bfe501a6a681c4239f877267a59e75b6358555f3",
+    "retrieved_at": "2026-09-08T23:53:35.083171+00:00",
+    "bytes": 31744,
+    "inspection": {
+      "representation": "hexadecimal text",
+      "decoded_bytes": 15872,
+      "node_edge_extraction": "unavailable: opaque binary, no supported local native workflow reader identified",
+      "runtime_validation": "not imported or executed",
+      "parse_checks": [
+        "raw_json:JSONDecodeError",
+        "hex_decoded_json:UnicodeDecodeError"
+      ]
+    },
+    "inspection_scope": "Original acquisition/static parse checks, before later supported UI inspection",
+    "supported_ui_inspection": {
+      "status": "imported_for_read_only_static_graph_inspection",
+      "observations": [
+        {
+          "path": "evidence/sample-flows/observed/native-register-transaction-dispute.json",
+          "observed_at": "2026-09-09T00:01:22.827Z",
+          "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model"
+        }
+      ],
+      "runtime_tested": false,
+      "note": "Temporary sample inspection is separate from executing or validating a live integration"
+    }
+  },
+  {
+    "file": "Request priority shipping.workflow",
+    "source_url": "https://github.com/WebexSamples/webex-contact-center-api-samples/blob/main/ai-agent-fulfilment-flows/banking%20template%20fulfilment%20flows/Request%20priority%20shipping.workflow",
+    "download_url": "https://raw.githubusercontent.com/WebexSamples/webex-contact-center-api-samples/main/ai-agent-fulfilment-flows/banking%20template%20fulfilment%20flows/Request%20priority%20shipping.workflow",
+    "repository_blob_sha": "6b8d6114ead6f16f846ef2f45de779145476706c",
+    "sha256": "bde81ac95f24430e2cce31c4605cb3a0b07d89aeb3d10316d6607efe57a93a01",
+    "retrieved_at": "2026-09-08T23:53:35.282748+00:00",
+    "bytes": 29184,
+    "inspection": {
+      "representation": "hexadecimal text",
+      "decoded_bytes": 14592,
+      "node_edge_extraction": "unavailable: opaque binary, no supported local native workflow reader identified",
+      "runtime_validation": "not imported or executed",
+      "parse_checks": [
+        "raw_json:JSONDecodeError",
+        "hex_decoded_json:UnicodeDecodeError"
+      ]
+    },
+    "inspection_scope": "Original acquisition/static parse checks, before later supported UI inspection",
+    "supported_ui_inspection": {
+      "status": "imported_for_read_only_static_graph_inspection",
+      "observations": [
+        {
+          "path": "evidence/sample-flows/observed/native-request-priority-shipping.json",
+          "observed_at": "2026-09-09T00:01:26.431Z",
+          "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model"
+        }
+      ],
+      "runtime_tested": false,
+      "note": "Temporary sample inspection is separate from executing or validating a live integration"
+    }
+  },
+  {
+    "file": "Verify user.workflow",
+    "source_url": "https://github.com/WebexSamples/webex-contact-center-api-samples/blob/main/ai-agent-fulfilment-flows/banking%20template%20fulfilment%20flows/Verify%20user.workflow",
+    "download_url": "https://raw.githubusercontent.com/WebexSamples/webex-contact-center-api-samples/main/ai-agent-fulfilment-flows/banking%20template%20fulfilment%20flows/Verify%20user.workflow",
+    "repository_blob_sha": "4ef10ff4275439e6c4e536623a17009cd2dc47bc",
+    "sha256": "eeabb9057209f6eea1eb202e959b5f65494ba2f99880d8d298484890ae7677ea",
+    "retrieved_at": "2026-09-08T23:53:35.470101+00:00",
+    "bytes": 36352,
+    "inspection": {
+      "representation": "hexadecimal text",
+      "decoded_bytes": 18176,
+      "node_edge_extraction": "unavailable: opaque binary, no supported local native workflow reader identified",
+      "runtime_validation": "not imported or executed",
+      "parse_checks": [
+        "raw_json:JSONDecodeError",
+        "hex_decoded_json:UnicodeDecodeError"
+      ]
+    },
+    "inspection_scope": "Original acquisition/static parse checks, before later supported UI inspection",
+    "supported_ui_inspection": {
+      "status": "imported_for_read_only_static_graph_inspection",
+      "observations": [
+        {
+          "path": "evidence/sample-flows/observed/native-verify-user.json",
+          "observed_at": "2026-09-09T00:01:29.840Z",
+          "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model"
+        }
+      ],
+      "runtime_tested": false,
+      "note": "Temporary sample inspection is separate from executing or validating a live integration"
+    }
+  },
+  {
+    "file": "cancel_booking.workflow",
+    "source_url": "https://github.com/WebexSamples/webex-contact-center-api-samples/blob/main/ai-agent-fulfilment-flows/airline%20template%20fulfilment%20flows/cancel_booking.workflow",
+    "download_url": "https://raw.githubusercontent.com/WebexSamples/webex-contact-center-api-samples/main/ai-agent-fulfilment-flows/airline%20template%20fulfilment%20flows/cancel_booking.workflow",
+    "repository_blob_sha": "2d0e369975173cbd14868389cfad5a6e7c59151e",
+    "sha256": "0a7a5f0cd34845920f6e87952280dcfa40fbab63324ba827aff9a7676c064b28",
+    "retrieved_at": "2026-09-08T23:53:35.905673+00:00",
+    "bytes": 38400,
+    "inspection": {
+      "representation": "hexadecimal text",
+      "decoded_bytes": 19200,
+      "node_edge_extraction": "unavailable: opaque binary, no supported local native workflow reader identified",
+      "runtime_validation": "not imported or executed",
+      "parse_checks": [
+        "raw_json:JSONDecodeError",
+        "hex_decoded_json:UnicodeDecodeError"
+      ]
+    },
+    "inspection_scope": "Original acquisition/static parse checks, before later supported UI inspection",
+    "supported_ui_inspection": {
+      "status": "imported_for_read_only_static_graph_inspection",
+      "observations": [
+        {
+          "path": "evidence/sample-flows/observed/native-cancel-booking.json",
+          "observed_at": "2026-09-09T00:01:47.372Z",
+          "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model"
+        }
+      ],
+      "runtime_tested": false,
+      "note": "Temporary sample inspection is separate from executing or validating a live integration"
+    }
+  },
+  {
+    "file": "cancel_checkin.workflow",
+    "source_url": "https://github.com/WebexSamples/webex-contact-center-api-samples/blob/main/ai-agent-fulfilment-flows/airline%20template%20fulfilment%20flows/cancel_checkin.workflow",
+    "download_url": "https://raw.githubusercontent.com/WebexSamples/webex-contact-center-api-samples/main/ai-agent-fulfilment-flows/airline%20template%20fulfilment%20flows/cancel_checkin.workflow",
+    "repository_blob_sha": "aa868a604ed07411f19ce84c558f1f01c77ef5f4",
+    "sha256": "e58e0c2a48fe4c9afeb89c98ab79f32876aa4e23d02264eb6d2cdefd8e900365",
+    "retrieved_at": "2026-09-08T23:53:36.115698+00:00",
+    "bytes": 40960,
+    "inspection": {
+      "representation": "hexadecimal text",
+      "decoded_bytes": 20480,
+      "node_edge_extraction": "unavailable: opaque binary, no supported local native workflow reader identified",
+      "runtime_validation": "not imported or executed",
+      "parse_checks": [
+        "raw_json:JSONDecodeError",
+        "hex_decoded_json:UnicodeDecodeError"
+      ]
+    },
+    "inspection_scope": "Original acquisition/static parse checks, before later supported UI inspection",
+    "supported_ui_inspection": {
+      "status": "imported_for_read_only_static_graph_inspection",
+      "observations": [
+        {
+          "path": "evidence/sample-flows/observed/native-cancel-checkin.json",
+          "observed_at": "2026-09-09T00:01:50.901Z",
+          "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model"
+        }
+      ],
+      "runtime_tested": false,
+      "note": "Temporary sample inspection is separate from executing or validating a live integration"
+    }
+  },
+  {
+    "file": "checkin.workflow",
+    "source_url": "https://github.com/WebexSamples/webex-contact-center-api-samples/blob/main/ai-agent-fulfilment-flows/airline%20template%20fulfilment%20flows/checkin.workflow",
+    "download_url": "https://raw.githubusercontent.com/WebexSamples/webex-contact-center-api-samples/main/ai-agent-fulfilment-flows/airline%20template%20fulfilment%20flows/checkin.workflow",
+    "repository_blob_sha": "d0caa280a44c1a0426ee6990444dbf5cdace425f",
+    "sha256": "5e52ca680281e76a33fb29e1348e4cf2ee5724dd68abfeccd6355af355f84535",
+    "retrieved_at": "2026-09-08T23:53:36.320370+00:00",
+    "bytes": 40960,
+    "inspection": {
+      "representation": "hexadecimal text",
+      "decoded_bytes": 20480,
+      "node_edge_extraction": "unavailable: opaque binary, no supported local native workflow reader identified",
+      "runtime_validation": "not imported or executed",
+      "parse_checks": [
+        "raw_json:JSONDecodeError",
+        "hex_decoded_json:UnicodeDecodeError"
+      ]
+    },
+    "inspection_scope": "Original acquisition/static parse checks, before later supported UI inspection",
+    "supported_ui_inspection": {
+      "status": "imported_for_read_only_static_graph_inspection",
+      "observations": [
+        {
+          "path": "evidence/sample-flows/observed/native-checkin.json",
+          "observed_at": "2026-09-09T00:01:54.153Z",
+          "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model"
+        }
+      ],
+      "runtime_tested": false,
+      "note": "Temporary sample inspection is separate from executing or validating a live integration"
+    }
+  },
+  {
+    "file": "get_flight_info.workflow",
+    "source_url": "https://github.com/WebexSamples/webex-contact-center-api-samples/blob/main/ai-agent-fulfilment-flows/airline%20template%20fulfilment%20flows/get_flight_info.workflow",
+    "download_url": "https://raw.githubusercontent.com/WebexSamples/webex-contact-center-api-samples/main/ai-agent-fulfilment-flows/airline%20template%20fulfilment%20flows/get_flight_info.workflow",
+    "repository_blob_sha": "255bac52d9270f9c3d7ea2bbaeb8112db810aece",
+    "sha256": "ec0cf9774c4283a00b063da10b65286a437790d19aac0b917407884cb523c2af",
+    "retrieved_at": "2026-09-08T23:53:36.530066+00:00",
+    "bytes": 48640,
+    "inspection": {
+      "representation": "hexadecimal text",
+      "decoded_bytes": 24320,
+      "node_edge_extraction": "unavailable: opaque binary, no supported local native workflow reader identified",
+      "runtime_validation": "not imported or executed",
+      "parse_checks": [
+        "raw_json:JSONDecodeError",
+        "hex_decoded_json:UnicodeDecodeError"
+      ]
+    },
+    "inspection_scope": "Original acquisition/static parse checks, before later supported UI inspection",
+    "supported_ui_inspection": {
+      "status": "imported_for_read_only_static_graph_inspection",
+      "observations": [
+        {
+          "path": "evidence/sample-flows/observed/native-get-flight-info.json",
+          "observed_at": "2026-09-09T00:02:04.734Z",
+          "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model"
+        }
+      ],
+      "runtime_tested": false,
+      "note": "Temporary sample inspection is separate from executing or validating a live integration"
+    }
+  },
+  {
+    "file": "lookup_flights.workflow",
+    "source_url": "https://github.com/WebexSamples/webex-contact-center-api-samples/blob/main/ai-agent-fulfilment-flows/airline%20template%20fulfilment%20flows/lookup_flights.workflow",
+    "download_url": "https://raw.githubusercontent.com/WebexSamples/webex-contact-center-api-samples/main/ai-agent-fulfilment-flows/airline%20template%20fulfilment%20flows/lookup_flights.workflow",
+    "repository_blob_sha": "a05b28167a9654304300f6e93b1e3129b392b804",
+    "sha256": "6e9384cd28fb7f029364a63d9b5ca1ea769855441229751b3e10eebbf7018d6e",
+    "retrieved_at": "2026-09-08T23:53:36.834479+00:00",
+    "bytes": 46080,
+    "inspection": {
+      "representation": "hexadecimal text",
+      "decoded_bytes": 23040,
+      "node_edge_extraction": "unavailable: opaque binary, no supported local native workflow reader identified",
+      "runtime_validation": "not imported or executed",
+      "parse_checks": [
+        "raw_json:JSONDecodeError",
+        "hex_decoded_json:UnicodeDecodeError"
+      ]
+    },
+    "inspection_scope": "Original acquisition/static parse checks, before later supported UI inspection",
+    "supported_ui_inspection": {
+      "status": "imported_for_read_only_static_graph_inspection",
+      "observations": [
+        {
+          "path": "evidence/sample-flows/observed/native-lookup-flights.json",
+          "observed_at": "2026-09-09T00:02:08.072Z",
+          "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model"
+        }
+      ],
+      "runtime_tested": false,
+      "note": "Temporary sample inspection is separate from executing or validating a live integration"
+    }
+  },
+  {
+    "file": "reschedule_flight.workflow",
+    "source_url": "https://github.com/WebexSamples/webex-contact-center-api-samples/blob/main/ai-agent-fulfilment-flows/airline%20template%20fulfilment%20flows/reschedule_flight.workflow",
+    "download_url": "https://raw.githubusercontent.com/WebexSamples/webex-contact-center-api-samples/main/ai-agent-fulfilment-flows/airline%20template%20fulfilment%20flows/reschedule_flight.workflow",
+    "repository_blob_sha": "9c7717e2d1862de29e137f846ee5ad8770be6123",
+    "sha256": "60a36b15873c5f44feb0089945696b909534cfeb82b54b2efbc331cb02987ed8",
+    "retrieved_at": "2026-09-08T23:53:37.290717+00:00",
+    "bytes": 50176,
+    "inspection": {
+      "representation": "hexadecimal text",
+      "decoded_bytes": 25088,
+      "node_edge_extraction": "unavailable: opaque binary, no supported local native workflow reader identified",
+      "runtime_validation": "not imported or executed",
+      "parse_checks": [
+        "raw_json:JSONDecodeError",
+        "hex_decoded_json:UnicodeDecodeError"
+      ]
+    },
+    "inspection_scope": "Original acquisition/static parse checks, before later supported UI inspection",
+    "supported_ui_inspection": {
+      "status": "imported_for_read_only_static_graph_inspection",
+      "observations": [
+        {
+          "path": "evidence/sample-flows/observed/native-reschedule-flight.json",
+          "observed_at": "2026-09-09T00:02:11.402Z",
+          "evidence_type": "read_only_inspection_of_loaded_sample_canvas_model"
+        }
+      ],
+      "runtime_tested": false,
+      "note": "Temporary sample inspection is separate from executing or validating a live integration"
+    }
+  }
+]

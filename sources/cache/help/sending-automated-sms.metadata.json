@@ -1,0 +1,43 @@
+{
+  "category": "GETTING STARTED",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd81825781b",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "225e1b35dae0ebe386f6e3152a9eacdd7d8082db94383d194350a2da88a59cde",
+    "source_path": "91c45360810872b2e43b034819736894dcb2b1604b51dd1a8980d4b5c6389fa4",
+    "text_path": "1178af265ae743016460a719b8fe47af72ad51b376ff5724557ed547b7475977"
+  },
+  "headings": [
+    "📘Prerequisites",
+    "Step 1: Create a Service",
+    "Step 2: Get a phone number",
+    "Step 3: Create a Flow to Send SMS",
+    "1. Create a New Flow",
+    "2. Select the custom event as the event trigger on the trigger category selection page",
+    "3. Build the Flow",
+    "Step 4 : Configure the 'onsuccess' event",
+    "Step 5 : Configure the 'onerror' event",
+    "Publish the Flow",
+    "Step 7: Invoke the flow using Postman"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/sending-automated-sms.md",
+  "resolved_url": "https://help.webexconnect.io/docs/sending-automated-sms",
+  "retrieved_at": "2026-09-08T23:28:47+00:00",
+  "sha256_html_response": "55a43582a68b3cee1a503c8d2849830b9241dd59a0420b4b6d30a70adf1610a2",
+  "sha256_source_body": "91c45360810872b2e43b034819736894dcb2b1604b51dd1a8980d4b5c6389fa4",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/sending-automated-sms.source.md",
+  "source_updated_at": "2026-04-15T08:19:57.338Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/sending-automated-sms.txt",
+  "title": "Sending automated SMS using Webex Connect Visual Flow Builder",
+  "url": "https://help.webexconnect.io/docs/sending-automated-sms",
+  "word_count": 482,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/sending-automated-sms.metadata.json"
+}

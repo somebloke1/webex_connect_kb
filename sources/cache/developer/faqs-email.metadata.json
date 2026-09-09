@@ -1,0 +1,32 @@
+{
+  "api_metadata_path": "sources/cache/developer/faqs-email.api.json",
+  "category": "FAQs",
+  "deprecated": false,
+  "doc_id": "6a675233ec1c893d8a7f65d5",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body + reference API/OpenAPI metadata when present; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "ae71667b41c4d82677d5197c651728d58c8c6a5f162e6d07f930b6ab4c750d3a",
+    "source_path": "a20cd92a568b7e7b0a6bc6b7e780adc0979a930f2e71b95d0ac5ed502f67d8b6",
+    "text_path": "7c8dd18cc47e23949fb832a1cbd1544f814047283a533c357e430463f691f1d8"
+  },
+  "headings": [],
+  "http_status": 200,
+  "markdown_path": "sources/cache/developer/faqs-email.md",
+  "resolved_url": "https://developers.webexconnect.io/reference/faqs-email",
+  "retrieved_at": "2026-09-08T23:31:52+00:00",
+  "sha256_api_metadata": "575f65b7d8dc3ea0b617314bc47e22705dc85fc80ee114e6faa20ada4e8aafe2",
+  "sha256_html_response": "714aa491f44215d53317a8fc8c80e998dd33f6258f671fa36bda5078868d7a21",
+  "sha256_source_body": "a20cd92a568b7e7b0a6bc6b7e780adc0979a930f2e71b95d0ac5ed502f67d8b6",
+  "source_family": "developer",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/developer/faqs-email.source.md",
+  "source_updated_at": "2026-02-12T09:19:52.090Z",
+  "status": "ok",
+  "text_path": "sources/cache/developer/faqs-email.txt",
+  "title": "Email FAQs",
+  "url": "https://developers.webexconnect.io/reference/faqs-email",
+  "word_count": 934,
+  "normalized_at": "2026-09-08T23:37:54+00:00",
+  "metadata_path": "sources/cache/developer/faqs-email.metadata.json"
+}

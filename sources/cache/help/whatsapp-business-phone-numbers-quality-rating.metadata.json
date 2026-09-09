@@ -1,0 +1,33 @@
+{
+  "category": "Assets",
+  "deprecated": false,
+  "discovered_from": "https://help.webexconnect.io/docs/service-introduction",
+  "doc_id": "6a6753700cc56fd818257922",
+  "doc_version": "6.20.0",
+  "extraction": "ReadMe SSR doc.body + rdmd.dehydrated.body; navigation excluded",
+  "file_sha256": {
+    "markdown_path": "36c0910a9136729a7021139b0c1509e63ffacffad14ac66c15fdf073aadd6c73",
+    "source_path": "e068dfb7ebbabc866b6bcdf53edd52414997b947b8a1d5fba16754c66d46ed50",
+    "text_path": "22199d5890ee32dfb70b67910cb88dcd04fee98d87b36130e7c9fa2b90442dbc"
+  },
+  "headings": [
+    "Improve your quality rating"
+  ],
+  "http_status": 200,
+  "markdown_path": "sources/cache/help/whatsapp-business-phone-numbers-quality-rating.md",
+  "resolved_url": "https://help.webexconnect.io/docs/whatsapp-business-phone-numbers-quality-rating",
+  "retrieved_at": "2026-09-08T23:29:06+00:00",
+  "sha256_html_response": "975e6c16b7f772c49f1bac94ceab369f3039112826dcd5049417bb5be3006e47",
+  "sha256_source_body": "e068dfb7ebbabc866b6bcdf53edd52414997b947b8a1d5fba16754c66d46ed50",
+  "source_family": "help",
+  "source_kind": "official_documentation",
+  "source_path": "sources/cache/help/whatsapp-business-phone-numbers-quality-rating.source.md",
+  "source_updated_at": "2026-01-26T14:31:21.918Z",
+  "status": "ok",
+  "text_path": "sources/cache/help/whatsapp-business-phone-numbers-quality-rating.txt",
+  "title": "WhatsApp Business Phone Number Quality Rating",
+  "url": "https://help.webexconnect.io/docs/whatsapp-business-phone-numbers-quality-rating",
+  "word_count": 406,
+  "normalized_at": "2026-09-08T23:37:55+00:00",
+  "metadata_path": "sources/cache/help/whatsapp-business-phone-numbers-quality-rating.metadata.json"
+}
